@@ -1,16 +1,14 @@
 ---
-title: Ridurre (tipo di dati geometry) | Documenti Microsoft
-ms.custom: 
+title: Reduce (tipo di dati geometry) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Reduce_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - Reduce method
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fb6c4a66f3233620ef5d24506d41e7659fc3b82d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 77443179047fe35f643d4728d3c09bf423b26be6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un'approssimazione del determinato **geometry** istanza prodotto dall'esecuzione di un'estensione dell'algoritmo Douglas-Peucker sull'istanza con la tolleranza specificata.
+Restituisce un'approssimazione dell'istanza **geometry** specificata prodotta eseguendo un'estensione dell'algoritmo Douglas-Peucker sull'istanza con la tolleranza specificata.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,24 +41,24 @@ Restituisce un'approssimazione del determinato **geometry** istanza prodotto dal
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *tolleranza di errore*  
- È un valore di tipo **float**. *tolleranza* è la tolleranza per l'input per l'algoritmo di approssimazione.  
+ *tolerance*  
+ Valore di tipo **float**. *tolerance* è la tolleranza da immettere per l'algoritmo di approssimazione.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- Per i tipi di raccolta, questo algoritmo opera indipendentemente su ciascun **geometry** contenuti nell'istanza.  
+## <a name="remarks"></a>Remarks  
+ Per i tipi di raccolta, questo algoritmo opera in modo indipendente su ogni elemento **geometry** contenuto nell'istanza.  
   
- Questo algoritmo non modifica **punto** istanze.  
+ Questo algoritmo non modifica le istanze **Point**.  
   
- In **LineString**, **CircularString**, e **CompoundCurve** istanze, l'algoritmo di approssimazione mantiene l'originale punti iniziale e finale dell'istanza, e in modo iterativo, aggiunge nuovamente il punto dall'istanza originale con la maggiore deviazione rispetto al risultato finché nessun punto devia più della tolleranza specificata.  
+ Nelle istanze **LineString**, **CircularString** e **CompoundCurve** l'algoritmo di approssimazione mantiene i punti di inizio e fine originali dell'istanza e, in modo iterativo, aggiunge nuovamente il punto dall'istanza originale con la maggiore deviazione rispetto al risultato finché nessun punto devia più della tolleranza specificata.  
   
- `Reduce()`Restituisce un **LineString**, **CircularString**, o **CompoundCurve** istanza per **CircularString** istanze.  `Reduce()`Restituisce un **CompoundCurve** o **LineString** istanza per **CompoundCurve** istanze.  
+ `Reduce()` restituisce un'istanza **LineString**, **CircularString** o **CompoundCurve** per le istanze **CircularString**.  `Reduce()` restituisce un'istanza **CompoundCurve** o **LineString** per le istanze **CompoundCurve**.  
   
- In **poligono** istanze, l'algoritmo di approssimazione viene applicato indipendentemente a ogni anello. Il metodo produrrà un `FormatException` se l'oggetto restituito **poligono** istanza non è valida; ad esempio, un non valido **MultiPolygon** istanza viene creata se `Reduce()` viene applicato per semplificare ogni anello nell'istanza e gli anelli risultanti si sovrappongono.  In **CurvePolygon** istanze con un anello esterno e nessun anello interno, `Reduce()` restituisce un **CurvePolygon**, **LineString**, o **punto** istanza.  Se il **CurvePolygon** dispone di anelli interni un **CurvePolygon** o **MultiPoint** istanza viene restituita.  
+ Nelle istanze **Polygon** l'algoritmo di approssimazione viene applicato in modo indipendente a ogni anello. Il metodo genera un'eccezione `FormatException` se l'istanza **Polygon** restituita non è valida. Se ad esempio `Reduce()` viene applicato per semplificare ogni anello nell'istanza e gli anelli risultanti si sovrappongono, viene creata un'istanza **MultiPolygon** non valida.  Nelle istanze **CurvePolygon** con un anello esterno e nessun anello interno, `Reduce()` restituisce un'istanza **CurvePolygon**, **LineString** o **Point**.  Se **CurvePolygon** include anelli interni viene restituita un'istanza **CurvePolygon** o **MultiPoint**.  
   
  Quando viene rilevato un segmento di arco circolare, l'algoritmo di approssimazione controlla se è possibile approssimare l'arco secondo la corda in metà della tolleranza specificata.  Se la corda soddisfa questi criteri, l'arco circolare viene sostituito nei calcoli dalla corda. Se non soddisfa questi criteri, l'arco circolare viene mantenuto e l'algoritmo di approssimazione viene applicato ai segmenti rimanenti.  
   
@@ -77,7 +74,7 @@ SELECT @g.Reduce(.75).ToString();
 ```  
   
 ### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>B. Utilizzo di Riduce() con livelli di tolleranza diversi su CircularString  
- L'esempio seguente usa `Reduce()` con tre livelli di tolleranza su un **CircularString** istanza:  
+ Nell'esempio seguente `Reduce()` viene usato con tre livelli di tolleranza in un'istanza **CircularString**:  
   
 ```
  DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)'; 
@@ -97,7 +94,7 @@ SELECT @g.Reduce(.75).ToString();
  Ogni istanza restituita contiene i punti finali (0 0) e (24 0).  
   
 ### <a name="c-using-reduce-with-varying-tolerance-levels-on-a-compoundcurve"></a>C. Utilizzo di Riduce() con livelli di tolleranza diversi su CompoundCurve  
- L'esempio seguente usa `Reduce()` con due livelli di tolleranza su un **CompoundCurve** istanza:  
+ Nell'esempio seguente `Reduce()` viene usato con due livelli di tolleranza in un'istanza **CompoundCurve**:  
   
 ```
  DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';  
@@ -105,10 +102,10 @@ SELECT @g.Reduce(.75).ToString();
  SELECT @g.Reduce(16).ToString();
  ```  
   
- In questo esempio si noti che il secondo **selezionare** istruzione restituisce il **LineString** istanza: `LineString(0 0, 16 0)`.  
+ In questo esempio si noti che la seconda istruzione **SELECT** restituisce l'istanza **LineString**: `LineString(0 0, 16 0)`.  
   
 ### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>Visualizzazione di un esempio in cui i punti di inizio e fine originali vengono persi  
- Nell'esempio seguente viene illustrato come i punti di inizio e fine originali potrebbero non essere mantenuti dall'istanza risultante. Questo errore si verifica perché mantenere all'inizio originario e punti di fine darà origine a un oggetto non valido **LineString** istanza.  
+ Nell'esempio seguente viene illustrato come i punti di inizio e fine originali potrebbero non essere mantenuti dall'istanza risultante. Ciò si verifica perché il mantenimento dei punti di inizio e fine originali produrrebbe un'istanza **LineString** non valida.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(0 0, 4 0, 2 .01, 1 0)';  

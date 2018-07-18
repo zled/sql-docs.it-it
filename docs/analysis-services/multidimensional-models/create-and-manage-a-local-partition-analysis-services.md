@@ -1,35 +1,23 @@
 ---
 title: Creare e gestire una partizione locale (Analysis Services) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- local partitions [Analysis Services]
-- partitions [Analysis Services], local
-- partitions [Analysis Services], creating
-ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 94cf5d3bdf0feadadf2180c6eb03f9898a4b6966
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 49ac59377001eb6007f7f647d3817993c6121b74
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Creare e gestire una partizione locale (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Per migliorare le prestazioni di elaborazione è possibile creare partizioni aggiuntive per un gruppo di misure. Con più partizioni è possibile allocare le tabelle dei fatti in un numero corrispondente di file di dati fisici sia su server locali che su server remoti. In Analysis Services le partizioni possono essere elaborate in modo indipendente e in parallelo, offrendo maggiore controllo sull'elaborazione dei carichi di lavoro sul server.  
+  Per migliorare le prestazioni di elaborazione è possibile creare partizioni aggiuntive per un gruppo di misure. Con più partizioni è possibile allocare le tabelle dei fatti in un numero corrispondente di file di dati fisici sia su server locali che su server remoti. In Analysis Services le partizioni possono essere elaborate in modo indipendente e in parallelo, offrendo maggiore controllo sull'elaborazione dei carichi di lavoro sul server.  
   
  È possibile creare le partizioni in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] durante la progettazione dei modelli o dopo la distribuzione della soluzione usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o XMLA. Si consiglia di scegliere un unico approccio. Se si alterna tra gli strumenti, è possibile che le modifiche apportate a un database distribuito in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vengono sovrascritte quando si ridistribuisce successivamente la soluzione da [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
@@ -129,8 +117,8 @@ Per migliorare le prestazioni di elaborazione è possibile creare partizioni agg
  Come passaggio finale in genere si rimuove la partizione predefinita basata sulla tabella stessa (se ancora esistente) per evitare che le query basate sulle partizioni si sovrappongano alla query basata sulla tabella completa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le partizioni &#40; Analysis Services - dati multidimensionali &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Le partizioni & #40; Analysis Services - dati multidimensionali & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Partizioni remote](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Unire partizioni in Analysis Services &#40; SSAS - multidimensionale &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Unire partizioni in Analysis Services & #40; SSAS - multidimensionale & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

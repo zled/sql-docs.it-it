@@ -1,16 +1,14 @@
 ---
 title: TRY...CATCH (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BEGIN_TRY_TSQL
@@ -31,16 +29,16 @@ helpviewer_keywords:
 - BEGIN TRY statement
 - CATCH block
 ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
-caps.latest.revision: 
+caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 4278a699e1624521fb781e9eda6ffab40e221d8e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f8e423943333085638ac0b142dba81b03752ce92
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +66,7 @@ END CATCH
  *statement_block*  
  Qualsiasi gruppo di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in un batch o racchiuse in un blocco BEGIN…END.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Un costrutto TRY…CATCH intercetta tutti gli errori di esecuzione con livello di gravità superiore a 10 che non determinano la chiusura della connessione al database.  
   
  Un blocco TRY deve essere immediatamente seguito da un blocco CATCH associato. L'inclusione di qualsiasi altra istruzione tra le istruzioni END TRY e BEGIN CATCH genera un errore di sintassi.  
@@ -96,17 +94,17 @@ END CATCH
 ## <a name="retrieving-error-information"></a>Recupero delle informazioni sugli errori  
  Nell'ambito di un blocco CATCH, è possibile utilizzare le funzioni di sistema seguenti per ottenere informazioni sull'errore che ha causato l'esecuzione del blocco CATCH:  
   
--   [Error_number ()](../../t-sql/functions/error-number-transact-sql.md) restituisce il numero dell'errore.  
+-   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) restituisce il numero dell'errore.  
   
--   [Error_severity ()](../../t-sql/functions/error-severity-transact-sql.md) restituisce il livello di gravità.  
+-   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) restituisce la gravità.  
   
--   [Error_state ()](../../t-sql/functions/error-state-transact-sql.md) restituisce il numero di errore.  
+-   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) restituisce il numero di contesto dell'errore.  
   
--   [Error_procedure ()](../../t-sql/functions/error-procedure-transact-sql.md) restituisce il nome della stored procedure o del trigger in cui si è verificato l'errore.  
+-   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) restituisce il nome della stored procedure o del trigger in cui si è verificato l'errore.  
   
--   [Error_line ()](../../t-sql/functions/error-line-transact-sql.md) restituisce il numero di riga all'interno della routine che ha causato l'errore.  
+-   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) restituisce il numero di riga all'interno della routine che ha causato l'errore.  
   
--   [Error_message ()](../../t-sql/functions/error-message-transact-sql.md) restituisce il testo completo del messaggio di errore. Il testo include i valori forniti da qualsiasi parametro sostituibile, ad esempio lunghezze, nomi di oggetti oppure orari.  
+-   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) restituisce il testo completo del messaggio di errore. Il testo include i valori forniti da qualsiasi parametro sostituibile, ad esempio lunghezze, nomi di oggetti oppure orari.  
   
  Queste funzioni restituiscono NULL se vengono chiamate all'esterno dell'ambito del blocco CATCH. È possibile recuperare informazioni sugli errori utilizzando queste funzioni in qualsiasi posizione all'interno dell'ambito del blocco CATCH. Nello script seguente, ad esempio, viene illustrata una stored procedure contenente funzioni di gestione degli errori. Nel blocco `CATCH` di un costrutto `TRY…CATCH` viene chiamata la stored procedure e vengono restituite informazioni sull'errore.  
   
@@ -138,7 +136,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- L'errore\_ \* funzioni funzionano anche in un `CATCH` blocco all'interno di un [stored procedure compilata in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Le funzioni ERROR\_\* possono essere utilizzate anche in un blocco `CATCH` all'interno di una [stored procedure con compilazione nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>Errori su cui il costrutto TRY…CATCH non ha alcun effetto  
  I costrutti TRY…CATCH non intercettano le condizioni seguenti:  
@@ -206,7 +204,7 @@ END CATCH;
 ## <a name="uncommittable-transactions-and-xactstate"></a>Transazioni bloccate e XACT_STATE  
  Se un errore generato in un blocco TRY invalida lo stato della transazione corrente, la transazione viene classificata come transazione bloccata. Un errore che normalmente termina una transazione all'esterno di un blocco TRY causa il passaggio della transazione a uno stato di transazione bloccata quando si verifica all'interno di un blocco TRY. Una transazione bloccata può eseguire soltanto le operazioni di lettura o ROLLBACK TRANSACTION. La transazione non può eseguire istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che generano una operazione di scrittura o COMMIT TRANSACTION. La funzione XACT_STATE restituisce un valore -1 se una transazione è stata classificata come transazione bloccata. Al termine di un batch, [!INCLUDE[ssDE](../../includes/ssde-md.md)] esegue automaticamente il rollback di qualsiasi transazione bloccata attiva. Se non sono stati inviati messaggi di errore al momento dell'attivazione dello stato di blocco per la transazione, al termine dell'esecuzione del batch, verrà inviato un messaggio di errore all'applicazione client. Viene così indicato che è stata rilevata una transazione bloccata e ne è stato eseguito il rollback.  
   
- Per ulteriori informazioni sulle transazioni bloccate e la funzione XACT_STATE, vedere [XACT_STATE &#40; Transact-SQL &#41; ](../../t-sql/functions/xact-state-transact-sql.md).  
+ Per altre informazioni sulle transazioni di cui non è possibile eseguire il commit e la funzione XACT_STATE, vedere [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
   
@@ -326,7 +324,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-trycatch"></a>D. Utilizzo di TRY…CATCH  
  Nell'esempio seguente viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. L'errore determina il passaggio dell'esecuzione al blocco `CATCH` associato.  
@@ -349,13 +347,13 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
- [Gravità degli errori di motore di database](../../relational-databases/errors-events/database-engine-error-severities.md)   
+ [Gravità degli errori del motore di database](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   

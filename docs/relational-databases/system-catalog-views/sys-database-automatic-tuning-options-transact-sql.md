@@ -1,17 +1,15 @@
 ---
 title: sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs
 description: Informazioni su come visualizzare le opzioni di ottimizzazione automatica in un Database SQL
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_automatic_tuning_options_tsql
@@ -24,16 +22,16 @@ helpviewer_keywords:
 - database_automatic_tuning_options catalog view
 - sys.database_automatic_tuning_options catalog view
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-caps.latest.revision: 
+caps.latest.revision: 24
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a4208b9e294273444c24ac9e3a05e60b43d4274c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 6a9fc30a86c3033264dc723de282caffd03289fd
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysdatabaseautomatictuningoptions-transact-sql"></a>sys.database\_automatic\_tuning_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,7 +40,7 @@ ms.lasthandoff: 02/03/2018
 
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|Il nome dell'opzione di ottimizzazione automatica. Fare riferimento a [ALTER DATABASE SET AUTOMATIC_TUNING &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) per le opzioni disponibili.|  
+|**name**|**nvarchar(128)**|Il nome dell'opzione di ottimizzazione automatica. Fare riferimento a [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) per le opzioni disponibili.|  
 |**desired_state**|**smallint**|Indica la modalità operativa desiderata per l'opzione di ottimizzazione automatica, impostare in modo esplicito dall'utente.<br />0 = OFF<br />1 = ON|  
 |**desired_state_desc**|**nvarchar(60)**|Descrizione testuale della modalità operativa desiderata dell'opzione di ottimizzazione automatica.<br />OFF<br />ON|  
 |**actual_state**|**smallint**|Indica la modalità operativa dell'opzione di ottimizzazione automatica.<br />0 = OFF<br />1 = ON|  
@@ -51,7 +49,7 @@ ms.lasthandoff: 02/03/2018
 |**reason_desc**|**nvarchar(60)**|Descrizione del motivo perché effettivi e desiderati stati sono diversi.<br />DISABILITATO = viene disattivata dal sistema<br />QUERY_STORE_OFF = archivio Query è stata disattivata<br />QUERY_STORE_READ_ONLY = archivio Query è in modalità di sola lettura<br />NOT_SUPPORTED = disponibile solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition| 
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede il `VIEW DATABASE STATE` autorizzazione.  
+ È necessaria l'autorizzazione `VIEW DATABASE STATE`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [L'ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md)   

@@ -1,35 +1,33 @@
 ---
 title: Accesso alla transazione corrente | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - current transaction access
 - Current property
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: abcc68d96e7516b31a231efeb4c5c851b10dee45
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b157a9c72533d6c92f71ddc93e7c8023eab6edc1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-the-current-transaction"></a>Accesso alla transazione corrente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Se una transazione è attiva nel punto in cui codice common language runtime (CLR) in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene immesso, la transazione viene esposta tramite il **Transactions** classe. Il **Current** proprietà viene utilizzata per accedere alla transazione corrente. Nella maggior parte dei casi non è necessario accedere in modo esplicito alla transazione. Per le connessioni di database, ADO.NET controlla **Current** automaticamente quando il **Connection** metodo viene chiamato e integra in modo trasparente la connessione in tale transazione (a meno che il **Integra** parola chiave è impostata su false nella stringa di connessione).  
+  Se una transazione è attiva nel punto in cui codice common language runtime (CLR) in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene immesso, la transazione viene esposta tramite il **Transactions** classe. Il **Current** proprietà viene utilizzata per accedere alla transazione corrente. Nella maggior parte dei casi non è necessario accedere in modo esplicito alla transazione. Per le connessioni di database, ADO.NET controlla **Current** automaticamente quando il **Connection** metodo viene chiamato e integra in modo trasparente la connessione in tale transazione (a meno che il **Integra** parola chiave è impostata su false nella stringa di connessione).  
   
  È possibile utilizzare il **transazione** oggetto direttamente negli scenari seguenti:  
   

@@ -1,29 +1,27 @@
 ---
 title: Procedure consigliate per la Data Migration Assistant (SQL Server) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-dma
-ms.tgt_pltfrm: 
-ms.topic: article
-keywords: 
-helpviewer_keywords: Data Migration Assistant, Best Practices
-ms.assetid: 
-caps.latest.revision: 
+ms.technology: dma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+keywords: ''
+helpviewer_keywords:
+- Data Migration Assistant, Best Practices
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f8842ca064494bc7ead99eb34d6ea2cc76bb2679
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4f568ed5159a36ae4a5d072471ded6498dbc2150
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Procedure consigliate per l'esecuzione di Assistente per la migrazione dei dati
 Questo articolo fornisce le seguenti informazioni sulle procedure consigliate per l'installazione, valutazione e la migrazione.

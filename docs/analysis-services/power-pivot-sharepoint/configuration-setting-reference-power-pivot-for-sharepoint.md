@@ -1,31 +1,23 @@
 ---
 title: Riferimento (PowerPivot per SharePoint) dell'impostazione di configurazione | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b66f1bb71a185be8663e1fab732a208a0ca99d87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: bcc526e6527431c3f8dc1a09f112ff40c556fe3d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Documentazione di riferimento per le impostazioni di configurazione (Power Pivot per SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Questo argomento include la documentazione di riferimento per le impostazioni di configurazione usate dalle applicazioni di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una farm di SharePoint. Nelle informazioni incluse in questo argomento vengono fornite descrizioni dettagliate per gli utenti che utilizzano uno script di PowerShell per configurare un server o che desiderano cercare informazioni per un'impostazione specifica.  
+  Questo argomento include la documentazione di riferimento per le impostazioni di configurazione usate dalle applicazioni di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una farm di SharePoint. Nelle informazioni incluse in questo argomento vengono fornite descrizioni dettagliate per gli utenti che utilizzano uno script di PowerShell per configurare un server o che desiderano cercare informazioni per un'impostazione specifica.  
   
  Le impostazioni di configurazione vengono specificate per ogni applicazione di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . All'interno di una farm è possibile creare più applicazioni di servizio per configurare istanze logiche indipendenti della stessa istanza fisica del servizio. Le impostazioni di configurazione vengono archiviate nel database dell'applicazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] creato per ogni applicazione di servizio configurata.  
   

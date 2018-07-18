@@ -1,17 +1,15 @@
 ---
 title: Find (metodo) (ADO) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 953398f5ed01cc3e0f7c0da1fee769d5e64209af
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-method-ado"></a>Find (metodo) (ADO)
 Cerca un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per la riga che soddisfa i criteri specificati. Facoltativamente, la direzione della ricerca, la riga iniziale e offset dalla riga iniziale può essere specificata. Se vengono soddisfatti i criteri, la posizione della riga corrente è impostata su record trovato. in caso contrario, la posizione viene impostata per la fine o inizio del **Recordset**.  
@@ -45,10 +42,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Oggetto **stringa** valore contenente un'istruzione che specifica il nome della colonna, l'operatore di confronto e valore da utilizzare nella ricerca.  
   
  *SkipRows*  
- Parametro facoltativo*.* Oggetto **lungo** valore, il cui valore predefinito è zero, che specifica l'offset di riga dalla riga corrente o *avviare* segnalibro per iniziare la ricerca. Per impostazione predefinita, verrà avviata la ricerca nella riga corrente.  
+ Parametro facoltativo *.* Oggetto **lungo** valore, il cui valore predefinito è zero, che specifica l'offset di riga dalla riga corrente o *avviare* segnalibro per iniziare la ricerca. Per impostazione predefinita, verrà avviata la ricerca nella riga corrente.  
   
  *SearchDirection*  
- Parametro facoltativo*.* Oggetto [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valore che specifica se la ricerca deve iniziare sulla riga corrente o la successiva riga disponibile nella direzione della ricerca. Arresta una ricerca alla fine del **Recordset** se il valore è **adSearchForward**. Arresta una ricerca all'inizio del **Recordset** se il valore è **adSearchBackward**.  
+ Parametro facoltativo *.* Oggetto [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valore che specifica se la ricerca deve iniziare sulla riga corrente o la successiva riga disponibile nella direzione della ricerca. Arresta una ricerca alla fine del **Recordset** se il valore è **adSearchForward**. Arresta una ricerca all'inizio del **Recordset** se il valore è **adSearchBackward**.  
   
  *Start*  
  Facoltativa. Oggetto **Variant** segnalibro che funziona come la posizione iniziale per la ricerca.  

@@ -1,40 +1,36 @@
 ---
 title: Classe di evento Data File Auto Shrink | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Data File Auto Shrink event class
 ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca97f272a4dc24c7e1f610ef33bbd1242cfa2242
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 89540348ae746ed92aa7293cee86908cf7fb4012
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento **Data File Auto Shrink** indica che il file di dati è stato compattato. Questo evento non viene generato se il file di dati viene compattato a causa di un'istruzione ALTER DATABASE esplicita. Includere la classe di evento **Data File Auto Shrink** nelle tracce che eseguono il monitoraggio delle modifiche alle dimensioni del file di dati.  
+  La classe di evento **Data File Auto Shrink** indica che il file di dati è stato compattato. Questo evento non viene generato se il file di dati viene compattato a causa di un'istruzione ALTER DATABASE esplicita. Includere la classe di evento **Data File Auto Shrink** nelle tracce che eseguono il monitoraggio delle modifiche alle dimensioni del file di dati.  
   
  Se la classe di evento **Data File Auto Shrink** viene inclusa in una traccia, l'overhead generato sarà ridotto a meno che il file di dati venga compattato di frequente.  
   
 ## <a name="data-file-auto-shrink-event-class-data-columns"></a>Colonne di dati della classe di evento Data File Auto Shrink  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |**ClientProcessID**|**Int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  

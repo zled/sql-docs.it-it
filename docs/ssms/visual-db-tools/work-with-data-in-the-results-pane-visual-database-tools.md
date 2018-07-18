@@ -1,16 +1,15 @@
 ---
 title: Usare i dati nel riquadro Risultati (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - queries [Visual Database Tools]
@@ -21,26 +20,26 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 506bb355413caeac330509853278f667bf73ee49
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5c45059cf8296e912853cac57d4e4da440ec03cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utilizzo dei dati nel riquadro Risultati (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dopo l'esecuzione di una query o di una vista, i risultati ottenuti vengono visualizzati nel riquadro Risultati e su di essi è possibile eseguire numerose operazioni, ad esempio aggiungere ed eliminare righe, immettere o modificare dati e navigare con facilità nell'ambito di set di risultati estesi.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Dopo l'esecuzione di una query o di una vista, i risultati ottenuti vengono visualizzati nel riquadro Risultati e su di essi è possibile eseguire numerose operazioni, ad esempio aggiungere ed eliminare righe, immettere o modificare dati e navigare con facilità nell'ambito di set di risultati estesi.  
   
 Le informazioni riportate di seguito consentono di evitare problemi e di utilizzare in modo ottimale i set di risultati ottenuti.  
   
 ## <a name="returning-the-results-set"></a>Restituzione del set di risultati  
 È possibile ottenere risultati da una query o da una vista e scegliere di aprire solo il riquadro Risultati oppure tutti i riquadri. In entrambi i casi la query o la vista verrà visualizzata in Progettazione query e Progettazione viste. La differenza è che una viene visualizzata solo con il riquadro Risultati, mentre l'altra viene visualizzata con tutte le finestre selezionate nella finestra di dialogo Opzioni. L'impostazione predefinita prevede la visualizzazione di tutti e quattro i riquadri disponibili: Risultati, SQL, Diagramma e Criteri.  
   
-Per altre informazioni, vedere [Apertura di query &#40; Visual Database Tools &#41;](../../ssms/visual-db-tools/open-queries-visual-database-tools.md).  
+Per altre informazioni, vedere [Apertura di query & #40; Visual Database Tools & #41;](../../ssms/visual-db-tools/open-queries-visual-database-tools.md).  
   
 Per modificare la struttura della query o della vista in modo che venga restituito un diverso set di risultati o che i record vengano riportati in un altro ordine, vedere gli argomenti elencati in [Procedure per la progettazione di query e viste&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
   
@@ -68,7 +67,7 @@ Per annullare le modifiche apportate a una cella specifica, spostarsi su tale ce
 ## <a name="adding-or-deleting-data-in-the-database"></a>Aggiunta o eliminazione di dati dal database  
 Per controllare se il proprio database funziona così com'è strutturato, è possibile aggiungere dati di esempio immettendoli direttamente nel riquadro Risultati oppure copiandoli da un altro programma, quale il Blocco note o Excel, e incollandoli nel riquadro Risultati.  
   
-Oltre a copiare righe nel riquadro Risultati, è possibile aggiungere nuovi record oppure modificare o eliminare record esistenti. Per altre informazioni vedere [Aggiunta di nuove righe nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-new-rows-in-the-results-pane-visual-database-tools.md), [Eliminare le righe nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/delete-rows-in-the-results-pane-visual-database-tools.md), e [Modifica di righe nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/edit-rows-in-the-results-pane-visual-database-tools.md).  
+Oltre a copiare righe nel riquadro Risultati, è possibile aggiungere nuovi record oppure modificare o eliminare record esistenti. Per altre informazioni vedere [Aggiunta di nuove righe nel riquadro Risultati &#40;Visual Database Tools& #41;](../../ssms/visual-db-tools/add-new-rows-in-the-results-pane-visual-database-tools.md), [Eliminare le righe nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/delete-rows-in-the-results-pane-visual-database-tools.md), e [Modifica di righe nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/edit-rows-in-the-results-pane-visual-database-tools.md).  
   
 ## <a name="tips-for-working-with-null-values-and-empty-cells"></a>Suggerimenti per l'utilizzo di valori NULL e celle vuote  
 Quando si fa clic su una riga vuota per aggiungere un nuovo record, il valore iniziale per tutte le colonne è *NULL*. Se una colonna supporta i valori Null, è possibile lasciarla invariata.  

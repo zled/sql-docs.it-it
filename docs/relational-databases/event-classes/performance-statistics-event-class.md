@@ -1,41 +1,37 @@
 ---
 title: Classe di evento Performance Statistics | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b3b788ea13beced99f19a35707591ecf90c5dd5d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 54ba7634152d355f16d73a48f0a430e83b861fc5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento Performance Statistics consente di eseguire il monitoraggio delle prestazioni di query, stored prcoedure e trigger in esecuzione. Ciascuna delle sei sottoclassi di evento indica un evento generato nel corso di query, stored procedure e trigger all'interno del sistema. L'utilizzo di tali sottoclassi di evento in combinazione con le viste a gestione dinamica sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associate consente di ricostituire la cronologia delle prestazioni di qualsiasi query, stored procedure o trigger specifico.  
+  La classe di evento Performance Statistics consente di eseguire il monitoraggio delle prestazioni di query, stored prcoedure e trigger in esecuzione. Ciascuna delle sei sottoclassi di evento indica un evento generato nel corso di query, stored procedure e trigger all'interno del sistema. L'utilizzo di tali sottoclassi di evento in combinazione con le viste a gestione dinamica sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associate consente di ricostituire la cronologia delle prestazioni di qualsiasi query, stored procedure o trigger specifico.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Colonne di dati della classe di evento Performance Statistics  
  Nelle tabelle seguenti sono descritte le colonne di dati della classe di evento associate a ciascuna delle sottoclassi di evento EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 ed EventSubClass 5.  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Sì|  
 |BinaryData|**image**|NULL|2|Sì|  
@@ -54,14 +50,14 @@ La classe di evento Performance Statistics consente di eseguire il monitoraggio 
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Numero cumulativo di ricompilazioni del piano.|52|Sì|  
 |BinaryData|**image**|XML binario del piano compilato.|2|Sì|  
 |DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
-|EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 1 = Le query incluse in una stored procedure sono state compilate.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per stored procedure.<br /><br /> Stored procedure con *n* query, dove n rappresenta un numero:<br /><br /> *n* di tipo 1|21|Sì|  
+|EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 1 = Le query incluse in una stored procedure sono state compilate.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per stored procedure.<br /><br /> Stored procedure con *n* query, dove n rappresenta un numero:<br /><br /> Numero*n* di tipo 1|21|Sì|  
 |IntegerData2|**int**|Fine dell'istruzione nella stored procedure.<br /><br /> -1 per la fine della stored procedure.|55|Sì|  
 |ObjectID|**int**|ID dell'oggetto assegnato dal sistema.|22|Sì|  
 |Offset|**int**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|61|Sì|  
@@ -78,14 +74,14 @@ La classe di evento Performance Statistics consente di eseguire il monitoraggio 
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Numero cumulativo di ricompilazioni del piano.|52|Sì|  
 |BinaryData|**image**|XML binario del piano compilato.|2|Sì|  
 |DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
-|EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 2 = Le query incluse in un'istruzione SQL ad hoc sono state compilate.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per batch ad hoc.<br /><br /> Batch ad hoc con *n* query, dove n rappresenta un numero:<br /><br /> *n* di tipo 2|21|Sì|  
+|EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 2 = Le query incluse in un'istruzione SQL ad hoc sono state compilate.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per batch ad hoc.<br /><br /> Batch ad hoc con *n* query, dove n rappresenta un numero:<br /><br /> Numero*n* di tipo 2|21|Sì|  
 |IntegerData2|**int**|Fine dell'istruzione nel batch.<br /><br /> -1 per la fine del batch.|55|Sì|  
 |ObjectID|**int**|N/D|22|Sì|  
 |Offset|**int**|Offset iniziale dell'istruzione nel batch.<br /><br /> 0 per l'inizio del batch.|61|Sì|  
@@ -101,7 +97,7 @@ La classe di evento Performance Statistics consente di eseguire il monitoraggio 
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Numero cumulativo di ricompilazioni del piano.|52|Sì|  
 |BinaryData|**image**|NULL|2|Sì|  
@@ -121,7 +117,7 @@ La classe di evento Performance Statistics consente di eseguire il monitoraggio 
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Sì|  
 |BinaryData|**image**|NULL|2|Sì|  
@@ -141,7 +137,7 @@ La classe di evento Performance Statistics consente di eseguire il monitoraggio 
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Sì|  
 |BinaryData|**image**|NULL|2|Sì|  

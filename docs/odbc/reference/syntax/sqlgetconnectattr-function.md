@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLGetConnectAttr | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLGetConnectOption
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLGetConnectOption
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetConnectAttr
-helpviewer_keywords: SQLGetConnectAttr function [ODBC]
+f1_keywords:
+- SQLGetConnectAttr
+helpviewer_keywords:
+- SQLGetConnectAttr function [ODBC]
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 11e1ae7c2dc3de4611687349295bdd3344c46d47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 32334ddfa2e58a0e6ec80a50fda44e704d20dee4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetconnectattr-function"></a>Funzione SQLSetConnectAttr
 **Conformità**  
@@ -54,7 +55,7 @@ SQLRETURN SQLGetConnectAttr(
  *ConnectionHandle*  
  [Input] Handle di connessione.  
   
- *Attribute*  
+ *Attributo*  
  [Input] Attributo da recuperare.  
   
  *ValuePtr*  

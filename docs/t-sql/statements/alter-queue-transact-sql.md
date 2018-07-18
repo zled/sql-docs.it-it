@@ -1,16 +1,14 @@
 ---
-title: ALTER QUEUE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER QUEUE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_QUEUE_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - unavailable queues [SQL Server]
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 49
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7f97bd0a341ecc5e960c94c4c8bdabe30b572fd9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 886011326e3c9ed7b3b297f503a5bf185a5a237b
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,10 +90,10 @@ WITH
   
 ## <a name="arguments"></a>Argomenti  
  *database_name* (oggetto)  
- Nome del database contenente la coda da modificare. Se non si *database_name* viene fornito, l'impostazione predefinita corrisponde al database corrente.  
+ Nome del database contenente la coda da modificare. Se non si specifica *database_name*, per impostazione predefinita viene usato il database corrente.  
   
  *schema_name* (oggetto)  
- Nome dello schema cui appartiene la nuova coda. Se non si *schema_name* viene fornito, l'impostazione predefinita lo schema predefinito per l'utente corrente.  
+ Nome dello schema cui appartiene la nuova coda. Se non si specifica *schema_name*, per impostazione predefinita viene usato lo schema predefinito dell'utente corrente.  
   
  *queue_name*  
  Nome della coda da modificare.  
@@ -116,32 +113,32 @@ WITH
  STATUS (attivazione)  
  Specifica se la coda attiva la stored procedure. Se STATUS = ON, la coda avvia la stored procedure specificata con PROCEDURE_NAME quando il numero di procedure in esecuzione è minore di MAX_QUEUE_READERS e quando i messaggi arrivano nella coda più velocemente di quanto non vengano ricevuti dalle stored procedure. Se STATUS = OFF, la coda non attiva la stored procedure.  
   
- RICOMPILARE [WITH \<queue_rebuild_options >]  
+ REBUILD [ WITH \<queue_rebuild_options> ]  
  **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Ricompila tutti gli indici della tabella interna di coda. Utilizzare questa funzionalità quando si verificano problemi di frammentazione a causa di un carico elevato. MAXDOP è la coda supportata sola opzione rebuild. RICOMPILAZIONE viene sempre eseguita in modalità offline.  
+ Ricompila tutti gli indici della tabella interna della coda. Usare questa funzionalità quando si verificano problemi di frammentazione a causa di un carico elevato. MAXDOP è l'unica opzione di ricompilazione della coda supportata. L'operazione REBUILD viene sempre eseguita in modalità offline.  
   
- RIORGANIZZA [CON (LOB_COMPACTION = {ON | OFF})]  
+ REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
  **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Riorganizza tutti gli indici della tabella interna di coda.   
-A differenza di RIORGANIZZAZIONE nelle tabelle utente, REORGANIZE in una coda viene sempre eseguita come operazione offline perché blocchi a livello di pagina sono disabilitati in modo esplicito nelle code.  
+ Riorganizza tutti gli indici della tabella interna della coda.   
+A differenza di REORGANIZE nelle tabelle utente, l'operazione REORGANIZE in una coda viene sempre eseguita in modalità offline perché i blocchi a livello di pagina sono disabilitati in modo esplicito nelle code.  
   
 > [!TIP]  
->  Per informazioni aggiuntive generali sulla frammentazione dell'indice, quando la frammentazione è compreso tra 5 e il 30%, riorganizzare l'indice. Quando la frammentazione è superiore al 30%, ricompilare l'indice. Tuttavia, questi numeri sono solo per le indicazioni generali come punto di partenza per l'ambiente. Per determinare la quantità di frammentazione dell'indice, utilizzare [Sys.dm db_index_physical_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) -vedere l'esempio G in tale articolo per gli esempi.  
+>  In linea generale, quando la frammentazione dell'indice è compresa tra il 5 e il 30%, è consigliabile riorganizzare l'indice. Se la frammentazione è superiore al 30%, ricompilare l'indice. Si tratta tuttavia di indicazioni di carattere generale, da considerare come punto di partenza per l'ambiente. Per determinare la percentuale di frammentazione dell'indice, usare [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md). Vedere l'esempio G in tale articolo.  
   
- Sposta in { *file_group* | "default"}  
+ MOVE TO { *file_group* | "default" }  
  **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- La tabella interna di coda (con i relativi indici) viene spostata a un filegroup specificato dall'utente.  Il nuovo gruppo di file non deve essere in sola lettura.  
+ Sposta la tabella interna della coda (con i relativi indici) in un filegroup specificato dall'utente.  Il nuovo filegroup non deve essere di sola lettura.  
   
- Procedure_name = \<procedura >  
+ PROCEDURE_NAME = \<procedure>  
  Specifica il nome della stored procedure da attivare quando la coda contiene messaggi da elaborare. Il valore deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *database_name* (routine)  
+ *database_name* (procedura)  
  Nome del database contenente la stored procedure.  
   
- *schema_name* (routine)  
+ *schema_name* (procedura)  
  Nome dello schema a cui appartiene la stored procedure.  
   
  *stored_procedure_name*  
@@ -156,8 +153,8 @@ A differenza di RIORGANIZZAZIONE nelle tabelle utente, REORGANIZE in una coda vi
  SELF  
  Specifica che la stored procedure viene eseguita con l'account dell'utente corrente, (l'entità di database che esegue l'istruzione ALTER QUEUE).  
   
- '*nome_utente*'  
- Nome dell'utente utilizzato per l'esecuzione della stored procedure. *USER_NAME* deve essere un valore valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificato dall'utente come un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificatore. L'utente corrente deve disporre dell'autorizzazione IMPERSONATE per il *nome_utente* specificato.  
+ '*user_name*'  
+ Nome dell'utente utilizzato per l'esecuzione della stored procedure. *user_name* deve essere un utente valido di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificato come identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'utente corrente deve avere l'autorizzazione IMPERSONATE per il nome *user_name* specificato.  
   
  OWNER  
  Specifica che la stored procedure viene eseguita con l'account del proprietario della coda.  
@@ -170,14 +167,14 @@ A differenza di RIORGANIZZAZIONE nelle tabelle utente, REORGANIZE in una coda vi
   
  Una coda con la gestione di messaggi non elaborabili impostata su OFF non verrà disabilitata dopo cinque rollback di transazioni consecutivi. In questo modo è possibile che un sistema di gestione di messaggi non elaborabili venga definito dall'applicazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se una coda per cui viene specificata una stored procedure di attivazione contiene messaggi, la modifica dello stato di attivazione da OFF a ON comporta l'attivazione immediata della stored procedure di attivazione. La modifica dello stato di attivazione da ON a OFF impedisce a Service Broker di attivare altre istanze della stored procedure, ma non arresta le istanze della stored procedure già in esecuzione.  
   
  La modifica di una coda per l'aggiunta di una stored procedure di attivazione non modifica lo stato di attivazione della coda. La modifica della stored procedure di attivazione per la coda non influisce sulle istanze della stored procedure di attivazione già in esecuzione.  
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] controlla il numero massimo di lettori per una coda nell'ambito del processo di attivazione. Se quindi si modifica una coda per aumentare il numero massimo di lettori, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sarà in grado di avviare immediatamente più istanze della stored procedure di attivazione. La modifica di una coda per ridurre il numero massimo di lettori non influisce sulle istanze della stored procedure di attivazione già in esecuzione. In [!INCLUDE[ssSB](../../includes/sssb-md.md)], tuttavia, non viene avviata una nuova istanza della stored procedure fino a quando il numero di istanze per la stored procedure di attivazione non risulta inferiore al numero massimo configurato.  
   
- Quando una coda non è disponibile, i messaggi per i servizi che utilizzano tale coda vengono mantenuti da [!INCLUDE[ssSB](../../includes/sssb-md.md)] nella coda di trasmissione per il database. Il [transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md) vista del catalogo consente di visualizzare la coda di trasmissione.  
+ Quando una coda non è disponibile, i messaggi per i servizi che utilizzano tale coda vengono mantenuti da [!INCLUDE[ssSB](../../includes/sssb-md.md)] nella coda di trasmissione per il database. La vista del catalogo [sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md) consente di visualizzare il contenuto della coda di trasmissione.  
   
  Se in un'istruzione RECEIVE o GET CONVERSATION GROUP viene specificata una coda non disponibile, l'istruzione ha esito negativo e viene generato un errore [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -234,27 +231,27 @@ ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;  
 ```  
   
-### <a name="g-rebuilding-queue-indexes"></a>G. La ricompilazione degli indici di coda  
+### <a name="g-rebuilding-queue-indexes"></a>G. Ricompilazione degli indici della coda  
   
 **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Nell'esempio seguente viene ricompilato degli indici di coda  
+ Nell'esempio seguente viene illustrata la ricompilazione degli indici della coda  
   
 ```  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
-### <a name="h-reorganizing-queue-indexes"></a>H. La riorganizzazione degli indici di coda  
+### <a name="h-reorganizing-queue-indexes"></a>H. Riorganizzazione degli indici della coda  
   
 **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Nell'esempio seguente viene Riorganizza gli indici di coda  
+ Nell'esempio seguente viene illustrata la riorganizzazione degli indici della coda  
   
 ```  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
-### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>Ricerca per categorie: spostamento di tabella della coda interna a un altro filegroup  
+### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I. Spostamento della tabella interna della coda in un altro filegroup  
   
 **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

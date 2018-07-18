@@ -1,16 +1,14 @@
 ---
-title: STBuffer (tipo di dati geometry) | Documenti Microsoft
-ms.custom: 
+title: STBuffer (tipo di dati geometry) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STBuffer (geometry Data Type)
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geometry Data Type)
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ff65df2a1216a29b15a0458e9e4537c748140714
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f202f87ba6909ea8331ec08b32bf3dd35a252d74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la cui distanza da un **geometry** istanza è minore o uguale a un valore specificato.
+Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la cui distanza da un'istanza **geometry** è minore o uguale a un valore specificato.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,35 +42,35 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
   
 ## <a name="arguments"></a>Argomenti  
  *distance*  
- È un valore di tipo **float** (**doppie** in .NET Framework) che specifica la distanza dall'istanza di geometria intorno alla quale calcolare il buffer.  
+ Valore di tipo **float** (**double** in .NET Framework) che specifica la distanza dall'istanza di geometria intorno alla quale calcolare il buffer.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- `STBuffer()`Calcola un buffer in modo analogo [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), specificando *tolleranza* = distanza \* .001 e *relativo*  =   **false**.  
+## <a name="remarks"></a>Remarks  
+ `STBuffer()` calcola un buffer in modo analogo a [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), specificando *tolerance* = distance \* 0,001 e *relative* = **false**.  
   
- Quando *distanza* > 0, un **poligono** o **MultiPolygon** istanza viene restituita.  
+ Se *distance* > 0 viene restituita un'istanza **Polygon** o **MultiPolygon**.  
   
 > [!NOTE]  
->  Poiché la distanza è un **float**, un valore estremamente ridotto può corrispondere a zero nei calcoli.  Quando ciò si verifica, una copia del chiamante **geometry** istanza viene restituita.  Vedere [float e real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+>  Poiché distance è di tipo **float**, nei calcoli un valore estremamente ridotto può corrispondere a zero.  Quando ciò si verifica, viene restituita una copia dell'istanza **geometry** chiamante.  Vedere [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
- Quando *distanza* = 0, quindi una copia del chiamante **geometry** istanza viene restituita.  
+ Quando *distance* = 0, viene restituita una copia dell'istanza **geometry** chiamante.  
   
- Quando *distanza* < 0, quindi  
+ Quando *distance* < 0,  
   
--   un oggetto vuoto **GeometryCollection** istanza viene restituita quando le dimensioni dell'istanza sono 0 o 1.  
+-   viene restituita un'istanza **GeometryCollection** vuota se le dimensioni dell'istanza sono 0 o 1.  
   
 -   viene restituito un buffer negativo quando le dimensioni dell'istanza sono 2 o maggiori di 2.  
   
     > [!NOTE]  
-    >  Un buffer negativo può inoltre creare un oggetto vuoto **GeometryCollection** istanza.  
+    >  È possibile che un buffer negativo crei un'istanza **GeometryCollection** vuota.  
   
  Un buffer negativo rimuove tutti i punti racchiusi nella distanza specificata del limite della geometria.  
   
- L'errore tra il buffer calcolato e quello teorico è max (tolleranza, extent * all'1. e-7) in cui tolleranza = distanza \* .001. Per ulteriori informazioni sulle estensioni, vedere [metodo riferimento al tipo di dati geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ L'errore tra il buffer calcolato e quello teorico è max(tolerance, extents * 1.E-7) dove tolerance = distance \* 0,001. Per altre informazioni sulle estensioni, vedere la [Guida di riferimento ai metodi per il tipo di dati geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Esempi  
   
@@ -102,17 +99,17 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
  ```  
   
 > [!NOTE]  
->  Viene restituita un'istanza `Polygon` anziché `CurvePolygon`.  Per restituire un `CurvePolygon` dell'istanza, vedere [BufferWithCurves &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+>  Viene restituita un'istanza `Polygon` anziché `CurvePolygon`.  Per restituire un'istanza `CurvePolygon`, vedere [BufferWithCurves &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
 ### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D. Chiamata a STBuffer () con un valore di parametro negativo mediante il quale viene restituita un'istanza vuota  
- Nell'esempio seguente viene illustrato cosa accade quando il *distanza* parametro è uguale a -2 per l'esempio precedente.  
+ Nell'esempio seguente viene illustrato cosa accade quando nell'esempio precedente il parametro *distance* è uguale a -2.  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
  SELECT @g.STBuffer(-2).ToString();
  ```  
   
- Questo **selezionare** istruzione restituisce un`GEOMETRYCOLLECTION EMPTY.`  
+ Questa istruzione **SELECT** restituisce `GEOMETRYCOLLECTION EMPTY.`  
   
 ### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. Chiamata a STBuffer() con parameter_value = 0  
  Nell'esempio seguente viene restituita una copia dell'istanza `geometry` chiamante:  
@@ -167,10 +164,10 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- I primi due **selezionare** istruzioni restituiscono un `MultiPolygon` istanza perché il parametro *distanza* è minore o uguale a 1/2 la distanza tra i due punti (1 1) e (1 4). Il terzo **selezionare** istruzione restituisce un `Polygon` istanza perché le istanze memorizzate nel buffer dei due punti (1 1) e (1 4) si sovrappongono.  
+ Le prime due istruzioni **SELECT** restituiscono un'istanza `MultiPolygon` perché il parametro *DISTANCE* è minore o uguale a 1/2 della distanza tra i due punti (1 1) e (1 4). La terza istruzione **select** restituisce un'istanza `Polygon` perché le istanze dei due punti (1 1) e (1 4) memorizzate nel buffer si sovrappongono.  
   
 ## <a name="see-also"></a>Vedere anche  
- [BufferWithTolerance &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
+ [BufferWithTolerance &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [Metodi OGC sulle istanze di geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

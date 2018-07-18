@@ -1,36 +1,37 @@
 ---
 title: Sys. bandwidth_usage (Database SQL di Azure) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bandwidth_usage
 - sys.bandwidth_usage
 - bandwidth_usage_TSQL
 - sys.bandwidth_usage_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d30cab1768b293c7cbc2e53729f8e8e8564a53d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: e34541614f20c4fedd8a691fc3c1c13d1929fb3c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  Restituisce informazioni sulla larghezza di banda di rete utilizzata da ogni database in un  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server logico V11**,. In ogni riga restituita per un determinato database vengono riepilogate una direzione e una classe di utilizzo per un periodo di un'ora.  
   
- **Questo è stato deprecato in una [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server logico (V12).**  
+ **Questo è stato deprecato in una [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 server logico.**  
   
  Il **Sys. bandwidth_usage** vista contiene le colonne seguenti.  
   
@@ -47,12 +48,12 @@ ms.lasthandoff: 11/21/2017
 |-----------------|-----------------|  
 |**time**|Ora in cui la larghezza di banda è stata usata. Le righe di questa vista hanno base oraria. Ad esempio, 2009-09-19 02:00:00.000 indica che la larghezza di banda è stata usata il 19 settembre 2009 tra le 14.00 e le 3.00.|  
 |**database_name**|Nome del database che ha usato la larghezza di banda.|  
-|**direzione**|Tipo di larghezza di banda usata, uno di:<br /><br /> In entrata: I dati spostati nella [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> In uscita: Dati spostati fuori il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**classe**|Classe di larghezza di banda usata, una di:<br />Interno: I dati spostati all'interno della piattaforma Azure.<br />Esterni: Dati spostati all'esterno della piattaforma Azure.<br /><br /> Questa classe viene restituita solo se il database è coinvolto in una relazione di copia continua tra aree ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Se un determinato database non partecipa ad alcuna relazione di copia continua, le righe di "interlink" non vengono restituite. Per altre informazioni, vedere la sezione "Osservazioni" più avanti in questo argomento.|  
+|**Direzione**|Tipo di larghezza di banda usata, uno di:<br /><br /> In entrata: I dati spostati nella [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> In uscita: Dati spostati fuori il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**class**|Classe di larghezza di banda usata, una di:<br />Interno: I dati spostati all'interno della piattaforma Azure.<br />Esterni: Dati spostati all'esterno della piattaforma Azure.<br /><br /> Questa classe viene restituita solo se il database è coinvolto in una relazione di copia continua tra aree ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Se un determinato database non partecipa ad alcuna relazione di copia continua, le righe di "interlink" non vengono restituite. Per altre informazioni, vedere la sezione "Osservazioni" più avanti in questo argomento.|  
 |**periodo_tempo**|Il periodo di tempo quando si è verificato l'utilizzo è punta o OffPeak. L'ora Peak si basa sull'area geografica in cui è stato creato il server. Ad esempio, se un server è stato creato nell'area geografica "US_Northwest", l'ora Peak è compresa tra le 10.00 e le 18.00 PST.|  
-|**quantità**|La quantità di larghezza di banda, in kilobyte (KB), usata.|  
+|**Quantità**|La quantità di larghezza di banda, in kilobyte (KB), usata.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa vista è disponibile solo nel **master** database all'account di accesso dell'entità a livello di server.  
   
 ## <a name="remarks"></a>Osservazioni  

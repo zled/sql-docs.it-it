@@ -1,28 +1,21 @@
 ---
-title: Nomi di Database riservato (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 92b0ffb2-0dcb-413f-bc0e-85e9e3e50f92
-caps.latest.revision: "5"
-ms.openlocfilehash: 809bbe11366deb54f5a08d9cf8b404f58ce9383f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: I nomi di database - Parallel Data Warehouse riservati | Documenti Microsoft
+description: Nomi di database riservato in Analitica piattaforma Parallel Data Warehouse di System.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 713927c6c0b32cb87353b39e562e3a6ab1a94132
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="reserved-database-names"></a>Nomi di Database riservato
+# <a name="reserved-database-names-in-parallel-data-warehouse"></a>Nomi di database riservato in Parallel Data Warehouse
 Un nome di database riservato è un nome non può essere assegnato a un database utente in SQL Server PDW.  
   
 Elenco di nomi di database riservato:  

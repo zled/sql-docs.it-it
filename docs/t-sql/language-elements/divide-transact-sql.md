@@ -1,16 +1,14 @@
 ---
-title: (Division) (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: / (divisione) (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - /
@@ -22,18 +20,18 @@ helpviewer_keywords:
 - division [SQL Server]
 - divide operator (/)
 ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
-caps.latest.revision: 
+caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a327ba041992614b4da0817d4b9f669b1e83b2f6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d5700348693a739b09f8a9ca37c25d2fd90773c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="-division-transact-sql"></a>/ (Division) (Transact-SQL)
+# <a name="-division-transact-sql"></a>/ (divisione) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Divide un numero per un altro (operatore aritmetico di divisione).  
@@ -48,17 +46,17 @@ dividend / divisor
   
 ## <a name="arguments"></a>Argomenti  
  *dividend*  
- Espressione numerica da dividere. *dividendo* può essere qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) uno qualsiasi dei tipi di dati del valore numerico categoria, tipo di dati, ad eccezione di **datetime** e **smalldatetime** tipi di dati.  
+ Espressione numerica da dividere. *dividend* può essere qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida di un qualsiasi tipo di dati della categoria dei tipi di dati numerici, ad eccezione dei tipi di dati **datetime** e **smalldatetime**.  
   
  *divisor*  
- Espressione numerica per cui dividere il dividendo. *divisore* può essere qualsiasi espressione valida di uno qualsiasi dei tipi di dati della categoria di tipi di dati numerici, ad eccezione di **datetime** e **smalldatetime** tipi di dati.  
+ Espressione numerica per cui dividere il dividendo. *divisor* può essere qualsiasi espressione valida di un qualsiasi tipo di dati della categoria dei tipi di dati numerici, ad eccezione dei tipi di dati **datetime** e **smalldatetime**.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati dell'argomento con la priorità più alta. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
- Se un numero intero *dividendo* viene diviso per un numero intero *divisore*, il risultato è un valore integer che eventuale parte frazionaria del risultato troncato.  
+ Se un *dividend* di tipo integer viene diviso per un *divisor* di tipo integer, il risultato sarà un valore intero con l'eventuale parte frazionaria troncata.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il valore effettivo restituito dall'operatore / corrisponde al quoziente della divisione tra la prima e la seconda espressione.  
   
 ## <a name="examples"></a>Esempi  
@@ -88,8 +86,8 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'esempio seguente usa l'operatore aritmetico di divisione per calcolare un rapporto semplice di ogni dei dipendenti ore di ferie ore malattia.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L'esempio seguente usa l'operatore aritmetico di divisione per calcolare un rapporto semplice tra le ore di ferie e le ore di malattia di ogni dipendente.  
   
 ```  
 -- Uses AdventureWorks  
@@ -102,11 +100,11 @@ FROM DimEmployee;
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [/= &#40;Division Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [/= &#40;assegnazione di divisione&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [Operatori composti &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

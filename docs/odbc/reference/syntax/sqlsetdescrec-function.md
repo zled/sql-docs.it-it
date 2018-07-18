@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLSetDescRec | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLSetDescRec
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLSetDescRec
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetDescRec
-helpviewer_keywords: SQLSetDescRec function [ODBC]
+f1_keywords:
+- SQLSetDescRec
+helpviewer_keywords:
+- SQLSetDescRec function [ODBC]
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c817bad04757820b7c8ee83905fbc0fad08b4e26
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 085543aca838cfe1a8123f891c30f618b86eb15d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescrec-function"></a>Funzione SQLSetDescRec
 **Conformità**  
@@ -65,7 +66,7 @@ SQLRETURN SQLSetDescRec(
  *Sottotipo*  
  [Input] Per i record il cui tipo è SQL_DATETIME o SQL_INTERVAL, questo è il valore su cui impostare il campo SQL_DESC_DATETIME_INTERVAL_CODE.  
   
- *Lunghezza*  
+ *Length*  
  [Input] Il valore su cui impostare il campo SQL_DESC_OCTET_LENGTH per il record del descrittore.  
   
  *Precisione*  

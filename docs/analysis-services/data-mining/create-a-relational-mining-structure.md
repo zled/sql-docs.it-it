@@ -1,37 +1,23 @@
 ---
 title: Creare una struttura di Data Mining relazionale | Documenti Microsoft
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], data mining
-- data mining [Analysis Services], structure
-- mining structures [Analysis Services], creating
-- relational mining models [Analysis Services]
-- OLAP mining models [Analysis Services]
-ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fe3958698c41cc54b6606255ced3a79133c66320
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>Creare una struttura di data mining relazionale
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La maggior parte dei modelli di data mining sono basati su origini dati relazionali. La creazione di un modello di data mining relazionale offre il vantaggio di poter assemblare dati ad hoc e aggiornare ed eseguire il training di un modello evitando la complessità di dover creare un cubo.  
+  La maggior parte dei modelli di data mining sono basati su origini dati relazionali. La creazione di un modello di data mining relazionale offre il vantaggio di poter assemblare dati ad hoc e aggiornare ed eseguire il training di un modello evitando la complessità di dover creare un cubo.  
   
  Una struttura di data mining relazionale può ottenere dati da origini disparate. È possibile archiviare i dati non elaborati in sistemi di tabelle, file o database relazionali, purché i dati possano essere definiti come parte di una vista origine dati. Ad esempio, è necessario utilizzare una struttura di data mining relazionale se i dati sono in Excel, in un data warehouse di SQL Server o in un database di report di SQL Server oppure in origini esterne cui si accede tramite provider OLE DB o ODBC.  
   
@@ -133,7 +119,7 @@ La maggior parte dei modelli di data mining sono basati su origini dati relazion
   
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione di Data Mining](../../analysis-services/data-mining/data-mining-designer.md)   
- [Creazione guidata di Data Mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Creazione guidata di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Proprietà modello di data mining](../../analysis-services/data-mining/mining-model-properties.md)   
  [Proprietà per la struttura di Data Mining e le colonne della struttura](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [Data mining struttura attività e procedure](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  

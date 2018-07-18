@@ -1,16 +1,14 @@
 ---
 title: DROP ASSEMBLY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP ASSEMBLY
@@ -25,21 +23,20 @@ helpviewer_keywords:
 - dropping assemblies
 - WITH NO DEPENDENTS option
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 32
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9c6156ff11476e91f13285c1db7d4cc545d5e8e5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 294326cda14b6027f067bd18a2f659dfc8e0e8e0
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Rimuove un assembly e tutti i relativi file associati dal database corrente. Gli assembly vengono creati utilizzando [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) e modificati tramite [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md).  
+  Rimuove un assembly e tutti i relativi file associati dal database corrente. Gli assembly vengono creati tramite [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) e modificati tramite [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,21 +49,21 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Elimina in modo condizionale l'assembly solo se esiste già.  
+ Rimuove in modo condizionale l'assembly solo se esiste già.  
   
  *assembly_name*  
  Nome dell'assembly da eliminare.  
   
  WITH NO DEPENDENTS  
- Se specificato, Elimina solo *nome_assembly* e nessuno degli assembly dipendenti che fanno riferimento all'assembly. Se omesso, DROP ASSEMBLY Elimina *nome_assembly* e tutti gli assembly dipendenti.  
+ Se viene specificato questo parametro, viene eliminato solo l'assembly definito tramite *assembly_name* e nessun assembly dipendente a cui l'assembly fa riferimento. Se viene omesso, DROP ASSEMBLY elimina l'assembly definito tramite *assembly_name* e tutti gli assembly dipendenti.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'eliminazione di un assembly comporta la rimozione di un assembly e di tutti i relativi file associati, ad esempio file del codice sorgente o di debug, dal database.  
   
- Se WITH NO DEPENDENTS viene omesso, DROP ASSEMBLY Elimina *nome_assembly* e tutti gli assembly dipendenti. Se il tentativo di eliminare gli assembly dipendenti ha esito negativo, DROP ASSEMBLY restituisce un errore.  
+ Se WITH NO DEPENDENTS viene omesso, DROP ASSEMBLY elimina l'assembly definito tramite *assembly_name* e tutti gli assembly dipendenti. Se il tentativo di eliminare gli assembly dipendenti ha esito negativo, DROP ASSEMBLY restituisce un errore.  
   
  DROP ASSEMBLY restituisce un errore se all'assembly viene fatto riferimento da un altro assembly esistente nel database oppure se viene utilizzato da funzioni CLR (Common Language Runtime), procedure, trigger, tipi definiti dall'utente o funzioni di aggregazione nel database corrente.  
   

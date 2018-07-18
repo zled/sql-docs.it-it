@@ -1,15 +1,14 @@
 ---
 title: Debug di oggetti di Database CLR | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - database objects [CLR integration], debugging
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - building database objects [CLR integration], debugging
 - common language runtime [SQL Server], debugging
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
-caps.latest.revision: 
+caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b3970e10bc77ccbee1cc52435e1b28a2a1dc7b4a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8bf6b05d891d18fec8cfc063321f294c914cfa13
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-clr-database-objects"></a>Debug di oggetti di database CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ ms.lasthandoff: 02/09/2018
   
 1.  Aprire Microsoft Visual Studio, creare un nuovo progetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e stabilire una connessione a un database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Creare un nuovo tipo. In **Esplora**, fare clic sul progetto, selezionare **Aggiungi** e **nuovo elemento...** Dal **Aggiungi nuovo elemento** selezionare **Stored Procedure**, **funzione definita dall'utente**, **tipo definito dall'utente**,  **Trigger**, **aggregazione**, o **classe**. Specificare un nome per il file di origine del nuovo tipo e fare clic su **Aggiungi**.  
+2.  Creare un nuovo tipo. In **Esplora soluzioni**, fare clic sul progetto, selezionare **Add** e **nuovo elemento...** Dal **Aggiungi nuovo elemento** selezionare **Stored Procedure**, **funzione definita dall'utente**, **tipo definito dall'utente**,  **Trigger**, **aggregazione**, o **classe**. Specificare un nome per il file di origine del nuovo tipo e fare clic su **Aggiungi**.  
   
 3.  Aggiungere il codice per il nuovo tipo nell'editor di testo. Per un codice di esempio relativo a un esempio di stored procedure, vedere la sezione più avanti in questo argomento.  
   

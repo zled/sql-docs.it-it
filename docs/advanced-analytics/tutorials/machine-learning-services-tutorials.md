@@ -1,31 +1,17 @@
 ---
 title: Esercitazioni di servizi di apprendimento macchina SQL Server | Documenti Microsoft
-ms.date: 12/14/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-- SQL Server 2017
-dev_langs:
-- Python
-- R
-ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 2d15f47fd148cb7b1f0edf399e94502c3570eabd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 604bbe9eb2a28c32b862174ce5da9cc5092e0c64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>Esercitazioni per servizi SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +40,7 @@ Per ulteriori informazioni sui requisiti e come configurare le impostazioni, ved
 
 Questi esempi e demo fornite dal team di sviluppo R Server e SQL Server evidenziano modi che è possibile utilizzare analitica incorporati nelle applicazioni reali.
 
-+ [Clienti di eseguire il clustering con R e SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/)
++ [Eseguire cliente clustering con R e SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/)
 
   Utilizzare apprendimento non supervisionato ai clienti di segmento in base ai dati di vendita. In questo esempio utilizza l'algoritmo rxKmeans scalabile da Microsoft R per compilare il modello di clustering. 
   
@@ -103,7 +89,7 @@ Per altre informazioni, vedere [Machine Learning Templates with SQL Server 2016 
 
     Informazioni su Microsoft R e cosa offre il pacchetto RevoScaleR in questa raccolta di esercitazioni. Informazioni su come scrivere una sola volta codice R e distribuire in qualsiasi punto, utilizzando le origini dati RevoScaleR e contesti di calcolo remoto.
 
-+ [Introduzione a MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package)
++ [Guida introduttiva MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package)
 
   Informazioni su come utilizzare i nuovi algoritmi nel pacchetto MicrosoftML per le trasformazioni di dati scalabili, ottimizzate per più contesti di calcolo e di modellazione avanzate.
 
@@ -111,8 +97,8 @@ Per altre informazioni, vedere [Machine Learning Templates with SQL Server 2016 
 
 Per eseguire queste esercitazioni, è necessario scaricare e installare il Server SQL di machine learning componenti, come descritto di seguito:
 
-+ [Configurare SQL Server 2017 Machine Learning Services o SQL Server 2016 R Services](../r/set-up-sql-server-r-services-in-database.md)
-+ [Impostare i servizi di SQL Server 2017 Python](../python/setup-python-machine-learning-services.md)
++ [Installare SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
++ [Installare SQL Server 2016 R Services (In-Database)](../install/sql-r-services-windows-install.md)
 
 Con SQL Server 2017, è possibile installare R o Python o entrambi. In caso contrario il processo di installazione complessivo, architettura e requisiti sono uguali.
 
@@ -122,7 +108,7 @@ Dopo l'installazione di SQL Server, non dimenticare questi passaggi importanti:
 2. Verificare che il servizio Launchpad sia in esecuzione e che gli account di lavoro della finestra di avvio è possono connettersi all'istanza di SQL Server.
 3. Esaminare le autorizzazioni associate gli utenti che devono eseguire script R o Python. Sia che si utilizzi un account di accesso SQL o account utente di Windows, l'utente deve disporre dell'autorizzazione per eseguire gli script R o Python e deve essere in grado di connettersi all'istanza. A seconda dell'esercitazione, l'utente può inoltre richiedere autorizzazioni per scrivere i dati, creare gli oggetti di database o eseguire delle operazioni bulk l'importazione dei dati.
 
-Per informazioni dettagliate, vedere l'articolo per alcuni problemi comuni di installazione e configurazione: [risoluzione dei problemi di Machine Learning Services](../machine-learning-troubleshooting-faq.md)
+Per informazioni dettagliate, vedere l'articolo per alcuni problemi comuni di installazione e configurazione: [risoluzione dei problemi Machine Learning Services](../machine-learning-troubleshooting-faq.md)
 
 > [!NOTE]
 > È possibile eseguire queste esercitazioni utilizzando un altro strumento open source R o Python. Ambiente di sviluppo e il computer SQL Server con machine learning dovranno entrambi disporre le librerie R o Python fornite da Microsoft, che supportano l'integrazione con SQL Server e l'uso di contesti di calcolo remoto.

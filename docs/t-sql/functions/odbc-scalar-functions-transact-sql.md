@@ -1,16 +1,14 @@
 ---
-title: Funzioni scalari ODBC (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: Funzioni scalari ODBC (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -54,21 +52,21 @@ helpviewer_keywords:
 - functions, ODBC WEEK
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2838242bcef767206af71446f9decd9ed798536a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b17a85709bbb7a60badadabc1f18ff5fd688188d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funzioni scalari ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  È possibile utilizzare [funzioni scalari ODBC](http://go.microsoft.com/fwlink/?LinkID=88579) in [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. Queste istruzioni sono interpretate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è possibile utilizzarle in stored procedure e funzioni definite dall'utente. Queste includono funzioni per i valori stringa, numerici, di ora, di data, di intervallo e di sistema.  
+  È possibile usare le [funzioni scalari ODBC](http://go.microsoft.com/fwlink/?LinkID=88579) all'interno di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste istruzioni sono interpretate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è possibile utilizzarle in stored procedure e funzioni definite dall'utente. Queste includono funzioni per i valori stringa, numerici, di ora, di data, di intervallo e di sistema.  
   
 ## <a name="usage"></a>Utilizzo  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -88,7 +86,7 @@ ms.lasthandoff: 11/21/2017
   
 |Funzione|Description|  
 |--------------|-----------------|  
-|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Restituisce numeric_exp troncato in corrispondenza di un numero di posizioni pari a integer_exp a destra del separatore decimale. Se integer_exp è negativo, numeric_exp viene troncato a &#124; integer_exp &#124; posizioni a sinistra del separatore decimale.|  
+|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Restituisce numeric_exp troncato in corrispondenza di un numero di posizioni pari a integer_exp a destra del separatore decimale. Se integer_exp è negativo, numeric_exp viene troncato in corrispondenza di un numero di posizioni pari a &#124;integer_exp&#124; a sinistra del separatore decimale.|  
   
 ### <a name="time-date-and-interval-functions"></a>Funzioni di data, ora e intervallo  
   
@@ -183,7 +181,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. Utilizzo di una funzione ODBC in una stored procedure  
  Nell'esempio seguente viene utilizzata una funzione ODBC in una stored procedure:  

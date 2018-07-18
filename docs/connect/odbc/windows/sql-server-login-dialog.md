@@ -1,27 +1,24 @@
 ---
 title: Finestra di dialogo account di accesso SQL Server (ODBC) | Documenti Microsoft
-ms.custom: 
-ms.date: 09/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/21/2018
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 5671f5213633d7efbb7693425a711db1e980d078
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.author: v-jizho2
+manager: craigg
+ms.openlocfilehash: 3dcd7f9d5d3807858ae13a9ded3a2164eca20b45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Finestra di dialogo Account di accesso di SQL Server (ODBC)
 
@@ -44,6 +41,7 @@ Seleziona la modalità di autenticazione da uno dei valori seguenti:
 - **Sicurezza integrata di Windows** autenticazione mediante account dell'utente connesso
 - **Password di Active Directory** con ID di accesso e password
 - **Active Directory Integrated** autenticazione mediante account dell'utente connesso
+- **Active Directory interattivo** l'autenticazione con ID di accesso
 
 Vedere [2 di schermata Creazione guidata origine dati](../../../connect/odbc/windows/dsn-wizard-2.md) per ulteriori informazioni sulle modalità di autenticazione.
 
@@ -53,7 +51,7 @@ Se si utilizza una connessione trusted, è possibile specificare un nome dell'en
 
 ### <a name="login-id"></a>ID accesso
 
-Specifica l'ID di accesso di SQL Server o Azure Active Directory da utilizzare per la connessione se **modalità di autenticazione** è impostato su **SQL Server** o **Password di Active Directory**. In caso contrario, il **ID di accesso** casella è disabilitata.
+Specifica l'ID di accesso di SQL Server o Azure Active Directory da utilizzare per la connessione se **modalità di autenticazione** è impostata su **SQL Server** oppure **Password di Active Directory** o **Active Directory interattivo**. In caso contrario, il **ID di accesso** casella è disabilitata.
 
 ### <a name="password"></a>Password
 
@@ -87,7 +85,7 @@ Indica il nome del partner di failover del database da sottoporre a mirroring.
 
 Se si desidera, è possibile specificare un nome SPN per il server mirror. Tale nome verrà utilizzato per l'autenticazione reciproca tra client e server.
 
-### <a name="language"></a>Linguaggio
+### <a name="language"></a>Lingua
 
 Specifica la lingua da utilizzare per i messaggi di sistema di SQL Server. Il computer che esegue SQL Server deve essere la lingua installata. Questa impostazione è prioritaria rispetto alla lingua predefinita specificata per l'account di accesso nel server. Se non è specificata alcuna lingua, viene utilizzata la lingua predefinita specificata per l'account di accesso nel server.
 

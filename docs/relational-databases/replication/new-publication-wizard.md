@@ -1,16 +1,16 @@
 ---
 title: Creazione guidata nuova pubblicazione | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbpublishin
 - sql13.swb.dbpublishingwizard.choosetables.f1
@@ -39,21 +39,22 @@ f1_keywords:
 - sql13.swb.dbpublishingwizard.choosedbroles.f1
 - sql13.swb.dbpublishingwizard.chooseudtype.f1
 - sql13.swb.dbpublishingwizard.chooseschemas.f1
-helpviewer_keywords: New Publication Wizard
+helpviewer_keywords:
+- New Publication Wizard
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
-caps.latest.revision: "18"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 18
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1be53dfe84e9731339dabdc68c67cf9d161fae69
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: bcc01ad69a1449fe196c260d01667d7538dda101
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa sezione contiene informazioni sulle pagine seguenti della Creazione guidata nuova pubblicazione:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questa sezione vengono fornite informazioni relative alle pagine seguenti della Creazione guidata nuova pubblicazione:  
   
 -   [Server di pubblicazione Oracle](../../relational-databases/replication/oracle-publisher.md)  
   

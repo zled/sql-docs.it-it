@@ -1,16 +1,14 @@
 ---
-title: STArea (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: STArea (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STArea (geography Data Type)
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - STArea method
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2082c36f483e1ebe6d532abb6d3335db127b21b1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 83a2b1ea1cc2f6cbe6093b12e50416f00f97db37
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="starea-geography-data-type"></a>STArea (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce l'area della superficie totale di un **geography** istanza. Per STArea() vengono restituiti come quadrato dell'unità di misura utilizzata dall'identificatore SRID del **geography** istanza; ad esempio, se l'identificatore SRID dell'istanza è 4326, STArea() restituisce risultati in metri quadrati.  
+  Restituisce l'area della superficie totale di un'istanza **geography**. I risultati di STArea() vengono restituiti come quadrato dell'unità di misura usata dall'identificatore SRID dell'istanza **geography**. Se ad esempio l'identificatore SRID dell'istanza è 4326, STArea() restituisce il risultato in metri quadrati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,18 +41,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **float**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **float**  
   
  Tipo CLR restituito: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
- STArea() restituisce 0 se un **geography** istanza contiene solo figure 0 e 1-dimensioni o se è vuota.  
+## <a name="remarks"></a>Remarks  
+ STArea() restituisce 0 se un'istanza **geography** contiene solo figure zero-dimensionali e unidimensionali oppure se è vuota.  
   
 > [!NOTE]  
->  Metodi di **geography** che producono una metrica restituire valore avrà risultati diversi basati sull'identificatore SRID dell'istanza utilizzato nel metodo del tipo di dati. Per ulteriori informazioni sugli identificatori SRID, vedere [gli identificatori di riferimento spaziale &#40; Identificatori SRID &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  I metodi applicati al tipo di dati **geography** che producono valori misurabili restituiranno risultati diversi a seconda dell'identificatore SRID dell'istanza usato nel metodo. Per altre informazioni sugli identificatori SRID, vedere [Spatial Reference Identifiers &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) (Identificatori SRID).  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `STArea()` per creare un `Polygon``geography` istanza e viene calcolata l'area del poligono.  
+ Nell'esempio seguente viene usato `STArea()` per creare un'istanza `Polygon``geography` e viene calcolata l'area del poligono.  
   
 ```  
 DECLARE @g geography;  

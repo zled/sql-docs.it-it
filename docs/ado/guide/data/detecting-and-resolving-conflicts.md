@@ -1,31 +1,28 @@
 ---
 title: Rilevamento e risoluzione dei conflitti | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 61f54b700be8ec03e56bf63999dc7f93b8d5fcdb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05e79fec4c5ddf9d33c9cfaa17581b6d50e0e42b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Rilevamento e risoluzione di conflitti
 Se si utilizzano il Recordset in modalità immediata, è meno probabile per problemi di concorrenza si verifichi. D'altra parte, se l'applicazione utilizza la modalità batch di aggiornamento, potrebbe esserci una buona possibilità che un utente modifichi un record prima che vengano salvate le modifiche apportate da un altro utente modifica lo stesso record. In tal caso, è possibile utilizzare l'applicazione di gestire correttamente il conflitto. Potrebbe essere desideri che l'ultima persona di inviare un aggiornamento al server "wins". Oppure è possibile consentire all'utente più recente per decidere quali update deve avere la precedenza fornendo a quest'ultimo una scelta tra i due valori in conflitto.  

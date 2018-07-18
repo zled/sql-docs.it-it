@@ -1,30 +1,17 @@
 ---
-title: 'Passaggio 3: Esplorare e visualizzare i dati | Documenti Microsoft'
-ms.custom: 
-ms.date: 10/17/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Passaggio 3 Esplora e visualizzare i dati | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-- TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 737a925e2902fbd017abcdf996d88652c995a044
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 2575b1c0d5de8d546d1b1ef1775f3c9e7145adc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-3-explore-and-visualize-the-data"></a>Passaggio 3: Esplorare e visualizzare i dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -164,7 +151,7 @@ La stored procedure restituisce un Python serializzato `figure` oggetto come flu
 
     A tale scopo, eseguire il seguente codice Python, sostituendo il nome del server, nome del database e le credenziali come appropriato. Verificare che la versione di Python è lo stesso per il client e server. Assicurarsi inoltre che le librerie di Python nel client (ad esempio matplotlib) sono la versione uguale o maggiore rispetto delle librerie installate nel server.
   
-    **Utilizzando l'autenticazione di SQL Server:**
+    **Autenticazione di SQL Server:**
     
     ```python
     import pyodbc

@@ -1,16 +1,14 @@
 ---
-title: ORDINARE per clausola (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: Clausola ORDER BY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ORDER_TSQL
@@ -41,30 +39,30 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: 
+caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0770af33005dfd3a02e7b388decb7cc77cf6b37d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="select---order-by-clause-transact-sql"></a>Selezionare, ordinare per clausola (Transact-SQL)
+# <a name="select---order-by-clause-transact-sql"></a>Clausola SELECT - ORDER BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Ordina i dati restituiti da una query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilizzare questa clausola per eseguire le operazioni seguenti:  
   
 -   Ordinare il set di risultati di una query in base all'elenco di colonne specificato e, facoltativamente, limitare le righe restituite a un intervallo specificato. L'ordine in cui le righe vengono restituite in un set di risultati non è garantito, a meno che non venga specificata una clausola ORDER BY.  
   
--   Determinare l'ordine in cui [funzione di rango](../../t-sql/functions/ranking-functions-transact-sql.md) valori vengono applicati al set di risultati.  
+-   Determinare l'ordine in cui i valori della [funzione di rango](../../t-sql/functions/ranking-functions-transact-sql.md) vengono applicati al set di risultati.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
->  ORDER BY non è supportata nella finestra Seleziona / in o le istruzioni di creazione tabella AS selezionare (un'istruzione CTAS) in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+>  ORDER BY non è supportata nelle istruzioni SELECT/INTO o CREATE TABLE AS SELECT (CTAS) in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -106,7 +104,7 @@ ORDER BY order_by_expression
  I nomi delle colonne a cui viene fatto riferimento nella clausola ORDER BY devono corrispondere senza ambiguità a una colonna nell'elenco di selezione o a una colonna definita in una tabella specificata nella clausola FROM.  
   
  COLLATE *collation_name*  
- Specifica che l'operazione ORDER BY deve essere eseguita in base alle regole di confronto specificate *collation_name*e non in base alle regole di confronto della colonna definite nella tabella o vista. *collation_name* può essere un nome di regole di confronto Windows o un nome di regole di confronto SQL. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE può essere applicato solo alle colonne di tipo **char**, **varchar**, **nchar**, e **nvarchar**.  
+ Specifica che l'operazione ORDER BY deve essere eseguita in base alle regole di confronto indicate in *collation_name* e non in base alle regole della colonna definite nella tabella o nella vista. In *collation_name* è possibile usare nomi di regole di confronto di Windows o SQL. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE può essere applicato solo alle colonne di tipo **char**, **varchar**, **nchar** e **nvarchar**.  
   
  **ASC** | DESC  
  Specifica che i valori nella colonna specificata devono essere ordinati in ordine crescente o decrescente. ASC consente di ordinare i valori dal più piccolo al più grande. DESC consente di ordinare i valori dal più grande al più piccolo. ASC è l'ordinamento predefinito. I valori Null vengono considerati i valori in assoluto più piccoli.  
@@ -114,18 +112,18 @@ ORDER BY order_by_expression
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Specifica il numero di righe da ignorare prima della restituzione delle righe dall'espressione di query. Il valore può essere un valore costante intero o un'espressione maggiore o uguale a zero.  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. s  
+**Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
   
  *offset_row_count_expression* può essere una variabile, un parametro o una sottoquery scalare costante. Quando viene utilizzata una sottoquery, non è possibile fare riferimento alle colonne definite nell'ambito di query esterno. Ciò significa che non è possibile metterla in correlazione con la query esterna.  
   
  ROW e ROWS sono sinonimi e vengono specificati per garantire la compatibilità ANSI.  
   
- Nei piani di esecuzione di query, il valore di conteggio righe di offset viene visualizzato nel **Offset** attributo dell'operatore di query TOP.  
+ Nei piani di esecuzione della query, il valore del conteggio delle righe di offset viene visualizzato nell'attributo **Offset** dell'operatore di query TOP.  
   
- RECUPERARE {PRIMA | Avanti} { *integer_constant* | *fetch_row_count_expression* } {riga | SOLO LE RIGHE}  
+ FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  Specifica il numero di righe da restituire dopo l'elaborazione della clausola OFFSET. Il valore può essere un valore costante intero o un'espressione maggiore o uguale a uno.  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Si applica a** : da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  *fetch_row_count_expression* può essere una variabile, un parametro o una sottoquery scalare costante. Quando viene utilizzata una sottoquery, non è possibile fare riferimento alle colonne definite nell'ambito di query esterno. Ciò significa che non è possibile metterla in correlazione con la query esterna.  
   
@@ -133,12 +131,12 @@ ORDER BY order_by_expression
   
  ROW e ROWS sono sinonimi e vengono specificati per garantire la compatibilità ANSI.  
   
- Nei piani di esecuzione di query, il valore di conteggio righe di offset viene visualizzato nel **righe** o **Top** attributo dell'operatore di query TOP.  
+ Nei piani di esecuzione della query, il valore del conteggio delle righe di offset viene visualizzato nell'attributo **Rows** o **Top** dell'operatore di query TOP.  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- Evitare di specificare numeri interi nella clausola ORDER BY come rappresentazioni posizionali delle colonne nell'elenco di selezione. Ad esempio, anche se un'istruzione quale `SELECT ProductID, Name FROM Production.Production ORDER BY 2` è valida, l'istruzione non risulta comprensibile come la specifica del nome della colonna effettivo. Inoltre, modifiche all'elenco di selezione, ad esempio per cambiare l'ordine delle colonne o aggiungendo nuove colonne, è necessario modificare la clausola ORDER BY per evitare risultati imprevisti.  
+ Evitare di specificare numeri interi nella clausola ORDER BY come rappresentazioni posizionali delle colonne nell'elenco di selezione. Ad esempio, anche se un'istruzione quale `SELECT ProductID, Name FROM Production.Production ORDER BY 2` è valida, l'istruzione non risulta comprensibile come la specifica del nome della colonna effettivo. Inoltre, le modifiche all'elenco di selezione, ad esempio la modifica dell'ordine delle colonne o l'aggiunta di nuove colonne, richiedono la modifica della clausola ORDER BY per evitare risultati imprevisti.  
   
- Nella parte superiore selezionare (*N*) istruzione, utilizzare sempre una clausola ORDER BY. È l'unico modo per indicare prevedibilmente quali righe sono interessate dalla clausola TOP. Per ulteriori informazioni, vedere [torna all'inizio &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+ In un'istruzione SELECT TOP ((*N*) usare sempre una clausola ORDER BY. È l'unico modo per indicare prevedibilmente quali righe sono interessate dalla clausola TOP. Per altre informazioni, vedere [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
 ## <a name="interoperability"></a>Interoperabilità  
  Se utilizzata insieme a un'istruzione SELECT…INTO per l'inserimento di righe da un'altra origine, la clausola ORDER BY non garantisce l'inserimento delle righe nell'ordine specificato.  
@@ -148,9 +146,9 @@ ORDER BY order_by_expression
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Non vi è limite al numero di colonne nella clausola ORDER BY. Tuttavia, la dimensione totale delle colonne specificata in una clausola ORDER BY non può superare 8.060 byte.  
   
- Le colonne di tipo **ntext**, **testo**, **immagine**, **geography**, **geometry**, e  **XML** non può essere utilizzato in una clausola ORDER BY.  
+ Le colonne di tipo **ntesto**, **testo**, **immagine**, **geografia**, **geometria** e **xml** non possono essere usate in una clausola ORDER BY.  
   
- Un numero intero o una costante non può essere specificato quando *argomento order_by_expression* viene visualizzato in una funzione di rango. Per ulteriori informazioni, vedere [la clausola OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Non è possibile specificare un valore intero o una costante quando *order_by_expression* è incluso in una funzione di rango. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  Se per un nome di tabella sono stati creati alias nella clausola FROM, è possibile utilizzare solo il nome dell'alias per qualificare le relative colonne nella clausola ORDER BY.  
   
@@ -164,9 +162,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- Inoltre, quando l'istruzione include un operatore UNION, EXCEPT o INTERSECT (operatore), i nomi delle colonne o alias di colonna devono essere specificati nell'elenco di selezione della prima query (lato sinistro).  
+ Inoltre, quando l'istruzione include un operatore UNION, EXCEPT o INTERSECT, i nomi o gli alias delle colonne devono essere specificati nell'elenco di selezione della prima query (lato sinistro).  
   
- In una query che utilizza l'operatore UNION, EXCEPT o INTERSECT, la clausola ORDER BY è consentita solo alla fine dell'istruzione. Questa restrizione si applica solo a quando si specifica l'operatore UNION, EXCEPT e INTERSECT in una query di livello superiore e non in una sottoquery. Vedere la sezione Esempi riportata di seguito.  
+ In una query che utilizza l'operatore UNION, EXCEPT o INTERSECT, la clausola ORDER BY è consentita solo alla fine dell'istruzione. Questa restrizione si applica unicamente ai casi in cui UNION, EXCEPT e INTERSECT vengono specificati in una query di livello principale e non in una sottoquery. Vedere la sezione Esempi riportata di seguito.  
   
  La clausola ORDER BY non è valida nelle viste, nelle funzioni inline, nelle tabelle derivate e nelle sottoquery, a meno che non vengano specificate anche la clausola TOP o le clausole OFFSET e FETCH. Quando si utilizza ORDER BY in questi oggetti, la clausola viene utilizzata esclusivamente per determinare le righe restituite dalla clausola TOP o dalle clausole OFFSET e FETCH. La clausola ORDER BY non garantisce risultati ordinati in caso di query su questi costrutti, a meno che tale clausola non venga specificata anche nella query.  
   
@@ -187,27 +185,27 @@ ORDER BY order_by_expression
   
  L'utilizzo di OFFSET e FETCH come soluzione di paging richiede di eseguire la query una volta per ogni "pagina" di dati restituita all'applicazione client. Ad esempio, per restituire i risultati di una query in incrementi di 10 righe, è necessario eseguire la query una volta per restituire le righe da 1 a 10 e quindi eseguirla nuovamente per restituire le righe da 11 a 20 e così via. Ogni query è indipendente e non correlata in alcun modo all'altra. Ciò significa che, contrariamente all'utilizzo di un cursore in cui viene eseguita la query e lo stato viene gestito nel server, l'applicazione client è responsabile del rilevamento dello stato. Per ottenere risultati stabili tra richieste di query utilizzando OFFSET e FETCH, è necessario soddisfare le condizioni seguenti:  
   
-1.  I dati sottostanti utilizzati dalla query non devono cambiare. Ciò significa che le righe interessate dalla query non vengono aggiornate o che tutte le richieste di pagine dalla query vengono eseguite in una singola transazione utilizzando l'isolamento dello snapshot o della transazione serializzabile. Per ulteriori informazioni su questi livelli di isolamento delle transazioni, vedere [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+1.  I dati sottostanti utilizzati dalla query non devono cambiare. Ciò significa che le righe interessate dalla query non vengono aggiornate o che tutte le richieste di pagine dalla query vengono eseguite in una singola transazione utilizzando l'isolamento dello snapshot o della transazione serializzabile. Per altre informazioni sui livelli di isolamento di questa transazione, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 2.  La clausola ORDER BY contiene una colonna o una combinazione di colonne di cui è garantita l'univocità.  
   
  Vedere l'esempio "Esecuzione di più query in una singola transazione" nella sezione Esempi più avanti in questo argomento.  
   
- Se piani di esecuzione coerenti sono importanti nella soluzione di paging, si consideri l'utilizzo dell'hint per la query OPTIMIZE FOR per i parametri OFFSET e FETCH. Vedere "Specifica di espressioni per valori OFFSET e FETCH" nella sezione Esempi più avanti in questo argomento. Per ulteriori informazioni su OPTIMZE FOR, vedere [hint per la Query &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-query.md).  
+ Se piani di esecuzione coerenti sono importanti nella soluzione di paging, si consideri l'utilizzo dell'hint per la query OPTIMIZE FOR per i parametri OFFSET e FETCH. Vedere "Specifica di espressioni per valori OFFSET e FETCH" nella sezione Esempi più avanti in questo argomento. Per altre informazioni su OPTIMZE FOR, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="examples"></a>Esempi  
   
 |Category|Elementi di sintassi inclusi|  
 |--------------|------------------------------|  
 |[Sintassi di base](#BasicSyntax)|ORDER BY|  
-|[Specifica l'ordine crescente e decrescente](#SortOrder)|DESC • ASC|  
-|[Specifica le regole di confronto](#Collation)|COLLATE|  
+|[Specifica dell'ordine crescente e decrescente](#SortOrder)|DESC • ASC|  
+|[Specifica di regole di confronto](#Collation)|COLLATE|  
 |[Specifica di un ordine condizionale](#Case)|Espressione CASE|  
 |[Utilizzo di ORDER BY in una funzione di rango](#Rank)|Funzioni di rango|  
 |[Limitazione del numero di righe restituite](#Offset)|OFFSET • FETCH|  
 |[Utilizzo di ORDER BY con UNION, EXCEPT e INTERSECT](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a>Sintassi di base  
+###  <a name="BasicSyntax"></a> Sintassi di base  
  Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base della clausola ORDER BY utilizzando la sintassi minima necessaria.  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Specifica di una singola colonna definita nell'elenco di selezione  
@@ -258,7 +256,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a>Specifica l'ordine crescente e decrescente  
+###  <a name="SortOrder"></a> Specifica dell'ordinamento crescente e decrescente  
   
 #### <a name="a-specifying-a-descending-order"></a>A. Specifica di un ordine decrescente  
  Nell'esempio seguente il set di risultati viene ordinato in base alla colonna numerica `ProductID` in ordine decrescente.  
@@ -272,8 +270,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-an-ascending-order"></a>B. Specifica un ordine crescente  
- Nell'esempio seguente il set di risultati viene ordinato in base alla colonna `Name` in ordine crescente. I caratteri vengono ordinati in ordine alfabetico, non numericamente. Di conseguenza, 10 precede 2.  
+#### <a name="b-specifying-an-ascending-order"></a>B. Specifica di un ordine crescente  
+ Nell'esempio seguente il set di risultati viene ordinato in base alla colonna `Name` in ordine crescente. I caratteri sono ordinati alfabeticamente, non numericamente. Di conseguenza, 10 precede 2.  
   
 ```  
 USE AdventureWorks2012;  
@@ -296,7 +294,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a>Specifica le regole di confronto  
+###  <a name="Collation"></a> Specifica di regole di confronto  
  Nell'esempio seguente viene illustrato come la specifica di regole di confronto nella clausola ORDER BY possa modificare l'ordine in cui vengono restituiti i risultati della query. Viene creata una tabella contenente una colonna definita tramite regole di confronto che non fanno distinzione tra maiuscole e minuscole e tra i vari accenti. I valori vengono inseriti con una varietà di differenze di caso e accento. Poiché nella clausola ORDER BY non vengono specificate regole di confronto, la prima query utilizza le regole di confronto della colonna quando si ordinano i valori. Nella seconda query, nella clausola ORDER BY, vengono specificate regole di confronto che fanno distinzione tra maiuscole e minuscole e tra gli accenti che comportano la modifica dell'ordine in cui vengono restituite le righe.  
   
 ```  
@@ -317,8 +315,8 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a>Specifica di un ordine condizionale  
- Nell'esempio seguente utilizzano l'espressione CASE in una clausola ORDER BY per determinare in modo condizionale l'ordinamento delle righe in base a un valore di colonna specificato. Nel primo esempio, viene calcolato il valore nella colonna `SalariedFlag` della tabella `HumanResources.Employee`. I dipendenti per cui `SalariedFlag` è impostato su 1 vengono restituiti in ordine decrescente in base a `BusinessEntityID`. I dipendenti per cui `SalariedFlag` è impostato su 0 vengono restituiti in ordine crescente in base a `BusinessEntityID`. Nel secondo esempio il set di risultati viene ordinato in base alla colonna `TerritoryName` quando la colonna `CountryRegionName` è uguale a 'United States' e in base a `CountryRegionName` per tutte le altre righe.  
+###  <a name="Case"></a> Specifica di un ordine condizionale  
+ Negli esempi seguenti viene usata l'espressione CASE in una clausola ORDER BY per determinare in modo condizionale l'ordinamento delle righe in base a un valore di colonna specificato. Nel primo esempio, viene calcolato il valore nella colonna `SalariedFlag` della tabella `HumanResources.Employee`. I dipendenti per cui `SalariedFlag` è impostato su 1 vengono restituiti in ordine decrescente in base a `BusinessEntityID`. I dipendenti per cui `SalariedFlag` è impostato su 0 vengono restituiti in ordine crescente in base a `BusinessEntityID`. Nel secondo esempio il set di risultati viene ordinato in base alla colonna `TerritoryName` quando la colonna `CountryRegionName` è uguale a 'United States' e in base a `CountryRegionName` per tutte le altre righe.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  
@@ -338,7 +336,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a>Utilizzo di ORDER BY in una funzione di rango  
+###  <a name="Rank"></a> Utilizzo di ORDER BY in una funzione di rango  
  Nell'esempio seguente la clausola ORDER BY viene utilizzata nelle funzioni di rango ROW_NUMBER, RANK, DENSE_RANK e NTILE.  
   
 ```  
@@ -359,10 +357,10 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a>Limitazione del numero di righe restituite  
+###  <a name="Offset"></a> Limitazione del numero di righe restituite  
  Negli esempi seguenti vengono utilizzate le clausole OFFSET e FETCH per limitare il numero di righe restituite da una query.  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Si applica a** : da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Specifica di valori costanti interi per OFFSET e FETCH  
  Nell'esempio seguente viene specificata una costante intera come valore per le clausole OFFSET e FETCH. La prima query restituisce tutte le righe ordinate in base alla colonna `DepartmentID`. Confrontare i risultati restituiti da questa query ai risultati delle due query che la seguono. La query successiva utilizza la clausola `OFFSET 5 ROWS` per ignorare le prime 5 righe e restituire tutte le righe rimanenti. Nella query finale viene utilizzata la clausola `OFFSET 0 ROWS` per iniziare con la prima riga, quindi `FETCH NEXT 10 ROWS ONLY` per limitare le righe restituite a 10 righe dal set di risultati ordinato.  
@@ -489,7 +487,7 @@ GO
   
 ```  
   
-###  <a name="Union"></a>Utilizzo di ORDER BY con UNION, EXCEPT e INTERSECT  
+###  <a name="Union"></a> Utilizzo di ORDER BY con UNION, EXCEPT e INTERSECT  
  Quando una query utilizza l'operatore UNION, EXCEPT o INTERSECT, è necessario specificare la clausola ORDER BY alla fine dell'istruzione e i risultati delle query combinate vengono ordinati. Nell'esempio seguente vengono restituiti tutti i prodotti rossi o gialli e questo elenco combinato viene ordinato in base alla colonna `ListPrice`.  
   
 ```  
@@ -507,8 +505,8 @@ ORDER BY ListPrice ASC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente viene illustrato l'ordinamento di un set di risultati, il formato numerico `EmployeeKey` colonna in ordine crescente.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Nell'esempio seguente viene illustrato l'ordinamento di un set di risultati in base alla colonna `EmployeeKey` numerica in ordine crescente.  
   
 ```  
 -- Uses AdventureWorks  
@@ -518,7 +516,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY EmployeeKey;  
 ```  
   
- Nell'esempio seguente viene ordini di un set di risultati, il formato numerico `EmployeeKey` colonna in ordine decrescente.  
+ Nell'esempio seguente un set di risultati viene ordinato in base alla colonna numerica `EmployeeKey` in ordine decrescente.  
   
 ```  
 -- Uses AdventureWorks  
@@ -528,7 +526,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY EmployeeKey DESC;  
 ```  
   
- Nell'esempio seguente viene ordini di un set di risultati, il `LastName` colonna.  
+ Nell'esempio seguente il set di risultati viene ordinato in base alla colonna `LastName`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -538,7 +536,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName;  
 ```  
   
- Gli ordini di esempio seguito da due colonne. Questa query vengono ordinati prima in ordine crescente in base il `FirstName` colonna, quindi ordina comune `FirstName` valori decrescente in base il `LastName` colonna.  
+ Nell'esempio seguente l'ordinamento viene fatto in base a due colonne. Questa query esegue l'ordinamento crescente in base alla colonna `FirstName`, quindi esegue un ordinamento decrescente dei valori `FirstName` comuni in base alla colonna `LastName`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -549,13 +547,13 @@ ORDER BY LastName, FirstName;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [Rango funzioni &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [Funzioni di rango &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [Hint di query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
- [Ad eccezione di e INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [EXCEPT e INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   

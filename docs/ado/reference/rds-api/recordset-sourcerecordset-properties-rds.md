@@ -1,30 +1,28 @@
 ---
-title: "Proprietà Recordset e SourceRecordset (RDS) | Documenti Microsoft"
-ms.technology:
-- drivers
-ms.custom: 
+title: Proprietà Recordset e SourceRecordset (RDS) | Documenti Microsoft
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Recordset property [ADO]
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a59056cd579bfc3bebfdd2e33c18e733fbacd1b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1b032e25ee5d4c85638cacfbe160240bf4c1853f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Proprietà Recordset e SourceRecordset (RDS)
 Indica il **Recordset** oggetto restituito da un oggetto di business personalizzata.  
@@ -56,7 +54,7 @@ Recordset = DataControl.Recordset
   
  È possibile impostare il **SourceRecordset** proprietà o a leggere la **Recordset** proprietà in fase di esecuzione nel codice di script.  
   
- **SourceRecordset** è una proprietà di sola scrittura, al contrario di **Recordset** proprietà, che è una proprietà di sola lettura.  
+ **SourceRecordset** è una proprietà di sola scrittura, in contrasto con il **Recordset** proprietà, che è una proprietà di sola lettura.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

@@ -1,33 +1,32 @@
 ---
 title: Elaborazione di query adattive nei database Microsoft SQL | Microsoft Docs
-description: "Funzionalità per l'elaborazione di query adattive e il miglioramento delle prestazioni delle query in SQL Server (2017 e versioni successive) e nel database SQL di Azure."
-ms.custom: 
-ms.date: 11/13/2017
-ms.prod: sql-non-specified
+description: Funzionalità per l'elaborazione di query adattive e il miglioramento delle prestazioni delle query in SQL Server (2017 e versioni successive) e nel database SQL di Azure.
+ms.custom: ''
+ms.date: 05/08/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: 
-ms.assetid: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords: ''
+ms.assetid: ''
 author: joesackmsft
-ms.author: josack;monicar
+ms.author: josack
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 139d73430346cdad7baa27d90c14ad692be5bbeb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 464696823e99e81a763fbbc4a2835c86ef9bea5c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Elaborazione di query adattive nei database SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Questo articolo presenta funzionalità per l'elaborazione di query adattive che consentono di migliorare le prestazioni delle query in SQL Server e nel database SQL di Azure:
+Questo articolo presenta funzionalità per l'elaborazione di query adattive che consentono di migliorare le prestazioni delle query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:
 - Feedback delle concessioni di memoria in modalità batch.
 - Join adattivo in modalità batch.
 - Esecuzione interleaved. 
@@ -41,13 +40,16 @@ In alcuni casi il piano scelto da Query Optimizer non è ottimale per diversi mo
 ![Funzionalità dell'elaborazione di query adattive](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>Come abilitare l'elaborazione di query adattive
-È possibile impostare automaticamente i carichi di lavoro come idonei all'elaborazione di query adattive abilitando il livello di compatibilità 140 per il database.  Questa opzione è impostabile con Transact-SQL. Ad esempio
+È possibile impostare automaticamente i carichi di lavoro come idonei all'elaborazione di query adattive abilitando il livello di compatibilità 140 per il database.  Questa opzione è impostabile con Transact-SQL. Ad esempio  
+
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
+
 ## <a name="batch-mode-memory-grant-feedback"></a>Feedback delle concessioni di memoria in modalità batch
-Un piano post esecuzione di una query in SQL Server include la memoria minima richiesta per l'esecuzione e la dimensione della concessione di memoria sufficiente a far sì che tutte le righe siano incluse nella memoria. Se le dimensioni della concessione di memoria non vengono impostate correttamente le prestazioni possono risultare ridotte. Le concessioni di dimensioni eccessive causano memoria non usata e riduzione della concorrenza. Le concessioni di memoria di dimensioni insufficienti causano costose distribuzioni su disco. Incentrandosi sui carichi di lavoro ripetuti, il feedback delle concessioni di memoria in modalità batch ricalcola la memoria effettiva necessaria per una query, quindi aggiorna il valore della concessione per il piano nella cache.  Quando viene eseguita un'istruzione query identica la query usa le dimensioni della concessione di memoria aggiornate, riducendo il numero eccessivo di concessioni che limita la concorrenza e correggendo il numero insufficiente di concessioni che causa costose distribuzioni su disco.
-Il grafico seguente visualizza un esempio dell'uso del feedback delle concessioni di memoria in modalità batch. La durata della prima esecuzione della query è pari a *88 secondi* a causa del numero elevato di distribuzioni:
+Un piano post esecuzione di una query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include la memoria minima richiesta per l'esecuzione e la dimensione della concessione di memoria sufficiente a far sì che tutte le righe siano incluse nella memoria. Se le dimensioni della concessione di memoria non vengono impostate correttamente le prestazioni possono risultare ridotte. Le concessioni di dimensioni eccessive causano memoria non usata e riduzione della concorrenza. Le concessioni di memoria di dimensioni insufficienti causano costose distribuzioni su disco. Incentrandosi sui carichi di lavoro ripetuti, il feedback delle concessioni di memoria in modalità batch ricalcola la memoria effettiva necessaria per una query, quindi aggiorna il valore della concessione per il piano nella cache.  Quando viene eseguita un'istruzione query identica la query usa le dimensioni della concessione di memoria aggiornate, riducendo il numero eccessivo di concessioni che limita la concorrenza e correggendo il numero insufficiente di concessioni che causa costose distribuzioni su disco.
+Il grafico seguente visualizza un esempio dell'uso del feedback delle concessioni di memoria in modalità batch. La durata della prima esecuzione della query è pari a **88 secondi** a causa del numero elevato di distribuzioni:   
+
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
 DECLARE @StartTime datetime = '2016-09-15 00:00:00.000';
@@ -57,72 +59,98 @@ WHERE Timestamp BETWEEN @StartTime and @EndTime
 GROUP BY hash_unique_bigint_id
 ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ```
+
 ![Numero elevato di distribuzioni](./media/2_AQPGraphHighSpills.png)
 
-Con il feedback delle concessioni di memoria attivato la durata della seconda esecuzione della query si riduce a *1 secondo* (da 88 secondi), le distribuzioni su disco vengono rimosse completamente e la concessione è superiore: 
+Con il feedback delle concessioni di memoria attivato la durata della seconda esecuzione della query si riduce a **1 secondo** (da 88 secondi), le distribuzioni su disco vengono rimosse completamente e la concessione è superiore: 
 
 ![Nessuna distribuzione](./media/3_AQPGraphNoSpills.png)
 
 ### <a name="memory-grant-feedback-sizing"></a>Dimensionamento tramite il feedback delle concessioni di memoria
-*Per le concessioni di memoria di dimensioni eccessive* se la memoria per le concessioni supera di oltre due volte la quantità di memoria realmente usata, il feedback delle concessioni di memoria ricalcola la concessione e aggiorna il piano memorizzato nella cache.  I piani con concessioni di memoria di dimensioni inferiori a 1 MB non vengono ricalcolati per le eccedenze.
-*Per le concessioni di memoria di dimensioni insufficienti* che generano distribuzioni su disco per gli operatori in modalità batch, il feedback delle concessioni di memoria attiva il ricalcolo della concessione di memoria. Gli eventi di distribuzione vengono segnalati al feedback delle concessioni di memoria e possono essere esposti con l'evento XEvent *spilling_report_to_memory_grant_feedback*. Questo evento restituisce l'ID del nodo dal piano e il volume dei dati distribuiti su disco da tale nodo.
+Per una condizione di concessione di memoria di dimensioni eccessive, se la memoria concessa supera di oltre due volte la quantità di memoria realmente usata, il feedback delle concessioni di memoria ricalcola la concessione e aggiorna il piano memorizzato nella cache. I piani con concessioni di memoria di dimensioni inferiori a 1 MB non vengono ricalcolati per le eccedenze.
+Per una condizione di concessione di memoria di dimensioni insufficienti che genera distribuzioni su disco per gli operatori in modalità batch, il feedback delle concessioni di memoria attiva il ricalcolo della concessione di memoria. Gli eventi di distribuzione vengono segnalati al feedback delle concessioni di memoria e possono essere esposti con l'evento xEvent *spilling_report_to_memory_grant_feedback*. Questo evento restituisce l'ID del nodo dal piano e il volume dei dati distribuiti su disco da tale nodo.
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>Feedback delle concessioni di memoria e scenari dipendenti dai parametri
-Per risultati ottimali, valori dei parametri diversi possono richiedere piani di query diversi. Le query di questo tipo sono definite "sensibili ai parametri". Per i piani sensibili ai parametri il feedback delle concessioni di memoria si disattiva quando una query registra requisiti di memoria non stabili.  Il piano viene disattivato dopo varie ripetizioni dell'esecuzione della query e la disattivazione può essere rilevata monitorando l'evento XEvent *memory_grant_feedback_loop_disabled*.
+Per risultati ottimali, valori dei parametri diversi possono richiedere piani di query diversi. Le query di questo tipo sono definite "sensibili ai parametri". Per i piani sensibili ai parametri il feedback delle concessioni di memoria si disattiva quando una query registra requisiti di memoria non stabili. Il piano viene disattivato dopo varie ripetizioni dell'esecuzione della query e la disattivazione può essere rilevata monitorando l'evento xEvent *memory_grant_feedback_loop_disabled*. Per altre informazioni sull'analisi e la sensibilità dei parametri, consultare la [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### <a name="memory-grant-feedback-caching"></a>Memorizzazione nella cache del feedback delle concessioni di memoria
 Il feedback può essere archiviato nel piano memorizzato nella cache per una singola esecuzione. Tuttavia i vantaggi del feedback delle concessioni di memoria appaiono in caso di esecuzioni consecutive dell'istruzione. Questa funzionalità si applica all'esecuzione ripetuta di istruzioni. Il feedback delle concessioni di memoria modifica solo il piano memorizzato nella cache. Attualmente le modifiche non vengono acquisite in Query Store.
-Se il piano viene rimosso dalla cache il feedback non viene mantenuto. Il feedback va perduto anche nel caso di un failover. Un'istruzione che usa OPTION(RECOMPILE) crea un nuovo piano e non lo memorizza nella cache. Dato che il piano non è memorizzato nella cache il feedback delle concessioni di memoria non viene generato e non viene archiviato per la compilazione e l'esecuzione.  Se tuttavia un'istruzione equivalente (con lo stesso hash di query) che *non* ha usato OPTION(RECOMPILE) è stata memorizzata nella cache e quindi rieseguita, l'istruzione consecutiva può trarre vantaggio dal feedback delle concessioni di memoria.
+Se il piano viene rimosso dalla cache il feedback non viene mantenuto. Il feedback va perduto anche nel caso di un failover. Un'istruzione che usa `OPTION (RECOMPILE)` crea un nuovo piano e non lo memorizza nella cache. Dato che il piano non è memorizzato nella cache il feedback delle concessioni di memoria non viene generato e non viene archiviato per la compilazione e l'esecuzione.  Se tuttavia un'istruzione equivalente (con lo stesso hash di query) che **non** ha usato `OPTION (RECOMPILE)` è stata memorizzata nella cache e quindi rieseguita, l'istruzione consecutiva può trarre vantaggio dal feedback delle concessioni di memoria.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>Rilevamento delle attività di feedback delle concessioni di memoria
-È possibile tenere traccia di eventi di feedback delle concessioni di memoria usando l'evento XEvent *memory_grant_updated_by_feedback*.  Questo evento rileva la cronologia del conteggio di esecuzione corrente, il numero di volte per il quale il piano è stato aggiornato dal feedback delle concessioni di memoria, la concessione di memoria aggiuntiva ideale prima della modifica e la concessione di memoria aggiuntiva ideale dopo che il feedback delle concessioni di memoria ha modificato il piano salvato nella cache.
+È possibile tenere traccia di eventi di feedback delle concessioni di memoria usando l'evento xEvent *memory_grant_updated_by_feedback*. Questo evento rileva la cronologia del conteggio di esecuzione corrente, il numero di volte per il quale il piano è stato aggiornato dal feedback delle concessioni di memoria, la concessione di memoria aggiuntiva ideale prima della modifica e la concessione di memoria aggiuntiva ideale dopo che il feedback delle concessioni di memoria ha modificato il piano salvato nella cache.
 
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Feedback delle concessioni di memoria, Resource Governor e hint per la query
 La memoria concessa reale è conforme al limite di memoria per le query determinato da Resource Governor o dall'hint per la query.
 
+### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>Disabilitazione dei commenti della concessione di memoria senza modificare il livello di compatibilità
+È possibile disabilitare i commenti della concessione di memoria nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore. Per disabilitare i commenti della concessione di memoria in modalità batch per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+Quando è abilitata, questa impostazione viene visualizzata come abilitata in sys. database_scoped_configurations.
+
+Per abilitare nuovamente i commenti della concessione di memoria in modalità batch per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+È anche possibile disabilitare i commenti della concessione di memoria in modalità batch per una query specifica, definendo DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK come hint per la query USE HINT.  Ad esempio
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
+
 ## <a name="batch-mode-adaptive-joins"></a>Join adattivi in modalità batch
-La funzionalità di join adattivo in modalità batch consente di rimandare a *dopo* la scansione del primo input la scelta tra l'esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati.  L'operatore di join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano a cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.
+La funzionalità di join adattivo in modalità batch consente di rimandare a **dopo** la scansione del primo input la scelta tra l'[esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati](../../relational-databases/performance/joins.md). L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.
 Il funzionamento è il seguente:
-- Se il conteggio delle righe dell'input del join di compilazione è così ridotto che un join a cicli annidati è preferibile a un hash join, il piano passa a un algoritmo a cicli annidati.
-- Se l'input del join di compilazione supera una determinata soglia di numero di righe non si verifica alcun cambiamento e il piano continua con un hash join.
+-  Se il conteggio delle righe dell'input del join di compilazione è così ridotto che un join a cicli annidati è preferibile a un hash join, il piano passa a un algoritmo a cicli annidati.
+-  Se l'input del join di compilazione supera una determinata soglia di numero di righe non si verifica alcun cambiamento e il piano continua con un hash join.
 
 La query seguente illustra un esempio di join adattivo:
 
 ```sql
 SELECT  [fo].[Order Key], [si].[Lead Time Days],
 [fo].[Quantity]
-FROM    [Fact].[Order] AS [fo]
+FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE   [fo].[Quantity] = 360;
+WHERE [fo].[Quantity] = 360;
 ```
 
-La query restituisce 336 righe.  Se si attiva Statistiche query dinamiche viene visualizzato il piano seguente:
+La query restituisce 336 righe. Se si attiva [Statistiche query dinamiche](../../relational-databases/performance/live-query-statistics.MD), viene visualizzato il piano seguente:
 
 ![Risultato della query: 336 righe](./media/4_AQPStats336Rows.png)
 
 Nel piano viene visualizzato quanto segue:
 1. È presente un'Analisi indice Columnstore che specifica righe per la fase di compilazione dell'hash join.
-1. È presente il nuovo operatore di join adattivo. L'operatore definisce la soglia usata per il passaggio a un piano con ciclo annidato.  In questo esempio la soglia corrisponde a 78 righe.  Se il risultato è &gt;= 78 righe verrà usato un hash join.  Se è inferiore alla soglia verrà usato un join a cicli annidati.
-1. Dato che le righe restituite sono 336, la soglia viene superata: il secondo ramo rappresenta la fase di probe di un'operazione hash join standard. Si noti che Statistiche sulle query dinamiche visualizza le righe del flusso tra gli operatori, in questo caso "672 di 672".
+1. È presente il nuovo operatore Join adattivo. L'operatore definisce la soglia usata per il passaggio a un piano Cicli annidati. In questo esempio la soglia corrisponde a 78 righe. Se il risultato è &gt;= 78 righe, verrà usato un hash join. Se è inferiore alla soglia, verrà usato un join a cicli annidati.
+1. Poiché le righe restituite sono 336, la soglia viene superata: il secondo ramo rappresenta la fase di probe di un'operazione hash join standard. Si noti che Statistiche sulle query dinamiche visualizza le righe del flusso tra gli operatori, in questo caso "672 di 672".
 1. L'ultimo ramo è la Ricerca indice cluster che il join a cicli annidati avrebbe usato se la soglia non fosse stata superata. Il valore visualizzato è "0 di 336" righe (il ramo non viene usato).
- Ora si confronti il piano con la stessa query che tuttavia nella tabella restituisce una quantità pari a una sola riga:
+ Ora si confronti il piano con la stessa query, ma questa volta per un valore *Quantità* che ha una sola riga nella tabella:
  
 ```sql
 SELECT  [fo].[Order Key], [si].[Lead Time Days],
 [fo].[Quantity]
-FROM    [Fact].[Order] AS [fo]
+FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE   [fo].[Quantity] = 361;
+WHERE [fo].[Quantity] = 361;
 ```
-La query restituisce una riga.  Se si attiva Statistiche query dinamiche viene visualizzato il piano seguente:
+La query restituisce una riga. Se si attiva Statistiche query dinamiche viene visualizzato il piano seguente:
 
 ![Risultato della query: una riga](./media/5_AQPStatsOneRow.png)
 
 Nel piano viene visualizzato quanto segue:
-- Dato che viene restituita una sola riga, ora il flusso di righe attraversa Ricerca indice cluster.
-- Dato che non è stata portata avanti la fase di compilazione dell'hash join, nessuna riga attraversa il secondo ramo.
+- Con una sola riga restituita, ora il flusso di righe attraversa Ricerca indice cluster.
+- Poiché non è stata portata avanti la fase di compilazione dell'hash join, nessuna riga attraversa il secondo ramo.
 
 ### <a name="adaptive-join-benefits"></a>Vantaggi del join adattivo
 Questa funzionalità è ottimale per i carichi di lavoro con frequenti oscillazioni tra i volumi di input di join rilevati.
@@ -134,9 +162,9 @@ I join adattivi presentano requisiti di memoria superiori rispetto a un piano eq
 I join adattivi in modalità batch funzionano per l'esecuzione iniziale di un'istruzione. Dopo la compilazione, le esecuzioni consecutive restano adattive sulla base della soglia di join adattivo di compilazione e delle righe di runtime del flusso di dati della fase di compilazione dell'input esterno.
 
 ### <a name="tracking-adaptive-join-activity"></a>Rilevamento delle attività di join adattivo
-L'operatore di join adattivo ha i seguenti attributi dell'operatore del piano:
+L'operatore Join adattivo ha i seguenti attributi dell'operatore del piano:
 
-| Attributo del piano | Description |
+| Attributo del piano | Descrizione |
 |--- |--- |
 | AdaptiveThresholdRows | Visualizza l'uso della soglia che determina il passaggio da un hash join a un join a cicli annidati. |
 | EstimatedJoinType | Probabile tipo del join. |
@@ -145,30 +173,60 @@ L'operatore di join adattivo ha i seguenti attributi dell'operatore del piano:
 Il piano stimato visualizza la struttura del piano di join adattivo, la soglia di join adattivo definita e il tipo di join stimato.
 
 ### <a name="adaptive-join-and-query-store-interoperability"></a>Interoperabilità tra join adattivi e Archivio query
-Archivio query acquisisce e può imporre un piano di join adattivo in modalità batch.
+Query Store acquisisce e può imporre un piano di join adattivo in modalità batch.
 
 ### <a name="adaptive-join-eligible-statements"></a>Istruzioni idonee per i join adattivi
 Alcune condizioni rendono un join logico idoneo per un join adattivo in modalità batch:
-- Il livello di compatibilità del database è 140
-- La query è un'istruzione SELECT (attualmente le istruzioni di modifica dei dati non sono idonee)
-- Il join è idoneo per l'esecuzione in un algoritmo fisico di join a cicli annidati indicizzati o di hash join
-- L'hash join usa la modalità batch con un indice Columnstore nella query globale o una tabella Columnstore indicizzata alla quale fa riferimento direttamente il join
-- Il primo elemento figlio (riferimento esterno) deve essere identico per le soluzioni alternative generate dal join a cicli annidati e dall'hash join
+- Il livello di compatibilità del database è 140.
+- La query è un'istruzione SELECT (attualmente le istruzioni di modifica dei dati non sono idonee).
+- Il join è idoneo per l'esecuzione in un algoritmo fisico di join a cicli annidati indicizzati o di hash join.
+- L'hash join usa la modalità batch con un indice Columnstore nella query globale o una tabella Columnstore indicizzata alla quale fa riferimento direttamente il join.
+- Il primo elemento figlio (riferimento esterno) deve essere identico per le soluzioni alternative generate dal join a cicli annidati e dall'hash join.
 
 ### <a name="adaptive-joins-and-nested-loop-efficiency"></a>Efficienza dei join adattivi e dei join a cicli annidati
-Se un join adattivo passa al funzionamento con cicli annidati usa le righe già lette dalla compilazione hash join. L'operatore *non* legge di nuovo le righe del riferimento esterno.
+Se un join adattivo passa al funzionamento con cicli annidati usa le righe già lette dalla compilazione hash join. L'operatore **non** legge di nuovo le righe del riferimento esterno.
 
 ### <a name="adaptive-threshold-rows"></a>Righe della soglia adattiva
 Il grafico seguente visualizza un esempio di intersezione tra il costo di un hash join e il costo di un join a cicli annidati alternativo.  In questo punto di intersezione viene determinata la soglia, che a sua volta determina l'algoritmo usato per l'operazione di join.
 
 ![Soglia di join](./media/6_AQPJoinThreshold.png)
 
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Disabilitazione dei join adattivi senza modificare il livello di compatibilità
+
+È possibile disabilitare i join adattivi nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore.  
+Per disabilitare i join adattivi per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+Quando è abilitata, questa impostazione viene visualizzata come abilitata in sys. database_scoped_configurations.
+Per abilitare nuovamente i join adattivi per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+È anche possibile disabilitare i join adattivi per una query specifica, definendo DISABLE_BATCH_MODE_ADAPTIVE_JOINS come hint per la query USE HINT.  Ad esempio
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
+
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>Esecuzione interleaved per funzioni con valori di tabella a più istruzioni
 L'esecuzione interleaved cambia il limite unidirezionale tra le fasi di ottimizzazione ed esecuzione nel caso di un'esecuzione a query singola e consente l'adattamento dei piani in base alle stime di cardinalità aggiornate. Se durante l'ottimizzazione viene rilevato un candidato per l'esecuzione interleaved, che attualmente corrisponde a una **funzione con valori di tabella a più istruzioni (MSTVF, Multi-Statement Table Valued Function)** si sospende l'ottimizzazione, si esegue il sottoalbero appropriato, si acquisiscono stime di cardinalità accurate e quindi si riprende l'ottimizzazione per le operazioni downstream.
-Le funzioni MSTVF hanno una stima di cardinalità predefinita pari a "100" in SQL Server 2014 e SQL Server 2016 e pari a "1" nelle versioni precedenti. L'esecuzione interleaved riduce i problemi di prestazioni del carico di lavoro dovute alle stime della cardinalità fisse associate alle funzioni con valori di tabella a più istruzioni.
+Le funzioni MSTVF hanno una stima di cardinalità predefinita pari a 100 in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e pari a 1 nelle versioni precedenti. L'esecuzione interleaved riduce i problemi di prestazioni del carico di lavoro dovute alle stime della cardinalità fisse associate alle funzioni con valori di tabella a più istruzioni.
 
 L'immagine seguente visualizza un output di statistiche query in tempo reale, un subset di un piano di esecuzione complessivo che visualizza l'impatto delle stime della cardinalità fisse da funzioni MSTVF. È possibile visualizzare il flusso di righe effettivo e le righe stimate. Tre aree del piano sono degne di nota (il flusso va da destra a sinistra):
-1. L'analisi di tabella MSTVF include una stima fissa pari a 100 righe. In questo esempio tuttavia il flusso della scansione tabella MSTVF registra *527.597* righe, come visualizzato in Statistiche query dinamiche nel confronto "527597 di 100" tra valore effettivo e valore stimato. Si tratta di una deviazione notevole rispetto alla stima fissa.
+1. L'analisi di tabella MSTVF include una stima fissa pari a 100 righe. In questo esempio tuttavia il flusso della scansione tabella MSTVF registra 527.597 righe, come visualizzato in Statistiche query dinamiche nel confronto *527597 di 100* tra valore effettivo e valore stimato. Si tratta di una deviazione notevole rispetto alla stima fissa.
 1. Per l'operazione di join a cicli annidati è previsto che il lato esterno del join restituisca solo 100 righe. Dato l'elevato numero di righe di fatto restituite dalla funzione MSTVF, in questo caso può risultare utile la scelta di un altro algoritmo di join.
 1. Per l'operazione Hash Match osservare il piccolo simbolo di avviso, che in questo caso indica un evento di distribuzione su disco.
 
@@ -202,33 +260,67 @@ Dopo che un piano di esecuzione interleaved viene memorizzato nella cache, il pi
 ### <a name="tracking-interleaved-execution-activity"></a>Rilevamento delle attività di esecuzione interleaved
 È possibile visualizzare gli attributi d'uso nel piano di esecuzione query:
 
-| Attributo del piano | Description |
+| Attributo del piano di esecuzione | Descrizione |
 | --- | --- |
-| ContainsInterleavedExecutionCandidates | Valido per il nodo *QueryPlan*. Se è "true" il piano contiene candidati per l'esecuzione interleaved. |
-| IsInterleavedExecuted | L'attributo è all'interno dell'elemento RuntimeInformation sotto il RelOp del nodo TVF. Se è "true" l'operazione è stata materializzata come parte di un'operazione di esecuzione interleaved. |
+| ContainsInterleavedExecutionCandidates | Si applica al nodo *QueryPlan*. Quando è *true*, il piano contiene candidati per l'esecuzione interleaved. |
+| IsInterleavedExecuted | Attributo dell'elemento *RuntimeInformation* in RelOp per il nodo TVF. Quando è *true*, l'operazione è stata materializzata come parte di un'operazione di esecuzione interleaved. |
 
-È anche possibile rilevare le occorrenze di esecuzione interleaved con i seguenti eventi XEvent:
+È anche possibile rilevare le occorrenze di esecuzione interleaved con i seguenti eventi xEvent:
 
-| XEvent | Description |
+| xEvent | Descrizione |
 | ---- | --- |
 | interleaved_exec_status | Questo evento viene generato quando si verifica l'esecuzione interleaved. |
 | interleaved_exec_stats_update | Questo evento descrive le stime della cardinalità aggiornate dall'esecuzione interleaved. |
 | Interleaved_exec_disabled_reason | Questo evento viene generato quando in una query con un possibile candidato per l'esecuzione interleaved non viene applicata tale modalità di esecuzione. |
 
-Per consentire all'esecuzione interleaved di rivedere le stime della cardinalità MSTVF è necessario eseguire la query. Tuttavia il piano di esecuzione viene ancora visualizzato quando sono presenti candidati per l'esecuzione interleaved tramite l'attributo ContainsInterleavedExecutionCandidates.
+Per consentire all'esecuzione interleaved di rivedere le stime della cardinalità MSTVF è necessario eseguire la query. Tuttavia il piano di esecuzione stimato viene ancora visualizzato quando sono presenti candidati per l'esecuzione interleaved tramite l'attributo showplan `ContainsInterleavedExecutionCandidates`.    
 
 ### <a name="interleaved-execution-caching"></a>Memorizzazione nella cache dell'esecuzione interleaved
 Se un piano è viene cancellato o espulso dalla cache, durante l'esecuzione della query l'esecuzione interleave viene usata da una nuova compilazione.
-Un'istruzione che usa OPTION(RECOMPILE) crea un nuovo piano usando l'esecuzione interleaved e non lo memorizza nella cache.
+Un'istruzione che usa `OPTION (RECOMPILE)` crea un nuovo piano usando l'esecuzione interleaved e non lo memorizza nella cache.     
 
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>Interoperabilità tra esecuzione interleaved e Archivio query
-È possibile forzare i piani che usano l'esecuzione interleaved. Il piano è la versione che presenta stime della cardinalità corrette sulla base dell'esecuzione iniziale.
+È possibile forzare i piani che usano l'esecuzione interleaved. Il piano è la versione che presenta stime della cardinalità corrette sulla base dell'esecuzione iniziale.    
+
+### <a name="disabling-interleaved-execution-without-changing-the-compatibility-level"></a>Disabilitazione dell'esecuzione interleaved senza modificare il livello di compatibilità
+
+È possibile disabilitare l'esecuzione interleaved nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore.  Per disabilitare l'esecuzione interleaved per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+```
+
+Quando è abilitata, questa impostazione viene visualizzata come abilitata in sys. database_scoped_configurations.
+Per abilitare nuovamente l'esecuzione interleaved per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+```
+
+È anche possibile disabilitare l'esecuzione interleave per una query specifica definendo DISABLE_INTERLEAVED_EXECUTION_TVF come hint per la query USE HINT.  Ad esempio
+
+```sql
+SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM    [Fact].[Order] AS [fo]
+INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
+                            '1-01-2013',
+                            '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
+                            AND [fo].[City Key] = [foo].[City Key]
+                            AND [fo].[Customer Key] = [foo].[Customer Key]
+                            AND [fo].[Stock Item Key] = [foo].[Stock Item Key]
+                            AND [fo].[Order Date Key] = [foo].[Order Date Key]
+                            AND [fo].[Picked Date Key] = [foo].[Picked Date Key]
+                            AND [fo].[Salesperson Key] = [foo].[Salesperson Key]
+                            AND [fo].[Picker Key] = [foo].[Picker Key]
+OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
+```
+
+L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
 
 ## <a name="see-also"></a>Vedere anche
-
-[Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
-
-[Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)
-
-[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md) (Dimostrazione dell'elaborazione di query adattive)      
+[Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
+[Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)    
+[Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
+[Join](../../relational-databases/performance/joins.md)    
+[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md) (Dimostrazione dell'elaborazione di query adattive)          
 

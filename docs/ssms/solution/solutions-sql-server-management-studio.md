@@ -1,16 +1,15 @@
 ---
 title: Soluzioni (SQL Server Management Studio) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], solutions
@@ -18,19 +17,19 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], projects
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cbaa02918eb4d30e7fc9f58b69a3665c0a3296a2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 9741b7db06a3be3adb6eb86f044fd7403fe1c2c0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluzioni (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Una soluzione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] è una raccolta di uno o più progetti correlati. I progetti sono contenitori che gli sviluppatori utilizzano per organizzare file correlati, ad esempio set di script di amministrazione di uso comune.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Una soluzione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] è una raccolta di uno o più progetti correlati. I progetti sono contenitori che gli sviluppatori utilizzano per organizzare file correlati, ad esempio set di script di amministrazione di uso comune.  
   
 ## <a name="solution-overview"></a>Panoramica della soluzione  
 È possibile utilizzare [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] come piattaforma per lo sviluppo di script per [!INCLUDE[ssDE](../../includes/ssde_md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Utilizzare gli editor di codice di [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] per sviluppare script e query per database relazionali e multidimensionali e per raccogliere script e query correlati in progetti.  

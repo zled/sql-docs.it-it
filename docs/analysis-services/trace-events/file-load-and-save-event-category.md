@@ -1,31 +1,23 @@
 ---
 title: Caricamento e salvataggio dei file categoria di eventi | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: trace-events
 ms.topic: reference
-ms.assetid: 8051a7d8-d815-45e1-a764-a5992b07b4fd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 35e87b8be69035997a6ba466d45f426d6e236a9c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6a432d196d950c3d21c255a019dd773ef957d8c0
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="file-load-and-save-event-category"></a>Categoria di eventi relativa al caricamento e salvataggio dei file
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Nella categoria di eventi relativa al caricamento e salvataggio dei file sono incluse le classi di eventi descritte nella tabella seguente.  
+  Nella categoria di eventi relativa al caricamento e salvataggio dei file sono incluse le classi di eventi descritte nella tabella seguente.  
   
 |Event Class|ID evento|Description|  
 |-----------------|--------------|-----------------|  

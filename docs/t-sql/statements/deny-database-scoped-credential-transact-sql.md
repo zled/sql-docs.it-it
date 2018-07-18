@@ -1,17 +1,15 @@
 ---
-title: DENY (Transact-SQL) credenziali con ambito Database | Documenti Microsoft
-ms.custom: 
+title: DENY - Credenziali con ambito database (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - DENY DATABASE SCOPED CREDENTIAL
 - DENY_DATABASE_SCOPED_CREDENTIAL_TSQL
@@ -21,21 +19,21 @@ helpviewer_keywords:
 - DENY statement, database scoped credentials
 - denying permissions [SQL Server], database scoped credential
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
-caps.latest.revision: 
+caps.latest.revision: 2
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: adcbe36f2ffabfc63521fe905933295402178977
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 799eb7604e5026e95a986a5aaddeb0e8e5e35bd2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="deny-database-scoped-credential-transact-sql"></a>DENY (Transact-SQL) credenziali con ambito Database
+# <a name="deny-database-scoped-credential-transact-sql"></a>DENY - Credenziali con ambito database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Nega le autorizzazioni per una credenziale con ambito database.  
+  Nega le autorizzazioni per credenziali con ambito database.  
 
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -52,11 +50,11 @@ DENY permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
- Specifica un'autorizzazione che può essere negata per una credenziale con ambito database. Vedere l'elenco riportato di seguito.  
+ *permission*  
+ Specifica un'autorizzazione che può essere negata per credenziali con ambito database. Vedere l'elenco riportato di seguito.  
   
- NEL DATABASE SCOPED CREDENTIAL **::***credential_name*  
- Specifica le credenziali con ambito database per cui viene negata l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
+ ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ Specifica il tipo di credenziali con ambito database per cui viene negata l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
  Specifica l'entità a cui viene negata l'autorizzazione. I tipi validi sono:  
@@ -99,10 +97,10 @@ DENY permission  [ ,...n ]
   
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Osservazioni  
- Una credenziale con ambito database è un database a livello di entità a protezione diretta contenuta nel database padre nella gerarchia delle autorizzazioni. Le autorizzazioni più specifiche e limitate che è possibile negare per una credenziale con ambito database sono elencate di seguito, insieme alle autorizzazioni più generali che le includono in modo implicito.  
+## <a name="remarks"></a>Remarks  
+ Le credenziali con ambito database sono un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Di seguito sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per credenziali con ambito database, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
-|Autorizzazione delle credenziali con ambito database|Autorizzazione delle credenziali con ambito database cui è inclusa|Autorizzazione del database in cui è inclusa|  
+|Autorizzazione delle credenziali con ambito database|Implicita nell'autorizzazione delle credenziali con ambito database|Autorizzazione del database in cui è inclusa|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -110,13 +108,13 @@ DENY permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'autorizzazione CONTROL per le credenziali con ambito database. Se viene utilizzata la clausola AS, l'entità specificata deve essere proprietaria di credenziali con ambito database.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione CONTROL per le credenziali con ambito database. Se viene usata la clausola AS, l'entità specificata deve essere proprietaria delle credenziali con ambito database.  
   
 ## <a name="see-also"></a>Vedere anche  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Credenziali (Transact-SQL) con ambito database GRANT](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [REVOCA delle credenziali con ambito database (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
+ [GRANT - Credenziali con ambito database (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
+ [REVOKE - Credenziali con ambito database (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  

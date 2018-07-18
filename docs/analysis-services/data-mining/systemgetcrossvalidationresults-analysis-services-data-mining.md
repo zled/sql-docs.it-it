@@ -1,35 +1,23 @@
 ---
 title: SystemGetCrossValidationResults (Analysis Services - Data Mining) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-helpviewer_keywords:
-- SystemGetCrossValidationResults
-- stored procedures [Analysis Services], data mining
-- cross-validation [data mining]
-ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2febed19e2bd481a8e442f115f9691e5abb6be4b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Partiziona la struttura di data mining nel numero specificato di sezioni incrociate, esegue il training di un modello per ogni partizione, quindi restituisce la metrica di accuratezza per ogni partizione.  
+  Partiziona la struttura di data mining nel numero specificato di sezioni incrociate, esegue il training di un modello per ogni partizione, quindi restituisce la metrica di accuratezza per ogni partizione.  
   
 > [!NOTE]  
 >  Non è possibile usare questa stored procedure per la convalida incrociata di modelli di clustering o di modelli compilati mediante l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series o l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering. Per eseguire la convalida incrociata di modelli di clustering, usare una stored procedure specifica, ovvero [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
@@ -116,10 +104,10 @@ SystemGetCrossValidationResults(
   
  Se non si specifica alcun valore oppure il valore è **Null**, viene usato lo stato più probabile, indipendentemente dal punteggio di probabilità corrispondente.  
   
- Il valore predefinito è **Null**.  
+ Il valore predefinito è **null**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non genererà un errore se si imposta la *state threshold* su 0.0, sebbene non sia mai consigliabile usare questo valore. Con una soglia di 0.0, le stime con una probabilità dello 0 percento vengono di fatto conteggiate come corrette.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non genererà un errore se si imposta *soglia di stato* su 0.0, ma non utilizzare mai questo valore. Con una soglia di 0.0, le stime con una probabilità dello 0 percento vengono di fatto conteggiate come corrette.  
   
  (facoltativo).  
   
@@ -144,7 +132,7 @@ SystemGetCrossValidationResults(
 |PartitionSize|Valore integer che indica il numero di case inclusi in ogni partizione.|  
 |Test|Categoria del test eseguito. Per una descrizione delle categorie e dei test inclusi in ogni categoria, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Misura|Nome della misura restituita dal test. Le misure per ogni modello dipendono dal tipo del valore stimabile. Per la definizione delle diverse misure, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Per un elenco delle misure restituite per ogni tipo stimabile, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
-|Valore|Valore della misura di test specificata.|  
+|Value|Valore della misura di test specificata.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Per restituire la metrica di accuratezza per l'intero set di dati, usare [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
@@ -173,7 +161,7 @@ NULL
   
  Risultati dell'esempio:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Misura|Valore|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Misura|Value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Target Mail DT|Bike Buyer|1|1|500|Classificazione|Vero positivo|144|  
 |Target Mail DT|Bike Buyer|1|1|500|Classificazione|Falso positivo|105|  
@@ -195,8 +183,8 @@ NULL
   
 ## <a name="see-also"></a>Vedere anche  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

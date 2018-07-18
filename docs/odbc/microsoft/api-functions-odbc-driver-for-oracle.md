@@ -1,31 +1,28 @@
 ---
 title: Le funzioni dell'API, il Driver ODBC per Oracle | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], functions
 - API functions [ODBC]
 ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: cad307162930465d3f03332c472af90d4439563d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: db35490ff900590f6eb1028b0288a93b55899cc6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="api-functions-odbc-driver-for-oracle"></a>Funzioni API (Driver ODBC per Oracle)
 > [!IMPORTANT]  
@@ -37,4 +34,4 @@ ms.lasthandoff: 12/21/2017
   
 -   [Livello 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) conformità fornisce funzionalità di interfaccia di livello principale oltre che le caratteristiche quali le transazioni.  
   
--   [Livello 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) conformità fornisce funzionalità di livello 1 oltre che le funzionalità, ad esempio i segnalibri, i parametri dinamici e di esecuzione asincrona delle funzioni ODBC.
+-   [Livello 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) conformità fornisce funzionalità di livello 1 oltre che le caratteristiche quali i segnalibri, i parametri dinamici e l'esecuzione asincrona delle funzioni ODBC.

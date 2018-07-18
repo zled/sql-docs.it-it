@@ -1,15 +1,14 @@
 ---
-title: "Guida di riferimento alle funzionalità (Reporting Services) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
+title: Guida di riferimento alle funzionalità (Reporting Services) | Microsoft Docs
+ms.custom: ''
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Report Builder 2.0, F1 help
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8c0339ff6e6662c4deb271cf38b744ac33678f2f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e6eace09048fd6ba2399e5314d6868efd9e7baf7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550082"
 ---
 # <a name="feature-reference-reporting-services"></a>Guida di riferimento alle funzionalità (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include numerosi strumenti e applicazioni che è possibile usare per la creazione, la gestione e la visualizzazione di report. In questa sezione sono disponibili argomenti specifici che descrivono le finestre di dialogo, le pagine Web e le procedure guidate di tali strumenti e applicazioni.  
@@ -36,9 +35,6 @@ ms.lasthandoff: 01/09/2018
 ## <a name="in-this-section"></a>Argomenti della sezione  
  [Guida sensibile al contesto di Progettazione report](../reporting-services/tools/report-designer-f1-help.md)  
  Guida per Progettazione report e le finestre di dialogo correlate, per Creazione guidata report e per Creazione guidata immagine.  
-  
- [Guida sensibile al contesto di Gestione report](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
- Guida per Gestione report, applicazione Web utilizzata per gestire un'istanza del server di report singola.  
   
  [Argomenti della Guida relativi a Gestione configurazione Reporting Services](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  Guida per lo strumento di configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usato per la distribuzione e la gestione delle istanze del server di report.  

@@ -1,16 +1,14 @@
 ---
 title: Accedere a SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server, logging in
 - services [SQL Server], logging in
@@ -23,19 +21,19 @@ helpviewer_keywords:
 - logging in [SQL Server]
 - logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 9afd0526acb2531222828a104a81096a29846342
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 769bb9418b3d631648f6f493aeb084b5fea0a619
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logging-in-to-sql-server"></a>Accesso a SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile accedere a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno degli strumenti di amministrazione a interfaccia grafica oppure dal prompt dei comandi.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  È possibile accedere a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno degli strumenti di amministrazione a interfaccia grafica oppure dal prompt dei comandi.  
   
  Se si accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno strumento di amministrazione a interfaccia grafica, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], viene richiesto di specificare il nome del server, un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una password, se necessario. Se si accede a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Windows non è necessario specificare un account di accesso di SQL Server ogni volta che si accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza infatti l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dell'utente per eseguire automaticamente l'accesso. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in modalità mista (modalità di autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows) e si sceglie di eseguire l'accesso usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una password. Se possibile, usare l'autenticazione di Windows.  
   

@@ -1,32 +1,33 @@
 ---
 title: sp_get_distributor (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_get_distributor
 - sp_get_distributor_TSQL
-helpviewer_keywords: sp_get_distributor
+helpviewer_keywords:
+- sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a9a52ebbb8e17ff88008b2b04208a0d383179ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1f4cd34760ff4bd447bc5a2621508629264adee1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +47,16 @@ sp_get_distributor
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**installato**|**int**|**0** = No. **1** = Sì|  
+|**Installato**|**int**|**0** = No. **1** = Sì|  
 |**server di distribuzione**|**sysname**|Nome del server di distribuzione|  
 |**database di distribuzione installato**|**int**|**0** = No. **1** = Sì|  
 |**è la distribuzione server di pubblicazione**|**int**|**0** = No. **1** = Sì|  
-|**server di pubblicazione di distribuzione remoto**|**int**|**0** = No. **1** = Sì|  
+|**con server di pubblicazione di distribuzione remoto**|**int**|**0** = No. **1** = Sì|  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_get_distributor** viene utilizzata principalmente dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in snapshot, transazionale e di tipo merge.  
+ **sp_get_distributor** viene utilizzata principalmente le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in snapshot, transazionale e di tipo merge.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può eseguire **sp_get_distributor**. Un set di risultati non NULL viene restituito quando la stored procedure viene eseguita dai membri del **db_owner** o **replmonitor** ruoli predefiniti del database nel database di distribuzione o i membri del  **db_owner** ruolo predefinito del database su almeno un database pubblicato. Un set di risultati non NULL viene restituito anche quando questa stored procedure viene eseguita dagli utenti nell'elenco di accesso alla pubblicazione (PAL) di almeno un database pubblicato o nell'elenco di accesso del database di distribuzione per un Server di pubblicazione non SQL, possono inoltre eseguire **sp _get_distributor**.  
   
 ## <a name="see-also"></a>Vedere anche  

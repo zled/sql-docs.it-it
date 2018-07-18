@@ -1,36 +1,23 @@
 ---
 title: Elemento RefreshPolicy (ASSL) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: RefreshPolicy Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: RefreshPolicy
-helpviewer_keywords: RefreshPolicy element
-ms.assetid: f4c36280-1a39-4f1c-a3ab-fbeb81742d6d
-caps.latest.revision: "34"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2f2d8598e588f65799df46a3b5e60c2f027f8861
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d553fc069242c8c9c3ba3348820c81474fd3a668
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="refreshpolicy-element-assl"></a>Elemento RefreshPolicy (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Determina la frequenza con cui parte dinamica del gruppo di dimensione o misura (come specificato da di [persistenza](../../../analysis-services/scripting/properties/persistence-element-assl.md) elemento) è selezionata per le modifiche.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Determina la frequenza con cui parte dinamica del gruppo di dimensione o misura (come specificato da di [persistenza](../../../analysis-services/scripting/properties/persistence-element-assl.md) elemento) è selezionata per le modifiche.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|Vedere la tabella riportata di seguito.|  
@@ -54,19 +41,19 @@ ms.lasthandoff: 01/08/2018
 |Predecessore o padre|Valore predefinito|  
 |------------------------|-------------------|  
 |[DimensionBinding](../../../analysis-services/scripting/data-type/dimensionbinding-data-type-assl.md)|*ByQuery*|  
-|[MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|None|  
+|[MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|Nessuno|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[DimensionBinding](../../../analysis-services/scripting/data-type/dimensionbinding-data-type-assl.md), [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*ByQuery*|Ogni query controlla se i dati di origine sono modificati.|  
 |*ByInterval*|Dati di origine viene verificati solo per le modifiche nell'intervallo specificato da [RefreshInterval](../../../analysis-services/scripting/properties/refreshinterval-element-assl.md).|  
@@ -74,7 +61,7 @@ ms.lasthandoff: 01/08/2018
  L'enumerazione che corrisponde ai valori consentiti per **RefreshPolicy** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.RefreshPolicy>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento Persistence &#40; ASSL &#41;](../../../analysis-services/scripting/properties/persistence-element-assl.md)   
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Elemento Persistence & #40; ASSL & #41;](../../../analysis-services/scripting/properties/persistence-element-assl.md)   
+ [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

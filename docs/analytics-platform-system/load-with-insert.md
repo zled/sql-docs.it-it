@@ -1,33 +1,28 @@
 ---
-title: Caricare i dati con l'istruzione INSERT
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "È possibile utilizzare l'istruzione INSERT tsql per caricare dati in SQL Server Parallel Data Warehouse (PDW) distribuite o tabella replicata."
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 6e951b0e-e95b-4fd1-b5f3-c65607aee0d8
-caps.latest.revision: "21"
-ms.openlocfilehash: 625b6938ebbb2d0b753cb1a35f5c1df7372c6cca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Caricare i dati con INSERT - Parallel Data Warehouse | Documenti Microsoft
+description: Utilizzando l'istruzione T-SQL INSERT per caricare dati in un Parallel Data Warehouse (PDW) distribuite o tabella replicata.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: b7a05e5381c2ad687c37926ad449cd6765403ceb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585783"
 ---
-# <a name="load-data-with-insert"></a>Caricare i dati con l'istruzione INSERT
+# <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Caricare i dati con l'istruzione INSERT in Parallel Data Warehouse
 
-È possibile utilizzare l'istruzione INSERT tsql per caricare dati in SQL Server Parallel Data Warehouse (PDW) distribuite o tabella replicata. Per ulteriori informazioni sull'inserimento, vedere [inserire](../t-sql/statements/insert-transact-sql.md). Per le tabelle replicate e tutte le colonne non distribuzione in una tabella distribuita, PDW utilizza SQL Server per convertire in modo implicito i valori di dati specificati nell'istruzione per il tipo di dati della colonna di destinazione. Per ulteriori informazioni sulle regole di conversione di dati di SQL Server, vedere [conversione SQL di tipo di dati](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx). Tuttavia, per le colonne di distribuzione, PDW supporta solo un subset delle conversioni implicite supportate da SQL Server. Pertanto, quando si utilizza l'istruzione INSERT per caricare dati in una colonna di distribuzione, i dati di origine devono essere specificati in uno dei formati definiti nelle tabelle seguenti.  
+È possibile utilizzare l'istruzione INSERT tsql per caricare dati in SQL Server Parallel Data Warehouse (PDW) distribuite o tabella replicata. Per ulteriori informazioni sull'inserimento, vedere [inserire](../t-sql/statements/insert-transact-sql.md). Per le tabelle replicate e tutte le colonne non distribuzione in una tabella distribuita, PDW utilizza SQL Server per convertire in modo implicito i valori di dati specificati nell'istruzione per il tipo di dati della colonna di destinazione. Per ulteriori informazioni sulle regole di conversione di dati di SQL Server, vedere [conversione SQL di tipo di dati](http://msdn.microsoft.com/library/ms191530\(v=sql11\).aspx). Tuttavia, per le colonne di distribuzione, PDW supporta solo un subset delle conversioni implicite supportate da SQL Server. Pertanto, quando si utilizza l'istruzione INSERT per caricare dati in una colonna di distribuzione, i dati di origine devono essere specificati in uno dei formati definiti nelle tabelle seguenti.  
   
   
 ## <a name="InsertingLiteralsBinary"></a>Inserire i valori letterali in tipi binari  
-Nella tabella seguente definisce i tipi letterali accettati, formato e le regole di conversione per l'inserimento di un valore letterale in una colonna di distribuzione di tipo **binario** (*n*) o  **varbinary**(*n*).  
+Nella tabella seguente definisce i tipi letterali accettati, formato e le regole di conversione per l'inserimento di un valore letterale in una colonna di distribuzione di tipo **binario** (*n*) o **varbinary** (*n*).  
   
 |Tipo di valore letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
@@ -41,10 +36,10 @@ Nella tabella seguente definisce i formati accettati e regole per l'inserimento 
   
 |Tipo di valore letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
-|Valore letterale stringa nel **datetime** formato|'Aaaa-MM-gg hh.mm.ss [. nnn]'<br /><br />Esempio: ' 2007-05-08 12:35:29.123'|Cifre frazionarie mancante vengono impostate su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08 12:35 ' viene inserito come ' 2007-05-08 12:35:00.000'.|  
+|Valore letterale stringa nel **datetime** formato|'YYYY-MM-DD hh:mm:ss[.nnn]'<br /><br />Esempio: ' 2007-05-08 12:35:29.123'|Cifre frazionarie mancante vengono impostate su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08 12:35 ' viene inserito come ' 2007-05-08 12:35:00.000'.|  
 |Valore letterale stringa nel **smalldatetime** formato|"Aaaa-MM-gg hh: mm"<br /><br />Esempio: ' 2007-05-08:35 12'|Quando il valore viene inserito, secondi e cifre frazionarie rimanenti vengono impostate su 0.|  
 |Valore letterale stringa nel **data** formato|"YYYY-MM-DD"<br /><br />Esempio: ' 2007-05-08'|Valori di ora (ora, minuti, secondi e frazioni) sono impostati su 12:00:00.000 quando viene inserito il valore.|  
-|Valore letterale stringa nel **datetime2** formato|'Aaaa-MM-GG. nnnnnnn'<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|I dati di origine non possono superare tre cifre frazionarie. Ad esempio, il valore letterale ' 2007-05-08 12:35:29.123' verrà inserito, ma il valore ' 2007-05-08 12:35:29.1234567' genera un errore.|  
+|Valore letterale stringa nel **datetime2** formato|'YYYY-MM-DD hh:mm:ss.nnnnnnn'<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|I dati di origine non possono superare tre cifre frazionarie. Ad esempio, il valore letterale ' 2007-05-08 12:35:29.123' verrà inserito, ma il valore ' 2007-05-08 12:35:29.1234567' genera un errore.|  
   
 ### <a name="smalldatetime-data-type"></a>tipo di dati smalldatetime  
 Nella tabella seguente definisce i formati accettati e regole per l'inserimento di valori letterali in una colonna di distribuzione di tipo **smalldatetime**. Qualsiasi stringa vuota (") viene convertito il valore predefinito ' 1900-01-01 12:00". Le stringhe che contengono solo spazi vuoti (' ') genera un errore.  
@@ -66,28 +61,28 @@ Nella tabella seguente definisce i formati accettati e regole per l'inserimento 
   
 |Tipo di valore letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
-|Valore letterale stringa nel **ora** formato|'. nnnnnnn'<br /><br />Esempio: '12:35:29.1234567'|Se l'origine dati ha una precisione di minore o uguale (numero di cifre frazionarie) quella di **ora** del tipo di dati, i dati vengano applicato un riempimento a destra con zeri. Ad esempio, viene inserito un valore letterale '12:35:29.123' come '12:35:29.1230000'.<br /><br />Un valore con una precisione maggiore rispetto al tipo di dati di destinazione viene rifiutato.|  
+|Valore letterale stringa nel **ora** formato|'hh:mm:ss.nnnnnnn'<br /><br />Esempio: '12:35:29.1234567'|Se l'origine dati ha una precisione di minore o uguale (numero di cifre frazionarie) quella di **ora** del tipo di dati, i dati vengano applicato un riempimento a destra con zeri. Ad esempio, viene inserito un valore letterale '12:35:29.123' come '12:35:29.1230000'.<br /><br />Un valore con una precisione maggiore rispetto al tipo di dati di destinazione viene rifiutato.|  
   
 ### <a name="datetimeoffset-data-type"></a>tipo di dati DateTimeOffset  
-Nella tabella seguente definisce i formati accettati e regole per l'inserimento di valori letterali in una colonna di distribuzione di tipo **datetimeoffset** (*n*). Il formato predefinito è ' aaaa-MM-GG. di nnnnnnn {+ |-} hh: mm ". Una stringa vuota (") viene convertita il valore predefinito ' 1900-01-01 12:00:00.0000000 + 00:00". Le stringhe che contengono solo spazi vuoti (' ') genera un errore. Il numero di cifre frazionarie dipende dalla definizione della colonna. Ad esempio, una colonna definita come **datetimeoffset** (2) avranno due cifre frazionarie.  
+Nella tabella seguente definisce i formati accettati e le regole per l'inserimento di valori letterali in una colonna di distribuzione di tipo **datetimeoffset** (*n*). Il formato predefinito è ' aaaa-MM-GG. di nnnnnnn {+ |-} hh: mm ". Una stringa vuota (") viene convertita il valore predefinito ' 1900-01-01 12:00:00.0000000 + 00:00". Le stringhe che contengono solo spazi vuoti (' ') genera un errore. Il numero di cifre frazionarie dipende dalla definizione della colonna. Ad esempio, una colonna definita come **datetimeoffset** (2) avranno due cifre frazionarie.  
   
 |Tipo di valore letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
-|Valore letterale stringa nel **datetime** formato|'Aaaa-MM-gg hh.mm.ss [. nnn]'<br /><br />Esempio: ' 2007-05-08 12:35:29.123'|Cifre frazionarie mancante e valori di offset sono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08 12:35:29.123' viene inserito come ' 2007-05-08 12:35:29.1230000 + 00:00 ".|  
+|Valore letterale stringa nel **datetime** formato|'YYYY-MM-DD hh:mm:ss[.nnn]'<br /><br />Esempio: ' 2007-05-08 12:35:29.123'|Cifre frazionarie mancante e valori di offset sono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08 12:35:29.123' viene inserito come ' 2007-05-08 12:35:29.1230000 + 00:00 ".|  
 |Valore letterale stringa nel **smalldatetime** formato|"Aaaa-MM-gg hh: mm"<br /><br />Esempio: ' 2007-05-08:35 12'|Secondi, le cifre frazionarie rimanenti e i valori di offset vengono impostati su 0 quando viene inserito il valore.|  
 |Valore letterale stringa nel **data** formato|"YYYY-MM-DD"<br /><br />Esempio: ' 2007-05-08'|I valori di ora (ora, minuti, secondi e frazioni) vengono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08' viene inserito come ' 2007-05-08 00.00.00.0000000 + 00:00 ".|  
-|Valore letterale stringa nel **datetime2** formato|'Aaaa-MM-GG. nnnnnnn'<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|I dati di origine non possono superare il numero specificato di secondi frazionari nella colonna datetimeoffset. Se l'origine dati contiene un numero minore o uguale dei secondi frazionari, i dati verranno aggiunti a destra con zeri. Ad esempio, se il tipo di dati datetimeoffset (5), il valore letterale ' 2007-05-08 12:35:29.123 + 12:15 ' viene inserito come ' 12:35:29.12300 + 12:15 '.|  
-|Valore letterale stringa nel **datetimeoffset** formato|"Aaaa-MM-GG. di nnnnnnn {+ &#124;;-} hh: mm"<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567 + 12:15 '|I dati di origine non possono superare il numero specificato di secondi frazionari nella colonna datetimeoffset. Se l'origine dati contiene un numero minore o uguale dei secondi frazionari, i dati verranno aggiunti a destra con zeri. Ad esempio, se il tipo di dati datetimeoffset (5), il valore letterale ' 2007-05-08 12:35:29.123 + 12:15 ' viene inserito come ' 12:35:29.12300 + 12:15 '.|  
+|Valore letterale stringa nel **datetime2** formato|'YYYY-MM-DD hh:mm:ss.nnnnnnn'<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|I dati di origine non possono superare il numero specificato di secondi frazionari nella colonna datetimeoffset. Se l'origine dati contiene un numero minore o uguale dei secondi frazionari, i dati verranno aggiunti a destra con zeri. Ad esempio, se il tipo di dati datetimeoffset (5), il valore letterale ' 2007-05-08 12:35:29.123 + 12:15 ' viene inserito come ' 12:35:29.12300 + 12:15 '.|  
+|Valore letterale stringa nel **datetimeoffset** formato|'YYYY-MM-DD hh:mm:ss.nnnnnnn {+&#124;-} hh:mm'<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567 + 12:15 '|I dati di origine non possono superare il numero specificato di secondi frazionari nella colonna datetimeoffset. Se l'origine dati contiene un numero minore o uguale dei secondi frazionari, i dati verranno aggiunti a destra con zeri. Ad esempio, se il tipo di dati datetimeoffset (5), il valore letterale ' 2007-05-08 12:35:29.123 + 12:15 ' viene inserito come ' 12:35:29.12300 + 12:15 '.|  
   
 ### <a name="datetime2-data-type"></a>tipo di dati datetime2  
-Nella tabella seguente definisce i formati accettati e regole per l'inserimento di valori letterali in una colonna di distribuzione di tipo **datetime2** (*n*). Il formato predefinito è 'YYYY-MM-GG. nnnnnnn'. Una stringa vuota (") viene convertita il valore predefinito ' 1900-01-01-12:00:00". Le stringhe che contengono solo spazi vuoti (' ') genera un errore. Il numero di cifre frazionarie dipende dalla definizione della colonna. Ad esempio, una colonna definita come **datetime2** (2) avranno due cifre frazionarie.  
+Nella tabella seguente definisce i formati accettati e le regole per l'inserimento di valori letterali in una colonna di distribuzione di tipo **datetime2** (*n*). Il formato predefinito è 'YYYY-MM-GG. nnnnnnn'. Una stringa vuota (") viene convertita il valore predefinito ' 1900-01-01-12:00:00". Le stringhe che contengono solo spazi vuoti (' ') genera un errore. Il numero di cifre frazionarie dipende dalla definizione della colonna. Ad esempio, una colonna definita come **datetime2** (2) avranno due cifre frazionarie.  
   
 |Tipo di valore letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
-|Valore letterale stringa nel **datetime** formato|'Aaaa-MM-gg hh.mm.ss [. nnn]'<br /><br />Esempio: ' 2007-05-08 12:35:29.123'|I secondi frazionari sono facoltativi e vengono impostati su 0 quando viene inserito il valore.<br /><br />Un valore che ha più cifre frazionarie che il tipo di dati di destinazione viene rifiutato.|  
+|Valore letterale stringa nel **datetime** formato|'YYYY-MM-DD hh:mm:ss[.nnn]'<br /><br />Esempio: ' 2007-05-08 12:35:29.123'|I secondi frazionari sono facoltativi e vengono impostati su 0 quando viene inserito il valore.<br /><br />Un valore che ha più cifre frazionarie che il tipo di dati di destinazione viene rifiutato.|  
 |Valore letterale stringa nel **smalldatetime** formato|"Aaaa-MM-gg hh: mm"<br /><br />Esempio: ' 2007-05-08 12'|Secondi facoltativi e cifre frazionarie rimanenti vengono impostate su 0 quando viene inserito il valore.|  
 |Valore letterale stringa nel **data** formato|"YYYY-MM-DD"<br /><br />Esempio: ' 2007-05-08'|I valori di ora (ora, minuti, secondi e frazioni) vengono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08' viene inserito come ' 2007-05-08 12:00:00.0000000'.|  
-|Valore letterale stringa nel **datetime2** formato|'Aaaa-MM-gg hh:mm:ss:nnnnnnn'<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|Se l'origine dati contiene i componenti di data e ora sono minore o uguale al valore specificato **datetime2**(*n*), i dati vengono inseriti; in caso contrario viene generato un errore.|  
+|Valore letterale stringa nel **datetime2** formato|'Aaaa-MM-gg hh:mm:ss:nnnnnnn'<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|Se l'origine dati contiene i componenti di data e ora che sono minori o uguali al valore specificato **datetime2**(*n*), i dati vengono inseriti; in caso contrario, viene generato un errore.|  
   
 ## <a name="InsertLiteralsNumeric"></a>Inserire i valori letterali in tipi numerici  
 Nelle tabelle seguenti definiscono i formati accettati e le regole di conversione per l'inserimento di un valore letterale in una colonna di distribuzione di SQL Server PDW che utilizza un tipo numerico.  

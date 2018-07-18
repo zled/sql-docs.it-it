@@ -1,27 +1,25 @@
 ---
-title: "Esplorazione della flessibilità di un'area dati Tablix (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: 
+title: Esplorazione della flessibilità di un'area dati Tablix (Generatore report e SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b795c6ab6d2106c781dbcd75cbf913dda85298d5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f66fa1f10498a014b244725e871ca935f89ee7a2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Esplorazione della flessibilità di un'area dati Tablix (Generatore report e SSRS)
 In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , quando si aggiunge una tabella, una matrice o un'area dati elenco dalla scheda Inserisci sulla barra multifunzione, si può partire con un modello iniziale per un'area dati Tablix. La scelta iniziale del modello, tuttavia, non è vincolante. Per continuare a sviluppare la modalità di visualizzazione dei dati è possibile aggiungere o rimuovere caratteristiche dell'area dati Tablix quali gruppi, righe e colonne.  
@@ -36,7 +34,7 @@ In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
 ## <a name="changing-a-table-to-a-matrix"></a>Sostituzione di una tabella con una matrice  
  Per impostazione predefinita, una tabella contiene righe di dettaglio che visualizzano i valori del set di dati del report. In genere, una tabella include gruppi di righe in cui i dati dettaglio sono organizzati per gruppo, quindi include i valori aggregati basati su ogni gruppo. Per sostituire la tabella con una matrice, aggiungere gruppi di colonne. In genere, il gruppo dettagli viene rimosso quando l'area dati contiene sia gruppi di righe sia di colonne in modo che sia possibile visualizzare solo i valori riepilogativi dei gruppi. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
- Per definizione, la creazione di una matrice implica l'aggiunta di una cella d'angolo della Tablix. È possibile unire le celle di quest'area e aggiungere un'etichetta. Per altre informazioni, vedere [Unire le celle in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
+ Per definizione, la creazione di una matrice implica l'aggiunta di una cella d'angolo della Tablix. È possibile unire le celle di quest'area e aggiungere un'etichetta. Per altre informazioni, vedere [Unire le celle in un'area dati &#40;Generatore report e SSRS& #41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="changing-a-matrix-to-a-table"></a>Sostituzione di una matrice con una tabella  
  Per impostazione predefinita, una matrice contiene gruppi di righe e di colonne, ma non gruppi dettagli. Per sostituire una matrice con una tabella, rimuovere i gruppi di colonne e aggiungere un gruppo dettagli da visualizzare nella riga di dettaglio. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) e [Aggiungere un gruppo dettagli &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md).  

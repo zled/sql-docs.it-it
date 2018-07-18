@@ -1,34 +1,34 @@
 ---
 title: 'Esercitazione: Uso del tipo di dati hierarchyid | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - tutorials [hierarchyid]
 - hierarchyid [Database Engine], tutorial
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 668177022a6032c906a97c1787ddac3b9a6771dc
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 817cb3a1693ddd7852d4ca143eb1b15326e8ad0d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Esercitazione: Utilizzo del tipo di dati hierarchyid
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Questa esercitazione è destinata agli utenti che hanno esperienza nell'uso di [!INCLUDE[tsql](../../includes/tsql-md.md)], ma non hanno familiarità con il tipo di dati **hierarchyid**.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Questa esercitazione è destinata agli utenti che hanno esperienza nell'uso di [!INCLUDE[tsql](../../includes/tsql-md.md)]ma non hanno familiarità con il tipo di dati **hierarchyid** .  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
 L'esercitazione è suddivisa in due lezioni:  

@@ -1,31 +1,31 @@
 ---
 title: Creare query (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: queries [SQL Server], creating
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 813673a5b992a27fe9d93f480024cb988136ab3a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 9aecd0e9a0393356409439ec9c46943ebded6233
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-queries-visual-database-tools"></a>Creazione di query (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le query consentono di recuperare dati dalle tabelle e dalle viste del database. Le query vengono create e usate in **Progettazione query e Progettazione viste**, uno strumento che comprende quattro riquadri: il [riquadro Diagramma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), il [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), il [riquadro Criteri Pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)e il [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Le query consentono di recuperare dati dalle tabelle e dalle viste del database. Le query vengono create e usate in **Progettazione query e Progettazione viste**, uno strumento che comprende quattro riquadri: il [riquadro Diagramma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), il [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), il [riquadro Criteri Pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)e il [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
 ### <a name="to-create-a-new-query"></a>Per creare una nuova query  
   

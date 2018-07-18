@@ -1,16 +1,14 @@
 ---
-title: sys.syscacheobjects (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys. syscacheobjects (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscacheobjects_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - syscacheobjects system table
 - sys.syscacheobjects compatibility view
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: afc20f732375a4ecd04075c1dbd228139b0005d3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: de76f70e43c7b8d4cc043be069c2b412bb03f69b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.lasthandoff: 02/09/2018
 |**dbid**|**smallint**|ID del database in cui è stato compilato l'oggetto della cache.|  
 |**dbidexec**|**smallint**|ID del database da cui viene eseguita la query.<br /><br /> Per la maggior parte degli oggetti, **dbidexec** ha lo stesso valore di **dbid**.<br /><br /> Per le viste di sistema, **dbidexec** è l'ID di database da cui viene eseguita la query.<br /><br /> Per le query ad hoc, **dbidexec** è 0. Ciò significa **dbidexec** ha lo stesso valore di **dbid**.|  
 |**uid**|**smallint**|Indica il creatore dei piani per le query ad hoc e dei piani preparati.<br /><br /> -2 = Il batch inviato non dipende dalla risoluzione implicita del nome e può essere condiviso da diversi utenti. Questo è il metodo consigliato. Qualsiasi altro valore rappresenta l'ID dell'utente che invia la query al database.<br /><br /> Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.|  
-|**refcounts**|**int**|Numero degli altri oggetti della cache che fanno riferimento a questo oggetto della cache. Il valore di base è 1.|  
+|**refCounts**|**int**|Numero degli altri oggetti della cache che fanno riferimento a questo oggetto della cache. Il valore di base è 1.|  
 |**usecounts**|**int**|Numero di utilizzi dell'oggetto della cache dall'inizio.|  
 |**pagesused**|**int**|Numero di pagine utilizzate dall'oggetto della cache.|  
 |**setopts**|**int**|Impostazioni delle opzioni SET che hanno effetto su un piano compilato. Queste impostazioni fanno parte della chiave della cache. Eventuali modifiche dei valori di questa colonna indicano che gli utenti hanno modificato le opzioni SET. Di seguito vengono descritte alcune di queste opzioni:<br /><br /> **ANSI_PADDING**<br /><br /> **FORCEPLAN**<br /><br /> **CONCAT_NULL_YIELDS_NULL**<br /><br /> **ANSI_WARNINGS**<br /><br /> **ANSI_NULLS**<br /><br /> **QUOTED_IDENTIFIER**<br /><br /> **ANSI_NULL_DFLT_ON**<br /><br /> **ANSI_NULL_DFLT_OFF**|  

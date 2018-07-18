@@ -1,28 +1,28 @@
 ---
 title: MSSQL_ENG014121 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: MSSQL_ENG014121 error
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- MSSQL_ENG014121 error
 ms.assetid: c8595854-cce1-4566-ad64-d565555caded
-caps.latest.revision: "13"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 13
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a528e562bd3eb64e037bd8f51fa8dadc0d4635c9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 57593511e74a098c4208d154aed044a3032d238f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mssqleng014121"></a>MSSQL_ENG014121
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

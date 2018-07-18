@@ -1,32 +1,34 @@
 ---
 title: Impostazioni server di pubblicazione | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.rep.monitor.publishersettings.f1
-helpviewer_keywords: Publisher Settings dialog box
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.rep.monitor.publishersettings.f1
+helpviewer_keywords:
+- Publisher Settings dialog box
 ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
-caps.latest.revision: "19"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 19
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6293fabc344e118f1aac0ff0978bba67e7c0ca27
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5d0a2e0201753adf7196111c68461f5fecfe43f8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publisher-settings"></a>Impostazioni server di pubblicazione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La finestra di dialogo **Impostazioni server di pubblicazione** consente di modificare le impostazioni per i server di pubblicazione aggiunti al riquadro sinistro di Monitoraggio replica.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La finestra di dialogo **Impostazioni server di pubblicazione** consente di modificare le impostazioni per i server di pubblicazione aggiunti al riquadro sinistro di Monitoraggio replica.  
   
 ## <a name="options"></a>Opzioni  
  **Connessione server di pubblicazione**  

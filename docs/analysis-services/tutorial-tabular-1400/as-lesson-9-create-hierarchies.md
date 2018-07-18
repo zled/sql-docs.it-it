@@ -1,27 +1,19 @@
 ---
-title: 'Lezione dell''esercitazione di Analysis Services 9: creare gerarchie | Documenti Microsoft'
-description: 
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: 
-author: Minewiskan
-manager: kfile
-editor: 
-tags: 
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+title: "Lezione dell'esercitazione di Analysis Services 9: creare gerarchie | Documenti Microsoft"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
-ms.openlocfilehash: 63aaf396aedfb550321a3b583db235cd9561e586
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.reviewer: owend
+author: minewiskan
+manager: kfiles"
+ms.openlocfilehash: df99d05373d4d3087ef1d5fa5324ec645bf000b6
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-hierarchies"></a>Creare gerarchie
 

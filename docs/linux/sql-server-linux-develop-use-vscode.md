@@ -1,25 +1,22 @@
 ---
 title: Utilizzare l'estensione di Visual Studio Code mssql per SQL Server | Documenti Microsoft
 description: In questa esercitazione viene illustrato come utilizzare l'estensione mssql per il codice di Visual Studio. Questa estensione consente di modificare ed eseguire script Transact-SQL nel codice di Visual Studio.
-author: erickangMSFT
-ms.author: erickang
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.workload: Active
-ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3291767b4fa1f7b18e751661f9beeb0e061f8146
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Usare codice di Visual Studio per creare ed eseguire script Transact-SQL per SQL Server
 
@@ -52,7 +49,7 @@ I passaggi seguenti illustrano come installare l'estensione mssql.
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > Per macOS, è necessario installare OpenSSL. Questo è un prerequisito per .net Core usati dall'estensione mssql. Seguire il **installare prerequisiti** passaggi il [.Net Core istruzioni]. In alternativa, è possibile eseguire i comandi seguenti nel macOS Terminal.
+   > Per macOS, è necessario installare OpenSSL. Questo è un prerequisito per .net Core usati dall'estensione mssql. Seguire il **installare prerequisiti** passaggi il [Istruzioni di .net core]. In alternativa, è possibile eseguire i comandi seguenti nel macOS Terminal.
    >
    >   ```bash
    >   brew update
@@ -97,7 +94,7 @@ La procedura seguente viene illustrato come connettersi a SQL Server con Visual 
 
    | Impostazione | Description |
    |-----|-----|
-   | **Nome server** | Il nome dell'istanza SQL Server. Per questa esercitazione, usare **localhost** per connettersi all'istanza di SQL Server locale nel computer. Se la connessione a un Server SQL remoto, immettere il nome del computer SQL Server di destinazione o il relativo indirizzo IP. |
+   | **Nome server** | Il nome dell'istanza SQL Server. Per questa esercitazione, usare **localhost** per connettersi all'istanza di SQL Server locale nel computer. Se la connessione a un Server SQL remoto, immettere il nome del computer SQL Server di destinazione o il relativo indirizzo IP. Se è necessario specificare una porta per l'istanza di SQL Server, utilizzare la virgola per separare dal nome. Ad esempio per un server locale in esecuzione sulla porta 1401 immesso **localhost, 1401**. |
    | **[Facoltativo] Nome del database** | Il database che si desidera utilizzare. Ai fini di questa esercitazione, non specificare un database e premere **invio** per continuare. |
    | **Nome utente** | Immettere il nome di un utente con accesso a un database nel server. Per questa esercitazione, usare il valore predefinito **SA** account creato durante l'installazione di SQL Server. |
    | **Password (account di accesso SQL)** | Immettere la password per l'utente specificato. | 
@@ -261,13 +258,13 @@ Per ulteriori informazioni su utilizzando o che hanno contribuito all'estensione
 Per ulteriori informazioni sull'utilizzo di codice di Visual Studio, vedere il [documentazione di Visual Studio Code](https://code.visualstudio.com/docs).
 
 [**mssql** estensione per il codice di Visual Studio]:https://aka.ms/mssql-marketplace
-[scaricare e installare Visual Studio Code]:https://code.visualstudio.com/Download
-[.Net Core istruzioni]:https://www.microsoft.com/net/core
+[Scaricare e installare Visual Studio Code]:https://code.visualstudio.com/Download
+[Istruzioni di .net core]:https://www.microsoft.com/net/core
 [gestire i profili di connessione]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [consigli per la risoluzione dei problemi di connessione]:./sql-server-linux-troubleshooting-guide.md#connection
 [personalizzare i tasti di scelta rapida]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
-[esercitazione: scrittura di istruzioni Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
-[riferimento a Transact-SQL (motore di Database)]:https://msdn.microsoft.com/library/bb510741.aspx
+[Esercitazione: Scrittura di istruzioni Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
+[Riferimento a Transact-SQL (motore di Database)]:https://msdn.microsoft.com/library/bb510741.aspx
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
 [Windows 10 Universal C Runtime]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [personalizzare le opzioni di estensione]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options

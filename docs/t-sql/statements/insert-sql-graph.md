@@ -1,47 +1,45 @@
 ---
-title: INSERT (SQL grafico) | Documenti Microsoft
-description: INSERIRE la sintassi per le tabelle di nodo o bordo grafico SQL.
+title: INSERT (grafo SQL) | Microsoft Docs
+description: Sintassi INSERT per le tabelle nodi e bordi di un grafo SQL.
 ms.date: 05/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - INSERT statement [SQL Server], SQL graph
 - SQL graph, INSERT statement
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6bac7f1d7da67f319a9c84425b370bb61a35ca19
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 0180eaa873484fa9061c01e0cc18e20ea3012da2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="insert-sql-graph"></a>INSERT (grafico SQL)
+# <a name="insert-sql-graph"></a>INSERT (grafo SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Aggiunge uno o più righe a un `node` o `edge` tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+  Consente di aggiungere una o più righe a una tabella `node` o `edge` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]   
->  Per istruzioni Transact-SQL standard, vedere [Inserisci tabella (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
+>  Per istruzioni Transact-SQL standard, vedere [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="insert-into-node-table-syntax"></a>INSERIRE la sintassi di tabella di nodo 
-La sintassi per l'inserimento in una tabella di nodo è uguale a quella di una normale tabella. 
+## <a name="insert-into-node-table-syntax"></a>INSERT nella sintassi della tabella nodi 
+La sintassi per l'inserimento in una tabella nodi è uguale a quella di una normale tabella. 
 
 ```  
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -107,43 +105,43 @@ INSERT
   
  
 ## <a name="arguments"></a>Argomenti  
- Questo documento descrive gli argomenti relativi al grafico SQL. Per un elenco completo e una descrizione di argomenti supportati nell'istruzione INSERT, vedere [Inserisci tabella (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+ Questo documento descrive gli argomenti relativi al grafo SQL. Per un elenco completo e una descrizione di argomenti supportati nell'istruzione INSERT, vedere [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
 
  INTO  
- Parola chiave facoltativa che può essere usato tra `INSERT` e la tabella di destinazione.  
+ Parola chiave facoltativa che può essere specificata tra `INSERT` e la tabella di destinazione.  
   
  *search_condition_with_match*   
- `MATCH`clausola è utilizzabile in una sottoquery durante l'inserimento in una tabella edge o di nodo. Per `MATCH` sintassi dell'istruzione, vedere [grafico corrispondenza (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
+ La clausola `MATCH` può essere usata in una sottoquery durante l'inserimento in una tabella nodi o bordi. Per la sintassi dell'istruzione `MATCH`, vedere [ GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
 
  *graph_search_pattern*   
- Criterio di ricerca fornita per `MATCH` clausola come parte del predicato di grafico.
+ Criterio di ricerca specificato per la clausola `MATCH` come parte del predicato del grafo.
 
  *edge_table_column_list*   
- Gli utenti devono fornire valori per `$from_id` e `$to_id` durante l'inserimento di un bordo. Se non viene fornito un valore o i valori null vengono inseriti in tali colonne, verrà restituito un errore. 
+ Gli utenti devono specificare valori per `$from_id` e `$to_id` durante l'inserimento in un bordo. Se in queste colonne non viene specificato alcun valore o se vengono inseriti valori Null, viene restituito un errore. 
   
 
-## <a name="remarks"></a>Osservazioni  
-Inserimento in un nodo corrisponde all'inserimento in qualsiasi tabella relazionale. I valori per la colonna node_id $ vengono generati automaticamente.
+## <a name="remarks"></a>Remarks  
+L'inserimento in un nodo corrisponde all'inserimento in qualsiasi tabella relazionale. I valori per la colonna $node_id vengono generati automaticamente.
 
-Durante l'inserimento in una tabella edge, gli utenti devono fornire valori per `$from_id` e `$to_id` colonne.   
+Quando eseguono l'inserimento in una tabella bordi, gli utenti devono specificare valori per le colonne `$from_id` e `$to_id`.   
 
-BULK insert per la tabella di nodo è rimangono identici a quelli di una tabella relazionale.
+L'inserimento bulk per la tabella nodi rimane identico a quello di una tabella relazionale.
 
-Prima di massa di inserimento in una tabella edge, le tabelle di nodo devono essere importate. I valori del parametro `$from_id` e `$to_id` possono essere estratte dal `$node_id` colonna della tabella dei nodi e inserire come bordi. 
+Prima dell'inserimento bulk in una tabella bordi, è necessario importare le tabelle nodi. I valori di `$from_id` e `$to_id` possono essere estratti dalla colonna `$node_id` della tabella nodi ed essere inseriti come bordi. 
 
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione INSERT per la tabella di destinazione.  
   
- INSERIMENTO di autorizzazioni per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server, il **db_owner** e **db_datawriter** fissa ruoli del database e il proprietario della tabella. I membri del **sysadmin**, **db_owner**e **db_securityadmin** ruoli e il proprietario della tabella possono trasferire autorizzazioni ad altri utenti.  
+ Le autorizzazioni INSERT vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e ai membri dei ruoli predefiniti del database **db_owner** e **db_datawriter** nonché al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner** e **db_securityadmin** e il proprietario della tabella possono trasferire le autorizzazioni ad altri utenti.  
   
- Per eseguire INSERT con l'opzione BULK della funzione OPENROWSET, è necessario essere un membro del **sysadmin** ruolo predefinito del server o il **bulkadmin** ruolo predefinito del server.  
+ Per eseguire INSERT con l'opzione BULK della funzione OPENROWSET, è necessario essere un membro del ruolo predefinito del server **sysadmin** o **bulkadmin**.  
   
 
 ## <a name="examples"></a>Esempi  
   
-#### <a name="a--insert-into-node-table"></a>A.  Inserire nella tabella del nodo  
- Nell'esempio seguente viene creata una tabella di nodo di persona e inserisce 2 righe nella tabella.
+#### <a name="a--insert-into-node-table"></a>A.  INSERT nella tabella nodi  
+ Nell'esempio seguente viene creata una tabella nodi di persone in cui vengono inserite 2 righe.
 
  ```
  -- Create person node table
@@ -154,8 +152,8 @@ Prima di massa di inserimento in una tabella edge, le tabelle di nodo devono ess
  INSERT INTO dbo.Person VALUES (2,'John');
  ```
   
-#### <a name="b--insert-into-edge-table"></a>B.  Inserire nella tabella edge  
- Nell'esempio seguente viene creata una tabella edge friend e inserisce un bordo della tabella.
+#### <a name="b--insert-into-edge-table"></a>B.  INSERT nella tabella bordi  
+ Nell'esempio seguente viene creata una tabella bordi di amici in cui viene inserito un bordo.
 
  ```
  -- Create friend edge table
@@ -169,6 +167,6 @@ Prima di massa di inserimento in una tabella edge, le tabelle di nodo devono ess
   
 ## <a name="see-also"></a>Vedere anche  
  [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [L'elaborazione con SQL Server 2017 grafico](../../relational-databases/graphs/sql-graph-overview.md)  
+ [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Elaborazione di grafi con SQL Server 2017)  
 
 

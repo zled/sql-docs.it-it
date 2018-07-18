@@ -1,16 +1,14 @@
 ---
-title: int, bigint, smallint e tinyint (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: int, bigint, smallint e tinyint (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 9/8/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bigint_TSQL
@@ -30,21 +28,21 @@ helpviewer_keywords:
 - int data type
 - smallint data type
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 2e99ccb97dc5c36f8b7870a042963d6302b3f1eb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ddd1dca194c6a80b627dafd62dff7f46ef96906b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint e tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Tipi di dati numerici esatti che utilizzano dati integer. Per risparmiare spazio nel database, utilizzare il tipo di dati più piccolo che può contenere in modo affidabile tutti i valori possibili. Ad esempio tinyint sarebbe sufficiente per età di una persona perché non si trova a più di 255 anni precedenti. Ma tinyint non sarebbero sufficienti per la durata di un edificio perché un edificio può essere più di 255 anni.
+Tipi di dati numerici esatti che utilizzano dati integer. Per risparmiare spazio nel database, usare il tipo di dati più piccolo che può contenere in modo affidabile tutti i valori possibili. Ad esempio, tinyint sarebbe sufficiente per l'età di una persona perché nessuno raggiunge un'età maggiore di 255 anni. Ma tinyint non sarebbe sufficiente per la durata di un edificio perché un edificio può avere più di 255 anni.
   
 |Tipo di dati|Intervallo|Archiviazione|  
 |---|---|---|
@@ -53,24 +51,24 @@ Tipi di dati numerici esatti che utilizzano dati integer. Per risparmiare spazio
 |**smallint**|da -2^15 (-32.768) a 2^15-1 (32.767)|2 byte|  
 |**tinyint**|da 0 a 255|1 byte|  
   
-## <a name="remarks"></a>Osservazioni  
-Il **int** tipo di dati è il tipo di dati integer primario in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il **bigint** quando i valori interi potrebbero superare l'intervallo supportato dal tipo di dati deve essere utilizzato il **int** tipo di dati.
+## <a name="remarks"></a>Remarks  
+Il tipo di dati **int** è il tipo di dati integer primario in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il tipo di dati **bigint** è stato progettato per essere utilizzato quando i valori interi potrebbero non rientrare nell'intervallo supportato dal tipo di dati **int**.
   
-**bigint** compreso tra **smallmoney** e **int** nel grafico di precedenza tipo di dati.
+Nell'ordine di precedenza dei tipi di dati **bigint** è compreso tra i tipi di dati **smallmoney** e **int**.
   
-Le funzioni restituiscono **bigint** solo se l'espressione del parametro è un **bigint** tipo di dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non promuove automaticamente altri tipi di dati integer (**tinyint**, **smallint**, e **int**) per **bigint**.
+Le funzioni restituiscono **bigint** solo se l'espressione per il parametro è un tipo di dati **bigint**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non promuove automaticamente altri tipi di dati Integer (**tinyint**, **smallint** e **int**) to **bigint**.
   
 > [!CAUTION]  
->  Quando si utilizza il +, -, \*, /, % operatori aritmetici per eseguire la conversione implicita o esplicita di o **int**, **smallint**, **tinyint**, o  **bigint** valori costanti di **float**, **reale**, **decimale** o **numerico** tipi di dati, le regole che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si applica quando si calcola il tipo di dati e la precisione dei risultati delle espressioni variano a seconda che la query sia attivata la parametrizzazione automatica o meno.  
+>  Quando si utilizzano gli operatori aritmetici +, -, \*, / o % per eseguire conversioni implicite o esplicite di costanti di tipo **int**, **smallint**, **tinyint**, o **bigint** per tipi di dati **mobili**, **reali**, **decimali** o **numerici**, le regole applicate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per calcolare il tipo di dati e la precisione dei risultati delle espressioni variano a seconda del fatto che per la query sia attivata o meno la parametrizzazione automatica.  
 >   
->  Per questo motivo, in alcuni casi espressioni simili nelle query possono dare risultati diversi. Quando una query non è attivata la parametrizzazione automatica, il valore costante viene prima convertito in **numerico**, la cui precisione è sufficiente a contenere il valore della costante, prima di convertire in tipo di dati specificato. Ad esempio, il valore costante 1 viene convertito in **numeric (1, 0)**, mentre il valore costante 250 viene convertito in **numeric (3, 0)**.  
+>  Per questo motivo, in alcuni casi espressioni simili nelle query possono dare risultati diversi. Se per una query non è attivata la parametrizzazione automatica, il valore costante viene prima convertito nel tipo **numerico**, la cui precisione è sufficiente a contenere il valore della costante, quindi viene convertito nel tipo di dati specificato. Il valore costante 1, ad esempio, viene convertito in **numerico (1, 0)** e il valore costante 250 viene convertito in **numerico (3, 0)**.  
 >   
->  Quando una query con parametrizzazione automatica, il valore costante viene sempre convertito in **numeric (10, 0)** prima della conversione al tipo di dati finale. Se viene utilizzato l'operatore /, sia la precisione del tipo di risultati che il valore del risultato di query simili possono essere diversi. Ad esempio, il valore di risultato di una query con parametrizzazione automatica che include l'espressione `SELECT CAST (1.0 / 7 AS float)`, differisce dal valore del risultato della query stessa non è attivata la parametrizzazione automatica, in quanto i risultati della query con parametrizzazione automatica, vengono troncati per rientrare nel il **numeric (10, 0)** tipo di dati.  
+>  Se per una query è attivata la parametrizzazione automatica, il valore costante viene sempre convertito in **numerico (10, 0)** prima di essere convertito nel tipo di dati finale. Se viene utilizzato l'operatore /, sia la precisione del tipo di risultati che il valore del risultato di query simili possono essere diversi. Ad esempio, il valore del risultato di una query con parametrizzazione automatica che include l'espressione `SELECT CAST (1.0 / 7 AS float)` è diverso dal valore del risultato della stessa query ma senza parametrizzazione automatica, perché i risultati della query con parametrizzazione automatica vengono troncati per rientrare nel tipo di dati **numerico (10, 0)**.  
   
-## <a name="converting-integer-data"></a>Conversione di dati integer
+## <a name="converting-integer-data"></a>Conversione di dati di tipo integer
 Quando i numeri interi vengono convertiti implicitamente in un tipo di dati carattere, se il numero intero è troppo grande per adattarsi al campo del carattere, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] immette il carattere ASCII 42, l'asterisco (*).
   
-Costanti integer maggiori di 2.147.483.647 vengono convertite le **decimale** del tipo di dati, non il **bigint** tipo di dati. L'esempio seguente mostra che quando il valore di soglia viene superato, il tipo di dati del risultato viene modificato da un **int** per un **decimale**.
+Le costanti integer maggiori di 2.147.483.647 vengono convertite nel tipo di dati **decimale**, non nel tipo di dati **bigint**. Nell'esempio seguente viene illustrata la modifica del tipo di dati del risultato da **int** a **decimale** quando il valore soglia viene superato.
   
 ```sql
 SELECT 2147483647 / 2 AS Result1, 2147483649 / 2 AS Result2 ;  
@@ -84,7 +82,7 @@ Result1      Result2
 ```  
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene creata una tabella utilizzando il **bigint**, **int**, **smallint**, e **tinyint** tipi di dati. I valori vengono inseriti in ogni colonna e restituiti nell'istruzione SELECT.
+Nell'esempio seguente viene creata una tabella utilizzando i tipi di dati **bigint**, **int**, **smallint** e **tinyint**. I valori vengono inseriti in ogni colonna e restituiti nell'istruzione SELECT.
   
 ```sql
 CREATE TABLE dbo.MyTable  
@@ -119,6 +117,6 @@ MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[Sys. Types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

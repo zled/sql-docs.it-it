@@ -1,38 +1,23 @@
 ---
 title: Set di righe dello Schema OLE DB | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- schema rowsets [OLE DB]
-- schema rowsets [Analysis Services], OLE DB
-- OLE DB schema rowsets
-- rowsets [Analysis Services], OLE DB
-ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 59d17cb1345f7ba32a2cbaac27f5ec002aadfa40
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3e0e7563eb925e9974dcca5bd1d02c54b01f38d8
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="ole-db-schema-rowsets"></a>Set di righe dello schema OLE DB
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-I set di righe dello schema OLE DB seguenti sono supportati dal provider di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA). Utilizzare il **DISCOVER_ENUMERATORS** set di righe con la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo per verificare se un provider dell'origine dati supporta un set di righe.  
+  I set di righe dello schema OLE DB seguenti sono supportati dal provider di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA). Utilizzare il **DISCOVER_ENUMERATORS** set di righe con la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo per verificare se un provider dell'origine dati supporta un set di righe.  
   
  Per ottenere informazioni dettagliate su questi set di righe, è inoltre possibile cercare l'argomento "Set di righe dello schema" nella parte relativa alla OLE DB Programmer's Reference in MSDN® Library nel sito Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
@@ -66,7 +51,7 @@ I set di righe dello schema OLE DB seguenti sono supportati dal provider di [!IN
 |**DBSCHEMA_TABLE_CONSTRAINTS**|Identifica i vincoli di tabella definiti nel catalogo e di proprietà di un determinato utente.|  
 |**DBSCHEMA_TABLE_PRIVILEGES**|Identifica i privilegi sulle tabelle definiti nel catalogo e disponibili per un determinato utente o concessi da un determinato utente.|  
 |**DBSCHEMA_TABLE_STATISTICS**|Descrive i set di statistiche disponibili relativi alle tabelle nel provider.<br /><br /> Questo set di righe non è correlato il **statistiche** set di righe.|  
-|[DBSCHEMA_TABLES Rowset](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) <sup>1</sup>|Identifica i gruppi di misure e le dimensioni esposte come tabelle all'interno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Set di righe DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) <sup>1</sup>|Identifica i gruppi di misure e le dimensioni esposte come tabelle all'interno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |**DBSCHEMA_TABLES_INFO** <sup>1</sup>|Identifica le tabelle, incluse le viste, definite nel catalogo e accessibili a un determinato utente.|  
 |**DBSCHEMA_TRANSLATIONS**|Identifica le traduzioni dei caratteri definite nel catalogo e accessibili a un determinato utente.|  
 |**DBSCHEMA_TRUSTEE**|Enumera le terze parti trusted per un'origine dati.|  

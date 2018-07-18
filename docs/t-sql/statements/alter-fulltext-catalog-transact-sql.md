@@ -1,16 +1,14 @@
 ---
-title: MODIFICARE il catalogo full-text (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_FULLEXT_CATALOG_TSQL
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], modifying
 - full-text catalogs [SQL Server], reorganizing
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fa56a980fa5c5c74a1868f4c03ec791175022f76
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: db4dfc09c47ad9527afcd1d1978b502bdd9c2347
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ ALTER FULLTEXT CATALOG catalog_name
   
 ## <a name="arguments"></a>Argomenti  
  *catalog_name*  
- Specifica il nome del catalogo da modificare. Se un catalogo con il nome specificato non esiste, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore e non esegue l'operazione di modifica.  
+ Specifica il nome del catalogo da modificare. Se non esiste un catalogo con il nome specificato, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore e non esegue l'operazione ALTER.  
   
  REBUILD  
  Indica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di ricompilare l'intero catalogo. Quando viene ricompilato un catalogo, il catalogo esistente viene eliminato e al suo posto viene creato un nuovo catalogo. Tutte le tabelle con riferimenti di indicizzazione full-text vengono associate al nuovo catalogo. La ricompilazione reimposta i metadati full-text nelle tabelle di sistema del database.  
@@ -64,12 +61,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  Specifica se il catalogo da modificare supporta o meno la distinzione tra caratteri accentati e non accentati per l'esecuzione di query e l'indicizzazione full-text.  
   
- Per determinare l'impostazione della proprietà di lettura e non accentati di un catalogo full-text, utilizzare la funzione FULLTEXTCATALOGPROPERTY con il **accentsensitivity** valore di proprietà e *catalog_name*. Se la funzione restituisce '1', il catalogo full-text supporta la distinzione tra caratteri accentati e non accentati. Se la funzione restituisce '0', il catalogo non supporta la distinzione tra caratteri accentati e non accentati.  
+ Per determinare l'impostazione corrente della proprietà relativa alla distinzione tra caratteri accentati e non accentati di un catalogo full-text, eseguire la funzione FULLTEXTCATALOGPROPERTY con il valore della proprietà **accentsensitivity** su *catalog_name*. Se la funzione restituisce '1', il catalogo full-text supporta la distinzione tra caratteri accentati e non accentati. Se la funzione restituisce '0', il catalogo non supporta la distinzione tra caratteri accentati e non accentati.  
   
  Il valore predefinito per la distinzione tra caratteri accentati e non accentati è uguale per il catalogo e il database.  
   
  REORGANIZE  
- Indica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire un *unione nell'indice master*, che comporta l'unione degli indici più piccoli creati durante il processo di indicizzazione in un indice di grandi dimensioni. L'unione dei frammenti di indice full-text, è possibile migliorare le prestazioni e liberare risorse di memoria e disco. Se il catalogo full-text è soggetto a modifiche frequenti, utilizzare questo comando con regolarità per riorganizzarlo.  
+ Indica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire un'*unione nell'indice master*, che comporta l'unione degli indici più piccoli creati durante il processo di indicizzazione in un unico indice di grandi dimensioni. L'unione dei frammenti di indici full-text può migliorare le prestazioni e liberare risorse di memoria e spazio su disco. Se il catalogo full-text è soggetto a modifiche frequenti, utilizzare questo comando con regolarità per riorganizzarlo.  
   
  REORGANIZE, inoltre, consente di ottimizzare le strutture interne dell'indice e del catalogo.  
   
@@ -78,8 +75,8 @@ ALTER FULLTEXT CATALOG catalog_name
  AS DEFAULT  
  Specifica che il catalogo è il catalogo predefinito. Quando vengono creati indici full-text senza che siano stati specificati cataloghi, viene utilizzato il catalogo predefinito. Se esiste già un catalogo full-text predefinito e si imposta AS DEFAULT per questo catalogo, il catalogo predefinito esistente verrà ignorato.  
   
-## <a name="permissions"></a>Permissions  
- L'utente deve disporre dell'autorizzazione ALTER nel catalogo full-text oppure essere un membro del **db_owner**, **db_ddladmin** fissa ruoli predefiniti del database o ruolo server sysadmin.  
+## <a name="permissions"></a>Autorizzazioni  
+ L'utente deve disporre dell'autorizzazione ALTER nel catalogo full-text oppure deve essere membro del ruolo predefinito del server sysadmin o del ruolo predefinito del database **db_owner** o **db_ddladmin**.  
   
 > [!NOTE]  
 >  Per utilizzare ALTER FULLTEXT CATALOG AS DEFAULT, l'utente deve disporre dell'autorizzazione ALTER nel catalogo full-text e dell'autorizzazione CREATE FULLTEXT CATALOG nel database.  
@@ -101,9 +98,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys. fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
- [CREARE il catalogo full-text &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [ELIMINARE il catalogo full-text &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [Ricerca full-text](../../relational-databases/search/full-text-search.md)  
   
   

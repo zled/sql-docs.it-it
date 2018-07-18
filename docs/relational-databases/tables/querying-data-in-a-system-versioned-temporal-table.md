@@ -1,34 +1,33 @@
 ---
 title: Query sui dati in una tabella temporale con controllo delle versioni di sistema | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/28/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-tables
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5bd4678f0a17e570f089f3c532df5a32e284787d
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cfdb035f176c2fcdb9e71b5621b76e4ecb72c2b4
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300169"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Query sui dati in una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Quando occorre recuperare lo stato (effettivo) più aggiornato dei dati in una tabella temporale, è possibile eseguire query esattamente nello stesso modo valido per l'esecuzione di query in tabelle non temporali. Se le colonne PERIOD non sono nascoste, i rispettivi valori compariranno in una query SELECT \* . Se le colonne **PERIOD** sono state specificate come nascoste, i rispettivi valori non saranno visualizzati in una query SELECT \* . Quando le colonne **PERIOD** sono nascoste, è possibile fare riferimento in modo specifico alle colonne **PERIOD** nella clausola SELECT per restituire i valori per queste colonne.  
   
- Per eseguire qualsiasi tipo di analisi basata sul tempo, usare la nuova clausola  **FOR SYSTEM_TIME** con quattro sottoclausole specifiche per i dati temporali per eseguire query sui dati nelle tabelle correnti e di cronologia. Per ulteriori informazioni su queste clausole, vedere [Tabelle temporali](../../relational-databases/tables/temporal-tables.md) e [FROM &#40;Transact-SQL #41;](../../t-sql/queries/from-transact-sql.md)  
+ Per eseguire qualsiasi tipo di analisi basata sul tempo, usare la nuova clausola **FOR SYSTEM_TIME** con quattro sottoclausole specifiche per i dati temporali per eseguire query sui dati nelle tabelle correnti e di cronologia. Per ulteriori informazioni su queste clausole, vedere [Tabelle temporali](../../relational-databases/tables/temporal-tables.md) e [FROM &#40;Transact-SQL #41;](../../t-sql/queries/from-transact-sql.md)  
   
 -   AS OF <data_ora>  
   
@@ -43,8 +42,8 @@ ms.lasthandoff: 01/18/2018
  È possibile specificare**FOR SYSTEM_TIME** in modo indipendente per ogni tabella in una query. La clausola può essere usata all'interno di espressioni di tabella comuni, funzioni con valore di tabella e stored procedure.  
   
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Query per un data/ora specifica con la sottoclausola AS-OF  
- Usare la sottoclausola**AS OF** quando è necessario ricostruire lo stato dei dati esistente in un momento specifico nel passato.  È possibile ricostruire i dati con la precisione del tipo datetime2 specificato nelle definizioni di colonna **PERIOD** .    
-La sottoclausola**AS OF** può essere usata con valori letterali costanti o variabili e ciò consente di specificare in modo dinamico la condizione temporale. I valori specificati vengono interpretati come ora UTC.  
+ Usare la sottoclausola **AS OF** quando è necessario ricostruire lo stato dei dati esistente in un momento specifico nel passato. È possibile ricostruire i dati con la precisione del tipo datetime2 specificato nelle definizioni di colonna **PERIOD** .    
+La sottoclausola **AS OF** può essere usata con valori letterali costanti o variabili e ciò consente di specificare in modo dinamico la condizione temporale. I valori specificati vengono interpretati come ora UTC.  
   
  Questo primo esempio restituisce lo stato della tabella dbo.Department in riferimento (AS OF) a una data specifica nel passato.  
   
@@ -137,9 +136,6 @@ FROM [dbo].[Department] FOR SYSTEM_TIME ALL
 ORDER BY [DeptID], [SysStartTime] Desc  
   
 ```  
-  
-## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Commenti e suggerimenti  
- Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Microsoft incoraggia gli utenti a inviare i propri commenti per migliorare i contenuti Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Queryinging%20a%20System-Versioned%20Temporal%20Table%20page)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle temporali](../../relational-databases/tables/temporal-tables.md)   

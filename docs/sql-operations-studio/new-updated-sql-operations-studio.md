@@ -1,34 +1,36 @@
 ---
-title: Aggiornato - Doc Studio operazioni SQL | Documenti Microsoft
-description: Visualizzare i frammenti di contenuto aggiornato per la documentazione modificato di recente in, per le operazioni SQL Studio.
+title: Articoli nuovi e aggiornati - Documentazione di SQL Operations Studio | Microsoft Docs
+description: Contenuti aggiornati nella documentazione modificati di recente in SQL Operations Studio.
 manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 ms.component: ssops
-ms.date: 02/03/2018
-ms.openlocfilehash: c96f50ee9f6a69cce60f6a1629eecfac3e3285d9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.date: 04/28/2018
+ms.openlocfilehash: 074ed6176480655d9d87a55eb87cbb76b3011b7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Nuovi e recentemente aggiornato: doc Studio operazioni SQL
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Articoli nuovi e recentemente aggiornati: Documentazione di SQL Operations Studio
 
 
 
-Quasi ogni giorno Microsoft aggiorna alcuni articoli esistenti nel relativo [Docs.Microsoft.com](http://docs.microsoft.com/) sito Web di documentazione. In questo articolo consente di visualizzare estratti dagli articoli aggiornati di recente. Potrebbero anche essere elencati collegamenti a nuovi articoli.
+Quasi ogni giorno Microsoft aggiorna alcuni articoli esistenti nel relativo sito Web di documentazione [Docs.Microsoft.com](http://docs.microsoft.com/). In questo articolo sono visualizzati estratti degli articoli aggiornati di recente. Potrebbero anche essere elencati collegamenti a nuovi articoli.
 
-In questo articolo viene generato da un programma che viene eseguito di nuovo periodicamente. In alcuni casi un estratto può apparire con formattazione perfetto, o come markdown nell'articolo di origine. Le immagini non vengono mai visualizzate qui.
+Questo articolo viene generato da un programma eseguito periodicamente. In alcuni casi un estratto può apparire con una formattazione imperfetta, o anche come markdown origine dell'articolo. Le immagini non vengono mai visualizzate qui.
 
-Aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'oggetto:
+Sono indicati gli aggiornamenti recenti per l'intervallo di date e l'area di interesse seguenti:
 
 
 
-- *Intervallo degli aggiornamenti di date:* &nbsp; **2017-12-03** &nbsp; - a - &nbsp; **2018-02-03**
+- *Intervallo degli aggiornamenti di date:* &nbsp; **2018-02-03** &nbsp; - a - &nbsp; **2018-04-28**
 - *Area di interesse:* &nbsp; **operazioni SQL Studio**.
 
 
@@ -41,8 +43,9 @@ Aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'og
 I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di recente.
 
 
-1. [Note sulla versione Studio operazioni SQL (anteprima)](release-notes.md)
+- [Estendere la funzionalità di SQL Studio Operations (anteprima)](extensions.md)
 
+<!-- GeneMi:  I MANUALLY replace the ugly !INCLUDE with the name from inside the includes file. -->
 
 
 &nbsp;
@@ -51,9 +54,9 @@ I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di re
 
 In questa sezione sono visualizzati gli estratti degli aggiornamenti raccolti dagli articoli che recentemente sono stati sottoposti a un aggiornamento di grande entità.
 
-Gli estratti visualizzati qui vengono visualizzati separatamente dal relativo contesto semantica corretto Inoltre, talvolta un estratto è separato dalla sintassi markdown importante che la racchiude nell'articolo effettivo. Di conseguenza questi estratti sono solo a scopo generale. Gli estratti consentono solo di sapere se i tuoi interessi garantiscono la necessità di fare clic e visitare l'articolo effettivo.
+Gli estratti visualizzati qui vengono visualizzati separatamente dal relativo contesto di semantica corretto. Inoltre, talvolta un estratto è separato dalla sintassi markdown importante che lo racchiude nell'articolo effettivo. Di conseguenza questi estratti sono solo a scopo generale. Gli estratti consentono solo di sapere se i tuoi interessi garantiscono la necessità di fare clic e visitare l'articolo effettivo.
 
-Per queste e altre ragioni, non copiare da questi estratti di codice e non prendono come verità esatta qualsiasi testo estratto. In alternativa, visitare l'articolo effettivo.
+Per queste e altre ragioni, non copiare codice da questi estratti e non prendere come verità esatta qualsiasi testo in essi contenuto. Piuttosto, visitare l'articolo effettivo.
 
 
 
@@ -63,11 +66,13 @@ Per queste e altre ragioni, non copiare da questi estratti di codice e non prend
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>Compact elenco degli articoli aggiornato di recente
+### <a name="compact-list-of-articles-updated-recently"></a>Elenco compatto degli articoli aggiornati di recente
 
 Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati elencati nella sezione degli estratti.
 
 1. [Scaricare e installare Studio operazioni SQL (anteprima)](#TitleNum_1)
+2. [Note sulla versione Studio operazioni SQL (anteprima)](#TitleNum_2)
+3. [Esercitazione: Aggiungere la *cinque query più lente* widget di esempio per il dashboard del database](#TitleNum_3)
 
 
 
@@ -78,87 +83,168 @@ Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati el
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp;[Scaricare e installare Studio operazioni SQL (anteprima)](download.md)
+### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [Scaricare e installare Studio operazioni SQL (anteprima)](download.md)
 
-*Ultimo aggiornamento: 2018-01-18* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+*Ultimo aggiornamento: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Avanti](#TitleNum_2))
 
-<!-- Source markdown line 24.  ms.author= "sstein".  -->
+<!-- Source markdown line 64.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 092e48dd5607eecc0e322b5051b4adf0c5aeeb30 6b4f80ad54c599e4354303a736f62e9715f99a32  (PR=4662  ,  Filename=download.md  ,  Dirpath=docs\sql-operations-studio\  ,  MergeCommitSha40=6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f) -->
+<!-- git diff --ignore-all-space --unified=0 6b4f80ad54c599e4354303a736f62e9715f99a32 18b22f464bbd8676348248ba5717b71acbab1c0d  (PR=5676  ,  Filename=download.md  ,  Dirpath=docs\sql-operations-studio\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-|Piattaforma|Scarica|Data di rilascio|
-|:---|:---|:---|
-|Windows|[Programma di installazione](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|17 gennaio 2018 |
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|17 gennaio 2018 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|17 gennaio 2018|
+   **Debian installazione:**
+```
+   cd ~
+   sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
 
-Per informazioni dettagliate sulla versione più recente, vedere il [note sulla versione](release-notes.md).
+   sqlops
+```
 
-**Ottenere Studio operazioni SQL (anteprima) per Windows**
+   **RPM installazione:**
+```
+   cd ~
+   yum install ./Downloads/sqlops-linux-<version string>.rpm
 
+   sqlops
+```
 
-Questa versione di Studio operazioni SQL (anteprima) include un'esperienza di installazione di Windows standard e un file ZIP:
-
-**Programma di installazione**
-
-1. Scaricare ed eseguire il [installer Studio operazioni SQL (anteprima) per Windows](https://go.microsoft.com/fwlink/?linkid=866480).
-1. Avviare l'app Studio operazioni SQL (anteprima).
-
-
-**file con estensione zip**
-
-1. Scaricare [ZIP Studio operazioni SQL (anteprima) per Windows](https://go.microsoft.com/fwlink/?linkid=866479).
+   **GZ installazione:**
 
 
 
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### <a name="2-nbsp-sql-operations-studio-preview-release-notesrelease-notesmd"></a>2. &nbsp; [Note sulla versione Studio operazioni SQL (anteprima)](release-notes.md)
+
+*Ultimo aggiornamento: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([precedente](#TitleNum_1) | [Avanti](#TitleNum_3))
+
+<!-- Source markdown line 20.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 e2901d8a197f375f7d10ec93cbc9320362bf9278 0dde1aceceb339cb4cacd744e469f3d85d589668  (PR=5676  ,  Filename=release-notes.md  ,  Dirpath=docs\sql-operations-studio\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
+
+
+
+**[Scaricare l'anteprima pubblica di aprile]**
+
+
+**2018 aprile (anteprima pubblica di aprile)**
+
+
+Data di rilascio: versione 25 aprile 2018: 0.28.6
+
+Il *anteprima pubblica di aprile* include miglioramenti e correzioni di bug.
+
+- Miglioramenti all'estensione di anteprima di SQL Agent.
+- Migliorato il supporto di file di grandi dimensioni e protetti per il salvataggio di amministratore protetto e > file 256M all'interno di SQL Studio operazioni.
+- Integrato suddivisione Terminal per l'utilizzo di più terminali aperti in una sola volta.
+- Footprint di conteggio file su disco di installazione ridotti di stampa per installazioni più veloce e tempi di avvio.
+- Continuare a risolvere i problemi di GitHub:
+   - Correggere [emettere 37](https://github.com/Microsoft/sqlopsstudio/issues/37): quando il Visualizzatore grafico genera un errore, si verifica un comportamento imprevisto.
+   - Correggere [emettere 462](https://github.com/Microsoft/sqlopsstudio/issues/462): funzionalità richiesta: opzione per i gruppi di Server per essere espanso per impostazione predefinita.
+   - Correggere [emettere 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense - suggerimento non valida per il comando 'update'.
+   - Correggere [emettere 967](https://github.com/Microsoft/sqlopsstudio/issues/967): prevede che il piano di query quando seleziona showplan XML nella griglia di risultati.
+   - Correggere [emettere 1023](https://github.com/Microsoft/sqlopsstudio/issues/1023): aggiungere delle parentesi quadre per chiamata ms_foreachdb da flyfishingdba.
+   - Correggere [emettere 1048](https://github.com/Microsoft/sqlopsstudio/issues/1048): errore di handshake di pre-accesso SSL/TLS.
+   - Correggere [emettere 1050](https://github.com/Microsoft/sqlopsstudio/issues/1050): consente di visualizzare informazioni dettagliate non crittografati prima della visualizzazione errore.
+   - Correggere [emettere 1057](https://github.com/Microsoft/sqlopsstudio/issues/1057): nuove azioni di query in Esplora widget e ripristino vengono interrotte.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### <a name="3-nbsp-tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboardtutorial-qds-sql-servermd"></a>3. &nbsp; [Esercitazione: Aggiungere la *cinque query più lente* widget di esempio per il dashboard del database](tutorial-qds-sql-server.md)
+
+*Ultimo aggiornamento: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([precedente](#TitleNum_2))
+
+<!-- Source markdown line 94.  ms.author= "erickang".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 bc128acd966898cafc04381d7d83187d28466052 a47bf93ea4165618e0e514d7900ce1461f691aae  (PR=5676  ,  Filename=tutorial-qds-sql-server.md  ,  Dirpath=docs\sql-operations-studio\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
+
+
+
+       },
+       {
+           "name": "Tasks",
+           "gridItemConfig": {
+               "sizex": 1,
+               "sizey": 1
+           },
+           "widget": {
+               "tasks-widget": {}
+           }
+       },
+       {
+           "gridItemConfig": {
+               "sizex": 1,
+               "sizey": 2
+           },
+           "widget": {
+               "explorer-widget": {}
+           }
 
 
 
 
-## <a name="similar-articles-about-new-or-updated-articles"></a>Articoli simili su nuovi o aggiornati gli articoli
+
+
+
+## <a name="similar-articles-about-new-or-updated-articles"></a>Articoli simili su articoli nuovi o aggiornati
 
 In questa sezione sono elencati articoli molto simili ad articoli aggiornati di recente in altre aree di interesse all'interno del repository GitHub pubblico di Microsoft: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
-#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Aree di interesse che *si* sono nuovi o recentemente aggiornati gli articoli
+
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Aree di interesse *con* articoli nuovi o aggiornati di recente
+
+- [Nuovo + aggiornato (11 + 6): &nbsp; &nbsp; **Advanced Analitica per SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuovo + aggiornato (18 + 0): &nbsp; &nbsp; **Analysis Services per SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [Nuovo + aggiornato (218 + 14): **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [Nuovo + aggiornato (14 + 0): &nbsp; &nbsp; **motore di Database per SQL** docs](../database-engine/new-updated-database-engine.md)
+- [Nuovo + aggiornato (3 + 2): &nbsp; &nbsp; **servizi di integrazione per SQL** docs](../integration-services/new-updated-integration-services.md)
+- [Nuovo + aggiornato (3 + 3): &nbsp; &nbsp; **Linux per SQL** docs](../linux/new-updated-linux.md)
+- [Nuovo + aggiornato (7 + 10): &nbsp; &nbsp; **database relazionali di SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [Nuovo + aggiornato (0 + 2): &nbsp; &nbsp; **Reporting Services per SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [Nuovo + aggiornato (1 + 3): &nbsp; &nbsp; **operazioni SQL Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nuovo + aggiornato (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [Nuovo + aggiornato (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [Nuovo + aggiornato (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [Nuovo + aggiornato (0 + 2): &nbsp; &nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [Nuovo + aggiornato (1 + 1): &nbsp; &nbsp; **Tools per SQL** docs](../tools/new-updated-tools.md)
 
 
-- [Nuovo + aggiornato (1 + 3):&nbsp; **Analitica avanzate per SQL** documenti](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuovo + aggiornato (0 + 1):&nbsp; **Analitica Platform System per SQL** documenti](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nuovo + aggiornato (0 + 1):&nbsp; **Connect to SQL** documenti](../connect/new-updated-connect.md)
-- [Nuovo + aggiornato (0 + 1):&nbsp; **motore di Database per SQL** documenti](../database-engine/new-updated-database-engine.md)
-- [Nuovo + aggiornato (12 + 1): **Integration Services per SQL** documenti](../integration-services/new-updated-integration-services.md)
-- [Nuovo + aggiornato (6 + 2):&nbsp; **Linux per SQL** documenti](../linux/new-updated-linux.md)
-- [Nuovo + aggiornato (15 + 0): **PowerShell per SQL** documenti](../powershell/new-updated-powershell.md)
-- [Nuovo + aggiornato (2 + 9):&nbsp; **database relazionali di SQL** documenti](../relational-databases/new-updated-relational-databases.md)
-- [Nuovo + aggiornato (1 + 0):&nbsp; **Reporting Services per SQL** documenti](../reporting-services/new-updated-reporting-services.md)
-- [Nuovo + aggiornato (1 + 1):&nbsp; **operazioni SQL Studio** documenti](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nuovo + aggiornato (1 + 1):&nbsp; **Microsoft SQL Server** documenti](../sql-server/new-updated-sql-server.md)
-- [Nuovo + aggiornato (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)** documenti](../ssdt/new-updated-ssdt.md)
-- [Nuovo + aggiornato (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)** documenti](../ssms/new-updated-ssms.md)
-- [Nuovo + aggiornato (0 + 2):&nbsp; **Transact-SQL** documenti](../t-sql/new-updated-t-sql.md)
 
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Aree di interesse *senza* articoli nuovi o aggiornati di recente
 
-
-#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Oggetto aree che *non* sono nuovi o recentemente aggiornati gli articoli
-
-
-- [Nuovo + aggiornato (0 + 0): documentazione di **Data Migration Assistant (DMA) per SQL Server**](../dma/new-updated-dma.md)
-- [Nuovo + aggiornato (0 + 0): **oggetti ADO (ActiveX Data) per SQL** documenti](../ado/new-updated-ado.md)
-- [Nuovo + aggiornato (0+0): documentazione di **Analysis Services per SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Nuovo + aggiornato (0 + 0): **Analitica Platform System per SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [Nuovo + aggiornato (0 + 0): **Data Quality Services per SQL** documenti](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuovo + aggiornato (0 + 0): **estensioni DMX (Data Mining) per SQL** documenti](../dmx/new-updated-dmx.md)
 - [Nuovo + aggiornato (0+0): documentazione di **Master Data Services (MDS) per SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Nuovo + aggiornato (0 + 0): **MDX (Multidimensional Expressions) per SQL** documenti](../mdx/new-updated-mdx.md)
 - [Nuovo + aggiornato (0 + 0): **ODBC (Open Database Connectivity) per SQL** documenti](../odbc/new-updated-odbc.md)
-- [Nuovo + aggiornato (0 + 0): **esempi per SQL** documenti](../sample/new-updated-sample.md)
+- [Nuovo + aggiornato (0 + 0): **PowerShell per SQL** documenti](../powershell/new-updated-powershell.md)
+- [Nuovo + aggiornato (0 + 0): **esempi per SQL** documenti](../samples/new-updated-samples.md)
 - [Nuovo + aggiornato (0 + 0): **SQL Server Migration Assistant (SSMA)** documenti](../ssma/new-updated-ssma.md)
-- [Nuovo + aggiornato (0+0): documentazione degli **strumenti per SQL**](../tools/new-updated-tools.md)
 - [Nuovo + aggiornato (0 + 0): **XQuery per SQL** documenti](../xquery/new-updated-xquery.md)
-
 

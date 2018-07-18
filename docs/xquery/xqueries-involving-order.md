@@ -1,16 +1,15 @@
 ---
 title: Query XQuery che implicano ordine | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -21,16 +20,15 @@ helpviewer_keywords:
 - XQuery, sequence
 - ordered expressions [XQuery]
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ade45beb1eed3079937b6d9302500b10adcca162
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 978e800ba5539878eb805c16f2460de3761dda59
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xqueries-involving-order"></a>Query XQuery che implicano l'ordinamento
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +66,9 @@ WHERE ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   Le espressioni tra parentesi graffe vengono sostituite dal risultato della relativa valutazione. Per ulteriori informazioni, vedere [costruzione di strutture XML &#40; XQuery &#41; ](../xquery/xml-construction-xquery.md).  
+-   Le espressioni tra parentesi graffe vengono sostituite dal risultato della relativa valutazione. Per altre informazioni, vedere [costruzione di strutture XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md).  
   
--   **@\***Recupera tutti gli attributi del secondo centro di lavorazione.  
+-   **@\*** Recupera tutti gli attributi del secondo centro di lavorazione.  
   
 -   L'iterazione di FLWOR (FOR ... RETURN) recupera tutti gli elementi figlio <`step`> del secondo centro di lavorazione.  
   
@@ -257,6 +255,6 @@ where ProductModelID=7
 ## <a name="see-also"></a>Vedere anche  
  [Dati XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [Costruzione di strutture XML &#40; XQuery &#41;](../xquery/xml-construction-xquery.md)  
+ [Costruzione di strutture XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

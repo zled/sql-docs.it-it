@@ -1,33 +1,30 @@
 ---
 title: Programmazione di ADO in Visual C++ | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 02/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 995c833e24f23c7a30ea8c4e5893215222e0867a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ce5a300ec2dd17109f888c9023b934c686289504
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-c-ado-programming"></a>Programmazione di ADO in Visual C++
 Il riferimento all'API ADO viene descritta la funzionalità delle ADO application programming interface (API) utilizzando una sintassi simile a Microsoft Visual Basic. Sebbene i destinatari sono tutti gli utenti, i programmatori di ADO utilizzano lingue diverse, ad esempio Visual Basic, Visual C++ (con e senza il **#import** (direttiva)) e Visual J++ (con il pacchetto di classe ADO/WFC).  
@@ -191,7 +188,7 @@ _RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffect
 _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
 ```  
   
- I parametri, *RecordsAffected* e *parametri*, sono puntatori a un **Variant**. *I parametri* è un parametro di input che specifica l'indirizzo di un **Variant** contenente un singolo parametro o una matrice di parametri, che verrà modificato il comando in esecuzione. *RecordsAffected* è un parametro di output che specifica l'indirizzo di un **Variant**, in cui viene restituito il numero di righe interessate dal metodo.  
+ I parametri, *RecordsAffected* e *parametri*, sono puntatori a un **Variant**. *I parametri* è un parametro di input che specifica l'indirizzo di un **Variant** contenente un singolo parametro o una matrice di parametri, che modificheranno il comando in esecuzione. *RecordsAffected* è un parametro di output che specifica l'indirizzo di un **Variant**, in cui viene restituito il numero di righe interessate dal metodo.  
   
  Nel **comando** oggetto **Execute** (metodo), indica che viene specificato alcun parametro impostando *parametri* a uno `&vtMissing` (impostazione consigliata) o a puntatore null (vale a dire **NULL** o zero (0)). Se *parametri* è impostato sul puntatore null, il metodo sostituisce internamente l'equivalente di **vtMissing**e quindi completa l'operazione.  
   

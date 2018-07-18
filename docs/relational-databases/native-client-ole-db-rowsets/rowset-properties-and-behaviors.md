@@ -1,15 +1,14 @@
 ---
-title: "Proprietà set di righe e i comportamenti | Documenti Microsoft"
-ms.custom: 
+title: Proprietà set di righe e i comportamenti | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-ole-db-rowsets
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], properties
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - properties [OLE DB]
 - OLE DB rowsets, properties
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fad9cc93c8faa050d537e687604a8934d3ee3386
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 279ea0c6232ebe1b81c67dedbde78d7614e1dbc1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Proprietà e comportamenti dei set di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_BOOKMARKTYPE|L/S: Sola lettura<br /><br /> Impostazione predefinita: DBPROPVAL_BMK_NUMERIC<br /><br /> Descrizione: Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client implementa solo segnalibri numerici. Oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] segnalibro del provider OLE DB Native Client è unsigned integer a 32 bit, di tipo DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Questa proprietà set di righe non è implementata dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta il recupero e scorrimento nei set di righe non sequenziali. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client crea un set di righe supportato dal cursore quando DBPROP_CANFETCHBACKWARDS o DBPROP_CANSCROLLBACKWARDS è VARIANT_TRUE. Per ulteriori informazioni, vedere [set di righe e cursori del Server SQL](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
-|DBPROP_CANHOLDROWS|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: per impostazione predefinita, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client restituisce DB_E_ROWSNOTRELEASED se il consumer tenta di ottenere più righe per un set di righe, mentre le modifiche in sospeso presenti su tali righe nel set di righe. È possibile modificare questo comportamento.<br /><br /> L'impostazione di DBPROP_CANHOLDROWS e DBPROP_IRowsetChange su VARIANT_TRUE produce un set di righe con segnalibro. Se entrambe le proprietà sono VARIANT_TRUE, il **IRowsetLocate** interfaccia è disponibile nel set di righe e DBPROP_BOOKMARKS e DBPROP_LITERALBOOKMARKS sono entrambe VARIANT_TRUE.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB provider set di righe che contengono segnalibri sono supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursori.|  
+|DBPROP_CANHOLDROWS|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: per impostazione predefinita, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client restituisce DB_E_ROWSNOTRELEASED se il consumer tenta di ottenere più righe per un set di righe, mentre le modifiche in sospeso presenti su tali righe nel set di righe. È possibile modificare questo comportamento.<br /><br /> L'impostazione di DBPROP_CANHOLDROWS e DBPROP_IRowsetChange su VARIANT_TRUE produce un set di righe con segnalibro. Se entrambe le proprietà sono VARIANT_TRUE, il **IRowsetLocate** interfaccia è disponibile nel set di righe e DBPROP_BOOKMARKS e DBPROP_LITERALBOOKMARKS sono entrambe VARIANT_TRUE.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider set di righe che contengono segnalibri sono supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursori.|  
 |DBPROP_CHANGEINSERTEDROWS|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: questa proprietà può essere impostata solo su VARIANT_TRUE se il set di righe utilizza un cursore gestito da keyset.|  
 |DBPROP_COLUMNRESTRICT|L/S: Sola lettura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client imposta la proprietà su VARIANT_TRUE quando una colonna in un set di righe non può essere modificata dal consumer. È possibile che le altre colonne nel set di righe siano aggiornabili e le righe stesse possano essere eliminate.<br /><br /> Quando la proprietà è VARIANT_TRUE, il consumer esamina il *dwFlags* membro della struttura DBCOLUMNINFO per determinare se è possibile scrivere il valore di una singola colonna o non. Per le colonne modificabili, *dwFlags* indica DBCOLUMNFLAGS_WRITE.|  
 |DBPROP_COMMANDTIMEOUT|L/S: Lettura/Scrittura<br /><br /> Predefinito: 0<br /><br /> Descrizione: per impostazione predefinita, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel provider OLE DB Native Client non ha timeout di **ICommand:: Execute** metodo.|  
@@ -98,7 +97,7 @@ ms.lasthandoff: 01/24/2018
   
 |ID proprietà|Description|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|Colonna: ColumnID<br /><br /> L/S: Sola lettura<br /><br /> Type: VT_U12 &#124; VT_ARRAY<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Descrizione: matrice di valori integer che rappresenta la posizione ordinale (base 1) di una colonna di risultati della clausola COMPUTE all'interno dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT. Si tratta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equivalente del provider OLE DB Native Client dell'attributo ODBC SQL_CA_SS_COLUMN_ID.|  
+|SSPROP_COLUMN_ID|Colonna: ColumnID<br /><br /> L/S: Sola lettura<br /><br /> Tipo: VT_U12 &#124; VT_ARRAY<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Descrizione: matrice di valori integer che rappresenta la posizione ordinale (base 1) di una colonna di risultati della clausola COMPUTE all'interno dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT. Si tratta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equivalente del provider OLE DB Native Client dell'attributo ODBC SQL_CA_SS_COLUMN_ID.|  
 |SSPROP_DEFERPREPARE|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_BOOL<br /><br /> Impostazione predefinita: VARIANT_TRUE<br /><br /> Descrizione: VARIANT_TRUE: In esecuzione preparata, la preparazione del comando viene posticipata fino alla **ICommand:: Execute** viene chiamato o viene eseguita un'operazione di metaproprietà. Se la proprietà è impostata su<br /><br /> VARIANT_FALSE: L'istruzione viene preparata quando **ICommandPrepare:: Prepare** viene eseguita.|  
 |SSPROP_IRowsetFastLoad|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_BOOL<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: Impostare questa proprietà su VARIANT_TRUE per aprire un set di righe di caricamento rapido tramite **IOpenRowset:: OPENROWSET**. È possibile impostare questa proprietà **ICommandProperties:: SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_BOOL<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: Impostare questa proprietà su VARIANT_TRUE per consentire operazioni asincrone mediante il [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md) interfaccia.|  

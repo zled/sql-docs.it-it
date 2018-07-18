@@ -26,11 +26,13 @@
 ## [Note su SQL Server 2012](sql-server-2012-release-notes.md)
 ## [Note su SQL Server 2008 R2 SP2](sql-server-2008-r2-sp2-release-notes.md)
 
+# [SQL Server in Linux](../linux/sql-server-linux-overview.md)
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [Motore di database](../database-engine/sql-server-database-engine-overview.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
 # [Cluster di failover](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
-# [Installare](../sql-server/install/planning-a-sql-server-installation.md)
+# [Eseguire l'installazione (Windows)](../sql-server/install/planning-a-sql-server-installation.md)
+# [Eseguire l'installazione (Linux)](../linux/sql-server-linux-setup.md)
 # [Integration Services](../integration-services/sql-server-integration-services.md)
 # [Master Data Services](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
@@ -38,6 +40,7 @@
 # [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Esercitazioni di SQL Server](tutorials-for-sql-server-2016.md)
+# [Strumenti di SQL Server](../tools/overview-sql-tools.md)
 
 # Risorse
 
@@ -52,6 +55,7 @@
 ### [SQL su Channel 9](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
 
 ## Commenti e Guida
+### [Contribuire alla documentazione di SQL](sql-server-docs-contribute.md)
 ### [UserVoice - Suggerire un miglioramento di SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)

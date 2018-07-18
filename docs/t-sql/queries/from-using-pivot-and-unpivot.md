@@ -1,16 +1,14 @@
 ---
-title: Utilizzo di PIVOT e UNPIVOT | Documenti Microsoft
-ms.custom: 
+title: Uso di PIVOT e UNPIVOT | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PIVOT_TSQL
@@ -26,26 +24,26 @@ helpviewer_keywords:
 - FROM clause, PIVOT operator
 - rotating columns
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1feee91c251b5c1f326e8e69569186c049007d9e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a975ea4d082023bab70d89474fa8ecb3a6be6308
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="from---using-pivot-and-unpivot"></a>DA - tramite PIVOT e UNPIVOT
+# <a name="from---using-pivot-and-unpivot"></a>FROM - Uso di PIVOT e UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  È possibile utilizzare il `PIVOT` e `UNPIVOT` operatori relazionali per modificare un'espressione con valori di tabella in un'altra tabella. `PIVOT`Ruota un'espressione con valori di tabella convertendo i valori univoci da una colonna nell'espressione in più colonne nell'output ed esegue aggregazioni dove sono necessarie sui valori di colonna restanti da includere nell'output finale. `UNPIVOT`esegue l'operazione contraria rispetto a PIVOT ruotando le colonne di un'espressione con valori di tabella in valori di colonna.  
+  È possibile usare gli operatori relazionali `PIVOT` e `UNPIVOT` per modificare un'espressione con valori di tabella in un'altra tabella. `PIVOT` ruota un'espressione con valori di tabella convertendo i valori univoci di una colonna nell'espressione in più colonne nell'output ed esegue le aggregazioni necessarie sui valori di colonna restanti da includere nell'output finale. `UNPIVOT` esegue l'operazione opposta rispetto a PIVOT ruotando le colonne di un'espressione con valori di tabella in valori di colonna.  
   
- La sintassi per `PIVOT` fornisce è più semplice e più leggibile di quella che potrebbe essere altrimenti specificata in una serie complessa di `SELECT...CASE` istruzioni. Per una descrizione completa della sintassi per `PIVOT`, vedere [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
+ La sintassi di `PIVOT` è più semplice e leggibile di quella che sarebbe altrimenti possibile specificare in una serie complessa di istruzioni `SELECT...CASE`. Per una descrizione completa della sintassi per `PIVOT`, vedere [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintassi  
- La sintassi seguente viene riepilogato come utilizzare il `PIVOT` operatore.  
+ La sintassi seguente offre un riepilogo dell'uso dell'operatore `PIVOT`.  
   
 ```  
 SELECT <non-pivoted column>,  
@@ -67,8 +65,8 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>Osservazioni  
-Gli identificatori di colonna nel `UNPIVOT` clausola seguire le regole di confronto del catalogo. Per [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], le regole di confronto è sempre `SQL_Latin1_General_CP1_CI_AS`. Per [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] database parzialmente indipendenti, le regole di confronto è sempre `Latin1_General_100_CI_AS_KS_WS_SC`. Se la colonna viene combinata con altre colonne, quindi una clausola collate (`COLLATE DATABASE_DEFAULT`) è necessario per evitare conflitti.  
+## <a name="remarks"></a>Remarks  
+Gli identificatori di colonna nella clausola `UNPIVOT` seguono le regole di confronto dei cataloghi. Per il [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], le regole di confronto sono sempre `SQL_Latin1_General_CP1_CI_AS`. Per i database parzialmente indipendenti di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], le regole di confronto sono sempre `Latin1_General_100_CI_AS_KS_WS_SC`. Se la colonna è combinata con altre colonne, sarà necessaria una clausola COLLATE, ovvero `COLLATE DATABASE_DEFAULT`, per evitare conflitti.  
 
   
 ## <a name="basic-pivot-example"></a>Esempio di PIVOT di base  
@@ -162,9 +160,9 @@ FROM PurchaseOrderHeader;
  In questo modo, i valori univoci restituiti dalla colonna `EmployeeID` diventano campi nel set di risultati finale. Pertanto è presente una colonna per ogni numero `EmployeeID` specificato nella clausola Pivot. In questo caso i dipendenti `164`, `198`, `223`, `231` e `233`. La colonna `PurchaseOrderID` funge da colonna dei valori, rispetto alla quale vengono raggruppate le colonne restituite nell'output finale, dette colonne di raggruppamento. In questo caso, le colonne di raggruppamento vengono aggregate dalla funzione `COUNT`. Si noti che viene visualizzato un messaggio di avviso che indica che eventuali valori Null visualizzati nella colonna `PurchaseOrderID` non sono considerati nel calcolo del `COUNT` per ogni dipendente.  
   
 > [!IMPORTANT]  
->  Quando le funzioni di aggregazione vengono utilizzate con `PIVOT`, la presenza di eventuali valori null nella colonna del valore non sono considerati durante l'elaborazione di un'aggregazione.  
+>  Quando le funzioni di aggregazione sono usate con `PIVOT`, gli eventuali valori Null presenti nella colonna dei valori non vengono considerati nel calcolo di un'aggregazione.  
   
- `UNPIVOT`esegue quasi l'operazione inversa di `PIVOT`, ruotando le colonne in righe. Si supponga che la tabella generata nell'esempio precedente venga archiviata nel database come `pvt` e che si desideri ruotare gli identificatori di colonna `Emp1`, `Emp2`, `Emp3`, `Emp4` e `Emp5` in valori di riga corrispondenti a un particolare fornitore. Ciò significa che è necessario identificare altre due colonne. La colonna che includerà i valori di colonna da ruotare (`Emp1`, `Emp2`,...) sarà denominata `Employee` e la colonna che includerà i valori che attualmente si trovano nelle colonne da ruotare sarà denominata `Orders`. Tali colonne corrispondono per la *pivot_column* e *value_column*, rispettivamente, nel [!INCLUDE[tsql](../../includes/tsql-md.md)] definizione. La query è la seguente.  
+ `UNPIVOT` esegue l'operazione quasi opposta rispetto a `PIVOT`, ruotando le colonne in righe. Si supponga che la tabella generata nell'esempio precedente venga archiviata nel database come `pvt` e che si desideri ruotare gli identificatori di colonna `Emp1`, `Emp2`, `Emp3`, `Emp4` e `Emp5` in valori di riga corrispondenti a un particolare fornitore. Ciò significa che è necessario identificare altre due colonne. La colonna che includerà i valori di colonna da ruotare (`Emp1`, `Emp2`,...) sarà denominata `Employee` e la colonna che includerà i valori che attualmente si trovano nelle colonne da ruotare sarà denominata `Orders`. Queste colonne corrispondono rispettivamente a *pivot_column* e *value_column* nella definizione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La query è la seguente.  
   
 ```  
 -- Create the table and insert values as portrayed in the previous example.  
@@ -207,9 +205,9 @@ VendorID    Employee    Orders
 ...
 ```
   
- Si noti che `UNPIVOT` non è l'esatto opposto di `PIVOT`. `PIVOT`esegue un'aggregazione e, pertanto, unisce più righe possibili in una sola riga nell'output. `UNPIVOT`non si verifica il risultato dell'espressione con valori di tabella originale perché le righe sono state unite. Inoltre, i valori nell'input di null `UNPIVOT` scompaiono nell'output, mentre si è verificato i valori null originali nell'input prima di `PIVOT` operazione.  
+ Si noti che `UNPIVOT` non è l'esatto opposto di `PIVOT`. `PIVOT` esegue un'aggregazione e, pertanto, unisce le righe che è possibile unire in una singola riga nell'output. `UNPIVOT` non riproduce il risultato dell'espressione con valori di tabella originale perché le righe sono state unite. Inoltre, i valori Null nell'input di `UNPIVOT` vengono esclusi dall'output, mentre è possibile che fossero presenti valori Null originali nell'input prima dell'operazione `PIVOT`.  
   
- Il `Sales.vSalesPersonSalesByFiscalYears` visualizzare il [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Usa database di esempio `PIVOT` per restituire le vendite totali per ogni venditore, per ogni anno fiscale. Per creare script di visualizzazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in **Esplora oggetti**, individuare la vista sotto il **viste** cartella per il [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. Il nome della visualizzazione e quindi scegliere **visualizzazione Script come**.  
+ Nella vista `Sales.vSalesPersonSalesByFiscalYears` nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] viene usato `PIVOT` per restituire le vendite totali per ogni venditore, per ogni anno fiscale. Per creare uno script per la vista in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in **Esplora oggetti** individuare la vista nella cartella **Viste** per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Fare clic con il pulsante destro del mouse sul nome della vista e quindi selezionare **Crea script per vista**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   

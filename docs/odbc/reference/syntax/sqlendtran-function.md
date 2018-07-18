@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLEndTran | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLEndTran
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLEndTran
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLEndTran
-helpviewer_keywords: SQLEndTran function [ODBC]
+f1_keywords:
+- SQLEndTran
+helpviewer_keywords:
+- SQLEndTran function [ODBC]
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 15ba9ff7d28101201842071929b34dfa7ec1d455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: af0207a5ccaa11728b0ff67a4acad75577acdca7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran Function
 **Conformità**  
@@ -108,15 +109,15 @@ SQLRETURN SQLEndTran(
   
  Per determinare come le operazioni di transazione influenzano i cursori, un'applicazione chiama **SQLGetInfo** con le opzioni SQL_CURSOR_ROLLBACK_BEHAVIOR e SQL_CURSOR_COMMIT_BEHAVIOR. Per ulteriori informazioni, vedere i paragrafi seguenti e inoltre vedere [effettiva delle transazioni, cursori e delle istruzioni preparate](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md).  
   
- Se il valore SQL_CURSOR_ROLLBACK_BEHAVIOR o SQL_CURSOR_COMMIT_BEHAVIOR uguale SQL_CB_DELETE, **SQLEndTran** viene chiusa, Elimina tutti i cursori aperti in tutte le istruzioni associate alla connessione e Cancella tutti i risultati in sospeso. **SQLEndTran** lascia qualsiasi istruzione presente in uno stato (non preparato) allocato; l'applicazione, possono essere riutilizzate per le successive richieste SQL alternativa è possibile chiamare **SQLFreeStmt** o **SQLFreeHandle** con un *HandleType* impostato su SQL_HANDLE_STMT per deallocarle.  
+ Se il valore SQL_CURSOR_ROLLBACK_BEHAVIOR o SQL_CURSOR_COMMIT_BEHAVIOR uguale SQL_CB_DELETE, **SQLEndTran** viene chiusa, Elimina tutti i cursori aperti in tutte le istruzioni associate alla connessione e Cancella tutti i risultati in sospeso. **SQLEndTran** lascia qualsiasi istruzione presente in uno stato allocato (non preparato); l'applicazione possono essere riutilizzate per le successive richieste SQL alternativa è possibile chiamare **SQLFreeStmt** o **SQLFreeHandle** con un *HandleType* SQL_HANDLE_STMT per deallocarle.  
   
- Se il valore SQL_CURSOR_ROLLBACK_BEHAVIOR o SQL_CURSOR_COMMIT_BEHAVIOR uguale SQL_CB_CLOSE, **SQLEndTran** chiude i cursori aperti vengono su tutte le istruzioni associate alla connessione. **SQLEndTran** lascia qualsiasi istruzione presente in uno stato preparato; l'applicazione può chiamare **SQLExecute** per un'istruzione associata alla connessione senza prima chiamare **SQLPrepare** .  
+ Se il valore SQL_CURSOR_ROLLBACK_BEHAVIOR o SQL_CURSOR_COMMIT_BEHAVIOR uguale SQL_CB_CLOSE, **SQLEndTran** chiude i cursori aperti vengono su tutte le istruzioni associate alla connessione. **SQLEndTran** lascia qualsiasi istruzione presente in uno stato preparato; l'applicazione può chiamare **SQLExecute** per un'istruzione associata alla connessione senza prima chiamare **SQLPrepare**.  
   
  Se il valore SQL_CURSOR_ROLLBACK_BEHAVIOR o SQL_CURSOR_COMMIT_BEHAVIOR uguale SQL_CB_PRESERVE, **SQLEndTran** non influisce sui cursori aperti associati alla connessione. I cursori rimangono in corrispondenza della riga a cui prima della chiamata a **SQLEndTran**.  
   
  Per i driver e le origini dati che supportano le transazioni, la chiamata **SQLEndTran** con SQL_COMMIT o SQL_ROLLBACK quando non è attiva alcuna transazione restituisce SQL_SUCCESS (che indica che non sono presenti operazioni per essere eseguito il commit o rollback) e non ha alcun effetto sull'origine dati.  
   
- Quando un driver in modalità autocommit, gestione Driver non chiama **SQLEndTran** nel driver. **SQLEndTran** sempre restituisce SQL_SUCCESS indipendentemente dal fatto che venga chiamato con un *CompletionType* di SQL_COMMIT o SQL_ROLLBACK.  
+ Quando un driver in modalità autocommit, gestione Driver non chiama **SQLEndTran** nel driver. **SQLEndTran** sempre restituisce SQL_SUCCESS indipendentemente dal fatto viene chiamato con un *CompletionType* di SQL_COMMIT o SQL_ROLLBACK.  
   
  Origini dati o i driver che non supportano le transazioni (**SQLGetInfo** *opzione* SQL_TXN_CAPABLE è SQL_TC_NONE) sono sempre in modo efficace in modalità autocommit e pertanto restituisce SQL_SUCCESS per sempre **SQLEndTran** o meno quando vengono chiamate con un *CompletionType* di SQL_COMMIT o SQL_ROLLBACK. Tali origini dati e il driver non effettivamente il rollback delle transazioni quando richiesto.  
   

@@ -1,16 +1,14 @@
 ---
-title: ALTER SERVICE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER SERVICE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER SERVICE
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - ALTER SERVICE statement
 - services [Service Broker], modifying
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 69756a85873ddae09780e28b2ccc5481659e563f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2a96de3e7df2c381ce8b1fe30c98769050fc65ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,25 +52,25 @@ ALTER SERVICE service_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SERVICE_NAME*  
+ *service_name*  
  Nome del servizio da modificare. Non è possibile specificare i nomi del server, del database e dello schema.  
   
- CODA ON [ *schema_name***.** ] *nome_coda*  
+ ON QUEUE [ *schema_name***.** ] *queue_name*  
  Specifica la nuova coda per questo servizio. [!INCLUDE[ssSB](../../includes/sssb-md.md)] sposta tutti i messaggi per questo servizio dalla coda corrente alla nuova coda.  
   
- Aggiungi contratto *contract_name*  
+ ADD CONTRACT *contract_name*  
  Specifica un contratto da aggiungere al set dei contratti esposti da questo servizio.  
   
  DROP CONTRACT *contract_name*  
  Specifica un contratto da eliminare dal set dei contratti esposti da questo servizio. [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio di errore per tutte le conversazioni esistenti con il servizio che utilizzano questo contratto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando l'istruzione ALTER SERVICE elimina un contratto da un servizio, il servizio non può più essere la destinazione per le conversazioni che utilizzano tale contratto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] non consente pertanto nuove conversazioni con il servizio in base a quel contratto. Le conversazioni esistenti che utilizzano il contratto non subiscono variazioni.  
   
  Per modificare il parametro AUTHORIZATION per un servizio, utilizzare l'istruzione ALTER AUTHORIZATION.  
   
-## <a name="permissions"></a>Permissions  
- L'autorizzazione per modificare un servizio viene impostato sul proprietario del servizio, i membri del **db_ddladmin** o **db_owner** fissa ruoli del database e i membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ L'autorizzazione per la modifica di un servizio viene assegnata per impostazione predefinita al proprietario del servizio, ai membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -104,7 +101,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [ELIMINARE servizio &#40; Transact-SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

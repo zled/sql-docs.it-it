@@ -1,38 +1,34 @@
 ---
 title: Classe di evento ExistingConnection | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ExistingConnection event class
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c2dcc04627c3acf3365f3aebcc4e84fecc9cc368
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5e4a50497ba1c18c5c8ead401f48cac895a9c193
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento ExistingConnection indica le proprietà delle connessioni utente esistenti dopo l'avvio della traccia. Il server genera un evento ExistingConnection per ogni connessione utente esistente.  
+  La classe di evento ExistingConnection indica le proprietà delle connessioni utente esistenti dopo l'avvio della traccia. Il server genera un evento ExistingConnection per ogni connessione utente esistente.  
   
 ## <a name="existing-connection-event-class-data-columns"></a>Colonne di dati della classe di evento Existing Connection  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |BinaryData|**image**|Dump binario dei flag delle opzioni, ad esempio le impostazioni a livello di sessione, inclusi i valori Null ANSI, il riempimento con caratteri ANSI, la chiusura del cursore in fase di commit, la concatenazione dei valori Null e gli identificatori tra virgolette.|2|Sì|  

@@ -1,16 +1,15 @@
 ---
 title: Accedere a schemi di inventario (AccessToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -42,16 +41,15 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8d3c34d87adbe5e854b9de2f49bda5492583298d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: db3476f35a5388d127d34ebb183364e0f63184f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Schemi di inventario di accesso (AccessToSQL)
 Nelle sezioni seguenti vengono descritte le tabelle che vengono create SSMA durante l'esportazione degli schemi di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -76,7 +74,7 @@ I metadati del database viene esportato nel **SSMA_Access_InventoryDatabases** t
 |**ReportsCount**|**int**|Il numero di report nel database di Access.|  
 |**MacrosCount**|**int**|Il numero di macro nel database di Access.|  
 |**AccessVersion**|**nvarchar(4000)**|La versione di accesso del database.|  
-|**Regole di confronto**|**nvarchar(4000)**|Le regole di confronto del database di Access. Regole di confronto determinano le modalità di Ordina e confronta le stringhe in un database.|  
+|**Confronto**|**nvarchar(4000)**|Le regole di confronto del database di Access. Regole di confronto determinano le modalità di Ordina e confronta le stringhe in un database.|  
 |**JetVersion**|**nvarchar(4000)**|La versione del motore di database Jet. I database di Access utilizzano il motore di database Jet sottostante.|  
 |**IsUpdatable**|**bit**|Indica se il database può essere aggiornato. Se il valore è 1, il database è aggiornabile. Se il valore è 0, il database è di sola lettura.|  
 |**QueryTimeout**|**int**|Configurato ODBC query valore di timeout per il database, in secondi. Il valore predefinito è 60 secondi.|  
@@ -107,7 +105,7 @@ I metadati della colonna viene esportato nel **SSMA_Access_InventoryColumns** ta
 |**DataType**|**nvarchar(4000)**|L'accesso del tipo di dati della colonna, ad esempio **testo** o **lungo**.|  
 |**IsAutoIncrement**|**bit**|Specifica se la colonna viene incrementato automaticamente i valori interi. Se il valore è 1, i numeri interi sono a incremento automatico.|  
 |**Ordinal**|**smallint**|L'ordine della colonna nella tabella, a partire da zero.|  
-|**DefaultValue**|**nvarchar(4000)**|Il valore predefinito per la colonna.|  
+|**defaultValue**|**nvarchar(4000)**|Il valore predefinito per la colonna.|  
 |**ValidationRule**|**nvarchar(4000)**|La regola viene utilizzata per convalidare i dati aggiunti o aggiornati nella colonna.|  
   
 ## <a name="indexes"></a>Indici  
@@ -147,7 +145,7 @@ I metadati delle query vengono esportati per il **SSMA_Access_InventoryQueries**
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database contenente la query.|  
 |**QueryId**|**int**|Incremento numero intero che identifica la query. Questa colonna è la chiave primaria per la tabella.|  
-|**Nomequery**|**nvarchar(4000)**|Nome della query.|  
+|**QueryName**|**nvarchar(4000)**|Nome della query.|  
 |**QueryText**|**nvarchar(4000)**|Il codice query SQL, ad esempio un'istruzione SELECT.|  
 |**IsUpdateable**|**bit**|Specifica se la query è di sola lettura o aggiornabili.|  
 |**QueryType**|**nvarchar(4000)**|Specifica il tipo di query, ad esempio **selezionare** o **SetOperation**.|  
@@ -187,7 +185,7 @@ Metadati del modulo vengono esportati nel **SSMA_Access_InventoryModules** tabel
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene il modulo.|  
 |**ModuleId**|**int**|Incremento numero intero che identifica il modulo. Questa colonna è la chiave primaria per la tabella.|  
-|**ModuleName**|**nvarchar(4000)**|Il nome del modulo.|  
+|**moduleName**|**nvarchar(4000)**|Il nome del modulo.|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esportazione di un inventario di Access](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  

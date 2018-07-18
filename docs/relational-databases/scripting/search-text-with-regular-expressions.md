@@ -1,17 +1,13 @@
 ---
 title: Eseguire ricerche di testo con espressioni regolari | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
 - vs.regularexpressionhelp
@@ -21,19 +17,20 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f60dd96e3a335938d99c0b0f619ce859c208e795
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2bdf5092dc19a5a96121db99ef0da7c9192da1bb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le espressioni regolari sono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile utilizzare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **di** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile utilizzare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **di** .  
   
 #### <a name="to-find-using-regular-expressions"></a>Per eseguire la ricerca utilizzando espressioni regolari  
   
@@ -42,11 +39,11 @@ ms.lasthandoff: 01/24/2018
 2.  Accanto al campo **Trova** viene reso disponibile il pulsante triangolare per **l'elenco dei riferimenti**. Fare clic su questo pulsante per visualizzare un elenco delle espressioni regolari più comuni. Ogni elemento selezionato in Generatore di espressioni viene inserito nella stringa **Trova** .  
   
 > [!NOTE]  
->  Le espressioni regolari che possono essere utilizzate nelle stringhe **Trova** presentano differenze sintattiche rispetto a quelle valide nella programmazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Poiché ad esempio in **Trova e sostituisci**la notazione con parentesi graffe {} viene utilizzata per le espressioni con tag, l'espressione "zo\{1\}" consente di trovare tutte le occorrenze di "zo" seguite dal tag 1, come "Pranzo1" e "Gonzo1". In .NET Framework, tuttavia, la notazione {} viene utilizzata per i quantificatori. Pertanto l'espressione "zo\{1\}" consente di trovare tutte le occorrenze di "z" seguite da una sola "o", come in "zona", ma non in "zoo".  
+>  Le espressioni regolari che possono essere utilizzate nelle stringhe **Trova** presentano differenze sintattiche rispetto a quelle valide nella programmazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Poiché ad esempio in **Trova e sostituisci** la notazione con parentesi graffe {} viene usata per le espressioni con tag, l'espressione "zo{1}" consente di trovare tutte le occorrenze di "zo" seguite dal tag 1, come in "Pranzo1" e "Gonzo1". In .NET Framework, tuttavia, la notazione {} viene usata per i quantificatori. Pertanto l'espressione "zo{1}" consente di trovare tutte le occorrenze di "z" seguite da una e una sola "o", come in "zona", ma non in "zoo".  
   
  Nella seguente tabella vengono descritte le espressioni regolari disponibili nell'**elenco dei riferimenti**.  
   
-|Espressione|Sintassi|Description|  
+|Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Qualsiasi carattere|,|Consente di ricercare un carattere qualsiasi, ad eccezione del carattere di interruzione riga.|  
 |Zero o più|*|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il maggior numero di caratteri corrispondenti possibile.|  
@@ -68,7 +65,7 @@ ms.lasthandoff: 01/24/2018
   
  Nell'**elenco dei riferimenti** non è possibile visualizzare tutte le espressioni regolari valide per le operazioni di **ricerca e sostituzione**. In una stringa **Trova** è possibile inserire anche le seguenti espressioni regolari:  
   
-|Espressione|Sintassi|Description|  
+|Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Minimo tra zero o più occorrenze|@|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
 |Minimo tra una o più occorrenze|#|Consente di ricercare una o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
@@ -92,7 +89,7 @@ ms.lasthandoff: 01/24/2018
   
  Nella tabella seguente viene descritta la sintassi per stabilire una corrispondenza attraverso le proprietà dei caratteri Unicode standard. Le abbreviazioni di due lettere corrispondono a quelle indicate nel database delle proprietà dei caratteri Unicode e possono essere specificate come parte di un set di caratteri. Ad esempio, l'espressione [:Nd:Nl:No] corrisponde a qualsiasi tipo di cifra.  
   
-|Espressione|Sintassi|Description|  
+|Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Lettera maiuscola|:Lu|Consente di ricercare una qualsiasi lettera maiuscola. Ad esempio, :Luli corrisponde a "Gli" ma non a "gli".|  
 |Lettera minuscola|:Ll|Consente di ricercare una qualsiasi lettera minuscola. Ad esempio, :Llli corrisponde a "gli" ma non a "Gli".|  
@@ -127,7 +124,7 @@ ms.lasthandoff: 01/24/2018
   
  Oltre alle proprietà dei caratteri Unicode standard, è possibile specificare come parte di un set di caratteri le proprietà aggiuntive elencate di seguito.  
   
-|Espressione|Sintassi|Description|  
+|Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Consente di ricercare qualsiasi carattere. Ad esempio, :Alli consente di trovare parole come "Gli", "giglio" e "foglio".|  
 |Numeric|:Nu|Consente di ricercare un numero o una cifra.|  

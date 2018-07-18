@@ -1,31 +1,23 @@
 ---
 title: Colonne di dati di controllo di sicurezza | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: trace-events
 ms.topic: reference
-helpviewer_keywords: Security Audit event category [SQL Server]
-ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
-caps.latest.revision: "36"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d827295c68028d54d64bbb91447aa7ab22eaaa77
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 06bb8b1c6906ebbced1ed7cf52d254564c77d084
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="security-audit-data-columns"></a>Colonne di dati degli eventi di controllo di sicurezza
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria di eventi di controllo di sicurezza include le classi di evento seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoria di eventi Controllo di sicurezza include le classi di eventi seguenti:  
   
 ||||  
 |-|-|-|  
@@ -47,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |Severity|22|1|Livello di gravità di un'eccezione.|  
-|Esito positivo|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
+|Operazione completata|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
 |Errore|24|1|Numero di errore di un evento specifico.|  
 |ConnectionID|25|1|ID connessione univoco.|  
 |NTUserName|32|8|Nome utente di Windows.|  
@@ -65,9 +57,9 @@ ms.lasthandoff: 01/08/2018
 |EventClass|0|1|La classe di evento viene utilizzata per suddividere gli eventi in categorie.|  
 |CurrentTime|2|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Duration|5|2|Durata dell'evento in millisecondi.|  
+|Durata|5|2|Durata dell'evento in millisecondi.|  
 |CPUTime|6|2|Tempo della CPU in millisecondi utilizzato dall'evento.|  
-|Esito positivo|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
+|Operazione completata|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
 |ConnectionID|25|1|ID connessione univoco.|  
 |NTUserName|32|8|Nome utente di Windows.|  
 |NTDomainName|33|8|Dominio Windows di appartenenza dell'utente.|  
@@ -85,7 +77,7 @@ ms.lasthandoff: 01/08/2018
 |EventSubclass|1|1|La sottoclasse di evento fornisce informazioni aggiuntive su ogni classe di evento:<br /><br /> 1: Instance Shutdown<br /><br /> 2: Instance Started<br /><br /> 3: Instance Paused<br /><br /> 4: Instance Continued|  
 |CurrentTime|2|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |Severity|22|1|Livello di gravità di un'eccezione.|  
-|Esito positivo|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
+|Operazione completata|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
 |Errore|24|1|Numero di errore di un evento specifico.|  
 |TextData|42|9|Dati di testo associati all'evento.|  
 |ServerName|43|8|Nome del server che produce l'evento.|  
@@ -100,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 |ObjectPath|14|8|Percorso dell'oggetto. Elenco delimitato da virgole di elementi padre, a partire dall'elemento padre dell'oggetto.|  
 |ObjectReference|15|8|Riferimento all'oggetto. Codificato in formato XML per tutti gli elementi padre. L'oggetto è descritto tramite tag.|  
 |Severity|22|1|Livello di gravità di un'eccezione.|  
-|Esito positivo|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
+|Operazione completata|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
 |Errore|24|1|Numero di errore di un evento specifico.|  
 |ConnectionID|25|1|ID connessione univoco.|  
 |DatabaseName|28|8|Nome del database in cui è in esecuzione l'istruzione dell'utente.|  
@@ -121,7 +113,7 @@ ms.lasthandoff: 01/08/2018
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventSubclass|1|1|La sottoclasse di evento fornisce informazioni aggiuntive su ogni classe di evento:<br /><br /> 1: **Backup**<br /><br /> 2: **Restore**<br /><br /> 3: **Synchronize**<br /><br /> 4: **Detach**<br /><br /> 5: **Attach**<br /><br /> 6: **ImageLoad**<br /><br /> 7: **ImageSave**|  
 |Severity|22|1|Livello di gravità di un'eccezione.|  
-|Esito positivo|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
+|Operazione completata|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
 |Errore|24|1|Numero di errore di un evento specifico.|  
 |ConnectionID|25|1|ID connessione univoco.|  
 |DatabaseName|28|8|Nome del database in cui è in esecuzione l'istruzione dell'utente.|  

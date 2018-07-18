@@ -1,28 +1,22 @@
 ---
-title: Introduzione a revoscalepy | Documenti Microsoft
-ms.custom: 
-ms.date: 10/05/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Introduzione a pacchetto di Python revoscalepy in SQL Server Machine Learning | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 450aa7cc002da9b42379330141f34ee33eedbde6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="introducing-revoscalepy"></a>Introduzione a revoscalepy
+# <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>Introduzione a revoscalepy in SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**revoscalepy** è una nuova libreria fornita da Microsoft per supportare l'elaborazione distribuita, di calcolo remoto contesti e gli algoritmi ad alte prestazioni per Python.
+**revoscalepy** è una nuova libreria Python fornito da Microsoft per supportare l'elaborazione distribuita, di calcolo remoto contesti e gli algoritmi ad alte prestazioni per gli sviluppatori di Python.
 
 È basato sul **RevoScaleR** pacchetto R, che è stato fornito in Microsoft R Server e SQL Server R Services e mira a fornire la stessa funzionalità:
 
@@ -31,7 +25,7 @@ ms.lasthandoff: 02/11/2018
 + Fornisce le versioni di Python RevoScaleR algoritmi di machine learning per l'elaborazione distribuita o parallela
 + Migliorare le prestazioni, incluso l'utilizzo delle librerie matematiche Intel
 
-I pacchetti di MicrosoftML vengono anche forniti per R e Python. Per ulteriori informazioni, vedere [utilizzando MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
+I pacchetti di MicrosoftML vengono anche forniti per R e Python. Per altre informazioni, vedere [utilizzando MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
 
 ## <a name="versions-and-supported-platforms"></a>Versioni e piattaforme supportate
 
@@ -53,7 +47,7 @@ Per un elenco aggiornato delle funzioni nelle librerie di Python alla data di ri
 
 + [revoscalepy per Python](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)
 
-+ [microsoftml per Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
++ [Microsoftml per Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 
 ### <a name="data-types-data-sources-and-compute-contexts"></a>Tipi di dati, origini dati e i contesti di calcolo
 
@@ -66,13 +60,13 @@ Crei l'oggetto origine dati mediante le funzioni elencate nella tabella seguente
 > [!IMPORTANT]
 > Numero di nomi di funzione è cambiati dalla versione iniziale di Python nella versione CTP 2.0.
 
-**SQL Server data**
+**Dati di SQL Server**
 
 + Utilizzare [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) per definire un'origine dati da una query o una tabella
 + Utilizzare [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserver) per creare un contesto di calcolo di SQL Server
 + Utilizzare [RxOdbcData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxodbcdata) per creare un'origine dati da una connessione ODBC
 
-**revoscalepy** supporta anche la [origine dati con estensione XDF](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxxdfdata), utilizzata per lo spostamento dei dati tra memoria e altre origini dati.
+**revoscalepy** supporta anche il [origine dati con estensione XDF](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxxdfdata), utilizzata per lo spostamento dei dati tra memoria e altre origini dati.
 
 > [!TIP]
 > Se si ha familiarità con il concetto di origini dati o contesti di calcolo, è consigliabile iniziare leggendo sul funzionamento di elaborazione distribuita per machine learning in [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction).
@@ -84,12 +78,12 @@ I seguenti algoritmi di machine learning e funzioni di riepilogo da RevoScaleR s
 
 | Funzione| Description|Note|
 | ------ | ------ |------ |
-|`rx_btrees` | Gli alberi delle decisioni con Boosting di Adatta sfumatura stocastica|`rx_btrees_ex` in CTP 2.0|
-|`rx_dforest` | Adatta una classificazione e regressione foreste delle decisioni|`rx_dforest_ex` in CTP 2.0|
-|`rx_dtree` | Alberi di classificazione e regressione appropriati |`rx_dtree_ex` in CTP 2.0|
-|`rx_lin_mod` | Creare un modello lineare|`rx_lin_mod_ex` in CTP 2.0|
-|`rx_logit` | Creare un modello di regressione logistica|`rx_logit_ex` in CTP 2.0|
-|`rx_predict` | Generare stime da un modello con training|`rx_predict_ex` in CTP 2.0|
+|`rx_btrees` | Gli alberi delle decisioni con Boosting di Adatta sfumatura stocastica|`rx_btrees_ex` Nella versione CTP 2.0|
+|`rx_dforest` | Adatta una classificazione e regressione foreste delle decisioni|`rx_dforest_ex` Nella versione CTP 2.0|
+|`rx_dtree` | Alberi di classificazione e regressione appropriati |`rx_dtree_ex` Nella versione CTP 2.0|
+|`rx_lin_mod` | Creare un modello lineare|`rx_lin_mod_ex` Nella versione CTP 2.0|
+|`rx_logit` | Creare un modello di regressione logistica|`rx_logit_ex` Nella versione CTP 2.0|
+|`rx_predict` | Generare stime da un modello con training|`rx_predict_ex` Nella versione CTP 2.0|
 |`rx_summary` | Generare un riepilogo del modello||
 
 Nuovi algoritmi di machine learning vengono anche forniti dalla versione di Python [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
@@ -108,17 +102,17 @@ Nuovi algoritmi di machine learning vengono anche forniti dalla versione di Pyth
 
 MicrosoftML per Python include anche un'ampia gamma di trasformazioni e le funzioni di supporto, ad esempio:
 
-+ `rx_predict`Genera stime da un modello con training e può essere utilizzato per l'assegnazione dei punteggi in tempo reale
++ `rx_predict` Genera stime da un modello con training e può essere utilizzato per l'assegnazione dei punteggi in tempo reale
 + funzioni featurization immagine
 + funzioni per l'estrazione di elaborazione e la valutazione di testo
 
-Per informazioni dettagliate, vedere [Introduzione a MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
+Per informazioni dettagliate, vedere [introduzione MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
 
 > [!NOTE]
 > La community di Python utilizza le convenzioni di codifica che potrebbero essere diverse rispetto a ciò che si è abituati, incluse tutte le lettere minuscole e caratteri di sottolineatura anziché sulla convenzione camel per i nomi dei parametri. Inoltre, forse si notato che il **revoscalepy** libreria è sempre in minuscola. Giusto! Un'altra convenzione Python.
 > 
-> Consultare i suggerimenti sulla documentazione di riferimento di Python per Microsoft R: [Guida funzione Python][Python funzione help](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
+> Consultare i suggerimenti sulla documentazione di riferimento di Python per Microsoft R: [help funzione Python][Python funzione della Guida](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
 ## <a name="examples"></a>Esempi
 
@@ -157,7 +151,7 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 Per eseguire codice Python in SQL Server, è necessario avere installato SQL Server 2017 con la funzionalità di **Machine Learning Services**e abilitato il linguaggio Python. Le versioni precedenti di SQL Server non supportano l'integrazione di Python.
 
 > [!NOTE]
-> Contesti di calcolo di SQL Server non supportano distribuzioni Apri origine di Python. Tuttavia, se si desidera pubblicare e utilizzare le applicazioni di Python da Windows, è possibile installare Server di Microsoft Machine Learning senza installazione di SQL Server. Per ulteriori informazioni, vedere [creare un Standalone R Server](../r/create-a-standalone-r-server.md)
+> Contesti di calcolo di SQL Server non supportano distribuzioni Apri origine di Python. Tuttavia, se si desidera pubblicare e utilizzare le applicazioni di Python da Windows, è possibile installare Server di Microsoft Machine Learning senza installazione di SQL Server. Per altre informazioni, vedere [installazione di SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md).
 
 ## <a name="get-more-help"></a>Ulteriori informazioni
 

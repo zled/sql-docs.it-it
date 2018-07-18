@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLInstallTranslatorEx | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLInstallTranslatorEx
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLInstallTranslatorEx
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLInstallTranslatorEx
-helpviewer_keywords: SQLInstallTranslatorEx function [ODBC]
+f1_keywords:
+- SQLInstallTranslatorEx
+helpviewer_keywords:
+- SQLInstallTranslatorEx function [ODBC]
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 220d3e6b0cc62c2d3d238332975c32e9c38bc030
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 2bf6eda5909aa7cec78a2c23e35126c90f566117
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx (funzione)
 **Conformità**  
  Introdotta: versione ODBC 3.0  
   
  **Riepilogo**  
- **SQLInstallTranslatorEx** aggiunge informazioni su una funzione di conversione alla sezione Odbcinst.ini delle informazioni di sistema (HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. INI\ODBC traduttori chiave Registro di sistema).  
+ **SQLInstallTranslatorEx** aggiunge informazioni su una funzione di conversione alla sezione Odbcinst le informazioni di sistema (HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. INI\ODBC traduttori chiave Registro di sistema).  
   
  La funzionalità di **SQLInstallTranslatorEx** accessibili anche con [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
   
@@ -102,13 +103,13 @@ BOOL SQLInstallTranslatorEx(
 ## <a name="comments"></a>Commenti  
  **SQLInstallTranslatorEx** fornisce un meccanismo per installare solo la funzione di conversione. Questa funzione non copiare effettivamente i file. Il programma chiamante è responsabile della copia dei file di conversione.  
   
- **SQLInstallTranslatorEx** incrementa il conteggio di utilizzo del componente per la funzione di conversione installato 1. Se esiste già una versione della funzione di conversione, ma il conteggio di utilizzo del componente per la funzione di conversione non esiste, il nuovo valore di conteggio dell'utilizzo di componente è impostato su 2.  
+ **SQLInstallTranslatorEx** incrementa il conteggio di utilizzi di componente per la funzione di conversione installati di 1. Se esiste già una versione della funzione di conversione, ma il conteggio di utilizzo del componente per la funzione di conversione non esiste, il nuovo valore di conteggio dell'utilizzo di componente è impostato su 2.  
   
  Il programma di installazione dell'applicazione è responsabile per copiare fisicamente il file di conversione e mantenere il conteggio di utilizzo di file. Se il file di conversione non è stato precedentemente installato, il programma di installazione dell'applicazione deve copiare i file e creare i file di conteggio di utilizzo. Se il file è stato installato in precedenza, il programma di installazione semplicemente incrementa il conteggio di utilizzo di file.  
   
  Se una versione precedente del convertitore è stata installata in precedenza dall'applicazione, la funzione di conversione deve essere disinstallato e reinstallato, in modo che il conteggio di utilizzo della funzione di conversione componente è valido. **SQLRemoveTranslator** deve essere chiamato per diminuire il conteggio di utilizzo del componente, quindi **SQLInstallTranslatorEx** deve essere chiamato per incrementare il conteggio di utilizzo del componente. Il programma di installazione dell'applicazione è necessario sostituire il vecchio file o i file con il nuovo file. Il conteggio di utilizzo del file rimarrà invariato e altre applicazioni che utilizzano il file della versione precedente utilizzeranno la versione più recente.  
   
- La lunghezza del percorso in *lpszPathOut* in **SQLInstallTranslatorEx** consente per un processo di installazione in due fasi, in modo da un'applicazione è possibile determinare quali *cbPathOutMax* deve essere chiamando **SQLInstallTranslatorEx** con un *trattano* della modalità ODBC_INSTALL_INQUIRY. Verrà restituito il numero totale di byte disponibili nel *pcbPathOut* buffer. **SQLInstallTranslatorEx** può quindi essere chiamato con un *trattano* di ODBC_INSTALL_COMPLETE e *cbPathOutMax* argomento impostato sul valore di *pcbPathOut* buffer più il carattere di terminazione null.  
+ La lunghezza del percorso in *lpszPathOut* in **SQLInstallTranslatorEx** consente per un processo di installazione in due fasi, in modo da un'applicazione è possibile determinare quali *cbPathOutMax* deve essere chiamando **SQLInstallTranslatorEx** con un *trattano* della modalità ODBC_INSTALL_INQUIRY. Verrà restituito il numero totale di byte disponibili nel *pcbPathOut* buffer. **SQLInstallTranslatorEx** può quindi essere chiamato con un *trattano* di ODBC_INSTALL_COMPLETE e il *cbPathOutMax* argomento impostato sul valore di *pcbPathOut* buffer più il carattere di terminazione null.  
   
  Se si sceglie di non utilizzare il modello a due fasi per **SQLInstallTranslatorEx**, è necessario impostare *cbPathOutMax*, che definisce le dimensioni dello spazio di archiviazione per il percorso della directory di destinazione, per il valore MAX_PATH, come definito in STDLIB. h, per impedire il troncamento.  
   

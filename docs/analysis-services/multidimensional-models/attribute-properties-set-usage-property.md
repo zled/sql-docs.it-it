@@ -1,34 +1,23 @@
 ---
-title: "Impostare la proprietà Usage | Documenti Microsoft"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- attributes [Analysis Services], usage setting
-- usage options [Analysis Services]
-ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
-caps.latest.revision: 
-author: Minewiskan
+title: Impostare la proprietà Usage | Documenti Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 931dcdc1f2f9cf6210c5993b8be14da4995d73d3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 603ef66e0021c2250987a0605fe9b28aae5e3490
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attribute-properties---set-usage-property"></a>Proprietà dell'attributo, impostare la proprietà utilizzo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-È possibile impostare l'utilizzo di un attributo mediante la visualizzazione **Struttura dimensione** di Progettazione dimensioni, accessibile da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  È possibile impostare l'utilizzo di un attributo mediante la visualizzazione **Struttura dimensione** di Progettazione dimensioni, accessibile da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Quando si imposta l'utilizzo di un attributo, le modifiche apportate non hanno effetto fino a quando non viene elaborata la dimensione. Per altre informazioni, vedere [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   

@@ -1,30 +1,19 @@
 ---
-title: Come per le query MDX Create utilizzando olapR | Documenti Microsoft
-ms.custom: 
-ms.date: 11/29/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- R
-ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 12c44fd21ab72975276e41c3107ca68d67dc2f82
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Come creare MDX le query in R tramite olapR in SQL Server Machine Learning | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 76602c41fd6f8d300c240a6072f2a6decec18e3f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="how-to-create-mdx-queries-using-olapr"></a>Come creare query MDX utilizzando olapR
+# <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Come creare query MDX in R tramite olapR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Il [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) pacchetto supporta le query MDX su cubi ospitati in SQL Server Analysis Services. Consente di compilare una query su un cubo esistente, esplorare le dimensioni e altri oggetti cubo e incollare le query MDX per recuperare i dati esistenti.
@@ -32,7 +21,7 @@ Il [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/
 Questo articolo vengono descritti i due utilizzi principali del **olapR** pacchetto:
 
 + [Compilare una query MDX da R, usando i costruttori forniti nel pacchetto olapR](#buildMDX)
-+ [Eseguire una query MDX valida esistente utilizzando olapR e un provider OLAP](#executeMDX)
++ [Eseguire una query MDX esistente, valida usando olapR e un provider OLAP](#executeMDX)
 
 Non sono supportate le operazioni seguenti:
 
@@ -40,7 +29,7 @@ Non sono supportate le operazioni seguenti:
 + Creazione di nuovi oggetti OLAP
 + Writeback per le partizioni, incluse le misure o somme
 
-## <a name="buildMDX"></a>Compilare una query MDX da R
+## <a name="buildMDX"></a> Compilare una query MDX da R
 
 1. Definire una stringa di connessione che specifica l'origine dati OLAP (istanza di SSAS) e il provider MSOLAP.
 
@@ -51,8 +40,8 @@ Non sono supportate le operazioni seguenti:
 4. Usare le funzioni helper seguenti per fornire altri dettagli sulle dimensioni e sulle misure da includere nella query MDX:
 
      + `cube()` Specificare il nome del database SSAS. Se la connessione a un'istanza denominata, specificare il nome del computer e il nome di istanza. 
-     + `columns()`Specificare i nomi delle misure da utilizzare nel **colonne ON** argomento.
-     + `rows()`Specificare i nomi delle misure da utilizzare nel **righe ON** argomento.
+     + `columns()` Specificare i nomi delle misure da utilizzare nel **via colonne** argomento.
+     + `rows()` Specificare i nomi delle misure da utilizzare nel **via righe** argomento.
      + `slicers()` Specificare un campo o i membri da usare come filtro dei dati. Si tratta di un filtro che viene applicato a tutti i dati delle query MDX.
      
      + `axis()` Specificare il nome di un altro asse da usare nella query. 
@@ -66,7 +55,7 @@ Non sono supportate le operazioni seguenti:
   + `executeMD` restituisce una matrice multidimensionale
   + `execute2D` restituisce un frame di dati bidimensionale (tabulare)
 
-## <a name="executeMDX"></a>Eseguire una query MDX valida da R
+## <a name="executeMDX"></a> Eseguire una query MDX valida da R
 
 1. Definire una stringa di connessione che specifica l'origine dati OLAP (istanza di SSAS) e il provider MSOLAP.
 
@@ -83,7 +72,7 @@ Non sono supportate le operazioni seguenti:
 
 Negli esempi seguenti sono basati sul data mart e del cubo progetto AdventureWorks, poiché tale progetto è ampiamente disponibile in più versioni, inclusi i file di backup possono essere ripristinati con facilità ad Analysis Services. Se non si dispone di un cubo esistente, è possibile ottenere un cubo di esempio tramite una delle seguenti opzioni:
 
-+ Creare il cubo che viene usato in questi esempi seguendo l'esercitazione di Analysis Services fino a lezione 4: [la creazione di un cubo OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Creare il cubo che viene usato in questi esempi seguendo l'esercitazione su Analysis Services fino alla lezione 4: [creazione di un cubo OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
 + Scaricare un cubo esistente come backup e ripristinare un'istanza di Analysis Services. Ad esempio, questo sito fornisce un cubo elaborato in formato compresso: [Adventure Works multidimensionali modello SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334). Estrarre il file e quindi ripristinarlo all'istanza di SSAS. Per ulteriori informazioni, vedere [Backup e ripristino](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), o [Cmdlet Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 
@@ -191,7 +180,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>Per restituire tutti i membri della dimensione e della gerarchia specificate
 
-Dopo aver definito l'origine e la creazione dell'handle, specificare il cubo, la dimensione e la gerarchia da restituire. Nei risultati restituiti, gli elementi che sono preceduti  **->**  rappresentano gli elementi figlio del membro precedente.
+Dopo aver definito l'origine e la creazione dell'handle, specificare il cubo, la dimensione e la gerarchia da restituire. Nei risultati restituiti, gli elementi che sono preceduti **->** rappresentano gli elementi figlio del membro precedente.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"

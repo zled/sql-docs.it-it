@@ -1,16 +1,14 @@
 ---
-title: nchar e nvarchar (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: nchar e nvarchar (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,52 +16,52 @@ helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f8918d985423174f09e1d796a406cc979dfc61f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar e nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Tipi di dati che sono a lunghezza fissa, carattere **nchar**, o a lunghezza variabile, **nvarchar**, set di dati Unicode e l'utilizzo di UNICODE UCS-2 caratteri.
+Tipi di dati carattere che rappresentano dati Unicode a lunghezza fissa, **nchar**, o variabile, **nvarchar**, e in cui viene usato il set di caratteri UNICODE UCS-2.
   
 ## <a name="arguments"></a>Argomenti  
-**nchar** [(n)]  
-Dati di tipo string a lunghezza fissa Unicode. *n*definisce la lunghezza della stringa e deve essere un valore compreso tra 1 e 4.000. Le dimensioni di archiviazione sono pari al doppio  *n*  byte. Quando la tabella codici delle regole di confronto utilizza caratteri a byte doppio, le dimensioni di archiviazione sono ancora  *n*  byte. A seconda della stringa, le dimensioni di archiviazione  *n*  byte possono essere minore del valore specificato per  *n* . I sinonimi di ISO per **nchar** sono **char national** e **caratteri nazionali**...
+**nchar** [ ( n ) ]  
+Dati di tipo string a lunghezza fissa Unicode. *n* definisce la lunghezza della stringa e deve essere un valore compreso tra 1 e 4.000. Le dimensioni di archiviazione, espresse in byte, sono pari al doppio di *n*. Quando la tabella codici delle regole di confronto usa caratteri a doppio byte, le dimensioni di archiviazione risultano comunque pari a *n* byte. A seconda della stringa, le dimensioni di archiviazione di *n*byte possono essere inferiori al valore specificato per *n*. I sinonimi ISO per **nchar** sono **national char** e **national character**.
   
-**nvarchar** [(n | **max** )]  
-Dati di tipo string a lunghezza variabile Unicode. *n*definisce la lunghezza della stringa e può essere un valore compreso tra 1 e 4.000. **max** indica che le dimensioni massime di archiviazione sono 2 ^ 31-1 caratteri, (2 GB). Le dimensioni di archiviazione, espresse in byte, sono pari al doppio della lunghezza effettiva dei dati immessi + 2 byte. I sinonimi di ISO per **nvarchar** sono **national char varying** e **variabile di caratteri nazionali**.
+**nvarchar** [ ( n | **max** ) ]  
+Dati di tipo string a lunghezza variabile Unicode. *n* definisce la lunghezza della stringa e può essere un valore compreso tra 1 e 4.000. **max** indica che le dimensioni di archiviazione massime sono di 2^30-1 caratteri.  Le dimensioni di archiviazione massime espresse in byte sono pari a 2 GB. Le dimensioni di archiviazione effettive espresse in byte sono pari al doppio del numero di caratteri immessi + 2 byte. I sinonimi ISO per **nvarchar** sono **national char varying** e **national character varying**.
   
-## <a name="remarks"></a>Osservazioni  
-Quando  *n*  non è specificato nella definizione dei dati o istruzione di dichiarazione di variabile, la lunghezza predefinita è 1. Quando  *n*  non è specificato con la funzione CAST, la lunghezza predefinita è 30.
+## <a name="remarks"></a>Remarks  
+Se *n* viene omesso in un'istruzione di definizione dei dati o di dichiarazione di variabili, la lunghezza predefinita è 1. Se *n* viene omesso in una funzione CAST, la lunghezza predefinita è 30.
   
-Utilizzare **nchar** quando le dimensioni delle voci della colonna sono pressoché simili.
+Usare **nchar** se le dimensioni delle voci della colonna sono pressoché simili.
   
-Utilizzare **nvarchar** quando le dimensioni delle voci della colonna sono pressoché variare notevolmente.
+Usare **nvarchar** se le dimensioni delle voci della colonna variano in modo considerevole.
   
-**sysname** è un tipo di dati definito dall'utente di sistema che è funzionalmente equivalente a **nvarchar (128)**, ad eccezione del fatto che non è nullable. **sysname** viene utilizzato per fare riferimento a nomi di oggetto di database.
+**sysname** è un tipo di dati di sistema definito dall'utente equivalente dal punto di vista funzionale a **nvarchar(128)**, anche se non ammette valori Null. **sysname** viene usato per fare riferimento a nomi di oggetti di database.
   
-Gli oggetti che utilizzano **nchar** o **nvarchar** vengono assegnate le regole di confronto predefinite del database, a meno che non viene assegnato un regole di confronto specifiche tramite la clausola COLLATE.
+Agli oggetti che usano **nchar** o **nvarchar** vengono assegnate le regole di confronto predefinite del database, a meno che non vengano assegnate regole di confronto specifiche tramite la clausola COLLATE.
   
-SET ANSI_PADDING è sempre attivo per **nchar** e **nvarchar**. SET ANSI_PADDING OFF non è valida per il **nchar** o **nvarchar** tipi di dati.
+Per **nchar** e **nvarchar** l'opzione SET ANSI_PADDING è sempre impostata su ON. L'opzione SET ANSI_PADDING OFF non è valida per i tipi di dati **nchar** o **nvarchar**.
   
-Prefisso costanti di stringa di caratteri Unicode con la lettera N. Senza il prefisso N, la stringa viene convertita la tabella codici predefinita del database. La tabella codici predefinita potrebbe non riconoscere certi caratteri.
+Usare la lettera N come prefisso per le costanti stringa di caratteri Unicode. Senza il prefisso N, la stringa viene convertita nella tabella codici predefinita del database. La tabella codici predefinita potrebbe non riconoscere certi caratteri.
  
 > [!NOTE]  
->  Quando un prefisso di una costante di stringa con la lettera N, la conversione implicita comporterà una stringa Unicode se la costante da convertire non supera la lunghezza massima per un tipo di dati stringa Unicode (4000). In caso contrario, la conversione implicita comporterà un Unicode valori di grandi dimensioni (max).
+>  Quando si usa la lettera N come prefisso di una costante stringa, il risultato della conversione implicita sarà una stringa Unicode se la costante da convertire non supera la lunghezza massima per un tipo di dati stringa Unicode (4.000). In caso contrario, il risultato della conversione implicita sarà un valore di grandi dimensioni Unicode (max).
   
 > [!WARNING]  
->  Ogni valore non null **varchar (max)** o **nvarchar (max)** colonna richiede 24 byte di allocazione fissa aggiuntiva che concorre il limite di riga di 8.060 byte durante un'operazione di ordinamento. Questo può creare un limite al numero di non null implicito **varchar (max)** o **nvarchar (max)** colonne che possono essere create in una tabella. Non vengono segnalati errori particolari (oltre il normale avviso che indica che le dimensioni massime per le righe superano il valore massimo consentito di 8060 byte) durante la creazione della tabella o l'inserimento dei dati. Queste dimensioni delle righe eccessive possono causare errori (ad esempio, l'errore 512) durante le normali operazioni, ad esempio un aggiornamento della chiave dell'indice cluster o l'ordinamento del set di colonne completo, che gli utenti non possono prevedere finché non eseguono un'operazione.  
+>  Ogni colonna non Null **varchar(max)** o **nvarchar(max)** richiede 24 byte di allocazione fissa aggiuntiva che concorre al raggiungimento del limite delle righe di 8.060 byte durante un'operazione di ordinamento. Questi byte aggiuntivi possono creare un limite implicito al numero di colonne non Null **varchar(max)** o **nvarchar(max)** in una tabella. Non vengono segnalati errori particolari (oltre il normale avviso che indica che le dimensioni massime per le righe superano il valore massimo consentito di 8060 byte) durante la creazione della tabella o l'inserimento dei dati. Queste grandi dimensioni di riga possono causare errori (ad esempio errore 512) che gli utenti non possono prevedere durante le normali operazioni,  ad esempio l'aggiornamento della chiave di indice cluster o l'ordinamento del set di colonne completo.
   
 ## <a name="converting-character-data"></a>Conversione dei dati di tipo carattere  
-Per informazioni sulla conversione di dati di tipo carattere, vedere [char e varchar &#40; Transact-SQL &#41; ](../../t-sql/data-types/char-and-varchar-transact-sql.md).
+Per informazioni sulla conversione dei dati di tipo carattere, vedere [char e varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md).
   
 ## <a name="examples"></a>Esempi  
   
@@ -95,12 +93,12 @@ Test data       More test data
 ## <a name="see-also"></a>Vedere anche
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[Ad esempio &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)  
-[SET ANSI_PADDING &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)  
+[LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)  
+[SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
   

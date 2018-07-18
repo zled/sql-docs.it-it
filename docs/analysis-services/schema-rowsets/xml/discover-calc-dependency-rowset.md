@@ -1,32 +1,23 @@
 ---
 title: Set di righe DISCOVER_CALC_DEPENDENCY | Documenti Microsoft
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DISCOVER_CALC_DEPENDENCIES rowset
-ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: "22"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39e8c2f6aa89e83de104862a22d8b8fefcab5fd0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3646b6dc83597918d4568003763b2aa26a7fd5a8
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discovercalcdependency-rowset"></a>Set di righe DISCOVER_CALC_DEPENDENCY
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Report sulle dipendenze tra i calcoli e sugli oggetti a cui fa riferimento in tali calcoli. Tali informazioni possono essere utilizzate in un'applicazione client per segnalare problemi con formule complesse o per visualizzare avvisi quando gli oggetti correlati vengono eliminati o modificati. È inoltre possibile utilizzare il set di righe per estrarre le espressioni DAX utilizzate nelle misure o nelle colonne calcolate.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Crea report sulle dipendenze tra i calcoli e sugli oggetti a cui si fa riferimento in tali calcoli. Tali informazioni possono essere utilizzate in un'applicazione client per segnalare problemi con formule complesse o per visualizzare avvisi quando gli oggetti correlati vengono eliminati o modificati. È inoltre possibile utilizzare il set di righe per estrarre le espressioni DAX utilizzate nelle misure o nelle colonne calcolate.  
   
  **Si applica a:** i modelli tabulari  
   
@@ -39,7 +30,7 @@ ms.lasthandoff: 01/08/2018
 |**OBJECT_TYPE**|**DBTYPE_WSTR**|Sì|Viene indicato il tipo di oggetto per il quale viene richiesta l'analisi delle dipendenze. L'oggetto deve essere uno dei tipi seguenti:<br /><br /> **ACTIVE_RELATIONSHIP**: una relazione attiva<br /><br /> **CALC_COLUMN**: colonna calcolata<br /><br /> **HIERARCHY**: una gerarchia<br /><br /> **MEASURE**: una misura<br /><br /> **RELATIONSHIP**: una relazione<br /><br /> **KPI**: un indicatore di prestazioni chiave<br /><br /> <br /><br /> Si noti che il **DISCOVER_DEPENDENCY_CALC** righe può essere limitato tramite questa colonna.|  
 |**QUERY**|**DBTYPE_WSTR**|Sì|Per i modelli tabulari creati in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], è possibile includere una query o un'espressione DAX per visualizzare il grafico delle dipendenze per questa query o espressione. Tramite la restrizione QUERY viene fornita alle applicazioni client una modalità per determinare gli oggetti utilizzati da una query DAX.<br /><br /> La restrizione **QUERY** può essere specificata in XMLA o nella clausola WHERE di una query DMV. Per ulteriori informazioni, vedere la sezione degli esempi.|  
 |**TABLE**|**DBTYPE_WSTR**||Nome della tabella contenente l'oggetto per il quale vengono generate le informazioni sulle dipendenze.|  
-|**OGGETTO**|**DBTYPE_WSTR**||Nome dell'oggetto per il quale vengono generate le informazioni sulle dipendenze. Se l'oggetto è una misura o una colonna calcolata, utilizzare il nome della misura. Se l'oggetto è una relazione, il nome della tabella (o dimensione del cubo) contenente la colonna che fa parte della relazione.|  
+|**OBJECT**|**DBTYPE_WSTR**||Nome dell'oggetto per il quale vengono generate le informazioni sulle dipendenze. Se l'oggetto è una misura o una colonna calcolata, utilizzare il nome della misura. Se l'oggetto è una relazione, il nome della tabella (o dimensione del cubo) contenente la colonna che fa parte della relazione.|  
 |**ESPRESSIONE**|**DBTYPE_WSTR**||Formula contenente l'oggetto per il quale vengono richieste le dipendenze.|  
 |**REFERENCED_OBJECT_TYPE**|**DBTYPE_WSTR**||Viene restituito il tipo di oggetto che presenta una dipendenza dall'oggetto a cui si fa riferimento. Gli oggetti restituiti possono essere del tipo seguente:<br /><br /> **CALC_COLUMN**: una colonna calcolata<br /><br /> **COLUMN**: una colonna di dati<br /><br /> **MEASURE**: una misura<br /><br /> **RELATIONSHIP**: una relazione<br /><br /> **KPI**: un indicatore di prestazioni chiave|  
 |**REFERENCED_TABLE**|**DBTYPE WSTR**||Nome della tabella contenente l'oggetto dipendente.|  
@@ -74,7 +65,7 @@ SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'RELATIONSHIP
 ```  
   
 ## <a name="example"></a>Esempio  
- **Filtrare le misure e colonne calcolate per visualizzare le espressioni DAX sottostanti**  
+ **Applicare filtri sulle misure e colonne calcolate per visualizzare le espressioni DAX sottostanti**  
   
  In questa query è possibile selezionare solo la misura o la colonna calcolata e, successivamente, visualizzare l'espressione DAX utilizzata nel calcolo. Nella colonna EXPRESSION sono contenute le espressioni DAX. Se si utilizza DISCOVER_CALC_DEPENDENCY per estrarre l'espressione DAX utilizzata nel modello, questa query è sufficiente a tale scopo. Infatti vengono restituite tutte le espressioni utilizzate nel modello, in ordine crescente.  
   
@@ -83,7 +74,7 @@ SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'MEASURE' OR 
 ```  
   
 ## <a name="example"></a>Esempio  
- **Applicare filtri tramite la QUERY**  
+ **Applicare filtri tramite QUERY**  
   
  Utilizzando la restrizione QUERY, è possibile specificare una query DAX per visualizzare tutti gli oggetti utilizzati nella query. Si consideri una query semplice come "Evaluate Customer". In base a quanto scritto, tramite questa query vengono restituite le righe dei dati dei clienti, in cui la composizione delle righe è basata sulle colonne della tabella Customer. Se ora si esegue DISCOVER_CALC_DEPENDENCY con una restrizione QUERY di "Evaluate Customer", si otterranno le colonne (o gli oggetti) utilizzate nella query. In questo caso, si tratta di un elenco di colonne della tabella Customer.  
   
@@ -124,13 +115,13 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
   
  Nella tabella seguente vengono forniti i GUID e i valori stringa che identificano questo set di righe.  
   
-|Argomento|valore|  
+|Argomento|Valore|  
 |--------------|-----------|  
 |GUID|a07ccd46-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|DependencyGraph|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe dello Schema di Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
- [Usare dinamica viste a Gestione &#40; viste a gestione dinamica &#41; per monitorare Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Usare dinamica viste a Gestione & #40; viste a gestione dinamica & #41; per monitorare Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

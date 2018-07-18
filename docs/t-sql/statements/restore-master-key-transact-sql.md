@@ -1,16 +1,14 @@
 ---
-title: RESTORE MASTER KEY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE_MASTER_KEY_TSQL
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - transferring Database Master Keys
 - RESTORE MASTER KEY statement
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 63c0d492da379f3cb0d982e5f35a2a110a3a6dda
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 863477cc362d072a4bf2b5378d70f81ea241d684
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +55,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
   
 ## <a name="arguments"></a>Argomenti  
  FILE ='*path_to_file*'  
- Specifica il percorso completo, nome file incluso, della chiave master del database archiviata. *path_to_file* può essere un percorso locale o un percorso UNC di un percorso di rete.  
+ Specifica il percorso completo, nome file incluso, della chiave master del database archiviata. *path_to_file* può essere un percorso locale o un percorso UNC di rete.  
   
  DECRYPTION BY PASSWORD ='*password*'  
  Specifica la password necessaria per decrittografare la chiave master del database che verrà importata da un file.  
@@ -69,7 +66,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
  FORCE  
  Specifica che il processo RESTORE deve continuare anche se la chiave master del database corrente non viene aperta oppure se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in grado di decrittografare alcune delle chiavi private crittografate con la chiave master.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando si ripristina la chiave master, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono decrittografate tutte le chiavi crittografate con la chiave master attiva corrente. Tali elementi venogno poi crittografati nuovamente con la chiave master ripristinata. Si tratta di un'operazione che utilizza molte risorse e pertanto dovrebbe essere pianificata in periodi di carico ridotto. L'operazione di ripristino avrà esito negativo se la chiave master del database corrente non è aperta e non è possibile aprirla, oppure se non è possibile decrittografare le eventuali chiavi crittografate con tale chiave master.  
   
  Utilizzare l'opzione FORCE solo se la chiave master è irrecuperabile o se la decrittografia ha esito negativo. Le informazioni crittografate esclusivamente da una chiave irrecuperabile andranno perdute.  
@@ -78,7 +75,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
   
  Se il database corrente non include alcuna chiave master, con l'esecuzione di RESTORE MASTER KEY verrà creata una chiave master. La nuova chiave master non verrà crittografata automaticamente con la chiave master del servizio.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il database.  
   
 ## <a name="examples"></a>Esempi  

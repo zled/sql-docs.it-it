@@ -1,27 +1,24 @@
 ---
 title: Interfaccia SQLXML | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 29b8b6708c4ebf01cc16130b08bb2892f2d1ec6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 2cb8975c4eda311b93c7a26c1d83eecbbfa581f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlxml-interface"></a>Interfaccia SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,14 +32,14 @@ ms.lasthandoff: 11/18/2017
   
 |Sintassi del metodo|Descrizione del metodo|  
 |-------------------|------------------------|  
-|[void Free)](http://go.microsoft.com/fwlink/?LinkId=131685)|Consente di liberare l'oggetto SQLXML e di rilasciare le risorse da questo bloccate.|  
+|[Free (void)](http://go.microsoft.com/fwlink/?LinkId=131685)|Consente di liberare l'oggetto SQLXML e di rilasciare le risorse da questo bloccate.|  
 |[InputStream getBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131754)|Restituisce un flusso di input per la lettura di dati da SQLXML.|  
 |[Lettore getCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131755)|Restituisce il **XML** dati come oggetto java.IO. Reader o come un flusso di caratteri.|  
-|[T estende getSource origine T (classe\<T > sourceClass)](http://go.microsoft.com/fwlink/?LinkId=131756)|Restituisce un **origine** per la lettura di **XML** valore specificato da questo **SQLXML** oggetto.<br /><br /> **Nota:** il metodo getSource supporta le seguenti origini: javax.Xml.Transform.DOM. DOMSource, javax.Xml.Transform.sax. saxsource, Transform e Java.IO. InputStream.|  
-|[Stringa GetString)](http://go.microsoft.com/fwlink/?LinkId=131757)|Restituisce una rappresentazione di stringa del **XML** valore designato dall'oggetto SQLXML.|  
+|[T estende getSource origine T (classe\<T > sourceClass)](http://go.microsoft.com/fwlink/?LinkId=131756)|Restituisce un **origine** per la lettura di **XML** valore specificato da questo **SQLXML** oggetto.<br /><br /> **Nota:** il metodo getSource supporta le seguenti origini: javax, saxsource, staxsource e. InputStream.|  
+|[GetString (stringa)](http://go.microsoft.com/fwlink/?LinkId=131757)|Restituisce una rappresentazione di stringa del **XML** valore designato dall'oggetto SQLXML.|  
 |[OutputStream setBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131758)|Recupera un flusso che può essere usato per scrivere il **XML** valore che rappresenta questo oggetto SQLXML.|  
 |[Writer setCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131759)|Restituisce un flusso da utilizzare per scrivere il **XML** valore che rappresenta questo oggetto SQLXML.|  
-|[T estende setResult risultato T (classe\<T > resultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|Restituisce un **risultato** per l'impostazione di **XML** valore specificato da questo **SQLXML** oggetto.<br /><br /> **Nota:** il metodo setResult supporta le seguenti origini: javax.Xml.Transform.DOM. DOMResult, javax.Xml.Transform.sax. SAXResult, javax.XML e Transform.|  
+|[T estende setResult risultato T (classe\<T > resultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|Restituisce un **risultato** per l'impostazione di **XML** valore specificato da questo **SQLXML** oggetto.<br /><br /> **Nota:** il metodo setResult supporta le seguenti origini: javax, SAXResult, staxresult e OutputStream.|  
 |[setString(String value) void](http://go.microsoft.com/fwlink/?LinkId=131762)|Imposta il valore XML indicato dall'oggetto SQLXML specificata **stringa** rappresentazione.|  
   
  Le applicazioni possono leggere e scrivere valori XML da e in un oggetto SQLXML una sola volta.  

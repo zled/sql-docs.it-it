@@ -1,16 +1,14 @@
 ---
-title: Istruzione END CONVERSATION (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: END CONVERSATION (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - END DIALOG
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - conversations [Service Broker], ending
 - ending conversations [SQL Server]
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 35
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d68dcecf84cb24b0c06876d40742c8f5ffe8124d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 940a843a643f35c58db74948dd9bf71c50c09b58
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,25 +57,25 @@ END CONVERSATION conversation_handle
  *conversation_handle*  
  Handle della conversazione da terminare.  
   
- ERRORE =*failure_code*  
- Codice di errore. Il *failure_code* è di tipo **int**. Il codice di errore è un codice definito dall'utente incluso nel messaggio di errore inviato all'altro lato della conversazione. Il codice di errore deve essere maggiore di 0.  
+ WITH ERROR =*failure_code*  
+ Codice di errore. *failure_code* è di tipo **int**. Il codice di errore è un codice definito dall'utente incluso nel messaggio di errore inviato all'altro lato della conversazione. Il codice di errore deve essere maggiore di 0.  
   
  DESCRIPTION =*failure_text*  
- Messaggio di errore. Il *failure_text* è di tipo **nvarchar (3000)**. Il testo dell'errore è un messaggio testuale definito dall'utente incluso nel messaggio di errore inviato all'altro lato della conversazione.  
+ Messaggio di errore. *failure_text* è di tipo **nvarchar(3000)**. Il testo dell'errore è un messaggio testuale definito dall'utente incluso nel messaggio di errore inviato all'altro lato della conversazione.  
   
  WITH CLEANUP  
- Rimuove tutti i messaggi e le voci della vista del catalogo per un lato di una conversazione che non è possibile completare normalmente. La pulizia non viene notificata all'altro lato della conversazione. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eliminati l'endpoint di conversazione, tutti i messaggi per la conversazione nella coda di trasmissione e tutti i messaggi per la conversazione nella coda del servizio. Gli amministratori possono utilizzare questa opzione per rimuovere le conversazioni che non possono essere completate normalmente. Se, ad esempio, il servizio remoto viene rimosso in modo definitivo, un amministratore può utilizzare WITH CLEANUP per rimuovere le conversazioni associate a tale servizio. Non utilizzare WITH CLEANUP nel codice di un [!INCLUDE[ssSB](../../includes/sssb-md.md)] dell'applicazione. Se si esegue END CONVERSATION WITH CLEANUP prima che l'endpoint di ricezione confermi la ricezione di un messaggio, l'endpoint di invio invierà di nuovo il messaggio. In questo modo, il dialogo potrebbe essere eseguito di nuovo.  
+ Rimuove tutti i messaggi e le voci della vista del catalogo per un lato di una conversazione che non è possibile completare normalmente. La pulizia non viene notificata all'altro lato della conversazione. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina l'endpoint della conversazione, tutti i messaggi per la conversazione nella coda di trasmissione e tutti i messaggi per la conversazione nella coda del servizio. Gli amministratori possono utilizzare questa opzione per rimuovere le conversazioni che non possono essere completate normalmente. Se, ad esempio, il servizio remoto viene rimosso in modo definitivo, un amministratore può utilizzare WITH CLEANUP per rimuovere le conversazioni associate a tale servizio. Non usare WITH CLEANUP nel codice di un'applicazione [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Se si esegue END CONVERSATION WITH CLEANUP prima che l'endpoint di ricezione confermi la ricezione di un messaggio, l'endpoint di invio invierà di nuovo il messaggio. In questo modo, il dialogo potrebbe essere eseguito di nuovo.  
   
-## <a name="remarks"></a>Osservazioni  
- Blocchi di conversazioni termina il gruppo di conversazioni che forniti *conversation_handle* appartiene. Al termine di una conversazione, tramite [!INCLUDE[ssSB](../../includes/sssb-md.md)] vengono rimossi dalla coda del servizio tutti i messaggi corrispondenti.  
+## <a name="remarks"></a>Remarks  
+ Quando si termina una conversazione, viene bloccato il gruppo di conversazioni a cui appartiene il valore *conversation_handle* specificato. Al termine di una conversazione, tramite [!INCLUDE[ssSB](../../includes/sssb-md.md)] vengono rimossi dalla coda del servizio tutti i messaggi corrispondenti.  
   
  Dopo aver terminato una conversazione, le applicazioni non possono più inviare o ricevere messaggi per tale conversazione. Entrambi i partecipanti alla conversazione devono chiamare END CONVERSATION per completare la conversazione. Se [!INCLUDE[ssSB](../../includes/sssb-md.md)] non riceve un messaggio di fine dialogo o un messaggio di errore dall'altro partecipante alla conversazione, tale partecipante riceve da [!INCLUDE[ssSB](../../includes/sssb-md.md)] una notifica della fine della conversazione. In questo caso, sebbene l'handle della conversazione non sia più valido, l'endpoint della conversazione rimane attivo fino a quando l'istanza che ospita il servizio remoto non invia un acknowledgement per il messaggio di notifica.  
   
  Se [!INCLUDE[ssSB](../../includes/sssb-md.md)] non ha già elaborato un messaggio di fine dialogo o un messaggio di errore per la conversazione, il lato remoto riceve da [!INCLUDE[ssSB](../../includes/sssb-md.md)] una notifica della fine della conversazione. I messaggi inviati da [!INCLUDE[ssSB](../../includes/sssb-md.md)] al servizio remoto dipendono dalle opzioni specificate:  
   
--   Se la conversazione termina senza errori e la conversazione con il servizio remoto ancora è attivo, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio di tipo `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` al servizio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] aggiunge questo messaggio alla coda di trasmissione nell'ordine della conversazione. Prima di inviare questo messaggio, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia tutti i messaggi per questa conversazione che sono attualmente nella coda di trasmissione.  
+-   Se la conversazione termina senza errori e la conversazione con il servizio remoto è ancora attiva, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio di tipo `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` al servizio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] aggiunge questo messaggio alla coda di trasmissione nell'ordine della conversazione. Prima di inviare questo messaggio, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia tutti i messaggi per questa conversazione che sono attualmente nella coda di trasmissione.  
   
--   Se la conversazione termina con un errore e la conversazione al servizio remoto ancora è attiva, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio di tipo `http://schemas.microsoft.com/SQL/ServiceBroker/Error` al servizio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] elimina tutti gli altri messaggi per questa conversazione che sono attualmente nella coda di trasmissione.  
+-   Se la conversazione termina con un errore e la conversazione con il servizio remoto è ancora attiva, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio di tipo `http://schemas.microsoft.com/SQL/ServiceBroker/Error` al servizio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] elimina tutti gli altri messaggi per questa conversazione che sono attualmente nella coda di trasmissione.  
   
 -   La clausola WITH CLEANUP consente agli amministratori di database di rimuovere le conversazioni che non possono essere completate normalmente. Questa opzione rimuove tutti i messaggi e le voci della vista del catalogo per la conversazione. Si noti che, in questo caso, il lato remoto della conversazione non riceve notifica della fine della conversazione e potrebbe non ricevere i messaggi inviati da un'applicazione ma non ancora trasmessi in rete. È consigliabile utilizzare questa opzione solo se la conversazione non può essere completata normalmente.  
   
@@ -130,7 +127,7 @@ COMMIT TRANSACTION ;
 ```  
   
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. Pulizia di una conversazione che non può essere completata normalmente  
- Nell'esempio seguente viene terminato il dialogo specificato da `@dialog_handle`. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rimossi immediatamente tutti i messaggi dalla coda del servizio e dalla coda di trasmissione, senza inviare notifica al servizio remoto. Dal momento che termina un dialogo con pulizia non notifica al servizio remoto, usare solo questo nei casi in cui il servizio remoto non è disponibile per ricevere un **EndDialog** o **errore** messaggio.  
+ Nell'esempio seguente viene terminato il dialogo specificato da `@dialog_handle`. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rimossi immediatamente tutti i messaggi dalla coda del servizio e dalla coda di trasmissione, senza inviare notifica al servizio remoto. Poiché la fine di un dialogo con pulizia non prevede notifiche al servizio remoto, è consigliabile usare questa operazione solo nei casi in cui il servizio remoto non è disponibile per la ricezione di un messaggio **EndDialog** or **Error**.  
   
 ```  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  

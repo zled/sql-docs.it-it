@@ -1,40 +1,36 @@
 ---
 title: Classe di evento Lock:Deadlock Chain | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Deadlock Chain event class
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5b22c7d953bbbe6417c207628b6e3d2faaf0de5a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f75a0b3580e19791e189512dd0788d074f16cb2d
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Classe di evento Lock:Deadlock Chain
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento Lock:Deadlock Chain viene generata per ogni partecipante a un deadlock.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La classe di evento Lock:Deadlock Chain viene generata per ogni partecipante a un deadlock.  
   
  Utilizzare la classe di evento Lock:Deadlock Chain per eseguire il monitoraggio delle condizioni di deadlock. In questo modo è possibile determinare se i deadlock stanno riducendo in maniera significativa le prestazioni dell'applicazione e individuare gli oggetti coinvolti. È possibile esaminare il codice dell'applicazione che modifica tali oggetti per verificare se possono essere apportate modifiche tese a ridurre al minimo i deadlock.  
   
 ## <a name="lockdeadlock-chain-event-class-data-columns"></a>Colonne di dati della classe di evento Lock:Deadlock Chain  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BinaryData|**image**|Identificatore della risorsa blocco.|2|Sì|  
 |DatabaseID|**int**|ID del database a cui appartiene questa risorsa. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  

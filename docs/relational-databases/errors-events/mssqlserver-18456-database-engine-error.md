@@ -1,28 +1,25 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-helpviewer_keywords: 18456 (Database Engine error)
+helpviewer_keywords:
+- 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
-caps.latest.revision: "15"
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 15
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ae32f75a30f38c3f2c86370afbb49bbf6e6031b7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b5bb3731947cebbd5ff1fe2d0f5f1f1875867724
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ Può essere inoltre restituito il messaggio seguente:
 ## <a name="additional-error-information"></a>Informazioni aggiuntive sull'errore  
 Per aumentare il livello di sicurezza, il messaggio di errore restituito al client nasconde deliberatamente la natura dell'errore di autenticazione. Tuttavia, nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ogni errore viene indicato lo stato corrispondente tramite cui viene eseguito il mapping alla condizione di errore di autenticazione. Confrontare lo stato di errore restituito con l'elenco seguente per determinare il motivo dell'errore di accesso.  
   
-|State|Description|  
+|State|Descrizione|  
 |---------|---------------|  
 |1|Non sono disponibili informazioni sull'errore. Questo stato in genere indica che non si dispone dell'autorizzazione a ricevere i dettagli dell'errore. Per ulteriori informazioni, contattare l'amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |2|L'ID utente non è valido.|  
@@ -99,7 +96,7 @@ Per risolvere questo problema, includere **TRUSTED_CONNECTION = TRUE** nella str
 ## <a name="examples"></a>Esempi  
 In questo esempio, lo stato dell'errore di autenticazione è 8 e indica che la password non è corretta.  
   
-|Data|Origine|Message|  
+|date|Origine|Message|  
 |--------|----------|-----------|  
 |2007-12-05 20:12:56.34|Accesso|Errore: 18456, gravità: 14, stato: 8.|  
 |2007-12-05 20:12:56.34|Accesso|Accesso non riuscito per l'utente '<nome_utente>'. [CLIENT: <ip address>]|  

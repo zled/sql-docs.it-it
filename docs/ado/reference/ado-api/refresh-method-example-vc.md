@@ -1,32 +1,29 @@
 ---
 title: Esempio del metodo Refresh (VC + +) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Refresh method [ADO], VC++ example
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 701d8dbef80af059e618d88bde0eaca7ed732de6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3bcc30868c0dfb0c097ebe8057db6a09a27434cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-method-example-vc"></a>Esempio del metodo Refresh (VC + +)
 In questo esempio viene illustrato l'utilizzo di [aggiornamento](../../../ado/reference/ado-api/refresh-method-ado.md) per aggiornare il [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) insieme per una stored procedure [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto.  

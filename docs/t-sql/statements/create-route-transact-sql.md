@@ -1,16 +1,14 @@
 ---
-title: CREARE ROUTE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+title: CREATE ROUTE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_ROUTE_TSQL
@@ -29,21 +27,21 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 42
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 17d01e8997fc27cd26fda5b29644b0cc1418af9e
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
-  Aggiunge una nuova route alla tabella di routing per il database corrente. Per i messaggi in uscita, [!INCLUDE[ssSB](../../includes/sssb-md.md)] determina il routing controllando la tabella di routing nel database locale. Per i messaggi per le conversazioni che hanno origine in un'altra istanza, inclusi i messaggi da inoltrare, [!INCLUDE[ssSB](../../includes/sssb-md.md)] archivia le route **msdb**.  
+  Aggiunge una nuova route alla tabella di routing per il database corrente. Per i messaggi in uscita, [!INCLUDE[ssSB](../../includes/sssb-md.md)] determina il routing controllando la tabella di routing nel database locale. Per i messaggi in conversazioni che hanno origine in un'altra istanza, inclusi i messaggi da inoltrare, in [!INCLUDE[ssSB](../../includes/sssb-md.md)] vengono controllate le route nel database **msdb**.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,19 +62,19 @@ WITH
   
 ## <a name="arguments"></a>Argomenti  
  *route_name*  
- Nome della route da creare. La nuova route viene creata nel database corrente e diventa di proprietà dell'identità specificata nella clausola AUTHORIZATION. Non è possibile specificare i nomi del server, del database e dello schema. Il *route_name* deve essere un valore valido **sysname**.  
+ Nome della route da creare. La nuova route viene creata nel database corrente e diventa di proprietà dell'identità specificata nella clausola AUTHORIZATION. Non è possibile specificare i nomi del server, del database e dello schema. *route_name* deve essere un valore **sysname**valido.  
   
- AUTORIZZAZIONE *owner_name*  
- Imposta il proprietario della route sull'utente o il ruolo di database specificato. Il *owner_name* può essere il nome di qualsiasi utente o ruolo valido quando l'utente corrente è un membro di entrambi i **db_owner** ruolo predefinito del database o **sysadmin** ruolo predefinito del server. In caso contrario, *owner_name* deve essere il nome dell'utente corrente, il nome di un utente che l'utente corrente dispone dell'autorizzazione IMPERSONATE oppure il nome di un ruolo a cui appartiene l'utente corrente. Se la clausola viene omessa, la route appartiene all'utente corrente.  
+ AUTHORIZATION *owner_name*  
+ Imposta il proprietario della route sull'utente o il ruolo di database specificato. Per *owner_name* è possibile specificare il nome di qualsiasi utente o ruolo valido se l'utente corrente è un membro del ruolo predefinito del database **db_owner** o del ruolo predefinito del server **sysadmin**. In caso contrario, *owner_name* deve corrispondere al nome dell'utente corrente, al nome di un utente per il quale l'utente corrente dispone di autorizzazione IMPERSONATE oppure al nome di un ruolo a cui appartiene l'utente corrente. Se la clausola viene omessa, la route appartiene all'utente corrente.  
   
  con  
  Introduce le clausole per la definizione della nuova route creata.  
   
  SERVICE_NAME = **'***service_name***'**  
- Specifica il nome del servizio remoto a cui la route fa riferimento. Il *service_name* deve corrispondere esattamente utilizza il nome del servizio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)]utilizza un confronto byte per byte per trovare la corrispondenza di *service_name*. In altre parole, nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Se la clausola SERVICE_NAME viene omessa, per la route viene utilizzato qualsiasi nome di servizio, ma in questo caso la route avrà una priorità di corrispondenza inferiore rispetto a una route per cui si specifica SERVICE_NAME. Una route con un nome di servizio **' SQL/ServiceBroker/BrokerConfiguration'** sia una route a un servizio Broker Configuration Notice. Per una route per questo servizio non è necessario specificare un'istanza di Service Broker.  
+ Specifica il nome del servizio remoto a cui la route fa riferimento. *service_name* deve corrispondere esattamente al nome usato dal servizio remoto. Per creare corrispondenza con *service_name*, [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa un confronto byte per byte. In altre parole, nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Se la clausola SERVICE_NAME viene omessa, per la route viene utilizzato qualsiasi nome di servizio, ma in questo caso la route avrà una priorità di corrispondenza inferiore rispetto a una route per cui si specifica SERVICE_NAME. Una route con nome di servizio **'SQL/ServiceBroker/BrokerConfiguration'** è una route per un servizio di configurazione di Service Broker. Per una route per questo servizio non è necessario specificare un'istanza di Service Broker.  
   
  BROKER_INSTANCE = **'***broker_instance_identifier***'**  
- Specifica il database che ospita il servizio di destinazione. Il *broker_instance_identifier* parametro deve essere l'identificatore di istanza di Service broker per il database remoto, che può essere ottenuto eseguendo la query seguente nel database selezionato:  
+ Specifica il database che ospita il servizio di destinazione. Il parametro *broker_instance_identifier* deve corrispondere all'identificatore dell'istanza di Service Broker per il database remoto. Per ottenere tale identificatore, è possibile eseguire la query seguente nel database selezionato:  
   
 ```  
 SELECT service_broker_guid  
@@ -87,14 +85,16 @@ WHERE database_id = DB_ID()
  Se si omette la clausola BROKER_INSTANCE, per la route viene utilizzata qualsiasi istanza di Service Broker. Le route impostate per qualsiasi istanza di Service Broker hanno una priorità maggiore di corrispondenza rispetto alle route con un'istanza di Service Broker esplicita quando la conversazione non specifica un'istanza di Service Broker. Per le conversazioni che specificano un'istanza di Service Broker, invece, le route impostate per un'istanza specifica di Service Broker hanno una priorità maggiore rispetto a quelle impostate per qualsiasi istanza.  
   
  LIFETIME **=***route_lifetime*  
- Specifica per quanti secondi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene la route nella tabella di routing. Al termine di questo periodo di tempo, la route scade e non viene più presa in considerazione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la scelta della route per una nuova conversazione. Se questa clausola viene omessa, il *route_lifetime* è NULL e la route non scade mai.  
+ Specifica per quanti secondi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene la route nella tabella di routing. Al termine di questo periodo di tempo, la route scade e non viene più presa in considerazione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la scelta della route per una nuova conversazione. Se le clausola viene omessa, il valore *route_lifetime* è Null e la route ha durata illimitata.  
   
  ADDRESS **='***next_hop_address***'**  
- Specifica l'indirizzo di rete per la route. Il *next_hop_address* specifica un indirizzo TCP/IP nel formato seguente:  
+Per Istanza gestita di database SQL, `ADDRESS` deve essere locale. 
+
+Specifica l'indirizzo di rete per la route. Il parametro *next_hop_address* specifica un indirizzo TCP/IP nel formato seguente:  
   
- **TCP: / /**{ *dns_name* | *nome_NetBIOS* | *indirizzo_IP* } **: * * * numero_porta*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   
- Specificato *numero_porta* deve corrispondere al numero di porta per il [!INCLUDE[ssSB](../../includes/sssb-md.md)] endpoint di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato. Per ottenere tale valore, eseguire la query seguente nel database selezionato:  
+ Il parametro *port_number* specificato deve corrispondere al numero di porta dell'endpoint di [!INCLUDE[ssSB](../../includes/sssb-md.md)] per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato. Per ottenere tale valore, eseguire la query seguente nel database selezionato:  
   
 ```  
 SELECT tcpe.port  
@@ -106,16 +106,16 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Se il servizio è ospitato in un database con mirroring, è inoltre necessario specificare l'indirizzo MIRROR_ADDRESS per l'altra istanza che ospita un database con mirroring. In caso contrario, la route non eseguirà il failover sul mirror.  
   
- Quando una route specifica **'LOCAL'** per il *next_hop_address*, il messaggio viene recapitato a un servizio all'interno dell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se per il parametro *next_hop_address* di una route viene specificato il valore **'LOCAL'**, il messaggio viene recapitato a un servizio nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Quando una route specifica **'TRANSPORT'** per il *next_hop_address*, l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. Una route che specifica **'TRANSPORT'** non è necessario specificare un nome o del gestore di istanza del servizio.  
+ Se per il parametro *next_hop_address* di una route viene specificato il valore **'TRANSPORT'**, l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. Per una route con valore **'TRANSPORT'** non è necessario specificare un nome di servizio o un'istanza di Service Broker.  
   
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
- Specifica l'indirizzo di rete per un database con mirroring con un database con mirroring ospitato nel *next_hop_address*. Il *next_hop_mirror_address* specifica un indirizzo TCP/IP nel formato seguente:  
+ Specifica l'indirizzo di rete di un database con mirroring con un database con mirroring ospitato in *next_hop_address*. Il parametro *next_hop_mirror_address* specifica un indirizzo TCP/IP nel formato seguente:  
   
- **TCP: / /**{ *dns_name* | *nome_NetBIOS* | *indirizzo_IP* } **:**  *numero_porta*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- Specificato *numero_porta* deve corrispondere al numero di porta per il [!INCLUDE[ssSB](../../includes/sssb-md.md)] endpoint di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato. Per ottenere tale valore, eseguire la query seguente nel database selezionato:  
+ Il parametro *port_number* specificato deve corrispondere al numero di porta dell'endpoint di [!INCLUDE[ssSB](../../includes/sssb-md.md)] per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato. Per ottenere tale valore, eseguire la query seguente nel database selezionato:  
   
 ```  
 SELECT tcpe.port  
@@ -125,23 +125,23 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Se si specifica MIRROR_ADDRESS, la route deve specificare la clausola SERVICE_NAME e la clausola BROKER_INSTANCE. Una route che specifica **'LOCAL'** o **'TRANSPORT'** per il *next_hop_address* non è necessario specificare un indirizzo mirror.  
+ Se si specifica MIRROR_ADDRESS, la route deve specificare la clausola SERVICE_NAME e la clausola BROKER_INSTANCE. Per una route con valore **'LOCAL'** o **'TRANSPORT'** per il parametro *next_hop_address* non è necessario specificare un indirizzo mirror.  
   
-## <a name="remarks"></a>Osservazioni  
- La tabella di routing che archivia le route è una tabella di metadati che può essere letta tramite la **Routes** vista del catalogo. È possibile aggiornare questa vista del catalogo solo tramite le istruzioni CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
+## <a name="remarks"></a>Remarks  
+ La tabella di routing in cui sono archiviate le route è una tabella di metadati che può essere letta tramite la vista del catalogo **sys.routes**. È possibile aggiornare questa vista del catalogo solo tramite le istruzioni CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
   
- Per impostazione predefinita, la tabella di routing in ogni database utente contiene una sola route. Tale route è denominata **AutoCreatedLocal**. Specifica la route **'LOCAL'** per il *next_hop_address* e corrisponde a qualsiasi identificatore di istanza nome e il gestore del servizio.  
+ Per impostazione predefinita, la tabella di routing in ogni database utente contiene una sola route. Tale route è denominata **AutoCreatedLocal**. La route è impostata con il valore **'LOCAL'** per il parametro *next_hop_address* e corrisponde a qualsiasi nome di servizio e identificatore di istanza di Service Broker.  
   
- Quando una route specifica **'TRANSPORT'** per il *next_hop_address*, l'indirizzo di rete viene determinato in base al nome del servizio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]può elaborare correttamente i nomi di servizio che iniziano con un indirizzo di rete in un formato non valido per un *next_hop_address*.  
+ Se per il parametro *next_hop_address* di una route viene specificato il valore **'TRANSPORT'**, l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elabora correttamente i nomi di servizi che iniziano con un indirizzo di rete in un formato valido per *next_hop_address*.  
   
  La tabella di routing può includere qualsiasi numero di route che specificano lo stesso servizio, indirizzo di rete e identificatore dell'istanza di Service Broker. In questo caso, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sceglie una route utilizzando una procedura progettata in modo da individuare la corrispondenza più esatta tra le informazioni specificate nella conversazione e le informazioni della tabella di routing.  
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] non rimuove le route scadute dalla tabella di routing. È possibile riattivare una route scaduta tramite l'istruzione ALTER ROUTE.  
   
- Una route non può essere un oggetto temporaneo. Nomi di route che iniziano con  **#**  sono consentiti, ma sono oggetti permanenti.  
+ Una route non può essere un oggetto temporaneo. Sono consentiti nomi di route che iniziano con **#**, ma si tratta di oggetti permanenti.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Autorizzazione per la creazione di impostazioni predefinite per i membri di una route di **db_ddladmin** o **db_owner** ruoli predefiniti del database e **sysadmin** ruolo predefinito del server.  
+ L'autorizzazione per la creazione di una route viene assegnata per impostazione predefinita ai membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
   
 ## <a name="examples"></a>Esempi  
   

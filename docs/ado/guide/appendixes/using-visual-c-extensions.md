@@ -1,33 +1,30 @@
 ---
 title: Uso delle estensioni di Visual C++ | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a1c832cff45ad5998918c6f5f67927e49bc9d4e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-c-extensions"></a>Estensioni di Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>L'interfaccia IADORecordBinding
@@ -96,21 +93,21 @@ Update(CADORecordBinding *binding)
  **Le macro BEGIN_ADO_BINDING**(*classe*)
 
 ### <a name="fixed-length-data"></a>Dati a lunghezza fissa
- **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY**(*ordinale, tipo di dati, Buffer, stato, modificare*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*ordinale, tipo di dati, del Buffer, modificare*)
 
 ### <a name="numeric-data"></a>Dati numerici
- **ADO_NUMERIC_ENTRY**(*Ordinal, DataType, Buffer, Precision, Scale, Status, Modify*)
+ **ADO_NUMERIC_ENTRY**(*ordinale, tipo di dati, Buffer, precisione, scala, stato, modificare*)
 
- **ADO_NUMERIC_ENTRY2**(*ordinale, tipo di dati, i Buffer, precisione, scala, modificare*)
+ **ADO_NUMERIC_ENTRY2**(*ordinale, tipo di dati, Buffer, precisione, scala, modificare*)
 
 ### <a name="variable-length-data"></a>Dati a lunghezza variabile
  **ADO_VARIABLE_LENGTH_ENTRY**(*ordinale, tipo di dati, Buffer, le dimensioni, lo stato, lunghezza, modificare*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*ordinale, tipo di dati, Buffer, dimensioni, lo stato, modificare*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*ordinale, tipo di dati, Buffer, le dimensioni, lo stato, modificare*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*ordinale, tipo di dati, Buffer, dimensioni, lunghezza, modificare*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*ordinale, tipo di dati, Buffer, le dimensioni, lunghezza, modificare*)
 
  **ADO_VARIABLE_LENGTH_ENTRY4**(*ordinale, tipo di dati, Buffer, dimensioni, modificare*)
 
@@ -135,7 +132,7 @@ Update(CADORecordBinding *binding)
 
  Durante l'impostazione di dati, *stato* può essere impostata su **adFldNull** per indicare il **Recordset** campo deve essere impostato su null.
 
-|Costante|Valore|Description|
+|Costante|Value|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|È stato restituito un valore di campo non null.|
 |**adFldBadAccessor**|1|Associazione non è valida.|

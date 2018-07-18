@@ -1,28 +1,26 @@
 ---
 title: Comando COLLATE SET | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: set collate command [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 735e28da49e0c8a9dc3a12d9a29d107209ec99dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f1ce3b75134da55286f40dc77cf6f6ba7de7e5b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-collate-command"></a>Comando COLLATE SET
 Specifica una sequenza di confronto per i campi di tipo carattere in operazioni di ordinamento e di indicizzazione successive.  
@@ -38,7 +36,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  Specifica una sequenza di confronto. Le opzioni di sequenza di regole di confronto disponibili sono descritte nella tabella seguente.  
   
-|Opzioni|Linguaggio|  
+|Opzioni|Lingua|  
 |-------------|--------------|  
 |OLANDESE|Olandese|  
 |GENERAL|Inglese, francese, tedesco, spagnolo moderno, portoghese e altre lingue dell'Europa occidentale|  

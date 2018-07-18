@@ -1,15 +1,14 @@
 ---
 title: Le funzioni con valori di tabella CLR | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -20,30 +19,29 @@ helpviewer_keywords:
 - table-valued functions [CLR integration]
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-caps.latest.revision: 
+caps.latest.revision: 88
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b39532e93eba5784bbc9925f3140c26ced977ede
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6f1881b43a716c8c6d6573338a27d7e93d919ada
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-table-valued-functions"></a>Funzioni CLR con valori di tabella
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Una funzione con valori di tabella è una funzione definita dall'utente che restituisce una tabella.  
+  Una funzione con valori di tabella è una funzione definita dall'utente che restituisce una tabella.  
   
  A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estende la funzionalità delle funzioni con valori di tabella consentendo la definizione di una funzione di questo tipo in qualsiasi linguaggio gestito. Dati vengono restituiti da una funzione con valori di tabella tramite un **IEnumerable** o **IEnumerator** oggetto.  
   
 > [!NOTE]  
 >  Per le funzioni con valori di tabella, le colonne del tipo di tabella restituito non possono includere colonne timestamp o colonne di tipo di dati stringa non Unicode (ad esempio **char**, **varchar**, e **testo**). Il vincolo NOT NULL non è supportato.  
   
- Per ulteriori informazioni sulle funzioni con valori di tabella CLR, vedere 'MSSQLTips [funzioni con valori di tabella Introduzione a CLR di SQL Server.](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
+ Per ulteriori informazioni sulle funzioni con valori di tabella CLR, consultare 'MSSQLTips [Introduzione a SQL Server CLR le funzioni con valori di tabella.](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Differenze tra funzioni con valori di tabella CLR e Transact-SQL  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] funzioni con valori di tabella di materializzare i risultati della chiamata della funzione in una tabella intermedia. Poiché utilizzano una tabella intermedia, possono supportare vincoli e indici univoci sui risultati. Queste caratteristiche possono rivelarsi estremamente utili quando vengono restituiti risultati di grandi dimensioni.  
+ Le funzioni con valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)] materializzano i risultati della chiamata alla funzione in una tabella intermedia. Poiché utilizzano una tabella intermedia, possono supportare vincoli e indici univoci sui risultati. Queste caratteristiche possono rivelarsi estremamente utili quando vengono restituiti risultati di grandi dimensioni.  
   
  Le funzioni con valori di tabella CLR rappresentano invece un modello di flusso alternativo. Non è necessario che l'intero set di risultati venga materializzato in una singola tabella. Il **IEnumerable** oggetto restituito dalla funzione gestita viene chiamato direttamente dal piano di esecuzione della query che chiama la funzione con valori di tabella e i risultati vengono utilizzati in modo incrementale. Questo modello di flusso consente di utilizzare i risultati non appena è disponibile la prima riga invece di dover attendere il popolamento dell'intera tabella. Rappresenta inoltre un'alternativa migliore in presenza di grandi quantità di righe restituite, in quanto non devono essere materializzate interamente in memoria. Una funzione con valori di tabella gestita, ad esempio, può essere utilizzata per analizzare un file di testo e restituire ogni riga del file come riga di tabella.  
   
@@ -51,7 +49,7 @@ Una funzione con valori di tabella è una funzione definita dall'utente che rest
  È possibile implementare funzioni con valori di tabella come metodi di una classe in un assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Il codice di funzione con valori di tabella deve implementare il **IEnumerable** interfaccia. Il **IEnumerable** interfaccia sia definita in .NET Framework. Tipi che rappresentano matrici e raccolte in .NET Framework già implementare il **IEnumerable** interfaccia. Questo semplifica la scrittura di funzioni con valori di tabella che convertono una raccolta o una matrice in un set di risultati.  
   
 ## <a name="table-valued-parameters"></a>Parametri con valori di tabella  
- I parametri con valori di tabella sono tipi di tabella definiti dall'utente passati in una procedura o in una funzione che consentono di passare in modo efficiente più righe di dati al server. I parametri con valori di tabella offrono funzionalità simili a quelle delle matrici di parametri, ma garantiscono più flessibilità e una maggiore integrazione con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Consentono inoltre di ottenere prestazioni potenzialmente migliori. I parametri con valori di tabella aiutano anche a ridurre il numero di round trip al server. Anziché inviare più richieste al server, ad esempio con un elenco di parametri scalari, è possibile inviare i dati al server sotto forma di parametro con valori di tabella. Un tipo di tabella definito dall'utente non può essere passato come parametro con valori di tabella a una stored procedure gestita o a una funzione in esecuzione nel processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], né può essere restituito dalle stesse. Per ulteriori informazioni sui parametri con valori di tabella, vedere [utilizzare parametri &#40; motore di Database &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ I parametri con valori di tabella sono tipi di tabella definiti dall'utente passati in una procedura o in una funzione che consentono di passare in modo efficiente più righe di dati al server. I parametri con valori di tabella offrono funzionalità simili a quelle delle matrici di parametri, ma garantiscono più flessibilità e una maggiore integrazione con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Consentono inoltre di ottenere prestazioni potenzialmente migliori. I parametri con valori di tabella aiutano anche a ridurre il numero di round trip al server. Anziché inviare più richieste al server, ad esempio con un elenco di parametri scalari, è possibile inviare i dati al server sotto forma di parametro con valori di tabella. Un tipo di tabella definito dall'utente non può essere passato come parametro con valori di tabella a una stored procedure gestita o a una funzione in esecuzione nel processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], né può essere restituito dalle stesse. Per ulteriori informazioni sui parametri con valori di tabella, vedere [utilizzare parametri & #40; motore di Database & #41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Parametri di output e funzioni con valori di tabella  
  Le funzioni con valori di tabella possono restituire le informazioni tramite parametri di output. Il parametro corrispondente nella funzione con valori di tabella nel codice di implementazione deve utilizzare un parametro di passaggio per riferimento come argomento. Si noti che Visual Basic non supporta parametri di output nello stesso modo in cui tali parametri sono supportati in Visual C#. È necessario specificare il parametro per riferimento e applicare il \<out () > attributo per rappresentare un parametro di output, come illustrato di seguito:  
@@ -85,7 +83,7 @@ select * from table t cross apply function(t.column);
   
 -   Vengono generate da dati esterni. Una funzione con valori di tabella che legge, ad esempio, il log eventi e lo espone come tabella.  
   
- **Nota** una funzione con valori di tabella può eseguire solo l'accesso ai dati tramite un [!INCLUDE[tsql](../../includes/tsql-md.md)] query nella **InitMethod** (metodo) e non nel **FillRow** (metodo). Il **InitMethod** deve essere contrassegnato con il **SqlFunction.DataAccess.Read** se la proprietà dell'attributo un [!INCLUDE[tsql](../../includes/tsql-md.md)] query viene eseguita.  
+ **Nota** una funzione con valori di tabella può eseguire solo l'accesso ai dati tramite un [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguire una query nel **InitMethod** (metodo) e non il **FillRow** (metodo). Il **InitMethod** deve essere contrassegnato con il **SqlFunction.DataAccess.Read** se la proprietà dell'attributo un [!INCLUDE[tsql](../../includes/tsql-md.md)] query viene eseguita.  
   
 ## <a name="a-sample-table-valued-function"></a>Funzione con valori di tabella di esempio  
  La funzione con valori di tabella seguente restituisce informazioni dal registro eventi di sistema. La funzione accetta un singolo argomento stringa contenente il nome del registro eventi da leggere.  
@@ -184,7 +182,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Esempio: Restituzione dei risultati di una query di SQL Server  
- Nell'esempio seguente viene illustrata una funzione con valori di tabella che esegue una query su un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo esempio viene utilizzato il database AdventureWorks Light di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Vedere [http://www.codeplex.com/sqlserversamples](http://go.microsoft.com/fwlink/?LinkId=87843) per ulteriori informazioni sul download di AdventureWorks.  
+ Nell'esempio seguente viene illustrata una funzione con valori di tabella che esegue una query su un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo esempio viene utilizzato il database AdventureWorks Light di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Vedere [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) per ulteriori informazioni sul download di AdventureWorks.  
   
  Assegnare al file di codice sorgente il nome FindInvalidEmails.cs o FindInvalidEmails.vb.  
   

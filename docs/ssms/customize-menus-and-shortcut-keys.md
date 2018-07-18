@@ -1,16 +1,15 @@
 ---
 title: Personalizzare i menu e i tasti di scelta rapida | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
 - keyboard shortcuts [SQL Server Management Studio]
@@ -22,19 +21,19 @@ helpviewer_keywords:
 - customizing menus [SQL Server]
 - accelerator keys
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 26565d1078d8fcb813cc634ce5d3cee05d151f4a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4152bca5efcafb59de4f08c299b4ff3c9a66b9d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizzare i menu e i tasti di scelta rapida
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un tasto di scelta rapida consente di scegliere un comando di menu o un pulsante premendo ALT+*<single letter>*. Per aprire ad esempio il menu **Modifica** , premere ALT+M. È possibile modificare la disposizione di pulsanti della barra degli strumenti, di menu e di comandi di menu nella finestra di dialogo **Personalizza** . Vengono fornite istruzioni per modificare le impostazioni utilizzando il mouse o solo la tastiera.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Un tasto di scelta rapida consente di scegliere un comando di menu o un pulsante premendo ALT+*<single letter>*. Per aprire ad esempio il menu **Modifica** , premere ALT+M. È possibile modificare la disposizione di pulsanti della barra degli strumenti, di menu e di comandi di menu nella finestra di dialogo **Personalizza** . Vengono fornite istruzioni per modificare le impostazioni utilizzando il mouse o solo la tastiera.  
   
 È possibile creare tasti di scelta rapida per stored procedure tramite CTRL dalla pagina **Tastiera** della finestra di dialogo **Strumenti**/**Opzioni** .  
   

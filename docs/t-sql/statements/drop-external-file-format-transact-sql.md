@@ -1,32 +1,30 @@
 ---
-title: ELIMINARE il formato di FILE esterno (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DROP EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8cf9009b-59f9-4aac-bef1-dcf2cf0708b2
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 12
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 36795146dba75f7bf6a755c1c1ff700b9ed150cd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 06deebec43f40b9915a9afde3225fc26f0e14645
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="drop-external-file-format-transact-sql"></a>ELIMINARE il formato di FILE esterno (Transact-SQL)
+# <a name="drop-external-file-format-transact-sql"></a>DROP EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Rimuove un formato di file esterno PolyBase.  
@@ -43,27 +41,27 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
   
 ## <a name="arguments"></a>Argomenti  
  *external_file_format_name*  
- Il nome del formato di file esterno da eliminare.  
+ Nome del formato di file esterno da eliminare.  
   
 ## <a name="metadata"></a>Metadati  
- Per visualizzare un elenco di formati di file esterni, utilizzare il [sys.external_file_formats &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) vista di sistema.  
+ Per visualizzare un elenco dei formati di file esterni, usare la vista di sistema [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md).  
   
 ```  
 SELECT * FROM sys.external_file_formats;  
 ```  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È necessario modificare qualsiasi formato di FILE esterno.  
+ Richiede ALTER ANY EXTERNAL FILE FORMAT.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- Eliminazione di un formato di file esterni non rimuove i dati esterni.  
+ La rimozione di un formato di file esterno non comporta la rimozione dei dati esterni.  
   
 ## <a name="locking"></a>Utilizzo di blocchi  
  Acquisisce un blocco condiviso per l'oggetto formato di file esterno.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-basic-syntax"></a>A. Utilizzando la sintassi di base  
+### <a name="a-using-basic-syntax"></a>A. Uso della sintassi di base  
   
 ```  
 DROP EXTERNAL FILE FORMAT myfileformat;  

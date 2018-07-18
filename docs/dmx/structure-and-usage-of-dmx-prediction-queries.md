@@ -1,17 +1,17 @@
 ---
 title: Struttura e l'utilizzo di query di stima DMX | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - prediction joins [DMX]
 - empty prediction joins [DMX]
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - singleton query predictions [DMX]
 - Data Mining Extensions [Analysis Services], prediction queries
 ms.assetid: 098bdaa6-9e7d-4e13-a9aa-eb17ce1750e6
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5f25d8ecd230ca4d2e7aa6a694536e71f5dd0f4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6f4e5d0f723851776340d3435c05e382c88552ae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Struttura e utilizzo di query di stima DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **TOP**  
   
--   **DA***\<modello >***PREDICTION JOIN**   
+-   **DAL***\<modello >***PREDICTION JOIN**   
   
 -   **ON**  
   
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/08/2018
   
  Il **selezionare** set elemento di una query di stima definisce le colonne e delle espressioni che verranno visualizzato nel risultato, possono includere i dati seguenti:  
   
--   **Stimare** o **PredictOnly** dalle colonne del modello di data mining.  
+-   **Stimare** oppure **PredictOnly** dalle colonne del modello di data mining.  
   
 -   Qualsiasi colonna dei dati di input utilizzata per creare le stime.  
   
@@ -82,18 +81,18 @@ ms.lasthandoff: 01/08/2018
   
  Il **ON** elemento mapping delle colonne che sono definite nel modello di data mining alle colonne in un set di dati esterno. Questo elemento non è necessario per la creazione di una query con prediction join vuoto o natural prediction join.  
   
- È possibile utilizzare il **dove** clausola per filtrare i risultati di una query di stima. È possibile utilizzare un **TOP** o **ORDER BY** clausola per selezionare le stime più probabile. Per ulteriori informazioni sull'utilizzo di queste clausole, vedere [DMX SELECT &#40; &#41;](../dmx/select-dmx.md).  
+ È possibile utilizzare il **dove** clausola per filtrare i risultati di una query di stima. È possibile utilizzare un **TOP** o **ORDER BY** clausola per selezionare le stime più probabile. Per ulteriori informazioni sull'utilizzo di queste clausole, vedere [selezionare &#40;DMX&#41;](../dmx/select-dmx.md).  
   
- Per ulteriori informazioni sulla sintassi di un'istruzione di stima, vedere [modello SELECT FROM &#60; &#62; DMX PREDICTION JOIN &#40; &#41; ](../dmx/select-from-model-prediction-join-dmx.md) e [SELECT FROM &#60; DMX modello &#62; &#40; &#41;](../dmx/select-from-model-dmx.md).  
+ Per ulteriori informazioni sulla sintassi di un'istruzione di stima, vedere [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41; ](../dmx/select-from-model-prediction-join-dmx.md) e [SELECT FROM &#60;modello&#62; &#40;DMX &#41;](../dmx/select-from-model-dmx.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions &#40; DMX &#41; Riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento (funzione)](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40; DMX &#41; Convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Data Mining Extensions &#40; DMX &#41; Elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Funzioni di stima generale &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Estensioni Data Mining &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Estensioni Data Mining &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Estensioni Data Mining &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

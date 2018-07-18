@@ -1,30 +1,20 @@
 ---
 title: UserName (MDX) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: UserName
-dev_langs: kbMDX
-helpviewer_keywords: UserName function
-ms.assetid: ecae549b-5c5e-4483-84e6-b713cd297d7e
-caps.latest.revision: "28"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: ce19801da4c9748852a9c2508bbbde259ebd9c83
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 887af13c84fd06ead5a36564c0dda740a5f6d0b0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581353"
 ---
 # <a name="username-mdx"></a>UserName (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,10 +28,10 @@ ms.lasthandoff: 01/08/2018
 UserName [ ( ) ]  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il valore restituito è costituito da una stringa con il formato seguente:  
   
- *nome utente di dominio*  
+ *nome dominio\nome utente di dominio*  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituito il nome dell'utente che esegue la query.  
@@ -54,6 +44,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

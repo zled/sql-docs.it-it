@@ -1,16 +1,14 @@
 ---
 title: ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ROLLBACK TRANSACTION
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 0df2fdf3d3e4aa7915fbfef3ff921d12b2851044
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 27e3d417122867d1b853aa4a1068a1bd48528b8e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -57,31 +55,31 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Argomenti  
  *transaction_name*  
- Nome assegnato alla transazione su BEGIN TRANSACTION. *transaction_name* deve essere conforme alle regole per gli identificatori, ma vengono utilizzati solo i primi 32 caratteri del nome della transazione. Quando si nidificano transazioni, *transaction_name* deve essere il nome dell'istruzione BEGIN TRANSACTION più esterna. *transaction_name* è sempre distinzione maiuscole/minuscole, anche quando l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è tra maiuscole e minuscole.  
+ Nome assegnato alla transazione su BEGIN TRANSACTION. *transaction_name* deve essere conforme alle regole per gli identificatori, ma vengono usati solo i primi 32 caratteri del nome della transazione. Quando le transazioni sono annidate, *transaction_name* deve essere il nome dell'istruzione BEGIN TRANSACTION più esterna. In *transaction_name* viene sempre applicata la distinzione tra maiuscole e minuscole, anche quando l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non prevede distinzione tra maiuscole e minuscole.  
   
  **@** *tran_name_variable*  
- Nome di una variabile definita dall'utente contenente un nome di transazione valido. La variabile deve essere dichiarata con un **char**, **varchar**, **nchar**, o **nvarchar** tipo di dati.  
+ Nome di una variabile definita dall'utente contenente un nome di transazione valido. La variabile deve essere dichiarata con un tipo di dati **char**, **varchar**, **nchar** o **nvarchar**.  
   
  *savepoint_name*  
- È *savepoint_name* da un'istruzione SAVE TRANSACTION. *savepoint_name* deve essere conforme alle regole per gli identificatori. Utilizzare *savepoint_name* quando eseguire un rollback condizionale dovrebbe influire solo una parte della transazione.  
+ *savepoint_name* di un'istruzione SAVE TRANSACTION. *savepoint_name* deve essere conforme alle regole per gli identificatori. Usare *savepoint_name* quando un rollback condizionale deve interessare solo parte della transazione.  
   
  **@** *savepoint_variable*  
- Nome di una variabile definita dall'utente contenente un punto di salvataggio valido. La variabile deve essere dichiarata con un **char**, **varchar**, **nchar**, o **nvarchar** tipo di dati.  
+ Nome di una variabile definita dall'utente contenente un punto di salvataggio valido. La variabile deve essere dichiarata con un tipo di dati **char**, **varchar**, **nchar** o **nvarchar**.  
   
 ## <a name="error-handling"></a>Gestione degli errori  
  Un'istruzione ROLLBACK TRANSACTION non genera messaggi per l'utente. Se nelle stored procedure o nei trigger è necessario visualizzare avvisi, utilizzare l'istruzione RAISERROR o PRINT. RAISERROR è l'istruzione consigliata per la segnalazione di errori.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- ROLLBACK TRANSACTION senza un *savepoint_name* o *transaction_name* esegue il rollback fino all'inizio della transazione. Quando le transazioni sono nidificate, viene eseguito il rollback di tutte le transazioni interne all'istruzione BEGIN TRANSACTION più esterna. In entrambi i casi, ROLLBACK TRANSACTION riduce il @@TRANCOUNT funzione di sistema su 0. ROLLBACK TRANSACTION *savepoint_name* non decrementa@TRANCOUNT.  
+ L'istruzione ROLLBACK TRANSACTION senza un argomento *savepoint_name* o *transaction_name* esegue il rollback fino all'inizio della transazione. Quando le transazioni sono nidificate, viene eseguito il rollback di tutte le transazioni interne all'istruzione BEGIN TRANSACTION più esterna. In entrambi i casi, ROLLBACK TRANSACTION decrementa la funzione di sistema @@TRANCOUNT a 0. ROLLBACK TRANSACTION *savepoint_name* non decrementa @@TRANCOUNT.  
   
- ROLLBACK TRANSACTION non può fare riferimento un *savepoint_name* nelle transazioni distribuite avviate in modo esplicito con BEGIN DISTRIBUTED TRANSACTION o alzate di livello da una transazione locale.  
+ L'istruzione ROLLBACK TRANSACTION non può fare riferimento a un *savepoint_name* in transazioni distribuite avviate in modo esplicito con l'istruzione BEGIN DISTRIBUTED TRANSACTION o risultanti dall'escalation di una transazione locale.  
   
- Non è possibile eseguire il rollback di una transazione dopo l'esecuzione di un'istruzione COMMIT TRANSACTION, tranne quando l'istruzione COMMIT TRANSACTION viene associata a una transazione nidificata contenuta all'interno della transazione sottoposta a rollback. In questo caso, verrà eseguito il transazione nidificata è rollback, anche se è stata eseguita un'istruzione COMMIT TRANSACTION per tale.  
+ Non è possibile eseguire il rollback di una transazione dopo l'esecuzione di un'istruzione COMMIT TRANSACTION, tranne quando l'istruzione COMMIT TRANSACTION viene associata a una transazione nidificata contenuta all'interno della transazione sottoposta a rollback. In tal caso, il rollback della transazione annidata viene eseguito anche se per la transazione è stata eseguita un'istruzione COMMIT TRANSACTION.  
   
  In una transazione sono consentiti nomi di punti di salvataggio duplicati. In tal caso il rollback viene tuttavia eseguito solo fino all'istruzione SAVE TRANSACTION più recente che utilizza il punto di salvataggio.  
   
 ## <a name="interoperability"></a>Interoperabilità  
- Nelle stored procedure, le istruzioni ROLLBACK TRANSACTION senza un *savepoint_name* o *transaction_name* ripristinare tutte le istruzioni BEGIN TRANSACTION più esterna. Un'istruzione ROLLBACK TRANSACTION in una stored procedure che fa sì che @@TRANCOUNT per avere un valore diverso al termine della stored procedure del @@TRANCOUNT valore quando è stata chiamata la stored procedure genera un messaggio informativo. Tale messaggio non ha alcun effetto sulle elaborazioni successive.  
+ Nelle stored procedure le istruzioni ROLLBACK TRANSACTION senza un argomento *savepoint_name* o *transaction_name* eseguono il rollback di tutte le istruzioni fino all'istruzione BEGIN TRANSACTION più esterna. Se con un'istruzione ROLLBACK TRANSACTION in una stored procedure si ottiene dopo il completamento della stored procedure un valore @@TRANCOUNT diverso rispetto al valore @@TRANCOUNT al momento della chiamata della stored procedure, viene visualizzato un messaggio informativo. Tale messaggio non ha alcun effetto sulle elaborazioni successive.  
   
  Se viene eseguita un'istruzione ROLLBACK TRANSACTION in un trigger:  
   
@@ -91,7 +89,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   Le istruzioni del batch successive all'istruzione che ha attivato il trigger non vengono eseguite.  
   
-@@TRANCOUNT viene incrementato di uno quando si immette un trigger, anche quando è in modalità autocommit. Il sistema considera il trigger come transazione nidificata implicita.  
+Quando si immette un trigger, il valore di @@TRANCOUNT viene incrementato di una unità, anche in modalità autocommit. Il sistema considera il trigger come transazione nidificata implicita.  
   
 Le istruzioni ROLLBACK TRANSACTION nelle stored procedure non hanno alcun effetto sulle istruzioni successive del batch che hanno richiamato la procedura. Tali istruzioni pertanto vengono eseguite. Le istruzioni ROLLBACK TRANSACTION nei trigger comportano l'interruzione del batch contenente l'istruzione che ha attivato il trigger. Le successive istruzioni del batch pertanto non vengono eseguite.  
   
@@ -104,13 +102,13 @@ L'effetto di ROLLBACK sui cursori viene definito dalle tre regole seguenti:
 3.  In seguito a un errore che comporta l'interruzione di un batch e l'esecuzione di un rollback interno, vengono deallocati tutti i cursori dichiarati nel batch contenente l'istruzione di errore. Vengono deallocati tutti i cursori indipendentemente dal tipo o dall'impostazione di CURSOR_CLOSE_ON_COMMIT, tra cui i cursori dichiarati in stored procedure richiamate dal batch di errore. I cursori dichiarati in un batch precedentemente all'errore sul batch sono soggetti alle regole 1 e 2. Un errore di deadlock è un esempio di questo tipo di errore. Questo tipo di errore inoltre viene generato automaticamente da un'istruzione ROLLBACK eseguita in un trigger.  
   
 ## <a name="locking-behavior"></a>Comportamento di blocco  
- Un'istruzione ROLLBACK TRANSACTION che specifica un *savepoint_name* rilascia eventuali blocchi acquisiti oltre il punto di salvataggio, ad eccezione di escalation e conversioni. Tali blocchi non vengono rilasciati né riconvertiti alla loro precedente modalità di blocco.  
+ Un'istruzione ROLLBACK TRANSACTION che specifica un argomento *savepoint_name* rilascia tutti i blocchi acquisiti oltre il punto di salvataggio, ad eccezione di escalation e conversioni. Tali blocchi non vengono rilasciati né riconvertiti alla loro precedente modalità di blocco.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato l'effetto dell'esecuzione del rollback di una transazione denominata. Dopo aver creato una tabella, le istruzioni seguenti avviare una transazione denominata, inserire due righe e quindi il rollback della transazione denominata nella variabile @TransactionName. Un'altra istruzione all'esterno della transazione denominata vengono inserite due righe. La query restituisce i risultati delle istruzioni precedente.   
+ Nell'esempio seguente viene illustrato l'effetto dell'esecuzione del rollback di una transazione denominata. Dopo aver creato una tabella, le istruzioni seguenti determinano l'avvio di una transazione denominata, l'inserimento di due righe e quindi il rollback della transazione denominata nella variabile @TransactionName. Un'altra istruzione all'esterno della transazione denominata inserisce due righe. La query restituisce i risultati delle istruzioni precedenti.   
   
 ```sql    
 USE tempdb;  

@@ -1,28 +1,24 @@
 ---
 title: Schermata della procedura guidata 3, il Driver ODBC per SQL Server, dell'origine dati | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a0a97971dcd8a16a2ac15b1013dbbe96a43f21c0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+manager: craigg
+ms.openlocfilehash: bbbedb76089ffb508f6ce521bd831b213ba90fc5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-source-wizard-screen-3"></a>Schermata di creazione guidata origine dati 3
 
@@ -74,7 +70,7 @@ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a 
 
 ### <a name="multi-subnet-failover"></a>Failover su più subnet
 
-Se l'applicazione si connette a un a disponibilità elevata disaster recovery (gruppi di disponibilità AlwaysOn) gruppo di disponibilità (AG) in subnet diverse, abilitare **failover su più subnet.** Configura il Driver ODBC per SQL Server fornire un rilevamento più veloce e connessione al server attualmente attivo.
+Se l'applicazione si connette a un a disponibilità elevata disaster recovery (gruppi di disponibilità AlwaysOn) gruppo di disponibilità (AG) in subnet diverse, abilitazione **failover su più subnet.** Configura il Driver ODBC per SQL Server fornire un rilevamento più veloce e connessione al server attualmente attivo.
 
 ### <a name="transparent-network-ip-resolution"></a>Risoluzione IP di rete Transparent.
 

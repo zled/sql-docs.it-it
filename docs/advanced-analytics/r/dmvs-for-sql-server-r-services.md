@@ -1,36 +1,27 @@
 ---
-title: Viste a gestione dinamica per servizi SQL Server Machine Learning | Documenti Microsoft
-ms.custom: 
-ms.date: 07/31/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: d3c90457c7d55071520546e6362a451427503a52
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Viste a gestione dati (DMV) per SQL Server di Machine Learning servizi | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: e2180794ca96fc6387105745e346802725afe1dd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>Viste a gestione dinamica per servizi SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-L'argomento sono elencate le viste del catalogo di sistema e viste a gestione dinamica correlate a machine learning di SQL Server.
+L'articolo elenca le viste del catalogo di sistema e viste a gestione dinamica correlate a apprendimento in SQL Server.
 
 Per informazioni sugli eventi estesi, vedere [eventi per machine learning estesi](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
 
 > [!TIP]
-> Il team del prodotto ha fornito personalizzato segnala che è possibile utilizzare per monitorare le sessioni di machine learning e l'utilizzo del pacchetto. Per ulteriori informazioni, vedere [monitorare machine learning che usano report personalizzati in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
+> Utilizzare i report predefiniti per le sessioni di apprendimento di monitoraggio e l'utilizzo di pacchetto. Per ulteriori informazioni, vedere [monitorare machine learning che usano report personalizzati in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## <a name="system-configuration-and-system-resources"></a>Configurazione di sistema e le risorse di sistema
 
@@ -53,9 +44,9 @@ Per informazioni sugli eventi estesi, vedere [eventi per machine learning estesi
   I contatori seguenti vengono segnalati da questa vista DMV per gli script esterni per ogni istanza:
 
   + **Totale di esecuzioni**: numero di processi esterni avviate dalle chiamate locali o remote
-  + **Esecuzioni parallele**: numero di volte in cui è incluso uno script di  _@parallel_  specifica e che [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] è stato in grado di generare e utilizzare un piano di query parallele
-  + **Streaming esecuzioni**: numero di volte in cui la funzionalità di flusso è stata richiamata.
-  + **Esecuzioni CC SQL**: numero di external script fase in cui la chiamata è stata creata un'istanza in modalità remota e SQL Server è stato usato come contesto di calcolo
+  + **Le esecuzioni parallele**: numero di volte in cui è incluso uno script la _@parallel_ specifica e che [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] è stato in grado di generare e utilizzare un piano di query parallele
+  + **Streaming esecuzioni**: numero di volte in cui è stata richiamata la funzionalità di flusso
+  + **SQL CC esecuzioni**: numero di external script fase in cui la chiamata è stata creata un'istanza in modalità remota e SQL Server è stato usato come contesto di calcolo
   + **Accessi tramite autenticazione implicita**: numero di volte in cui è stata effettuata una chiamata di loopback ODBC usando l'autenticazione implicita, vale a dire che [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ha eseguito la chiamata per conto dell'utente inviando la richiesta di script.
   + **Tempo totale di esecuzione (ms)**: tempo trascorso tra la chiamata e il completamento della chiamata
   + **Errori di esecuzione**: numero di volte in cui gli script hanno segnalato errori. Questo conteggio non include gli errori R.
@@ -67,10 +58,10 @@ Per informazioni sugli eventi estesi, vedere [eventi per machine learning estesi
 
   Questa vista DMV non restituisce risultati se nessuno script è attualmente in esecuzione, quindi è molto utile per monitorare gli script con esecuzione prolungata. Restituisce questi valori:
 
-  + **external_script_request_id**: un GUID, che viene usato anche come nome della directory di lavoro utilizzato per archiviare gli script e i risultati intermedi temporaneo
-  + **lingua**: un valore, ad esempio `R` che indica la lingua dello script esterno
-  + **degree_of_parallelism**: valore intero che indica il numero di parallelo processi che sono stati utilizzati
-  + **external_user_name**: account di lavoro di una finestra di avvio, ad esempio **SQLRUser01**
+  + **external_script_request_id**: un GUID, che viene usato anche come il nome temporaneo della directory di lavoro utilizzato per archiviare gli script e i risultati intermedi
+  + **linguaggio**: un valore, ad esempio `R` che denota la lingua dello script esterno
+  + **degree_of_parallelism**: un numero intero che indica il numero di parallelo processi che sono stati utilizzati
+  + **external_user_name**: finestra di avvio di un ruolo di lavoro dell'account, ad esempio **SQLRUser01**
 
 + [sys.dm_external_script_execution_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 

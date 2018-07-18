@@ -1,16 +1,14 @@
 ---
 title: FETCH (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FETCH
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7abb27f973c2759a5065769a578b1c8e15fe305f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,25 +69,25 @@ FETCH
  LAST  
  Restituisce l'ultima riga nel cursore, che diventa la riga corrente.  
   
- ASSOLUTO {  *n* | @*nvar*}  
- Se  *n*  o @*nvar* è positivo, restituisce la riga  *n*  righe dall'inizio del cursore e imposta la riga restituita come nuova riga corrente. Se  *n*  o @*nvar* è negativo, restituisce la riga  *n*  righe prima della fine del cursore e imposta la riga restituita come nuova riga corrente. Se  *n*  o @*nvar* è 0, viene restituita alcuna riga. *n*deve essere una costante integer e @*nvar* deve essere **smallint**, **tinyint**, o **int**.  
+ ABSOLUTE { *n*| @*nvar*}  
+ Se *n* o @*nvar* è un valore positivo, restituisce la riga corrispondente a *n* righe dall'inizio del cursore e imposta la riga restituita come nuova riga corrente. Se*n* o @*nvar* è un valore negativo, restituisce la riga corrispondente a *n* righe prima della fine del cursore e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è 0 non vengono restituite righe. *n* deve essere una costante integer e @*nvar* deve essere **smallint**, **tinyint** o **int**.  
   
- RELATIVO {  *n* | @*nvar*}  
- Se  *n*  o @*nvar* è positivo, restituisce la riga  *n*  righe successive alla riga corrente e imposta la riga restituita come nuova riga corrente. Se  *n*  o @*nvar* è negativo, restituisce la riga  *n*  righe precedenti alla riga corrente e imposta la riga restituita come nuova riga corrente. Se  *n*  o @*nvar* è 0, restituisce la riga corrente. Se si specifica FETCH RELATIVE con  *n*  o @*nvar* impostato su numeri negativi o su 0 per la prima operazione di recupero eseguita in un cursore, viene restituita alcuna riga. *n*deve essere una costante integer e @*nvar* deve essere **smallint**, **tinyint**, o **int**.  
+ RELATIVE { *n*| @*nvar*}  
+ Se *n* o @*nvar* è un valore positivo, restituisce la riga corrispondente a *n* righe successive alla riga corrente e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è un valore negativo, restituisce la riga corrispondente a *n* righe precedenti alla riga corrente e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è 0, restituisce la riga corrente. Se si specifica FETCH RELATIVE con *n* o @*nvar* impostato su numeri negativi o su 0 per la prima operazione di recupero eseguita in un cursore, non viene restituita alcuna riga. *n* deve essere una costante integer e @*nvar* deve essere **smallint**, **tinyint** o **int**.  
   
  GLOBAL  
  Specifica che *cursor_name* fa riferimento a un cursore globale.  
   
  *cursor_name*  
- Nome del cursore aperto dal quale deve essere eseguita l'operazione di recupero. Se esiste un globali e un cursore locale con *cursor_name* per il proprio nome, *cursor_name* fino al cursore globale se viene specificato e il cursore locale se non è stato specificato.  
+ Nome del cursore aperto dal quale deve essere eseguita l'operazione di recupero. Se esistono sia un cursore globale che un cursore locale con nome *cursor_name*, *cursor_name* indica il cursore globale se la parola chiave GLOBAL viene specificata e il cursore locale se la parola chiave GLOBAL viene omessa.  
   
  @*cursor_variable_name*  
  Nome di una variabile di cursore che fa riferimento al cursore da cui deve essere eseguita l'operazione di recupero.  
   
- INTO @*nome_variabile*[,... *n*]  
+ INTO @*variable_name*[ ,...*n*]  
  Consente di inserire in variabili locali i dati delle colonne ottenute da un'operazione di recupero. Ogni variabile dell'elenco, da sinistra a destra, è associata alla colonna corrispondente nel set di risultati del cursore. A ogni variabile deve essere associato lo stesso tipo di dati o un tipo di dati che supporti la conversione implicita dal tipo di dati della colonna corrispondente nel set di risultati. Il numero di variabili deve corrispondere al numero di colonne dell'elenco di selezione del cursore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se nell'istruzione ISO DECLARE CURSOR l'opzione SCROLL non è specificata, NEXT è l'unica opzione FETCH supportata. In caso contrario, sono supportate tutte le opzioni FETCH.  
   
  Quando vengono utilizzate le estensioni del cursore DECLARE di [!INCLUDE[tsql](../../includes/tsql-md.md)], vengono applicate le regole seguenti:  
@@ -101,7 +98,7 @@ FETCH
   
 -   I cursori DYNAMIC SCROLL supportano tutte le opzioni FETCH, ad eccezione di ABSOLUTE.  
   
- Il @@FETCH_STATUS funzione segnala lo stato dell'ultima istruzione FETCH. Le stesse informazioni vengono registrate nella colonna fetch_status del cursore restituito dalla stored procedure sp_describe_cursor. In base a queste informazioni sullo stato, è necessario determinare la validità dei dati restituiti da un'istruzione FETCH prima di eseguire qualsiasi operazione con i dati. Per ulteriori informazioni, vedere [@@FETCH_STATUS &#40; Transact-SQL &#41; ](../../t-sql/functions/fetch-status-transact-sql.md).  
+ La funzione @@FETCH_STATUS restituisce lo stato dell'ultima istruzione FETCH. Le stesse informazioni vengono registrate nella colonna fetch_status del cursore restituito dalla stored procedure sp_describe_cursor. In base a queste informazioni sullo stato, è necessario determinare la validità dei dati restituiti da un'istruzione FETCH prima di eseguire qualsiasi operazione con i dati. Per altre informazioni, vedere [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per l'istruzione FETCH vengono assegnate per impostazione predefinita a qualsiasi utente valido.  

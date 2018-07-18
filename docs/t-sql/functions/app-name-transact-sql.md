@@ -1,16 +1,14 @@
 ---
-title: APP_NAME (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: APP_NAME (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - APP_NAME_TSQL
@@ -24,24 +22,23 @@ helpviewer_keywords:
 - current session application names
 - APP_NAME function
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b2b65f2380cc52c7a1d084dedad5fdb744d377bf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9d9652c25875fb1edb5d09e4e283fd7393b523a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce il nome dell'applicazione per la sessione corrente, se impostato dall'applicazione.
+Funzione che restituisce il nome dell'applicazione per la sessione corrente, se impostato dall'applicazione.
   
 > [!IMPORTANT]  
->  Il nome dell'applicazione viene fornito dal client e non viene verificato in alcun modo. Non utilizzare **nome_app** come parte di un controllo di sicurezza.  
+>  Il client specifica il nome applicazione e il valore del nome applicazione non viene verificato in alcun modo. Non usare **APP_NAME** come parte di un controllo di sicurezza.  
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,15 +50,15 @@ APP_NAME  ( )
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
-**nvarchar (128)**
+**nvarchar(128)**
   
-## <a name="remarks"></a>Osservazioni  
-Utilizzare **nome_app** quando si desidera eseguire azioni diverse per applicazioni diverse. Ad esempio, per formattare una data in modo diverso per applicazioni diverse o per restituire un messaggio informativo per alcune applicazioni.
+## <a name="remarks"></a>Remarks  
+Usare **APP_NAME** per distinguere le diverse applicazioni, in modo da eseguire azioni diverse per le applicazioni. Ad esempio, **APP_NAME** consente di distinguere diverse applicazioni in modo da applicare un formato data diverso per ogni applicazione. È anche possibile restituire un messaggio informativo in determinate applicazioni.
   
-Per impostare un nome di applicazione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]nel **Connetti al motore di Database** la finestra di dialogo, fare clic su **opzioni**. Nel **Additional Connection Parameters** scheda, fornire un **app** attributo nel formato`;app='application_name'`
+Per impostare un nome applicazione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], fare clic su **Opzioni** nella finestra di dialogo **Connetti al motore di database**. Nella scheda **Parametri aggiuntivi per la connessione** fornire un attributo **app** nel formato `;app='application_name'`
   
-## <a name="examples"></a>Esempi  
-L'esempio seguente consente di controllare se l'applicazione client che ha avviato il processo è una sessione di `SQL Server Management Studio` e fornisce una data sia nel formato US che ANSI.
+## <a name="example"></a>Esempio  
+L'esempio consente di controllare se l'applicazione client che ha avviato il processo è una sessione di `SQL Server Management Studio` e specifica una data sia nel formato US che ANSI.
   
 ```sql
 USE AdventureWorks2012;  
@@ -74,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [Funzioni](../../t-sql/functions/functions.md)
   
   

@@ -1,31 +1,30 @@
 ---
 title: Supporto per colonne di tipo sparse in SQL Server Native Client | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sparse columns, ODBC
 - sparse columns, SQL Server Native Client
 - sparse columns, OLE DB
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 541c38e37a581c929da8ca3185b39fbaef065b92
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5f9cf56b4ee1a7e3108607912ecba9a05d0815e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Supporto per colonne di tipo sparse in SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta le colonne di tipo sparse. Per ulteriori informazioni sulle colonne di tipo sparse [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [utilizzare le colonne di tipo Sparse](../../../relational-databases/tables/use-sparse-columns.md) e [usare set di colonne](../../../relational-databases/tables/use-column-sets.md).  
   
- Per ulteriori informazioni sulle colonne di tipo sparse supporto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vedere [supporta colonne di tipo Sparse &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) e [OLE DB supporta colonne di tipo Sparse &#40; &#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md).  
+ Per ulteriori informazioni sulle colonne di tipo sparse supporto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vedere [supporta colonne di tipo Sparse &#40;ODBC&#41; ](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) e [supporta colonne di tipo Sparse &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md) .  
   
  Per informazioni sulle applicazioni di esempio che illustrano questa funzionalità, vedere [esempi di programmazione dati di SQL Server](http://msftdpprodsamples.codeplex.com/).  
   
@@ -64,7 +63,7 @@ ms.lasthandoff: 01/25/2018
   
  Se una tabella include un **column_set**, colonne di tipo sparse non vengono gestite come colonne distinte. I valori di tutte le colonne di tipo sparse sono inclusi nel valore della **column_set**, che viene esportato come una colonna XML; vale a dire come **varbinary (max)** se associato come tipo binario oppure come  **nvarchar (max)** se associato come un **char** o **wchar** tipo). Durante l'importazione, il **column_set** valore deve essere conforme allo schema del **column_set**.  
   
- Per **queryout** operazioni, sussiste alcuna modifica al modo in cui viene fatto riferimento in modo esplicito le colonne vengono gestite. **COLUMN_SET** colonne hanno lo stesso comportamento delle colonne XML e di tipo sparse non ha alcun effetto sulla gestione di colonne di tipo sparse denominate.  
+ Per **queryout** operazioni, sussiste alcuna modifica al modo in cui viene fatto riferimento in modo esplicito le colonne vengono gestite. **COLUMN_SET** colonne hanno lo stesso comportamento delle colonne XML e il tipo sparse non ha alcun effetto sulla gestione di colonne di tipo sparse denominate.  
   
  Tuttavia, se **queryout** viene utilizzato per l'esportazione e si fa riferimento le colonne di tipo sparse che sono membri di una colonna di tipo sparse impostata in base al nome, non è possibile eseguire un'importazione diretta in una tabella dalla struttura analoga. In questo modo l'utilità BCP utilizza metadati consistenti con un **selezionare \***  operazione per l'importazione ed è Impossibile trovare la corrispondenza **column_set** colonne membri con questi metadati. Per importare **column_set** colonne membri singolarmente, è necessario definire una visualizzazione sulla tabella che fa riferimento l'oggetto desiderato **column_set** colonne ed è necessario eseguire l'operazione di importazione utilizzando la visualizzazione.  
   

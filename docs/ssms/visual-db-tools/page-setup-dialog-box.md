@@ -1,31 +1,31 @@
 ---
 title: Finestra di dialogo Imposta pagina | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vs.PageSetup
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- vs.PageSetup
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8ff85dabb4dc02737ccd0379435c85c87902a8dc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0099048b3de1461971e115ea3cfff0d1ff9d95e6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="page-setup-dialog-box"></a>Finestra di dialogo Imposta pagina
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile personalizzare la progettazione della pagina selezionando le opzioni presenti nella finestra di dialogo **Imposta pagina**. Le opzioni disponibili dipendono dalle lingue installate e abilitate per le operazioni di modifica.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+È possibile personalizzare la progettazione della pagina selezionando le opzioni presenti nella finestra di dialogo **Imposta pagina** . Le opzioni disponibili dipendono dalle lingue installate e abilitate per le operazioni di modifica.  
   
 ## <a name="paper"></a>Foglio  
 **Dimensione**  

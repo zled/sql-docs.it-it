@@ -1,16 +1,14 @@
 ---
-title: CurveToLineWithTolerance (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: CurveToLineWithTolerance (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CurveToLineWithTolerance_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - CurveToLineWithTolerance method (geography)
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 208878805dcf7c812caa1e6fb4f06120431ad803
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e5445cce83bfc6328606b4a2fa0f55ffe37587f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un'approssimazione poligonale di un' **geography** istanza contenente i segmenti di arco circolare.  
+  Restituisce un'approssimazione poligonale di un'istanza **geography** contenente segmenti di arco circolare.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,29 +41,29 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *tolleranza di errore*  
- È un **doppie** espressione che definisce l'errore massimo tra il segmento di arco circolare originale e l'approssimazione lineare.  
+ *tolerance*  
+ Espressione **double** che definisce l'errore massimo tra il segmento di arco circolare originale e l'approssimazione lineare.  
   
  *relative*  
- È un **bool** espressione che indica se utilizzare un valore massimo relativo per la deviazione. Quando il parametro relative viene impostato su false (0), viene impostato un valore massimo assoluto per la deviazione che può presentare un'approssimazione lineare.  Quando il parametro relative viene impostato su true (1), la tolleranza e viene calcolata come prodotto tra il parametro della tolleranza e il diametro del rettangolo di selezione per l'oggetto spaziale.  
+ Espressione **bool** che indica se usare un valore massimo relativo per la deviazione. Quando il parametro relative viene impostato su false (0), viene impostato un valore massimo assoluto per la deviazione che può presentare un'approssimazione lineare.  Quando il parametro relative viene impostato su true (1), la tolleranza e viene calcolata come prodotto tra il parametro della tolleranza e il diametro del rettangolo di selezione per l'oggetto spaziale.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
 ## <a name="exceptions"></a>Eccezioni  
- Impostazione della tolleranza < = 0 genera un **ArgumentOutOfRange** eccezione.  
+ L'impostazione di tolerance <= 0 genera un'eccezione **ArgumentOutOfRange**.  
   
-## <a name="remarks"></a>Osservazioni  
- In questo modo per un periodo di tolleranza di errore per i risultanti **LineString**.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo consente di specificare la tolleranza di errore per l'istanza **LineString** risultante.  
   
- **CurveToLineWithTolerance** metodo restituirà un **LineString** istanza per un **CircularString** o **CompoundCurve** istanza e **Poligono** istanza per un **CurvePolygon** istanza.  
+ Il metodo **CurveToLineWithTolerance** restituisce un'istanza **LineString** per un'istanza **CircularString** o **CompoundCurve** e un'istanza **Polygon** per un'istanza **CurvePolygon**.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Utilizzo di valori di tolleranza diversi in un'istanza CircularString  
- Nell'esempio seguente viene illustrato come l'impostazione della tolleranza sul `LineString`istanza restituita da un `CircularString` istanza:  
+ L'esempio seguente illustra l'impatto dell'impostazione della tolleranza sull'istanza `LineString` restituita da un'istanza `CircularString`:  
   
  ```
  DECLARE @g geography;  
@@ -93,7 +90,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Impostazione del parametro relative su true per un'istanza CurvePolygon di chiamata  
- Nell'esempio seguente viene utilizzato un `CurvePolygon` istanza chiamare `CurveToLineWithTolerance()` con *relativo* impostato su true:  
+ Nell'esempio seguente viene usata un'istanza `CurvePolygon` per chiamare `CurveToLineWithTolerance()` con *relative* impostato su true:  
   
  ```
  DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  

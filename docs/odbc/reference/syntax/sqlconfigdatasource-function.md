@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLConfigDataSource | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLConfigDataSource
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLConfigDataSource
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLConfigDataSource
-helpviewer_keywords: SQLConfigDataSource function [ODBC]
+f1_keywords:
+- SQLConfigDataSource
+helpviewer_keywords:
+- SQLConfigDataSource function [ODBC]
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6678a9b2fd25a1c639d03753f7e89a47d287adf2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ddff49350de9d4e713b065848ab53649b25cb094
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlconfigdatasource-function"></a>Funzione SQLConfigDataSource
 **Conformità**  
@@ -97,7 +98,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource** restituisce FALSE se non è in grado di trovare o caricare la DLL di installazione o se l'utente annulla la finestra di dialogo. In caso contrario, restituisce lo stato ricevuto da **ConfigDSN**.  
   
- **SQLConfigDataSource** esegue il mapping il DSN di sistema *trattano*s per il DSN utente *trattano*s (ODBC_ADD_SYS_DSN per ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN e ODBC_REMOVE_SYS _DSN a ODBC_REMOVE_DSN). La distinzione tra utente e DSN di sistema, **SQLConfigDataSource** imposta il programma di installazione in modalità di configurazione in base alla tabella seguente. Prima della restituzione, **SQLConfigDataSource** BOTHDSN Reimposta modalità di configurazione. **ConfigDSN** (implementata dai driver) deve chiamare **SQLWriteDSNToIni** e **SQLWritePrivateProfileString** per supportare un DSN di sistema. Per ulteriori informazioni, vedere [funzione ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
+ **SQLConfigDataSource** viene eseguito il mapping il DSN di sistema *trattano*s per il DSN utente *trattano*s (ODBC_ADD_SYS_DSN a ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN e ODBC_REMOVE_SYS_ DSN a ODBC_REMOVE_DSN). La distinzione tra utente e DSN di sistema, **SQLConfigDataSource** imposta il programma di installazione in modalità di configurazione in base alla tabella seguente. Prima della restituzione, **SQLConfigDataSource** BOTHDSN Reimposta modalità di configurazione. **ConfigDSN** (implementata dai driver) deve chiamare **SQLWriteDSNToIni** e **SQLWritePrivateProfileString** per supportare un DSN di sistema. Per ulteriori informazioni, vedere [funzione ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
 |*trattano*|Modalità di configurazione|  
 |----------------|------------------------|  
@@ -112,6 +113,6 @@ BOOL SQLConfigDataSource(
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Aggiunta, modifica o rimozione di un'origine dati|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) (in DLL di installazione)|  
+|Aggiunta, modifica o rimozione di un'origine dati|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) (nel programma di installazione DLL)|  
 |Rimozione di un nome origine dati dalle informazioni di sistema|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
 |Aggiunta di un nome di origine dati per le informazioni di sistema|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|

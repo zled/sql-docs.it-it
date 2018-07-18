@@ -1,32 +1,29 @@
 ---
-title: "Esempio di proprietà (VC + +) di origine | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Esempio di proprietà (VC + +) di origine | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Source property [ADO], VC++ example
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 54114054a8d3a1133c0cb5163052fde60f473a5f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 73fe0186d0683c0b68c9d7cf57d92d7e7d9d548a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="source-property-example-vc"></a>Esempio di proprietà Source (VC + +)
 Questo esempio viene illustrato il [origine](../../../ado/reference/ado-api/source-property-ado-recordset.md) proprietà aprendo tre [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) gli oggetti basati su origini dati diverse.  

@@ -1,16 +1,14 @@
 ---
-title: EVENTDATA (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: EVENTDATA (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - EVENTDATA
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - status information [SQL Server], events
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-caps.latest.revision: 
+caps.latest.revision: 55
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 45f9d434e5833180320dcb3184fdcceec56c715c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0853aaa013cd46c81d22ad8093a891ecb54a6d3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 EVENTDATA( )  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  EVENTDATA restituisce dati solo se utilizzata direttamente in un trigger DDL o LOGON. EVENTDATA restituisce Null se viene chiamata da altre routine, anche se tali routine sono chiamate da un trigger DDL o LOGON.  
   
  I dati restituiti da EVENTDATA non sono validi dopo il commit o il rollback di una transazione che ha chiamato EVENTDATA, in modo implicito o esplicito.  
@@ -77,7 +74,7 @@ EVENTDATA( )
 ## <a name="schemas-returned"></a>Schemi restituiti  
  EVENTDATA restituisce un valore di tipo **xml**. Per impostazione predefinita, la definizione dello schema per tutti gli eventi è installata nella directory seguente: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
- In alternativa, lo schema di eventi è pubblicato nella [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) pagina Web.  
+ In alternativa, lo schema degli eventi è pubblicato nella pagina Web [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850).  
   
  Per estrarre lo schema di un evento specifico, cercare nello schema il tipo complesso `EVENT_INSTANCE_\<event_type>`. Ad esempio, per estrarre lo schema di un evento DROP_TABLE, cercare nello schema `EVENT_INSTANCE_DROP_TABLE`.  
   
@@ -87,7 +84,7 @@ EVENTDATA( )
  Nell'esempio seguente viene creato un trigger DDL per impedire la creazione di nuove tabelle nel database. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che attiva il trigger viene acquisita utilizzando XQuery sui dati XML generati da EVENTDATA. Per altre informazioni, vedere [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md).  
   
 > [!NOTE]  
->  Quando esegue una query di `\<TSQLCommand>` elemento utilizzando **risultati in formato griglia** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], interruzioni di riga nel testo del comando non vengono visualizzati. Utilizzare **risultati in formato testo** invece.  
+>  Quando si esegue una query sull'elemento `\<TSQLCommand>` tramite **Risultati in formato griglia** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], le interruzioni di riga nel testo del comando non vengono visualizzate. Usare invece **Risultati in formato testo**.  
   
 ```  
 USE AdventureWorks2012;  
@@ -113,7 +110,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Quando si desidera restituire dati degli eventi, è consigliabile utilizzare l'espressione XQuery **Value ()** anziché il **query ()** metodo. Il **query ()** metodo restituisce-il carattere di escape e commerciale e XML e l'avanzamento di riga istanze (CR/LF) nell'output, mentre il **Value ()** metodo rende le istanze CR/LF invisibili nell'output.  
+>  Per restituire dati sugli eventi, è consigliabile usare il metodo XQuery **value()** invece del metodo **query()**. Il metodo **query()** restituisce istanze XML e CR/LF (ritorno a capo/avanzamento riga) trasformate con il carattere di escape e commerciale (&amp;) nell'output, mentre il metodo **value()** rende le istanze CR/LF invisibili nell'output.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Creazione di una tabella di log con dati di eventi in un trigger DDL  
  Nell'esempio seguente viene creata una tabella per l'archiviazione di informazioni su tutti gli eventi a livello di database e tale tabella viene popolata con un trigger DDL. Il tipo di evento e l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono acquisiti utilizzando XQuery sui dati XML generati da `EVENTDATA`.  
@@ -153,7 +150,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzare la funzione EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)   
+ [Usare la funzione EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)   
  [Trigger DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Notifiche degli eventi](../../relational-databases/service-broker/event-notifications.md)   
  [Trigger LOGON](../../relational-databases/triggers/logon-triggers.md)  

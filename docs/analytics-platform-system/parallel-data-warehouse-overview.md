@@ -1,28 +1,22 @@
 ---
-title: Panoramica del Data Warehouse parallelo
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: In questo argomento viene illustrato il software di dispositivo e i componenti non strumento software di sistema della piattaforma Analitica.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: "20"
-ms.openlocfilehash: f2b6708f6e82340c971bdd3a6cc0cdb7e67f2d65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Parallelo i componenti Data Warehouse - Analitica Platform System | Documenti Microsoft
+description: In questo articolo illustra il software di dispositivo e i componenti non strumento software del sistema della piattaforma Analitica.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 09813eecdcc933619955de8d94e83079cad0c68f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="parallel-data-warehouse-overview"></a>Panoramica del Data Warehouse parallelo
-In questo argomento viene illustrato il software di dispositivo e i componenti non strumento software di sistema della piattaforma Analitica.  
+# <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Parallelo i componenti Data Warehouse - Analitica Platform System
+In questo articolo illustra il software di dispositivo e i componenti non strumento software del sistema della piattaforma Analitica.  
   
 <!-- MISSING LINKS
 
@@ -45,7 +39,7 @@ To learn more about Analytics Platform System, see:
   
 ![Software di Data Warehouse parallelo](media/parallel-data-warehouse-software.png "software Parallel Data Warehouse")  
   
-## <a name="sec1"></a>Il Software di dispositivo: Query di elaborazione e archiviazione dei dati utente  
+## <a name="sec1"></a>Software accessorio – eseguire Query di elaborazione e archiviazione dei dati utente  
   
 ### <a name="control-node"></a>Nodo di controllo  
 Motore MPP  
@@ -231,7 +225,7 @@ For more information, see [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase
 ## <a name="database-backup-and-restore"></a>Ripristino e Backup del database  
 SQL Server PDW utilizza Transact\-SQL backup e ripristino dei database i comandi di backup e ripristino di database utente, in parallelo, in e da un server di backup. SQL Server PDW scrive il backup in una directory in una condivisione di file di Windows e quindi allo stesso modo ripristinare i dati da una condivisione di file di Windows.  
   
-Per ulteriori informazioni, vedere [pianificare per il Backup e il caricamento di Hardware](backup-and-loading-hardware.md) e [Panoramica del Backup e ripristino](backup-and-restore-overview.md)  
+Per altre informazioni, vedere [pianificare per il Backup e il caricamento di Hardware](backup-and-loading-hardware.md) e [Panoramica del Backup e ripristino](backup-and-restore-overview.md)  
   
 ## <a name="remote-table-copy"></a>Copia della tabella remota  
 La funzionalità di copia della tabella remota consente di copiare tabelle dal database di SQL Server PDW ai database remoti di SMP SQL Server (non accessorio). Questo consente scenari di hub e spoke per SQL Server PDW.  
@@ -248,15 +242,15 @@ Sistema della piattaforma Analitica ha diversi modi per monitorare l'attività d
 ### <a name="admin-console"></a>Console di amministrazione  
 La Console di amministrazione consente di visualizzare lo stato corrente sullo stato dello strumento. Ciò viene eseguito come un'applicazione web nel nodo di controllo ed è accessibile tramite https.  
   
-Per ulteriori informazioni, vedere [monitorare il dispositivo tramite la Console di amministrazione &#40; Sistema della piattaforma Analitica &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+Per altre informazioni, vedere [monitorare il dispositivo tramite la Console di amministrazione &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 
 ### <a name="system-views"></a>Viste di sistema  
 La Console di amministrazione è basata sulle query di vista di sistema. È possibile eseguire query di viste di sistema per ottenere la parte specifica di informazioni che necessarie.  
 
-Per ulteriori informazioni, vedere [monitorare il dispositivo utilizzando le viste di sistema &#40; Sistema della piattaforma Analitica &#41;](monitor-the-appliance-by-using-system-views.md) 
+Per altre informazioni, vedere [monitorare l'accessorio dalle viste di sistema usando &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-views.md) 
   
 ### <a name="system-center-operations-manager"></a>System Center Operations Manager  
 Sono disponibili in System Center Operations Manager (SCOM) Management Pack per SQL Server PDW. 
 
-Per configurare il dispositivo per SCOM, vedere [monitorare l'accessorio tramite System Center Operations Manager &#40; Sistema della piattaforma Analitica &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+Per configurare il dispositivo per SCOM, vedere [monitorare l'accessorio by Using System Center Operations Manager &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   

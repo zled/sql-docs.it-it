@@ -1,17 +1,15 @@
 ---
 title: Dell'interazione tra i gestori eventi | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - events [ADO], about event handlers
 - unpaired event handlers [ADO]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c95a748f197469739797fdd34ced0ae4f896c3bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4ef9af3c4ba076048e0d04d31601b20e9d9ca321
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-event-handlers-work-together"></a>Dell'interazione tra i gestori eventi
 A meno che la programmazione in Visual Basic, tutti i gestori eventi per **connessione** e **Recordset** eventi devono essere implementati indipendentemente dall'effettiva elaborazione tutti gli eventi. La quantità di lavoro di implementazione che è necessario eseguire varia a seconda del linguaggio di programmazione. Per ulteriori informazioni, vedere [la creazione di istanze di ADO evento dal linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
@@ -37,7 +34,7 @@ A meno che la programmazione in Visual Basic, tutti i gestori eventi per **conne
 ## <a name="paired-event-handlers"></a>Gestori eventi associati  
  Ogni gestore dell'evento verrà è associato un **completa** gestore dell'evento. Ad esempio, quando l'applicazione modifica il valore di un campo, il **WillChangeField** gestore eventi viene chiamato. Se la modifica è accettabile, l'applicazione lascia il **adStatus** parametro invariato e viene eseguita l'operazione. Al termine dell'operazione, un **FieldChangeComplete** evento notifica all'applicazione che è stata completata l'operazione. Se è stata completata correttamente, **adStatus** contiene **adStatusOK**; in caso contrario, **adStatus** contiene **adStatusErrorsOccurred** e è necessario controllare il **errore** oggetto per determinare la causa dell'errore.  
   
- Quando **WillChangeField** viene chiamato, è possibile che la modifica non dovrebbe essere eseguita. In questo caso, impostare **adStatus** a **adStatusCancel.** L'operazione sia annullata e **FieldChangeComplete** evento riceve un **adStatus** valore **adStatusErrorsOccurred**. Il **errore** oggetto contiene **adErrOperationCancelled** in modo che il **FieldChangeComplete** gestore sa che l'operazione è stata annullata. Tuttavia, è necessario controllare il valore della **adStatus** parametro prima di modificarlo, poiché l'impostazione **adStatus** a **adStatusCancel** non ha alcun effetto se il parametro è stato impostato per **adStatusCantDeny** sulla voce per la procedura.  
+ Quando **WillChangeField** viene chiamato, è possibile che la modifica non dovrebbe essere eseguita. In tal caso, impostare **adStatus** a **adStatusCancel.** L'operazione sia annullata e **FieldChangeComplete** evento riceve un **adStatus** valore **adStatusErrorsOccurred**. Il **errore** oggetto contiene **adErrOperationCancelled** in modo che il **FieldChangeComplete** gestore sa che l'operazione è stata annullata. Tuttavia, è necessario controllare il valore della **adStatus** parametro prima di modificarlo, poiché l'impostazione **adStatus** a **adStatusCancel** non ha alcun effetto se il parametro è stato impostato per **adStatusCantDeny** sulla voce per la procedura.  
   
  In alcuni casi, un'operazione può generare più eventi. Ad esempio, il **Recordset** oggetto dispone di eventi per accoppiati **campo** le modifiche e **Record** le modifiche. Quando l'applicazione modifica il valore di un **campo**, **WillChangeField** gestore eventi viene chiamato. Se si determina che l'operazione può continuare, la **WillChangeRecord** gestore dell'evento viene generato anche. Se questo gestore consente anche l'evento continuare, la modifica venga apportata e **FieldChangeComplete** e **RecordChangeComplete** gestori eventi vengono chiamati. L'ordine in cui vengono chiamati i gestori di eventi verrà per una determinata operazione non è definito, pertanto è consigliabile evitare di scrivere codice che dipende da una determinata sequenza di chiamata dei gestori.  
   

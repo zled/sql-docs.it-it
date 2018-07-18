@@ -1,34 +1,34 @@
 ---
 title: Monitoraggio della replica con Monitor di sistema | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], System Monitor
 - System Monitor [SQL Server], replication
 - performance counters [SQL Server replication]
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
-caps.latest.revision: "30"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 30
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce2cd6d57f3d8f5c2e08930a96f118341172fafc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 071539a24627f7bb7ce7cd74580b206ef5cd64a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>Monitoraggio della replica con Monitor di sistema
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Monitor di sistema di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows consente di usare grafici e report per valutare l'efficienza del computer, identificare e risolvere eventuali problemi, ad esempio un utilizzo non equilibrato delle risorse, componenti hardware inadeguati e configurazioni di programmi insufficienti, nonché pianificare risorse hardware aggiuntive. Per altre informazioni, vedere [Monitoraggio dell'utilizzo delle risorse&#40;Monitor di sistema&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Monitor di sistema di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows consente di utilizzare grafici e report per valutare l'efficienza del computer, identificare e risolvere eventuali problemi, ad esempio un utilizzo non equilibrato delle risorse, componenti hardware inadeguati e configurazioni di programmi insufficienti, nonché pianificare risorse hardware aggiuntive. Per altre informazioni, vedere [Monitoraggio dell'utilizzo delle risorse&#40;Monitor di sistema&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
   
  In Monitor di sistema vengono utilizzati oggetti e contatori delle prestazioni che forniscono informazioni sulle prestazioni dei vari processi. È possibile misurare le prestazioni della replica mediante contatori associati agli agenti di replica:  
   

@@ -1,16 +1,14 @@
 ---
 title: core.sp_update_data_source (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 913701521f913542356ea11bc916e6af3a971fe8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3156ef5a6d4d1af2298222b660e6483eb109cddd
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,26 +50,26 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collection_set_uid = ] '*collection_set_uid*'  
- GUID per il set di raccolta. *collection_set_uid* è **uniqueidentifier**, senza alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collection_sets nel database msdb.  
+ [ @collection_set_uid =] '*collection_set_uid*'  
+ GUID per il set di raccolta. *collection_set_uid* viene **uniqueidentifier**, senza alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collection_sets nel database msdb.  
   
  [ @machine_name =] '*nome_computer*'  
- Nome del server in cui risiede l'insieme di raccolta. *nome_computer* è **sysname** non prevede alcun valore predefinito.  
+ Nome del server in cui risiede l'insieme di raccolta. *nome_computer* viene **sysname** non prevede alcun valore predefinito.  
   
  [ @named_instance =] '*named_instance*'  
- Nome dell'istanza per l'insieme di raccolta. *named_instance* è **sysname**, senza alcun valore predefinito.  
+ Nome dell'istanza per l'insieme di raccolta. *named_instance* viene **sysname**, senza alcun valore predefinito.  
   
 > [!NOTE]  
->  *named_instance* deve essere il nome di istanza completo, che include il nome del computer e il nome dell'istanza nel formato *computername*\\*instancename*.  
+>  *named_instance* deve essere il nome, nome completo dell'istanza che include il nome del computer e il nome dell'istanza nel formato *nomecomputer*\\*instancename*.  
   
  [ @days_until_expiration =] *days_until_expiration*  
- Numero di giorni rimanenti del periodo di memorizzazione dei dati dello snapshot. *days_until_expiration* è **smallint**.  
+ Numero di giorni rimanenti del periodo di memorizzazione dei dati dello snapshot. *days_until_expiration* viene **smallint**.  
   
- [ @source_id = ] *source_id*  
- Identificatore univoco per l'origine dell'aggiornamento. *Source_ID* è **int** e viene restituito come OUTPUT.  
+ [ @source_id =] *source_id*  
+ Identificatore univoco per l'origine dell'aggiornamento. *Source_ID* viene **int** e viene restituito come OUTPUT.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  Ogni volta che un pacchetto di caricamento inizia a caricare i dati nel data warehouse di gestione, il componente di runtime dell'agente di raccolta dati chiama core.sp_update_data_source. La tabella core.source_info_internal viene aggiornata se dopo l'ultimo caricamento si è verificata una delle modifiche seguenti:  

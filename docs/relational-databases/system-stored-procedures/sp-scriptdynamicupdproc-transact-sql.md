@@ -1,32 +1,33 @@
 ---
 title: sp_scriptdynamicupdproc (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_scriptdynamicupdproc_TSQL
 - sp_scriptdynamicupdproc
-helpviewer_keywords: sp_scriptdynamicupdproc
+helpviewer_keywords:
+- sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 89a2704f20a2bdea0bb015d0280492dc594057da
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 707a4262c6d4ae31596d01c0194c7bc438af26ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
   
 ## <a name="arguments"></a>Argomenti  
  [  **@artid=**] *artid*  
- ID dell'articolo. *artid* è **int**, non prevede alcun valore predefinito.  
+ ID dell'articolo. *artid* viene **int**, non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce un set di risultati è costituito da un singolo **nvarchar (4000)** colonna. Il set di risultati forma l'istruzione CREATE PROCEDURE completa utilizzata per creare la stored procedure personalizzata.  
@@ -52,7 +53,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="remarks"></a>Osservazioni  
  **sp_scriptdynamicupdproc** viene utilizzata nella replica transazionale. La logica di scripting MCALL predefinita prevede l'inserimento di tutte le colonne all'interno dell'istruzione UPDATE e l'utilizzo di una mappa di bit per determinare le colonne modificate. Se una colonna non è stata modificata, viene eseguita un'operazione di reimpostazione del valore originale della colonna. Questa operazione in genere non causa problemi. Se la colonna è indicizzata, sono necessari altri processi di elaborazione. L'approccio dinamico prevede l'inserimento delle sole colonne modificate e consente pertanto di creare una stringa UPDATE ottimale. Per la compilazione dell'istruzione UPDATE dinamica in fase di esecuzione sono tuttavia necessari processi di elaborazione aggiuntivi. È consigliabile verificare gli approcci dinamico e statico e quindi scegliere la soluzione ottimale.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_scriptdynamicupdproc**.  
   
 ## <a name="examples"></a>Esempi  

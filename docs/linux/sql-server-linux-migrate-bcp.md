@@ -1,25 +1,22 @@
 ---
 title: Copia bulk di dati a SQL Server in Linux | Documenti Microsoft
-description: 
+description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 01/30/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.workload: On Demand
-ms.openlocfilehash: a7cc0015af2ca7af7821175cdb836f71ba0ac6f5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: d792a7dfd4481d5c5cce3e2517559dcb0b3e22be
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Copia bulk di dati con bcp per SQL Server in Linux
 
@@ -122,7 +119,7 @@ Id          Name                Location
 
 In questa esercitazione è utilizzare `bcp` per esportare i dati dalla tabella di esempio creato in precedenza in un nuovo file di dati.
 
-Copiare e incollare i comandi followikng nella finestra terminal. Questi comandi usano il `bcp` utilità della riga di comando per esportare i dati dalla tabella **TestEmployees** nel database **BcpSampleDB** in un nuovo file di dati denominato **~/test_export.txt** .  Ricordarsi di sostituire il nome utente e `<your_password>` necessarie prima di eseguire il comando.
+Copiare e incollare i comandi seguenti nella finestra terminal. Questi comandi usano il `bcp` utilità della riga di comando per esportare i dati dalla tabella **TestEmployees** nel database **BcpSampleDB** in un nuovo file di dati denominato **~/test_export.txt** .  Ricordarsi di sostituire il nome utente e `<your_password>` necessarie prima di eseguire il comando.
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','

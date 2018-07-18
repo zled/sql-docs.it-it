@@ -1,29 +1,19 @@
 ---
 title: La definizione di membri calcolati | Documenti Microsoft
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 38cc23d0b24748cf47fac78419d545eea98dea4e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e3b91737e62a4a4f0d55bfded58631d36327a567
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Lezione 6-1-definizione di membri calcolati
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -97,7 +87,7 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
   
 12. Sulla barra degli strumenti della scheda **Calcoli** fare clic su **Visualizzazione Form**, verificare che sia selezionato **[Total Sales Amount]** nel riquadro **Libreria script** e fare clic su **Nuovo membro calcolato**.  
   
-13. Cambiare il nome del nuovo membro calcolato in **[Total Product Cost]**e creare l'espressione seguente nella casella **Espressione** :  
+13. Cambiare il nome del nuovo membro calcolato in **[Total Product Cost]** e creare l'espressione seguente nella casella **Espressione** :  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -177,7 +167,7 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
   
 1.  Fare clic su **Visualizzazione Form** sulla barra degli strumenti della scheda **Calcoli**.  
   
-2.  Nel riquadro **Libreria script** selezionare **[Total GPM]**e fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli** .  
+2.  Nel riquadro **Libreria script** selezionare **[Total GPM]** e fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli** .  
   
     Facendo clic sull'ultimo membro calcolato nel riquadro **Libreria script** prima di selezionare **Nuovo membro calcolato** si garantisce che il nuovo membro calcolato venga immesso alla fine dello script. L'esecuzione degli script seguirà l'ordine visualizzato nel riquadro **Libreria script** .  
   

@@ -1,25 +1,22 @@
 ---
-title: "Configurare SLES Cluster per il gruppo di disponibilità di SQL Server | Documenti Microsoft"
-description: 
+title: Configurare SLES Cluster per il gruppo di disponibilità di SQL Server | Documenti Microsoft
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 05/17/2017
+ms.date: 04/30/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.workload: Inactive
-ms.openlocfilehash: 9b0c068ce56a2f499ee452b56ca54025485163f5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: dc6298c55104aeabcf2da799be4ed1977ea39620
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare SLES Cluster per il gruppo di disponibilità di SQL Server
 
@@ -189,16 +186,31 @@ Se sono stati configurati i nodi del cluster esistente con il `YaST` modulo del 
 
 Dopo avere aggiunto tutti i nodi, controllare se è necessario modificare i criteri di quorum no nelle opzioni di cluster globale. Questo è particolarmente importante per i cluster a due nodi. Per ulteriori informazioni, vedere sezione 4.1.2, l'opzione no-quorum-policy. 
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Impostare la proprietà cluster start-errore-è-errore irreversibile per false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Impostare proprietà di cluster del cluster-nuova verifica del-intervallo
 
-`Start-failure-is-fatal` indica se un errore di avvio di una risorsa in un nodo impedisce ulteriori tentativi di avvio in tale nodo. Se impostato su `false`, il cluster decide di provare ad avviare nello stesso nodo in base alle corrente conteggio e la migrazione soglia di errore della risorsa. In tal caso, dopo il failover si verifica, tentativi Pacemaker avvio la disponibilità gruppo risorsa per il primo primario quando l'istanza SQL è disponibile. Pacemaker si occupa di abbassamento di livello la replica secondaria e viene automaticamente aggiunto nuovamente il gruppo di disponibilità. Inoltre, se `start-failure-is-fatal` è impostato su `false`, il cluster esegue il fallback i limiti configurati failcount configurato con la soglia di migrazione. Verificare che l'impostazione predefinita per la soglia di migrazione viene aggiornato di conseguenza.
+`cluster-recheck-interval` indica l'intervallo di polling durante il quale controlla il cluster per la modifica in parametri delle risorse, i vincoli o altre opzioni di cluster. Se una replica diventa inattiva, il cluster tenta di riavviare la replica a un intervallo che è associato il `failure-timeout` valore e il `cluster-recheck-interval` valore. Ad esempio, se `failure-timeout` è impostata su 60 secondi e `cluster-recheck-interval` è impostato su 120 secondi, il riavvio viene eseguito un tentativo a un intervallo che è maggiore di 60 secondi ma inferiore a 120 secondi. È consigliabile impostare timeout errore 60s e intervallo di nuova verifica del cluster su un valore maggiore di 60 secondi. Non è consigliabile impostare l'intervallo di nuova verifica del cluster su un valore basso.
 
-Per aggiornare il valore della proprietà per l'esecuzione false:
+Per aggiornare il valore della proprietà da `2 minutes` eseguire:
+
 ```bash
-sudo crm configure property start-failure-is-fatal=false
-sudo crm configure rsc_defaults migration-threshold=5000
+crm configure property cluster-recheck-interval=2min
 ```
-Se la proprietà ha il valore predefinito di `true`, se il primo tentativo di avviare l'intervento dell'utente della risorsa non è necessario dopo un failover automatico per pulire il conteggio degli errori di risorse e reimpostare la configurazione mediante: `sudo crm resource cleanup <resourceName>` comando.
+
+> [!IMPORTANT] 
+> Se si dispone già di una risorsa del gruppo di disponibilità gestita da un cluster Pacemaker, tenere presente che tutte le distribuzioni che usano la versione più recente disponibile Pacemaker pacchetto 1.1.18-11.el7 introducano una modifica del comportamento per il cluster avvia errore-è-irreversibile impostazione quando il relativo valore è false. Questa modifica interessa il flusso di lavoro di failover. Se una replica primaria di cui si verifichi un'interruzione del servizio, il cluster deve eseguire il failover su una delle repliche secondarie disponibili. Al contrario, gli utenti noteranno che il cluster mantiene tenta di avviare la replica primaria non riuscita. Se il database primario non viene portato online (a causa di un'interruzione permanente), failover del cluster mai a un'altra replica secondaria disponibile. Grazie a questa modifica, una configurazione consigliata in precedenza per impostare inizio-errore-è-errore irreversibile non è più valida e l'impostazione deve essere ripristinato il valore predefinito `true`. Inoltre, la risorsa gruppo di disponibilità deve essere aggiornato per includere il `failover-timeout` proprietà. 
+>
+>Per aggiornare il valore della proprietà da `true` eseguire:
+>
+>```bash
+>crm configure property start-failure-is-fatal=true
+>```
+>
+>Aggiornare le proprietà della risorsa gruppo di disponibilità esistente `failure-timeout` al `60s` eseguire (sostituire `ag1` con il nome della risorsa del gruppo di disponibilità): 
+>
+>```bash
+>crm configure edit ag1
+># In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
+>```
 
 Per ulteriori informazioni sulle proprietà di Pacemaker cluster, vedere [la configurazione di risorse Cluster](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
@@ -239,22 +251,23 @@ Eseguire il comando in uno dei nodi del cluster:
 1. Nel prompt dei crm, eseguire il comando seguente per configurare le proprietà della risorsa.
 
    ```bash
-primitive ag_cluster \
-   ocf:mssql:ag \
-   params ag_name="ag1" \
-   op start timeout=60s \
-   op stop timeout=60s \
-   op promote timeout=60s \
-   op demote timeout=10s \
-   op monitor timeout=60s interval=10s \
-   op monitor timeout=60s interval=11s role="Master" \
-   op monitor timeout=60s interval=12s role="Slave" \
-   op notify timeout=60s
-ms ms-ag_cluster ag_cluster \
-   meta master-max="1" master-node-max="1" clone-max="3" \
-  clone-node-max="1" notify="true" \
-commit
-   ```
+   primitive ag_cluster \
+      ocf:mssql:ag \
+      params ag_name="ag1" \
+      meta failure-timeout=60s \
+      op start timeout=60s \
+      op stop timeout=60s \
+      op promote timeout=60s \
+      op demote timeout=10s \
+      op monitor timeout=60s interval=10s \
+      op monitor timeout=60s interval=11s role="Master" \
+      op monitor timeout=60s interval=12s role="Slave" \
+      op notify timeout=60s
+   ms ms-ag_cluster ag_cluster \
+      meta master-max="1" master-node-max="1" clone-max="3" \
+     clone-node-max="1" notify="true" \
+   commit
+      ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

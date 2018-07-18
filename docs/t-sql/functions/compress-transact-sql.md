@@ -1,16 +1,14 @@
 ---
-title: COMPRIMI (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: COMPRESS (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - COMPRESS
@@ -18,21 +16,20 @@ f1_keywords:
 helpviewer_keywords:
 - COMPRESS function
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 01500cd6560fd60dda2cb9060c2968d7c010d8e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 893790448524a844b488478230db0f5141173ffd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="compress-transact-sql"></a>COMPRIMI (Transact-SQL)
+# <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Comprime l'espressione di input utilizzando l'algoritmo GZIP. Il risultato della compressione è la matrice di byte di tipo **varbinary (max)**.
+Questa funzione comprime l'espressione di input usando l'algoritmo GZIP. La funzione restituisce una matrice di byte di tipo **varbinary (max)**.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,21 +40,36 @@ COMPRESS ( expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*espressione*  
-È un **nvarchar (***n***)**, **nvarchar (max)**, **varchar (**  *n*  **)**, **varchar (max)**, **varbinary (**  *n*  **)**, **varbinary (max)**, **char (***n***)**, **(nchar**   *n*  **)**, o **binario (***n***)** espressione. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
+*expression*  
+Un
+
+* **binary(***n***)**
+* **char(***n***)**
+* **nchar(***n***)**
+* **nvarchar(max)**
+* **nvarchar(***n***)**
+* **varbinary(max)**
+* **varbinary(***n***)**
+* **ntext**
+
+o Gestione configurazione
+
+* **varchar(***n***)**
+
+expression. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="return-types"></a>Tipi restituiti
-Restituisce il tipo di dati di **varbinary (max)** che rappresenta il contenuto compresso di input.
+**varbinary (max)** che rappresenta il contenuto compresso dell'input.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 I dati compressi non possono essere indicizzati.
   
-La funzione COMPRESS comprime i dati forniti come espressione di input e deve essere richiamata per ogni sezione di dati deve essere compresso. Per la compressione automatica a livello di riga o di pagina durante l'archiviazione, vedere [la compressione dei dati](../../relational-databases/data-compression/data-compression.md).
+La funzione `COMPRESS` comprime i dati di espressione dell'input. Richiamare questa funzione per ogni sezione di dati da comprimere. Vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md) per altre informazioni sulla compressione automatica dei dati durante l'archiviazione a livello di riga o pagina.
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-compress-data-during-the-table-insert"></a>A. Comprimere i dati durante l'inserimento di tabella  
-Nell'esempio seguente viene illustrato come comprimere i dati inseriti nella tabella:
+### <a name="a-compress-data-during-the-table-insert"></a>A. Comprimere i dati durante l'inserimento nella tabella  
+L'esempio illustra come comprimere i dati inseriti in una tabella:
   
 ```sql
 INSERT INTO player (name, surname, info )  
@@ -68,8 +80,8 @@ INSERT INTO player (name, surname, info )
 VALUES (N'Michael', N'Raheem', compress(@info));  
 ```  
   
-### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. Archiviazione compressa di righe eliminate  
-L'istruzione seguente Elimina vecchi record di lettore dal `player` tabella e archivia i record di `inactivePlayer` tabella in un formato compresso per risparmiare spazio.
+### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. Archiviare la versione compressa di righe eliminate  
+Questa istruzione elimina i record obsoleti Player (Giocatore) dalla tabella `player`, dopo di ché, per risparmiare spazio, archivia i record nella tabella `inactivePlayer` usando un formato compresso.
   
 ```sql
 DELETE player  
@@ -79,7 +91,7 @@ INTO dbo.inactivePlayers ;
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-[DECOMPRIMERE &#40; Transact-SQL &#41;](../../t-sql/functions/decompress-transact-sql.md)
+[Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+[DECOMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/decompress-transact-sql.md)
   
   

@@ -1,26 +1,18 @@
 ---
-title: Prestazioni per R Services - ottimizzazione dati | Documenti Microsoft
-ms.custom: 
-ms.date: 07/12/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 'Le prestazioni per SQL Server R Services: ottimizzazione dati | Documenti Microsoft'
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563759"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Prestazioni per R Services - ottimizzazione dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +31,7 @@ Quando si usano set di dati di grandi dimensioni, è consigliabile usare sempre 
 
 ## <a name="factors"></a>Fattori
 
-Il linguaggio R è il concetto di "fattori", che sono variabili speciali per i dati categorici. Gli esperti di dati spesso utilizzano variabili di fattore in loro formula, perché le variabili di categoria come fattori di gestione garantisce che i dati viene elaborato correttamente da funzioni di machine learning. Per ulteriori informazioni, vedere [R per dummy: variabili Factor] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+Il linguaggio R è il concetto di "fattori", che sono variabili speciali per i dati categorici. Gli esperti di dati spesso utilizzano variabili di fattore in loro formula, perché le variabili di categoria come fattori di gestione garantisce che i dati viene elaborato correttamente da funzioni di machine learning. Per altre informazioni, vedere [R per dummy: fattore variabili](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
 Per impostazione predefinita, le variabili di fattore possono essere convertite da stringhe in numeri interi e viceversa nuovamente per l'archiviazione o l'elaborazione. R `data.frame` funzione gestisce tutte le stringhe come variabili fattore, a meno che l'argomento *stringsAsFactors* è impostato su **False**. Ciò significa che le stringhe vengono automaticamente convertito in un intero per l'elaborazione viene quindi eseguito il mapping alla stringa originale.
 
@@ -85,7 +77,7 @@ Per migliorare le prestazioni di **rx** funzioni analitiche, è possibile sfrutt
 
 Esistono due modi per ottenere la parallelizzazione di R in SQL Server:
 
--   **Utilizzare \@parallelo.** Quando si usa la stored procedure `sp_execute_external_script` per eseguire uno script R, impostare il parametro `@parallel` su `1`. Questo è il metodo migliore se lo script R non **non** usare funzioni RevoScaleR, che hanno altri meccanismi per l'elaborazione. Se lo script utilizza le funzioni RevoScaleR (in genere precedute da "rx"), l'elaborazione parallela viene eseguita automaticamente e non è necessario impostare in modo esplicito `@parallel` a `1`.
+-   **Utilizzare \@paralleli.** Quando si usa la stored procedure `sp_execute_external_script` per eseguire uno script R, impostare il parametro `@parallel` su `1`. Questo è il metodo migliore se lo script R non **non** usare funzioni RevoScaleR, che hanno altri meccanismi per l'elaborazione. Se lo script utilizza le funzioni RevoScaleR (in genere precedute da "rx"), l'elaborazione parallela viene eseguita automaticamente e non è necessario impostare in modo esplicito `@parallel` a `1`.
 
     Se lo script R può essere eseguito in parallelo e se la query SQL può essere eseguito in parallelo, il motore di database crea più processi paralleli. Il numero massimo di processi che possono essere create è uguale al **massimo grado di parallelismo** impostazione (MAXDOP) per l'istanza. Tutti i processi quindi eseguire lo stesso script, ma solo una parte dei dati di ricezione.
     
@@ -139,7 +131,7 @@ Molti algoritmi RevoScaleR supportano i parametri per controllare la modalità d
 
 + [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
 
-    `rxDTree`supporta il `maxDepth` parametro, che controlla la profondità dell'albero delle decisioni. Come `maxDepth` viene aumentato, le prestazioni possono ridursi, pertanto è importante analizzare i vantaggi di aumentare la profondità e incide negativamente sulle prestazioni.
+    `rxDTree` supporta il `maxDepth` parametro, che controlla la profondità dell'albero delle decisioni. Come `maxDepth` viene aumentato, le prestazioni possono ridursi, pertanto è importante analizzare i vantaggi di aumentare la profondità e incide negativamente sulle prestazioni.
 
     È inoltre possibile controllare il bilanciamento tra precisione complessità e la stima di tempo modificando i parametri, ad esempio `maxNumBins`, `maxDepth`, `maxComplete`, e `maxSurrogate`. L'aumento della profondità oltre 10 o 15 può rendere il calcolo molto dispendioso.
 
@@ -159,21 +151,21 @@ Per ulteriori informazioni sull'ottimizzazione di RevoScaleR, vedere i seguenti 
 
 + Articolo del supporto tecnico: [le opzioni per rxDForest e rxDTree l'ottimizzazione delle prestazioni](https://support.microsoft.com/kb/3104235)
 
-+ Metodi per il controllo del modello di base in un modello di struttura ad albero con Boosting: [stima dei modelli utilizzando stocastico Boosting dei gradienti](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ I metodi per controllare modello rientrano in un modello di struttura ad albero con Boosting: [stima dei modelli utilizzando stocastico Boosting dei gradienti](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ Panoramica di come RevoScaleR Sposta ed elaborazione dei dati: [ScaleR di scrittura di algoritmi personalizzati di suddivisione in blocchi](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ Panoramica delle modalità RevoScaleR Sposta ed elaborazione dei dati: [scrivere algoritmi personalizzati suddivisione in blocchi in ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
 + Modello di programmazione per RevoScaleR: [gestendo i thread in RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
-+ Funzione di riferimento per [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
++ Per riferimento alla funzione [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-+ Funzione di riferimento per [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
++ Per riferimento alla funzione [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
 
 ### <a name="use-microsoftml"></a>Utilizzare MicrosoftML
 
 È inoltre consigliabile che cerca nel nuovo **MicrosoftML** pacchetto, che fornisce gli algoritmi di apprendimento scalabile di macchine che è possono utilizzare le trasformazioni fornite da RevoScaleR e i contesti di calcolo.
 
-+ [Introduzione a MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
++ [Guida introduttiva MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
 + [Come scegliere un algoritmo MicrosoftML](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
 
@@ -181,16 +173,16 @@ Per ulteriori informazioni sull'ottimizzazione di RevoScaleR, vedere i seguenti 
 
 Se lo scenario prevede una rapida stima utilizzando un modello archiviato o integrazione di apprendimento in un'applicazione, è possibile utilizzare il [rendere operativo il](https://docs.microsoft.com/r-server/what-is-operationalization) funzionalità di Microsoft R Server (precedentemente noto come DeployR).
 
-+ Come un **esperto di dati**, utilizzare il [mrsdeploy pacchetto](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) condividere il codice R con altri computer e l'integrazione analitica R all'interno di applicazioni web, desktop, mobili e dashboard: [come pubblicare e gestire i servizi web di R in R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ Come un **esperto**, utilizzare il [mrsdeploy pacchetto](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) condividere il codice R con altri computer e l'integrazione analitica R all'interno delle applicazioni web, desktop, mobili e dashboard: [come pubblicare e gestire i servizi web di R in R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ Come un **amministratore**, informazioni su come gestire i pacchetti, monitorare i nodi di web e nodi di calcolo e controllare la protezione per i processi R: [come interagire con e utilizzare i servizi web in R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ Come un **amministratore**informazioni su come gestire i pacchetti, monitorare i nodi di web e nodi di calcolo e controllare la protezione per i processi R: [come interagire con e utilizzare i servizi web in R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>Articoli di questa serie
 
 [Prestazioni di ottimizzazione per R: introduzione](sql-server-r-services-performance-tuning.md)
 
-[Ottimizzazione delle prestazioni per R - configurazione di SQL Server](sql-server-configuration-r-services.md)
+[Ottimizzazione delle prestazioni per R - configurazione SQL Server](sql-server-configuration-r-services.md)
 
 [Ottimizzazione delle prestazioni per R - R ottimizzazione di codice e i dati](r-and-data-optimization-r-services.md)
 
-[Ottimizzazione delle prestazioni - risultati di case study](performance-case-study-r-services.md)
+[Ottimizzazione delle prestazioni - case study sulla risultati](performance-case-study-r-services.md)

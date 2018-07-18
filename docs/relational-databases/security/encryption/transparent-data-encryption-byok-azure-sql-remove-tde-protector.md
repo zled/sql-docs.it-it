@@ -1,29 +1,28 @@
 ---
 title: PowerShell - Rimuovere la protezione TDE - Azure SQL | Microsoft Docs
 description: Guida alle procedure da seguire per rispondere a una protezione TDE potenzialmente compromessa per un database o data warehouse SQL di Azure usando TDE con il supporto BYOK (Bring Your Own Key).
-keywords: 
+keywords: ''
 services: sql-database
-documentationcenter: 
+documentationcenter: ''
 author: becczhang
 manager: craigg
-ms.prod: 
-ms.reviewer: 
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: 
+ms.custom: ''
 ms.component: security
-ms.workload: Inactive
-ms.tgt_pltfrm: 
-ms.devlang: na
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: 30b08c760eff3bdeb6d264d1c9d79c375f0a09ec
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: d83d696accde5d192c151703bb461edae06bc084
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>Rimuovere una protezione Transparent Data Encryption (TDE) con PowerShell
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

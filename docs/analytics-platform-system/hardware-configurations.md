@@ -1,27 +1,21 @@
 ---
-title: Configurazioni hardware (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "L'hardware Analitica piattaforma di strumenti analitici viene progettato con unità scalabili in modo che si acquista la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali."
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
-caps.latest.revision: "9"
-ms.openlocfilehash: 6762775fdec3cd3a01a372ed5c16fbc4a93c1426
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Le configurazioni hardware - Analitica Platform System | Documenti Microsoft
+description: L'hardware del dispositivo Analitica piattaforma di strumenti è progettato con unità scalabili in modo che si acquista la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali. Il dispositivo scalabile archiviazione per Parallel Data Warehouse da alcuni terabyte per oltre 6 petabyte di dati.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5677298e1924959c83cd95b86845e37eab7340e9
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="hardware-configurations"></a>Configurazioni hardware
+# <a name="hardware-configurations---analytics-platform-system"></a>Configurazioni hardware - Analitica Platform System
 L'hardware Analitica piattaforma di strumenti analitici viene progettato con unità scalabili in modo che si acquista la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali. Il dispositivo di scala di archiviazione per SQL Server Parallel Data Wareouse (PDW) da qualche terabyte per oltre 6 petabyte di dati.  
   
 ## <a name="contents"></a>Sommario  
@@ -52,10 +46,10 @@ Ogni fornitore di hardware specifica il numero di unità di scala di dati che è
 ### <a name="scale-out-example---hpe"></a>Scalabilità orizzontale esempio - HPE  
 Questo diagramma mostra un accessorio 3 rack HP che contiene 20 nodi di calcolo.  
   
-![Dispositivo HPE con 20 nodi di calcolo](media/scale-out-hpe.png "accessorio HPE con 20 nodi di calcolo")  
+![Accessorio HPE con 20 nodi di calcolo](media/scale-out-hpe.png "accessorio HPE con 20 nodi di calcolo")  
   
 ### <a name="scale-out-example--dell-quanta"></a>Esempio: DELL, quantum con scalabilità  
 Questo diagramma mostra 3 rack DELL o Quanta appliance che contiene i nodi di calcolo 21.  
   
-![Il dispositivo Dell con nodi di calcolo 21](media/scale-out-dell.png "dispositivo Dell con 21 nodi di calcolo")  
+![Dispositivo Dell con nodi di calcolo 21](media/scale-out-dell.png "accessorio Dell con 21 nodi di calcolo")  
  

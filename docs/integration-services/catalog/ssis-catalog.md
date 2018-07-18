@@ -1,32 +1,30 @@
 ---
 title: Catalogo SSIS | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 04/30/2018
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
   Il catalogo **SSISDB** è il punto centrale dell'utilizzo di progetti [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) che sono stati distribuiti nel server [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ad esempio, è possibile impostare parametri di progetti e pacchetti, configurare ambienti per specificare valori di runtime per i pacchetti, eseguire e risolvere i problemi dei pacchetti e gestire le operazioni del server [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -619,9 +617,7 @@ Per aggiungere il database SSISDB a un gruppo di disponibilità Always On, si pr
   
 Inserire la password specificata durante la creazione del catalogo SSIS nella pagina **Seleziona database** della creazione guidata **Nuovo gruppo di disponibilità**.
 
-Quando viene chiesto di **selezionare la preferenza di sincronizzazione dei dati** selezionare **Ignora sincronizzazione dati iniziale**.
-  
- ![Nuovo gruppo di disponibilità](../../integration-services/service/media/ssis-newavailabilitygroup.png "Nuovo gruppo di disponibilità")  
+![Nuovo gruppo di disponibilità](../../integration-services/service/media/ssis-newavailabilitygroup.png "Nuovo gruppo di disponibilità")  
   
 ####  <a name="Step3"></a> Passaggio 3: Abilitare il supporto SSIS per Always On  
  Dopo aver creato il catalogo di Integration Services, fare clic con il pulsante destro del mouse sul nodo **Cataloghi di Integration Services** e quindi scegliere **Abilita supporto per AlwaysOn**. Verrà visualizzata la finestra di dialogo **Abilita supporto per AlwaysOn** illustrata di seguito. Se questa voce di menu è disabilitata, verificare di avere installato tutti i prerequisiti e fare clic su **Aggiorna**.  

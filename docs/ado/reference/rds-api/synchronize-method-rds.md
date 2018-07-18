@@ -1,30 +1,28 @@
 ---
 title: Synchronize (metodo) (RDS) | Documenti Microsoft
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d223df00d0b32c3f608bcd61207de23da77e15cf
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 763c75a0b098dd76fe650dce2628ee5450be0be7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="synchronize-method-rds"></a>Synchronize (metodo) (RDS)
 Sincronizzare il Recordset specificato con il database specificato dalla stringa di connessione per l'utilizzo in ADO 2.5 e versioni successiva.  
@@ -40,7 +38,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *ConnectionString*  
+ *connectionString*  
  Stringa utilizzata per la connessione al provider OLE DB in cui verrà inviata la richiesta. Se viene utilizzato un gestore, il gestore può modificare o sostituire la stringa di connessione.  
   
  *HandlerString*  

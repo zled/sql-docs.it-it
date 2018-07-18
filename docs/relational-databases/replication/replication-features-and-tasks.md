@@ -1,34 +1,34 @@
 ---
-title: "Caratteristiche e attività di replica | Microsoft Docs"
-ms.custom: 
+title: Caratteristiche e attività di replica | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - development [SQL Server replication]
 - replication [SQL Server], development
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
-caps.latest.revision: "21"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 21
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5a1b9183f8a9cf1c60bd399baf43825c4a3949f6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fc483ee66f8b03e098c0ac94121f47b252157915
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-features-and-tasks"></a>Caratteristiche e attività di replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento include informazioni utili a qualsiasi tipologia di utente (designer, sviluppatore, analista o amministratore) per progettare e implementare soluzioni di replica.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questo argomento sono incluse le informazioni che consentono a qualsiasi tipologia di utente (designer, sviluppatore, analista o amministratore) di progettare e implementare soluzioni di replica.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   

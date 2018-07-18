@@ -1,25 +1,17 @@
 ---
 title: Distribuire e utilizzare analitica utilizzando mrsdeploy | Documenti Microsoft
-ms.custom: 
-ms.date: 08/20/2017
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: b090579bd0a32b901d1c1cedcc26b290d7a68771
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 0f785b4aece13dd2df27988ef6a2e5c6934045fd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>Distribuire e utilizzare analitica utilizzando mrsdeploy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,10 +48,6 @@ Questa funzionalità di distribuzione di R Server offre i seguenti vantaggi:
   
   È possibile utilizzare in tempo reale di punteggio con un oggetto modello R supportato per migliorare la velocità di operazioni di assegnazione dei punteggi.
 
-+ Pubblicare il codice Python come servizio web
-
-  Per esempi, vedere [pubblica e utilizzare il codice Python](./python/publish-consume-python-code.md).
-
 + Utilizzo di batch asincrone
 
   Servizi Web che chiamano per dati di input di grandi dimensioni ora possono essere utilizzati in modo asincrono tramite l'esecuzione del batch.
@@ -88,7 +76,7 @@ Tuttavia, se è necessario installarlo insieme, seguire questi passaggi aggiunti
 
 3. Al termine dell'installazione di **Microsoft Machine Learning Server**manualmente la chiave del Registro di sistema seguente per aggiungere **mrsdeploy**, che consente di specificare la cartella di base per i file R_SERVER. 
 
-    + Creare una nuova chiave del Registro di sistema`H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
+    + Creare una nuova chiave del Registro di sistema `H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
     + Impostare il valore della chiave da `"C:\Program Files\Microsoft SQL Server\140\R_SERVER"`.
 
 4. Al termine, aprire il [amministratore utilità](https://docs.microsoft.com/r-server/operationalize/configure-use-admin-utility).

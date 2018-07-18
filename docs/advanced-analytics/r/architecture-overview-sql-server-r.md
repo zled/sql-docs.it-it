@@ -1,33 +1,24 @@
 ---
-title: Panoramica dell'architettura (SQL Server R Services) | Microsoft Docs
-ms.custom: 
-ms.date: 07/11/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: d23b15bd823c9054d9ddc7f1077bda80614686bd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Panoramica dell'architettura di supporto del linguaggio R in SQL Server | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 3784fe62669b3f6d29e94bea799e19f9eadad5f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>Panoramica dell'architettura di R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questa sezione viene fornita una panoramica dell'architettura di SQL Server 2016 R Services e di servizi di SQL Server 2017 Machine Learning.
 
-L'architettura per l'architettura di estendibilità è lo stesso o molto simili per SQL Server 2016 e versioni SQL Server 2017 e lo stesso vale anche per R e Python. Per semplificare la discussione, tuttavia, questo argomento vengono illustrate solo i componenti di R, inclusi i nuovi componenti aggiunti nel motore di database di SQL Server per supportare l'esecuzione dello script esterno, sicurezza, le librerie di R e interoperabilità con open source di R.
+L'architettura per l'architettura di estendibilità è lo stesso o molto simili per SQL Server 2016 e versioni SQL Server 2017 e lo stesso vale anche per R e Python. Tuttavia, per semplificare la discussione, questo articolo illustra solo i componenti di R, inclusi nuovi componenti aggiunti nel motore di database di SQL Server per supportare l'esecuzione dello script esterno, sicurezza, le librerie di R e interoperabilità con open source di R.
 
 Dettagli aggiuntivi vengono forniti i collegamenti per ogni sezione.
 
@@ -39,7 +30,7 @@ L'architettura è progettata in modo che gli script esterni usando R eseguiti in
 
 Per ridimensionare la soluzione o utilizzare l'elaborazione parallela, è consigliabile utilizzare il [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) pacchetto o [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) pacchetto. Se non si utilizzano le capacità di elaborazione distribuite fornite da queste librerie, è comunque possibile ottenere alcuni miglioramenti delle prestazioni eseguendo codice R nel contesto di SQL Server.
 
-Per ulteriori informazioni sui componenti di script esterni installati o l'interazione di SQL Server con R, vedere [interoperabilità R](../../advanced-analytics/r/r-interoperability-in-sql-server.md)
+Per ulteriori informazioni sui componenti script esterni che vengono installati o l'interazione di SQL Server con R, vedere [interoperabilità R](../../advanced-analytics/r/r-interoperability-in-sql-server.md)
 
 ## <a name="components-to-support-r-integration"></a>Componenti per supportare l'integrazione di R
 

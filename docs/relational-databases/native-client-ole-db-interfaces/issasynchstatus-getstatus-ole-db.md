@@ -1,30 +1,32 @@
 ---
 title: 'Issasynchstatus:: getStatus (OLE DB) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-ole-db-interfaces
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: ISSAsynchStatus::GetStatus (OLE DB)
+apiname:
+- ISSAsynchStatus::GetStatus (OLE DB)
 apitype: COM
-helpviewer_keywords: GetStatus method
+helpviewer_keywords:
+- GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d1a6d91a0224b53a09dd35e1b8adf0f48c77d578
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 455707070a8ee20fd767a510a255db2bfc87d502
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -103,9 +105,9 @@ HRESULT GetStatus(
  Il *hChapter* parametro non è corretto.  
   
  E_UNEXPECTED  
- **Issasynchstatus:: GetStatus** è stato chiamato su un oggetto origine dati, e **IDBInitialize:: Initialize** non è stato chiamato sull'oggetto origine dati.  
+ **Issasynchstatus:: GetStatus** è stato chiamato su un oggetto di origine dati, e **IDBInitialize:: Initialize** non è stato chiamato sull'oggetto origine dati.  
   
- **Issasynchstatus:: GetStatus** è stato chiamato su un set di righe, **ITransaction:: commit** o **ITransaction:: Abort** è stato chiamato e l'oggetto è in uno stato non valido.  
+ **Issasynchstatus:: GetStatus** è stato chiamato su un set di righe **ITransaction:: commit** o **ITransaction:: Abort** è stato chiamato e l'oggetto è in uno stato non valido.  
   
  **Issasynchstatus:: GetStatus** è stato chiamato su un set di righe annullato in modo asincrono nella fase di inizializzazione. Il set di righe si trova in uno stato non valido.  
   
@@ -129,6 +131,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di operazioni asincrone](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

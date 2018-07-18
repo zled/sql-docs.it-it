@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLGetConfigMode | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLGetConfigMode
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLGetConfigMode
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetConfigMode
-helpviewer_keywords: SQLGetConfigMode function [ODBC]
+f1_keywords:
+- SQLGetConfigMode
+helpviewer_keywords:
+- SQLGetConfigMode function [ODBC]
 ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ca766c5cb2e619672193888c791d4dee13a029e8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 397f4ef5a2efd8e663544f5e21171c2184db1b30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode (funzione)
 **Conformità**  
  Introdotta: versione ODBC 3.0  
   
  **Riepilogo**  
- **SQLGetConfigMode** recupera la modalità di configurazione che indica la posizione nelle informazioni di sistema la voce Odbc.ini Elenco valori DSN.  
+ **SQLGetConfigMode** recupera la modalità di configurazione che indica la voce ini Elenca i valori DSN in cui si trova le informazioni di sistema.  
   
 ## <a name="syntax"></a>Sintassi  
   

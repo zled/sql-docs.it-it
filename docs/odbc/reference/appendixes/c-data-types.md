@@ -1,32 +1,29 @@
 ---
 title: Tipi di dati C | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
 - C data types [ODBC]
 - C buffers [ODBC]
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 31de2fc95be1a7ead0b61b2dde493caf8d484fe4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 288ca6cbd5553b963131d34b8e63640518f70ef4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-data-types"></a>Tipi di dati C
 Tipi di dati C ODBC indicano il tipo di dati di buffer C utilizzato per archiviare i dati nell'applicazione.  
@@ -45,7 +42,7 @@ Tipi di dati C ODBC indicano il tipo di dati di buffer C utilizzato per archivia
 |SQL_C_USHORT [j#]|SQLUSMALLINT|Unsigned Integer a breve|  
 |SQL_C_SLONG [j#]|SQLINTEGER|long int|  
 |SQL_C_ULONG [j#]|SQLUINTEGER|unsigned long integer|  
-|SQL_C_FLOAT|SQLREAL|FLOAT|  
+|SQL_C_FLOAT|SQLREAL|float|  
 |SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|unsigned char|  
 |SQL_C_STINYINT [j#]|SQLSCHAR|char con segno|  

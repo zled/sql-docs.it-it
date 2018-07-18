@@ -1,38 +1,34 @@
 ---
 title: Classe di evento QN:Template | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2169d940b03d317493f3894c42e24307c324d952
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 260b0e0a88f74feb60aadf795fd45cbd1de8961d
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="qntemplate-event-class"></a>Classe di evento QN:Template
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-L'evento QN:Template fornisce informazioni sull'utilizzo interno dei modelli di query che rappresentano il meccanismo tramite il quale [!INCLUDE[ssDE](../../includes/ssde-md.md)] consente di condividere le definizioni di una query per la notifica. Questi modelli vengono creati insieme alle tabelle di parametri. [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un evento di questo tipo quando viene creato, utilizzato o eliminato un modello di query.  
+  L'evento QN:Template fornisce informazioni sull'utilizzo interno dei modelli di query che rappresentano il meccanismo tramite il quale [!INCLUDE[ssDE](../../includes/ssde-md.md)] consente di condividere le definizioni di una query per la notifica. Questi modelli vengono creati insieme alle tabelle di parametri. [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un evento di questo tipo quando viene creato, utilizzato o eliminato un modello di query.  
   
 ## <a name="qntemplate-event-class-data-columns"></a>Colonne dati della classe di evento QN:Template  
   
-|Colonna di dati|Tipo|Description|Numero colonna|Filtrabile|  
+|Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  

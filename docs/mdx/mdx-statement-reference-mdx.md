@@ -1,32 +1,20 @@
 ---
 title: Riferimento alle istruzioni MDX (MultiDimensional Expression) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords:
-- statements [MDX]
-- Multidimensional Expressions [Analysis Services], statements
-- MDX [Analysis Services], statements
-ms.assetid: 812d2647-587d-4fcb-8db8-64a5e4b23aec
-caps.latest.revision: "26"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 331f4e7d67524bb6fc4d3af706f9a28ef9dabb95
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 44979fdaa5673573587a2e05f837b808d6cb06ef
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580223"
 ---
 # <a name="mdx-statement-reference-mdx"></a>Guida di riferimento alle istruzioni MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,11 +25,11 @@ ms.lasthandoff: 01/08/2018
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Istruzioni di Scripting MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)|Descrive le istruzioni di scripting MDX per la gestione di contesto di query e ambito e per il controllo del flusso in script MDX.|  
-|[Le istruzioni di definizione dei dati MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)|Descrive le istruzioni MDX di definizione dati per la creazione, l'eliminazione e la manipolazione di oggetti multidimensionali.|  
-|[Le istruzioni di manipolazione dei dati MDX &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|Descrive le istruzioni MDX di manipolazione dei dati per il recupero e la manipolazione dei dati di oggetti multidimensionali.|  
+|[Istruzioni di Scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)|Descrive le istruzioni di scripting MDX per la gestione di contesto di query e ambito e per il controllo del flusso in script MDX.|  
+|[Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|Descrive le istruzioni MDX di definizione dati per la creazione, l'eliminazione e la manipolazione di oggetti multidimensionali.|  
+|[Istruzioni MDX di manipolazione dei dati &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|Descrive le istruzioni MDX di manipolazione dei dati per il recupero e la manipolazione dei dati di oggetti multidimensionali.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti al linguaggio MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
+ [Riferimenti al linguaggio MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

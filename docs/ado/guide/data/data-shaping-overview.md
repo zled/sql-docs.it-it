@@ -1,33 +1,30 @@
 ---
 title: Data Shaping Panoramica | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c5ebd3d67ffc5c3f3aba0f481182c5812f4523a5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ba1b8acd52c86c0bffa19ec22658008a3b8f5601
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-shaping-overview"></a>Data Shaping Panoramica
-*Il data shaping* significa che la creazione di relazioni gerarchiche tra due o più entità logiche in una query. La gerarchia può essere visualizzata in relazioni padre-figlio tra un record di uno [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e uno o più record (noto anche come un capitolo) di un altro **Recordset**. In una relazione padre-figlio, l'elemento padre **Recordset** contiene l'elemento figlio **Recordset**. Un esempio di tale relazione gerarchica è customers e orders. Per ogni cliente in un database, possono essere presenti zero o più ordini. La relazione gerarchica può essere ricorsivo, vale a dire che i record nipote possono essere annidati in un record figlio. In sostanza, un record gerarchico può essere annidato a qualsiasi profondità. In pratica, ADO limita la ricorsione a un massimo di 512 **Recordset**s.  
+*Il data shaping* la creazione di relazioni gerarchiche tra due o più entità logiche in una query. La gerarchia può essere visualizzata in relazioni padre-figlio tra un record di uno [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e uno o più record (noto anche come un capitolo) di un altro **Recordset**. In una relazione padre-figlio, l'elemento padre **Recordset** contiene l'elemento figlio **Recordset**. Un esempio di tale relazione gerarchica è customers e orders. Per ogni cliente in un database, possono essere presenti zero o più ordini. La relazione gerarchica può essere ricorsivo, vale a dire che i record nipote possono essere annidati in un record figlio. In sostanza, un record gerarchico può essere annidato a qualsiasi profondità. In pratica, ADO limita la ricorsione a un massimo di 512 **Recordset**s.  
   
  In generale, colonne di una forma **Recordset** può contenere i dati da un provider di dati, ad esempio Microsoft® SQL Server, i riferimenti a un altro **Recordset**, valori derivati da un calcolo su una singola riga di un  **Recordset**, o valori derivati da un'operazione su una colonna di un intero **Recordset**. Una colonna può inoltre essere appena creato e vuota.  
   

@@ -1,16 +1,14 @@
 ---
-title: sp_create_removable (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_create_removable (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_removable
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7b5a66828c1ee49734e720137d3a0ededc0098e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7ac999e58a6c88d8a121d7708b6fc9e954cf7419
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,37 +59,37 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@dbname=** ] **'***dbname***'**  
- Nome del database da creare per utilizzarlo nei supporti rimovibili. *dbname* è **sysname**.  
+ [  **@dbname=** ] **'***dbname***'**  
+ Nome del database da creare per utilizzarlo nei supporti rimovibili. *dbname* viene **sysname**.  
   
- [ **@syslogical=** ] **'***syslogical***'**  
- Nome logico del file contenente le tabelle del catalogo di sistema. *syslogical* è **sysname**.  
+ [  **@syslogical=** ] **'***syslogical***'**  
+ Nome logico del file contenente le tabelle del catalogo di sistema. *syslogical* viene **sysname**.  
   
  [  **@sysphysical=** ] **'***sysphysical***'**  
- Nome fisico. In esso è incluso un percorso completo del file contenente le tabelle del catalogo di sistema. *sysphysical* è **nvarchar (260)**.  
+ Nome fisico. In esso è incluso un percorso completo del file contenente le tabelle del catalogo di sistema. *sysphysical* viene **nvarchar(260)**.  
   
- [ **@syssize=** ] *syssize*  
- Dimensione in megabyte del file contenente le tabelle del catalogo di sistema. *syssize* è **int**. Il valore minimo *syssize* è 1.  
+ [  **@syssize=** ] *syssize*  
+ Dimensione in megabyte del file contenente le tabelle del catalogo di sistema. *syssize* viene **int**. Il valore minimo *syssize* è 1.  
   
- [ **@loglogical=** ] **'***loglogical***'**  
- Nome logico del file contenente il log delle transazioni. *loglogical* è **sysname**.  
+ [  **@loglogical=** ] **'***loglogical***'**  
+ Nome logico del file contenente il log delle transazioni. *loglogical* viene **sysname**.  
   
  [  **@logphysical=** ] **'***logphysical***'**  
- Nome fisico. In esso è incluso un percorso completo del file contenente il log delle transazioni. *logphysical* è **nvarchar (260)**.  
+ Nome fisico. In esso è incluso un percorso completo del file contenente il log delle transazioni. *logphysical* viene **nvarchar(260)**.  
   
  [  **@logsize=** ] *logsize*  
- Dimensioni in megabyte del file contenente il log delle transazioni. *LogSize* è **int**. Il valore minimo *logsize* è 1.  
+ Dimensioni in megabyte del file contenente il log delle transazioni. *LogSize* viene **int**. Il valore minimo *logsize* è 1.  
   
  [  **@datalogical1=** ] **'***datalogical***'**  
- Nome logico di un file contenente le tabelle di dati. *datalogical* è **sysname**.  
+ Nome logico di un file contenente le tabelle di dati. *datalogical* viene **sysname**.  
   
  Il numero dei file di dati è compreso tra 1 e 16. Vengono in genere creati più file di dati quando si prevede che il database sia di grandi dimensioni e debba essere pertanto suddiviso su più dischi.  
   
  [  **@dataphysical1=** ] **'***dataphysical***'**  
- Nome fisico. In esso è incluso un percorso completo di un file contenente le tabelle di dati. *dataphysical* è **nvarchar (260)**.  
+ Nome fisico. In esso è incluso un percorso completo di un file contenente le tabelle di dati. *dataphysical* viene **nvarchar(260)**.  
   
  [  **@datasize1=** ] **'***datasize***'**  
- Dimensioni in megabyte di un file contenente le tabelle di dati. *DataSize* è **int**. Il valore minimo *datasize* è 1.  
+ Dimensioni in megabyte di un file contenente le tabelle di dati. *DataSize* viene **int**. Il valore minimo *datasize* è 1.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -118,7 +115,7 @@ sp_create_removable
 |Ripristino|Scollegamento|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dati del set di file di log e le autorizzazioni.  
+>  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non vengono impostate autorizzazioni per i file di dati e di log.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente il database `inventory` viene creato come database rimovibile.  

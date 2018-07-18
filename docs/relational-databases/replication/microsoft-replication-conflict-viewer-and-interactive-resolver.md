@@ -1,33 +1,33 @@
 ---
 title: Visualizzatore conflitti di replica Microsoft e sistema di risoluzione dei conflitti interattivo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - replication conflict viewer [SQL Server]
 - interactive resolver [SQL Server replication]
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
-caps.latest.revision: "22"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 22
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5bbc5ed6ee2bb4713430e00394869e915ddada9d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 08691148eb216a3b1be832f123de45a72a24ab15
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Visualizzatore conflitti di replica Microsoft e sistema di risoluzione dei conflitti interattivo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa sezione contiene informazioni sul Visualizzatore conflitti di replica per la replica di tipo merge e la replica transazionale sul sistema di risoluzione interattivo per la replica di tipo merge:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questa sezione vengono fornite informazioni sul Visualizzatore conflitti di replica per la replica di tipo merge e la replica transazionale sul sistema di risoluzione interattivo per la replica di tipo merge:  
   
 -   [Visualizzatore conflitti di replica Microsoft &#40;replica di tipo merge&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  
   

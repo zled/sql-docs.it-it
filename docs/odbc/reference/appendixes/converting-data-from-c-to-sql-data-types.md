@@ -1,16 +1,14 @@
 ---
 title: Conversione di dati c ai tipi di dati SQL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], about converting
 - converting data from c to SQL types [ODBC]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bb1d1c07f1453886fd91159eabad97dc90b9b191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f08f4294b5b6c44c54d9f577ec423f7d298181a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversione di dati c ai tipi di dati SQL
 Quando un'applicazione chiama **SQLExecute** o **SQLExecDirect**, il driver recupera i dati per tutti i parametri associati con **SQLBindParameter** da posizioni di archiviazione in l'applicazione. Quando un'applicazione chiama **SQLSetPos**, il driver recupera i dati per un aggiornamento o l'operazione di aggiunta di colonne associate a **SQLBindCol**. Per i parametri data-at-execution, l'applicazione invia i dati del parametro con **SQLPutData**. Se necessario, il driver converte i dati dal tipo di dati specificato per il *ValueType* argomento in **SQLBindParameter** al tipo di dati specificato dal *ParameterType*argomento **SQLBindParameter**e quindi invia i dati all'origine dati.  
@@ -54,12 +51,12 @@ Quando un'applicazione chiama **SQLExecute** o **SQLExecDirect**, il driver recu
   
 -   **Lunghezza in byte colonna** : numero di byte necessari per archiviare i dati nell'origine dati.  
   
--   **Lunghezza in byte di caratteri** , ovvero il numero massimo di byte necessari per visualizzare i dati in formato carattere. Si tratta come definito per ogni tipo di dati SQL in [visualizzare dimensioni](../../../odbc/reference/appendixes/display-size.md), ma è di lunghezza in byte di caratteri in byte, mentre le dimensioni di visualizzazione in caratteri.  
+-   **Lunghezza in byte di caratteri** , ovvero numero massimo di byte necessari per visualizzare i dati in formato carattere. Si tratta come definito per ogni tipo di dati SQL in [visualizzare dimensioni](../../../odbc/reference/appendixes/display-size.md), ma è di lunghezza in byte di caratteri in byte, mentre le dimensioni di visualizzazione in caratteri.  
   
 -   **Numero di cifre** : numero di caratteri utilizzato per rappresentare un numero, incluso il segno meno, il separatore decimale e l'esponente (se necessario).  
   
 -   **Parole in**   
-     ***corsivo*** , gli elementi della grammatica SQL. Per la sintassi di elementi di sintassi, vedere [grammatica SQL di appendice c:](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     ***italics*** , ovvero gli elementi della grammatica SQL. Per la sintassi di elementi di sintassi, vedere [grammatica SQL di appendice c:](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

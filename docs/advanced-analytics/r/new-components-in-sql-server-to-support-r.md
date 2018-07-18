@@ -1,33 +1,24 @@
 ---
 title: Componenti di SQL Server per il supporto di R | Documenti Microsoft
-ms.custom: 
-ms.date: 04/05/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: fa29a924b34bbe5737a89f5b111c92053b62d36b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Componenti di SQL Server per il supporto di R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In SQL Server 2016 e 2017, il motore di database include i componenti facoltativi che supportano l'estensibilità per i linguaggi di script esterni, tra R e Python. È stato aggiunto il supporto per il linguaggio R in SQL Server 2016; il supporto per Python è stato aggiunto in servizi di SQL Server 2017 Machine Learning.
 
-In questo argomento vengono descritti i nuovi componenti che funzionano in modo specifico con il linguaggio R. Per una descrizione del funzionano di questi componenti con R open source, vedere [interoperabilità R](r-interoperability-in-sql-server.md)
+In questo argomento vengono descritti i nuovi componenti che funzionano in modo specifico con il linguaggio R. Per informazioni sul funzionamento di questi componenti con R open source, vedere [interoperabilità R](r-interoperability-in-sql-server.md)
 
 ## <a name="components-and-providers"></a>Provider e componenti
 
@@ -112,7 +103,7 @@ Il codice R eseguito dall'interno di [!INCLUDE[ssNoVersion_md](../../includes/ss
 4. BxlServer si coordina con il runtime R per gestire gli scambi di dati con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e l'archiviazione dei risultati.
 5. SQL Satellite gestisce le comunicazioni sulle attività correlate e i processi con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer usa SQL Satellite per comunicare lo stato e i risultati a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Ottiene i risultati e chiude i processi e attività correlate.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ottiene i risultati e chiude le attività e i processi correlati.
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>Script R eseguiti da un client remoto
 

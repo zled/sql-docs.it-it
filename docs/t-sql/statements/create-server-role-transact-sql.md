@@ -1,16 +1,14 @@
 ---
-title: CREARE il ruolo di SERVER (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: CREATE SERVER ROLE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVER_ROLE_TSQL
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - user-defined server roles [SQL Server]
 - roles, server
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ad6b6aa0eac42e8f415de6e4633027aa70ee9158
-ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.openlocfilehash: 6edd79d676607594af119d0b0b9c64a1d385bcde
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +52,13 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  *role_name*  
  Nome del ruolo del server che si desidera creare.  
   
- AUTORIZZAZIONE *server_principal*  
+ AUTHORIZATION *server_principal*  
  Account di accesso che diventerà proprietario del nuovo ruolo del server. Se non viene specificato alcun account di accesso, il ruolo del server sarà di proprietà dell'account di accesso che esegue l'istruzione CREATE SERVER ROLE.  
   
-## <a name="remarks"></a>Osservazioni  
- I ruoli del server sono entità a protezione diretta a livello di server. Dopo aver creato un ruolo del server, configurare le autorizzazioni a livello di server per il ruolo tramite GRANT, DENY e REVOKE. Per aggiungere o rimuovere gli account di accesso da un ruolo di server, utilizzare [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md). Per eliminare un ruolo del server, utilizzare [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md). Per altre informazioni, vedere [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ I ruoli del server sono entità a protezione diretta a livello di server. Dopo aver creato un ruolo del server, configurare le autorizzazioni a livello di server per il ruolo tramite GRANT, DENY e REVOKE. Per aggiungere o rimuovere account di accesso a o da un ruolo del server, usare [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md). Per eliminare un ruolo del server, usare [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md). Per altre informazioni, vedere [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- È possibile visualizzare i ruoli del server eseguendo una query di [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) e [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) viste del catalogo.  
+ È possibile visualizzare i ruoli del server eseguendo una query sulle viste del catalogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) e [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Non è possibile concedere ai ruoli del server l'autorizzazione sulle entità a protezione diretta a livello di database. Per creare ruoli del database, vedere [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md).  
   
@@ -72,7 +69,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
  È anche richiesta l'autorizzazione IMPERSONATE in *server_principal* per gli account di accesso, l'autorizzazione ALTER per i ruoli del server usati come *server_principal*o l'appartenenza a un gruppo di Windows usato come server_principal.  
   
- Verrà generato l'evento Audit Server Principal Management con il tipo di oggetto impostato al ruolo del server e il tipo di evento da aggiungere.  
+ Verrà generato l'evento Audit Server Principal Management con il tipo di oggetto impostato sul ruolo del server e il tipo di evento da aggiungere.  
   
  Se si utilizza l'opzione AUTHORIZATION per assegnare la proprietà del ruolo del server, sono necessarie anche le autorizzazioni seguenti:  
   

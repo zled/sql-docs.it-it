@@ -1,31 +1,23 @@
 ---
 title: Creare misure e gruppi di misure nei modelli multidimensionali | Documenti Microsoft
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: measure groups [Analysis Services], defining
-ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
-caps.latest.revision: "17"
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a66d433e5b96e8012e8c4c05c14d3078235db958
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fde4dd3ac818935319f0331448e552163a6e148f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Creare misure e gruppi di misure nei modelli multidimensionali
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Oggetto *misura* è un'aggregazione di valori di dati numerici, ad esempio sum, count, minimo, massimo, medio o un'espressione MDX personalizzata creata. Un *gruppo di misure* è un contenitore per una o più misure. Tutte le misure sono disponibili in un gruppo di misure, anche se esiste una sola misura. Un cubo deve avere almeno una misura e un gruppo di misure.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Una *misura* è un'aggregazione di valori di dati numerici, ad esempio somme, conteggi, valori minimi, valori massimi, medie o un'espressione MDX personalizzata creata. Un *gruppo di misure* è un contenitore per una o più misure. Tutte le misure sono disponibili in un gruppo di misure, anche se esiste una sola misura. Un cubo deve avere almeno una misura e un gruppo di misure.  
   
  In questo argomento sono contenute le sezioni seguenti:  
   
@@ -91,6 +83,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Cubi nei modelli multidimensionali](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [Misure e gruppi di misure](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
+ [Le misure e gruppi di misure](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   
   

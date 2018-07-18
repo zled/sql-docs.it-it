@@ -1,16 +1,14 @@
 ---
-title: STInteriorRingN (tipo di dati geometry) | Documenti Microsoft
-ms.custom: 
+title: STInteriorRingN (tipo di dati geometry) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STInteriorRingN_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - STInteriorRingN (geometry Data Type)
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7335cdeab403eb8530a7a26742c7c0d715dce0a1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a1de9fabd5c7f3dcfd7fd128599bc03b7489d033
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce l'anello interno specificato di un **Polygongeometry** istanza.
+Restituisce l'anello interno specificato di un'istanza **Polygongeometry**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,21 +41,21 @@ Restituisce l'anello interno specificato di un **Polygongeometry** istanza.
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È un **int** espressione compreso tra 1 e il numero di anelli interni nel **geometry** istanza.  
+ *expression*  
+ Espressione **int** compresa tra 1 e il numero di anelli interni nell'istanza **geometry**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
- Aprire tipo Geospatial Consortium (OGC): **LineString**  
+ Tipo OGC (Open Geospatial Consortium): **LineString**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce **null** se il **geometry** istanza non è un poligono. Questo metodo genererà inoltre un **ArgumentOutOfRangeException** se l'espressione è maggiore del numero di anelli. Il numero di anelli può essere restituito utilizzando `STNumInteriorRing``()`.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce **null** se l'istanza **geometry** non è un poligono. Questo metodo genererà anche un'eccezione **ArgumentOutOfRangeException** se l'espressione è maggiore del numero di anelli. Il numero di anelli può essere restituito usando `STNumInteriorRing``()`.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creato un `Polygon` istanza e viene utilizzato `STInteriorRingN()` per restituire l'anello interno del poligono come un **LineString**.  
+ Nell'esempio seguente viene creata un'istanza `Polygon` e viene usato `STInteriorRingN()` per restituire l'anello interno del poligono come **LineString**.  
   
 ```  
 DECLARE @g geometry;  

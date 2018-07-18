@@ -1,16 +1,14 @@
 ---
 title: RIGHT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RIGHT_TSQL
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: b6680078aff2e103655a94ec157371a0d09f79be
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4a875727fe72fab974e95850a8dc45bb22070d64
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,10 +46,10 @@ RIGHT ( character_expression , integer_expression )
   
 ## <a name="arguments"></a>Argomenti  
  *character_expression*  
- È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di dati carattere o binario. *character_expression* può essere una costante, variabile o colonna. *character_expression* può essere qualsiasi tipo di dati, eccetto **testo** o **ntext**, che può essere convertito in modo implicito in **varchar** o  **nvarchar**. In caso contrario, utilizzare il [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) funzione per convertire esplicitamente *character_expression*.  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di dati di tipo carattere o binario. *character_expression* può essere una costante, una variabile o una colonna. *character_expression* può essere di qualsiasi tipo di dati, eccetto **text** o **ntext**, implicitamente convertibile in **varchar** o **nvarchar**. In alternativa usare la funzione [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) per convertire in modo esplicito *character_expression*.  
   
  *integer_expression*  
- È un numero intero positivo che specifica il numero di caratteri di *character_expression* verranno restituiti. Se *integer_expression* è negativo, viene restituito un errore. Se *integer_expression* è di tipo **bigint** e contiene un valore elevato, *character_expression* deve essere di un tipo di dati di grandi dimensioni, ad esempio **varchar(max)**.  
+ Valore Integer positivo che specifica quanti caratteri di *character_expression* verranno restituiti. Se l'argomento *integer_expression* è negativo, viene restituito un errore. Se *integer_expression* è di tipo **bigint** e contiene un valore elevato, *character_expression* deve essere di un tipo di dati di grandi dimensioni, ad esempio **varchar(max)**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce **varchar** quando *character_expression* è un tipo di dati carattere non Unicode.  
@@ -63,7 +61,7 @@ RIGHT ( character_expression , integer_expression )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-right-with-a-column"></a>R: con una colonna di destra  
+### <a name="a-using-right-with-a-column"></a>A. Uso di LEFT con una colonna  
  Nell'esempio seguente vengono restituiti gli ultimi cinque caratteri del nome di ciascuna persona nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -88,10 +86,10 @@ Rob
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-right-with-a-column"></a>B. Con una colonna di destra  
- L'esempio seguente restituisce gli ultimi cinque caratteri di ogni cognome nel `DimEmployee` tabella.  
+### <a name="b-using-right-with-a-column"></a>B. Uso di RIGHT con una colonna  
+ Nell'esempio seguente vengono restituiti gli ultimi cinque caratteri di ogni cognome nella tabella `DimEmployee`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -112,8 +110,8 @@ rello
 lters
  ```  
   
-### <a name="c-using-right-with-a-character-string"></a>C. Utilizzo di RIGHT con una stringa di caratteri  
- L'esempio seguente usa `RIGHT` per restituire i primi due caratteri della stringa di caratteri `abcdefg`.  
+### <a name="c-using-right-with-a-character-string"></a>C. Uso di LEFT con una stringa di caratteri  
+ Nell'esempio seguente viene usata la funzione `RIGHT` per restituire gli ultimi due caratteri della stringa di caratteri `abcdefg`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -135,9 +133,9 @@ fg
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

@@ -1,31 +1,41 @@
 ---
 title: Eseguire un pacchetto SSIS dal prompt dei comandi | Microsoft Docs
-ms.date: 09/25/2017
-ms.topic: article
-ms.prod: sql-non-specified
+ms.date: 05/21/2018
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d5c64fa4ba32ebd9e95d728b3a7655b523d9627
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 018a1b6e8e75ce89a1c1679262d185381f432b39
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34454864"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Eseguire un pacchetto SSIS dal prompt dei comandi con DTExec.exe
-Questa esercitazione introduttiva illustra come eseguire un pacchetto SSIS dal prompt dei comandi eseguendo `DTExec.exe` con i parametri appropriati.
+Questa guida introduttiva illustra come eseguire un pacchetto SSIS al prompt dei comandi eseguendo `DTExec.exe` con i parametri appropriati.
 
 > [!NOTE]
 > Il metodo descritto in questo articolo non è stato testato con i pacchetti distribuiti in un server di database SQL di Azure.
 
 Per altre informazioni su `DTExec.exe`, vedere [Utilità dtexec](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility).
+
+## <a name="supported-platforms"></a>Piattaforme supportate
+
+È possibile usare le informazioni di questa guida introduttiva per eseguire un pacchetto SSIS nelle piattaforme seguenti:
+
+-   SQL Server in Windows.
+
+Il metodo descritto in questo articolo non è stato testato con i pacchetti distribuiti in un server di database SQL di Azure. Per altre informazioni sulla distribuzione e l'esecuzione di pacchetti in Azure, vedere [Spostare i carichi di lavoro di SQL Server Integration Services nel cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Non è possibile usare le informazioni di questa guida introduttiva per eseguire un pacchetto SSIS in Linux. Per altre informazioni sull'esecuzione di pacchetti in Linux, vedere [Estrarre, trasformare e caricare i dati in Linux con SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
 ## <a name="run-a-package-with-dtexec"></a>Eseguire un pacchetto con dtexec
 

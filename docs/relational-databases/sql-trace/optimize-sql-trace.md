@@ -1,35 +1,35 @@
 ---
 title: Ottimizzare l'uso di Traccia SQL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: sql-trace
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - time [SQL Server], traces
 - SQL Trace, performance
 - traces [SQL Server], performance
 - performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
-caps.latest.revision: "25"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 25
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 04c90ac8025d4939c6c9606d63c5d35c5d68aabe
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 15dc4212e7a0328f584ba2149adc177631a3ce60
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimize-sql-trace"></a>Ottimizzare l'utilizzo di Traccia SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sebbene l'esecuzione di Traccia SQL comporti costi di prestazioni significativi, in quanto la funzionalità usa le risorse di sistema per raccogliere dati, è possibile adottare numerosi accorgimenti per ridurre tali costi. Per ridurre i costi di prestazioni provocati dall'utilizzo di una traccia, provare le soluzioni seguenti:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Sebbene l'esecuzione di Traccia SQL comporti costi di prestazioni significativi, in quanto la funzionalità utilizza le risorse di sistema per raccogliere dati, è possibile adottare numerosi accorgimenti per ridurre tali costi. Per ridurre i costi di prestazioni provocati dall'utilizzo di una traccia, provare le soluzioni seguenti:  
   
 -   Utilizzare il prompt dei comandi per eseguire tracce. L'utilizzo di un'interfaccia utente grafica influisce sulle prestazioni. Per altre informazioni, vedere [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).  
   

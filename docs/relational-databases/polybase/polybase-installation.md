@@ -1,30 +1,25 @@
 ---
 title: Installazione di PolyBase | Microsoft Docs
-ms.custom: 
-ms.date: 08/31/2016
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 02/23/2018
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: polybase
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase, installation
-ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7a897b2a3a74900763cb6de6eb398e14b5d1bdb1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="polybase-installation"></a>Installazione di PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,17 +28,23 @@ ms.lasthandoff: 02/12/2018
   
 ## <a name="prerequisites"></a>Prerequisites  
   
--   Copia di valutazione di SQL Server a 64 bit  
+- Copia di valutazione di SQL Server a 64 bit  
   
--   Microsoft .NET Framework 4.5.  
+- Microsoft .NET Framework 4.5.  
+
+- Oracle Java SE Runtime Environment (JRE). Sono supportate la versione 7 (a partire da 7.51) e 8 (la versione [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) o [JRE Server](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)). Passare a [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Download di Java SE). Il programma di installazione avrà esito negativo se JRE non è presente. JRE9 e JRE10 non sono supportati.
+    
+- Memoria minima: 4 GB  
   
--   Oracle Java SE RunTime Environment (JRE) versione 7.51 o successiva (64 bit) (è valido sia [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) che [JRE Server](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) ). Passare a [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Download di Java SE). Il programma di installazione avrà esito negativo se JRE non è presente.  
+- Spazio su disco minimo: 2 GB  
   
--   Memoria minima: 4 GB  
-  
--   Spazio su disco minimo: 2 GB  
-  
--   Polybase funziona correttamente se è abilitato il protocollo TCP/IP. TCP/IP è abilitato per impostazione predefinita in tutte le edizioni di SQL Server tranne le edizioni Developer e SQL Server Express. Perché Polybase funzioni correttamente nelle edizioni Developer ed Express è necessario abilitare la connettività TCP/IP (vedere [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).
+- Polybase funziona correttamente se è abilitato il protocollo TCP/IP. TCP/IP è abilitato per impostazione predefinita in tutte le edizioni di SQL Server tranne le edizioni Developer e SQL Server Express. Perché Polybase funzioni correttamente nelle edizioni Developer ed Express è necessario abilitare la connettività TCP/IP (vedere [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).
+
+- Un'origine dati esterna, ovvero un BLOB di Azure o un cluster Hadoop. Per le versioni supportate di Hadoop, vedere [Configurazione di PolyBase](#supported).  
+
+
+> [!NOTE]
+>   Se si prevede di usare la funzionalità di distribuzione di calcolo su Hadoop, è necessario assicurarsi che il cluster Hadoop di destinazione disponga dei componenti principali di HDFS, Yarn/MapReduce con server Jobhistory abilitato. PolyBase invia la query di distribuzione tramite MapReduce e recupera lo stato dal server JobHistory. Senza uno dei due componenti la query avrà esito negativo. 
   
  **Note**  
   
@@ -86,7 +87,7 @@ Dopo aver installato PolyBase in un nodo singolo o in un gruppo di scalabilità 
 ##  <a name="installing"></a> Installare usando un prompt dei comandi  
  Usare i valori in questa tabella per creare gli script di installazione. Il **servizio motore PolyBase di SQL Server** e **SQL Server PolyBase Data Movement Service** devono essere eseguiti con lo stesso account. In un gruppo con scalabilità orizzontale di PolyBase, i servizi di PolyBase su tutti i nodi devono essere eseguiti con lo stesso account di dominio.  
   
-|componente di SQL Server|Parametro e valori|Description|  
+|componente di SQL Server|Parametro e valori|Descrizione|  
 |--------------------------|--------------------------|-----------------|  
 |Controllo dell'installazione di SQL Server|**Required**<br /><br /> /FEATURES=PolyBase|Viene selezionata la funzionalità PolyBase.|  
 |servizio motore PolyBase di SQL Server|**Facoltativo**<br /><br /> /PBENGSVCACCOUNT|Viene specificato l'account per il servizio motore. L'impostazione predefinita è **NT Authority\NETWORK SERVICE**.|  

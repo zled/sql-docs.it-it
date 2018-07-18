@@ -1,16 +1,14 @@
 ---
 title: ALL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 142fbd5b352a73e382f89a61f60fba6373902172
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 39d5d8af39a63b89d6d65468645899d090d101e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,13 +48,13 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
   
 ## <a name="arguments"></a>Argomenti  
  *scalar_expression*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida.  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  Operatore di confronto.  
   
  *subquery*  
- Sottoquery che restituisce un set di risultati a colonna singola. Il tipo di dati della colonna restituita deve essere il tipo di dati stesso come il tipo di dati di *scalar_expression*.  
+ Sottoquery che restituisce un set di risultati a colonna singola. Il tipo di dati della colonna restituita deve essere uguale a quello di *scalar_expression*.  
   
  Istruzione SELECT con restrizioni, in cui la clausola ORDER BY e la parola chiave INTO non sono consentite.  
   
@@ -65,17 +62,17 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>Valore restituito  
- Restituisce TRUE se il confronto specificato è TRUE per tutte le coppie (*scalar_expression***,***x)*, quando *x* è un valore nel set di colonna singola; in caso contrario restituisce FALSE.  
+ Restituisce TRUE se il confronto specificato è TRUE per tutte le coppie (*scalar_expression ***,*** x)*, dove *x* è un valore del set di valori a colonna singola. In caso contrario restituisce FALSE.  
   
-## <a name="remarks"></a>Osservazioni  
- TUTTI richiede il *scalar_expression* deve essere confrontato con ogni valore viene restituito dalla sottoquery. Ad esempio, se la sottoquery restituisce i valori 2 e 3, *scalar_expression* < = ALL (sottoquery) restituisce TRUE per un *scalar_expression* di 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (sottoquery) restituisce false, perché alcuni dei valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  
+## <a name="remarks"></a>Remarks  
+ ALL specifica che l'argomento *scalar_expression* deve essere confrontato in modo univoco con ogni valore restituito dalla sottoquery. Se ad esempio la sottoquery restituisce i valori 2 e 3, *scalar_expression* <= ALL (sottoquery) restituisce TRUE se il valore di *scalar_expression* è 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (subquery) restituisce FALSE, in quanto alcuni valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  
   
- Per le istruzioni che richiedono il *scalar_expression* per deve essere confrontato a un solo valore restituito dalla sottoquery, vedere [alcune &#124; I &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
+ Per le istruzioni che specificano che l'argomento *scalar_expression* deve essere confrontato in modo univoco con un solo valore restituito dalla sottoquery, vedere [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
- Le informazioni contenute in questo sono rilevanti per l'utilizzo dell'opzione ALL con una sottoquery. TUTTE possono essere utilizzate anche con [unione](../../t-sql/language-elements/set-operators-union-transact-sql.md) e [selezionare](../../t-sql/queries/select-transact-sql.md).  
+ Le informazioni contenute in questo sono rilevanti per l'utilizzo dell'opzione ALL con una sottoquery. L'opzione ALL può essere usata anche con [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) e [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata una stored procedure che determina se tutti i componenti di un oggetto specificato `SalesOrderID` nel [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database può essere prodotti nel numero di giorni specificato. Nell'esempio viene utilizzata una sottoquery per creare un elenco contenente i numeri corrispondenti ai valori di `DaysToManufacture` per tutti i componenti della colonna `SalesOrderID` specifica e viene quindi verificato che tutti i valori di `DaysToManufacture` siano maggiori del numero di giorni specificato.  
+ Nell'esempio seguente viene creata una stored procedure che determina se tutti i componenti di una colonna `SalesOrderID` specificata nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] possono essere prodotti nel numero di giorni indicato. Nell'esempio viene utilizzata una sottoquery per creare un elenco contenente i numeri corrispondenti ai valori di `DaysToManufacture` per tutti i componenti della colonna `SalesOrderID` specifica e viene quindi verificato che tutti i valori di `DaysToManufacture` siano maggiori del numero di giorni specificato.  
   
 ```  
 -- Uses AdventureWorks  
@@ -117,10 +114,10 @@ EXECUTE DaysToBuild 49080, 1 ;
   
 ## <a name="see-also"></a>Vedere anche  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  

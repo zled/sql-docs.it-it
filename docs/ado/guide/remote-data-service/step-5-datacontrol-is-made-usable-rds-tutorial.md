@@ -1,30 +1,27 @@
 ---
-title: "Passaggio 5: DataControl è rendere utilizzabile (esercitazione su RDS) | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 'Passaggio 5: DataControl è rendere utilizzabile (esercitazione su RDS) | Documenti Microsoft'
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bc51b8047a4eddc007dfbb46cbc087676800d54b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 564c9b1984226c02ab1cb960ff6e4ed32b5527d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Passaggio 5: DataControl è rendere utilizzabile (esercitazione di servizi desktop remoto)
 L'oggetto restituito **Recordset** l'oggetto è disponibile per l'utilizzo. È possibile esaminare, esplorare o modificarlo come qualsiasi altra **Recordset**. Cosa si può fare con il **Recordset** dipende dall'ambiente. Visual Basic e Visual C++ sono controlli visivi che è possono utilizzare un **Recordset** direttamente o indirettamente con l'aiuto di un controllo di dati di attivazione.  

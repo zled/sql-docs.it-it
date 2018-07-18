@@ -1,31 +1,28 @@
 ---
 title: Utilizzo di SQLBindCol | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 - SQLBindCol function [ODBC], using
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bd0406efdc485eadef6c90552a634099166f7b08
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d4ccd4607e16b244279e0910fe32047f19e2e6d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlbindcol"></a>Utilizzando la funzione SQLBindCol
 L'applicazione associa le colonne chiamando **SQLBindCol**. Questa funzione associa una colonna alla volta. Con questa soluzione, l'applicazione specifica quanto segue:  
@@ -40,7 +37,7 @@ L'applicazione associa le colonne chiamando **SQLBindCol**. Questa funzione asso
   
  Ad esempio, il seguente codice associa variabili alle colonne venditore e CustID. I dati per le colonne verranno restituiti *venditore* e *CustID*. Poiché *venditore* è un buffer di caratteri, l'applicazione specifica la lunghezza di byte (11) in modo che il driver può determinare se troncare i dati. La lunghezza in byte dell'oggetto restituito title, o se è NULL, verrà restituito *SalesPersonLenOrInd*.  
   
- Poiché *CustID* una variabile integer e ha risolto lunghezza, non è necessario specificare la lunghezza in byte, il driver presuppone che si tratti **sizeof (**SQLUINTEGER**)**. La lunghezza in byte del cliente restituito l'ID di dati o se è NULL, verrà restituito *CustIDInd*. Si noti che l'applicazione è interessata solo se lo stipendio è NULL, perché la lunghezza in byte è sempre **sizeof (**SQLUINTEGER**)**.  
+ Poiché *CustID* una variabile integer e ha risolto lunghezza, non è necessario specificare la lunghezza in byte, il driver presuppone che si tratti **sizeof (** SQLUINTEGER **)**. La lunghezza in byte del cliente restituito l'ID di dati o se è NULL, verrà restituito *CustIDInd*. Si noti che l'applicazione è interessata solo se lo stipendio è NULL, perché la lunghezza in byte è sempre **sizeof (** SQLUINTEGER **)**.  
   
 ```  
 SQLCHAR       SalesPerson[11];  

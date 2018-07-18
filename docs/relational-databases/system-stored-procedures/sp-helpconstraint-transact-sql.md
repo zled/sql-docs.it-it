@@ -1,32 +1,33 @@
 ---
 title: sp_helpconstraint (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpconstraint
 - sp_helpconstraint_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_helpconstraint
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_helpconstraint
 ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4d7ef47ca294a7f52c59fa16755d316d1e574e9e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: db7c4131c564dad86abe569862b364fbcc6c7288
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,21 +46,21 @@ sp_helpconstraint [ @objname = ] 'table'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@objname=** ] **'***tabella***'**  
- Tabella di cui si desidera ottenere informazioni sui vincoli. La tabella specificata deve essere locale rispetto al database corrente. *tabella* è **nvarchar(776)**, non prevede alcun valore predefinito.  
+ Tabella di cui si desidera ottenere informazioni sui vincoli. La tabella specificata deve essere locale rispetto al database corrente. *Nella tabella* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
  [  **@nomsg=**] **'***no_message***'**  
- Parametro facoltativo che consente di stampare il nome della tabella. *no_message* è **varchar (5)**, il valore predefinito è **msg**. **nomsg** Annulla la stampa.  
+ Parametro facoltativo che consente di stampare il nome della tabella. *no_message* viene **varchar (5)**, il valore predefinito è **msg**. **nomsg** Annulla la stampa.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- **sp_helpconstraint** Visualizza colonne indicizzate in ordine decrescente, se fanno parte di chiavi primarie. Nel set di risultati il nome di tali colonne viene seguito da un segno meno (-). Nel caso di colonne indicizzate in ordine crescente, come per impostazione predefinita, viene invece visualizzato solo il nome delle colonne.  
+ **sp_helpconstraint** consente di visualizzare una colonna con indicizzazione decrescente, se nelle chiavi primarie. Nel set di risultati il nome di tali colonne viene seguito da un segno meno (-). Nel caso di colonne indicizzate in ordine crescente, come per impostazione predefinita, viene invece visualizzato solo il nome delle colonne.  
   
 ## <a name="remarks"></a>Osservazioni  
- L'esecuzione di **sp_help***tabella* tutte le informazioni sulla tabella specificata. Per visualizzare solo le informazioni sui vincoli, utilizzare **sp_helpconstraint**.  
+ L'esecuzione **sp_help * * * tabella* tutte le informazioni sulla tabella specificata. Per visualizzare solo le informazioni sui vincoli, utilizzare **sp_helpconstraint**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -72,13 +73,13 @@ EXEC sp_helpconstraint 'Production.Product';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Sys. key_constraints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [Sys. CHECK_CONSTRAINTS &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
- [default_constraints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
+ [sys.key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [Sys. check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [Sys. default_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
   
   

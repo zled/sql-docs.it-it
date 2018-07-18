@@ -1,16 +1,13 @@
 ---
 title: Considerazioni relative all'uso di server di prova | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: performance
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
 - tuning overhead [SQL Server]
@@ -21,19 +18,19 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bb2515163afb01ece59d6d1dc7d681e67dfbbbd4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7df20d63ae24216781d4b1e4abc8f01fbd6c9c65
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="considerations-for-using-test-servers"></a>Considerazioni relative all'utilizzo di server di prova
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'uso di un server di prova per ottimizzare un database su un server di produzione è un importante vantaggio offerto da Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Attraverso questa funzionalità è possibile ripartire su un server di prova il carico dell'overhead generato dall'ottimizzazione senza copiare i dati effettivi dal server di produzione al server di prova.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L'utilizzo di un server di prova per ottimizzare un database su un server di produzione è un importante vantaggio offerto da Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Attraverso questa funzionalità è possibile ripartire su un server di prova il carico dell'overhead generato dall'ottimizzazione senza copiare i dati effettivi dal server di produzione al server di prova.  
   
 > [!NOTE]  
 >  La funzionalità di ottimizzazione del server di prova non è supportata nell'interfaccia utente grafica (GUI) di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  

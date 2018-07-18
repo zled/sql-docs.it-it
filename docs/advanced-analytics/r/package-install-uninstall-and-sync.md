@@ -1,24 +1,18 @@
 ---
 title: Sincronizzazione del pacchetto R per SQL Server | Documenti Microsoft
-ms.custom: 
-ms.date: 01/04/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: efb0477481e47af1ace78b938a64e72bace6d81f
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 5aa19e54917a421567c5ede2013e019de609d8b6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585227"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>Sincronizzazione del pacchetto R per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -130,4 +124,4 @@ rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", 
 
 ## <a name="related-resources"></a>Risorse correlate
 
-[Gestione dei pacchetti R per SQL Server](r-package-management-for-sql-server-r-services.md)
+[Gestione dei pacchetti R per SQL Server](install-additional-r-packages-on-sql-server.md)

@@ -1,31 +1,32 @@
 ---
 title: Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Best Practices [Database Engine]
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f48c7d177acea6812a7b10610a2ab67930b3e9e2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d29ff5465669ed8c37448f0461b349b6d37906c8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La gestione basata su criteri consente di monitorare le procedure consigliate per [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un set di file di criteri che è possibile importare per le procedure consigliate e descrive come valutare i criteri rispetto a un set di destinazione con istanze, oggetti di istanza, database e oggetti di database. Valutare manualmente i criteri, impostare i criteri per la valutazione di un set di destinazioni in base a una pianificazione oppure per la valutazione di un set di destinazioni in base a un evento. Per altre informazioni sulla gestione basata su criteri, vedere [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La gestione basata su criteri consente di monitorare le procedure consigliate per [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un set di file di criteri che è possibile importare per le procedure consigliate e descrive come valutare i criteri rispetto a un set di destinazione con istanze, oggetti di istanza, database e oggetti di database. Valutare manualmente i criteri, impostare i criteri per la valutazione di un set di destinazioni in base a una pianificazione oppure per la valutazione di un set di destinazioni in base a un evento. Per altre informazioni sulla gestione basata su criteri, vedere [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Criteri e regole per il Motore di database  
  La tabella seguente elenca i criteri disponibili con l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le informazioni relative alle regole per le procedure consigliate valutate dai singoli criteri. I criteri vengono archiviati come file XML e devono essere importati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sull'importazione di criteri, vedere [Importare i criteri della gestione basata su criteri](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/18/2018
 |Autorizzazioni Guest|[Autorizzazioni Guest nei database utente](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
 |Data ultimo backup completato|[Backup obsoleto](../../relational-databases/policy-based-management/outdated-backup.md)|  
 |Autorizzazioni server non concesse al ruolo public|[Autorizzazioni server per il ruolo public](../../relational-databases/policy-based-management/server-public-permissions.md)|  
-|Sovrapposizione maschera di affinità a 64 bit SQL Server|[Correct Affinity Mask and Affinity Input and Output Mask Overlap](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Sovrapposizione maschera di affinità a 64 bit SQL Server|[Correggere la sovrapposizione delle opzioni affinity mask e affinity I/O mask](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |Maschera di affinità SQL Server|[Valore predefinito per la maschera di affinità](../../relational-databases/policy-based-management/keep-the-affinity-mask-default-value.md)|  
 |Soglia processo bloccato SQL Server|[Aumento o disabilitazione dell'opzione blocked process threshold](../../relational-databases/policy-based-management/increase-or-disable-blocked-process-threshold.md)|  
 |Traccia predefinita SQL Server|[File dei log di traccia predefiniti disabilitati](../../relational-databases/policy-based-management/default-trace-log-files-disabled.md)|  

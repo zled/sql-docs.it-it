@@ -1,31 +1,23 @@
 ---
 title: I contatori delle prestazioni (SSAS) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 79b4ecc40d69e8f40a5a1612985477d8ee6f166a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="performance-counters-ssas"></a>Contatori delle prestazioni (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Con Performance Monitor è possibile monitorare le prestazioni di un'istanza di Microsoft SQL Server Analysis Services (SSAS) tramite i contatori delle prestazioni.  
+  Con Performance Monitor è possibile monitorare le prestazioni di un'istanza di Microsoft SQL Server Analysis Services (SSAS) tramite i contatori delle prestazioni.  
   
  Performance Monitor è uno snap-in di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) che consente di tenere traccia dell'utilizzo delle risorse. È possibile avviare lo snap-in MMC digitando **PerfMon** al prompt dei comandi o dal Pannello di controllo facendo clic su **Strumenti di amministrazione**, quindi su **Performance Monitor**. Performance Monitor consente di tenere traccia delle prestazioni e delle attività del server e dei processi tramite oggetti e contatori predefiniti, nonché monitorare eventi tramite contatori definiti dall'utente. Tramite Performance Monitor vengono raccolti i conteggi anziché i dati sugli eventi, ad esempio l'utilizzo della memoria, il numero di transazioni attive o l'attività della CPU. È inoltre possibile impostare valore soglia per contatori specifici allo scopo di generare avvisi per la notifica agli operatori.  
   

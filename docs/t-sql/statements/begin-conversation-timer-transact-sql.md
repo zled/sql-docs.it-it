@@ -1,16 +1,14 @@
 ---
-title: BEGIN CONVERSATION TIMER (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: BEGIN CONVERSATION TIMER (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONVERSATION
@@ -35,21 +33,20 @@ helpviewer_keywords:
 - starting timers [Service Broker]
 - http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 28
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6f85695e3d8263936d053979074a92b52fba7259
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bff71c5286d0bf48e43bda62cdc4b7c26a10b038
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Avvia un timer. Quando il timeout scade, [!INCLUDE[ssSB](../../includes/sssb-md.md)] inserisce un messaggio di tipo `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` nella coda locale per la conversazione.  
+  Avvia un timer. Alla scadenza del timeout, [!INCLUDE[ssSB](../../includes/sssb-md.md)] inserisce un messaggio di tipo `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` nella coda locale per la conversazione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,22 +61,22 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
   
 ## <a name="arguments"></a>Argomenti  
  BEGIN CONVERSATION TIMER **(***conversation_handle***)**  
- Specifica la conversazione per cui avviare il timer. Il *conversation_handle* deve essere di tipo **uniqueidentifier**.  
+ Specifica la conversazione per cui avviare il timer. *conversation_handle* deve essere di tipo **uniqueidentifier**.  
   
  TIMEOUT  
  Specifica, in secondi, quanto tempo deve trascorrere prima che il messaggio venga inserito nella coda.  
   
-## <a name="remarks"></a>Osservazioni  
- Il timer di conversazione consente a un'applicazione di ricevere un messaggio per una conversazione dopo un periodo di tempo specifico. Se si chiama BEGIN CONVERSATION TIMER per una conversazione prima della scadenza del timer, per il timeout verrà impostato il nuovo valore. A differenza di quanto avviene per la durata della conversazione, ogni lato della conversazione ha un timer indipendente. Il **DialogTimer** messaggio arriva nella coda locale senza modificare il lato remoto della conversazione. Un'applicazione può, quindi, utilizzare un messaggio timer per qualsiasi motivo.  
+## <a name="remarks"></a>Remarks  
+ Il timer di conversazione consente a un'applicazione di ricevere un messaggio per una conversazione dopo un periodo di tempo specifico. Se si chiama BEGIN CONVERSATION TIMER per una conversazione prima della scadenza del timer, per il timeout verrà impostato il nuovo valore. A differenza di quanto avviene per la durata della conversazione, ogni lato della conversazione ha un timer indipendente. Il messaggio **DialogTimer** arriva nella coda locale senza che venga interessato il lato remoto della conversazione. Un'applicazione può, quindi, utilizzare un messaggio timer per qualsiasi motivo.  
   
  È possibile, ad esempio, utilizzare il timer di conversazione per evitare che un'applicazione attenda troppo a lungo una risposta scaduta. Se si prevede che un'applicazione completi un dialogo in 30 secondi, è possibile impostare il timer di conversazione per tale dialogo su 60 secondi (30 secondi più altri 30 secondi di tolleranza). Se il dialogo è ancora aperto dopo 60 secondi, l'applicazione riceve un messaggio di timeout nella coda.  
   
- In alternativa un'applicazione può utilizzare un timer di conversazione per richiedere l'attivazione in un determinato momento. Si potrebbe, ad esempio, creare un servizio che segnali il numero di connessioni attive a intervalli di pochi minuti oppure un servizio che segnali il numero di ordini di acquisto aperti ogni sera. Il servizio viene impostato un timer di conversazione in modo che scada sul tempo desiderato; Quando il timer scade, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un **DialogTimer** messaggio. Il **DialogTimer** messaggio cause [!INCLUDE[ssSB](../../includes/sssb-md.md)] per avviare l'attivazione stored procedure per la coda. La stored procedure invia un messaggio al servizio remoto e riavvia il timer di conversazione.  
+ In alternativa un'applicazione può utilizzare un timer di conversazione per richiedere l'attivazione in un determinato momento. Si potrebbe, ad esempio, creare un servizio che segnali il numero di connessioni attive a intervalli di pochi minuti oppure un servizio che segnali il numero di ordini di acquisto aperti ogni sera. Il servizio imposta la scadenza desiderata per un timer di conversazione. Alla scadenza, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio **DialogTimer**, Il messaggio **DialogTimer** fa in modo che [!INCLUDE[ssSB](../../includes/sssb-md.md)] avvii la stored procedure di attivazione per la coda. La stored procedure invia un messaggio al servizio remoto e riavvia il timer di conversazione.  
   
  BEGIN CONVERSATION TIMER non è valida in una funzione definita dall'utente.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Autorizzazione per l'impostazione di un timer di conversazione valori predefiniti per gli utenti che dispongono delle autorizzazioni SEND sul servizio per la conversazione, i membri del **sysadmin** risolto ruolo del server e i membri del **db_owner** ruolo predefinito del database.  
+ L'autorizzazione per l'impostazione di un timer di conversazione viene assegnata per impostazione predefinita agli utenti che dispongono delle autorizzazioni SEND per il servizio della conversazione, ai membri del ruolo predefinito del server **sysadmin** e ai membri del ruolo predefinito del database **db_owner**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene impostato un timeout di due minuti per il dialogo identificato da `@dialog_handle`.  

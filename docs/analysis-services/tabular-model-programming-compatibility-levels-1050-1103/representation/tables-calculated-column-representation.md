@@ -1,33 +1,23 @@
 ---
 title: Rappresentazione della colonna (tabulare) calcolato | Documenti Microsoft
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 21e4a28e2be7492302e1b68506b4e74f695d30fd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b0f8e3ddd813366d713f438fc526985773abd611
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tables---calculated-column-representation"></a>Tabelle - rappresentazione della colonna calcolata
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Una colonna calcolata è un'espressione DAX che crea una nuova colonna in una tabella e i valori ottenuti vengono archiviati nella tabella. L'espressione della colonna calcolata viene valutata ogni volta che la tabella viene elaborata.  
+  Una colonna calcolata è un'espressione DAX che crea una nuova colonna in una tabella e i valori ottenuti vengono archiviati nella tabella. L'espressione della colonna calcolata viene valutata ogni volta che la tabella viene elaborata.  
   
 ## <a name="calculated-column-representation"></a>Rappresentazione della colonna calcolata  
   

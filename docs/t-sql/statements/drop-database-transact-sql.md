@@ -1,20 +1,20 @@
 ---
-title: ELIMINARE il DATABASE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DROP DATABASE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP DATABASE
 - DROP_DATABASE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - snapshots [SQL Server database snapshots], deleting
 - removing databases
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - DROP DATABASE statement
 - database removal [SQL Server], DROP DATABASE statement
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 6e963031c1d9f27293a2f0786e7f0ce19183f038
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 47aa7d947dfeafcad80c74514e1861d44205389c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -56,13 +56,13 @@ DROP DATABASE database_name [;]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Elimina in modo condizionale il database solo se esiste già.  
+ Rimuove in modo condizionale il database solo se esiste già.  
   
  *database_name*  
- Specifica il nome del database da rimuovere. Per visualizzare un elenco di database, utilizzare il [Sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista del catalogo.  
+ Specifica il nome del database da rimuovere. Per visualizzare un elenco di database, usare la vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  *database_snapshot_name*  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -70,19 +70,19 @@ DROP DATABASE database_name [;]
  Specifica il nome di uno snapshot del database da rimuovere.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- Un database può essere rimosso indipendentemente dallo stato: offline, di sola lettura, sospetto e così via. Per visualizzare lo stato corrente di un database, utilizzare il **Sys. Databases** vista del catalogo.  
+ Un database può essere rimosso indipendentemente dallo stato: offline, di sola lettura, sospetto e così via. Per visualizzare lo stato corrente di un database, usare la vista del catalogo **sys.databases**.  
   
  È possibile ricreare un database rimosso solo tramite il ripristino di un backup. Non è possibile eseguire il backup degli snapshot di un database e, di conseguenza, non è possibile ripristinarli.  
   
- Quando viene eliminato un database, il [database master](../../relational-databases/databases/master-database.md) deve essere eseguito il backup.  
+ Dopo la rimozione di un database, è necessario eseguire il backup del [database master](../../relational-databases/databases/master-database.md).  
   
- La rimozione di un database comporta l'eliminazione del database da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dei relativi file su disco utilizzati. Se il database o uno dei relativi file è offline quando viene rimosso, i file su disco non vengono eliminati. Questi file possono essere eliminati manualmente tramite Esplora risorse. Per rimuovere un database dal server corrente senza eliminare i file dal file system, utilizzare [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
+ La rimozione di un database comporta l'eliminazione del database da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dei relativi file su disco utilizzati. Se il database o uno dei relativi file è offline quando viene rimosso, i file su disco non vengono eliminati. Questi file possono essere eliminati manualmente tramite Esplora risorse. Per rimuovere un database dal server corrente senza eliminare i file dal file system, usare [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
 > [!WARNING]  
->  Rimozione di un database con FILE_SNAPSHOT associati backup avrà esito positivo, ma non verranno eliminati i file di database a cui sono associati snapshot per evitare di invalidare i backup che fa riferimento a questi file di database. Il file verrà troncato, ma non verranno fisicamente eliminato per mantenere i backup FILE_SNAPSHOT intatto. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [versione](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+>  Sarà possibile rimuovere un database con backup FILE_SNAPSHOT associati, ma i file del database con snapshot associati non verranno eliminati per evitare di invalidare i backup che fanno riferimento a tali file del database. Il file verrà troncato, ma non sarà eliminato fisicamente in modo da mantenere inalterati i backup FILE_SNAPSHOT. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- La rimozione di uno snapshot di database comporta l'eliminazione dello snapshot del database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dei file sparse fisici del file system NTFS utilizzati dallo snapshot. Per informazioni sull'utilizzo dei file sparse dagli snapshot del database, vedere [snapshot del Database &#40; SQL Server &#41; ](../../relational-databases/databases/database-snapshots-sql-server.md). La rimozione di uno snapshot del database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.  
+ La rimozione di uno snapshot di database comporta l'eliminazione dello snapshot del database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dei file sparse fisici del file system NTFS utilizzati dallo snapshot. Per informazioni sull'uso di file sparse con gli snapshot del database, vedere [Snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md). La rimozione di uno snapshot del database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.  
   
 ## <a name="interoperability"></a>Interoperabilità  
   
@@ -93,16 +93,19 @@ DROP DATABASE database_name [;]
   
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
- [Database di sistema](../../relational-databases/databases/system-databases.md) non può essere eliminata.  
+ I [database di sistema](../../relational-databases/databases/system-databases.md) non possono essere eliminati.  
   
  L'istruzione DROP DATABASE deve essere eseguita in modalità autocommit e non è consentita in una transazione esplicita o implicita. La modalità autocommit è la modalità predefinita per la gestione delle transazioni.  
   
- Non è possibile rimuovere un database in uso, ovvero aperto per la lettura o la scrittura da parte di un utente. Per rimuovere gli utenti dal database, utilizzare ALTER DATABASE per impostare il database su SINGLE_USER.  
+ Non è possibile rimuovere un database in uso, ovvero aperto per la lettura o la scrittura da parte di un utente. Per rimuovere gli utenti dal database, usare ALTER DATABASE per impostare il database su SINGLE_USER. 
+ 
+ >[!Warning] 
+ > Questo non è un approccio a prova di errore, poiché la prima connessione consecutiva eseguita da qualsiasi thread riceverà il thread SINGLE_USER, causando un errore di connessione. SQL Server non offre un metodo incorporato per eliminare i database sotto carico.
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Prima di poter rimuovere un database, è necessario eliminare tutti gli snapshot del database.  
   
- Eliminazione di un database per abilitare per l'estensione Database non rimuove i dati remoti. Se si desidera eliminare i dati remoti, è necessario rimuoverlo manualmente.  
+ L'eliminazione di un database abilitato per Stretch Database non determina la rimozione dei dati remoti. Per eliminare i dati remoti, è necessario rimuoverli manualmente.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
  È necessario essere connessi al database master per eliminare un database.
@@ -114,16 +117,16 @@ DROP DATABASE database_name [;]
   
  L'istruzione DROP DATABASE deve essere l'unica istruzione in un batch SQL ed è possibile eliminare un solo database alla volta.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Richiede il **controllo** autorizzazione per il database, o **ALTER ANY DATABASE** autorizzazione o l'appartenenza di **db_owner** ruolo predefinito del database.  
+ È richiesta l'autorizzazione **CONTROL** per il database, l'autorizzazione **ALTER ANY DATABASE** o l'appartenenza al ruolo predefinito del database **db_owner**.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
- Solo il livello di server di accesso dell'entità (creato dal processo di provisioning) o i membri del **dbmanager** ruolo del database può eliminare un database.  
+ Solo l'account di accesso dell'entità di livello server (creato dal processo di provisioning) o i membri del ruolo del database **dbmanager** possono eliminare un database.  
   
 ### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Richiede il **controllo** autorizzazione per il database, o **ALTER ANY DATABASE** autorizzazione o l'appartenenza di **db_owner** ruolo predefinito del database.  
+ È richiesta l'autorizzazione **CONTROL** per il database, l'autorizzazione **ALTER ANY DATABASE** o l'appartenenza al ruolo predefinito del database **db_owner**.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -148,7 +151,7 @@ DROP DATABASE Sales, NewSales;
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Nell'esempio seguente viene rimosso uno snapshot del database, denominato `sales_snapshot0600`, senza influire sul database di origine.  
+ Nell'esempio seguente viene rimosso uno snapshot di database, denominato `sales_snapshot0600`, senza influire sul database di origine.  
   
 ```  
 DROP DATABASE sales_snapshot0600;  

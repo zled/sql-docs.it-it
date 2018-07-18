@@ -1,32 +1,33 @@
 ---
 title: sp_helpmergepullsubscription (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_helpmergepullsubscription
 - sp_helpmergepullsubscription_TSQL
-helpviewer_keywords: sp_helpmergepullsubscription
+helpviewer_keywords:
+- sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4fdb0047d265b2f848b77a0b84445f8683132833
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 905ead01709a932639f72e874f1246228f2f9c21
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,41 +48,41 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
   
 ## <a name="argument"></a>Argomento  
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* è **sysname**, il valore predefinito è  **%** . Se *pubblicazione* è  **%** , vengono restituite informazioni su tutte le pubblicazioni di tipo merge e le sottoscrizioni nel database corrente.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. Se *pubblicazione* è **%**, vengono restituite informazioni su tutte le pubblicazioni di tipo merge e le sottoscrizioni nel database corrente.  
   
  [  **@publisher=**] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione*è **sysname**, il valore predefinito è  **%** .  
+ Nome del server di pubblicazione. *server di pubblicazione*viene **sysname**, il valore predefinito è **%**.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- Nome del database del server di pubblicazione. *publisher_db*è **sysname**, il valore predefinito è  **%** .  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ Nome del database del server di pubblicazione. *publisher_db*viene **sysname**, il valore predefinito è **%**.  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
- Indica se visualizzare le sottoscrizioni pull. *subscription_type*è **nvarchar (10)**, il valore predefinito è **'pull'**. I valori validi sono **'push'**, **'pull'**, o **'both'**.  
+ Indica se visualizzare le sottoscrizioni pull. *subscription_type*viene **nvarchar(10)**, il valore predefinito è **'pull'**. I valori validi sono **'push'**, **'pull'**, o **'both'**.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**subscription_name**|**nvarchar (1000)**|Nome della sottoscrizione.|  
-|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
+|**subscription_name**|**nvarchar(1000)**|Nome della sottoscrizione.|  
+|**Pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**publisher**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
 |**subscriber**|**sysname**|Nome del Sottoscrittore.|  
 |**subscriber_db**|**sysname**|Nome del database di sottoscrizione.|  
 |**status**|**int**|Stato della sottoscrizione:<br /><br /> **0** = sottoscrizione inattiva<br /><br /> **1** = sottoscrizione attiva<br /><br /> **2** = sottoscrizione eliminata<br /><br /> **3** = sottoscrizione scollegata<br /><br /> **4** = sottoscrizione collegata<br /><br /> **5** = sottoscrizione contrassegnata per la reinizializzazione al caricamento<br /><br /> **6** = collegamento della sottoscrizione non riuscito<br /><br /> **7** = sottoscrizione ripristinata dal backup|  
-|**subscriber_type**|**int**|Tipo di Sottoscrittore:<br /><br /> **1** = globale<br /><br /> **2** = locale<br /><br /> **3** = anonimo|  
-|**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = anonimo|  
-|**priorità**|**float(8)**|Priorità della sottoscrizione. Il valore deve essere minore di **100,00**.|  
-|**sync_type**|**tinyint**|Tipo di sincronizzazione per la sottoscrizione:<br /><br /> **1** = automatica<br /><br /> **2** = non viene utilizzato uno snapshot.|  
-|**Descrizione**|**nvarchar(255)**|Breve descrizione della sottoscrizione pull.|  
-|**merge_jobid**|**Binary (16)**|ID di processo dell'agente di merge.|  
+|**subscriber_type**|**int**|Tipo di Sottoscrittore:<br /><br /> **1** = globale<br /><br /> **2** = locale<br /><br /> **3** = anonima|  
+|**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = anonima|  
+|**priority**|**float(8)**|Priorità della sottoscrizione. Il valore deve essere minore di **100,00**.|  
+|**sync_type**|**tinyint**|Tipo di sincronizzazione per la sottoscrizione:<br /><br /> **1** = automatica<br /><br /> **2** = non viene utilizzato lo snapshot.|  
+|**description**|**nvarchar(255)**|Breve descrizione della sottoscrizione pull.|  
+|**merge_jobid**|**binary(16)**|ID di processo dell'agente di merge.|  
 |**enabled_for_syncmgr**|**int**|Indica se è possibile sincronizzare la sottoscrizione tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
 |**last_updated**|**nvarchar(26)**|Ora in cui l'agente di merge ha eseguito l'ultima sincronizzazione della sottoscrizione.|  
 |**publisher_login**|**sysname**|Nome dell'account di accesso del server di pubblicazione.|  
 |**publisher_password**|**sysname**|Password del server di pubblicazione.|  
 |**publisher_security_mode**|**int**|Modalità di sicurezza del server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows|  
-|**server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
-|**parametro**|**sysname**|Nome dell'account di accesso del server di distribuzione.|  
+|**Server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
+|**distributor_login**|**sysname**|Nome dell'account di accesso del server di distribuzione.|  
 |**distributor_password**|**sysname**|Password per il server di distribuzione.|  
 |**distributor_security_mode**|**int**|Modalità di sicurezza del server di distribuzione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows|  
 |**ftp_address**|**sysname**|Disponibile per compatibilità con le versioni precedenti. Indirizzo di rete del servizio FTP per il server di distribuzione.|  
@@ -96,31 +97,31 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**use_interactive_resolver**|**int**|Specifica se durante la fase di riconciliazione viene utilizzato il sistema di risoluzione dei conflitti interattivo. Se **0**, non viene utilizzato il sistema di risoluzione interattivo.|  
 |**subid**|**uniqueidentifier**|ID del Sottoscrittore.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Percorso della cartella in cui vengono salvati i file di snapshot.|  
-|**last_sync_status**|**int**|Stato della sincronizzazione:<br /><br /> **1** = avvio in corso<br /><br /> **2** = ha avuto esito positivo<br /><br /> **3** = in corso<br /><br /> **4** = inattivo<br /><br /> **5** = nuovo tentativo dopo un precedente errore<br /><br /> **6** = non riuscito<br /><br /> **7** = convalida non riuscita<br /><br /> **8** = convalida riuscita<br /><br /> **9** = richiesta di chiusura|  
+|**last_sync_status**|**int**|Stato della sincronizzazione:<br /><br /> **1** = avvio in corso<br /><br /> **2** = ha avuto esito positivo<br /><br /> **3** = in corso<br /><br /> **4** = inattivo<br /><br /> **5** = nuovo tentativo dopo un precedente errore<br /><br /> **6** = non è riuscita<br /><br /> **7** = convalida non riuscita<br /><br /> **8** = convalida riuscita<br /><br /> **9** = richiesta di chiusura|  
 |**last_sync_summary**|**sysname**|Descrizione dei risultati dell'ultima sincronizzazione.|  
 |**use_web_sync**|**bit**|Specifica se la sottoscrizione può essere sincronizzata tramite HTTPS, dove il valore **1** indica che questa funzionalità è abilitata.|  
-|**internet_url**|**nvarchar (260)**|URL che rappresenta la posizione del listener per la replica per la sincronizzazione Web.|  
-|**internet_login**|**nvarchar (128)**|Account di accesso utilizzato dall'agente di merge per la connessione al server Web che ospita la sincronizzazione Web tramite l'autenticazione di base.|  
-|**internet_password**|**nvarchar (524)**|Password di accesso utilizzata dall'agente di merge per la connessione al server Web in cui viene eseguita la sincronizzazione Web tramite l'autenticazione di base.|  
+|**internet_url**|**nvarchar(260)**|URL che rappresenta la posizione del listener per la replica per la sincronizzazione Web.|  
+|**internet_login**|**nvarchar(128)**|Account di accesso utilizzato dall'agente di merge per la connessione al server Web che ospita la sincronizzazione Web tramite l'autenticazione di base.|  
+|**internet_password**|**nvarchar(524**|Password di accesso utilizzata dall'agente di merge per la connessione al server Web in cui viene eseguita la sincronizzazione Web tramite l'autenticazione di base.|  
 |**internet_security_mode**|**int**|Modalità di autenticazione utilizzata per la connessione al server Web in cui viene eseguita la sincronizzazione Web. Il valore **1** indica l'autenticazione di Windows, mentre il valore di **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.|  
 |**internet_timeout**|**int**|Periodo di tempo, espresso in secondi, al termine del quale una richiesta di sincronizzazione Web scade.|  
-|**nome host**|**nvarchar (128)**|Specifica un valore di overload per [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) quando questa funzione viene utilizzata nella clausola WHERE di un filtro di riga con parametri.|  
+|**Nome host**|**nvarchar(128)**|Specifica un valore di overload per [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) quando questa funzione viene utilizzata nella clausola WHERE di un filtro di riga con parametri.|  
 |**job_login**|**nvarchar(512)**|È l'account di Windows con cui viene eseguito l'agente di Merge, viene restituito nel formato *dominio*\\*username*.|  
 |**job_password**|**sysname**|Per motivi di sicurezza, il valore "**\*\*\*\*\*\*\*\*\*\***" è sempre restituito.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_helpmergepullsubscription** viene utilizzata nella replica di tipo merge. Nel set di risultati, la data restituita **last_updated** sia formattata come *YYYYMMDD hh*.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server e **db_owner** ruolo predefinito del database possono eseguire **sp_helpmergepullsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

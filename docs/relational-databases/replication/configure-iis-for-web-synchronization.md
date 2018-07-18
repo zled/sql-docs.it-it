@@ -1,34 +1,34 @@
 ---
 title: Configurare IIS per la sincronizzazione Web | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: "88"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 88
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c524b1ad61453b835402816102a8f428adfe42d1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2d4bc5f866ac5cfe9cb29212bd2cf1a30c0b8e3e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le procedure descritte in questo argomento rappresentano il secondo passaggio nella configurazione della sincronizzazione Web per la replica di tipo merge. Questo passaggio è successivo all'abilitazione di una pubblicazione per la sincronizzazione Web. Per una panoramica del processo di configurazione, vedere [Configura sincronizzazione Web](../../relational-databases/replication/configure-web-synchronization.md). Al termine delle procedure indicate in questo argomento, procedere al terzo passaggio, che consiste nella configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web. Questo terzo passaggio è descritto negli argomenti seguenti:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Le procedure descritte in questo argomento rappresentano il secondo passaggio nella configurazione della sincronizzazione Web per la replica di tipo merge. Questo passaggio è successivo all'abilitazione di una pubblicazione per la sincronizzazione Web. Per una panoramica del processo di configurazione, vedere [Configura sincronizzazione Web](../../relational-databases/replication/configure-web-synchronization.md). Al termine delle procedure indicate in questo argomento, procedere al terzo passaggio, che consiste nella configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web. Questo terzo passaggio è descritto negli argomenti seguenti:  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Procedura: Configurazione di una sottoscrizione per l'utilizzo della sincronizzazione tramite il Web \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/18/2018
   
 3.  Eseguire la Gestione guidata certificati IIS:  
   
-    1.  In **Gestione Internet Information Services (IIS)**espandere il nodo **computer locale** e quindi la cartella **Siti Web** .  
+    1.  In **Gestione Internet Information Services (IIS)** espandere il nodo **computer locale** e quindi la cartella **Siti Web** .  
   
     2.  Fare clic con il pulsante destro del mouse su **Sito Web predefinito**e quindi scegliere **Proprietà**.  
   
@@ -284,7 +284,7 @@ ms.lasthandoff: 01/18/2018
   
     2.  Digitare **inetmgr** nella casella **Apri**e quindi fare clic su **OK**.  
   
-    3.  In **Gestione Internet Information Services (IIS)**espandere il nodo **computer locale** .  
+    3.  In **Gestione Internet Information Services (IIS)** espandere il nodo **computer locale** .  
   
     4.  Fare clic con il pulsante destro del mouse su **Pool di applicazioni**, scegliere **Nuovo** e quindi **Pool di applicazioni**.  
   
@@ -292,7 +292,7 @@ ms.lasthandoff: 01/18/2018
   
 5.  Associare l'account al pool di applicazioni:  
   
-    1.  In **Gestione Internet Information Services (IIS)**espandere il nodo **computer locale** e quindi **Pool di applicazioni**.  
+    1.  In **Gestione Internet Information Services (IIS)** espandere il nodo **computer locale** e quindi **Pool di applicazioni**.  
   
     2.  Fare clic con il pulsante destro del mouse sul pool di applicazioni creato e quindi scegliere **Proprietà**.  
   
@@ -304,7 +304,7 @@ ms.lasthandoff: 01/18/2018
   
 6.  Associare il pool di applicazioni alla directory virtuale utilizzata per la sincronizzazione Web:  
   
-    1.  In **Gestione Internet Information Services (IIS)**espandere il nodo **computer locale** e quindi **Siti Web**.  
+    1.  In **Gestione Internet Information Services (IIS)** espandere il nodo **computer locale** e quindi **Siti Web**.  
   
     2.  Espandere il sito Web utilizzato per la sincronizzazione Web, fare clic con il pulsante destro del mouse sulla directory virtuale creata per tale sincronizzazione e quindi scegliere **Proprietà**.  
   

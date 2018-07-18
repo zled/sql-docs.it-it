@@ -1,30 +1,27 @@
 ---
 title: Riferimento all'API ADO | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, reference
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ca0e6125f9e6f2288156698a15ec434be5a5ff59
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 12e206c96b9a4e8fedc61fac55fcc99089b952f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-api-reference"></a>Riferimento all'API ADO
 In questa sezione della documentazione di ADO contiene argomenti per ogni ADO oggetto, insieme, proprietà, proprietà dinamiche, metodo, evento e dell'enumerazione. Inoltre, contiene un elenco di indici di ADO sintassi da utilizzare con Microsoft Visual C++ e di Windows Foundation Classes (WFC).  
@@ -52,7 +49,7 @@ In questa sezione della documentazione di ADO contiene argomenti per ogni ADO og
 -   [Esempi di codice ADO](../../../ado/reference/ado-api/ado-code-examples.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Appendice d: esempi ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
+ [Appendice d: esempi di ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Appendice c: programmazione con ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [Appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md)   

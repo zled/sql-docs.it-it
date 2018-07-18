@@ -1,17 +1,14 @@
 ---
 title: Procedura guidata Genera e pubblica script | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql9.swb.generatescriptswizard.chooseviews.f1
 - sql13.swb.generatescriptswizard.manageproviders.f1
@@ -45,23 +42,24 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: 
+caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6a9e1ba4f4afadc27174f3dfd61b03005a33ef16
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d755a56c4ee302ed0f249bac303b082b9031a239
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile usare la procedura guidata **Genera e pubblica script** per creare script per il trasferimento di un database tra le istanze del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o di [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. È possibile generare script per un database in un'istanza del motore di database nella rete locale o da [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Gli script generati possono essere eseguiti in un'altra istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. È inoltre possibile usare la procedura guidata per pubblicare direttamente il contenuto di un database in un servizio Web creato tramite Database Publishing Services. È possibile creare script per un intero database o limitare la creazione a oggetti specifici.  
-  
-1.  **Prima di iniziare:**  [Pubblicazione in un servizio ospitato](#PubHostSvc), [Autorizzazioni](#Permissions)  
-  
-2.  **Per generare o pubblicare uno script usando la**  [procedura guidata Genera e pubblica script](#GenPubScriptWiz)  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  È possibile usare la procedura guidata **Genera e pubblica script** per creare script per il trasferimento di un database tra le istanze del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o di [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. È possibile generare script per un database in un'istanza del motore di database nella rete locale o da [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Gli script generati possono essere eseguiti in un'altra istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. È inoltre possibile usare la procedura guidata per pubblicare direttamente il contenuto di un database in un servizio Web creato tramite Database Publishing Services. È possibile creare script per un intero database o limitare la creazione a oggetti specifici.  
+
+Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e pubblica script, vedere [Generare script per database con l'opzione Genera script](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option).
+
+
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  I database di origine e di destinazione possono trovarsi in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguita in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva.  
@@ -82,40 +80,34 @@ ms.lasthandoff: 01/24/2018
 1.  In **Esplora oggetti**espandere il nodo dell'istanza contenente il database per il quale generare lo script.  
   
 2.  Scegliere **Attività**, quindi fare clic su **Genera script**.  
+
+    ![Procedura guidata Genera script](media/generate-and-publish-scripts-wizard/generatescripts.png)
   
 3.  Completare le finestre di dialogo della procedura guidata.  
   
     -   [Pagina Introduzione](#Introduction)  
-  
-    -   [Pagina Seleziona oggetti](#ChooseObjects)  
-  
+    -   [Pagina Seleziona oggetti](#ChooseObjects)   
     -   [Pagina Imposta opzioni di generazione script](#SetScriptOpt)  
-  
     -   [Pagina Opzioni di generazione script avanzate](#AdvScriptOpt)  
-  
-    -   [Pagina Gestisci provider](#MgProviders)  
-  
+    -   [Pagina Gestisci provider](#MgProviders)   
     -   [Pagina Opzioni di pubblicazione avanzate](#AdvPubOpts)  
-  
     -   [Pagina Configurazione del provider](#ProvConfig)  
-  
-    -   [Pagina Riepilogo](#Summary)  
-  
+    -   [Pagina Riepilogo](#Summary)   
     -   [Pagina Salva o pubblica script](#SavePubScripts)  
   
 ###  <a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per la generazione o la pubblicazione di uno script.  
   
- **Non visualizzare più questa pagina**: consente di non visualizzare più questa pagina al successivo avvio della procedura guidata **Genera e pubblica script**.  
+ **Non visualizzare più questa pagina** : consente di non visualizzare più questa pagina al successivo avvio della procedura guidata **Genera e pubblica script**.  
   
- **Avanti >**: consente di passare alla pagina **Seleziona metodo**.  
-  
- **Annulla** : consente di terminare la procedura guidata senza generare o pubblicare uno script dal database.  
+  ![Pagina Introduzione](media/generate-and-publish-scripts-wizard/intro.png)
   
 ###  <a name="ChooseObjects"></a> Pagina Seleziona oggetti  
  Usare questa pagina per scegliere quali oggetti si desidera includere negli script generati dalla procedura guidata. Nella pagina successiva della procedura guidata, è possibile salvare gli script nel percorso desiderato oppure usarli per pubblicare oggetti di database su un provider di hosting Web remoto in cui sia installato [Database Publishing Services di SQL Server](http://go.microsoft.com/fwlink/?LinkId=142025).  
   
- **Opzione Genera script per intero database** : fare clic per generare script per tutti gli oggetti nel database e includere uno script per il database stesso.  
+ **Opzione Genera script per intero database** : fare clic per generare script per tutti gli oggetti nel database e includere uno script per il database stesso. 
+
+   ![Script per tutti i database](media/generate-and-publish-scripts-wizard/scriptall.png) 
   
  **Seleziona oggetti di database specifici** : fare clic per limitare la generazione degli script solo agli oggetti specifici nel database prescelto:  
   
@@ -124,15 +116,17 @@ ms.lasthandoff: 01/24/2018
 -   **Seleziona tutto** : consente di selezionare tutte le caselle di controllo disponibili.  
   
 -   **Deseleziona tutto** : consente di deselezionare tutte le caselle di controllo. Per continuare, è necessario selezionare almeno un oggetto di database.  
+
+   ![Script per database specifico](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
 ###  <a name="SetScriptOpt"></a> Pagina Imposta opzioni di generazione script  
  Usare questa pagina per specificare se si desidera che tramite la procedura guidata gli script vengano salvati nel percorso prescelto o vengano usati per pubblicare oggetti di database in un provider di hosting Web remoto. Ai fini della pubblicazione, è necessario avere accesso a un servizio Web installato usando il servizio Web Database Publishing Services.  
   
  **Opzioni** : se si vuole che gli script vengano salvati in un percorso specifico, selezionare **Salva script in un percorso specifico**. È possibile eseguire in un secondo momento gli script in a un'istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Se si desidera pubblicare gli oggetti di database in un provider di hosting Web remoto tramite una procedura guidata, selezionare **Pubblica su servizio Web**.  
   
- **Salva script in un percorso specifico** : consente di salvare uno o più file script Transact-SQL in un percorso specificato.  
-  
--   **Avanzate** : consente di visualizzare la finestra di dialogo **Opzioni di generazione script avanzate** in cui è possibile selezionare opzioni avanzate per la generazione di script.  
+ **Salva script in un percorso specifico**: consente di salvare uno o più file script Transact-SQL in un percorso specificato.  
+
+  ![Salvare](media/generate-and-publish-scripts-wizard/save.png)   
   
 -   **Salva nel file** : consente di salvare lo script in uno o più file con estensione sql. Fare clic sul pulsante Sfoglia (**…**) per specificare il nome e il percorso del file. Selezionare la casella di controllo **Sovrascrivi file esistente** per sostituire il file se ne esiste già uno con lo stesso nome. Fare clic su **File singolo** o **Singolo file per oggetto** per specificare come devono essere generati gli script. Fare clic su **Testo Unicode** o **Testo ANSI** per specificare il tipo di testo che deve essere usato nello script.  
   
@@ -152,6 +146,8 @@ ms.lasthandoff: 01/24/2018
   
 ###  <a name="AdvScriptOpt"></a> Pagina Opzioni di generazione script avanzate  
  Usare questa pagina per specificare come si desidera che vengano generati gli script tramite la procedura guidata. Sono disponibili molte opzioni diverse. Le opzioni sono disattivate se non sono supportate dalla versione di SQL Server o di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] specificata in **Tipo di motore di database**.  
+
+![Opzioni avanzate](media/generate-and-publish-scripts-wizard/advanced.png)
   
  **Opzioni** : consente di specificare le opzioni avanzate selezionando un valore tra quelli disponibili nell'elenco visualizzato a destra di ciascuna opzione.  
   
@@ -171,7 +167,7 @@ ms.lasthandoff: 01/24/2018
   
 -   **Includi IF NOT EXISTS** : se è impostato su **True**, lo script include un'istruzione che verifica se l'oggetto esiste già nel database e non prova a creare un nuovo oggetto se già presente. Il valore predefinito è **False**.  
   
--   **Includi nomi di vincoli di sistema** : se è impostato su **False**, i valori predefiniti dei vincoli nominati automaticamente nel database di origine vengono automaticamente rinominati nel database di destinazione. Se è impostato su **True**, i vincoli hanno lo stesso nome nel database di origine e in quello di destinazione.  
+-   **Includi nomi di vincoli di sistema**: se è impostato su **False**, i valori predefiniti dei vincoli nominati automaticamente nel database di origine vengono rinominati nel database di destinazione. Se è impostato su **True**, i vincoli hanno lo stesso nome nel database di origine e in quello di destinazione.  
   
 -   **Includi istruzioni non supportate** : se è impostato su **False**, lo script non contiene istruzioni per oggetti che non sono supportati nella versione del server o nel tipo di motore selezionati. Se impostato su **Vero**, lo script contiene gli oggetti non supportati. Ogni istruzione per un oggetto non supportato sarà accompagnata da un commento che specifica che è necessario modificare l'istruzione prima di potere eseguire lo script con la versione di SQL Server o il tipo di motore selezionati. Il valore predefinito è **False**.  
   
@@ -240,6 +236,8 @@ ms.lasthandoff: 01/24/2018
   
 ###  <a name="AdvPubOpts"></a> Pagina Opzioni di pubblicazione avanzate  
  Usare questa pagina per specificare il modo in cui si desidera pubblicare un database tramite la procedura guidata. Sono disponibili molte opzioni diverse. Le opzioni sono disattivate se non sono supportate dalla versione di SQL Server o di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] specificata in **Tipo di motore di database**.  
+
+  ![Pubblicazione avanzata](media/generate-and-publish-scripts-wizard/advancedpublish.png)
   
  **Opzioni** : consente di specificare le opzioni avanzate selezionando un valore tra quelli disponibili nell'elenco visualizzato a destra di ciascuna opzione.  
   

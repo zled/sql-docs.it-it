@@ -1,17 +1,16 @@
 ---
-title: "Attività Profiling dati | Microsoft Docs"
-ms.custom: 
+title: Attività Profiling dati | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a59e91ef39974021474d90bb65885b80831307da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-profiling-task"></a>Attività Profiling dati
   L'attività Profiling dati calcola i diversi profili che consentono di familiarizzare con un'origine dati e identificare i problemi nei dati che devono essere corretti.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 02/15/2018
 |----------------------------------------------|-----------------|  
 |Profilo Distribuzione lunghezze di colonna|Segnala tutte le singole lunghezze dei valori stringa nella colonna selezionata e la percentuale di righe nella tabella che ogni lunghezza rappresenta.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio valori non validi. Si analizza, ad esempio, una colonna che contiene i codici degli stati degli Stati Uniti a due caratteri e si individuano valori con lunghezza superiore a due caratteri.|  
 |Profilo Rapporto di valori Null nella colonna|Segnala la percentuale di valori Null nella colonna selezionata.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio un rapporto di valori di colonna Null inaspettatamente elevato. Si analizza, ad esempio, una colonna contenente CAP e si individua una percentuale eccessivamente elevata di codici mancanti.|  
-|Profilo Criteri di ricerca colonna|Segnala un set di espressioni regolari che coprono la percentuale specificata di valori in una colonna stringa.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio stringhe non valide. Questo profilo può inoltre indicare espressioni regolari che possono essere utilizzate in futuro per convalidare nuovi valori. Ad esempio, un profilo di criteri di ricerca di una colonna Codice postale (Stati Uniti) può produrre le espressioni regolari seguenti: \d{5}-\d{4}, \d{5}, and \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.|  
+|Profilo Criteri di ricerca colonna|Segnala un set di espressioni regolari che coprono la percentuale specificata di valori in una colonna stringa.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio stringhe non valide. Questo profilo può inoltre indicare espressioni regolari che possono essere utilizzate in futuro per convalidare nuovi valori. Un profilo di criteri di ricerca di una colonna contenente codici postali ZIP (Stati Uniti) potrebbe ad esempio produrre le seguenti espressioni regolari: \d{5}-\d{4}, \d{5} e \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.|  
 |Profilo Statistiche di colonna|Segnala le statistiche, ad esempio la deviazione minima, massima, media e standard per le colonne numeriche e minima e massima per le colonne di tipo **datetime** .<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio date non valide. Si analizza, ad esempio, una colonna di date cronologiche e si individua una data massima successiva alla data corrente.|  
 |Profilo Distribuzione valori di colonna|Segnala tutti i valori distinct nella colonna selezionata e la percentuale di righe nella tabella che ogni valore rappresenta. Può inoltre segnalare valori che rappresentano più di una percentuale specificata di righe nella tabella.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio un numero non corretto di valori distinct in una colonna. Si analizza, ad esempio, una colonna che si suppone contenga gli stati degli Stati Uniti e si individuano più di 50 valori distinct.|  
   
@@ -131,7 +129,7 @@ ms.lasthandoff: 02/15/2018
   
 -   Compilazione di strumenti personalizzati da utilizzare con le informazioni sulla qualità dei dati.  
   
- Lo spazio dei nomi di destinazione è identificato nello schema come [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ Lo spazio dei nomi di destinazione viene identificato nello schema come [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Output nel flusso di lavoro condizionale di un pacchetto  
  I componenti di profiling dei dati non includono la funzionalità predefinita per implementare la logica condizionale nel flusso di lavoro del pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] basata sull'output dell'attività Profiling dati. È tuttavia facile aggiungere questa logica con una programmazione minima in un'attività Script. Con questo codice verrebbe eseguita una query XPath sull'output XML e quindi il risultato verrebbe salvato in una variabile del pacchetto. I vincoli di precedenza che collegano l'attività Script alle attività successive possono utilizzare un'espressione per determinare il flusso di lavoro. Ad esempio, l'attività Script rileva che la percentuale di valori Null in una colonna supera una determinata soglia. Quando questa condizione è vera, potrebbe essere necessario interrompere il pacchetto e risolvere il problema prima di continuare.  

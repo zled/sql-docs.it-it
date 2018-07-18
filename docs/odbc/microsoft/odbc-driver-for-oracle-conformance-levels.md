@@ -1,30 +1,27 @@
 ---
-title: "Il Driver ODBC per Oracle livelli di conformità | Documenti Microsoft"
-ms.custom: 
+title: Il Driver ODBC per Oracle livelli di conformità | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], conformance levels
 - conformance levels [ODBC], ODBC driver for Oracle
 ms.assetid: 2ad2ef7a-a86f-4a77-b12c-bbd5a3499dac
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e09b8e29f5dbdfe1fc6bdb56be9a866c6312b186
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f9dfef3e28c1f3deb323701b8ca086e44e34637a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-driver-for-oracle-conformance-levels"></a>Driver ODBC per Oracle livelli di conformità
 > [!IMPORTANT]  
@@ -36,8 +33,8 @@ ms.lasthandoff: 12/21/2017
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Livello di conformità di API (Driver ODCB per Oracle)](../../odbc/microsoft/api-conformance-level-odbc-driver-for-oracle.md)  
+-   [Livello di conformità di API (Driver ODCB for Oracle)](../../odbc/microsoft/api-conformance-level-odbc-driver-for-oracle.md)  
   
--   [Opzioni supportate (Driver ODCB per Oracle)](../../odbc/microsoft/supported-options-odbc-driver-for-oracle.md)  
+-   [Opzioni supportate (Driver ODCB for Oracle)](../../odbc/microsoft/supported-options-odbc-driver-for-oracle.md)  
   
--   [Livelli di conformità SQL (Driver ODCB per Oracle)](../../odbc/microsoft/sql-conformance-levels-odbc-driver-for-oracle.md)
+-   [Livelli di conformità SQL (Driver ODCB for Oracle)](../../odbc/microsoft/sql-conformance-levels-odbc-driver-for-oracle.md)

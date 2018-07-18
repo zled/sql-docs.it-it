@@ -1,16 +1,14 @@
 ---
 title: Definizione di assi in query XPath (SQLXML 4.0) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], axes
@@ -21,22 +19,22 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aa306b70eaa1c91b352a6e2e19e7b76c4aabf52c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8e4f7d99951749a147db2e0432bb74ce61113335
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Definizione di assi in query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Negli esempi seguenti viene illustrato il modo in cui specificare assi in query XPath.  
+  Negli esempi seguenti viene illustrato il modo in cui specificare assi in query XPath.  
   
- Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+ Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Esempi  
   
@@ -98,7 +96,7 @@ Negli esempi seguenti viene illustrato il modo in cui specificare assi in query 
 /child::Customer/child::Order  
 ```  
   
- Nella query, `child` è l'asse e `Customer` e `Order` sono i test di nodo (questi test di nodo sono TRUE se Customer e Order sono  **\<elemento >** nodi, in quanto il  **\<elemento >** nodo è il nodo primario per il **figlio** asse). Per ogni nodo corrispondente  **\<cliente >**nodi corrispondenti,  **\<ordini >** vengono aggiunti al risultato. Solo  **\<ordine >** viene restituito nel set di risultati.  
+ Nella query, `child` è l'asse e `Customer` e `Order` sono i test di nodo (questi test di nodo sono TRUE se Customer e Order sono  **\<elemento >** nodi, in quanto il  **\<elemento >** nodo è il nodo primario per il **figlio** asse). Per ogni nodo corrispondente  **\<cliente >** nodi corrispondenti,  **\<ordini >** vengono aggiunti al risultato. Solo  **\<ordine >** viene restituito nel set di risultati.  
   
  Il **figlio** è l'asse predefinito. È pertanto possibile specificare la query nel modo seguente:  
   

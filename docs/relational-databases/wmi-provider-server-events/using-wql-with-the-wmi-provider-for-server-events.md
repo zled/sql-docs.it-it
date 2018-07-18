@@ -1,16 +1,15 @@
 ---
 title: Utilizzo di WQL con il Provider WMI per eventi del Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [WMI]
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 36
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d14958366c9dfa24343e244a8a5d5cb880fafa3e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e417f360129f63477702dfbd95015886f0836ddc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Utilizzo di WQL con il provider WMI per eventi del server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Le applicazioni di gestione accedono agli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il provider WMI per eventi del server ed eseguendo istruzioni WQL (WMI Query Language). WQL è un subset semplificato del linguaggio SQL (Structured Query Language), con alcune estensioni specifiche di WMI. Quando si utilizza WQL, un'applicazione recupera un tipo di evento da un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un database o un oggetto di database (l'unico oggetto attualmente supportato è la coda). Il Provider WMI per eventi del Server converte la query in una notifica degli eventi creata nel database di destinazione per le notifiche degli eventi con ambito database o con ambito oggetto o nel **master** database per l'evento con ambito server notifiche.  
+  Le applicazioni di gestione accedono agli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il provider WMI per eventi del server ed eseguendo istruzioni WQL (WMI Query Language). WQL è un subset semplificato del linguaggio SQL (Structured Query Language), con alcune estensioni specifiche di WMI. Quando si utilizza WQL, un'applicazione recupera un tipo di evento da un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un database o un oggetto di database (l'unico oggetto attualmente supportato è la coda). Il Provider WMI per eventi del Server converte la query in una notifica degli eventi creata nel database di destinazione per le notifiche degli eventi con ambito database o con ambito oggetto o nel **master** database per l'evento con ambito server notifiche.  
   
  Si consideri, ad esempio, la query WQL seguente:  
   
@@ -99,7 +97,7 @@ WHERE where_condition
   
  Il provider WMI per eventi del server utilizza un algoritmo bottom-up, first-fit per produrre l'ambito più ristretto possibile per l'oggetto EVENT NOTIFICATION sottostante. L'algoritmo tenta di ridurre l'attività interna sul server e il traffico di rete tra l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il processo host WMI. Il provider esamina il *event_type* specificato nella clausola FROM e le condizioni nella clausola WHERE e tenta di registrare la notifica degli eventi sottostante con l'ambito più ristretto possibile. Se tale registrazione non riesce, prova a eseguirla nei successivi ambiti di livello più alto finché l'operazione non riesce. Se l'esito dell'operazione è ancora negativo dopo aver raggiunto l'ambito di livello più alto, ovvero il livello del server, restituisce un errore al consumer.  
   
- Ad esempio, se DatabaseName =**'**AdventureWorks**'**è specificato nella clausola WHERE, il provider tenta di registrare una notifica degli eventi nel [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. Se il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] esiste e il client chiamante dispone delle autorizzazioni necessarie per creare una notifica degli eventi in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], la registrazione riesce. In caso contrario, viene eseguito un tentativo di registrazione della notifica degli eventi a livello di server. La registrazione riesce se il client WMI dispone delle autorizzazioni necessarie. In questo scenario, tuttavia, gli eventi non vengono restituiti al client finché il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] non sarà stato creato.  
+ Ad esempio, se DatabaseName =**'** AdventureWorks **'** è specificato nella clausola WHERE, il provider tenta di registrare una notifica degli eventi nel [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. Se il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] esiste e il client chiamante dispone delle autorizzazioni necessarie per creare una notifica degli eventi in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], la registrazione riesce. In caso contrario, viene eseguito un tentativo di registrazione della notifica degli eventi a livello di server. La registrazione riesce se il client WMI dispone delle autorizzazioni necessarie. In questo scenario, tuttavia, gli eventi non vengono restituiti al client finché il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] non sarà stato creato.  
   
  Il *where_condition* può anche agire come un filtro per limitare ulteriormente la query per un determinato database, schema o object. Si consideri, ad esempio, la query WQL seguente:  
   

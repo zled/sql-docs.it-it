@@ -1,17 +1,15 @@
 ---
 title: Eseguire la pre-elaborazione di uno schema per unire schemi inclusi | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - testing preprocessor tool
 - xsd:include
@@ -22,20 +20,19 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bb486493743bc51842c0531e1072aa1eac106d76
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6667fd78bc2b345f8976edab3fbdf8197cf6dac7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Pre-elaborazione di uno schema per unire schemi inclusi
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-L'elemento **include** XSD W3C rende disponibile il supporto per la modularità di schema, che consente di partizionare XML Schema in più file fisici. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente non supporta questo elemento. Gli XML Schema che includono tale elemento verranno rifiutati dal server.  
+  L'elemento **include** XSD W3C rende disponibile il supporto per la modularità di schema, che consente di partizionare XML Schema in più file fisici. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente non supporta questo elemento. Gli XML Schema che includono tale elemento verranno rifiutati dal server.  
   
  Per risolvere questo problema, è possibile eseguire la pre-elaborazione di tutti gli XML Schema che includono la direttiva \<xsd:include> per copiare e unire il relativo contenuto in un singolo schema da caricare nel server. Per la pre-elaborazione è possibile utilizzare il codice C# seguente. I commenti nella parte iniziale del codice includono informazioni sul relativo utilizzo.  
   

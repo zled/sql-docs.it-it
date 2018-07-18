@@ -1,16 +1,14 @@
 ---
-title: sys.sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.sp_add_trusted_assembly (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 06/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_trusted_assembly_TSQL
@@ -21,17 +19,17 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.sp_add_trusted_assembly
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: tmullaney
-ms.author: thmullan;rickbyh
+ms.author: thmullan
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7b44f4253a295d91c7011c0aa51d943848188784
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1a3791d82f0970ec6ed3e04ede69492abbcddb59
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysspaddtrustedassembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

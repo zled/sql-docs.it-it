@@ -1,35 +1,33 @@
 ---
 title: Impostare il metodo di propagazione per le modifiche ai dati negli articoli transazionali | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
 - propagating data changes [SQL Server replication]
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
-caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 39
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0f97ecca34a7c61305e243ce75a11dc58a5f641f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: aa1eef0787a96ddd1661c6276a692d3ad05d7b5e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Impostazione del metodo di propagazione per le modifiche ai dati negli articoli transazionali
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In questo argomento viene descritto come impostare il metodo di propagazione per le modifiche ai dati negli articoli transazionali in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  In questo argomento viene descritto come impostare il metodo di propagazione per le modifiche ai dati negli articoli transazionali in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Per impostazione predefinita, la replica transazionale propaga le modifiche ai Sottoscrittori tramite un set di stored procedure per ogni articolo. È possibile sostituire tali procedure con procedure personalizzate. Per altre informazioni, vedere [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -124,11 +122,11 @@ In questo argomento viene descritto come impostare il metodo di propagazione per
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, l'oggetto di database da pubblicare per **@source_object**, un valore per la maschera di bit **@schema_option** che contiene il valore **0x02** (consente la generazione automatica di stored procedure personalizzate) e almeno uno dei parametri seguenti:  
   
-    -   **@ins_cmd**: specificare il valore **CALL sp_MSins_*nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
+    -   **@ins_cmd**: specificare il valore **CALL sp_MSins_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
-    -   **@del_cmd**: specificare il valore **CALL sp_MSdel_*nome_articolo*** o **XCALL sp_MSdel_*nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
+    -   **@del_cmd**: specificare il valore **CALL sp_MSdel_*nome_articolo*** o **XCALL sp_MSdel_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
-    -   **@upd_cmd**: specificare il valore **SCALL sp_MSupd_*nome_articolo***, **CALL sp_MSupd_*nome_articolo***, **XCALL sp_MSupd_*nome_articolo*** o **MCALL sp_MSupd_*nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
+    -   **@upd_cmd**: specificare il valore **SCALL sp_MSupd_* nome_articolo***, **CALL sp_MSupd_* nome_articolo***, **XCALL sp_MSupd_* nome_articolo*** o **MCALL sp_MSupd_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
     > [!NOTE]  
     >  Per ognuno dei parametri di comando indicati in precedenza, è possibile specificare il nome desiderato per le stored procedure generate dalla replica.  
@@ -144,11 +142,11 @@ In questo argomento viene descritto come impostare il metodo di propagazione per
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, l'oggetto di database da pubblicare per **@source_object**, un valore per la maschera di bit **@schema_option** che contiene il valore **0x02** (consente la generazione automatica di stored procedure personalizzate) e almeno uno dei parametri seguenti:  
   
-    -   **@ins_cmd**: specificare il valore **CALL sp_MSins_*nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
+    -   **@ins_cmd**: specificare il valore **CALL sp_MSins_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
-    -   **@del_cmd**: specificare il valore **CALL sp_MSdel_*nome_articolo*** o **XCALL sp_MSdel_*nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
+    -   **@del_cmd**: specificare il valore **CALL sp_MSdel_*nome_articolo*** o **XCALL sp_MSdel_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
-    -   **@upd_cmd**: specificare il valore **SCALL sp_MSupd_*nome_articolo***, **CALL sp_MSupd_*nome_articolo***, **XCALL sp_MSupd_*nome_articolo*** o **MCALL sp_MSupd_*nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
+    -   **@upd_cmd**: specificare il valore **SCALL sp_MSupd_* nome_articolo***, **CALL sp_MSupd_* nome_articolo***, **XCALL sp_MSupd_* nome_articolo*** o **MCALL sp_MSupd_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
     > [!NOTE]  
     >  Per ognuno dei parametri di comando indicati in precedenza, è possibile specificare il nome desiderato per le stored procedure generate dalla replica.  

@@ -1,31 +1,31 @@
 ---
 title: Finestra di dialogo Colonne indice (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vdt.dlgbox.indexcolumns
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- vdt.dlgbox.indexcolumns
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58eb707b051fc163202af81aa847ce68a8df64fc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 6ed5aca3c9f33ac691306d1c68a199975518003c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Colonne indice (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usare questa finestra di dialogo per selezionare le colonne di un indice e per impostarne gli ordinamenti. Un indice può utilizzare una o più colonne, ognuna delle quali può essere ordinata con un ordinamento crescente o decrescente. Per accedere a questa finestra di dialogo, nella finestra di dialogo **Indici/chiavi** fare clic sul pulsante con i puntini nella riga **Colonne** della sezione **Generale** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Utilizzare questa finestra di dialogo per selezionare le colonne di un indice e per impostarne gli ordinamenti. Un indice può utilizzare una o più colonne, ognuna delle quali può essere ordinata con un ordinamento crescente o decrescente. Per accedere a questa finestra di dialogo, nella finestra di dialogo **Indici/chiavi** fare clic sul pulsante con i puntini nella riga **Colonne** della sezione **Generale** .  
   
 ## <a name="options"></a>Opzioni  
 **Nome colonna**  

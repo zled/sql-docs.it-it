@@ -1,28 +1,27 @@
 ---
 title: 'Procedura: connessione tramite autenticazione di SQL Server | Documenti Microsoft'
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: connecting to the server, SQL Server Authentication
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 5802ddf79f53fda9e03c842ce21def20cb99f6e3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: a6991014daf7c1ac11aee177b9d81f489d5b1bf6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>Procedura: Connessione con l'autenticazione di SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,7 +56,7 @@ Quando si usa l'autenticazione di SQL Server per la connessione a SQL Server è 
 ## <a name="example"></a>Esempio  
 L'esempio seguente usa il driver SQLSRV con l'autenticazione di SQL Server per connettersi a un'istanza locale di SQL Server. I valori per il *UID* e *PWD* gli attributi di connessione vengono estratti dal file di testo specifici dell'applicazione, *uid.txt* e *pwd.txt*nella *C:\AppData* directory. Dopo aver stabilito la connessione, viene eseguita una query nel server per verificare l'accesso dell'utente.  
   
-Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) siano installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -135,13 +134,21 @@ Questo esempio usa il driver PDO_SQLSRV per illustrare la procedura di connessio
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[Guida di programmazione per il driver SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
-[SUSER_SNAME (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106382)  
-[Procedura: Creazione di un account di accesso di SQL Server](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[Procedura: Creazione di un utente del database](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[Gestione di utenti, ruoli e account di accesso](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[Separazione Schema-utente](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[Concedere autorizzazioni per oggetti (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+[Procedura: Connessione con l'autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
+
+[Procedura: creare un account di accesso SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[Procedura: creare un utente del Database](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[Gestione di utenti, ruoli e account di accesso](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Separazione tra Schema e utente](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Concedere autorizzazioni per oggetti (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

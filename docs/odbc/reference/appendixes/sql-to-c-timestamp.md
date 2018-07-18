@@ -1,31 +1,28 @@
 ---
 title: 'SQL a c: Timestamp | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - timestamp data type [ODBC]
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d877c369a071dfc9c28f2500dc6584fe99808cfa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 5582bf0e3c3b498799c229176b824770eec27433
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-to-c-timestamp"></a>SQL a c: Timestamp
 L'identificatore del tipo di dati SQL ODBC timestamp è:  
@@ -55,4 +52,4 @@ _C_TYPE_TIMESTAMP|Parte relativa ai secondi frazionari di timestamp non è stato
   
  [f] è la dimensione del tipo di dati C corrispondente.  
   
- Quando i dati SQL timestamp vengono convertiti in dati di tipo carattere C, la stringa risultante è il "*aaaa*-*mm*-*gg* *hh* :*mm*:*ss*[. *f...* ] "formato, in cui può essere utilizzato fino a nove cifre per i secondi frazionari. Questo formato non è interessato dalla configurazione dell'impostazione di paese Windows®. (Tranne il separatore decimale e i secondi frazionari, il formato intero da utilizzare, indipendentemente dalla precisione del tipo di dati timestamp SQL.)
+ Quando i dati SQL timestamp vengono convertiti in dati di tipo carattere C, la stringa risultante è il "*aaaa*-*mm*-*gg* *hh* :*mm*:*ss*[.*f...*] "formato, in cui può essere utilizzato fino a nove cifre per i secondi frazionari. Questo formato non è interessato dalla configurazione dell'impostazione di paese Windows®. (Tranne il separatore decimale e i secondi frazionari, il formato intero da utilizzare, indipendentemente dalla precisione del tipo di dati timestamp SQL.)

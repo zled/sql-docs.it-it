@@ -1,40 +1,40 @@
 ---
-title: "Limiti della capacità di calcolo per edizione di SQL Server | Microsoft Docs"
-ms.custom: 
+title: Limiti della capacità di calcolo per edizione di SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 11/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-caps.latest.revision: "60"
+caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 56a8763efc38fbcb9fcd0597e09e5992f9efc793
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: 1d197350d9dc209a18f7913ec9c6e27ef91b40a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limiti della capacità di calcolo per edizione di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra i limiti della capacità di calcolo per diverse edizioni di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e le differenze in ambienti fisici e virtualizzati con processori dotati di Hyper-Threading.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Questo articolo illustra i limiti della capacità di calcolo per diverse edizioni di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e le differenze in ambienti fisici e virtualizzati con processori dotati di Hyper-Threading.  
   
  ![Mapping per il calcolo dei limiti della capacità](../sql-server/media/compute-capacity-limits.gif "Mapping per il calcolo dei limiti della capacità")  
   
  Questa tabella descrive le notazioni nel diagramma precedente:  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |0..1|Zero o uno|  
 |1|Esattamente uno|  
@@ -85,8 +85,8 @@ Nella tabella seguente vengono specificati i limiti della capacità di calcolo p
   
 |Edizione di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Capacità di calcolo massima per una singola istanza ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacità di calcolo massima per una singola istanza (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition: licenze basate su core\*|valore massimo del sistema operativo|valore massimo del sistema operativo|  
-|Sviluppatore|valore massimo del sistema operativo|valore massimo del sistema operativo|  
+|Enterprise Edition: licenze basate su core\*|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
+|Developer|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
 |Standard|Limitato a meno di 4 socket o 24 core|Limitato a meno di 4 socket o 24 core|  
 |Express|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
 
@@ -103,6 +103,7 @@ Può risultare utile disabilitare l'Hyper-Threading quando le prestazioni per pr
  [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Specifiche di capacità massima per SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [Guida introduttiva all'installazione di SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
-  
-  
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

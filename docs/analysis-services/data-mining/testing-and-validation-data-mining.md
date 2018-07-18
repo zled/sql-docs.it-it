@@ -1,49 +1,23 @@
 ---
 title: Test e convalida (Data Mining) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- testing data mining models
-- comparing mining models
-- continuous attribute charts
-- data mining [Analysis Services], models
-- charts [Analysis Services]
-- predictive modeling [Analysis Services]
-- mining models [Analysis Services], validating
-- validating data mining models
-- viewing mining accuracy
-- confidence scores [data mining]
-- displaying mining accuracy
-- predictions [Analysis Services], comparing mining models
-- scoring [data mining]
-- lift charts [Analysis Services]
-- classification matrix [Analysis Services]
-- CRISP-DM
-- accuracy testing [data mining]
-ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bf43af38fc18b67c37ec5409ccb90a1d8e798259
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e4ce983ed5d5a645f32466ab38d5c67ff1c68897
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="testing-and-validation-data-mining"></a>Test e convalida (Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La convalida è il processo che consente di valutare le prestazioni dei modelli di data mining rispetto ai dati reali. Per convalidare in modo corretto i modelli di data mining, è importante comprenderne la qualità e le caratteristiche prima di distribuirli in un ambiente di produzione.  
+  La convalida è il processo che consente di valutare le prestazioni dei modelli di data mining rispetto ai dati reali. Per convalidare in modo corretto i modelli di data mining, è importante comprenderne la qualità e le caratteristiche prima di distribuirli in un ambiente di produzione.  
   
  Questa sezione introduce alcuni concetti di base relativi alla qualità dei modelli e descrive le strategie per la convalida dei modelli fornite in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per una panoramica sullo scopo della convalida dei modelli nel contesto più ampio del processo di data mining, vedere [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md).  
   
@@ -68,7 +42,7 @@ La convalida è il processo che consente di valutare le prestazioni dei modelli 
  L'*utilità* include diverse metriche che indicano se il modello fornisce informazioni vantaggiose. Un modello di data mining che correla ad esempio l'ubicazione di un negozio con le vendite potrebbe essere accurato e affidabile, ma potrebbe non essere utile, poiché non è possibile generalizzare tale risultato aggiungendo altri negozi nella stessa ubicazione. Tale modello inoltre non risponde alla domanda aziendale fondamentale, ovvero non indica perché a ubicazioni specifiche è associato un numero maggiore di vendite. È possibile anche rilevare che un modello apparentemente positivo non è in effetti significativo, poiché si basa su correlazioni incrociate dei dati.  
   
 ## <a name="tools-for-testing-and-validation-of-mining-models"></a>Strumenti per il test e la convalida dei modelli di data mining  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta più approcci per la convalida di soluzioni di data mining e consente di gestire tutte le fasi della metodologia di test del data mining.  
+ In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili più approcci per la convalida di soluzioni di data mining che supportano tutte le fasi della metodologia di test del data mining.  
   
 -   Partizionamento dei dati in set di training e di testing.  
   
@@ -93,13 +67,13 @@ La convalida è il processo che consente di valutare le prestazioni dei modelli 
 |Argomento|Collegamenti|  
 |------------|-----------|  
 |Informazioni sulla configurazione di un set di dati di test tramite una procedura guidata o comandi DMX|[Set di training e set di dati di Testing](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|Informazioni sul test della distribuzione e della rappresentatività dei dati in una struttura di data mining|[La convalida incrociata &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Informazioni sui tipi di grafico di accuratezza forniti.|[Grafico di accuratezza &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Informazioni sulla creazione di una matrice di classificazione, talvolta denominata matrice di confusione, per valutare il numero di veri e falsi positivi e di veri e falsi negativi.|[Matrice di classificazione &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|Informazioni sul test della distribuzione e della rappresentatività dei dati in una struttura di data mining|[La convalida incrociata & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Informazioni sui tipi di grafico di accuratezza forniti.|[Grafico di accuratezza & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Informazioni sulla creazione di una matrice di classificazione, talvolta denominata matrice di confusione, per valutare il numero di veri e falsi positivi e di veri e falsi negativi.|[Matrice di classificazione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di Data Mining](../../analysis-services/data-mining/data-mining-tools.md)   
  [Soluzioni di Data Mining](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Test e convalida le attività e procedure relative alla &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Test e convalida le attività e procedure relative alla & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

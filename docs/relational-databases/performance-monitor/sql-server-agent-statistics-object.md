@@ -1,33 +1,33 @@
 ---
 title: Oggetto Statistiche di SQL Server Agent | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Statistics object
 - SQLAgent:Statistics
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4a7c220116116d77786eb958767fafff228b4676
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fe30b9faca81825b140259996af1fc6b0fedc2fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-agent-statistics-object"></a>Oggetto Statistiche di SQL Server Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'oggetto prestazione **Statistiche** di SQL Server Agent include contatori delle prestazioni che contengono informazioni su questo servizio.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L'oggetto prestazione **Statistiche** di SQL Server Agent include contatori delle prestazioni che contengono informazioni su questo servizio.  
   
  Nella tabella seguente sono elencati i contatori **SQLAgent:Statistiche** .  
   

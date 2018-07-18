@@ -1,16 +1,14 @@
 ---
 title: ALTER MESSAGE TYPE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_MESSAGE_TYPE_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - modifying message types
 - message types [Service Broker], modifying
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 27
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0aff23be0cf324678cbe565c0f0c7a3c92d13a3e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1989db77e1f786694e794a2626a544cc1659d9ea
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,15 +67,15 @@ ALTER MESSAGE TYPE message_type_name
  Il corpo del messaggio deve contenere XML ben formato.  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
- Il corpo del messaggio deve contenere dati XML conformi a uno schema incluso nella raccolta di schemi specificata. Il *schema_collection_name* deve essere il nome di una raccolta di XML schema esistente.  
+ Il corpo del messaggio deve contenere dati XML conformi a uno schema incluso nella raccolta di schemi specificata. *schema_collection_name* deve corrispondere al nome di una raccolta di XML Schema esistente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La modifica del tipo di messaggio non influisce sui messaggi che sono già stati recapitati a una coda.  
   
  Per modificare AUTHORIZATION per un tipo di messaggio, utilizzare l'istruzione ALTER AUTHORIZATION.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- L'autorizzazione per modificare un tipo di messaggio per impostazione predefinita al proprietario del tipo di messaggio, i membri del **db_ddladmin** o **db_owner** fissa ruoli del database e i membri del **sysadmin**ruolo predefinito del server.  
+ L'autorizzazione per modificare un tipo di messaggio viene assegnata per impostazione predefinita al proprietario del tipo di messaggio, ai membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
   
  Quando l'istruzione ALTER MESSAGE TYPE specifica una raccolta di schemi, l'utente che esegue l'istruzione deve disporre dell'autorizzazione REFERENCES nella raccolta di schemi specificata.  
   

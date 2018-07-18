@@ -1,16 +1,14 @@
 ---
-title: '@@FETCH_STATUS (Transact-SQL) | Documenti Microsoft'
-ms.custom: 
+title: '@@FETCH_STATUS (Transact-SQL) | Microsoft Docs'
+ms.custom: ''
 ms.date: 09/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@FETCH_STATUS'
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - status information [SQL Server], FETCH
 - '@@FETCH_STATUS function'
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 9bc4027eb6be9d79599cb06f7935bd2d052bb2a2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46b6c72283ab0ead6aad871f3801fb3ed967f8f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,12 +56,12 @@ ms.lasthandoff: 11/21/2017
 |-2|La riga recuperata è mancante.|
 |-9|Il cursore non sta eseguendo un'operazione di recupero.|  
   
-## <a name="remarks"></a>Osservazioni  
- Poiché @@FETCH_STATUS è globale per tutti i cursori in una connessione, utilizzare @@FETCH_STATUS con attenzione. Dopo l'esecuzione di un'istruzione FETCH, il test per @@FETCH_STATUS deve verificarsi prima che qualsiasi altra istruzione FETCH viene eseguita su un altro cursore. Il valore di @@FETCH_STATUS prima di operazioni di recupero si sono verificati per la connessione non è definito.  
+## <a name="remarks"></a>Remarks  
+ Poiché la funzione @@FETCH_STATUS è globale per tutti i cursori di una connessione, usare @@FETCH_STATUS con attenzione. Dopo l'esecuzione di un'istruzione FETCH, prima di eseguire qualsiasi altra istruzione FETCH con un altro cursore è necessario eseguire il test della funzione @@FETCH_STATUS. Il valore di @@FETCH_STATUS viene definito solo dopo l'esecuzione di operazioni di recupero sulla connessione.  
   
- Un utente, ad esempio, può eseguire un'istruzione FETCH da un cursore e richiamare quindi una stored procedure che apre ed elabora i risultati di un altro cursore. Quando il controllo viene restituito dalla stored procedure chiamata, @@FETCH_STATUS riflette l'ultima istruzione FETCH eseguita nella stored procedure, non l'istruzione FETCH eseguita prima che venga chiamata la stored procedure.  
+ Un utente, ad esempio, può eseguire un'istruzione FETCH da un cursore e richiamare quindi una stored procedure che apre ed elabora i risultati di un altro cursore. Al termine della stored procedure chiamata, nella funzione @@FETCH_STATUS è riportato il risultato dell'ultima istruzione FETCH eseguita nella stored procedure, non dell'istruzione FETCH eseguita prima della chiamata della stored procedure.  
   
- Per recuperare l'ultimo stato di un cursore specifico, eseguire una query di **fetch_status** colonna il **Sys.dm exec_cursors** funzione a gestione dinamica.  
+ Per recuperare l'ultimo stato di un cursore specifico, eseguire una query nella colonna **fetch_status** della DMF **sys.dm_exec_cursors**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzata la funzione `@@FETCH_STATUS` per controllare le attività del cursore in un ciclo `WHILE`.  
@@ -86,6 +83,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni per i cursori &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)   
- [Operazione di recupero &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   

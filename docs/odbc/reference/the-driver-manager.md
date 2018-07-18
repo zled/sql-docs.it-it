@@ -1,32 +1,29 @@
 ---
 title: Gestione Driver | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - driver manager [ODBC]
 - ODBC architecture [ODBC], driver manager
 - driver manager [ODBC], about driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6bd1a9c9f164c1a745e3ec9baf40a7184600a4b1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d31dbfce3f5c5e3b09f43ec9a644e415b6d82d22
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-driver-manager"></a>Gestione Driver
 Il *gestione Driver* è una libreria che gestisce la comunicazione tra applicazioni e driver. Ad esempio, nelle piattaforme Microsoft® Windows®, gestione Driver è una libreria a collegamento dinamico (DLL) che viene scritto da Microsoft e può essere ridistribuita dagli utenti del SDK di ridistribuibile MDAC 2.8 SP1.  

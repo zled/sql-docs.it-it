@@ -1,16 +1,14 @@
 ---
-title: InstanceOf (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: InstanceOf (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - InstanceOf
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - InstanceOf method
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1178b0287c167666216b090a87c6c9dd645622f7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 701be526d519616803275a0959504c161b989c38
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Verifica se il **geography** istanza corrisponde al tipo specificato.  
+  Verifica se l'istanza **geography** corrisponde al tipo specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,19 +42,19 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *geography_type*  
- È un **nvarchar (4000)** specificando una delle 16 tipi esposti nella stringa di **geography** gerarchia dei tipi.  
+ Stringa **nvarchar(4000)** che specifica uno dei 16 tipi esposti nella gerarchia del tipo **geography**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Restituisce 1 se il tipo di un **geography** istanza corrisponde al tipo specificato, o se il tipo specificato è un predecessore del tipo di istanza; in caso contrario, restituisce 0.  
+## <a name="remarks"></a>Remarks  
+ Restituisce 1 se il tipo di un'istanza **geography** corrisponde al tipo specificato o se il tipo specificato è un predecessore del tipo di istanza. In caso contrario, restituisce 0.  
   
- Questo **geography** metodo supportata dal tipo di dati **FullGlobe** istanze o le istanze spaziali con dimensioni maggiori di un emisfero.  
+ Questo metodo con tipo di dati **geography** supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.  
   
- L'input per il metodo deve essere uno dei seguenti: Geometry, punto, Curve, LineString, CircularString, area, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**,  **MultiLineString, multiPolygon, MultiCurve**, **MultiPoint**, o **FullGlobe**.  
+ L'input per il metodo deve essere uno dei seguenti: Geometry, Point, Curve, LineString, CircularString, Surface, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**, **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint** o **FullGlobe**.  
   
  Questo metodo genera un'eccezione `ArgumentException` se per l'input viene utilizzata una qualsiasi altra stringa.  
   

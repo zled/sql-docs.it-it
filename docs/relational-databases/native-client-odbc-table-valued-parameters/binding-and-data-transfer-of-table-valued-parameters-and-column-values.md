@@ -1,28 +1,28 @@
 ---
 title: Associazione e trasferimento dati della tabella con valori di parametri e valori di colonna | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-helpviewer_keywords: table-valued parameters (ODBC), binding and data transfer
+helpviewer_keywords:
+- table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 738981ef92321f4989497b20d027667698065a75
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7a5d0aac8e3d45f67ca83950ee139e3cb7377a96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Associazione e trasferimento dati di valori di colonna e parametri con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/24/2018
   
 3.  Chiama SQLExecute o SQLExecDirect. Verrà restituito SQL_NEED_DATA se sono presenti parametri SQL_PARAM_INPUT o SQL_PARAM_INPUT_OUTPUT da gestire come parametri data-at-execution. In questo caso, l'applicazione effettua quanto segue:  
   
-    -   Calls SQLParamData. Restituisce il *ParameterValuePtr* valore per un parametro data-at-execution e un codice restituito di SQL_NEED_DATA. Quando tutti i dati di parametro sono stati passati al driver, SQLParamData restituisce SQL_SUCCESS, SQL_SUCCESS_WITH_INFO o SQL_ERROR. Per i parametri data-at-execution, *ParameterValuePtr*, che corrisponde al descrittore di campo SQL_DESC_DATA_PTR, può essere considerato come un token per identificare un parametro per il quale è necessario specificare un valore. Tale "token" viene passato dall'applicazione al driver in fase di associazione, quindi viene passato nuovamente all'applicazione in fase di esecuzione.  
+    -   Chiama la funzione SQLParamData. Restituisce il *ParameterValuePtr* valore per un parametro data-at-execution e un codice restituito di SQL_NEED_DATA. Quando tutti i dati di parametro sono stati passati al driver, SQLParamData restituisce SQL_SUCCESS, SQL_SUCCESS_WITH_INFO o SQL_ERROR. Per i parametri data-at-execution, *ParameterValuePtr*, che corrisponde al descrittore di campo SQL_DESC_DATA_PTR, può essere considerato come un token per identificare un parametro per il quale è necessario specificare un valore. Tale "token" viene passato dall'applicazione al driver in fase di associazione, quindi viene passato nuovamente all'applicazione in fase di esecuzione.  
   
 4.  Per inviare dati di riga di parametro con valori di tabella per i parametri con valori di tabella null, se il parametro con valori di tabella non è presenti righe, un'applicazione chiama SQLPutData con *StrLen_or_Ind* impostato su SQL_DEFAULT_PARAM.  
   
@@ -98,6 +98,6 @@ ms.lasthandoff: 01/24/2018
 6.  Chiama la funzione SQLParamData nuovamente. Se sono presenti parametri data-at-execution tra le colonne di parametri con valori di tabella, questi verranno identificati dal valore *ValuePtrPtr* restituito da SQLParamData. Quando tutti i valori di colonna sono disponibili, SQLParamData restituirà nuovamente il *ParameterValuePtr* valore per il parametro con valori di tabella e l'applicazione inizia nuovamente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Table-Valued parametri &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

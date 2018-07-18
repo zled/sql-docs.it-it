@@ -1,37 +1,35 @@
 ---
 title: Tipi di dati (API Stored procedure estesa) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], data types
 - data types [SQL Server], extended stored procedures
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a69f167e3979a975deb506270843886142244dc4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 0e703c80db732560a45db72d8f8c0bf2a2ce21fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Tipi di dati (API Stored procedure estesa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] In alternativa, usare l'integrazione con CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Per utilizzare i tipi di dati dell'API Stored procedure estesa, includere il file di intestazione Srv.h nel programma.  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 02/09/2018
 |SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|Tipo di dati **tinyint**, **smallint** o **int**, sono consentiti valori Null.|  
 |SRVMONEY4|**smallmoney**|Tipo di dati **smallmoney** a 4 byte.|  
 |SRVMONEY|**money**|Tipo di dati **money** a 8 byte.|  
-|SRVMONEYN|**Money** &#124; **smallmoney null**|Tipo di dati **smallmoney** o **money**, sono consentiti valori Null.|  
+|SRVMONEYN|**money** &#124; **smallmoney null**|Tipo di dati **smallmoney** o **money**, sono consentiti valori Null.|  
 |SRVNCHAR|**nchar**|Tipo di dati **character** Unicode.|  
 |SRVNTEXT|**ntext**|Tipo di dati **text** Unicode.|  
 |SRVNUMERIC|**numeric**|Tipo di dati **numeric**.|  

@@ -1,16 +1,14 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -40,21 +38,22 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 
+caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 356a8a7e4e869d86d93b0654828b081d81c380ff
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582513"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Modifica i dati esistenti in una tabella o vista in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per esempi, vedere [esempi](#UpdateExamples).  
+  Modifica i dati esistenti in una tabella o vista in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per alcuni esempi, vedere [Esempi](#UpdateExamples).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -124,20 +123,20 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  WITH \<common_table_expression>  
  Specifica una vista o un set di risultati denominato temporaneo, anche noto come espressione di tabella comune (CTE), definito nell'ambito di un'istruzione SELECT, INSERT, UPDATE o DELETE. Il set di risultati di espressione di tabella comune è derivato da una query semplice e vi viene fatto riferimento dall'istruzione UPDATE.  
   
- Le espressioni di tabella comune possono essere utilizzate anche con le istruzioni SELECT, INSERT, DELETE e CREATE VIEW. Per ulteriori informazioni, vedere [con common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Le espressioni di tabella comune possono essere utilizzate anche con le istruzioni SELECT, INSERT, DELETE e CREATE VIEW. Per altre informazioni, vedere [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- INIZIO **(** *espressione * * *)** [percentuale]  
+ TOP **(** *expression***)** [ PERCENT ]  
  Specifica il numero o la percentuale di righe che vengono aggiornate. Il valore di*expression* può essere specificato come numero o come percentuale di righe.  
   
  Le righe a cui viene fatto riferimento nell'espressione TOP utilizzata con INSERT, UPDATE o DELETE non sono disposte in alcun ordine.  
   
- Le parentesi che delimitano *espressione* nell'espressione TOP sono necessarie nelle istruzioni INSERT, UPDATE e DELETE. Per ulteriori informazioni, vedere [torna all'inizio &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+ Le parentesi che delimitano *expression* nell'espressione TOP sono obbligatorie nelle istruzioni INSERT, UPDATE e DELETE. Per altre informazioni, vedere [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  *table_alias*  
  Alias specificato nella clausola FROM che rappresenta la tabella o la vista da cui vengono aggiornate le righe.  
   
  *server_name*  
- È il nome del server (nome di un server collegato o [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) funzione come nome del server) in cui è contenuta la tabella o vista. Se *nome_server* è specificato, *database_name* e *schema_name* sono necessari.  
+ Nome del server (che usa come nome un nome di server collegato o la funzione [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)) in cui si trova la tabella o la vista. Se *server_name* è specificato, è obbligatorio specificare *database_name* e *schema_name*.  
   
  *database_name*  
  Nome del database.  
@@ -145,17 +144,17 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *schema_name*  
  Nome dello schema a cui appartiene la tabella o la vista.  
   
- *view_name table_or*  
- Nome della tabella o della vista da cui devono essere aggiornate le righe. La vista a cui fa riferimento *table_or_view_name* deve essere aggiornabile e fare riferimento esattamente a una tabella di base nella clausola FROM della vista. Per ulteriori informazioni sulle viste aggiornabili, vedere [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ *table_or_view_name*  
+ Nome della tabella o della vista da cui devono essere aggiornate le righe. È necessario che la vista a cui viene fatto riferimento in *table_or_view_name* sia aggiornabile e includa un riferimento esatto a una tabella di base nella clausola FROM della definizione della vista. Per altre informazioni sulle viste aggiornabili, vedere [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- È il [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) funzione, soggetto alle funzionalità del provider.  
+ Funzione [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), in base alle funzionalità del provider.  
   
- CON **(** \<Table_Hint_Limited > **)**  
- Specifica uno o più hint di tabella consentiti per una tabella di destinazione. La parola chiave WITH e le parentesi sono obbligatorie. Le opzioni NOLOCK e READUNCOMMITTED non sono consentite. Per informazioni sugli hint di tabella, vedere [hint di tabella &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+ WITH **(** \<Table_Hint_Limited> **)**  
+ Specifica uno o più hint di tabella consentiti per una tabella di destinazione. La parola chiave WITH e le parentesi sono obbligatorie. Le opzioni NOLOCK e READUNCOMMITTED non sono consentite. Per informazioni sugli hint di tabella, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
- Specifica un [tabella](../../t-sql/data-types/table-transact-sql.md) variabile come origine di tabella.  
+ Indica una variabile[ table](../../t-sql/data-types/table-transact-sql.md) come origine di tabella.  
   
  SET  
  Indica l'elenco dei nomi di colonna o di variabile da aggiornare.  
@@ -163,25 +162,25 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *column_name*  
  È una colonna contenente i dati da modificare. *column_name* deve essere presente in *table_or view_name*. Non è possibile aggiornare le colonne Identity.  
   
- *espressione*  
- Variabile, valore letterale, espressione o istruzione sub-SELECT racchiusa tra parentesi che restituisce un valore singolo. Il valore restituito da *espressione* sostituisce il valore esistente in *column_name* o  *@variable* .  
+ *expression*  
+ Variabile, valore letterale, espressione o istruzione sub-SELECT racchiusa tra parentesi che restituisce un valore singolo. Il valore restituito da *expression* sostituisce il valore esistente in *column_name* o in *@variable*.  
   
 > [!NOTE]  
->  Quando si fa riferimento a tipi di dati carattere Unicode **nchar**, **nvarchar**, e **ntext**, 'expression' deve essere preceduto dalla lettera maiuscola ' N' '. Se la lettera "N" non è specificata, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la stringa viene convertita in base alla tabella codici corrispondente alle regole di confronto predefinite del database o della colonna. Tutti i caratteri non trovati nella tabella codici vengono persi.  
+>  Quando si fa riferimento ai tipi di dati dei caratteri Unicode **nchar**, **nvarchar** e **ntext**, è necessario far precedere 'expression' dalla lettera maiuscola 'N'. Se la lettera "N" non è specificata, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la stringa viene convertita in base alla tabella codici corrispondente alle regole di confronto predefinite del database o della colonna. Tutti i caratteri non trovati nella tabella codici vengono persi.  
   
  DEFAULT  
  Specifica che il valore predefinito impostato per la colonna deve sostituire il valore esistente all'interno della colonna. Questo argomento consente inoltre di modificare il valore della colonna in NULL se la colonna non dispone di un valore predefinito e ammette valori Null.  
   
  { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
  Operatore di assegnazione composto:  
- += Aggiunta e assegnazione  
- -= Sottrazione e assegnazione  
- *= Moltiplicazione e assegnazione  
- / = Divisione e assegnazione  
- % = Applicazione del coefficiente e assegnazione  
- & = AND bit per bit e assegnazione  
- ^ = XOR bit per bit e assegnazione  
- | = OR bit per bit e assegnazione  
+ +=                       Somma e assegnazione  
+ -=                        Sottrazione e assegnazione  
+ *=                        Moltiplicazione e assegnazione  
+ /=                         Divisione e assegnazione  
+ %=                       Modulo e assegnazione  
+ &=                        AND bit per bit e assegnazione  
+ ^=                        XOR bit per bit e assegnazione  
+ |=                         OR bit per bit e assegnazione  
   
  *udt_column_name*  
  Colonna definita dall'utente.  
@@ -189,29 +188,29 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *property_name* | *field_name*  
  Proprietà pubblica o membro pubblico di dati di un tipo definito dall'utente.  
   
- *nome_metodo* **(** *argomento* [ **,**... *n*] **)**  
- È un metodo mutatore pubblico non static di *udt_column_name* che accetta uno o più argomenti.  
+ *method_name* **(** *argument* [ **,**... *n*] **)**  
+ Metodo mutatore pubblico non statico di *udt_column_name* che accetta uno o più argomenti.  
   
- **.** Scrivere **(***espressione***,***@Offset***,***@Length***)**  
- Specifica che una sezione del valore di *column_name* deve essere modificato. *espressione* sostituisce  *@Length*  unità a partire da  *@Offset*  di *column_name*. Solo le colonne di **varchar (max)**, **nvarchar (max)**, o **varbinary (max)** possono essere specificate con questa clausola. *column_name* non può essere NULL e non può essere qualificato con un nome di tabella o un alias di tabella.  
+ **.** WRITE **(***expression***,***@Offset***,***@Length***)**  
+ Specifica che è necessario modificare una sezione del valore di *column_name*. *expression* sostituisce unità *@Length* a partire da *@Offset* di *column_name*. È possibile specificare con questa clausola solo colonne di tipo **varchar(max)**, **nvarchar(max)** o **varbinary(max)**. *column_name* non può essere NULL e non può essere qualificato con un nome di tabella o un alias di tabella.  
   
- *espressione* è il valore copiato in *column_name*. *espressione* deve restituire o essere in grado di eseguire il cast implicito per il *column_name* tipo. Se *espressione* è impostato su NULL,  *@Length*  viene ignorato e il valore in *column_name* viene troncato in corrispondenza  *@Offset* .  
+ *expression* è il valore copiato in *column_name*. *expression* deve restituire il tipo di *column_name* oppure deve essere possibile eseguirne il cast implicito a tale tipo. Se il valore di *expression* è impostato su NULL, *@Length* viene ignorato e il valore in *column_name* viene troncato in corrispondenza dell'offset specificato in *@Offset*.  
   
- *@Offset*è il punto di partenza nel valore di *column_name* in corrispondenza del quale *espressione* viene scritto. *@Offset*è una posizione ordinale in base zero, è **bigint**, e non può essere un numero negativo. Se  *@Offset*  è NULL, l'operazione di aggiornamento Accoda *espressione* alla fine dell'oggetto esistente *column_name* valore e  *@Length*  viene ignorato. Se @Offset è maggiore della lunghezza del *column_name* valore, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un errore. Se  *@Offset*  più  *@Length*  supera la fine del valore sottostante nella colonna, l'eliminazione viene eseguita fino all'ultimo carattere del valore. Se  *@Offset*  più LEN (*espressione*) è maggiore di sottostante dimensioni dichiarate, viene generato un errore.  
+ *@Offset*è il punto iniziale nel valore di *column_name* in corrispondenza del quale viene scritto il valore *expression*. *@Offset* è una posizione ordinale in base zero, è di tipo **bigint** e non può essere un numero negativo. Se *@Offset* è NULL, l'operazione di aggiornamento accoda *expression* al termine del valore *column_name* esistente e *@Length* viene ignorato. Se @Offset è maggiore della lunghezza del valore *column_name*, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un errore. Se la somma di *@Offset* e *@Length* supera la fine del valore sottostante nella colonna, l'eliminazione viene eseguita fino all'ultimo carattere del valore. Se la somma di *@Offset* e LEN(*expression*) è maggiore rispetto alle dimensioni dichiarate sottostanti, viene generato un errore.  
   
- *@Length*è la lunghezza della sezione nella colonna, a partire da  *@Offset* , che viene sostituito da *espressione*. *@Length*è **bigint** e non può essere un numero negativo. Se  *@Length*  è NULL, l'operazione di aggiornamento rimuove tutti i dati da  *@Offset*  alla fine del *column_name* valore.  
+ *@Length* è la lunghezza della sezione nella colonna, a partire da *@Offset*, sostituito da *expression*. *@Length* è di tipo **bigint** e non può essere un numero negativo. Se *@Length* è NULL, l'operazione di aggiornamento rimuove tutti i dati da *@Offset* fino al termine del valore *column_name*.  
   
  Per altre informazioni, vedere la sezione Osservazioni.  
   
- **@***variabile*  
- È una variabile dichiarata impostata sul valore restituito da *espressione*.  
+ **@** *variable*  
+ Variabile dichiarata impostata sul valore restituito da *expression*.  
   
- IMPOSTARE **@ * variabile* = *colonna* = *espressione* imposta la variabile sullo stesso valore della colonna. Questo comportamento è diverso dal SET **@ * variabile* = *colonna*, *colonna* = *espressione*, che imposta il variabile in cui il valore precedente all'aggiornamento della colonna.  
+ SET **@***variable* = *column* = *expression* imposta la variabile sullo stesso valore della colonna, a differenza di SET **@***variable* = *column*, *column* = *expression*, che imposta la variabile sul valore precedente all'aggiornamento della colonna.  
   
  \<OUTPUT_Clause>  
- Restituisce dati aggiornati o espressioni basate su di essi come parte dell'operazione UPDATE. La clausola OUTPUT non è supportata in alcuna istruzione DML applicata a tabelle o viste remote. Per ulteriori informazioni, vedere [clausola OUTPUT &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
+ Restituisce dati aggiornati o espressioni basate su di essi come parte dell'operazione UPDATE. La clausola OUTPUT non è supportata in alcuna istruzione DML applicata a tabelle o viste remote. Per altre informazioni, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
- DA \<table_source >  
+ FROM \<table_source>  
  Specifica che una tabella, vista o origine di tabella derivata viene utilizzata per fornire i criteri per l'operazione di aggiornamento. Per altre informazioni, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
  Se l'oggetto da aggiornare coincide con l'oggetto specificato nella clausola FROM e la clausola FROM include un solo riferimento all'oggetto, non è necessario specificare un alias di oggetto. Se l'oggetto da aggiornare è specificato più di una volta nella clausola FROM, un solo riferimento all'oggetto non deve specificare un alias della tabella. Tutti gli altri riferimenti all'oggetto nella clausola FROM devono includere un alias dell'oggetto.  
@@ -229,29 +228,29 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 -   Gli aggiornamenti posizionati utilizzano la clausola CURRENT OF per specificare un cursore. L'operazione di aggiornamento viene in questo caso eseguita nella posizione corrente del cursore.  
   
 \<search_condition>  
- Specifica la condizione che le righe da aggiornare devono soddisfare. La condizione di ricerca può inoltre essere rappresentata dalla condizione per un join. Non sono previsti limiti per il numero di predicati che è possibile includere in una condizione di ricerca. Per ulteriori informazioni sui predicati e condizioni di ricerca, vedere [condizione di ricerca &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+ Specifica la condizione che le righe da aggiornare devono soddisfare. La condizione di ricerca può inoltre essere rappresentata dalla condizione per un join. Non sono previsti limiti per il numero di predicati che è possibile includere in una condizione di ricerca. Per altre informazioni sui predicati e sulle condizioni di ricerca, vedere [Condizioni di ricerca &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 CURRENT OF  
  Specifica che l'aggiornamento viene eseguito nella posizione corrente del cursore specificato.  
   
- Se si esegue un aggiornamento posizionato tramite la clausola WHERE CURRENT OF, viene aggiornata la riga singola che corrisponde alla posizione corrente del cursore. Può trattarsi di un aggiornamento con ricerca che utilizza una clausola WHERE più accurata \<search_condition > clausola che qualifica le righe da aggiornare. Un aggiornamento con ricerca modifica più righe se le condizioni di ricerca non identificano una singola riga in modo univoco.  
+ Se si esegue un aggiornamento posizionato tramite la clausola WHERE CURRENT OF, viene aggiornata la riga singola che corrisponde alla posizione corrente del cursore. Questa operazione risulta più accurata rispetto a un aggiornamento con ricerca che usa una clausola WHERE \<search_condition> per qualificare le righe da aggiornare. Un aggiornamento con ricerca modifica più righe se le condizioni di ricerca non identificano una singola riga in modo univoco.  
   
 GLOBAL  
  Specifica che *cursor_name* fa riferimento a un cursore globale.  
   
 *cursor_name*  
- Nome del cursore aperto dal quale deve essere eseguita l'operazione di recupero. Se entrambe globale e un cursore locale con il nome *cursor_name* esiste, questo argomento fa riferimento il cursore globale se globale è specificata; in caso contrario, fa riferimento al cursore locale. Il cursore deve consentire operazioni di aggiornamento.  
+ Nome del cursore aperto dal quale deve essere eseguita l'operazione di recupero. Se sono presenti un cursore globale e un cursore locale denominati *cursor_name* ed è stato specificato l'argomento GLOBAL, l'argomento fa riferimento al cursore globale. Se non è stato specificato l'argomento GLOBAL, fa riferimento al cursore locale. Il cursore deve consentire operazioni di aggiornamento.  
   
 *cursor_variable_name*  
- Nome di una variabile di cursore. *cursor_variable_name* deve fare riferimento a un cursore che consente gli aggiornamenti.  
+ Nome di una variabile di cursore. *cursor_variable_name* deve fare riferimento a un cursore che consente operazioni di aggiornamento.  
   
-OPZIONE **(** \<query_hint > [ **,**... *n* ] **)**  
+OPTION **(** \<query_hint> [ **,**... *n* ] **)**  
  Specifica che vengono utilizzati hint di ottimizzazione per personalizzare la modalità di elaborazione dell'istruzione nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- Utilizzo di @@ROWCOUNT inserito di funzione per restituire il numero di righe per l'applicazione client. Per ulteriori informazioni, vedere [@@ROWCOUNT &#40; Transact-SQL &#41; ](../../t-sql/functions/rowcount-transact-sql.md).  
+ Usare la funzione @@ROWCOUNT per restituire il numero di righe inserite nell'applicazione client. Per altre informazioni, vedere [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
- Nelle istruzioni UPDATE è possibile utilizzare nomi di variabili per indicare il valore da aggiornare e il valore in base a cui eseguire l'aggiornamento. I nomi di variabili, tuttavia, devono essere utilizzati solo quando l'istruzione UPDATE è relativa a un unico record. Se l'istruzione UPDATE interessa più record, per restituire i valori vecchi e nuovi per ogni record, utilizzare il [clausola OUTPUT](../../t-sql/queries/output-clause-transact-sql.md).  
+ Nelle istruzioni UPDATE è possibile utilizzare nomi di variabili per indicare il valore da aggiornare e il valore in base a cui eseguire l'aggiornamento. I nomi di variabili, tuttavia, devono essere utilizzati solo quando l'istruzione UPDATE è relativa a un unico record. In caso contrario, usare la [clausola OUTPUT](../../t-sql/queries/output-clause-transact-sql.md).  
   
  Prestare attenzione nello specificare la clausola FROM per fornire i criteri per l'operazione di aggiornamento. I risultati di un'istruzione UPDATE sono indefiniti se l'istruzione include una clausola FROM non specificata in modo che sia disponibile un unico valore per ogni occorrenza di colonna che viene aggiornata, ovvero se l'istruzione UPDATE non è deterministica. Ad esempio, nell'istruzione UPDATE dello script riportato di seguito entrambe le righe in `Table1` soddisfano le condizioni della clausola FROM nell'istruzione UPDATE, ma non viene specificato quale riga di `Table1` viene utilizzata per aggiornare la riga in `Table2.`  
   
@@ -321,36 +320,36 @@ GO
  In una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà rimosso il supporto per l'utilizzo degli hint READUNCOMMITTED e NOLOCK nella clausola FROM per la tabella di destinazione di un'istruzione UPDATE o DELETE. Evitare di usare questi hint in questo contesto nei nuovi progetti di sviluppo e pianificare la modifica delle applicazioni in cui sono attualmente usati.  
   
 ## <a name="data-types"></a>Tipi di dati  
- Tutti **char** e **nchar** colonne vengono aggiunti a destra per la lunghezza definita.  
+ Tutte le colonne di tipo **char** e **nchar** vengono riempite con caratteri nulli a destra fino a raggiungere la lunghezza definita.  
   
- Se l'opzione ANSI_PADDING è impostata su OFF, tutti gli spazi finali vengono rimossi dai dati inseriti **varchar** e **nvarchar** colonne, tranne che in stringhe che contengono solo spazi. le quali vengono troncate come stringhe vuote. Se l'opzione ANSI_PADDING è impostata su ON, vengono inseriti spazi finali. Il driver ODBC di Microsoft SQL Server e il provider OLE DB per SQL Server impostano automaticamente l'opzione ANSI_PADDING su ON per ogni connessione. Questa opzione può essere configurata in origini dati ODBC oppure impostando gli attributi o le proprietà della connessione. Per altre informazioni, vedere [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+ Se l'opzione ANSI_PADDING è impostata su OFF, tutti gli spazi finali vengono rimossi dai dati inseriti nelle colonne **varchar** e **nvarchar**, tranne nel caso di stringhe che includono solo spazi, le quali vengono troncate come stringhe vuote. Se l'opzione ANSI_PADDING è impostata su ON, vengono inseriti spazi finali. Il driver ODBC di Microsoft SQL Server e il provider OLE DB per SQL Server impostano automaticamente l'opzione ANSI_PADDING su ON per ogni connessione. Questa opzione può essere configurata in origini dati ODBC oppure impostando gli attributi o le proprietà della connessione. Per altre informazioni, vedere [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ### <a name="updating-text-ntext-and-image-columns"></a>Aggiornamento di colonne text, ntext e image  
- Modifica di un **testo**, **ntext**, o **immagine** colonna con l'aggiornamento consente di inizializzare la colonna, assegna un puntatore di testo valido e consente di allocare almeno una pagina di dati, a meno che non la colonna venga aggiornata con NULL.  
+ Se si modifica una colonna **text**, **ntext** o **image** tramite l'istruzione UPDATE, la colonna viene inizializzata, viene associata a un puntatore di testo valido e viene allocata almeno una pagina di dati, a meno che la colonna non venga aggiornata con NULL.  
   
- Per sostituire o modificare grandi blocchi di **testo**, **ntext**, o **immagine** dei dati, utilizzare [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) o [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) anziché l'istruzione UPDATE.  
+ Per sostituire o modificare grandi blocchi di dati di tipo **text**, **ntext** o **image**, usare le istruzioni [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) o [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) invece dell'istruzione UPDATE.  
   
- Se l'istruzione UPDATE modifica più righe durante l'aggiornamento sia la chiave di clustering e uno o più **testo**, **ntext**, o **immagine** colonne, l'aggiornamento parziale di Queste colonne viene eseguito come sostituzione completa dei valori.  
+ Se l'istruzione UPDATE modifica più righe durante l'aggiornamento della chiave di clustering e di una o più colonne di tipo **text**, **ntext** o **image**, l'aggiornamento parziale di queste colonne viene eseguito come sostituzione completa dei valori.  
   
 > [!IMPORTANT]  
->  Il **ntext**, **testo**, e **immagine** tipi di dati verranno rimossa in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
+>  I tipi di dati **ntext**, **text** e **image** verranno rimossi in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Aggiornamento dei tipi di dati per valori di grandi dimensioni  
- Utilizzare il **.** SCRIVERE (*espressione * * *,** *@Offset***,***@Length*) clausola per eseguire un aggiornamento parziale o completo di  **varchar (max)**, **nvarchar (max)**, e **varbinary (max)** tipi di dati. Ad esempio, un aggiornamento parziale di un **varchar (max)** colonna potrebbe eliminare o modificare solo i primi 200 caratteri della colonna, mentre un aggiornamento completo Elimina o modifica di tutti i dati nella colonna. **.** Scrivere gli aggiornamenti che inseriscono o accodano nuovi dati vengono registrati tramite registrazione se il modello di recupero del database è impostato su bulk oppure su registrazione minima. La registrazione minima non viene utilizzata in caso di aggiornamento di valori esistenti. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Usare la clausola **.** WRITE (*expression***,** *@Offset ***,***@Length*) per eseguire un aggiornamento parziale o completo dei tipi di dati **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. Un aggiornamento parziale di una colonna di tipo **varchar(max)**, ad esempio, può eliminare o modificare solo i primi 200 caratteri della colonna, mentre un aggiornamento completo elimina o modifica tutti i dati nella colonna. Gli aggiornamenti **.** WRITE che inseriscono o accodano nuovi dati vengono registrati in maniera minima se il modello di recupero del database è impostato su registrazione minima delle operazioni bulk oppure su registrazione minima. La registrazione minima non viene utilizzata in caso di aggiornamento di valori esistenti. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  In [!INCLUDE[ssDE](../../includes/ssde-md.md)] un aggiornamento parziale viene convertito in aggiornamento completo quando l'istruzione UPDATE provoca una di queste azioni:  
 -   modifica una colonna chiave della vista o tabella partizionata  
 -   modifica più di una riga e allo stesso tempo aggiorna la chiave di un indice cluster non univoco ad un valore non costante.  
   
-Non è possibile utilizzare il **.** Clausola di scrittura per aggiornare una colonna NULL o impostare il valore di *column_name* su NULL.  
+Non è possibile usare la clausola **.** WRITE per aggiornare una colonna NULL o impostare il valore di *column_name* su NULL.  
   
-*@Offset*e  *@Length*  vengono specificate in byte per **varbinary** e **varchar** tipi di dati e in caratteri per il **nvarchar**tipo di dati. Gli offset appropriati vengono calcolati per le regole di confronto DBCS (Double-Byte Character Set).  
+I valori di *@Offset* e *@Length* vengono specificati in byte per i tipi di dati **varbinary** e **varchar** e in caratteri per il tipo di dati **nvarchar**. Gli offset appropriati vengono calcolati per le regole di confronto DBCS (Double-Byte Character Set).  
   
 Per prestazioni ottimali, è consigliabile inserire o aggiornare i dati in dimensioni di blocco multiple di 8040 byte.  
   
-Se la colonna modificata dal **.** SCRIVERE clausola fa riferimento in una clausola OUTPUT, il valore completo della colonna, ovvero l'immagine precedente in **eliminato. * * * column_name* o l'immagine successiva in **inserito. * * * column_name*, viene restituito Nella colonna specificata nella variabile di tabella. Vedere l'esempio che segue R.  
+Se in una clausola OUTPUT si fa riferimento alla colonna modificata dalla clausola **.** WRITE, il valore completo della colonna, ovvero l'immagine precedente all'aggiornamento in **deleted.***column_name* oppure l'immagine successiva all'aggiornamento in **inserted.***column_name*, viene restituito nella colonna specificata nella variabile di tabella. Vedere l'esempio R seguente.  
   
-Per ottenere la stessa funzionalità di **.** WRITE con altri caratteri o i tipi di dati binari, utilizzare il [STUFF &#40; Transact-SQL &#41; ](../../t-sql/functions/stuff-transact-sql.md).  
+Per raggiungere la stessa funzionalità di **.** WRITE con altri tipi di dati character o binary, usare [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
   
 ### <a name="updating-user-defined-type-columns"></a>Aggiornamento delle colonne di tipo definito dall'utente  
  L'aggiornamento dei valori nelle colonne di tipo definito dall'utente può essere eseguito in uno dei modi seguenti:  
@@ -385,7 +384,7 @@ Per ottenere la stessa funzionalità di **.** WRITE con altri caratteri o i tipi
      Per modificare proprietà diverse della stessa colonna di tipo definito dall'utente, eseguire più istruzioni UPDATE o richiamare un metodo mutatore del tipo.  
   
 ### <a name="updating-filestream-data"></a>Aggiornamento di dati FILESTREAM  
- È possibile utilizzare l'istruzione UPDATE per aggiornare un campo FILESTREAM a un valore Null, a un valore vuoto o a una quantità di dati inline relativamente piccola. Tuttavia, una grande quantità di dati viene trasmessa in modo più efficace in un file mediante l'utilizzo di interfacce Win32. Quando si aggiorna un campo FILESTREAM, si modificano i dati BLOB sottostanti nel file system. Quando un campo FILESTREAM viene impostato su NULL, i dati BLOB associati al campo vengono eliminati. Non è possibile utilizzare. Write () per eseguire aggiornamenti parziali a dati FILESTREAM. Per altre informazioni, vedere [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
+ È possibile utilizzare l'istruzione UPDATE per aggiornare un campo FILESTREAM a un valore Null, a un valore vuoto o a una quantità di dati inline relativamente piccola. Tuttavia, una grande quantità di dati viene trasmessa in modo più efficace in un file mediante l'utilizzo di interfacce Win32. Quando si aggiorna un campo FILESTREAM, si modificano i dati BLOB sottostanti nel file system. Quando un campo FILESTREAM viene impostato su NULL, i dati BLOB associati al campo vengono eliminati. Non è possibile usare .WRITE() per eseguire aggiornamenti parziali a dati FILESTREAM. Per altre informazioni, vedere [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
 ## <a name="error-handling"></a>Gestione degli errori  
  Se un'operazione di aggiornamento in una riga non rispetta un vincolo o una regola, viola l'impostazione NULL per la colonna oppure il nuovo valore è un tipo di dati incompatibile, l'istruzione viene annullata, viene restituito un errore e non viene aggiornato alcun record.  
@@ -397,10 +396,10 @@ Per ottenere la stessa funzionalità di **.** WRITE con altri caratteri o i tipi
 ## <a name="interoperability"></a>Interoperabilità  
  Le istruzioni UPDATE sono consentite all'interno delle funzioni definite dall'utente solo se la tabella da modificare è una variabile di tabella.  
   
- Quando viene definito un trigger INSTEAD OF in azioni UPDATE eseguite su una tabella, viene eseguito il trigger anziché l'istruzione UPDATE. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati solo i trigger AFTER definiti in UPDATE e altre istruzioni di modifica dei dati. La clausola FROM non può essere specificata in un'istruzione UPDATE in cui si fa riferimento diretto o indiretto a una vista in cui è definito un trigger INSTEAD OF. Per ulteriori informazioni sui trigger INSTEAD OF, vedere [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+ Quando viene definito un trigger INSTEAD OF in azioni UPDATE eseguite su una tabella, viene eseguito il trigger anziché l'istruzione UPDATE. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati solo i trigger AFTER definiti in UPDATE e altre istruzioni di modifica dei dati. La clausola FROM non può essere specificata in un'istruzione UPDATE in cui si fa riferimento diretto o indiretto a una vista in cui è definito un trigger INSTEAD OF. Per altre informazioni sui trigger INSTEAD OF, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
- La clausola FROM non può essere specificata in un'istruzione UPDATE in cui si fa riferimento diretto o indiretto a una vista in cui è definito un trigger INSTEAD OF. Per ulteriori informazioni sui trigger INSTEAD OF, vedere [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+ La clausola FROM non può essere specificata in un'istruzione UPDATE in cui si fa riferimento diretto o indiretto a una vista in cui è definito un trigger INSTEAD OF. Per altre informazioni sui trigger INSTEAD OF, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  Quando un'espressione di tabella comune (CTE) è la destinazione di un'istruzione UPDATE, tutti i riferimenti a tale espressione nell'istruzione devono corrispondere. Se, ad esempio, alla CTE è assegnato un alias nella clausola FROM, l'alias deve essere utilizzato per tutti gli altri riferimenti alla CTE. Sono necessari riferimenti CTE non ambigui perché una CTE non dispone di un ID oggetto utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per riconoscere la relazione implicita tra l'oggetto e il relativo alias. Senza questa relazione è possibile che il piano di query produca un comportamento del join e risultati della query imprevisti. Negli esempi seguenti vengono illustrati i metodi corretti ed errati della definizione di una CTE quando questa è l'oggetto di destinazione dell'operazione di aggiornamento.  
   
@@ -432,7 +431,7 @@ GO
  (2 row(s) affected)  
 ```  
 
-Istruzione UPDATE con riferimenti CTE corrispondente in modo non corretto.  
+Istruzione UPDATE con riferimenti CTE associati in modo non corretto.  
 ```sql  
 USE tempdb;  
 GO  
@@ -464,14 +463,14 @@ ID     Value
  Un'istruzione UPDATE acquisisce sempre un blocco esclusivo (X) sulla tabella che modifica e mantiene tale blocco fino al completamento della transazione. Con un blocco esclusivo, nessuna altra transazione può modificare dati. È possibile specificare hint di tabella per eseguire l'override di questo comportamento predefinito per la durata dell'istruzione UPDATE specificando un altro metodo di blocco. Gli hint dovrebbero comunque essere utilizzati solo se strettamente necessario ed esclusivamente da sviluppatori e amministratori di database esperti. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
- L'istruzione UPDATE viene registrata. Tuttavia, per gli aggiornamenti parziali a tipi di dati di valori di grandi dimensioni tramite la **.** SCRIVERE la clausola con registrazione minima. Per altre informazioni, vedere "Aggiornamento dei tipi di dati per valori di grandi dimensioni" nella sezione precedente "Tipi di dati".  
+ L'istruzione UPDATE viene registrata; tuttavia, per gli aggiornamenti parziali a tipi di dati per valori di grandi dimensioni tramite la clausola **.** WRITE viene eseguita una registrazione minima. Per altre informazioni, vedere "Aggiornamento dei tipi di dati per valori di grandi dimensioni" nella sezione precedente "Tipi di dati".  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
- Le autorizzazioni UPDATE sono necessarie nella tabella di destinazione. Le autorizzazioni SELECT sono necessari anche per la tabella da aggiornare se l'istruzione UPDATE include una clausola WHERE, oppure se *espressione* nel SET di clausola utilizza una colonna nella tabella.  
+ Le autorizzazioni UPDATE sono necessarie nella tabella di destinazione. Se l'istruzione UPDATE include una clausola WHERE oppure l'argomento *expression* nella clausola SET usa una colonna della tabella, sono anche necessarie le autorizzazioni per l'esecuzione dell'istruzione SELECT nella tabella da aggiornare.  
   
- AGGIORNAMENTO delle autorizzazioni per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server, il **db_owner** e **db_datawriter** fissa ruoli del database e il proprietario della tabella. I membri del **sysadmin**, **db_owner**, e **db_securityadmin** ruoli e il proprietario della tabella possono trasferire autorizzazioni ad altri utenti.  
+ Le autorizzazioni per l'istruzione UPDATE vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin**, dei ruoli predefiniti del database **db_owner** e **db_datawriter** e al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner** e **db_securityadmin** e il proprietario della tabella possono trasferire autorizzazioni ad altri utenti.  
   
 ##  <a name="UpdateExamples"></a> Esempi  
   
@@ -480,16 +479,16 @@ ID     Value
 |[Sintassi di base](#BasicSyntax)|UPDATE|  
 |[Limitazione delle righe aggiornate](#LimitingValues)|WHERE • TOP • espressione di tabella comune WITH • WHERE CURRENT OF|  
 |[Impostazione dei valori di colonna](#ColumnValues)|valori calcolati • operatori composti • valori predefiniti • sottoquery|  
-|[Specifica di oggetti di destinazione diversi dalle tabelle Standard](#TargetObjects)|viste • variabili di tabella • alias di tabella|  
-|[L'aggiornamento dei dati in base ai dati da altre tabelle](#OtherTables)|FROM|  
-|[L'aggiornamento delle righe in una tabella remota](#RemoteTables)|server collegato • OPENQUERY • OPENDATASOURCE|  
-|[Aggiornamento di tipi di dati LOB](#LOBValues)|. WRITE • OPENROWSET|  
+|[Indicazione di oggetti di destinazione diversi dalle tabelle standard](#TargetObjects)|viste • variabili di tabella • alias di tabella|  
+|[Aggiornamento di dati in base ai dati di altre tabelle](#OtherTables)|FROM|  
+|[Aggiornamento di righe in una tabella remota](#RemoteTables)|server collegato • OPENQUERY • OPENDATASOURCE|  
+|[Aggiornamento di tipi di dati Large Object](#LOBValues)|.WRITE • OPENROWSET|  
 |[Aggiornamento di tipi definiti dall'utente](#UDTs)|tipi definiti dall'utente|  
 |[Override del comportamento predefinito di Query Optimizer tramite hint](#TableHints)|hint di tabella • hint per la query|  
 |[Acquisizione dei risultati dell'istruzione UPDATE](#CaptureResults)|Clausola OUTPUT|  
-|[Utilizzo di UPDATE in altre istruzioni](#Other)|Stored procedure • TRY…CATCH|  
+|[Uso di UPDATE in altre istruzioni](#Other)|Stored procedure • TRY…CATCH|  
   
-###  <a name="BasicSyntax"></a>Sintassi di base  
+###  <a name="BasicSyntax"></a> Sintassi di base  
  Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base dell'istruzione UPDATE tramite la sintassi minima richiesta.  
   
 #### <a name="a-using-a-simple-update-statement"></a>A. Esecuzione di un'istruzione UPDATE semplice  
@@ -513,7 +512,7 @@ SET Bonus = 6000, CommissionPct = .10, SalesQuota = NULL;
 GO  
 ```  
   
-###  <a name="LimitingValues"></a>Limitazione delle righe aggiornate  
+###  <a name="LimitingValues"></a> Limitazione delle righe aggiornate  
  Negli esempi contenuti in questa sezione vengono illustrati i modi che è possibile utilizzare per limitare il numero di righe interessate dall'istruzione UPDATE.  
   
 #### <a name="c-using-the-where-clause"></a>C. Utilizzo della clausola WHERE  
@@ -529,7 +528,7 @@ GO
 ```  
   
 #### <a name="d-using-the-top-clause"></a>D. Utilizzo della clausola TOP  
- Negli esempi seguenti viene utilizzata la clausola TOP per limitare il numero di righe modificate in un'istruzione UPDATE. Quando TOP (*n*) clausola viene utilizzata con l'aggiornamento, l'operazione di aggiornamento viene eseguita su una selezione casuale di '*n*' numero di righe. Nell'esempio seguente viene aggiornata la colonna `VacationHours` del 25% per 10 righe casuali nella tabella `Employee`.  
+ Negli esempi seguenti viene utilizzata la clausola TOP per limitare il numero di righe modificate in un'istruzione UPDATE. Quando si usa una clausola TOP (*n*) con UPDATE, l'operazione di aggiornamento viene eseguita su una selezione casuale di un numero '*n*' di righe. Nell'esempio seguente viene aggiornata la colonna `VacationHours` del 25% per 10 righe casuali nella tabella `Employee`.  
   
 ```sql  
 USE AdventureWorks2012;
@@ -601,7 +600,7 @@ DEALLOCATE complex_cursor;
 GO  
 ```  
   
-###  <a name="ColumnValues"></a>Impostazione dei valori di colonna  
+###  <a name="ColumnValues"></a> Impostazione dei valori di colonna  
  Negli esempi contenuti in questa sezione viene illustrato l'aggiornamento di colonne tramite valori calcolati, sottoquery e valori DEFAULT.  
   
 #### <a name="g-specifying-a-computed-value"></a>G. Specifica di un valore calcolato  
@@ -667,11 +666,11 @@ SET CostRate = DEFAULT
 WHERE CostRate > 20.00;  
 ```  
   
-###  <a name="TargetObjects"></a>Specifica di oggetti di destinazione diversi dalle tabelle Standard  
+###  <a name="TargetObjects"></a> Indicazione di oggetti di destinazione diversi dalle tabelle standard  
  Negli esempi contenuti in questa sezione viene illustrato come aggiornare le righe specificando una vista, un alias di tabella o una variabile di tabella.  
   
 #### <a name="k-specifying-a-view-as-the-target-object"></a>K. Specifica di una vista come oggetto di destinazione  
- Nell'esempio seguente vengono aggiornate le righe di una tabella specificando una vista come oggetto di destinazione. La definizione di vista fa riferimento a più tabelle, tuttavia l'istruzione UPDATE ha esito positivo perché fa riferimento alle colonne di una sola delle tabelle sottostanti. L'istruzione UPDATE avrebbe esito negativo se venissero specificate colonne di entrambe le tabelle. Per ulteriori informazioni, vedere [modificare dati tramite una vista](../../relational-databases/views/modify-data-through-a-view.md).  
+ Nell'esempio seguente vengono aggiornate le righe di una tabella specificando una vista come oggetto di destinazione. La definizione di vista fa riferimento a più tabelle, tuttavia l'istruzione UPDATE ha esito positivo perché fa riferimento alle colonne di una sola delle tabelle sottostanti. L'istruzione UPDATE avrebbe esito negativo se venissero specificate colonne di entrambe le tabelle. Per altre informazioni, vedere [Modificare i dati tramite una vista](../../relational-databases/views/modify-data-through-a-view.md).  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -724,7 +723,7 @@ ORDER BY EmpID;
 GO  
 ```  
   
-###  <a name="OtherTables"></a>L'aggiornamento dei dati in base ai dati da altre tabelle  
+###  <a name="OtherTables"></a> Aggiornamento di dati in base ai dati di altre tabelle  
  Negli esempi contenuti in questa sezione vengono illustrati i metodi per l'aggiornamento delle righe di una tabella in base alle informazioni contenute in un'altra.  
   
 #### <a name="n-using-the-update-statement-with-information-from-another-table"></a>N. Utilizzo dell'istruzione UPDATE con informazioni di un'altra tabella  
@@ -744,7 +743,7 @@ JOIN Sales.SalesOrderHeader AS so
 GO  
 ```  
   
- Nell'esempio precedente si presume che venga registrata una sola vendita per un determinato venditore in una data specifica e che i dati siano aggiornati. Se è possibile registrare più vendite per un determinato venditore nello stesso giorno, l'esempio non funziona correttamente. Nell'esempio viene eseguito senza errori, ma ogni `SalesYTD` valore viene aggiornato con una sola vendita, indipendentemente dal numero effettivo di vendite del giorno corrente. Un'istruzione UPDATE infatti non aggiorna mai la stessa riga due volte.  
+ Nell'esempio precedente si presume che venga registrata una sola vendita per un determinato venditore in una data specifica e che i dati siano aggiornati. Se è possibile registrare più vendite per un determinato venditore nello stesso giorno, l'esempio non funziona correttamente. Viene eseguito senza errori, ma ogni valore `SalesYTD` viene aggiornato con una sola vendita, indipendentemente dal numero effettivo di vendite relative al giorno specificato. Un'istruzione UPDATE infatti non aggiorna mai la stessa riga due volte.  
   
  Nel caso in cui sia necessario registrare più vendite per un determinato venditore nello stesso giorno, tutte le vendite relative allo stesso venditore devono essere aggregate all'interno dell'istruzione `UPDATE`, come illustrato nell'esempio seguente:  
   
@@ -763,11 +762,11 @@ SET SalesYTD = SalesYTD +
 GO  
 ```  
   
-###  <a name="RemoteTables"></a>L'aggiornamento delle righe in una tabella remota  
- In questa sezione viene illustrato come aggiornare le righe in una tabella di destinazione remota tramite un [server collegato](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o [funzione rowset](../../t-sql/functions/rowset-functions-transact-sql.md) fare riferimento alla tabella remota.  
+###  <a name="RemoteTables"></a> Aggiornamento di righe in una tabella remota  
+ Gli esempi di questa sezione illustrano come aggiornare le righe in una tabella di destinazione remota tramite un [server collegato](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [funzione per i set di righe](../../t-sql/functions/rowset-functions-transact-sql.md) per fare riferimento alla tabella remota.  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. Aggiornamento di dati in una tabella remota tramite un server collegato  
- Nell'esempio seguente viene aggiornata una tabella in un server remoto. L'esempio inizia creando un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene quindi specificato come parte del nome dell'oggetto in quattro parti nel formato server.catalogo.schema.oggetto. Si noti che è necessario specificare un nome server valido per `@datasrc`.  
+ Nell'esempio seguente viene aggiornata una tabella in un server remoto. L'esempio inizia con la creazione di un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene quindi specificato come parte del nome dell'oggetto in quattro parti nel formato server.catalogo.schema.oggetto. Si noti che è necessario specificare un nome server valido per `@datasrc`.  
   
 ```sql  
 USE master;  
@@ -792,7 +791,7 @@ WHERE DepartmentID = 4;
 ```  
   
 #### <a name="p-updating-data-in-a-remote-table-by-using-the-openquery-function"></a>P. Aggiornamento di dati in una tabella remota tramite una funzione OPENQUERY  
- Nell'esempio seguente viene aggiornata una riga in una tabella remota specificando la [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) funzione set di righe. Viene utilizzato il nome del server collegato creato nell'esempio precedente.  
+ L'esempio seguente aggiorna una riga in una tabella remota specificando la funzione per i set di righe [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). Viene utilizzato il nome del server collegato creato nell'esempio precedente.  
   
 ```sql  
 UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
@@ -800,18 +799,18 @@ SET GroupName = 'Sales and Marketing';
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q. Aggiornamento di dati in una tabella remota tramite una funzione OPENDATASOURCE  
- Nell'esempio seguente viene inserita una riga in una tabella remota specificando la [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) funzione set di righe. Specificare un nome server valido per l'origine dati utilizzando il formato *nome_server* o *server_name\instance_name*. Potrebbe essere necessario configurare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Ad Hoc Distributed Queries. Per ulteriori informazioni, vedere [opzione di configurazione Server ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
+ L'esempio seguente inserisce una riga in una tabella remota tramite la funzione per i set di righe [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Specificare un nome server valido per l'origine dati usando il formato *nome_server* oppure *nome_server\nome_istanza*. Potrebbe essere necessario configurare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Ad Hoc Distributed Queries. Per altre informazioni, vedere [Opzione di configurazione del server ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
   
 ```sql  
 UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
 SET GroupName = 'Sales and Marketing';  
 ```  
   
-###  <a name="LOBValues"></a>Aggiornamento di tipi di dati LOB  
+###  <a name="LOBValues"></a> Aggiornamento di tipi di dati Large Object  
  Negli esempi contenuti in questa sezione vengono illustrati i metodi per l'aggiornamento di valori in colonne definite con tipi di dati LOB (Large Object).  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R. Utilizzo di UPDATE con la clausola .WRITE per modificare dati in una colonna nvarchar(max)  
- L'esempio seguente usa il. Clausola di scrittura per l'aggiornamento di un valore parziale `DocumentSummary`, un **nvarchar (max)** colonna il `Production.Document` tabella. La parola `components` viene sostituita con la parola `features` specificando la parola sostitutiva, il percorso iniziale (offset) della parola da sostituire nei dati esistenti e il numero di caratteri da sostituire (lunghezza). Nell'esempio viene inoltre utilizzata la clausola OUTPUT per restituire la prima e dopo le immagini del `DocumentSummary` colonna per il `@MyTableVar` variabile di tabella.  
+ L'esempio seguente usata la clausola .WRITE per aggiornare un valore parziale nella colonna `DocumentSummary` di tipo **nvarchar(max)** della tabella `Production.Document`. La parola `components` viene sostituita con la parola `features` specificando la parola sostitutiva, il percorso iniziale (offset) della parola da sostituire nei dati esistenti e il numero di caratteri da sostituire (lunghezza). L'esempio usa anche la clausola OUTPUT per restituire le immagini precedente e successiva della colonna `DocumentSummary`nella variabile di tabella `@MyTableVar`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -831,7 +830,7 @@ GO
 ```  
   
 #### <a name="s-using-update-with-write-to-add-and-remove-data-in-an-nvarcharmax-column"></a>S. Utilizzo di UPDATE con la clausola .WRITE per aggiungere e rimuovere dati in una colonna di tipo nvarchar(max)  
- Negli esempi seguenti aggiungere e rimuovere dati da un **nvarchar (max)** colonna con un valore impostato su NULL. Poiché il. SCRIVERE clausola non può essere usata per modificare una colonna NULL, la colonna viene prima popolata con dati temporanei. Questi dati vengono quindi sostituiti con i dati corretti tramite la clausola .WRITE. Negli esempi aggiuntivi vengono accodati dati al termine del valore della colonna, rimossi (troncati) dati dalla colonna e infine rimossi dati parziali dalla colonna. Le istruzioni SELECT consentono di visualizzare la modifica dei dati generata da ogni istruzione UPDATE.  
+ Gli esempi seguenti aggiungono e rimuovono dati da una colonna di tipo **nvarchar(max)** con valore impostato su NULL. Poiché la clausola .WRITE non può essere usata per modificare una colonna NULL, la colonna viene prima popolata con dati temporanei. Questi dati vengono quindi sostituiti con i dati corretti tramite la clausola .WRITE. Negli esempi aggiuntivi vengono accodati dati al termine del valore della colonna, rimossi (troncati) dati dalla colonna e infine rimossi dati parziali dalla colonna. Le istruzioni SELECT consentono di visualizzare la modifica dei dati generata da ogni istruzione UPDATE.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -888,7 +887,7 @@ GO
 ```  
   
 #### <a name="t-using-update-with-openrowset-to-modify-a-varbinarymax-column"></a>T. Utilizzo di UPDATE con OPENROWSET per modificare una colonna di tipo varbinary(max)  
- Nell'esempio seguente sostituisce un'immagine esistente archiviata in un **varbinary (max)** colonna con una nuova immagine. Il [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) funzione viene utilizzata con l'opzione BULK per caricare l'immagine nella colonna. In questo esempio si presuppone che un file `Tires.jpg` esista nel percorso di file specificato.  
+ L'esempio seguente sostituisce un'immagine esistente archiviata in una colonna di tipo **varbinary(max)** con una nuova immagine. La funzione [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) viene usata con l'opzione BULK per caricare l'immagine nella colonna. In questo esempio si presuppone che un file `Tires.jpg` esista nel percorso di file specificato.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -910,8 +909,8 @@ SET [Chart] = CAST('Xray 1' as varbinary(max))
 WHERE [SerialNumber] = 2;  
 ```  
   
-###  <a name="UDTs"></a>Aggiornamento di tipi definiti dall'utente  
- Negli esempi seguenti vengono modificati i valori nelle colonne di tipo CLR definito dall'utente. Vengono illustrati tre metodi. Per ulteriori informazioni sulle colonne definite dall'utente, vedere [tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+###  <a name="UDTs"></a> Aggiornamento di tipi definiti dall'utente  
+ Negli esempi seguenti vengono modificati i valori nelle colonne di tipo CLR definito dall'utente. Vengono illustrati tre metodi. Per altre informazioni sulle colonne di tipo definito dall'utente, vedere [Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 #### <a name="v-using-a-system-data-type"></a>V. Utilizzo di un tipo di dati di sistema  
  È possibile aggiornare un tipo definito dall'utente specificando un valore in un tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a condizione che il tipo definito dall'utente supporti la conversione implicita o esplicita da tale tipo. Nell'esempio seguente viene illustrato come aggiornare un valore in una colonna del tipo `Point` definito dall'utente, eseguendo la conversione esplicita da una stringa.  
@@ -940,14 +939,14 @@ SET Location.X = 23.5
 WHERE Name = 'Anchorage';  
 ```  
   
-###  <a name="TableHints"></a>Override del comportamento predefinito di Query Optimizer tramite hint  
+###  <a name="TableHints"></a> Override del comportamento predefinito di Query Optimizer tramite hint  
  Negli esempi contenuti in questa sezione viene illustrato come utilizzare gli hint di tabella e gli hint per le query per eseguire temporaneamente l'override del comportamento predefinito di Query Optimizer durante l'elaborazione dell'istruzione UPDATE.  
   
 > [!CAUTION]  
 >  Poiché Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente in genere di selezionare il piano di esecuzione migliore per una query, gli hint devono essere usati solo se strettamente necessari ed esclusivamente da sviluppatori e amministratori di database esperti.  
   
 #### <a name="y-specifying-a-table-hint"></a>Y. Specifica di un hint di tabella  
- Nell'esempio seguente viene specificato il [hint di tabella](../../t-sql/queries/hints-transact-sql-table.md) TABLOCK. L'hint specifica l'acquisizione di un blocco condiviso sulla tabella `Production.Product`. Tale blocco viene mantenuto attivo fino al termine dell'istruzione UPDATE.  
+ L'esempio seguente specifica l'[hint di tabella](../../t-sql/queries/hints-transact-sql-table.md) TABLOCK. L'hint specifica l'acquisizione di un blocco condiviso sulla tabella `Production.Product`. Tale blocco viene mantenuto attivo fino al termine dell'istruzione UPDATE.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -960,7 +959,7 @@ GO
 ```  
   
 #### <a name="z-specifying-a-query-hint"></a>Z. Specifica di un hint per la query  
- Nell'esempio seguente viene specificato il [hint per la query](../../t-sql/queries/hints-transact-sql-query.md) `OPTIMIZE FOR (@variable)` nell'istruzione UPDATE. Tramite questo hint si indica a Query Optimizer di utilizzare un valore specifico per una variabile locale quando la query viene compilata e ottimizzata. Il valore viene utilizzato solo durante l'ottimizzazione della query e non durante l'esecuzione.  
+ L'esempio seguente specificato l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) `OPTIMIZE FOR (@variable)` nell'istruzione UPDATE. Tramite questo hint si indica a Query Optimizer di utilizzare un valore specifico per una variabile locale quando la query viene compilata e ottimizzata. Il valore viene utilizzato solo durante l'ottimizzazione della query e non durante l'esecuzione.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -978,13 +977,13 @@ GO
 EXEC Production.uspProductUpdate 'BK-%';  
 ```  
   
-###  <a name="CaptureResults"></a>Acquisizione dei risultati dell'istruzione UPDATE  
- Negli esempi riportati in questa sezione viene illustrato come utilizzare il [clausola OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) per restituire informazioni da o espressioni basate su, ogni riga interessata da un'istruzione UPDATE. Questi risultati possono essere restituiti all'applicazione di elaborazione per l'utilizzo nei messaggi di errore, l'archiviazione e altri scopi simili dell'applicazione.  
+###  <a name="CaptureResults"></a> Acquisizione dei risultati dell'istruzione UPDATE  
+ Gli esempi contenuti in questa sezione illustrano come usare la [clausola OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) per restituire informazioni da (o espressioni basate su) ogni riga interessata da un'istruzione UPDATE. Questi risultati possono essere restituiti all'applicazione di elaborazione per l'utilizzo nei messaggi di errore, l'archiviazione e altri scopi simili dell'applicazione.  
   
 #### <a name="aa-using-update-with-the-output-clause"></a>AA. Utilizzo di UPDATE con la clausola OUTPUT  
  Nell'esempio seguente viene aggiornata la colonna `VacationHours` nella tabella `Employee` del 25% per le prime 10 righe e viene inoltre impostato il valore nella colonna `ModifiedDate` sulla data corrente. La clausola `OUTPUT` restituisce il valore di `VacationHours` esistente prima di applicare l'istruzione `UPDATE` nella colonna `deleted.VacationHours` e il valore aggiornato nella colonna `inserted.VacationHours` alla variabile di tabella `@MyTableVar`.  
   
- Questa variabile è seguita da due istruzioni `SELECT` che restituiscono i valori in `@MyTableVar` e i risultati dell'operazione di aggiornamento nella tabella `Employee`. Per ulteriori esempi di utilizzo della clausola OUTPUT, vedere [clausola OUTPUT &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
+ Questa variabile è seguita da due istruzioni `SELECT` che restituiscono i valori in `@MyTableVar` e i risultati dell'operazione di aggiornamento nella tabella `Employee`. Per altri esempi sull'uso della clausola OUTPUT, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1012,11 +1011,11 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-###  <a name="Other"></a>Utilizzo di UPDATE in altre istruzioni  
+###  <a name="Other"></a> Uso di UPDATE in altre istruzioni  
  Negli esempi inclusi in questa sezione viene illustrato l'utilizzo di UPDATE in altre istruzioni.  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>AB. Utilizzo di UPDATE in una stored procedure  
- Nell'esempio seguente viene usata un'istruzione UPDATE in una stored procedure. Per la stored procedure sono previsti un unico parametro di input `@NewHours` e un unico parametro di output `@RowCount`. Il `@NewHours` valore del parametro viene utilizzato nell'istruzione UPDATE per aggiornare la colonna `VacationHours` nella tabella `HumanResources.Employee`. Il parametro di output `@RowCount` viene usato per restituire il numero di righe interessate a una variabile locale. L'espressione CASE viene utilizzata nella clausola SET per determinare in modo condizionale il valore impostato per `VacationHours`. Quando un dipendente percepisce una paga oraria (`SalariedFlag` = 0), `VacationHours` viene impostato sul numero corrente di ore più il valore specificato in `@NewHours`. In caso contrario, `VacationHours` viene impostato sul valore specificato in `@NewHours`.  
+ Nell'esempio seguente viene usata un'istruzione UPDATE in una stored procedure. Per la stored procedure sono previsti un unico parametro di input `@NewHours` e un unico parametro di output `@RowCount`. Il valore del parametro `@NewHours` viene usato nell'istruzione UPDATE per aggiornare la colonna `VacationHours` della tabella `HumanResources.Employee`. Il parametro di output `@RowCount` viene usato per restituire il numero di righe interessate a una variabile locale. L'espressione CASE viene utilizzata nella clausola SET per determinare in modo condizionale il valore impostato per `VacationHours`. Quando un dipendente percepisce una paga oraria (`SalariedFlag` = 0), `VacationHours` viene impostato sul numero corrente di ore più il valore specificato in `@NewHours`. In caso contrario, `VacationHours` viene impostato sul valore specificato in `@NewHours`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1039,7 +1038,7 @@ EXEC HumanResources.Update_VacationHours 40;
 ```  
   
 #### <a name="ac-using-update-in-a-trycatch-block"></a>AC. Utilizzo di UPDATE in un blocco TRY...CATCH  
- Nell'esempio seguente viene utilizzata un'istruzione UPDATE in un blocco TRY... CATCH per gestire gli errori di esecuzione che potrebbero verificarsi durante l'operazione di aggiornamento.  
+ L'esempio seguente usa un'istruzione UPDATE in un blocco TRY...CATCH per gestire gli errori di esecuzione che potrebbero verificarsi durante l'operazione di aggiornamento.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1070,12 +1069,12 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="ad-using-a-simple-update-statement"></a>AD. Esecuzione di un'istruzione UPDATE semplice  
- I seguenti esempi viene illustrato come possono essere interessate tutte le righe quando una clausola WHERE non utilizzata per specificare la riga (o le righe) per l'aggiornamento.  
+ Gli esempi seguenti illustrano gli effetti possibili su tutte le righe del mancato uso di una clausola WHERE per specificare la riga o le righe da aggiornare.  
   
- In questo esempio aggiorna i valori nel `EndDate` e `CurrentFlag` colonne per tutte le righe di `DimEmployee` tabella.  
+ Questo esempio aggiorna i valori nelle colonne `EndDate` e `CurrentFlag` per tutte le righe nella tabella `DimEmployee`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -1093,7 +1092,7 @@ UPDATE DimEmployee
 SET BaseRate = BaseRate * 2;  
 ```  
   
-### <a name="ae-using-the-update-statement-with-a-where-clause"></a>AE. Utilizzo dell'istruzione UPDATE con una clausola WHERE  
+### <a name="ae-using-the-update-statement-with-a-where-clause"></a>AE. Uso dell'istruzione UPDATE con una clausola WHERE  
  Nell'esempio seguente viene utilizzata la clausola WHERE per specificare le righe da aggiornare.  
   
 ```sql  
@@ -1104,8 +1103,8 @@ SET FirstName = 'Gail'
 WHERE EmployeeKey = 500;  
 ```  
   
-### <a name="af-using-the-update-statement-with-label"></a>AF. Utilizzo dell'istruzione UPDATE con etichetta  
- Nell'esempio riportato di seguito viene illustrato l'utilizzo di un'etichetta per l'istruzione UPDATE.  
+### <a name="af-using-the-update-statement-with-label"></a>AF. Uso dell'istruzione UPDATE con un'etichetta  
+ L'esempio seguente illustra l'uso dell'opzione LABEL in un'istruzione UPDATE.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -1117,7 +1116,7 @@ OPTION (LABEL = N'label1');
 ```  
   
 ### <a name="ag-using-the-update-statement-with-information-from-another-table"></a>AG. Utilizzo dell'istruzione UPDATE con informazioni di un'altra tabella  
- Questo esempio viene creata una tabella per archiviare le vendite totali per anno. Aggiorna le vendite totali per l'anno 2004 eseguendo un'istruzione SELECT sulla tabella FactInternetSales.  
+ Questo esempio creata una tabella per archiviare le vendite totali per anno. L'esempio aggiorna le vendite totali per l'anno 2004 eseguendo un'istruzione SELECT sulla tabella FactInternetSales.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -1139,10 +1138,10 @@ WHERE Year=2004;
 SELECT * FROM YearlyTotalSales;   
 ```  
 
-### <a name="ah-ansi-join-replacement-for-update-statements"></a>AH. Sostituzione di join ANSI per le istruzioni update
-È possibile che si dispone di un aggiornamento complesso che unisce in join più di due tabelle utilizzando la sintassi join ANSI per eseguire l'aggiornamento o eliminazione.  
+### <a name="ah-ansi-join-replacement-for-update-statements"></a>AH. Sostituzione di join ANSI per istruzioni UPDATE
+È possibile che sia necessario gestire un aggiornamento complesso che unisce più di due tabelle usando la sintassi di join ANSI per eseguire azioni UPDATE o DELETE.  
 
-Si supponga che era necessario aggiornare la tabella:  
+Si supponga di dover aggiornare questa tabella:  
 
 ```sql
 CREATE TABLE [dbo].[AnnualCategorySales]
@@ -1157,7 +1156,7 @@ WITH
 ;  
 ```
 
-La query originale potrebbe siano presenti simile al seguente:  
+L'aspetto della query originale potrebbe essere simile al seguente:  
 
 ```
 UPDATE  acs
@@ -1182,9 +1181,9 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;  
 ```
 
-Poiché [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] non supporta ANSI join nella clausola FROM di un'istruzione UPDATE, non è possibile copiare questo codice su senza modificarla leggermente.  
+Poiché [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] non supporta i join ANSI nella clausola FROM di un'istruzione UPDATE, non è possibile copiare questo codice senza modificarlo leggermente.  
 
-È possibile utilizzare una combinazione di una istruzione CTAS e un join implicito per sostituire questo codice:  
+È possibile sostituire questo codice con una combinazione di CTAS e un join implicito:  
 
 ```sql
 -- Create an interim table
@@ -1223,8 +1222,8 @@ DROP TABLE CTAS_acs
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Cursori &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Testo e immagine funzioni &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [Funzioni per i valori text e image &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   

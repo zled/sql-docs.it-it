@@ -1,30 +1,27 @@
 ---
 title: Parametri dell'oggetto Command | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 527ed7c9e6e3a3f250fd559b479637414be3989f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fa60d076d6c4a3d4eea2092db92c3006d4fd0905
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-object-parameters"></a>Parametri dell'oggetto Command
 Argomento precedente descritto [per creare ed eseguire un comando semplice](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Un utilizzo di [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto è illustrato nell'esempio seguente, in cui è stati assegnati parametri del comando SQL. Questa modifica consente di riutilizzare il comando, passando un valore diverso per il parametro ogni volta. Poiché il [preparato proprietà](../../../ado/reference/ado-api/prepared-property-ado.md) proprietà il **comando** oggetto è impostato su **true**, ADO richiede al provider di compilare il comando specificato nel [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) prima dell'esecuzione per la prima volta. Verrà mantenuta anche il comando compilato in memoria. Ciò rallenta l'esecuzione del comando leggermente la prima volta che viene eseguita a causa dell'overhead necessario per preparare, ma comporta un miglioramento delle prestazioni ogni volta che il comando viene chiamato in seguito. Di conseguenza, i comandi devono essere preparati solo se verranno utilizzati più di una volta.  

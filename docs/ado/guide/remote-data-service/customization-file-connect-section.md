@@ -1,31 +1,28 @@
 ---
 title: File di personalizzazione connettersi sezione | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 859324a8cbf2f08bfae2ac18e86525a9e65914d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 12d1560220a9c281425a1d75c43f0ef95845d611
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customization-file-connect-section"></a>Collegare il File di personalizzazione
 Il comportamento predefinito del gestore consiste nel negare tutte le connessioni. Il **connettersi** sezione specifica le eccezioni a questo comportamento. Ad esempio, se tutti i **connettersi** sezioni sono assenti o vuota, quindi per impostazione predefinita può essere eseguita alcuna connessione.  
@@ -65,7 +62,7 @@ connectionString
 |**Connetti**|Una stringa letterale che indica che si è una stringa di connessione.|  
 |***connectionString***|Stringa che sostituisce la stringa di connessione client intero.|  
 |**Accesso**|Una stringa letterale che indica che si è una voce di accesso.|  
-|***accessRight***|Uno dei diritti di accesso seguenti:<br /><br /> -   **NoAccess** : utente non è possibile accedere all'origine dati.<br />-   **ReadOnly** : l'utente può leggere l'origine dati.<br />-   **ReadWrite** , in grado di leggere o scrivere nell'origine dati utente.|  
+|***accessRight***|Uno dei diritti di accesso seguenti:<br /><br /> -   **NoAccess** : utente non è possibile accedere all'origine dati.<br />-   **ReadOnly** , ovvero l'utente può leggere l'origine dati.<br />-   **ReadWrite** : utente può leggere o scrivere all'origine dati.|  
   
  Se si desidera consentire qualsiasi connessione (in disabilitando il comportamento del gestore predefinito), impostare la voce di accesso **connettersi predefinito** sezione a `Access=ReadWrite`ed eliminare o qualsiasi altro commento **connettersi** *identificatore* sezione.  
   

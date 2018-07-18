@@ -1,32 +1,20 @@
 ---
 title: + (Unione) (MDX) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: +
-dev_langs: kbMDX
-helpviewer_keywords:
-- union operator (+)
-- + (union operator)
-ms.assetid: 6c6dfca2-7413-452a-98a2-3d8c58a8a3e6
-caps.latest.revision: "43"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a936895822b842d2d08672c4c05bd8c1a416064c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bebcf04c248251e2272d4135c129c519f48f7405
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582443"
 ---
 # <a name="union---mdx-operator-reference"></a>Union - riferimento agli operatori MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,8 +35,8 @@ Set_Expression + Set_Expression
 ## <a name="return-value"></a>Valore restituito  
  Set che include i membri di entrambi i set specificati.  
   
-## <a name="remarks"></a>Osservazioni  
- Il **+ (unione)** è funzionalmente equivalente all'operatore di [unione &#40; MDX &#41; ](../mdx/union-mdx.md) (funzione).  
+## <a name="remarks"></a>Remarks  
+ Il **+ (Union)** è funzionalmente equivalente all'operatore il [unione &#40;MDX&#41; ](../mdx/union-mdx.md) (funzione).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo di questo operatore.  
@@ -66,6 +54,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

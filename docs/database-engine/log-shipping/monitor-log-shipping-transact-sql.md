@@ -1,16 +1,13 @@
 ---
 title: Monitorare il log shipping (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: log-shipping
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], status
 - history tables [SQL Server]
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: "29"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 29
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4399ef7bef888655c6c69926b622612ba9bb84d8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1d805bc8bdb62f5aad87afa19fd12e4d134a6ed8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771697"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Monitorare il log shipping (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dopo aver configurato il log shipping, è possibile monitorare le informazioni relative allo stato di tutti i server di log shipping. La cronologia e lo stato delle operazioni di log shipping vengono salvati sempre in locale dai processi per il log shipping. La cronologia e lo stato dell'operazione di backup vengono memorizzati sul server primario, mentre la cronologia e lo stato delle operazioni di copia e ripristino sono memorizzati sul server secondario. Se è stato implementato un server di monitoraggio remoto, queste informazioni vengono memorizzate anche sul server di monitoraggio.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Dopo aver configurato il log shipping, è possibile monitorare le informazioni relative allo stato di tutti i server di log shipping. La cronologia e lo stato delle operazioni di log shipping vengono salvati sempre in locale dai processi per il log shipping. La cronologia e lo stato dell'operazione di backup vengono memorizzati sul server primario, mentre la cronologia e lo stato delle operazioni di copia e ripristino sono memorizzati sul server secondario. Se è stato implementato un server di monitoraggio remoto, queste informazioni vengono memorizzate anche sul server di monitoraggio.  
   
  È possibile configurare avvisi che verranno attivati se le operazioni di log shipping non avvengono secondo la pianificazione. Gli errori sono generati da un processo per la gestione degli avvisi che controlla lo stato delle operazioni di backup e ripristino. È possibile definire avvisi che notifichino a un operatore quando si verificano questi errori. Se è configurato un server di monitoraggio, su di esso viene eseguito un processo per la gestione degli avvisi che genera errori per tutte le operazioni nella configurazione per il log shipping. Se non è specificato alcun server di monitoraggio, viene eseguito un processo per la gestione degli avvisi sull'istanza del server primario, che monitora l'operazione di backup. Se non è specificato alcun server di monitoraggio, su ogni istanza del server secondario viene eseguito un processo per la gestione degli avvisi per monitorare le operazioni di copia e ripristino locali.  
   
@@ -44,7 +42,7 @@ ms.lasthandoff: 01/18/2018
   
  È possibile eseguire query su queste tabelle per monitorare lo stato di una sessione di log shipping. Ad esempio, per ottenere lo stato del log shipping, verificare lo stato e la cronologia dei processi di backup, di copia e di ripristino. È possibile visualizzare i dettagli specifici relativi agli errori e alla cronologia del log shipping eseguendo query sulle tabelle di monitoraggio seguenti.  
   
-|Tabella|Description|  
+|Tabella|Descrizione|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Memorizza l'ID del processo per la gestione degli avvisi.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Memorizza i dettagli relativi agli errori per i processi di log shipping. È possibile eseguire query su questa tabella per visualizzare gli errori relativi a una sessione di agente. Facoltativamente, è possibile ordinare gli errori in base alla data e all'ora di registrazione. Ogni errore viene registrato come una sequenza di eccezioni, mentre più errori (sequenze) possono essere ordinati per sessione di agente.|  
@@ -55,7 +53,7 @@ ms.lasthandoff: 01/18/2018
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>Stored procedure per il monitoraggio del log shipping  
  Le informazioni relative al monitoraggio e alla cronologia vengono archiviate nelle tabelle di **msdb**, accessibili con le stored procedure di log shipping. Eseguire le stored procedure sui server specificati nella tabella seguente.  
   
-|Stored procedure|Description|Eseguire la stored procedure su|  
+|Stored procedure|Descrizione|Eseguire la stored procedure su|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|Restituisce i record di monitoraggio per il database primario specificato dalla tabella **log_shipping_monitor_primary** .|Server di monitoraggio o server primario|  
 |[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|Restituisce i record di monitoraggio per il database secondario specificato dalla tabella **log_shipping_monitor_secondary** .|Server di monitoraggio oppure server secondario|  

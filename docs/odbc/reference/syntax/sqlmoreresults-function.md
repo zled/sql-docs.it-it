@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLMoreResults | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLMoreResults
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLMoreResults
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLMoreResults
-helpviewer_keywords: SQLMoreResults function [ODBC]
+f1_keywords:
+- SQLMoreResults
+helpviewer_keywords:
+- SQLMoreResults function [ODBC]
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b1905665f1505cd484a6d2ab5c1f83008efc2298
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d156b07358d6430ec52f000ed4bebfe1c5d19d9f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlmoreresults-function"></a>Funzione SQLMoreResults
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: ODBC  
   
  **Riepilogo**  
- **SQLMoreResults** determina se sono disponibili in un'istruzione contenente altri risultati **selezionare**, **aggiornamento**, **inserire**, o  **ELIMINARE** istruzioni e, in caso affermativo, inizializza l'elaborazione per i risultati.  
+ **SQLMoreResults** determina se sono disponibili in un'istruzione contenente altri risultati **selezionare**, **UPDATE**, **inserire**, o  **ELIMINARE** istruzioni e, in caso affermativo, inizializza l'elaborazione per i risultati.  
   
 ## <a name="syntax"></a>Sintassi  
   

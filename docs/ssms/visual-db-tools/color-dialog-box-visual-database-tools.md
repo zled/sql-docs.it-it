@@ -1,31 +1,31 @@
 ---
 title: Finestra di dialogo Colore (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: VS.ToolsOptions.FontsAndColors.ColorPicker
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- VS.ToolsOptions.FontsAndColors.ColorPicker
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f94edb00fc680bdfb3731e2d492c79e2f7cb09f2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5e77921c7510cf02c0e9e66b7c89ab736117de38
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Finestra di dialogo Colore (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La **finestra di dialogo Colore** restituisce il valore RGB di un colore selezionato dall'utente. È possibile effettuare una selezione da un set di colori di base determinato dal driver video oppure da un set di colori personalizzati. Effettuare le selezioni da Colori di base oppure creare i colori personalizzati. Per definire i colori, fare clic nella matrice dei colori o digitare i valori nelle caselle **Tonalità**, **Sat**, **Lum**, **Rosso**, **Verde**e **Blu** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+La **finestra di dialogo Colore** restituisce il valore RGB di un colore selezionato dall'utente. È possibile effettuare una selezione da un set di colori di base determinato dal driver video oppure da un set di colori personalizzati. Effettuare le selezioni da Colori di base oppure creare i colori personalizzati. Per definire i colori, fare clic nella matrice dei colori o digitare i valori nelle caselle **Tonalità**, **Sat**, **Lum**, **Rosso**, **Verde**e **Blu** .  
   
 ## <a name="options"></a>Opzioni  
 **Colori di base**  

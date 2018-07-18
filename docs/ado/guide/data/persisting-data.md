@@ -1,46 +1,43 @@
 ---
 title: Rendere persistenti i dati | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
 - data updates [ADO], persisting data
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 533801c5f6717ec32a821a79acadce3f953c8d71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d3f4fed35b629f8dd1eae89c42895fb8a780c4cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="persisting-data"></a>Rendere persistenti i dati
 Computer portatili (ad esempio, usando i computer portatili) ha generato la necessità per le applicazioni che possono essere eseguiti in uno stato connesso e disconnesso. ADO ha aggiunto il supporto per questo offrendo agli sviluppatori la possibilità di salvare un cursore client **Recordset** su disco e ricaricare il file in un secondo momento.  
   
  Esistono diversi scenari in cui è possibile utilizzare questo tipo di funzionalità, inclusi i seguenti:  
   
--   **Si trova in viaggio:** quando si esegue l'applicazione in trasferta, è essenziale per fornire la possibilità di apportare modifiche e aggiungere nuovi record che può essere riconnesso al database in un secondo momento e il commit.  
+-   **In viaggio:** quando si esegue l'applicazione in viaggio, è essenziale per fornire la possibilità di apportare modifiche e aggiungere nuovi record che può essere riconnesso al database in un secondo momento e il commit.  
   
--   **Ricerche aggiornate raramente:** spesso in un'applicazione, le tabelle vengono utilizzate come ricerche, ad esempio stato tax tabelle. Che vengono aggiornati di rado e sono di sola lettura. Invece di rileggere i dati dal server ogni volta che l'applicazione viene avviata, l'applicazione può semplicemente caricare i dati da un locale persistente **Recordset**.  
+-   **Aggiornati di rado ricerche:** spesso in un'applicazione, le tabelle vengono utilizzate come ricerche, ad esempio, definiscono tabelle imposte. Che vengono aggiornati di rado e sono di sola lettura. Invece di rileggere i dati dal server ogni volta che l'applicazione viene avviata, l'applicazione può semplicemente caricare i dati da un locale persistente **Recordset**.  
   
  In ADO, per salvare e caricare **recordset**, utilizzare il **Recordset. Save** e **Recordset.Open(,,,adCmdFile)** metodi sull'oggetto ADO **Recordset**oggetto.  
   
- È possibile utilizzare il **Salva Recordset** metodo per rendere persistenti le ADO **Recordset** in un file su disco. (È anche possibile salvare un **Recordset** per un oggetto ADO **flusso** oggetto. **Flusso** oggetti vengono descritti più avanti nella Guida.) Successivamente, è possibile utilizzare il **aprire** metodo per riaprire il **Recordset** quando si è pronti a usarlo. Per impostazione predefinita, ADO Salva il **Recordset** in formato proprietario di Microsoft Advanced dati viene (ADTG). Questo formato binario viene specificato utilizzando il **adPersistADTG PersistFormatEnum** valore. In alternativa, è possibile scegliere di salvare il **Recordset** out come XML utilizzando invece **il valore adPersistXML**. Per ulteriori informazioni sul salvataggio di recordset in formato XML, vedere [salvataggio di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
+ È possibile utilizzare il **Salva Recordset** metodo per rendere persistenti le ADO **Recordset** in un file su disco. (È anche possibile salvare un **Recordset** per un oggetto ADO **flusso** oggetto. **Flusso** vengono descritti gli oggetti in un secondo momento nella Guida.) Successivamente, è possibile utilizzare il **aprire** metodo per riaprire il **Recordset** quando si è pronti a usarlo. Per impostazione predefinita, ADO Salva il **Recordset** in formato proprietario di Microsoft Advanced dati viene (ADTG). Questo formato binario viene specificato utilizzando il **adPersistADTG PersistFormatEnum** valore. In alternativa, è possibile scegliere di salvare il **Recordset** out come XML utilizzando invece **il valore adPersistXML**. Per ulteriori informazioni sul salvataggio di recordset in formato XML, vedere [salvataggio di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
   
  La sintassi del **salvare** metodo è il seguente:  
   
@@ -56,7 +53,7 @@ Destination, PersistFormat
   
  Omettere *destinazione* quando si chiama successivamente **salvare** dopo il primo salvataggio o un errore di run-time si verificherà. Se si chiama successivamente **salvare** con un nuovo *destinazione*, **Recordset** viene salvato nella nuova destinazione. Tuttavia, la nuova destinazione e la destinazione originale sia sarà aperti.  
   
- **Salvare** non chiude il **Recordset** o *destinazione*, pertanto è possibile continuare a lavorare con i **Recordset** e salvare le modifiche più recenti. *Destinazione* rimane aperto fino a quando il **Recordset** è chiuso, durante i quali altre applicazioni possono leggere ma non scrivere *destinazione*.  
+ **Salvare** non chiude il **Recordset** o *destinazione*, pertanto è possibile continuare a lavorare con i **Recordset** e salvare le modifiche più recenti. *Destinazione* rimane aperto fino a quando il **Recordset** viene chiusa, durante il quale le altre applicazioni possono leggere, ma non scrivere *destinazione*.  
   
  Per motivi di sicurezza, il **salvare** metodo consente solo l'utilizzo di impostazioni di protezione basso e personalizzato da uno script eseguito da Microsoft Internet Explorer.  
   

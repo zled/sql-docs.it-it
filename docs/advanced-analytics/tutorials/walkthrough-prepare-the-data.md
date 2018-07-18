@@ -1,30 +1,18 @@
 ---
 title: Preparare i dati di utilizzo di PowerShell (procedura dettagliata) | Documenti Microsoft
-ms.custom: 
-ms.date: 11/10/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: ccdccaf4a3624bef365cec85e452a88526b9fd6b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585933"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Preparare i dati di utilizzo di PowerShell (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -70,7 +58,7 @@ Tutto il codice necessario è stato specificato in un repository di GitHub. È p
   
     ![Dopo il completamento dello script di PowerShell](media/rsql-e2e-psscriptresults.PNG "Dopo il completamento dello script di PowerShell")
   
-5.  Nella console di PowerShell è possibile eseguire il comando `ls` per visualizzare l'elenco dei file che sono stati scaricati in *DestDir*.  Per una descrizione dei file, vedere [cosa è incluso](#What-the-Download-Includes).
+5.  Nella console di PowerShell è possibile eseguire il comando `ls` per visualizzare l'elenco dei file che sono stati scaricati in *DestDir*.  Per una descrizione dei file, vedere [cosa è incluso](#whats-included-in-the-sample).
 
 ## <a name="2-install-required-r-packages"></a>2. Installare pacchetti R richiesti
 
@@ -96,7 +84,7 @@ Lo script R scaricato include i comandi per scaricare e installare questi pacche
 
 ### <a name="install-required-packages-on-the-server"></a>Installare i pacchetti necessari nel server
 
-Esistono molti modi diversi, che è possibile installare i pacchetti in SQL Server. Ad esempio, SQL Server fornisce un [pacchetto gestione](../r/installing-and-managing-r-packages.md) funzionalità che consente agli amministratori di database, creare un repository di pacchetti e assegnare utente i diritti per installare i propri pacchetti. Tuttavia, se si è un amministratore del computer, è possibile installare nuovi pacchetti tramite R, fino a quando si installa per la libreria corretta.
+Esistono molti modi diversi, che è possibile installare i pacchetti in SQL Server. Ad esempio, SQL Server fornisce [gestione dei pacchetti R](../r/install-additional-r-packages-on-sql-server.md) funzionalità che consente agli amministratori di database crea un repository di pacchetti e assegnare utente i diritti per installare i propri pacchetti. Tuttavia, se si è un amministratore del computer, è possibile installare nuovi pacchetti tramite R, fino a quando si installa per la libreria corretta.
 
 > [!NOTE]
 > Nel server, **non** installare in una raccolta di utenti, anche se viene richiesto. Se si installa una libreria di utente, l'istanza di SQL Server non è possibile trovare o eseguire i pacchetti. Per altre informazioni, vedere [Installing New R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md)(Installazione di nuovi pacchetti R in SQL Server).
@@ -112,7 +100,7 @@ Esistono molti modi diversi, che è possibile installare i pacchetti in SQL Serv
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - In questo esempio utilizza la funzione di grep R per cercare il vettore di percorsi disponibili e trovare il percorso che include "Program Files". Per altre informazioni, vedere [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
+    - In questo esempio utilizza la funzione di grep R per cercare il vettore di percorsi disponibili e trovare il percorso che include "Program Files". Per ulteriori informazioni, vedere [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep).
 
     - Se si ritiene che i pacchetti sono già installati, controllare l'elenco dei pacchetti installati eseguendo `installed.packages()`.
 
@@ -142,7 +130,7 @@ Eseguire lo script nel computer in cui si compila la soluzione: ad esempio, il c
   
 3.  Richiesto per ognuno dei parametri seguenti:
   
-    **Nome del server database**: il nome dell'istanza di SQL Server in cui è installato Machine learning Services o R Services.
+    **Nome server database**: il nome dell'istanza di SQL Server in cui è installato Machine learning servizi o R Services.
 
     A seconda dei requisiti della rete, è possibile che il nome dell'istanza vada qualificato con uno o più nomi di subnet.  Ad esempio, se MYSERVER non funziona, provare myserver.subnet.mycompany.com.
     
@@ -175,7 +163,7 @@ Plug in the database server name, database name, user name and password into the
 This step (plugging in database information) takes 0.48 seconds.
 ```
 
-Fare clic su questo collegamento per passare alla lezione successiva: [visualizzare ed esplorare i dati di utilizzo di SQL](/walkthrough-view-and-explore-the-data.md)
+Fare clic su questo collegamento per passare alla lezione successiva: [visualizzare ed esplorare i dati di utilizzo di SQL](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="bkmk_Troubleshooting"></a>Risoluzione dei problemi
 
@@ -273,13 +261,13 @@ Quando si scaricano i file dal repository GitHub, si ottiene quanto segue:
 + Più script T-SQL
 + Tutto il codice R necessario eseguire questa procedura dettagliata
 
-### <a name="bkmk_data"></a>Set di training e di assegnare punteggi ai dati
+### <a name="bkmk_data"></a>Set di training e assegnare punteggi ai dati
 
 I dati sono un campione rappresentativo del set di dati dei taxi di New York City, contenente record di oltre 173 milioni di corse singole effettuate nel 2013, inclusi gli importi delle corse e delle mance corrisposte per ogni corsa. Per semplificare la manipolazione, il team di analisi scientifica dei dati Microsoft ha eseguito un downsampling per ottenere solo l'1% dei dati.  Tali dati sono stati quindi condivisi in un contenitore di archiviazione BLOB pubblico di Azure, in formato csv. I dati di origine sono un file non compresso, appena sotto 350 MB.
 
-+ Set di dati pubblici: [NYC Taxi e Commissione Limousine] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Set di dati pubblico: [NYC Taxi e Commission Limousine] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [La creazione di modelli di Azure ML nel set di dati NYC Taxi] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [Compilazione dei modelli di Azure ML nel set di dati NYC Taxi] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 
 ### <a name="powershell-and-r-script-files"></a>File di script di PowerShell e R
 
@@ -309,10 +297,10 @@ Le query T-SQL utilizzate in questa procedura dettagliata sono state testate e p
 
 ## <a name="next-lesson"></a>Lezione successiva
 
-[Visualizzare ed esplorare i dati con R e SQL](/walkthrough-view-and-explore-the-data.md)
+[Visualizzare ed esplorare i dati con R e SQL](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="previous-lesson"></a>Lezione precedente
 
-[Procedura dettagliata di analisi scientifica dei dati end-to-end per R e SQL Server](/walkthrough-data-science-end-to-end-walkthrough.md)
+[Procedura dettagliata di analisi scientifica dei dati end-to-end per R e SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
 
 [Prerequisiti per la procedura dettagliata di data science](walkthrough-prerequisites-for-data-science-walkthroughs.md)

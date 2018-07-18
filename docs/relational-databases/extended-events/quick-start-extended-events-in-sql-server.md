@@ -1,29 +1,25 @@
 ---
 title: 'Avvio rapido: Eventi estesi in SQL Server | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 09/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xevents
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b532bf37f99a3fc05b0f2999d0d3d301323457d6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 28dad124a7c4552418f103dc03d6893d5718632b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Avvio rapido: Eventi estesi in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -656,7 +652,7 @@ Di seguito sono forniti collegamenti alla documentazione relativa a queste istru
 - [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
 - Per il database di SQL Azure in particolare, [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)
 - Blog relativo alle [autorizzazioni efficaci del motore di database efficace](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
-- [poster](http://go.microsoft.com/fwlink/?LinkId=229142)ingrandibile, in formato PDF, che visualizza la gerarchia di tutte le autorizzazioni di SQL Server.
+- [poster](https://aka.ms/sql-permissions-poster)ingrandibile, in formato PDF, che visualizza la gerarchia di tutte le autorizzazioni di SQL Server.
 
 
 

@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLGetData | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLGetData
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLGetData
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetData
-helpviewer_keywords: SQLGetData function [ODBC]
+f1_keywords:
+- SQLGetData
+helpviewer_keywords:
+- SQLGetData function [ODBC]
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 0a23ddb9ee932b67bddd35edfcc9d64228b36f18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ab603b24536afcbe7304dae907c10ee911d3cfd9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdata-function"></a>Funzione SQLGetData
 **Conformità**  
@@ -72,7 +73,7 @@ SQLRETURN SQLGetData(
  *BufferLength*  
  [Input] Lunghezza di **TargetValuePtr* buffer in byte.  
   
- Il driver utilizza *BufferLength* per evitare di scrivere oltre la fine del \* *TargetValuePtr* buffer durante la restituzione di dati a lunghezza variabile, ad esempio carattere o dati binari. Si noti che il driver viene considerato il carattere di terminazione null per la restituzione di dati carattere \* *TargetValuePtr*. **TargetValuePtr* deve pertanto contenere spazio per il carattere di terminazione null, o il driver verrà troncare i dati.  
+ Il driver utilizza *BufferLength* per evitare di scrivere oltre la fine del \* *TargetValuePtr* buffer durante la restituzione di dati a lunghezza variabile, ad esempio carattere o dati binari. Si noti che il driver viene considerato il carattere di terminazione null per la restituzione di dati carattere \* *TargetValuePtr*. **TargetValuePtr* deve pertanto contenere spazio per il carattere di terminazione null, o il driver verrà troncato i dati.  
   
  Quando il driver restituisce dati a lunghezza fissa, ad esempio un numero intero o una struttura di data, il driver ignora *BufferLength* e presuppone che il buffer sia sufficientemente grande da contenere i dati. È pertanto importante per l'applicazione allocare un buffer sufficiente per i dati a lunghezza fissa o il driver scriverà oltre la fine del buffer.  
   
@@ -105,7 +106,7 @@ SQLRETURN SQLGetData(
 |07006|Violazione dell'attributo del tipo di dati|Il valore di dati di una colonna nel set di risultati non può essere convertito nel tipo di dati C specificato dall'argomento *TargetType*.|  
 |07009|Indice del descrittore non valido|Il valore specificato per l'argomento *Col_or_Param_Num* era 0 e l'attributo di istruzione SQL_ATTR_USE_BOOKMARKS è stato impostato su SQL_UB_OFF.<br /><br /> Il valore specificato per l'argomento *Col_or_Param_Num* è maggiore del numero di colonne nel set di risultati.<br /><br /> Il *Col_or_Param_Num* valore non è uguale al numero ordinale del parametro che è disponibile.<br /><br /> (DM) è stata associata la colonna specificata. Questa descrizione non è valida per i driver che restituiscono la maschera di bit SQL_GD_BOUND per l'opzione SQL_GETDATA_EXTENSIONS in **SQLGetInfo**.<br /><br /> (DM) il numero della colonna specificata è minore o uguale al numero della colonna associata più alto. Questa descrizione non è valida per i driver che restituiscono la maschera di bit SQL_GD_ANY_COLUMN per l'opzione SQL_GETDATA_EXTENSIONS in **SQLGetInfo**.<br /><br /> (DM) l'applicazione è già chiamato **SQLGetData** per la riga corrente; il numero della colonna specificata nella chiamata corrente è minore del numero della colonna specificata nella chiamata precedente; e il driver non restituisce lo SQL _ Maschera di bit GD_ANY_ORDER per l'opzione SQL_GETDATA_EXTENSIONS in **SQLGetInfo**.<br /><br /> (DM) il *TargetType* argomento era SQL_ARD_TYPE e *Col_or_Param_Num* record del descrittore di ARD non è riuscita la verifica coerenza.<br /><br /> (DM) il *TargetType* argomento sia SQL_ARD_TYPE e il valore nel campo SQL_DESC_COUNT del ARD è inferiore a quello di *Col_or_Param_Num* argomento.|  
 |08S01|Errore del collegamento di comunicazione|Collegamento di comunicazione tra il driver e l'origine dati a cui era connesso il driver non è stato possibile prima dell'elaborazione della funzione è stata completata.|  
-|22002|Variabile indicatore necessaria ma non fornito|*StrLen_or_IndPtr* era un puntatore null e dati NULL è stati recuperati.|  
+|22002|Variabile indicatore necessaria ma non fornito|*StrLen_or_IndPtr* era un puntatore null e recupero dei dati NULL.|  
 |22003|Valore numerico non compreso nell'intervallo|Restituire il valore numerico (come valore numerico o stringa) per la colonna avrebbe causato la parte intera (in contrapposizione frazionari) del numero da troncare.<br /><br /> Per ulteriori informazioni, vedere [appendice d: i tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
 |22007|Formato di datetime non valido|Colonna di tipo carattere nel set di risultati è stata associata a una data, ora o struttura di timestamp C e il valore nella colonna è una data non valida, il tempo o timestamp, rispettivamente. Per ulteriori informazioni, vedere [appendice d: i tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
 |22012|Divisione per zero|È stato restituito un valore da un'espressione aritmetica che ha comportato la divisione per zero.|  
@@ -129,7 +130,7 @@ SQLRETURN SQLGetData(
 |IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente dell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato per l'handle per eseguire la post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLGetData** restituisce i dati in una colonna specificata. **SQLGetData** può essere chiamato solo dopo che una o più righe sono state recuperate dal set di risultati tramite **SQLFetch**, **SQLFetchScroll**, o **SQLExtendedFetch** . Se i dati a lunghezza variabile sono troppo grandi per essere restituiti in una singola chiamata a **SQLGetData** (a causa di una limitazione nell'applicazione), **SQLGetData** possibile recuperarla in parti. È possibile associare alcune colonne in una riga e una chiamata **SQLGetData** ad altri utenti, anche se si tratta soggetti ad alcune restrizioni. Per ulteriori informazioni, vedere [recupero di dati Long](../../../odbc/reference/develop-app/getting-long-data.md).  
+ **SQLGetData** restituisce i dati in una colonna specificata. **SQLGetData** può essere chiamato solo dopo che una o più righe sono state recuperate dal set di risultati tramite **SQLFetch**, **SQLFetchScroll**, o **SQLExtendedFetch**. Se i dati a lunghezza variabile sono troppo grandi per essere restituiti in una singola chiamata a **SQLGetData** (a causa di una limitazione nell'applicazione), **SQLGetData** possibile recuperarla in parti. È possibile associare alcune colonne in una riga e una chiamata **SQLGetData** ad altri utenti, anche se si tratta soggetti ad alcune restrizioni. Per ulteriori informazioni, vedere [recupero di dati Long](../../../odbc/reference/develop-app/getting-long-data.md).  
   
  Per informazioni sull'utilizzo **SQLGetData** con i parametri di flusso di output, vedere [il recupero dei parametri di Output tramite SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
@@ -144,13 +145,13 @@ SQLRETURN SQLGetData(
   
 -   SQL_GD_ANY_ORDER. Se questa opzione viene restituita, **SQLGetData** può essere chiamato per le colonne non associate in qualsiasi ordine.  
   
--   SQL_GD_BLOCK. Se questa opzione viene restituita dalla **SQLGetInfo** per il InfoType SQL_GETDATA_EXTENSIONS, il driver supporta le chiamate a **SQLGetData** quando le dimensioni del set di righe sono maggiore di 1 e l'applicazione può chiamare **SQLSetPos** con l'opzione SQL_POSITION per posizionare il cursore sulla riga corretta prima di chiamare **SQLGetData.**  
+-   SQL_GD_BLOCK. Se questa opzione viene restituita da **SQLGetInfo** per InfoType SQL_GETDATA_EXTENSIONS, il driver supporta le chiamate a **SQLGetData** quando le dimensioni del set di righe sono maggiore di 1 e l'applicazione può chiamare **SQLSetPos** con l'opzione SQL_POSITION per posizionare il cursore sulla riga corrette prima di chiamare **SQLGetData.**  
   
 -   SQL_GD_BOUND. Se questa opzione viene restituita, **SQLGetData** può essere chiamato per le colonne associate, nonché le colonne non associate.  
   
  Esistono due eccezioni a queste restrizioni e possibilità di un driver a essi. Prima di tutto, **SQLGetData** non dovrebbe mai essere chiamato per un cursore forward-only quando le dimensioni del set di righe sono maggiore di 1. In secondo luogo, se un driver supporta i segnalibri, deve sempre supportare la possibilità di chiamare **SQLGetData** per la colonna 0, anche se non consente alle applicazioni di chiamare **SQLGetData** per le altre colonne prima dell'ultimo colonna associata. (Quando un'applicazione sta utilizzando un'API ODBC 2*x* driver, **SQLGetData** restituirà correttamente un segnalibro quando viene chiamato con *Col_or_Param_Num* uguale a 0 dopo una chiamata a **SQLFetch**perché **SQLFetch** viene eseguito il mapping da ODBC 3*x* gestione Driver per **SQLExtendedFetch** con un  *FetchOrientation* di SQL_FETCH_NEXT, e **SQLGetData** con un *Col_or_Param_Num* 0 è stato eseguito il mapping da ODBC 3*x* gestione Driver per **SQLGetStmtOption** con un *fOption* di SQL_GET_BOOKMARK.)  
   
- **SQLGetData** non può essere utilizzato per recuperare il segnalibro per una riga appena inserita chiamando **SQLBulkOperations** con l'opzione SQL_ADD, perché il cursore non è posizionato sulla riga. Un'applicazione può recuperare il segnalibro per tale riga, associare la colonna 0 prima di chiamare **SQLBulkOperations** con SQL_ADD, nel qual caso **SQLBulkOperations** restituisce il segnalibro nel buffer associato. **SQLFetchScroll** può quindi essere chiamato con SQL_FETCH_BOOKMARK per riposizionare il cursore sulla riga.  
+ **SQLGetData** non può essere utilizzato per recuperare il segnalibro per una riga appena inserita chiamando **SQLBulkOperations** con l'opzione SQL_ADD, perché non è posizionato il cursore sulla riga. Un'applicazione può recuperare il segnalibro per tale riga, associare la colonna 0 prima di chiamare **SQLBulkOperations** con SQL_ADD, nel qual caso **SQLBulkOperations** restituisce il segnalibro nel buffer associato. **SQLFetchScroll** può quindi essere chiamato con SQL_FETCH_BOOKMARK per riposizionare il cursore nella riga corrispondente.  
   
  Se il *TargetType* argomento è un tipo di dati di intervallo, la precisione iniziale intervallo predefinita (2) e la precisione dei secondi di intervallo predefinito (6), di cui i campi SQL_DESC_DATETIME_INTERVAL_PRECISION e SQL_DESC_PRECISION di ARD, vengono utilizzati rispettivamente per i dati. Se il *TargetType* argomento è un tipo di dati SQL_C_NUMERIC, la precisione predefinita (definito dal driver) e valore predefinito di scala (0), come set di campi di SQL_DESC_PRECISION e SQL_DESC_SCALE il ARD, vengono utilizzato per i dati. Se qualsiasi precisione predefinita o la scala non è appropriata, l'applicazione deve impostare in modo esplicito il campo di descrizione appropriato da una chiamata a **SQLSetDescField** o **SQLSetDescRec**. È possibile impostare il campo SQL_DESC_CONCISE_TYPE SQL_C_NUMERIC e chiamare **SQLGetData** con un *TargetType* argomento di SQL_ARD_TYPE, che verranno ripristinati i valori di precisione e scala campi di descrizione da utilizzare.  
   
@@ -158,7 +159,7 @@ SQLRETURN SQLGetData(
 >  In ODBC 2*x*, set di applicazioni *TargetType* SQL_C_DATE, SQL_C_TIME o SQL_C_TIMESTAMP per indicare che \* *TargetValuePtr* è una data, ora, o struttura di timestamp. In ODBC 3*x*, set di applicazioni *TargetType* SQL_C_TYPE_DATE, SQL_C_TYPE_TIME o SQL_C_TYPE_TIMESTAMP. Gestione Driver rende mapping appropriato se necessario, in base alla versione dell'applicazione e il driver.  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>Il recupero dei dati a lunghezza variabile in parti  
- **SQLGetData** può essere utilizzato per recuperare dati da una colonna che contiene i dati a lunghezza variabile in parti, ovvero, se l'identificatore del tipo di dati SQL della colonna è SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL _ WLONGVARCHAR SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY o un identificatore specifico del driver per un tipo a lunghezza variabile.  
+ **SQLGetData** può essere utilizzato per recuperare dati da una colonna che contiene i dati a lunghezza variabile in parti, vale a dire, se l'identificatore del tipo di dati SQL della colonna è SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL _ WLONGVARCHAR SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY o un identificatore specifico del driver per un tipo a lunghezza variabile.  
   
  Per recuperare dati da una colonna in parti, l'applicazione chiama **SQLGetData** più volte in successione per la stessa colonna. Per ogni chiamata, **SQLGetData** restituisce la parte successiva dei dati. È compito dell'applicazione per riunire le parti, prestando attenzione a rimuovere il carattere di terminazione null da parti intermediate di dati di tipo carattere. Se sono presenti ulteriori dati per restituire o non è stata allocata buffer insufficiente per il carattere di terminazione, **SQLGetData** restituisce SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (dati troncati). Quando viene restituita l'ultima parte dei dati, **SQLGetData** restituisce SQL_SUCCESS. SQL_NO_TOTAL né zero può essere restituito nell'ultima chiamata valido per recuperare dati da una colonna, perché l'applicazione non sarà necessario in alcun modo di conoscere la quantità di dati nel buffer dell'applicazione è valido. Se **SQLGetData** viene chiamato in seguito, viene restituito SQL_NO_DATA. Per ulteriori informazioni, vedere la sezione successiva, "Recupero dei dati con SQLGetData".  
   

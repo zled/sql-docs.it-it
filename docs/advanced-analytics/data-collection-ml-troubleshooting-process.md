@@ -1,62 +1,41 @@
 ---
 title: Risoluzione dei problemi di raccolta dati per l'apprendimento automatico, SQL Server
-ms.custom: 
-ms.date: 06/16/2017
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- R
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 9b0fdd8d198675720188d6ab2417be97a9280c57
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708409"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Risoluzione dei problemi di raccolta dati per l'apprendimento automatico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo articolo descrive il tipo di dati da raccogliere quando si tenta di risolvere i problemi con il programma di installazione, configurazione o le prestazioni di machine learning in SQL Server. Tali dati includono registri, i messaggi di errore e le informazioni di sistema.
-
-L'articolo vengono descritte le origini di informazioni che sono particolarmente utili quando si esegue la diagnostica in una base di risolvere autonomamente il problema. Raccolta di queste informazioni è utile anche quando si richiede il supporto tecnico per i problemi relativi alle funzionalità di SQL Server machine learning.
+Questo articolo descrive i metodi di raccolta dati che utilizzare durante il tentativo di risolvere i problemi autonomamente o con l'aiuto di clienti Microsoft. 
 
 **Si applica a:** R Services SQL Server 2016, SQL Server 2017 di Machine Learning Services (R e Python)
 
-## <a name="sql-server-and-r-versions"></a>Versioni di SQL Server e R
 
-Nota Se la versione è una nuova installazione o l'aggiornamento. Se è un aggiornamento, determinare la modalità con cui è stata eseguita:
+## <a name="sql-server-version-and-edition"></a>Edizione e la versione di SQL Server
 
-- La versione è stata l'aggiornamento da? 
-- Sono stati rimossi i componenti obsoleti, oppure ha l'aggiornamento sul posto?
-- Apportare funzionalità ha modifiche durante l'aggiornamento? 
+R Services di SQL Server 2016 è la prima versione di SQL Server da includere il supporto integrato di R. SQL Server 2016 Service Pack 1 (SP1) include diversi miglioramenti principali, inclusa la possibilità di eseguire gli script esterni. Se si è un cliente di SQL Server 2016, è consigliabile considerare l'installazione di SP1 o versione successiva.
 
-### <a name="which-edition-of-sql-server-is-installed-and-which-version"></a>Edizione di SQL Server installata e quale versione? 
+SQL Server 2017 aggiunto integrazione linguaggio Python. Nelle versioni precedenti non è possibile ottenere l'integrazione della caratteristica Python.
 
-SQL Server R Services è stato introdotto in SQL Server 2016. Le versioni precedenti non supportano l'apprendimento. Inoltre, i service pack successivi per la versione di 2016 inclusi numerosi miglioramenti e correzioni di bug. Come primo passaggio, è consigliabile installare Service Pack 1 o versione successivo.
+Per assistenza edition e nelle versioni, vedere questo articolo, in cui sono elencati i numeri di build per ognuna del [versioni di SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions).
 
-In SQL Server 2017, supporto viene esteso per il linguaggio Python. Nelle versioni precedenti non è stato fornito il supporto per Python.
-
-Assistenza per determinare quale edizione e la versione, vedere l'articolo, in cui sono elencati i numeri di build per ogni il [versioni di SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions).
-
-A seconda dell'edizione di SQL Server in uso, alcune funzionalità di apprendimento automatico potrebbe essere non disponibile o limitate.
-
-Vedere gli argomenti seguenti per un elenco delle funzionalità di machine learning nelle edizioni Enterprise, Developer, Standard ed Express.
+A seconda dell'edizione di SQL Server in uso, alcune funzionalità di apprendimento automatico potrebbe essere non disponibile o limitate. Nell'elenco seguente di articoli apprendimento di funzionalità del computer nelle edizioni Enterprise, Developer, Standard ed Express.
 
 * [Edizioni e le funzionalità supportate di SQL Server](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
-* [Differenze nelle funzionalità di R tra le edizioni di SQL Server](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)
+* [Funzionalità di R e Python dalle edizioni di SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
 
-### <a name="which-version-of-microsoft-r-is-installed"></a>La versione di Microsoft R è installato.
+## <a name="r-language-and-tool-versions"></a>Versioni di lingua e lo strumento di R
 
 In generale, la versione di Microsoft R che viene installato quando si seleziona la funzionalità di R Services o la funzionalità di servizi di Machine Learning è determinata dal numero della build di SQL Server. Se si aggiorna o patch di SQL Server, è necessario aggiornare o patch componenti R.
 
@@ -64,7 +43,7 @@ Per un elenco delle versioni e i collegamenti ai download di componenti di R, ve
 
 È possibile aggiornare i componenti di R Server separatamente dal motore di database di SQL Server, in un processo noto come associazione. Pertanto, la versione di R in uso quando si esegue codice R in SQL Server potrebbe variare a seconda la versione installata di SQL Server e se la migrazione il server alla versione più recente di R.
 
-#### <a name="determine-the-r-version"></a>Determinare la versione di R
+### <a name="determine-the-r-version"></a>Determinare la versione di R
 
 Il modo più semplice per determinare la versione di R è per ottenere le proprietà di runtime tramite l'esecuzione di un'istruzione simile alla seguente:
 
@@ -123,9 +102,7 @@ Nella console di R vengono visualizzate le informazioni sulla versione all'avvio
     *Loading Microsoft R Server packages, version 9.1.0.*
 
 
-### <a name="what-version-of-python-is-installed"></a>La versione di Python è installata?
-
-Supporto per Python è disponibile solo in SQL Server 2017 Community Technology Preview (CTP) 2.0 e versioni successive.
+## <a name="python-versions"></a>Versioni di Python
 
 Esistono diversi modi per ottenere la versione di Python. Il modo più semplice è eseguire questa istruzione da Management Studio o qualsiasi altro strumento di query SQL:
 
@@ -146,7 +123,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 Se non è in esecuzione servizi di Machine Learning, è possibile determinare la versione installata di Python esaminando il file pythonlauncher.config. Si consiglia di verificare e aprire una copia del file in modo da non modificare accidentalmente alcuna proprietà.
 
-1. Solo per SQL Server 2017:`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. Solo per SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
 2. Ottenere il valore di **PYTHONHOME**.
 3. Ottenere il valore della directory di lavoro corrente.
 
@@ -154,7 +131,7 @@ Se non è in esecuzione servizi di Machine Learning, è possibile determinare la
 > [!NOTE]
 > Se è stato installato sia Python e R in SQL Server 2017, la directory di lavoro e il pool di account di lavoro vengono condivisi per le lingue di R e Python.
 
-### <a name="are-multiple-instances-of-r-or-python-installed"></a>Più istanze di R o Python installato.
+## <a name="are-multiple-instances-of-r-or-python-installed"></a>Più istanze di R o Python installato.
 
 Verificare se più di una copia delle librerie R è installata nel computer. Questa duplicazione può verificarsi se:
 
@@ -167,7 +144,7 @@ Le stesse condizioni si applicano per Python.
 
 Se si ritiene che siano installati più librerie o Runtime, assicurarsi di ottenere solo gli errori associati i runtime di Python o R che vengono utilizzati dall'istanza di SQL Server.
 
-## <a name="errors-and-messages"></a>Errori e messaggi
+## <a name="origin-of-errors"></a>Origine degli errori
 
 Gli errori che viene visualizzato quando si tenta di eseguire il codice R possono provenire da una qualsiasi delle seguenti origini:
 
@@ -182,7 +159,7 @@ Quando si lavora con il servizio per la prima volta, può essere difficile stabi
 - Si sta utilizzando Management Studio? Un'applicazione esterna?
 - Si esegue codice R in un client remoto o direttamente in una stored procedure?
 
-### <a name="what-errors-has-sql-server-logged"></a>Gli errori registrati con SQL Server
+## <a name="sql-server-log-files"></a>File di log di SQL Server
 
 Ottenere il più recente di SQL Server di log degli errori. Il set completo di log degli errori include i file dalla directory log predefinita seguente:
 
@@ -198,7 +175,7 @@ Ottenere il più recente di SQL Server di log degli errori. Il set completo di l
 > Il nome esatto della cartella varia a seconda il nome dell'istanza.
 
 
-### <a name="what-errors-were-returned-by-the-spexecuteexternalscript-command"></a>Gli errori restituiti dal comando sp_execute_external_script?
+## <a name="errors-returned-by-spexecuteexternalscript"></a>Errori restituiti da sp_execute_external_script
 
 Ottenere il testo completo degli errori che vengono restituiti, se presente, quando si esegue il comando sp_execute_external_script. 
 
@@ -224,7 +201,7 @@ with result sets (([hello] int not null));
 go
 ```
 
-### <a name="what-errors-are-generated-by-the-extensibility-framework"></a>Gli errori vengono generati dal framework di estendibilità?
+## <a name="errors-generated-by-the-extensibility-framework"></a>Errori generati dal framework di estendibilità
 
 SQL Server genera un file di log distinti per i runtime del linguaggio dello script esterno. Questi errori non vengono generati dal linguaggio Python o R. Sono generati dai componenti di estendibilità in SQL Server, tra cui avvio specifici della lingua e i processi satellite.
 
@@ -253,22 +230,22 @@ Ad esempio, i messaggi di log seguenti riguardano il framework di estendibilità
 
 * *Inizializzazione di gestore del contesto di sicurezza non riuscita* 
 
-* *Inizializzazione di gestione di sessioni satellite non riuscita*
+* *Inizializzazione di gestione di sessioni satellite non è riuscita*
 
-### <a name="are-there-any-related-system-events"></a>Sono presenti tutti gli eventi di sistema correlate?
+## <a name="system-events"></a>Eventi di sistema
 
 1. Aprire il Visualizzatore eventi di Windows e di ricerca di **evento di sistema** log per i messaggi che includono la stringa *Launchpad*. 
 2. Aprire il file ExtLaunchErrorlog e cercare la stringa *ErrorCode*. Esaminare il messaggio associato a un codice di errore.
 
 Ad esempio, i messaggi seguenti sono comuni errori di sistema che riguardano il framework di estendibilità di SQL Server: 
 
-* *Il servizio SQL Server Launchpad (MSSQLSERVER) non è stato possibile avviare a causa dell'errore seguente:<text>*
+* *Il servizio SQL Server Launchpad (MSSQLSERVER) non è stato possibile avviare a causa dell'errore seguente:  <text>*
 
 * *Il servizio non ha risposto alla richiesta di avvio o di controllo in modo tempestivo.* 
 
 * *(In 120000 millisecondi) è stato raggiunto un timeout durante l'attesa per il servizio SQL Server Launchpad (MSSQLSERVER) per la connessione.* 
 
-### <a name="did-any-components-start-and-then-crash"></a>Tutti i componenti start e quindi di arresto anomalo?
+## <a name="dump-files"></a>File di dump
 
 Se ha familiarità con il debug, è possibile utilizzare i file di dump per analizzare un errore nella finestra di avvio.
 
@@ -279,7 +256,7 @@ Se ha familiarità con il debug, è possibile utilizzare i file di dump per anal
 La posizione esatta potrebbero essere diversi nel sistema e potrebbe trovarsi in un'unità diversa dall'unità C. Assicurarsi di ottenere i registri per l'istanza in cui è installato l'apprendimento. 
 
 
-## <a name="related-tools-and-configuration"></a>Configurazione e gli strumenti correlati
+## <a name="configuration-settings"></a>Impostazioni di configurazione
 
 In questa sezione elenca i componenti aggiuntivi o i provider che possono essere un'origine degli errori quando si eseguono script R o Python.
 
@@ -310,7 +287,7 @@ Per singoli account utente:
    - Tutti tranne *db_owner*: richiedono EXECUTE ANY EXTERNAL SCRIPT.
    - *db_datawriter*: per scrivere i risultati da R o Python. 
    - *db_ddladmin*: per creare nuovi oggetti. 
-   - *db_datareader*: per leggere i dati che viene utilizzati dal codice R o Python. 
+   - *db_datareader*: leggere i dati utilizzati da codice Python o R. 
 4. Nota Se è stato modificato qualsiasi account di avvio predefiniti durante l'installazione di SQL Server 2016.
 5. Se un utente deve installare i nuovi pacchetti R o utilizzare i pacchetti R che sono stati installati da altri utenti, è necessario abilitare la gestione dei pacchetti nell'istanza e quindi assegnare le autorizzazioni aggiuntive. Per ulteriori informazioni, vedere [abilitare o disabilitare la gestione dei pacchetti R](r\r-package-how-to-enable-or-disable.md).
 
@@ -330,20 +307,7 @@ Poiché potrebbe non essere possibile escludere tutte le cartelle che sono neces
 
 2. Determinare se è stata creata una regola del firewall per SQL Server. Per motivi di sicurezza in un'installazione predefinita, potrebbe non essere possibile per il client R o Python remoto per connettersi all'istanza. Per ulteriori informazioni, vedere [risoluzione dei problemi di connessione a SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
 
-### <a name="can-you-run-r-script-outside-t-sql"></a>È possibile eseguire lo script R all'esterno di T-SQL?
-
-È possibile provare a eseguire il runtime di R è associato all'istanza di SQL Server utilizzando altri strumenti di R. In questo modo, è possibile determinare se sono installate le librerie necessarie.
-
-Un'installazione di R di base include più strumenti che è possibile utilizzare per eseguire uno script R da riga di comando, nonché RGui per l'esecuzione interattiva di script.
-
-Se il runtime di R è funzionante, ma lo script restituisce errori, è consigliabile provare il debug di script in un ambiente di sviluppo R dedicato, ad esempio strumenti R per Visual Studio.
-
-È inoltre consigliabile esaminare e leggermente riscrivere lo script per risolvere eventuali problemi con i tipi di dati che potrebbero verificarsi quando si spostano dati tra R e il motore di database. Per ulteriori informazioni, vedere [R librerie e tipi di dati](r/r-libraries-and-data-types.md).
-
-Inoltre, è possibile utilizzare il pacchetto sqlrutils per raggruppare script R in un formato più facilmente utilizzabile come una stored procedure. Per altre informazioni, vedere:
-* [Generare una stored procedure per il codice R tramite il pacchetto sqlrutils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
-* [Creare una stored procedure utilizzando sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Risoluzione dei problemi di apprendimento in SQL Server](machine-learning-troubleshooting-faq.md)
+[Risolvere i problemi di apprendimento automatico in SQL Server](machine-learning-troubleshooting-faq.md)

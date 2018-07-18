@@ -1,30 +1,31 @@
 ---
 title: Indice personalizzato (Master Data Services) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 190d8f1541fc13affddffa71859d37dbb4d4239b
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 4fceac85efd8c53a178d2861ca3b528ff6d8b730
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-index-master-data-services"></a>Indice personalizzato (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Gli indici personalizzati consentono di creare un indice non cluster in un attributo (indice singolo) o in un elenco di attributi (indice composto) e in un'entità. In genere gli indici migliorano le prestazioni del processo di esecuzione delle query. Per altre informazioni sugli indici di SQL Server, vedere [Indici](../relational-databases/indexes/indexes.md).  
   
 ## <a name="type-of-indexes"></a>Tipi di indici  

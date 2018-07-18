@@ -1,45 +1,42 @@
 ---
 title: Quando utilizzare le procedure | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f62c820f57fba7af608a870e00e0b2ddf0ad13b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: dbc53507bf2cdf3333e0d36763ad7ecf7d359155
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="when-to-use-procedures"></a>Quando utilizzare le procedure
 Esistono diversi vantaggi rispetto all'utilizzo delle procedure, tutte basata sul fatto che tramite le procedure Sposta istruzioni SQL dall'applicazione per l'origine dati. Ciò che resta nell'applicazione è una chiamata di procedura interoperativa. Tali vantaggi includono:  
   
 -   **Prestazioni** procedure vengono in genere il modo più rapido per eseguire istruzioni SQL. Ad esempio preparata esecuzione, l'istruzione viene compilato ed eseguito in due fasi distinte. A differenza di esecuzione preparata, procedure vengono eseguite solo in fase di esecuzione. Vengono compilati in un altro momento.  
   
--   **Le regole di business** A *regola business* è una regola sul modo in cui una società di business. Ad esempio, solo un utente con il titolo del venditore potrebbe essere consentito per aggiungere nuovi ordini di vendita. Immissione di queste regole nelle procedure consente alle aziende di singoli personalizzare le applicazioni verticali riscrivendo le procedure per l'applicazione chiamate senza dover modificare il codice dell'applicazione. Ad esempio, un'applicazione di immissione ordini potrebbe chiamare la routine **InsertOrder** con un numero fisso di parametri; esattamente come **InsertOrder** viene implementato può variare da una società a.  
+-   **Le regole business** A *regola business* è una regola sul modo in cui una società di business. Ad esempio, solo un utente con il titolo del venditore potrebbe essere consentito per aggiungere nuovi ordini di vendita. Immissione di queste regole nelle procedure consente alle aziende di singoli personalizzare le applicazioni verticali riscrivendo le procedure per l'applicazione chiamate senza dover modificare il codice dell'applicazione. Ad esempio, un'applicazione di immissione ordini potrebbe chiamare la routine **InsertOrder** con un numero fisso di parametri; esattamente come **InsertOrder** viene implementato può variare da una società a.  
   
--   **Replaceability** strettamente correlate per il posizionamento delle regole di business nelle procedure è costituita dal fatto che possono essere sostituite procedure senza ricompilare l'applicazione. Se una regola business viene modificata dopo che una società ha acquistato e installata un'applicazione, la società può sostituire la routine contenente tale regola. Dal punto di vista dell'applicazione, non è stata modificata; comunque, chiama una particolare procedura per completare un'attività particolare.  
+-   **Replaceability** strettamente correlate per il posizionamento delle regole di business nelle procedure è il fatto che le procedure possono essere sostituite senza ricompilare l'applicazione. Se una regola business viene modificata dopo che una società ha acquistato e installata un'applicazione, la società può sostituire la routine contenente tale regola. Dal punto di vista dell'applicazione, non è stata modificata; comunque, chiama una particolare procedura per completare un'attività particolare.  
   
--   **SQL DBMS specifici** procedure consentono alle applicazioni di sfruttare SQL DBMS specifici e sono tuttora disponibili interoperativa. Ad esempio, una procedura in un sistema DBMS che supporta le istruzioni di controllo di flusso in SQL potrebbe intercettare e correggere gli errori, mentre una procedura in un sistema DBMS che non supportano le istruzioni di controllo di flusso può semplicemente restituire un errore.  
+-   **SQL DBMS specifici** procedure forniscono un modo per le applicazioni di sfruttare SQL DBMS specifici e sono tuttora disponibili interoperativa. Ad esempio, una procedura in un sistema DBMS che supporta le istruzioni di controllo di flusso in SQL potrebbe intercettare e correggere gli errori, mentre una procedura in un sistema DBMS che non supportano le istruzioni di controllo di flusso può semplicemente restituire un errore.  
   
--   **Procedure sopravvivono transazioni** in alcune origini dati, i piani di accesso per le istruzioni preparate tutte in una connessione vengono eliminati quando una transazione viene eseguito il commit o rollback. Inserire le istruzioni SQL in procedure, che sono archiviate in modo permanente nell'origine dati, le istruzioni di superare la transazione. Se le procedure sopravvivono un preparata parzialmente preparata, o non preparato lo stato è specifico del DBMS.  
+-   **Procedure di restare attiva quando le transazioni** in alcune origini dati, i piani di accesso per le istruzioni preparate tutti su una connessione vengono eliminati quando una transazione viene eseguito il commit o rollback. Inserire le istruzioni SQL in procedure, che sono archiviate in modo permanente nell'origine dati, le istruzioni di superare la transazione. Se le procedure sopravvivono un preparata parzialmente preparata, o non preparato lo stato è specifico del DBMS.  
   
--   **Sviluppo di separare** procedure possono essere sviluppate separatamente dal resto dell'applicazione. In grandi aziende, questo potrebbe fornire un modo per sfruttare ulteriormente le competenze di programmatori altamente specializzate. In altre parole, i programmatori di applicazioni è possono scrivere codice dell'interfaccia utente e ai programmatori di database è possono scrivere routine.  
+-   **Separare sviluppo** procedure possono essere sviluppate separatamente dal resto dell'applicazione. In grandi aziende, questo potrebbe fornire un modo per sfruttare ulteriormente le competenze di programmatori altamente specializzate. In altre parole, i programmatori di applicazioni è possono scrivere codice dell'interfaccia utente e ai programmatori di database è possono scrivere routine.  
   
  Procedure vengono utilizzate in genere da applicazioni personalizzate e verticale. Queste applicazioni tendono a eseguire attività fissa, ed è possibile per le chiamate di procedura a livello di codice in essi contenuti. Ad esempio, un'applicazione di immissione dell'ordine può chiamare le procedure **InsertOrder**, **DeleteOrder**, **UpdateOrder**, e **GetOrders** .  
   

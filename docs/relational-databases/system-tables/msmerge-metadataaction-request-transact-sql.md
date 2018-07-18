@@ -1,33 +1,35 @@
 ---
 title: MSmerge_metadataaction_request (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSmerge_metadataaction_request
 - MSmerge_metadataaction_request_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSmerge_metadataaction_request system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSmerge_metadataaction_request system table
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7cdb53489f18f2936a418e9a4a1d29145fcdb4ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a26726d6fb6bc38a79ab50f958f071301a841f12
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +39,14 @@ ms.lasthandoff: 11/21/2017
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|Nome alternativo della tabella pubblicata.|  
-|**ROWGUID**|**uniqueidentifier**|Identificatore della riga specificata.|  
-|**azione**|**tinyint**|Identifica l'azione di compensazione necessaria.|  
+|**rowguid**|**uniqueidentifier**|Identificatore della riga specificata.|  
+|**action**|**tinyint**|Identifica l'azione di compensazione necessaria.|  
 |**generazione**|**bigint**|Valore della generazione per cui l'azione di compensazione è necessaria.|  
-|**modificato**|**int**|Solo per uso interno.|  
+|**Modificato**|**int**|Solo per uso interno.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Viste della replica &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Viste della replica di &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Sincronizzazione Web per la replica di tipo merge](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

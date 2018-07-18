@@ -1,31 +1,23 @@
 ---
 title: Individuare lo stato del Server Events Data Columns | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: trace-events
 ms.topic: reference
-helpviewer_keywords: Discover Server State event category
-ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
-caps.latest.revision: "32"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 192c9bc97a67f5690619ac0b0ef667e9de6c99d6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: af00bfd3d38f7014efaa04037ffdd0754165e232
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discover-server-state-events-data-columns"></a>Colonne di dati degli eventi di individuazione dello stato del server
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria di eventi individuazione stato del Server include le classi di evento seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoria degli eventi di individuazione stato del server include le classi di eventi seguenti:  
   
 |**ID evento**|**Nome evento**|**Descrizione evento**|  
 |------------------|--------------------|---------------------------|  
@@ -81,7 +73,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Contiene l'ora corrente dell'evento di individuazione dello stato del server, quando disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene l'ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene l'ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Duration|5|2|Contiene la durata dell'evento in millisecondi.|  
+|Durata|5|2|Contiene la durata dell'evento in millisecondi.|  
 |CPUTime|6|2|Contiene la quantità di tempo CPU in millisecondi utilizzata dall'evento di individuazione dello stato del server.|  
 |ConnectionID|25|1|Contiene l'ID di connessione univoco associato all'evento di individuazione dello stato del server.|  
 |NTUserName|32|8|Contiene l'account utente di Windows associato all'evento di individuazione dello stato del server.|  
@@ -95,6 +87,6 @@ ms.lasthandoff: 01/08/2018
 |ServerName|43|8|Contiene il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento di individuazione dello stato del server.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  
+ [Individuare la categoria di eventi dello stato di Server](../../analysis-services/trace-events/discover-server-state-event-category.md)  
   
   

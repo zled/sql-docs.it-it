@@ -1,30 +1,27 @@
 ---
 title: Parole chiave riservate | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 54df53e2ff5f095a0404719d6e1219013d90d47f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 2b791ea7d4430e4f594079231926c41e02de1ed4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords"></a>Parole chiave riservate
 Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzioni di ODBC. Queste parole non limitano la grammatica SQL minima; Tuttavia, per garantire la compatibilità con driver che supportano la grammatica SQL di base, le applicazioni evitare di utilizzare uno qualsiasi di queste parole chiave. Il simbolo #**definire** valore SQL_ODBC_KEYWORDS contiene un elenco delimitato da virgole di queste parole chiave.  
@@ -66,7 +63,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|o|  
+|COLLATION|OPPURE|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
@@ -84,7 +81,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|real|  
+|CURSOR|REAL|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -94,7 +91,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|Elimina|SECOND|  
+|DELETE|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -117,7 +114,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|timestamp|  
+|FIRST|TIMESTAMP|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
@@ -135,7 +132,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |HOUR|USAGE|  
 |IDENTITY|Utente|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|VALUE|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  

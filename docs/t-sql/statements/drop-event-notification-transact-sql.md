@@ -1,16 +1,14 @@
 ---
-title: DROP EVENT NOTIFICATION (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP EVENT NOTIFICATION
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - DROP EVENT NOTIFICATION statement
 - removing event notifications
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b2ecaff48f54ce76fe0d193eda5406df1bc574e7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a47ff204433d49e76fe18f772d37fcc8589123aa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>Argomenti  
  *notification_name*  
- Nome della notifica degli eventi da rimuovere. È possibile specificare più notifiche. Per visualizzare un elenco di notifiche degli eventi, utilizzare [Sys. event_notifications &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ Nome della notifica degli eventi da rimuovere. È possibile specificare più notifiche. Per visualizzare un elenco delle notifiche degli eventi disponibili, usare [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
   
  SERVER  
  Indica che l'ambito della notifica degli eventi corrisponde al server corrente. È necessario specificare SERVER se questo è l'ambito impostato al momento della creazione della notifica degli eventi.  
@@ -61,10 +58,10 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  DATABASE  
  Indica che l'ambito della notifica degli eventi corrisponde al database corrente. È necessario specificare DATABASE se questo è l'ambito impostato al momento della creazione della notifica degli eventi.  
   
- CODA *nome_coda*  
- Indica l'ambito della notifica degli eventi corrisponde alla coda specificata da *nome_coda*. È necessario specificare QUEUE se questo è l'ambito impostato al momento della creazione della notifica degli eventi. *nome_coda* è il nome della coda e deve anche essere specificato.  
+ QUEUE *queue_name*  
+ Indica che l'ambito della notifica degli eventi corrisponde alla coda specificata da *queue_name*. È necessario specificare QUEUE se questo è l'ambito impostato al momento della creazione della notifica degli eventi. L'argomento *queue_name* corrisponde al nome della coda ed è obbligatorio specificarlo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se viene attivata una notifica degli eventi all'interno di una transazione e tale notifica viene eliminata all'interno della stessa transazione, l'istanza della notifica degli eventi viene inviata e quindi la notifica degli eventi viene eliminata.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -91,9 +88,9 @@ ON DATABASE;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREATE EVENT NOTIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
+ [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Sys. event_notifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [Sys. Events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   

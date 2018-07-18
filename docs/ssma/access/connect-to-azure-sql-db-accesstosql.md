@@ -1,36 +1,33 @@
 ---
 title: Connettersi al database SQL di Azure (AccessToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssma-access
-ms.custom: 
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Connect to SQL Azure dialog box
+helpviewer_keywords:
+- Connect to SQL Azure dialog box
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 54f826bd9b4bd2bdec0c7cd79c6faf20b0630639
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: a789b00930a68280a314072725a5d902d9dfe240
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Connettersi al database SQL di Azure (AccessToSQL)
 Utilizzare la connessione per la finestra di dialogo di SQL Azure per la connessione al database di SQL Azure che si desidera eseguire la migrazione.  
   
-Per accedere a questa finestra di dialogo, scegliere il **File** dal menu **Connetti a SQL Azure**. Se in precedenza si è connessi, il comando è **Riconnetti a SQL Azure.**  
+Per accedere a questa finestra di dialogo, scegliere il **File** dal menu **Connetti a SQL Azure**. Se si è già connessa, il comando è **Riconnetti a SQL Azure.**  
   
 ## <a name="options"></a>Opzioni  
 **Nome server**  
@@ -44,7 +41,7 @@ Selezionare, inserire o **Sfoglia** il nome del Database.
 > [!IMPORTANT]  
 > SSMA per l'accesso non supporta la connessione al database master in SQL Azure.  
   
-**User name**  
+**Nome utente**  
   
 Immettere il nome utente utilizzato per connettersi al database di SQL Azure SSMA  
   
@@ -63,13 +60,13 @@ Per creare un nuovo database di azure, seguire i passaggi seguenti
   
 2.  Se non sono disponibili database, vengono visualizzate due voci di menu  
   
-    1.  **(Nessun database trovato)**  che è disabilitato e visualizzato in grigio costantemente  
+    1.  **(Nessun database trovato)**  che è disabilitata e costantemente in grigio  
   
-    2.  **Crea nuovo database** che è sempre abilitata, consentendo all'utente di creare un nuovo database di azure nell'account di SQL Azure. Al momento facendo clic su questa voce di menu, creare il database di azure, finestra di dialogo è presente con il nome di database e le dimensioni.  
+    2.  **Crea nuovo database** è sempre abilitata, consentendo all'utente di creare un nuovo database di azure nell'account di SQL Azure. Al momento facendo clic su questa voce di menu, creare il database di azure, finestra di dialogo è presente con il nome di database e le dimensioni.  
   
 3.  Al momento della creazione del database, questi due parametri viene fornito come input.  
   
     1.  **Nome del database:** immettere il nome del Database.  
   
-    2.  **Dimensioni del database:** selezionare le dimensioni del Database che si devono creare nell'account di SQL Azure.  
+    2.  **Dimensioni del database:** selezionare le dimensioni del Database che è necessario creare account di SQL Azure.  
   

@@ -1,16 +1,15 @@
 ---
 title: La gestione delle password (SybaseToSQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - Sybase Console,Managing Passwords
 - Sybase Console,Securing Password
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4ef75b192ee59854f1f0c53b9446a60da734351b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 61af7aec304c285957297b40bae955a632c11a9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-passwords-sybasetosql"></a>La gestione delle password (SybaseToSQL)
 In questa sezione riguarda la protezione delle password di database e le procedure per importare o esportare tali tra server:  
@@ -46,9 +44,9 @@ Specificare una password valida utilizzando uno dei tre metodi seguenti:
   
 1.  **Testo non crittografato:** digitare la password del database dell'attributo value del nodo 'password'. Si trovi sotto il nodo della definizione di server nella sezione Server di file di script o file di connessione del server.  
   
-    Le password in testo non crittografato non sono protette. Pertanto, si verificherà il seguente messaggio di avviso nell'output della console: *"Server &lt;id server&gt; password viene fornito in formato testo non crittografato non protetta, l'applicazione Console SSMA fornisce un'opzione per proteggere la password mediante crittografia, vedere l'opzione – securepassword SSMA file della Guida per ulteriori informazioni."*  
+    Le password in testo non crittografato non sono protette. Pertanto, si verifica il seguente messaggio di avviso nell'output della console: *"Server &lt;id server&gt; password viene fornita in formato testo non crittografato non sicure, applicazione Console SSMA fornisce un'opzione per proteggere il password mediante crittografia, vedere opzione – securepassword in SSMA file per altre informazioni della Guida."*  
   
-    **Le password crittografate:** la password specificata, in questo caso, è archiviata in formato crittografato nel computer locale in ProtectedStorage.ssma.  
+    **Le password crittografate:** la password specificata, in questo caso, viene archiviata in formato crittografato nel computer locale in ProtectedStorage.ssma.  
   
     -   **Protezione delle password**  
   
@@ -80,7 +78,7 @@ Specificare una password valida utilizzando uno dei tre metodi seguenti:
                 
                 Re-enter password for server_id 'target _1': xxxxxxx  
     
-    -   **Rimuovere le password crittografate**  
+    -   **Rimozione di password crittografate**  
   
         Eseguire il `SSMAforSybaseConsole.exe` con il`–securepassword` e `–remove` passa alla riga di comando passando l'ID del server, per rimuovere le password crittografate dal file di archiviazione protetto presentano nel computer locale.  
   

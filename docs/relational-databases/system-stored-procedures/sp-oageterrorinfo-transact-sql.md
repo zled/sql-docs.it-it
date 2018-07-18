@@ -1,32 +1,32 @@
 ---
 title: sp_OAGetErrorInfo (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAGetErrorInfo_TSQL
 - sp_OAGetErrorInfo
-dev_langs: TSQL
-helpviewer_keywords: sp_OAGetErrorInfo
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7b4477349f95fc286fce553f81e449162d8de511
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b272cbcc6fc8221dede3b4a1274032926910186a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**Tipo di variabile non valido (0x80020008)**|Tipo di dati di un [!INCLUDE[tsql](../../includes/tsql-md.md)] valore passato come un parametro di metodo non corrispondeva il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] tipo di dati del parametro del metodo o un valore NULL è stato passato come parametro di metodo.|  
 |**Nome sconosciuto (0x8002006)**|Il nome di proprietà o metodo specificato non è stato trovato per l'oggetto specificato.|  
-|**Stringa di classe non valida (0x800401f3)**|Il valore ProgID o CLSID specificato non è registrato come oggetto OLE in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Server di automazione OLE personalizzati devono essere registrati prima può essere implementati con **sp_OACreate**. Questa operazione può essere eseguita tramite l'utilità Regsvr32.exe per server (. dll) in-process, o **/REGSERVER** switch della riga di comando per i server locali (.exe).|  
+|**Stringa della classe non valida (0x800401f3)**|Il valore ProgID o CLSID specificato non è registrato come oggetto OLE in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Server di automazione OLE personalizzati devono essere registrati prima può essere implementati con **sp_OACreate**. Questa operazione può essere eseguita tramite l'utilità Regsvr32.exe per server (. dll) in-process, o **/REGSERVER** switch della riga di comando per i server locali (.exe).|  
 |**Esecuzione del server fallita (0x80080005)**|L'oggetto OLE specificato è registrato come server OLE locale (file exe), ma non è stato possibile trovare o avviare il file.|  
 |**Il modulo specificato non trovato (0x8007007e)**|L'oggetto OLE specificato è registrato come server OLE in-process (file dll), ma non è stato possibile trovare o caricare il file.|  
 |**Tipo non corrispondente (0x80020005)**|Il tipo di dati di una variabile locale [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata per l'archiviazione del valore restituito di una proprietà o un metodo non corrisponde al tipo di dati di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] del valore restituito della proprietà o del metodo oppure è stato richiesto il valore restituito di una proprietà o un metodo ma non viene restituito alcun valore.|  
@@ -98,7 +98,7 @@ sp_OAGetErrorInfo [ objecttoken ]
   
  Per ulteriori informazioni sull'elaborazione dei codici restituiti HRESULT, vedere [OLE Automation codici restituiti e informazioni sull'errore](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -126,7 +126,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Automazione OLE Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Automazione OLE Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Script di automazione OLE di esempio](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

@@ -1,16 +1,14 @@
 ---
-title: Istruzione ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_CRYPTOGRAPHIC_PROVIDER_TSQL
@@ -22,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER CRYPTOGRAPHIC PROVIDER
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe377a27978cdae372a7bfc8545d7cad1f514820
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e7d99901080ae6b5d401f376c832f498ce9c5627
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +55,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  Abilita o disabilita un provider.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se il provider modifica il file DLL utilizzato per l'implementazione di EKM (Extensible Key Management) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario utilizzare l'istruzione ALTER CRYPTOGRAPHIC PROVIDER.  
   
  Quando il percorso del file DLL viene aggiornato utilizzando l'istruzione ALTER CRYPTOGRAPHIC PROVIDER, tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono effettuate le azioni seguenti:  
@@ -79,20 +76,20 @@ Quando il file di intestazione utilizzato per creare la dll del provider EKM non
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il provider di crittografia.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente modifica un provider di crittografia, denominato `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a una versione più recente di un file DLL. Questa nuova versione è denominata `c:\SecurityProvider\SecurityProvider_v2.dll` e viene installato nel server. Il certificato del provider deve essere installato nel server.  
+ Nell'esempio seguente viene modificato un provider di crittografia denominato `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una versione più recente di un file DLL. La nuova versione è denominata `c:\SecurityProvider\SecurityProvider_v2.dll` e viene installata nel server. Il certificato del provider deve essere installato nel server.  
   
-1. Disabilitare il provider per eseguire l'aggiornamento. Questo comporta la terminazione tutte le sessioni di crittografia.  
+1. Per eseguire l'aggiornamento, disabilitare il provider. Tutte le sessioni di crittografia aperte verranno terminate.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
-2. Aggiornare il file con estensione DLL del provider. Il GUID deve essere identico alla versione precedente, ma la versione può essere diversa.  
+2. Aggiornare il file DLL del provider. Il GUID deve corrispondere a quello della versione precedente, ma la versione può essere diversa.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  

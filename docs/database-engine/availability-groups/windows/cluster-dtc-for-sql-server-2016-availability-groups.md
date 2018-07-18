@@ -1,30 +1,31 @@
 ---
-title: "DTC del cluster per i gruppi di disponibilità di SQL Server 2016 | Microsoft Docs"
-ms.custom: 
+title: DTC del cluster per i gruppi di disponibilità di SQL Server 2016 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
-caps.latest.revision: "3"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 3
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ad11a6e0f6e9bf9a2830fed6068423b79d0726ae
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f5361e96eeb91aaf51d4f0949e3d01d078c6ee95
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768697"
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>DTC del cluster per i gruppi di disponibilità di SQL Server 2016
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive i requisiti e i passaggi per il clustering del servizio Microsoft Distributed Transaction Coordinator (DTC) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni sulle transazioni distribuite e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità Always On (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Questo argomento descrive i requisiti e i passaggi per il clustering del servizio Microsoft Distributed Transaction Coordinator (DTC) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni sulle transazioni distribuite e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità Always On (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
  ## <a name="checklist-preliminary-requirements"></a>Elenco di controllo: requisiti preliminari
 ||Attività|Riferimento|  

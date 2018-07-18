@@ -1,16 +1,14 @@
 ---
-title: Parse (motore di Database) | Documenti Microsoft
-ms.custom: 
+title: Parse (motore di database) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Parse
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - Parse [Database Engine]
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e80c29d1a13e0b77792ec6d3533d4d80cf355b40
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ced228d34b92c636aa38983dbface3ec566773bd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parse-database-engine"></a>Parse (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-L'analisi converte la rappresentazione di stringa canonica di un **hierarchyid** per un **hierarchyid** valore. L'analisi viene chiamato implicitamente quando una conversione da un tipo stringa per **hierarchyid** si verifica. Funziona in modo opposto di [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse () è un metodo statico.
+Il metodo Parse esegue la conversione della rappresentazione stringa canonica di un valore **hierarchyid** in un valore **hierarchyid**. Parse viene chiamato in modo implicito quando viene eseguita una conversione da un tipo stringa in **hierarchyid**. Il metodo funziona in modo opposto a [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse() è un metodo statico.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,17 +55,17 @@ static SqlHierarchyId Parse ( SqlString input )
 CLR: valore stringa valutato.
   
 ## <a name="return-types"></a>Tipi restituiti  
-**Tipo: hierarchyid restituito SQL Server**
+**Tipo SQL Server restituito: hierarchyid**
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Osservazioni  
-Se l'analisi riceve un valore che non è una rappresentazione di stringa valida di un **hierarchyid**, viene generata un'eccezione. Ad esempio, se **char** tipi di dati contengono spazi finali, viene generata un'eccezione.
+## <a name="remarks"></a>Remarks  
+Se Parse riceve un valore che non è una rappresentazione stringa valida di un valore **hierarchyid**, viene generata un'eccezione. Se, ad esempio, i tipi di dati **char** contengono spazi finali, viene generata un'eccezione.
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. Conversione di valori Transact-SQL senza una tabella  
-Nell'esempio di codice viene illustrato come utilizzare `ToString` per convertire un **hierarchyid** valore in una stringa e `Parse` per convertire un valore stringa in un **hierarchyid**.
+Nell'esempio di codice seguente viene usato `ToString` per convertire un valore **hierarchyid** in una stringa e `Parse` per convertire un valore stringa in un valore **hierarchyid**.
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -89,7 +86,7 @@ hierarchyidRepresentation    StringRepresentation
 ```
   
 ### <a name="b-clr-example"></a>B. Esempio CLR  
-Frammento di codice seguente chiama il metodo Parse ():
+Nel frammento di codice seguente viene chiamato il metodo Parse():
   
 ```sql
 string input = “/1/2/”;  

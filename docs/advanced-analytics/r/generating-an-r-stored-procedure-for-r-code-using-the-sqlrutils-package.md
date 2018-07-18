@@ -1,30 +1,19 @@
 ---
-title: Generazione di una stored procedure R per il codice R tramite il pacchetto sqlrutils | Microsoft Docs
-ms.custom: 
-ms.date: 02/28/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- R
-ms.assetid: d8739f16-ac26-4f69-870c-51c77cf286d3
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 2a119867b30b0d3ff8a0abb0b32e8017e5663969
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Generare una routine di R archiviato per il codice R tramite sqlrutils pacchetto | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 2b327391b7a21e340b30f2bc5fbf27481168266e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>Generazione di una stored procedure R per il codice R tramite il pacchetto sqlrutils
+# <a name="generate-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>Generare una routine di R archiviato per il codice R usando il pacchetto sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Il pacchetto **sqlrutils** fornisce un meccanismo che consente agli utenti di R di inserire gli script R in una stored procedure T-SQL, registrare la stored procedure con un database ed eseguirla da un ambiente di sviluppo R. 

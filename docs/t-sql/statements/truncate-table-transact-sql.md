@@ -1,16 +1,14 @@
 ---
-title: Istruzione TRUNCATE TABLE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: TRUNCATE TABLE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TRUNCATE
@@ -27,21 +25,21 @@ helpviewer_keywords:
 - deleting rows
 - dropping rows
 ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 71f05b47a4a070e5d797a6f9ff6b5f4d88e585c5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c5550dbfb1c245470b6ea0e2ab6d25c7139e82b7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Rimuove tutte le righe da una tabella o le partizioni specificate di una tabella, senza registrare le eliminazioni delle singole righe. TRUNCATE TABLE è simile all'istruzione DELETE senza clausola WHERE. L'istruzione TRUNCATE TABLE è tuttavia più rapida e utilizza un numero minore di risorse di sistema e del log delle transazioni.  
+  Rimuove tutte le righe da una tabella o da partizioni specificate di una tabella senza registrare le eliminazioni delle singole righe. TRUNCATE TABLE è simile all'istruzione DELETE senza clausola WHERE. L'istruzione TRUNCATE TABLE è tuttavia più rapida e utilizza un numero minore di risorse di sistema e del log delle transazioni.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,26 +74,26 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  Nome dello schema a cui appartiene la tabella.  
   
  *table_name*  
- Nome della tabella da troncare o dalla quale vengono rimosse tutte le righe. *TABLE_NAME* deve essere un valore letterale. *TABLE_NAME* non può essere il **object_id ()** funzione o una variabile.  
+ Nome della tabella da troncare o dalla quale vengono rimosse tutte le righe. *table_name* deve essere un valore letterale. *table_name* non può essere la funzione **OBJECT_ID()** o una variabile.  
   
- CON (partizioni ({ \< *partition_number_expression*> | \< *intervallo*>} [,... n]))  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [versione](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- Specifica le partizioni da troncare o da cui vengono rimosse tutte le righe. Se la tabella non è partizionata, la **con partizioni** argomento genererà un errore. Se il **con partizioni** clausola non è specificata, verrà troncato l'intera tabella.  
+ Specifica le partizioni da troncare o da cui vengono rimosse tutte le righe. Se la tabella non è partizionata, l'argomento **WITH PARTITIONS** genera un errore. Se la clausola **WITH PARTITIONS** non viene specificata, viene troncata l'intera tabella.  
   
- *\<partition_number_expression >* possono essere specificati nei modi seguenti: 
+ *\<partition_number_expression>* può essere specificato nei modi seguenti: 
   
--   Specificare il numero di una partizione, ad esempio:`WITH (PARTITIONS (2))`  
+-   Specificare il numero di una partizione, ad esempio: `WITH (PARTITIONS (2))`  
   
--   Fornire i numeri di partizione per più partizioni singole separati da virgole, ad esempio:`WITH (PARTITIONS (1, 5))`  
+-   Specificare i numeri di partizione per più partizioni singole separati da virgole, ad esempio: `WITH (PARTITIONS (1, 5))`  
   
--   Fornire sia intervalli sia singole partizioni, ad esempio:`WITH (PARTITIONS (2, 4, 6 TO 8))`  
+-   Specificare sia intervalli sia singole partizioni, ad esempio: `WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<intervallo >* possono essere specificati come numeri di partizione separati dalla parola **a**, ad esempio:`WITH (PARTITIONS (6 TO 8))`  
+-   *\<range>* può essere specificato sotto forma di numeri di partizione separati dalla parola **TO**, ad esempio: `WITH (PARTITIONS (6 TO 8))`  
   
- Per troncare una tabella partizionata, la tabella e gli indici devono essere allineati (partizionate nella stessa funzione di partizione).  
+ Per troncare una tabella partizionata, la tabella e gli indici devono essere allineati (partizionati nella stessa funzione di partizione).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Rispetto all'istruzione DELETE, TRUNCATE TABLE presenta i vantaggi seguenti:  
   
 -   Richiede una minore quantità di spazio del log delle transazioni.  
@@ -129,12 +127,12 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  
  In [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
 
-- TRUNCATE TABLE non è consentita all'interno dell'istruzione di descrizione.
+- TRUNCATE TABLE non è consentita all'interno dell'istruzione EXPLAIN.
 
-- TRUNCATE TABLE non può essere eseguito all'interno di una transazione.
+- TRUNCATE TABLE non può essere eseguita all'interno di una transazione.
   
 ## <a name="truncating-large-tables"></a>Troncamento delle tabelle di grandi dimensioni  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha la possibilità di eliminare o troncare le tabelle che includono più di 128 extent senza mantenere blocchi simultanei in tutti gli extent necessari per l'eliminazione.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile eliminare o troncare le tabelle che includono più di 128 extent senza mantenere attivi blocchi simultanei in tutti gli extent necessari per l'eliminazione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione minima necessaria è ALTER su *table_name*. Le autorizzazioni per l'istruzione TRUNCATE TABLE vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server sysadmin, dei ruoli predefiniti del database db_owner e db_ddladmin e al proprietario della tabella e non sono trasferibili. È tuttavia possibile incorporare l'istruzione TRUNCATE TABLE all'interno di un modulo, ad esempio una stored procedure, e concedere le autorizzazioni necessarie al modulo tramite la clausola EXECUTE AS.  
@@ -159,7 +157,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>B. Troncare le partizioni di una tabella  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [versione](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  L'esempio seguente tronca le partizioni specificate di una tabella partizionata. La sintassi `WITH (PARTITIONS (2, 4, 6 TO 8))` consente di troncare i numeri di partizione 2, 4, 6, 7 e 8.  
   
@@ -171,7 +169,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [DROP TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

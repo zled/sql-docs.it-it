@@ -1,16 +1,14 @@
 ---
 title: sp_add_category (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_category
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_category
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7df42005cfd21c4030990784c7efd482c9312118
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d6f98fd4dbccc6b47297c8b0ebb2073dd23d35c6
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,28 +47,28 @@ sp_add_category
   
 ## <a name="arguments"></a>Argomenti  
  [  **@class =** ] **'***classe***'**  
- Classe della categoria da aggiungere. *classe* è **varchar (8)** con un valore predefinito di processo, i possibili valori sono i seguenti.  
+ Classe della categoria da aggiungere. *classe* viene **varchar (8)** con un valore predefinito di processo, e può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |JOB|Aggiunge una categoria di processi.|  
 |ALERT|Aggiunge una categoria di avvisi.|  
 |OPERATOR|Aggiunge una categoria di operatori.|  
   
  [  **@type =** ] **'***tipo***'**  
- Tipo della categoria da aggiungere. *tipo* è **varchar(12)**, con un valore predefinito di **locale**, i possibili valori sono i seguenti.  
+ Tipo della categoria da aggiungere. *tipo di* viene **varchar(12)**, con valore predefinito è **locale**, e può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |LOCAL|Categoria di processi locali.|  
 |MULTI-SERVER|Categoria di processi multiserver.|  
-|Nessuno|Una categoria per una classe diversa da JOB**.**|  
+|Nessuno|Una categoria per una classe diversa da JOB **.**|  
   
  [  **@name =** ] **'***nome***'**  
- Nome della categoria da aggiungere. Il nome deve essere univoco all'interno della classe specificata. *nome* è **sysname**, non prevede alcun valore predefinito.  
+ Nome della categoria da aggiungere. Il nome deve essere univoco all'interno della classe specificata. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
@@ -100,7 +97,7 @@ GO
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo.sysjobs &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo.sysjobs & #40; Transact-SQL & #41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

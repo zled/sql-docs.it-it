@@ -1,29 +1,23 @@
 ---
-title: Determinare la frequenza di Polling (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 062c0e3d-f7d0-44f1-aeab-a9bd17dc6fdd
-caps.latest.revision: "7"
-ms.openlocfilehash: 1dce371320f42df646e861b1323b352966ae9916
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Determinare la frequenza di polling - Analitica Platform System | Documenti Microsoft
+description: In questo articolo viene illustrato come determinare la frequenza di polling Analitica Platform appliance gli avvisi di sistema.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 39597e0e4623a3006709acde7fe54f97545c362f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707619"
 ---
 # <a name="determine-polling-frequency"></a>Determinare la frequenza di Polling
-In questo argomento viene illustrato come determinare la frequenza di polling per gli avvisi di SQL Server PDW appliance.  
+In questo articolo viene illustrato come determinare la frequenza di polling Analitica Platform appliance gli avvisi di sistema.  
   
 ## <a name="to-determine-the-polling-frequency"></a>Per determinare la frequenza di Polling  
 Poiché PDW non supporta attualmente attiva notifiche quando si verificano avvisi, la soluzione di monitoraggio deve eseguire continuamente il polling accessorio DLL.  Internamente, PDW esegue il polling dei componenti a intervalli diversi:  
@@ -32,15 +26,15 @@ Poiché PDW non supporta attualmente attiva notifiche quando si verificano avvis
   
 -   Heartbeat-60 secondi  
   
--   Tutti gli altri componenti, ovvero 5 minuti  
+-   Tutti gli altri componenti, ovvero cinque minuti  
   
--   Contatori delle prestazioni-3 secondi  
+-   Contatori delle prestazioni: tre secondi  
   
-È un intervallo comune per eseguire il polling per gli avvisi, viene utilizzato anche da System Center, **ogni 15 minuti**.  Ovviamente, è possibile eseguire una query più o meno frequente, ma non è consigliabile eseguire il polling inferiore a ogni 6 ore.  
+È un intervallo comune per eseguire il polling per gli avvisi, viene utilizzato anche da System Center, **ogni 15 minuti**.  Ovviamente, è possibile eseguire una query più o meno frequente, ma non è consigliabile eseguire il polling inferiore a ogni sei ore.  
   
-Esecuzione più frequente del polling è accettabile, ma l'esecuzione troppo frequente del polling può creare confusione il [sys.dm_pdw_nodes_exec_requests](http://msdn.microsoft.com/en-us/library/ms177648(v=sql11).aspx) DMV.  Questo può rendere difficile per gli utenti diagnosticare i problemi di prestazioni delle query, se presente rapidamente query transita fuori della visualizzazione.  
+Esecuzione più frequente del polling è accettabile, ma l'esecuzione troppo frequente del polling può creare confusione il [sys.dm_pdw_nodes_exec_requests](http://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV.  Esecuzione troppo frequente del polling può rendere difficile per gli utenti diagnosticare le prestazioni delle query problemi quando i relativi rapidamente il rollback fuori della visualizzazione.  
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Monitoraggio dispositivo &#40; Sistema della piattaforma Analitica &#41;](appliance-monitoring.md)  
+[Monitoraggio dello strumento &#40;Analitica Platform System&#41;](appliance-monitoring.md)  
   

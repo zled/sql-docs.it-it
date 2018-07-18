@@ -1,16 +1,14 @@
 ---
-title: TRY_CONVERT (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: TRY_CONVERT (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TRY_CONVERT_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CONVERT function
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 5fedc9777146d24cb04fb7652344f244babc8246
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6885d980636261843f99702c3e22f7584f9e71d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tryconvert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,26 +43,26 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *data_type [(lunghezza)]*  
- Tipo di dati in cui eseguire il cast *espressione*.  
+ *data_type [ ( length ) ]*  
+ Tipo di dati in cui eseguire il cast di *expression*.  
   
  *expression*  
  Valore di cui eseguire il cast.  
   
- *stile*  
- Espressione integer che specifica il modo in **TRY_CONVERT** funzione consiste nel tradurre *espressione*.  
+ *style*  
+ Espressione Integer facoltativa che specifica il modo in cui la funzione **TRY_CONVERT** viene usata per convertire *expression*.  
   
- *stile* accetta gli stessi valori di *stile* parametro del **CONVERTIRE** (funzione). Per altre informazioni, vedere [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ *style* accetta gli stessi valori del parametro *style* della funzione **CONVERT**. Per altre informazioni, vedere [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
- L'intervallo di valori accettabili è determinato dal valore di *data_type*. Se *stile* è null, **TRY_CONVERT** restituisce null.  
+ L'intervallo di valori accettabili è determinato dal valore di *data_type*. Se *style* è Null, **TRY_CONVERT** restituisce Null.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce un cast del valore nel tipo di dati specificato se il cast ha esito positivo. In caso contrario, restituisce Null.  
   
-## <a name="remarks"></a>Osservazioni  
- **TRY_CONVERT** accetta il valore passato e tenta di convertirlo in oggetto *data_type*. Se il cast ha esito positivo, **TRY_CONVERT** restituisce il valore specificato *data_type*; se si verifica un errore, viene restituito null. Tuttavia se si richiede una conversione in modo esplicito non valido, quindi **TRY_CONVERT** genera un errore.  
+## <a name="remarks"></a>Remarks  
+ **TRY_CONVERT** accetta il valore passato e prova a convertirlo nel tipo di dati *data_type* specificato. Se il cast ha esito positivo, **TRY_CONVERT** restituisce il valore come l'elemento *data_type* specificato. Se si verifica un errore, viene restituito Null. Se tuttavia si richiede una conversione non consentita in modo esplicito, **TRY_CONVERT** ha esito negativo e viene restituito un errore.  
   
- **TRY_CONVERT** è una parola chiave riservata nel livello di compatibilità 110 e versioni successive.  
+ **TRY_CONVERT** è una parola chiave riservata nel livello di compatibilità 110 o superiore.  
   
  Questa funzione può essere eseguita in modalità remota in server con versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e successive, ma non in server con versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   

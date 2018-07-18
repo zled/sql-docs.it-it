@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLAllocHandle | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLAllocHandle
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLAllocHandle
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLAllocHandle
-helpviewer_keywords: SQLAllocHandle function [ODBC]
+f1_keywords:
+- SQLAllocHandle
+helpviewer_keywords:
+- SQLAllocHandle function [ODBC]
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: b8bf173bf0055dc06cf475aa72e137d9ca426222
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 22135dd429d9f1a42f4ee694b5730f38d636cb64
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle-funzione
 **Conformità**  
@@ -104,7 +105,7 @@ SQLRETURN SQLAllocHandle(
 |IM001|Driver non supporta questa funzione|(DM) il *HandleType* argomento è stato impostato su SQL_HANDLE_STMT e il driver non è un driver ODBC valido.<br /><br /> (DM) il *HandleType* argomento è stato SQL_HANDLE_DESC e il driver non supporta l'allocazione di un handle descrittore.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLAllocHandle** viene utilizzata per allocare gli handle per gli ambienti, le connessioni, istruzioni e descrittori, come descritto nelle sezioni seguenti. Per informazioni generali sugli handle, vedere [handle](../../../odbc/reference/develop-app/handles.md).  
+ **SQLAllocHandle** viene utilizzata per allocare gli handle per gli ambienti, le connessioni, istruzioni e i descrittori, come descritto nelle sezioni seguenti. Per informazioni generali sugli handle, vedere [handle](../../../odbc/reference/develop-app/handles.md).  
   
  Più di un handle di ambiente, connessione o dell'istruzione può essere allocato da un'applicazione in un momento se più allocazioni sono supportate dal driver. In ODBC, è definito alcun limite al numero di ambiente, connessione, istruzione o handle di descrittore allocato in qualsiasi momento. I driver possono imporre un limite al numero di un determinato tipo di handle che può essere allocata alla volta. Per ulteriori informazioni, vedere la documentazione del driver.  
   
@@ -115,7 +116,7 @@ SQLRETURN SQLAllocHandle(
   
  Nei sistemi operativi che supportano più thread, le applicazioni possono utilizzare lo stesso handle di ambiente, connessione, istruzione o descrittore in thread diversi. I driver devono supportare pertanto accedere multithread-safe a queste informazioni. un modo per eseguire questa operazione, è ad esempio, tramite un semaforo o una sezione critica. Per ulteriori informazioni sul threading, vedere [Multithreading](../../../odbc/reference/develop-app/multithreading.md).  
   
- **SQLAllocHandle** non impostare l'attributo di ambiente SQL_ATTR_ODBC_VERSION quando viene chiamata per allocare un handle di ambiente; l'attributo di ambiente deve essere impostato dall'applicazione oppure SQLSTATE HY010 sarà (errore di sequenza di funzioni) restituito quando **SQLAllocHandle** viene chiamata per allocare un handle di connessione.  
+ **SQLAllocHandle** non viene impostato l'attributo di ambiente SQL_ATTR_ODBC_VERSION quando viene chiamata per allocare un handle di ambiente; l'attributo di ambiente deve essere impostato dall'applicazione oppure SQLSTATE HY010 sarà (errore nella sequenza funzione) restituito quando **SQLAllocHandle** viene chiamata per allocare un handle di connessione.  
   
  Per le applicazioni conformi agli standard, **SQLAllocHandle** viene eseguito il mapping a **SQLAllocHandleStd** in fase di compilazione. La differenza tra queste due funzioni è che **SQLAllocHandleStd** impostato l'attributo di ambiente SQL_ATTR_ODBC_VERSION SQL_OV_ODBC3 quando viene chiamato con il *HandleType* argomento impostato su SQL _HANDLE_ENV. Questo avviene perché le applicazioni conformi agli standard sono sempre ODBC 3. *x* applicazioni. Inoltre, gli standard non richiedono la versione dell'applicazione da registrare. Questo è l'unica differenza tra queste due funzioni. in caso contrario, sono identici. **SQLAllocHandleStd** viene eseguito il mapping a **SQLAllocHandle** all'interno di Gestione driver. Di conseguenza, i driver di terze parti non è necessario implementare **SQLAllocHandleStd**.  
   
@@ -139,7 +140,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-shared-environments-for-connection-pooling"></a>Allocazione di ambienti condivisi per il pool di connessioni  
  Gli ambienti possono essere condivise tra più componenti in un singolo processo. Un ambiente condiviso può essere utilizzato da più di un componente nello stesso momento. Quando un componente utilizza un ambiente condiviso, è possibile utilizzare le connessioni in pool, che consentono di allocare e utilizzare una connessione esistente senza ricreare la connessione.  
   
- Prima di allocare un ambiente condiviso che può essere utilizzato per il pool di connessioni, un'applicazione deve chiamare **SQLSetEnvAttr** per impostare l'attributo di ambiente SQL_ATTR_CONNECTION_POOLING SQL_CP_ONE_PER_DRIVER o SQL_CP_ONE_PER_ HENV. **SQLSetEnvAttr** in questo caso, viene chiamato con *EnvironmentHandle* impostato su null, che rende l'attributo di un attributo a livello di processo.  
+ Prima di allocare un ambiente condiviso che può essere utilizzato per il pool di connessioni, un'applicazione deve chiamare **SQLSetEnvAttr** per impostare l'attributo di ambiente SQL_ATTR_CONNECTION_POOLING SQL_CP_ONE_PER_DRIVER o SQL_CP_ONE_PER_ HENV. **SQLSetEnvAttr** in questo caso viene chiamato con *EnvironmentHandle* impostato su null, che rende l'attributo di un attributo a livello di processo.  
   
  Dopo aver abilitato il pool di connessioni, un'applicazione chiama **SQLAllocHandle** con il *HandleType* argomento impostato su SQL_HANDLE_ENV. L'ambiente allocato da questa chiamata sarà un ambiente condiviso implicito perché il pool di connessioni è stato abilitato.  
   

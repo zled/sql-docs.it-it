@@ -1,33 +1,30 @@
 ---
 title: Condivisa di SQL Server Management Objects (SMO) - condizioni di licenza | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: smo
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
 ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 44c825951f769e733ac6f6a985138d5d2c9f32d1
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bd92f1a4d3dd24e4eab1c4f886b28dad158d9fd1
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Condivisa di SQL Server Management Objects (SMO) condizioni di licenza
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ## <a name="microsoft-software-license-terms"></a>CONDIZIONI DI LICENZA PER IL SOFTWARE MICROSOFT.
-**OGGETTI DI GESTIONE CONDIVISA DI MICROSOFT SQL SERVER 2017**
+**MICROSOFT SQL SERVER 2017 SHARED MANAGEMENT OBJECTS**
 
 ---
 Le presenti condizioni di licenza costituiscono il contratto tra Microsoft Corporation (o, in base al luogo di residenza del licenziatario, una delle sue consociate) e il licenziatario. Leggere le condizioni di licenza. Le condizioni si applicano al software indicato sopra, che include il supporto con cui è stato fornito (se presente). Le condizioni si applicano anche a qualsiasi

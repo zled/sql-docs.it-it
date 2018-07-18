@@ -1,16 +1,15 @@
 ---
 title: Funzione ID (XQuery) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - fn:id function
 - id function
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 341693aa368bc92e5176570711541ab6c217cb88
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b31e1dc2894511d56cf8809396853dbb0a2e8329
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-on-sequences---id"></a>Funzioni per le sequenze - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -185,9 +183,9 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta la versione di due argomenti di **ID**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta la versione a due argomenti **ID ()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede il tipo di argomento di **ID** per essere un sottotipo di xs: IDREF *.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede il tipo di argomento del **ID ()** sia un sottotipo di xs: IDREF *.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni per le sequenze](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  

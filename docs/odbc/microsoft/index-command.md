@@ -1,28 +1,26 @@
 ---
 title: Comando indice | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: index command [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- index command [ODBC]
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e1a3cd65cf38079a6d6c23cd08f371841a0463f5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 555cccdbeae2b70b18616b6c81a79ff84e230f4a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="index-command"></a>Comando indice
 Crea un file di indice per visualizzare e accedere ai record di tabella in ordine logico.  
@@ -60,9 +58,9 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  Creare due tipi di file di indice composto: strutturali e non strutturali.  
   
- **File di indice composto strutturale** è possibile creare un file di indice composto strutturale con TAG *TagName* escludendo il parametro facoltativo di *CDXFileName* clausola. Un file di indice composto strutturale sempre ha lo stesso nome di base della tabella e viene aperto automaticamente quando la tabella è aperta.  
+ **File di indice composto strutturale** è possibile creare un file di indice composto strutturale con TAG *TagName* escludendo OF facoltativo *CDXFileName* clausola. Un file di indice composto strutturale sempre ha lo stesso nome di base della tabella e viene aperto automaticamente quando la tabella è aperta.  
   
- **File di indice composto** è possibile creare un file di indice composto includendo OF *CDXFileName* dopo il TAG *TagName*. A differenza di un file di indice composto strutturale, un file di indice composto deve essere aperto in modo esplicito con la clausola di indice in uso.  
+ **File di indice composto non strutturali** è possibile creare un file di indice composto includendo OF *CDXFileName* dopo il TAG *TagName*. A differenza di un file di indice composto strutturale, un file di indice composto deve essere aperto in modo esplicito con la clausola di indice in uso.  
   
  Se già creato e aperto un file di indice composto, emettendo l'indice con TAG *TagName* aggiunge un tag per il file di indice composto.  
   

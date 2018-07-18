@@ -1,31 +1,29 @@
 ---
 title: Ruoli predefiniti | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 
+caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 492f85664f3a1068d32fca9910717d794fb6dc6e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="role-definitions---predefined-roles"></a>Definizioni di ruolo - Ruoli predefiniti
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato con ruoli predefiniti che è possibile utilizzare per concedere l'accesso alle operazioni del server di report. Ogni ruolo predefinito definisce una raccolta di attività correlate. È possibile assegnare account utente e di gruppo ai ruoli predefiniti per fornire accesso immediato alle operazioni del server di report.  
@@ -213,7 +211,7 @@ ms.lasthandoff: 01/09/2018
 |Visualizzazione delle proprietà del server di report|Visualizzare proprietà relative al server di report, ad esempio il nome dell'applicazione, lo stato di attivazione della funzionalità Report personali e le impostazioni predefinite della cronologia dei report.<br /><br /> Se si rimuove questa attività dal ruolo **Utente sistema** , la pagina Impostazioni sito non sarà più disponibile. Non verrà inoltre visualizzato il titolo dell'applicazione nella parte superiore di ogni pagina. Per impostazione predefinita, il titolo per Gestione report è "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  
 |Visualizzazione di pianificazioni condivise|Visualizzare le pianificazioni condivise che sono utilizzate per eseguire o aggiornare i report.<br /><br /> Se si rimuove questa attività dal ruolo **Utente sistema** , gli utenti non potranno selezionare le pianificazioni condivise da utilizzare con sottoscrizioni e altre operazioni pianificate.|  
   
- Il ruolo **Utente sistema** può essere utilizzato per integrare la sicurezza predefinita. È possibile includerlo in nuove assegnazioni di ruolo per estendere le autorizzazioni di accesso al server di report agli utenti dei report. Per altre informazioni, vedere [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+ Il ruolo **Utente sistema** può essere utilizzato per integrare la sicurezza predefinita. È possibile includerlo in nuove assegnazioni di ruolo per estendere le autorizzazioni di accesso al server di report agli utenti dei report. Per altre informazioni, vedere [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

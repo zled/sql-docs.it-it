@@ -1,33 +1,32 @@
 ---
 title: Finestra di dialogo Apri file | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vs.openfile
 - vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b410bc86b35e2cacc83e9a367a9609e271c34290
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 20f698a0f85f54a31b18f74ad364de1fc1dfb187
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-file-dialog-box"></a>Finestra di dialogo Apri file
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usare la finestra di dialogo **Apri file** per aprire un file esistente sul disco o per aprire un file già aperto utilizzando opzioni di codifica della lingua diverse.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Usare la finestra di dialogo **Apri file** per aprire un file esistente sul disco. o per aprire un file già aperto utilizzando opzioni di codifica della lingua diverse.  
   
 Per accedere a questa finestra di dialogo, selezionare **Apri** dal menu **File** e scegliere **File**. Questa finestra di dialogo viene visualizzata anche quando si aprono file da altri elementi, ad esempio dalla finestra di dialogo **Strumenti esterni** . Per aprire la finestra di dialogo simile **Apri progetto** , scegliere **Apri**dal menu **File** e selezionare **Progetto/Soluzione** .  
   

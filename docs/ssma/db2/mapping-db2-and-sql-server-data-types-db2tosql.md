@@ -1,36 +1,34 @@
 ---
 title: Mapping di DB2 e tipi di dati SQL Server (DB2ToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 88d98ac264e853a2bc94be002c2c2e4eeadee9ff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e9f470aca25b8f42473ccb8a453edc0d3da911a1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mapping di DB2 e tipi di dati SQL Server (DB2ToSQL)
 Tipi di database DB2 sono diversi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di database. Quando si esegue la conversione di oggetti di database DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti, è necessario specificare come eseguire il mapping dei tipi di dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. È possibile accettare i mapping dei tipi di dati predefinito oppure è possibile personalizzare i mapping, come illustrato nelle sezioni seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
-SSMA è un set predefinito di mapping dei tipi di dati. Per l'elenco dei mapping predefiniti, vedere [impostazioni progetto &#40; Mapping dei tipi di &#41; &#40; DB2ToSQL &#41; ](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
+SSMA è un set predefinito di mapping dei tipi di dati. Per l'elenco di mapping predefiniti, vedere [impostazioni del progetto di &#40;Mapping dei tipi&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
   
 ## <a name="type-mapping-inheritance"></a>Mapping di ereditarietà dei tipi  
 È possibile personalizzare i mapping dei tipi a livello di progetto, il livello di categoria oggetto (ad esempio, tutte le stored procedure) o livello di oggetto. Le impostazioni vengono ereditate da un livello più alto, a meno che vengano sostituiti con un livello inferiore. Ad esempio, se si esegue il mapping **smallmoney** a **money** a livello di progetto, tutti gli oggetti nel progetto utilizzerà questo mapping, a meno che per personalizzare il mapping a livello di oggetto o alla categoria.  
@@ -40,7 +38,7 @@ Quando si visualizza il **del mapping dei tipi** scheda SSMA, lo sfondo è contr
 ## <a name="customizing-data-type-mappings"></a>Personalizzazione dei mapping dei tipi di dati  
 La procedura seguente viene illustrato come eseguire il mapping di tipi di dati nel progetto, database o il livello di oggetto:  
   
-**Per eseguire il mapping di tipi di dati**  
+**Eseguire il mapping di tipi di dati**  
   
 1.  Per personalizzare i mapping dei tipi di dati per l'intero progetto, aprire il **impostazioni progetto** la finestra di dialogo:  
   
@@ -84,7 +82,7 @@ La procedura seguente viene illustrato come eseguire il mapping di tipi di dati 
   
     4.  In **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati.  
   
-        Alcuni tipi richiedono una lunghezza di tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire** casella, quindi[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Alcuni tipi richiedono una lunghezza di tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire con** casella, quindi [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 4.  Per rimuovere un mapping dei tipi di dati personalizzati, effettuare le operazioni seguenti:  
   
@@ -94,9 +92,9 @@ La procedura seguente viene illustrato come eseguire il mapping di tipi di dati 
   
         È possibile rimuovere i mapping ereditati. Tuttavia, i mapping ereditati vengono sovrascritte dai mapping personalizzati in un oggetto specifico o una categoria dell'oggetto.  
   
-## <a name="next-steps"></a>Next Steps  
-Il passaggio successivo del processo di migrazione è su [DB2ToSQL valutazione Report &#40; &#41;](../../ssma/db2/assessment-report-db2tosql.md) o [DB2ToSQL la conversione di schemi di DB2 &#40; &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Se si crea una relazione di valutazione, gli oggetti DB2 vengono convertiti automaticamente durante la valutazione.  
+## <a name="next-steps"></a>Passaggi successivi  
+Il passaggio successivo del processo di migrazione è su [Assessment Report &#40;DB2ToSQL&#41; ](../../ssma/db2/assessment-report-db2tosql.md) o [la conversione di schemi DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Se si crea una relazione di valutazione, gli oggetti DB2 vengono convertiti automaticamente durante la valutazione.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database DB2 a SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[Database DB2 la migrazione a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

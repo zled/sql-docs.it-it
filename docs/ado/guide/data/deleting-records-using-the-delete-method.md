@@ -1,33 +1,30 @@
 ---
 title: Eliminazione di record mediante il metodo Delete | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, deleting records
 - deleting records [ADO]
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 23238ea9992931cea607feb3fbd73ddefb9201f3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 36a6a7e7f2ecd6deb3b25a2d2ed6dc65c8b6f98d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Eliminazione di record mediante il metodo Delete
 Utilizzo di **eliminare** metodo contrassegna il record corrente o un gruppo di record in un **Recordset** oggetto per l'eliminazione. Se il **Recordset** oggetto non consente l'eliminazione di record, si verifica un errore. Se si è in modalità di aggiornamento immediato, le operazioni di eliminazione si verifica immediatamente nel database. Se non è possibile eliminare un record (a causa di violazioni di integrità del database, ad esempio), il record rimarrà in modalità di modifica dopo la chiamata a **Update.** Ciò significa che è necessario annullare l'aggiornamento con [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) prima di spostarsi dal record corrente (ad esempio, usando [Chiudi](../../../ado/reference/ado-api/close-method-ado.md), [spostare](../../../ado/reference/ado-api/move-method-ado.md), o [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
@@ -46,9 +43,9 @@ Utilizzo di **eliminare** metodo contrassegna il record corrente o un gruppo di 
   
 -   **adAffectCurrent** interessa solo il record corrente.  
   
--   **adAffectGroup** interessa solo i record che soddisfano corrente **filtro** l'impostazione della proprietà. Il **filtro** proprietà deve essere impostata su un **FilterGroupEnum** valore o una matrice di **segnalibri** per utilizzare questa opzione.  
+-   **adAffectGroup** interessa solo i record che soddisfano corrente **filtro** impostazione della proprietà. Il **filtro** proprietà deve essere impostata su un **FilterGroupEnum** valore o una matrice di **segnalibri** per utilizzare questa opzione.  
   
- Il codice seguente viene illustrato un esempio di definizione **adAffectGroup** quando si chiama il **eliminare** metodo. In questo esempio aggiunge alcuni record per l'esempio **Recordset** e aggiorna il database. Quindi vengono applicati i filtri di **Recordset** utilizzando il **adFilterAffectedRecords** costante enumerata di filtro, che rende visibili in solo il record appena aggiunto il **Recordset.** Infine, chiama il **eliminare** (metodo) e specifica che tutti i record che soddisfano corrente **filtro** deve essere eliminata l'impostazione della proprietà (i nuovi record).  
+ Il codice seguente viene illustrato un esempio di definizione **adAffectGroup** quando si chiama il **eliminare** metodo. In questo esempio aggiunge alcuni record per l'esempio **Recordset** e aggiorna il database. Quindi filtra il **Recordset** utilizzando il **adFilterAffectedRecords** costante enumerata di filtro, che rende visibili in solo il record appena aggiunto il **Recordset.** Infine, chiama il **eliminare** (metodo) e specifica che tutti i record che soddisfano corrente **filtro** deve essere eliminata l'impostazione della proprietà (i nuovi record).  
   
 ```  
 'BeginDeleteGroup  

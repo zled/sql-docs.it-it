@@ -1,27 +1,20 @@
 ---
 title: Funzioni VBA in MDX e DAX | Documenti Microsoft
-ms.custom: 
-ms.date: 01/30/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 6356a6c841072490e10f9c32933606010ce0b9f9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a9764d4e302a663800bd71a5c7083d985ea230bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582523"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funzioni VBA in MDX e DAX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +23,7 @@ ms.lasthandoff: 02/01/2018
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Riferimenti a funzioni di Visual Basic, Applications Edition  
   
-|Nome funzione|Supported|Note|  
+|Nome funzione|Supportato|Note|  
 |-------------------|---------------|-----------|  
 |Abs|DAX, MDX||  
 |Array|Non supportato||  
@@ -50,7 +43,7 @@ ms.lasthandoff: 02/01/2018
 |CLng|Solo MDX||  
 |CLngLng|Non supportato||  
 |CLngPtr|Non supportato||  
-|Command|Non supportato||  
+|Comando|Non supportato||  
 |Cos|Solo MDX||  
 |CreateObject|Non supportato||  
 |CSng|Solo MDX||  
@@ -58,8 +51,8 @@ ms.lasthandoff: 02/01/2018
 |CurDir|Non supportato||  
 |CVar|Solo MDX||  
 |CVErr|Non supportato||  
-|Data|Solo MDX|**Avviso** DAX viene implementata una funzione diversa con lo stesso nome, la funzione DATE (Year, Month, Day), utilizzata per generare un valore di tipo date dagli argomenti specificati|  
-|DateAdd|Solo MDX|**Avviso** DAX viene implementata una funzione diversa con lo stesso nome, la funzione DATEADD (\<date >, < number_of_intervals >,\<intervallo >) (funzione), utilizzato per scorrere le date specificate da un numero di intervalli specificati|  
+|date|Solo MDX|**Avviso** DAX viene implementata una funzione diversa con lo stesso nome, cioè la funzione DATE (Year, Month, Day), utilizzato per generare un valore di tipo date dagli argomenti specificati|  
+|DateAdd|Solo MDX|**Avviso** DAX viene implementata una funzione diversa con lo stesso nome, la funzione DATEADD (\<date >, < number_of_intervals >,\<intervallo >) funzione, utilizzata per scorrere le date specificate da un numero di intervalli specificati|  
 |DateDiff]|Solo MDX||  
 |DatePart|Solo MDX||  
 |DateSerial|Solo MDX||  
@@ -75,7 +68,7 @@ ms.lasthandoff: 02/01/2018
 |FileAttr|Non supportato||  
 |FileDateTime|Non supportato||  
 |FileLen|Non supportato||  
-|Filter|Non supportato|**Avviso** MDX viene implementata una funzione diversa con lo stesso nome, la funzione FILTER (Set_Expression, Logical_Expression) restituisce il set risultante dal filtraggio di un set specificato in base a una condizione di ricerca dagli argomenti specificati<br /><br /> **Avviso** DAX viene implementata una funzione diversa con lo stesso nome, il filtro (\<tabella >,\<filtro >) restituisce una tabella che rappresenta un subset di un'altra tabella o espressione dagli argomenti specificati|  
+|Filtro|Non supportato|**Avviso** MDX viene implementata una funzione diversa con lo stesso nome, la funzione FILTER (Set_Expression, Logical_Expression) restituisce il set risultante dal filtraggio di un set specificato in base a una condizione di ricerca dagli argomenti specificati<br /><br /> **Avviso** DAX viene implementata una funzione diversa con lo stesso nome, il filtro (\<tabella >,\<filtro >) funzione restituisce una tabella che rappresenta un subset di un'altra tabella o espressione dagli argomenti specificati|  
 |Fix|Solo MDX||  
 |Format (Visual Basic, Applications Edition)|DAX, MDX||  
 |FormatCurrency|Non supportato||  
@@ -90,7 +83,7 @@ ms.lasthandoff: 02/01/2018
 |GetSetting|Non supportato||  
 |Hex|Solo MDX||  
 |Ora|DAX, MDX||  
-|Iif|Solo MDX|**Avviso** DAX viene implementata una funzione simile, con il nome: IF (logical_test, value_if_true, value_if_false) (funzione).|  
+|Iif|Solo MDX|**Avviso** DAX viene implementata una funzione simile con il nome: IF (logical_test, value_if_true, value_if_false) (funzione).|  
 |IMEStatus|Non supportato||  
 |Input|Non supportato||  
 |InputBox|Non supportato||  
@@ -114,7 +107,7 @@ ms.lasthandoff: 02/01/2018
 |Len|DAX, MDX||  
 |Loc|Non supportato||  
 |LOF|Non supportato||  
-|File di log|Solo MDX|**Importante** DAX viene implementata una funzione diversa con lo stesso nome, la funzione LOG (number, base). Viene restituito il logaritmo di un numero nella base specificata dagli argomenti specificati.|  
+|File di log|Solo MDX|**Importante** DAX viene implementata una funzione diversa con lo stesso nome, cioè la funzione LOG (number, base). Viene restituito il logaritmo di un numero nella base specificata dagli argomenti specificati.|  
 |LTrim|Solo MDX||  
 |MacID|Non supportato||  
 |MacScript|Non supportato||  
@@ -153,7 +146,7 @@ ms.lasthandoff: 02/01/2018
 |Str|Solo MDX||  
 |StrComp|Solo MDX||  
 |StrConv|Solo MDX||  
-|String]|Solo MDX||  
+|Stringa]|Solo MDX||  
 |StrReverse|Non supportato||  
 |Opzione|Solo MDX||  
 |SYD|Solo MDX||  

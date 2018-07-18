@@ -1,16 +1,14 @@
 ---
-title: SET DEADLOCK_PRIORITY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET DEADLOCK_PRIORITY
@@ -26,16 +24,16 @@ helpviewer_keywords:
 - priority deadlock settings [SQL Server]
 - SET DEADLOCK_PRIORITY statement
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
-ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3c39805c2d488e4d0b77d8f353c6f0d7a3597ba1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -63,21 +61,21 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  HIGH  
  Specifica che la sessione corrente sarà vittima del deadlock se la priorità di deadlock delle altre sessioni coinvolte nella catena del deadlock è impostata su un valore intero maggiore di 5 oppure che può essere scelta come vittima del deadlock se la priorità di deadlock di un'altra sessione è anch'essa impostata su HIGH o su un valore intero uguale a 5.  
   
- \<priorità numerica >  
+ \<numeric-priority>  
  Intervallo di valori interi (da -10 a 10) per fornire 21 livelli di priorità del deadlock. Specifica che la sessione corrente sarà vittima del deadlock se altre sessioni della catena del deadlock vengono eseguite con una priorità di deadlock maggiore, ma non sarà vittima del deadlock se le altre sessioni vengono eseguite con la priorità di deadlock impostata su un valore minore di quello della sessione corrente. Specifica inoltre che la sessione corrente può essere vittima del deadlock se un'altra sessione viene eseguita con una priorità di deadlock uguale a quella della sessione corrente. LOW corrisponde a -5, NORMAL a 0 e HIGH a 5.  
   
- **@***deadlock_var*  
+ **@** *deadlock_var*  
  Variabile di tipo carattere che specifica la priorità del deadlock. La variabile deve essere impostata su uno dei valori seguenti: 'LOW', 'NORMAL' o 'HIGH'. Le dimensioni della variabili devono essere tali da contenere l'intera stringa.  
   
- **@***deadlock_intvar*  
+ **@** *deadlock_intvar*  
  Variabile di tipo integer che specifica la priorità del deadlock. La variabile deve essere impostata su un valore intero compreso nell'intervallo (da -10 a 10).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il deadlock si verifica quando due sessioni sono entrambe in attesa di accedere a risorse bloccate dall'altra sessione. Quando un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rileva che due sessioni sono coinvolte in un deadlock, risolve il deadlock scegliendo una delle sessioni come vittima del deadlock. Viene eseguito il rollback della transazione corrente della sessione vittima del deadlock e al client viene restituito il messaggio di errore relativo al deadlock 1205. In questo modo tutti i blocchi della sessione vengono rilasciati e l'altra sessione può proseguire.  
   
  La scelta della sessione che sarà vittima del deadlock dipende dalla priorità di deadlock delle sessioni:  
   
--   Se entrambe le sessioni hanno la stessa priorità di deadlock, l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglie come vittima del deadlock la sessione per cui risulta meno oneroso eseguire il rollback. Se, ad esempio, la priorità di deadlock di entrambe le sessioni è impostata su HIGH, l'istanza sceglierà come vittima la sessione per cui ritiene che sia meno oneroso eseguire il rollback. Il costo viene determinato confrontando il numero di byte di log scritti in tale punto in ogni transazione. (È possibile visualizzare questo valore come "Registro utilizzato" in un grafico di deadlock).
+-   Se entrambe le sessioni hanno la stessa priorità di deadlock, l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglie come vittima del deadlock la sessione per cui risulta meno oneroso eseguire il rollback. Se, ad esempio, la priorità di deadlock di entrambe le sessioni è impostata su HIGH, l'istanza sceglierà come vittima la sessione per cui ritiene che sia meno oneroso eseguire il rollback. Il costo viene determinato confrontando il numero di byte di log scritti in quel punto in ogni transazione. Questo valore viene visualizzato come "Log utilizzato" in Deadlock Graph.
   
 -   Se le priorità di deadlock delle sessioni sono diverse, come vittima del deadlock verrà scelta la sessione con la priorità di deadlock inferiore.  
   
@@ -107,6 +105,6 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET LOCK_TIMEOUT &#40; Transact-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   

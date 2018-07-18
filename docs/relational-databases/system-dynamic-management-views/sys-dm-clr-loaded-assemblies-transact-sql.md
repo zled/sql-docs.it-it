@@ -1,16 +1,12 @@
 ---
-title: sys.dm_clr_loaded_assemblies (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm clr_loaded_assemblies (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_clr_loaded_assemblies
@@ -22,28 +18,27 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_loaded_assemblies dynamic management view
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a5c24a05e1f33512234edafd3fb6d2672a8eee6a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 08abe7b86ec5d6c80d98bdfbead24cd3e7d20f3d
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmclrloadedassemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni assembly gestito dall'utente nello spazio degli indirizzi del server. Utilizzare questa visualizzazione per comprendere e risolvere i problemi di integrazione con CLR gestito oggetti di database che sono in esecuzione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Gli assembly sono costituiti da file DLL di codice gestito utilizzati per definire e distribuire gli oggetti di database gestito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ogni volta che un utente esegue uno di questi oggetti di database gestito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il CLR caricano l'assembly in cui l'oggetto di database gestito viene definito e i relativi riferimenti. L'assembly rimane caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per migliorare le prestazioni. In seguito sarà infatti possibile chiamare gli oggetti di database gestito contenuti nell'assembly senza che sia necessario ricaricare l'assembly. L'assembly non viene scaricato finché la quantità di memoria in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non risulta insufficiente. Per ulteriori informazioni sugli assembly e l'integrazione con CLR, vedere [ambiente ospitato CLR](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md). Per ulteriori informazioni sugli oggetti di database gestiti, vedere [compilazione di oggetti di Database con Common Language Runtime &#40; Common Language Runtime &#41; Integrazione](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
+ Gli assembly sono costituiti da file DLL di codice gestito utilizzati per definire e distribuire gli oggetti di database gestito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ogni volta che un utente esegue uno di questi oggetti di database gestito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il CLR caricano l'assembly in cui l'oggetto di database gestito viene definito e i relativi riferimenti. L'assembly rimane caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per migliorare le prestazioni. In seguito sarà infatti possibile chiamare gli oggetti di database gestito contenuti nell'assembly senza che sia necessario ricaricare l'assembly. L'assembly non viene scaricato finché la quantità di memoria in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non risulta insufficiente. Per ulteriori informazioni sugli assembly e l'integrazione con CLR, vedere [ambiente ospitato CLR](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md). Per ulteriori informazioni sugli oggetti di database gestiti, vedere [compilazione di oggetti di Database con Common Language Runtime &#40;CLR&#41; Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
 
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**int**|ID dell'assembly caricato. Il **assembly_id** può essere utilizzato per cercare ulteriori informazioni sull'assembly nella [Assemblies &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) vista del catalogo. Si noti che il [!INCLUDE[tsql](../../includes/tsql-md.md)] [Assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) catalogo Mostra gli assembly nel database corrente. Il **sqs.dm_clr_loaded_assemblies** visualizzazione Mostra tutti gli assembly caricati nel server.|  
+|**assembly_id**|**int**|ID dell'assembly caricato. Il **assembly_id** può essere utilizzato per cercare ulteriori informazioni sull'assembly nella [Assemblies &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) vista del catalogo. Si noti che il [!INCLUDE[tsql](../../includes/tsql-md.md)] [Assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) catalogo Mostra gli assembly nel database corrente. Il **sqs.dm_clr_loaded_assemblies** visualizzazione Mostra tutti gli assembly caricati nel server.|  
 |**appdomain_address**|**int**|Indirizzo del dominio dell'applicazione (**AppDomain**) in cui l'assembly viene caricato. Tutti gli assembly di proprietà di un singolo utente vengono sempre caricati nello stesso **AppDomain**. Il **appdomain_address** può essere usato per cercare ulteriori informazioni sul **AppDomain** nel [Sys.dm clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) visualizzazione.|  
 |**load_time**|**datetime**|Ora di caricamento dell'assembly. Si noti che l'assembly rimane caricato finché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eccessivo della memoria e scarica il **AppDomain**. È possibile monitorare **load_time** per comprendere la frequenza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proviene eccessivo della memoria e scarica il **AppDomain**.|  
   
@@ -75,6 +70,6 @@ WHERE appdomain_address =
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Common Language Runtime relative viste a gestione dinamica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica relative a Common Language Runtime &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -2,30 +2,27 @@
 title: Seeding automatico per le repliche secondarie (SQL Server) | Microsoft Docs
 description: Usare il seeding automatico per inizializzare le repliche secondarie.
 services: data-lake-analytics
-ms.custom: 
+ms.custom: ''
 ms.date: 09/25/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Automatic seeding [SQL Server], secondary replica
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: allanhirt
-ms.author: mikeray
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6576f0430a45300d76f675730f14b2a257441ffd
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769697"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Seeding automatico per le repliche secondarie
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -248,7 +245,7 @@ GO
 
 La tabella seguente elenca gli eventi estesi correlati al seeding automatico.
 
-|nome|Description|
+|nome|Descrizione|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Messaggio di richiesta di seeding.|
 |hadr_physical_seeding_backup_state_change|Modifica dello stato lato backup del seed fisico.|

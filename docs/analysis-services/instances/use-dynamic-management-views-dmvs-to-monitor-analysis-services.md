@@ -1,30 +1,23 @@
 ---
 title: Utilizzare viste a gestione dinamica (DMV) per monitorare Analysis Services | Documenti Microsoft
-ms.custom: 
-ms.date: 12/15/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
-caps.latest.revision: "16"
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 07565f6092a8f4e642234038c05a0f83024ce6a4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 412923d24b4d48a0ebdfa11bcf60dc19d5b85368
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utilizzare DMV per monitorare Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services Management viste dinamica (DMV) sono strutture di query che espongono informazioni sulle operazioni del server locale e l'integrità del server. La struttura di query è un'interfaccia dei set di righe dello schema tramite cui vengono restituiti i metadati e le informazioni di monitoraggio per un'istanza di Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Le DMV (viste a gestione dinamica) di Analysis Services sono strutture di query che consentono di esporre informazioni sulle operazioni del server locali e sull'integrità del server. La struttura di query è un'interfaccia dei set di righe dello schema tramite cui vengono restituiti i metadati e le informazioni di monitoraggio per un'istanza di Analysis Services.  
   
  Per la maggior parte delle query DMV, vengono usati un'istruzione **SELECT** e lo schema **$System** con un set di righe dello schema XML/A.set.  
   
@@ -34,12 +27,12 @@ SELECT * FROM $System.<schemaRowset>
   
  Le query DMV restituiscono informazioni sullo stato del server corrente al momento dell'esecuzione della query. Per monitorare le operazioni in tempo reale, utilizzare invece la traccia. Per altre informazioni, vedere [Utilizzare SQL Server Profiler per il monitoraggio di Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
-##  <a name="bkmk_ben"></a>Vantaggi delle query utilizzando DMV  
+##  <a name="bkmk_ben"></a> Vantaggi delle query utilizzando DMV  
  Le query DMV restituiscono informazioni sulle operazioni e sull'utilizzo delle risorse, che non sono disponibili in altro modo.  
   
  Le query DMV rappresentano un'alternativa all'esecuzione di comandi di individuazione XML/A. Per la maggior parte degli amministratori, la scrittura di una query DMV risulta più semplice in quanto la sintassi di query è basata su SQL. Il set di risultati viene inoltre restituito in un formato tabulare, che offre maggiore semplicità per le operazioni di lettura e copia.  
   
-##  <a name="bkmk_ex"></a>Esempi e scenari  
+##  <a name="bkmk_ex"></a> Esempi e scenari  
  Una query DMV può essere utile per rispondere a domande sulle connessioni e sulle sessioni attive, nonché per verificare quali oggetti stanno utilizzando la maggior parte di memoria o CPU in un momento specifico. In questa sezione vengono forniti esempi per scenari in cui le query DMV sono più comunemente utilizzate. È possibile vedere anche la [Guida operativa di SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) per informazioni aggiuntive sull'uso di query DMV per monitorare un'istanza del server.  
   
  `Select * from $System.discover_object_activity` /** Questa query fornisce informazioni sull'attività dell'oggetto dal momento dell'ultimo avvio del servizio. Per query di esempio basate su questa DMV, vedere [Nuova DMV System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322).  
@@ -50,7 +43,7 @@ SELECT * FROM $System.<schemaRowset>
   
  `Select * from $System.discover_locks` /** Questa query restituisce uno snapshot dei blocchi usati in un momento specifico.  
   
-##  <a name="bkmk_syn"></a>Sintassi di query  
+##  <a name="bkmk_syn"></a> Sintassi di query  
  Il motore di query per le DMV è il parser di data mining. La sintassi di query DMV è basata sull'istruzione [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
  Sebbene la sintassi di query DMV sia basata su un'istruzione SQL SELECT, non è supportata la sintassi completa di un'istruzione SELECT. In particolare, non sono supportate le clausole JOIN, GROUP BY, LIKE, CAST e CONVERT.  
@@ -75,14 +68,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a>Strumenti e autorizzazioni  
+##  <a name="bkmk_tools"></a> Strumenti e le autorizzazioni  
  Per eseguire una query su una DMV, è necessario disporre delle autorizzazioni di amministratore di sistema nell'istanza di Analysis Services.  
   
  È possibile utilizzare qualsiasi applicazione client che supporta le query MDX o DMX, inclusi SQL Server Management Studio, un report di Reporting Services o un dashboard di PerformancePoint.  
   
  Per eseguire una query DMV da Management Studio, connettersi all'istanza su cui si vuole eseguire la query e fare clic su **Nuova query**. È possibile eseguire una query da una finestra Query DMX o MDX.  
   
-##  <a name="bkmk_ref"></a>Riferimento DMV  
+##  <a name="bkmk_ref"></a> Riferimento DMV  
  Non tutti i set di righe dello schema dispongono di un'interfaccia DMV. Per restituire un elenco di tutti i set di righe dello schema su cui è possibile eseguire una query utilizzando DMV, eseguire la query seguente.  
   
 ```  
@@ -110,7 +103,7 @@ ORDER BY TABLE_NAME ASC
 |[Set di righe DISCOVER_ENUMERATORS](../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|Restituisce i metadati sugli enumeratori supportati per un'origine dati specifica.|  
 |[Set di righe DISCOVER_INSTANCES](../../analysis-services/schema-rowsets/ole-db-olap/discover-instances-rowset.md)|Restituisce informazioni sull'istanza specificata.<br /><br /> Richiede l'aggiunta di SYSTEMRESTRICTSCHEMA e di parametri aggiuntivi.|  
 |[Set di righe DISCOVER_JOBS](../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|Restituisce informazioni sui processi correnti.|  
-|[Set di righe DISCOVER_KEYWORDS &#40;XMLA&#41;](../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Restituisce l'elenco di parole chiave riservate.|  
+|[Set di righe DISCOVER_KEYWORDS & #40; XMLA & #41;](../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Restituisce l'elenco di parole chiave riservate.|  
 |[Set di righe DISCOVER_LITERALS](../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|Restituisce l'elenco di valori letterali, inclusi valori e tipi di dati, supportati da XMLA.|  
 |[Set di righe DISCOVER_LOCKS](../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|Restituisce uno snapshot dei blocchi utilizzati in un momento specifico.|  
 |[Set di righe DISCOVER_MEMORYGRANT](../../analysis-services/schema-rowsets/xml/discover-memorygrant-rowset.md)|Restituisce informazioni sulla memoria allocata da Analysis Services all'avvio.|  
@@ -152,12 +145,12 @@ ORDER BY TABLE_NAME ASC
 |[Set di righe MDSCHEMA_MEASUREGROUP_DIMENSIONS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)|Elenca la dimensione dei gruppi di misure.|  
 |[Set di righe MDSCHEMA_MEASUREGROUPS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset.md)|Restituisce un elenco dei gruppi di misure nella connessione corrente.|  
 |[Set di righe MDSCHEMA_MEASURES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measures-rowset.md)|Restituisce un elenco delle misure nella connessione corrente.|  
-|[Set di righe MDSCHEMA_MEMBERS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|Restituisce un elenco di tutti i membri nella connessione corrente elencati per database, cubo e dimensione.|  
+|[Set di righe mdschema_members](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|Restituisce un elenco di tutti i membri nella connessione corrente elencati per database, cubo e dimensione.|  
 |[Set di righe MDSCHEMA_PROPERTIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Restituisce un nome completo di ogni proprietà, insieme a tipo di proprietà, tipo di dati e altri metadati.|  
 |[Set di righe MDSCHEMA_SETS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Restituisce un elenco di set definiti nella connessione corrente.|  
   
 ## <a name="see-also"></a>Vedere anche   
- [Nuova DMV System. discover_object_activity](http://go.microsoft.com/fwlink/?linkid=221322)   
+ [Nuova DMV System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Nuova funzione SYSTEMRESTRICTEDSCHEMA per DMV e set di righe con restrizioni](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

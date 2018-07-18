@@ -1,32 +1,32 @@
 ---
 title: sp_dropmessage (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropmessage_TSQL
 - sp_dropmessage
-dev_langs: TSQL
-helpviewer_keywords: sp_dropmessage
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f5673871097f702a8e370fefb4998b378af26d91
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3bac74ff66a266fd0987dc869145c70287232c09
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,18 +45,18 @@ sp_dropmessage [ @msgnum = ] message_number
   
 ## <a name="arguments"></a>Argomenti  
  [  **@msgnum =** ] *message_number*  
- Numero del messaggio da eliminare. *message_number* deve essere un messaggio definito dall'utente che dispone di un numero maggiore di 50000. *message_number* è **int**, con un valore predefinito è NULL.  
+ Numero del messaggio da eliminare. *message_number* deve essere un messaggio definito dall'utente che dispone di un numero di messaggio maggiore di 50000. *message_number* viene **int**, con un valore predefinito è NULL.  
   
  [  **@lang =** ] **'***language***'**  
- Lingua del messaggio da eliminare. Se **tutti** è specificato, tutte le versioni localizzate di *message_number* vengono eliminati. *lingua* è **sysname**, con un valore predefinito è NULL.  
+ Lingua del messaggio da eliminare. Se **tutti** è specificato, tutte le versioni localizzate di *message_number* vengono eliminati. *linguaggio* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- nessuna.  
+ Nessuno  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza di **sysadmin** e **serveradmin** ruoli predefiniti del server.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -138,9 +138,9 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_addmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_altermessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,16 +1,14 @@
 ---
 title: sp_help_jobs_in_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobs_in_schedule_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobs_in_schedule
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aac7c4d1cb1199f17e060c9c9d0d4437d8a3220c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 78bffc1432bb650d5c1a7f37c0a712c34236dca1
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +45,14 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@schedule_id =** ] *schedule_id*  
- Identificatore della pianificazione per cui restituire un elenco di informazioni. *schedule_id* è **int**, non prevede alcun valore predefinito. Entrambi *schedule_id* o *schedule_name* può essere specificato.  
+ [  **@schedule_id =** ] *schedule_id*  
+ Identificatore della pianificazione per cui restituire un elenco di informazioni. *schedule_id* viene **int**, non prevede alcun valore predefinito. Entrambi *schedule_id* o *schedule_name* può essere specificato.  
   
  [  **@schedule_name =** ] **'***schedule_name***'**  
- Nome della pianificazione per cui restituire un elenco di informazioni. *schedule_name* è **sysname**, non prevede alcun valore predefinito. Entrambi *schedule_id* o *schedule_name* può essere specificato.  
+ Nome della pianificazione per cui restituire un elenco di informazioni. *schedule_name* viene **sysname**, non prevede alcun valore predefinito. Entrambi *schedule_id* o *schedule_name* può essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce il set di risultati seguente:  
@@ -70,7 +67,7 @@ sp_help_jobs_in_schedule
 |**start_step_id**|**int**|ID del passaggio del processo da cui deve iniziare l'esecuzione.|  
 |**category**|**sysname**|Categoria del processo.|  
 |**proprietario**|**sysname**|Proprietario del processo.|  
-|**notify_level_eventlog**|**int**|Maschera di bit che indica le condizioni per la registrazione dell'evento di notifica nel registro applicazioni di Microsoft Windows. I possibili valori sono i seguenti:<br /><br /> **0** non = mai<br /><br /> **1** = in caso di esito positivo del processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = al termine del processo (indipendentemente dal risultato del processo)|  
+|**notify_level_eventlog**|**int**|Maschera di bit che indica le condizioni per la registrazione dell'evento di notifica nel registro applicazioni di Microsoft Windows. I possibili valori sono i seguenti:<br /><br /> **0** non = mai<br /><br /> **1** = in caso di esito positivo del processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato del processo)|  
 |**notify_level_email**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio di posta elettronica di notifica al termine di un processo. I valori possibili sono le stesse di **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio in rete al termine di un processo. I valori possibili sono le stesse di **notify_level_eventlog**.|  
 |**notify_level_page**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio su cercapersone al termine di un processo. I valori possibili sono le stesse di **notify_level_eventlog**.|  
@@ -83,7 +80,7 @@ sp_help_jobs_in_schedule
 |**version_number**|**int**|Versione del processo aggiornata automaticamente in corrispondenza di ogni modifica del processo.|  
 |**last_run_date**|**int**|Data dell'ultimo avvio dell'esecuzione del processo.|  
 |**last_run_time**|**int**|Ora dell'ultimo avvio dell'esecuzione del processo.|  
-|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del processo:<br /><br /> **0** = non riuscito<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
+|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del processo:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**next_run_date**|**int**|Data pianificata per la successiva esecuzione del processo.|  
 |**next_run_time**|**int**|Ora pianificata per la successiva esecuzione del processo.|  
 |**next_run_schedule_id**|**int**|ID della successiva pianificazione di esecuzione.|  
@@ -124,7 +121,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Agent Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Stored procedure SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

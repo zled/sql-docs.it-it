@@ -1,33 +1,32 @@
 ---
-title: sqlsrv_errors | Documenti Microsoft
-ms.custom: 
+title: sqlsrv_errors | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: sqlsrv_errors
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- sqlsrv_errors
 apitype: NA
 helpviewer_keywords:
 - API Reference, sqlsrv_errors
 - sqlsrv_errors
 - errors and warnings
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f75b6e72c4678de0e24bab58de7a159ee173cfa4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 589fc732d9d49b58763f6374277d4375cccbbaf8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,7 +61,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 #### <a name="parameters"></a>Parametri  
 *$errorsAndOrWarnings*[facoltativo]: costante predefinita. Questo parametro può assumere uno dei valori elencati nella tabella seguente:  
   
-|Valore|Description|  
+|Value|Description|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|Vengono restituiti gli errori e gli avvisi generati nell'ultima chiamata di funzione **sqlsrv** .|  
 |SQLSRV_ERR_ERRORS|Vengono restituiti gli errori generati nell'ultima chiamata di funzione **sqlsrv** .|  
@@ -73,16 +72,16 @@ Se non viene specificato alcun valore di parametro, vengono restituiti gli avvis
 ## <a name="return-value"></a>Valore restituito  
 Una **matrice** di matrici oppure **null**. Ogni **matrice** nell'oggetto restituito **matrice** contiene tre coppie chiave-valore. Nella tabella seguente sono elencate le chiavi con la relativa descrizione:  
   
-|Key|Descrizione|  
+|Key|Description|  
 |-------|---------------|  
-|SQLSTATE|Per errori originati dal driver ODBC, il valore SQLSTATE restituito da ODBC. Per informazioni sui valori SQLSTATE per ODBC, vedere [Codici di errore ODBC](http://go.microsoft.com/fwlink/?linkid=119618).<br /><br />Per gli errori originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valore SQLSTATE di IMSSP.<br /><br />Per gli avvisi originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valore SQLSTATE di 01SSP.|  
+|SQLSTATE|Per errori originati dal driver ODBC, il valore SQLSTATE restituito da ODBC. Per informazioni sui valori SQLSTATE per ODBC, vedere [codici di errore ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Per gli errori originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valore SQLSTATE di IMSSP.<br /><br />Per gli avvisi originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valore SQLSTATE di 01SSP.|  
 |codice|Per errori originati da SQL Server, il codice di errore nativo di SQL Server.<br /><br />Per errori originati dal driver ODBC, il codice di errore restituito da ODBC.<br /><br />Per gli errori originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], il codice di errore [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Per altre informazioni, vedere [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
 |message|Descrizione dell'errore.|  
   
 I valori della matrice sono accessibili anche con le chiavi numeriche 0, 1 e 2. Se non si verificano errori o avvisi, viene restituito **null** .  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente visualizza gli errori che si verificano durante l'esecuzione di un'istruzione non riuscita. (L'istruzione ha esito negativo poiché **InvalidColumName** non è un nome di colonna valido nella tabella specificata.) Nell'esempio si presuppone che SQL Server e [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  
+L'esempio seguente visualizza gli errori che si verificano durante l'esecuzione di un'istruzione non riuscita. (L'istruzione ha esito negativo poiché **InvalidColumName** non è un nome di colonna valido nella tabella specificata.) Nell'esempio si presuppone che SQL Server e [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -122,6 +121,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
 [Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
   

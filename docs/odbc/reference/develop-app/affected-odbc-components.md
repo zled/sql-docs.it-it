@@ -1,16 +1,14 @@
 ---
 title: Componenti ODBC interessati | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading applications [ODBC], affected components
 - application upgrades [ODBC], affected components
@@ -18,24 +16,23 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], backward compatibility
 - backward compatibility [ODBC], affected components
 ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e74a2a77a224fd4ef7e48f9211857d42732d84dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 046ec16827e46f6cdf71881ec2f1b6c908fb42fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="affected-odbc-components"></a>Componenti ODBC interessati
 Compatibilità con le versioni precedenti viene descritto come applicazioni, gestione Driver e i driver sono interessati dall'introduzione di una nuova versione di gestione Driver. Questo influisce sulle applicazioni e driver quando uno o entrambi gli elementi rimangono nella versione precedente. Vi sono, pertanto, tre tipi di compatibilità con le versioni precedenti per prendere in considerazione, come illustrato nella tabella seguente.  
   
 |Tipo|Versione di data mining|Versione dell'applicazione|Versione del driver|  
 |----------|-------------------|----------------------------|-----------------------|  
-|Compatibilità di gestione Driver|3*. x*|2.*x*|2.*x*|  
-|Compatibilità con le versioni precedenti del Driver [1]|3*. x*|2.*x*|3.*x*|  
+|Compatibilità di gestione Driver|3 *. x*|2.*x*|2.*x*|  
+|Compatibilità con le versioni precedenti del Driver [1]|3 *. x*|2.*x*|3.*x*|  
 |Compatibilità con le versioni precedenti dell'applicazione|3.*x*|3.*x*|2.*x*|  
   
  [1] la compatibilità con le versioni precedenti del driver viene trattata principalmente in appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  

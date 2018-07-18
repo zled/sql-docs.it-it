@@ -1,35 +1,33 @@
 ---
 title: Recupero di informazioni sugli assembly | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], metadata
 - status information [SQL Server], assemblies
 - metadata [SQL Server], assemblies
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c96fde4198ff475f53aa94e09a400e62f26fc8b3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b2e7ce156858640e6b41dfa186839761b400e9fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assemblies---getting-information"></a>Assembly: recupero di informazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-È possibile recuperare metadati sugli assembly eseguendo query sulle funzioni e sulle viste del catalogo seguenti.  
+  È possibile recuperare metadati sugli assembly eseguendo query sulle funzioni e sulle viste del catalogo seguenti.  
   
  **Per ottenere informazioni sui singoli assembly**  
   
@@ -62,8 +60,8 @@ ms.lasthandoff: 02/09/2018
 -   [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Assembly &#40; motore di Database &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [Progettazione di assembly](../../relational-databases/clr-integration/assemblies-designing.md)   
+ [Assembly & #40; motore di Database & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Progettazione di database](../../relational-databases/clr-integration/assemblies-designing.md)   
  [Implementazione di assembly](../../relational-databases/clr-integration/assemblies-implementing.md)  
   
   

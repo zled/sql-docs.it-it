@@ -1,36 +1,23 @@
 ---
 title: Elemento UnknownMemberName (ASSL) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: UnknownMemberName Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: UnknownMemberName
-helpviewer_keywords: UnknownMemberName element
-ms.assetid: 54271336-ea9b-4270-ac3a-9658a5cff77b
-caps.latest.revision: "35"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d1d432fcc4692191d70aa2e084bee736a7efe3c6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d744357078e4cfaa73fe3170dba8f1321313efad
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="unknownmembername-element-assl"></a>Elemento UnknownMemberName (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene la didascalia, nella lingua predefinita della dimensione, per il membro sconosciuto della dimensione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene la didascalia, nella lingua predefinita della dimensione, per il membro sconosciuto della dimensione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String|  
 |Valore predefinito|*Unknown*|  
@@ -55,15 +42,15 @@ ms.lasthandoff: 01/08/2018
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elemento padre|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
-|Elementi figlio|None|  
+|Elemento padre|[Dimensione](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
+|Elementi figlio|Nessuno|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il valore dell'elemento **UnknownMemberName** fornisce la didascalia utilizzata per il membro sconosciuto. L'ID del membro sconosciuto è *Dimension*.UnknownMember, dove *Dimension* è il nome univoco della dimensione e non può essere modificato.  
   
  L'elemento che corrisponde all'elemento padre **UnknownMemberName** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

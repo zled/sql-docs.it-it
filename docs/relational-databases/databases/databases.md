@@ -1,41 +1,41 @@
 ---
 title: Database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data warehouse [SQL Server]
 - OLTP databases [SQL Server]
 - databases [SQL Server], about databases
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f2dd347a2f17cd4712deb64e6dcd6c9a55e7cb15
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e4382d10ca8fcae916d82726ae4932b3518df362
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708279"
 ---
 # <a name="databases"></a>Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è costituito da una raccolta di tabelle in cui è archiviato un set specifico di dati strutturati. Una tabella contiene una raccolta di righe, definite anche record o tuple, e colonne, definite anche attributi. Ogni colonna nella tabella è progettata per contenere un tipo di informazioni specifico, ad esempio date, nomi, importi in valuta e numeri.  
+  Un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è costituito da una raccolta di tabelle in cui è archiviato un set specifico di dati strutturati. Una tabella contiene una raccolta di righe, definite anche record o tuple, e colonne, definite anche attributi. Ogni colonna nella tabella è progettata per contenere un tipo di informazioni specifico, ad esempio date, nomi, importi in valuta e numeri.  
   
 ## <a name="basic-information-about-databases"></a>Informazioni di base sui database  
  Un computer può disporre di una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può contenere uno o più database.  All'interno di un database sono presenti uno o più gruppi di proprietà di oggetti denominati schemi. All'interno di ogni schema sono presenti oggetti di database quali tabelle, viste e stored procedure. Alcuni oggetti quali certificati e chiavi asimmetriche sono contenuti all'interno del database, ma non all'interno di uno schema. Per altre informazioni sulla creazione delle tabelle, vedere [Tabelle](../../relational-databases/tables/tables.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] I database sono archiviati in file del file system. I file possono essere raggruppati in filegroup. Per altre informazioni su file e filegroup, vedere [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md).  
+ I database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono archiviati in file del file system. I file possono essere raggruppati in filegroup. Per altre informazioni su file e filegroup, vedere [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md).  
   
  Quando un utente accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene identificato come account di accesso. Quando un utente accede a un database viene identificato come utente di database. Un utente di database può essere basato su un account di accesso. Se sono abilitati i database indipendenti, è possibile creare un utente di database non basato su un account di accesso. Per altre informazioni sugli utenti, vedere [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
   

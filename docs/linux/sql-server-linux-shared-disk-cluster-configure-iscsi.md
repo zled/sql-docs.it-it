@@ -1,24 +1,21 @@
 ---
 title: Configurare il failover del cluster istanza archiviazione iSCSI, SQL Server in Linux | Documenti Microsoft
-description: 
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.technology: linux
+ms.openlocfilehash: 6876ac9f3aa6641efe4e08e6c434870347315bc6
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurare l'istanza del cluster di failover SQL Server in Linux - iSCSI:
 
@@ -57,7 +54,7 @@ Per ulteriori informazioni sull'iniziatore iSCSI per le distribuzioni supportate
 
     - iface.net_ifacename è il nome della scheda di rete, come illustrato nel sistema operativo.
     - iface.hwaddress è l'indirizzo MAC di un nome univoco che verrà creato per questa interfaccia riportata di seguito.
-    - iface.ipaddress
+    - iface.IPAddress
     - iface.subnet_Mask 
 
     Vedere l'esempio seguente:

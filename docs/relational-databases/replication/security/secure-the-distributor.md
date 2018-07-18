@@ -1,33 +1,33 @@
 ---
 title: Proteggere il database di distribuzione | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], Distributors
 - Distributors [SQL Server replication], security
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 38
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 69919214ba8fae9f6158466482f5b08201ad8afd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5e81af44b1a6ff52d3011e18c3cd94aa3f7b73aa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="secure-the-distributor"></a>Sicurezza del database di distribuzione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gli agenti di replica che si connettono al server di distribuzione sono l'agente di lettura log, l'agente di snapshot, l'agente di lettura coda, l'agente di distribuzione e l'agente di merge. È importante fornire un account di accesso appropriato per ognuno di questi agenti seguendo il principio di concedere i diritti minimi necessari nonché proteggere l'archiviazione di tutte le password:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Gli agenti di replica che si connettono al server di distribuzione sono l'agente di lettura log, l'agente snapshot, l'agente di lettura coda, l'agente di distribuzione e l'agente di merge. È importante fornire un account di accesso appropriato per ognuno di questi agenti seguendo il principio di concedere i diritti minimi necessari nonché proteggere l'archiviazione di tutte le password:  
   
 -   Per informazioni sulla gestione di account di accesso e password, vedere [Gestire gli account di accesso e le password nella replica](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
   

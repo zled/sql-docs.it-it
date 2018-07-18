@@ -1,30 +1,29 @@
 ---
 title: Metodo updateFloat (int, float) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerResultSet.updateFloat (int, float)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerResultSet.updateFloat (int, float)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 33ec697feff5fbaed21b5939ed0021321de576a4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: d7d5924affae294f684ef758530073acefd8a777
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updatefloat-method-int-float"></a>Metodo updateFloat (int, float)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ public void updateFloat(int index,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *indice*  
+ *index*  
   
  Un **int** che indica l'indice di colonna.  
   
@@ -55,7 +54,7 @@ public void updateFloat(int index,
  Questo metodo updateFloat viene specificato dal metodo updateFloat nell'interfaccia Java.SQL. ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo updateFloat &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)   
+ [Metodo updateFloat &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)   
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

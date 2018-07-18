@@ -1,16 +1,14 @@
 ---
-title: '@@CURSOR_ROWS (Transact-SQL) | Documenti Microsoft'
-ms.custom: 
+title: '@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@CURSOR_ROWS'
@@ -23,21 +21,20 @@ helpviewer_keywords:
 - last-opened cursor
 - asynchronous cursors [SQL Server]
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8c4c1fac4c5d9dacddfb942a3e5b9238e5be16a4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a608d12c790b9b9808ef0f1d84264f1423ba472b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce il numero delle righe attualmente risultanti nell'ultimo cursore aperto sulla connessione. Per migliorare le prestazioni, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può popolare i cursori statistici e i set di chiavi di grandi dimensioni in modo asincrono. @@CURSOR_ROWS può essere chiamato per determinare che il numero di righe che soddisfano le condizioni per un cursore viene recuperato in fase di @@CURSOR_ROWS viene chiamato.
+Restituisce il numero delle righe attualmente risultanti nell'ultimo cursore aperto sulla connessione. Per migliorare le prestazioni, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può popolare i cursori statistici e i set di chiavi di grandi dimensioni in modo asincrono. È possibile chiamare la funzione `@@CURSOR_ROWS` in modo che il recupero del numero delle righe per un cursore venga eseguito al momento della chiamata a @@CURSOR_ROWS.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,18 +49,18 @@ Restituisce il numero delle righe attualmente risultanti nell'ultimo cursore ape
   
 ## <a name="return-value"></a>Valore restituito  
   
-|Valore restituito|Description|  
+|Valore restituito|Descrizione|  
 |---|---|
-|-*m*|Il cursore viene popolato in modo asincrono. Il valore restituito (-*m*) è il numero di righe correntemente nel keyset.|  
-|-1|Il cursore è dinamico. Poiché nei cursori dinamici vengono riportate tutte le modifiche, il numero delle righe risultanti per il cursore è variabile. Non è possibile affermare in modo definitivo che tutte le righe restituite sono state recuperate.|  
+|-*m*|Il cursore viene popolato in modo asincrono. Il valore restituito (-*m*) corrisponde al numero di righe risultanti per il set di chiavi.|  
+|-1|Il cursore è dinamico. Poiché nei cursori dinamici vengono riportate tutte le modifiche, il numero delle righe risultanti per il cursore cambia in modo costante. Il cursore non recupera necessariamente tutte le righe qualificate.|  
 |0|Non è stato aperto alcun cursore, nessuna riga è stata restituita per l'ultimo cursore aperto oppure l'ultimo cursore aperto è chiuso o deallocato.|  
-|*n*|Il cursore è completamente popolato. Il valore restituito (*n*) è il numero totale di righe nel cursore.|  
+|*n*|Il cursore è completamente popolato. Il valore restituito (*n*) corrisponde al numero totale di righe nel cursore.|  
   
-## <a name="remarks"></a>Osservazioni  
-Il numero restituito da@CURSOR_ROWS è negativo se l'ultimo cursore è stato aperto in modo asincrono. I driver o i cursori statistici vengono aperti in modo asincrono se il valore di sp_configure cursor threshold è maggiore di 0 e il numero di righe nel set di risultati del cursore è maggiore della soglia del cursore.
+## <a name="remarks"></a>Remarks  
+`@@CURSOR_ROWS` restituisce un numero negativo se l'ultimo cursore è stato aperto in modalità asincrona. I driver del set di chiavi o i cursori statici si aprono in modo asincrono se il valore della soglia del cursore sp_configure è maggiore di 0 e il numero di righe nel set di risultati del cursore è maggiore del valore soglia del cursore.
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene dichiarato un cursore e viene utilizzata l'istruzione `SELECT` per visualizzare il valore della funzione `@@CURSOR_ROWS`. Prima dell'apertura del cursore il valore della funzione è `0`. Il valore `-1` indica che il set di chiavi del cursore è stato popolato in modo asincrono.
+Questo esempio prima dichiara un cursore e quindi usa l'istruzione `SELECT` per visualizzare il valore della funzione `@@CURSOR_ROWS`. Prima dell'apertura del cursore, il valore della funzione è `0`. Il valore diventa quindi `-1`, a indicare che il set di chiavi del cursore viene popolato in modo asincrono.
   
 ```sql
 USE AdventureWorks2012;  
@@ -98,7 +95,7 @@ Sanchez
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Funzioni di cursore &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
-[Apri &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)
+[Funzioni per i cursori &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)
   
   

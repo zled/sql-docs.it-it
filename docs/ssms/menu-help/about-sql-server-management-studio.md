@@ -1,32 +1,33 @@
 ---
 title: Informazioni su SQL Server Management Studio | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.aboutsqlserverworkbench.f1
-helpviewer_keywords: SQL Server Management Studio dialog box
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.aboutsqlserverworkbench.f1
+helpviewer_keywords:
+- SQL Server Management Studio dialog box
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6a2aa7db876c4b3d78cf14846cb3d7aed821cbeb
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 8784beb120a0d9bdfbe9e558984ff01fa3054a59
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-sql-server-management-studio"></a>Informazioni su SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usare questa finestra di dialogo per visualizzare o copiare informazioni sull'installazione di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Nelle copie di valutazione è indicato il numero di giorni che mancano alla scadenza del prodotto.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Utilizzare questa finestra di dialogo per visualizzare o copiare informazioni sull'installazione di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Nelle copie di valutazione è indicato il numero di giorni che mancano alla scadenza del prodotto.  
   
 ## <a name="options"></a>Opzioni  
 **Nome componente**  

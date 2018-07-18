@@ -1,32 +1,33 @@
 ---
 title: sp_repldropcolumn (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_repldropcolumn_TSQL
 - sp_repldropcolumn
-helpviewer_keywords: sp_repldropcolumn
+helpviewer_keywords:
+- sp_repldropcolumn
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 120f6a9d6f23d50a002fad7c9bb77f7caa4010d9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2613b4c2aded7ee192bdd456b3d9d51ec1587eda
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sprepldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +52,16 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
   
 ## <a name="arguments"></a>Argomenti  
  [ @source_object =] '*source_object*'  
- Nome dell'articolo di tabella contenente la colonna da eliminare. *source_object* è nvarchar (258), non prevede alcun valore predefinito.  
+ Nome dell'articolo di tabella contenente la colonna da eliminare. *source_object* è nvarchar(258), non prevede alcun valore predefinito.  
   
  [ @column =] '*colonna*'  
  Nome della colonna nella tabella da eliminare. *colonna* è di tipo sysname e non prevede alcun valore predefinito.  
   
  [ @from_agent =] *from_agent*  
- Specifica se la stored procedure viene eseguita da un agente di replica. *from_agent* è di tipo int, con un valore predefinito è 0, in cui il valore 1 viene utilizzato quando la stored procedure viene eseguita da un agente di replica e in tutti gli altri casi deve essere utilizzato il valore predefinito pari a 0.  
+ Specifica se la stored procedure viene eseguita da un agente di replica. *from_agent* è di tipo int, con un valore predefinito è 0, in cui viene utilizzato un valore pari a 1 quando questa stored procedure viene eseguita da un agente di replica e in tutti gli altri casi deve essere usato il valore predefinito pari a 0.  
   
  [ @schema_change_script =] '*schema_change_script*'  
- Specifica il nome e il percorso di uno script di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per modificare le stored procedure personalizzate generate dal sistema. *schema_change_script* è nvarchar (4000), con un valore predefinito è NULL. La replica consente di sostituire una o più stored procedure predefinite utilizzate per la replica transazionale con stored procedure personalizzate definite dall'utente. *schema_change_script* viene eseguito dopo una modifica dello schema viene eseguita in un articolo di tabella replicato utilizzando sp_repldropcolumn e può essere usata per eseguire una delle operazioni seguenti:  
+ Specifica il nome e il percorso di uno script di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per modificare le stored procedure personalizzate generate dal sistema. *schema_change_script* è nvarchar (4000), con un valore predefinito è NULL. La replica consente di sostituire una o più stored procedure predefinite utilizzate per la replica transazionale con stored procedure personalizzate definite dall'utente. *schema_change_script* viene eseguito dopo una modifica dello schema apportata in un articolo di tabella replicato utilizzando sp_repldropcolumn e può essere usata per eseguire una delle operazioni seguenti:  
   
 -   Se le stored procedure personalizzate vengono rigenerate automaticamente, *schema_change_script* può essere utilizzato per eliminare le stored procedure personalizzate e sostituirle con definito dall'utente stored procedure personalizzate che supportano il nuovo schema.  
   
@@ -83,7 +84,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server sysadmin sul server di pubblicazione o i membri dei ruoli predefiniti del database db_owner o db_ddladmin nel database di pubblicazione possono eseguire sp_repldropcolumn.  
   
 ## <a name="see-also"></a>Vedere anche  

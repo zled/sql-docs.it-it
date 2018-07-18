@@ -1,37 +1,35 @@
 ---
 title: Migrazione di Oracle database a SQL Server (OracleToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 04/22/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Active
-ms.openlocfilehash: c3b6bc1f359cd54c1380fbe193fb007e1e337a3d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6fbfce1479ba86feeda8178481eb75c64b960a5d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>Migrazione di database Oracle a SQL Server (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) per Oracle è un ambiente completo che consente di eseguire rapidamente la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure. Tramite SSMA per Oracle, è possibile esaminare gli oggetti di database e i dati, valutare i database per la migrazione, eseguire la migrazione di oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure, quindi eseguire la migrazione dei dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure. Si noti che è possibile eseguire la migrazione di schemi SYS e sistema Oracle.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) per Oracle è un ambiente completo che consente di eseguire rapidamente la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], database SQL di Azure o Azure SQL Data Warehouse. Tramite SSMA per Oracle, è possibile esaminare gli oggetti di database e i dati, valutare i database per la migrazione, eseguire la migrazione di oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], database SQL di Azure o Azure SQL Data Warehouse, quindi eseguire la migrazione dei dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], database SQL di Azure o i dati di SQL Azure Warehouse. Si noti che è possibile eseguire la migrazione di schemi SYS e sistema Oracle.
   
 ## <a name="recommended-migration-process"></a>Consiglia di processo di migrazione  
-Per completare la migrazione oggetti e i dati dal database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure, procedere come segue:  
+Per eseguire correttamente la migrazione oggetti e dati da database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], database SQL di Azure o Azure SQL Data Warehouse, eseguire le operazioni seguenti:
   
 1.  [Creare un nuovo progetto SSMA](http://msdn.microsoft.com/en-us/ee5d94c0-c7a6-4779-bd32-729bdaf61e1b).  
   
-    Dopo aver creato il progetto, è possibile impostare le opzioni di mapping dei tipi, migrazione e conversione del progetto. Per informazioni sulle impostazioni del progetto, vedere [OracleToSQL impostazione delle opzioni progetto &#40; &#41;](../../ssma/oracle/setting-project-options-oracletosql.md). Per informazioni su come personalizzare i mapping dei tipi di dati, vedere [OracleToSQL Mapping Oracle e tipi di dati di SQL Server &#40; &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
+    Dopo aver creato il progetto, è possibile impostare le opzioni di mapping dei tipi, migrazione e conversione del progetto. Per informazioni sulle impostazioni di progetto, vedere [impostazione delle opzioni di progetto &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md). Per informazioni su come personalizzare i mapping dei tipi di dati, vedere [Mapping Oracle e tipi di dati di SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
 2.  [Connettersi al server di database Oracle](http://msdn.microsoft.com/en-us/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6).  
   
@@ -56,6 +54,6 @@ Per completare la migrazione oggetti e i dati dal database Oracle a [!INCLUDE[ss
 9. Se necessario, aggiornare le applicazioni di database.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Installazione di SSMA per OracleToSQL Oracle &#40; &#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
-[Introduzione a SSMA per OracleToSQL Oracle &#40; &#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
+[Installazione di SSMA per Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
+[Guida introduttiva di SSMA per Oracle di &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   

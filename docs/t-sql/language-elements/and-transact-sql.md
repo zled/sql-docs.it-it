@@ -1,16 +1,14 @@
 ---
 title: AND (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AND_TSQL
@@ -19,26 +17,26 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - values [SQL Server], TRUE
-- TRUE
+- "TRUE"
 - AND, about AND operators
 - AND
 - combining expressions
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 340905e1f4ed4917fa4485278e43c6dc754f6164
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 31d8858572e292f8cc3b1f32f5036da400d39435
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Combina due espressioni booleane e restituisce **TRUE** quando entrambe le espressioni sono **TRUE**. Quando più di un operatore logico viene utilizzato in un'istruzione di **AND** operatori vengono valutati per primi. È tuttavia possibile modificare l'ordine di valutazione tramite l'utilizzo delle parentesi.  
+  Combina due espressioni booleane e restituisce **TRUE** se entrambe le espressioni sono **TRUE**. Quando un'istruzione include più operatori logici, gli operatori **AND** vengono valutati per primi. È tuttavia possibile modificare l'ordine di valutazione tramite l'utilizzo delle parentesi.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +48,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>Argomenti  
  *boolean_expression*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) che restituisce un valore booleano: **TRUE**, **FALSE**, o **sconosciuto**.  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida che restituisce un valore booleano: **TRUE**, **FALSE** o **UNKNOWN**.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  **Boolean**  
@@ -58,7 +56,7 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>Valore restituito  
  Restituisce TRUE quando entrambe le espressioni sono TRUE.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Nella tabella seguente vengono illustrati i risultati dei confronti eseguiti tra valori TRUE e FALSE tramite l'operatore AND.  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -102,7 +100,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

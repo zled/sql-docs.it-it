@@ -1,38 +1,34 @@
 ---
 title: Classe di evento SQL:StmtRecompile | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: df67c9972328d7e418a5f68315bcd46d8d60e369
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 63343f500b2c0e3d330a0fb84cb4ece4ff193c10
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento SQL:StmtRecompile indica ricompilazioni a livello di istruzione causate da tutti i tipi di batch: stored procedure, trigger, batch ad hoc e query. Le query possono essere inviate utilizzando sp_executesql, linguaggio SQL dinamico, metodi Prepare, metodi Execute o interfacce simili. È consigliabile usare la classe di evento SQL:StmtRecompile anziché SP:Recompile.  
+  La classe di evento SQL:StmtRecompile indica ricompilazioni a livello di istruzione causate da tutti i tipi di batch: stored procedure, trigger, batch ad hoc e query. Le query possono essere inviate utilizzando sp_executesql, linguaggio SQL dinamico, metodi Prepare, metodi Execute o interfacce simili. È consigliabile usare la classe di evento SQL:StmtRecompile anziché SP:Recompile.  
   
 ## <a name="sqlstmtrecompile-event-class-data-columns"></a>Colonne di dati della classe di evento SQL:StmtRecompile  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione anziché con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se il client fornisce l'ID del processo.|9|Sì|  

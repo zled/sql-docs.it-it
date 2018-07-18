@@ -1,16 +1,14 @@
 ---
-title: ALTER DATABASE SET HADR (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET HADR
@@ -26,21 +24,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Transact-SQL statements
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 44
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a601a5f93f7a922228232c8ef4a91b5775eded91
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 31fa0d001be173ee465181debdc6b3a16560b72e
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  In questo argomento contiene la sintassi di ALTER DATABASE per l'impostazione [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] opzioni in un database secondario. Solo una delle opzioni SET HADR è consentita per l'istruzione ALTER DATABASE. Queste opzioni sono supportate solo su repliche secondarie.  
+  In questo argomento è inclusa la sintassi di ALTER DATABASE correlata all'impostazione delle opzioni [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in un database secondario. È consentita una sola opzione SET HADR per ogni istruzione ALTER DATABASE. Queste opzioni sono supportate solo su repliche secondarie.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +61,7 @@ ALTER DATABASE database_name
  SET HADR  
  Esegue il comando [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] indicato nel database specificato.  
   
- {GRUPPO di disponibilità **= * * * nome_gruppo* | OFF}  
+ { AVAILABILITY GROUP **=***group_name* | OFF }  
  Crea un join del database di disponibilità o lo rimuove dal gruppo di disponibilità specificato come segue:  
   
  *group_name*  
@@ -74,24 +71,24 @@ ALTER DATABASE database_name
   
 -   È necessario che il database sia già stato aggiunto al gruppo di disponibilità nella replica primaria.  
   
--   La replica primaria deve essere attiva. Per informazioni su come risolvere i problemi di una replica primaria inattiva, vedere [risoluzione dei problemi sempre in gruppi di configurazione di disponibilità (SQL Server)](http://go.microsoft.com/fwlink/?LinkId=225834).  
+-   La replica primaria deve essere attiva. Per informazioni su come risolvere i problemi relativi a una replica primaria inattiva, vedere l'articolo [Risolvere i problemi relativi alla configurazione di Gruppi di disponibilità AlwaysOn (SQL Server)](http://go.microsoft.com/fwlink/?LinkId=225834).  
   
 -   La replica primaria deve essere online e quella secondaria deve essere connessa alla primaria.  
   
 -   Il database secondario deve essere stato ripristinato tramite WITH NORECOVERY da backup di database e di log recenti eseguiti sul database primario che terminano con un backup del log sufficientemente recente per consentire che il database secondario venga aggiornato in base a quello primario.  
   
     > [!NOTE]  
-    >  Per aggiungere un database al gruppo di disponibilità, connettersi all'istanza del server che ospita la replica primaria e utilizzare il [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*nome_gruppo* Aggiungi DATABASE *database_name*  istruzione.  
+    >  Per aggiungere un database al gruppo di disponibilità, connettersi all'istanza del server che ospita la replica primaria e usare l'istruzione [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* ADD DATABASE *database_name*.  
   
  Per altre informazioni, vedere [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  OFF  
  Rimuove il database secondario specificato dal gruppo di disponibilità.  
   
- La rimozione di un database secondario può essere utile se tale database è in ritardo rispetto a quello primario e non si desidera attenderne l'aggiornamento. Dopo aver rimosso il database secondario, è possibile aggiornarlo ripristinando una sequenza di backup che terminano con un backup del log recente (tramite RESTORE... WITH NORECOVERY).  
+ La rimozione di un database secondario può essere utile se tale database è in ritardo rispetto a quello primario e non si desidera attenderne l'aggiornamento. Dopo aver rimosso il database secondario, è possibile aggiornarlo ripristinando una sequenza di backup che termina con un backup del log recente (tramite RESTORE … WITH NORECOVERY).  
   
 > [!IMPORTANT]  
->  Per rimuovere completamente un database di disponibilità da un gruppo di disponibilità, connettersi all'istanza del server che ospita la replica primaria e utilizzare il [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*nome_gruppo* rimuovere DATABASE *availability_database_name* istruzione. Per ulteriori informazioni, vedere [rimuovere un Database primario da un gruppo di disponibilità &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
+>  Per rimuovere completamente un database di disponibilità da un gruppo di disponibilità, connettersi all'istanza del server che ospita la replica di disponibilità primaria e usare l'istruzione [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* REMOVE DATABASE *availability_database_name*. Per altre informazioni, vedere [Rimuovere un database primario da un gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
   
  SUSPEND  
  Sospende lo spostamento dei dati su un database secondario. Un comando SUSPEND viene restituito non appena è stato accettato dalla replica che ospita il database di destinazione, ma la sospensione effettiva del database avviene in modo asincrono.  
@@ -100,7 +97,7 @@ ALTER DATABASE database_name
   
 -   Se si sospende un database secondario su una replica secondaria, viene sospeso solo il database secondario locale. Le connessioni esistenti nel database secondario leggibile rimangono utilizzabili. Non sono consentite nuove connessioni al database sospeso nel database secondario leggibile finché non viene ripreso lo spostamento di dati.  
   
--   Se si sospende un database nella replica primaria, lo spostamento di dati viene sospeso nei database secondari corrispondenti in ogni replica secondaria. Le connessioni esistenti in un database secondario leggibile rimangono utilizzabili e le nuove connessioni con finalità di lettura non si connetteranno a repliche secondarie leggibili.  
+-   Se si sospende un database nella replica primaria, lo spostamento di dati viene sospeso nei database secondari corrispondenti in ogni replica secondaria. Le connessioni esistenti in un database secondario leggibile rimangono usabili e le nuove connessioni con finalità di lettura non si connettono a repliche secondarie leggibili.  
   
 -   Quando lo spostamento di dati viene sospeso a causa di un failover manuale forzato, non sono consentite connessioni alla nuova replica secondaria e lo spostamento di dati è sospeso.  
   
@@ -110,9 +107,9 @@ ALTER DATABASE database_name
 >  Durante la fase di sospensione di un database secondario, nella coda di invio del database primario corrispondente verranno accumulati record del log delle transazioni non inviati. Tramite le connessioni alla replica secondaria vengono restituiti i dati disponibili quando lo spostamento di dati è stato sospeso.  
   
 > [!NOTE]  
->  Sospensione e ripresa di un database secondario AlwaysOn non incide direttamente sulla disponibilità del database primario, sebbene la sospensione di un database secondario può influire sulle funzionalità di ridondanza e failover per il database primario, finché il sospeso database secondario viene ripreso. Questo comportamento è diverso rispetto al mirroring del database, in cui lo stato del mirroring risulta sospeso sia sul database mirror che sul database principale, finché il mirroring non viene ripreso. La sospensione di un database primario AlwaysOn comporta la sospensione dello spostamento di dati su tutti i corrispondenti database secondari e le funzionalità di ridondanza e failover cessano per tale database finché non viene ripreso il database primario.  
+>  La sospensione e la ripresa di un database secondario AlwaysOn non incide direttamente sulla disponibilità del database primario, anche se la sospensione di un database secondario può avere un impatto sulle funzionalità di ridondanza e failover del database primario, finché il database secondario sospeso non viene ripreso. Questo comportamento è diverso rispetto al mirroring del database, in cui lo stato del mirroring risulta sospeso sia sul database mirror che sul database principale, finché il mirroring non viene ripreso. La sospensione di un database primario AlwaysOn comporta la sospensione dello spostamento di dati su tutti i corrispondenti database secondari e le funzionalità di ridondanza e failover cessano per tale database finché non viene ripreso il database primario.  
   
- Per ulteriori informazioni, vedere [sospendere un Database di disponibilità &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md).  
+ Per altre informazioni, vedere [Sospendere un database di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md).  
   
  RESUME  
  Riprende lo spostamento dei dati sospesi nel database secondario specificato. Un comando RESUME viene restituito non appena è stato accettato dalla replica che ospita il database di destinazione, ma la ripresa effettiva del database avviene in modo asincrono.  
@@ -130,13 +127,13 @@ ALTER DATABASE database_name
 ## <a name="database-states"></a>Stati del database  
  Quando per un database secondario viene creato un join a un gruppo di disponibilità, la replica secondaria locale modifica lo stato di tale database da RESTORING a ONLINE. Se un database secondario viene rimosso da un gruppo di disponibilità, lo stato viene reimpostato su RESTORING dalla replica secondaria locale. In questo modo è possibile applicare backup di log successivi dal database primario a quello secondario.  
   
-## <a name="restrictions"></a>Restrizioni  
+## <a name="restrictions"></a>Restrictions  
  Eseguire le istruzioni ALTER DATABASE all'esterno sia delle transazioni che dei batch.  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione ALTER per il database. Aggiunta di un database a un gruppo di disponibilità richiede l'appartenenza di **db_owner** ruolo predefinito del database.  
+ È richiesta l'autorizzazione ALTER per il database. Per la creazione di un join di un database a un gruppo di disponibilità è richiesta l'appartenenza al ruolo predefinito del database **db_owner** .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creato un join del database secondario, `AccountsDb1`, alla replica secondaria locale del gruppo di disponibilità `AccountsAG`.  
@@ -151,7 +148,7 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 ## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREARE il gruppo di disponibilità &#40; Transact-SQL &#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Panoramica di gruppi di disponibilità AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [Risolvere i problemi di configurazione di gruppi di disponibilità AlwaysOn &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [Risolvere i problemi relativi alla configurazione di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   

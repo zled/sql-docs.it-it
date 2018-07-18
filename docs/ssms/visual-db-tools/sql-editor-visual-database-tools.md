@@ -1,16 +1,15 @@
 ---
 title: Editor SQL (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vdt.sqleditor
 - sql.data.tools.sqleditor
@@ -23,19 +22,19 @@ helpviewer_keywords:
 - Query Designer [SQL Server], SQL Editor
 - View Designer, SQL Editor
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 94b11dc5e05e50c0f0982d2d5c66a61f63594c6c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 32be220c7344e75d5c7f925e9e30ede94f79331e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-editor-visual-database-tools"></a>Editor SQL (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Editor SQL consente di modificare stored procedure, funzioni, trigger e script SQL esistenti. Tale finestra viene visualizzata quando si apre uno qualsiasi di questi oggetti. Se si vuole creare una nuova istruzione SQL da eseguire sull'origine dei dati, usare il [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) di Progettazione query.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Editor SQL consente di modificare stored procedure, funzioni, trigger e script SQL esistenti. Tale finestra viene visualizzata quando si apre uno qualsiasi di questi oggetti. Se si vuole creare una nuova istruzione SQL da eseguire sull'origine dei dati, usare il [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) di Progettazione query.  
   
 Editor SQL contiene numerose caratteristica per la modifica di testo SQL, comprese:  
   

@@ -1,16 +1,14 @@
 ---
-title: TRIGGER_NESTLEVEL (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TRIGGER_NESTLEVEL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - number of triggers
 - TRIGGER_NESTLEVEL function
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0416b80079ac4c1dfb6dc10b507fd85800dd3a27
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 86b31446821fae2ee03449c1e636f6624bee931b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,18 +46,18 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="arguments"></a>Argomenti  
  *object_id*  
- ID di oggetto di un trigger. Se *object_id* viene specificato, il numero di esecuzioni del trigger specificato per l'istruzione viene restituito. Se *object_id* non viene specificato, il numero di volte in cui tutti i trigger sono stati eseguiti per l'istruzione viene restituito.  
+ ID di oggetto di un trigger. Se si specifica *object_id*, viene restituito il numero di esecuzioni del trigger specificato per l'istruzione. Se non si specifica *object_id*, viene restituito il numero di esecuzioni di tutti i trigger per l'istruzione.  
   
  **'** *trigger_type* **'**  
- Specifica se applicare TRIGGER_NESTLEVEL ai trigger AFTER oppure ai trigger INSTEAD OF. Specificare **AFTER** per i trigger AFTER. Specificare **IOT** per i trigger INSTEAD OF. Se *trigger_type* è specificato, *trigger_event_category* deve anche essere specificato.  
+ Specifica se applicare TRIGGER_NESTLEVEL ai trigger AFTER oppure ai trigger INSTEAD OF. Specificare **AFTER** per i trigger AFTER. Specificare **IOT** per i trigger INSTEAD OF. Se *trigger_type* viene specificato, deve essere specificato anche *trigger_event_category*.  
   
  **'** *trigger_event_category* **'**  
- Specifica se applicare TRIGGER_NESTLEVEL ai trigger DML o DDL. Specificare **DML** per i trigger DML. Specificare **DDL** per i trigger DDL. Se *trigger_event_category* è specificato, *trigger_type* deve anche essere specificato. Si noti che solo **AFTER** possono essere specificati con **DDL**, poiché i trigger DDL possono essere solo trigger AFTER.  
+ Specifica se applicare TRIGGER_NESTLEVEL ai trigger DML o DDL. Specificare **DML** per i trigger DML. Specificare **DDL** per i trigger DDL. Se *trigger_event_category* viene specificato, deve essere specificato anche *trigger_type*. Se si specifica **DDL** è possibile specificare solo **AFTER** perché i trigger DDL possono essere solo trigger AFTER.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se non si specifica alcun parametro, TRIGGER_NESTLEVEL restituisce il numero totale di trigger nello stack di chiamate. Nel numero è incluso il parametro stesso. È possibile omettere i parametri quando un trigger esegue comandi che provocano l'attivazione di un altro trigger o crea una serie di attivazioni di trigger.  
   
- Per restituire il numero totale di trigger nello stack di chiamate per una categoria di tipo e all'evento trigger specifico, specificare *object_id* = 0.  
+ Per restituire il numero totale di trigger nello stack di chiamate per un tipo di trigger specifico o una categoria di eventi specifica, impostare *object_id* = 0.  
   
  TRIGGER_NESTLEVEL restituisce il valore 0 se viene eseguita all'esterno di un trigger e i parametri sono diversi da NULL.  
   

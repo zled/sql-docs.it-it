@@ -1,27 +1,25 @@
 ---
-title: "Visualizzare intestazioni e piè di pagina con un gruppo (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: 
+title: Visualizzare intestazioni e piè di pagina con un gruppo (Generatore report e SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92f7c462be75d4557ab44216af1beb14d101029e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3068cf6494dfc790f2990f8e872dd9365e3594f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Visualizzare intestazioni e piè di pagina con un gruppo (Generatore report e SSRS)
   È possibile stabilire se di una riga statica, ad esempio l'intestazione o il piè di pagina di un gruppo, viene eseguito il rendering con righe dinamiche associate a un gruppo in un'area dati Tablix.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso, quindi fare clic su **Modalità avanzata**. Nel riquadro Gruppi di colonne verranno visualizzati i membri statici e dinamici gerarchici della gerarchia dei gruppi di colonne.  
   
-3.  Fare clic sul membro statico che corrisponde alla colonna statica che si desidera mantenere con le colonne di gruppo. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix**.  
+3.  Fare clic sul membro statico che corrisponde alla colonna statica che si desidera mantenere con le colonne di gruppo. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix** .  
   
 4.  Nel riquadro Proprietà fare clic su **KeepWithGroup**e quindi scegliere uno dei valori seguenti nell'elenco a discesa:  
   

@@ -1,15 +1,13 @@
 ---
 title: Finestre di dialogo di SQL Server Profiler | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: profiler
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.pro.traceproperties.general.f1;
@@ -43,20 +41,20 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 284333202ee48153b0de4d513502e35edc73acaf
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 5bd72cc0de57f33c69101ba2d5f387ed45bae4c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Finestre di dialogo di SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è uno strumento che consente di acquisire [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli eventi da un server. Gli eventi vengono salvati in un file di traccia che è possibile analizzare o utilizzare in un momento successivo per riprodurre una serie specifica di passaggi allo scopo di diagnosticare un problema. Di seguito sono i comandi e le impostazioni disponibili nelle finestre di dialogo di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
-## <a name="trace-properties"></a>Proprietà della traccia
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è uno strumento in grado di acquisire gli eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un server. Gli eventi vengono salvati in un file di traccia che è possibile analizzare o utilizzare in un momento successivo per riprodurre una serie specifica di passaggi allo scopo di diagnosticare un problema. Di seguito sono i comandi e le impostazioni disponibili nelle finestre di dialogo di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+## <a name="trace-properties"></a>Proprietà traccia
 ### <a name="general-tab"></a>Scheda Generale
 Usare la scheda **Generale** della finestra di dialogo **Proprietà traccia** per visualizzare o specificare le proprietà di una traccia.  
 |Elemento|Description
@@ -90,7 +88,7 @@ Usare la scheda **Selezione eventi** della finestra di dialogo **Proprietà trac
 
 ## <a name="trace-template-properties"></a>Proprietà modello di traccia 
 ### <a name="new-general-tab"></a>Nuovo (scheda Generale)
-Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** per creare nuovi modelli di traccia utilizzando le opzioni seguenti. Per accedere a questa finestra di dialogo, scegliere il [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** dal menu **modelli**, quindi fare clic su **New**.
+Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** per creare nuovi modelli di traccia utilizzando le opzioni seguenti. Per accedere a questa finestra di dialogo, nel menu **File** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] scegliere **Modelli**e quindi fare clic su **Nuovo**.
 |Elemento|Description
 |---|---
 |**Tipo server**|Consente di specificare il tipo di server per il quale verrà utilizzato il modello.  
@@ -171,9 +169,9 @@ Usare la finestra di dialogo **Opzioni generali** per visualizzare o specificare
 |**Nome carattere**|Visualizza il nome del carattere utilizzato nella griglia dei risultati della traccia durante l'esecuzione delle tracce.  
 |**Dimensioni carattere**|Visualizza le dimensioni del carattere utilizzato nella griglia dei risultati della traccia durante l'esecuzione delle tracce.  
 |**Scegli carattere**|Consente di aprire una finestra di dialogo per la modifica delle impostazioni del carattere.  
-|**Visualizza valori di data e ora in base alle impostazioni internazionali**|Visualizza i valori di data e ora in base alle impostazioni internazionali configurate nel computer in uso. Se questa opzione non viene selezionata, i valori di data e ora vengono visualizzati in base al formato predefinito utilizzato da Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in cui sono inclusi i millisecondi. Si noti che l'attivazione e disattivazione di questa casella di controllo di modifica nelle colonne dell'ora formato di visualizzazione, ad esempio **StartTime** e **EndTime**. Tuttavia, non vengono modificati i parametri del valore **DateTime** negli eventi del linguaggio o nelle RPC (Remote Procedure Call).  
+|**Visualizza valori di data e ora in base alle impostazioni internazionali**|Visualizza i valori di data e ora in base alle impostazioni internazionali configurate nel computer in uso. Se questa opzione non viene selezionata, i valori di data e ora vengono visualizzati in base al formato predefinito utilizzato da Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in cui sono inclusi i millisecondi. Si noti che l'attivazione o la disattivazione di questa casella di controllo modifica il formato di visualizzazione delle colonne relative all'ora, ad esempio **StartTime** ed **EndTime**. Tuttavia, non vengono modificati i parametri del valore **DateTime** negli eventi del linguaggio o nelle RPC (Remote Procedure Call).  
 |**Mostra i valori nella colonna Durata in microsecondi**|Visualizza i valori in microsecondi nella colonna di dati **Durata** delle tracce. Per impostazione predefinita, i valori nella colonna **Durata** vengono visualizzati in millisecondi.  
-### <a name="tracing-options"></a>Le opzioni di traccia  
+### <a name="tracing-options"></a>Opzioni di traccia  
 |Elemento|Description
 |---|---
 |**Avvia traccia non appena viene stabilita una connessione**|La traccia viene avviata utilizzando il modello predefinito non appena viene stabilita una connessione.  
@@ -190,7 +188,7 @@ Usare la finestra di dialogo **Opzioni generali** per visualizzare o specificare
 |**Numero predefinito di thread di riproduzione**|Consente di specificare il numero di thread di riproduzione da utilizzare simultaneamente. Un numero elevato determina un maggior consumo di risorse durante la riproduzione, ma migliora la simultaneità della riproduzione.  
 |**Intervallo di attesa predefinito Health Monitor (sec)**|Consente di specificare l'intervallo di attesa in secondi per la riproduzione. Il valore predefinito è 3600 secondi (1 ora). Questa impostazione influisce sulla quantità di tempo durante la quale è consentita l'esecuzione di un thread prima che questo venga terminato da Health Monitor.  
 |**Intervallo di polling predefinito Health Monitor (sec)**|Consente di specificare l'intervallo di polling in secondi di Health Monitor durante la riproduzione. Il valore predefinito è 60 secondi. Questo valore consente di configurare la frequenza con cui Health Monitor esegue il polling di candidati per la terminazione.
-## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>Tabella di origine (Database motore di ottimizzazione guidata Seleziona tabella carico di lavoro)
+## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>Tabella di origine (Seleziona tabella carico di lavoro di Ottimizzazione guidata motore di database)
 Questa finestra di dialogo viene usata in Microsoft SQL Server Profiler e in Ottimizzazione guidata per selezionare tabelle.  
 - In Profiler usare la finestra di dialogo **Tabella di origine** per specificare una tabella di origine per una tabella di traccia. Si tratta di una tabella dalla quale viene caricata una traccia e il cui contenuto viene visualizzato o utilizzato per riprodurre la traccia.  
 - In Ottimizzazione guidata usare la finestra di dialogo **Seleziona tabella carico di lavoro** per selezionare una tabella di database contenente informazioni di traccia del profiler da usare come carico di lavoro per l'ottimizzazione o per visualizzare un'anteprima del contenuto della tabella prima di avviare l'analisi per l'ottimizzazione.  
@@ -217,11 +215,11 @@ Per visualizzare questa finestra utilizzare [!INCLUDE[ssSqlProfiler](../../inclu
 |---|---
 |**Server di riproduzione**|Consente di visualizzare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi per la riproduzione.  
 |**Cambia...**|Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a un altro server.  
-|**Salva nel file** |Consente di salvare i risultati di riproduzione in un file. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Consente di visualizzare la finestra di dialogo file standard, in cui è possibile specificare il percorso in cui salvare il file.  
-|**Salva nella tabella**|Consente di salvare i risultati di riproduzione in una tabella. In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verrà visualizzata la finestra di dialogo di selezione della tabella in cui è possibile specificare la posizione in cui salvare la tabella.  
+|**Salva nel file** |Consente di salvare i risultati di riproduzione in un file. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo dei file standard in cui è possibile specificare la posizione in cui salvare il file.  
+|**Salva nella tabella**|Consente di salvare i risultati di riproduzione in una tabella. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo di selezione della tabella in cui è possibile specificare la posizione in cui salvare la tabella.  
 |**Numero di thread di riproduzione**|Consente di specificare il numero di thread di riproduzione da utilizzare simultaneamente. Un numero elevato determina un maggior consumo di risorse durante la riproduzione, ma la riproduzione viene eseguita in modo più veloce e simultaneo.  
 |**Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**|Gli eventi vengono riprodotti in modo sequenziale. Utilizzare questa opzione per riprodurre una traccia a scopi di debug.  
-|**Riproduci gli eventi utilizzando più thread** |Gli eventi vengono riprodotti simultaneamente. Questa opzione offre una riproduzione più veloce rispetto alla riproduzione degli eventi sequenziale, ma non permette l'utilizzo a scopi di debug. Gli eventi vengono ordinati in base ai relativi identificatori di processo di sistema (SPID).  
+|**Riproduci gli eventi usando più thread** |Gli eventi vengono riprodotti simultaneamente. Questa opzione offre una riproduzione più veloce rispetto alla riproduzione degli eventi sequenziale, ma non permette l'utilizzo a scopi di debug. Gli eventi vengono ordinati in base ai relativi identificatori di processo di sistema (SPID).  
 |**Visualizza risultati di riproduzione**|Consente di visualizzare i risultati di riproduzione in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. 
 ### <a name="advanced-replay-options"></a>Opzioni avanzate di riproduzione
 La scheda **Opzioni avanzate di riproduzione** della finestra di dialogo **Configurazione riproduzione** consente di specificare la modalità di riproduzione di un file di traccia.  
@@ -243,8 +241,8 @@ Usare la finestra di dialogo **Trova** per eseguire la ricerca all'interno di un
  Per aprire questa finestra di dialogo in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], scegliere **Trova** dal menu **Modifica**.  
 |Elemento|Description
 |---|---
-|**Find what**|Immettere il testo che si desidera cercare. La ricerca individua tutte le stringhe contenenti la stringa specificata. Ad esempio, se si cerca "Completed", viene individuata la stringa "SQL:BatchCompleted." I caratteri jolly (*, ? e così via) non sono supportati.  
-|**Cerca nella colonna**|Fare clic su una colonna di dati per eseguire la ricerca oppure fare clic su  **\<tutte le colonne >** per la ricerca di tutte le colonne di dati nella traccia.  
+|**Trova**|Immettere il testo che si desidera cercare. La ricerca individua tutte le stringhe contenenti la stringa specificata. Ad esempio, se si cerca "Completed", viene individuata la stringa "SQL:BatchCompleted." I caratteri jolly (*, ? e così via) non sono supportati.  
+|**Cerca nella colonna**|Fare clic sulla colonna di dati in cui eseguire la ricerca o su **\<Tutte le colonne>** per eseguire la ricerca in tutte le colonne di dati presenti nella traccia.  
 |**Maiuscole/minuscole**|Consente di trovare una stringa di testo con le stesse lettere maiuscole e minuscole di quella specificata nella casella **Trova** . Deselezionare questa casella di controllo per trovare stringhe di testo nella traccia che corrispondono al testo specificato indipendentemente dai caratteri maiuscoli o minuscoli.  
 |**Parola intera**|Consente di limitare l'ambito della ricerca alle parole intere. Deselezionare la casella di controllo **Parola intera** per cercare un insieme di caratteri all'interno di una parola.  
 |**Trova successivo**|Consente di trovare l'esempio successivo dei caratteri specificati nella casella **Trova** .  

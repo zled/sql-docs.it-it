@@ -1,16 +1,14 @@
 ---
-title: KEY_NAME (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: KEY_NAME (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - KEY_NAME_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - KEY_NAME function
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db0ea5d34aae0bd3486bd6a143df187b9d5d7899
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9bc5361bf1d3e4ea8a584bd1fed7906bbd73d21b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,22 +43,22 @@ KEY_NAME ( ciphertext | key_guid )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *testo crittografato*  
- Testo crittografato dalla chiave simmetrica. *messaggio cifrato* è di tipo **varbinary (8000)**.  
+ *ciphertext*  
+ Testo crittografato dalla chiave simmetrica. *cyphertext* è di tipo **varbinary(8000)**.  
   
  *key_guid*  
  GUID della chiave simmetrica. *key_guid* è di tipo **uniqueidentifier**.  
   
 ## <a name="returned-types"></a>Tipi restituiti  
- **varchar (128)**  
+ **varchar(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] la visibilità dei metadati è limitata alle entità a sicurezza diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. Visualizzazione del nome di una chiave simmetrica mediante key_guid  
- Il **master** database contiene una chiave simmetrica denominata # # MS_ServiceMasterKey # #. Nell'esempio seguente il GUID di tale chiave viene recuperato dalla vista a gestione dinamica sys.symmetric_keys e viene assegnato a una variabile che viene quindi passata alla funzione KEY_NAME per illustrare come restituire il nome corrispondente al GUID.  
+ Il database **master** contiene una chiave simmetrica denominata ##MS_ServiceMasterKey##. Nell'esempio seguente il GUID di tale chiave viene recuperato dalla vista a gestione dinamica sys.symmetric_keys e viene assegnato a una variabile che viene quindi passata alla funzione KEY_NAME per illustrare come restituire il nome corrispondente al GUID.  
   
 ```  
 USE master;  
@@ -116,8 +113,8 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEYAUTOASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEYAUTOASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   

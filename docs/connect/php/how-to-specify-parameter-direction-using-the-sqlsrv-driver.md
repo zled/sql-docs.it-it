@@ -1,33 +1,32 @@
 ---
 title: 'Procedura: specificare la direzione del parametro usando il Driver SQLSRV | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: stored procedure support
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 692d1cd432a7d156a4bb9d8cc2c3bfcf57c02d6d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 048b2961d933787cbdd35a95f676e602c37ee9f9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Procedura: Specificare la direzione del parametro usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In questo argomento viene illustrato come usare il driver SQLSRV per specificare la direzione del parametro nella chiamata di una stored procedure. Si noti che la direzione del parametro viene specificata quando si crea un parametro di matrice (passaggio 3) che viene passato a [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
+In questo argomento viene illustrato come usare il driver SQLSRV per specificare la direzione del parametro nella chiamata di una stored procedure. La direzione del parametro viene specificato quando si costruisce una matrice di parametri (passaggio 3) che viene passata a [sqlsrv_query](../../connect/php/sqlsrv-query.md) oppure [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
 ### <a name="to-specify-parameter-direction"></a>Per specificare la direzione di un parametro  
   
@@ -38,7 +37,7 @@ In questo argomento viene illustrato come usare il driver SQLSRV per specificare
     ```  
   
     > [!NOTE]  
-    > È consigliabile pertanto chiamare le stored procedure usando la sintassi canonica. Per altre informazioni sulla sintassi canonica, vedere [Chiamata di una stored procedure](http://go.microsoft.com/fwlink/?linkid=119517).  
+    > È consigliabile pertanto chiamare le stored procedure usando la sintassi canonica. Per ulteriori informazioni sulla sintassi canonica, vedere [chiamare una Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
 2.  Inizializzare o aggiornare le variabili PHP che corrispondono ai segnaposto della query Transact-SQL. Ad esempio, il codice seguente consente di inizializzare i due parametri della stored procedure UpdateVacationHours:  
   
@@ -88,6 +87,7 @@ In questo argomento viene illustrato come usare il driver SQLSRV per specificare
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedura: Recuperare i parametri di output mediante il driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[Procedura: Recuperare i parametri di output mediante il driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

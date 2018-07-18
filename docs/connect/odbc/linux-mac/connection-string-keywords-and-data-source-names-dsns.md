@@ -1,32 +1,28 @@
 ---
 title: Connessione a SQL Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data source names
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: b6ad6278da1a3e325356058df51238dc34018bf0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+manager: craigg
+ms.openlocfilehash: 8f49c0105f96f446c627f5ec1b5f47ee62b28558
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-sql-server"></a>Connessione a SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +63,7 @@ In alternativa, è possibile aggiungere le informazioni di DSN in un file di mod
  - **Odbcinst -i -f -s** *template_file*  
  
 È possibile verificare che il driver funzioni usando `isql` per testare la connessione oppure è possibile utilizzare questo comando:
- - **master.INFORMATION_SCHEMA.TABLES BCP out file OutFile.dat -S <server> - U <name> - P<password>**  
+ - **master.INFORMATION_SCHEMA.TABLES BCP out OUTFILE -S <server> - U <name> - P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Uso di Secure Sockets Layer (SSL)  
 È possibile utilizzare Secure Sockets Layer (SSL) per crittografare le connessioni a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. SSL protegge [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] nomi utente e password in rete. SSL verifica inoltre l'identità del server per la protezione dagli attacchi man-in-the-middle (MITM).  
@@ -78,7 +74,7 @@ Per ulteriori informazioni, vedere [crittografia delle connessioni a SQL Server]
 
 Indipendentemente dalle impostazioni di **Encrypt** e **TrustServerCertificate**, le credenziali di accesso al server (nome utente e password) vengono sempre crittografate. La tabella seguente mostra l'effetto delle impostazioni di **Encrypt** e **TrustServerCertificate** .  
 
-||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
+||**TrustServerCertificate=no**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa non vengono crittografati.|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa non vengono crittografati.|  
 |**Crittografare = Sì**|Il certificato del server viene verificato.<br /><br />I dati inviati dal client al server e viceversa vengono crittografati.<br /><br />Il nome (o l'indirizzo IP) in un nome comune soggetto (CN) o nome alternativo soggetto (SAN) in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] certificato SSL deve corrispondere esattamente il server name (o indirizzo IP) specificato nella stringa di connessione.|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa vengono crittografati.|  
@@ -95,9 +91,9 @@ SSL usa la libreria OpenSSL. La tabella seguente mostra le versioni minime suppo
 |------------|---------------------------|--------------------------------------------|
 |Debian 9|1.1.0|/etc/ssl/certs|
 |Debian 8.71 |1.0.1|/etc/ssl/certs|
-|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
-|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
-|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|macOS 10.13|1.0.2|/usr/local/etc/OpenSSL/certs|
+|macOS 10.12|1.0.2|/usr/local/etc/OpenSSL/certs|
+|OS X 10.11|1.0.2|/usr/local/etc/OpenSSL/certs|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
 |SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|

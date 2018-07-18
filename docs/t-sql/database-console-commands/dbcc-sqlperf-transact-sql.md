@@ -1,16 +1,13 @@
 ---
-title: DBCC SQLPERF (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DBCC SQLPERF (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/07/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQLPERF
@@ -25,23 +22,22 @@ helpviewer_keywords:
 - space [SQL Server], transaction logs
 - DBCC SQLPERF statement
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 43
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: cd615cd56860138d2e9afa7e2d7090ed27ba8e3a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4f8229b7765655bd75c2e0bfa2dc804c56a6fffa
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Fornisce statistiche relative all'utilizzo dello spazio nel log delle transazioni per tutti i database. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può essere utilizzato per reimpostare le statistiche di latch e attese.
+Fornisce statistiche relative all'utilizzo dello spazio nel log delle transazioni per tutti i database. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può anche essere usata per reimpostare le statistiche relative a latch e attese.
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([anteprima in alcune aree](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([anteprima in alcune aree](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,16 +55,16 @@ DBCC SQLPERF
   
 ## <a name="arguments"></a>Argomenti  
 LOGSPACE  
-Restituisce la dimensione corrente del log delle transazioni e la percentuale di spazio del log utilizzata per ogni database. Utilizzare queste informazioni per monitorare la quantità di spazio utilizzato in un log delle transazioni.
+Restituisce la dimensione corrente del log delle transazioni e la percentuale di spazio del log utilizzata per ogni database. Usare queste informazioni per monitorare la quantità di spazio usato in un log delle transazioni.
 
 > [!IMPORTANT]
-> Per ulteriori informazioni sulle informazioni sull'utilizzo dello spazio per il log delle transazioni a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], consultare il [osservazioni](#Remarks) in questo argomento.
+> Per altre informazioni sui dati di uso dello spazio per il log delle transazioni a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vedere la sezione [Osservazioni](#Remarks) in questo argomento.
   
 **"sys.dm_os_latch_stats"**, CLEAR  
-Reimposta le statistiche relative ai latch. Per ulteriori informazioni, vedere [Sys.dm os_latch_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Questa opzione non è disponibile in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+Reimposta le statistiche relative ai latch. Per altre informazioni, vedere [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Questa opzione non è disponibile in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 **"sys.dm_os_wait_stats"**, CLEAR  
-Reimposta le statistiche relative alle attese. Per ulteriori informazioni, vedere [Sys.dm os_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). Questa opzione non è disponibile in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+Reimposta le statistiche relative alle attese. Per altre informazioni, vedere [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). Questa opzione non è disponibile in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 WITH NO_INFOMSGS  
 Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
@@ -78,20 +74,20 @@ Evita la visualizzazione di tutti i messaggi informativi con livello di gravità
   
 |Nome colonna|Definizione|  
 |---|---|
-|**Nome database**|Nome del database a cui si riferiscono le statistiche del log visualizzate.|  
-|**Dimensioni log (MB)**|Dimensione corrente allocata al log. Questo valore è sempre inferiore rispetto alla quantità di spazio allocata inizialmente per il log in quanto [!INCLUDE[ssDE](../../includes/ssde-md.md)] riserva una piccola quantità di spazio su disco per informazioni di intestazione interne.|  
-|**Lo spazio del log utilizzato (%)**|Percentuale del file di log attualmente in uso per archiviare le informazioni di log delle transazioni.|  
+|**Database Name**|Nome del database a cui si riferiscono le statistiche del log visualizzate.|  
+|**Log Size (MB)**|Dimensione corrente allocata al log. Questo valore è sempre inferiore rispetto alla quantità di spazio allocata inizialmente per il log in quanto [!INCLUDE[ssDE](../../includes/ssde-md.md)] riserva una piccola quantità di spazio su disco per informazioni di intestazione interne.|  
+|**Log Space Used (%)**|Percentuale del file di log attualmente usata per archiviare informazioni del log delle transazioni.|  
 |**Stato**|Stato del file di log. Sempre 0.|  
   
 ## <a name="Remarks"></a> Osservazioni  
-A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], utilizzare il [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV anziché `DBCC SQLPERF(LOGSPACE)`, per restituire informazioni sull'utilizzo dello spazio per il log delle transazioni per ogni database.    
+A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usare la DMV [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) anziché `DBCC SQLPERF(LOGSPACE)` per restituire informazioni sull'uso dello spazio per il log transazioni di ogni database.    
  
-Nel log delle transazioni viene registrata ogni transazione eseguita in un database. Per ulteriori informazioni vedere [Log delle transazioni &#40; SQL Server &#41; ](../../relational-databases/logs/the-transaction-log-sql-server.md) e [architettura di Log delle transazioni di SQL Server e Guida al Management](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
+Nel log delle transazioni viene registrata ogni transazione eseguita in un database. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) e [Guida sull'architettura e gestione del log delle transazioni di SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   
 ## <a name="permissions"></a>Autorizzazioni  
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguire `DBCC SQLPERF(LOGSPACE)` richiede `VIEW SERVER STATE` autorizzazione nel server. Per reimpostare le statistiche di latch e attese richiede `ALTER SERVER STATE` autorizzazione nel server.
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire `DBCC SQLPERF(LOGSPACE)` è richiesta l'autorizzazione `VIEW SERVER STATE` nel server. Per reimpostare le statistiche relative a latch e attese è richiesta l'autorizzazione `ALTER SERVER STATE` per il server.
   
-In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede livelli Premium di `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Standard e Basic richiede il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] account amministratore. Le statistiche di reimpostazione di latch e attese non sono supportate.
+Nei livelli Premium e Business Critical di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli Standard, Basic e Utilizzo generico del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è richiesto l'account amministratore del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Le statistiche di reimpostazione di latch e attese non sono supportate.
   
 ## <a name="examples"></a>Esempi  
   

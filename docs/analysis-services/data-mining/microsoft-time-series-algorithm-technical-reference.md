@@ -1,48 +1,23 @@
 ---
 title: Riferimento tecnico per algoritmo Microsoft Time Series | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- ARTXP
-- HISTORICAL_MODEL_GAP parameter
-- AUTO_DETECT_PERIODICITY parameter
-- time series algorithms [Analysis Services]
-- ARIMA
-- INSTABILITY_SENSITIVITY parameter
-- PERIODICITY_HINT parameter
-- MAXIMUM_SERIES_VALUE parameter
-- time series [Analysis Services]
-- MINIMUM_SUPPORT parameter
-- HISTORIC_MODEL_COUNT parameter
-- FORECAST_METHOD parameter
-- MISSING_VALUE_SUBSTITUTION parameter
-- MINIMUM_SERIES_VALUE parameter
-- COMPLEXITY_PENALTY parameter
-- PREDICTION_SMOOTHING parameter
-ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5d4634a8d926ec62d05317976f4e1bf1a459f0cd
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Time Series
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series sono inclusi due algoritmi distinti per l'analisi delle serie temporali:  
+  Nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series sono inclusi due algoritmi distinti per l'analisi delle serie temporali:  
   
 -   L'algoritmo ARTXP, introdotto in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], è ottimizzato per stimare il successivo valore probabile in una serie.  
   
@@ -53,7 +28,7 @@ Nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series s
  In questo argomento sono incluse informazioni aggiuntive sulla modalità di implementazione di ciascun algoritmo e su come personalizzare un algoritmo impostando parametri per ottimizzare i risultati di analisi e stima.  
   
 ## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Implementazione dell'algoritmo Microsoft Time Series  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research ha sviluppato l'algoritmo ARTXP originale, usato in SQL Server 2005, basandone l'implementazione sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. Pertanto, l'algoritmo ARTXP può essere descritto come modello di albero autoregressivo per la rappresentazione di una serie temporale periodica. Questo algoritmo consente di correlare un numero variabile di elementi precedenti a ciascun elemento corrente stimato. Il nome ARTXP (Autoregressive Tree with Cross Prediction, albero autoregressivo a stima incrociata) deriva dal fatto che il metodo dell'albero autoregressivo (un algoritmo ART) viene applicato a più stati precedenti non noti. Per una descrizione dettagliata dell'algoritmo ARTXP, vedere l'articolo relativo ai [modelli di albero autoregressivi per l'analisi delle serie temporali](http://go.microsoft.com/fwlink/?LinkId=45966).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]Research ha sviluppato l'algoritmo ARTXP originale che è stato utilizzato in SQL Server 2005, basandone l'implementazione sul [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Decision Trees. Pertanto, l'algoritmo ARTXP può essere descritto come modello di albero autoregressivo per la rappresentazione di una serie temporale periodica. Questo algoritmo consente di correlare un numero variabile di elementi precedenti a ciascun elemento corrente stimato. Il nome ARTXP (Autoregressive Tree with Cross Prediction, albero autoregressivo a stima incrociata) deriva dal fatto che il metodo dell'albero autoregressivo (un algoritmo ART) viene applicato a più stati precedenti non noti. Per una descrizione dettagliata dell'algoritmo ARTXP, vedere l'articolo relativo ai [modelli di albero autoregressivi per l'analisi delle serie temporali](http://go.microsoft.com/fwlink/?LinkId=45966).  
   
  L'algoritmo ARIMA è stato aggiunto all'algoritmo Microsoft Time Series in SQL Server 2008 per migliorare l'accuratezza della stima a lungo termine. Si tratta di un'implementazione del processo di calcolo delle medie mobili integrate autoregressive descritto da Box e Jenkins. La metodologia ARIMA consente di determinare le dipendenze in osservazioni effettuate in sequenza nel tempo e può incorporare nel modello shock casuali. Il metodo ARIMA supporta inoltre la stagionalità moltiplicativa. Per ulteriori informazioni sull'algoritmo ARIMA, si consiglia la lettura degli studi originari di Box e Jenkins. Le informazioni fornite in questa sezione sono orientate esclusivamente a una descrizione dell'implementazione della metodologia ARIMA nell'algoritmo Microsoft Time Series.  
   
@@ -176,6 +151,6 @@ Nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series s
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Tempo Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli Time Series &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli Time Series & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

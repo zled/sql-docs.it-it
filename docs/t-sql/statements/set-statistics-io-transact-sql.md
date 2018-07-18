@@ -1,16 +1,14 @@
 ---
 title: SET STATISTICS IO (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET_STATISTICS_IO_TSQL
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - SET STATISTICS IO statement
 - statistical information [SQL Server], disk activity
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3b2aad11610a23c3686e279daa60c57bf7c8154f
-ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.openlocfilehash: d314a95d8955639e67da350f5fa9c67d581dde5b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ ms.lasthandoff: 01/23/2018
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando l'opzione STATISTICS IO è impostata su ON, vengono visualizzate informazioni statistiche. Quando è impostata su OFF, le informazioni non vengono visualizzate.  
   
  Quando l'opzione viene impostata su ON, tutte le successive istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] restituiscono le informazioni statistiche fino a quando l'opzione non viene reimpostata su OFF.  
@@ -63,13 +60,13 @@ SET STATISTICS IO { ON | OFF }
 |Elemento di output|Significato|  
 |-----------------|-------------|  
 |**Tabella**|Nome della tabella.|  
-|**Conteggio analisi**|Numero di ricerche/analisi avviate dopo aver raggiunto il livello foglia in qualsiasi direzione per recuperare tutti i valori in modo da costruire il set di dati finale per l'output.<br /><br /> Il conteggio analisi è 0 se l'indice utilizzato è univoco o cluster in una chiave primaria e si cerca un unico valore. Ad esempio `WHERE Primary_Key_Column = <value>`.<br /><br /> Conteggio analisi è 1 quando cerca un valore utilizzando un indice cluster non univoco, definito in una colonna chiave non primaria. Questa operazione viene effettuata per verificare valori duplicati per il valore di chiave che si sta cercando. Ad esempio `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Il conteggio analisi è N quando N è il numero di ricerche/analisi differenti avviate verso sinistra o destra nel livello foglia dopo aver individuato un valore di chiave utilizzando la chiave di indice.|  
-|**letture logiche**|Numero di pagine lette dalla cache dei dati.|  
-|**letture fisiche**|Numero di pagine lette dal disco.|  
-|**letture read-ahead**|Numero di pagine inserite nella cache per la query.|  
-|**letture logiche LOB**|Numero di **testo**, **ntext**, **immagine**, o un tipo di valori di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**) pagine lette dalla cache dei dati.|  
-|**letture fisiche LOB**|Numero di **testo**, **ntext**, **immagine** o valori di grandi dimensioni tipo pagine lette dal disco.|  
-|**letture read-ahead LOB**|Numero di **testo**, **ntext**, **immagine** o valori di grandi dimensioni digitare pagine inserite nella cache per la query.|  
+|**Scan count**|Numero di ricerche/analisi avviate dopo aver raggiunto il livello foglia in qualsiasi direzione per recuperare tutti i valori in modo da costruire il set di dati finale per l'output.<br /><br /> Il conteggio analisi è 0 se l'indice utilizzato è univoco o cluster in una chiave primaria e si cerca un unico valore. Ad esempio `WHERE Primary_Key_Column = <value>`.<br /><br /> Il conteggio analisi è 1 quando si cerca un valore usando un indice cluster non univoco definito in una colonna chiave non primaria. Questa operazione viene effettuata per verificare valori duplicati per il valore di chiave che si sta cercando. Ad esempio `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Il conteggio analisi è N quando N è il numero di ricerche/analisi differenti avviate verso sinistra o destra nel livello foglia dopo aver individuato un valore di chiave utilizzando la chiave di indice.|  
+|**logical reads**|Numero di pagine lette dalla cache dei dati.|  
+|**physical reads**|Numero di pagine lette dal disco.|  
+|**read-ahead reads**|Numero di pagine inserite nella cache per la query.|  
+|**lob logical reads**|Numero di pagine lette dalla cache dei dati di tipo valore **text**, **ntext**, **image** o di grandi dimensioni (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**).|  
+|**lob physical reads**|Numero di pagine lette dal disco di tipo valore **text**, **ntext**, **image** o di grandi dimensioni.|  
+|**lob read-ahead reads**|Numero di pagine inserite nella cache per la query di tipo valore **text**, **ntext**, **image** o di grandi dimensioni.|  
   
  L'opzione SET STATISTICS IO viene impostata in fase di esecuzione, non in fase di analisi.  
   

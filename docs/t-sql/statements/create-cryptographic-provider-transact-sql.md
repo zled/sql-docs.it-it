@@ -1,16 +1,14 @@
 ---
-title: CREARE il PROVIDER di crittografia (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_CRYPTOGRAPHIC_TSQL
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - CREATE CRYPTOGRAPHIC PROVIDER statement
 - 33032 (Database Engine error)
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bedc5441c8119101a209de42358b38d20c288b8d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6aae0136e9daa4c6b39e613cc5b0455308c907e2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,12 +56,12 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  Nome del provider EKM.  
   
  *path_of_DLL*  
- Percorso del file dll che implementa l'interfaccia EKM di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si utilizza il **SQL Server Connector per Microsoft Azure Key Vault** il percorso predefinito è **' C:\Program Files\Microsoft SQL Server Connector per Microsoft Azure chiave Vault\Microsoft.AzureKeyVaultService.EKM.dll '**.  
+ Percorso del file dll che implementa l'interfaccia EKM di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si usa **Connettore SQL Server per Microsoft Azure Key Vault**, il percorso predefinito è **"C:\Programmi\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll"**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Tutte le chiavi create da un provider faranno riferimento al provider attraverso il GUID. Il GUID viene mantenuto per tutte le versioni della DLL.  
   
- Alla DLL che implementa l'interfaccia SQLEKM deve essere applicata una firma digitale usando qualsiasi certificato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificherà la firma. Ciò include la catena di certificati, che deve avere installato nella radice di **autorità di certificazione radice attendibili** percorso in un sistema di Windows. Se la firma non viene verificata correttamente, l'istruzione CREATE CRYPTOGRAPHIC PROVIDER avrà esito negativo. Per ulteriori informazioni sui certificati e le catene di certificati, vedere [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+ Alla DLL che implementa l'interfaccia SQLEKM deve essere applicata una firma digitale usando qualsiasi certificato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificherà la firma. Include la catena di certificati, la cui radice deve essere installata nel percorso **Autorità di certificazione radice attendibili** in un sistema Windows. Se la firma non viene verificata correttamente, l'istruzione CREATE CRYPTOGRAPHIC PROVIDER avrà esito negativo. Per altre informazioni sui certificati e sulle catene di certificati, vedere [Certificati SQL Server e chiavi simmetriche](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
  Quando la DLL di un provider EKM non implementa tutti i metodi necessari, CREATE CRYPTOGRAPHIC PROVIDER può restituire l'errore 33085:  
   
@@ -74,11 +71,11 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'autorizzazione CONTROL SERVER o l'appartenenza di **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione CONTROL SERVER o l'appartenenza al ruolo predefinito del server **sysadmin**.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente crea un provider di crittografia denominato `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un file con estensione dll. Il file dll è denominato `c:\SecurityProvider\SecurityProvider_v1.dll` ed è installato nel server. Il certificato del provider deve prima essere installato nel server.  
+ Nell'esempio seguente viene creato un provider del servizio di crittografia denominato `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un file DLL. Il file dll è denominato `c:\SecurityProvider\SecurityProvider_v1.dll` ed è installato nel server. Il certificato del provider deve prima essere installato nel server.  
   
 ```  
 -- Install the provider  

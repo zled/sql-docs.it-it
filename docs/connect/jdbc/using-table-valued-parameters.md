@@ -1,27 +1,24 @@
 ---
 title: Utilizzo di parametri con valori di tabella | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: e68713965ff5c985244e992bed5f3dd0bfb8eef7
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 356e81dc6faf25e12c4edd51d1927ac53c5b3a38
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-table-valued-parameters"></a>Utilizzo di parametri con valori di tabella
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,7 +38,7 @@ ms.lasthandoff: 11/18/2017
 |Risorsa|Description|  
 |--------------|-----------------|  
 |[Parametri con valori di tabella (motore di Database)](http://go.microsoft.com/fwlink/?LinkId=98363) nella documentazione Online di SQL Server|Viene descritto come creare e utilizzare i parametri con valori di tabella|  
-|[Tipi di tabella definito dall'utente](http://go.microsoft.com/fwlink/?LinkId=98364) nella documentazione Online di SQL Server|Vengono descritti i tipi di tabella definito dall'utente vengono utilizzati per dichiarare i parametri con valori di tabella|  
+|[Tipi di tabella definiti dall'utente](http://go.microsoft.com/fwlink/?LinkId=98364) nella documentazione Online di SQL Server|Vengono descritti i tipi di tabella definito dall'utente vengono utilizzati per dichiarare i parametri con valori di tabella|  
 |Il [motore di Database di Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=120507) sezione di CodePlex|Sono inclusi esempi che illustrano come utilizzare la funzionalità e le funzionalità di SQL Server|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passare più righe nelle versioni precedenti di SQL Server  

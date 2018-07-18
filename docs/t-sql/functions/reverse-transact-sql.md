@@ -1,16 +1,14 @@
 ---
 title: REVERSE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - REVERSE_TSQL
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: c14fb9f1e0f6e7b3f0cb224036af37e6a7b19e23
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 77988e56f8e23e71225086fb3419de6b4f76e637
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,13 +46,13 @@ REVERSE ( string_expression )
   
 ## <a name="arguments"></a>Argomenti  
  *string_expression*  
- *string_expression* è un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di un tipo di dati string o binary. *string_expression* può essere una costante, variabile o colonna di tipo carattere o binario.  
+ *string_expression* è un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) con tipo di dati stringa o binario. *string_expression* può essere una costante, una variabile o una colonna di dati di tipo carattere o binario.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **varchar** o **nvarchar**  
   
-## <a name="remarks"></a>Osservazioni  
- *string_expression* deve essere di un tipo di dati che è implicitamente convertibile in **varchar**. In caso contrario, utilizzare [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) per convertire esplicitamente *string_expression*.  
+## <a name="remarks"></a>Remarks  
+ *string_expression* deve essere di un tipo di dati che può essere convertito in modo implicito in **varchar**. In caso contrario usare [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) per convertire in modo esplicito *string_expression*.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
  Quando si utilizzano le regole di confronto SC, la funzione REVERSE non invertirà l'ordine di due metà di una coppia di surrogati.  
@@ -92,15 +90,15 @@ SELECT REVERSE(@myvar) AS Reversed ;
 GO  
 ```  
   
- Nell'esempio seguente viene eseguita una conversione implicita da un **int** del tipo di dati in **varchar** tipo di dati e quindi inverte il risultato.  
+ Nell'esempio seguente viene eseguita una conversione implicita da un tipo di dati **int** in un tipo di dati **varchar**, quindi viene restituito il risultato in ordine inverso.  
   
 ```  
 SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'esempio seguente restituisce i nomi di tutti i database e i nomi con i caratteri invertito.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L'esempio seguente restituisce i nomi di tutti i database e i nomi con i caratteri in ordine inverso.  
   
 ```  
 SELECT name, REVERSE(name) FROM sys.databases;  
@@ -117,9 +115,9 @@ GO
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

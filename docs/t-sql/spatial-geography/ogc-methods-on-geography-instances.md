@@ -1,35 +1,32 @@
 ---
-title: Metodi OGC sulle istanze di geografia | Documenti Microsoft
-ms.custom: 
+title: Metodi OGC sulle istanze di geografia | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a30ef8c87eaaf31891ebfcbc15405e53da09a4d9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9e17e87ab990a1beb884516b3adc6ce9f6a95f2c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ogc-methods-on-geography-instances"></a>Metodi OGC sulle istanze di geografia
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta i metodi Open Geospatial Consortium (OGC) per **geography** istanze.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati i metodi OGC (Open Geospatial Consortium) sulle istanze **geography**.  
   
  Per ulteriori informazioni sulle specifiche OGC, vedere le risorse seguenti:  
   
@@ -37,7 +34,7 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [STArea](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
@@ -47,9 +44,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STBuffer](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)  
   
--   [STCurveN &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/stcurven-geography-data-type.md)  
+-   [STCurveN &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stcurven-geography-data-type.md)  
   
--   [STCurveToLine &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/stcurvetoline-geography-data-type.md)  
+-   [STCurveToLine &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stcurvetoline-geography-data-type.md)  
   
 -   [STDifference](../../t-sql/spatial-geography/stdifference-geography-data-type.md)  
   
@@ -97,7 +94,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi estesi sulle istanze di geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Metodi di geografia statici OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
+ [Metodi geography statici OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
  [Metodi geography statici estesi](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

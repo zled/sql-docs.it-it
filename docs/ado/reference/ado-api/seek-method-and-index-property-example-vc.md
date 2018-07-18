@@ -1,33 +1,30 @@
 ---
-title: "Metodo Seek e esempio di proprietà indice (VC + +) | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Metodo Seek e esempio di proprietà indice (VC + +) | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Seek method [ADO], VC++ example
 - index property [ADO]
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a69c31406aa87ac0dc79d7b44a0f471bf7c8c392
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4f2561dfb1d7c934f909f894f4227b538232a8e3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Metodo Seek e esempio di proprietà indice (VC + +)
 Questo esempio viene utilizzato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [Seek](../../../ado/reference/ado-api/seek-method.md) (metodo) e [indice](../../../ado/reference/ado-api/index-property.md) proprietà in combinazione con un determinato ***ID dipendente***per individuare il nome del dipendente nel ***dipendenti*** tabella del database Nwind.  

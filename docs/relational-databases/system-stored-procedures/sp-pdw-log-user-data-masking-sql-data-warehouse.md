@@ -1,30 +1,28 @@
 ---
 title: sp_pdw_log_user_data_masking (SQL Data Warehouse) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-data-warehouse
-ms.tgt_pltfrm: 
+ms.technology: data-warehouse
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+author: ronortloff
+ms.author: rortloff
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e401596add887d6bfc3f7fc7bd6b5255128b251c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 6b158d6c0ea65159d6e310512ee45abb4916a0e7
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,9 +30,9 @@ ms.lasthandoff: 02/03/2018
   Utilizzare **sp_pdw_log_user_data_masking** per abilitare la maschera dati utente [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività. La maschera dati utente interessa le istruzioni in tutti i database nel dispositivo.  
   
 > [!IMPORTANT]  
->  Il [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività interessati **sp_pdw_log_user_data_masking** sono determinati [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività. **sp_pdw_log_user_data_masking** non influisce sul log delle transazioni di database, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log degli errori.  
+>  Il [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività interessati **sp_pdw_log_user_data_masking** sono determinati [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività. **sp_pdw_log_user_data_masking** non influisce sui registri delle transazioni del database o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log degli errori.  
   
- **Sfondo:** nella configurazione predefinita [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività contengono completo [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni e in alcuni casi può includere i dati utente contenuti nelle operazioni, ad esempio **inserire**, **Aggiornamento**, e **selezionare** istruzioni. In caso di un problema nel dispositivo, in tal modo l'analisi delle condizioni che ha causato il problema senza la necessità di riprodurre il problema. Per impedire che i dati utente scritti [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività, i clienti possono scegliere di attivare il mascheramento dei dati utente tramite questa stored procedure. Le istruzioni verranno ancora essere scritti [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività, ma tutti i valori letterali nelle istruzioni contenenti dati utente verranno nascosta; sostituita con alcuni valori di costante predefinite.  
+ **Sfondo:** nella configurazione predefinita [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività contengono completo [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni e in alcuni casi può includere i dati utente contenuti nelle operazioni, ad esempio **inserire**,  **AGGIORNAMENTO**, e **selezionare** istruzioni. In caso di un problema nel dispositivo, in tal modo l'analisi delle condizioni che ha causato il problema senza la necessità di riprodurre il problema. Per impedire che i dati utente scritti [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività, i clienti possono scegliere di attivare il mascheramento dei dati utente tramite questa stored procedure. Le istruzioni verranno ancora essere scritti [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività, ma tutti i valori letterali nelle istruzioni contenenti dati utente verranno nascosta; sostituita con alcuni valori di costante predefinite.  
   
  Quando transparent data encryption è abilitato nel dispositivo, mascheramento dei dati utente in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività viene automaticamente attivata.  
   
@@ -47,8 +45,8 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [ **@masking_mode=** ] *masking_mode*  
- Determina se sono abilitati transparent data encryption log utente maschera dati. *masking_mode* è **int**, e può essere uno dei valori seguenti:  
+ [  **@masking_mode=** ] *masking_mode*  
+ Determina se sono abilitati transparent data encryption log utente maschera dati. *masking_mode* viene **int**, e può essere uno dei valori seguenti:  
   
 -   0 = disabilitato, i dati vengono visualizzati nell'utente il [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività.  
   
@@ -82,7 +80,7 @@ EXEC sp_pdw_log_user_data_masking 1;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_pdw_database_encryption &#40; SQL Data Warehouse &#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+ [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   

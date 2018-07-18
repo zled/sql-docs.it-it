@@ -1,16 +1,14 @@
 ---
-title: La funzione DROP (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DROP FUNCTION (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_FUNCTION_TSQL
@@ -24,23 +22,23 @@ helpviewer_keywords:
 - dropping user-defined functions
 - deleting user-defined functions
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c0768b2a24a939bc2e646fb4cc7173762eae7679
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 81fd6b618a3c266e7c0aa75f95f6013d5f539860
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  Rimuove dal database corrente una o più funzioni definite dall'utente. Funzioni definite dall'utente vengono create utilizzando [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) e modificati tramite [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md).  
+  Rimuove dal database corrente una o più funzioni definite dall'utente. Le funzioni definite dall'utente vengono create usando l'istruzione [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) e modificate usando l'istruzione [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md).  
   
- La funzione DROP supporta funzioni compilate in modo nativo e scalari definite dall'utente. Per ulteriori informazioni, vedere [funzioni scalari definite dall'utente per OLTP In memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
+ La funzione DROP supporta le funzioni scalari definite dall'utente e compilate in modo nativo. Per altre informazioni, vedere [Funzioni scalari definite dall'utente per OLTP in memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,27 +60,27 @@ DROP FUNCTION [ schema_name. ] function_name
    
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*    
- Elimina in modo condizionale la funzione solo se esiste già. Disponibile a partire da [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016 e in [!INCLUDE[sssds_md](../../includes/sssds_md.md)].
+ *IF EXISTS*    
+ Rimuove in modo condizionale la funzione solo se esiste già. Disponibile a partire da [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016 e [!INCLUDE[sssds_md](../../includes/sssds_md.md)].
   
  *schema_name*  
  Nome dello schema a cui appartiene la funzione definita dall'utente.  
   
- *nome_funzione*  
+ *function_name*  
  Nome della funzione o delle funzioni definite dall'utente che si desidera rimuovere. Il nome dello schema è facoltativo. Non è possibile specificare il nome del server e il nome del database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  DROP FUNCTION ha esito negativo se nel database esistono funzioni o viste [!INCLUDE[tsql](../../includes/tsql-md.md)] che fanno riferimento a questa funzione e sono state create con l'opzione SCHEMABINDING oppure se esistono colonne calcolate, vincoli CHECK o vincoli DEFAULT che fanno riferimento a questa funzione.  
   
  DROP FUNCTION ha esito negativo se esistono colonne calcolate che fanno riferimento a questa funzione e sono state indicizzate.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire l'istruzione DROP FUNCTION, è necessario disporre almeno dell'autorizzazione ALTER per lo schema a cui la funzione appartiene oppure dell'autorizzazione CONTROL per la funzione.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-dropping-a-function"></a>A. Eliminazione di una funzione  
- Nell'esempio seguente viene eliminato il `fn_SalesByStore` funzione definita dall'utente dal `Sales` schema il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database di esempio. Per creare questa funzione, vedere l'esempio B in [CREATE FUNCTION &#40; Transact-SQL &#41; ](../../t-sql/statements/create-function-transact-sql.md).  
+ L'esempio seguente elimina la funzione definita dall'utente `fn_SalesByStore` dallo schema `Sales` nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Per creare questa funzione, vedere l'esempio B in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  
@@ -91,9 +89,9 @@ DROP FUNCTION Sales.fn_SalesByStore;
 ## <a name="see-also"></a>Vedere anche  
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
- [Object_id &#40; Transact-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [Sys. Parameters &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

@@ -1,32 +1,32 @@
 ---
 title: sp_password (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_password
 - sp_password_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_password
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_password
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b461f601e94756d1406da13f1da99f8b1df50198
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 186384ed3dc9ec22264c4cbb184f9369c3677af3
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/27/2017
   Aggiunge o modifica una password per un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilizzare [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Uso [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) invece.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,26 +49,26 @@ sp_password [ [ @old = ] 'old_password' , ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@old=** ] **'***old_password***'**  
- Vecchia password. *old_password* è **sysname**, con un valore predefinito è NULL.  
+ Vecchia password. *old_password* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@new=** ] **'***new_password***'**  
- Nuova password. *new_password* è **sysname**, non prevede alcun valore predefinito. *old_password* deve essere specificato se non si utilizzano parametri denominati.  
+ Nuova password. *new_password* viene **sysname**, non prevede alcun valore predefinito. *old_password* deve essere specificato se non si utilizzano parametri denominati.  
   
 > [!IMPORTANT]  
 >  Non utilizzare una password NULL. Usare una password complessa. Per altre informazioni, vedere [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
- [  **@loginame=** ] **'***accesso***'**  
- Nome dell'account di accesso interessato dalla modifica della password. *account di accesso* è **sysname**, con un valore predefinito è NULL. *account di accesso* deve esistere e può essere specificato solo dai membri del **sysadmin** o **securityadmin** ruoli predefiniti del server.  
+ [  **@loginame=** ] **'***account di accesso***'**  
+ Nome dell'account di accesso interessato dalla modifica della password. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve esistere già e può essere specificato solo dai membri del **sysadmin** o **securityadmin** predefiniti del server.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_password** chiama ALTER LOGIN. che supporta opzioni aggiuntive. Per informazioni sulla modifica delle password, vedere [ALTER LOGIN &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-login-transact-sql.md).  
+ **sp_password** chiama ALTER LOGIN. che supporta opzioni aggiuntive. Per informazioni sulla modifica delle password, vedere [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
  **sp_password** non può essere eseguita all'interno di una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY LOGIN. È inoltre richiesta l'autorizzazione CONTROL SERVER per reimpostare una password senza specificare la vecchia password oppure se l'account di accesso da modificare dispone dell'autorizzazione CONTROL SERVER.  
   
  Un'entità può modificare la propria password.  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   

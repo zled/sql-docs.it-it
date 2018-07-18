@@ -1,16 +1,13 @@
 ---
-title: "Gravità degli errori del motore di database | Microsoft Docs"
-ms.custom: 
+title: Gravità degli errori del motore di database | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined error messages [SQL Server]
 - severity levels [SQL Server]
@@ -18,19 +15,19 @@ helpviewer_keywords:
 - errors [SQL Server], severity
 - TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: "21"
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 21
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a399c817aef67a59ef9a4e7edff00391a9173b88
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7d5c5a6ddee7f8d5e9b734651fa7722df56349db
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="database-engine-error-severities"></a>Gravità degli errori del Motore di database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Negli errori generati da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] la gravità dell'errore indica il tipo di problema rilevato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Negli errori generati da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], la gravità dell'errore indica il tipo di problema rilevato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="levels-of-severity"></a>Livelli di gravità  
  Nella tabella seguente sono elencati e descritti i livelli di gravità degli errori generati da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

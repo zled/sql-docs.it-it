@@ -1,28 +1,19 @@
 ---
 title: 'Lezione 2: Aggiungere dati | Documenti Microsoft'
-ms.custom: 
-ms.date: 06/19/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-applies_to: SQL Server 2016
-ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
-caps.latest.revision: "33"
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 05a93e001f4b5deb7be0aa3367ad74278e90d70a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4a7c3756e6c8c35472b760d9fa3100b4f40ecfdc
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-2-add-data"></a>Lezione 2: Aggiungere dati
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +24,7 @@ Utilizzando l'Importazione guidata tabella è possibile importare dati da divers
   
 Tempo stimato per il completamento della lezione: **20 minuti**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario aver completato la lezione precedente: [Lezione 1: Creare un nuovo modello di progetto tabulare](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Creare una connessione  
@@ -93,7 +84,7 @@ La tabella DimCustomer che si sta importando dal database di esempio contiene un
     
     **DimDate**
     
-      |colonna|  
+      |Colonna|  
       |--------|  
       |**DateKey**|  
       |**SpanishDayNameOfWeek**|  
@@ -103,7 +94,7 @@ La tabella DimCustomer che si sta importando dal database di esempio contiene un
   
     **DimGeography**
   
-      |colonna|  
+      |Colonna|  
       |-------------|  
       |**SpanishCountryRegionName**|  
       |**FrenchCountryRegionName**|  
@@ -111,7 +102,7 @@ La tabella DimCustomer che si sta importando dal database di esempio contiene un
   
     **DimProduct**
   
-      |colonna|  
+      |Colonna|  
       |-----------|  
       |**SpanishProductName**|  
       |**FrenchProductName**|  
@@ -126,21 +117,21 @@ La tabella DimCustomer che si sta importando dal database di esempio contiene un
   
     **DimProductCategory**
   
-      |colonna|  
+      |Colonna|  
       |--------------------|  
       |**SpanishProductCategoryName**|  
       |**FrenchProductCategoryName**|  
   
     **DimProductSubcategory**
   
-      |colonna|  
+      |Colonna|  
       |-----------------------|  
       |**SpanishProductSubcategoryName**|  
       |**FrenchProductSubcategoryName**|  
   
     **FactInternetSales**
   
-      |colonna|  
+      |Colonna|  
       |------------------|  
       |**OrderDateKey**|  
       |**DueDateKey**|  

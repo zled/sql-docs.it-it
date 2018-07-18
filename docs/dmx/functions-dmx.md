@@ -1,17 +1,17 @@
 ---
 title: Funzioni (DMX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - DMX [Analysis Services], functions
 - VBA [DMX]
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - Excel [DMX]
 - Data Mining Extensions [Analysis Services], functions
 ms.assetid: 75ab6346-f4a4-4699-90f3-66d35f930ed7
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 729d6837a07738a17e4c926c4f98f39ad79c3d82
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 50a80c12549555f68a819de433faa39a1628a0c4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-dmx"></a>Funzioni (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
  La maggior parte delle funzioni DMX restituisce un valore scalare, ad esempio il supporto di una stima, ma alcune restituiscono un risultato tabulare. Ad esempio, la funzione PredictHistogram restituisce una tabella che contiene il supporto e probabilità per ogni stato della colonna stimabile specificata. I risultati vengono visualizzati come una nuova colonna di tabella.  
   
- **Per ulteriori informazioni:** [DMX funzioni di stima generale &#40; &#41;](../dmx/general-prediction-functions-dmx.md), [DMX Data Mining Extensions &#40; &#41; Riferimento (funzione)](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Per ulteriori informazioni:** [le funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
 ## <a name="visual-basic-for-applications-vba-and-excel-functions"></a>Funzioni di Visual Basic, Applications Edition (VBA) e di Excel  
  Oltre alle funzioni DMX, dalle istruzioni DMX è possibile chiamare anche un'ampia gamma di funzioni di Excel e VBA. Ad esempio, è possibile utilizzare la funzione lCase per modificare la modalità di visualizzazione della colonna Attribute_Name nel contenuto del modello TM_Decision_Tree. come illustrato nell'esempio di codice seguente.  
@@ -64,16 +63,16 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>Stored procedure  
  È possibile utilizzare linguaggi di programmazione CLR (Common Language Runtime) per creare stored procedure in grado di estendere le funzionalità di DMX. Ad esempio, un modello di data mining dell'albero di regressione restituisce coefficienti, ad esempio A, B e così via, che descrivono l'equazione di regressione, ma il modello non viene restituito l'equazione, ad esempio A + Bx = y. È tuttavia possibile creare una stored procedure che utilizza l'oggetto modello di data mining per navigare nello schema del contenuto e restituire l'equazione di regressione come output. Un'istruzione DMX può pertanto restituire un elenco di equazioni di regressione nell'ambito dei risultati di una query.  
   
- **Per ulteriori informazioni:** [gestione assembly di modelli multidimensionali](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
+ **Per ulteriori informazioni:** [gestione di assembly di modello multidimensionale](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions &#40; DMX &#41; Riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento (funzione)](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40; DMX &#41; Convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Data Mining Extensions &#40; DMX &#41; Elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Funzioni di stima generale &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Estensioni Data Mining &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Estensioni Data Mining &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Estensioni Data Mining &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struttura e l'utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

@@ -1,24 +1,17 @@
 ---
-title: Governance delle risorse per Python | Documenti Microsoft
-ms.custom: 
-ms.date: 03/30/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Governance delle risorse per Python in SQL Server Machine Learning | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 88116b7db71e1b9a33815686f2f1ade7561264e9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resource-governance-for-python"></a>Governance delle risorse per Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,11 +30,11 @@ In questa sezione vengono fornite informazioni su come è possibile gestire le r
 
 La governance delle risorse è progettata per identificare e prevenire i problemi comuni in un ambiente server di database, in cui ci sono spesso più applicazioni dipendenti e più servizi da supportare e bilanciare. Per [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], la governance delle risorse include le attività seguenti:  
 
-+ **Identificazione di script che utilizzano le risorse del server eccessivo**. L'amministratore deve poter terminare o limitare i processi che utilizzano troppe risorse.
++ **Identificazione di script che usano le risorse del server eccessivo**. L'amministratore deve poter terminare o limitare i processi che utilizzano troppe risorse.
 
 + **Riduzione dei carichi di lavoro imprevedibile**. Se più processi di Python sono in esecuzione contemporaneamente sul server e i processi non sono isolati tra loro tramite pool di risorse, la contesa tra risorse risultante potrebbe comportare prestazioni imprevedibile o compromettere il completamento del carico di lavoro.
 
-+ **Assegnazione di priorità ai carichi di lavoro**. L'amministratore o il progettista deve poter specificare i carichi di lavoro che hanno la precedenza o garantire il completamento di determinati carichi di lavoro in caso di contesa per le risorse.
++ **Priorità dei carichi di lavoro**. L'amministratore o il progettista deve poter specificare i carichi di lavoro che hanno la precedenza o garantire il completamento di determinati carichi di lavoro in caso di contesa per le risorse.
 
 È possibile utilizzare [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) per gestire le risorse utilizzate dal runtime esterni. Sono inclusi script Python che vengono avviati da un remoto terminal ma eseguito utilizzando il computer SQL Server come contesto di calcolo.
 
@@ -64,7 +57,7 @@ Per una buona introduzione ai concetti generali e alla terminologia, vedere [Poo
 
 ## <a name="resource-management-using-resource-governor"></a>Gestione delle risorse con Resource Governor
 
-Se non si conosce Resource Governor, vedere questo argomento per una rapida procedura dettagliata su come modificare le risorse predefinite dell'istanza e creare un nuovo pool di risorse esterne: [Procedura: Creare un pool di risorse per R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
+Se si ha familiarità di Resource Governor, vedere questo articolo per una rapida procedura dettagliata su come modificare le risorse predefinite di istanza e creare un nuovo pool di risorse esterne: [procedura: creare un Pool di risorse per R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
 
 È possibile utilizzare il *pool di risorse esterne* meccanismo per gestire le risorse usate da file eseguibili supportati seguenti:
 

@@ -1,28 +1,26 @@
 ---
 title: Passaggi dell'Importazione/Esportazione guidata SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b1f3defee5da1c6cc98e985cf6f8eb6bc30479b0
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5f79aea129b92293209452bb3dfbd92185e381f2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Passaggi dell'Importazione/Esportazione guidata SQL Server
 In questo argomento viene descritta la sequenza dei passaggi per l'importazione e l'esportazione dei dati nell'Importazione/Esportazione guidata SQL Server. Sono anche disponibili collegamenti alle singole pagine della documentazione che descrivono ogni pagina o la finestra di dialogo usata nella procedura guidata.

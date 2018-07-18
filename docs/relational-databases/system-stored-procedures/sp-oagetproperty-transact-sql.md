@@ -1,32 +1,32 @@
 ---
 title: sp_OAGetProperty (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAGetProperty_TSQL
 - sp_OAGetProperty
-dev_langs: TSQL
-helpviewer_keywords: sp_OAGetProperty
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0132315386f5c7922ee778d4ec0067190c03fe9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 31b9620e58029285d020371b261dc78cff55b078
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_OAGetProperty objecttoken , propertyname
  *vengono restituite le*  
  È il token di oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate**.  
   
- *PropertyName*  
+ *propertyname*  
  Nome di proprietà dell'oggetto OLE da restituire.  
   
  *PropertyValue* **OUTPUT**  
@@ -62,7 +62,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Se *propertyvalue* viene specificato, ma la proprietà non restituisce alcun valore, si verifica un errore. Viene inoltre generato un errore se la proprietà restituisce una matrice a più di due dimensioni.  
   
- *indice*  
+ *index*  
  Parametro di indice. Se specificato, *indice* deve essere un valore del tipo di dati appropriato.  
   
  Ad alcune proprietà sono associati parametri. Tali proprietà sono denominate proprietà indicizzate e i parametri corrispondenti sono denominati parametri di indice. A una proprietà possono essere associati più parametri di indice.  
@@ -98,7 +98,7 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="remarks"></a>Osservazioni  
  È inoltre possibile utilizzare **sp_OAMethod** per ottenere un valore della proprietà.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -130,7 +130,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Automazione OLE Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Automazione OLE Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Script di automazione OLE di esempio](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

@@ -1,32 +1,32 @@
 ---
 title: sp_server_diagnostics (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_diagnostics
 - sp_server_diagnostics_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_server_diagnostics
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 181b5ba51d87db43392af280d8fc4178da54dcc4
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@repeat_interval**  =] **'***repeat_interval_in_seconds***'**  
+ [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
  Indica l'intervallo di tempo in cui la stored procedure verrà eseguita ripetutamente per inviare informazioni di integrità.  
   
- *repeat_interval_in_seconds* è **int** con il valore predefinito è 0. I valori di parametro validi sono 0 oppure qualsiasi valore uguale o maggiore di 5. È necessario eseguire la stored procedure per almeno 5 secondi per restituire i dati completi. Il valore minimo per l'esecuzione della stored procedure in modalità di ripetizione è 5 secondi.  
+ *repeat_interval_in_seconds* viene **int** con il valore predefinito è 0. I valori di parametro validi sono 0 oppure qualsiasi valore uguale o maggiore di 5. È necessario eseguire la stored procedure per almeno 5 secondi per restituire i dati completi. Il valore minimo per l'esecuzione della stored procedure in modalità di ripetizione è 5 secondi.  
   
  Se questo parametro non viene specificato o se il valore specificato è 0, la stored procedure restituirà i dati una sola volta, quindi verrà chiusa.  
   
@@ -61,7 +61,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Set di risultati  
 **sp_server_diagnostics** restituisce le informazioni seguenti  
   
-|colonna|Tipo di dati|Description|  
+|Colonna|Tipo di dati|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica il timestamp della creazione della riga. Ogni riga di un singolo set di righe dispone dello stesso timestamp.|  
 |**component_type**|**sysname**|Indica se la riga contiene informazioni per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza livello di componente o per un gruppo di disponibilità Always On:<br /><br /> istanza<br /><br /> AlwaysOn: AvailabilityGroup|  
@@ -72,17 +72,17 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
  Di seguito sono riportate le descrizioni dei cinque componenti:  
   
--   **sistema**: raccoglie dati da un punto di vista di sistema su spinlock, condizioni gravi di elaborazione, le attività non cede il controllo, gli errori di pagina e l'utilizzo della CPU. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
+-   **sistema**: raccoglie dati da un punto di vista di sistema su spinlock, condizioni gravi di elaborazione, le attività non ceda la precedenza, gli errori di pagina e l'utilizzo della CPU. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
 -   **risorsa**: raccoglie dati da una prospettiva della risorsa su memoria fisica e virtuale, pool di buffer, pagine, cache e altri oggetti di memoria. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
 -   **query_processing**: raccoglie dati da una prospettiva di elaborazione delle query su thread di lavoro, attività, di attesa tipi, sessioni intensive della CPU e attività di blocco. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
--   **io_subsystem**: raccoglie dati in IO. Oltre ai dati diagnostici, questo componente produce uno stato di integrità di avviso o integro e pulito solo per un sottosistema di IO.  
+-   **io_subsystem**: raccoglie i dati in fase di IO. Oltre ai dati diagnostici, questo componente produce uno stato di integrità di avviso o integro e pulito solo per un sottosistema di IO.  
   
--   **eventi**: raccoglie dati e superfici tramite la stored procedure su errori ed eventi di interesse registrati dal server, inclusi i dettagli sulle eccezioni del buffer, circolare sul broker di memoria, dalla memoria, il monitoraggio dell'utilità di pianificazione, gli eventi del buffer pool di buffer, spinlock, sicurezza e connettività. Gli eventi avranno sempre 0 come stato.  
+-   **eventi**: raccoglie dati e superfici tramite la stored procedure su errori ed eventi di interesse registrati dal server, inclusi i dettagli sulle eccezioni del buffer circolare, circolare sul broker di memoria, dalla memoria, monitoraggio dell'utilità di pianificazione, gli eventi del buffer pool di buffer, spinlock, sicurezza e connettività. Gli eventi avranno sempre 0 come stato.  
   
--   **\<nome del gruppo di disponibilità >**: raccoglie dati per il gruppo di disponibilità specificato (se component_type = "sempre in: AvailabilityGroup").  
+-   **\<nome del gruppo di disponibilità >**: raccoglie dati per il gruppo di disponibilità specificato (se component_type = "sempre sul: AvailabilityGroup").  
   
 ## <a name="remarks"></a>Osservazioni  
 Da una prospettiva di errore, i componenti di elaborazione di query, risorsa e sistema verranno utilizzati per il rilevamento dell'errore mentre i componenti di eventi e io_subsystem verranno utilizzati solo per gli scopi diagnostici.  

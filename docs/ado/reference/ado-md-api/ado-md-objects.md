@@ -1,49 +1,47 @@
 ---
 title: Oggetti ADO MD | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9967930e6ee7ff1310a1ea331fb972f93d902f88
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3ae297d189b03af51c73a98e6f273601e805b25c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "32807134"
 ---
 # <a name="ado-md-objects"></a>Oggetti ADO MD
 |||  
 |-|-|  
-|[Asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Rappresenta una posizione o l'asse filtro di un set di celle contenente i membri selezionati di una o più dimensioni.|  
+|[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Rappresenta una posizione o l'asse filtro di un set di celle contenente i membri selezionati di una o più dimensioni.|  
 |[Catalogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contiene informazioni sullo schema multidimensionale (vale a dire, cubi e sottostante dimensioni, gerarchie, livelli e membri) specifiche per un provider di dati multidimensionali (dati Multidimensionali).|  
 |[Cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Rappresenta i dati in corrispondenza dell'intersezione delle coordinate dell'asse, contenuti in un set di celle.|  
-|[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Rappresenta i risultati di una query multidimensionale. È una raccolta di celle selezionate da cubi o altri set di celle.|  
+|[Set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Rappresenta i risultati di una query multidimensionale. È una raccolta di celle selezionate da cubi o altri set di celle.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Rappresenta un cubo da uno schema multidimensionale, contenente un set di dimensioni correlate.|  
-|[Dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Rappresenta una delle dimensioni di un cubo multidimensionale, contenente uno o più gerarchie di membri.|  
-|[Gerarchia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Rappresenta uno dei modi in cui i membri di una dimensione possono essere aggregati o "rollback". Una dimensione può essere aggregata in una o più gerarchie.|  
+|[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Rappresenta una delle dimensioni di un cubo multidimensionale, contenente uno o più gerarchie di membri.|  
+|[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Rappresenta uno dei modi in cui i membri di una dimensione possono essere aggregati o "rollback". Una dimensione può essere aggregata in una o più gerarchie.|  
 |[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contiene un set di membri, ognuno dei quali ha lo stesso rango all'interno di una gerarchia.|  
 |[Membro](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro di un livello o un membro di una posizione lungo un asse di un set di celle.|  
 |[Posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Rappresenta un set di uno o più membri di dimensioni diverse che definisce un punto lungo un asse.|  
   
  Inoltre, il **catalogo** oggetto connesso a un oggetto ADO **connessione** oggetto, che è incluso nella libreria ADO standard:  
   
-|Oggetto|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |[Connessione](../../../ado/reference/ado-api/connection-object-ado.md)|Rappresenta una connessione aperta a un'origine dati.|  
   

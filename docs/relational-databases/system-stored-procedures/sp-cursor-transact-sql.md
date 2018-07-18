@@ -1,32 +1,32 @@
 ---
-title: sp_cursor (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: sp_cursor (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_TSQL
 - sp_cursor
-dev_langs: TSQL
-helpviewer_keywords: sp_cursor
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e85732afe35198cea86a605dfde8396b013842dc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 36e188370f32702544ccef4b18d0398e5c8fddfd
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
 ||  
 |-|  
-|**Si applica a**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [versione](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Si applica a**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,12 +49,12 @@ sp_cursor  cursor, optype, rownum, table
   
 ## <a name="arguments"></a>Argomenti  
  *cursor*  
- Handle del cursore. *cursore* è un parametro obbligatorio che richiede un **int** valore di input. *cursore* è il *gestire* valore generati da SQL Server e restituito dalla routine sp_cursoropen.  
+ Handle del cursore. *cursore* è un parametro obbligatorio che richiede un' **int** valore di input. *cursore* è il *gestire* valore generati da SQL Server e restituito dalla routine sp_cursoropen.  
   
  *optype*  
  Parametro obbligatorio che definisce l'operazione che verrà effettuata dal cursore. *optype* richiede uno dei seguenti **int** valori di input.  
   
-|Valore|Nome|Description|  
+|Value|Nome|Description|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Consente di aggiornare una o più righe nel buffer di recupero.  Righe specificate in *rownum* per accedere nuovamente e aggiornato.|  
 |0x0002|DELETE|Consente di eliminare una o più righe nel buffer di recupero. Righe specificate in *rownum* accede nuovamente alle vengono eliminati.|  
@@ -64,13 +64,13 @@ sp_cursor  cursor, optype, rownum, table
 |0X20|SETPOSITION|Viene utilizzato solo quando il programma sta per rilasciare un successive di SQL Server posizionata l'istruzione DELETE o UPDATE.|  
 |0X40|ABSOLUTE|Può essere usato solo insieme ad UPDATE o DELETE.  ABSOLUTE viene usato solo con i cursori KEYSET, viene ignorato per i cursori DYNAMIC e i cursori STATIC non possono essere aggiornati.<br /><br /> Nota: Se in una riga nel keyset che non è stata recuperata, viene specificato ABSOLUTE, l'operazione non riesca il controllo della concorrenza e il risultato restituito non può essere garantito.|  
   
- *rowNum*  
+ *rownum*  
  Specifica le righe del buffer di recupero che verranno usate, aggiornate o eliminate mediante il cursore.  
   
 > [!NOTE]  
 >  Non influisce sul punto di partenza di qualsiasi operazione di recupero RELATIVE, NEXT o PREVIOUS, né su eliminazioni o aggiornamenti eseguiti utilizzando sp_cursor.  
   
- *rowNum* è un parametro obbligatorio che richiede un **int** valore di input.  
+ *rowNum* è un parametro obbligatorio che richiede un' **int** valore di input.  
   
  1  
  Indica la prima riga del buffer di recupero.  
@@ -178,8 +178,8 @@ sp_cursor  cursor, optype, rownum, table
 >  È possibile inviare un parametro come parametro denominato, ad esempio "`@VALUES`". In questo caso è possibile non usare altri parametri denominati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_cursoropen &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

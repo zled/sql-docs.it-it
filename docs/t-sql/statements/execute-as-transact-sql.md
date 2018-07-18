@@ -1,16 +1,14 @@
 ---
-title: EXECUTE AS (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: EXECUTE AS (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - EXECUTE AS
@@ -25,23 +23,22 @@ helpviewer_keywords:
 - execution context [SQL Server]
 - switching execution context
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: b89c78d286feaace6ec6bb2c85e854cb0ddbb5e0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6a038b8928eeda0df043ff42b621b95c48102b55
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Imposta il contesto di esecuzione di una sessione.  
   
- Per impostazione predefinita, una sessione inizia quando un utente si connette e termina quando l'utente si disconnette. Tutte le operazioni eseguite durante una sessione sono soggette alle verifiche delle autorizzazioni dell'utente connesso. Quando un **EXECUTE AS** istruzione viene eseguita, il contesto di esecuzione della sessione viene impostato il nome di account di accesso o utente specificato. Dopo il cambio di contesto, le autorizzazioni vengono confrontate con i token di sicurezza di accesso e utente per tale account invece che la persona che ha chiamato la **EXECUTE AS** istruzione. In pratica, l'account utente o l'account di accesso viene rappresentato per l'intera durata dell'esecuzione della sessione o del modulo oppure il passaggio di contesto viene ripristinato in modo esplicito.  
+ Per impostazione predefinita, una sessione inizia quando un utente si connette e termina quando l'utente si disconnette. Tutte le operazioni eseguite durante una sessione sono soggette alle verifiche delle autorizzazioni dell'utente connesso. Quando viene eseguita un'istruzione **EXECUTE AS**, il contesto di esecuzione della sessione viene impostato sull'account di accesso o sul nome utente specificato. In seguito all'impostazione del contesto specifico, le autorizzazioni vengono verificate in base ai token di sicurezza dell'account di accesso e dell'account utente per l'account specifico anziché in base alla persona che ha chiamato l'istruzione **EXECUTE AS**. In pratica, l'account utente o l'account di accesso viene rappresentato per l'intera durata dell'esecuzione della sessione o del modulo oppure il passaggio di contesto viene ripristinato in modo esplicito.  
   
 
   
@@ -66,42 +63,42 @@ ms.lasthandoff: 11/21/2017
  Specifica che il contesto di esecuzione da rappresentare è un account di accesso. L'ambito di rappresentazione è a livello di server.  
   
 > [!NOTE]  
->  Questa opzione non è disponibile in un database indipendente o in Database SQL.  
+>  Questa opzione non è disponibile in un database indipendente o nel database SQL.  
   
  Utente  
  Specifica che il contesto da rappresentare è un utente nel database corrente. L'ambito di rappresentazione è limitato al database corrente. Un cambio di contesto a un utente del database non eredita le autorizzazioni a livello di server di tale utente.  
   
 > [!IMPORTANT]  
->  Mentre il cambio di contesto all'utente del database è attivo, qualsiasi tentativo di accesso alle risorse esterne al database comporterà l'esito negativo dell'esecuzione dell'istruzione. Ciò include l'utilizzo *database* istruzioni, le query distribuite e le query che fanno riferimento a un altro database che utilizza gli identificatori di tre o quattro parti.  
+>  Mentre il cambio di contesto all'utente del database è attivo, qualsiasi tentativo di accesso alle risorse esterne al database comporterà l'esito negativo dell'esecuzione dell'istruzione. Ciò è valido per le istruzioni USE *database*, le query distribuite e le query che fanno riferimento a un altro database che usa identificatori in tre o quattro parti.  
   
- **'** *nome* **'**  
- Nome utente o nome account di accesso valido. *nome* deve essere un membro del **sysadmin** ruolo predefinito del server, oppure esistere come entità nel [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) o [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), rispettivamente.  
+ **'** *name* **'**  
+ Nome utente o nome account di accesso valido. *name* deve essere membro del ruolo predefinito del server **sysadmin** oppure esistere come entità di sicurezza rispettivamente in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) o [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- *nome* possono essere specificati come una variabile locale.  
+ *name* può essere specificato come variabile locale.  
   
- *nome* deve essere un account singleton e non può essere un gruppo, ruolo, certificato, chiave o un account predefinito, ad esempio NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem..  
+ *name* deve essere un account singleton e non può essere un gruppo, un ruolo, un certificato, una chiave oppure un account predefinito, ad esempio NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem.  
   
- Per ulteriori informazioni, vedere [specificando un utente o un nome di accesso](#_user) più avanti in questo argomento.  
+ Per altre informazioni, vedere [Specifica di un nome utente o un nome account di accesso](#_user) di seguito in questo argomento.  
   
  NO REVERT  
- Specifica che non è possibile ripristinare il contesto precedente in seguito a un cambio di contesto. Il **NO REVERT** opzione può essere usata solo a livello ad hoc.  
+ Specifica che non è possibile ripristinare il contesto precedente in seguito a un cambio di contesto. L'opzione **NO REVERT** può essere usata solo a livello ad hoc.  
   
- Per ulteriori informazioni sul ripristino del contesto precedente, vedere [REVERT &#40; Transact-SQL &#41; ](../../t-sql/statements/revert-transact-sql.md).  
+ Per altre informazioni sul ripristino del contesto precedente, vedere [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE in  **@**  *varbinary_variable*  
- Specifica il contesto di esecuzione possa solo essere ripristinare il contesto precedente se l'istruzione REVERT WITH COOKIE chiamante include il corretto  **@**  *varbinary_variable* valore. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa il cookie a  **@**  *varbinary_variable*. Il **COOKIE in** opzione può essere usata solo a livello ad hoc.  
+ COOKIE INTO **@***varbinary_variable*  
+ Specifica che è possibile ripristinare il contesto di esecuzione precedente solo se l'istruzione REVERT WITH COOKIE chiamante include il valore corretto per **@***varbinary_variable*. [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa il cookie a **@***varbinary_variable*. L'opzione **COOKIE INTO** può essere usata solo a livello ad hoc.  
   
- **@***varbinary_variable* è **varbinary (8000)**.  
+ **@** *varbinary_variable* è **varbinary(8000)**.  
   
 > [!NOTE]  
->  Il cookie **OUTPUT** parametro per è attualmente documentato come **varbinary (8000)** che è la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(100)**. Applicazioni devono riservare **varbinary (8000)** in modo che l'applicazione continua a funzionare correttamente se il cookie restituito dimensioni aumentano in una versione futura.  
+>  Il parametro **OUTPUT** del cookie è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(100)**. Le applicazioni devono riservare **varbinary(8000)** in modo che siano in grado di funzionare correttamente se le dimensioni restituite del cookie aumentano in una versione successiva.  
   
  CALLER  
  Se utilizzato all'interno di un modulo, specifica che le istruzioni all'interno del modulo vengono eseguite nel contesto del chiamante del modulo.  
   
  Se utilizzato all'esterno di un modulo, l'istruzione non esegue alcuna azione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il cambio di contesto di esecuzione rimane valido finché non si verifica una delle situazioni seguenti:  
   
 -   Viene eseguita un'altra istruzione EXECUTE AS.  
@@ -112,18 +109,18 @@ ms.lasthandoff: 11/21/2017
   
 -   La stored procedure o il trigger in cui è stato eseguito il comando è esistente.  
   
-È possibile creare uno stack di contesti di esecuzione eseguendo più volte una chiamata all'istruzione EXECUTE AS in più entità. Quando viene chiamata, l'istruzione REVERT imposta il contesto sull'account di accesso o sull'utente nel successivo livello superiore nello stack di contesti. Per una dimostrazione di questo comportamento, vedere [esempio](#_exampleA).  
+È possibile creare uno stack di contesti di esecuzione eseguendo più volte una chiamata all'istruzione EXECUTE AS in più entità. Quando viene chiamata, l'istruzione REVERT imposta il contesto sull'account di accesso o sull'utente nel successivo livello superiore nello stack di contesti. Per una dimostrazione di questo comportamento, vedere l'[esempio A](#_exampleA).  
   
-##  <a name="_user"></a>Specifica un utente o un nome di accesso  
- Il nome utente o account di accesso specificato in EXECUTE AS \<context_specification > deve esistere come entità nel **Sys. database_principals** o **Sys. server_principals**, rispettivamente, o Istruzione EXECUTE AS avrà esito negativo. È inoltre necessario concedere le autorizzazioni IMPERSONATE per l'entità. A meno che il chiamante è il proprietario del database, o un membro del **sysadmin** ruolo predefinito del server, l'entità deve esistere anche quando l'utente effettua l'accesso al database o all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un gruppo di Windows l'appartenenza. Si suppongano ad esempio le condizioni seguenti: 
+##  <a name="_user"></a> Indicazione di un nome utente o di un ID di accesso  
+ Il nome utente o l'ID di accesso specificato in EXECUTE AS \<context_specification> deve esistere come entità rispettivamente in **sys.database_principals** o **sys.server_principals**. In caso contrario, l'istruzione EXECUTE AS ha esito negativo. È inoltre necessario concedere le autorizzazioni IMPERSONATE per l'entità. A meno che il chiamante non sia il proprietario del database o membro del ruolo predefinito del server **sysadmin**, l'entità deve esistere anche quando l'utente effettua l'accesso al database o all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'appartenenza a un gruppo di Windows. Si suppongano ad esempio le condizioni seguenti: 
   
--   **CompanyDomain\SQLUsers** gruppo disponga dell'accesso per il **Sales** database.  
+-   Il gruppo **CompanyDomain\SQLUsers** ha accesso al database **Sales**.  
   
--   **CompanyDomain\SqlUser1** è un membro di **SQLUsers** e, di conseguenza, ha accesso implicito al **Sales** database.  
+-   **CompanyDomain\SqlUser1** è membro del gruppo **SQLUsers** e pertanto può implicitamente accedere al database **Sales**.  
   
- Anche se **CompanyDomain\SqlUser1** ha accesso al database tramite l'appartenenza di **SQLUsers** gruppo, l'istruzione `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` ha esito negativo perché `CompanyDomain\SqlUser1` non esiste come entità nel il database.  
+ Anche se **CompanyDomain\SqlUser1** può accedere al database in virtù dell'appartenenza al gruppo **SQLUsers**, l'istruzione `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` ha esito negativo in quanto `CompanyDomain\SqlUser1` non esiste come entità nel database.  
   
-Se l'utente è reso orfano (l'account di accesso associato non esiste più), e l'utente non è stato creato con **WITHOUT LOGIN**, **EXECUTE AS** avrà esito negativo per l'utente.  
+Se l'utente è reso orfano, ovvero se l'accesso associato non esiste più, e non è stato creato con **WITHOUT LOGIN**, **EXECUTE AS** avrà esito negativo per tale utente.  
   
 ## <a name="best-practice"></a>Procedura consigliata  
  Specificare un account di accesso o un utente che disponga almeno dei privilegi necessari per eseguire operazioni nella sessione. Ad esempio, non specificare un nome account di accesso con autorizzazioni a livello di server se sono richieste solo autorizzazioni a livello di database oppure non specificare l'account di un proprietario di database a meno che siano richieste le autorizzazioni corrispondenti.  
@@ -134,15 +131,15 @@ Se l'utente è reso orfano (l'account di accesso associato non esiste più), e l
 ## <a name="using-with-no-revert"></a>Utilizzo di WITH NO REVERT  
  Se l'istruzione EXECUTE AS include la clausola facoltativa WITH NO REVERT, il contesto di esecuzione di una sessione non può essere ripristinato tramite REVERT oppure tramite l'esecuzione di un'altra istruzione EXECUTE AS. Il contesto impostato dall'istruzione rimane valido fino all'eliminazione della sessione.  
   
- Quando il WITH NO REVERT COOKIE = @*varbinary_variabl*clausola è specificato, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa il valore del cookie a @*varbinary_variabl*e. Il contesto di esecuzione impostato tale istruzione può essere ripristinata al contesto precedente se il chiamante REVERT WITH COOKIE = @*varbinary_variable* istruzione contiene lo stesso  *@varbinary_variable*  valore.  
+ Quando la clausola WITH NO REVERT COOKIE = @*varbinary_variabl*e è specificata, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa il valore del cookie a @*varbinary_variabl*e. Il contesto di esecuzione impostato da tale istruzione può essere riportato al contesto precedente se l'istruzione REVERT WITH COOKIE = @*varbinary_variable* contiene lo stesso valore *@varbinary_variable*.  
   
- Questa opzione risulta utile in un ambiente in cui vengono utilizzati i pool di connessioni. Tramite i pool di connessioni vengono gestiti i gruppi di connessioni al database in modo che tali connessioni possano essere riutilizzate dalle applicazioni in un server applicazioni. Poiché il valore passato a  *@varbinary_variable*  è noto solo al chiamante di EXECUTE AS istruzione, il chiamante può garantire che il contesto di esecuzione stabilito non può essere modificato da altri utenti.  
+ Questa opzione risulta utile in un ambiente in cui vengono utilizzati i pool di connessioni. Tramite i pool di connessioni vengono gestiti i gruppi di connessioni al database in modo che tali connessioni possano essere riutilizzate dalle applicazioni in un server applicazioni. Poiché il valore passato a *@varbinary_variable* è noto solo al chiamante dell'istruzione EXECUTE AS, il chiamante è in grado di garantire che il contesto di esecuzione stabilito non venga modificato da altri.  
   
 ## <a name="determining-the-original-login"></a>Determinazione dell'account di accesso originale  
- Utilizzare il [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) funzione per restituire il nome dell'account di accesso connesso all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare questa funzione per restituire l'identità dell'account di accesso originale in sessioni in cui si verificano numerosi cambi di contesto espliciti o impliciti.  
+ Usare la funzione [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) per restituire il nome dell'account di accesso connesso all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare questa funzione per restituire l'identità dell'account di accesso originale in sessioni in cui si verificano numerosi cambi di contesto espliciti o impliciti.  
   
-## <a name="permissions"></a>Permissions  
- Per specificare **EXECUTE AS** un account di accesso, il chiamante deve disporre **IMPERSONATE** sull'account di accesso specificato un nome e non deve essere negato il **IMPERSONATE ANY LOGIN** autorizzazione . Per specificare **EXECUTE AS** per un utente del database, il chiamante deve disporre **IMPERSONATE** le autorizzazioni per il nome utente specificato. Quando **EXECUTE AS CALLER** è specificato, **IMPERSONATE** non sono necessarie autorizzazioni.  
+## <a name="permissions"></a>Autorizzazioni  
+ Per specificare l'istruzione **EXECUTE AS** per un account di accesso, il chiamante deve disporre dell'autorizzazione **IMPERSONATE** per il nome dell'account di accesso specificato e non gli deve essere negata l'autorizzazione **IMPERSONATE ANY LOGIN**. Per specificare l'istruzione **EXECUTE AS** per un utente del database, il chiamante deve disporre delle autorizzazioni **IMPERSONATE** per il nome utente specificato. Se si specifica **EXECUTE AS CALLER**, le autorizzazioni **IMPERSONATE** non sono obbligatorie.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -191,7 +188,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. Utilizzo della clausola WITH COOKIE  
- Nell'esempio seguente imposta il contesto di esecuzione di una sessione a un utente specificato e specifica di WITH NO REVERT COOKIE = @*varbinary_variabl*clausola. Nell'istruzione `REVERT` è necessario specificare il valore passato alla variabile `@cookie` nell'istruzione `EXECUTE AS` per ripristinare correttamente il contesto al chiamante originale. Per eseguire questo esempio, l'account di accesso `login1` e l'utente `user1` creato nell'esempio A devono esistere.  
+ Nell'esempio seguente il contesto di esecuzione di una sessione viene impostato su un utente specifico e quindi viene specificata la clausola WITH NO REVERT COOKIE = @*varbinary_variable*. Nell'istruzione `REVERT` è necessario specificare il valore passato alla variabile `@cookie` nell'istruzione `EXECUTE AS` per ripristinare correttamente il contesto al chiamante originale. Per eseguire questo esempio, l'account di accesso `login1` e l'utente `user1` creato nell'esempio A devono esistere.  
   
 ```  
 DECLARE @cookie varbinary(8000);  
@@ -213,8 +210,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ripristina &#40; Transact-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
- [EXECUTE AS clausola &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
   
   
 

@@ -1,29 +1,22 @@
 ---
-title: Configurazione di rete dello strumento (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: "27"
-ms.openlocfilehash: 34f322e9bd1d500b3755262332ab5724de5aa301
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Configurazione di rete accessorio - Analitica Platform System | Documenti Microsoft
+description: Il dispositivo Analitica piattaforma di strumenti compilato e configurato con un set di correzione degli indirizzi IP in tutti i server e dispositivi applicabili da stabilimento del IHV. Dopo la consegna del dispositivo, è necessario riconfigurare l'indirizzo IP di esterno (Ethernet) in base ai requisiti del cliente specifico data center.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2db040c63d3c31f93cd0b72e48422e806aef01e0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-network-configuration"></a>Configurazione di rete dispositivo
-Lo strumento di SQL Server PDW è creato e configurato con un set di correzione degli indirizzi IP in tutti i server e dispositivi applicabili di fabbrica del IHV. Dopo la consegna del dispositivo, è necessario riconfigurare l'indirizzo IP di esterno (Ethernet) in base ai requisiti del cliente specifico data center.  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Configurazione di rete dello strumento per Analitica Platform System
+Il dispositivo Analitica piattaforma di strumenti compilato e configurato con un set di correzione degli indirizzi IP in tutti i server e dispositivi applicabili da stabilimento del IHV. Dopo la consegna del dispositivo, è necessario riconfigurare l'indirizzo IP di esterno (Ethernet) in base ai requisiti del cliente specifico data center.  
   
 > [!NOTE]  
 > PDW V1 necessari 8 IP esterno (*rivolta a clienti*) gli indirizzi per fornire connettività esterna a ogni controllo rack nodi. 2012 PDW (V2) avanzata delle comunicazioni di rete tramite l'esposizione di ogni componente del dispositivo esternamente tramite gli indirizzi IP. Questo approccio fornisce una struttura più affidabile riduce i costi e aumentando la flessibilità e migliora lo spostamento dei dati, il caricamento dei dati e l'integrazione di Hadoop. Il numero di indirizzi IP necessarie dipende dal numero di nodi nel dispositivo e la presenza di funzionalità, ad esempio HDInsight. Per gestire questo blocco più grande di indirizzi IP, il cliente deve configurare una subnet distinta per PDW. All'interno della subnet, saranno presenti sufficiente spazio degli indirizzi IP (indirizzi fino a 250) per supportare i componenti del rack PDW fino a 5.  
@@ -60,10 +53,10 @@ Per ulteriori informazioni su accessori Dell, vedere:
   
 -   Istruzioni Switch PowerConnect [Dell PowerConnect 6200 serie sistema CLI Guida di riferimento](http://downloads.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_powerconnect/powerconnect-6224f_Reference%20Guide_en-us.pdf)  
   
--   iDRAC/BMC [manuale dell'utente 1.30.30 versione integrato Dell remota accesso Controller 7 (iDRAC7)](http://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
+-   iDRAC/BMC [manuale dell'utente versione 1.30.30 integrata Dell remota accesso Controller 7 (iDRAC7)](http://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
   
 -   PDU **Dell a consumo Rack PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
 ## <a name="see-also"></a>Vedere anche  
-[Avviare Gestione configurazione &#40; Sistema della piattaforma Analitica &#41;](launch-the-configuration-manager.md)  
+[Avviare Gestione configurazione &#40;Analitica Platform System&#41;](launch-the-configuration-manager.md)  
   

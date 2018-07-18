@@ -1,16 +1,14 @@
 ---
-title: GetReparentedValue (motore di Database) | Documenti Microsoft
-ms.custom: 
+title: GetReparentedValue (Motore di database) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Reparent_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - Reparent [Database Engine]
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e0b054e9651cce9a486d4acf9e997a601114e98a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ede41879f6586edf34b81866c769303ed62752d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un nodo il cui percorso dalla radice è il percorso per *nuova radice*, seguito dal percorso *oldRoot* a *questo*.
+Restituisce un nodo il cui percorso dalla radice è il percorso *newRoot*, seguito dal percorso da *oldRoot* a *this*.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,23 +47,23 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
   
 ## <a name="arguments"></a>Argomenti  
 *oldRoot*  
-Oggetto **hierarchyid** che rappresenta il nodo che rappresenta il livello della gerarchia che deve essere modificato.
+Valore **hierarchyid** del nodo che rappresenta il livello della gerarchia da modificare.
   
-*nuova radice*  
-Oggetto **hierarchyid** che rappresenta il nodo che sostituirà il *oldRoot* sezione del nodo per spostare il nodo corrente.
+*newRoot*  
+Valore **hierarchyid** che rappresenta il nodo che sostituirà la sezione *oldRoot* del nodo corrente per lo spostamento del nodo.
   
 ## <a name="return-types"></a>Tipi restituiti  
-**Tipo: hierarchyid restituito SQL Server**
+**Tipo SQL Server restituito: hierarchyid**
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Osservazioni  
-Può essere usato per modificare la struttura ad albero spostando nodi da *oldRoot* a *nuova radice*. GetReparentValue può inoltre essere utilizzato per spostare un nodo di una gerarchia in un nuovo percorso della gerarchia. Il **hierarchyid** rappresenta il tipo di dati, ma non applica la struttura gerarchica. Gli utenti devono verificare che hierarchyid sia strutturato in modo appropriato per il nuovo percorso. Un indice univoco nella **hierarchyid** tipo di dati può aiutare a evitare le voci duplicate. Per un esempio di un intero sottoalbero di spostamento, vedere [dati gerarchici &#40; SQL Server &#41; ](../../relational-databases/hierarchical-data-sql-server.md).
+## <a name="remarks"></a>Remarks  
+Può essere usato per modificare l'albero spostando nodi da *oldRoot* a *newRoot*. GetReparentValue può inoltre essere utilizzato per spostare un nodo di una gerarchia in un nuovo percorso della gerarchia. Il tipo di dati **hierarchyid** rappresenta la struttura gerarchica, ma non la applica. Gli utenti devono verificare che hierarchyid sia strutturato in modo appropriato per il nuovo percorso. Un indice univoco applicato al tipo di dati **hierarchyid** può impedire la presenza di voci duplicate. Per un esempio di spostamento di un sottoalbero intero, vedere [Dati gerarchici &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-comparing-two-node-locations"></a>A. Confronto tra due percorsi di nodi  
-Nell'esempio seguente viene illustrato il valore hierarchyid corrente di un nodo. Viene inoltre illustrato il **hierarchyid** del nodo sarebbe se sono stati spostati diventare un discendente del nodo di  **@NewParent**  nodo. Per visualizzare le relazioni gerarchiche, viene utilizzato il metodo `ToString()`.
+Nell'esempio seguente viene illustrato il valore hierarchyid corrente di un nodo. Nell'esempio viene anche illustrato il valore **hierarchyid** del nodo nel caso in cui il nodo venga spostato e diventi un discendente del nodo **@NewParent**. Per visualizzare le relazioni gerarchiche, viene utilizzato il metodo `ToString()`.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  
@@ -110,7 +107,7 @@ WHERE LoginID = 'adventure-works\gail0' ; -- Now node /2/3/2/
 ```  
   
 ### <a name="c-clr-example"></a>C. Esempio CLR  
-Frammento di codice seguente chiama il metodo di GetReparentedValue ():
+Nel frammento di codice seguente viene chiamato il metodo GetReparentedValue ():
   
 ```sql
 this. GetReparentedValue(oldParent, newParent)  

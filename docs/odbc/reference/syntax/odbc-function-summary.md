@@ -1,28 +1,26 @@
 ---
 title: Riepilogo delle funzioni ODBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: functions [ODBC], listed by task
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- functions [ODBC], listed by task
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 9aab042c14953c170d86dda5fcd3432a471a12b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: bc994a3e3ec3e0e41a7b18958c013f1876f38c86
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-function-summary"></a>Riepilogo delle funzioni ODBC
 Nella tabella seguente elenca le funzioni ODBC, raggruppate per tipo di attività e include la designazione di conformità e una breve descrizione dello scopo di ogni funzione. Per ulteriori informazioni sulle designazioni di conformità, vedere [ODBC e Standard CLI](../../../odbc/reference/odbc-and-the-standard-cli.md). Per ulteriori informazioni sulla sintassi e semantica per ogni funzione, vedere [riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md).  
@@ -39,10 +37,10 @@ Nella tabella seguente elenca le funzioni ODBC, raggruppate per tipo di attivit�
 ||[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)|ISO 92|Restituisce informazioni relative a un'origine dati e i driver specifica.|  
 ||[SQLGetFunctions](../../../odbc/reference/syntax/sqlgetfunctions-function.md)|ISO 92|Restituisce supportate funzioni del driver.|  
 ||[SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)|ISO 92|Restituisce informazioni sui tipi di dati supportati.|  
-|Impostazione e recupero attributi del driver|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)<br /><br /> [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|ISO 92<br /><br /> ISO 92|Imposta un attributo di connessione.<br /><br /> Restituisce il valore di un attributo di connessione.|  
+|Impostazione e recupero attributi del driver|[Funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)<br /><br /> [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|ISO 92<br /><br /> ISO 92|Imposta un attributo di connessione.<br /><br /> Restituisce il valore di un attributo di connessione.|  
 ||[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|ISO 92|Imposta un attributo di ambiente.|  
 ||[SQLGetEnvAttr](../../../odbc/reference/syntax/sqlgetenvattr-function.md)|ISO 92|Restituisce il valore di un attributo di ambiente.|  
-||[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|ISO 92|Imposta un attributo di istruzione.|  
+||[Funzione SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|ISO 92|Imposta un attributo di istruzione.|  
 ||[SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|ISO 92|Restituisce il valore di un attributo di istruzione.|  
 |Impostazione e recupero di campi di descrizione|[SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)<br /><br /> [SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|ISO 92<br /><br /> ISO 92|Restituisce il valore di un campo singolo descrittore.<br /><br /> Restituisce i valori di più campi di descrizione.|  
 ||[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|ISO 92|Imposta un campo di descrizione singolo.|  

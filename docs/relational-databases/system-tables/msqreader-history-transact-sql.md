@@ -1,33 +1,35 @@
 ---
 title: MSqreader_history (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSqreader_history
 - MSqreader_history_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSqreader_history system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c9615bb702c89d8b2a5be0087671df9d8a6a910
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c060cd85f1b4a36087f3d8756bf0d48c1976110f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +44,8 @@ ms.lasthandoff: 11/21/2017
 |**start_time**|**datetime**|Data e ora di inizio della sessione dell'agente.|  
 |**time**|**datetime**|Data e ora dell'ultimo messaggio registrato.|  
 |**duration**|**int**|Tempo trascorso, espresso in secondi, delle attività della sessione registrate.|  
-|**commenti**|**nvarchar(255)**|Testo descrittivo.|  
-|**transaction_id**|**nvarchar (40)**|ID della transazione archiviato insieme al messaggio, se applicabile.|  
+|**Commenti**|**nvarchar(255)**|Testo descrittivo.|  
+|**transaction_id**|**nvarchar(40)**|ID della transazione archiviato insieme al messaggio, se applicabile.|  
 |**transaction_status**|**int**|Stato della transazione.|  
 |**transactions_processed**|**int**|Numero totale di transazioni elaborate durante la sessione.|  
 |**commands_processed**|**int**|Numero totale di comandi elaborati durante la sessione.|  
@@ -55,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 |**timestamp**|**timestamp**|Colonna di tipo timestamp della tabella.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

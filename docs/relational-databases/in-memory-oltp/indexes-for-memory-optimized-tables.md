@@ -1,28 +1,26 @@
 ---
 title: Indici per tabelle con ottimizzazione per la memoria | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: in-memory-oltp
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 52c415b0c4c7f4913e8d675ce9fe86ad6051e233
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2b2ce7ce7e891e0750f80637c3ebc42176167834
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indici in tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ Per essere dichiarata con la clausola DURABILITY = SCHEMA\_AND_DATA predefinita,
             DURABILITY = SCHEMA\_AND_DATA);  
     ```
 > [!NOTE]  
-> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hanno un limite di 8 indici per tabella o tipo di tabella ottimizzata per la memoria. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non è più previsto un limite al numero di indici specifici di tabelle ottimizzate per la memoria e tipi di tabella.
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hanno un limite di 8 indici per ogni tipo di tabella o tabella ottimizzata per la memoria. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non è più previsto un limite al numero di indici specifici di tabelle ottimizzate per la memoria e tipi di tabella.
   
 ### <a name="code-sample-for-syntax"></a>Esempio di codice per la sintassi  
   

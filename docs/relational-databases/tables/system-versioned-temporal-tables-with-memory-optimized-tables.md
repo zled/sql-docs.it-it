@@ -1,27 +1,26 @@
 ---
 title: Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-tables
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 66cf48a0435cdb14681ab996d7707cc4e082c0d9
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b8f6870e0e7881f9ce31a7b9d120b4fb4906a926
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563719"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.lasthandoff: 01/18/2018
   
 -   La tabella di cronologia per la tabella ottimizzata per la memoria con controllo delle versioni di sistema deve essere basata su disco, che sia stata creata dall'utente finale o dal sistema.  
   
--   Le query che interessano solo la tabella corrente in memoria possono essere usate in [moduli T-SQL compilati in modo nativo](https://msdnstage.redmond.corp.microsoft.com/en-us/library/dn133184.aspx). Le query temporali che usano la clausola FOR SYSTEM TIME non sono supportate nei moduli compilati in modo nativo. È supportato invece l'uso della clausola FOR SYSTEM TIME insieme a tabelle ottimizzate per la memoria in query ad hoc e in moduli non nativi.  
+-   Le query che interessano solo la tabella corrente in memoria possono essere usate in [moduli T-SQL compilati in modo nativo](https://msdn.microsoft.com/en-us/library/dn133184.aspx). Le query temporali che usano la clausola FOR SYSTEM TIME non sono supportate nei moduli compilati in modo nativo. È supportato invece l'uso della clausola FOR SYSTEM TIME insieme a tabelle ottimizzate per la memoria in query ad hoc e in moduli non nativi.  
   
 -   Con **SYSTEM_VERSIONING = ON** viene creata automaticamente una tabella di staging interna ottimizzata per la memoria per accettare le modifiche più recenti alle versioni di sistema in seguito alle operazioni di aggiornamento ed eliminazione nella tabella ottimizzata per la memoria corrente.  
   
@@ -82,9 +81,6 @@ ms.lasthandoff: 01/18/2018
   
  È possibile applicare uno scaricamento dati chiamando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) e specificando il nome dello schema e della tabella:   
 **sys.sp_xtp_flush_temporal_history  @schema_name, @object_name**. Con questo comando eseguito dall'utente viene richiamato lo stesso processo di spostamento dei dati richiamato per questa attività dal sistema su pianificazione interna.  
-  
-## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Commenti e suggerimenti  
- Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Microsoft incoraggia gli utenti a inviare i propri commenti per migliorare i contenuti Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20System-Versioned%20Temporal%20Tables%20with%20Memory-Optimized%20Tables%20page)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle temporali](../../relational-databases/tables/temporal-tables.md)   

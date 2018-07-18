@@ -1,31 +1,32 @@
 ---
-title: "Finestra di dialogo Proprietà facet, pagina Condizioni dipendenti | Microsoft Docs"
-ms.custom: 
+title: Finestra di dialogo Proprietà facet, pagina Condizioni dipendenti | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.dmf.facet.dependentconditions.f1
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.dmf.facet.dependentconditions.f1
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbd566299b8ed27c401227c170fa312e4a2fa530
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: aae7f637e88c5c7b7ac3e1d287da56acfc925ffa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>Finestra di dialogo Proprietà facet, pagina Condizioni dipendenti
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa finestra di dialogo per visualizzare un elenco di condizioni che fanno riferimento al facet della gestione basata su criteri.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilizzare questa finestra di dialogo per visualizzare un elenco di condizioni che fanno riferimento al facet della gestione basata su criteri.  
   
 ## <a name="options"></a>Opzioni  
  **Nome**  

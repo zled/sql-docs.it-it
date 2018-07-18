@@ -1,27 +1,24 @@
 ---
 title: Informazioni sulle transazioni XA | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 6599312aa6c25275e6b7a642c6764591d1bf4cba
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: a78fdb7edae90289d64d4c7fdf74ac3a12d4b115
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-xa-transactions"></a>Informazioni sulle transazioni XA
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -104,7 +101,7 @@ ms.lasthandoff: 11/18/2017
   
 3.  Impostare la funzionalità di registrazione come illustrato nell'esempio di codice della sezione successiva. Eseguire la ricerca della frase "Server XA DLL version:..." nel file del log di output.  
   
-###  <a name="BKMK_ServerSide"></a>Configurazione delle impostazioni di timeout sul lato server per il rollback automatico delle transazioni non preparate  
+###  <a name="BKMK_ServerSide"></a> Configurazione delle impostazioni di timeout sul lato server per il rollback automatico delle transazioni non preparate  
   
 > [!WARNING]  
 >  Questa opzione sul lato server è nuova con Microsoft JDBC Driver 4.2 (e versioni successive) per SQL Server. Per ottenere il comportamento aggiornato, verificare che il file sqljdbc_xa.dll nel server sia aggiornato. Per ulteriori informazioni sull'impostazione di timeout lato client, vedere [XAResource](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  

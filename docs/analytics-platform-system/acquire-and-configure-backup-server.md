@@ -1,31 +1,25 @@
 ---
-title: Acquisire e configurare un Server di Backup per PDW APS
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "Configurare un sistema di Windows non strumento come un server di backup per l'utilizzo con il backup e ripristino funzionalità Analitica piattaforma di strumenti analitici e di SQL Server Parallel Data Warehouse (PDW)."
-ms.date: 10/20/2016
-ms.topic: article
-caps.latest.revision: "20"
-ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Acquisire e configurare un server di backup - Parallel Data Warehouse | Documenti Microsoft
+description: Questo articolo descrive come configurare un sistema di Windows non strumento come un server di backup per l'utilizzo con le funzionalità di backup e ripristino di sistema della piattaforma Analitica (AP) e Parallel Data Warehouse (PDW).
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4464857e2b1e71a96f87e95d45df0577df987176
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-backup-server"></a>Acquisire e configurare un server di backup
-In questo argomento viene descritto come configurare un sistema di Windows non strumento come un server di backup per l'utilizzo con le funzionalità di backup e ripristino in Analitica piattaforma di strumenti analitici e di SQL Server Parallel Data Warehouse (PDW).  
+# <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Acquisire e configurare un server di backup per Parallel Data Warehouse
+Questo articolo descrive come configurare un sistema di Windows non strumento come un server di backup per l'utilizzo con le funzionalità di backup e ripristino di sistema della piattaforma Analitica (AP) e Parallel Data Warehouse (PDW).  
   
   
-## <a name="Basics"></a>Nozioni fondamentali sul server di backup  
+## <a name="Basics"></a>Nozioni fondamentali sul server backup  
 Il server di backup:  
   
 -   Viene fornita e gestito dal proprio team IT.  
@@ -45,7 +39,7 @@ I requisiti di sistema per il server di Backup dipendono quasi completamente il 
   
 Utilizzare il [foglio di lavoro di pianificazione della capacità Backup server](backup-capacity-planning-worksheet.md) per determinare i requisiti di capacità.  
   
-## <a name="Step2"></a>Passaggio 2: Ottenere il server di backup  
+## <a name="Step2"></a>Passaggio 2: Acquisire il server di backup  
 Ora che è comprendere meglio i requisiti di capacità, è possibile pianificare i server e i componenti di rete che sarà necessario acquistare o effettuare il provisioning. Incorporare il seguente elenco di requisiti al piano di acquisto, quindi acquistare il server o effettuare il provisioning di un server esistente.  
   
 ### <a name="software-requirements"></a>Requisiti software  
@@ -94,7 +88,7 @@ PDW potranno accedere il server di backup tramite una condivisione file UNC. Per
   
 5.  Aggiungere le credenziali dell'account di dominio di backup a PDW.  
   
-    Ad esempio  
+    Esempio:  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -114,7 +108,7 @@ Per il backup dei dati, utilizzare un client di query per connettersi a SQL Serv
 > [!IMPORTANT]  
 > Ricordarsi di utilizzare l'indirizzo IP InfiniBand del server di backup. In caso contrario, verranno copiati i dati su Ethernet anziché InfiniBand.  
   
-Ad esempio  
+Esempio:  
   
 ```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  
@@ -136,12 +130,12 @@ Poiché i backup PDW non sono archiviati nel dispositivo, il team IT è responsa
   
 ### <a name="manage-network-credentials"></a>Gestire le credenziali di rete  
   
-Accesso alla rete per la directory di backup è basato su standard Windows condivisione file security. Prima di eseguire un backup, è necessario creare o designare un account di Windows che verrà utilizzato per l'autenticazione PDW alla directory di backup. Questo account di windows deve disporre dell'autorizzazione per accedere, creare e scrivere nella directory di backup.  
+L'accesso di rete alla directory di backup è basato sulla sicurezza di condivisione dei file di Windows standard. Prima di eseguire un backup, è necessario creare o designare un account di Windows che verrà utilizzato per l'autenticazione PDW alla directory di backup. L'account di Windows deve avere le autorizzazioni per accedere, creare e scrivere nella directory di backup.  
   
 > [!IMPORTANT]  
-> Per ridurre i rischi di sicurezza con i dati, è consigliabile che definisce un account di Windows solo scopo di operazioni di backup e di operazioni di ripristino. Consente questo account dispone delle autorizzazioni per il percorso di backup e non altrove.  
+> Per ridurre i rischi di sicurezza dei dati, è consigliabile impostare un account di Windows dedicato esclusivamente all'esecuzione delle operazioni di backup e ripristino. Concedere all'account le autorizzazioni solo per il percorso di backup.  
   
-Per archiviare il nome utente e password in PDW, utilizzare il [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) stored procedure. PDW Usa Gestione credenziali di Windows per archiviare e crittografare i nomi utente e password nel nodo di controllo e nodi di calcolo. Le credenziali non vengono eseguito il backup con il comando BACKUP DATABASE.  
+Per archiviare il nome utente e password in PDW, utilizzare il [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) stored procedure. PDW Usa Gestione credenziali di Windows per archiviare e crittografare i nomi utente e password nel nodo di controllo e nodi di calcolo. Con il comando BACKUP DATABASE non viene eseguito il backup delle credenziali.  
   
 Per rimuovere le credenziali di rete da PDW, utilizzare il [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) stored procedure.  
   

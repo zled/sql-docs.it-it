@@ -1,32 +1,33 @@
 ---
 title: sp_copysubscription (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_copysubscription
 - sp_copysubscription_TSQL
-helpviewer_keywords: sp_copysubscription
+helpviewer_keywords:
+- sp_copysubscription
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9feaac9bb5dfd23bbdd4422f3ad9908663bc64c7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3cae06562e37cf10c2fa94934eedb20880b4391a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,25 +51,25 @@ sp_copysubscription [ @filename = ] 'file_name'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@filename =**] **'***file_name***'**  
- Stringa che specifica il percorso completo, compreso il nome del file, in cui salvare una copia del file con estensione mdf. *nome del file* è **nvarchar (260)**, non prevede alcun valore predefinito.  
+ Stringa che specifica il percorso completo, compreso il nome del file, in cui salvare una copia del file con estensione mdf. *nome del file* viene **nvarchar(260)**, non prevede alcun valore predefinito.  
   
  [  **@temp_dir=**] **'***temp_dir***'**  
- Nome della directory contenente i file temporanei. *temp_dir* è **nvarchar (260)**, con un valore predefinito è NULL. Se NULL, il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory dati predefinita verrà utilizzato. Nella directory deve essere disponibile spazio sufficiente per l'archiviazione di un file le cui dimensioni sono pari alla somma delle dimensioni di tutti i file di database del Sottoscrittore.  
+ Nome della directory contenente i file temporanei. *temp_dir* viene **nvarchar(260)**, con un valore predefinito è NULL. Se NULL, il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory dati predefinita verrà utilizzato. Nella directory deve essere disponibile spazio sufficiente per l'archiviazione di un file le cui dimensioni sono pari alla somma delle dimensioni di tutti i file di database del Sottoscrittore.  
   
  [  **@overwrite_existing_file=**] **'***overwrite_existing_file***'**  
- È un flag booleano facoltativo che specifica se sovrascrivere un file esistente con lo stesso nome specificato in  **@filename** . *overwrite_existing_file*è **bit**, il valore predefinito è **0**. Se **1**, sovrascrive il file specificato da  **@filename** , se presente. Se **0**, la stored procedure ha esito negativo se il file esista e non è possibile sovrascrivere il file.  
+ È un flag booleano facoltativo che specifica se sovrascrivere un file esistente con lo stesso nome specificato in **@filename**. *overwrite_existing_file*viene **bit**, il valore predefinito è **0**. Se **1**, sovrascrive il file specificato da **@filename**, se presente. Se **0**, la stored procedure ha esito negativo se il file esista e non è possibile sovrascrivere il file.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_copysubscription** viene utilizzato in tutti i tipi di replica per copiare un database di sottoscrizione in un file in alternativa all'applicazione di uno snapshot nel Sottoscrittore. Il database deve essere configurato in modo che supporti solo le sottoscrizioni pull. Gli utenti che dispongono delle autorizzazioni appropriate possono eseguire copie del database di sottoscrizione e quindi inviare tramite posta elettronica, copiare o trasferire il file ottenuto (con estensione msf) in un altro Sottoscrittore, dove è possibile collegarlo come sottoscrizione.  
+ **sp_copysubscription** viene utilizzato in tutti i tipi di replica per copiare un database di sottoscrizione in un file come alternativa all'applicazione di uno snapshot nel Sottoscrittore. Il database deve essere configurato in modo che supporti solo le sottoscrizioni pull. Gli utenti che dispongono delle autorizzazioni appropriate possono eseguire copie del database di sottoscrizione e quindi inviare tramite posta elettronica, copiare o trasferire il file ottenuto (con estensione msf) in un altro Sottoscrittore, dove è possibile collegarlo come sottoscrizione.  
   
  Le dimensioni del database di sottoscrizione copiato devono essere inferiori a 2 gigabyte (GB)  
   
- **sp_copysubscription** è supportato solo per i database con sottoscrizioni client e non può essere eseguita quando il database ha sottoscrizioni server.  
+ **sp_copysubscription** è supportato solo per i database con le sottoscrizioni client e non può essere eseguita quando il database ha sottoscrizioni server.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_copysubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  

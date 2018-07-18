@@ -1,16 +1,14 @@
 ---
-title: Money e smallmoney (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: money e smallmoney (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - money_TSQL
@@ -26,43 +24,43 @@ helpviewer_keywords:
 - values [SQL Server], monetary
 - currency [SQL Server]
 ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: c9c66d9934618b1b8b21b0d4dcb0a234ff94731f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 936a5300c3eda74e819fbbef74dbf11fee58ae30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money e smallmoney (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Tipi di dati che rappresentano valori monetari o valutari.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 |Tipo di dati|Intervallo|Archiviazione|  
 |---|---|---|
-|**money**|-922.337.203.685.477,5808 a 922.337.203.685.477,5807 (-922,337,203,685,477.58<br />per 922,337,203,685,477.58 di Informatica.  Informatica solo supporta due numeri decimali, non quattro).|8 byte|  
+|**money**|Da -922.337.203.685.477,5808 a 922.337.203.685.477,5807 (da -922.337.203.685.477,58<br />a 922.337.203.685.477,58 per Informatica.  Informatica supporta solo due posizioni decimali e non quattro).|8 byte|  
 |**smallmoney**|Da -214.748,3648 a 214.748,3647|4 byte|  
   
-Il **money** e **smallmoney** sono accurati di un decimillesimo di unità di valuta che rappresentano i tipi di dati. Per Informatica, il **money** e **smallmoney** sono accurati per centesimo delle unità monetarie che rappresentano i tipi di dati.
+I tipi di dati **money** e **smallmoney** sono caratterizzati da una precisione pari a dieci millesimi delle unità monetarie rappresentate. Per Informatica i tipi di dati **money** e **smallmoney** sono caratterizzati da una precisione pari a un centesimo delle unità monetarie rappresentate.
   
 Per separare le unità di valuta parziali, ad esempio i centesimi, da quelle intere, utilizzare il punto. Ad esempio, 2.15 indica 2 dollari e 15 centesimi.
   
 È possibile utilizzare questi tipi di dati per i simboli di valuta illustrati di seguito.
   
-![Tabella dei simboli di valuta, valori esadecimali](../../t-sql/data-types/media/money01.gif "tabella dei simboli di valuta, valori esadecimali")
+![Tabella dei simboli di valuta, valori esadecimali](../../t-sql/data-types/media/money01.gif "Tabella dei simboli di valuta, valori esadecimali")
   
 Non è necessario racchiudere i dati di tipo valuta tra virgolette singole ('). È importante tenere presente che anche se è possibile specificare un simbolo di valuta che precede i valori di valuta, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le informazioni relative alla valuta archiviate non sono associate al simbolo, ma è presente solo il valore numerico.
   
-## <a name="converting-money-data"></a>Conversione di dati money
-Quando si converte **money** da tipi di dati integer, unità si presuppone che sia in unità di valuta. Ad esempio, il valore integer 4 viene convertito nel **money** equivalente di 4 unità di valuta.
+## <a name="converting-money-data"></a>Conversione dei dati di tipo money
+Nella conversione dal tipo di dati Integer a **money** le unità vengono interpretate come unità di valuta. Ad esempio, il valore Integer 4 viene convertito nell'equivalente di 4 unità di valuta per il tipo **money**.
   
-L'esempio seguente converte **smallmoney** e **money** valori **varchar** e **decimale** tipi di dati, rispettivamente.
+Nell'esempio seguente i valori **smallmoney** e **money** vengono convertiti rispettivamente nei tipi di dati **varchar** e **decimal**.
   
 ```sql
 DECLARE @mymoney_sm smallmoney = 3148.29,  
@@ -81,12 +79,12 @@ SM_MONEY VARCHAR               MONEY DECIMAL
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Istruzione ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) 
- [CAST e CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md) 
- [Crea una tabella &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) 
- [Tipi di dati &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md) 
- [DECLARE @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 
- [Impostare @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/set-local-variable-transact-sql.md) 
- [Sys. Types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
+[CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
+[Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

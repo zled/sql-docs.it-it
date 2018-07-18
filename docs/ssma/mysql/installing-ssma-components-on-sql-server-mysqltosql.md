@@ -1,31 +1,30 @@
 ---
 title: Installazione dei componenti SSMA in SQL Server (MySQLToSql) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: SSMA extension pack, Installation
+helpviewer_keywords:
+- SSMA extension pack, Installation
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c9bdf41c278fe5660c645eab72498cbbee540508
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Installazione dei componenti SSMA in SQL Server (MySQLToSql)
 Oltre a installare SSMA, è necessario installare anche i componenti nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Questi componenti includono il pacchetto estensione SSMA, che supporta la migrazione dei dati e i provider di MySQL per abilitare la connettività di server a server.  
@@ -35,10 +34,10 @@ Il pacchetto di estensione SSMA viene aggiunto un database, **sysdb**, per l'ist
   
 Inoltre, quando si esegue la migrazione dei dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], crea SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] processi agente, quando il modulo di migrazione dei dati lato server viene utilizzato per la migrazione dei dati.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
 Prima di installare SSMA per i componenti server di MySQL in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], assicurarsi che il computer soddisfi i requisiti seguenti:  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 o versione successiva.  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 o versione successiva.  
   
 -   Il Provider Client MySQL e la connettività al database di MySQL che si desidera eseguire la migrazione. È possibile installare i provider dal sito Web di MySQL o MySQL supporto del prodotto.  
   
@@ -55,7 +54,7 @@ Prima di installare SSMA per i componenti server di MySQL in [!INCLUDE[ssNoVersi
   
 **Per installare il pacchetto di estensione**  
   
-1.  Copiare SSMA per l'estensione MySQL Pack. *n*. Install.exe, in cui  *n*  è il numero di build, al computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+1.  Copiare SSMA per l'estensione MySQL Pack. *n*. Install.exe, dove *n* è il numero di build, al computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 2.  Fare doppio clic su SSMA per l'estensione MySQL Pack. *n*. Install.exe.  
   
@@ -79,13 +78,13 @@ Prima di installare SSMA per i componenti server di MySQL in [!INCLUDE[ssNoVersi
   
     L'autenticazione di Windows utilizzerà le credenziali di Windows per tentare di accedere all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Se si seleziona [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] l'autenticazione, è necessario immettere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nome account di accesso e password.  
   
-10. Nella successiva finestra di dialogo, selezionare **installare Database utilità**  *n* , dove  *n*  è il numero di versione e quindi fare clic su **Avanti**.  
+10. Nella successiva finestra di dialogo, selezionare **installare Database Utilities** *n*, dove *n* è il numero di versione e quindi fare clic su **Avanti**.  
   
     Il **sysdb** database viene creato con le tabelle e stored procedure necessarie per la migrazione dei dati (con modulo di migrazione dei dati lato server) vengono create in tale database.  
   
 11. Per installare le utilità in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]selezionare **Sì**, quindi fare clic su **Avanti**. Per uscire dalla procedura guidata, fare clic su **n**.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Installazione di SSMA per MySQL Client &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[Migrazione di database MySQL a SQL Server: database SQL di Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Installazione di SSMA per Client di MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
+[Database MySQL la migrazione a SQL Server - SQL di Azure DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

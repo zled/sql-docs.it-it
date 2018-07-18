@@ -1,16 +1,14 @@
 ---
-title: ALTER USER (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER USER (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_USER_TSQL
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - default schemas
 - modifying default schemas
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
-caps.latest.revision: 
+caps.latest.revision: 75
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 61984e16244a32a28449a099b2e03b5916d2c2db
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: aafcc77a26dcd75c5581f36acc8e37cd852684a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -111,37 +109,37 @@ ALTER USER userName
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *nome utente*  
+ *userName*  
  Specifica il nome con cui viene identificato l'utente all'interno del database.  
   
- Account di accesso  **=**  *loginName*  
+ LOGIN **=***loginName*  
  Modifica il mapping di un utente associandolo a un altro account di accesso, modificando l'ID di sicurezza (SID) dell'utente in modo che corrisponda all'ID di sicurezza dell'account di accesso.  
   
  Se l'istruzione ALTER USER è l'unica istruzione in un batch SQL, il database SQL di Microsoft Azure supporta la clausola WITH LOGIN. Se l'istruzione ALTER USER non è l'unica istruzione in un batch SQL o viene eseguita in SQL dinamico, la clausola WITH LOGIN non è supportata.  
   
- NOME  **=**  *newUserName*  
+ NAME **=***newUserName*  
  Specifica il nuovo nome dell'utente. *newUserName* non deve essere già presente nel database corrente.  
   
- DEFAULT_SCHEMA  **=**  { *schemaName* | NULL}  
+ DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
  Specifica il primo schema nel quale il server eseguirà una ricerca durante la risoluzione dei nomi di oggetti per l'utente. L'impostazione dello schema predefinito su NULL comporta la rimozione di uno schema predefinito da un gruppo di Windows.   Non è possibile usare NULL con un utente di Windows.  
   
- PASSWORD  **=**  '*password*'  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ PASSWORD **=** '*password*'  
+ **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifica la password per l'utente che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.  
   
 > [!NOTE]  
->  Questa opzione è disponibile solo per gli utenti contenuti. Vedere [database indipendenti](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) per ulteriori informazioni.  
+>  Questa opzione è disponibile solo per gli utenti contenuti. Vedere [Database indipendenti](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) per altre informazioni.  
   
- OLD_PASSWORD  **=**  *'oldpassword'*  
- **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ OLD_PASSWORD **=***'oldpassword'*  
+ **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- La password dell'utente corrente che verrà sostituita da '*password*'. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si dispone **ALTER ANY USER** autorizzazione. Richiedere *OLD_PASSWORD* impedisce agli utenti con **rappresentazione** autorizzazioni per la modifica della password.  
+ Password dell'utente corrente che verrà sostituita da '*password*'. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si disponga dell'autorizzazione **ALTER ANY USER**. Si richiede *OLD_PASSWORD* per impedire agli utenti con autorizzazione **IMPERSONATION** di modificare la password.  
   
 > [!NOTE]  
 >  Questa opzione è disponibile solo per gli utenti contenuti.  
   
- DEFAULT_LANGUAGE  **=**  *{NONE | \<lcid > | \<nome lingua > | \<alias di lingua >}*  
+ DEFAULT_LANGUAGE **=***{ NONE | \<lcid> | \<language name> | \<language alias> }*  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifica una lingua predefinita da assegnare all'utente. Se questa opzione è impostata su NONE, la lingua predefinita viene impostata sulla lingua predefinita corrente del database. Se la lingua predefinita del database viene modificata in seguito, la lingua predefinita dell'utente rimarrà invariata. *DEFAULT_LANGUAGE* può essere l'ID locale (lcid), il nome della lingua o l'alias della lingua.  
@@ -149,25 +147,25 @@ ALTER USER userName
 > [!NOTE]  
 >  È possibile specificare questa opzione solo in un database indipendente e solo per utenti contenuti.  
   
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ON | **OFF** ]]  
- **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
+ **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- Elimina i controlli dei metadati crittografici sul server nelle operazioni di copia bulk. In questo modo all'utente di bulk copia dei dati crittografati fra tabelle o database, senza la decrittografia dei dati. Il valore predefinito è OFF.  
+ Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di eseguire la copia bulk dei dati crittografati fra tabelle o database senza decrittografare i dati. Il valore predefinito è OFF.  
   
 > [!WARNING]  
->  L'uso improprio di questa opzione può causare il danneggiamento dei dati. Per ulteriori informazioni, vedere [migrare dati sensibili protetti da crittografia sempre attiva](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
+>  L'uso improprio di questa opzione può causare il danneggiamento dei dati. Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Lo schema predefinito sarà il primo schema in cui verrà eseguita la ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database. Se non specificato diversamente, lo schema predefinito sarà il proprietario degli oggetti creati dall'utente del database.  
   
- Se l'utente dispone di uno schema predefinito, verrà utilizzato tale schema. Se l'utente non dispone di uno schema predefinito, ma è un membro di un gruppo che dispone di uno schema predefinito, verrà utilizzato lo schema predefinito del gruppo. Se l'utente non dispone di uno schema predefinito ed è un membro di più gruppi, lo schema predefinito per l'utente sarà quello del gruppo di Windows con principal_id inferiore e uno schema predefinito impostato in modo esplicito. Se non lo schema predefinito può essere determinato per un utente, il **dbo** schema verrà utilizzato.  
+ Se l'utente dispone di uno schema predefinito, verrà utilizzato tale schema. Se l'utente non dispone di uno schema predefinito, ma è un membro di un gruppo che dispone di uno schema predefinito, verrà utilizzato lo schema predefinito del gruppo. Se l'utente non dispone di uno schema predefinito ed è un membro di più gruppi, lo schema predefinito per l'utente sarà quello del gruppo di Windows con principal_id inferiore e uno schema predefinito impostato in modo esplicito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo**.  
   
  È possibile impostare DEFAULT_SCHEMA su uno schema non attualmente presente nel database. È pertanto possibile assegnare uno schema predefinito tramite DEFAULT_SCHEMA a un utente prima della creazione dello schema.  
   
  Non è possibile specificare DEFAULT_SCHEMA per un utente di cui è stato eseguito il mapping a un certificato o a una chiave asimmetrica.  
   
 > [!IMPORTANT]  
->  Il valore di DEFAULT_SCHEMA viene ignorato se l'utente è membro il **sysadmin** ruolo predefinito del server. Tutti i membri del **sysadmin** ruolo predefinito del server dispone di uno schema predefinito di `dbo`.  
+>  Il valore di DEFAULT_SCHEMA viene ignorato se l'utente è un membro del ruolo predefinito del server **sysadmin**. Tutti i membri del ruolo predefinito del server **sysadmin** dispongono di uno schema predefinito di `dbo`.  
   
  È possibile modificare il nome di un utente sul quale viene eseguito il mapping a un account di accesso o a un gruppo di Windows solo se il SID del nuovo nome utente corrisponde al SID registrato nel database. Questa verifica consente di impedire lo spoofing degli account di accesso di Windows nel database.  
   
@@ -185,7 +183,7 @@ ALTER USER userName
   
  In caso contrario, l'utente non verrà rinominato, a meno che il chiamante non richiami anche la clausola NAME.  
   
-Il nome di un utente con mappato a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso, un certificato o una chiave asimmetrica non può contenere il carattere barra rovesciata (\\).  
+Il nome di un utente di cui è stato eseguito il mapping a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un certificato o una chiave asimmetrica non può contenere il carattere barra rovesciata (\\).  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -193,16 +191,16 @@ Il nome di un utente con mappato a un [!INCLUDE[ssNoVersion](../../includes/ssno
 ## <a name="security"></a>Security  
   
 > [!NOTE]  
->  Un utente con **ALTER ANY USER** autorizzazione possa modificare lo schema predefinito di qualsiasi utente. È possibile che un utente con uno schema modificato selezioni involontariamente i dati dalla tabella errata o esegua codice dallo schema errato.  
+>  Un utente con autorizzazione **ALTER ANY USER** può modificare lo schema predefinito di qualsiasi utente. È possibile che un utente con uno schema modificato selezioni involontariamente i dati dalla tabella errata o esegua codice dallo schema errato.  
   
-### <a name="permissions"></a>Permissions  
- Per modificare il nome di un utente richiede la **ALTER ANY USER** autorizzazione.  
+### <a name="permissions"></a>Autorizzazioni  
+ Per modificare il nome di un utente, è necessaria l'autorizzazione **ALTER ANY USER**.  
   
- Per modificare l'account di accesso di destinazione di un utente richiede la **controllo** autorizzazione per il database.  
+ Per modificare l'account di accesso di destinazione di un utente, è necessaria l'autorizzazione **CONTROL** per il database.  
   
- Per modificare il nome utente di un utente con **controllo** richiede l'autorizzazione per il database di **controllo** autorizzazione per il database.  
+ Per modificare il nome di un utente con autorizzazione **CONTROL** per il database, è necessaria l'autorizzazione **CONTROL** per il database.  
   
- Per modificare lo schema predefinito o una lingua, è necessario **ALTER** autorizzazione per l'utente. Gli utenti possono modificare il proprio schema predefinito o la lingua.  
+ Per modificare la lingua o lo schema predefinito, è necessaria l'autorizzazione **ALTER** per l'utente. Gli utenti possono modificare il proprio schema predefinito o la lingua.  
   
 ## <a name="examples"></a>Esempi  
 
@@ -241,10 +239,10 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [DROP USER &#40; Transact-SQL &#41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [Database indipendenti](../../relational-databases/databases/contained-databases.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_migrate_user_to_contained &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)  
+ [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)  
   
   
 

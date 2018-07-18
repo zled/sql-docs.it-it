@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLGetCursorName | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLGetCursorName
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLGetCursorName
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetCursorName
-helpviewer_keywords: SQLGetCursorName function [ODBC]
+f1_keywords:
+- SQLGetCursorName
+helpviewer_keywords:
+- SQLGetCursorName function [ODBC]
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 69a0da5196c5724284c2da75dc6c7deb3c3cedcd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 262eee1b795907c7c429443ae85a25485f257ed5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetcursorname-function"></a>Funzione SQLGetCursorName
 **Conformità**  

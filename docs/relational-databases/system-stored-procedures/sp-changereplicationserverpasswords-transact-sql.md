@@ -1,32 +1,33 @@
 ---
 title: sp_changereplicationserverpasswords (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_changereplicationserverpasswords_TSQL
 - sp_changereplicationserverpasswords
-helpviewer_keywords: sp_changereplicationserverpasswords
+helpviewer_keywords:
+- sp_changereplicationserverpasswords
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fcd1cbfd5532703196e47d06f920ef7cfa81f019
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7c27142aa0e628e7041202429ae6bbaee0b87a1f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,39 +47,39 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@login_type**  =] *login_type*  
- Tipo di autenticazione per le credenziali specificate. *LOGIN_TYPE* è **tinyint**, non prevede alcun valore predefinito.  
+ [ **@login_type** =] *login_type*  
+ Tipo di autenticazione per le credenziali specificate. *LOGIN_TYPE* viene **tinyint**, non prevede alcun valore predefinito.  
   
  **1** = autenticazione integrata di Windows  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione  
   
- [  **@login**  =] **'***accesso***'**  
- Nome dell'account di Windows o dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da modificare. *account di accesso* è **nvarchar (257)**, non prevede alcun valore predefinito  
+ [ **@login** =] **'***account di accesso***'**  
+ Nome dell'account di Windows o dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da modificare. *account di accesso* viene **nvarchar(257)**, non prevede alcun valore predefinito  
   
- [  **@password**  =] **'***password***'**  
- È possibile archiviare la nuova password per l'oggetto specificato *accesso*. *password* è **sysname**, non prevede alcun valore predefinito.  
+ [ **@password** =] **'***password***'**  
+ È possibile archiviare la nuova password per l'oggetto specificato *accesso*. *password* viene **sysname**, non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  Dopo aver modificato una password per la replica è necessario arrestare e riavviare ogni agente che utilizza la password prima che la modifica abbia effetto per tale agente.  
   
- [  **@server**  =] **'***server***'**  
- Connessione server per cui viene modificata la password archiviata. *server* è **sysname**, i possibili valori sono i seguenti:  
+ [ **@server** =] **'***server***'**  
+ Connessione server per cui viene modificata la password archiviata. *server* viene **sysname**, e può essere uno dei valori seguenti:  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**server di distribuzione**|Tutte le connessioni di agenti al server di distribuzione.|  
+|**Server di distribuzione**|Tutte le connessioni di agenti al server di distribuzione.|  
 |**publisher**|Tutte le connessioni di agenti al server di pubblicazione.|  
 |**subscriber**|Tutte le connessioni di agenti al Sottoscrittore.|  
-|**%**(impostazione predefinita)|Tutte le connessioni di agenti a tutti i server di una topologia di replica.|  
+|**%** (impostazione predefinita)|Tutte le connessioni di agenti a tutti i server di una topologia di replica.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_changereplicationserverpasswords** viene utilizzato con tutti i tipi di replica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_changereplicationserverpasswords**.  
   
 ## <a name="see-also"></a>Vedere anche  

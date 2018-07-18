@@ -1,31 +1,23 @@
 ---
 title: Eliminare relazioni | Documenti Microsoft
-ms.custom: 
-ms.date: 02/22/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: multidimensional-tabular
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 690224c1798494e75f6b26add07d51c3afa7134f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 115d72bd0b833d1f392b2349d3ed4e4970f58453
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="delete-relationships"></a>Eliminare relazioni 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-È possibile eliminare relazioni esistenti utilizzando Progettazione modelli nella Vista diagramma o la finestra di dialogo Gestisci relazioni. Per informazioni sull'utilizzo delle relazioni nei modelli tabulari, vedere [relazioni](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
+  È possibile eliminare relazioni esistenti utilizzando Progettazione modelli nella Vista diagramma o la finestra di dialogo Gestisci relazioni. Per informazioni sull'utilizzo delle relazioni nei modelli tabulari, vedere [relazioni](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
 ## <a name="considerations-for-deleting-relationships"></a>Considerazioni sull'eliminazione di relazioni  
  Quando si decide se eliminare una relazione, tenere presente i fattori seguenti:  

@@ -1,29 +1,27 @@
 ---
 title: Eseguire la migrazione di Server SQL locale (dati Migration Assistant) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-dma
-ms.tgt_pltfrm: 
-ms.topic: article
-keywords: 
-helpviewer_keywords: Data Migration Assistant, on-premises SQL Server
-ms.assetid: 
-caps.latest.revision: 
+ms.technology: dma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+keywords: ''
+helpviewer_keywords:
+- Data Migration Assistant, on-premises SQL Server
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 666236842318cfba0cee38f71ac694eef86cdbf5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b535e41b93d337fc2cc1ae3f12699dd841bf91b9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-on-premises-sql-server-using-data-migration-assistant"></a>Eseguire la migrazione di Server SQL locale utilizzando dati Migration Assistant
 
@@ -121,7 +119,7 @@ Dati della migrazione guidata esegue la convalida per le cartelle di backup, dat
 
 ## <a name="see-also"></a>Vedere anche
 
-[Dati Migration Assistant (DMA)](../dma/dma-overview.md)
+[Data Migration Assistant (DMA)](../dma/dma-overview.md)
 
 [Dati Migration Assistant: Le impostazioni di configurazione](../dma/dma-configurationsettings.md)
 

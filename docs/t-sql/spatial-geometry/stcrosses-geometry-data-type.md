@@ -1,16 +1,14 @@
 ---
-title: STCrosses (tipo di dati geometry) | Documenti Microsoft
-ms.custom: 
+title: STCrosses (tipo di dati geometry) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STCrosses (geometry Data Type)
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - STCrosses (geometry Data Type)
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f1b1588649574e16f3bf46ae6d3fa06079f16a39
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5e0d1fd0aa523fdf98ad2ff14ebfeb771bb7cf3b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Restituisce 1 se un **geometry** istanza incrocia un'altra **geometry** istanza. In caso contrario, restituisce 0.
+Restituisce 1 se un'istanza **geometry** incrocia un'altra istanza **geometry**. In caso contrario, restituisce 0.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,21 +42,21 @@ Restituisce 1 se un **geometry** istanza incrocia un'altra **geometry** istanza.
   
 ## <a name="arguments"></a>Argomenti  
  *other_geometry*  
- Un altro **geometry** istanza da confrontare con l'istanza sulla quale `STCrosses()` viene richiamato.  
+ Altra istanza **geometry** da confrontare con l'istanza sulla quale viene chiamato `STCrosses()`.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Due **geometry** istanze si incrociano se entrambe le condizioni seguenti sono vere:  
+## <a name="remarks"></a>Remarks  
+ Due istanze **geometry** si incrociano se si verificano entrambe le condizioni seguenti:  
   
--   L'intersezione dei due **geometry** istanze restituisce una geometria le cui dimensioni sono minori rispetto alle dimensioni massime dell'origine **geometry** istanze.  
+-   L'intersezione delle due istanze **geometry** restituisce una geometria le cui dimensioni sono minori delle dimensioni massime delle istanze **geometry** di origine.  
   
--   Il set di intersezione è interno a entrambe origine **geometry** istanze.  
+-   Il set di intersezione è interno a entrambe le istanze **geometry** di origine.  
   
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono.  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato `STCrosses()` per verificare se due istanze `geometry` si incrociano.  

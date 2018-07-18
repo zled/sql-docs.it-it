@@ -1,31 +1,23 @@
 ---
-title: "Disponibilità elevata e scalabilità in Analysis Services | Documenti Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: 
-author: Minewiskan
+title: Disponibilità elevata e scalabilità in Analysis Services | Documenti Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 33270141fc67581adaeaeca9df8411c68fe0ac50
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Disponibilità elevata e scalabilità in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Questo articolo descrive le tecniche usate più di frequente per garantire ai database di Analysis Services disponibilità elevata e scalabilità. Ognuno di questi obiettivi potrebbe essere affrontato separatamente ma, in realtà, questi sono spesso correlati: una distribuzione scalabile per carichi di lavoro di elaborazione o di query di grandi dimensioni in genere prevede una disponibilità elevata.  
+  Questo articolo descrive le tecniche usate più di frequente per garantire ai database di Analysis Services disponibilità elevata e scalabilità. Ognuno di questi obiettivi potrebbe essere affrontato separatamente ma, in realtà, questi sono spesso correlati: una distribuzione scalabile per carichi di lavoro di elaborazione o di query di grandi dimensioni in genere prevede una disponibilità elevata.  
   
  Non è sempre vero il contrario, tuttavia. La disponibilità elevata, senza scalabilità, può essere l'unico obiettivo nel caso di contratti di servizio rigidi per carichi di lavoro di query di importanza critica, ma con volumi moderati.  
   

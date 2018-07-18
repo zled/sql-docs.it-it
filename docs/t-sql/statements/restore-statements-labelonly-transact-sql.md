@@ -1,16 +1,14 @@
 ---
-title: RESTORE LABELONLY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/15/2017
-ms.prod: sql-non-specified
+title: RESTORE LABELONLY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - LABELONLY
@@ -23,24 +21,25 @@ helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 46
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c5cbf694abdf86a5e5e13f2799f5b1f4b808a498
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 24a5757410d99c7a6d52fc1d12c2562900329d89
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="restore-statements---labelonly-transact-sql"></a>Istruzioni - RESTORE LABELONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-
+# <a name="restore-statements---labelonly-transact-sql"></a>Istruzioni RESTORE - LABELONLY (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
   Restituisce un set di risultati che include informazioni sul supporto di backup identificato dal dispositivo di backup specificato.  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 > [!NOTE]  
->  Per una descrizione degli argomenti, vedere [argomenti RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  Per le descrizioni degli argomenti, vedere [Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -78,7 +77,7 @@ FROM <backup_device>
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Per una descrizione degli argomenti RESTORE LABELONLY, vedere [argomenti RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ Per le descrizioni degli argomenti RESTORE LABELONLY, vedere [Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## <a name="result-sets"></a>Set di risultati  
  Il set di risultati dall'istruzione RESTORE LABELONLY consiste in una riga singola che include le informazioni seguenti.  
@@ -91,12 +90,12 @@ FROM <backup_device>
 |**FamilySequenceNumber**|**int**|Numero di sequenza del gruppo.|  
 |**MediaFamilyId**|**uniqueidentifier**|Numero di identificazione univoco del gruppo di supporti.|  
 |**MediaSequenceNumber**|**int**|Numero di sequenza del supporto nel gruppo di supporti.|  
-|**MediaLabelPresent**|**tinyint**|Specifica se la descrizione del supporto include:<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] etichetta del supporto tape Format<br /><br /> **0** = descrizione dei supporti|  
+|**MediaLabelPresent**|**tinyint**|Specifica se la descrizione del supporto include:<br /><br /> **1** =  etichetta di supporto [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format<br /><br /> **0** = descrizione dei supporti|  
 |**MediaDescription**|**nvarchar(255)**|Descrizione del supporto come testo in formato libero o etichetta del supporto Microsoft Tape Format|  
 |**SoftwareName**|**nvarchar(128)**|Nome del software di backup con cui è stata scritta l'etichetta.|  
 |**SoftwareVendorId**|**int**|Numero di identificazione univoco del produttore del software che ha scritto il backup.|  
 |**MediaDate**|**datetime**|Data e ora in cui è stata scritta l'etichetta.|  
-|**Mirror_Count**|**int**|Numero di mirror nel set (1-4).<br /><br /> Nota: Le etichette scritte per mirror diversi in un set sono identiche.|  
+|**Mirror_Count**|**int**|Numero di mirror nel set (1-4).<br /><br /> Nota: le etichette scritte per mirror diversi in un set sono identiche.|  
 |**IsCompressed**|**bit**|Specifica se il backup è compresso:<br /><br /> 0 = non compresso<br /><br /> 1 = compresso|  
   
 > [!NOTE]  
@@ -105,11 +104,11 @@ FROM <backup_device>
 ## <a name="general-remarks"></a>Osservazioni generali  
  L'esecuzione di RESTORE LABELONLY consente di individuare rapidamente il contenuto del supporto di backup. Poiché viene letta solo l'intestazione supporto, l'esecuzione dell'istruzione risulta veloce anche con dispositivi nastro ad alta capacità.  
   
-## <a name="security"></a>Sicurezza  
- Per un'operazione di backup è possibile specificare facoltativamente una password per un set di supporti. Se è stata impostata una password per un set di supporti, la password corretta deve essere specificata nell'istruzione RESTORE. La password impedisce operazioni di ripristino non autorizzate e non autorizzato aggiunge set di backup ai supporti tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumenti. Tuttavia, la password non impedisce la sovrascrittura dei supporti tramite l'opzione FORMAT dell'istruzione BACKUP.  
+## <a name="security"></a>Security  
+ Per un'operazione di backup è possibile specificare facoltativamente una password per un set di supporti. Se è stata impostata una password per un set di supporti, la password corretta deve essere specificata nell'istruzione RESTORE. La password impedisce operazioni di ripristino non autorizzate e l'aggiunta non autorizzata di set di backup ai supporti tramite gli strumenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, la password non impedisce la sovrascrittura dei supporti tramite l'opzione FORMAT dell'istruzione BACKUP.  
   
 > [!IMPORTANT]  
->  Il livello di protezione garantito da questa password è ridotto. Lo scopo è impedire un ripristino non corretto da parte di utenti autorizzati o non autorizzati mediante gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non impedisce la lettura dei dati di backup eseguita con altri mezzi o la sostituzione della password. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]La procedura consigliata per la protezione dei backup consiste nell'archiviare i nastri di backup in un luogo sicuro oppure eseguire il backup su disco i file protetti da elenchi di controllo di accesso (ACL). Gli elenchi di controllo di accesso devono essere impostati a livello della directory radice in cui vengono creati i backup.  
+>  Il livello di protezione garantito da questa password è ridotto. Lo scopo è impedire un ripristino non corretto da parte di utenti autorizzati o non autorizzati mediante gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non impedisce la lettura dei dati di backup eseguita con altri mezzi o la sostituzione della password. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Per ottenere un livello di protezione adeguato dei backup è consigliabile archiviare i nastri di backup in un luogo sicuro oppure eseguire il backup in file su disco protetti da elenchi di controllo di accesso (ACL) appropriati. Gli elenchi di controllo di accesso devono essere impostati a livello della directory radice in cui vengono creati i backup.  
   
 ### <a name="permissions"></a>Autorizzazioni  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, per ottenere informazioni su un set o un dispositivo di backup è necessario disporre dell'autorizzazione CREATE DATABASE. Per altre informazioni, vedere [GRANT - autorizzazioni per database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  

@@ -1,33 +1,32 @@
 ---
-title: 'Procedura: connessione tramite l''autenticazione di Windows | Documenti Microsoft'
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: "Procedura: connessione tramite l'autenticazione di Windows | Documenti Microsoft"
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: connecting to the server, Windows Authentication
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- connecting to the server, Windows Authentication
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 7032726897facd93e88007a879e94c40dda809c2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 8a1e43874edbdf5cc3ece40a141f3b32b7fe121e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Procedura: Connessione con l'autenticazione di Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Per impostazione predefinita, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] usa l'autenticazione di Windows per la connessione a SQL Server. È importante notare che nella maggior parte dei casi ciò significa che viene usata l'identità del processo del server Web o l'identità del thread (se il server Web usa l'impersonificazione) per connettersi al server e non l'identità dell'utente finale.  
+Per impostazione predefinita, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] usa l'autenticazione di Windows per la connessione a SQL Server. È importante notare che nella maggior parte degli scenari, ciò significa che l'identità del processo del server Web o l'identità del thread (se il server Web Usa l'impersonificazione) viene utilizzato per connettersi al server, non l'identità dell'utente finale.  
   
 Quando si usa l'autenticazione di Windows per la connessione a SQL Server è necessario considerare i seguenti punti:  
   
@@ -49,7 +48,7 @@ Se l'autenticazione di Windows non è un'opzione possibile, vedere [How to: Conn
 ## <a name="example"></a>Esempio  
 Con il driver SQLSRV dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], l'esempio seguente usa l'autenticazione di Windows per connettersi a un'istanza locale di SQL Server. Dopo aver stabilito la connessione, viene richiesto al server l'account dell'utente che accede al database.  
   
-Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) siano installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -110,12 +109,19 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[Guida di programmazione per il driver SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Procedura: Creazione di un account di accesso di SQL Server](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[Procedura: Creazione di un utente del database](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[Gestione di utenti, ruoli e account di accesso](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[Separazione Schema-utente](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[Concedere autorizzazioni per oggetti (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+[Procedura: Connessione con l'autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Procedura: creare un account di accesso SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[Procedura: creare un utente del Database](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[Gestione di utenti, ruoli e account di accesso](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Separazione tra Schema e utente](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Concedere autorizzazioni per oggetti (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

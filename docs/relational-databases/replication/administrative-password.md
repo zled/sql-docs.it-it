@@ -1,31 +1,32 @@
 ---
 title: Password amministrativa | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.rep.replicationutilities.administrativepassword.f1
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.rep.replicationutilities.administrativepassword.f1
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
-caps.latest.revision: "13"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 13
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 245f9a2a668bfadb293c27bcd9f4ca5eb170c4fb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 158530af1905b3b0801ce26d4d7e8687b959b1f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="administrative-password"></a>Password amministrativa
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se per il server di pubblicazione si seleziona un server di distribuzione remoto nella pagina **Server di distribuzione** di questa procedura guidata, è necessario immettere una password per la connessione stabilita dalla replica tra il server di pubblicazione e il server di distribuzione usando l'account di accesso **distributor_admin**. La password deve corrispondere a quella specificata nella pagina **Password database di distribuzione** della Configurazione guidata distribuzione o nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Se per il server di pubblicazione si seleziona un server di distribuzione remoto nella pagina **Server di distribuzione** di questa procedura guidata, è necessario immettere una password per la connessione stabilita dalla replica tra il server di pubblicazione e il server di distribuzione utilizzando l'account di accesso **distributor_admin** . La password deve corrispondere a quella specificata nella pagina **Password database di distribuzione** della Configurazione guidata distribuzione o nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione** .  
   
 ## <a name="options"></a>Opzioni  
  **Password**  

@@ -1,25 +1,23 @@
 ---
 title: Individuazione dati e classificazione SQL | Microsoft Docs
 description: Individuazione dati e classificazione SQL
-services: sql-server
-documentationcenter: 
+documentationcenter: ''
 author: giladm
 manager: shaik
 ms.reviewer: carlrab
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
-ms.service: sql-server
+ms.service: sql-database
+ms.prod_service: sql-database,sql
 ms.custom: security
-ms.workload: data-management
 ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 1d9694136e275f402be8467acd5f9e79bf9fbb0d
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-discovery-and-classification"></a>Individuazione dati e classificazione SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,16 +1,14 @@
 ---
 title: sp_revoke_proxy_from_subsystem (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_revoke_login_from_subsystem
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_revoke_proxy_from_subsystem
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3408c3ddee13886edaaa410341379ee50d4f9cb3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c80739e4a888316837b22838b92f6d5919c998d0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,18 +47,18 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@proxy_id** = ] *id*  
+ [ **@proxy_id** =] *id*  
  Numero di identificazione del proxy da cui revocare l'accesso. Il *proxy_id* è **int**, con un valore predefinito è NULL. Entrambi *proxy_id* o *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
+ [ **@proxy_name** =] **'***proxy_name***'**  
  Nome del proxy da cui revocare l'accesso. Il *proxy_name* è **sysname**, con un valore predefinito è NULL. Entrambi *proxy_id* o *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [ **@subsystem_id** = ] *id*  
+ [ **@subsystem_id** =] *id*  
  Numero di identificazione del sottosistema al quale revocare l'accesso. Il *subsystem_id* è **int**, con un valore predefinito è NULL. Entrambi *subsystem_id* o *subsystem_name* devono essere specificati, ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**2**|Script ActiveX<br /><br /> **\*\*Importante \* \***  verrà rimosso dal sottosistema di Scripting ActiveX di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
+|**2**|Script ActiveX<br /><br /> **\*\* Importante \* \***  verrà rimosso dal sottosistema di Scripting ActiveX The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |**3**|Sistema operativo (CmdExec)|  
 |**4**|Agente snapshot repliche|  
 |**5**|Agente lettura log repliche|  
@@ -73,10 +70,10 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] esecuzione del pacchetto|  
 |**12**|Script di PowerShell|  
   
- [  **@subsystem_name** =] **'***subsystem_name***'**  
+ [ **@subsystem_name**=] **'***subsystem_name***'**  
  Nome del sottosistema a cui revocare l'accesso. Il *subsystem_name* è **sysname**, con un valore predefinito è NULL. Entrambi *subsystem_id* o *subsystem_name* devono essere specificati, ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  
@@ -112,7 +109,7 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Agent Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Stored procedure SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Implementazione della sicurezza SQL Server Agent](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
  [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   

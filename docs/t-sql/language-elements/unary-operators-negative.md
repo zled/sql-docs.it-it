@@ -1,16 +1,14 @@
 ---
-title: '- (Negative) (Transact-SQL) | Microsoft Docs'
-ms.custom: 
+title: '- (negativo) (Transact-SQL) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - negative
@@ -21,18 +19,18 @@ helpviewer_keywords:
 - negative operator (-)
 - negative values
 ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c2d561099b6208ad0057489efd27942e48882df9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 75523e05ae2612332b9df757f403b4c712727eb7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="unary-operators---negative"></a>Operatori unari - negativo
+# <a name="unary-operators---negative"></a>Operatori unari - Negativo
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce il valore negativo del valore di un'espressione numerica (operatore unario). Gli operatori unari eseguono un'operazione in una sola espressione di un tipo di dati della categoria numerici.   
@@ -55,10 +53,10 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *numeric_expression*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) uno qualsiasi dei tipi di dati di categoria di tipi di dati numerici, tranne la data e ora categoria.  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida con uno qualsiasi dei tipi di dati appartenenti alla categoria dei tipi di dati numerici, con l'eccezione della categoria di data e ora.  
   
 ## <a name="result-types"></a>Tipi restituiti  
- Restituisce il tipo di dati di *numeric_expression*, ad eccezione del fatto che un unsigned **tinyint** espressioni in un **smallint** risultato.  
+ Restituisce il tipo di dati di *numeric_expression*, con la sola eccezione che un'espressione di tipo **tinyint** senza segno viene promossa e convertita in un risultato **smallint** con segno.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -109,10 +107,10 @@ VariableValue NegativeValue
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. Restituisce il valore negativo di una costante positiva  
- L'esempio seguente restituisce il valore negativo di una costante positiva.  
+### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. Restituzione del valore negativo di una costante positiva  
+ Nell'esempio seguente viene restituito il valore negativo di una costante positiva.  
   
 ```  
 USE ssawPDW;  
@@ -126,8 +124,8 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 -17  
 ```  
   
-### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. Restituisce il segno positivo di una costante negativa  
- L'esempio seguente restituisce il segno positivo di una costante negativa.  
+### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. Restituzione del valore positivo di una costante negativa  
+ Nell'esempio seguente viene restituito il valore positivo di una costante negativa.  
   
 ```  
 USE ssawPDW;  
@@ -141,8 +139,8 @@ SELECT TOP (1) – ( - 17) FROM DimEmployee;
 17  
 ```  
   
-### <a name="e-returning-the-negative-of-a-column"></a>E. Restituisce il corrispondente negativo di una colonna  
- L'esempio seguente restituisce il corrispondente negativo del `BaseRate` valore per ogni dipendente nel `dimEmployee` tabella.  
+### <a name="e-returning-the-negative-of-a-column"></a>E. Restituzione del valore negativo di una colonna  
+ Nell'esempio seguente viene restituito il valore negativo del valore `BaseRate` per ogni dipendente nella tabella `dimEmployee`.  
   
 ```  
 USE ssawPDW;  
@@ -152,8 +150,8 @@ SELECT - BaseRate FROM DimEmployee;
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
 

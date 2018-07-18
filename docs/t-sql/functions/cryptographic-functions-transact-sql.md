@@ -1,16 +1,14 @@
 ---
-title: Funzioni di crittografia (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: Funzioni di crittografia (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -22,21 +20,20 @@ helpviewer_keywords:
 - security functions
 - encryption [SQL Server], functions
 ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2faf87a86ea633ba996436448ce83daca4e38e2b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bd25f4a498c11bc3eec36f21877f5a0204b7617f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cryptographic-functions-transact-sql"></a>Funzioni di crittografia (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Le funzioni seguenti supportano le funzionalità di crittografia, decrittografia, firma digitale e convalida delle firme digitali.
+Queste funzioni supportano la firma digitale, la convalida della firma digitale, la crittografia e la decrittografia.
   
 ## <a name="symmetric-encryption-and-decryption"></a>Crittografia e decrittografia simmetrica
   
@@ -56,7 +53,7 @@ Le funzioni seguenti supportano le funzionalità di crittografia, decrittografia
 |[ENCRYPTBYCert](../../t-sql/functions/encryptbycert-transact-sql.md)|[DECRYPTBYCERT](../../t-sql/functions/decryptbycert-transact-sql.md)|  
 |[ASYMKEYPROPERTY](../../t-sql/functions/asymkeyproperty-transact-sql.md)|[ASYMKEY_ID](../../t-sql/functions/asymkey-id-transact-sql.md)|  
   
-## <a name="signing-and-signature-verification"></a>La firma e verifica della firma
+## <a name="signing-and-signature-verification"></a>Firma e verifica delle firme
   
 |||  
 |-|-|  
@@ -64,24 +61,24 @@ Le funzioni seguenti supportano le funzionalità di crittografia, decrittografia
 |[SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)|[VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)|  
 |[IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)||  
   
-## <a name="symmetric-decryption-with-automatic-key-handling"></a>Decrittografia simmetrica con gestione automatica delle chiavi
+## <a name="symmetric-decryption-with-automatic-key-handling"></a>Decrittografia simmetrica, con gestione automatica delle chiavi
   
 |||  
 |-|-|  
 |[DecryptByKeyAutoCert](../../t-sql/functions/decryptbykeyautocert-transact-sql.md)||  
   
-## <a name="encryption-hashing"></a>Hash di crittografia
+## <a name="encryption-hashing"></a>Hashing di crittografia
   
 |||  
 |-|-|  
 |[HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)||  
   
-## <a name="copying-certificates"></a>Copia di certificati
+## <a name="certificate-copying"></a>Copia del certificato
   
 |||  
 |-|-|  
-|[CERTENCODED &#40; Transact-SQL &#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
-|[CERTPRIVATEKEY &#40; Transact-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
+|[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
+|[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
   
 ## <a name="see-also"></a>Vedere anche
 [Funzioni](../../t-sql/functions/functions.md)  

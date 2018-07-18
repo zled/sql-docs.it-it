@@ -1,28 +1,26 @@
 ---
 title: ALTER TABLE - comando SQL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: alter table [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 255ce0a4e9e06f2cdd20dd8d1e707b7f7823e6bd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - comando SQL
 A livello di codice modifica la struttura di una tabella.  
@@ -81,7 +79,7 @@ ALTER TABLE TableName1
   
  *nFieldWidth* e *nPrecision* vengono ignorate per D, G, I, G, M, P, T e Y tipi. Per impostazione predefinita, *nPrecision* non è zero (cifre decimali) se *nPrecision* non è incluso per i tipi di B, F e N.  
   
- NULL &#124; NON È NULL  
+ NULL &#124; NOT NULL  
  Consente o impedisce che i valori null nel campo.  
   
  Se si omette NULL e non NULL, l'impostazione corrente di SET NULL determina se sono consentiti valori null nel campo. Tuttavia, se si omette NULL e non NULL e includa la chiave primaria o una clausola univoco, viene ignorata l'impostazione corrente di SET NULL e il campo non è NULL per impostazione predefinita.  
@@ -110,7 +108,7 @@ ALTER TABLE TableName1
   
  Se si modifica un campo esistente e il database primario o candidato è costituita da campi della tabella, Visual FoxPro controlla i campi per vedere se contengono valori null o i record duplicati. In questo caso, Visual FoxPro genera un errore e la tabella non viene modificata.  
   
- RIFERIMENTI *TableName2* TAG *TagName1*  
+ I riferimenti *TableName2* TAG *TagName1*  
  Specifica la tabella padre a cui viene stabilita una relazione permanente. TAG *TagName1* specifica il tag di indice della tabella padre in cui si basa la relazione. I nomi di tag di indice possono contenere fino a 10 caratteri.  
   
  NOCPTRANS  
@@ -155,7 +153,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  CONTROLLO DI RILASCIO  
  Rimuove la regola di convalida della tabella.  
   
- CHIAVE primaria Aggiungi *eExpression3*TAG *TagName2*  
+ Aggiungi chiave primaria *eExpression3*TAG *TagName2*  
  Aggiunge un indice primario per la tabella. *eExpression3* specifica l'espressione chiave di indice primario, e *TagName2* specifica il nome del tag indice primario. I nomi di tag di indice possono contenere fino a 10 caratteri. Se TAG *TagName2* viene omesso e *eExpression3* è un singolo campo, il tag di indice primario ha lo stesso nome del campo specificato in *eExpression3*.  
   
  ELIMINARE LA CHIAVE PRIMARIA  
@@ -167,8 +165,8 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  Identificatore univoco di rilascio *TagName4*  
  Rimuove l'indice candidato e tag di indice. Poiché una tabella può avere più chiavi candidate, è necessario specificare il nome del tag indice candidato.  
   
- Aggiungi FOREIGN KEY [ *eExpression5*] TAG *TagName4*  
- Aggiunge un indice (non primaria) esterno alla tabella. *eExpression5* specifica l'espressione di chiave esterna di indice, e *TagName4* specifica il nome del tag indice esterna. I nomi di tag di indice possono contenere fino a 10 caratteri.  
+ Aggiungi chiave esterna [ *eExpression5*] TAG *TagName4*  
+ Aggiunge un indice (non primaria) esterno alla tabella. *eExpression5* specifica l'espressione chiave di indice esterna, e *TagName4* specifica il nome del tag indice esterna. I nomi di tag di indice possono contenere fino a 10 caratteri.  
   
  RIFERIMENTI *TableName2*[TAG *TagName5*]  
  Specifica la tabella padre a cui viene stabilita una relazione permanente. Includere TAG *TagName5* per stabilire una relazione in base a un tag di indice esistente per la tabella padre. I nomi di tag di indice possono contenere fino a 10 caratteri. Se si omette TAG *TagName5*, la relazione viene stabilita tramite il tag di indice primario della tabella padre.  
@@ -176,7 +174,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  TAG di chiave esterna di rilascio *TagName6*[Salva]  
  Elimina una chiave esterna tag il cui indice è *TagName6*. Se si omette salvataggio, il tag di indice viene eliminato dall'indice struttura. Includere salvare per evitare l'eliminazione del tag indice dall'indice struttura.  
   
- RINOMINA colonna *FieldName4*a *FieldName5*  
+ COLONNA RENAME *FieldName4*TO *FieldName5*  
  Consente di modificare il nome di un campo nella tabella. *FieldName4* specifica il nome del campo che è stato rinominato. *FieldName5* specifica il nuovo nome del campo.  
   
 > [!CAUTION]  

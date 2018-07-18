@@ -1,16 +1,14 @@
 ---
-title: fn_syscollector_get_execution_details (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: fn_syscollector_get_execution_details (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_details_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_details function
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 98d6fd075e060b9c25863137eccdd1cd86b4c45e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4336b2bd20dbfb49996f6eb4edd5826533215b89
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +44,7 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="arguments"></a>Argomenti  
  *log_id*  
- Identificatore univoco locale del log di esecuzione. *log_id* è **int**.  
+ Identificatore univoco locale del log di esecuzione. *log_id* viene **int**.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -70,7 +67,7 @@ fn_syscollector_get_execution_details ( log_id )
  Richiede l'autorizzazione SELECT per **dc_operator**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Abilitare la registrazione di pacchetti in SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
+ [Abilitare la registrazione in SQL Server Data Tools di pacchetti](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)  
   
   

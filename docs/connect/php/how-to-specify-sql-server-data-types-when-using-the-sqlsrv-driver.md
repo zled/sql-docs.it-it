@@ -1,30 +1,28 @@
 ---
 title: 'Procedura: specificare i tipi di dati SQL Server quando si utilizza il Driver SQLSRV | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c3ad9f3e6aa9e136f76122f39079db21b31c30d3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: d3c73c660e0b5468eabfb2878552dd396567144e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>Procedura: Specificare i tipi di dati di SQL Server con il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +34,7 @@ Per specificare il tipo di dati di SQL Server, è necessario usare la matrice fa
 Di seguito sono elencati i passaggi principali per la specifica del tipo di dati di SQL Server durante l'invio di dati al server:  
   
 > [!NOTE]  
-> Se non viene specificato alcun tipo di dati di SQL Server, verranno usati i tipi predefiniti. Per altre informazioni sui tipi di dati di SQL Server predefiniti, vedere [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md).  
+> Se viene specificato alcun tipo di dati di SQL Server, vengono usati i tipi predefiniti. Per altre informazioni sui tipi di dati di SQL Server predefiniti, vedere [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md).  
   
 1.  Definire una query Transact-SQL che inserisce o aggiorna i dati. Usare i punti interrogativi (?) come segnaposto per i valori dei parametri nella query.  
   
@@ -44,7 +42,7 @@ Di seguito sono elencati i passaggi principali per la specifica del tipo di dati
   
 3.  Costruire la matrice *$params* da usare durante la preparazione o l'esecuzione della query. Si noti che ogni elemento della matrice *$params* deve essere una matrice quando si specifica il tipo di dati di SQL Server.  
   
-4.  Specificare il tipo di dati di SQL Server desiderato, utilizzando i **SQLSRV_SQLTYPE\***  costante come quarto parametro in ciascuna matrice secondaria del *$params* matrice. Per un elenco completo del **SQLSRV_SQLTYPE\***  costanti, vedere la sezione SqlType di [costanti &#40; Driver Microsoft per PHP per SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Ad esempio, nel codice seguente, *$changeDate*, *$rate*e *$payFrequency* sono specificati rispettivamente come tipi di SQL Server **datetime**, **money**e **tinyint** nella matrice *$params* . Poiché non è specificato alcun tipo di SQL Server per *$employeeId* che viene inizializzato su un numero intero, viene usato il tipo di SQL Server predefinito **integer** .  
+4.  Specificare il tipo di dati SQL Server desiderato utilizzando gli appropriati **SQLSRV_SQLTYPE\***  costante come quarto parametro in ciascuna matrice secondaria del *$params* matrice. Per un elenco completo del **SQLSRV_SQLTYPE\***  costanti, vedere la sezione SqlType di [costanti &#40;Microsoft Drivers for PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Ad esempio, nel codice seguente, *$changeDate*, *$rate*e *$payFrequency* sono specificati rispettivamente come tipi di SQL Server **datetime**, **money**e **tinyint** nella matrice *$params* . Poiché non è specificato alcun tipo di SQL Server per *$employeeId* che viene inizializzato su un numero intero, viene usato il tipo di SQL Server predefinito **integer** .  
   
     ```  
     $employeeId = 5;  
@@ -60,9 +58,9 @@ Di seguito sono elencati i passaggi principali per la specifica del tipo di dati
     ```  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente inserisce i dati nella tabella *HumanResources.EmployeePayHistory* del database AdventureWorks. I tipi di SQL Server sono specificati per i parametri *$changeDate*, *$rate*e *$payFrequency* . Il tipo di SQL Server predefinito viene usato per il parametro *$employeeId* . Per verificarne il corretto inserimento, i dati vengono recuperati e visualizzati.  
+L'esempio seguente inserisce i dati nel *HumanResources. EmployeePayHistory* tabella del database AdventureWorks. I tipi di SQL Server sono specificati per i parametri *$changeDate*, *$rate*e *$payFrequency* . Il tipo di SQL Server predefinito viene usato per il parametro *$employeeId* . Per verificarne il corretto inserimento, i dati vengono recuperati e visualizzati.  
   
-Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  
+Questo esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -141,9 +139,13 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Recupero di dati](../../connect/php/retrieving-data.md)  
-[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Procedura: Specificare i tipi di dati PHP](../../connect/php/how-to-specify-php-data-types.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[Procedura: Invio e recupero di dati UTF-8 con il supporto incorporato di UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
+[Recupero di dati](../../connect/php/retrieving-data.md)
+
+[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Procedura: Specificare i tipi di dati PHP](../../connect/php/how-to-specify-php-data-types.md)
+
+[Conversione dei tipi di dati](../../connect/php/converting-data-types.md)
+
+[Procedura: Inviare e recuperare dati UTF-8 con il supporto incorporato di UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
   

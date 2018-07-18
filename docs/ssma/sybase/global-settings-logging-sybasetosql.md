@@ -1,30 +1,28 @@
 ---
 title: Impostazioni globali (registrazione) (SybaseToSQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 97e9648a60828b42eb9cde0c14e5ab923a08eff9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d877237074380414a630aa4585415ddd8bffcad6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="global-settings-logging-sybasetosql"></a>Impostazioni globali (registrazione) (SybaseToSQL)
 Utilizzare il **impostazioni globali** la finestra di dialogo per specificare le impostazioni di registrazione per SSMA. In genere, è necessario modificare queste impostazioni solo quando si lavora con il supporto tecnico.  
@@ -46,7 +44,7 @@ Le opzioni seguenti sono disponibili in **livello messaggi**:
 |**Linker**|Risolve gli identificatori SQL e vengono fornite informazioni per altri componenti.|  
 |**Altro**|Tutti i messaggi che non sono presenti in qualsiasi altra categoria.|  
 |**Parser**|Analizza lo schema di origine.|  
-|**Programma di sincronizzazione**|Carica gli oggetti di database in di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|**Synchronizer**|Carica gli oggetti di database in di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |**TreeConverter**|Converte gli oggetti di metadati di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] metadati.|  
   
 Per ogni opzione in **livello messaggi**, configurare uno dei seguenti livelli di registrazione per SSMA:  
@@ -56,7 +54,7 @@ Per ogni opzione in **livello messaggi**, configurare uno dei seguenti livelli d
 |**Errore irreversibile**|Scrivere il log solo i messaggi di errore irreversibile.|  
 |**Errore**|Scrivere nel registro errori e messaggi di errore irreversibile.|  
 |**Avviso**|Scrivere i messaggi di errore irreversibile, errore e avviso per il log.|  
-|**Informazioni**|Scrivere il log informativi, avvisi, errori e i messaggi di errore irreversibile.|  
+|**informazioni**|Scrivere il log informativi, avvisi, errori e i messaggi di errore irreversibile.|  
 |**Debug**|Scrivere tutti i messaggi, compresi i messaggi, nel Registro di debug.|  
   
 **Percorso File di log**  

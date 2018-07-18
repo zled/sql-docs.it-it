@@ -1,28 +1,26 @@
 ---
 title: Generazione di file di dump per l'esecuzione del pacchetto | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: be1121099a2ca2bed5e145e47c8720f57e6fc5d9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1053f9e1714ac5003f02ac66ff19e148660d918b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generazione di file di dump per l'esecuzione del pacchetto
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Le informazioni in questi file sono utili per risolvere i problemi di esecuzione dei pacchetti.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 02/15/2018
   
 -   File di dump del debug con estensione tmp. Si tratta di un file in formato testo.  
   
- Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia questi file nella cartella *\<unità>:*\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
+ Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia questi file nella cartella *\<unità>:* \Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
  Nella tabella seguente sono descritte solo determinate sezioni del file con estensione tmp. Il file tmp include altri dati non riportati nella tabella.  
   

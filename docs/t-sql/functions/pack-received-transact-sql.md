@@ -1,16 +1,14 @@
 ---
-title: '@@PACK_RECEIVED (Transact-SQL) | Documenti Microsoft'
-ms.custom: 
+title: '@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@PACK_RECEIVED_TSQL'
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - number of packets read
 - packets [SQL Server], number read
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1dfa728de6b80397de18bf0bc519c00dfad524ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b89ac13d1f9a545fd858e2c775904c871efb62f9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40packreceived-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +46,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipi restituiti  
  **integer**  
   
-## <a name="remarks"></a>Osservazioni  
- Per visualizzare un report contenente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statistiche, inclusi i pacchetti inviati e ricevuti, eseguire **sp_monitor**.  
+## <a name="remarks"></a>Remarks  
+ Per visualizzare un report contenente dati statistici relativi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], inclusi i pacchetti inviati e ricevuti, eseguire **sp_monitor**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo di `@@PACK_RECEIVED`.  
@@ -69,7 +66,7 @@ Packets Received
   
 ## <a name="see-also"></a>Vedere anche  
  [@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)   
- [procedura sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [Funzioni statistiche di sistema](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

@@ -1,32 +1,22 @@
 ---
-title: Python | Microsoft Docs
-ms.custom: 
-ms.date: 04/18/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: ff0022d673cfc368e988e009452d23a989b8eb7f
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Riferimento API di Python per servizi di SQL Server Machine Learning | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 11b722628bbe46203c9b04464703c6ed3f99fab7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="python"></a>Python
+# <a name="python-api-reference-for-sql-server-machine-learning-services"></a>Riferimento API di Python per servizi di SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questa sezione contiene i collegamenti al riferimento API specifica per Machine Learning Services in SQL Server 2017.
-
-> [!NOTE]
-> Supporto Python è una nuova funzionalità di SQL Server 2017 ed è in versione provvisoria. Per ulteriori informazioni appena, vedere.
 
 **Librerie**
 
@@ -35,7 +25,6 @@ In questa sezione contiene i collegamenti al riferimento API specifica per Machi
 **Esempi**
 
 + [Eseguire Python da T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Pubblicare e utilizzare i modelli di Python](publish-consume-python-code.md)
 + [Utilizzare revoscalepy per creare un modello](../tutorials/use-python-revoscalepy-to-create-model.md)
 
 

@@ -1,31 +1,23 @@
 ---
-title: Database dell'area di lavoro | Documenti Microsoft
-ms.custom: 
-ms.date: 02/21/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: 
-author: Minewiskan
+title: Database dell'area di lavoro in SQL Server Data Tools | Documenti Microsoft
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2ab6a38542e9c6702edcf98401db0796fc5e78e4
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 817c3b821fef5fe1c8dcfb539e93b9bf275ee5d9
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="workspace-database"></a>Database dell'area di lavoro 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Il database dell'area di lavoro modello tabulare, usato durante la creazione del modello, viene creato quando si crea un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
+  Il database dell'area di lavoro modello tabulare, usato durante la creazione del modello, viene creato quando si crea un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
 ## <a name="specifying-a-workspace-instance"></a>Specifica di un'istanza dell'area di lavoro  
   Quando si crea un nuovo progetto di modello tabulare in SSDT, è possibile specificare un'istanza di Analysis Services da usare durante la creazione del progetto. A partire dal rilascio di settembre 2016 (14.0.60918.0) di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], sono disponibili due modalità per specificare un'istanza dell'area di lavoro quando si crea un nuovo progetto di modello tabulare. 
@@ -94,6 +86,6 @@ Usando le proprietà Database dell'area di lavoro e Server dell'area di lavoro p
  È possibile usare SQL Server Management Studio (SSMS) per connettersi a un server di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che ospita un database dell'area di lavoro. In genere non è necessaria alcuna attività di gestione del database dell'area di lavoro. L'unica eccezione è data dallo scollegamento o dall'eliminazione di un database dell'area di lavoro che deve essere eseguita da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Non usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per gestire il database dell'area di lavoro mentre il progetto è aperto in Progettazione modelli, in quanto si potrebbe verificare una perdita di dati.
    
 ## <a name="see-also"></a>Vedere anche  
-[Proprietà del modello](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
+[Proprietà dei modelli](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   

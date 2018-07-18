@@ -1,16 +1,14 @@
 ---
-title: IMPOSTARE il livello di isolamento delle transazioni (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - LEVEL
@@ -29,16 +27,16 @@ helpviewer_keywords:
 - locking [SQL Server], isolation levels
 - transactions [SQL Server], isolation levels
 ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
-caps.latest.revision: 
+caps.latest.revision: 80
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: cde588fed7aad439e90c97de99ba89633a1df2c5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0380185c7371a742a778293f9f1cffe038c6e2db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,7 +82,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Il funzionamento di READ COMMITTED varia a seconda dell'impostazione dell'opzione di database READ_COMMITTED_SNAPSHOT:  
   
--   Se l'opzione READ_COMMITTED_SNAPSHOT è impostata su OFF (impostazione predefinita), [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza blocchi condivisi per impedire che altre transazioni possano modificare le righe mentre la transazione corrente sta eseguendo un'operazione di lettura. I blocchi condivisi impediscono inoltre che l'istruzione possa leggere righe modificate da altre transazioni, fino al completamento di tali transazioni. Il tipo di blocco condiviso determina il momento in cui verrà rilasciato. I blocchi a livello di riga vengono rilasciati prima dell'elaborazione della riga successiva. Blocchi di pagina vengono rilasciati quando la pagina successiva viene letta, mentre i blocchi di tabella vengono rilasciati al termine dell'istruzione.  
+-   Se l'opzione READ_COMMITTED_SNAPSHOT è impostata su OFF (impostazione predefinita), [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza blocchi condivisi per impedire che altre transazioni possano modificare le righe mentre la transazione corrente sta eseguendo un'operazione di lettura. I blocchi condivisi impediscono inoltre che l'istruzione possa leggere righe modificate da altre transazioni, fino al completamento di tali transazioni. Il tipo di blocco condiviso determina il momento in cui verrà rilasciato. I blocchi a livello di riga vengono rilasciati prima dell'elaborazione della riga successiva. I blocchi a livello di pagina vengono rilasciati nel momento in cui la pagina successiva viene letta, mentre i blocchi di tabella vengono rilasciati al termine dell'istruzione.  
   
     > [!NOTE]  
     >  Se READ_COMMITTED_SNAPSHOT è impostata su ON, [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza il controllo delle versioni delle righe per presentare a ogni istruzione uno snapshot dei dati consistente dal punto di vista transazionale, rappresentativo dei dati esistenti al momento dell'avvio dell'istruzione. Non vengono utilizzati blocchi per proteggere i dati da aggiornamenti eseguiti da altre transazioni.  
@@ -128,7 +126,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Vengono acquisiti blocchi di intervalli di chiavi per l'intervallo dei valori di chiave corrispondenti alle condizioni di ricerca di ogni istruzione eseguita in una transazione. In questo modo si impedisce che altre transazioni possano aggiornare o inserire righe qualificate per l'esecuzione di qualsiasi istruzione della transazione corrente. Ciò significa che in caso di ripetizione di una delle istruzioni di una transazione, la lettura restituirà lo stesso set di righe. I blocchi di intervalli di chiavi vengono mantenuti attivi fino al completamento della transazione. Questo è il livello di isolamento più restrittivo tra quelli disponibili, perché blocca interi intervalli di chiavi e mantiene attivi tali blocchi fino al completamento della transazione. Poiché la concorrenza è inferiore, utilizzare questa opzione solo quando è strettamente necessario. Questa opzione equivale all'impostazione di HOLDLOCK per tutte le tabelle in tutte le istruzioni SELECT di una transazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile impostare una sola opzione di livello di isolamento alla volta. Tale impostazione rimane valida per la connessione fino a quando non viene modificata in modo esplicito. Tutte le operazioni di lettura eseguite nell'ambito della transazione rispettano le regole del livello di isolamento specificato a meno che un hint di tabella nella clausola FROM di un'istruzione non specifichi un funzionamento di blocco o di controllo delle versioni diverso per una tabella.  
   
  I livelli di isolamento delle transazioni definiscono i tipi di blocchi acquisiti per le operazioni di lettura. I blocchi condivisi acquisiti per il livello READ COMMITTED o REPEATABLE READ sono in genere blocchi di riga, anche se è possibile che venga eseguita l'escalation a blocchi di pagina o di tabella, se la lettura fa riferimento a un numero significativo di righe in una pagina o una tabella. Se la transazione modifica una riga dopo la lettura, la transazione acquisisce un blocco esclusivo per proteggere tale riga e il blocco viene mantenuto attivo fino al completamento della transazione. Ad esempio, se una transazione REPEATABLE READ acquisisce un blocco condiviso su una riga e quindi modifica tale riga, il blocco di riga condiviso viene convertito in un blocco di riga esclusivo.  
@@ -154,7 +152,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ COMMITTED con utilizzo del controllo delle versioni delle righe  
   
- Al contrario, le query eseguite con tali livelli di isolamento bloccano le operazioni ottimizzate di caricamento bulk negli heap. Per ulteriori informazioni sulle operazioni di caricamento bulk, vedere [importazione in blocco e l'esportazione di dati &#40; SQL Server &#41; ](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Al contrario, le query eseguite con tali livelli di isolamento bloccano le operazioni ottimizzate di caricamento bulk negli heap. Per altre informazioni sulle operazioni di caricamento bulk, vedere [Importazione ed esportazione bulk di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  I database abilitati per FILESTREAM supportano i livelli di isolamento della transazione seguenti.  
   
@@ -189,7 +187,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [DBCC USEROPTIONS &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
+ [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  

@@ -1,29 +1,31 @@
 ---
 title: Applicazione Data Quality Client | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/01/2012
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 92da55879e2d7dddd982eaba66fb2ff5c2c7ba27
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: 57103f3906c5a6b11fb27986a627c2da8c016038
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-quality-client-application"></a>Applicazione client Data Quality
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   L'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] consente di eseguire operazioni relative alla qualità dei dati utilizzando uno strumento autonomo. Con questa applicazione è possibile creare Knowledge Base, creare ed eseguire progetti Data Quality ed eseguire attività amministrative.  
   
  Gli amministratori ed esperti di dati o i professionisti IT responsabili della gestione delle risorse informative e del mantenimento di standard elevati di qualità dei dati possono utilizzare l'applicazione client in uno di tre possibili ruoli: DQS KB Operator, che può modificare ed eseguire un progetto Data Quality; DQS KB Editor, che può eseguire le funzioni correlate ai progetti e creare e modificare una Knowledge Base; DQS Administrator, che può eseguire le funzioni correlate a progetti e Knowledge Base e amministrare il sistema. Per altre informazioni, vedere [DQS Security](../data-quality-services/dqs-security.md).  

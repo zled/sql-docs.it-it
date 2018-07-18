@@ -1,16 +1,14 @@
 ---
 title: SOME | ANY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 62f3343b6cf7ffad9bf866b3a731b8c71d962855
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
   
 ## <a name="arguments"></a>Argomenti  
  *scalar_expression*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida.  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  Qualsiasi operatore di confronto valido.  
@@ -64,16 +61,16 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  Specifica che deve essere eseguito un confronto.  
   
  *subquery*  
- Sottoquery che include un set di risultati di una colonna. Il tipo di dati della colonna restituita deve essere il tipo di dati stesso come *scalar_expression*.  
+ Sottoquery che include un set di risultati di una colonna. Il tipo di dati della colonna restituita deve corrispondere a quello di *scalar_expression*.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  **Boolean**  
   
 ## <a name="result-value"></a>Valore restituito  
- SOME o ANY restituisce **TRUE** quando il confronto specificato è TRUE per qualsiasi coppia (*scalar_expression***,***x*) in cui *x* è un valore di set di colonna singola. in caso contrario, restituisce **FALSE**.  
+ SOME o ANY restituisce **TRUE** se il confronto specificato è TRUE per qualsiasi coppia (*scalar_expression ***,*** x*) dove *x* è un valore del set di valori a colonna singola. In caso contrario restituisce **FALSE**.  
   
-## <a name="remarks"></a>Osservazioni  
- ALCUNI richiede il *scalar_expression* deve essere confrontato per almeno un valore restituito dalla sottoquery. Per le istruzioni che richiedono il *scalar_expression* per deve essere confrontato con ogni valore viene restituito dalla sottoquery, vedere [tutti &#40; Transact-SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md). Ad esempio, se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = SOME (sottoquery) restituisce TRUE per un *scalar_express* di 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (sottoquery) restituisce false, perché alcuni dei valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  
+## <a name="remarks"></a>Remarks  
+ SOME specifica che l'argomento *scalar_expression* deve essere confrontato in modo univoco con almeno un valore restituito dalla sottoquery. Per le istruzioni che specificano che l'argomento *scalar_expression* deve essere confrontato in modo univoco con ogni valore restituito dalla sottoquery, vedere [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Se ad esempio la sottoquery restituisce i valori 2 e 3, *scalar_expression* = SOME (subquery) restituisce TRUE se il valore di *scalar_expression* è 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (subquery) restituisce FALSE, in quanto alcuni valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -109,7 +106,7 @@ PRINT 'FALSE' ;
 ```  
   
 ### <a name="b-running-a-practical-example"></a>B. Esecuzione di un esempio pratico  
- Nell'esempio seguente viene creata una stored procedure che determina se tutti i componenti di un oggetto specificato `SalesOrderID` nel `AdventureWorks2012` database può essere prodotti nel numero di giorni specificato. Nell'esempio viene utilizzata una sottoquery per creare un elenco contenente i numeri corrispondenti ai valori di `DaysToManufacture` per tutti i componenti della colonna `SalesOrderID` specifica e viene quindi verificato se alcuni dei valori restituiti dalla sottoquery sono maggiori del numero di giorni specificato. Se ogni valore di `DaysToManufacture` restituito è minore del numero specificato, la condizione è TRUE e viene stampato il primo messaggio.  
+ Nell'esempio seguente viene creata una stored procedure che determina se tutti i componenti di una colonna `SalesOrderID` specificata nel database `AdventureWorks2012` possono essere prodotti nel numero di giorni indicato. Nell'esempio viene utilizzata una sottoquery per creare un elenco contenente i numeri corrispondenti ai valori di `DaysToManufacture` per tutti i componenti della colonna `SalesOrderID` specifica e viene quindi verificato se alcuni dei valori restituiti dalla sottoquery sono maggiori del numero di giorni specificato. Se ogni valore di `DaysToManufacture` restituito è minore del numero specificato, la condizione è TRUE e viene stampato il primo messaggio.  
   
 ```  
 -- Uses AdventureWorks  
@@ -131,7 +128,7 @@ PRINT 'All items for this order can be manufactured in the specified number of d
   
 ```  
   
- Per testare la procedura, eseguire la procedura utilizzando il `SalesOrderID``49080`, che dispone di un componente che richiede `2` giorni e due componenti che richiedono 0 giorni. La prima istruzione soddisfa i criteri, mentre la seconda no.  
+ Per testare la procedura, eseguirla usando il valore `SalesOrderID``49080`, a cui sono associati un componente che richiede `2` giorni e due componenti che richiedono 0 giorni. La prima istruzione soddisfa i criteri, mentre la seconda no.  
   
 ```  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
@@ -153,7 +150,7 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  

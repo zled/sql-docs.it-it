@@ -1,16 +1,14 @@
 ---
-title: STConvexHull (tipo di dati geometry) | Documenti Microsoft
-ms.custom: 
+title: STConvexHull (tipo di dati geometry) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STConvexHull (geometry Data Type)
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - STConvexHull (geometry Data Type)
 ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9ef8ba324571a8546dfe6ebdcdcdc8234509d3e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 677672e118e2a99d88eaedfbaf32520ac835f082
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un oggetto che rappresenta la struttura convessa di una **geometry** istanza.
+Restituisce un oggetto che rappresenta la struttura convessa di un'istanza **geometry**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +41,12 @@ Restituisce un oggetto che rappresenta la struttura convessa di una **geometry**
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- `STConvexHull()`Restituisce il più piccolo poligono convesso che contiene il dato **geometry** istanza. **Punti** o **LineString** collineari restituiranno un'istanza dello stesso tipo dell'input.  
+## <a name="remarks"></a>Remarks  
+ `STConvexHull()` restituisce il più piccolo poligono convesso che contiene l'istanza **geometry** specificata. Le istanze **Point** o le istanze **LineString** collineari restituiranno un'istanza dello stesso tipo di quella di input.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato `STConvexHull()` per trovare la struttura convessa di un'istanza `Polygon``geometry` non convessa.  

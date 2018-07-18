@@ -1,16 +1,14 @@
 ---
 title: TOP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TOP_TSQL
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - TOP clause, about TOP clause
 - queries [SQL Server], results
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 26eda1bce8b9f7775b2cada2e9633115020e94fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -234,7 +232,7 @@ GO
 ###  <a name="DML"></a> Limitazione delle righe interessate da DELETE, INSERT o UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Utilizzo di TOP per limitare il numero di righe eliminate  
- Quando si usa una clausola TOP (*n*) con DELETE, l'operazione di eliminazione viene eseguita su una selezione non definita di un numero *n* di righe. In altre parole, l'istruzione DELETE sceglie un numero (*n*) di righe qualsiasi che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono eliminate `20` righe dalla tabella `PurchaseOrderDetail` con scadenze precedenti al 1* luglio 2002.  
+ Quando si usa una clausola TOP (*n*) con DELETE, l'operazione di eliminazione viene eseguita su una selezione non definita di un numero *n* di righe. In altre parole, l'istruzione DELETE sceglie un numero (*n*) di righe che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono eliminate `20` righe dalla tabella `PurchaseOrderDetail` con scadenze precedenti al 1* luglio 2002.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +298,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. Utilizzo di TOP per limitare il numero di righe aggiornate  
- Nell'esempio seguente viene utilizzata la clausola TOP per aggiornare righe in una tabella. Quando si usa una clausola TOP (*n*) con UPDATE, l'operazione di aggiornamento viene eseguita su un numero non definito di righe. In altre parole, l'istruzione UPDATE sceglie un numero (*n*) di righe qualsiasi che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono assegnati 10 clienti da un venditore a un altro.  
+ Nell'esempio seguente viene utilizzata la clausola TOP per aggiornare righe in una tabella. Quando si usa una clausola TOP (*n*) con UPDATE, l'operazione di aggiornamento viene eseguita su un numero non definito di righe. In altre parole, l'istruzione UPDATE sceglie un numero (*n*) di righe che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono assegnati 10 clienti da un venditore a un altro.  
   
 ```sql  
 USE AdventureWorks2012;  

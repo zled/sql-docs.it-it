@@ -1,17 +1,15 @@
 ---
 title: 'Appendice a: provider | Documenti Microsoft'
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data providers [ADO]
 - providers [ADO]
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - service providers [ADO]
 - service components [ADO]
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ad762b73bd91ed92bf32a74587105a2be64e5192
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a4cd609a06e0d30e28a451a4308cfec337d47f68
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707509"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Appendice a: dati e provider di servizi
 In questa sezione vengono tre tipi di provider: provider di dati, i provider di servizi e componenti del servizio. Provider rientrano in due categorie: quelli che forniscono dati e quelli che forniscono servizi. Oggetto *provider di dati* possiede i propri dati e lo espone in formato tabulare all'applicazione. Oggetto *provider di servizi* incapsula un servizio di creazione e utilizzo di dati, in modo da integrare le funzionalità delle applicazioni ADO. Un provider di servizi può inoltre essere definito un *componente del servizio*, che è necessario collaborare con altri provider di servizi o componenti.
@@ -55,12 +53,12 @@ In questa sezione vengono tre tipi di provider: provider di dati, i provider di 
 |Microsoft SQL Server|[Provider Microsoft OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |database Oracle|[Provider Microsoft OLE DB per Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |Pubblicazione su Internet|[Provider Microsoft OLE DB per la pubblicazione su Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
-|Semplici origini dati|[Provider Microsoft OLE DB semplice](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
+|Semplici origini dati|[Provider semplice in Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
 ## <a name="provider-specific-dynamic-properties"></a>Proprietà dinamiche specifiche del provider
  Il [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insiemi di [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti includono le proprietà dinamiche specifiche per il provider. Queste proprietà forniscono informazioni sulle funzionalità specifiche del provider di là delle proprietà predefinite supportate da ADO.
 
- Dopo avere stabilito la connessione e la creazione di questi oggetti, utilizzare il [aggiornamento](../../../ado/reference/ado-api/refresh-method-ado.md) metodo il **proprietà** raccolta dell'oggetto da ottenere le proprietà specifiche del provider. Consultare la documentazione di provider e [Guida per programmatori OLE DB](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) per informazioni dettagliate su queste proprietà dinamiche.
+ Dopo avere stabilito la connessione e la creazione di questi oggetti, utilizzare il [aggiornamento](../../../ado/reference/ado-api/refresh-method-ado.md) metodo il **proprietà** raccolta dell'oggetto da ottenere le proprietà specifiche del provider. Consultare la documentazione di provider e [Guida per programmatori OLE DB](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) per informazioni dettagliate su queste proprietà dinamiche.
 
 ## <a name="service-providers"></a>Provider di servizi
  Per utilizzare un provider di servizi, è necessario specificare una parola chiave. È necessario essere consapevoli delle proprietà dinamiche specifiche del provider associata a ogni provider di servizi. Dettagli specifici dei provider elencati per ogni provider di servizi che è attualmente disponibile da Microsoft:
@@ -69,7 +67,7 @@ In questa sezione vengono tre tipi di provider: provider di dati, i provider di 
 
 -   [Provider di persistenza Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
 
--   [Provider di servizi remoti Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)
+-   [Provider Microsoft OLE DB remota](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)
 
 ## <a name="service-components"></a>Componenti del servizio
  Il [servizio cursore per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) componente del servizio integra le funzioni di supporto cursore dei provider di dati. Inoltre, richiede una parola chiave e dispone di proprietà dinamiche.
@@ -80,4 +78,4 @@ In questa sezione vengono tre tipi di provider: provider di dati, i provider di 
  Per ogni provider elencati di seguito, se le applicazioni consentono agli utenti di immettere istruzioni SQL come comandi del provider, è necessario sempre convalidare l'input dell'utente e prestare attenzione ai tentativi possibili pirata informatico utilizzando istruzioni SQL potenzialmente pericolose, ad esempio `DROP TABLE t1`, come parte dell'input dell'utente.
 
 ## <a name="see-also"></a>Vedere anche
- [Comando oggetto (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [oggetto di connessione (ADO.NET)](../../../ado/reference/ado-api/connection-object-ado.md) [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [Provider Microsoft OLE DB per Microsoft Active Directory Servizio](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Provider Microsoft OLE DB per servizio di indicizzazione Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [Provider Microsoft OLE DB per ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Provider Microsoft OLE DB per Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Provider Microsoft OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [Provider Microsoft OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [insieme di proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Recordset Oggetto (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [metodo Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
+ [Comando oggetto (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [oggetto connessione (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [Provider Microsoft OLE DB per Microsoft Active Directory Service ](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Provider Microsoft OLE DB per servizio di indicizzazione Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [Provider Microsoft OLE DB per ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Provider Microsoft OLE DB per Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Provider Microsoft OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [Provider Microsoft OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [ Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [Aggiorna metodo (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)

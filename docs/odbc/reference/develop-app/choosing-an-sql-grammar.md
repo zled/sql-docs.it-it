@@ -1,31 +1,28 @@
 ---
 title: Scelta di una grammatica SQL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], SQL grammar
 - SQL grammar [ODBC], selecting
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6eedc2466842d922e1b10445500f05ad904d1a0b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f571ee10abc26d5de0fb0ff35fc0c931b759f2b4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-an-sql-grammar"></a>Scelta di una grammatica SQL
 La prima decisione da prendere durante la costruzione di istruzioni SQL è quali grammatica da utilizzare. Oltre alle grammatiche disponibili dai corpi dei vari standard, ad esempio Open Group, ANSI e ISO, praticamente ogni fornitore del sistema DBMS definisce il proprio grammatica, ognuno dei quali varia leggermente dallo standard.  

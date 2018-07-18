@@ -1,31 +1,32 @@
 ---
 title: Finestra di dialogo Visualizza criteri | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.dmf.managepolicies.general.f1
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.dmf.managepolicies.general.f1
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e339d3fa4719aac58023a62a1d858b6a98dfe5d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 73f9889b829f7829c8ac0ffc5fa15d5ae5399049
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-policies-dialog-box"></a>Finestra di dialogo Visualizza criteri
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa finestra di dialogo per visualizzare i criteri validi per la destinazione corrente. In questa finestra di dialogo vengono visualizzati i criteri pertinenti, le relative categorie e le informazioni sui criteri.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilizzare questa finestra di dialogo per visualizzare i criteri validi per la destinazione corrente. In questa finestra di dialogo vengono visualizzati i criteri pertinenti, le relative categorie e le informazioni sui criteri.  
   
 ## <a name="options"></a>Opzioni  
  **Stato di integrità criteri**  

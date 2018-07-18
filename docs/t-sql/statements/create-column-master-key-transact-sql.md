@@ -1,16 +1,14 @@
 ---
-title: CREARE la chiave MASTER della colonna (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/18/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1
@@ -29,21 +27,20 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 30cf5c83de208992cb36692c0b4b7b07fabf5cb6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e5dafed981c030b5f06e41610fd3add6c4af0238
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Crea un oggetto di metadati chiave master della colonna in un database. Una voce di metadati chiave master della colonna che rappresenta una chiave, archiviati in un archivio di chiavi esterno, viene utilizzato per proteggere (crittografare) le chiavi di crittografia di colonna quando si utilizza il [Always Encrypted &#40; motore di Database &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) funzionalità. Consenti più chiavi master della colonna per la rotazione delle chiavi; modifica periodica della chiave per migliorare la sicurezza. È possibile creare una chiave master della colonna in un archivio chiavi e il relativo oggetto di metadati corrispondente nel database utilizzando Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o PowerShell. Per informazioni dettagliate, vedere [Panoramica della gestione delle chiavi per Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
+  Crea un oggetto metadati chiave master della colonna nel database. Una voce di metadati chiave master della colonna che rappresenta una chiave, archiviata in un archivio chiavi esterno, usato per proteggere (crittografare) le chiavi di crittografia della colonna quando si usa la funzionalità [Always Encrypted &#40;motore di database&#41; ](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Più chiavi master della colonna consentono la rotazione delle chiavi, modificando periodicamente la chiave per migliorare la sicurezza. È possibile creare una chiave master della colonna in un archivio chiavi e l'oggetto metadati corrispondente nel database tramite Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o PowerShell. Per i dettagli, vedere [Panoramica della gestione delle chiavi per Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,42 +57,42 @@ CREATE COLUMN MASTER KEY key_name
   
 ## <a name="arguments"></a>Argomenti  
  *key_name*  
- È il nome mediante il quale la chiave master della colonna sarà noto nel database.  
+ Nome con il quale sarà nota la chiave master della colonna all'interno del database.  
   
  *key_store_provider_name*  
- Specifica il nome di un provider dell'archivio chiavi, che è un componente software lato client che incapsula un archivio chiavi contenente la chiave master della colonna. Un driver client abilitato per crittografia sempre attiva utilizza un nome di provider di archivio chiavi per cercare un provider dell'archivio chiavi del Registro di sistema del driver di provider dell'archivio chiavi. Il driver utilizza il provider per decrittografare le chiavi di crittografia di colonna, protette dalla chiave master della colonna, archiviata nell'archivio delle chiavi sottostante. Un valore crittografato della chiave di crittografia della colonna viene quindi utilizzato per crittografare i parametri di query, corrispondenti alle colonne del database crittografato, o per decrittografare i risultati della query dalle colonne crittografate.  
+ Specifica il nome di un provider dell'archivio chiavi, un componente software lato client che incapsula un archivio chiavi contenente la chiave master della colonna. Un driver client abilitato per Always Encrypted usa il nome di un provider dell'archivio chiavi per cercare un provider dell'archivio chiavi nel registro del driver dei provider dell'archivio chiavi. Il driver usa il provider per decrittografare le chiavi di crittografia della colonna, protette da una chiave master della colonna, archiviata nell'archivio chiavi sottostante. Un valore di testo non crittografato della chiave di crittografia della colonna viene quindi usato per crittografare i parametri di query, corrispondenti alle colonne del database crittografate, o per decrittografare i risultati delle query provenienti dalle colonne crittografate.  
   
- Le librerie di driver di Always Encrypted abilitato client includono provider dell'archivio chiavi per archivi chiavi più diffusi.   
+ Le librerie dei driver client abilitati per Always Encrypted includono provider dell'archivio chiavi per gli archivi chiavi più diffusi.   
   
-Un set di provider disponibili dipendono dal tipo e la versione del driver client. Consultare la documentazione di Always Encrypted per un driver specifico:
+Il set di provider disponibili dipende dal tipo e dalla versione del driver client. Per driver particolari, fare riferimento alla documentazione di Always Encrypted:
 
-[Sviluppare applicazioni usando Always Encrypted con il Provider .NET Framework per SQL Server](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+[Sviluppare applicazioni usando Always Encrypted con il provider di dati .NET Framework per SQL Server](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
 
-Di seguito tabelle acquisisce i nomi di provider di sistema:  
+La tabella seguente contiene i nomi dei provider di sistema:  
   
-|Nome provider archivio chiavi|Archivio chiave sottostante|  
+|Nome provider archivio chiavi|Archivio chiavi sottostante|  
     |-----------------------------|--------------------------|
-    |'MSSQL_CERTIFICATE_STORE'|Archivio certificati di Windows| 
-    |'MSSQL_CSP_PROVIDER'|Un archivio, ad esempio un modulo di protezione hardware (HSM), che supporta Microsoft CryptoAPI.|
-    |'MSSQL_CNG_STORE'|Un archivio, ad esempio un modulo di protezione hardware (HSM), che supporta l'API Cryptography: generazione successiva.|  
-    |'Azure_Key_Vault'|Vedere [Guida introduttiva a insieme di credenziali chiave di Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'MSSQL_CERTIFICATE_STORE'|Archivio certificati Windows| 
+    |'MSSQL_CSP_PROVIDER'|Archivio, ad esempio un modulo di protezione hardware, che supporta la CryptoAPI Microsoft.|
+    |'MSSQL_CNG_STORE'|Archivio, ad esempio un modulo di protezione hardware, che supporta l'API Cryptography Next Generation di Microsoft.|  
+    |'Azure_Key_Vault'|[Introduzione a Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
   
 
- È possibile implementare un provider dell'archivio chiavi personalizzato, per poter archiviare chiavi master della colonna in un archivio in cui non è presente alcuna chiave incorporata provider dell'archivio nel driver client abilitato per Always Encrypted.  Si noti che i nomi di provider di archivio chiavi personalizzato non possono iniziare con 'MSSQL _', che è un prefisso riservato [!INCLUDE[msCoName](../../includes/msconame-md.md)] provider di archiviazione chiavi. 
+ È possibile implementare un provider dell'archivio chiavi personalizzato allo scopo di archiviare chiavi master della colonna in un archivio per il quale non esiste un provider dell'archivio chiavi predefinito nel driver client abilitato per Always Encrypted.  Si noti che i nomi dei provider dell'archivio chiavi personalizzati non possono iniziare con 'MSSQL_', che è un prefisso riservato per i provider dell'archivio chiavi [!INCLUDE[msCoName](../../includes/msconame-md.md)]. 
 
   
  key_path  
- Archiviare il percorso della chiave master della colonna chiave. Il percorso della chiave deve essere valido nel contesto di ogni applicazione client che si prevede di crittografare o decrittografare i dati archiviati in una colonna (indirettamente) protetta dalla chiave master della colonna di riferimento e l'applicazione client deve essere consentito di accedere alla chiave. Il formato del percorso della chiave è specifico del provider di archivio chiavi. Nell'elenco seguente descrive il formato di percorsi principali per determinati provider di archivio chiavi di sistema di Microsoft.  
+ Percorso della chiave nell'archivio chiavi master della colonna. Il percorso della chiave deve essere valido nel contesto di ogni applicazione client che si prevede che effettui la crittografia o la decrittografia dei dati archiviati in una colonna (indirettamente) protetta dalla chiave master della colonna di riferimento e l'applicazione client deve essere autorizzata ad accedere alla chiave. Il formato del percorso della chiave è specifico del provider dell'archivio chiavi. L'elenco seguente descrive il formato dei percorsi delle chiavi per provider dell'archivio chiavi di sistema Microsoft specifici.  
   
--   **Nome del provider:** MSSQL_CERTIFICATE_STORE  
+-   **Nome provider:** MSSQL_CERTIFICATE_STORE  
   
-     **Formato del percorso di chiave:** *NomeArchivioCertificati*/*CertificateStoreLocation*/*CertificateThumbprint*  
+     **Formato del percorso della chiave:** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
      Dove:  
   
      *CertificateStoreLocation*  
-     Percorso dell'archivio certificati, che deve essere l'utente corrente o al computer locale. Per ulteriori informazioni, vedere [del computer locale e archivi di certificati utente corrente](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
+     Posizione dell'archivio certificati, che deve essere Utente corrente o Computer locale. Per altre informazioni, vedere [Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx) (Archivi certificati Computer locale e Utente corrente).  
   
      *CertificateStore*  
      Nome dell'archivio certificati, ad esempio 'My'.  
@@ -113,15 +110,15 @@ Di seguito tabelle acquisisce i nomi di provider di sistema:
   
 -   **Nome del provider:** MSSQL_CSP_PROVIDER  
   
-     **Formato del percorso di chiave:** *ProviderName*/*KeyIdentifier*  
+     **Formato del percorso della chiave:** *ProviderName*/*KeyIdentifier*  
   
      Dove:  
   
      *ProviderName*  
-     Il nome di un Cryptography Service Provider (CSP), che implementa CAPI, per l'archivio chiavi master della colonna. Se si utilizza un modulo HSM come un archivio chiavi, deve essere il nome del CSP il fornitore del modulo fornisce. Il provider deve essere installato in un computer client.  
+     Nome di un provider del servizio di crittografia (CSP, Cryptography Service Provider), che implementa CAPI, per l'archivio chiavi master della colonna. Se si usa un modulo di protezione hardware come archivio chiavi, deve essere il nome del CSP fornito dal fornitore del modulo di protezione hardware. Il provider deve essere installato in un computer client.  
   
      *KeyIdentifier*  
-     Identificatore della chiave, utilizzato come chiave master della colonna, nell'archivio delle chiavi.  
+     Identificatore della chiave, usato come chiave master della colonna, nell'archivio chiavi.  
   
      **Esempi:**  
   
@@ -131,15 +128,15 @@ Di seguito tabelle acquisisce i nomi di provider di sistema:
   
 -   **Nome del provider:** MSSQL_CNG_STORE  
   
-     **Formato del percorso di chiave:** *ProviderName*/*KeyIdentifier*  
+     **Formato del percorso della chiave:** *ProviderName*/*KeyIdentifier*  
   
      Dove:  
   
      *ProviderName*  
-     Nome dell'archiviazione Provider chiavi (KSP), che implementa la crittografia: Next Generation (CNG) API, per l'archivio chiavi master della colonna. Se si utilizza un modulo HSM come un archivio chiavi, deve essere il nome del KSP il fornitore del modulo fornisce. Il provider deve essere installato in un computer client.  
+     Nome del provider di archiviazione chiavi, che implementa l'API Cryptography Next Generation (CNG), per l'archivio chiavi master della colonna. Se si usa un modulo di protezione hardware come archivio chiavi, deve essere il nome del provider di archiviazione chiavi fornito dal fornitore del modulo di protezione hardware. Il provider deve essere installato in un computer client.  
   
      *KeyIdentifier*  
-     Identificatore della chiave, utilizzato come chiave master della colonna, nell'archivio delle chiavi.  
+     Identificatore della chiave, usato come chiave master della colonna, nell'archivio chiavi.  
   
      **Esempi:**  
   
@@ -149,31 +146,31 @@ Di seguito tabelle acquisisce i nomi di provider di sistema:
 
 -   **Nome del provider:** AZURE_KEY_STORE  
   
-     **Formato del percorso di chiave:** *KeyUrl*  
+     **Formato del percorso della chiave:** *KeyUrl*  
   
      Dove:  
   
      *KeyUrl*  
-     L'URL della chiave nell'insieme di credenziali chiave di Azure
+     URL della chiave in Azure Key Vault
 
 
 Esempio:
  
 `N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700'`  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 
-È necessario creare una voce di metadati chiave master della colonna prima di poter creare una voce di metadati della chiave di crittografia di colonna nel database e prima di qualsiasi colonna nel database può essere crittografata con crittografia sempre attiva. Si noti che, una voce di chiave master della colonna nei metadati non contiene la chiave master di colonna effettivi, che deve essere memorizzata in un archivio chiavi colonna esterna (all'esterno di SQL Server). Il nome del provider di archivio chiavi e il percorso della chiave master di colonna nei metadati devono essere validi per un'applicazione client in grado di utilizzare la chiave master della colonna per decrittografare una chiave di crittografia di colonna crittografata con la chiave master della colonna e di query sulle colonne crittografate.
+È necessario creare una voce di metadati della chiave master della colonna prima di poter creare nel database una voce di metadati della chiave di crittografia della colonna e prima di poter crittografare qualsiasi colonna nel database con Always Encrypted. Si noti che una voce di chiave master della colonna nei metadati non contiene la chiave master della colonna effettiva, che deve essere archiviata in un archivio chiavi della colonna esterno (all'esterno di SQL Server). Il nome del provider dell'archivio chiavi e il percorso della chiave master della colonna nei metadati devono essere validi perché un'applicazione client sia in grado di usare la chiave master della colonna per decrittografare una chiave di crittografia della colonna crittografata con la chiave master della colonna e perché sia in grado di effettuare query sulle colonne crittografate.
 
 
   
-## <a name="permissions"></a>Permissions  
- Richiede il **ALTER ANY COLUMN MASTER KEY** autorizzazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ È necessaria l'autorizzazione **ALTER ANY COLUMN MASTER KEY**.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-creating-a-column-master-key"></a>A. Creazione di una chiave master della colonna  
- Creazione di una voce di metadati della chiave master della colonna per una chiave master della colonna archiviata nell'archivio certificati, per le applicazioni client che utilizzano il provider MSSQL_CERTIFICATE_STORE per accedere alla chiave master di colonna:  
+ Creazione di una voce di metadati della chiave master della colonna per una chiave master della colonna archiviata nell'archivio certificati, per applicazioni client che usano il provider MSSQL_CERTIFICATE_STORE per accedere alla chiave master della colonna:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -183,7 +180,7 @@ WITH (
    );  
 ```  
   
- Creazione di una voce di metadati della chiave master della colonna per una chiave master della colonna che si accede dalle applicazioni client che utilizzano il provider MSSQL_CNG_STORE:  
+ Creazione di una voce di metadati della chiave master della colonna per una chiave master della colonna a cui accedono applicazioni client che usano il provider MSSQL_CNG_STORE:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -193,7 +190,7 @@ WITH (
 );  
 ```  
   
- Creazione di una chiave master della colonna archiviata nell'insieme di credenziali chiave di Azure, per le applicazioni client che utilizzano il provider AZURE_KEY_VAULT, per accedere alla chiave master di colonna.  
+ Creazione di una chiave master della colonna archiviata in Azure Key Vault, per applicazioni client che usano il provider AZURE_KEY_VAULT, per accedere alla chiave master della colonna.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -203,7 +200,7 @@ WITH (
         MyCMK/4c05f1a41b12488f9cba2ea964b6a700');  
 ```  
   
- Creazione di una CMK archiviata in un archivio chiavi master della colonna personalizzata:  
+ Creazione di una chiave master della colonna archiviata in un archivio chiavi master della colonna:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -215,7 +212,7 @@ WITH (
   
 ## <a name="see-also"></a>Vedere anche
  
-* [ELIMINARE la chiave MASTER della colonna &#40; Transact-SQL &#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
+* [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
 * [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  

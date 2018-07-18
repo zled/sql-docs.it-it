@@ -1,16 +1,15 @@
 ---
 title: sp_refresh_parameter_encryption (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sp_refresh_parameter_encryption
 - sp_refresh_parameter_encryption_TSQL
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1af1ab9933bab98ab0679749d47f4c6ec4a86bc2
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ I metadati di crittografia per i parametri di un modulo possono diventare obsole
 
 Quando si modificano le proprietà di crittografia di una tabella, `sp_refresh_parameter_encryption` deve essere eseguita per tutti i moduli direttamente o indirettamente riferimento alla tabella. Questa stored procedure può essere chiamata in tali moduli in qualsiasi ordine, senza richiedere all'utente prima di aggiornare il modulo interno prima di passare ai relativi chiamanti.
 
-`sp_refresh_parameter_encryption`non influiscono su tutte le autorizzazioni, le proprietà estese, o `SET` opzioni che sono associate all'oggetto. 
+`sp_refresh_parameter_encryption` non influiscono su tutte le autorizzazioni, le proprietà estese, o `SET` opzioni che sono associate all'oggetto. 
 
 Per aggiornare un trigger DDL a livello di server, eseguire questa stored procedure dal contesto di un qualsiasi database.
 

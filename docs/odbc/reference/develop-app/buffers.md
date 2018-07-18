@@ -1,16 +1,14 @@
 ---
 title: Buffer | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - input buffers [ODBC]
 - length/indicator buffers [ODBC]
@@ -19,28 +17,27 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ceb263eb42a4ef58c38f18eba98736a4c9de89e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 90162445e385f42ed4b69232e58b63d3e7e8d52a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="buffers"></a>Buffer
-Un buffer è qualsiasi porzione di memoria dell'applicazione utilizzata per passare dati tra l'applicazione e il driver. Ad esempio, i buffer dell'applicazione può essere associato a, o *associato,* colonne con set di risultati **SQLBindCol**. Come viene recuperata ogni riga, i dati vengono restituiti per ogni colonna in questi buffer. *I buffer di input* vengono utilizzati per passare dati dall'applicazione al driver. *buffer di output* vengono utilizzate per restituire i dati dal driver per l'applicazione.  
+Un buffer è qualsiasi porzione di memoria dell'applicazione utilizzata per passare dati tra l'applicazione e il driver. Ad esempio, i buffer dell'applicazione può essere associato a, o *associato,* colonne con set di risultati **SQLBindCol**. Come viene recuperata ogni riga, i dati vengono restituiti per ogni colonna in questi buffer. *I buffer di input* vengono utilizzati per passare dati dall'applicazione al driver; *buffer di output* vengono utilizzate per restituire i dati dal driver per l'applicazione.  
   
 > [!NOTE]  
 >  Se una funzione ODBC restituisce SQL_ERROR, il contenuto di tutti gli argomenti di output a tale funzione è indefinito.  
   
  Questa sezione riguarda stesso principalmente con buffer di tipo non determinato. Gli indirizzi di questi buffer vengono visualizzati come argomenti di tipo SQLPOINTER, ad esempio il *TargetValuePtr* argomento **SQLBindCol**. Tuttavia, alcuni degli elementi descritti in questo caso, ad esempio gli argomenti utilizzati con buffer, si applicano anche agli argomenti utilizzati per passare stringhe al driver, ad esempio il *TableName* argomento **SQLTables**.  
   
- In genere, questi buffer entrano nelle coppie. *Buffer di dati* sono utilizzate per passare i dati stessi, mentre *buffer di lunghezza/indicatore* vengono utilizzati per passare la lunghezza dei dati nel buffer di dati o un valore speciale, ad esempio SQL_NULL_DATA, che indica che i dati sono NULL. La lunghezza dei dati in un buffer di dati è diversa dalla lunghezza del buffer di dati stesso. Nella figura seguente viene illustrata la relazione tra il buffer dei dati e il buffer di lunghezza/indicatore.  
+ In genere, questi buffer entrano nelle coppie. *Buffer di dati* sono consente di passare i dati stessi, mentre *buffer di lunghezza/indicatore* vengono utilizzati per passare la lunghezza dei dati nel buffer di dati o un valore speciale, ad esempio SQL_NULL_DATA, che indica che i dati sono NULL. La lunghezza dei dati in un buffer di dati è diversa dalla lunghezza del buffer di dati stesso. Nella figura seguente viene illustrata la relazione tra il buffer dei dati e il buffer di lunghezza/indicatore.  
   
- ![Buffer dei dati e lunghezza &#47; buffer di indicatore](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
+ ![Buffer dei dati e lunghezza&#47;buffer di indicatore](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
   
  Ogni volta che il buffer dei dati contiene dati a lunghezza variabile, ad esempio carattere o dati binari, è necessario un buffer di lunghezza/indicatore. Se il buffer dei dati contiene dati a lunghezza fissa, ad esempio una struttura di tipo integer o data, è necessario un buffer di lunghezza/indicatore solo per passare i valori di indicatore perché la lunghezza dei dati è già nota. Se un'applicazione utilizza un buffer di lunghezza/indicatore con dati a lunghezza fissa, il driver ignora qualsiasi lunghezza passata in essa contenuti.  
   

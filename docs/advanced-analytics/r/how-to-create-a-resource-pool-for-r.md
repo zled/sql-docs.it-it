@@ -1,31 +1,22 @@
 ---
-title: Creare un pool di risorse per machine learning | Documenti Microsoft
-ms.custom: 
-ms.date: 11/13/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Creare un pool di risorse per SQL Server Machine Learning | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: af01eb3308b08c4ef7cfc78e5ee615f8dd984713
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-a-resource-pool-for-machine-learning"></a>Creare un pool di risorse per machine learning
+# <a name="create-a-resource-pool-for-machine-learning-in-sql-server"></a>Creare un pool di risorse per l'apprendimento di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo argomento viene descritto come creare un pool di risorse in modo specifico per la gestione dei carichi di lavoro di machine learning in SQL Server. Si presuppone di aver installato e abilitato di machine learning, funzionalità e si desidera riconfigurare l'istanza per supportare più granulari per le gestione delle risorse utilizzate da un processo esterno, ad esempio R o Python.
+In questo articolo viene descritto come creare un pool di risorse in modo specifico per la gestione dei carichi di lavoro di machine learning in SQL Server. Si presuppone di aver installato e abilitato di machine learning, funzionalità e si desidera riconfigurare l'istanza per supportare più granulari per le gestione delle risorse utilizzate da un processo esterno, ad esempio R o Python.
 
 Il processo include più passaggi:
 
@@ -45,7 +36,7 @@ Il processo include più passaggi:
     SELECT * FROM sys.resource_governor_resource_pools WHERE name = 'default'
     ```
 
-    **Risultati di esempio**
+    **Risultati dell'esempio**
 
     |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
@@ -57,7 +48,7 @@ Il processo include più passaggi:
     SELECT * FROM sys.resource_governor_external_resource_pools WHERE name = 'default'
     ```
 
-    **Risultati di esempio**
+    **Risultati dell'esempio**
 
     |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
@@ -167,7 +158,7 @@ Per verificare che le modifiche sono state apportate, controllare la configurazi
     SELECT * FROM sys.resource_governor_workload_groups;
     ```
 
-    **Risultati di esempio**
+    **Risultati dell'esempio**
 
     |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
@@ -175,13 +166,13 @@ Per verificare che le modifiche sono state apportate, controllare la configurazi
     |2|predefiniti|Media|25|0|0|0|0|2|2|
     |256|ds_wg|Media|25|0|0|0|0|2|256|
   
-2.  Utilizzare la nuova vista del catalogo, [Sys. resource_governor_external_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), per visualizzare tutti i pool di risorse esterne.
+2.  Utilizzo della nuova vista del catalogo [Sys. resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)per visualizzare tutti i pool di risorse esterne.
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
     ```
 
-    **Risultati di esempio**
+    **Risultati dell'esempio**
     
     |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
@@ -203,7 +194,7 @@ Per verificare che le modifiche sono state apportate, controllare la configurazi
 Per ulteriori informazioni sulla gestione delle risorse di server, vedere:
 
 +  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 
-+ [Viste a gestione dinamica &#40; relative a Resource Governor Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [Viste a gestione dinamica relative a Resource Governor &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 Per una panoramica di governance delle risorse per machine learning, vedere:
 

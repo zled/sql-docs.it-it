@@ -1,16 +1,14 @@
 ---
-title: '@@LOCK_TIMEOUT (Transact-SQL) | Documenti Microsoft'
-ms.custom: 
+title: '@@LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs'
+ms.custom: ''
 ms.date: 09/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@LOCK_TIMEOUT'
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - current lock time-out setting
 - locking [SQL Server], time-outs
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 84b885d21e5d940e3c532eef43040ba29c2b45ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c493d0f51692767a0c5113b41caff080fc0f8143
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40locktimeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +47,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipi restituiti  
  **integer**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'istruzione SET LOCK_TIMEOUT consente a un'applicazione di impostare il periodo di tempo massimo durante il quale un'istruzione rimane in attesa di una risorsa bloccata. Quando il periodo di attesa di un'istruzione supera il valore massimo impostato con l'opzione LOCK_TIMEOUT, l'istruzione bloccata viene annullata automaticamente e nell'applicazione viene restituito un messaggio di errore.  
   
- @@LOCK_TIMEOUT restituisce un valore di -1 se SET LOCK_TIMEOUT non è ancora stato eseguito nella sessione corrente.  
+ @@LOCK_TIMEOUT restituisce il valore -1 se l'istruzione SET LOCK_TIMEOUT non è stata ancora eseguita nella sessione corrente.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato il set di risultati ottenuto quando per l'opzione LOCK_TIMEOUT non è stato impostato alcun valore.  
@@ -71,7 +68,7 @@ Lock Timeout
 -1  
 ```  
   
- In questo esempio imposta LOCK_TIMEOUT su 1800 millisecondi e quindi chiama@LOCK_TIMEOUT .  
+ Nell'esempio seguente l'opzione LOCK_TIMEOUT viene impostata su 1800 millisecondi, quindi viene richiamata la funzione @@LOCK_TIMEOUT.  
   
 ```  
 SET LOCK_TIMEOUT 1800;  
@@ -89,6 +86,6 @@ Lock Timeout
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di configurazione &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [SET LOCK_TIMEOUT &#40; Transact-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   

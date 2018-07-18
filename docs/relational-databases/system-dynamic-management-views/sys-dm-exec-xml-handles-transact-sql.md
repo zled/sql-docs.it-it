@@ -1,16 +1,13 @@
 ---
-title: sys.dm_exec_xml_handles (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm exec_xml_handles – (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_xml_handles
@@ -22,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_xml_handles dynamic management function
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a8d9b94690a487911414fdceeb9cd173116ea9c0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 66702418faae18f1c4582a28353e2f5ae7c156bc
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -72,7 +69,7 @@ dm_exec_xml_handles (session_id | 0 )
  La durata di **sql_handles** utilizzato per recuperare il testo SQL eseguito una chiamata a **sp_xml_preparedocument** sia maggiore di quella il piano memorizzato nella cache usato per eseguire la query. Se il testo della query non è disponibile nella cache, non sarà possibile recuperare i dati utilizzando le informazioni incluse nel risultato della funzione. Questa situazione può verificarsi in caso di esecuzione di numerosi batch di grandi dimensioni.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione VIEW SERVER STATE sul server per visualizzare tutte le sessioni o gli ID di sessione che non appartengono al chiamante. Un chiamante può sempre visualizzare i dati del proprio ID della sessione corrente.  
+ È richiesta l'autorizzazione VIEW SERVER STATE sul server per visualizzare tutte le sessioni o gli ID di sessione che non appartengono al chiamante. Un chiamante può sempre visualizzare i dati del proprio ID della sessione corrente.      
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono selezionati tutti gli handle attivi.  
@@ -82,7 +79,12 @@ SELECT * FROM sys.dm_exec_xml_handles(0);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Funzioni e viste a gestione dinamica &#40; relative all'esecuzione Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ <br>[Viste a gestione dinamica e funzioni (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+ <br>[Funzioni (Transact-SQL) e viste a gestione dinamica relative all'esecuzione](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+ <br>[sp_xml_preparedocument (Transact-SQL)](../system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
+ <br>[sp_xml_removedocument (Transact-SQL)](../system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+
+
+ 
   
   

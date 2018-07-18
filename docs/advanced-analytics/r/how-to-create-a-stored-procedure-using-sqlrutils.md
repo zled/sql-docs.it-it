@@ -1,39 +1,28 @@
 ---
-title: Come creare una stored procedure con sqlrutils | Microsoft Docs
-ms.custom: 
-ms.date: 12/16/2016
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- R
-ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: ad0cf99c59bcd3295acf0e1c29b14c8523f6f925
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Come creare una stored procedure utilizzando sqlrutils | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 82af827d95def976a04ac69073b58e1420cc9130
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-a-stored-procedure-using-sqlrutils"></a>Creare una Stored Procedure utilizzando sqlrutils
+# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Creare una stored pProcedure utilizzando sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questo argomento descrive i passaggi per la conversione del codice R per l'esecuzione come stored procedure T-SQL. Per ottenere i migliori risultati possibili, può essere necessario modificare il codice per garantire che tutti gli input possano essere parametrizzati.
+In questo articolo vengono descritti i passaggi per la conversione del codice R per l'esecuzione di una stored procedure T-SQL archiviate. Per ottenere i migliori risultati possibili, può essere necessario modificare il codice per garantire che tutti gli input possano essere parametrizzati.
 
 ## <a name="bkmk_rewrite"></a>Passaggio 1. Riscrivere lo Script R
 
 Per ottenere risultati ottimali, è necessario riscrivere il codice R per incapsularlo come una singola funzione.
 
-Tutte le variabili usate dalla funzione devono essere definite all'interno della funzione o devono essere definite come parametri di input. Vedere il [codice di esempio](#samples) in questo argomento.
+Tutte le variabili usate dalla funzione devono essere definite all'interno della funzione o devono essere definite come parametri di input. Vedere la [con codice di esempio](#samples) in questo articolo.
 
 Inoltre, poiché i parametri di input per la funzione di R diventerà stored procedure di parametri di input dell'istruzione SQL, è necessario assicurarsi che l'input e output siano conformi ai requisiti del tipo seguente:
 
@@ -63,27 +52,27 @@ La funzione può restituire uno degli elementi seguenti:
 
 Dopo il codice R è stato pulito e può essere chiamato come una singola funzione, utilizzare le funzioni di **sqlrutils** pacchetto per preparare gli input e output in un formato che può essere passato al costruttore che crea il stored procedure.
 
-**sqlrutils** fornisce funzioni che definiscono lo schema di dati di input e un tipo, nonché definiscono lo schema di dati di output e un tipo. Include inoltre funzioni che è possono convertire il tipo di output richiesto oggetti R. È possibile rendere più chiamate di funzione per creare gli oggetti necessari, a seconda dei tipi di dati che utilizza il codice.
+**sqlrutils** sono disponibili funzioni che definiscono lo schema di dati di input e un tipo, nonché definiscono lo schema di dati di output e tipo. Include inoltre funzioni che è possono convertire il tipo di output richiesto oggetti R. È possibile rendere più chiamate di funzione per creare gli oggetti necessari, a seconda dei tipi di dati che utilizza il codice.
 
 ### <a name="inputs"></a>Input
 
 Se la funzione accetta l'input, per ogni input, chiamare le funzioni seguenti:
 
-- `setInputData`Se l'input è un frame di dati
-- `setInputParameter`per tutti gli altri tipi di input
+- `setInputData` Se l'input è un frame di dati
+- `setInputParameter` per tutti gli altri tipi di input
 
 Quando si esegue ogni funzione chiamata, viene creato un oggetto di R in un secondo momento si passerà come argomento di `StoredProcedure`, per creare la stored procedure completa.
 
 ### <a name="outputs"></a>Output
 
-**sqlrutils** fornisce più funzioni per la conversione di R, gli oggetti, ad esempio elenchi al data.frame richiesti da SQL Server.
+**sqlrutils** fornisce più funzioni di conversione R oggetti quali elenchi di a data.frame richiesti da SQL Server.
 Se la funzione restituisce un frame di dati direttamente, senza prima eseguirne il wrapping in un elenco, è possibile ignorare questo passaggio.
 È anche possibile ignorare la conversione in questo passaggio se la funzione restituisce NULL.
 
 Quando la conversione di un elenco o per ottenere un determinato elemento da un elenco, scegliere tra queste funzioni:
 
-- `setOutputData`Se la variabile per ottenere l'elenco è un frame di dati
-- `setOutputParameter`per tutti gli altri membri dell'elenco
+- `setOutputData` Se la variabile per ottenere l'elenco è un frame di dati
+- `setOutputParameter` per tutti gli altri membri dell'elenco
 
 Quando si esegue ogni funzione chiamata, viene creato un oggetto di R in un secondo momento si passerà come argomento di `StoredProcedure`, per creare la stored procedure completa.
 

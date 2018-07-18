@@ -1,30 +1,20 @@
 ---
 title: Predecessore (MDX) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: ANCESTOR
-dev_langs: kbMDX
-helpviewer_keywords: Ancestor function
-ms.assetid: b5bf2ce4-20df-4ebc-97eb-e44a6f64cc50
-caps.latest.revision: "46"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a8a7eee3ad6767c0a40dedb8f334c9767778e0d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 5e30774aa9173bfcb7851096a25363c81d7abe9f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577073"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,14 +39,14 @@ Ancestor(Member_Expression, Distance)
  *Level_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un livello.  
   
- *Distanza*  
+ *distanza*  
  Espressione numerica valida che specifica la distanza dal membro specificato.  
   
 ## <a name="remarks"></a>Remarks  
  Con il **predecessore** funzione, si specifica la funzione con un'espressione di membro MDX e quindi un'espressione MDX di un livello è un predecessore del membro oppure un'espressione numerica che rappresenta il numero di livelli di sopra di tale membro. Con queste informazioni, il **predecessori** funzione restituisce il membro predecessore a tale livello.  
   
 > [!NOTE]  
->  Per restituire un set contenente il membro predecessore, anziché il solo membro predecessore, utilizzare il [predecessori &#40; MDX &#41; ](../mdx/ancestors-mdx.md) (funzione).  
+>  Per restituire un set contenente il membro predecessore, anziché il solo membro predecessore, utilizzare il [predecessori &#40;MDX&#41; ](../mdx/ancestors-mdx.md) (funzione).  
   
  Se si specifica un'espressione di livello il **predecessore** funzione restituisce il predecessore del membro specificato al livello specificato. Se il membro specificato non è incluso nella stessa gerarchia del livello specificato, la funzione restituisce un errore.  
   
@@ -110,6 +100,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

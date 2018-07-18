@@ -1,31 +1,23 @@
 ---
-title: "Configurare le proprietà del gruppo di misure | Documenti Microsoft"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: properties [Analysis Services], measure groups
-ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2
-caps.latest.revision: "17"
-author: Minewiskan
+title: Configurare le proprietà del gruppo di misure | Documenti Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7cf2328a6f93ed1c7fe17034af1b42b53baaa39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eed879fa9bdeab12398f53d424bb5eaf8aea5bc7
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-measure-group-properties"></a>Configurare le proprietà dei gruppi di misure
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gruppi di misure dispongono di proprietà che consentono di definire gruppi di misure come funzione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Le proprietà dei gruppi di misure consentono di definirne il funzionamento.  
   
 ## <a name="measure-group-properties"></a>Proprietà dei gruppi di misure  
  Le proprietà dei gruppi di misure determinano i comportamenti dell'intero gruppo di misure e impostano i comportamenti predefiniti per alcune proprietà delle misure all'interno di un gruppo di misure.  
@@ -34,7 +26,7 @@ ms.lasthandoff: 01/08/2018
 |--------------|----------------|  
 |**AggregationPrefix**|Si applica all'archiviazione ROLAP. Assegna un prefisso comune alle viste indicizzate in SQL Server, usato per archiviare le aggregazioni per le partizioni associate a questo gruppo di misure.|  
 |**DataAggregation**|Questa proprietà è riservata per utilizzi futuri e attualmente non ha alcun effetto. Pertanto, è consigliabile non modificare questa impostazione.|  
-|**Descrizione**|È possibile usare questa proprietà per documentare il gruppo di misure.|  
+|**Description**|È possibile usare questa proprietà per documentare il gruppo di misure.|  
 |**ErrorConfiguration**|Impostazioni configurabili per la gestione degli errori, relative alla gestione di chiavi duplicate, chiavi sconosciute, chiavi Null, limiti di errore, azione da eseguire in caso di rilevamento di un errore e file di log degli errori. Vedere [Configurazione errori per l'elaborazione di cubi, partizioni e dimensioni &#40;SSAS - multidimensionale&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
 |**EstimatedRows**|Specifica il numero stimato di righe della tabella dei fatti.|  
 |**EstimatedSize**|Specifica la dimensione stimata (in byte) del gruppo di misure.|  

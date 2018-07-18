@@ -1,31 +1,28 @@
 ---
 title: Microsoft servizio Data Shaping per OLE DB (ADO Service Provider) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], data shaping service for OLE DB
 - data shaping service for OLE DB [ADO]
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcdf661427b97fe58681a6747a3b074e4965f4b8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a3020789835820519e07ac3e465899c3ac93b0ae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft servizio Data Shaping per OLE DB Panoramica
 > [!IMPORTANT]
@@ -45,7 +42,7 @@ ms.lasthandoff: 02/09/2018
 
 |Nome della proprietà dinamica|Description|
 |---------------------------|-----------------|
-|**ADO**|Indica se **Recordset** oggetti con valori duplicati per i relativi **modificare la forma di nome** proprietà sono consentite. Se questa proprietà dinamica è **True** e un nuovo **Recordset** viene creato con lo stesso nome della nuova forma specificato dall'utente di un oggetto esistente **Recordset**, quindi nuovo  **Recordset** Nome nuova forma dell'oggetto viene modificato per renderlo univoco. Se questa proprietà è **False** e un nuovo **Recordset** viene creato con lo stesso nome nuova forma specificato dall'utente esistenti **Recordset**, entrambi **Recordset**  oggetti avranno lo stesso nome della nuova forma. Di conseguenza, nessuno dei due **Recordset** può modificare la forma fino a quando esistono entrambi gli oggetti.<br /><br /> Il valore predefinito della proprietà è **False**.|
+|**Nomi univoci nuova forma**|Indica se **Recordset** oggetti con valori duplicati per i relativi **modificare la forma di nome** proprietà sono consentite. Se questa proprietà dinamica è **True** e un nuovo **Recordset** viene creato con lo stesso nome della nuova forma specificato dall'utente di un oggetto esistente **Recordset**, quindi nuovo  **Recordset** Nome nuova forma dell'oggetto viene modificato per renderlo univoco. Se questa proprietà è **False** e un nuovo **Recordset** viene creato con lo stesso nome nuova forma specificato dall'utente esistenti **Recordset**, entrambi **Recordset**  oggetti avranno lo stesso nome della nuova forma. Di conseguenza, nessuno dei due **Recordset** può modificare la forma fino a quando esistono entrambi gli oggetti.<br /><br /> Il valore predefinito della proprietà è **False**.|
 |**Provider di dati**|Indica il nome del provider che fornirà le righe da essere modellati. Questo valore può essere NONE se non verrà utilizzato un provider per fornire righe.|
 
  È anche possibile impostare proprietà dinamiche scrivibili specificando i relativi nomi come parole chiave nella stringa di connessione. Ad esempio, in Microsoft Visual Basic, impostare il **Provider di dati** proprietà dinamica su "MSDASQL", specificando:

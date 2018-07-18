@@ -1,39 +1,23 @@
 ---
 title: Nei modelli multidimensionali viste origine dati | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- data source views [Analysis Services]
-- data source views [Analysis Services], about data source views
-- SQL Server Analysis Services, data source views
-- data source views [Analysis Services], multiple
-- Analysis Services, data source views
-- multiple data source views
-- SSAS, data source views
-ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9e443b461a01c7a8e2ba04e7d759984062f63d6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c5947bb9de4088a97d68df7b919e3de947bd1d02
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Viste origine dati in modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una vista origine dati è un'astrazione di un'origine dati relazionale che diventa la base dei cubi e delle dimensioni creati in un progetto multidimensionale. Lo scopo di una vista origine dati è fornire il controllo sulle strutture di dati utilizzate nel progetto e funzionare indipendentemente dalle origini dati sottostanti (ad esempio, con la possibilità di rinominare o concatenare colonne senza modificare direttamente l'origine dati originale).  
+  Una vista origine dati è un'astrazione di un'origine dati relazionale che diventa la base dei cubi e delle dimensioni creati in un progetto multidimensionale. Lo scopo di una vista origine dati è fornire il controllo sulle strutture di dati utilizzate nel progetto e funzionare indipendentemente dalle origini dati sottostanti (ad esempio, con la possibilità di rinominare o concatenare colonne senza modificare direttamente l'origine dati originale).  
   
  In un progetto o un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile compilare più viste origine dati per una o più origini dati e costruire ognuna in modo da soddisfare i requisiti per una diversa soluzione.  
   

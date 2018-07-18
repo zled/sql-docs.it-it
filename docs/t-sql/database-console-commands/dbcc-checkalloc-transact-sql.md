@@ -1,16 +1,13 @@
 ---
-title: DBCC CHECKALLOC (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKALLOC_TSQL
@@ -29,16 +26,15 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 76
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 69a22a7e7b3859ba2232fe7c60f5b0b885af8b17
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5532f6870e19e830a4d8925fbfca68862493fa6a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,9 +65,9 @@ DBCC CHECKALLOC
   
 ## <a name="arguments"></a>Argomenti  
  *database_name* | *database_id* | 0   
- Il nome o l'ID del database per cui si desidera controllare l'utilizzo della pagina e di allocazione.
+ Nome o ID del database per cui si vuole controllare l'allocazione e l'uso delle pagine.
 Se questo argomento viene omesso oppure se viene specificato il valore 0, viene utilizzato il database corrente.
-I nomi di database devono seguire le regole per [identificatori](../../relational-databases/databases/database-identifiers.md).
+I nomi di database devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).
 
  NOINDEX  
  Specifica che il controllo degli indici non cluster di tabelle utente non è necessario.<br>NOINDEX è disponibile solo per compatibilità con le versioni precedenti e non ha alcun effetto su DBCC CHECKALLOC.
@@ -102,20 +98,20 @@ I nomi di database devono seguire le regole per [identificatori](../../relationa
  Richiede l'acquisizione di un blocco esclusivo del database per l'esecuzione del comando DBCC.
 
  ESTIMATE ONLY  
- Visualizza la quantità stimata di spazio di tempdb è necessario eseguire DBCC CHECKALLOC quando vengono specificate tutte le altre opzioni.
+ Visualizza la quantità stimata di spazio in tempdb necessaria per l'esecuzione di DBCC CHECKALLOC quando vengono specificate tutte le altre opzioni.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKALLOC controlla l'allocazione di tutte le pagine nel database, indipendentemente dal tipo di pagina o dal tipo di oggetto a cui la pagina appartiene. Questa istruzione convalida inoltre le varie strutture interne utilizzate per tenere traccia delle pagine e delle relative relazioni.
-Se NO_INFOMSGS viene omesso, DBCC CHECKALLOC raccoglie informazioni relative all'utilizzo dello spazio per tutti gli oggetti del database. Queste informazioni viene stampate insieme a eventuali errori rilevati.
+Se NO_INFOMSGS viene omesso, DBCC CHECKALLOC raccoglie informazioni relative all'utilizzo dello spazio per tutti gli oggetti del database. Queste informazioni vengono aggiunte a tutti gli errori rilevati.
   
 > [!NOTE]  
-> La funzionalità di DBCC CHECKALLOC è inclusa [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) e [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Non è pertanto necessario eseguire DBCC CHECKALLOC separatamente rispetto a queste istruzioni.   I dati di FILESTREAM non vengono controllati da DBCC CHECKALLOC. Tramite FILESTREAM vengono archiviati oggetti binari di grandi dimensioni (BLOB) nel file system.  
+> La funzionalità di DBCC CHECKALLOC è inclusa in [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) e [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Non è pertanto necessario eseguire DBCC CHECKALLOC separatamente rispetto a queste istruzioni.   I dati di FILESTREAM non vengono controllati da DBCC CHECKALLOC. Tramite FILESTREAM vengono archiviati oggetti binari di grandi dimensioni (BLOB) nel file system.  
   
 ## <a name="internal-database-snapshot"></a>Snapshot di database interno  
 DBCC CHECKALLOC utilizza uno snapshot interno del database per indicare la consistenza transazionale necessaria per l'esecuzione di questi controlli. Se non è possibile creare uno snapshot o si specifica TABLOCK, DBCC CHECKALLOC tenta di acquisire un blocco esclusivo (X) sul database per ottenere la consistenza necessaria.
   
 > [!NOTE]  
-> Esecuzione di DBCC CHECKALLOC su tempdb non esegue alcun controllo. Questo funzionamento dipende dal fatto che per motivi di prestazioni gli snapshot di database non sono disponibili in tempdb. Ciò significa che non è possibile ottenere la consistenza delle transazioni necessaria. Arrestare e avviare il servizio MSSQLSERVER per risolvere eventuali problemi di allocazione di tempdb. Questa azione Elimina e ricrea il database tempdb.  
+> L'esecuzione di DBCC CHECKALLOC in tempdb non comporta alcun controllo. Questo funzionamento dipende dal fatto che per motivi di prestazioni gli snapshot di database non sono disponibili in tempdb. Ciò significa che non è possibile ottenere la consistenza delle transazioni necessaria. Arrestare e avviare il servizio MSSQLSERVER per risolvere gli eventuali problemi di allocazione di tempdb. Il database tempdb viene quindi eliminato e ricreato.  
   
 ## <a name="understanding-dbcc-error-messages"></a>Informazioni sui messaggi di errore DBCC  
 Dopo il completamento del comando DBCC CHECKALLOC, nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene scritto un messaggio. Se il comando DBCC viene eseguito correttamente, il messaggio indica il completamento corretto e la durata dell'esecuzione del comando. Se il comando DBCC viene arrestato prima del completamento del controllo a causa di un errore, il messaggio indica che il comando è stato terminato e specifica un valore di stato e la durata dell'esecuzione del comando. Nella tabella seguente sono elencati e descritti i valori di stato che possono essere inclusi nel messaggio.
@@ -130,8 +126,8 @@ Dopo il completamento del comando DBCC CHECKALLOC, nel log degli errori di [!INC
 |5|Si è verificato un errore sconosciuto che ha causato l'interruzione del comando DBCC.|  
   
 ## <a name="error-reporting"></a>Segnalazione errori  
-Un file di minidump (denominato SQLDUMP*nnnn*. txt) viene creato nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory LOG DBCC CHECKALLOC rileva un errore di danneggiamento. Se le funzionalità di segnalazione degli errori e di raccolta di dati relativi all'utilizzo delle funzionalità sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file verrà inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-Il file di dump contiene i risultati dell'esecuzione del comando DBCC CHECKALLOC e l'output di dati diagnostici supplementari. Il file dispone di elenchi di controllo di accesso discrezionale (DACL) limitati. L'accesso è limitato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account e i membri del ruolo sysadmin. Per impostazione predefinita, il ruolo sysadmin contiene tutti i membri del gruppo BUILTIN\Administrators di Windows e il gruppo Administrators locale. Se il processo di raccolta dei dati non ha esito positivo, l'esecuzione del comando DBCC viene completata comunque.
+Quando un comando DBCC CHECKALLOC rileva un errore di danneggiamento, viene creato un piccolo file di dump denominato SQLDUMP*nnnn*.txt nella directory LOG di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se le funzionalità di segnalazione degli errori e di raccolta di dati relativi all'utilizzo delle funzionalità sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file verrà inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Il file di dump contiene i risultati dell'esecuzione del comando DBCC CHECKALLOC e l'output di dati diagnostici supplementari. Il file dispone di elenchi di controllo di accesso discrezionale (DACL) limitati. L'accesso è limitato all'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ai membri del ruolo sysadmin. Per impostazione predefinita il ruolo sysadmin contiene tutti i membri del gruppo BUILTIN\Administrators di Windows e del gruppo dell'amministratore locale. Se il processo di raccolta dei dati non ha esito positivo, l'esecuzione del comando DBCC viene completata comunque.
   
 ## <a name="resolving-errors"></a>Risoluzione degli errori  
 Se DBCC CHECKALLOC segnala la presenza di errori, è consigliabile ripristinare il database dal backup anziché eseguire un'operazione di correzione. Se non esiste un backup, l'operazione di correzione può consentire di risolvere i problemi segnalati, ma può comportare l'eliminazione di alcune pagine e, di conseguenza, di alcuni dati.
@@ -157,7 +153,7 @@ DBCC CHECKALLOC fornisce inoltre per ogni indice e partizione di ogni file un ri
 |Partition ID|Solo per uso interno.|  
 |Alloc unit ID|Solo per uso interno.|  
 |Dati In-row|Pagine contenenti dati di indice o di heap.|  
-|Dati LOB|Pagine contenenti **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **testo**, **ntext**, **xml**, e **immagine** dati.|  
+|Dati LOB|Pagine contenenti dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **xml** e **image**.|  
 |Dati Row-overflow|Pagine contenenti dati di colonne a lunghezza variabile spostati all'esterno di righe.|  
   
 DBCC CHECKALLOC restituisce il set di risultati seguente (i valori possono variare), tranne quando viene specificata la parola chiave ESTIMATEONLY o NO_INFOMSGS.
@@ -235,7 +231,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Autorizzazioni  
-È richiesta l'appartenenza del ruolo predefinito del server sysadmin o db_owner del database.
+È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner.
   
 ## <a name="examples"></a>Esempi  
 Nell'esempio seguente viene eseguito `DBCC CHECKALLOC` per il database corrente e per il database `AdventureWorks2012`.

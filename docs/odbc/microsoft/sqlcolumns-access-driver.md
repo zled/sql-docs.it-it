@@ -1,36 +1,33 @@
 ---
 title: SQLColumns (Driver di accesso) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLColumns function [ODBC], Access Driver
 - Access driver [ODBC], SQLColumns
 ms.assetid: 1eac255c-6110-4805-a1bc-feee1eec35d0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ae3bce8cbb5f2858a864d6779109c6c23bedca8e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f436d028622480295c9932a42f278dabc5bb5b3b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcolumns-access-driver"></a>SQLColumns (Driver di accesso)
 > [!NOTE]  
 >  In questo argomento fornisce informazioni di accesso specifici del Driver. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|colonna|Commenti|  
+|Colonna|Commenti|  
 |------------|--------------|  
 |TABLE_QUALIFIER|Viene restituito il percorso di un file di database.|  
 |TABLE_OWNER|In questa colonna viene restituito NULL perché il nome del proprietario non è supportato.|  

@@ -1,30 +1,29 @@
 ---
 title: Metodo getUnicodeStream (int) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerResultSet.getUnicodeStream (int)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerResultSet.getUnicodeStream (int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b487da1231cb0077693291ee40fcb7ea275c3178
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 8034a89bde03c3994dc660ed7cfde390ff970357
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getunicodestream-method-int"></a>Metodo getUnicodeStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +55,7 @@ public java.io.InputStream getUnicodeStream(int columnIndex)
  Questo metodo getUnicodeString viene specificato dal metodo getUnicodeString nell'interfaccia Java.SQL. ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo getUnicodeStream &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)   
+ [Metodo getUnicodeStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)   
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

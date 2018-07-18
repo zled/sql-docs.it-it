@@ -1,16 +1,14 @@
 ---
-title: STCurveToLine (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: STCurveToLine (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STCurveToLine_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - STCurveToLine method (geography)
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d503d7c7ad67e56ddfd38495f40e8960daa13561
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a8142ec380fc376de4c05c718b87dfb29dc0f79e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un'approssimazione poligonale di un' **geography** istanza contenente i segmenti di arco circolare.  
+  Restituisce un'approssimazione poligonale di un'istanza **geography** contenente segmenti di arco circolare.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,18 +41,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Restituisce un **LineString** istanza per un **CircularString** o **CompoundCurve** istanza.  
+## <a name="remarks"></a>Remarks  
+ Restituisce un'istanza **LineString** per un'istanza **CircularString** o **CompoundCurve**.  
   
- Restituisce un **poligono** istanza per un **CurvePolygon** istanza.  
+ Restituisce un'istanza **Polygon** per un'istanza **CurvePolygon**.  
   
- Restituire una copia di **geography** istanze che non contengono **CircularString**, **CompoundCurve**, o **CurvePolygon** istanze.  
+ Restituisce una copia delle istanze **geography** che non contengono istanze **CircularString**, **CompoundCurve** o **CurvePolygon**.  
   
- A differenza della specifica SQL MM, questo metodo non utilizza i valori di coordinata z nel calcolo dell'approssimazione poligonale. Coordinata z tutti i valori presentano nel chiamante **geography** istanza vengono ignorati.  
+ A differenza della specifica SQL MM, questo metodo non usa i valori della coordinata Z nel calcolo dell'approssimazione poligonale. Qualsiasi valore della coordinata Z presente nell'istanza **geometry** chiamante viene ignorato.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituita un'istanza `LineString` che rappresenta un'approssimazione poligonale di un'istanza `CircularString`.  
@@ -68,8 +65,8 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [STLength &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
- [STNumPoints &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
+ [STLength &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
+ [STNumPoints &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
  [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

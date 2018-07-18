@@ -1,27 +1,24 @@
 ---
 title: Metodo setClob (SQLServerPreparedStatement) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 1b148388-01a8-4e2e-bc72-470ce29164de
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f69a550270564e3db12c8e44eace04525ac7d436
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 28d8b9b1e30bc9208d8ba46728730e188d78150a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setclob-method-sqlserverpreparedstatement"></a>Metodo setClob (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,9 +29,9 @@ ms.lasthandoff: 11/18/2017
   
 |Nome|Description|  
 |----------|-----------------|  
-|[setClob metodo &#40; int, Java.IO. Reader &#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|Imposta il parametro designato su un oggetto java.SQL. Clob.|  
-|[setClob metodo &#40; int, Java.SQL. Clob &#41;](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|Imposta il parametro designato per l'oggetto java.SQL. Clob specificato.|  
-|[setClob metodo &#40; int, Java.IO. Reader, long &#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader-long.md)|Imposta il parametro designato su un oggetto java.SQL. Clob, che rappresenta il numero specificato di caratteri.|  
+|[Metodo setClob &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|Imposta il parametro designato su un oggetto java.SQL. Clob.|  
+|[Metodo setClob &#40;int, CLOB&#41;](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|Imposta il parametro designato per l'oggetto java.SQL. Clob specificato.|  
+|[Metodo setClob &#40;int, java.io.Reader, lungo&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader-long.md)|Imposta il parametro designato su un oggetto java.SQL. Clob, che rappresenta il numero specificato di caratteri.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Nessun comportamento relativo al driver del server. Per i dettagli vedere la specifica API per JSE 6.  

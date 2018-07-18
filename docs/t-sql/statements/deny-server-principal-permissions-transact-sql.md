@@ -1,16 +1,14 @@
 ---
-title: "DENY-autorizzazioni per entità Server (Transact-SQL) | Documenti Microsoft"
-ms.custom: 
+title: Autorizzazioni per entità server DENY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - logins [SQL Server], denying access
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 795c7dcc946966859e5d81382df75a4bb646e38d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 53805cdf1cbe580468a05dd667048927d7a05c74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>Autorizzazioni per entità server DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,19 +60,19 @@ DENY permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere negata per un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- Account di accesso **::** *SQL_Server_login*  
+ LOGIN **::** *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui viene negata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
   
- RUOLO del SERVER **::** *server_role*  
+ SERVER ROLE **::** *server_role*  
  Specifica il ruolo del server a cui viene negata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
   
- PER \<server_principal >  
+ TO \<server_principal>  
  Specifica il ruolo del server o l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene concessa l'autorizzazione.  
   
- PER *SQL_Server_login*  
+ TO *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene negata l'autorizzazione.  
   
  *SQL_Server_login*  
@@ -99,12 +96,12 @@ DENY permission [ ,...n ] }
  AS *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal quale l'entità che esegue la query ottiene il diritto di negare l'autorizzazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile negare autorizzazioni nell'ambito del server solo se il database corrente è il database master.  
   
- Informazioni sulle autorizzazioni del server sono disponibile nel [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vista del catalogo. Informazioni sulle entità server sono disponibile nel [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista del catalogo.  
+ Le informazioni sulle autorizzazioni del server sono disponibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Le informazioni sulle entità server sono disponibili nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- L'istruzione DENY ha esito negativo se non si specifica CASCADE la negazione di un'autorizzazione a un'entità che è stato concesso tale autorizzazione con GRANT OPTION.  
+ L'istruzione DENY non riesce se non si specifica CASCADE per la negazione di un'autorizzazione a un'entità a cui l'autorizzazione è stata concessa con GRANT OPTION.  
   
  I ruoli del server e gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono entità a protezione diretta a livello di server. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per un ruolo del server o account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
@@ -115,7 +112,7 @@ DENY permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per gli account di accesso, è richiesta l'autorizzazione CONTROL per l'account di accesso o l'autorizzazione ALTER ANY LOGIN per il server.  
   
  Per i ruoli del server, è richiesta l'autorizzazione CONTROL per il ruolo del server o l'autorizzazione ALTER ANY SERVER ROLE per il server.  
@@ -123,7 +120,7 @@ DENY permission [ ,...n ] }
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-denying-impersonate-permission-on-a-login"></a>A. Negazione dell'autorizzazione IMPERSONATE per un account di accesso  
- Nell'esempio seguente viene negata il `IMPERSONATE` l'autorizzazione per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso `WanidaBenshoof` per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso creato dall'utente di Windows `AdvWorks\YoonM`.  
+ Nell'esempio seguente viene negata l'autorizzazione `IMPERSONATE` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creato dall'utente di Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  

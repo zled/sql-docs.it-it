@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLBulkOperations | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLBulkOperations
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLBulkOperations
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLBulkOperations
-helpviewer_keywords: SQLBulkOperations function [ODBC]
+f1_keywords:
+- SQLBulkOperations
+helpviewer_keywords:
+- SQLBulkOperations function [ODBC]
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1872238d5e017ef8b6bd3fbfb2dc185051fc3557
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 6f50b977d1ba296cbdc66a2f4c53407311e93631
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbulkoperations-function"></a>Funzione SQLBulkOperations
 **Conformità**  
  Introdotta: versione ODBC 3.0 aderenza: ODBC  
   
  **Riepilogo**  
- **SQLBulkOperations** esegue le operazioni di inserimento bulk e segnalibro bulk operazioni, incluso l'aggiornamento, eliminazione e il recupero dal segnalibro.  
+ **SQLBulkOperations** esegue le operazioni di inserimento bulk e inserisce un segnalibro bulk operazioni, incluso l'aggiornamento, eliminazione e il recupero dal segnalibro.  
   
 ## <a name="syntax"></a>Sintassi  
   

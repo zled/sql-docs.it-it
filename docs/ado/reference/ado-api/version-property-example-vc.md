@@ -1,32 +1,29 @@
 ---
-title: "Esempio di proprietà Version (VC + +) | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Esempio di proprietà Version (VC + +) | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 86d3b981271498ee8366ac2d8dea1f22d9e1ed61
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4e4eb2d222dcfae12e61302919ec7d3aa4e73fd2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="version-property-example-vc"></a>Esempio di proprietà Version (VC + +)
 Questo esempio viene utilizzato il [versione](../../../ado/reference/ado-api/version-property-ado.md) proprietà di un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto per visualizzare la versione corrente di ADO. Utilizza inoltre diverse proprietà dinamiche per mostrare:  

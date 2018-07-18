@@ -1,16 +1,14 @@
 ---
 title: La costruzione di istruzioni ricerca | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - searched statements [ODBC]
 - ODBC cursor library [ODBC], statement processing
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - cursor library [ODBC], searched statements
 - SQL statements [ODBC], searched statements
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 713f020261d4d2365061247603de72fa31787696
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: feeebf8ffad30aa5897471c95e8916617e3907ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constructing-searched-statements"></a>Costruzione di istruzioni di ricerca
 > [!IMPORTANT]  
@@ -48,8 +45,8 @@ ms.lasthandoff: 12/21/2017
   
 -   **Associare le colonne che identificano in modo univoco la riga.** Se le colonne associate non identificare in modo univoco la riga, il **dove** clausola costruito dalla libreria di cursori potrebbe identificare più di una riga. In un'istruzione delete o un aggiornamento posizionato, questa clausola può causare più di una riga deve essere aggiornato o eliminato. In una chiamata a **SQLGetData**, tale clausola potrebbe causare il driver restituire i dati per la riga non corretto. Associazione di tutte le colonne in una chiave univoca garantisce che ogni riga viene identificato in modo univoco.  
   
--   **Allocare buffer di dati sufficientemente grande che si verifica il troncamento non.** La cache della libreria di cursori è una copia dei valori nei buffer di set di righe associato al set di risultati con **SQLBindCol**. Quando viene inserito in questi buffer i dati vengono troncati, verrà troncato anche nella cache. Oggetto **dove** clausola costruito dai valori troncati potrebbe non identificare correttamente riga nell'origine dati sottostante.  
+-   **Allocare buffer di dati sufficientemente grande che nessun troncamento si verifica.** La cache della libreria di cursori è una copia dei valori nei buffer di set di righe associato al set di risultati con **SQLBindCol**. Quando viene inserito in questi buffer i dati vengono troncati, verrà troncato anche nella cache. Oggetto **dove** clausola costruito dai valori troncati potrebbe non identificare correttamente riga nell'origine dati sottostante.  
   
--   **Specificare il buffer di lunghezza non null per i dati binari di C.** La libreria di cursori alloca i buffer di lunghezza nella relativa cache solo se il *StrLen_or_IndPtr* argomento **SQLBindCol** è diverso da null. Quando il *TargetType* argomento SQL_C_BINARY, la libreria di cursori richiede la lunghezza dei dati binari per costruire un **dove** clausola dai dati. Se non vi è alcun buffer di lunghezza per una colonna SQL_C_BINARY e l'applicazione chiama **SQLGetData** o tenta di eseguire un aggiornamento posizionato o eliminare l'istruzione, la restituisce libreria cursore SQL_ERROR e SQLSTATE SL014 (un oggetto posizionato richiesta è stata rilasciata e non tutti i campi numero di colonna sono stati memorizzati nel buffer).  
+-   **Specificare i buffer di lunghezza non null per i dati binari di C.** La libreria di cursori alloca i buffer di lunghezza nella relativa cache solo se il *StrLen_or_IndPtr* argomento **SQLBindCol** è diverso da null. Quando il *TargetType* argomento SQL_C_BINARY, la libreria di cursori richiede la lunghezza dei dati binari per costruire un **dove** clausola dai dati. Se non vi è alcun buffer di lunghezza per una colonna SQL_C_BINARY e l'applicazione chiama **SQLGetData** o tenta di eseguire un aggiornamento posizionato o eliminare l'istruzione, la restituisce libreria cursore SQL_ERROR e SQLSTATE SL014 (un oggetto posizionato richiesta è stata rilasciata e non tutti i campi numero di colonna sono stati memorizzati nel buffer).  
   
--   **Specificare il buffer di lunghezza non null per le colonne che ammettono valori null.** La libreria di cursori alloca i buffer di lunghezza nella relativa cache solo se il *StrLen_or_IndPtr* argomento **SQLBindCol** è diverso da null. Poiché SQL_NULL_DATA viene memorizzata nel buffer di lunghezza, la libreria di cursori si presuppone che qualsiasi colonna per la cui lunghezza non viene specificato il buffer non nullable. Se per una colonna che ammette valori null non è specificata alcuna colonna di lunghezza, la libreria di cursori costruisce una **dove** clausola che utilizza il valore dei dati per la colonna. Questa clausola non identificherà correttamente la riga.
+-   **Specificare i buffer di lunghezza non null per le colonne che ammettono valori null.** La libreria di cursori alloca i buffer di lunghezza nella relativa cache solo se il *StrLen_or_IndPtr* argomento **SQLBindCol** è diverso da null. Poiché SQL_NULL_DATA viene memorizzata nel buffer di lunghezza, la libreria di cursori si presuppone che qualsiasi colonna per la cui lunghezza non viene specificato il buffer non nullable. Se per una colonna che ammette valori null non è specificata alcuna colonna di lunghezza, la libreria di cursori costruisce una **dove** clausola che utilizza il valore dei dati per la colonna. Questa clausola non identificherà correttamente la riga.

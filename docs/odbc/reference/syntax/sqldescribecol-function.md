@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLDescribeCol | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLDescribeCol
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLDescribeCol
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLDescribeCol
-helpviewer_keywords: SQLDescribeCol function [ODBC]
+f1_keywords:
+- SQLDescribeCol
+helpviewer_keywords:
+- SQLDescribeCol function [ODBC]
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4967b2de98246e3ae8eedb91ecfcbf507b2afc8c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 4e35649b865a41481de3bfe3356d8738888be39c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldescribecol-function"></a>Funzione SQLDescribeCol 
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: 92 ISO  
   
  **Riepilogo**  
- **SQLDescribeCol** restituisce il descrittore del risultato, il nome di colonna, tipo, dimensioni della colonna, cifre decimali e supporto di valori null, per una colonna nel risultato impostato. Queste informazioni sono anche disponibili nei campi di implementazione.  
+ **SQLDescribeCol** restituisce il descrittore del risultato, ovvero nome di colonna, tipo, dimensione della colonna, cifre decimali e supporto di valori null, per una colonna nel risultato impostato. Queste informazioni sono anche disponibili nei campi di implementazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,7 +59,7 @@ SQLRETURN SQLDescribeCol(
  *ColumnNumber*  
  [Input] Numero di colonna di dati del risultato, ordinati in sequenza in ordine crescente di colonna, a partire da 1. Il *ColumnNumber* argomento può inoltre essere impostato su 0 per descrivere la colonna del segnalibro.  
   
- *Nome colonna*  
+ *ColumnName*  
  [Output] Puntatore a un buffer con terminazione null in cui restituire il nome della colonna. Questo valore viene letto dal campo SQL_DESC_NAME di implementazione. Se la colonna è senza nome o non è possibile determinare il nome della colonna, il driver restituisce una stringa vuota.  
   
  Se *ColumnName* è NULL, *NameLengthPtr* continuerà a restituire il numero totale di caratteri (escluso il carattere di terminazione null per i dati di tipo carattere) disponibile da restituire nel buffer a cui fa riferimento *ColumnName*.  
@@ -118,7 +119,7 @@ SQLRETURN SQLDescribeCol(
 |IM017|Polling è disabilitato in modalità di notifica asincrona|Ogni volta che viene utilizzato il modello di notifica, il polling è disabilitato.|  
 |IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente dell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato per l'handle per eseguire la post-elaborazione e completare l'operazione.|  
   
- **SQLDescribeCol** può restituire qualsiasi SQLSTATE che può essere restituiti da **SQLPrepare** o **SQLExecute** quando viene chiamato dopo **SQLPrepare** e prima  **SQLExecute**, a seconda di quando l'origine dati restituisce l'istruzione SQL associata all'handle di istruzione.  
+ **SQLDescribeCol** può restituire qualsiasi SQLSTATE che può essere restituiti da **SQLPrepare** o **SQLExecute** quando viene chiamato dopo **SQLPrepare** e prima **SQLExecute**, a seconda di quando l'origine dati restituisce l'istruzione SQL associata all'handle di istruzione.  
   
  Per motivi di prestazioni, un'applicazione non deve chiamare **SQLDescribeCol** prima di eseguire un'istruzione.  
   

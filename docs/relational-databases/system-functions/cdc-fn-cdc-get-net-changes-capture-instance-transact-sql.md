@@ -1,16 +1,14 @@
 ---
 title: cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_net_changes_<capture_instance>
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8eef147e95d841605c01fa8a0597aae1d32cc831
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d4f66b0608afcfa883f4e12d0e3dfe39e8bf7512
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ ms.lasthandoff: 02/09/2018
   
  Quando una riga di origine dispone di più modifiche durante l'intervallo di LSN, una singola riga che riflette il contenuto finale della riga viene restituita dalla funzione di enumerazione descritta di seguito. Ad esempio, se una transazione inserisce una riga nella tabella di origine e una transazione successiva all'interno dell'intervallo LSN aggiorna uno o più colonne in tale riga, la funzione restituisce solo **uno** riga, che include i valori di colonna aggiornata.  
   
- Questa funzione di enumerazione viene creata nel momento in cui una tabella di origine è abilitata per l'acquisizione dei dati delle modifiche e quando viene specificato il rilevamento delle modifiche nette. Per abilitare il rilevamento delle modifiche nette, è necessario che la tabella di origine disponga di una chiave primaria o un indice univoco. Il nome della funzione è derivato e utilizza il formato CDC. fn_cdc_get_net_changes_*capture_instance*, dove *capture_instance* è il valore specificato per l'istanza di acquisizione quando la tabella di origine abilitato per change data capture. Per ulteriori informazioni, vedere [sp_cdc_enable_table &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+ Questa funzione di enumerazione viene creata nel momento in cui una tabella di origine è abilitata per l'acquisizione dei dati delle modifiche e quando viene specificato il rilevamento delle modifiche nette. Per abilitare il rilevamento delle modifiche nette, è necessario che la tabella di origine disponga di una chiave primaria o un indice univoco. Il nome della funzione è derivato e utilizza il formato CDC. fn_cdc_get_net_changes_*capture_instance*, dove *capture_instance* è il valore specificato per l'istanza di acquisizione quando la tabella di origine abilitato per change data capture. Per altre informazioni, vedere [sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,16 +57,16 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argomenti  
  *from_lsn*  
- Il numero LSN che rappresenta l'endpoint inferiore dell'intervallo LSN da includere nel set di risultati. *from_lsn* è **Binary (10)**.  
+ Il numero LSN che rappresenta l'endpoint inferiore dell'intervallo LSN da includere nel set di risultati. *from_lsn* viene **binary(10)**.  
   
- Solo le righe del [cdc. &#91; capture_instance &#93; CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) modificare una tabella con un valore in _ $start_lsn maggiore o uguale a *from_lsn* sono inclusi nel set di risultati.  
+ Solo le righe della [cdc.&#91; capture_instance&#93;CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) modificare una tabella con un valore in _ $start_lsn maggiore o uguale a *from_lsn* sono incluse nel set di risultati.  
   
  *to_lsn*  
- Il numero LSN che rappresenta l'endpoint superiore dell'intervallo LSN da includere nel set di risultati. *to_lsn* è **Binary (10)**.  
+ Il numero LSN che rappresenta l'endpoint superiore dell'intervallo LSN da includere nel set di risultati. *to_lsn* viene **binary(10)**.  
   
- Solo le righe del [cdc. &#91; capture_instance &#93; CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) modificare una tabella con un valore in _ $start_lsn minore o uguale a *from_lsn* o uguale a *to_lsn* sono incluso nel set di risultati.  
+ Solo le righe della [cdc.&#91; capture_instance&#93;CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) modificare una tabella con un valore in _ $start_lsn minore o uguale a *from_lsn* o uguale a *to_lsn* sono inclusi nel set di risultati.  
   
- *< row_filter_option >* :: = {tutti | all con maschera | all con merge}  
+ *< row_filter_option >* :: = {tutti | all con mask | all con merge}  
  Opzione applicata al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati. Le opzioni possibili sono le seguenti:  
   
  all  
@@ -96,12 +93,14 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database. Se il chiamante non dispone delle autorizzazioni per visualizzare i dati di origine, la funzione restituisce un errore 208 (Il nome di oggetto non è valido).  
   
 ## <a name="remarks"></a>Osservazioni  
- Se l'intervallo LSN specificato è esterno alla cronologia di rilevamento delle modifiche per l'istanza di acquisizione, la funzione restituisce un errore 208, in cui è indicato che il nome di oggetto non è valido.  
+ Se l'intervallo LSN specificato è esterno alla cronologia di rilevamento delle modifiche per l'istanza di acquisizione, la funzione restituisce un errore 208, in cui è indicato che il nome di oggetto non è valido.
+
+ Le modifiche sull'identificatore univoco di una riga causerà fn_cdc_get_net_changes mostrare il comando di aggiornamento iniziale con un'operazione di eliminazione e quindi inserire invece comando.  Questo comportamento è necessario registrare la chiave sia prima sia dopo la modifica.
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzata la funzione `cdc.fn_cdc_get_net_changes_HR_Department` per segnalare tutte le modifiche apportate alla tabella di origine `HumanResources.Department` durante un intervallo di tempo specifico.  
   
- Innanzitutto, per contrassegnare l'inizio dell'intervallo di tempo viene utilizzata la funzione `GETDATE`. Dopo l'applicazione delle istruzioni DML alla tabella di origine, la funzione `GETDATE` viene chiamata nuovamente per identificare la fine dell'intervallo di tempo. La funzione [fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) viene quindi utilizzato per eseguire il mapping a un intervallo di query change data capture delimitato da valori LSN l'intervallo di tempo. Infine, la funzione `cdc.fn_cdc_get_net_changes_HR_Department` viene eseguita per ottenere tutte le modifiche alla tabella di origine per l'intervallo di tempo. La riga inserita ed eliminata non viene visualizzata nel set dei risultati restituito dalla funzione. Ciò avviene perché una riga aggiunta ed eliminata all'interno di una finestra di query non produce modifiche totali sulla tabella di origine per l'intervallo. Prima di eseguire questo esempio, è innanzitutto necessario eseguire l'esempio B in [sp_cdc_enable_table &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+ Innanzitutto, per contrassegnare l'inizio dell'intervallo di tempo viene utilizzata la funzione `GETDATE`. Dopo l'applicazione delle istruzioni DML alla tabella di origine, la funzione `GETDATE` viene chiamata nuovamente per identificare la fine dell'intervallo di tempo. La funzione [fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) viene quindi utilizzato per eseguire il mapping a un intervallo di query change data capture delimitato da valori LSN l'intervallo di tempo. Infine, la funzione `cdc.fn_cdc_get_net_changes_HR_Department` viene eseguita per ottenere tutte le modifiche alla tabella di origine per l'intervallo di tempo. La riga inserita ed eliminata non viene visualizzata nel set dei risultati restituito dalla funzione. Ciò avviene perché una riga aggiunta ed eliminata all'interno di una finestra di query non produce modifiche totali sulla tabella di origine per l'intervallo. Prima di eseguire questo esempio, è innanzitutto necessario eseguire l'esempio B nel [sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,41 +1,38 @@
 ---
 title: Outer join | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f217b7392b4db968e612f58b264e17f921a40aae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 15ab82f5623bad7d3c82729dfd9077ac967301e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="outer-joins"></a>Outer join
 ODBC supporta SQL-92 a sinistra, la sintassi di right e full outer join. La sequenza di escape per gli outer join  
   
- **{GU** *outer join***}**  
+ **{GU** *outer-join * * *}**  
   
  dove *outer join* è  
   
- *riferimento alla tabella* {**sinistra &#124; DESTRA &#124; FULL} OUTER JOIN** {*riferimento alla tabella* &#124; *outer join*} **ON** *condizione di ricerca*  
+ *riferimento alla tabella* {**sinistra &#124; a destra &#124; completo} OUTER JOIN** {*riferimento alla tabella* &#124; *outer join*} **ON**  *condizione di ricerca*  
   
- *riferimento alla tabella* specifica un nome di tabella e *condizione di ricerca* specifica la condizione di join tra la *riferimenti alla tabella*.  
+ *riferimento alla tabella* specifica un nome di tabella, e *condizione di ricerca* specifica la condizione di join tra il *riferimenti alla tabella*.  
   
  Una richiesta di outer join deve essere visualizzate dopo il **FROM** (parola chiave) e prima di **dove** clausola (se presente). Per informazioni complete sulla sintassi, vedere [Outer Join sequenza di Escape](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) nella grammatica SQL di appendice c:.  
   

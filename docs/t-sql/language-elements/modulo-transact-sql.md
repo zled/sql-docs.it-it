@@ -1,16 +1,14 @@
 ---
-title: '% (Modulo) (Transact-SQL) | Documenti Microsoft'
-ms.custom: 
+title: '% (modulo) (Transact-SQL) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - modulo
@@ -27,18 +25,18 @@ helpviewer_keywords:
 - modulo operator (%)
 - modulus operator (%)
 ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
-caps.latest.revision: 
+caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 927b993e2b93ef670633ae1594c86178662ebabb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fd3f08c6c62b0cec436e86556679b87e5ca3b9a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="-modulus-transact-sql"></a>% (Modulus) (Transact-SQL)
+# <a name="-modulus-transact-sql"></a>% (modulo) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Viene restituito il resto di una divisione.  
@@ -53,21 +51,21 @@ dividend % divisor
   
 ## <a name="arguments"></a>Argomenti  
  *dividend*  
- Espressione numerica da dividere. *dividendo* deve essere un valore valido [espressione](../../t-sql/language-elements/expressions-transact-sql.md) uno qualsiasi dei tipi di dati nell'integer o di categorie di tipi di dati di tipo valuta, o **numerico** tipo di dati.  
+ Espressione numerica da dividere. *dividend* deve essere un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida di uno dei tipi di dati presenti per le categorie di interi e di valuta o del tipo di dati **numeric**.  
   
  *divisor*  
- Espressione numerica per cui dividere il dividendo. *divisore* deve essere qualsiasi espressione valida di uno qualsiasi dei tipi di dati nell'integer o di categorie di tipi di dati di tipo valuta, o **numerico** tipo di dati.  
+ Espressione numerica per cui dividere il dividendo. *divisor* deve essere qualsiasi espressione valida di uno dei tipi di dati presenti per le categorie di interi e di valuta o del tipo di dati **numeric**.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti.  
   
-## <a name="remarks"></a>Osservazioni  
- È possibile utilizzare l'operatore aritmetico modulo nell'elenco di selezione dell'istruzione SELECT con qualsiasi combinazione di nomi di colonna, costanti numeriche o qualsiasi espressione valida di integer e dati di valuta un tipo di categorie o **numerico** dati tipo.  
+## <a name="remarks"></a>Remarks  
+ L'operatore aritmetico modulo può essere usato nell'elenco di selezione dell'istruzione SELECT con una qualsiasi combinazione di nomi di colonna, costanti numeriche o qualsiasi espressione valida delle categorie di tipi di dati integer e monetary o del tipo di dati **numeric**.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-simple-example"></a>A. Esempio semplice  
- Nell'esempio seguente viene diviso il numero 38 per 5. Questo comporta 7 come parte intera del risultato e viene illustrato come modulo, restituisce il resto di 3.  
+ Nell'esempio seguente viene diviso il numero 38 per 5. Viene restituito 7 come parte intera del risultato e viene illustrata la restituzione del resto di 3 da parte del modulo.  
   
 ```  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
@@ -86,10 +84,10 @@ FROM Sales.SalesOrderDetail;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C: esempio  
- L'esempio seguente mostra i risultati per il `%` operatore quando si divide 3 per 2.  
+### <a name="c-simple-example"></a>C. Esempio semplice  
+ L'esempio seguente visualizza i risultati per l'operatore `%` quando si divide 3 per 2.  
   
 ```  
 -- Uses AdventureWorks  
@@ -107,10 +105,10 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [%= &#40;Modulus Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
- [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [%= &#40;Assegnazione modulo&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [Operatori composti &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

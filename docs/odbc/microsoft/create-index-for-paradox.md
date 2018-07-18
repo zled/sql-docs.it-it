@@ -1,37 +1,34 @@
 ---
 title: CREARE l'indice per Paradox | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - Paradox driver [ODBC], create index
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a64feb77cc0562635b5e432174c58503e459e8ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 473c8d73e33504e7cc22d3b02aaca789d9c7a620
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-index-for-paradox"></a>CREARE l'indice per Paradox
 La sintassi dell'istruzione CREATE INDEX per il driver ODBC Paradox è:  
   
  **CREARE** [**UNIQUE**] **indice** *nome indice*  
   
- **ON** *-nome della tabella*  
+ **VIA** *-nome della tabella*  
   
  **(** *colonna identificatore* [**ASC**]  
   
@@ -51,7 +48,7 @@ La sintassi dell'istruzione CREATE INDEX per il driver ODBC Paradox è:
   
 -   Il *nome indice* argomento per un indice primario deve essere lo stesso nome base della tabella, come richiesto dal Paradox.  
   
- Se la parola chiave **UNIQUE** viene omesso, il driver ODBC Paradox verrà creato un indice non univoco. Si tratta di due file di indice secondario Paradox denominati *-nome della tabella*. X *nn*  e *-nome della tabella*. Y*nn*, dove  *nn*  è il numero della colonna nella tabella. Gli indici non univoci sono soggetti alle restrizioni seguenti:  
+ Se la parola chiave **UNIQUE** viene omesso, il driver ODBC Paradox verrà creato un indice non univoco. Si tratta di due file di indice secondario Paradox denominati *-nome della tabella*. X*nn* e *-nome della tabella*. Y*nn*, dove *nn* è il numero della colonna nella tabella. Gli indici non univoci sono soggetti alle restrizioni seguenti:  
   
 -   Prima di poter creare un indice non univoco per una tabella, deve esistere un indice primario per la tabella.  
   

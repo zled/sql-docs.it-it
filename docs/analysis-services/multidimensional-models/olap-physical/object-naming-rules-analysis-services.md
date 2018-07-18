@@ -1,39 +1,30 @@
 ---
 title: Le regole di denominazione (Analysis Services) dell'oggetto | Documenti Microsoft
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: objects [Analysis Services], naming
-ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
-caps.latest.revision: "13"
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0200c7bedb0d0dd7dd990ef8cbe9ed2114978b8d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In questo argomento vengono descritte le convenzioni di denominazione di oggetti, nonché le parole riservate e caratteri che non possono essere usati in qualsiasi oggetto, nome in codice o script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  In questo argomento vengono descritte le convenzioni di denominazione degli oggetti, come pure le parole e i caratteri riservati che non possono essere utilizzati in nomi di oggetto, codice o script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_Names"></a>Convenzioni di denominazione  
+##  <a name="bkmk_Names"></a> Convenzioni di denominazione  
  Ogni oggetto dispone di un **nome** e **ID** proprietà che devono essere univoci all'interno dell'ambito della raccolta padre. Ad esempio, due dimensioni possono avere lo stesso nome fintanto che ciascuna risiede in un database diverso.  
   
  Sebbene sia possibile specificare manualmente il **ID** viene in genere generato automaticamente quando viene creato l'oggetto. Non modificare mai il **ID** una volta avviata la compilazione di un modello. Tutti i riferimenti agli oggetti in un modello si basano le **ID**. Pertanto, la modifica un **ID** facilmente può causare il danneggiamento del modello.  
   
- **Origine dati** e **DataSourceView** oggetti presentano eccezioni rilevanti alle convenzioni di denominazione. **Origine dati** ID può essere impostato su un punto singolo (.), che non è univoco, come un riferimento al database corrente. Una seconda eccezione è **DataSourceView**, che aderisce alle convenzioni di denominazione definite per **DataSet** oggetti in .NET Framework, in cui il **nome** viene utilizzato come il identificatore.  
+ **DataSource** e **DataSourceView** oggetti presentano eccezioni rilevanti alle convenzioni di denominazione. **Origine dati** ID può essere impostato su un punto singolo (.), che non è univoco, come un riferimento al database corrente. Una seconda eccezione è **DataSourceView**, che aderisce alle convenzioni di denominazione definite per **DataSet** oggetti in .NET Framework, in cui il **nome** viene utilizzato come il identificatore.  
   
  Le regole seguenti si applicano a **nome** e **ID** proprietà.  
   
@@ -45,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Non esiste alcun particolare requisito per il primo carattere di un identificatore, che può pertanto essere qualsiasi carattere valido.  
   
-##  <a name="bkmk_reserved"></a>Caratteri e le parole riservate  
+##  <a name="bkmk_reserved"></a> Caratteri e le parole riservate  
  Le parole riservate sono in inglese e si applicano ai nomi di oggetto, non alle didascalie. Se inavvertitamente si utilizza una parola riservata nel nome di un oggetto, viene restituito un errore di convalida. Per i modelli di data mining e multidimensionali, le parole riservate descritte di seguito non possono mai essere utilizzate in un nome di oggetto.  
   
  Per i modelli tabulari, per cui la compatibilità del database è impostata su 1103, le regole di convalida sono meno restrittive per alcuni oggetti, senza la conformità ai requisiti di caratteri estesi e alle convenzioni di denominazione di alcune applicazioni client. I database che soddisfano questi criteri sono soggetti a regole di convalida meno restrittive. In questo caso, è possibile includere in un nome di oggetto un carattere limitato e passare la convalida.  
@@ -72,13 +63,13 @@ ms.lasthandoff: 01/08/2018
   
  Nella tabella seguente sono elencati i caratteri non validi per oggetti specifici.  
   
-|Object|Caratteri non validi|  
+|Oggetto|Caratteri non validi|  
 |------------|------------------------|  
 |**Server**|Seguire le convenzioni di denominazione del server Windows quando si denomina un oggetto server. Vedere [convenzioni di denominazione (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) per informazioni dettagliate.|  
-|**DataSource**|: / \ * &#124; ? " () [] {} <>|  
-|**Livello** o **attributo**|, , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**Dimensione** o **gerarchia**|, , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
-|Tutti gli altri oggetti|, , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} < >|  
+|**DataSource**|: / \ * &#124; ? "[] () {} <>|  
+|**Livello** o **attributo**|tramite tabelle annidate. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
+|**Dimensione** o **gerarchia**|tramite tabelle annidate. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
+|Tutti gli altri oggetti|tramite tabelle annidate. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} < >|  
   
  **Eccezioni: Quando i caratteri riservati consentiti**  
   
@@ -96,6 +87,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Vedere anche  
  [Parole riservate MDX](../../../mdx/mdx-reserved-words.md)   
  [Supporto delle traduzioni in Analysis Services](../../../analysis-services/translation-support-in-analysis-services.md)   
- [XML for Analysis conformità &#40; XMLA &#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis conformità &#40;XMLA&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
   
   

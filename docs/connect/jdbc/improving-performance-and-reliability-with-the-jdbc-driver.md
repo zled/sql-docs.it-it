@@ -1,28 +1,24 @@
 ---
-title: "Miglioramento delle prestazioni e affidabilità con il Driver JDBC | Documenti Microsoft"
-ms.custom: 
+title: Miglioramento delle prestazioni e affidabilità con il Driver JDBC | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d8b2d716ada4cb786eb141c0f49dcad41c5231c4
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+manager: craigg
+ms.openlocfilehash: 58521cbe6c21e7ef58fc97b52e1ef6b27209e4fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Utilizzo del driver JDBC per il miglioramento di prestazioni e affidabilità
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +36,7 @@ ms.lasthandoff: 03/02/2018
 |[Uso di istruzioni e set di risultati](../../connect/jdbc/working-with-statements-and-result-sets.md)|Descrive le tecniche per migliorare le prestazioni quando si utilizza l'istruzione o set di risultati di oggetti.|  
 |[Uso del buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md)|Viene descritta una caratteristica di buffer adattivo, progettata per recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori server.|  
 |[Colonne di tipo sparse](../../connect/jdbc/sparse-columns.md)|Viene descritto il supporto del driver JDBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] colonne di tipo sparse.|  
-|[Metadati di istruzione preparata la memorizzazione nella cache per il Driver JDBC](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Vengono descritte le tecniche per migliorare le prestazioni delle query di istruzione preparata.|
+|[Memorizzazione nella cache dei metadati delle istruzioni preparate per JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Vengono descritte le tecniche per migliorare le prestazioni delle query di istruzione preparata.|
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -1,17 +1,16 @@
 ---
 title: Guida di riferimento a operatori Showplan logici e fisici | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.showplan.leftouterjoin.f1
 - sql13.swb.showplan.remotedelete.f1
@@ -138,20 +137,20 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 605d3ff10ac725358ec51e28357f8b03cfcee094
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 75aeadbf83ba580545ed97e9c7d5f13ea24ecda5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Guida di riferimento a operatori Showplan logici e fisici
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Gli operatori descrivono la modalità di esecuzione di una query o di un'istruzione del linguaggio di manipolazione dei dati (DML, Data Manipulation Language) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . In Query Optimizer gli operatori consentono di compilare un piano di query per ottenere i risultati specificati nella query o per eseguire l'operazione specificata nell'istruzione DML. Il piano di query è un albero composto da operatori fisici che è possibile visualizzare tramite le istruzioni SET SHOWPLAN, le opzioni del piano di esecuzione grafico in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]o le classi di eventi Showplan di SQL Server Profiler.  
+  Gli operatori descrivono la modalità di esecuzione di una query o di un'istruzione del linguaggio di manipolazione dei dati (DML, Data Manipulation Language) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . In Query Optimizer gli operatori consentono di compilare un piano di query per ottenere i risultati specificati nella query o per eseguire l'operazione specificata nell'istruzione DML. Il piano di query è un albero composto da operatori fisici che è possibile visualizzare tramite le istruzioni SET SHOWPLAN, le opzioni del piano di esecuzione grafico in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]o le classi di eventi Showplan di SQL Server Profiler.  
   
  Gli operatori sono suddivisi in operatori logici e fisici.  
   
@@ -283,7 +282,7 @@ Gli operatori descrivono la modalità di esecuzione di una query o di un'istruzi
 |![Icona dell'operatore Split](../relational-databases/media/split-32x.gif "Icona dell'operatore Split")|**Split**|L'operatore **Split** consente di ottimizzare l'elaborazione degli aggiornamenti. Ogni operazione di aggiornamento viene suddivisa in un'operazione di eliminazione e un'operazione di inserimento. **Split** è un operatore logico e fisico.|  
 |![Icona dell'operatore Spool](../relational-databases/media/spool-32x.gif "Icona dell'operatore Spool")|**Spool**|L'operatore **Spool** salva risultati di query intermedi nel database **tempdb** .|  
 |![Icona dell'operatore Stream Aggregate](../relational-databases/media/stream-aggregate-32x.gif "Icona dell'operatore Stream Aggregate")|**Stream Aggregate**|L'operatore **Stream Aggregate** raggruppa le righe in base a una o più colonne e quindi calcola una o più espressioni di aggregazione restituite dalla query. L'output di questo operatore può essere utilizzato come riferimento da operatori successivi nella query, può essere restituito al client o può essere oggetto di entrambe le operazioni. Per l'operatore **Stream Aggregate** è necessario che l'input sia ordinato in base alle colonne all'interno del relativo gruppo. In Query Optimizer verrà utilizzato un operatore **Sort** prima di questo se i dati non sono già stati ordinati tramite un operatore **Sort** precedente o tramite una ricerca o un'analisi di un indice ordinato. Nell'istruzione SHOWPLAN_ALL o nel piano di esecuzione grafico in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]le colonne incluse nel predicato GROUP BY sono elencate nella colonna **Argument** , mentre le espressioni di aggregazione sono elencate nella colonna **Defined Values** . **Stream Aggregate** è un operatore fisico.|  
-|![Icona dell'operatore Switch](../relational-databases/media/switch-32x.gif "Icona dell'operatore Switch")|**Opzione**|**Opzione** è un tipo speciale di iteratore di concatenazione che prevede *n* input. A ogni operatore **Switch** è associata un'espressione. In base al valore restituito dall'espressione (compreso tra 0 e *n*-1), l'operatore **Opzione** copia il flusso di input appropriato nel flusso di output. Tra i possibili utilizzi dell'operatore **Switch** è inclusa l'implementazione di query che richiedono cursori fast forward con operatori specifici, ad esempio l'operatore **TOP** . **Switch** è un operatore logico e fisico.|  
+|![Icona dell'operatore Switch](../relational-databases/media/switch-32x.gif "Icona dell'operatore Switch")|**Opzione**|**Switch** è un tipo speciale di iteratore di concatenazione che prevede *n* input. A ogni operatore **Switch** è associata un'espressione. In base al valore restituito dall'espressione (compreso tra 0 e *n*-1), l'operatore **Switch** copia il flusso di input appropriato nel flusso di output. Tra i possibili utilizzi dell'operatore **Switch** è inclusa l'implementazione di query che richiedono cursori fast forward con operatori specifici, ad esempio l'operatore **TOP** . **Switch** è un operatore logico e fisico.|  
 |![Icona dell'operatore Table Delete](../relational-databases/media/table-delete-32x.gif "Icona dell'operatore Table Delete")|**Table Delete**|L'operatore **Table Delete** fisico elimina righe dalla tabella specificata nella colonna **Argument** del piano di esecuzione della query.|  
 |![Icona dell'operatore Table Insert](../relational-databases/media/table-insert-32x.gif "Icona dell'operatore Table Insert")|**Table Insert**|L'operatore **Table Insert** inserisce righe dal proprio input nella tabella specificata nella colonna **Argument** del piano di esecuzione della query. La colonna **Argument** include anche un predicato SET:(), che indica il valore su cui viene impostata ogni colonna. Se in **Table Insert** non sono disponibili figli per i valori Insert, la riga inserita verrà recuperata dall'operatore Insert stesso. **Table Insert** è un operatore fisico.|  
 |![Icona dell'operatore Table Merge](../relational-databases/media/table-merge-32x.gif "Icona dell'operatore Table Merge")|**Table Merge**|L'operatore **Table Merge** applica un flusso di dati di unione a un heap. L'operatore elimina, aggiorna o inserisce righe nella tabella specificata nella colonna dell'**argomento** dell'operatore. L'operazione effettiva eseguita dipende dal valore di runtime della colonna **ACTION** specificato nella colonna **Argument** dell'operatore. **Table Merge** è un operatore fisico.|  

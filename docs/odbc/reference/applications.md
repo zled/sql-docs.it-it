@@ -1,16 +1,14 @@
 ---
 title: Applicazioni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - off-the-shelf applications [ODBC]
 - ODBC architecture [ODBC], applications
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f2a2e9924d032e3ccc32d613a1799c3abd84880f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ac9d98b3b7f6261333626d888c6a8b1d750f2d1b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="applications"></a>Applicazioni
 Un *applicazione* è un programma che chiama l'API ODBC per accedere ai dati. Anche se sono possibili diversi tipi di applicazioni, la maggior parte rientrano in tre categorie, che vengono utilizzate come esempi in questa Guida.  
@@ -40,7 +37,7 @@ Un *applicazione* è un programma che chiama l'API ODBC per accedere ai dati. An
   
      Cosa generiche tutte le applicazioni hanno in comune è che sono estremamente interoperativi tra DBMS e devono utilizzare ODBC in modo relativamente generico. Per ulteriori informazioni sull'interoperabilità, vedere [scelta di un livello di interoperabilità](../../odbc/reference/develop-app/choosing-a-level-of-interoperability.md).  
   
--   **Le applicazioni verticali** applicazioni verticali eseguire un singolo tipo di attività, ad esempio ordini o dati di produzione, di rilevamento e di lavoro con uno schema di database che viene controllato dallo sviluppatore dell'applicazione. Per un determinato cliente, l'applicazione funziona con un singolo DBMS. Ad esempio, una piccola azienda potrebbe utilizzare l'applicazione con dBase, mentre un'azienda di grandi dimensioni potrebbe essere utilizzato con Oracle.  
+-   **Le applicazioni verticali** applicazioni verticali eseguire un singolo tipo di attività, ad esempio ordini o i dati di produzione, di rilevamento e di lavoro con uno schema di database che viene controllato dallo sviluppatore dell'applicazione. Per un determinato cliente, l'applicazione funziona con un singolo DBMS. Ad esempio, una piccola azienda potrebbe utilizzare l'applicazione con dBase, mentre un'azienda di grandi dimensioni potrebbe essere utilizzato con Oracle.  
   
      L'applicazione utilizza ODBC in modo che l'applicazione non è correlato a un qualsiasi DBMS, anche se potrebbero essere associato a un numero limitato di DBMS che offrono funzionalità simili. Di conseguenza, lo sviluppatore di applicazioni è possibile vendere l'applicazione indipendentemente da DBMS. Le applicazioni verticali sono interoperativi quando vengono sviluppati, ma in alcuni casi sono state modificate per includere codice noninteroperable dopo che il cliente avrà scelto un DBMS.  
   

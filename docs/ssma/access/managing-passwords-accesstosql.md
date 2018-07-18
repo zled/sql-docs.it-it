@@ -1,30 +1,28 @@
 ---
 title: La gestione delle password (AccessToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3f939dc06c04f0c2fb00022a688b8a2cc86e8a0b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b147ba97ef56ad9fa944ec18a4d9859f02ef3105
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-passwords-accesstosql"></a>La gestione delle password (AccessToSQL)
 In questa sezione riguarda la protezione delle password di database e le procedure per importare o esportare tali tra server:  
@@ -42,9 +40,9 @@ Specificare una password valida utilizzando uno dei tre metodi seguenti:
   
 1.  **Testo non crittografato:** digitare la password del database dell'attributo value del nodo 'password'. Si trovi sotto il nodo della definizione di server nella sezione Server di file di script o file di connessione del server.  
   
-    Le password in testo non crittografato non sono protette. Pertanto, si verificherà il seguente messaggio di avviso nell'output della console: *"Server &lt;id server&gt; password viene fornito in formato testo non crittografato non protetta, l'applicazione Console SSMA fornisce un'opzione per proteggere la password mediante crittografia, vedere l'opzione – securepassword SSMA file della Guida per ulteriori informazioni."*  
+    Le password in testo non crittografato non sono protette. Pertanto, si verifica il seguente messaggio di avviso nell'output della console: *"Server &lt;id server&gt; password viene fornita in formato testo non crittografato non sicure, applicazione Console SSMA fornisce un'opzione per proteggere il password mediante crittografia, vedere opzione – securepassword in SSMA file per altre informazioni della Guida."*  
   
-    **Le password crittografate:** la password specificata, in questo caso, è archiviata in formato crittografato nel computer locale in ProtectedStorage.ssma.  
+    **Le password crittografate:** la password specificata, in questo caso, viene archiviata in formato crittografato nel computer locale in ProtectedStorage.ssma.  
   
     -   **Protezione delle password**  
   
@@ -76,7 +74,7 @@ Specificare una password valida utilizzando uno dei tre metodi seguenti:
                 
                 Re-enter password for server_id 'target _1': xxxxxxx  
   
-    -   **Rimuovere le password crittografate**  
+    -   **Rimozione di password crittografate**  
   
         Eseguire il `SSMAforAccessConsole.exe` con il`–securepassword` e `–remove` passa alla riga di comando passando l'ID del server, per rimuovere le password crittografate dal file di archiviazione protetto presentano nel computer locale.  
   
@@ -131,5 +129,5 @@ L'applicazione Console di SSMA consente di esportare le password crittografate d
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>Vedere anche  
-[L'esecuzione la Console SSMA (accesso)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[L'esecuzione la Console SSMA (Access)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

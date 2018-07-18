@@ -1,16 +1,14 @@
 ---
 title: sp_msx_enlist (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_enlist_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_enlist
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b7984972ac467403114b62e30390e86d007eb401
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 84e48bc3d0661e7359d6794d6cc45ec494caee43
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +48,13 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
   
 ## <a name="arguments"></a>Argomenti  
  [ **@msx_server_name =**] **'***msx_server***'**  
- Nome del server di amministrazione multiserver (master). *msx_server* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del server di amministrazione multiserver (master). *msx_server* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@location =**] **'***percorso***'**  
- Percorso del server di destinazione da aggiungere. *percorso* è **nvarchar (100)**, con un valore predefinito è NULL.  
+ Percorso del server di destinazione da aggiungere. *percorso* viene **nvarchar(100)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  

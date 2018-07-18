@@ -1,16 +1,14 @@
 ---
-title: TRY_CAST (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: TRY_CAST (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TRY_CAST_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CAST function
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 38958007757b3bc2d4016946a918982eba91251b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f5e5ab081302ddb43f3e0bfd8084bd843dcb4965
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="trycast-transact-sql"></a>TRY_CAST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  Valore di cui eseguire il cast. Qualsiasi espressione valida.  
   
  *data_type*  
- Tipo di dati in cui eseguire il cast *espressione*.  
+ Tipo di dati in cui eseguire il cast di *expression*.  
   
  *length*  
  Numero intero facoltativo con cui si specifica la lunghezza del tipo di dati di destinazione.  
@@ -60,10 +57,10 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce un cast del valore nel tipo di dati specificato se il cast ha esito positivo. In caso contrario, restituisce Null.  
   
-## <a name="remarks"></a>Osservazioni  
- **TRY_CAST** accetta il valore passato e tenta di convertirlo in oggetto *data_type*. Se il cast ha esito positivo, **TRY_CAST** restituisce il valore specificato *data_type*; se si verifica un errore, viene restituito null. Tuttavia se si richiede una conversione in modo esplicito non valido, quindi **TRY_CAST** genera un errore.  
+## <a name="remarks"></a>Remarks  
+ **TRY_CAST** accetta il valore passato e prova a convertirlo nel tipo di dati *data_type* specificato. Se il cast ha esito positivo, **TRY_CAST** restituisce il valore come elemento *data_type* specificato. Se si verifica un errore, viene restituito Null. Se tuttavia si richiede una conversione non consentita in modo esplicito, **TRY_CAST** ha esito negativo e viene restituito un errore.  
   
- **TRY_CAST** non è una parola chiave riservata nuovi ed è disponibile in tutti i livelli di compatibilità. **TRY_CAST** ha la stessa semantica **TRY_CONVERT** quando ci si connette a server remoti.  
+ **TRY_CAST** non è una nuova parola chiave riservata ed è disponibile in tutti i livelli di compatibilità. La semantica di **TRY_CAST** è uguale a quella di **TRY_CONVERT** quando si esegue la connessione a server remoti.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -141,7 +138,7 @@ Result
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
+ [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

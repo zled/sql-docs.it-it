@@ -1,27 +1,24 @@
 ---
 title: Con la copia Bulk con il Driver JDBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: f4a714ce9ea2a076b922de3fc66851fa58110eb4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 6daf0ae2773d8a99e4f9264c05024a86fcd79926
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Utilizzo della copia bulk con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +48,7 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 >  Gli esempi di codice per SQLServerBulkCopy vengono forniti solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
   
-###  <a name="BKMK_TableSetup"></a>Impostazione delle tabelle  
+###  <a name="BKMK_TableSetup"></a> Impostazione delle tabelle  
  Per creare le tabelle necessarie per il corretto funzionamento degli esempi di codice, è necessario eseguire le seguenti istruzioni Transact-SQL in un database di SQL Server.  
   
 ```  
@@ -120,7 +117,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 > [!NOTE]  
 >  Se è necessario eseguire il rollback di una parte o dell'intera operazione di copia bulk quando si verifica un errore, è possibile utilizzare una transazione gestita da SQLServerBulkCopy o eseguire l'operazione di copia bulk in una transazione esistente.  
 >   
->  Per ulteriori informazioni, vedere [operazioni di copia bulk e transazione](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TransactionBulk)  
+>  Per altre informazioni, vedere [operazioni di copia bulk e delle transazioni](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TransactionBulk)  
   
  I passaggi generali per eseguire un'operazione di copia bulk sono:  
   
@@ -460,7 +457,7 @@ public class Program
   
 ```  
   
-##  <a name="BKMK_TransactionBulk"></a>Transazioni e operazioni di copia bulk  
+##  <a name="BKMK_TransactionBulk"></a> Transazioni e operazioni di copia bulk  
  Le operazioni di copia bulk possono essere eseguite come operazioni isolate oppure come parte di una transazione in più passaggi. Quest'ultima opzione consente di eseguire più di un'operazione di copia bulk all'interno della stessa transazione, nonché di eseguire altre operazioni sul database (come inserimenti, aggiornamenti ed eliminazioni), mantenendo comunque la possibilità di eseguire il commit o il rollback dell'intera transazione.  
   
  Per impostazione predefinita, una copia bulk viene eseguita come un'operazione isolata. L'operazione di copia bulk avviene in modalità non transazionale, senza la possibilità di eseguirne il rollback. Se è necessario eseguire il rollback di una parte o dell'intera operazione di copia bulk quando si verifica un errore, è possibile utilizzare una transazione gestita da SQLServerBulkCopy o eseguire l'operazione di copia bulk in una transazione esistente.  
@@ -868,11 +865,11 @@ public class Program
   
 3.  Per l'origine dati, selezionare il **origine dati** che consente di connettersi a SQL Server (ad esempio SQL Server Native Client 11.0), controllare la configurazione e quindi **successivo**  
   
-4.  Per la destinazione, selezionare il **destinazione File Flat** e immettere un **nome File** con una destinazione come c:\test\testbulkcsvexample.csv.. Verificare che il **formato** è delimitata, il **qualificatore di testo** è none e abilitare **nomi di colonna nella prima riga di dati**e quindi selezionare **successivo**  
+4.  Per la destinazione, selezionare il **destinazione File Flat** e immettere un **nome File** con una destinazione come c:\test\testbulkcsvexample.csv. Verificare che il **formato** è delimitata, il **qualificatore di testo** sia nessuno e abilitare **nomi di colonna nella prima riga di dati**, quindi selezionare **successivo**  
   
 5.  Selezionare **scrivere una query per specificare i dati da trasferire** e **Avanti**.  Immettere il **istruzione SQL** selezionare ProductID, Name, ProductNumber FROM Production. Product e **successivo**  
   
-6.  Controllare la configurazione: è possibile lasciare {CR}{LF} come delimitatore di riga e la virgola {,} come delimitatore di colonna.  Selezionare **modificare i mapping**... e verificare che i dati **tipo** sia corretto per ogni colonna (ad esempio, integer per ProductID e stringa Unicode per gli altri).  
+6.  Controllare la configurazione: È possibile lasciare il delimitatore di riga {CR} {LF} come e virgola come delimitatore di colonna {,}.  Selezionare **modificare i mapping**... e verificare che i dati **tipo** sia corretto per ogni colonna (ad esempio, integer per ProductID e stringa Unicode per gli altri).  
   
 7.  Ignorare **fine** ed eseguire l'esportazione.  
   

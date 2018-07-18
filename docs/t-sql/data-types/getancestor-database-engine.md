@@ -1,16 +1,14 @@
 ---
-title: GetAncestor (motore di Database) | Documenti Microsoft
-ms.custom: 
+title: GetAncestor (motore di database) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GetAncestor_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - GetAncestor [Database Engine]
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b232238dccf5c22918a8805cdc9cd876dfef5723
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dc7223489803f4a205476fb380937658a7c14696
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **hierarchyid** che rappresenta il  *n* predecessore di *questo*.
+Restituisce un valore **hierarchyid** che rappresenta il valore *n* predecessore di *this*.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,17 +47,17 @@ SqlHierarchyId GetAncestor ( int n )
   
 ## <a name="arguments"></a>Argomenti  
 *n*  
-Un **int**, che rappresenta il numero di livelli da salire nella gerarchia.
+Valore **int** che rappresenta il numero di livelli da salire nella gerarchia.
   
 ## <a name="return-types"></a>Tipi restituiti
-**Tipo: hierarchyid restituito SQL Server**
+**Tipo SQL Server restituito: hierarchyid**
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 Utilizzato per testare se per ogni nodo nell'output il nodo corrente rappresenta un predecessore al livello specificato.
   
-Se un numero maggiore di [Getlevel](../../t-sql/data-types/getlevel-database-engine.md) viene superato, viene restituito NULL.
+Se viene passato un numero maggiore di [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md), viene restituito NULL.
   
 Se viene passato un numero negativo, viene generata un'eccezione.
   
@@ -93,7 +90,7 @@ WHERE OrgNode.GetAncestor(2) = @CurrentEmployee ;
 ```  
   
 ### <a name="c-returning-the-current-row"></a>C. Restituzione della riga corrente  
-Per restituire il nodo corrente utilizzando `GetAncestor(0)`, eseguire il codice seguente.
+Per restituire il nodo corrente usando `GetAncestor(0)`, eseguire il codice seguente.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -124,7 +121,7 @@ this.GetAncestor(1)
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[IsDescendantOf &#40; motore di Database &#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
+[IsDescendantOf &#40;motore di database&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [Guida di riferimento ai metodi per il tipo di dati hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Dati gerarchici &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

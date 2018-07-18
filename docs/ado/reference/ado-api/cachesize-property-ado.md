@@ -1,33 +1,30 @@
 ---
-title: "Proprietà CacheSize (ADO) | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Proprietà CacheSize (ADO) | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::CacheSize
 helpviewer_keywords:
 - CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: de4d82f2788ce1166e8b69cd13e8f214b6338688
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 36930b020c120a58c41579056397a3b5a3ea085c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cachesize-property-ado"></a>Proprietà CacheSize (ADO)
 Indica il numero di record da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti memorizzati nella cache in locale.  
@@ -39,7 +36,7 @@ Indica il numero di record da un [Recordset](../../../ado/reference/ado-api/reco
  Utilizzare il **CacheSize** proprietà per controllare il numero di record da recuperare contemporaneamente nella memoria locale dal provider. Ad esempio, se il **CacheSize** è 10, dopo avere aperto prima il **Recordset** dell'oggetto, il provider recupera i primi 10 record nella memoria locale. Quando si sposta attraverso i **Recordset** dell'oggetto, il provider restituisce i dati dal buffer di memoria locale. Non appena si sposta dopo l'ultimo record nella cache, il provider recupera i successivi 10 record dall'origine dati nella cache.  
   
 > [!NOTE]
->  **CacheSize** si basa sul **numero massimo di righe aperto** proprietà specifiche del provider (nel **proprietà** insieme del **Recordset** oggetto). Non è possibile impostare **CacheSize** su un valore maggiore di **numero massimo di righe aperto**. Per modificare il numero di righe che può essere aperta dal provider, impostare **numero massimo di righe aperto**.  
+>  **CacheSize** basa il **numero massimo di righe aperto** proprietà specifiche del provider (nel **proprietà** raccolta del **Recordset** oggetto). Non è possibile impostare **CacheSize** su un valore maggiore di **numero massimo di righe aperto**. Per modificare il numero di righe che può essere aperta dal provider, impostare **numero massimo di righe aperto**.  
   
  Il valore di **CacheSize** può essere modificata durante il ciclo di vita del **Recordset** oggetto, ma se si modifica questo valore interessa solo il numero di record nella cache dopo recuperi successivi dall'origine dati. La modifica solo il valore della proprietà non modificherà il contenuto corrente della cache.  
   

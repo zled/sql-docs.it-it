@@ -1,32 +1,29 @@
 ---
-title: "Esempio di proprietà Status (campo) (VB) | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Esempio di proprietà Status (campo) (VB) | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4ea3ebba271ebdc12802b31cc1f50cdd3befead0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 84d9ed89afc18f87898e5636163e6fde16345602
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="status-property-example-field-vb"></a>Esempio di proprietà Status (campo) (VB)
 Nell'esempio seguente viene aperto un documento da una cartella di lettura/scrittura con la [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Il [stato](../../../ado/reference/ado-api/status-property-ado-field.md) proprietà di un [campo](../../../ado/reference/ado-api/field-object.md) oggetto del [Record](../../../ado/reference/ado-api/record-object-ado.md) verrà impostata innanzitutto **adFieldPendingInsert**, quindi verrà aggiornata al **adFieldOk**.  
@@ -92,7 +89,7 @@ End Sub
 Attribute VB_Name = "StatusField"  
 ```  
   
- Il codice seguente elimina un **campo** da un **Record** aperto in un documento di sola lettura. **Stato** verrà impostato su **adFieldPendingDelete**. In [aggiornamento](../../../ado/reference/ado-api/update-method.md), l'eliminazione non riuscirà e **stato** sarà **adFieldPendingDelete** più **adFieldPermissionDenied**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Cancella l'in sospeso **stato** impostazione.  
+ Il codice seguente elimina un **campo** da un **Record** aperto in un documento di sola lettura. **Lo stato** verrà impostato su **adFieldPendingDelete**. In [aggiornamento](../../../ado/reference/ado-api/update-method.md), l'eliminazione non riuscirà e **stato** sarà **adFieldPendingDelete** più **adFieldPermissionDenied**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Cancella l'in sospeso **stato** impostazione.  
   
 ```  
 Attribute VB_Name = "StatusField"  

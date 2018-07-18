@@ -1,16 +1,14 @@
 ---
-title: sp_apply_job_to_targets (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_apply_job_to_targets (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_apply_job_to_targets
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 341a14b2ae6aa3d551ab90d4ff2f931d617aa3f2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7e7ec6285f807dd51b0a67ad55ab2e53634584e5
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,28 +47,28 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_id =**] *job_id*  
- Numero di identificazione del processo da applicare ai server o ai gruppi di server di destinazione specificati. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL.  
+ Numero di identificazione del processo da applicare ai server o ai gruppi di server di destinazione specificati. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name =**] **'***job_name***'**  
- Nome del processo da applicare ai server o ai gruppi di server di destinazione specificati. *job_name* è **sysname**, con un valore predefinito è NULL.  
+ Nome del processo da applicare ai server o ai gruppi di server di destinazione specificati. *job_name* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [  **@target_server_groups =**] **'***target_server_groups***'**  
- Elenco delimitato da virgole dei gruppi di server di destinazione ai quali si desidera applicare il processo specificato. *target_server_groups* è **nvarchar (2048)**, con un valore predefinito è NULL.  
+ Elenco delimitato da virgole dei gruppi di server di destinazione ai quali si desidera applicare il processo specificato. *target_server_groups* viene **nvarchar(2048)**, con un valore predefinito è NULL.  
   
- [ **@target_servers=** ] **'***target_servers***'**  
- Elenco delimitato da virgole dei server di destinazione ai quali si desidera applicare il processo specificato. *target_servers*è **nvarchar (2048)**, con un valore predefinito è NULL.  
+ [  **@target_servers=** ] **'***target_servers***'**  
+ Elenco delimitato da virgole dei server di destinazione ai quali si desidera applicare il processo specificato. *target_servers*viene **nvarchar(2048)**, con un valore predefinito è NULL.  
   
  [  **@operation=** ] **'***operazione***'**  
- Indica se il processo specificato deve essere applicato o rimosso dai server o dai gruppi di server di destinazione specificati. *operazione*è **varchar(7)**, con un valore predefinito è APPLY. Le operazioni valide sono **applica** e **rimuovere**.  
+ Indica se il processo specificato deve essere applicato o rimosso dai server o dai gruppi di server di destinazione specificati. *operazione*viene **varchar(7)**, con un valore predefinito è APPLY. Le operazioni valide sono **applica** e **rimuovere**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_apply_job_to_targets** fornisce un modo semplice per applicare (o rimuovere) un processo da più server di destinazione e costituisce un'alternativa alla chiamata al metodo **sp_add_jobserver** (o **sp_delete_jobserver** ) una volta per ogni server di destinazione.  
+ **sp_apply_job_to_targets** fornisce un modo semplice per applicare (o rimuovere) un processo da più server di destinazione, senza che sia un'alternativa alla chiamata **sp_add_jobserver** (o **sp_delete_jobserver**) una volta per ogni server di destinazione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  

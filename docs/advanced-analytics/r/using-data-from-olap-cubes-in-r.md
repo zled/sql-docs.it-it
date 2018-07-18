@@ -1,27 +1,17 @@
 ---
-title: Utilizzando i dati di cubi OLAP in R | Documenti Microsoft
-ms.custom: 
-ms.date: 12/08/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: 
-ms.assetid: 8093599c-8307-4237-983b-0908d0f8ab77
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 256a8a58a61f679cd5b2981134403cc389733e75
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Utilizzo di dati dai cubi OLAP in R (SQL Server Machine Learning) | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 0753fc84ea6516da63e1e49dc68063780b99361b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Utilizzando i dati di cubi OLAP in R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +27,7 @@ In questo articolo viene descritta l'API, insieme a una panoramica di OLAP e MDX
 
 OLAP è l'abbreviazione di elaborazione analitica in linea. Soluzioni OLAP vengono ampiamente utilizzate per l'acquisizione e l'archiviazione di dati aziendali critici nel tempo. I dati OLAP vengono utilizzati per l'analisi aziendale da un'ampia gamma di strumenti, dashboard e visualizzazioni. Per ulteriori informazioni, vedere [elaborazione analitica in linea](https://en.wikipedia.org/wiki/Online_analytical_processing).
 
-Microsoft fornisce [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), che consente di progettare, distribuire e query dei dati OLAP sotto forma di _cubi_ o _modelli tabulari_. Un cubo è un database multidimensionale. _Dimensioni_ equivalgono facet dei dati, o fattori di r: utilizzare le dimensioni per identificare un sottoinsieme specifico di dati che si desidera riepilogare o analizzare. Ad esempio, ora è una dimensione importante, tanta in modo che molte soluzioni OLAP includono più calendari definiti per impostazione predefinita, da utilizzare durante il sezionamento e riepilogare i dati. 
+Microsoft fornisce [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), che consente di progettare, distribuire e query dei dati OLAP sotto forma di _cubi_ o _modelli tabulari_. Un cubo è un database multidimensionale. _Dimensioni_ sono analoghi ai facet dei dati, o fattori di r: utilizzare le dimensioni per identificare un sottoinsieme specifico di dati che si desidera riepilogare o analizzare. Ad esempio, ora è una dimensione importante, tanta in modo che molte soluzioni OLAP includono più calendari definiti per impostazione predefinita, da utilizzare durante il sezionamento e riepilogare i dati. 
 
 Per motivi di prestazioni, un database OLAP calcola spesso riepiloghi (o _aggregazioni_) in anticipo e quindi li archivia per il recupero veloce. Si basano *misure*, che rappresentano le formule che possono essere applicate ai dati numerici. Utilizzare le dimensioni per definire un subset di dati e quindi calcolare la misura i dati. Ad esempio, utilizzare una misura per calcolare le vendite totali per una determinata riga prodotto più trimestri meno imposte per segnalare i costi di spedizione medio per un particolare fornitore, year-to-date cumulativo Salari a pagamento e così via.
 
@@ -102,7 +92,7 @@ Se ci si connette ad Analysis Services utilizzando un client, ad esempio SQL Ser
 
 Vedere l'articolo seguente per informazioni generali sui due tipi di modelli:
 
-+ [Il confronto di modelli multidimensionale e tabulare](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
++ [Confronto di modelli multidimensionali e tabulari](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
 
 Vedere l'articolo seguente per informazioni sull'esecuzione di query delle proprietà del server:
 

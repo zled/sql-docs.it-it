@@ -1,31 +1,29 @@
 ---
 title: IntelliSense (SQL Server Management Studio) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: dbf4112403363ce7c3d19e433b1bcf028983823f
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1d3cd1c3a38fc0d54aaf1256bb299cd3f7e2b447
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Gli editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supportano le opzioni IntelliSense [!INCLUDE[msCoName](../../includes/msconame-md.md)] in grado di ridurre la digitazione, fornire l'accesso rapido alle informazioni sulla sintassi o facilitare la visualizzazione dei delimitatori di espressioni complesse.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Gli editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supportano le opzioni IntelliSense [!INCLUDE[msCoName](../../includes/msconame-md.md)] in grado di ridurre la digitazione, fornire l'accesso rapido alle informazioni sulla sintassi o facilitare la visualizzazione dei delimitatori di espressioni complesse.  
   
 ## <a name="benefits-of-intellisense"></a>Vantaggi di IntelliSense  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense offre una gamma di opzioni che rendono facilmente accessibili i riferimenti del linguaggio. Durante la scrittura di codice non è necessario uscire dall'editor per eseguire ricerche negli elementi del linguaggio. È infatti possibile rimanere nel contesto, trovare le informazioni necessarie, inserire gli elementi del linguaggio direttamente nel codice e ottenerne l'immissione automatica.  

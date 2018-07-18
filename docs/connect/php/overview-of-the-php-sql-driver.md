@@ -1,43 +1,41 @@
 ---
-title: Panoramica del Driver SQL PHP | Documenti Microsoft
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Panoramica dei driver Microsoft per PHP per SQL Server | Documenti Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
-caps.latest.revision: "73"
+caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 6f045be45ddaa373d0aaba01d1c49fea66c49915
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: e11308cc4c5095a212f508168fdae2b1d14e8b96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="overview-of-the-php-sql-driver"></a>Panoramica del driver SQL PHP
+# <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Panoramica dei driver Microsoft per PHP per SQL Server
 
-![Un cerchio FRECCIAGIÙ download](../../ssdt/media/download.png)[scaricare il driver PHP per SQL Server](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] è un'estensione PHP che fornisce accesso ai dati di SQL Server 2005 e versioni successive, incluso Database SQL di Azure. L'estensione fornisce un'interfaccia procedurale (il driver SQLSRV) e un'interfaccia orientata agli oggetti (il driver PDO_SQLSRV) per l'accesso ai dati in tutte le versioni (inclusa Express) a partire da SQL Server 2005 (supporto per PHP per SQL Server versione 3.1 e versioni successive inizia con SQL Server 2008). L'API dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] include il supporto per autenticazione di Windows, transazioni, associazione di parametri, streaming, accesso ai metadati e gestione degli errori.  
+Il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] è un'estensione PHP che fornisce accesso ai dati di SQL Server 2005 e versioni successive, incluso Database SQL di Azure. L'estensione fornisce un'interfaccia procedurale con il driver SQLSRV e un'interfaccia orientata agli oggetti con il driver PDO_SQLSRV per l'accesso ai dati in tutte le versioni di SQL Server, inclusa la Express Edition, a partire da SQL Server 2005. Il supporto per le versioni 3.1 e versioni successive i driver di inizia con SQL Server 2008. L'API dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] include il supporto per autenticazione di Windows, transazioni, associazione di parametri, streaming, accesso ai metadati e gestione degli errori.  
   
-Utilizzare il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] è necessario che la versione corretta di SQL Server Native Client o il Driver ODBC di Microsoft installato nello stesso computer PHP è in esecuzione.  Per altre informazioni, vedere [Requisiti di sistema per il driver SQL PHP](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+Utilizzare il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è necessario che la versione corretta di SQL Server Native Client o Microsoft ODBC Driver installati nello stesso computer PHP è in esecuzione.  Per altre informazioni, vedere [requisiti di sistema per Microsoft Drivers for PHP per SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Description|  
 |---------|---------------|  
-| ![Un cerchio FRECCIAGIÙ download](../../ssdt/media/download.png)[scaricare il driver PHP per SQL Server](../sql-connection-libraries.md#anchor-20-drivers-relational-access) | Collegamenti per il download di driver e codice sorgente per Microsoft PHP Driver per SQL Server. |
-|[Note sulla versione per il driver SQL PHP](../../connect/php/release-notes-for-the-php-sql-driver.md)|Elenca le funzionalità che sono state aggiunte per le versioni 2.0, 3.0, 3.1, 3.2 e 4.0.|  
-|[Risorse di supporto per il driver SQL PHP](../../connect/php/support-resources-for-the-php-sql-driver.md)|Vengono forniti collegamenti a risorse che possono risultare utili per sviluppare applicazioni che usano i [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
+| ![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[per scaricare i driver for PHP for SQL Server](download-drivers-php-sql-server.md) | Collegamenti per scaricare Microsoft Drivers for PHP for SQL Server. |
+|[Note sulla versione per i driver Microsoft per PHP per SQL Server](../../connect/php/release-notes-for-the-php-sql-driver.md)|Elenca le funzionalità che sono state aggiunte per le versioni 2.0, 3.0, 3.1, 3.2 e 4.0.|  
+|[Risorse di supporto per i driver Microsoft per PHP per SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|Vengono forniti collegamenti a risorse che possono risultare utili per sviluppare applicazioni che usano i [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
 |[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)|Vengono fornite informazioni che possono risultare utili quando si eseguono gli esempi di codice di questa documentazione.|  
   
 ## <a name="reference"></a>Riferimento  
@@ -46,6 +44,8 @@ Utilizzare il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] è neces
 [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Introduzione al Driver SQL PHP](../../connect/php/getting-started-with-the-php-sql-driver.md)
-[Guida di programmazione per il Driver SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[applicazione di esempio &#40; Driver SQLSRV &#41;](../../connect/php/example-application-sqlsrv-driver.md)
+[Guida introduttiva con i driver Microsoft per PHP per SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+
+[Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Applicazione di esempio &#40;Driver SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)

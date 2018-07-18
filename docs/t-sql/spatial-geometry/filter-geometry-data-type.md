@@ -1,16 +1,14 @@
 ---
-title: Filtro (tipo di dati geometry) | Documenti Microsoft
-ms.custom: 
+title: Filter (tipo di dati geometry) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Filter
@@ -21,25 +19,24 @@ dev_langs:
 helpviewer_keywords:
 - Filter method
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e09f4ac5d6d4ecaf32f6b500aee9a3a50c772c02
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 328ff71b368382a1aa9a06f9ca9274089679c729
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-geometry-data-type"></a>Filter (tipo di dati geometrico)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Un metodo che offre un metodo rapido indice intersezione basato solo per determinare se un **geometry** istanza interseca un'altra **geometry** istanza, supponendo che un indice sia disponibile.
+Metodo di intersezione basato solo su indici che consente di determinare in modo rapido se un'istanza **geometry** interseca un'altra istanza **geometry**, a condizione che sia disponibile un indice.
   
-Restituisce 1 se un **geometry** istanza interseca potenzialmente un'altra **geometry** istanza. Questo metodo può produrre un risultato falso positivo e il risultato esatto può dipendere dal piano. Restituisce un valore esatto 0 (risultato vero positivo) se è presente alcuna intersezione di **geometry** istanze trovate.
+Restituisce 1 se un'istanza **geometry** interseca potenzialmente un'altra istanza **geometry**. Questo metodo può produrre un risultato falso positivo e il risultato esatto può dipendere dal piano. Restituisce un valore esatto 0 (risultato vero positivo) se non viene rilevata alcuna intersezione tra le istanze **geometry**.
   
-In casi in cui un indice non è disponibile o non viene utilizzato il metodo restituirà gli stessi valori **stintersects ()** quando viene chiamato con gli stessi parametri.
+Nel caso in cui un indice non sia disponibile o non venga usato, il metodo restituisce gli stessi valori di **STIntersects()** se viene chiamato con gli stessi parametri.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,14 +47,14 @@ In casi in cui un indice non è disponibile o non viene utilizzato il metodo res
   
 ## <a name="arguments"></a>Argomenti  
  *other_geometry*  
- Un altro **geometry** istanza da confrontare con l'istanza in cui viene richiamato Filter().  
+ Altra istanza **geometry** da confrontare con l'istanza sulla quale viene chiamato Filter().  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo non è deterministico e non è preciso.  
   
 ## <a name="examples"></a>Esempi  

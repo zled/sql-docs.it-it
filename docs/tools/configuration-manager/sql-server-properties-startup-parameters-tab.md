@@ -1,32 +1,28 @@
 ---
-title: "Proprietà SQL Server (scheda parametri di avvio) | Documenti Microsoft"
-ms.custom: 
+title: Proprietà SQL Server (scheda parametri di avvio) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c845f8c174f96ba2e0dd5595d49721ae800777e2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: f3020bba3dc9270744a1dae0e16994dddc002587
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Proprietà di SQL Server (scheda Parametri di avvio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Utilizzare questa finestra di dialogo per aggiungere o rimuovere parametri di avvio per [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I parametri di avvio possono avere un effetto significativo sulle prestazioni di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Prima di aggiungere o modificare i parametri di avvio, vedere l'argomento "Utilizzo delle opzioni di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilizzare questa finestra di dialogo per aggiungere o rimuovere parametri di avvio per [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I parametri di avvio possono avere un effetto significativo sulle prestazioni di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Prima di aggiungere o modificare i parametri di avvio, vedere l'argomento "Utilizzo delle opzioni di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opzioni  
  **Specificare un parametro di avvio**  
@@ -38,7 +34,7 @@ Utilizzare questa finestra di dialogo per aggiungere o rimuovere parametri di av
  Per rimuovere un parametro, selezionarlo e quindi fare clic su **Rimuovi**.  
   
 ## <a name="parameter-format"></a>Formato dei parametri  
- Non inserire un separatore tra parametri. Il separatore viene aggiunto automaticamente in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager consente di applicare i seguenti requisiti di parametro.  
+ Non inserire un separatore tra parametri. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione aggiunge automaticamente il separatore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione applica i requisiti dei parametri seguenti.  
   
 -   Spazi iniziali e finali vengono tagliati da qualsiasi parametro di avvio.  
   
@@ -68,7 +64,7 @@ Utilizzare questa finestra di dialogo per aggiungere o rimuovere parametri di av
   
 |Parametro|Breve descrizione|  
 |---------------|-----------------------|  
-|-m|Avvia un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo.|  
+|-M|Avvia un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo.|  
 |-T1204|Restituisce le risorse e i tipi di blocco coinvolti in un deadlock nonché il comando corrente interessato.|  
 |-T1224|Disabilita l'escalation di blocchi in base al numero di blocchi.|  
 |-T3608|Impedisce l'avvio e il recupero automatico dei database ad eccezione del database master in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

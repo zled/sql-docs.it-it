@@ -1,16 +1,14 @@
 ---
 title: Tipi di dati dBASE | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
 - desktop database drivers [ODBC], DBasedriver
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - dbase data types [ODBC]
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: fc9032a42f79e73009df216ecdb1273fa550ea72
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 60240eb9763d2d0b581765bde3a6d0958567f08e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbase-data-types"></a>file dBASE tipi di dati
 Nella tabella seguente viene illustrato come tipi di dati dBASE vengono eseguito il mapping ai tipi di dati SQL ODBC. Si noti che non tutti i tipi di dati SQL ODBC sono supportati.  
@@ -52,7 +49,7 @@ Nella tabella seguente viene illustrato come tipi di dati dBASE vengono eseguito
  Una colonna creata con il tipo di dati numerici utilizzando le mappe di driver ODBC dBASE al tipo di dati ODBC SQL_DOUBLE. In questo modo i dati in questa colonna sono soggetti a arrotondamento. Questo comportamento non è lo stesso come che i dati numerici di tipo nel file dBASE (tipo N), che è Binary Coded Decimal (BCD).  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** restituisce i tipi di dati SQL ODBC. Tutte le conversioni nell'appendice D il *riferimento per programmatori ODBC* sono supportati per i tipi di dati SQL ODBC elencati in precedenza in questo argomento.  
+>  **SQLGetTypeInfo** restituisce tipi di dati SQL ODBC. Tutte le conversioni nell'appendice D il *riferimento per programmatori ODBC* sono supportati per i tipi di dati SQL ODBC elencati in precedenza in questo argomento.  
   
  La tabella seguente illustra le limitazioni in file dBASE tipi di dati.  
   

@@ -1,38 +1,35 @@
 ---
-title: StringFormatEnum | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: StringFormatEnum | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - StringFormatEnum
 helpviewer_keywords:
 - StringFormatEnum enumeration [ADO]
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e6584a40917078c29e8fc619afb6a4f3bddd541
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 13c4f80064a06299a6049330fcf85c8e0827e619
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 Specifica il formato durante il recupero di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sotto forma di stringa.  
   
-|Costante|Valore|Description|  
+|Costante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adClipString**|2|Delimita le righe da *RowDelimiter*, le colonne da *ColumnDelimiter*e i valori da null *NullExpr*. Questi tre parametri del [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) metodo sono validi solo con un *StringFormat* di **adClipString**.|  
   

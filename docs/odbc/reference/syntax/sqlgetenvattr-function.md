@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLGetEnvAttr | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLGetEnvAttr
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLGetEnvAttr
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetEnvAttr
-helpviewer_keywords: SQLGetEnvAttr function [ODBC]
+f1_keywords:
+- SQLGetEnvAttr
+helpviewer_keywords:
+- SQLGetEnvAttr function [ODBC]
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6d292b667e51211fac9d7b2d3d577f2d459b17fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b1a31f7d374a06a4e9cfe963c92b73fa681a41d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr (funzione)
 **Conformità**  
@@ -51,7 +52,7 @@ SQLRETURN SQLGetEnvAttr(
  *EnvironmentHandle*  
  [Input] Handle di ambiente.  
   
- *Attribute*  
+ *Attributo*  
  [Input] Attributo da recuperare.  
   
  *ValuePtr*  

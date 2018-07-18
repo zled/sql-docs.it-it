@@ -1,32 +1,28 @@
 ---
 title: Log delle transazioni (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: logs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-transaction-log
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 65
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 24b9cf5cb7fd7a8359b7a946219b5e4a5eb5c037
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 877c48ecbe9befaf0bb04f34a866dd8fee6671bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-transaction-log-sql-server"></a>Log delle transazioni (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +93,7 @@ Per evitare l'esaurimento dello spazio, il troncamento si verifica automaticamen
  Per altre informazioni, vedere [Fattori che possono posticipare il troncamento del log](#FactorsThatDelayTruncation) più avanti in questo argomento.  
   
 > [!NOTE]
-> Il troncamento del log non riduce le dimensioni del file di log fisico. Per ridurre la dimensione fisica di un file di log fisico, è necessario ridurre il file di log. Per informazioni sulla compattazione del file di log fisico, vedere [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
+> Il troncamento del log non riduce le dimensioni del file di log fisico. Per ridurre la dimensione fisica di un file di log fisico, è necessario ridurre il file di log. Per informazioni sulla compattazione del file di log fisico, vedere [Gestire le dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > Tenere tuttavia presenti i [fattori che possono posticipare il troncamento del log](#FactorsThatDelayTruncation). Se dopo una compattazione del log è di nuovo necessario lo spazio di archiviazione, il log delle transazioni torna a crescere e durante tale crescita origina un overhead delle prestazioni.
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
@@ -187,7 +183,7 @@ Quando la replica transazionale è abilitata, le operazioni SELECT INTO vengono 
 [Visualizzare o modificare le proprietà di un database](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
 [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
 [Backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
-[sys.dm_db_log_info &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+[sys.dm_db_log_info & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
   
   

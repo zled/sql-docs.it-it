@@ -1,30 +1,23 @@
 ---
 title: ALTER-comando (TMSL) | Documenti Microsoft
-ms.custom: 
-ms.date: 05/30/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tmsl
 ms.topic: reference
-ms.assetid: 8bdc49f1-209e-4055-be19-c83862b81efa
-caps.latest.revision: "13"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34e3e12741988f5d1369e96381a54c15f64ec557
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6dc7ba58ce3e5db228046324c17c91719db35d0b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-command-tmsl"></a>Comando ALTER (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Modifica di un oggetto esistente, ma non relativi elementi figlio, in un'istanza di Analysis Services in modalità tabulare.  Se l'oggetto non esiste, il comando genera un errore.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Modifica di un oggetto esistente, ma non relativi elementi figlio, in un'istanza di Analysis Services in modalità tabulare.  Se l'oggetto non esiste, il comando genera un errore.  
   
  Utilizzare **Alter** comando per la destinazione degli aggiornamenti, come impostazione di una proprietà in una tabella senza dover specificare tutte le colonne nonché. Questo comando è simile a **CreateOrReplace**, ma senza la necessità di dover fornire una definizione completa dell'oggetto.  
   
@@ -53,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  La struttura della richiesta varia in base all'oggetto. **ALTER** può essere utilizzato con uno qualsiasi dei seguenti oggetti:  
   
- [Oggetto di database &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) Rinominare un database.  
+ [Oggetto di database &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) rinominare un database.  
   
 ```  
 "alter": {   
@@ -66,7 +59,7 @@ ms.lasthandoff: 01/08/2018
   }   
 ```  
   
- [Oggetto di origini dati &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) Rinominare una connessione, ovvero un oggetto figlio del database.  
+ [Oggetto di origini dati &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) rinominare una connessione, ovvero un oggetto figlio del database.  
   
 ```  
 {   
@@ -82,11 +75,11 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Oggetto tabelle &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) Vedere **esempio 1** sotto.  
+ [Oggetto tabelle &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) vedere **Example 1** di seguito.  
   
- [Oggetto partizioni &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) Vedere **esempio 2** sotto.  
+ [Oggetto di partizioni &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) vedere **esempio 2** di seguito.  
   
- [Oggetto ruoli &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) Modificare una proprietà di un oggetto role.  
+ [Oggetto di ruoli &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) modificare una proprietà di un oggetto role.  
   
 ```  
 {   
@@ -108,7 +101,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="examples"></a>Esempi  
  Gli esempi seguenti illustrano script che è possibile eseguire in una finestra XMLA in Management Studio o utilizzare come input in [cmdlet Invoke-ASCmd](../../analysis-services/powershell/invoke-ascmd-cmdlet.md) in PowerShell per AMO.  
   
- **Esempio 1** -questo script imposta la proprietà name in una tabella.  
+ **Esempio 1** -questo script permette di cambiare la proprietà name in una tabella.  
   
 ```  
 {   
@@ -152,7 +145,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>Utilizzo (endpoint)  
- Questo elemento di comando viene utilizzato in un'istruzione del [metodo Execute &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chiamata su un endpoint XMLA, esposto nei modi seguenti:  
+ Questo elemento di comando viene utilizzato in un'istruzione del [metodo Execute &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chiamata su un endpoint XMLA, esposto nei modi seguenti:  
   
 -   Come una finestra XMLA in SQL Server Management Studio (SSMS)  
   
@@ -162,7 +155,7 @@ ms.lasthandoff: 01/08/2018
   
  Non è possibile generare uno script già pronto per questo comando da SSMS. In alternativa, è possibile iniziare con un esempio o scriverne uno proprio.  
   
- Il [ \[SSAS-MS-T\]: QL Server tabulare di Analysis Services (SQL Server tecniche Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento include una sezione 3.1.5.2.2 che descrive la struttura di oggetti e i comandi di metadati tabulari JSON. Attualmente, tale documento vengono illustrati i comandi e le funzionalità non ancora implementata nello script TMSL. Vedere l'argomento ([tabulare Model Scripting Language &#40; TMSL &#41; Fare riferimento a](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) per chiarimenti sui quali è supportata.  
+ Il [ \[SSAS-MS-T\]: QL Server tabulare di Analysis Services (SQL Server tecniche Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento include una sezione 3.1.5.2.2 che descrive la struttura di oggetti e i comandi di metadati tabulari JSON. Attualmente, tale documento vengono illustrati i comandi e le funzionalità non ancora implementata nello script TMSL. Vedere l'argomento ([linguaggio di Scripting del modello tabulare &#40;TMSL&#41; riferimento](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) per chiarimenti sui quali è supportata.  
 
 ## <a name="see-also"></a>Vedere anche  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Riferimento al linguaggio di scripting per modelli tabulari &#40;TMSL&#41;)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

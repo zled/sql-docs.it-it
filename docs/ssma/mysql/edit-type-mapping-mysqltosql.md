@@ -1,30 +1,28 @@
 ---
 title: Modificare i Mapping dei tipi (MySQLToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8db4278a82968a5bd147f5fcb984af3fa104022e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: cd02b4aa75298fbe5c70751dc9e7e7c101a67377
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Modificare i Mapping dei tipi (MySQLToSQL)
 Il **modifica del Mapping di tipo** la finestra di dialogo consente di specificare la modalità di mapping dei tipi tra gli oggetti di database di origine e di destinazione.  
@@ -45,10 +43,10 @@ Selezionare il tipo di dati di origine per eseguire il mapping a un tipo di dati
 Se il tipo di dati è di lunghezza variabile, i campi seguenti verranno visualizzati in **Sourcetype**:  
   
 ##### <a name="from"></a>From  
-Specificare la lunghezza minima per questo mapping. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 10 per specificare che il mapping è per un intervallo a partire da **nchar (10).**  
+Specificare la lunghezza minima per questo mapping. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 10 per specificare che il mapping è per un intervallo inizi a **nchar (10).**  
   
 ##### <a name="to"></a>Per  
-Specificare la lunghezza massima per questa associazione. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 20 per specificare che il mapping è per un intervallo termina **nchar(20).**  
+Specificare la lunghezza massima per questa associazione. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 20 per specificare che il mapping è per un intervallo terminando **nchar(20).**  
   
 ##### <a name="target-type"></a>Tipo di destinazione  
 Selezionare il tipo di dati di SQL Server a cui è mappato il tipo di dati di origine. Quando SSMA crea la tabella o in SQL Server, il tipo di dati di origine passerà a questo tipo di dati.  
@@ -56,5 +54,5 @@ Selezionare il tipo di dati di SQL Server a cui è mappato il tipo di dati di or
 Se il tipo di dati è di lunghezza variabile, il seguente campo verrà visualizzato in **tipo di destinazione**:  
   
 ##### <a name="replace-with"></a>Sostituisci con  
-Specificare la lunghezza di destinazione per questo mapping. Ad esempio, per il **nvarchar** tipo di dati, è possibile immettere 20 per specificare che il tipo di dati di origine specificato deve essere mappato a **nvarchar (20).**  
+Specificare la lunghezza di destinazione per questo mapping. Ad esempio, per il **nvarchar** tipo di dati, è possibile immettere 20 per specificare che il tipo di dati di origine specificata deve essere mappato ai **nvarchar (20).**  
   

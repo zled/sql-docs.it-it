@@ -1,29 +1,19 @@
 ---
 title: 'Lezione 14: Distribuire | Documenti Microsoft'
-ms.custom: 
-ms.date: 03/27/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 29a05dfbeea281b2468b95e69b458d4948f7f624
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 533b6197c72d03876b928f4024fc5eb4fb0f2fc0
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-13-deploy"></a>Lezione 13: distribuire
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -71,12 +61,12 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
 ## <a name="conclusion"></a>Conclusioni  
 Congratulazioni! Si è finito di creazione e la distribuzione del primo modello tabulare di Analysis Services. Tramite questa esercitazione sono state completate le attività più comuni di creazione di un modello tabulare. Ora che il modello Adventure Works Internet Sales è stato distribuito, è possibile utilizzare SQL Server Management Studio per gestire il modello, nonché creare script di processo e un piano di backup. Gli utenti possono ora connettersi al modello utilizzando un'applicazione client di creazione di report, ad esempio Microsoft Excel o Power BI.  
 
-![as-tabular-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
+![come-tabulare-lesson13-SQL Server Management Studio](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
   
 ## <a name="see-also"></a>Vedere anche  
 [Modalità DirectQuery](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
-[Configurare le proprietà di modellazione e distribuzione dei dati predefinite](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+[Configurare la modellazione dei dati e le proprietà di distribuzione predefinite](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
 [Database modello tabulare](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

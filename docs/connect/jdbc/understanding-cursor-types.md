@@ -1,27 +1,24 @@
 ---
 title: Informazioni sui tipi di cursore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: dfd697881fbde24c797707990d53c2cc33576a24
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: df4f0f6e43c0eb7184f8421d3ebeada44e74a3e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-cursor-types"></a>Informazioni sui tipi di cursore
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +48,7 @@ ms.lasthandoff: 11/18/2017
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/D|Forward-only, di sola lettura|dirette|completi|L'applicazione deve eseguire una singola iterazione (in avanti) nel set di risultati. Si tratta del comportamento predefinito, corrispondente a un cursore TYPE_SS_DIRECT_FORWARD_ONLY. Tramite il driver viene letto l'intero set di risultati dal server caricandolo in memoria durante l'esecuzione dell'istruzione.|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/D|Forward-only, di sola lettura|dirette|adaptive|L'applicazione deve eseguire una singola iterazione (in avanti) nel set di risultati. Il comportamento corrisponde a quello di un cursore TYPE_SS_DIRECT_FORWARD_ONLY. Tramite il driver le righe vengono lette dal server quando vengono richieste dall'applicazione, riducendo così al minimo l'utilizzo della memoria sul lato client.|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|Fast forward|Forward-only, di sola lettura|cursor|N/D|L'applicazione deve eseguire una singola iterazione (in avanti) nel set di risultati utilizzando un cursore server. Il comportamento è analogo a quello di un cursore TYPE_SS_SERVER_CURSOR_FORWARD_ONLY.<br /><br /> Le righe vengono recuperate dal server in blocchi specificati dalla dimensione di recupero.|  
-|TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|Dinamico (forward-only)|Forward-only, aggiornabile|N/D|N/D|L'applicazione deve eseguire una singola iterazione (in avanti) nel set di risultati per aggiornare una o più righe.<br /><br /> Le righe vengono recuperate dal server in blocchi specificati dalla dimensione di recupero.<br /><br /> Per impostazione predefinita, la dimensione di recupero viene fissata quando l'applicazione chiama il [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) metodo il [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.<br /><br /> **Nota:** il driver JDBC fornisce una caratteristica di buffer adattivo che consente di recuperare i risultati di esecuzione di istruzioni dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] come questi sono necessari per l'applicazione, anziché tutti contemporaneamente. Se ad esempio l'applicazione deve recuperare una quantità di dati eccessiva per essere caricata completamente in memoria, il buffer adattivo consente all'applicazione client di recuperare tali dati sotto forma di flusso. Il comportamento predefinito del driver è "**adattivo**". Tuttavia, per ottenere il buffer adattivo per i set di risultati aggiornabili forward-only, l'applicazione deve chiamare in modo esplicito il [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) metodo il [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) oggetto fornendo un **stringa** valore "**adattivo"**. Per un esempio di codice, vedere [l'aggiornamento di grandi dimensioni campione di dati](../../connect/jdbc/updating-large-data-sample.md).|  
+|TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|Dinamico (forward-only)|Forward-only, aggiornabile|N/D|N/D|L'applicazione deve eseguire una singola iterazione (in avanti) nel set di risultati per aggiornare una o più righe.<br /><br /> Le righe vengono recuperate dal server in blocchi specificati dalla dimensione di recupero.<br /><br /> Per impostazione predefinita, la dimensione di recupero viene fissata quando l'applicazione chiama il [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) metodo il [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.<br /><br /> **Nota:** il driver JDBC fornisce una caratteristica di buffer ADATTIVA che consente di recuperare i risultati di esecuzione di istruzioni dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] quando questi sono necessari l'applicazione, anziché tutti contemporaneamente. Se ad esempio l'applicazione deve recuperare una quantità di dati eccessiva per essere caricata completamente in memoria, il buffer adattivo consente all'applicazione client di recuperare tali dati sotto forma di flusso. Il comportamento predefinito del driver è "**adattivo**". Tuttavia, per ottenere il buffer adattivo per i set di risultati aggiornabili forward-only, l'applicazione deve chiamare in modo esplicito il [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) metodo il [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) oggetto fornendo un **stringa** valore "**adattivo"**. Per un esempio di codice, vedere [l'aggiornamento di grandi dimensioni campione di dati](../../connect/jdbc/updating-large-data-sample.md).|  
 |TYPE_SCROLL_INSENSITIVE|Statico|Scorrevole, non aggiornabile<br /><br /> Gli aggiornamenti, gli inserimenti e le eliminazioni di righe eseguiti esternamente non sono visibili.|N/D|N/D|L'applicazione richiede uno snapshot del database. Il set di risultati non è aggiornabile. È supportato solo CONCUR_READ_ONLY.  Tutti gli altri tipi di concorrenza generano un'eccezione, se utilizzati con questo tipo di cursore.<br /><br /> Le righe vengono recuperate dal server in blocchi specificati dalla dimensione di recupero.|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_READ_ONLY)|Keyset|Scorrevole, sola lettura. Gli aggiornamenti di righe eseguiti esternamente sono visibili e le eliminazioni vengono visualizzate come dati mancanti.<br /><br /> Gli inserimenti di righe eseguiti esternamente non sono visibili.|N/D|N/D|Nell'applicazione devono essere visualizzati i dati modificati solo per le righe esistenti.<br /><br /> Le righe vengono recuperate dal server in blocchi specificati dalla dimensione di recupero.|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_UPDATABLE, CONCUR_SS_SCROLL_LOCKS, CONCUR_SS_OPTIMISTIC_CC, CONCUR_SS_OPTIMISTIC_CCVAL)|Keyset|Scorrevole, aggiornabile<br /><br /> Gli aggiornamenti di righe eseguiti internamente ed esternamente sono visibili e le eliminazioni vengono visualizzate come dati mancanti. Gli inserimenti non sono visibili.|N/D|N/D|L'applicazione può modificare i dati nelle righe esistenti tramite l'oggetto set di risultati. L'applicazione deve inoltre essere in grado di visualizzare le modifiche apportate da altri esternamente all'oggetto set di risultati alle righe.<br /><br /> Le righe vengono recuperate dal server in blocchi specificati dalla dimensione di recupero.|  
@@ -82,7 +79,7 @@ ms.lasthandoff: 11/18/2017
  Per i cursori dinamici, le righe aggiornate mantengono la posizione all'interno del buffer di recupero fino a quando la finestra definita dal buffer di recupero non viene chiusa. Successivamente, le righe aggiornate possono venire visualizzate in posizioni diverse nel set di risultati o scomparire completamente. Per le applicazioni in cui è necessario evitare le incoerenze temporanee nel set di risultati, è necessario utilizzare una dimensione di recupero pari a 1. L'impostazione predefinita è 8 righe con concorrenza CONCUR_SS_SCROLL_LOCKS e 128 righe con altre concorrenze.  
   
 ## <a name="cursor-conversion"></a>Conversione dei cursori  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]In alcuni casi è possibile scegliere di implementare un tipo di cursore diverso da quello richiesto, questo comportamento è noto come conversione implicita del cursore (o degradazione del cursore). Per ulteriori informazioni sulla conversione implicita del cursore, vedere l'argomento "Utilizzo della conversione implicita del cursore" nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] documentazione in linea.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] In alcuni casi è possibile scegliere di implementare un tipo di cursore diverso da quello richiesto, questo comportamento è noto come conversione implicita del cursore (o degradazione del cursore). Per ulteriori informazioni sulla conversione implicita del cursore, vedere l'argomento "Utilizzo della conversione implicita del cursore" nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] documentazione in linea.  
   
  Con [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]quando si aggiornano i dati attraverso il risultato ResultSet.TYPE_SCROLL_SENSITIVE e ResultSet.CONCUR_UPDATABLE è impostato, viene generata un'eccezione con un messaggio "il cursore è READ ONLY". Questa eccezione si verifica perché il [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] ha eseguito una conversione implicita del cursore per tale risultato set e non ha restituito il cursore aggiornabile è stato richiesto.  
   

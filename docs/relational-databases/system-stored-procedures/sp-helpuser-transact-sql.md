@@ -1,32 +1,32 @@
 ---
 title: sp_helpuser (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpuser
 - sp_helpuser_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_helpuser
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2dcf314d52fd7d20dae8ad8ddb163a331a89d52c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 343439dd04f9f74c0a5444afef25921072d9d14c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@name_in_db =** ] **'***security_account***'**  
- Nome dell'utente o del ruolo del database nel database corrente. *security_account* deve esistere nel database corrente. *security_account* è **sysname**, con un valore predefinito è NULL. Se *security_account* non viene specificato, **sp_helpuser** restituisce informazioni su tutte le entità di database.  
+ Nome dell'utente o del ruolo del database nel database corrente. *security_account* deve esistere nel database corrente. *security_account* viene **sysname**, con un valore predefinito è NULL. Se *security_account* non viene specificato, **sp_helpuser** restituisce informazioni su tutte le entità di database.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -76,7 +76,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**Role_name**|**sysname**|Nome del ruolo nel database corrente.|  
+|**role_name**|**sysname**|Nome del ruolo nel database corrente.|  
 |**Role_id**|**smallint**|ID del ruolo nel database corrente.|  
 |**Users_in_role**|**sysname**|Membro del ruolo nel database corrente.|  
 |**ID utente**|**smallint**|ID utente del membro del ruolo.|  
@@ -84,7 +84,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="remarks"></a>Osservazioni  
  Per visualizzare informazioni sull'appartenenza ai ruoli di database, utilizzare [database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Per visualizzare informazioni sui membri del ruolo server, utilizzare [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)e per visualizzare le informazioni sulle entità a livello di server, utilizzare [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
  Le informazioni restituite sono soggette a limitazioni di accesso ai metadati. Non vengono visualizzate le entità per le quali l'entità di database non dispone dell'autorizzazione. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -113,7 +113,7 @@ EXEC sp_helpuser 'db_securityadmin';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   

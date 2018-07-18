@@ -1,16 +1,14 @@
 ---
 title: managed_backup.sp_set_parameter (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_set_parameter_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c8469b7ddb66198889604af7b0d512166429a0b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2a9f1d5eeec1fc5b24fbc1974d27e9f4b5efd00d
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +51,12 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="Arguments"></a> Argomenti  
  @parameter_name  
- Nome del parametro per cui si desidera impostare il valore. @parameter_nameè nvarchar (128). I nomi dei parametri disponibili **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**, e **StorageOperationDebugXevent**.  
+ Nome del parametro per cui si desidera impostare il valore. @parameter_name è nvarchar (128). I nomi dei parametri disponibili **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**, e **StorageOperationDebugXevent**.  
   
  @parameter_value  
- Valore del parametro che si desidera impostare. @parameteril valore è di tipo nvarchar (128).  Di seguito vengono indicati il nome del parametro e le coppie di valori consentiti:  
+ Valore del parametro che si desidera impostare. @parameter il valore è nvarchar (128).  Di seguito vengono indicati il nome del parametro e le coppie di valori consentiti:  
   
--   @parameter_name= 'SSMBackup2WANotificationEmailIds': @parameter_value = "email"  
+-   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = "email"  
   
 -   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy' : @parameter_value  = { 'true' | 'false' }  
   

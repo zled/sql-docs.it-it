@@ -1,16 +1,14 @@
 ---
-title: SET ANSI_NULL_DFLT_ON (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SET ANSI_NULL_DFLT_ON (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2016 Preview
@@ -28,21 +26,21 @@ helpviewer_keywords:
 - null values [SQL Server], overriding
 - overriding default nullability
 ms.assetid: 8c925924-a466-4c8b-aeb2-7e0d341f32db
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 82532accfe14729a0e3ccbfa7bd3f1b55d2aaa01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: adcc1a9e2ff60f2b841bd93a2aa4fe9d74c01eb8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-ansinulldflton-transact-sql"></a>SET ANSI_NULL_DFLT_ON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Modifica il comportamento della sessione in modo da prevaricare l'impostazione predefinita le nuove colonne quando il **ANSI null default** opzione per il database è **false**. Per ulteriori informazioni sull'impostazione del valore per **ANSI null default**, vedere [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
+  Modifica il comportamento della sessione in modo da eseguire l'override dell'impostazione predefinita relativa al supporto di valori Null delle nuove colonne, quando l'opzione di database **ANSI null default** è **false**. Per altre informazioni sull'impostazione del valore per **ANSI null default**, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -60,14 +58,14 @@ SET ANSI_NULL_DFLT_ON {ON | OFF}
 SET ANSI_NULL_DFLT_ON ON
 ```
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa impostazione ha effetto solo sul supporto di valori Null per le nuove colonne quando tale supporto non è specificato nelle istruzioni CREATE TABLE e ALTER TABLE. Quando l'opzione SET ANSI_NULL_DFLT_ON è impostata su ON, le nuove colonne create con le istruzioni ALTER TABLE e CREATE TABLE supportano i valori Null se il supporto di valori Null per la colonna non è stato specificato in modo esplicito. SET ANSI_NULL_DFLT_OFF non ha effetto sulle colonne create tramite un NULL o un NOT NULL esplicito.  
   
- Non è possibile impostare contemporaneamente su ON entrambe le opzioni SET ANSI_NULL_DFLT_OFF e SET ANSI_NULL_DFLT_ON. Se un'opzione è impostata su ON, l'altra deve essere impostata su OFF. In altri termini, è possibile impostare su ON una delle due opzioni oppure impostare entrambe le opzioni su OFF. Se si imposta su ON una delle due opzioni SET ANSI_NULL_DFLT_OFF e SET ANSI_NULL_DFLT_ON, tale opzione risulta attivata. Se entrambe le opzioni sono impostate su OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza il valore della **is_ansi_null_default_on** colonna il [Sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista del catalogo.  
+ Non è possibile impostare contemporaneamente su ON entrambe le opzioni SET ANSI_NULL_DFLT_OFF e SET ANSI_NULL_DFLT_ON. Se un'opzione è impostata su ON, l'altra deve essere impostata su OFF. In altri termini, è possibile impostare su ON una delle due opzioni oppure impostare entrambe le opzioni su OFF. Se si imposta su ON una delle due opzioni SET ANSI_NULL_DFLT_OFF e SET ANSI_NULL_DFLT_ON, tale opzione risulta attivata. Se entrambe le opzioni sono impostate su OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa il valore della colonna **is_ansi_null_default_on** nella vista di catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  Per ottenere un'affidabilità maggiore dell'operazione degli script [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzabili in database con impostazione per il supporto di valori Null diversa, nelle istruzioni CREATE TABLE e ALTER TABLE è consigliabile specificare sempre la parola chiave NULL o NOT NULL.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Provider OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostano automaticamente l'opzione ANSI_NULL_DFLT_ON su ON durante la connessione. L'opzione predefinita per SET ANSI_NULL_DFLT_ON è OFF per le connessioni di applicazioni DB-Library.  
+ Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostano automaticamente l'opzione ANSI_NULL_DFLT_ON su ON al momento della connessione. L'opzione predefinita per SET ANSI_NULL_DFLT_ON è OFF per le connessioni di applicazioni DB-Library.  
   
  Quando l'opzione SET ANSI_DEFAULTS è impostata su ON, l'opzione SET ANSI_NULL_DFLT_ON risulta abilitata.  
   
@@ -84,11 +82,11 @@ SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono illustrati gli effetti di `SET ANSI_NULL_DFLT_ON` con entrambe le impostazioni per il **ANSI null default** opzione di database.  
+ In questo esempio vengono illustrati gli effetti dell'opzione `SET ANSI_NULL_DFLT_ON` con entrambe le impostazioni dell'opzione di database **ANSI null default**.  
   
 ```  
 USE AdventureWorks2012;  
@@ -168,7 +166,7 @@ DROP TABLE t1,t2,t3,t4,t5,t6;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [SET ANSI_NULL_DFLT_OFF &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)  
   
   

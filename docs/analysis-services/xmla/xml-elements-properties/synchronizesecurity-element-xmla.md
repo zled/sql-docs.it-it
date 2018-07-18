@@ -1,39 +1,24 @@
 ---
 title: Elemento SynchronizeSecurity (XMLA) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: SynchronizeSecurity Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- microsoft.xml.analysis.synchronizesecurity
-- http://schemas.microsoft.com/analysisservices/2003/engine#SynchronizeSecurity
-- urn:schemas-microsoft-com:xml-analysis#SynchronizeSecurity
-helpviewer_keywords: SynchronizeSecurity element
-ms.assetid: d37dbb95-f4a4-44ac-8eb9-f661d5bb5018
-caps.latest.revision: "12"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: af696c7bea2b1906402743c53aeee5d2730ea9e9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5f99f4c0ddf212d2fac33abd08c33ccf3dbe7998
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576483"
 ---
 # <a name="synchronizesecurity-element-xmla"></a>Elemento SynchronizeSecurity (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Specifica come sincronizzare definizioni di sicurezza, ad esempio ruoli e autorizzazioni, durante un [Sincronizza](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Specifica come sincronizzare definizioni di sicurezza, ad esempio ruoli e autorizzazioni, durante un [Sincronizza](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +46,8 @@ ms.lasthandoff: 01/08/2018
 |Elementi padre|[Sincronizza](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
- Il **sicurezza** elemento determina se le definizioni di sicurezza, ad esempio ruoli e autorizzazioni, definiti in un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database sono sincronizzati durante un **Sincronizza**  comando. Questo elemento determina inoltre se gli account utente di Windows e i gruppi definiti come membri delle definizioni di sicurezza sono inclusi come parte di **Sincronizza** comando.  
+## <a name="remarks"></a>Remarks  
+ Il **Security** elemento determina se le definizioni di sicurezza, ad esempio ruoli e autorizzazioni, definite in un database di Analysis Services sono sincronizzate durante un **Synchronize** comando. Questo elemento determina inoltre se gli account utente di Windows e i gruppi definiti come membri delle definizioni di sicurezza sono inclusi come parte di **Sincronizza** comando.  
   
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
@@ -72,8 +57,8 @@ ms.lasthandoff: 01/08/2018
 |*CopyAll*|Include le definizioni di sicurezza e informazioni sull'appartenenza durante un **Sincronizza** comando.|  
 |*IgnoreSecurity*|Esclude le definizioni di sicurezza durante un **Sincronizza** comando.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Elemento di sicurezza &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md)   
- [Proprietà &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vedere anche
+ [Elemento di sicurezza &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md)   
+ [Proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

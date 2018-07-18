@@ -1,30 +1,30 @@
 ---
-title: "Scalabilità | Microsoft Docs"
-ms.custom: 
+title: Scalabilità | Microsoft Docs
+ms.custom: ''
 ms.date: 08/27/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: in-memory-oltp
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a9657320f92fd50b8d07d255e863cb5aebba46f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1768c9db30f01b6c5cd0350614e2f3c3dc579acb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="scalability"></a>Scalabilità
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SQL Server 2016 contiene miglioramenti alla scalabilità per l'archiviazione su disco per le tabelle ottimizzate per la memoria.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  SQL Server 2016 contiene miglioramenti alla scalabilità per l'archiviazione su disco per le tabelle ottimizzate per la memoria.  
   
 -   **Più thread per rendere persistenti le tabelle ottimizzate per la memoria**  
   

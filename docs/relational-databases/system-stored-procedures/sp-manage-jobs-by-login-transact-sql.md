@@ -1,16 +1,14 @@
 ---
 title: sp_manage_jobs_by_login (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_manage_jobs_by_login
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_manage_jobs_by_login
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2575a298f71475452dffe05b75adeaf41ac8f2fa
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 59f79ac7f0dfa72be2f63d0c3e711969f92ea93d
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +47,16 @@ sp_manage_jobs_by_login
   
 ## <a name="arguments"></a>Argomenti  
  [  **@action=** ] **'***azione***'**  
- Azione da eseguire per l'account specificato. *azione* è **varchar (10)**, non prevede alcun valore predefinito. Quando *azione*è **eliminare**, **sp_manage_jobs_by_login** Elimina tutti i processi di proprietà *current_owner_login_name*. Quando *azione* è **RIASSEGNARE**, tutti i processi assegnati al *new_owner_login_name*.  
+ Azione da eseguire per l'account specificato. *azione* viene **varchar(10**, non prevede alcun valore predefinito. Quando *azione*è **eliminare**, **sp_manage_jobs_by_login** Elimina tutti i processi di proprietà *current_owner_login_name*. Quando *azione* è **RIASSEGNARE**, tutti i processi assegnati al *new_owner_login_name*.  
   
- [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
- Nome dell'account di accesso del proprietario del processo corrente. *current_owner_login_name* è **sysname**, non prevede alcun valore predefinito.  
+ [  **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
+ Nome dell'account di accesso del proprietario del processo corrente. *current_owner_login_name* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
- Nome dell'account di accesso del nuovo proprietario del processo. Utilizzare questo parametro solo se *azione* è **RIASSEGNARE**. *new_owner_login_name* è **sysname**, con un valore predefinito è NULL.  
+ [  **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
+ Nome dell'account di accesso del nuovo proprietario del processo. Utilizzare questo parametro solo se *azione* è **RIASSEGNARE**. *new_owner_login_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  

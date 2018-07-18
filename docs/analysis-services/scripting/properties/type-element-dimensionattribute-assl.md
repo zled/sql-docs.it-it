@@ -1,36 +1,23 @@
 ---
 title: Tipo di elemento (DimensionAttribute) (ASSL) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: Type Element (DimensionAttribute)
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: TYPE
-helpviewer_keywords: Type element
-ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
-caps.latest.revision: "35"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9cd0db2e914ffba09e7e2e3831b5815be8288e10
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f1b0a959e57d4df5db8fa4616cf8a31536cf1689
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Elemento Type (DimensionAttribute) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene il tipo dell'attributo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene il tipo dell'attributo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,10 +32,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
-|Valore predefinito|*Regolare*|  
+|Valore predefinito|*Regular*|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -56,12 +43,12 @@ ms.lasthandoff: 01/08/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*Account*|L'attributo rappresenta il nome di un conto.|  
 |*AccountNumber*|L'attributo rappresenta il numero di un conto.|  
@@ -69,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 |*Indirizzo*|L'attributo rappresenta un indirizzo.|  
 |*AddressBuilding*|L'attributo rappresenta un identificatore di edificio per un indirizzo.|  
 |*AddressCity*|L'attributo rappresenta la città per un indirizzo.|  
-|*AddressCountry*|L'attributo rappresenta un paese/regione per un indirizzo.|  
+|*AddressCountry*|L'attributo rappresenta un paese/area geografica per un indirizzo.|  
 |*AddressFax*|L'attributo rappresenta un numero di fax.|  
 |*AddressFloor*|L'attributo rappresenta un identificatore di piano per un indirizzo.|  
 |*AddressHouse*|L'attributo rappresenta il numero civico per un indirizzo.|  
@@ -80,11 +67,11 @@ ms.lasthandoff: 01/08/2018
 |*AddressStreet*|L'attributo rappresenta la via per un indirizzo.|  
 |*AddressZip*|L'attributo rappresenta un codice postale per un indirizzo.|  
 |*BOMResource*|L'attributo rappresenta una risorsa per una distinta base.|  
-|*Didascalia*|L'attributo rappresenta una didascalia.|  
+|*Caption*|L'attributo rappresenta una didascalia.|  
 |*CaptionAbbreviation*|L'attributo rappresenta un'abbreviazione.|  
 |*CaptionDescription*|L'attributo rappresenta una descrizione.|  
 |*Channel*|L'attributo rappresenta un canale.|  
-|*Città*|L'attributo rappresenta una città.|  
+|*City*|L'attributo rappresenta una città.|  
 |*Società*|L'attributo rappresenta una società.|  
 |*Continente*|L'attributo rappresenta un continente.|  
 |*Paese*|L'attributo rappresenta un paese.|  
@@ -95,7 +82,7 @@ ms.lasthandoff: 01/08/2018
 |*CurrencySource*|L'attributo rappresenta la valuta di origine di un cambio di valuta.|  
 |*CustomerGroup*|L'attributo rappresenta un gruppo di clienti.|  
 |*CustomerHousehold*|L'attributo rappresenta un'unità familiare dei clienti.|  
-|*Clienti*|L'attributo rappresenta un cliente.|  
+|*Customers*|L'attributo rappresenta un cliente.|  
 |*Data*|L'attributo rappresenta una data.|  
 |*DateCanceled*|L'attributo rappresenta una data di annullamento.|  
 |*DateDuration*|L'attributo rappresenta una durata.|  
@@ -155,7 +142,7 @@ ms.lasthandoff: 01/08/2018
 |*HalfYears*|L'attributo rappresenta i semestri.|  
 |*HalfYearsOfYear*|L'attributo rappresenta il numero ordinale di semestre di un anno.|  
 |*Ore*|L'attributo rappresenta le ore.|  
-|*ID*|L'attributo rappresenta un identificatore o una chiave.|  
+|*Id*|L'attributo rappresenta un identificatore o una chiave.|  
 |*IsHoliday*|L'attributo indica se una data rappresenta un giorno festivo.|  
 |*ISO8601DayOfWeek*|L'attributo rappresenta il numero ordinale di giorno di una settimana in un calendario ISO 8601.|  
 |*ISO8601DayOfYear*|L'attributo rappresenta il numero ordinale di  giorno di un anno in un calendario ISO 8601.|  
@@ -217,7 +204,7 @@ ms.lasthandoff: 01/08/2018
 |*PhysicalWeight*|L'attributo rappresenta il peso.|  
 |*PhysicalWidth*|L'attributo rappresenta la larghezza.|  
 |*Point*|L'attributo rappresenta un punto.|  
-|*CAP*|L'attributo rappresenta un CAP.|  
+|*PostalCode*|L'attributo rappresenta un CAP.|  
 |*Product*|L'attributo rappresenta un prodotto.|  
 |*ProductBrand*|L'attributo rappresenta una marca di prodotto.|  
 |*ProductCategory*|L'attributo rappresenta una categoria di prodotti.|  
@@ -228,17 +215,17 @@ ms.lasthandoff: 01/08/2018
 |*ProjectEnddate*|L'attributo rappresenta la data di fine di un progetto.|  
 |*NomeProgetto*|L'attributo rappresenta il nome di un progetto.|  
 |*ProjectStartDate*|L'attributo rappresenta la data di inizio di un progetto.|  
-|*Innalzamento di livello*|L'attributo rappresenta una promozione.|  
+|*Promotion*|L'attributo rappresenta una promozione.|  
 |*QtyRangeHigh*|L'attributo rappresenta il valore massimo in un intervallo di quantità.|  
 |*QtyRangeLow*|L'attributo rappresenta il valore minimo in un intervallo di quantità.|  
-|*Quantitativo*|L'attributo rappresenta un attributo quantitativo.|  
+|*Quantitative*|L'attributo rappresenta un attributo quantitativo.|  
 |*QuarterOfHalfYear*|L'attributo rappresenta il numero ordinale di trimestre di un semestre.|  
 |*QuarterOfYear*|L'attributo rappresenta il numero ordinale di trimestre di un anno.|  
 |*Trimestri*|L'attributo rappresenta i trimestri.|  
 |*Frequenza*|L'attributo rappresenta un tasso.|  
 |*RateType*|L'attributo rappresenta un tipo di tasso.|  
 |*Region*|L'attributo rappresenta una regione definita dal cliente.|  
-|*Regolare*|L'attributo rappresenta un attributo regolare.|  
+|*Regular*|L'attributo rappresenta un attributo regolare.|  
 |*RelationToParent*|L'attributo rappresenta una relazione con un elemento padre.|  
 |*ReportingDay*|L'attributo rappresenta i giorni in un calendario di report.|  
 |*ReportingDayOfHalfYears*|L'attributo rappresenta il numero ordinale di giorno di un semestre in un calendario di report.|  
@@ -300,8 +287,8 @@ ms.lasthandoff: 01/08/2018
  L'elemento che corrisponde all'elemento padre **tipo** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attributi elemento &#40; ASSL &#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Elemento Dimension &#40; ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Attributi elemento &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [Elemento Dimension & #40; ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

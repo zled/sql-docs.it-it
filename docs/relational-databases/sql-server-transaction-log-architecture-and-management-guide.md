@@ -1,17 +1,16 @@
 ---
 title: Guida sull'architettura e gestione del log delle transazioni di SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction log architecture guide
 - guide, transaction log architecture
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c8d5917a0faed7d4861a03097a2072db3cfa0670
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 23119e2fafd68797b15a9baf525d52906f311178
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +70,7 @@ Nel log delle transazioni vengono registrati molti tipi di operazioni, tra cui:
   
  Nel log vengono registrate anche le operazioni di rollback. Ogni transazione riserva una determinata quantità di spazio nel log delle transazioni per garantire che nel log sia disponibile spazio sufficiente per supportare un rollback causato da un'istruzione di rollback esplicita o dal verificarsi di un errore. La quantità di spazio riservata varia in base alle operazioni eseguite nella transazione, ma in genere equivale alla quantità di spazio utilizzata per registrare nel log ogni operazione. Lo spazio riservato viene liberato al completamento della transazione.  
   
-<a name="minlsn"></a> La sezione del file di log dal primo record di log che deve essere presente per la corretta esecuzione del rollback a livello di database all'ultimo record di log scritto è definita parte attiva del log o *log attivo*. Questa sezione del log è necessaria per il recupero completo del database. Non è possibile troncare nessuna parte del log attivo. Il [numero di sequenza del file di log (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) di questo primo record di log è anche detto ***LSN minimo del recupero (*MinLSN**).  
+<a name="minlsn"></a> La sezione del file di log dal primo record di log che deve essere presente per la corretta esecuzione del rollback a livello di database all'ultimo record di log scritto è definita parte attiva del log o *log attivo*. Questa sezione del log è necessaria per il recupero completo del database. Non è possibile troncare nessuna parte del log attivo. Il [numero di sequenza del file di log (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) di questo primo record di log è anche detto ***LSN minimo del recupero (* MinLSN**).  
   
 ##  <a name="physical_arch"></a> Architettura fisica del log delle transazioni  
 Del log delle transazioni di un database viene eseguito il mapping su uno o più file fisici. Concettualmente, il file di log è una stringa di record di log. Fisicamente, la sequenza di record di log viene archiviata in modo efficiente nel set di file fisici che implementano il log delle transazioni. È necessario che sia disponibile almeno un file di log per ogni database.  
@@ -92,7 +91,7 @@ Se le dimensioni dei file di log aumentano in modo considerevole a piccoli ma nu
  - Il valore *size*, impostato dall'argomento `SIZE` di `ALTER DATABASE`, corrisponde alle dimensioni iniziali del file di log.
  - Il valore *growth_increment*, vale a dire il valore di aumento automatico, impostato dall'argomento `FILEGROWTH` di `ALTER DATABASE`, è la quantità di spazio che viene aggiunta al file ogni volta che è richiesto spazio nuovo. 
  
-Per altre informazioni sugli argomenti `FILEGROWTH` e `SIZE` di `ALTER DATABASE`, vedere [Opzioni per file e filegroup ALTER DATABASE &#40; Transact-SQL &#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+Per altre informazioni sugli argomenti `FILEGROWTH` e `SIZE` di `ALTER DATABASE`, vedere [Opzioni per file e filegroup ALTER DATABASE & #40; Transact-SQL & #41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
 > Per determinare la distribuzione dei file di log virtuali ottimale per le dimensioni correnti del log delle transazioni di tutti i database in un'istanza specifica e gli incrementi della crescita necessari per ottenere le dimensioni richieste, vedere questo [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).

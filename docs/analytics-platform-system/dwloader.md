@@ -1,27 +1,21 @@
 ---
-title: dwloader caricatore della riga di comando per Parallel Data Warehouse
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "**dwloader** è uno strumento da riga di comando Parallel Data Warehouse (PDW) che esegue il caricamento bulk di righe di tabella in una tabella esistente."
-ms.date: 11/04/2016
-ms.topic: article
-ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 
-ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+title: dwloader del caricatore della riga di comando - Parallel Data Warehouse | Documenti Microsoft
+description: dwloader è uno strumento da riga di comando Parallel Data Warehouse (PDW) che consente di caricare righe della tabella in blocco in una tabella esistente.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d5d8ead82525266148729f9773e47b933def349e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="dwloader-command-line-loader"></a>dwloader caricatore della riga di comando
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader caricatore della riga di comando per Parallel Data Warehouse
 **dwloader** è uno strumento da riga di comando Parallel Data Warehouse (PDW) che esegue il caricamento bulk di righe di tabella in una tabella esistente. Durante il caricamento di righe, è possibile aggiungere tutte le righe alla fine della tabella (*modalità append* o *modalità fastappend*), aggiungere nuove righe e aggiornare le righe esistenti (*modalità upsert*), o eliminarli tutti righe prima del caricamento esistente e quindi inserire tutte le righe in una tabella vuota (*ricaricare modalità*).  
   
 **Processo di caricamento dei dati**  
@@ -140,7 +134,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 Utilizzare un file di parametro, *parameter_file_name*, al posto di parametri della riga di comando. *parameter_file_name* può contenere tutti i parametri della riga di comando tranne *nome_utente* e *password*. Se viene specificato un parametro della riga di comando e nel file di parametri, la riga di comando sostituisce il parametro file.  
   
-Il file dei parametri contiene un parametro, senza il  **-**  prefisso, per ogni riga.  
+Il file dei parametri contiene un parametro, senza il **-** prefisso, per ogni riga.  
   
 Esempi:  
   
@@ -161,7 +155,7 @@ Se omesso, viene impostata sul valore specificato durante l'installazione di dwl
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name.* [*schema*]. *table_name*  
 Il nome in tre parti per la tabella di destinazione.  
   
 **-I***source_data_location*  
@@ -201,7 +195,7 @@ Esempi:
   
 -   -i \\\loadserver\loads\daily\\*.gz  
   
--   -i \\\loadserver\loads\daily\\*.txt  
+-   -i \\\loadserver\loads\daily\\*. txt  
   
 -   -i \\\loadserver\loads\daily\monday.*  
   
@@ -229,7 +223,7 @@ Il delimitatore per ogni campo (colonna) della riga. Il delimitatore di campo è
 |Nome|Carattere escape|Caratteri esadecimali|  
 |--------|--------------------|-----------------|  
 |Scheda|\t|0x09|  
-|Ritorno a capo (CR)|\r|0x0d|  
+|Ritorno a capo (CR)|\r|0x0D|  
 |Avanzamento riga (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
 |Virgola|','|0x2c|  
@@ -263,13 +257,13 @@ Esempi di CR LF +:
   
 Esempi di CR:  
   
--r \r  
+\r - r  
   
 -r 0x0d  
   
 Esempi di nuova riga:  
   
--r \n  
+\n - r  
   
 -r 0x0a  
   
@@ -332,13 +326,13 @@ Esempi di CR LF +:
   
 Esempi di CR:  
   
--r \r  
+\r - r  
   
 -r 0x0d  
   
 Esempi di nuova riga:  
   
--r \n  
+\n - r  
   
 -r 0x0a  
   
@@ -347,10 +341,10 @@ Un avanzamento riga è necessaria per Unix. Un CR è necessario per Windows.
 **-D** { **AMG** | agm | mdy | myd |  DMY | dym | *custom_date_format* }  
 Specifica l'ordine di mese (m), (d) giorno e anno (y) per tutti i campi datetime nel file di input. L'ordine predefinito è AMG. Per specificare più formati di ordine per lo stesso file di origine, utilizzare l'opzione-dt.  
   
-ymd | dmy  
+AMG | DMY  
 agm e dmy consentono gli stessi formati di input. Entrambi consentono l'anno essere all'inizio o alla fine della data. Ad esempio, per entrambi **agm** e **dmy** , formati di data potrebbe aver 2013-02-03 o 02-03-2013 nel file di input.  
   
-ydm  
+agm  
 È possibile caricare solo input formattate come agm in colonne di tipo di dati datetime e smalldatetime. Non è possibile caricare agm valori in una colonna di tipo di dati datetimeoffset, datetime2 o Data.  
   
 mdy  
@@ -402,7 +396,7 @@ Il caricatore inserisce righe alla fine delle righe esistenti nella tabella di d
 fastappend  
 Il caricatore inserisce righe direttamente, senza utilizzare una tabella temporanea, alla fine delle righe esistenti nella tabella di destinazione. fastappend richiede la multi-transazione (-m) opzione. Quando si utilizza fastappend, non è possibile specificare un database di gestione temporanea. Viene eseguito alcun rollback con fastappend, il che significa che il ripristino da un carico interrotto o non deve essere gestito dal proprio processo di caricamento.  
   
-Upsert **-K***merge_column* [,... *n* ]  
+eseguire l'Upsert **-K***merge_column* [,... *n* ]  
 Il caricatore Usa l'istruzione Merge SQL Server per aggiornare le righe esistenti e inserire nuove righe.  
   
 L'opzione -K specifica le colonne su cui basare il merge. Queste colonne formano una chiave di tipo merge, che deve rappresentare una riga univoca. Se la chiave di tipo merge esiste nella tabella di destinazione, la riga viene aggiornata. Se la chiave di tipo merge non esiste nella tabella di destinazione, la riga viene aggiunto.  

@@ -1,33 +1,34 @@
 ---
 title: Configurazione guidata distribuzione | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Configure Distribution Wizard
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Configure Distribution Wizard
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
-caps.latest.revision: "22"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 22
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b700916165340f23dfe73e7364ff0bb27f2f984a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c60cc6953cce0bccd8ccdc557fb58fad2ac7ded1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-distribution-wizard"></a>Configure Distribution Wizard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa sezione fornisce informazioni sulle pagine seguenti della Configurazione guidata distribuzione:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questa sezione vengono fornite informazioni sulle pagine seguenti della Configurazione guidata distribuzione:  
   
--   [Database di distribuzione](../../relational-databases/replication/distributor.md)  
+-   [Server di distribuzione](../../relational-databases/replication/distributor.md)  
   
 -   [Cartella snapshot](../../relational-databases/replication/snapshot-folder.md)  
   

@@ -1,65 +1,64 @@
 ---
-title: Creare e personalizzare i tasti di scelta rapida in Studio operazioni SQL (anteprima) | Documenti Microsoft
-description: Informazioni su come creare e personalizzare i tasti di scelta rapida in Studio operazioni SQL (anteprima).
+title: Creare e personalizzare i tasti di scelta rapida in SQL Operations Studio (anteprima) | Microsoft Docs
+description: Informazioni su come creare e personalizzare i tasti di scelta rapida in SQL Operations Studio (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
-ms.reviewer: alayu; erickang; sstein
+ms.prod: sql
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a96204723bd56a63ec23841ede47b5844fbad313
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 692d07af3e94eea9c255a5cb464dacd710eddbbb
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Tasti di scelta rapida[!INCLUDE[name-sos](../includes/name-sos.md)]
+# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Tasti di scelta rapida in [!INCLUDE[name-sos](../includes/name-sos.md)]
 
-In questo articolo illustra la procedura per visualizzare, modificare e creare tasti di scelta rapida in [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+In questo articolo viene mostrata la procedura per visualizzare, modificare e creare tasti di scelta rapida in [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
-Poiché [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita le funzionalità chiave di associazione da codice di Visual Studio, informazioni dettagliate sulle personalizzazioni avanzate, utilizzando diversi layout di tastiera e così via, se il [associazioni di chiave per il codice di Visual Studio](https://code.visualstudio.com/docs/getstarted/keybindings) articolo. Alcune funzionalità del tasto di scelta rapida potrebbero non essere disponibili (ad esempio, le estensioni di mappatura non sono supportate [!INCLUDE[name-sos](../includes/name-sos-short.md)]).
+Poiché [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita le associazioni dei tasti di Visual Studio Code, le informazioni dettagliate sulle personalizzazioni avanzate, l'utilizzo di diversi layout di tastiera e così via sono disponibili nell'articolo [associazione di tasti di Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings). Alcune funzionalità di associazione tasti potrebbero non essere disponibili (ad esempio, le estensioni di mappatura non sono supportate in [!INCLUDE[name-sos](../includes/name-sos-short.md)]).
 
 
-## <a name="open-the-keyboard-shortcuts-editor"></a>Aprire l'editor tasti di scelta rapida
+## <a name="open-the-keyboard-shortcuts-editor"></a>Aprire l'editor dei tasti di scelta rapida
 
 Per visualizzare tutti i tasti attualmente definiti:
 
-Aprire il **tasti di scelta rapida** editor dal **File** menu: **File** > **preferenze**  >   **Tasti di scelta rapida** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **preferenze** > **tasti di scelta rapida** su Mac).
+Aprire il l'editor dei **tasti di scelta rapida** dal menu **File**: **File** > **Preferenze** > **Tasti di scelta rapida** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **Preferenze** > **Tasti di scelta rapida** su Mac).
 
-Oltre a visualizzare i tasti di scelta rapida corrente, il **tasti di scelta rapida** editor Elenca i comandi disponibili che non dispongono di tasti di scelta rapida definiti. Il **tasti di scelta rapida** editor consente di modificare, rimuovere, reimpostare e definire nuovi tasti di scelta rapida con facilmente.  
+Oltre a visualizzare i tasti di scelta rapida correnti, l'editor dei **tasti di scelta rapida** elenca i comandi disponibili che non dispongono di tasti di scelta rapida definiti. L'editor dei **Tasti di scelta rapida** consente di modificare, rimuovere, reimpostare e definire facilmente nuovi tasti di scelta rapida.  
 
 
 ## <a name="edit-existing-keyboard-shortcuts"></a>Modificare i tasti di scelta rapida da tastiera
 
-Per modificare il tasto di scelta rapida per un tasto di scelta rapida di esistente:
+Per modificare l'associazione di un tasto di scelta rapida esistente:
 
 1. Individuare il tasto di scelta rapida che si desidera modificare utilizzando la casella di ricerca o lo scorrimento nell'elenco.
    > [!TIP]
-   > Cercare dalla chiave, dal comando, dall'origine e così via per restituire tutti i tasti pertinente.
+   > Cercare per chiave, per comando, per sorgente e così via per restituire tutti i tasti pertinenti.
 
-1. Fare clic sulla voce desiderata e selezionare **Keybinding di modifica**
+1. Premere il tasto destro del mouse sulla voce desiderata e selezionare **Cambia tasto di scelta rapida**
 
    ![modificare i tasti di scelta rapida](media/keyboard-shortcuts/change-keybinding.png)
 
-1. Premere la combinazione desiderata delle chiavi, quindi premere **invio** salvarlo. 
+1. Premere la combinazione desiderata, quindi premere **Invio** per salvarla. 
 
    ![salvare i tasti di scelta rapida](media/keyboard-shortcuts/save-keybinding.png)
 
-## <a name="create-new-keyboard-shortcuts"></a>Creare nuove scelte rapide da tastiera
+## <a name="create-new-keyboard-shortcuts"></a>Creare nuovi tasti di scelta rapida
 
-Per creare nuove scelte rapide da tastiera:
+Per creare nuovi tasti di scelta rapida:
 
-1. Fare doppio clic su un comando che non dispone di qualsiasi tasto di scelta rapida e selezionare **aggiungere Keybinding**.
+1. Premere il tasto destro del mouse su di un comando che non dispone di associazioni e selezionare **Aggiungi tasto di scelta rapida**.
 
    ![creare tasti di scelta rapida](media/keyboard-shortcuts/add-keybinding.png)
 
-1. Premere la combinazione desiderata delle chiavi, quindi premere **invio** salvarlo.
+1. Premere la combinazione desiderata, quindi premere **Invio** per salvarla.
 
 

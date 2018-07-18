@@ -1,30 +1,28 @@
 ---
 title: Il caricamento di convertire gli oggetti di Database in SQL Server (DB2ToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d662bcab0fe8c804b75f7908ca6fc04f2e96a650
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 04d7ce18baed888af7b0de96faec99b72a6b4586
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Il caricamento di convertire gli oggetti di Database in SQL Server (DB2ToSQL)
 Dopo aver convertito schemi DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile caricare gli oggetti di database risultante in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. È possibile avere SSMA creare gli oggetti, oppure è possibile creare script degli oggetti ed eseguire gli script manualmente. SSMA consente inoltre di aggiornare i metadati di destinazione con il contenuto effettivo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
@@ -69,7 +67,7 @@ Fare clic sul segno di azione di modifica dello stato. Sincronizzazione effettiv
 ## <a name="scripting-objects"></a>Oggetti di scripting  
 Per salvare [!INCLUDE[tsql](../../includes/tsql_md.md)] le definizioni degli oggetti di database convertito, o per modificare le definizioni degli oggetti ed eseguire gli script manualmente, è possibile salvare il database convertito definizioni di oggetto [!INCLUDE[tsql](../../includes/tsql_md.md)] script.  
   
-**Per salvare gli oggetti script**  
+**Per salvare gli oggetti come script**  
   
 1.  Dopo aver selezionato gli oggetti per salvare uno script, fare doppio clic su **database**, quindi fare clic su **salvare come Script**.  
   
@@ -99,7 +97,7 @@ Dopo aver salvato il [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] d
   
 1.  Nel [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **File** dal menu **aprire**, quindi fare clic su **File**.  
   
-2.  Nel **aprire** finestra di dialogo, selezionare il file di script, quindi[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+2.  Nel **Open** finestra di dialogo, selezionare il file di script, quindi [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 3.  Per eseguire lo script completo, premere il **F5** chiave.  
   
@@ -116,5 +114,5 @@ Dopo aver caricato gli oggetti di database convertito in [!INCLUDE[ssNoVersion](
 Il passaggio successivo del processo di migrazione consiste nel [la migrazione di dati DB2 in SQL Server](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
   
 ## <a name="see-also"></a>Vedere anche  
-[La migrazione dei dati di DB2 in SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[La migrazione dei dati DB2 in SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

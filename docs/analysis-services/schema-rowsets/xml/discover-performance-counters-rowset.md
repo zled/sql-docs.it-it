@@ -1,33 +1,23 @@
 ---
-title: DISCOVER_PERFORMANCE_COUNTERS Rowset | Microsoft Docs
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Set di righe DISCOVER_PERFORMANCE_COUNTERS | Documenti Microsoft
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1d769567a033eedd98eff41aee9cde5306c9b7ea
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5eb379d24ef39ab2cacbda2d80ecf742e0edc1d1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discoverperformancecounters-rowset"></a>Set di righe DISCOVER_PERFORMANCE_COUNTERS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Restituisce il valore di uno o più contatori di prestazioni. Non supporta i contatori che restituiscono informazioni sull'utilizzo nel tempo, ad esempio le letture del disco al secondo e la percentuale di utilizzo della CPU.  
+  Restituisce il valore di uno o più contatori di prestazioni. Non supporta i contatori che restituiscono informazioni sull'utilizzo nel tempo, ad esempio le letture del disco al secondo e la percentuale di utilizzo della CPU.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
   

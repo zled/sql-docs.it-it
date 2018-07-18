@@ -1,31 +1,23 @@
 ---
 title: Eliminare una raccolta Power Pivot | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: b7222318-7307-4afb-b585-9358426103a0
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: de9f32a826273ed1efaf9395c8a0e67030b1b573
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7e288a1823ca2dca44b4c032b1618710212c2a65
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="delete-power-pivot-gallery"></a>Eliminare una raccolta Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Con l'eliminazione di una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono eliminati tutti i relativi elementi, inclusa la cronologia dell'aggiornamento dati per le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configurate per l'aggiornamento dati pianificato.  
+  Con l'eliminazione di una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono eliminati tutti i relativi elementi, inclusa la cronologia dell'aggiornamento dati per le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configurate per l'aggiornamento dati pianificato.  
   
 > [!NOTE]  
 >  In questo argomento vengono fornite istruzioni per l'eliminazione di una raccolta di SharePoint. Per istruzioni sull'eliminazione di singoli documenti dalla raccolta, vedere [Usare la Raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md).  

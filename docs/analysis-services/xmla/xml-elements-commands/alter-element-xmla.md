@@ -1,39 +1,24 @@
 ---
 title: Elemento ALTER (XMLA) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Alter Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#Alter
-- microsoft.xml.analysis.alter
-- urn:schemas-microsoft-com:xml-analysis#Alter
-helpviewer_keywords: Alter command
-ms.assetid: 84e58385-c9ba-48fa-a867-94d35b777a56
-caps.latest.revision: "15"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d6d234801cb298f15982bfc4ac1d75a493dd6aa8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5ff62bcde0aa40e9bb052691d4d3dee1317c1217
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574603"
 ---
 # <a name="alter-element-xmla"></a>Elemento Alter (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene gli elementi di Analysis Services Scripting Language (ASSL) utilizzati dal [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) metodo per modificare gli oggetti in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene gli elementi di Analysis Services Scripting Language (ASSL) utilizzati per il [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) metodo per modificare gli oggetti in un'istanza di Analysis Services.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -73,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>Remarks  
  Ogni **Alter** comando modifica la definizione di un oggetto principale sotto l'oggetto padre specificato da di [ParentObject](../../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md) elemento.  
   
-## <a name="see-also"></a>Vedere anche  
- [Comandi &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>Vedere anche
+ [I comandi &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

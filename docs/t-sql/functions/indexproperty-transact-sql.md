@@ -1,16 +1,14 @@
 ---
-title: INDEXPROPERTY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: INDEXPROPERTY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - INDEXPROPERTY
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - indexes [SQL Server], viewing
 - indexes [SQL Server], properties
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-caps.latest.revision: 
+caps.latest.revision: 56
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f7099b3e11259d59c18ff6c5d8f591beca70846f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b149c056517c1b33b7880f3379a033b0ece3d936
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,18 +46,18 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
   
 ## <a name="arguments"></a>Argomenti  
  *object_ID*  
- Espressione che contiene il numero di identificazione della tabella o vista indicizzata di cui si desidera ottenere informazioni sulla proprietà dell'indice. *object_ID* è **int**.  
+ Espressione che contiene il numero di identificazione della tabella o vista indicizzata di cui si desidera ottenere informazioni sulla proprietà dell'indice. *object_ID* è di tipo **int**.  
   
  *index_or_statistics_name*  
- Espressione che contiene il nome dell'indice o delle statistiche per cui si desidera ottenere informazioni sulle proprietà. *index_or_statistics_name* è **nvarchar (128)**.  
+ Espressione che contiene il nome dell'indice o delle statistiche per cui si desidera ottenere informazioni sulle proprietà. *index_or_statistics_name* è di tipo **nvarchar(128)**.  
   
- *proprietà*  
- Espressione che contiene il nome della proprietà del database da restituire. *proprietà* è **varchar (128)**, i possibili valori sono i seguenti.  
+ *property*  
+ Espressione che contiene il nome della proprietà del database da restituire. *property* è di tipo **varchar(128)**. I valori possibili sono i seguenti.  
   
 > [!NOTE]  
->  Se non diversamente specificato, viene restituito NULL quando *proprietà* non è un nome di proprietà valido, *object_ID* non è un ID di oggetto valido, *object_ID* è un tipo di oggetto non supportato per la proprietà specificata o il chiamante non dispone dell'autorizzazione per visualizzare i metadati dell'oggetto.  
+>  Se non specificato diversamente, viene restituito NULL quando *property* non è un nome di proprietà valido, *object_ID* non è un ID di oggetto valido, *object_ID* è un tipo di oggetto non supportato per la proprietà specificata oppure il chiamante non ha l'autorizzazione necessaria per visualizzare i metadati dell'oggetto.  
   
-|Proprietà|Description|Valore|  
+|Proprietà|Description|valore|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|Dettagli dell'indice.|Numero di livelli dell'indice.<br /><br /> NULL = indice XML o input non valido.|  
 |**IndexFillFactor**|Valore del fattore di riempimento utilizzato quando l'indice è stato creato o ricompilato per l'ultima volta.|Fattore di riempimento|  
@@ -72,7 +70,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsPadIndex**|All'indice è associata la quantità di spazio da lasciare aperto in ogni nodo interno.|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False o indice XML.|  
 |**IsPageLockDisallowed**|Valore per il blocco di pagina impostato mediante l'opzione ALLOW_PAGE_LOCKS di ALTER INDEX.|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = il blocco di pagina è disattivato.<br /><br /> 0 = il blocco di pagina è attivato.<br /><br /> NULL = Input non valido.|  
 |**IsRowLockDisallowed**|Valore per il blocco di riga impostato tramite l'opzione ALLOW_ROW_LOCKS di ALTER INDEX.|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = il blocco di riga è disattivato.<br /><br /> 0 = il blocco di riga è attivato.<br /><br /> NULL = Input non valido.|  
-|**IsStatistics**|*index_or_statistics_name* è statistiche create dall'istruzione CREATE STATISTICS o dall'opzione AUTO_CREATE_STATISTICS di ALTER DATABASE.|1 = True<br /><br /> 0 = False o indice XML.|  
+|**IsStatistics**|*index_or_statistics_name* rappresenta le statistiche create dall'istruzione CREATE STATISTICS o dall'opzione AUTO_CREATE_STATISTICS di ALTER DATABASE.|1 = True<br /><br /> 0 = False o indice XML.|  
 |**IsUnique**|Indice univoco.|1 = True<br /><br /> 0 = False o indice XML.|  
 |**IsColumnstore**|L'indice è un indice columnstore con ottimizzazione per la memoria xVelocity.|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -85,7 +83,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come INDEXPROPERTY possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce i valori per il **IsClustered**, **IndexDepth**, e **IndexFillFactor** le proprietà per il `PK_Employee_BusinessEntityID` indice del `Employee`tabella il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ Nell'esempio seguente vengono restituiti i valori delle proprietà **IsClustered**, **IndexDepth** e **IndexFillFactor** per l'indice `PK_Employee_BusinessEntityID` della tabella `Employee` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
 SELECT   
@@ -108,8 +106,8 @@ Is Clustered Index Depth Fill Factor
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente vengono esaminate le proprietà di uno degli indici nel `FactResellerSales` tabella.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Nell'esempio seguente vengono esaminate le proprietà di uno degli indici nella tabella `FactResellerSales`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -130,7 +128,7 @@ GO
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [Sys. stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
 

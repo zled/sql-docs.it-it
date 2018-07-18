@@ -1,32 +1,32 @@
 ---
 title: sp_cursor_list (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_list
 - sp_cursor_list_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_cursor_list
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2b4ce00bf096ecbd0c40b723c017b21d6fa982d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 368c1b64a7c6eea9d338a1698e5a20d90948b696
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,12 +46,12 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
 ## <a name="arguments"></a>Argomenti  
  [ @cursor_return=] *cursor_variable_name*OUTPUT  
- Nome di una variabile di cursore dichiarata. *cursor_variable_name* è **cursore**, non prevede alcun valore predefinito. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
+ Nome di una variabile di cursore dichiarata. *cursor_variable_name* viene **cursore**, non prevede alcun valore predefinito. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
   
  [ @cursor_scope=] *cursor_scope*  
- Specifica il livello dei cursori da segnalare. *cursor_scope* è **int**e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
+ Specifica il livello dei cursori da segnalare. *cursor_scope* viene **int**e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Description|  
 |-----------|-----------------|  
 |1|Restituisce tutti i cursori locali.|  
 |2|Restituisce tutti i cursori globali.|  
@@ -91,7 +91,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  Utilizzare sp_describe_cursor_columns per ottenere una descrizione degli attributi del set dei risultati restituito dal cursore. Utilizzare sp_describe_cursor_tables per ottenere un report delle tabelle di base a cui fa riferimento il cursore. stored procedure sp_describe_cursor restituisce le stesse informazioni di sp_cursor_list, ma solo per il cursore specificato.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione vengono assegnate per impostazione predefinita al ruolo public.  
   
 ## <a name="examples"></a>Esempi  

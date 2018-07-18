@@ -1,27 +1,19 @@
 ---
 title: Confronto tra soluzioni tabulari e multidimensionali (SSAS) | Documenti Microsoft
-ms.custom: 
-ms.date: 06/15/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: multidimensional-tabular
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4e6a5941b33d2d73ee8bd86e33a710e065a21ae1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Confronto tra soluzioni tabulari e multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -151,9 +143,9 @@ ms.lasthandoff: 02/23/2018
   
 -   Database modello multidimensionale possono utilizzare dimensioni e la sicurezza a livello di cella, usando autorizzazioni basate sui ruoli.  
 
--   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] sono protette a livello di file, mediante le autorizzazioni di SharePoint.  
+-   Le cartelle di lavoro di[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] sono protette a livello di file, mediante le autorizzazioni di SharePoint.  
   
- [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] in un server in modalità tabulare. Una volta ripristinato, il file viene separato da SharePoint consentendo di utilizzare tutte le funzionalità di modellazione tabulare, inclusa la sicurezza a livello di riga.  
+ Le cartelle di lavoro di[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] possono essere ripristinate in un server in modalità tabulare. Una volta ripristinato, il file viene separato da SharePoint consentendo di utilizzare tutte le funzionalità di modellazione tabulare, inclusa la sicurezza a livello di riga.  
   
 ##  <a name="bkmk_designer"></a> Strumenti di progettazione  
  Le competenze di modellazione dei dati e l'esperienza tecnica possono variare molto tra gli utenti che si occupano della compilazione di modelli analitici. Se in una soluzione la familiarità di uno strumento o l'esperienza degli utenti è una considerazione importante, confrontare le esperienze seguenti per la creazione del modello.  

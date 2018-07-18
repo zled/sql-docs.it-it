@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLInstallDriverManager | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLInstallDriverManager
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLInstallDriverManager
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLInstallDriverManager
-helpviewer_keywords: SQLInstallDriverManager function [ODBC]
+f1_keywords:
+- SQLInstallDriverManager
+helpviewer_keywords:
+- SQLInstallDriverManager function [ODBC]
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7d1769b4951662f99cd50709b498891540fd4b9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 739af9f6d97dbd4595a3c18254ab53f2a9db10f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager (funzione)
 **Conformità**  
@@ -69,7 +70,7 @@ BOOL SQLInstallDriverManager(
 |ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione: Impossibile eseguire la funzione a causa della mancanza di memoria.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLInstallDriverManager** viene chiamata per restituire il percorso per i componenti principali di ODBC e incremento l'utilizzo del componente conteggio nelle informazioni di sistema. Se esiste già una versione di gestione Driver, ma il conteggio di utilizzo del componente per il driver non esiste, il nuovo valore di conteggio dell'utilizzo di componente è impostato su 2.  
+ **SQLInstallDriverManager** viene chiamata per restituire il percorso per i componenti di base di ODBC e incrementare l'utilizzo di componenti conteggio nelle informazioni di sistema. Se esiste già una versione di gestione Driver, ma il conteggio di utilizzo del componente per il driver non esiste, il nuovo valore di conteggio dell'utilizzo di componente è impostato su 2.  
   
  Il programma di installazione dell'applicazione è responsabile per copiare fisicamente i file dei componenti di base e mantenendo l'utilizzo del file vengono contati. Se un file di componente di base non è stato precedentemente installato, il programma di installazione dell'applicazione deve copiare il file e creare il conteggio di utilizzo di file. Se il file è stato installato in precedenza, il programma di installazione semplicemente incrementa il conteggio di utilizzo di file.  
   

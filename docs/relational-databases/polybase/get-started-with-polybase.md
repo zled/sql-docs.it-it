@@ -1,16 +1,14 @@
 ---
 title: Introduzione a PolyBase | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: polybase
-ms.reviewer: 
+ms.component: database
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
-ms.tgt_pltfrm: 
+ms.technology: polybase
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - PolyBase
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 78
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9b28ca40643cec6661564c439657e1a3454929be
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: cfde818a22771ba7bfa08259e3a34eff68fb1aea
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="get-started-with-polybase"></a>Introduzione a PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +42,10 @@ ms.lasthandoff: 02/12/2018
   
 -   Comprendere in che modo gestire gli oggetti PolyBase in SQL Server Management Studio (SSMS)  
   
--   Reperire esempi di query con oggetti PolyBase  
-  
-## <a name="prerequisites"></a>Prerequisites  
- Un'istanza di [SQL Server (64 bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) con quanto segue:  
-  
--   Microsoft .NET Framework 4.5.  
-  
--   Oracle Java SE RunTime Environment (JRE) versione 7.51 o versione successiva (64 bit). Funzionano sia [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) che [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) . Passare a [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Download di Java SE). Il programma di installazione avrà esito negativo se JRE non è presente.   
-  
--   Memoria minima: 4 GB  
-  
--   Spazio su disco rigido minimo: 2 GB    
-
--   La connettività TCP/IP deve essere abilitata. Vedere [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md). TCP/IP è disabilitato per impostazione predefinita in SQL Server Developer Edition e SQL Server Express Edition. PolyBase può essere installato ma non verrà avviato completamente fino a quando non si abilita TCP/IP. È necessario abilitare manualmente TCP/IP per avere a disposizione la funzionalità PolyBase. 
-  
- 
- Un'origine dati esterna può essere:  
-  
--   Cluster Hadoop. Per le versioni supportate, vedere [Configurare PolyBase](#supported).  
-
--   Archiviazione BLOB Azure
-
-> [!NOTE]
->   Se si prevede di usare la funzionalità di distribuzione di calcolo su Hadoop, è necessario assicurarsi che il cluster Hadoop di destinazione disponga dei componenti principali di HDFS, Yarn/MapReduce con server Jobhistory abilitato. PolyBase invia la query di distribuzione tramite MapReduce e recupera lo stato dal server JobHistory. Senza uno dei due componenti la query avrà esito negativo. 
+-   Reperire esempi di query con oggetti PolyBase    
 
 ## <a name="install-polybase"></a>Installare PolyBase  
- Se PolyBase non è stato installato, vedere la [procedura di installazione di PolyBase](../../relational-databases/polybase/polybase-installation.md).  
+Se PolyBase non è stato installato, vedere [Installazione di PolyBase](../../relational-databases/polybase/polybase-installation.md). Nell'articolo sull'installazione vengono illustrati i prerequisiti.
   
 ### <a name="how-to-confirm-installation"></a>Procedura per confermare l'installazione  
  Dopo l'installazione, eseguire il comando seguente per verificare che PolyBase sia stato installato correttamente. Se installato, PolyBase restituisce 1; in caso contrario, restituisce 0.  
@@ -91,7 +65,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Cloudera CDH 4.3 su Linux  
   
--   Cloudera CDH 5.1 - 5.5, 5.9 - 5.12 su Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 su Linux  
   
 -   Archiviazione BLOB Azure  
  

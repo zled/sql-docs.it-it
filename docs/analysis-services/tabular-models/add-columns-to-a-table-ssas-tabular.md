@@ -1,31 +1,23 @@
 ---
 title: Aggiungere colonne a una tabella | Documenti Microsoft
-ms.custom: 
-ms.date: 02/21/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5b5d09c35fcdfa2def6ec78422c1f4d40caa3ef3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 77be2e392add4811d011d85ebc1ee9efbf52191d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="add-columns-to-a-table"></a>Aggiungere colonne a una tabella
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-In questo articolo viene descritto come aggiungere colonne a una tabella esistente.  
+  In questo articolo viene descritto come aggiungere colonne a una tabella esistente.  
   
 ## <a name="add-columns-from-the-datasource"></a>Aggiungere colonne dall'origine dati  
  Quando si utilizza l'Importazione guidata tabella per importare dati da una tabella dell'origine dati, viene creata una nuova tabella del modello in cui sono incluse tutte le colonne nella tabella di origine oppure, se si sceglie di escludere determinate colonne utilizzando la funzionalità Visualizza anteprima e applica filtro, solo quelle colonne e quei dati filtrati vengono selezionati. È inoltre possibile scrivere una query SQL che consente di specificare solo determinate colonne da importare. Tuttavia, successivamente è possibile determinare che una tabella di origine disponga di colonne aggiuntive da aggiungere al modello oppure che sia necessario aggiungere una colonna calcolata con i valori derivati da una formula DAX.  

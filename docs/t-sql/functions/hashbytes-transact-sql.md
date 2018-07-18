@@ -1,16 +1,14 @@
 ---
-title: HASHBYTES (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: HASHBYTES (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - HASHBYTES_TSQL
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - hash input
 - HASHBYTES
 ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 63552f4b6fb61b3b24d4d670b9ea255d8e417699
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 20e5e1a2f85d81a49072fba1e6acae3bc9b1dc1e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,28 +46,28 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **'**\<algoritmo >**'**  
- Identifica l'algoritmo di hash da utilizzare per eseguire l'hashing dell'input. Si tratta di un argomento obbligatorio in assenza di impostazioni predefinite. Le virgolette singole sono obbligatorie. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tutti gli algoritmi diversi da SHA2_256 e SHA2_512 sono deprecati. Algoritmi meno recenti (sconsigliato) continueranno a funzionare, ma viene generato un evento di deprecazione.  
+ **'**\<algorithm>**'**  
+ Identifica l'algoritmo di hash da utilizzare per eseguire l'hashing dell'input. Si tratta di un argomento obbligatorio in assenza di impostazioni predefinite. Le virgolette singole sono obbligatorie. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tutti gli algoritmi diversi da SHA2_256 e SHA2_512 sono deprecati. Gli algoritmi precedenti (non consigliati) continueranno a funzionare, ma genereranno un evento Deprecation.  
   
  **@input**  
- Specifica una variabile contenente i dati di cui eseguire l'hashing. **@input**è **varchar**, **nvarchar**, o **varbinary**.  
+ Specifica una variabile contenente i dati di cui eseguire l'hashing. **@input** è di tipo **varchar**, **nvarchar** o **varbinary**.  
   
  **'** *input* **'**  
  Specifica un'espressione che restituisce un carattere o una stringa binaria di cui eseguire l'hashing.  
   
  L'output è conforme allo standard dell'algoritmo, ovvero 128 bit (16 byte) per MD2, MD4 e MD5 e 160 bit (20 byte) per SHA e SHA1; 256 bit (32 byte) per SHA2_256 e 512 bit (64 byte) per SHA2_512.  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e consentita in precedenza, i valori di input sono limitati a 8.000 byte.  
+ Per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni precedenti, la dimensione dei valori di input consentiti è limitata a 8.000 byte.  
   
 ## <a name="return-value"></a>Valore restituito  
- **varbinary** (numero massimo di 8000 byte)  
+ **varbinary** (non più di 8000 byte)  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-return-the-hash-of-a-variable"></a>R: restituire l'hash di una variabile  
- Nell'esempio seguente viene restituito il `SHA1` hash di **nvarchar** dati archiviati nella variabile `@HashThis`.  
+### <a name="a-return-the-hash-of-a-variable"></a>A: Restituire l'hash di una variabile  
+ Nell'esempio seguente viene restituito l'hash `SHA1` dei dati **nvarchar** archiviati nella variabile `@HashThis`.  
   
 ```  
 DECLARE @HashThis nvarchar(4000);  
@@ -78,7 +76,7 @@ SELECT HASHBYTES('SHA1', @HashThis);
   
 ```  
   
-### <a name="b-return-the-hash-of-a-table-column"></a>B: restituire l'hash di una colonna di tabella  
+### <a name="b-return-the-hash-of-a-table-column"></a>B: Restituire l'hash di una colonna di tabella  
  Nell'esempio seguente viene restituito l'hash SHA1 dei valori della colonna `c1` nella tabella `Test1`.  
   
 ```  

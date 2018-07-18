@@ -1,17 +1,15 @@
 ---
-title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Documenti Microsoft
 description: Restituisce lo stato corrente della risorsa semafori utilizzato per l'ottimizzazione delle query simultanee. limitazione totale
-ms.custom: 
+ms.custom: ''
 ms.date: 04/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_optimizer_memory_gateways_TSQL
@@ -25,12 +23,12 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b65e22d1cd2f403e2ed3aa1bd1dc14faa90079b9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b9d36c4a67fab2f9f7c867a3ba6b7e7d01fc5d29
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +43,7 @@ Restituisce lo stato corrente della risorsa semafori utilizzato per l'ottimizzaz
 |**active_count**|**int**|Il numero attualmente attivo di compilazioni in questo controllo|
 |**waiter_count**|**int**|Il numero di oggetti waiter in questo controllo|
 |**threshold_factor**|**bigint**|Fattore di soglia che definisce la parte di memoria massima utilizzata da ottimizzazione delle query.  Per il gateway di piccole dimensioni, threshold_factor indica l'utilizzo della memoria query optimizer massima in byte per una query prima che sia necessario per ottenere un accesso nel gateway di piccole dimensioni.  Per il gateway di medie e grandi dimensioni, threshold_factor illustra la parte della memoria totale del server disponibile per questo controllo. Quando si calcola la soglia di utilizzo della memoria per il controllo e viene utilizzato come divisore.|
-|**threshold**|**bigint**|Memoria successiva di soglia in byte.  La query è necessario per ottenere l'accesso a questo gateway, se l'utilizzo della memoria raggiunge questa soglia.  "-1" se la query non è necessario ottenere un accesso a questo gateway.|
+|**Soglia**|**bigint**|Memoria successiva di soglia in byte.  La query è necessario per ottenere l'accesso a questo gateway, se l'utilizzo della memoria raggiunge questa soglia.  "-1" se la query non è necessario ottenere un accesso a questo gateway.|
 |**is_active**|**bit**|Se la query è necessario passare il controllo corrente o non.|
 
 
@@ -75,6 +73,6 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
- [Funzioni e viste a gestione dinamica &#40; relative all'esecuzione Transact-SQL &#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [Come utilizzare il comando DBCC MEMORYSTATUS per monitorare l'utilizzo di memoria in SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
 [la compilazione di query di grandi dimensioni è in attesa in RESOURCE_SEMAPHORE_QUERY_COMPILE in SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

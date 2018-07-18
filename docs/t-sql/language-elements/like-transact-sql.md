@@ -1,16 +1,14 @@
 ---
 title: LIKE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ESCAPE
@@ -33,16 +31,16 @@ helpviewer_keywords:
 - matching patterns [SQL Server]
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-caps.latest.revision: 
+caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 4fa2299a1efade9f44de85d02c60286a25aad8d0
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f97c3e301814d73ece3703a5bd32c55a7b8ab8a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,10 +65,10 @@ match_expression [ NOT ] LIKE pattern
   
 ## <a name="arguments"></a>Argomenti  
  *match_expression*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) del tipo di dati carattere.  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida di tipo di dati carattere.  
   
  *pattern*  
- È la stringa di caratteri da cercare nella *match_expression*e possono includere i seguenti caratteri jolly validi. *modello* può contenere un massimo di 8.000 byte.  
+ Stringa specifica di caratteri da cercare in *match_expression*. Può includere i caratteri jolly validi riportati di seguito. *pattern* può essere composto da un massimo di 8.000 byte.  
   
 |Carattere jolly|Description|Esempio|  
 |------------------------|-----------------|-------------|  
@@ -80,18 +78,18 @@ match_expression [ NOT ] LIKE pattern
 |[^]|Carattere singolo non compreso nell'intervallo ([^a-f]) o nel set ([^abcdef]) specificato.|WHERE au_lname LIKE 'de[^l]%' consente di individuare tutti gli autori il cui cognome inizia con "de" e la lettera successiva è diversa da "l".|  
   
  *escape_character*  
- Carattere posto davanti a un carattere jolly a indicare che il carattere jolly deve essere interpretato come carattere normale e non come carattere jolly. *escape_character* è un'espressione di caratteri che non dispone di alcun valore predefinito e deve restituire un solo carattere.  
+ Carattere posto davanti a un carattere jolly a indicare che il carattere jolly deve essere interpretato come carattere normale e non come carattere jolly. *escape_character* è un'espressione di caratteri che non ha un valore predefinito e che deve restituire solo un carattere.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  **Boolean**  
   
 ## <a name="result-value"></a>Valore restituito  
- LIKE restituisce TRUE se il *match_expression* corrisponde al valore specificato *modello*.  
+ LIKE restituisce TRUE se *match_expression* corrisponde all'argomento *pattern* specificato.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se si esegue un confronto di stringe utilizzando LIKE, tutti i caratteri nella stringa modello sono significativi, compresi gli spazi iniziali e finali. Se un confronto in una query deve restituire tutte le righe contenenti la stringa LIKE 'abc ' (abc seguito da uno spazio), una riga il cui valore per la colonna è abc (abc non seguito da alcuno spazio) non viene restituita. Gli spazi vuoti finali vengono tuttavia ignorati nell'espressione corrispondente al modello. Se un confronto in una query deve restituire tutte le righe contenenti la stringa LIKE 'abc' (abc non seguito da alcuno spazio), vengono restituite tutte le righe che iniziano con abc seguito da zero o più spazi vuoti finali.  
   
- Un confronto tra stringhe con uno schema che contiene **char** e **varchar** dati potrebbero non superare i confronti LIKE a causa di modalità di archiviazione di dati. È importante capire la modalità di archiviazione di ogni tipo di dati e i casi in cui i confronti LIKE potrebbero avere esito negativo. Nell'esempio seguente passa una variabile locale **char** variabile a una stored procedure e viene utilizzato un modello di corrispondenza per trovare tutti i dipendenti il cui cognome inizia con un set di caratteri specificato.  
+ Un confronto tra stringhe con l'operatore LIKE basato su un modello contenente dati di tipo **char** e **varchar** potrebbe avere esito negativo a causa della modalità di archiviazione dei dati. È importante capire la modalità di archiviazione di ogni tipo di dati e i casi in cui i confronti LIKE potrebbero avere esito negativo. Nell'esempio seguente una variabile **char** locale viene passata a una stored procedure e vengono quindi usati criteri di ricerca per individuare tutti i dipendenti il cui cognome inizia con un set di caratteri specificato.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -107,9 +105,9 @@ EXEC FindEmployee @EmpLName = 'Barb';
 GO  
 ```  
   
- Nel `FindEmployee` procedura, viene restituita alcuna riga perché la **char** variabile (`@EmpLName`) contiene spazi vuoti finali ogni volta che il nome contiene meno di 20 caratteri. Poiché il `LastName` colonna **varchar**, non esistono gli spazi vuoti finali. Questa procedura ha esito negativo in quanto gli spazi vuoti finali sono significativi.  
+ Nella procedura `FindEmployee` non viene restituita alcuna riga perché quando il nome è composto da meno di 20 caratteri la variabile **char** (`@EmpLName`) contiene spazi vuoti finali. Dato che la colonna `LastName` è di tipo **varchar**, non sono presenti spazi vuoti finali. Questa procedura ha esito negativo in quanto gli spazi vuoti finali sono significativi.  
   
- Tuttavia, nell'esempio seguente ha esito positivo perché gli spazi vuoti finali non vengono aggiunti a un **varchar** variabile.  
+ Nell'esempio seguente l'operazione ha invece esito positivo perché a una variabile **varchar** non vengono aggiunti spazi vuoti finali.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -135,7 +133,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
  ``` 
  
 ## <a name="pattern-matching-by-using-like"></a>Ricerche con l'operatore LIKE basate su modello  
- LIKE supporta ricerche ASCII e ricerche Unicode. Quando tutti gli argomenti (*match_expression*, *modello*, e *escape_character*, se presente) sono tipi di dati carattere ASCII, criteri di ricerca ASCII viene eseguito. Se il tipo di dati di uno degli argomenti è Unicode, tutti gli argomenti vengono convertiti in Unicode e viene eseguita una ricerca Unicode. Quando si utilizzano dati Unicode (**nchar** o **nvarchar** tipi di dati) con LIKE, gli spazi vuoti finali sono significativi, tuttavia, per i dati non Unicode, spazi vuoti finali non sono significativi. L'operatore LIKE per Unicode è compatibile con lo standard ISO. L'operatore LIKE per ASCII è compatibile con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ LIKE supporta ricerche ASCII e ricerche Unicode. Quando tutti gli argomenti (*match_expression*, *pattern* e *escape_character*, se presente) sono tipi di dati carattere ASCII, viene eseguita una ricerca ASCII. Se il tipo di dati di uno degli argomenti è Unicode, tutti gli argomenti vengono convertiti in Unicode e viene eseguita una ricerca Unicode. Quando si usano dati Unicode (tipi di dati **nchar** o **nvarchar**) con l'operatore LIKE, gli spazi vuoti finali sono significativi, mentre per i dati non Unicode non lo sono. L'operatore LIKE per Unicode è compatibile con lo standard ISO. L'operatore LIKE per ASCII è compatibile con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Negli esempi seguenti vengono illustrate le differenze tra le righe restituite da ricerche LIKE per ASCII e per Unicode.  
   
@@ -297,7 +295,7 @@ GO
 ```  
   
 ### <a name="d-using-the---wildcard-characters"></a>D. Utilizzo del carattere jolly [ ]  
- Nell'esempio seguente consente di trovare i dipendenti nel `Person` tabella con il nome di `Cheryl` o `Sheryl`.  
+ Nell'esempio seguente viene eseguita una ricerca dei dipendenti presenti nella tabella `Person` con nome `Cheryl` o `Sheryl`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -320,10 +318,10 @@ ORDER BY LastName ASC, FirstName ASC;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Utilizzo dell'operatore LIKE con il carattere jolly %  
- Nell'esempio seguente consente di individuare tutti i dipendenti di `DimEmployee` tabella con numeri di telefono che iniziano con `612`.  
+ Nell'esempio seguente viene eseguita una ricerca di tutti i dipendenti presenti nella tabella `DimEmployee` con numeri telefonici che iniziano con `612`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -335,7 +333,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Utilizzo dell'operatore NOT LIKE con il carattere jolly %  
- Nell'esempio seguente consente di individuare tutti i numeri di telefono di `DimEmployee` tabella che non iniziano con `612`.  tramite tabelle annidate.  
+ Nell'esempio seguente viene eseguita una ricerca di tutti i numeri telefonici presenti nella tabella `DimEmployee` che non iniziano con `612`.  ,  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -346,8 +344,8 @@ WHERE phone NOT LIKE '612%'
 ORDER by LastName;  
 ```  
   
-### <a name="g-using-like-with-the--wildcard-character"></a>G. Utilizzo dell'operatore LIKE con il carattere jolly _  
- Nell'esempio seguente consente di individuare tutti i numeri di telefono che dispone di un codice di area, a partire da `6` e di fine `2` nel `DimEmployee` tabella. Si noti che il carattere jolly % è anche incluso alla fine del criterio di ricerca perché il codice di area è la prima parte del numero di telefono e caratteri aggiuntivi dopo aver sono il valore della colonna.  
+### <a name="g-using-like-with-the--wildcard-character"></a>G. Uso dell'operatore LIKE con il carattere jolly _  
+ Nell'esempio seguente viene eseguita una ricerca di tutti i numeri telefonici con un prefisso che inizia con `6` e termina con `2` nella tabella `DimEmployee`. Si noti che alla fine del criterio di ricerca è incluso anche il carattere jolly % poiché il prefisso è la prima parte del numero telefonico e dopo di esso sono presenti altri caratteri nel valore della colonna.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -359,7 +357,7 @@ ORDER by LastName;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

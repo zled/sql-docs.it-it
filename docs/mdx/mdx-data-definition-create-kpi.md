@@ -1,35 +1,20 @@
 ---
 title: Istruzione CREATE KPI (MDX) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords:
-- CREATE KPI
-- KPI
-- CREATE_KPI
-- CREATE
-helpviewer_keywords:
-- CREATE KPI statement
-- key performance indicators [MDX]
-ms.assetid: 87618fef-95e5-4dd0-a650-aeb60ccbddcb
-caps.latest.revision: "18"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6a97fbc894a0b88511ab551aa231fcfb3746d52c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7c2322d30e4e42bebbe4537f687c349c5179d9f9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579323"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Definizione dei dati MDX - creare l'indicatore KPI
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +42,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  *Property_Value*  
  Espressione scalare valida che definisce il valore della proprietà dell'indicatore KPI.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Specificando un cubo diverso dal cubo connesso viene generato un errore. Pertanto, per identificare il cubo corrente è consigliabile usare CURRENTCUBE anziché il nome di un cubo.  
   
 ## <a name="kpi-properties"></a>Proprietà indicatore KPI  
@@ -111,7 +96,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |Tendenza|Smile|3|  
   
 ## <a name="see-also"></a>Vedere anche  
- [DROP KPI-istruzione &#40; MDX &#41;](../mdx/mdx-data-definition-drop-kpi.md)   
- [Le istruzioni di definizione dei dati MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzione DROP KPI &#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
+ [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

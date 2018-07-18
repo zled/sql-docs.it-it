@@ -1,31 +1,24 @@
 ---
-title: Autorizzazioni PDW (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: "23"
-ms.openlocfilehash: 49bcb7cf5e8d4bb03acd9db5de87716ec2462191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Le autorizzazioni in Parallel Data Warehouse | Documenti Microsoft
+description: In questo articolo illustra i requisiti e le opzioni per la gestione delle autorizzazioni di database per Parallel Data Warehouse.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 16ed81d3349cd1e641a66a95d9993e2a86ca4098
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-permissions"></a>Autorizzazioni di PDW
-Questo argomento descrive i requisiti e le opzioni per la gestione delle autorizzazioni di database per SQL Server PDW.  
+# <a name="managing-permissions-in-parallel-data-warehouse"></a>Gestione delle autorizzazioni in Parallel Data Warehouse
+In questo articolo illustra i requisiti e le opzioni per la gestione delle autorizzazioni di database per SQL Server PDW.  
   
-## <a name="BackupRestoreBasics"></a>Nozioni fondamentali di autorizzazione motore di database  
+## <a name="BackupRestoreBasics"></a>Nozioni fondamentali sull'autorizzazione di motore di database  
 Autorizzazioni del motore di database in SQL Server PDW vengono gestite a livello di server tramite gli account di accesso e a livello di database tramite gli utenti del database e i ruoli del database definiti dall'utente.  
   
 **Account di accesso**  
@@ -68,7 +61,7 @@ L'elenco seguente descrive le autorizzazioni predefinite:
   
 -   Creazione di un account di accesso da using **CREATE LOGIN** istruzione, l'account di accesso riceve il **CONNECT SQL** autorizzazioni consentendo l'account di accesso per connettersi a SQL Server PDW.  
   
--   Quando un utente del database viene creato utilizzando il **CREATE USER** istruzione, l'utente riceve il **CONNECT ON DATABASE::***< database_name >* autorizzazioni, consentendo il account di accesso per connettersi al database come utente.  
+-   Quando un utente del database viene creato utilizzando il **CREATE USER** istruzione, l'utente riceve il **CONNECT ON DATABASE:: * * * < nome_database >* autorizzazioni, consentendo l'account di accesso per la connessione al database come un utente.  
   
 -   Tutte le entità, tra cui il ruolo PUBLIC, non avere alcuna autorizzazione esplicite o implicite per impostazione predefinita poiché le autorizzazioni implicite vengono ereditate dalle autorizzazioni esplicite. Pertanto, quando non le autorizzazioni esplicite sono presenti, non può anche essere alcuna autorizzazione implicite.  
   
@@ -80,7 +73,7 @@ L'elenco seguente descrive le autorizzazioni predefinite:
   
 -   Le transazioni non richiedono le autorizzazioni. Eseguire tutte le entità di **BEGIN TRANSACTION**, **COMMIT**, e **ROLLBACK** i comandi di transazione. Tuttavia, un'entità deve disporre delle autorizzazioni appropriate per eseguire ogni istruzione all'interno della transazione.  
   
--   Il **utilizzare** istruzione non richiede le autorizzazioni. Possono eseguire tutte le entità di **utilizzare** istruzione in qualsiasi database, ma per accedere a un database hanno un'identità utente nel database o l'utente guest deve essere abilitato.  
+-   L'istruzione **USE** non richiede autorizzazioni. Possono eseguire tutte le entità di **utilizzare** istruzione in qualsiasi database, ma per accedere a un database hanno un'identità utente nel database o l'utente guest deve essere abilitato.  
   
 ### <a name="the-public-role"></a>Il ruolo PUBLIC  
 Tutti i nuovi account di accesso dispositivo automaticamente appartiene al ruolo PUBLIC. Ruolo del server PUBLIC presenta le caratteristiche seguenti:  
@@ -95,7 +88,7 @@ Tutti i nuovi account di accesso dispositivo automaticamente appartiene al ruolo
 O meno un account di accesso dispone dell'autorizzazione per eseguire un'azione specifica dipende dalle autorizzazioni concesse o negate per l'account di accesso, utenti e ruoli che utente è membro. Le autorizzazioni a livello di server (ad esempio **CREATE LOGIN** e **VIEW SERVER STATE**) sono disponibili per l'entità a livello di server (account di accesso). Le autorizzazioni a livello di database (ad esempio **selezionare** da una tabella o **EXECUTE** una stored procedure) sono disponibili per l'entità a livello di database (utenti e ruoli del database).  
   
 ### <a name="implicit-and-explicit-permissions"></a>Autorizzazioni implicite ed esplicite  
-Un *autorizzazione esplicita* è un **GRANT** o **DENY** autorizzazioni concesse a un'entità da un **GRANT** o **DENY**istruzione. Cui sono elencate le autorizzazioni di livello di database di [Sys. database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) visualizzazione. Cui sono elencate le autorizzazioni di livello di server di [server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) visualizzazione.  
+Un'*autorizzazione esplicita* è un'autorizzazione **GRANT** o **DENY** concessa a un'entità di sicurezza tramite un'istruzione **GRANT** o **DENY**. Cui sono elencate le autorizzazioni di livello di database di [Sys. database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) visualizzazione. Cui sono elencate le autorizzazioni di livello di server di [server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) visualizzazione.  
   
 Un *autorizzazione implicita* è un **GRANT** o **DENY** autorizzazione che ha ereditato un'entità (account di accesso o ruolo server). Un'autorizzazione può essere ereditata nei modi seguenti.  
   
@@ -103,7 +96,7 @@ Un *autorizzazione implicita* è un **GRANT** o **DENY** autorizzazione che ha e
   
 -   Un'entità può ereditare un'autorizzazione su un oggetto subordinato (ad esempio una tabella), se l'entità dispone di un'autorizzazione su uno degli ambiti padre oggetti (ad esempio lo schema della tabella o l'autorizzazione per l'intero database).  
   
--   Un'entità può ereditare un'autorizzazione con un'autorizzazione che include un'autorizzazione subordinata. Ad esempio il **ALTER ANY USER** autorizzazione include il **CREATE USER** e **ALTER ON USER::**  *<name>*  autorizzazioni.  
+-   Un'entità può ereditare un'autorizzazione con un'autorizzazione che include un'autorizzazione subordinata. Ad esempio il **ALTER ANY USER** autorizzazione include il **CREATE USER** e il **ALTER ON USER:: * * *<name>*  autorizzazioni.  
   
 ### <a name="determining-permissions-when-performing-actions"></a>Determinazione delle autorizzazioni per eseguire le azioni  
 Il processo di determinazione di autorizzazione da assegnare a un'entità è complesso. La complessità si verifica durante la determinazione di autorizzazioni implicite perché le entità possono essere membri di più ruoli e le autorizzazioni possono essere passate a più livelli nella gerarchia dei ruoli.  
@@ -214,7 +207,7 @@ Esistono 9 ruoli predefiniti del database.
 ### <a name="permissions-of-the-fixed-database-roles"></a>Autorizzazioni dei ruoli predefiniti del Database  
 Il sistema di ruoli predefiniti del server e ruoli predefiniti del database è un sistema legacy ha avuto origine in anni ' 80. Ruoli predefiniti sono ancora supportati e sono utili in ambienti in cui sono presenti alcuni utenti e alle esigenze di sicurezza sono semplici. A partire da SQL Server 2005, è stato creato un sistema di concessione dell'autorizzazione per più dettagliato. Questo nuovo sistema è più granulare, che fornisce molte altre opzioni per la concessione e negazione di autorizzazioni. La complessità del sistema più granulare aggiuntiva rende più difficile per ulteriori informazioni, ma la maggior parte dei sistemi aziendali devono concedere le autorizzazioni anziché utilizzare i ruoli predefiniti. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md). -->Il grafico seguente sono indicate le autorizzazioni associate a ogni ruolo predefinito del database. Tutte le autorizzazioni in questa immagine di SQL Server non sono disponibili (o necessario) nei punti di accesso.  
   
-![Ruoli predefiniti del database per la sicurezza APS](./media/pdw-permissions/APS_security_fixed_db_roles.png "APS_security_fixed_db_roles")  
+![Ruoli del database per la sicurezza APS](./media/pdw-permissions/APS_security_fixed_db_roles.png "APS_security_fixed_db_roles")  
   
 ### <a name="related-content"></a>Contenuto correlato  
   
@@ -225,7 +218,7 @@ Il sistema di ruoli predefiniti del server e ruoli predefiniti del database è u
 Ruoli predefiniti del server vengono creati automaticamente da SQL Server. SQL Server PDW è un'implementazione limitata di ruoli predefiniti del server di SQL Server. Solo il **sysadmin** e **pubblica** presenti account di accesso utente come membri. Il **setupadmin** e **dbcreator** vengono utilizzati internamente da SQL Server PDW. Membri aggiuntivi non possono essere aggiunti o rimossi da alcun ruolo.  
   
 ### <a name="sysadmin-fixed-server-role"></a>sysadmin ruolo Server predefinito  
-I membri del ruolo predefinito del server **sysadmin** possono eseguire qualsiasi attività nel server. Il **sa** account di accesso è l'unico membro del **sysadmin** ruolo predefinito del server. Non è possibile aggiungere account di accesso aggiuntivi per il **sysadmin** ruolo predefinito del server. Concessione di **CONTROL SERVER** autorizzazione è all'incirca l'appartenenza al **sysadmin** ruolo predefinito del server. Nell'esempio seguente viene concessa la **CONTROL SERVER** dell'autorizzazione per un account di accesso denominato Fay.  
+I membri del ruolo predefinito del server **sysadmin** possono eseguire qualsiasi attività nel server. Il **sa** account di accesso è l'unico membro del **sysadmin** ruolo predefinito del server. Non è possibile aggiungere account di accesso aggiuntivi per il **sysadmin** ruolo predefinito del server. La concessione dell'autorizzazione **CONTROL SERVER** è simile all'appartenenza al ruolo predefinito del server **sysadmin**. Nell'esempio seguente viene concessa la **CONTROL SERVER** dell'autorizzazione per un account di accesso denominato Fay.  
   
 ```sql  
 USE master;  

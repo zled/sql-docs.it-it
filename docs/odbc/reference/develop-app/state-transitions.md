@@ -1,16 +1,14 @@
 ---
 title: Transizioni di stato | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - unallocated state [ODBC]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - allocated state [ODBC]
 - connection state [ODBC]
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6795a0e730f1b927b7921863714a2a9db55551e4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 424c421b29dce6bedad9a73c1d27acb01b6e77c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="state-transitions"></a>Transizioni di stato
 ODBC definisce discreti *stati* per ogni ambiente, ogni connessione e ogni istruzione. Ad esempio, l'ambiente ha tre stati possibili: non allocato (in cui non è allocato alcun ambiente), allocato (in cui viene allocato un ambiente ma non le connessioni vengono allocate) e connessione (in cui un ambiente e una o più connessioni sono allocato). Le connessioni sono sette possibili stati; le istruzioni sono stati possibili 13.  

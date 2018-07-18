@@ -1,24 +1,18 @@
 ---
 title: Riferimento API per servizi di SQL Server Machine Learning | Documenti Microsoft
-ms.custom: 
-ms.date: 10/31/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: ab95ffe13fafa6e54d129ae155ddd58c16f07044
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 8f0714f223145acd65a0dd57d02b105e5ec2aa0e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563650"
 ---
 # <a name="api-reference-for-sql-server-machine-learning-services"></a>Riferimento API per servizi di SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,13 +26,13 @@ La maggior parte, SQL Server utilizza le stesse librerie R e Python disponibili 
 > [!NOTE]
 > Documentazione relativa a tutte le API deriva da codice sorgente e non è stata modificata. Se si verificano errori, aggiungere un commento nella documentazione di riferimento dell'API. 
 
-## <a name="r"></a>L
+## <a name="r"></a>R
 
 + [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 
     Algoritmi scalabili che supportano i contesti di calcolo remoti e di più origini dati.
 
-+ [MicrosoftML](https://docs.microsoft.com/machine-learning-serverr-reference/microsoftml/microsoftml-package)
++ [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 
     Apprendimento delle trasformazioni e gli algoritmi per R. richiede RevoScaleR automatico veloce e scalabile.
 
@@ -66,7 +60,7 @@ La maggior parte, SQL Server utilizza le stesse librerie R e Python disponibili 
 
 ## <a name="related-apis"></a>API correlate
 
-+ [Riferimento alla funzione RevoPEMAR](https://docs.microsoft.com/machine-learning-server/r-reference/revopemar/pemar)
++ [Riferimento alle funzioni RevoPEMAR](https://docs.microsoft.com/machine-learning-server/r-reference/revopemar/pemar)
 
     Supporta lo sviluppo di algoritmi paralleli
 
@@ -80,4 +74,4 @@ La maggior parte, SQL Server utilizza le stesse librerie R e Python disponibili 
 
 + [Funzioni scaleR per l'utilizzo di SQL Server](scaler-functions-for-working-with-sql-server-data.md)
 + [Generare una stored procedure utilizzando sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
-+ [Lettura dati MDX in R tramite olapR](how-to-create-mdx-queries-using-olapr.md)
++ [Lettura dei dati MDX in R tramite olapR](how-to-create-mdx-queries-using-olapr.md)

@@ -1,16 +1,14 @@
 ---
-title: SEQUENZA di ALTER (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER SEQUENCE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SEQUENCE_TSQL
@@ -21,25 +19,24 @@ helpviewer_keywords:
 - sequence number object, altering
 - ALTER SEQUENCE statement
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 66960ed0ae27cb7ecbe2d39d0e30d1ec12dcc3cb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a51c1e1cd1c15a5fc219f42d89f2815ace318012
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Modifica gli argomenti di un oggetto sequenza esistente. Se la sequenza è stata creata con la **CACHE** opzione, la sequenza di modifica implica la ricreazione della cache.  
+  Modifica gli argomenti di un oggetto sequenza esistente. Se la sequenza è stata creata con l'opzione **CACHE**, la modifica della sequenza comporta la ricreazione della cache.  
   
- Gli oggetti sequenza vengono creati utilizzando il [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) istruzione. Le sequenze sono valori interi e possono essere di qualsiasi tipo di dati in grado di restituire un intero. Non è possibile modificare il tipo di dati tramite l'istruzione ALTER SEQUENCE. Per modificare il tipo di dati, eliminare e ricreare l'oggetto sequenza.  
+ Gli oggetti sequenza vengono creati tramite l'istruzione [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). Le sequenze sono valori interi e possono essere di qualsiasi tipo di dati in grado di restituire un intero. Non è possibile modificare il tipo di dati tramite l'istruzione ALTER SEQUENCE. Per modificare il tipo di dati, eliminare e ricreare l'oggetto sequenza.  
   
- Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base a una specifica. Si generano nuovi valori da una sequenza chiamando la funzione NEXT VALUE FOR. Usare **sp_sequence_get_range** per ottenere immediatamente più numeri di sequenza. Per informazioni e scenari che utilizzano entrambi CREATE SEQUENCE, **sp_sequence_get_range**e la funzione NEXT VALUE FOR, vedere [numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base a una specifica. Si generano nuovi valori da una sequenza chiamando la funzione NEXT VALUE FOR. Usare **sp_sequence_get_range** per ottenere immediatamente più numeri di sequenza. Per informazioni e scenari in cui vengono usate le istruzioni CREATE SEQUENCE, **sp_sequence_get_range** e la funzione NEXT VALUE FOR, vedere [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,16 +58,16 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  *sequence_name*  
  Specifica il nome univoco con il quale è nota la sequenza nel database. Il tipo è **sysname**.  
   
- RIAVVIARE [WITH \<costante >]  
+ RESTART [ WITH \<constant> ]  
  Valore successivo che verrà restituito dall'oggetto sequenza. Se specificato, il valore RESTART WITH deve essere un numero intero minore o uguale al valore massimo e maggiore o uguale al valore minimo dell'oggetto sequenza. Se il valore WITH viene omesso, la numerazione della sequenza ricomincia in base alle opzioni CREATE SEQUENCE originali.  
   
- INCREMENT BY \<costante >  
+ INCREMENT BY \<constant>  
  Valore utilizzato per incrementare (o diminuire, in caso di valore negativo) il valore di base dell'oggetto sequenza per ogni chiamata alla funzione NEXT VALUE FOR. Se l'incremento è un valore negativo, l'oggetto sequenza ha un ordine decrescente, in caso contrario avrà un ordine crescente. L'incremento non può essere 0.  
   
- [MINVALUE \<costante > | NESSUN MINVALUE]  
+ [ MINVALUE \<constant> | NO MINVALUE ]  
  Specifica i limiti per l'oggetto sequenza. Se viene specificato NO MINVALUE, viene utilizzato il valore possibile minimo del tipo di dati della sequenza.  
   
- [MAXVALUE \<costante > | NESSUN MAXVALUE  
+ [ MAXVALUE \<constant> | NO MAXVALUE  
  Specifica i limiti per l'oggetto sequenza. Se viene specificato NO MAXVALUE, viene utilizzato il valore possibile massimo del tipo di dati della sequenza.  
   
  [ CYCLE | NO CYCLE ]  
@@ -79,13 +76,13 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 > [!NOTE]  
 >  Dopo la ripresa del ciclo, il valore successivo sarà il valore minimo o massimo, non il valore START VALUE della sequenza.  
   
- [CACHE [\<costante >] | NO CACHE]  
+ [ CACHE [\<constant> ] | NO CACHE ]  
  Migliora le prestazioni delle applicazioni che utilizzano gli oggetti sequenza riducendo il numero di I/O necessari per rendere persistenti i valori generati nelle tabelle di sistema.  
   
- Per ulteriori informazioni sul comportamento della cache, vedere [CREATE SEQUENCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-sequence-transact-sql.md).  
+ Per altre informazioni sul comportamento della cache, vedere [REATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
- Per informazioni sulla creazione delle sequenze e come viene gestita la cache della sequenza di, vedere [CREATE SEQUENCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-sequence-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Per informazioni sulla creazione delle sequenze e sulla gestione della cache delle sequenze, vedere [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
  Non è possibile modificare MINVALUE per le sequenze con ordine crescente e MAXVALUE per le sequenze con ordine decrescente in un valore che non consente il valore START WITH della sequenza. Per modificare MINVALUE per una sequenza con ordine crescente in un numero maggiore del valore START WITH o per modificare MAXVALUE di una sequenza con ordine decrescente in un numero più piccolo del valore START WITH, includere l'argomento RESTART WITH per riprendere la sequenza in un punto desiderato compreso nell'intervallo minimo e massimo.  
   
@@ -94,23 +91,23 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
- Richiede **ALTER** l'autorizzazione per la sequenza o **ALTER** autorizzazione per lo schema. Per concedere **ALTER** l'autorizzazione per la sequenza, utilizzare **ALTER ON OBJECT** nel formato seguente:  
+### <a name="permissions"></a>Autorizzazioni  
+ È necessaria l'autorizzazione **ALTER** per la sequenza o **ALTER** per lo schema. Per concedere l'autorizzazione **ALTER** per la sequenza, usare **ALTER ON OBJECT** nel formato seguente:  
   
 ```  
 GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]  
 ```  
   
- La proprietà di un oggetto sequenza può essere trasferita tramite il **ALTER AUTHORIZATION** istruzione.  
+ È possibile trasferire la proprietà di un oggetto sequenza tramite l'istruzione **ALTER AUTHORIZATION**.  
   
-### <a name="audit"></a>Controllo  
- Per controllare **ALTER SEQUENCE**, monitoraggio di **SCHEMA_OBJECT_CHANGE_GROUP**.  
+### <a name="audit"></a>Controllare il funzionamento di  
+ Per controllare **ALTER SEQUENCE**, monitorare **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Esempi  
- Per esempi di creazione di sequenze e utilizzando il **NEXT VALUE FOR** funzione per generare numeri di sequenza, vedere [numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Per esempi relativi alla creazione di sequenze e all'uso della funzione **NEXT VALUE FOR** per generare numeri di sequenza, vedere [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
 ### <a name="a-altering-a-sequence"></a>A. Alterazione di una sequenza  
- Nell'esempio seguente viene creato uno schema denominato Test e una sequenza denominata TestSeq utilizzando il **int** tipo di dati, con un intervallo compreso tra 0 e 255. La sequenza inizia con 125 e aumenta di 25 ogni volta che viene generato un numero. Poiché la sequenza è configurata per la ripresa del ciclo quando il valore supera il valore massimo di 200, la sequenza riprende dal valore minimo di 100.  
+ Nell'esempio seguente vengono creati uno schema denominato Test e una sequenza denominata TestSeq usando il tipo di dati **int**, con un intervallo di valori compreso tra 0 e 255. La sequenza inizia con 125 e aumenta di 25 ogni volta che viene generato un numero. Poiché la sequenza è configurata per la ripresa del ciclo quando il valore supera il valore massimo di 200, la sequenza riprende dal valore minimo di 100.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -128,7 +125,7 @@ CREATE SEQUENCE Test.TestSeq
 GO  
 ```  
   
- L'esempio seguente modifica la sequenza TestSeq per avere un intervallo compreso tra 0 e 255. La sequenza riavvia la serie di numerazione con 100 e aumenta di 50 ogni volta che viene generato un numero.  
+ Nell'esempio seguente la sequenza TestSeq viene modificata in modo da avere un intervallo di valori compreso tra 0 e 255. La sequenza riavvia la serie di numerazione con 100 e aumenta di 50 ogni volta che viene generato un numero.  
   
 ```  
 ALTER SEQUENCE Test. TestSeq  
@@ -142,7 +139,7 @@ ALTER SEQUENCE Test. TestSeq
 GO  
 ```  
   
- Poiché la sequenza non viene ripresa, il **NEXT VALUE FOR** funzione genereranno un errore durante la sequenza supera 200.  
+ Poiché la sequenza non viene ripresa, la funzione **NEXT VALUE FOR** genererà un errore quando la sequenza supererà 200.  
   
 ### <a name="b-restarting-a-sequence"></a>B. Riavvio di una sequenza  
  Nell'esempio seguente viene creata una sequenza denominata CountBy1. La sequenza utilizza i valori predefiniti.  
@@ -157,7 +154,7 @@ CREATE SEQUENCE Test.CountBy1 ;
 SELECT NEXT VALUE FOR Test.CountBy1  
 ```  
   
- Il valore restituito-9.223.372.036.854.775.808 è il valore minimo per il **bigint** tipo di dati. Il proprietario è consapevole del fatto che la sequenza inizi con 1, ma non indica la **START WITH** clausola quando ha creato la sequenza. Per risolvere l'errore, il proprietario esegue l'istruzione seguente.  
+ Il valore restituito -9.223.372.036.854.775.808 è il valore più piccolo possibile per il tipo di dati **bigint**. Il proprietario voleva che la sequenza iniziasse con 1, ma non ha indicato la clausola **START WITH** quando ha creato la sequenza. Per risolvere l'errore, il proprietario esegue l'istruzione seguente.  
   
 ```  
 ALTER SEQUENCE Test.CountBy1 RESTART WITH 1 ;  
@@ -171,7 +168,7 @@ SELECT NEXT VALUE FOR Test.CountBy1;
   
  Il numero è ora 1, come previsto.  
   
- La sequenza CountBy1 è stata creata utilizzando il valore predefinito di NO CYCLE, pertanto arresterà dopo avere generato il numero 9.223.372.036.854.775.807. Le chiamate successive all'oggetto sequenza restituiranno l'errore 11728. Nell'istruzione seguente viene modificato l'oggetto sequenza in modo che venga ripreso il ciclo e viene impostata una cache di 20.  
+ La sequenza CountBy1 è stata creata usando il valore predefinito di NO CYCLE, pertanto si arresterà dopo avere generato il numero 9.223.372.036.854.775.807. Le chiamate successive all'oggetto sequenza restituiranno l'errore 11728. Nell'istruzione seguente viene modificato l'oggetto sequenza in modo che venga ripreso il ciclo e viene impostata una cache di 20.  
   
 ```  
 ALTER SEQUENCE Test.CountBy1  
@@ -182,13 +179,13 @@ ALTER SEQUENCE Test.CountBy1
   
  Quando l'oggetto sequenza raggiunge 9.223.372.036.854.775.807 il ciclo viene ripreso e il numero successivo dopo la ripresa del ciclo sarà il minimo del tipo di dati, ovvero -9.223.372.036.854.775.808.  
   
- Il proprietario si rende conto che la **bigint** tipo di dati utilizza 8 byte ogni volta che viene utilizzato. Il **int** tipo di dati che utilizza 4 byte è sufficiente. Non è tuttavia possibile modificare il tipo di dati di un oggetto sequenza. Per modificare un **int** del tipo di dati, il proprietario deve eliminare l'oggetto sequenza e ricreare l'oggetto con tipo di dati corretto.  
+ Il proprietario nota che il tipo di dati **bigint** usa 8 byte ogni volta che viene impiegato. Il tipo di dati **int** che usa 4 byte è sufficiente. Non è tuttavia possibile modificare il tipo di dati di un oggetto sequenza. Per modificare un tipo di dati **int**, il proprietario deve eliminare l'oggetto sequenza e ricrearlo con il tipo di dati corretto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREATE SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [VALORE successivo per &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md)   
- [sp_sequence_get_range &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
+ [sp_sequence_get_range &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   

@@ -1,16 +1,14 @@
 ---
-title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SMALLDATETIMEFROMPARTS
@@ -20,21 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - SMALLDATETIMEFROMPARTS function
 ms.assetid: 7467fdab-e588-419c-9e29-42caec34a9ea
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 07eaaf385e0227f3e5ddf7d0c1ee506aecca211a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dbb54802a67fcc046223da4b02e976329ee90148
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Restituisce un **smalldatetime** valore per la data e ora specificate.  
+  Restituisce un valore di tipo **smalldatetime** per la data e l'ora specificate.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,28 +43,28 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *anno*  
+ *year*  
  Espressione intera che specifica un anno.  
   
- *mese*  
+ *month*  
  Espressione intera che specifica un mese.  
   
- *giorno*  
+ *day*  
  Espressione intera che specifica un giorno.  
   
- *ora*  
+ *hour*  
  Espressione intera che specifica le ore.  
   
- *minuto*  
+ *minute*  
  Espressione intera che specifica i minuti.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **smalldatetime**  
   
-## <a name="remarks"></a>Osservazioni  
- Questa funzione agisce come un costruttore per un oggetto completamente inizializzato **smalldatetime** valore. Se gli argomenti non sono validi, viene generato un errore. Se gli argomenti obbligatori sono Null, viene restituito un valore Null.  
+## <a name="remarks"></a>Remarks  
+ Queste funzioni si comportano come un costruttore per un valore **smalldatetime** completamente inizializzato. Se gli argomenti non sono validi, viene generato un errore. Se gli argomenti obbligatori sono Null, viene restituito un valore Null.  
   
- Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive, Non è eseguita in modalità remota in server con una versione precedente [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="examples"></a>Esempi  
   

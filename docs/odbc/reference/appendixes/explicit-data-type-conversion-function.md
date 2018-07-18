@@ -1,31 +1,28 @@
 ---
 title: Funzione di conversione del tipo di dati espliciti | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit data type conversion functions [ODBC]
 - data type conversion functions [ODBC]
 - functions [ODBC], explicit data type conversion functions
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c1520ca18c42d2efbc2822630fe7ccae9f90302a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 1c0326cb06ce772a66be464c176cba58c085d855
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicit-data-type-conversion-function"></a>Funzione di conversione di tipi di dati esplicite
 Conversione di tipi di dati esplicito è specificata in termini di definizioni dei tipi di dati SQL.  
@@ -34,7 +31,7 @@ Conversione di tipi di dati esplicito è specificata in termini di definizioni d
   
  Il formato del **CONVERTIRE** funzione è:  
   
- **CONVERTIRE (** *value_exp*, *data_type***)**  
+ **CONVERTIRE (** *value_exp*, *data_type * * *)**  
   
  La funzione restituisce il valore specificato da *value_exp* convertito specificata *data_type*, dove *data_type* è una delle parole chiave seguenti:  
   
@@ -62,7 +59,7 @@ Conversione di tipi di dati esplicito è specificata in termini di definizioni d
   
  La sintassi ODBC per la funzione di conversione di tipo di dati espliciti non supporta la specifica del formato di conversione. Se specifica dei formati espliciti è supportata dall'origine dati sottostante, un driver necessario specificare un valore predefinito o implementare specifica di formato.  
   
- L'argomento *value_exp* può essere un nome di colonna, il risultato di un'altra funzione scalare o un valore numerico o stringa letterale. Ad esempio  
+ L'argomento *value_exp* può essere un nome di colonna, il risultato di un'altra funzione scalare o un valore numerico o stringa letterale. Esempio:  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

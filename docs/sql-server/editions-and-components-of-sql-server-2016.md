@@ -1,16 +1,16 @@
 ---
-title: "Edizioni e funzionalità supportate di SQL Server 2016 | Microsoft Docs"
-ms.custom: 
+title: Edizioni e funzionalità supportate di SQL Server 2016 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: server-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- server-general
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
 - Developer Edition [SQL Server]
@@ -35,16 +35,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
-caps.latest.revision: "121"
+caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: ed553003bbcb95f5c898815506cb3dd26ae7564c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: b646e55f8849bc6465b59f7295581aefe03f048c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Edizioni e funzionalità supportate di SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ Per le note sulla versione più recenti e informazioni sulle novità, vedere qua
 |Enterprise|L'offerta Premium, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition offre le funzionalità complete dei centri dati di fascia alta con prestazioni velocissime, virtualizzazione illimitata e Business Intelligence end-to-end, abilitando livelli di servizio elevati per carichi di lavoro di importanza critica e l'accesso dell'utente finale per la comprensione dei dati.|  
 |Standard|L'edizione[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard offre un database di gestione dati e di Business Intelligence di base per l'esecuzione di applicazioni per reparti e piccole organizzazioni e supporta gli strumenti di sviluppo comuni locali e per cloud, abilitando una gestione efficace del database con risorse IT minime.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition costituisce un'opzione con un costo totale di proprietà ridotto per provider di servizi di hosting Web e VAP Web, offrendo funzionalità di scalabilità, convenienza e facilità di gestione per proprietà Web di ogni dimensione.|  
-|Sviluppatore|L'edizione[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer consente agli sviluppatori di compilare qualsiasi tipo di applicazione in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Benché includa tutte le funzionalità dell'edizione Enterprise, ne è consentito l'utilizzo solo come sistema di sviluppo e di prova e non come server di produzione. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer rappresenta la scelta ideale per chi vuole compilare<br />                e testare applicazioni[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] .|  
+|Developer|L'edizione[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer consente agli sviluppatori di compilare qualsiasi tipo di applicazione in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Benché includa tutte le funzionalità dell'edizione Enterprise, ne è consentito l'utilizzo solo come sistema di sviluppo e di prova e non come server di produzione. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer rappresenta la scelta ideale per chi vuole compilare<br />                e testare applicazioni[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] .|  
 |Edizioni Express|L'edizione Express è un database di base gratuito, ideale per l'apprendimento e la compilazione di applicazioni basate sui dati desktop e server di piccole dimensioni. Questa edizione costituisce la scelta ottimale per fornitori di software indipendenti, sviluppatori e sviluppatori amatoriali di applicazioni client. Se sono necessarie funzionalità di database più avanzate, è possibile aggiornare facilmente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express a versioni di fascia superiore di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, una versione leggera di Express che, pur includendone tutte le funzionalità di programmazione, viene eseguita in modalità utente e prevede un'installazione veloce senza operazioni di configurazione, nonché un elenco ridotto di prerequisiti.|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>Utilizzo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con un server Internet  
@@ -126,8 +125,8 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
   
 |Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Capacità di calcolo massima usata da una singola istanza - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|valore massimo del sistema operativo|Limitato a meno di 4 socket o 24 core|Limitato a meno di 4 socket o 16 core|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core| 
-|Capacità di calcolo massima usata da una singola istanza - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oppure [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|valore massimo del sistema operativo|Limitato a meno di 4 socket o 24 core|Limitato a meno di 4 socket o 16 core|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
+|Capacità di calcolo massima usata da una singola istanza - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Valore massimo del sistema operativo|Limitato a meno di 4 socket o 24 core|Limitato a meno di 4 socket o 16 core|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core| 
+|Capacità di calcolo massima usata da una singola istanza - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oppure [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Valore massimo del sistema operativo|Limitato a meno di 4 socket o 24 core|Limitato a meno di 4 socket o 16 core|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
 |Memoria massima per il pool di buffer per ogni istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|valore massimo del sistema operativo|128 GB|64 GB|1410 MB|1410 MB|
 |Memoria massima per la cache dei segmenti Columnstore per ogni istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria illimitata| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
 |Dimensione massima dati ottimizzati per la memoria per ogni database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria illimitata| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
@@ -144,22 +143,22 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Supporto di Server Core <sup>1</sup>|Sì|Sì|Sì|Sì|Sì|  
-|Log shipping|Sì|Sì|Sì|No|No|  
+|Log shipping|Sì|Sì|Sì|no|no|  
 |Mirroring del database|Sì|Sì<br /><br /> Solo modalità di protezione Full|Solo server di controllo|Solo server di controllo|Solo server di controllo| 
-|Compressione backup|Sì|Sì|No|No|No| 
+|Compressione backup|Sì|Sì|no|no|no| 
 |Snapshot del database|Sì|Sì <sup>3</sup>|Sì <sup>3</sup>|Sì <sup>3</sup>|Sì <sup>3</sup>|
-|Istanze del cluster di failover Always On|Sì<br /><br /> Il numero di nodi è il valore massimo del sistema operativo|Sì<br /><br /> Supporto per 2 nodi|No|No|No|  
-|Gruppi di disponibilità Always On|Sì<br /><br /> Fino a 8 repliche secondarie, incluse 2 repliche secondarie sincrone|No|No|No|No|
-|Gruppi di disponibilità di base <sup>2</sup>|No|Sì<br /><br /> Supporto per 2 nodi|No|No|No|
-|Ripristino di pagine e file online|Sì|No|No|No|No|
-|Indicizzazione online|Sì|No|No|No|No|
-|Modifica dello schema online|Sì|No|No|No|No|
-|Recupero rapido|Sì|No|No|No|No|
-|Backup con mirroring|Sì|No|No|No|No|
-|Aggiunta di memoria a caldo e CPU|Sì|No|No|No|No|
+|Istanze del cluster di failover Always On|Sì<br /><br /> Il numero di nodi è il valore massimo del sistema operativo|Sì<br /><br /> Supporto per 2 nodi|no|no|no|  
+|Gruppi di disponibilità Always On|Sì<br /><br /> Fino a 8 repliche secondarie, incluse 2 repliche secondarie sincrone|no|no|no|no|
+|Gruppi di disponibilità di base <sup>2</sup>|no|Sì<br /><br /> Supporto per 2 nodi|no|no|no|
+|Ripristino di pagine e file online|Sì|no|no|no|no|
+|Indicizzazione online|Sì|no|no|no|no|
+|Modifica dello schema online|Sì|no|no|no|no|
+|Recupero rapido|Sì|no|no|no|no|
+|Backup con mirroring|Sì|no|no|no|no|
+|Aggiunta di memoria a caldo e CPU|Sì|no|no|no|no|
 |Database Recovery Advisor|Sì|Sì|Sì|Sì|Sì|
-|Backup crittografato|Sì|Sì|No|No|No|
-|Backup ibrido in Microsoft Azure (backup nell'URL)|Sì|Sì|No|No|No|  
+|Backup crittografato|Sì|Sì|no|no|no|
+|Backup ibrido in Microsoft Azure (backup nell'URL)|Sì|Sì|no|no|no|  
   
  <sup>1</sup> Per altre informazioni sull'installazione di SQL Server in Server Core, vedere [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md) (Installare SQL Server in Server Core). 
 
@@ -173,17 +172,17 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Columnstore <sup>1</sup>|Sì|Sì <sup>2</sup>|Sì <sup>2</sup>|Sì<sup>2</sup>|Sì<sup>2</sup>|  
 |OLTP in memoria <sup>1</sup>|Sì|Sì <sup>2</sup>|Sì <sup>2</sup>|Sì <sup>2</sup>, <sup>3</sup>|Sì <sup>2</sup>|
-|Estensione database|Sì|Sì|Sì|Sì|Sì|
+|Stretch Database|Sì|Sì|Sì|Sì|Sì|
 |Memoria principale persistente|Sì|Sì|Sì|Sì|Sì|
 |Supporto di più istanze|50|50|50|50|50|
 |Partizionamento di tabelle e indici|Sì|Sì <sup>2</sup>|Sì <sup>2</sup>|Sì <sup>2</sup>|Sì <sup>2</sup>|  
 |Compressione dati|Sì|Sì <sup>2</sup>|Sì <sup>2</sup>|Sì <sup>2</sup>|Sì <sup>2</sup>|
-|Resource Governor|Sì|No|No|No|No|  
-|Parallelismo della tabella partizionata|Sì|No|No|No|No|
+|Resource Governor|Sì|no|no|no|no|  
+|Parallelismo della tabella partizionata|Sì|no|no|no|no|
 |Più contenitori Filestream|Sì|Sì <sup>2</sup>|Sì <sup>2</sup>|Sì <sup>2</sup>|Sì <sup>2</sup>|
-|Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Sì|No|No|No|No|
-|Estensione pool di buffer|Sì|Sì|No|No|No|
-|Governance delle risorse di I/O|Sì|No|No|No|No|  
+|Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Sì|no|no|no|no|
+|Estensione pool di buffer|Sì|Sì|no|no|no|
+|Governance delle risorse di I/O|Sì|no|no|no|no|  
 |Durabilità posticipata|Sì|Sì|Sì|Sì|Sì|
 
 <sup>1</sup> Le dimensioni dati OLTP in memoria e la cache dei segmenti Columnstore sono limitate alla quantità di memoria specificata dall'edizione nella sezione Limiti di scalabilità. I gradi di parallelismo (DOP) massimi sono limitati. I gradi di parallelismo del processo (DOP) per una compilazione indice sono limitati a 2 DOP per l'edizione Standard e 1 DOP per le edizioni Web ed Express. Questo si riferisce agli indici columnstore creati tramite le tabelle basate su disco e le tabelle ottimizzate per la memoria.
@@ -200,26 +199,26 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Mascheramento dati dinamici|Sì|Sì|Sì <sup>1</sup>|Sì <sup>1</sup>|Sì <sup>1</sup>|   
 |Controllo di base|Sì|Sì|Sì|Sì|Sì| 
 |Controllo con granularità fine|Sì|Sì <sup>1</sup>|Sì <sup>1</sup>|Sì <sup>1</sup>|Sì <sup>1</sup>| 
-|Crittografia trasparente del database|Sì|No|No|No|No|   
-|Extensible Key Management|Sì|No|No|No|No| 
+|Crittografia trasparente del database|Sì|no|no|no|no|   
+|Extensible Key Management|Sì|no|no|no|no| 
 |Ruoli definiti dall'utente|Sì|Sì|Sì|Sì|Sì| 
 |Database indipendenti|Sì|Sì|Sì|Sì|Sì| 
-|Crittografia per backup|Sì|Sì|No|No|No|  
+|Crittografia per backup|Sì|Sì|no|no|no|  
 
 <sup>1</sup> Si applica a [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1.  
 ##  <a name="Replication"></a> Replication  
   
 |Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Sottoscrittori eterogenei|Sì|Sì|No|No|No|  
+|Sottoscrittori eterogenei|Sì|Sì|no|no|no|  
 |Replica di tipo merge|Sì|Sì|Sì (solo sottoscrittore)|Sì (solo sottoscrittore)|Sì (solo sottoscrittore)|   
-|Pubblicazione Oracle|Sì|No|No|No|No| 
-|Replica transazionale peer-to-peer|Sì|No|No|No|No|   
+|Pubblicazione Oracle|Sì|no|no|no|no| 
+|Replica transazionale peer-to-peer|Sì|no|no|no|no|   
 |Replica snapshot|Sì|Sì|Sì (solo sottoscrittore)|Sì (solo sottoscrittore)|Sì (solo sottoscrittore)|   
 |Rilevamento delle modifiche in SQL Server|Sì|Sì|Sì|Sì|Sì| 
 |Replica transazionale|Sì|Sì|Sì (solo sottoscrittore)|Sì (solo sottoscrittore)|Sì (solo sottoscrittore)|   
-|Replica transazionale in Azure|Sì|Sì|No|No|No|   
-|Sottoscrizione aggiornabile con replica transazionale|Sì|No|No|No|No|  
+|Replica transazionale in Azure|Sì|Sì|no|no|no|   
+|Sottoscrizione aggiornabile con replica transazionale|Sì|no|no|no|no|  
   
 ##  <a name="SSMS"></a> Management Tools  
   
@@ -228,13 +227,13 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |SMO (SQL Management Objects)|Sì|Sì|Sì|Sì|Sì|  
 |Gestione configurazione SQL Server|Sì|Sì|Sì|Sì|Sì|   
 |CMD SQL (strumento da riga di comando)|Sì|Sì|Sì|Sì|Sì|      
-|Riesecuzione distribuita - Strumento di amministrazione|Sì|Sì|Sì|Sì|No|  
-|Riesecuzione distribuita - Client|Sì|Sì|Sì|No|No|  
-|Distributed Replay - Controller|Sì (fino a 16 client)|Sì (1 client)|Sì (1 client)|No|No|   
+|Riesecuzione distribuita - Strumento di amministrazione|Sì|Sì|Sì|Sì|no|  
+|Riesecuzione distribuita - Client|Sì|Sì|Sì|no|no|  
+|Distributed Replay - Controller|Sì (fino a 16 client)|Sì (1 client)|Sì (1 client)|no|no|   
 |SQL Profiler|Sì|Sì|No <sup>1</sup>|No <sup>1</sup>|No <sup>1</sup>|  
-|SQL Server Agent|Sì|Sì|Sì|No|No| 
-|Management Pack di Microsoft System Center Operations Manager|Sì|Sì|Sì|No|No|  
-|Ottimizzazione guidata motore di database (DTA)|Sì|Sì <sup>2</sup>|Sì <sup>2</sup>|No|No|      
+|SQL Server Agent|Sì|Sì|Sì|no|no| 
+|Management Pack di Microsoft System Center Operations Manager|Sì|Sì|Sì|no|no|  
+|Ottimizzazione guidata motore di database (DTA)|Sì|Sì <sup>2</sup>|Sì <sup>2</sup>|no|no|      
   
  <sup>1</sup> È possibile eseguire il profiling di SQL Server Web, SQL Server Express, SQL Server Express with Tools ed SQL Server Express with Advanced Services usando le edizioni SQL Server Standard ed SQL Server Enterprise Edition.  
   
@@ -244,25 +243,25 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
   
 |Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Istanze utente|No|No|No|Sì|Sì| 
-|Database locale|No|No|No|Sì|No| 
+|Istanze utente|no|no|no|Sì|Sì| 
+|Database locale|no|no|no|Sì|no| 
 |Connessione amministrativa dedicata|Sì|Sì|Sì|Sì, con flag di traccia|Sì, con flag di traccia|   
 |Supporto per script di PowerShell|Sì|Sì|Sì|Sì|Sì| 
 |Supporto SysPrep <sup>1</sup>|Sì|Sì|Sì|Sì|Sì| 
 |Supporto per le operazioni del componente dell'applicazione livello dati (DAC) - estrazione, distribuzione, aggiornamento, eliminazione|Sì|Sì|Sì|Sì|Sì| 
-|Automazione dei criteri (controllo pianificato e modifica)|Sì|Sì|Sì|No|No|   
-|Agente di raccolta dati relativi alle prestazioni|Sì|Sì|Sì|No|No| 
-|Possibilità di registrarsi come un'istanza gestita in una gestione a più istanze|Sì|Sì|Sì|No|No|   
-|Report di prestazioni standard|Sì|Sì|Sì|No|No| 
-|Guide di piano e blocco del piano per le guide di piano|Sì|Sì|Sì|No|No|   
+|Automazione dei criteri (controllo pianificato e modifica)|Sì|Sì|Sì|no|no|   
+|Agente di raccolta dati relativi alle prestazioni|Sì|Sì|Sì|no|no| 
+|Possibilità di registrarsi come un'istanza gestita in una gestione a più istanze|Sì|Sì|Sì|no|no|   
+|Report di prestazioni standard|Sì|Sì|Sì|no|no| 
+|Guide di piano e blocco del piano per le guide di piano|Sì|Sì|Sì|no|no|   
 |Query diretta di viste indicizzate (tramite hint NOEXPAND)|Sì|Sì|Sì|Sì|Sì| 
-|Gestione automatica viste indicizzate|Sì|Sì|Sì|No|No| 
-|Viste partizionate distribuite|Sì|No|No|No|No| 
-|Operazioni indicizzate parallele|Sì|No|No|No|No|  
-|Utilizzo automatico di viste indicizzate da Query Optimizer|Sì|No|No|No|No| 
-|Verifica di coerenza parallela|Sì|No|No|No|No| 
-|Punto di controllo dell'Utilità SQL Server|Sì|No|No|No|No|    
-|Estensione pool di buffer|Sì|Sì|No|No|No| 
+|Gestione automatica viste indicizzate|Sì|Sì|Sì|no|no| 
+|Viste partizionate distribuite|Sì|no|no|no|no| 
+|Operazioni indicizzate parallele|Sì|no|no|no|no|  
+|Utilizzo automatico di viste indicizzate da Query Optimizer|Sì|no|no|no|no| 
+|Verifica di coerenza parallela|Sì|no|no|no|no| 
+|Punto di controllo dell'Utilità SQL Server|Sì|no|no|no|no|    
+|Estensione pool di buffer|Sì|Sì|no|no|no| 
   
  <sup>1</sup> Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
@@ -274,18 +273,18 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Integrazione con Microsoft Visual Studio|Sì|Sì|Sì|Sì|Sì| 
 |Intellisense (Transact-SQL e MDX)|Sì|Sì|Sì|Sì|Sì| 
-|SQL Server Data Tools (SSDT)|Sì|Sì|Sì|Sì|No|    
-|Strumenti di progettazione, debug e modifica MDX|Sì|Sì|No|No|No|   
+|SQL Server Data Tools (SSDT)|Sì|Sì|Sì|Sì|no|    
+|Strumenti di progettazione, debug e modifica MDX|Sì|Sì|no|no|no|   
   
 ##  <a name="Programmability"></a> Programmability  
   
 |Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Integrazione di R di base|Sì|Sì|Sì|Sì|No|   
-|Integrazione di R avanzato|Sì|No|No|No|No| 
-|R Server (Standalone)|Sì|No|No|No|No|   
+|Integrazione di R di base|Sì|Sì|Sì|Sì|no|   
+|Integrazione di R avanzato|Sì|no|no|no|no| 
+|R Server (Standalone)|Sì|no|no|no|no|   
 |Nodo di calcolo Polybase|Sì|Sì <sup>1</sup>|Sì <sup>1</sup>, <sup>2</sup>|Sì <sup>1</sup>, <sup>2</sup>|Sì <sup>1</sup>, <sup>2</sup>| 
-|Nodo head Polybase|Sì|No|No|No|No| 
+|Nodo head Polybase|Sì|no|no|no|no| 
 |JSON|Sì|Sì|Sì|Sì|Sì|   
 |Archivio query|Sì|Sì|Sì|Sì|Sì|   
 |Temporale|Sì|Sì|Sì|Sì|Sì|   
@@ -297,10 +296,10 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |FileTable|Sì|Sì|Sì|Sì|Sì| 
 |Tipi di dati data e ora|Sì|Sì|Sì|Sì|Sì|  
 |Supporto di internazionalizzazione|Sì|Sì|Sì|Sì|Sì| 
-|Ricerca full-text e semantica|Sì|Sì|Sì|Sì|No| 
-|Impostazione della lingua nelle query|Sì|Sì|Sì|Sì|No|   
+|Ricerca full-text e semantica|Sì|Sì|Sì|Sì|no| 
+|Impostazione della lingua nelle query|Sì|Sì|Sì|Sì|no|   
 |Service Broker (messaggistica)|Sì|Sì|No (solo client)|No (solo client)|No (solo client)|   
-|Transact-SQL - endpoint|Sì|Sì|Sì|No|No| 
+|Transact-SQL - endpoint|Sì|Sì|Sì|no|no| 
 
 <sup>1</sup> La scalabilità orizzontale con più nodi di calcolo richiede un nodo head.
 
@@ -318,13 +317,13 @@ Per informazioni sulle funzionalità di Integration Services (SSIS) supportate d
   
 |Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Creazione di cubi senza database|Sì|Sì|No|No|No |   
-|Generazione automatica dello schema della gestione temporanea e del data warehouse|Sì|Sì|No|No|No| 
-|Change Data Capture|Sì|Sì <sup>1</sup>|No|No|No| 
-|Ottimizzazione query join a stella|Sì|No|No|No|No| 
-|Configurazione scalabile di Analysis Services di sola lettura|Sì|No|No|No|No| 
-|Elaborazione di query parallela su tabelle e indici partizionati|Sì|No|No|No|No|   
-|Aggregazione batch globale|Sì|No|No|No|No| 
+|Creazione di cubi senza database|Sì|Sì|no|no|no |   
+|Generazione automatica dello schema della gestione temporanea e del data warehouse|Sì|Sì|no|no|no| 
+|Change Data Capture|Sì|Sì <sup>1</sup>|no|no|no| 
+|Ottimizzazione query join a stella|Sì|no|no|no|no| 
+|Configurazione scalabile di Analysis Services di sola lettura|Sì|no|no|no|no| 
+|Elaborazione di query parallela su tabelle e indici partizionati|Sì|no|no|no|no|   
+|Aggregazione batch globale|Sì|no|no|no|no| 
 
 <sup>1</sup> Si applica a [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1.  
 ##  <a name="SSAS"></a> Analysis Services  
@@ -369,16 +368,16 @@ Per informazioni sulle funzionalità del client di Business Intelligence support
 |Nome funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Sì|Sì|Sì|Sì|Sì|   
-|Posta elettronica database|Sì|Sì|Sì|No|No| 
+|Posta elettronica database|Sì|Sì|Sì|no|no| 
   
 ##  <a name="Other"></a> Other Components  
   
 |Nome funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No| 
-|StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|   
+|StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|no|no| 
+|StreamInsight HA|StreamInsight Premium Edition|no|no|no|no|   
   
-> [![Download di SSMS](../ssms/download-sql-server-management-studio-ssms.md) **[Scaricare la versione più recente di SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**    
+> [![Download di SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Scaricare la versione più recente di SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   
 ## <a name="see-also"></a>Vedere anche  
  [Documentazione tecnica di SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   

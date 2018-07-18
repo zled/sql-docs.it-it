@@ -1,32 +1,28 @@
 ---
 title: 'Appendice b: tabelle di transizione dello stato di ODBC | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+manager: craigg
+ms.openlocfilehash: a0d114dd574faf2909fa200f7c24ab0ccaa07804
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Appendice b: tabelle di transizione dello stato di ODBC
 Le tabelle in questa appendice illustrano come le funzioni ODBC causano transizioni di ambiente, connessione, istruzione e gli stati del descrittore. Lo stato dell'ambiente, una connessione, istruzione o un descrittore determina in genere quando le funzioni che utilizzano il corrispondente tipo di handle (ambiente di connessione, istruzione o descrittore) possono essere chiamate. Gli stati di ambiente, connessione, l'istruzione e descrittore sovrappongano approssimativamente come illustrato nelle figure seguenti. Ad esempio, la sovrapposizione esatto della connessione stati C5 e C6 e istruzione indica S1 tramite S12 dati dipende dall'origine, poiché le transazioni iniziano in momenti diversi da origini dati diverse e varia a seconda dello stato di descrittore D1i (allocati in modo implicito descrittore) durante lo stato D1e (allocati in modo esplicito descrittore) lo stato dell'istruzione a cui è associato il descrittore, è indipendentemente dallo stato di qualsiasi istruzione. Per una descrizione di ogni stato, vedere [transizioni di ambiente](../../../odbc/reference/appendixes/environment-transitions.md), [connessione transizioni](../../../odbc/reference/appendixes/connection-transitions.md), [istruzione transizioni](../../../odbc/reference/appendixes/statement-transitions.md), e [descrittore transizioni ](../../../odbc/reference/appendixes/descriptor-transitions.md), più avanti in questa appendice.  
@@ -52,7 +48,7 @@ Le tabelle in questa appendice illustrano come le funzioni ODBC causano transizi
 -   **--** -Lo stato rimane invariato dopo l'esecuzione della funzione.  
   
 -   **E**  
-     ***n*** , **C*n * * *, **S*n***, o **D * n***  : consente di spostare lo stato di ambiente, connessione, istruzione o descrittore per il stato specificato.  
+     ***n*** , **C*n * * *, **S*n * **, oppure **1!d * n***  : consente di spostare lo stato di ambiente, connessione, istruzione o descrittore per il stato specificato.  
   
 -   **(QUALI)**  , Ovvero un handle non valido passato alla funzione. Se l'handle è stato un handle null oppure un handle valido di tipo errato, ad esempio, un handle di connessione è stato passato quando è richiesto un handle di istruzione, la funzione non restituisca SQL_INVALID_HANDLE; in caso contrario, il comportamento è indefinito e probabilmente irreversibile. Questo errore viene visualizzato solo quando è il risultato della chiamata della funzione nello stato specificato solo possibile. Questo errore non modifica lo stato e viene sempre rilevato da Gestione Driver, come indicato dalle parentesi.  
   

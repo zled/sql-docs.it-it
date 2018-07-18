@@ -1,16 +1,14 @@
 ---
-title: Point (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: Point (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Point
@@ -21,21 +19,20 @@ helpviewer_keywords:
 - Point method
 - Point (geography Data Type)
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f37072d64159d5d8bfb1d44a64dd017adf0fceed
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d29f89266c39e900ccf9dd368cea0eb103fc8037
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="point-geography-data-type"></a>Point (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Costruisce un **geography** istanza che rappresenta un **punto** istanza da cui i valori di latitudine e longitudine e un SRID di ID di riferimento spaziale.
+Costruisce un'istanza **geography** che rappresenta un'istanza **Point** dai relativi valori di latitudine e longitudine e un identificatore SRID.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,16 +43,16 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *Lat*  
- È un **float** espressione che rappresenta la coordinata x del **punto** in corso la generazione.  
+ Espressione **float** che rappresenta la coordinata X dell'istanza **Point** da generare.  
   
  *Long*  
- È un **float** espressione che rappresenta la coordinata y del **punto** in corso la generazione. Per ulteriori informazioni sui valori di longitudine e latitudine validi, vedere [punto](../../relational-databases/spatial/point.md).  
+ Espressione **float** che rappresenta la coordinata Y dell'istanza **Point** da generare. Per altre informazioni sui valori validi di latitudine e longitudine, vedere [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- È un **int** che rappresenta l'identificatore SRID dell'espressione di **geography** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geography** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   

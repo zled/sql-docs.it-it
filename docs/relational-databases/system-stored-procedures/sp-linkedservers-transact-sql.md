@@ -1,32 +1,32 @@
 ---
 title: sp_linkedservers (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_linkedservers
 - sp_linkedservers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_linkedservers
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_linkedservers
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a8fd9f6a3c9f9acd4f1f956a827cab76dfa810af
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 58c827d61009f2c4be3ba86f2a12f49c3eb178ff
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,26 +50,26 @@ sp_linkedservers
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|Nome del server collegato.|  
-|**SRV_PROVIDERNAME**|**nvarchar (**128**)**|Nome descrittivo del provider OLE DB che gestisce l'accesso al server collegato specificato.|  
-|**SRV_PRODUCT**|**nvarchar (**128**)**|Nome del prodotto del server collegato.|  
-|**SRV_DATASOURCE**|**nvarchar (**4000**)**|Proprietà dell'origine dei dati OLE DB corrispondente al server collegato specificato.|  
-|**SRV_PROVIDERSTRING**|**nvarchar (**4000**)**|Proprietà della stringa del provider OLE DB corrispondente al server collegato.|  
-|**SRV_LOCATION**|**nvarchar (**4000**)**|Proprietà della posizione OLE DB corrispondente al server collegato specificato.|  
+|**SRV_PROVIDERNAME**|**nvarchar (** 128 **)**|Nome descrittivo del provider OLE DB che gestisce l'accesso al server collegato specificato.|  
+|**SRV_PRODUCT**|**nvarchar (** 128 **)**|Nome del prodotto del server collegato.|  
+|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|Proprietà dell'origine dei dati OLE DB corrispondente al server collegato specificato.|  
+|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|Proprietà della stringa del provider OLE DB corrispondente al server collegato.|  
+|**SRV_LOCATION**|**nvarchar (** 4000 **)**|Proprietà della posizione OLE DB corrispondente al server collegato specificato.|  
 |**SRV_CAT NON**|**sysname**|Proprietà del catalogo OLE DB corrispondente al server collegato specificato.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_columns_ex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
- [sp_foreignkeys &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_primarykeys &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [sp_table_privileges &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [sp_tables_ex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_columns_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Query distribuite Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
+ [Distributed query Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

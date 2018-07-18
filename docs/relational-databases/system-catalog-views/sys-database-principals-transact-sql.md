@@ -1,34 +1,35 @@
 ---
 title: Sys. database_principals (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_principals
 - database_principals_TSQL
 - sys.database_principals
 - sys.database_principals_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.database_principals catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.database_principals catalog view
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6f742ceebbb7c996f5e1a1d09e78352d26d10a37
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a879dfcc6dd0feb57126574947b51f84261af915
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,24 +40,24 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome dell'entità, univoco all'interno del database.|  
 |**principal_id**|**int**|ID dell'entità, univoco all'interno del database.|  
-|**tipo**|**Char (1)**|Tipo di entità:<br /><br /> A = Ruolo applicazione<br /><br /> C = Utente sul quale è stato eseguito il mapping a un certificato<br /><br /> E = utente esterno da Azure Active Directory<br /><br /> G = Gruppo di Windows<br /><br /> K = Utente sul quale è stato eseguito il mapping a una chiave asimmetrica<br /><br /> R = Ruolo del database<br /><br /> S = Utente SQL<br /><br /> U = Utente di Windows<br /><br /> X = gruppo esterno da applicazioni o il gruppo di Azure Active Directory|  
+|**type**|**char(1)**|Tipo di entità:<br /><br /> A = Ruolo applicazione<br /><br /> C = Utente sul quale è stato eseguito il mapping a un certificato<br /><br /> E = utente esterno da Azure Active Directory<br /><br /> G = Gruppo di Windows<br /><br /> K = Utente sul quale è stato eseguito il mapping a una chiave asimmetrica<br /><br /> R = Ruolo del database<br /><br /> S = Utente SQL<br /><br /> U = Utente di Windows<br /><br /> X = gruppo esterno da applicazioni o il gruppo di Azure Active Directory|  
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo dell'entità.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|Nome da utilizzare quando il nome SQL non specifica uno schema. Restituisce Null per entità non di tipo S, U o A.|  
 |**create_date**|**datetime**|Ora di creazione dell'entità.|  
 |**modify_date**|**datetime**|Ora dell'ultima modifica dell'entità.|  
 |**owning_principal_id**|**int**|ID dell'entità proprietaria dell'entità corrente. Tutte le entità, ad eccezione dei ruoli di Database devono essere di proprietà **dbo**.|  
-|**SID**|**varbinary (85)**|ID di sicurezza (SID) dell'entità.  NULL per SYS e INFORMATION SCHEMAS.|  
+|**sid**|**varbinary(85)**|ID di sicurezza (SID) dell'entità.  NULL per SYS e INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Se è 1, questa riga rappresenta una voce per uno dei ruoli predefiniti del database, ovvero db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
 |**authentication_type e**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica il tipo di autenticazione. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 0: Nessuna autenticazione<br />1: autenticazione istanza<br />2: l'autenticazione del database<br />3: l'autenticazione di Windows|  
 |**denominata authentication_type_desc**|**nvarchar(60)**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descrizione del tipo di autenticazione. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> NONE: Nessuna autenticazione<br />ISTANZA: Autenticazione istanza<br />DATABASE: L'autenticazione Database<br />WINDOWS: L'autenticazione di Windows|  
 |**default_language_name**|**sysname**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica la lingua predefinita per questa entità.|  
 |**default_language_lcid**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica l'identificatore LCID predefinito per questa entità.|  
-|**allow_encrypted_value_modifications**|**bit**|**Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Elimina i controlli dei metadati crittografici sul server nelle operazioni di copia bulk. Ciò consente all'utente di copia bulk dei dati crittografate con crittografia sempre attiva, tra le tabelle o database, senza la decrittografia dei dati. Il valore predefinito è OFF. |      
+|**allow_encrypted_value_modifications**|**bit**|**Si applica a**: da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di copia bulk dei dati crittografate con crittografia sempre attiva, tra le tabelle o database, senza la decrittografia dei dati. Il valore predefinito è OFF. |      
   
 ## <a name="remarks"></a>Osservazioni  
  Il *PasswordLastSetTime* sono disponibili in tutte le configurazioni supportate di SQL Server, mentre le altre proprietà è disponibile solo quando SQL Server è in esecuzione su Windows Server 2003 o versione successiva e CHECK_POLICY e CHECK_ SCADENZA sono abilitati. Vedere [criteri Password](../../relational-databases/security/password-policy.md) per ulteriori informazioni.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può visualizzare il proprio nome utente, gli utenti di sistema e i ruoli predefiniti del database. Per visualizzare altri utenti, è richiesta l'autorizzazione ALTER ANY USER o un'autorizzazione dell'utente. Per visualizzare i ruoli definiti dall'utente, è richiesta l'autorizzazione ALTER ANY ROLE o l'appartenenza al ruolo.  
   
 ## <a name="examples"></a>Esempi  
@@ -91,7 +92,7 @@ JOIN sys.schemas AS s
     ON o.schema_id = s.schema_id;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: elenco di tutte le autorizzazioni delle entità di database  
  Nella query seguente vengono elencate le autorizzazioni concesse o negate in modo esplicito alle entità di database.  

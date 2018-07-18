@@ -1,29 +1,28 @@
 ---
 title: Funzione SQLCompleteAsync | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: SQLCompleteAsync
-helpviewer_keywords: SQLCompleteAsync function [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- SQLCompleteAsync
+helpviewer_keywords:
+- SQLCompleteAsync function [ODBC]
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 91a6449e07ff83fd6bb7478bfc52cb077a76c955
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 0d3b851fd61209df8a721264e50e5cf1f298da87
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync (funzione)
 **Conformità**  
@@ -32,13 +31,13 @@ ms.lasthandoff: 12/21/2017
  Conformità agli standard: nessuno  
   
  **Riepilogo**  
- **SQLCompleteAsync** può essere utilizzato per determinare quando una funzione asincrona viene completata utilizzando l'elaborazione basata su notifica o polling. Per ulteriori informazioni sulle operazioni asincrone, vedere [esecuzione asincrona](../../../odbc/reference/develop-app/asynchronous-execution.md).  
+ **SQLCompleteAsync** può essere utilizzato per determinare quando una funzione asincrona è stata completata con l'elaborazione o polling-basato sulla notifica. Per ulteriori informazioni sulle operazioni asincrone, vedere [esecuzione asincrona](../../../odbc/reference/develop-app/asynchronous-execution.md).  
   
  **SQLCompleteAsync** è implementata solo in Gestione Driver ODBC.  
   
  In modalità di elaborazione asincrona di notifica in base **SQLCompleteAsync** deve essere chiamato dopo che il Driver Manager genera l'oggetto evento utilizzato per la notifica. **SQLCompleteAsync** completamento asincrona l'elaborazione e la funzione asincrona verrà generato un codice restituito.  
   
- In modalità di elaborazione asincrona di polling in base **SQLCompleteAsync** è un'alternativa alla chiamata della funzione asincrona originale, senza la necessità di specificare gli argomenti nella chiamata di funzione asincrona originale. **SQLCompleteAsync** può essere usata indipendentemente dal fatto che, se è abilitata la libreria di cursori ODBC.  
+ In modalità di elaborazione asincrona di polling in base **SQLCompleteAsync** è un'alternativa alla chiamata della funzione asincrona originale, senza la necessità di specificare gli argomenti nella chiamata di funzione asincrona originale. **SQLCompleteAsync** può essere usata indipendentemente dal fatto che se la libreria di cursori ODBC è abilitata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -68,7 +67,7 @@ SQLRETURN SQLCompleteAsync(
 ## <a name="diagnostics"></a>Diagnostica  
  Se **SQLCompleteAsync** restituisce SQL_SUCCESS, un'applicazione devono ricevere il codice restituito della funzione asincrona dal buffer a cui puntava *AsyncRetCodePtr*. SQLSTATE associato, se presente, può essere ottenuto chiamando **SQLGetDiagRec** con un *HandleType* impostato su SQL_HANDLE_STMT e un handle di istruzione o un *HandleType* di SQL _ HANDLE_DBC e un handle di connessione. Tali record di diagnostica associati con la funzione asincrona, questo non **SQLCompleteAsync** (funzione).  
   
- **SQLCompleteAsync** restituisce un codice diverso da SQL_SUCCESS per indicare che **SQLCompleteAsync** non viene chiamato correttamente. **SQLCompleteAsync** non invierà alcun record di diagnostica in questo caso. Sono possibili codici restituiti:  
+ **SQLCompleteAsync** restituisce un codice diverso da SQL_SUCCESS per indicare che **SQLCompleteAsync** non viene chiamato correttamente. **SQLCompleteAsync** non inserirà eventuali record di diagnostica in questo caso. Sono possibili codici restituiti:  
   
 -   SQL_INVALID_HANDLE: L'handle indicato da *HandleType* e *gestire* non è un handle valido.  
   

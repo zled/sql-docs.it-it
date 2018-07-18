@@ -1,16 +1,14 @@
 ---
-title: sp_help_operator (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_operator (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_operator
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_operator
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fc89c5f6689b64aea7be0410850f373d75d876e6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0fc94dd72bdb96516c6cd65f1e405951cbf8ff45
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +47,16 @@ sp_help_operator
   
 ## <a name="arguments"></a>Argomenti  
  [  **@operator_name=** ] **'***operator_name***'**  
- Nome dell'operatore. *operator_name* è **sysname**. Se *operator_name* viene omesso, vengono restituite informazioni su tutti gli operatori.  
+ Nome dell'operatore. *operator_name* viene **sysname**. Se *operator_name* viene omesso, vengono restituite informazioni su tutti gli operatori.  
   
- [ **@operator_id=** ] *operator_id*  
- Numero di identificazione dell'operatore su cui vengono richieste informazioni. *operator_id*è **int**, con un valore predefinito è NULL.  
+ [  **@operator_id=** ] *operator_id*  
+ Numero di identificazione dell'operatore su cui vengono richieste informazioni. *operator_id*viene **int**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *operator_id* o *operator_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -68,10 +65,10 @@ sp_help_operator
 |**id**|**int**|Numero di identificazione dell'operatore.|  
 |**name**|**sysname**|Nome dell'operatore.|  
 |**enabled**|**tinyint**|Specifica se l'operatore è disponibile per la ricezione di notifiche:<br /><br /> **1** = Sì<br /><br /> **0** = No|  
-|**email_address**|**nvarchar(100)**|Indirizzo di posta elettronica dell'operatore.|  
+|**email_address**|**Nvarchar (100)**|Indirizzo di posta elettronica dell'operatore.|  
 |**last_email_date**|**int**|Data dell'ultima notifica dell'operatore tramite posta elettronica.|  
 |**last_email_time**|**int**|Ora dell'ultima notifica dell'operatore tramite posta elettronica.|  
-|**pager_address**|**nvarchar(100)**|Indirizzo cercapersone dell'operatore.|  
+|**pager_address**|**Nvarchar (100)**|Indirizzo cercapersone dell'operatore.|  
 |**last_pager_date**|**int**|Data dell'ultima notifica dell'operatore tramite cercapersone.|  
 |**last_pager_time**|**int**|Ora dell'ultima notifica dell'operatore tramite cercapersone.|  
 |**weekday_pager_start_time**|**int**|Inizio del periodo di tempo durante il quale l'operatore è disponibile per ricevere notifiche tramite cercapersone in un giorno feriale.|  
@@ -81,7 +78,7 @@ sp_help_operator
 |**sunday_pager_start_time**|**int**|Inizio del periodo di tempo durante il quale l'operatore è disponibile per ricevere notifiche tramite cercapersone la domenica.|  
 |**sunday_pager_end_time**|**int**|Termine del periodo di tempo durante il quale l'operatore è disponibile per ricevere notifiche tramite cercapersone la domenica.|  
 |**pager_days**|**tinyint**|Maschera di bit (**1** = domenica, **64** = sabato) di giorni-della settimana che indica quando l'operatore è disponibile per ricevere notifiche tramite cercapersone.|  
-|**netsend_address**|**nvarchar(100)**|Indirizzo dell'operatore per le notifiche dei messaggi popup di rete.|  
+|**netsend_address**|**Nvarchar (100)**|Indirizzo dell'operatore per le notifiche dei messaggi popup di rete.|  
 |**last_netsend_date**|**int**|Data dell'ultima notifica inviata all'operatore tramite un messaggio popup di rete.|  
 |**last_netsend_time**|**int**|Ora dell'ultima notifica inviata all'operatore tramite un messaggio popup di rete.|  
 |**category_name**|**sysname**|Nome della categoria a cui appartiene l'operatore.|  

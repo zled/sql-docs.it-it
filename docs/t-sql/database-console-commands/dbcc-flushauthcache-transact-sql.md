@@ -1,16 +1,13 @@
 ---
-title: DBCC FLUSHAUTHCACHE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DBCC FLUSHAUTHCACHE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC FLUSHAUTHCACHE
@@ -20,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - DBCC FLUSHAUTHCACHE
 ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f3eca7d8191ff7ff7570167c6ec4250258ab2ac5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 3cb7b06efe21d7dd6d4179c3454b6638ea636165
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Svuota la cache di autenticazione del database contenente informazioni sull'account di accesso e le regole firewall, per il database utente corrente in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Questa informativa non si applica al database master logico, poiché il database master contiene l'archivio fisico per le informazioni sull'account di accesso e le regole del firewall. L'utente che esegue l'istruzione e gli altri utenti attualmente connessi rimangano connessi. (FLUSHAUTHCACHE DBCC non è attualmente supportato per [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].)
+Svuota la cache di autenticazione del database che contiene le informazioni su account di accesso e regole del firewall per il database utente corrente nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Questa istruzione non si applica al database master logico perché il database master contiene lo spazio fisico di archiviazione per le informazioni su account di accesso e regole del firewall. L'utente che esegue l'istruzione e gli altri utenti attualmente connessi mantengono la connessione. DBCC FLUSHAUTHCACHE non è attualmente supportato per [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
  
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,14 +42,14 @@ DBCC FLUSHAUTHCACHE [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-Nessuno
+Nessuna.
   
-## <a name="remarks"></a>Osservazioni  
-La cache di autenticazione esegue una copia di account di accesso e delle regole firewall del server che vengono archiviate nel database master e li inserisce in memoria nel database utente.  Poiché le informazioni relative agli utenti di database indipendente sono già memorizzate nel database utente, gli utenti del database indipendente non fanno parte della cache di autenticazione.
-Connessioni attive continuamente al [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiedono la riautorizzazione (eseguite dal [!INCLUDE[ssDE](../../includes/ssde-md.md)]) almeno ogni 10 ore. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] di input la riautorizzazione tentativi utilizzando la password inviata e nessun utente è obbligatorio. Per motivi di prestazioni quando si reimposta una password in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], la connessione non verrà nuovamente autenticata, anche se la connessione viene reimpostata a causa del pool di connessioni. Questo comportamento è diverso dal comportamento di on-premise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se la password è stata modificata dopo la connessione è stata inizialmente autorizzata, è necessario terminare la connessione e stabilire una nuova connessione utilizzando la nuova password. Un utente con l'autorizzazione KILL DATABASE CONNECTION possa terminare in modo esplicito una connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] utilizzando il [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md) comando.
+## <a name="remarks"></a>Remarks  
+La cache di autenticazione crea una copia degli account di accesso e delle regole firewall del server archiviati nel database master e li inserisce in memoria nel database utente.  Poiché le informazioni relative agli utenti di database indipendente sono già archiviate nel database utente, gli utenti di database indipendente non fanno parte della cache di autenticazione.
+Le connessioni continuamente attive al [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiedono la riautorizzazione (eseguita dal [!INCLUDE[ssDE](../../includes/ssde-md.md)]) almeno ogni 10 ore. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenta la riautorizzazione usando la password inviata originariamente e non richiede alcun input da parte dell'utente. Per motivi di prestazioni, quando si reimposta una password nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)], la connessione non verrà nuovamente autenticata, anche se la connessione viene reimpostata a causa del pool di connessioni. Questo comportamento è diverso da quello dell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se la password è stata cambiata dopo l'autorizzazione iniziale della connessione sarà necessario terminare la connessione e stabilirne una nuova usando la nuova password. Un utente con l'autorizzazione KILL DATABASE CONNECTION può terminare in modo esplicito una connessione al [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando il comando [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).
   
 ## <a name="permissions"></a>Autorizzazioni  
-Richiede il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] account amministratore.
+Richiede l'account amministratore del [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
 ## <a name="example"></a>Esempio  
 L'istruzione seguente consente di cancellare la cache di autenticazione per il database corrente.

@@ -1,41 +1,42 @@
 ---
 title: Funzione SQLDriverConnect | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLDriverConnect
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLDriverConnect
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLDriverConnect
-helpviewer_keywords: SQLDriverConnect function [ODBC]
+f1_keywords:
+- SQLDriverConnect
+helpviewer_keywords:
+- SQLDriverConnect function [ODBC]
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 6d53e3922a5ef8508e654805f39a329471c4ba70
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect Function
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: ODBC  
   
  **Riepilogo**  
- **SQLDriverConnect** è un'alternativa a **SQLConnect**. Supporta origini dati che richiedono più informazioni di connessione di tre argomenti in **SQLConnect**, finestre di dialogo per chiedere all'utente per tutte le origini dati che non sono definite nel sistema e informazioni di connessione informazioni.  
+ **SQLDriverConnect** costituisce un'alternativa allo **SQLConnect**. Supporta origini dati che richiedono più informazioni di connessione di tre argomenti in **SQLConnect**, finestre di dialogo per chiedere all'utente per tutte le origini dati che non sono definite nel sistema e informazioni di connessione informazioni.  
   
- **SQLDriverConnect** fornisce gli attributi di connessione seguente:  
+ **SQLDriverConnect** fornisce gli attributi di connessione seguenti:  
   
 -   Stabilire una connessione utilizzando una stringa di connessione che contiene il nome dell'origine dati, uno o più ID utente, una o più password e altre informazioni richieste dall'origine dati.  
   
@@ -146,23 +147,23 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>Commenti  
  Una stringa di connessione presenta la sintassi seguente:  
   
- *stringa di connessione* :: = *stringa vuota*[;] &#124; *attributo*[;] &#124; *attributo*; *stringa di connessione*  
+ *stringa di connessione* :: = *stringa vuoto*[;] &#124; *attributo*[;] &#124; *attributo*; *stringa di connessione*  
   
- *stringa vuota* :: =*attributo* :: = *parola chiave di attributo*=*attributo-valore* &#124; DRIVER = [{}]*attributo-valore*[}]  
+ *stringa vuota* :: =*attributo* :: = *parola chiave di attributo*=*attributo-valore* &#124; DRIVER = [{}] *valore dell'attributo*[}]  
   
- *parola chiave di attributo* :: = DSN &#124; UID &#124; PWD &#124; *-definiti-attributo-parola chiave driver*  
+ *attributo di una parola chiave* :: = DSN &#124; UID &#124; PWD &#124; *-definito dall'attributo-parola chiave driver*  
   
- *valore dell'attributo* :: = *stringa di caratteri*  
+ *valore dell'attributo* :: = *stringhe di caratteri*  
   
- *definiti-attributo-parola chiave driver* :: = *identificatore*  
+ *definito dall'attributo-parola chiave driver* :: = *identificatore*  
   
  dove *stringa di caratteri* contiene zero o più caratteri; *identificatore* contiene uno o più caratteri; *parola chiave di attributo* non è tra maiuscole e minuscole; *attributo-valore* potrebbe essere tra maiuscole e minuscole; e il valore della **DSN** (parola chiave) non è costituito esclusivamente spazi vuoti.  
   
- A causa di connessione stringa e l'inizializzazione file grammatica, parole chiave e l'attributo valori che contengono i caratteri **[] {} (),? \*=! @** non racchiusi tra parentesi graffe. Il valore di **DSN** parola chiave non può essere costituito solo da spazi vuoti e non deve contenere spazi vuoti iniziali. A causa di grammatica delle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri.  
+ A causa di connessione stringa e l'inizializzazione file grammatica, parole chiave e attributo valori che contengono i caratteri **[]{}(),? \*=! @** non racchiusi tra parentesi graffe devono essere evitate. Il valore di **DSN** parola chiave non può essere costituito solo da spazi vuoti e non deve contenere spazi vuoti iniziali. A causa di grammatica delle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri.  
   
  Le applicazioni non è necessario aggiungere le parentesi graffe per il valore dell'attributo dopo il **DRIVER** (parola chiave), a meno che l'attributo contiene un punto e virgola (;), nel qual caso sono necessarie le parentesi graffe. Se il valore dell'attributo che il driver riceve include parentesi graffe, il driver non necessario rimuoverli ma dovrebbero far parte della stringa di connessione restituito.  
   
- Un valore di stringa di connessione o DSN tra parentesi graffe ({}) contenente i caratteri **[] {} (),? \*=! @** passati invariati al driver. Tuttavia, quando si utilizza questi caratteri in una parola chiave, gestione Driver restituisce un errore quando si lavora con i DSN su file, ma passa la stringa di connessione per il driver per le stringhe di connessione normale. Evitare di usare parentesi graffe incorporate in un valore della parola chiave.  
+ Un valore di stringa di connessione o DSN tra parentesi graffe ({}) che contiene i caratteri **[]{}(),? \*=! @** passati invariati al driver. Tuttavia, quando si utilizza questi caratteri in una parola chiave, gestione Driver restituisce un errore quando si lavora con i DSN su file, ma passa la stringa di connessione per il driver per le stringhe di connessione normale. Evitare di usare parentesi graffe incorporate in un valore della parola chiave.  
   
  La stringa di connessione può includere qualsiasi numero di parole chiave definito dal driver. Poiché il **DRIVER** parola chiave non utilizza informazioni dalle informazioni di sistema, il driver deve definire sufficiente parole chiave in modo da potersi connettere a un'origine dati utilizzando solo le informazioni nella stringa di connessione. (Per ulteriori informazioni, vedere "Driver linee guida," più avanti in questa sezione). Il driver definisce le parole chiave sono necessarie per connettersi all'origine dati.  
   

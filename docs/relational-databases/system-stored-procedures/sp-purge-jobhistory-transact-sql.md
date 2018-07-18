@@ -1,16 +1,14 @@
 ---
-title: sp_purge_jobhistory (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_purge_jobhistory (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_jobhistory_TSQL
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7f50228e089d71a6cf3a8d74225e1e26f42844fd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9c998f8b105ed0f85eb6637a3f861e435af4471e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,19 +48,19 @@ sp_purge_jobhistory
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_name=** ] **'***job_name***'**  
- Nome del processo di cui si desidera eliminare i record della cronologia. *job_name*è **sysname**, con un valore predefinito è NULL. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+ Nome del processo di cui si desidera eliminare i record della cronologia. *job_name*viene **sysname**, con un valore predefinito è NULL. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
 > [!NOTE]  
 >  I membri del **sysadmin** fisso di server o del ruolo di **SQLAgentOperatorRole** ruolo predefinito del database possono eseguire **sp_purge_jobhistory** senza specificare un *job_name* o *job_id*. Quando **sysadmin** gli utenti specificano questi argomenti, la cronologia processo per tutti i processi locali e multiserver viene eliminata entro il tempo specificato da *oldest_date*. Quando **SQLAgentOperatorRole** gli utenti specificano questi argomenti, la cronologia processo per tutti i processi locali verrà eliminata entro il tempo specificato da *oldest_date*.  
   
  [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo dei record da eliminare. *job_id*è **uniqueidentifier**, con un valore predefinito è NULL. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. Vedere la nota nella sezione Descrizione del  **@job_name**  per informazioni su come **sysadmin** o **SQLAgentOperatorRole** gli utenti possono utilizzare questo argomento.  
+ Numero di identificazione del processo dei record da eliminare. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. Vedere la nota nella sezione Descrizione del **@job_name** per informazioni su come **sysadmin** o **SQLAgentOperatorRole** gli utenti possono utilizzare questo argomento.  
   
- [ **@oldest_date** = ] *oldest_date*  
- Il record meno recente da conservare nella cronologia. *oldest_date* è **datetime**, con un valore predefinito è NULL. Quando *oldest_date* è specificato, **sp_purge_jobhistory** rimuove solo i record precedenti rispetto al valore specificato.  
+ [ **@oldest_date** =] *oldest_date*  
+ Il record meno recente da conservare nella cronologia. *oldest_date* viene **datetime**, con un valore predefinito è NULL. Quando *oldest_date* è specificato, **sp_purge_jobhistory** rimuove solo i record precedenti rispetto al valore specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
@@ -110,6 +108,6 @@ GO
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [CONCEDERE autorizzazioni per oggetti &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+ [GRANT - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   
   

@@ -1,34 +1,19 @@
 ---
 title: Oggetti avanzati OLAP in AMO programmazione | Documenti Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: amo
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 03114f3f88d53efa01580e07db164c679b324661
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programmazione di oggetti avanzati OLAP in AMO
   In questo argomento vengono descritti i dettagli relativi alla programmazione di oggetti avanzati OLAP nella libreria AMO (Analysis Management Objects). In questo argomento sono incluse le sezioni seguenti:  
@@ -43,7 +28,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Oggetti Translation](#Transl)  
   
-##  <a name="Action">Oggetti Action</a>  
+##  <a name="Action"></a> Oggetti Action  
  Le classi Action vengono utilizzate per creare una risposta attiva quando si visualizzano aree determinate del cubo. Gli oggetti di questo tipo possono essere definiti tramite AMO, ma vengono utilizzati dall'applicazione client che visualizza i dati. Sono disponibili azioni di tipo diverso, in base al quale è pertanto necessario crearle. Di seguito vengono indicati i diversi tipi di azione.  
   
 -   Azioni drill-through, che restituiscono il set di righe che rappresenta i dati sottostanti delle celle selezionate del cubo in cui si verifica l'azione.  
@@ -64,7 +49,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  Aggiunta dell'azione alla raccolta di cubi e aggiornamento del cubo. L'azione non è un oggetto aggiornabile.  
   
- Per eseguire il test dell'azione, è necessaria un'applicazione diversa. È possibile eseguire il test dell'azione in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], In primo luogo, è necessario installare [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] esempi, vedere [l'elaborazione di un modello multidimensionale &#40; Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Per eseguire il test dell'azione, è necessaria un'applicazione diversa. È possibile eseguire il test dell'azione in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], In primo luogo, è necessario installare [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] esempi, vedere [l'elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  Nel codice di esempio seguente vengono replicate tre azioni diverse dell'esempio Adventure Works Analysis Services Project. È possibile differenziare le azioni poiché quelle introdotte tramite l'esempio seguente iniziano con "My".  
   
@@ -191,7 +176,7 @@ static public void CreateActions(Cube cube)
 }  
 ```  
   
-##  <a name="KPI">Oggetti KPI</a>  
+##  <a name="KPI"></a> Oggetti KPI  
  Un indicatore di prestazioni chiave (KPI) è costituito da una raccolta di calcoli associati a un gruppo di misure in un cubo e utilizzati per valutare il successo aziendale. Gli oggetti <xref:Microsoft.AnalysisServices.Kpi> possono essere definiti in AMO, ma vengono utilizzati dall'applicazione client che visualizza i dati.  
   
  Per creare un oggetto <xref:Microsoft.AnalysisServices.Kpi>, sono necessari i passaggi seguenti:  
@@ -350,7 +335,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp">Oggetti della prospettiva</a>  
+##  <a name="Persp"></a> Oggetti della prospettiva  
  Gli oggetti <xref:Microsoft.AnalysisServices.Perspective> possono essere definiti in AMO, ma vengono utilizzati dall'applicazione client che visualizza i dati.  
   
  Per creare un oggetto <xref:Microsoft.AnalysisServices.Perspective>, sono necessari i passaggi seguenti:  
@@ -413,7 +398,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC">Oggetti ProactiveCaching</a>  
+##  <a name="PC"></a> Oggetti ProactiveCaching  
  Gli oggetti <xref:Microsoft.AnalysisServices.ProactiveCaching> possono essere definiti in AMO.  
   
  Per creare un oggetto <xref:Microsoft.AnalysisServices.ProactiveCaching>, sono necessari i passaggi seguenti:  
@@ -470,7 +455,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl">Oggetti Translation</a>  
+##  <a name="Transl"></a> Oggetti Translation  
  Gli oggetti Translation possono essere definiti in AMO, ma vengono utilizzati dall'applicazione client che visualizza i dati. La codifica di oggetti di questo tipo è un'operazione semplice. Le traduzioni per le didascalie degli oggetti vengono fornite da coppie costituite da un identificatore delle impostazioni locali e da una didascalia tradotta. Per ogni didascalia è possibile abilitare più traduzioni. Le traduzioni possono essere fornite per la maggior parte degli oggetti di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], ad esempio dimensioni, attributi gerarchie, cubi, gruppi di misure, misure e altri oggetti.  
   
  Nell'esempio di codice seguente viene fornita la traduzione in spagnolo per il nome dell'attributo Product Name.  
@@ -493,9 +478,9 @@ static public void CreateTranslations(Database db)
  <xref:Microsoft.AnalysisServices>   
  [Introduzione a classi AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Classi OLAP in AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
- [Architettura logica &#40; Analysis Services - dati multidimensionali &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Gli oggetti di database &#40; Analysis Services - dati multidimensionali &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [L'elaborazione di un modello multidimensionale &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [Architettura logica & #40; Analysis Services - dati multidimensionali & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Gli oggetti di database & #40; Analysis Services - dati multidimensionali & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../../../analysis-services/install-sample-data-and-projects.md)  
   
   

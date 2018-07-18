@@ -1,30 +1,28 @@
 ---
-title: "Nuove funzionalità di interfaccia utente grafica di SSMA per l'accesso a SQL | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Nuove funzionalità di interfaccia utente grafica di SSMA per l'accesso a SQL | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 392ffae9874950d288a315798685294ccac71a28
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 30c80a6d78c3b9b2737c608c75299f90dd02c969
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Nuove funzionalità di interfaccia utente grafica di SSMA per l'accesso a SQL
 In questo capitolo descrive nuove funzionalità dell'interfaccia utente di SSMA  

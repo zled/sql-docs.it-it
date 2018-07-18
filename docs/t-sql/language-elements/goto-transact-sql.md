@@ -1,16 +1,14 @@
 ---
 title: GOTO (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GOTO
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - statements [SQL Server], skipping
 - GOTO statement
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e4420f83c9cb36ea9c8dfb2f9cae6586d7089047
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 88bd7067c5aa11a9dc9eecb684e6542edb47719e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,9 +51,9 @@ GOTO label
   
 ## <a name="arguments"></a>Argomenti  
  *label*  
- Posizione da cui inizia l'elaborazione se la destinazione dell'istruzione GOTO è impostata su tale etichetta. Le etichette devono seguire le regole per [identificatori](../../relational-databases/databases/database-identifiers.md). È possibile adottare le etichette come metodo per l'inserimento di commenti indipendentemente dall'utilizzo dell'istruzione GOTO.  
+ Posizione da cui inizia l'elaborazione se la destinazione dell'istruzione GOTO è impostata su tale etichetta. Le etichette devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). È possibile adottare le etichette come metodo per l'inserimento di commenti indipendentemente dall'utilizzo dell'istruzione GOTO.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'istruzione GOTO può essere utilizzata in istruzioni condizionali per il controllo di flusso, in blocchi di istruzioni o in procedure ma non è possibile associarla a un'etichetta all'esterno del batch. Le diramazioni implementate tramite l'istruzione GOTO possono fare riferimento a un'etichetta definita prima o dopo GOTO.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -85,7 +82,7 @@ Branch_Three:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Il controllo di flusso Language &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Elementi del linguaggio per il controllo di flusso &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [BREAK &#40;Transact-SQL&#41;](../../t-sql/language-elements/break-transact-sql.md)   
  [CONTINUE &#40;Transact-SQL&#41;](../../t-sql/language-elements/continue-transact-sql.md)   

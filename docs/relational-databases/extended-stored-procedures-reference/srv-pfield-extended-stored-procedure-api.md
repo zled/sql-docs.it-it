@@ -1,16 +1,15 @@
 ---
 title: srv_pfield (API Stored procedure estesa) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_pfield
@@ -22,22 +21,21 @@ dev_langs:
 helpviewer_keywords:
 - srv_pfield
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 157bf19237d3b2dcf64a1401823c746fd2849cf0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: b99afab30584db1a13444f2d259ffafa0459c967
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API della stored procedure estesa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] In alternativa, usare l'integrazione con CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Restituisce informazioni su una connessione a un database.  
   
@@ -64,7 +62,7 @@ len
  *field*  
  Specifica i dati nella connessione da restituire.  
   
-|Valore|Valori di codice restituiti|  
+|valore|Valori di codice restituiti|  
 |-----------|-------------|  
 |SRV_APPLNAME|Nome dell'applicazione fornito dal client quando ha stabilito la connessione.|  
 |SRV_BCPFLAG|Flag impostato su TRUE se il client si prepara per un'operazione di copia bulk; in caso contrario, è impostato su FALSE.|  

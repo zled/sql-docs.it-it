@@ -1,16 +1,14 @@
 ---
-title: IIF (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: IIF (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IIF_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - IIF function
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a7b58233c958d8ca9dc6b0fea9f9e69290d13679
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be47b84edfd15c0c175062972634c06044dd109c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-functions---iif-transact-sql"></a>Funzioni logiche - IIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -52,16 +49,16 @@ IIF ( boolean_expression, true_value, false_value )
  Se questo argomento non è un'espressione booleana, viene generato un errore di sintassi.  
   
  *true_value*  
- Valore da restituire se *argomento boolean_expression* restituisce true.  
+ Valore da restituire se *boolean_expression* restituisce true.  
   
  *false_value*  
- Valore da restituire se *argomento boolean_expression* restituisce false.  
+ Valore da restituire se *boolean_expression* restituisce false.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- Restituisce il tipo di dati con precedenza più alta tra i tipi nella *true_value* e *false_value*. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Restituisce il tipo di dati con precedenza maggiore nei tipi *true_value* e *false_value*. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
- IIF è un modo abbreviato per scrivere un'espressione CASE. Valuta l'espressione booleana passata come primo argomento, quindi restituisce uno dei due argomenti in base al risultato della valutazione. Vale a dire il *true_value* viene restituito se l'espressione booleana è true e *false_value* viene restituito se l'espressione booleana è false o unknown. *true_value* e *false_value* può essere di qualsiasi tipo. Le stesse regole applicate all'espressione CASE per espressioni booleane, gestione di valori Null e tipi restituiti vengono applicate anche a IIF. Per ulteriori informazioni, vedere [CASE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/case-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ IIF è un modo abbreviato per scrivere un'espressione CASE. Valuta l'espressione booleana passata come primo argomento, quindi restituisce uno dei due argomenti in base al risultato della valutazione. Viene quindi restituito *true_value* se l'espressione booleana è true, mentre viene restituito *false_value* se l'espressione booleana è false o sconosciuta. *true_value* e *false_value* possono essere di qualsiasi tipo. Le stesse regole applicate all'espressione CASE per espressioni booleane, gestione di valori Null e tipi restituiti vengono applicate anche a IIF. Per altre informazioni, vedere [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md).  
   
  La conversione di IIF in CASE influisce inoltre su altri aspetti del comportamento di questa funzione. Poiché le espressioni CASE possono essere nidificate solo fino a livello 10, anche le istruzioni IIF possono essere nidificate fino al livello massimo 10. Inoltre l'istruzione IIF viene eseguita in modalità remota in altri server come un'espressione CASE equivalente dal punto di vista semantico, con tutti i comportamenti di un'espressione CASE eseguita in modalità remota.  
   
@@ -110,7 +107,7 @@ NULL
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CASE &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Scegliere &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   

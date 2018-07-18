@@ -1,32 +1,33 @@
 ---
 title: sp_restoremergeidentityrange (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_restoremergeidentityrange_TSQL
 - sp_restoremergeidentityrange
-helpviewer_keywords: sp_restoremergeidentityrange
+helpviewer_keywords:
+- sp_restoremergeidentityrange
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a42807009ffd42b16fe08fde76b7f91e34d62742
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b8be3de617713868a755dbab55e4ac4674dfd07a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,25 +45,25 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication**  =] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* è **sysname**, con valore predefinito di **tutti**. Se viene specificato questo parametro, vengono ripristinati solo gli intervalli di valori Identity per la pubblicazione specificata.  
+ [ **@publication** =] **'***pubblicazione***'**  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, con valore predefinito di **tutti**. Se viene specificato questo parametro, vengono ripristinati solo gli intervalli di valori Identity per la pubblicazione specificata.  
   
- [  **@article**  =] **'***articolo***'**  
- Nome dell'articolo. *articolo* è **sysname**, con un valore predefinito di **tutti**. Se specificato, vengono ripristinati solo gli intervalli di valori Identity per l'articolo specificato.  
+ [ **@article** =] **'***articolo***'**  
+ Nome dell'articolo. *articolo* viene **sysname**, con valore predefinito è **tutti**. Se specificato, vengono ripristinati solo gli intervalli di valori Identity per l'articolo specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_restoremergeidentityrange** viene utilizzato con la replica di tipo merge.  
+ **sp_restoremergeidentityrange** è utilizzato nella replica di tipo merge.  
   
- **sp_restoremergeidentityrange** Ottiene informazioni di allocazione di intervalli di valori identity massimo dal server di distribuzione e aggiorna i valori di **max_used** colonna di [MSmerge_identity_range_allocations & # 40; Transact-SQL &#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) per gli articoli che utilizzano Gestione intervalli di valori identity automatici.  
+ **sp_restoremergeidentityrange** Ottiene informazioni di allocazione di intervalli di valori identity massimo dal server di distribuzione e aggiorna i valori nel **max_used** colonna di [MSmerge_identity_range_allocations &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) per gli articoli che utilizzano Gestione intervalli di valori identity automatici.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_restoremergeidentityrange**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addmergearticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   

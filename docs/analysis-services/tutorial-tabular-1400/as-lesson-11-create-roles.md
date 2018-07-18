@@ -1,27 +1,19 @@
 ---
-title: 'Lezione dell''esercitazione di Analysis Services 11: creare ruoli | Documenti Microsoft'
-description: Viene descritto come creare ruoli del progetto di Analysis Services tutorial.
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: 
-author: Minewiskan
-manager: kfile
-editor: 
-tags: 
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+title: "Lezione dell'esercitazione di Analysis Services 11: creare ruoli | Documenti Microsoft"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
-ms.openlocfilehash: b3ed6028a02b117fb6cdb87a8097d1e1eab48b0f
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.reviewer: owend
+author: minewiskan
+manager: kfiles"
+ms.openlocfilehash: 8e630d53aed8f722c2de4a21afea8391cefe8bd8
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-roles"></a>Creazione di ruoli
 

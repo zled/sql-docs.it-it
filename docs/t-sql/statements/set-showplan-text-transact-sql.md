@@ -1,16 +1,14 @@
 ---
-title: SET SHOWPLAN_TEXT (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SET SHOWPLAN_TEXT (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SHOWPLAN_TEXT
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - stopping statement execution
 - estimated execution information [SQL Server]
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e0fd12594c0b2a4c5df3a616aeaa48746f781977
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 11bdddd82efcbc4f0e97b8b33d99961caa9dcfd5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,12 +51,12 @@ ms.lasthandoff: 11/21/2017
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'opzione SET SHOWPLAN_TEXT viene impostata in fase di esecuzione, non in fase di analisi.  
   
  Quando l'opzione SET SHOWPLAN_TEXT è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce informazioni di esecuzione per ogni istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] senza eseguire l'istruzione. Quando l'opzione è impostata su ON, vengono restituite informazioni del piano di esecuzione su tutte le istruzioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] successive fino a quando l'opzione non viene reimpostata su OFF. Se, ad esempio, si esegue un'istruzione CREATE TABLE quando l'opzione SET SHOWPLAN_TEXT è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un messaggio di errore di una successiva istruzione SELECT che interessa la stessa tabella, per informare gli utenti che la tabella specificata non esiste. I successivi riferimenti a tale tabella pertanto hanno esito negativo. Quando l'opzione SET SHOWPLAN_TEXT è impostata su OFF, le istruzioni vengono eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza la generazione di un report contenente informazioni del piano di esecuzione.  
   
- SET SHOWPLAN_TEXT è destinato a restituire output leggibile per le applicazioni di Microsoft Win32 prompt dei comandi, ad esempio il **osql** utilità. L'opzione SET SHOWPLAN_ALL restituisce un output più dettagliato per l'utilizzo in programmi per la gestione di output.  
+ SET SHOWPLAN_TEXT è stata creata specificatamente per la restituzione di output leggibile in applicazioni del prompt dei comandi per Microsoft Win 32, ad esempio l'utilità **osql**. L'opzione SET SHOWPLAN_ALL restituisce un output più dettagliato per l'utilizzo in programmi per la gestione di output.  
   
  Non è possibile specificare SET SHOWPLAN_TEXT e SET SHOWPLAN_ALLL all'interno di una stored procedure. Devono essere le uniche istruzioni in un batch.  
   
@@ -67,20 +64,20 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
 |Nome colonna|Description|  
 |-----------------|-----------------|  
-|**StmtText**|Per righe che non sono di tipo PLAN_ROW, questa colonna include il testo dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per righe di tipo PLAN_ROW, include una descrizione dell'operazione. La colonna include l'operatore fisico e facoltativamente l'operatore logico. Può essere inoltre seguita da una descrizione determinata dall'operatore fisico. Per ulteriori informazioni sugli operatori fisici, vedere il **argomento** colonna [SET SHOWPLAN_ALL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
+|**StmtText**|Per righe che non sono di tipo PLAN_ROW, questa colonna include il testo dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per righe di tipo PLAN_ROW, include una descrizione dell'operazione. La colonna include l'operatore fisico e facoltativamente l'operatore logico. Può essere inoltre seguita da una descrizione determinata dall'operatore fisico. Per altre informazioni sugli operatori fisici, vedere la colonna **Argument** in [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
   
- Per ulteriori informazioni sugli operatori logici e fisici che possono essere visualizzati nell'output Showplan, vedere [Showplan logici e fisici riferimento a operatori](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
+ Per altre informazioni sugli operatori fisici e logici che possono essere visualizzati nell'output Showplan, vedere [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per poter utilizzare SET SHOWPLAN_TEXT, è necessario disporre delle autorizzazioni sufficienti per eseguire le istruzioni in cui SET SHOWPLAN_TEXT viene eseguito, nonché l'autorizzazione SHOWPLAN per tutti i database contenenti oggetti di riferimento.  
   
- Per SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure*, EXEC e *user_defined_function* istruzioni, per produrre uno Showplan in cui l'utente deve:  
+ Per poter generare uno Showplan con le istruzioni SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure* ed EXEC *user_defined_function*, l'utente deve avere:  
   
 -   Autorizzazioni appropriate per l'esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   Autorizzazione SHOWPLAN su tutti i database contenenti oggetti a cui fanno riferimento le istruzioni Transact-SQL, ad esempio tabelle, viste e così via.  
   
- Per tutte le altre istruzioni, ad esempio DDL, USE *database_name*, SET, DECLARE, SQL, dinamico e così via, solo le autorizzazioni appropriate per eseguire il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni sono necessarie.  
+ Per tutte le altre istruzioni, ad esempio DDL, USE *database_name*, SET, DECLARE, SQL dinamico e così via sono necessarie soltanto le autorizzazioni per l'esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  In questo esempio viene illustrato l'utilizzo degli indici in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante l'elaborazione di istruzioni.  
@@ -144,8 +141,8 @@ StmtText
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)  
   
   

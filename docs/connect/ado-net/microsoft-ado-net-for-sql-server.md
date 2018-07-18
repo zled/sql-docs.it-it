@@ -1,31 +1,30 @@
 ---
 title: Microsoft ADO.NET per SQL Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado-net
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 54a5cdcd7341972d2f2e5b2e4e3e5fe3e3fe2531
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 7f8d8ee2ecca5db774ed31f25f85a150f0fc6b20
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563909"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
-![Un cerchio FRECCIAGIÙ download](../../ssdt/media/download.png)[scaricare ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[scaricare ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET è la tecnologia di base per l'accesso ai dati per i linguaggi .NET. Usare lo spazio dei nomi System.Data.SqlClient per accedere a SQL Server oppure i provider di altri fornitori per accedere ai rispettivi archivi. Usare System.Data.Odbc o System.Data.Oledb per accedere ai dati dai linguaggi .NET mediante altre tecnologie di accesso ai dati. Usare System.Data.Dataset quando è necessaria una cache di dati offline nelle applicazioni client. Offre anche funzionalità per il salvataggio permanente locale e per XML, che possono risultare utili nei servizi Web.  
   
@@ -47,7 +46,7 @@ ADO.NET è la tecnologia di base per l'accesso ai dati per i linguaggi .NET. Usa
 ## <a name="more-samples"></a>Altri esempi  
 * [Esempi di codice ADO.NET](https://msdn.microsoft.com/library/dw70f090.aspx)  
 * [Introduzione a .NET Framework in Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [Introduzione a .NET Core su macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/mac/)
+* [Introduzione a .NET Core su macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
 * [Introduzione a .NET Core in Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
 * [Introduzione a .NET Core su Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

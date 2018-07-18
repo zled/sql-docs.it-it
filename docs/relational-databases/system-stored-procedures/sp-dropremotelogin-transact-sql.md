@@ -1,32 +1,32 @@
 ---
 title: sp_dropremotelogin (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropremotelogin
 - sp_dropremotelogin_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_dropremotelogin
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9edb5db6819950e517f26bee0d144ef3cf567bc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4565f5a3005a556d24777a220ff020816f01a346
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@remoteserver =** ] **'***remoteserver***'**  
- Nome del server remoto di cui è stato eseguito il mapping all'account di accesso remoto che si desidera rimuovere. *remoteserver* è **sysname**, non prevede alcun valore predefinito. *remoteserver* deve essere già esistente.  
+ Nome del server remoto di cui è stato eseguito il mapping all'account di accesso remoto che si desidera rimuovere. *remoteserver* viene **sysname**, non prevede alcun valore predefinito. *remoteserver* deve esistere già.  
   
- [  **@loginame =** ] **'***accesso***'**  
- Nome facoltativo dell'account di accesso nel server locale associato al server remoto. *account di accesso* è **sysname**, con un valore predefinito è NULL. *account di accesso* deve già esistere se specificato.  
+ [ **@loginame =** ] **'***login***'**  
+ Nome facoltativo dell'account di accesso nel server locale associato al server remoto. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve già esistere se specificato.  
   
  [  **@remotename =** ] **'***remote_name***'**  
- Nome facoltativo dell'account di accesso remoto che viene eseguito il mapping a *accesso* durante l'accesso dal server remoto. *remote_name* è **sysname**, con un valore predefinito è NULL.  
+ Nome facoltativo dell'account di accesso remoto che viene eseguito il mapping a *accesso* durante l'accesso dal server remoto. *remote_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -69,7 +69,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
  **sp_dropremotelogin** non può essere eseguita all'interno di una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza di **sysadmin** o **securityadmin** ruoli predefiniti del server.  
   
 ## <a name="examples"></a>Esempi  
@@ -96,14 +96,14 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [la procedura sp_addlinkedsrvlogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_addremotelogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_addserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [la procedura sp_droplinkedsrvlogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [sp_helpremotelogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

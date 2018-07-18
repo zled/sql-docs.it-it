@@ -1,33 +1,30 @@
 ---
 title: Oggetto Recordset (ADO) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 75e28a7413bc510865e1553e9a548ac1f00d46b5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4667e510edb12f0c916c6b2da7afd6cc73204c8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recordset-object-ado"></a>Oggetto Recordset ADO)
 Rappresenta l'intero set di record da una tabella di base o i risultati di un comando eseguito. In qualsiasi momento, il **Recordset** oggetto fa riferimento a un solo record all'interno del set di record corrente.  
@@ -39,13 +36,13 @@ Rappresenta l'intero set di record da una tabella di base o i risultati di un co
   
  Esistono quattro diversi tipi di cursore definiti in ADO:  
   
--   **Cursore dinamico** consente di visualizzare le aggiunte, modifiche ed eliminazioni da altri utenti; consente a tutti i tipi di spostamento all'interno di **Recordset** che non si basi su segnalibri; e consente i segnalibri, se il provider supporta essi.  
+-   **Cursore dinamico** consente di visualizzare le aggiunte, modifiche ed eliminazioni da altri utenti; consente a tutti i tipi di spostamento tramite il **Recordset** che non si basi su segnalibri; e consente i segnalibri, se il provider supporta essi.  
   
 -   **Cursore keyset** aggiungere Behaves come un cursore dinamico, ad eccezione del fatto che impedisce la visualizzazione record ad altri utenti e impedisce l'accesso ai record eliminati dagli altri utenti. Le modifiche dei dati da altri utenti saranno ancora visibili. Supporta sempre i segnalibri e consente pertanto di tutti i tipi di spostamento all'interno di **Recordset**.  
   
--   **Cursore statico** fornisce una copia statica di un set di record da usare per trovare i dati o di generare report; consente sempre i segnalibri e pertanto tutti i tipi di spostamento all'interno di **Recordset**. Le aggiunte, modifiche o le eliminazioni eseguite da altri utenti non saranno visibili. Questo è l'unico tipo di cursore consentito quando si apre un lato client **Recordset** oggetto.  
+-   **Cursore statico** fornisce una copia statica di un set di record da usare per trovare i dati o di generare report; consente sempre i segnalibri e quindi vengono consentiti tutti i tipi di spostamento tramite il **Recordset**. Le aggiunte, modifiche o le eliminazioni eseguite da altri utenti non saranno visibili. Questo è l'unico tipo di cursore consentito quando si apre un lato client **Recordset** oggetto.  
   
--   **Cursore forward-only** consente solo mediante lo scorrimento in avanti il **Recordset**. Le aggiunte, modifiche o le eliminazioni eseguite da altri utenti non saranno visibili. Ciò migliora le prestazioni in situazioni in cui è necessario apportare solo una singola iterazione un **Recordset**.  
+-   **Con cursori forward-only** consente di scorrere solo in avanti il **Recordset**. Le aggiunte, modifiche o le eliminazioni eseguite da altri utenti non saranno visibili. Ciò migliora le prestazioni in situazioni in cui è necessario apportare solo una singola iterazione un **Recordset**.  
   
  Impostare il [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) proprietà prima apertura di **Recordset** di scegliere il tipo di cursore o di passare un *CursorType* argomento con il [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)metodo. Alcuni provider non supporta tutti i tipi di cursore. Consultare la documentazione per il provider. Se non si specifica un tipo di cursore, ADO apre un cursore forward-only per impostazione predefinita.  
   

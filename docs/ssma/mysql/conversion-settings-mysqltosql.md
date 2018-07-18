@@ -1,30 +1,28 @@
 ---
 title: Le impostazioni di conversione (MySQLToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d19688f630a71ff111a755b6810379b06fd129d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 13a3bfc9f8fe001d31b1d231438cece9752e08df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conversion-settings-mysqltosql"></a>Impostazioni di conversione (MySQLToSQL)
 Il **'Impostazioni'** scheda consente di impostare le impostazioni a livello di nodo. La scheda è disponibile in nodi Metabase seguenti:  
@@ -52,7 +50,7 @@ Queste impostazioni saranno disponibili in base al tipo di nodo della Metabase. 
 > -   Le modifiche apportate dall'utente verranno essere salvate come file separato preferenza nell'area di lavoro di progetto.  
 > -   L'estensione di questo file sarà **ccprefs**.  
   
-1.  **Impostazione di conversione di funzione:**  
+1.  **Impostazione di conversione (funzione):**  
   
     1.  Questa scheda contiene **'Forzare la conversione di funzione'** opzione. L'opzione può avere uno dei quattro valori seguenti:  
   
@@ -68,7 +66,7 @@ Queste impostazioni saranno disponibili in base al tipo di nodo della Metabase. 
   
     3.  Le impostazioni apportate dall'utente vengono salvate nel file delle preferenze in serie fare clic su **applica** pulsante.  
   
-2.  **Impostazione conversione della tabella:**  
+2.  **Impostazione di conversione tabella:**  
   
     1.  Questa scheda contiene **'Generazione colonna ausiliario esclusione ROWID'** opzione. L'opzione può avere uno dei quattro valori seguenti:  
   

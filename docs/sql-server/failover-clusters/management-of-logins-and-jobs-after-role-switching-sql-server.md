@@ -1,31 +1,30 @@
 ---
 title: Gestione di account di accesso e di processi dopo un cambio di ruolo (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: failover-clusters
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: role switching [SQL Server]
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ff1ff9689876177cb55aaeea6689e49a478fd6d2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: 94f3340c0184142baefb5bde981e71a74e56b6a9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Gestione di account di accesso e di processi dopo un cambio di ruolo (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si distribuisce una soluzione di disponibilità elevata e ripristino di emergenza per un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è importante riprodurre le informazioni più significative archiviate per il database nei database **master** o **msdb**. In genere, tra queste informazioni sono inclusi i processi del database primario/principale e gli account di accesso di utenti o processi necessari per la connessione al database. È consigliabile duplicare queste informazioni in qualsiasi istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene ospitato un database secondario/mirror. Se possibile, dopo il cambio di ruolo, è opportuno riprodurre le informazioni a livello di programmazione nel nuovo database primario/principale.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Quando si distribuisce una soluzione di recupero di emergenza o a disponibilità elevata per un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è importante riprodurre le informazioni più significative archiviate per il database nei database **master** o **msdb** . In genere, tra queste informazioni sono inclusi i processi del database primario/principale e gli account di accesso di utenti o processi necessari per la connessione al database. È consigliabile duplicare queste informazioni in qualsiasi istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene ospitato un database secondario/mirror. Se possibile, dopo il cambio di ruolo, è opportuno riprodurre le informazioni a livello di programmazione nel nuovo database primario/principale.  
   
 ## <a name="logins"></a>Account di accesso  
  In tutte le istanze del server in cui viene ospitata una copia del database, è consigliabile riprodurre gli account di accesso con l'autorizzazione ad accedere al database principale. Quando il ruolo primario/principale cambia, solo gli utenti con account di accesso presenti nella nuova istanza del server primario/principale possono accedere al nuovo database primario/principale. Gli utenti i cui account di accesso non sono definiti nella nuova istanza del server primario/principale sono orfani e non possono accedere al database.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
  Per altre informazioni, vedere la pagina relativa agli [utenti orfani con log shipping e mirroring del database](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (blog del motore di database).  
   
-## <a name="jobs"></a>Processi  
+## <a name="jobs"></a>processi  
  I processi, ad esempio quelli di backup, richiedono una particolare attenzione. Dopo un cambio di ruolo, in genere il proprietario del database o l'amministratore di sistema deve ricreare i processi per il nuovo database primario/principale.  
   
  Se l'istanza del server primario/principale precedente è disponibile, è consigliabile eliminare i processi originali nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in questione. Si noti che i processi nel database mirror attuale non vengono eseguiti poiché il database si trova nello stato RESTORING e, pertanto, non è disponibile.  

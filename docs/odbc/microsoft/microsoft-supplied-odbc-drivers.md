@@ -1,34 +1,31 @@
 ---
 title: Driver ODBC fornito da Microsoft | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], about ODBC drivers
 - drivers [ODBC], about ODBC drivers
 - ODBC drivers [ODBC]
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 1e321e1771076a4a71370f0494fb7331eb3ffc6f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 07c3b729354f173e6a47488f036cb487c84f5468
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Driver ODBC fornito da Microsoft
-*Driver* sono librerie che implementano le funzioni dell'API ODBC. Ogni driver è specifico di un sistema di gestione di specifica del database (DBMS). Nella maggior parte dei casi, i driver di espongono le funzionalità del sistema DBMS sottostante; che non sono necessari per implementare funzionalità non supportate dal sistema DBMS. I driver di eseguire attività specifiche e possono essere classificati in due categorie: basati su DBMS e file. Per ulteriori informazioni sull'architettura di driver e i driver, vedere [driver](../../odbc/reference/drivers.md).  
+*I driver* sono librerie che implementano le funzioni dell'API ODBC. Ogni driver è specifico di un sistema di gestione di specifica del database (DBMS). Nella maggior parte dei casi, i driver di espongono le funzionalità del sistema DBMS sottostante; che non sono necessari per implementare funzionalità non supportate dal sistema DBMS. I driver di eseguire attività specifiche e possono essere classificati in due categorie: basati su DBMS e file. Per ulteriori informazioni sull'architettura di driver e i driver, vedere [driver](../../odbc/reference/drivers.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

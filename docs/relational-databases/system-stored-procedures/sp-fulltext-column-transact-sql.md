@@ -1,16 +1,14 @@
 ---
 title: sp_fulltext_column (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_column_TSQL
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f1099b9ee7ebf38703701a2160e15d24b80ba859
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6c1a53e05eef89584526846c3f3d3c6324164a94
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 02/03/2018
   Specifica se una determinata colonna di una tabella viene inclusa o meno nell'indicizzazione full-text.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Uso [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) invece.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,30 +52,30 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 ## <a name="arguments"></a>Argomenti  
  [  **@tabname=** ] **'***qualified_table_name***'**  
- Nome della tabella composto da una o due parti. La tabella deve esistere nel database corrente La tabella deve disporre di un indice full-text. *qualified_table_name* è **nvarchar (517)**, senza alcun valore predefinito.  
+ Nome della tabella composto da una o due parti. La tabella deve esistere nel database corrente La tabella deve disporre di un indice full-text. *qualified_table_name* viene **nvarchar(517)**, senza alcun valore predefinito.  
   
- [  **@colname=** ] **'***column_name***'**  
- È il nome di una colonna in *qualified_table_name*. La colonna deve essere un carattere, **varbinary (max)** o **immagine** colonna e non può essere una colonna calcolata. *column_name* è **sysname**, non prevede alcun valore predefinito.  
+ [  **@colname=** ] **'***nome_colonna***'**  
+ È il nome di una colonna in *qualified_table_name*. La colonna deve essere un carattere, **varbinary (max)** o **immagine** colonna e non può essere una colonna calcolata. *column_name* viene **sysname**, non prevede alcun valore predefinito.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creare indici full-text dei dati di testo archiviati in colonne di **varbinary (max)** o **immagine** tipo di dati. Le immagini non vengono indicizzate.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creare indici full-text dei dati di testo archiviati nelle colonne del appartenenti al **varbinary (max)** oppure **immagine** tipo di dati. Le immagini non vengono indicizzate.  
   
  [  **@action=** ] **'***azione***'**  
- Azione da eseguire. *azione* è **varchar (20)**e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
+ Azione da eseguire. *azione* viene **varchar (20)** e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**add**|Aggiunge *column_name* di *qualified_table_name* all'indice full-text inattivo della tabella. Questa azione abilita la colonna per l'indicizzazione full-text.|  
 |**drop**|Rimuove *column_name* di *qualified_table_name* dall'indice full-text inattivo della tabella.|  
   
  [  **@language=** ] **'***language_term***'**  
- Lingua dei dati archiviati nella colonna. Per un elenco delle lingue incluse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Sys. fulltext_languages &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+ Lingua dei dati archiviati nella colonna. Per un elenco delle lingue incluse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Se una colonna include dati in più lingue o in una lingua non supportata, utilizzare la lingua neutra. Il valore predefinito è specificato nell'opzione di configurazione "default full-text language".  
   
- [ **@type_colname =** ] **'***type_column_name***'**  
- È il nome di una colonna in *qualified_table_name* che contiene il tipo di documento *column_name*. Questa colonna deve essere **char**, **nchar**, **varchar**, o **nvarchar**. Viene utilizzato solo quando il tipo di dati *column_name* è di tipo **varbinary (max)** o **immagine**. *type_column_name* è **sysname**, non prevede alcun valore predefinito.  
+ [  **@type_colname =** ] **'***type_column_name***'**  
+ È il nome di una colonna in *qualified_table_name* che contiene il tipo di documento *column_name*. Questa colonna deve essere **char**, **nchar**, **varchar**, o **nvarchar**. Viene utilizzato solo quando il tipo di dati *column_name* è di tipo **varbinary (max)** o **immagine**. *type_column_name* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -130,6 +128,6 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
  [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Ricerca full-Text e semantica Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Ricerca full-Text e semantica Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

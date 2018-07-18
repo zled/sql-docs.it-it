@@ -1,30 +1,27 @@
 ---
 title: L'invio di dati Long | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e60a23396a725f449b3b5f37f70bcb28284071d8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 3a15a3fdd69a1578392d34adac08b297269df7cf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sending-long-data"></a>L'invio di dati Long
 Definiscono DBMS *dati long* come qualsiasi carattere o dati binari in una determinata dimensione, ad esempio 254 caratteri. Che non sia possibile archiviare l'intero elemento di dati long in memoria, ad esempio quando l'elemento rappresenta un documento di testo lungo o una bitmap. Poiché tali dati non possono essere archiviati in un unico buffer, la invia al driver in parti con l'origine dati **SQLPutData** quando viene eseguita l'istruzione. Parametri per il quale i dati vengono inviati in fase di esecuzione sono noti come *parametri data-at-execution*.  
@@ -46,7 +43,7 @@ Definiscono DBMS *dati long* come qualsiasi carattere o dati binari in una deter
   
 6.  Chiamate **SQLPutData** per inviare i dati dei parametri del driver. Se i dati del parametro non rientrano in un singolo buffer, come accade spesso con i dati di tipo long, l'applicazione chiama **SQLPutData** ripetutamente per inviare i dati in parti; in questo caso, il driver e l'origine dati per riunire i dati. Se l'applicazione passa i dati di stringa con terminazione null, il driver o l'origine dati deve rimuovere il carattere di terminazione null come parte del processo di riassemblaggio.  
   
-7.  Chiamate **SQLParamData** nuovamente per indicare che è stato inviato a tutti i dati per il parametro. Se sono presenti parametri data-at-execution per cui non sono stati inviati dati, il driver restituisce SQL_NEED_DATA e il valore che identifica il parametro successivo. l'applicazione torna al passaggio 6. Se i dati sono stati inviati per tutti i parametri data-at-execution, viene eseguita l'istruzione. **SQLParamData** restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO e può restituiscono qualsiasi valore o diagnostica che **SQLExecute** o **SQLExecDirect** può restituire.  
+7.  Chiamate **SQLParamData** nuovamente per indicare che è stato inviato a tutti i dati per il parametro. Se sono presenti parametri data-at-execution per cui non sono stati inviati dati, il driver restituisce SQL_NEED_DATA e il valore che identifica il parametro successivo. l'applicazione torna al passaggio 6. Se i dati sono stati inviati per tutti i parametri data-at-execution, viene eseguita l'istruzione. **SQLParamData** restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO e può restituiscono qualsiasi valore o diagnostico che **SQLExecute** o **SQLExecDirect** può restituire.  
   
  Dopo aver **SQLExecute** o **SQLExecDirect** restituisce SQL_NEED_DATA e prima dell'invio di dati per l'ultimo parametro data-at-execution completamente, l'istruzione è in uno stato di dati necessario. Mentre un'istruzione si trova in uno stato di dati necessario, l'applicazione può chiamare solo **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, o **SQLGetDiagRec**; tutte le altre funzioni restituiscono SQLSTATE HY010 (funzione di errore nella sequenza). La chiamata **SQLCancel** Annulla l'esecuzione dell'istruzione e restituisce lo stato precedente. Per ulteriori informazioni, vedere [tabelle di transizione dello stato di appendice b: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   

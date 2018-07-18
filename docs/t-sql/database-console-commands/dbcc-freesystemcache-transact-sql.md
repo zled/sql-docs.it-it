@@ -1,16 +1,13 @@
 ---
-title: DBCC FREESYSTEMCACHE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FREESYSTEMCACHE_TSQL
@@ -27,16 +24,15 @@ helpviewer_keywords:
 - freeing unused cache entries
 - cleaning unused cache entries
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 35
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d5c6924da3ef9ac85683c857c786337b9d9b978b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 75c98aca474af0ebf02fd446cf9645fdb7c20373
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,9 +51,9 @@ DBCC FREESYSTEMCACHE
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- ('Tutte' [,*pool_name* ])  
+ ( 'ALL' [,*pool_name* ] )  
  ALL specifica tutte le cache supportate.  
- *pool_name* specifica una cache di pool di Resource Governor. Verranno liberate solo le voci associate a questo pool.  
+ *pool_name* specifica una cache del pool di Resource Governor. Verranno liberate solo le voci associate a questo pool.  
   
  MARK_IN_USE_FOR_REMOVAL  
  Libera in modalità asincrona le voci utilizzate dalle relative cache non appena tali voci risultano inutilizzate. Le nuove voci create nella cache dopo l'esecuzione di DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL rimangono invariate.  
@@ -65,11 +61,11 @@ DBCC FREESYSTEMCACHE
  NO_INFOMSGS  
  Disattiva tutti i messaggi informativi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 L'esecuzione di DBCC FREESYSTEMCACHE comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni 'DBCC FREEPROCCACHE' o 'DBCC FREESYSTEMCACHE'". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
 
 ## <a name="result-sets"></a>Set di risultati  
-DBCC FREESYSTEMCACHE restituisce: "esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".
+DBCC FREESYSTEMCACHE restituisce: "Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".
   
 ## <a name="permissions"></a>Autorizzazioni  
 È necessario disporre dell'autorizzazione ALTER SERVER STATE per il server.

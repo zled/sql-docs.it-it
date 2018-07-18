@@ -1,32 +1,28 @@
 ---
-title: "Proprietà computer Analysis Server (scheda Avanzate) | Documenti Microsoft"
-ms.custom: 
+title: Proprietà - Analysis Server (scheda Avanzate) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b91f70af11fb303d184a30368a3d183549214ba2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: b27173afb4898a0a21abf7203a992e492e5ae288
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>Proprietà - Analysis Server (scheda Avanzate)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Si tratta del servizio Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se sono state definite proprietà personalizzate, verranno visualizzate in questa scheda con i rispettivi valori.  
+  Si tratta del servizio Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se sono state definite proprietà personalizzate, verranno visualizzate in questa scheda con i rispettivi valori.  
   
 ## <a name="options"></a>Opzioni  
  **Cluster**  

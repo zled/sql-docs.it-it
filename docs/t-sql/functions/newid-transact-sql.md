@@ -1,16 +1,14 @@
 ---
-title: NEWID (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: NEWID (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - NEWID
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - uniqueidentifier data type
 - NEWID function
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: cb2a6d743037b040b609ee73e09a44ebbe6b29f1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9278f0d62298d89f5295071940bcc303195aee6c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -49,13 +47,13 @@ NEWID ( )
 ## <a name="return-types"></a>Tipi restituiti  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  `NEWID()` è conforme a RFC4122.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. Utilizzo della funzione NEWID con una variabile  
- L'esempio seguente usa `NEWID()` per assegnare un valore a una variabile dichiarata come il **uniqueidentifier** tipo di dati. Il valore di **uniqueidentifier** variabile di tipo di dati viene stampato prima viene verificato il valore.  
+ Nell'esempio seguente viene usata `NEWID()` per assegnare un valore a una variabile dichiarata con il tipo di dati **uniqueidentifier**. Il valore della variabile di tipo **uniqueidentifier** viene stampato prima di essere verificato.  
   
 ```  
 -- Creating a local variable with DECLARE/SET syntax.  
@@ -75,9 +73,9 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>B. Utilizzo di NEWID in un'istruzione CREATE TABLE  
   
-**Si applica a**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- Nell'esempio seguente viene creata la `cust` tabella con un **uniqueidentifier** tipo di dati e viene utilizzata NEWID per riempire la tabella con un valore predefinito. Quando si assegna il valore predefinito con `NEWID()`, tutte le righe, esistenti e nuove, contengono un valore univoco nella colonna `CustomerID`.  
+ Nell'esempio seguente viene creata una tabella `cust` con tipo di dati **uniqueidentifier** e viene usata NEWID per riempire la tabella con un valore predefinito. Quando si assegna il valore predefinito con `NEWID()`, tutte le righe, esistenti e nuove, contengono un valore univoco nella colonna `CustomerID`.  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  
@@ -115,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. Utilizzo dell'assegnazione di variabili e del tipo uniqueidentifier  
- Nell'esempio seguente dichiara una variabile locale denominata `@myid` come una variabile di **uniqueidentifier** tipo di dati. Alla variabile viene quindi assegnato un valore mediante l'istruzione `SET`.  
+ Nell'esempio seguente viene dichiarata una variabile locale denominata `@myid` come variabile di tipo **uniqueidentifier**. Alla variabile viene quindi assegnato un valore mediante l'istruzione `SET`.  
   
 ```  
 DECLARE @myid uniqueidentifier ;  
@@ -125,13 +123,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [NEWSEQUENTIALID &#40; Transact-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
+ [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [uniqueidentifier &#40; Transact-SQL &#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
+ [uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

@@ -1,32 +1,29 @@
 ---
 title: Segnalibro tipi | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], bookmarks
 - variable-length bookmarks [ODBC]
 - bookmarks [ODBC]
 - fixed-length bookmarks [ODBC]
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8ae130125c99e6ff87fd3b2d6fa8563c75f7e6ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 06f720d61ae8be7b1a2c98ce2c749a4265e630d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bookmark-types"></a>Tipi di segnalibro
 Tutti i segnalibri in ODBC 3*x* sono segnalibri a lunghezza variabile. In questo modo una chiave primaria o un indice univoco associato a una tabella per essere utilizzata come segnalibro. Il segnalibro inoltre può essere un valore a 32 bit, utilizzato in ODBC 2. *x*. Per specificare che un segnalibro viene utilizzato con un cursore, un'applicazione ODBC 3*x* applicazione imposta l'attributo di istruzione SQL_ATTR_USE_BOOKMARK SQL_UB_VARIABLE. Viene usato automaticamente un segnalibro a lunghezza variabile.  

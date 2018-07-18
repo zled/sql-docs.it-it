@@ -1,27 +1,22 @@
 ---
-title: Caricare i dati con Integration Services
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: Fornisce informazioni di riferimento e di distribuzione per il caricamento dei dati in SQL Server Parallel Data Warehouse utilizzando i pacchetti di SQL Server Integration Services (SSIS).
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: "69"
-ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Caricamento con Integration Services - Data Warehouse parallelo | Documenti Microsoft
+description: Fornisce informazioni di riferimento e la distribuzione per il caricamento dei dati in Parallel Data Warehouse (PDW) utilizzando i pacchetti di SQL Server Integration Services (SSIS).
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 718a076822a4304e0ba951f3ca1903bb7c009e17
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586063"
 ---
-# <a name="load-data-with-integration-services"></a>Caricare i dati con Integration Services
+# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Caricare i dati con Integration Services a Parallel Data Warehouse
 Fornisce informazioni di riferimento e di distribuzione per il caricamento dei dati in SQL Server Parallel Data Warehouse utilizzando i pacchetti di SQL Server Integration Services (SSIS).  
   
 <!-- MISSING LINKS
@@ -34,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -59,12 +54,12 @@ Per impostazione predefinita, le offerte esegue i pacchetti utilizzando i file b
 Per eseguire il pacchetto dall'interno di SQL Server Data Tools, fare doppio clic sul pacchetto e scegliere **Esegui pacchetto**.  
   
 ### <a name="run-from-powershell"></a>Esecuzione di PowerShell  
-Per eseguire il pacchetto di Windows PowerShell, usando il **dtexec** utilità:`dtexec /FILE <packagePath>`  
+Per eseguire il pacchetto di Windows PowerShell, usando il **dtexec** utilità: `dtexec /FILE <packagePath>`  
   
 Ad esempio, usare `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Eseguire Windows da un prompt dei comandi 
-Per eseguire il pacchetto da un prompt dei comandi di Windows, utilizzando il **dtexec** utilità:`dtexec /FILE <packagePath>`  
+Per eseguire il pacchetto da un prompt dei comandi di Windows, utilizzando il **dtexec** utilità: `dtexec /FILE <packagePath>`  
   
 Ad esempio: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -252,17 +247,17 @@ Eseguire il pacchetto nel computer in uso di Integration Services.
 2.  Il pacchetto verrà eseguito e verranno visualizzati lo stato di avanzamento e gli eventuali errori nel **lo stato di avanzamento** riquadro. Utilizzare un client SQL per confermare o monitorare il carico mediante la Console di amministrazione di SQL Server PDW.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creare un'attività script che utilizza l'adapter di destinazione PDW SSIS](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
-[Progettazione e implementazione di pacchetti (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
-[Esercitazione: Creazione di un pacchetto di base tramite una procedura guidata](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
+[Creare un'attività script che utilizza l'adapter di destinazione SSIS PDW](create-ssis-script-task-using-pdw-destination-adapter.md)  
+[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026\(v=sql11\).aspx)  
+[Progettazione e implementazione di pacchetti (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[Esercitazione: Creazione di un pacchetto di base tramite una procedura guidata](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Introduzione (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
-[Esempio di generazione dinamica dei pacchetti](http://go.microsoft.com/fwlink/?LinkId=202413)  
+[Esempio di generazione di pacchetti dinamiche](http://go.microsoft.com/fwlink/?LinkId=202413)  
 [Progettazione di pacchetti SSIS per parallelismo (Video di SQL Server)](http://msdn.microsoft.com/library/dd795221.aspx)  
-[Esempi della Community di Microsoft SQL Server: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[Miglioramento dei caricamenti incrementali con Change Data Capture](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
-[Trasformazione Dimensione a modifica lenta](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
-[Attività Inserimento bulk](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
+[Negli esempi della Community di Microsoft SQL Server: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
+[Miglioramento dei caricamenti incrementali tra Change Data Capture](http://msdn.microsoft.com/library/bb895315\(v=sql11\).aspx)  
+[Trasformazione Dimensione a modifica lenta](http://msdn.microsoft.com/library/ms141715\(v=sql11\).aspx)  
+[Attività Inserimento bulk](http://msdn.microsoft.com/library/ms141239\(v=sql11\).aspx)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

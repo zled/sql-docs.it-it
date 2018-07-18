@@ -1,16 +1,15 @@
 ---
 title: Mapping di database di origine e destinazione (AccessToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -23,22 +22,21 @@ helpviewer_keywords:
 - source database
 - target database
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 48e87d2b6c84db3534a3c52ee6176e29fd34257f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ade8c301a8cb519c22413a4db9a236f58f5dd870
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Mapping di database di origine e destinazione (AccessToSQL)
 Quando si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, è necessario specificare un database di destinazione per la migrazione. Se si dispone di più database di Access è possibile eseguirne il mapping a più [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database (o gli schemi) o a più schemi del database di SQL Azure connesso.  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server o SQL Azure Database schemi  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]database utilizzano il concetto di schemi per separare gli oggetti all'interno di un database in gruppi logici. Ad esempio, un database di libreria può utilizzare tre schemi denominati **documentazione**, **audio**, e **video** per separare gli oggetti di audio e video di libro, da altro. Per impostazione predefinita, il database di access viene eseguito il mapping a **master** database e **dbo** schema [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e al database connesso e **dbo** dello schema in SQL Azure.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database usano il concetto di schemi per separare gli oggetti all'interno di un database in gruppi logici. Ad esempio, un database di libreria può utilizzare tre schemi denominati **documentazione**, **audio**, e **video** per separare gli oggetti di audio e video di libro, da altro. Per impostazione predefinita, il database di access viene eseguito il mapping a **master** database e **dbo** schema [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e al database connesso e **dbo** dello schema in SQL Azure.  
   
 A meno che non si personalizza il mapping tra ogni database di Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database e dello schema, verrà eseguita la migrazione di SSMA tutti gli schemi e dati associati al database di accesso al database predefinito mappato.  
   
@@ -72,13 +70,13 @@ SSMA consente di eseguire il mapping di ogni database di Access in [!INCLUDE[ssN
 ## <a name="reverting-to-your-initial-database-and-schema"></a>Ripristinando il Database iniziale e dello Schema  
 Se si personalizza il mapping tra un database di Access e un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database di SQL Azure e dello schema, è possibile ripristinare il mapping al database specificato quando connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.  
   
-**Per reimpostare lo schema e di database predefinito**  
+**Per reimpostare lo schema e il database predefinito**  
   
 1.  Nella scheda mapping dello schema, selezionare una riga e fare clic su **Ripristina predefiniti** per ripristinare il database predefinito e lo schema.  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo del processo di migrazione è [la conversione di oggetti di database](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+Il passaggio successivo del processo di migrazione consiste [conversione di oggetti di database](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database di Access a SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[La migrazione dei database di Access a SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

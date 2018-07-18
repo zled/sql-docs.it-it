@@ -1,36 +1,23 @@
 ---
 title: Elemento AggregationFunction (ASSL) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
 ms.topic: reference
-apiname: AggregationFunction Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: AggregationFunction
-helpviewer_keywords: AggregationFunction element
-ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
-caps.latest.revision: "39"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c9cc86c77bc1f0b33a394cb7151bc29e2fd36ed4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e465538b6528e26090f96786f98354b5253b9a7
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="aggregationfunction-element-assl"></a>Elemento AggregationFunction (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene la funzione di aggregazione da utilizzare per il tipo di account.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene la funzione di aggregazione da usare per il tipo di account.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|*Sum*|  
@@ -56,15 +43,15 @@ ms.lasthandoff: 01/08/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Account](../../../analysis-services/scripting/objects/account-element-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il valore di questo elemento è limitato a una delle stringhe seguenti.  
   
-|valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*Sum*|La misura viene aggregata utilizzando il **somma** (funzione).|  
-|*Conteggio*|La misura viene aggregata utilizzando il **conteggio** (funzione).|  
+|*Count*|La misura viene aggregata utilizzando il **conteggio** (funzione).|  
 |*Min*|La misura viene aggregata utilizzando il **Min** (funzione).|  
 |*Max*|La misura viene aggregata utilizzando il **Max** (funzione).|  
 |*DistinctCount*|La misura viene aggregata utilizzando il **DistinctCount** (funzione).|  
@@ -78,7 +65,7 @@ ms.lasthandoff: 01/08/2018
  L'enumerazione che corrisponde ai valori consentiti per **AggregationFunction** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.AggregationFunction>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento Accounts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Elemento account &#40;ASSL&#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
+ [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

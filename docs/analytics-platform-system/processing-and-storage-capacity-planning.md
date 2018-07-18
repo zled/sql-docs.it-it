@@ -1,27 +1,21 @@
 ---
-title: "Capacità di elaborazione e archiviazione della piattaforma Analitica"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "I requisiti aziendali determinano il numero di unità di scala di dati e le dimensioni dei dischi di nodo di calcolo che è necessario che nel dispositivo Analitica piattaforma di strumenti analitici."
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
-caps.latest.revision: "7"
-ms.openlocfilehash: 9d7f933c45f05d7d4226a2f64fd41eff8d1c914a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Capacità di elaborazione e archiviazione - Analitica Platform System | Documenti Microsoft
+description: I requisiti aziendali determinano il numero di unità di scala di dati e le dimensioni dei dischi di nodo di calcolo che è necessario che nel dispositivo Analitica piattaforma di strumenti analitici.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: f552372ac108d219ad410b88ec9911ecaea63ab3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="analytics-platform-system-processing-and-storage-capacity"></a>Capacità di elaborazione e di archiviazione di sistema della piattaforma Analitica
+# <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacità di elaborazione e archiviazione in Analitica Platform System
 I requisiti aziendali determinano il numero di unità di scala di dati e le dimensioni dei dischi di nodo di calcolo che è necessario che nel dispositivo Analitica piattaforma di strumenti analitici. Utilizzare questi calcoli di elaborazione e archiviazione per la capacità di acquisto e decisioni relative alla pianificazione.  
   
   
@@ -97,17 +91,17 @@ Questa tabella stima che è possibile caricare e archiviare fino a 6 petabyte di
   
 Spiegazione:  
   
--   **Dimensioni dell'unità** è 1, 2 o 3 TB per ogni fornitore Hardware.  
+-   **Dimensioni dell'unità** è 1, 2 o 3 TB per ogni fornitore dell'Hardware.  
   
 -   **Archivio dati fisico per ogni nodo di calcolo** = (dimensioni dell'unità) * (16 dischi per ogni nodo di calcolo). Non sono inclusi i dischi con mirroring poiché sono per la ridondanza.  
   
--   **I nodi di calcolo massima per ogni rack** è specifico per il fornitore dell'hardware.  
+-   **Nodi di calcolo massima per ogni rack** è specifico per il fornitore dell'hardware.  
   
--   **Archiviazione fisica massima dei dati per ogni rack** = (archivio dati fisico per ogni nodo di calcolo) * (nodi di calcolo massima per ogni rack).  
+-   **Archiviazione fisica massima dei dati per ogni rack** = (archivio dati fisico per ogni nodo di calcolo) * (nodi di calcolo massima per rack).  
   
--   **Archiviazione massima dei dati per ogni rack stimato** = (archiviazione fisica massima dei dati per ogni rack) * (5 per un rapporto di compressione 5:1) \* (50% per i registri e tempDB). Si tratta di una stima per i dati utente non compresso che possono essere caricati e memorizzati nel dispositivo. Si tratta di una stima e non viene applicata dal software. L'archiviazione dei dati utente effettivo varia a seconda dei dati e la configurazione.  
+-   **Stimato massimo archiviazione dei dati per ogni rack** = (archiviazione fisica massima dei dati per ogni rack) * (5 per un rapporto di compressione 5:1) \* (50% per i log e tempDB). Si tratta di una stima per i dati utente non compresso che possono essere caricati e memorizzati nel dispositivo. Si tratta di una stima e non viene applicata dal software. L'archiviazione dei dati utente effettivo varia a seconda dei dati e la configurazione.  
   
 -   **Rack massimo** è specifico per ogni fornitore dell'Hardware.  
   
--   **Archiviazione massima dei dati per ogni dispositivo stimato** = (archiviazione di dati massimo stimato per rack) * (massimo rack). Si tratta di una stima della dimensione totale complessivo dei dati utente che è stato possibile caricare e archiviare in un dispositivo completamente compilato.  
+-   **Stimato archiviazione massima dei dati per ogni dispositivo** = (archiviazione stimato massima dei dati per ogni rack) * (massimo sistemi rack). Si tratta di una stima della dimensione totale complessivo dei dati utente che è stato possibile caricare e archiviare in un dispositivo completamente compilato.  
   

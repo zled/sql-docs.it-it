@@ -1,16 +1,14 @@
 ---
 title: sp_delete_maintenance_plan_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_maintenance_plan_db_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - removing maintenance plan
 - disassociating maintenance plan
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 69f523fbdb044d889cc3ee961d38ae6e6681136c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +53,10 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
   
 ## <a name="arguments"></a>Argomenti  
  [ **@plan_id =**] **'***plan_id***'**  
- Viene specificato l'ID del piano di manutenzione. *plan_id* è **uniqueidentifier**.  
+ Viene specificato l'ID del piano di manutenzione. *plan_id* viene **uniqueidentifier**.  
   
- [ **@db_name =**] **'***database_name***'**  
- Viene specificato il nome del database da eliminare dal piano di manutenzione. *database_name* è **sysname**.  
+ [  **@db_name =**] **'***database_name***'**  
+ Viene specificato il nome del database da eliminare dal piano di manutenzione. *database_name* è di tipo **sysname**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -83,6 +80,6 @@ EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC',
   
 ## <a name="see-also"></a>Vedere anche  
  [Piani di manutenzione](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Piano di manutenzione database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Piano di manutenzione database Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

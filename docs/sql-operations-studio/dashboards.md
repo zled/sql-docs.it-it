@@ -1,36 +1,35 @@
 ---
-title: "Accedere rapidamente alle informazioni e le attività comuni in Studio operazioni SQL (anteprima) | Documenti Microsoft"
+title: Accedere rapidamente alle informazioni e le attività comuni in Studio operazioni SQL (anteprima) | Documenti Microsoft
 description: Informazioni sulla visualizzazione dei widget dettagliati in Studio operazioni SQL (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
-ms.reviewer: alayu; erickang; sstein
+ms.prod: sql
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7b501b653920d2a8ff7e3e8ed4656c8154b344f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8ed47935a863a14d68385c540ce68d0e75e99799
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Dashboard in[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Dashboard in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Per visualizzare un dashboard, scelta di un server o database e selezionare **Gestisci**.
 
 ![Dashboard di esempio](media/dashboards/sample-dashboard.png)
 
-**Proprietà server** contiene le proprietà del server, incluse versione, versione, nome del Computer e versione del sistema operativo.
+**Proprietà server** contiene le proprietà del server, tra cui versione, versione, nome del Computer e versione del sistema operativo.
 
 **Attività** contiene attività commons come nuova Query e di ripristino.
 
-**Database di ricerca** cercare facilmente archiviati nel server, incluse le tabelle di database esistenti.
+**I database di ricerca** cercare facilmente i database esistenti archiviati nel server, incluse le tabelle.
 
 **Stato backup** cercare facilmente lo stato del backup per i database esistenti.
 
@@ -107,11 +106,11 @@ Utilizzando [!INCLUDE[name-sos](../includes/name-sos-short.md)]della configurazi
 
 ## <a name="sample-insight-action-definition"></a>Definizione dell'azione di informazioni di esempio
 
-```"actions"{}```Definisce un'azione di informazioni dettagliate. Azione può essere definita su un ambito specifico, ad esempio ```"server"```, ```"database"``` e così via e [!INCLUDE[name-sos](../includes/name-sos-short.md)] passa le informazioni sul contesto di connessione corrente all'azione. 
+```"actions"{}``` Definisce un'azione di una visione. Azione può essere definita su un ambito specifico, ad esempio ```"server"```, ```"database"``` e così via e [!INCLUDE[name-sos](../includes/name-sos-short.md)] passa le informazioni sul contesto di connessione corrente all'azione. 
 
-Ad esempio, quando l'azione di ripristino viene avviata per il database WideWorldImporters, ```"database": "${Database}"``` definizione indica di passare ```Database``` valore della colonna nel risultato della query per l'azione di ripristino. Azione di ripristino avvia quindi il database. ```"types"```è una matrice json e possono essere elencate più azioni nella matrice. Fondamentalmente, diventa un menu di scelta rapida nella finestra di dialogo Dettagli informazioni dettagliate che l'utente può scegliere ed eseguire l'azione. 
+Ad esempio, quando l'azione di ripristino viene avviata per il database WideWorldImporters, ```"database": "${Database}"``` definizione indica di passare ```Database``` valore della colonna nel risultato della query per l'azione di ripristino. Azione di ripristino avvia quindi il database. ```"types"``` è una matrice json e più azioni possono essere elencate nella matrice. Fondamentalmente, diventa un menu di scelta rapida nella finestra di dialogo Dettagli informazioni dettagliate che l'utente può scegliere ed eseguire l'azione. 
 
-> [!INCLUDE[name-sos](../includes/name-sos-short.md)]Anteprima 0.17.1 è abilitata "backup", "ripristino", "nuova query" e "nuovo database" come tipi di azione.
+> [!INCLUDE[name-sos](../includes/name-sos-short.md)] Anteprima 0.17.1 è abilitata "backup", "ripristino", "nuova query" e "nuovo database" come tipi di azione.
 
 ```json
 "details": {

@@ -1,24 +1,24 @@
 ---
-title: mssql-cli | Microsoft Docs
-description: "MSSQL-cli è uno strumento di query interattivo della riga di comando per SQL Server in esecuzione su Windows, Mac OS o Linux."
+title: MSSQL-cli | Documenti Microsoft
+description: MSSQL-cli è uno strumento di query interattivo della riga di comando per SQL Server in esecuzione su Windows, Mac OS o Linux.
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
-ms.prod: sql-non-specified
-ms.reviewer: alayu; erickang; sstein
+ms.prod: sql
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: mssql-cli
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2c996fb8b4b896ef50f53c9420a8ee27648d0579
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bf49d6676b64386985a8af46676bab4e9c9c134d
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="mssql-cli-command-line-query-tool-for-sql-server"></a>strumento da riga di comando di query MSSQL-cli per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

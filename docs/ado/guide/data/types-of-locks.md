@@ -1,17 +1,15 @@
 ---
 title: Tipi di blocchi | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - AdLockBatchOptimistic [ADO]
 - AdLockReadOnly [ADO]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - AdLockOptimistic [ADO]
 - AdLockPessimistic [ADO]
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9bec4523ea458998ff19481de467cc6493d03ed2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2f20cb8bb9344b107a32f29aa2a9a9f83206ccaf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="types-of-locks"></a>Tipi di blocchi
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  
@@ -41,7 +38,7 @@ ms.lasthandoff: 02/09/2018
  Indica che il provider Usa blocco ottimistico: blocco dei record solo quando si chiama il **aggiornamento** metodo. Ciò significa che è probabile che un altro utente può modificare i dati tra il momento in cui si modifica il record e quando si chiama **aggiornamento**, che consente di creare conflitti. Utilizzare questo tipo di blocco nelle situazioni in cui la probabilità di un conflitto è insufficiente o in cui possono essere risolti immediatamente conflitti.  
   
 ## <a name="adlockpessimistic"></a>adLockPessimistic  
- Indica il blocco pessimistico, un record. Il provider non sia necessaria per garantire la corretta modifica dei record, in genere di blocco dei record nell'origine dati prima della modifica. Naturalmente, ciò significa che i record sono disponibili ad altri utenti dopo l'inizio di modifica, fino al rilascio del blocco chiamando **Update.** Utilizzare questo tipo di blocco in un sistema in cui ci si può permettere di modifiche simultanee ai dati, ad esempio in un sistema di prenotazione.  
+ Indica il blocco pessimistico, un record. Il provider non sia necessaria per garantire la corretta modifica dei record, in genere di blocco dei record nell'origine dati prima della modifica. Naturalmente, ciò significa che i record non sono disponibili ad altri utenti di iniziare la modifica, fino a quando non si rilascia il blocco chiamando **Update.** Utilizzare questo tipo di blocco in un sistema in cui ci si può permettere di modifiche simultanee ai dati, ad esempio in un sistema di prenotazione.  
   
 ## <a name="adlockreadonly"></a>adLockReadOnly  
  Indica i record di sola lettura. È possibile modificare i dati. Un blocco di sola lettura è il tipo di blocco "veloce" perché non richiede il server per mantenere un blocco di record.  

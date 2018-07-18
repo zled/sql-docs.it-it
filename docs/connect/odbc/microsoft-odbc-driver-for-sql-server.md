@@ -1,32 +1,28 @@
 ---
 title: Microsoft ODBC Driver for SQL Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 44d62e94b53d1599a0fcfb3f5815719bdbc2986d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+manager: craigg
+ms.openlocfilehash: 5142268f69db446dc588af17d7b532ba680c24d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
-![Un cerchio FRECCIAGIÙ download](../../ssdt/media/download.png)[per scaricare il driver ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC è l'API di accesso ai dati nativa principale per le applicazioni scritte in C e C++ per SQL Server. È un driver ODBC per la maggior parte delle origini dati. Altri linguaggi che è possono utilizzare ODBC includono COBOL, Perl, PHP e Python. ODBC viene ampiamente impiegato negli scenari di integrazione dati.
 
@@ -34,31 +30,31 @@ Il driver ODBC viene fornito con strumenti quali [ **sqlcmd** ](../../tools/sqlc
 
 ## <a name="code-example-in-c"></a>Esempio di codice in C++
 
-Si dispone di un file di piccole dimensioni con estensione zip che contiene il codice sorgente di un programma C++ che utilizza ODBC:
+L'esempio C++ seguente viene illustrato come utilizzare le API ODBC per connettersi e accedere a un database:
 
 - [Esempio di codice C++, tramite ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>Scarica
 
-- ![Un cerchio FRECCIAGIÙ download](../../ssdt/media/download.png)[per scaricare il driver ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[scaricare il driver ODBC](download-odbc-driver-for-sql-server.md)
 
-## <a name="documentation"></a>Documentazione  
+## <a name="documentation"></a>Documentazione
 
 ### <a name="features"></a>Funzionalità
 
 - [Provider di archivio chiavi personalizzato](../../connect/odbc/custom-keystore-providers.md)
 - [DSN e parole chiave delle stringhe di connessione e gli attributi](dsn-connection-string-attribute.md)
-- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (le funzionalità disponibili si applicano anche, senza OLEDB, per il Driver ODBC per SQL Server)
+- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (le funzionalità disponibili sono applicabili anche, senza OLEDB per il Driver ODBC per SQL Server)
 - [Utilizzando sempre crittografato](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [Utilizzo di Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
 - [Utilizzando la risoluzione IP di rete Transparent](../../connect/odbc/using-transparent-network-ip-resolution.md)
 
 ### <a name="linux-and-macos"></a>Linux e macOS
 
-- [L'installazione del Driver](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installazione del Driver](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 - [Connessione a SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
-- [Connessione con **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
-- [Connessione con **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
+- [La connessione con **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
+- [La connessione con **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 - [Traccia di accesso ai dati](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
 - [Domande frequenti](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 - [Installazione di Gestione driver](../../connect/odbc/linux-mac/installing-the-driver-manager.md)

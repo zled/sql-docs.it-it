@@ -1,16 +1,14 @@
 ---
 title: sp_add_targetservergroup (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_targetservergroup
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_targetservergroup
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 56fe13d82aa4c846ba49f546e1d767446c204547
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b31363478fdc6f024ac2907a4c27bcd06485f158
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33238122"
 ---
 # <a name="spaddtargetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +45,15 @@ sp_add_targetservergroup [ @name = ] 'name'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@name=**] **'***nome***'**  
- Nome del gruppo di server da creare. *nome* è **sysname**, non prevede alcun valore predefinito. *nome* non può contenere virgole.  
+ Nome del gruppo di server da creare. *nome* viene **sysname**, non prevede alcun valore predefinito. *nome* non può contenere virgole.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I gruppi di server di destinazione rappresentano una soluzione semplice per indirizzare un processo a una raccolta di server di destinazione. Per ulteriori informazioni, vedere [sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -1,39 +1,37 @@
 ---
 title: Esecuzione di un'istruzione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: SQL statements [ODBC], executing
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- SQL statements [ODBC], executing
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ddb265060dc0714ce4eafaa09ce336d289697309
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c111620b2f06e7b2eacb159d7cf1c8817bd27c59
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-a-statement"></a>Esecuzione di un'istruzione
 Sono disponibili quattro modi per eseguire un'istruzione, in base al momento della compilazione (autore) il motore di database e che sono definiti:  
   
 -   **L'esecuzione diretta** l'applicazione definisce l'istruzione SQL. Viene preparata ed eseguita in fase di esecuzione in un unico passaggio.  
   
--   **Esecuzione preparata** l'applicazione definisce l'istruzione SQL. Viene preparata ed eseguita in fase di esecuzione in due fasi distinte. L'istruzione può essere una volta preparato ed eseguito più volte.  
+-   **L'esecuzione preparata** l'applicazione definisce l'istruzione SQL. Viene preparata ed eseguita in fase di esecuzione in due fasi distinte. L'istruzione può essere una volta preparato ed eseguito più volte.  
   
--   **Procedure** l'applicazione è possibile definire e compilare uno o più istruzioni SQL in fase di sviluppo tempo e archiviano queste istruzioni nell'origine dati di una stored procedure. La procedura viene eseguita una o più volte in fase di esecuzione. L'applicazione può enumerare le stored procedure disponibili utilizzando funzioni di catalogo.  
+-   **Procedure** l'applicazione è possibile definire e compilare uno o più istruzioni SQL in fase di sviluppo tempo e archiviano queste istruzioni sull'origine dati di una stored procedure. La procedura viene eseguita una o più volte in fase di esecuzione. L'applicazione può enumerare le stored procedure disponibili utilizzando funzioni di catalogo.  
   
--   **Funzioni di catalogo** il writer di driver crea una funzione che restituisce un set di risultati predefiniti. In genere, questa funzione Invia un'istruzione SQL predefinita o chiama una routine creata per questo scopo. La funzione viene eseguita una o più volte in fase di esecuzione.  
+-   **Le funzioni di catalogo** il writer di driver crea una funzione che restituisce un set di risultati predefiniti. In genere, questa funzione Invia un'istruzione SQL predefinita o chiama una routine creata per questo scopo. La funzione viene eseguita una o più volte in fase di esecuzione.  
   
  Una determinata istruzione (come identificato dal relativo handle di istruzione) può essere eseguite un numero qualsiasi di volte. L'istruzione può essere eseguita con una serie di istruzioni SQL diverse oppure può essere eseguito ripetutamente con la stessa istruzione SQL. Ad esempio, il codice seguente usa lo stesso handle di istruzione (*hstmt1*) per recuperare e visualizzare le tabelle nel database Sales. Quindi, viene riutilizzato questo handle per recuperare le colonne in una tabella selezionata dall'utente.  
   

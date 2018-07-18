@@ -1,15 +1,14 @@
 ---
 title: Registrazione dei tipi definiti dall'utente in SQL Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -35,20 +34,19 @@ helpviewer_keywords:
 - UDTs [CLR integration], registering
 - ADD FILE clause
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 49a0a9d7c9bf8d023b748a34b622ba15e6406233
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c008844b49d907eb03e2358327f0f71959495675
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrazione dei tipi definiti dall'utente in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Per utilizzare un tipo definito dall'utente (UDT) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario registrarlo. La registrazione di un tipo definito dall'utente (UDT) comporta la registrazione dell'assembly e la creazione del tipo nel database in cui si desidera utilizzarlo. I tipi definiti dall'utente (UDT) vengono definiti nell'ambito di un singolo database e non possono essere utilizzati in più database a meno che lo stesso assembly e lo stesso tipo definito dall'utente (UDT) non vengano registrati con ogni database. Dopo la registrazione dell'assembly del tipo definito dall'utente (UDT) e la creazione del tipo, è possibile utilizzare il tipo definito dall'utente (UDT) in [!INCLUDE[tsql](../../includes/tsql-md.md)] e nel codice client. Per altre informazioni, vedere [Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+  Per utilizzare un tipo definito dall'utente (UDT) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario registrarlo. La registrazione di un tipo definito dall'utente (UDT) comporta la registrazione dell'assembly e la creazione del tipo nel database in cui si desidera utilizzarlo. I tipi definiti dall'utente (UDT) vengono definiti nell'ambito di un singolo database e non possono essere utilizzati in più database a meno che lo stesso assembly e lo stesso tipo definito dall'utente (UDT) non vengano registrati con ogni database. Dopo la registrazione dell'assembly del tipo definito dall'utente (UDT) e la creazione del tipo, è possibile utilizzare il tipo definito dall'utente (UDT) in [!INCLUDE[tsql](../../includes/tsql-md.md)] e nel codice client. Per altre informazioni, vedere [Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Utilizzo di Visual Studio per distribuire i tipi definiti dall'utente (UDT)  
  Il modo più semplice per distribuire il tipo definito dall'utente (UDT) è utilizzare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio. Per scenari di distribuzione più complessi e una maggiore flessibilità utilizzare tuttavia [!INCLUDE[tsql](../../includes/tsql-md.md)] come illustrato più avanti in questo argomento.  
@@ -66,7 +64,7 @@ Per utilizzare un tipo definito dall'utente (UDT) in [!INCLUDE[msCoName](../../i
 5.  Dal **compilare** dal menu **Distribuisci**. per registrare l'assembly e creare il tipo nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-transact-sql-to-deploy-udts"></a>Utilizzo di Transact-SQL per distribuire i tipi definiti dall'utente (UDT)  
- La sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY viene utilizzata per registrare l'assembly nel database in cui si desidera utilizzare il tipo definito dall'utente (UDT). Viene archiviata internamente nelle tabelle di sistema del database e non esternamente nel file system. Se il tipo definito dall'utente (UDT) dipende dagli assembly esterni, questi dovranno essere caricati nel database. L'istruzione CREATE TYPE viene utilizzata per creare il tipo definito dall'utente (UDT) nel database in cui deve essere utilizzato. Per ulteriori informazioni, vedere [CREATE ASSEMBLY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-assembly-transact-sql.md) e [Crea tipo &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ La sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY viene utilizzata per registrare l'assembly nel database in cui si desidera utilizzare il tipo definito dall'utente (UDT). Viene archiviata internamente nelle tabelle di sistema del database e non esternamente nel file system. Se il tipo definito dall'utente (UDT) dipende dagli assembly esterni, questi dovranno essere caricati nel database. L'istruzione CREATE TYPE viene utilizzata per creare il tipo definito dall'utente (UDT) nel database in cui deve essere utilizzato. Per ulteriori informazioni, vedere [CREATE ASSEMBLY & #40; Transact-SQL & #41; ](../../t-sql/statements/create-assembly-transact-sql.md) e [Crea tipo & #40; Transact-SQL & #41; ](../../t-sql/statements/create-type-transact-sql.md).  
   
 ### <a name="using-create-assembly"></a>Utilizzo di CREATE ASSEMBLY  
  La sintassi CREATE ASSEMBLY registra l'assembly nel database in cui si desidera utilizzare il tipo definito dall'utente (UDT). Dopo avere registrato l'assembly, non saranno presenti dipendenze.  
@@ -99,7 +97,7 @@ FROM 0xfeac4 … 21ac78
 > [!NOTE]  
 >  La sintassi CREATE TYPE viene utilizzata anche per la creazione di nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati alias, tipi e deve sostituire **sp_addtype** come mezzo per la creazione di tipi di dati alias. Alcuni argomenti facoltativi nella sintassi CREATE TYPE si riferiscono alla creazione dei tipi definiti dall'utente (UDT) e non sono applicabili alla creazione dei tipi di dati alias, ad esempio il tipo di base.  
   
- Per ulteriori informazioni, vedere [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ Per ulteriori informazioni, vedere [CREATE TYPE & #40; Transact-SQL & #41; ](../../t-sql/statements/create-type-transact-sql.md).  
   
 #### <a name="example"></a>Esempio  
  Nell'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione crea la **punto** tipo. EXTERNAL NAME viene specificato utilizzando la sintassi di denominazione in due parti di *AssemblyName*. *Nomeudt*.  
@@ -154,7 +152,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  Non è possibile modificare un tipo definito dall'utente (UDT) una volta creato in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sebbene sia possibile modificare l'assembly sul quale si basa il tipo. Nella maggior parte dei casi, è necessario rimuovere il tipo definito dall'utente (UDT) dal database con l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE, apportare le modifiche all'assembly sottostante e ricaricarlo mediante l'istruzione ALTER ASSEMBLY. È necessario quindi ricreare il tipo definito dall'utente (UDT) e tutti gli oggetti dipendenti.  
   
 ### <a name="example"></a>Esempio  
- L'istruzione ALTER ASSEMBLY viene utilizzata dopo avere apportato le modifiche al codice sorgente nell'assembly del tipo definito dall'utente (UDT) e averlo ricompilato. Il file con estensione dll viene copiato nel server e riassociato al nuovo assembly. Per la sintassi completa, vedere [ALTER ASSEMBLY &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-assembly-transact-sql.md).  
+ L'istruzione ALTER ASSEMBLY viene utilizzata dopo avere apportato le modifiche al codice sorgente nell'assembly del tipo definito dall'utente (UDT) e averlo ricompilato. Il file con estensione dll viene copiato nel server e riassociato al nuovo assembly. Per la sintassi completa, vedere [ALTER ASSEMBLY & #40; Transact-SQL & #41; ](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
  L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY seguente ricarica l'assembly Point.dll dal percorso specificato su disco.  
   

@@ -1,16 +1,16 @@
 ---
 title: Migliorare le prestazioni generali della replica | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -23,19 +23,19 @@ helpviewer_keywords:
 - performance [SQL Server replication], general considerations
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
-caps.latest.revision: "45"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 45
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72c807961694b90e0a987385c5a0fad4a38bd184
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6fa663e269559fb2eb87d599723734639a717d2e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enhance-general-replication-performance"></a>Miglioramento delle prestazioni generali della replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile migliorare le prestazioni generali di tutti i tipi di replica nell'applicazione e nella rete seguendo le istruzioni riportate in questo argomento.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  È possibile migliorare le prestazioni generali di tutti i tipi di replica nell'applicazione e nella rete attenendosi alle istruzioni riportate in questo argomento.  
   
 ## <a name="server-and-network"></a>Server e rete  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 01/18/2018
   
 -   Limitare l'utilizzo dei tipi di dati LOB (Large Object).  
   
-     Tali dati richiedono uno spazio di archiviazione e un'elaborazione maggiori rispetto ad altri tipi di dati di colonna. Non includere queste colonne negli articoli a meno che non sia necessario per l'applicazione in uso. I tipi di dati **text**, **ntext**e **image** sono deprecati. Se è necessario includere dati LOB, è consigliabile utilizzare rispettivamente i tipi di dati **varchar(max)**, **nvarchar(max)**e **varbinary(max)**.  
+     Tali dati richiedono uno spazio di archiviazione e un'elaborazione maggiori rispetto ad altri tipi di dati di colonna. Non includere queste colonne negli articoli a meno che non sia necessario per l'applicazione in uso. I tipi di dati **text**, **ntext**e **image** sono deprecati. Se è necessario includere dati LOB, è consigliabile utilizzare rispettivamente i tipi di dati **varchar(max)**, **nvarchar(max)** e **varbinary(max)**.  
   
      Per la replica transazionale, provare a utilizzare il profilo dell'agente di distribuzione denominato **Profilo di distribuzione per flussi OLEDB**. Per altre informazioni, vedere [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

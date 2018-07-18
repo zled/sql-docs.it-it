@@ -1,27 +1,26 @@
 ---
 title: PDOStatement::bindValue | Documenti Microsoft
-ms.custom: 
-ms.date: 10/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.custom: ''
+ms.date: 05/22/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 910b5326d910f57056ac885a91762496a96d7a0a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 293437aabacd65e16bc7312c080ac54fa4d70999
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563849"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +35,7 @@ bool PDOStatement::bindValue($parameter, $value[, $data_type]);
 ```  
   
 #### <a name="parameters"></a>Parametri  
-$*parametro*: un identificatore di parametro (misto). Per un'istruzione che usa segnaposti denominati, utilizzare un nome di parametro (: nome). Per un'istruzione preparata utilizzando la sintassi punto interrogativo, si tratta dell'indice in base 1 del parametro.
+$*parametro*: un identificatore del parametro (misto). Per un'istruzione che usa segnaposti denominati, utilizzare un nome di parametro (: nome). Per un'istruzione preparata utilizzando la sintassi punto interrogativo, si tratta dell'indice in base 1 del parametro.
   
 $*valore*: il valore (misto) da associare al parametro.  
   
@@ -45,7 +44,7 @@ $*data_type*: il tipo di dati (intero) facoltativo rappresentato da una costante
 ## <a name="return-value"></a>Valore restituito  
 TRUE in caso di esito positivo; in caso contrario, FALSE.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
   
@@ -82,7 +81,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> È consigliabile utilizzare le stringhe come input durante l'associazione di valori da un [colonna decimal o numeric](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) per garantire la precisione e l'accuratezza PHP limitate precisione per [numeri a virgola mobile](http://php.net/manual/en/language.types.float.php).
+> È consigliabile utilizzare le stringhe come input durante l'associazione di valori da un [colonna decimal o numeric](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) per garantire la precisione e l'accuratezza PHP limitate precisione per [numeri a virgola mobile](http://php.net/manual/en/language.types.float.php). Lo stesso vale per le colonne di tipo bigint, soprattutto quando i valori sono di fuori dell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Esempio  
 In questo esempio di codice viene illustrato come associare un valore decimale come parametro di input.  
@@ -103,6 +102,7 @@ $stmt->execute();
 ```
   
 ## <a name="see-also"></a>Vedere anche  
-[Classe PDOStatement](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[Classe PDOStatement](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

@@ -1,16 +1,14 @@
 ---
 title: sp_add_jobserver (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobserver
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobserver
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6b132644593bd62cc9830ffd61490253e1a89ae2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e89ba03a88db9dd5977ace92cc498726da6b3e45
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,25 +45,25 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_id =** ] *job_id*  
- Numero di identificazione del processo. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL.  
+ Numero di identificazione del processo. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name =** ] **'***job_name***'**  
- Nome del processo. *job_name* è **sysname**, con un valore predefinito è NULL.  
+ Nome del processo. *job_name* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [ **@server_name =** ] **'***server***'**  
- Nome del server a cui indirizzare il processo. *server* è **nvarchar (30)**, con valore predefinito è N' (Local) '. *server*può essere **(LOCAL)** per un server locale o il nome di un server di destinazione esistente.  
+ Nome del server a cui indirizzare il processo. *server* viene **nvarchar(30)**, con un valore predefinito di N' (Local) '. *server*può essere **(LOCAL)** per un server locale o il nome di un server di destinazione esistente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- **@automatic_post**esiste **sp_add_jobserver**, ma non è elencato nella sezione argomenti. **@automatic_post**è riservato per uso interno.  
+ **@automatic_post** esiste **sp_add_jobserver**, ma non è elencato nella sezione argomenti. **@automatic_post** è riservato per uso interno.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   

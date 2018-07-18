@@ -1,32 +1,29 @@
 ---
-title: "Catalogo di esempio di proprietà ActiveConnection (VC + +) | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Catalogo di esempio di proprietà ActiveConnection (VC + +) | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveConnection property [ADOX], VC++ example
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 743c9a3eb5394b098b21a3957299dd837becd52c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e57603e656cde933b74f6576ad6bae95a862b0df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Esempio di proprietà ActiveConnection catalogo (VC + +)
 L'impostazione di [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) proprietà a una connessione valida e aperta "aperta" nel catalogo. Da un catalogo aperto, è possibile accedere gli oggetti dello schema in esso contenuti.  

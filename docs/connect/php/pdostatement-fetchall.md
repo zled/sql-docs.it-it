@@ -1,27 +1,25 @@
 ---
 title: PDOStatement::fetchAll | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 64e8171c54768ca447438d245e16f149753566af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 55c793b27d63f5df67413ad2faa16d6025c89b37
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +38,7 @@ $*fetch_style*: un simbolo (intero) che specifica il formato della riga di dati.
   
 $*indice*: valore intero che rappresenta la colonna da restituire se $*fetch_style* è PDO:: fetch_column. 0 è il valore predefinito.  
   
-$*ctor_args*: una matrice dei parametri di un costruttore di classe, quando $*fetch_style* è fetch_class o PDO:: fetch_obj.  
+$*ctor_args*: una matrice dei parametri di un costruttore di classe, quando $*fetch_style* è PDO:: fetch_class o PDO:: fetch_obj.  
   
 ## <a name="return-value"></a>Valore restituito  
 Una matrice delle righe rimanenti del set di risultati oppure false se la chiamata al metodo ha esito negativo.  
@@ -90,6 +88,7 @@ Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Classe PDOStatement](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[Classe PDOStatement](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

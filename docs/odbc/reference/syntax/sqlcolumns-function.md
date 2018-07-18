@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLColumns | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLColumns
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLColumns
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLColumns
-helpviewer_keywords: SQLColumns function [ODBC]
+f1_keywords:
+- SQLColumns
+helpviewer_keywords:
+- SQLColumns function [ODBC]
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7cb9d78a2ee194779f9e01dfd313ae4846d5a804
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d48fad8c874a9edda7da1afbe2f006726c39ee5b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcolumns-function"></a>Funzione SQLColumns
 **Conformità**  
@@ -56,7 +57,7 @@ SQLRETURN SQLColumns(
  [Input] Handle di istruzione.  
   
  *CatalogName*  
- [Input] Nome del catalogo. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *CatalogName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome del catalogo. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *CatalogName* non può contenere un criterio di ricerca di stringa.  
   
 > [!NOTE]  
 >  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *CatalogName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *CatalogName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa. Per ulteriori informazioni, vedere [argomenti delle funzioni di catalogo in](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
@@ -82,7 +83,7 @@ SQLRETURN SQLColumns(
  *NameLength3*  
  [Input] Lunghezza in caratteri del **TableName*.  
   
- *Nome colonna*  
+ *ColumnName*  
  [Input] Stringa criterio di ricerca per i nomi di colonna.  
   
 > [!NOTE]  
@@ -121,7 +122,7 @@ SQLRETURN SQLColumns(
 |IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente dell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato per l'handle per eseguire la post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
- Questa funzione viene in genere utilizzata prima dell'esecuzione di istruzione per recuperare informazioni sulle colonne per una o più tabelle dal catalogo dell'origine dati. **SQLColumns** può essere utilizzato per recuperare dati per tutti i tipi di elementi restituiti dalla **SQLTables**. Oltre alle tabelle di base, questo può includere (ma non è limitato a) viste, sinonimi, tabelle di sistema e così via. Al contrario, le funzioni **SQLColAttribute** e **SQLDescribeCol** vengono descritte le colonne in un set di risultati e la funzione **SQLNumResultCols** restituisce il numero di colonne in un set di risultati. Per ulteriori informazioni, vedere [utilizza dei dati del catalogo](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
+ Questa funzione viene in genere utilizzata prima dell'esecuzione di istruzione per recuperare informazioni sulle colonne per una o più tabelle dal catalogo dell'origine dati. **SQLColumns** può essere utilizzato per recuperare i dati per tutti i tipi di elementi restituiti dalla **SQLTables**. Oltre alle tabelle di base, questo può includere (ma non è limitato a) viste, sinonimi, tabelle di sistema e così via. Al contrario, le funzioni **SQLColAttribute** e **SQLDescribeCol** vengono descritte le colonne in un set di risultati e la funzione **SQLNumResultCols** restituisce il numero di colonne in un set di risultati. Per ulteriori informazioni, vedere [utilizza dei dati del catalogo](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
   
 > [!NOTE]  
 >  Per ulteriori informazioni sull'utilizzo generale, gli argomenti e i dati restituiti delle funzioni di catalogo ODBC, vedere [funzioni di catalogo](../../../odbc/reference/develop-app/catalog-functions.md).  
@@ -159,7 +160,7 @@ SQLRETURN SQLColumns(
   
  Nella tabella seguente elenca le colonne nel set di risultati. È possibile definire le colonne aggiuntive oltre colonna 18 (IS_NULLABLE) dal driver. Un'applicazione deve accedere a colonne specifiche del driver contando dalla fine del gruppo di risultati anziché specificare una posizione ordinale esplicita verso il basso. Per ulteriori informazioni, vedere [dati restituiti dalle funzioni di catalogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nome colonna|colonna<br /><br /> number|Tipo di dati|Commenti|  
+|Nome colonna|Colonna<br /><br /> number|Tipo di dati|Commenti|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nome di catalogo. NULL se non è applicabile all'origine dati. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando il driver recupera i dati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non dispone di cataloghi.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nome dello schema. NULL se non è applicabile all'origine dati. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando il driver recupera i dati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non dispone di schemi.|  
@@ -167,8 +168,8 @@ SQLRETURN SQLColumns(
 |COLUMN_NAME (ODBC 1.0)|4|Varchar non NULL|Nome colonna. Il driver restituisce una stringa vuota per una colonna che non dispone di un nome.|  
 |DATA_TYPE (ODBC 1.0)|5|Smallint non NULL|Tipo di dati SQL. Può trattarsi di un tipo di dati SQL ODBC o un tipo di dati specifici del driver SQL. Per i tipi di dati datetime e interval, questa colonna restituisce il tipo di dati conciso (ad esempio SQL_TYPE_DATE o SQL_INTERVAL_YEAR_TO_MONTH, anziché il tipo di dati nonconcise, ad esempio SQL_DATETIME o SQL_INTERVAL). Per un elenco dei tipi di dati ODBC SQL validi, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) appendice d: tipo di dati. Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.<br /><br /> I tipi di dati restituiti per ODBC 3. *x* e ODBC 2. *x* applicazioni potrebbero essere diverse. Per ulteriori informazioni, vedere [compatibilità e conformità agli standard](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).|  
 |TYPE_NAME (ODBC 1.0)|6|Varchar non NULL|Nome del tipo di dati dipende dall'origine dati; ad esempio, "CHAR", "VARCHAR", "MONEY", "LONG VARBINAR" o "CHAR () FOR BIT DATA".|  
-|COLUMN_SIZE (ODBC 1.0)|7|Valore intero|Se DATA_TYPE è SQL_CHAR o SQL_VARCHAR, questa colonna contiene la lunghezza massima in caratteri della colonna. Per i tipi di dati datetime, questo è il numero totale di caratteri necessari per visualizzare il valore quando viene convertito in caratteri. Per i tipi di dati numerici, questo è il numero totale di cifre o il numero totale di bit consentite nella colonna, in base alla colonna NUM_PREC_RADIX. Per i tipi di dati di intervallo, questo è il numero di caratteri nella rappresentazione di caratteri dell'intervallo di valori letterale (come definito nell'intervallo di precisione iniziale, vedere [lunghezza del tipo di dati intervallo](../../../odbc/reference/appendixes/interval-data-type-length.md) appendice d: tipo di dati). Per ulteriori informazioni, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) appendice d: tipo di dati.|  
-|BUFFER_LENGTH (ODBC 1.0)|8|Valore intero|La lunghezza in byte dei dati trasferiti durante un'operazione SQLGetData, SQLFetch o SQLFetchScroll se si specifica SQL_C_DEFAULT. Per i dati numerici, queste dimensioni potrebbero differire dalle dimensioni dei dati archiviati nell'origine dati. Questo valore potrebbe essere diverso dalla colonna COLUMN_SIZE per dati di tipo carattere. Per ulteriori informazioni sulla lunghezza, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) appendice d: tipo di dati.|  
+|COLUMN_SIZE (ODBC 1.0)|7|Integer|Se DATA_TYPE è SQL_CHAR o SQL_VARCHAR, questa colonna contiene la lunghezza massima in caratteri della colonna. Per i tipi di dati datetime, questo è il numero totale di caratteri necessari per visualizzare il valore quando viene convertito in caratteri. Per i tipi di dati numerici, questo è il numero totale di cifre o il numero totale di bit consentite nella colonna, in base alla colonna NUM_PREC_RADIX. Per i tipi di dati di intervallo, questo è il numero di caratteri nella rappresentazione di caratteri dell'intervallo di valori letterale (come definito nell'intervallo di precisione iniziale, vedere [lunghezza del tipo di dati intervallo](../../../odbc/reference/appendixes/interval-data-type-length.md) appendice d: tipo di dati). Per ulteriori informazioni, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) appendice d: tipo di dati.|  
+|BUFFER_LENGTH (ODBC 1.0)|8|Integer|La lunghezza in byte dei dati trasferiti durante un'operazione SQLGetData, SQLFetch o SQLFetchScroll se si specifica SQL_C_DEFAULT. Per i dati numerici, queste dimensioni potrebbero differire dalle dimensioni dei dati archiviati nell'origine dati. Questo valore potrebbe essere diverso dalla colonna COLUMN_SIZE per dati di tipo carattere. Per ulteriori informazioni sulla lunghezza, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) appendice d: tipo di dati.|  
 |DECIMAL_DIGITS (ODBC 1.0)|9|Smallint|Numero totale di cifre a destra del separatore decimale. Per SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP, questa colonna contiene il numero di cifre nel componente di secondi frazionari. Per altri tipi di dati, si tratta di cifre decimali della colonna nell'origine dati. Per i tipi di dati di intervallo che contengono un componente di ora, questa colonna contiene il numero di cifre a destra del separatore decimale (secondi frazionari). Per i tipi di dati di intervallo che non contengono un componente della fase, questa colonna è 0. Per ulteriori informazioni su cifre decimali, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) appendice d: tipo di dati. Viene restituito NULL per i tipi di dati in cui non è applicabile DECIMAL_DIGITS.|  
 |NUM_PREC_RADIX (ODBC 1.0)|10|Smallint|Per i tipi di dati numerici, 10 o 2. Se è 10, i valori COLUMN_SIZE e DECIMAL_DIGITS fornire il numero di cifre consentito per la colonna. Ad esempio, una colonna DECIMAL(12,5) restituirebbe un NUM_PREC_RADIX di 10, un valore di COLUMN_SIZE 12 e un DECIMAL_DIGITS 5; una colonna di tipo FLOAT può restituire un NUM_PREC_RADIX di 10, un valore di COLUMN_SIZE 15 e DECIMAL_DIGITS NULL.<br /><br /> Se è 2, i valori COLUMN_SIZE e DECIMAL_DIGITS fornire il numero di bit consentite nella colonna. Ad esempio, una colonna di tipo FLOAT potrebbe restituire una radice pari a 2, un valore di COLUMN_SIZE di 53 e DECIMAL_DIGITS NULL.<br /><br /> Viene restituito NULL per i tipi di dati in cui non è applicabile NUM_PREC_RADIX.|  
 |NULLABLE (ODBC 1.0)|11|Smallint non NULL|SQL_NO_NULLS se la colonna non può includere valori NULL.<br /><br /> SQL_NULLABLE se la colonna accetta valori NULL.<br /><br /> SQL_NULLABLE_UNKNOWN se non è noto se la colonna accetta valori NULL.<br /><br /> Il valore restituito per questa colonna è diverso dal valore restituito per la colonna IS_NULLABLE. La colonna ammette valori null indica con certezza che una colonna può accettare valori null, ma non è possibile specificare con certezza che una colonna non accetta valori null. La colonna IS_NULLABLE indica con certezza che una colonna non può accettare valori null, ma non è possibile specificare con certezza che una colonna accetta valori null.|  
@@ -176,7 +177,7 @@ SQLRETURN SQLColumns(
 |COLUMN_DEF (ODBC 3.0)|13|Varchar|Valore predefinito della colonna. Il valore di questa colonna deve essere interpretato come una stringa, se sia racchiuso tra virgolette.<br /><br /> Se è stato specificato NULL come valore predefinito, questa colonna è la parola NULL, non è racchiuso tra virgolette. Se il valore predefinito non può essere rappresentato senza troncamento, questa colonna contiene troncati, senza che li racchiude tra virgolette singole. Se è stato specificato alcun valore predefinito, questa colonna è NULL.<br /><br /> Il valore di COLUMN_DEF può essere utilizzato per la generazione di una nuova definizione di colonna, tranne quando contiene il valore troncati.|  
 |SQL_DATA_TYPE (ODBC 3.0)|14|Smallint non NULL|Tipo di dati SQL, così come viene visualizzato nel campo SQL_DESC_TYPE nell'implementazione. Può trattarsi di un tipo di dati SQL ODBC o un tipo di dati specifici del driver SQL. Questa colonna corrisponde alla colonna DATA_TYPE, tranne i tipi di dati datetime e interval. Questa colonna restituisce il tipo di dati nonconcise (ad esempio SQL_DATETIME o SQL_INTERVAL), anziché conciso tipo di dati (ad esempio SQL_TYPE_DATE o SQL_INTERVAL_YEAR_TO_MONTH) per datetime e i tipi di dati di intervallo. Se questa colonna restituisce SQL_DATETIME o SQL_INTERVAL, è possibile determinare il tipo di dati specifico dalla colonna SQL_DATETIME_SUB. Per un elenco dei tipi di dati ODBC SQL validi, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) appendice d: tipo di dati. Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.<br /><br /> I tipi di dati restituiti per ODBC 3. *x* e ODBC 2. *x* applicazioni potrebbero essere diverse. Per ulteriori informazioni, vedere [compatibilità e conformità agli standard](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).|  
 |SQL_DATETIME_SUB (ODBC 3.0)|15|Smallint|Il codice di sottotipo per i tipi di dati datetime e interval. Per gli altri tipi di dati in questa colonna viene restituito NULL. Per ulteriori informazioni su data/ora e intervallo di codici secondari, vedere "SQL_DESC_DATETIME_INTERVAL_CODE" in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).|  
-|CHAR_OCTET_LENGTH (ODBC 3.0)|16|Valore intero|La lunghezza massima in byte di un carattere o dati binari di colonna di tipo. Per gli tutti gli altri tipi di dati, il valore di questa colonna è NULL.|  
+|CHAR_OCTET_LENGTH (ODBC 3.0)|16|Integer|La lunghezza massima in byte di un carattere o dati binari di colonna di tipo. Per gli tutti gli altri tipi di dati, il valore di questa colonna è NULL.|  
 |ORDINAL_POSITION (ODBC 3.0)|17|Integer non NULL|Posizione ordinale della colonna nella tabella. La prima colonna nella tabella è pari al numerica 1.|  
 |IS_NULLABLE (ODBC 3.0)|18|Varchar|"NO" se la colonna non ammette valori null.<br /><br /> "YES" se la colonna può includere valori null.<br /><br /> Quando non è noto se i valori Null sono supportati, in questa colonna viene restituita una stringa di lunghezza zero.<br /><br /> Per determinare il supporto di valori Null vengono seguite le regole ISO. Un DBMS conforme a ISO SQL non può restituire una stringa vuota.<br /><br /> Il valore restituito per questa colonna è diverso dal valore restituito per la colonna ammette valori null. (Vedere la descrizione della colonna che ammette valori null).|  
   

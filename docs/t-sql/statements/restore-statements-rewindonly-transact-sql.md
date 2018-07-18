@@ -1,16 +1,14 @@
 ---
-title: RESTORE REWINDONLY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: RESTORE REWINDONLY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE_REWINDONLY_TSQL
@@ -25,18 +23,17 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 50
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf67d54e58f08296878c0781158e7b878b0b2a49
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5257fc78e43295131685d2fbdededa2f71d2b7de
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="restore-statements---rewindonly-transact-sql"></a>Istruzioni - RESTORE REWINDONLY (Transact-SQL)
+# <a name="restore-statements---rewindonly-transact-sql"></a>Istruzioni RESTORE - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Riavvolge e chiude i dispositivi nastro specificati lasciati aperti dalle istruzioni BACKUP o RESTORE eseguite con l'opzione NOREWIND. Questo comando è supportato solo per i dispositivi nastro.  
@@ -67,16 +64,16 @@ FROM <backup_device> [ ,...n ]
   
  Specifica i dispositivi di backup logici o fisici da utilizzare per il ripristino.  
   
- { *logical_backup_device_name* | **@ * * * logical_backup_device_name_var* } è il nome logico, conforme alle regole per gli identificatori, i dispositivi di backup creato da **sp_addumpdevice** da cui viene ripristinato il database. Se specificato come variabile (**@***logical_backup_device_name_var*), il nome di dispositivo di backup può essere specificato come costante stringa (**@ * * * logical_backup_device_name_var*  =   *logical_backup_device_name*) o come una variabile di tipo carattere, ad eccezione di **ntext** o **testo** tipi di dati.  
+ { *logical_backup_device_name* | **@***logical_backup_device_name_var* } Nome logico, conforme alle regole per gli identificatori, dei dispositivi di backup creati tramite **sp_addumpdevice** da cui viene ripristinato il database. Se indicato in forma di variabile (**@***logical_backup_device_name_var*), il nome del dispositivo di backup può essere specificato come costante stringa (**@***logical_backup_device_name_var* = *logical_backup_device_name*) oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
   
- {DISCO | NASTRO}  **=**  { **'***nome_dispositivo_backup_fisico***'** | **@ * * * physical_backup_device_name_var*  } Consente il backup da ripristinare dal dispositivo disco o nastro denominato. I tipi di dispositivo del disco e nastro devono essere specificati con il nome effettivo (ad esempio, percorso e il nome completo) del dispositivo: disco = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\. \TAPE0'. Se specificato come variabile (**@***physical_backup_device_name_var*), il nome del dispositivo può essere specificato come costante stringa (**@ * * * physical_backup_device_name_var* = '* physical_backup_device_name *') o come una variabile di tipo carattere, ad eccezione di **ntext** o **testo** tipi di dati.  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Consente di ripristinare i backup dal dispositivo disco o nastro specificato. I tipi di dispositivo disco e nastro devono essere specificati con il nome effettivo del dispositivo, ad esempio il percorso completo e il nome del file: DISK = 'C:\Programmi\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' o TAPE = '\\\\.\TAPE0'. Se indicato in forma di variabile (**@***phyal_backup_device_name_var*), il nome del dispositivo può essere specificato come costante stringa (***@***physical_backup_device_name_var* = '* physical_backup_device_name*') oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
   
- Se si utilizza un server di rete avente un nome UNC (che deve contenere il nome del server), specificare un dispositivo disco. Per ulteriori informazioni sull'utilizzo dei nomi UNC, vedere [dispositivi di Backup &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+ Se si utilizza un server di rete avente un nome UNC (che deve contenere il nome del server), specificare un dispositivo disco. Per altre informazioni sull'uso dei nomi UNC, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
- L'account con cui si esegue Microsoft SQL Server deve avere accesso in lettura al computer remoto o al server di rete per eseguire un'operazione di ripristino.  
+ Per eseguire un'operazione RESTORE, l'account con il quale si esegue Microsoft SQL Server deve avere l'accesso in lettura al server di rete o al computer remoto.  
   
  *n*  
- Segnaposto che indica la possibilità di specificare più dispositivi di backup e logici. Il numero massimo di dispositivi di backup o di dispositivi di backup logici è **64**.  
+ Segnaposto che indica la possibilità di specificare più dispositivi di backup e logici. Il numero massimo di dispositivi di backup o logici è **64**.  
   
  Una sequenza di ripristino può richiedere altrettanti dispositivi di backup quanti ne sono stati utilizzati per creare il set di supporti al quale appartengono i backup, a seconda che il ripristino sia online o offline. Il ripristino offline consente il ripristino di un backup utilizzando un numero minore di dispositivi di backup rispetto a quelli utilizzati per creare il backup. Il ripristino online richiede tutti i dispositivi di backup del backup. Non è possibile eseguire il ripristino con un numero inferiore di dispositivi.  
   
@@ -85,7 +82,7 @@ FROM <backup_device> [ ,...n ]
 > [!NOTE]  
 >  Durante il ripristino di un backup da un set di supporti con mirroring, è possibile specificare solo un mirror singolo per ogni gruppo di supporti. In caso di errori, tuttavia, la presenza di altri mirror, consente una risoluzione rapida di alcuni problemi di ripristino. È possibile sostituire un volume di un supporto danneggiato con il volume corrispondente da un altro mirror. Si noti che per i ripristini offline è possibile ripristinare da un numero inferiore di dispositivi rispetto a un gruppo di dispositivi, ma ogni gruppo viene elaborato soltanto una volta.  
   
- **CON le opzioni**  
+ **Opzioni WITH**  
   
  UNLOAD  
  Specifica che il nastro viene riavvolto ed espulso automaticamente al termine dell'operazione RESTORE. Per impostazione predefinita l'opzione UNLOAD viene impostata all'avvio di una nuova sessione utente e rimane attiva fino a quando non si specifica NOUNLOAD. Viene utilizzata solo per i dispositivi nastro. Se per l'operazione RESTORE non viene utilizzata un dispositivo nastro, questa opzione viene ignorata.  
@@ -96,9 +93,9 @@ FROM <backup_device> [ ,...n ]
  Specifica che il nastro non viene scaricato automaticamente dall'unità dopo un'operazione RESTORE. L'opzione NOUNLOAD rimane attiva fino a quando non si specifica UNLOAD.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- RESTORE REWINDONLY è un'alternativa a RESTORE LABELONLY FROM TAPE = \<name > WITH REWIND. È possibile ottenere un elenco di unità nastro aperte dal [Sys.dm io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) vista a gestione dinamica.  
+ RESTORE REWINDONLY è un'alternativa a RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND. È possibile ottenere un elenco di unità nastro aperte dalla DMV [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md).  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può utilizzare RESTORE REWINDONLY.  

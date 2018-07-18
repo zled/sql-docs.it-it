@@ -1,33 +1,30 @@
 ---
 title: Append (metodo) (ADO) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _DynaCollection::Append
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9a192286d39660580968305d16cb159480b6a09a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 22e33175e9a52891f8e9fbd3eb2e6b637a0788bb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="append-method-ado"></a>Append (metodo) (ADO)
 Aggiunge un oggetto a una raccolta. Se la raccolta è [campi](../../../ado/reference/ado-api/fields-collection-ado.md), un nuovo [campo](../../../ado/reference/ado-api/field-object.md) oggetto può essere creato prima di essere aggiunto alla raccolta.  
@@ -41,10 +38,10 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *collection*  
+ *raccolta*  
  Oggetto raccolta.  
   
- *fields*  
+ *Campi*  
  Oggetto **campi** insieme.  
   
  *oggetto*  
@@ -62,7 +59,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *Attrib*  
  Facoltativa. Oggetto [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) valore, il cui valore predefinito è **adFldDefault**, che specifica gli attributi per il nuovo campo. Se questo valore viene omesso, il campo conterrà gli attributi derivati da *tipo*.  
   
- *FieldValue*  
+ *Valore FieldValue*  
  Facoltativa. Oggetto **Variant** che rappresenta il valore per il nuovo campo. Se non specificato, il campo viene aggiunto con un valore null.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -78,7 +75,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  Il *FieldValue* parametro è valido solo quando si aggiunge un **campo** l'oggetto in un [Record](../../../ado/reference/ado-api/record-object-ado.md) dell'oggetto, non a un **Recordset** oggetto. Con un **Record** dell'oggetto, è possibile aggiungere campi e specificare i valori nello stesso momento. Con un **Recordset** dell'oggetto, è necessario creare campi durante la **Recordset** è chiuso e quindi aprire il **Recordset** e assegnare valori ai campi.  
   
 > [!NOTE]
->  Per i nuovi **campo** gli oggetti che sono stati accodati per il **campi** raccolta di un **Record** oggetto, il [valore](../../../ado/reference/ado-api/value-property-ado.md) deve essere impostata prima di qualsiasi altro **campo** le proprietà possono essere specificate. Innanzitutto, un valore specifico per il **valore** proprietà necessario è stata assegnata e [aggiornamento](../../../ado/reference/ado-api/update-method.md) sul **campi** raccolta denominata. Quindi, altre proprietà, ad esempio [tipo](../../../ado/reference/ado-api/type-property-ado.md) o [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) accessibili. **Campo** oggetti dei seguenti tipi di dati (**DataTypeEnum**) non possono essere accodati per il **campi** insieme e causerà un errore: **adArray**, **adChapter**, **adEmpty**, **adPropVariant**, e **adUserDefined**. Inoltre, i tipi di dati seguenti non sono supportati da ADO: **adIDispatch**, **adIUnknown**, e **adIVariant**. Per questi tipi, si verificherà alcun errore quando aggiunto, ma utilizzo può produrre risultati imprevisti, tra cui le perdite di memoria.  
+>  Per i nuovi **campo** gli oggetti che sono stati accodati per il **campi** raccolta di un **Record** oggetto, il [valore](../../../ado/reference/ado-api/value-property-ado.md) deve essere impostata prima di qualsiasi altro **campo** le proprietà possono essere specificate. Innanzitutto, un valore specifico per il **valore** proprietà necessario è stata assegnata e [aggiornamento](../../../ado/reference/ado-api/update-method.md) sul **campi** raccolta denominata. Quindi, altre proprietà, ad esempio [tipo](../../../ado/reference/ado-api/type-property-ado.md) o [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) accessibili. **Campo** oggetti dei seguenti tipi di dati (**DataTypeEnum**) non possono essere accodati per il **campi** raccolta e causerà un errore: **adArray**, **adChapter**, **adEmpty**, **adPropVariant**, e **adUserDefined**. Inoltre, i tipi di dati seguenti non sono supportati da ADO: **adIDispatch**, **adIUnknown**, e **adIVariant**. Per questi tipi, si verificherà alcun errore quando aggiunto, ma utilizzo può produrre risultati imprevisti, tra cui le perdite di memoria.  
   
 ## <a name="recordset"></a>recordset  
  Se non si imposta la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà prima di chiamare il **Append** metodo **CursorLocation** verrà impostato su **adUseClient** ( un [CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md) valore) automaticamente quando il [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene chiamato l'oggetto.  

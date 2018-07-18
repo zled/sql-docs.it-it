@@ -1,29 +1,17 @@
 ---
-title: Aggiungere SQLRUserGroup come un utente del database | Documenti Microsoft
-ms.custom: 
-ms.date: 12/21/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-keywords:
-- autenticazione implicita
-- SQLRUserGroup
-ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Active
-ms.openlocfilehash: 8e448e665044b1b8f63d30b7c99adf62419ae283
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Aggiungere SQLRUserGroup come un utente del database (SQL Server Machine Learning) | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 6f0877f04b35475dd4d1403390447adad0c3936c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>Aggiungere SQLRUserGroup come un utente del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,19 +34,19 @@ Tuttavia, è necessario eseguire gli script R o Python da un client di analisi s
 
 2. Nel **accesso - nuovo** nella finestra di dialogo **ricerca**. (Non digitare un valore nella casella ancora).
     
-     ![Fare clic su Cerca per aggiungere di nuovo account di accesso per machine learning](media/implied-auth-login1.png "fare clic su Cerca per aggiungere di nuovo account di accesso per machine learning")
+     ![Fare clic su Cerca per aggiungere nuovi account di accesso per l'apprendimento](media/implied-auth-login1.png "fare clic su Cerca per aggiungere nuovi account di accesso per machine learning")
 
 3. Nel **Seleziona utente o gruppo** fare clic su di **tipi di oggetto** pulsante.
 
-     ![Ricerca di tipi di oggetto da aggiungere nuovo account di accesso per machine learning](media/implied-auth-login2.png "ricerca i tipi di oggetto da aggiungere nuovo account di accesso per machine learning")
+     ![Ricerca di tipi di oggetto da aggiungere nuovo account di accesso per l'apprendimento](media/implied-auth-login2.png "Cerca tipi di oggetto da aggiungere nuovo account di accesso per machine learning")
 
 4. Nel **tipi di oggetto** nella finestra di dialogo **gruppi**. Deselezionare tutte le altre caselle di controllo.
 
-     ![Selezionare i gruppi nella finestra di dialogo tipi di oggetto](media/implied-auth-login3.png "selezionare gruppi nella finestra di dialogo tipi di oggetto")
+     ![Selezionare i gruppi nella finestra di dialogo tipi di oggetti](media/implied-auth-login3.png "Seleziona gruppi nella finestra di dialogo tipi di oggetto")
 
 4. Fare clic su **avanzate**, verificare che il percorso per la ricerca del computer corrente e quindi fare clic su **trova**.
 
-     ![Fare clic su Trova per ottenere l'elenco di gruppi](media/implied-auth-login4.png "fare clic su Trova per ottenere l'elenco di gruppi")
+     ![Fare clic su Trova per ottenere l'elenco dei gruppi](media/implied-auth-login4.png "fare clic su Trova per ottenere l'elenco dei gruppi")
 
 5. Scorrere l'elenco di account di gruppo nel server finché non si trova un a partire da `SQLRUserGroup`.
     
@@ -80,6 +68,6 @@ Tuttavia, è necessario eseguire gli script R o Python da un client di analisi s
 
 Se si prevede un uso massiccio di machine learning, è possibile aumentare il numero di account utilizzato per eseguire gli script esterni, come descritto in questo articolo: 
 
-+ [Modificare il pool di account utente per l'apprendimento automatico](modify-the-user-account-pool-for-sql-server-r-services.md)
++ [Modificare il pool di account utente per machine learning](modify-the-user-account-pool-for-sql-server-r-services.md)
 
 Per impostazione predefinita, vengono creati 20 account, che supporta sessioni simultanee di 20. Attività parallelizzata non utilizzano gli account aggiuntivi. Ad esempio, se un utente esegue un'attività di assegnazione dei punteggi che utilizza l'elaborazione parallela, lo stesso account di lavoro vengono riutilizzate per tutti i thread.

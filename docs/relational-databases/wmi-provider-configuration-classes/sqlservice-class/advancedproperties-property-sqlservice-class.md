@@ -1,16 +1,15 @@
 ---
-title: "Proprietà AdvancedProperties (classe SqlService) | Documenti Microsoft"
-ms.custom: 
+title: Proprietà AdvancedProperties (classe SqlService) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - AdvancedProperties Property (SqlService Class)
@@ -19,20 +18,19 @@ apilocation:
 helpviewer_keywords:
 - AdvancedProperties property
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 33
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c4d5bbd73a215d072dac4d992928d48becaf6510
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 98c6d4e4f4ad9b3382abfd2077b4bad74e007e0c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>Proprietà AdvancedProperties (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ottiene una matrice di riferimenti agli oggetti che contengono le proprietà avanzate per il **SqlService** oggetto.  
+  Ottiene una matrice di riferimenti agli oggetti che contengono le proprietà avanzate per il **SqlService** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   

@@ -1,16 +1,14 @@
 ---
 title: xml (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xml_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - xml data type [SQL Server], about xml data type
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6b9d3c8c512611ea9d8d0482acb7fd848c04629b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d50095449723be22ef34003b815aaa354613b4ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Tipo di dati in cui vengono archiviati i dati XML. È possibile archiviare **xml** istanze in una colonna o una variabile di **xml** tipo.  
+  Tipo di dati in cui vengono archiviati i dati XML. È possibile archiviare istanze **xml** in una colonna oppure una variabile di tipo **xml**.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,34 +44,34 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## <a name="arguments"></a>Argomenti  
  CONTENT  
- Limita il **xml** istanza da un frammento XML ben formato. I dati XML possono contenere più 0 (zero) o più elementi al livello principale. Al livello principale sono inoltre consentiti nodi di testo.  
+ Limita l'istanza **xml** a un frammento XML in formato corretto. I dati XML possono contenere più 0 (zero) o più elementi al livello principale. Al livello principale sono inoltre consentiti nodi di testo.  
   
  Questo è il comportamento predefinito.  
   
  DOCUMENT  
- Limita il **xml** istanza da un documento XML ben formato. I dati XML devono disporre di un unico elemento radice. Al livello principale non sono consentiti nodi di testo.  
+ Limita l'istanza **xml** a un documento XML in formato corretto. I dati XML devono disporre di un unico elemento radice. Al livello principale non sono consentiti nodi di testo.  
   
  *xml_schema_collection*  
- Nome di una raccolta di XML Schema. Per creare un oggetto tipizzato **xml** colonna o variabile, è possibile specificare facoltativamente il nome della raccolta XML schema. Per ulteriori informazioni sui dati XML tipizzati e, vedere [confrontare dati XML tipizzati con dati XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Nome di una raccolta di XML Schema. Per creare una colonna o una variabile **xml** tipizzata, facoltativamente è possibile specificare il nome della raccolta di XML Schema. Per altre informazioni sul codice XML tipizzato e non tipizzato, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-## <a name="remarks"></a>Osservazioni  
- La rappresentazione archiviata delle **xml** le istanze di tipi di dati non possono superare 2 gigabyte (GB) di dimensioni.  
+## <a name="remarks"></a>Remarks  
+ Le dimensioni della rappresentazione archiviata delle istanze del tipo di dati **xml** non possono superare 2 gigabyte (GB).  
   
- I facet CONTENT e DOCUMENT sono applicabili soltanto a XML tipizzato. Per ulteriori informazioni vedere [confrontare dati XML tipizzati con dati XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ I facet CONTENT e DOCUMENT sono applicabili soltanto a XML tipizzato. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
 ## <a name="examples"></a>Esempi  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 GO  
-DECLARE @y xml (Sales.IndividualSurveySchemaCollection);  
-SET @y =  (SELECT TOP 1 Demographics FROM Sales.Individual);  
-SELECT @y;  
+DECLARE @DemographicData xml (Person.IndividualSurveySchemaCollection);  
+SET @DemographicData =  (SELECT TOP 1 Demographics FROM Person.Person);  
+SELECT @DemographicData;  
 GO  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione tipo di dati &#40; motore di Database &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Conversione di tipi di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

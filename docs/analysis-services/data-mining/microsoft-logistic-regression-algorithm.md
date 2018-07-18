@@ -1,36 +1,23 @@
 ---
 title: Algoritmo Microsoft Logistic Regression | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- logical regression algorithms [Analysis Services]
-- algorithms [data mining]
-- neural network algorithms [Analysis Services]
-- regression algorithms [Analysis Services]
-ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5d293b386cf02d492e3a78a6cef34396f22277ee
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Microsoft Logistic Regression
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La regressione logistica è una nota tecnica statistica utilizzata per modellare i risultati binari.  
+  La regressione logistica è una nota tecnica statistica utilizzata per modellare i risultati binari.  
   
  Sono disponibili varie implementazioni della regressione logistica nella ricerca statistica, utilizzando tecniche di apprendimento diverse. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression è stato implementato utilizzando una variazione dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network. Questo algoritmo consente di condividere molte delle qualità delle reti neurale ma è più facile per eseguire il training.  
   

@@ -1,28 +1,26 @@
 ---
 title: Usare la Procedura guidata nuova istanza | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-caps.latest.revision: 
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5e6e92aa871347938f49c0a5e1d345e4a8d98377
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3c029e627576fd92b282a5d4597c97aaf4ee69ca
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-new-instance-wizard"></a>Utilizzare la New Instance Wizard
   Tramite la New Instance Wizard è possibile creare una nuova istanza per un servizio CDC. Viene visualizzata la procedura guidata Create an Oracle CDC Instance da CDC Designer Console. Nella New Instance Wizard è possibile eseguire le operazioni seguenti.  

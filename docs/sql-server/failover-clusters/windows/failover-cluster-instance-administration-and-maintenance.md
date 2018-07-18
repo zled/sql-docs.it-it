@@ -1,16 +1,13 @@
 ---
 title: Gestione e manutenzione dell'istanza del cluster di failover | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: failover-clusters
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - user accounts [SQL Server], failover clustering
 - clusters [SQL Server], maintaining
@@ -25,19 +22,19 @@ helpviewer_keywords:
 - removing nodes
 - virtual servers [SQL Server], adding nodes
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
-caps.latest.revision: "35"
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 964ce2dcfcff3edb1de4822ee01982583062f958
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b5f38ae5d55508bd1619e544f5e6bd87b469e849
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772677"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Gestione e manutenzione dell'istanza del cluster di failover
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le attività di manutenzione come l'aggiunta o la rimozione di nodi da un'istanza del cluster di failover (FCI) AlwaysOn esistente vengono portate a termine usando il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le altre attività dell'amministrazione, quali la modifica delle risorse indirizzo IP, il recupero da determinati scenari di FCI, vengono eseguite mediante lo snap-in Gestione cluster di failover che è lo snap-in di gestione per il servizio Windows Server Failover Clustering (WSFC).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Le attività di manutenzione quali l'aggiunta o la rimozione di nodi da un'istanza del cluster di failover (FCI) AlwaysOn esistente vengono portate a termine usando il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le altre attività dell'amministrazione, quali la modifica delle risorse indirizzo IP, il recupero da determinati scenari di FCI, vengono eseguite mediante lo snap-in Gestione cluster di failover che è lo snap-in di gestione per il servizio Windows Server Failover Clustering (WSFC).  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>Gestione un'istanza del cluster di failover  
  Dopo avere installato un'istanza FCI, è possibile modificarlo o ripristinarlo tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È possibile, ad esempio, aggiungere ulteriori nodi a un'istanza FCI, eseguire un'istanza FCI come istanza autonoma o rimuovere un nodo da una configurazione di un'istanza FCI.  

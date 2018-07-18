@@ -1,31 +1,29 @@
 ---
-title: "Creare e gestire sottoscrizioni per server di report in modalità SharePoint | Microsoft Docs"
-ms.custom: 
+title: Creare e gestire sottoscrizioni per server di report in modalità SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], creating
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 31d672c16ed9cf4854be7b64507daaf381a6a175
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 67991ac7def0691b3d2df38ce54ea34766dbd574
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità SharePoint
   È possibile creare sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per il recapito di report da un'applicazione Web di SharePoint integrata con un server di report in modalità SharePoint. Le sottoscrizioni possono recapitare report a una raccolta documenti o a una cartella di file oppure come messaggio di posta elettronica. Questo argomento fornisce un riepilogo dei requisiti e dei passaggi necessari per la creazione di una sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -61,7 +59,7 @@ ms.lasthandoff: 01/09/2018
   
  Quando si crea una sottoscrizione, è possibile selezionare un formato di file di output. Non tutti i formati sono appropriati per tutti i report. Prima di selezionare un formato in una sottoscrizione, aprire il report e provare a esportarlo in vari formati, per verificare che venga visualizzato come previsto.  
   
- Per poter creare sottoscrizioni di **, gli utenti necessitano dell'autorizzazione di elenco** Modifica elementi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint. Per altre informazioni, vedere [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ Per poter creare sottoscrizioni di **, gli utenti necessitano dell'autorizzazione di elenco** Modifica elementi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint. Per altre informazioni, vedere [Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
 > [!IMPORTANT]  
 >  Una sottoscrizione che recapita un report a una raccolta o a una cartella condivisa crea un nuovo file statico, che è basato sul report originale ma non è una vera e propria definizione di report eseguibile in una web part Visualizzatore report. Se il report originale include funzionalità interattive (ad esempio, collegamenti drill-through) o contenuto dinamico, tali funzionalità non saranno disponibili nel file statico recapitato al percorso di destinazione. Se si seleziona una pagina Web è possibile mantenere un certo livello di interattività, ma poiché il documento non è un file con estensione rdl eseguito nel visualizzatore di report, quando si fa clic per scorrere il report vengono create nuove pagine nella sessione del browser, pagine che sarà poi necessario scorrere per tornare al sito.  

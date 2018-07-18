@@ -1,32 +1,33 @@
 ---
 title: sp_changedynamicsnapshot_job (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_changedynamicsnapshot_job
 - sp_changedynamicsnapshot_job_TSQL
-helpviewer_keywords: sp_changedynamicsnapshot_job
+helpviewer_keywords:
+- sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3c7c2aaa546d1951117c39835ae2a285d3533a78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2c31883e19d688dd7158ece061144ae7d44ccf30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,18 +59,18 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication =** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* è **sysname**, non prevede alcun valore predefinito.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- Nome del processo di snapshot da modificare. *dynamic_snapshot_jobname*è **sysname**, con valore predefinito di N '% s'. Se *dynamic_snapshot_jobid* è specificato, è necessario utilizzare il valore predefinito per *dynamic_snapshot_jobname*.  
+ Nome del processo di snapshot da modificare. *dynamic_snapshot_jobname*viene **sysname**, con valore predefinito di N '% s'. Se *dynamic_snapshot_jobid* è specificato, è necessario utilizzare il valore predefinito per *dynamic_snapshot_jobname*.  
   
  [  **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- ID del processo di snapshot da modificare. *dynamic_snapshot_jobid* è **uniqueidentifier**, il valore predefinito NULL. Se *dynamic_snapshot_jobname*è specificato, è necessario utilizzare il valore predefinito per *dynamic_snapshot_jobid*.  
+ ID del processo di snapshot da modificare. *dynamic_snapshot_jobid* viene **uniqueidentifier**, con valore predefinito è NULL. Se *dynamic_snapshot_jobname*è specificato, è necessario utilizzare il valore predefinito per *dynamic_snapshot_jobid*.  
   
  [  **@frequency_type =** ] *frequency_type*  
- Frequenza per l'esecuzione pianificata dell'agente. *frequency_type* è **int**, e può essere uno dei valori seguenti.  
+ Frequenza per l'esecuzione pianificata dell'agente. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Su richiesta|  
@@ -82,9 +83,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |NULL (predefinito)||  
   
  [  **@frequency_interval =** ] *frequency_interval*  
- Giorni in cui viene eseguito l'agente. *frequency_interval* è **int**, e può essere uno dei valori seguenti.  
+ Giorni in cui viene eseguito l'agente. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Domenica|  
 |**2**|Lunedì|  
@@ -99,9 +100,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |NULL (predefinito)||  
   
  [  **@frequency_subday =** ] *frequency_subday*  
- Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è **int**, e può essere uno dei valori seguenti.  
+ Frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -110,12 +111,12 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |NULL (predefinito)||  
   
  [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- Intervallo per *frequency_subday*. *frequency_subday_interval* è **int**, con un valore predefinito è NULL.  
+ Intervallo per *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
   
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Data di esecuzione dell'agente di merge. Questo parametro viene utilizzato quando *frequency_type* è impostato su **32** (frequenza mensile relativa). *frequency_relative_interval* è **int**, e può essere uno dei valori seguenti.  
+ Data di esecuzione dell'agente di merge. Questo parametro viene utilizzato quando *frequency_type* è impostato su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, e può essere uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -125,42 +126,42 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |NULL (predefinito)||  
   
  [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è **int**, con un valore predefinito è NULL.  
+ Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_start_date =** ] *active_start_date*  
- Data della prima esecuzione pianificata dell'agente di merge, nel formato AAAAMMGG. *active_start_date* è **int**, con un valore predefinito è NULL.  
+ [ **@active_start_date =** ] *active_start_date*  
+ Data della prima esecuzione pianificata dell'agente di merge, nel formato AAAAMMGG. *active_start_date* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_end_date =** ] *active_end_date*  
- Data dell'ultima esecuzione pianificata dell'agente di merge, nel formato AAAAMMGG. *active_end_date* è **int**, con un valore predefinito è NULL.  
+ [ **@active_end_date =** ] *active_end_date*  
+ Data dell'ultima esecuzione pianificata dell'agente di merge, nel formato AAAAMMGG. *active_end_date* viene **int**, con un valore predefinito è NULL.  
   
  [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- Ora del giorno della prima esecuzione pianificata dell'agente di merge, nel formato HHMMSS. *active_start_time_of_day* è **int**, con un valore predefinito è NULL.  
+ Ora del giorno della prima esecuzione pianificata dell'agente di merge, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- Ora del giorno dell'ultima esecuzione pianificata dell'agente di merge, nel formato HHMMSS. *active_end_time_of_day* è **int**, con un valore predefinito è NULL.  
+ Ora del giorno dell'ultima esecuzione pianificata dell'agente di merge, nel formato HHMMSS. *active_end_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
  [  **@job_login=** ] **'***job_login***'**  
- Account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente snapshot durante la generazione dello snapshot per una sottoscrizione con un filtro di riga con parametri. *job_login* è **nvarchar (257)**, con un valore predefinito null.  
+ Account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente snapshot durante la generazione dello snapshot per una sottoscrizione con un filtro di riga con parametri. *job_login* viene **nvarchar(257)**, con valore predefinito è NULL.  
   
  [  **@job_password=** ] **'***job_password***'**  
- Password dell'account di Windows utilizzato per l'esecuzione dell'agente snapshot durante la generazione dello snapshot per una sottoscrizione con un filtro di riga con parametri. *job_password* è **nvarchar (257)**, con un valore predefinito null.  
+ Password dell'account di Windows utilizzato per l'esecuzione dell'agente snapshot durante la generazione dello snapshot per una sottoscrizione con un filtro di riga con parametri. *job_password* viene **nvarchar(257)**, con valore predefinito è NULL.  
   
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_changedynamicsnapshot_job** viene utilizzata nella replica di tipo merge per le pubblicazioni con filtri di riga con parametri.  
   
  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_changedynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le impostazioni di sicurezza della replica](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Snapshot per pubblicazioni di tipo merge con filtri con parametri](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

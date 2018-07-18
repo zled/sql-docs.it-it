@@ -1,16 +1,14 @@
 ---
-title: Transactions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Transazioni (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Transactions
@@ -23,23 +21,23 @@ helpviewer_keywords:
 - UOW [SQL Server]
 - unit of work [SQL Server]
 ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 360d2d4d88280a011687dfb3845f1de86513bdc8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 458f1a04b28db78b7931b08b27ad110be034c5e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transactions-transact-sql"></a>Transazioni (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Una transazione corrisponde a una singola unità di lavoro. Se la transazione viene eseguita correttamente, viene eseguito il commit di tutte le modifiche dei dati apportate durante la transazione e tali modifiche diventano parte permanente del database. Se si verificano errori durante l'esecuzione della transazione ed è necessario annullarla o eseguirne il rollback, verranno cancellate tutte le modifiche dei dati.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]funziona in modalità di transazione seguenti:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le modalità per le transazioni seguenti:  
   
  Transazioni con autocommit  
  Ogni istruzione corrisponde a una transazione.  
@@ -54,10 +52,10 @@ ms.lasthandoff: 01/25/2018
  Applicabile solo a MARS (Multiple Active Result Set). Una transazione definita a livello di ambito di batch è una transazione [!INCLUDE[tsql](../../includes/tsql-md.md)] esplicita o implicita che inizia in una sessione MARS. Se per una transazione definita a livello di ambito di batch non è stato eseguito il commit o il rollback quando il batch è completato, il rollback viene eseguito automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 > [!NOTE] 
-> Per considerazioni speciali relative ai prodotti di Data Warehouse, vedere [transazioni (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
+> Per considerazioni speciali relative ai prodotti di data warehouse, vedere [Transazioni (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
 
-## <a name="in-this-section"></a>Contenuto della sezione  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornisce le seguenti istruzioni transaction:  
+## <a name="in-this-section"></a>Argomenti della sezione  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili le seguenti istruzioni Transaction:  
   
 |||  
 |-|-|  

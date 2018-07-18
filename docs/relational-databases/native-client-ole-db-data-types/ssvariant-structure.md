@@ -1,29 +1,31 @@
 ---
 title: Struttura SSVARIANT | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-ole-db-data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: SSVARIANT
-helpviewer_keywords: SSVARIANT struct
+f1_keywords:
+- SSVARIANT
+helpviewer_keywords:
+- SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e0f5df988e6f0a12fa5b5c2cebd9f5ce7b937104
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: feb71f4bd7cb6c2a18bfebad46eac4d50db34bcb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssvariant-structure"></a>Struttura SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,11 +81,11 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|Supporta il **datetimeoffset** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati.<br /><br /> Include i membri indicati di seguito:<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**BYTE**) specifica la scala per *tsoDateTimeOffsetVal* valore.|  
 |NCharVal|Nessun indicatore del tipo OLE DB corrispondente.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Supporta il **nchar** e **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati.<br /><br /> Include i membri indicati di seguito:<br /><br /> *sActualLength* (**breve**) specifica la lunghezza effettiva per la stringa a cui *pwchNCharVal* punti. Non include lo zero finale.<br /><br /> *sMaxLength* (**breve**) specifica la lunghezza massima per la stringa a cui *pwchNCharVal* punti.<br /><br /> *pwchNCharVal* (**WCHAR** \*) puntatore alla stringa.<br /><br /> Membri non utilizzati: *rgbReserved*, *dwReserved*, e *pwchReserved*.|  
 |CharVal|Nessun indicatore del tipo OLE DB corrispondente.|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Supporta il **char** e **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati.<br /><br /> Include i membri indicati di seguito:<br /><br /> *sActualLength* (**breve**) specifica la lunghezza effettiva per la stringa a cui *pchCharVal* punti. Non include lo zero finale.<br /><br /> *sMaxLength* (**breve**) specifica la lunghezza massima per la stringa a cui *pchCharVal* punti.<br /><br /> *pchCharVal* (**CHAR** \*) puntatore alla stringa.<br /><br /> Membri non utilizzati:<br /><br /> *rgbReserved*, *dwReserved*, e *pwchReserved*.|  
-|BinaryVal|Nessun indicatore del tipo OLE DB corrispondente.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Supporta il **binario** e **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati.<br /><br /> Include i membri indicati di seguito:<br /><br /> *sActualLength* (**breve**) specifica la lunghezza effettiva dei dati a cui *prgbBinaryVal* punti.<br /><br /> *sMaxLength* (**breve**) specifica la lunghezza massima per i dati a cui *prgbBinaryVal* punti.<br /><br /> *prgbBinaryVal* (**BYTE** \*) puntatore ai dati binari.<br /><br /> Membro non utilizzato: *dwReserved*.|  
+|BinaryVal|Nessun indicatore del tipo OLE DB corrispondente.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Supporta il **binario** e **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati.<br /><br /> Include i membri indicati di seguito:<br /><br /> *sActualLength* (**breve**) specifica la lunghezza effettiva per i dati a cui *prgbBinaryVal* punti.<br /><br /> *sMaxLength* (**breve**) specifica la lunghezza massima per i dati a cui *prgbBinaryVal* punti.<br /><br /> *prgbBinaryVal* (**BYTE** \*) puntatore ai dati binari.<br /><br /> Membro non utilizzato: *dwReserved*.|  
 |Tipo sconosciuto|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi di dati &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
+ [Tipi di dati & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
   

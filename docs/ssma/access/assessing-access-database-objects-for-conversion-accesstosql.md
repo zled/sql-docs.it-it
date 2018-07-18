@@ -1,16 +1,15 @@
 ---
 title: Valutare gli oggetti di Database di Access per la conversione (AccessToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -24,16 +23,15 @@ helpviewer_keywords:
 - SQL, assessing
 - syntax, assessing
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e5deebf9af1de40aedfd549ba050e37a4539a1c7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: fb353f5906c1ed5cb45d6075f92cf183ba5e276b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Valutare gli oggetti di Database di Access per la conversione (AccessToSQL)
 Prima di caricare gli oggetti e la migrazione dei dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, è necessario determinare la quantità della migrazione sia stata completata e il tempo potrebbe richiedere la conversione. SSMA è possibile creare una relazione di valutazione che mostra la percentuale di oggetti che sono state convertite correttamente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o sintassi SQL Azure e l'ora le stime per eseguire la migrazione. SSMA consente inoltre di visualizzare i problemi specifici che hanno causato gli errori di conversione.  
@@ -41,7 +39,7 @@ Prima di caricare gli oggetti e la migrazione dei dati per [!INCLUDE[ssNoVersion
 ## <a name="creating-assessment-reports"></a>Creazione di report di valutazione  
 Quando crea una relazione di valutazione, SSMA converte gli oggetti di database di Access selezionati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o sintassi SQL Azure e quindi Mostra i risultati.  
   
-**Per creare una relazione di valutazione**  
+**Per creare un report di valutazione**  
   
 1.  Nel Visualizzatore metadati di accesso, selezionare i database che si desidera valutare.  
   
@@ -70,5 +68,5 @@ La finestra di Report di valutazione contiene tre riquadri: un elenco di cartell
 [Conversione di oggetti di database di Access](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database di Access a SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[La migrazione dei database di Access a SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

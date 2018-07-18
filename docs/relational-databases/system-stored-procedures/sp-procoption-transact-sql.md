@@ -1,32 +1,32 @@
 ---
 title: sp_procoption (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_procoption
 - sp_procoption_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_procoption
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_procoption
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f2906367b1f16c59ffbe4f4a98e25cf300302388
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d78b81013f7101cce34dcdc4713a800ce36e8930
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,14 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@ProcName =** ] **'***procedura***'**  
- È il nome della routine per cui impostare un'opzione. *procedura* è **nvarchar(776)**, non prevede alcun valore predefinito.  
+ [  **@ProcName =** ] **'***procedure***'**  
+ È il nome della routine per cui impostare un'opzione. *stored procedure* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
  [  **@OptionName =** ] **'***opzione***'**  
  Nome dell'opzione da impostare. L'unico valore per *opzione* è **avvio**.  
   
  [  **@OptionValue =** ] **'***valore***'**  
- Indica se impostare l'opzione on (**true** o **su**) o off (**false** o **off**). *valore* è **varchar(12)**, non prevede alcun valore predefinito.  
+ Indica se impostare l'opzione on (**true** o **su**) o off (**false** o **off**). *valore* viene **varchar(12)**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o numero di errore (esito negativo)  
@@ -60,7 +60,7 @@ sp_procoption [ @ProcName = ] 'procedure'
 ## <a name="remarks"></a>Osservazioni  
  Procedure di avvio devono essere il **master** database e non può contenere parametri INPUT o OUTPUT. L'esecuzione delle stored procedure inizia quando tutti i database sono stati recuperati e il messaggio relativo al completamento del recupero viene registrato all'avvio.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

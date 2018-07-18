@@ -1,17 +1,14 @@
 ---
 title: Editor di query del motore di database (SQL Server Management Studio) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
 dev_langs:
@@ -25,19 +22,20 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e6b32e0a52127becc2850e79c0d2b6828ed14aaf
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8a43ec3925304c5d895ebedbf157ebfecf8f82c0
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor di query del Motore di database (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usare l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per creare ed eseguire script contenenti istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'editor supporta anche l'esecuzione di script contenenti comandi **sqlcmd** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Utilizzare l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per creare ed eseguire script contenenti istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'editor supporta anche l'esecuzione di script contenenti comandi **sqlcmd** .  
   
 ## <a name="transact-sql-f1-help"></a>Guida di Transact-SQL  
  L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta il collegamento all'argomento di riferimento per un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specifica quando si seleziona F1. A tale scopo, evidenziare il nome di un'istruzione Transact-SQL, quindi selezionare F1. Verrà cercato quindi un argomento che disponga di un attributo della Guida corrispondente alla stringa evidenziata.  

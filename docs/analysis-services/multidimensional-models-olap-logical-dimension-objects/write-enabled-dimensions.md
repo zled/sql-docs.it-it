@@ -1,34 +1,19 @@
 ---
 title: Dimensioni abilitate la scrittura | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords:
-- write-enabled dimensions [Analysis Services]
-- dimensions [Analysis Services], write-enabled
-- dimension writeback [Analysis Services]
-- write-enabled cubes [Analysis Services]
-- writeback [Analysis Services], dimensions
-ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
-caps.latest.revision: "38"
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 175199b7090abc373e0ac39d1e99e81480df4e2e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 23f2fff5a78be0dad52f674a8d23c1922a86391c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="write-enabled-dimensions"></a>Dimensioni abilitate per la scrittura
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,9 +33,9 @@ ms.lasthandoff: 01/08/2018
   
 -   Il writeback della dimensione è supportato solo per gli schemi star. In altre parole, una dimensione deve essere basata su un'unica tabella della dimensione correlata direttamente a una tabella dei fatti. Dopo avere abilitato per la scrittura una dimensione, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] questi requisiti vengono convalidati quando si esegue la distribuzione a un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente o quando si compila un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- È possibile modificare o eliminare qualsiasi membro esistente di una dimensione writeback. Quando un membro viene eliminato, l'eliminazione viene propagata a tutti i membri figlio. In una dimensione Customer contenente gli attributi CountryRegion, Province, City e Customer, l'eliminazione di un paese/regione provocherebbe, ad esempio, l'eliminazione di tutte le province e città e di tutti i clienti appartenenti al paese/regione eliminato. Se un paese/regione include una sola provincia, eliminando tale provincia verrebbe eliminato anche il paese/regione.  
+ È possibile modificare o eliminare qualsiasi membro esistente di una dimensione writeback. Quando un membro viene eliminato, l'eliminazione viene propagata a tutti i membri figlio. In una dimensione Customer contenente gli attributi CountryRegion, Province, City e Customer, l'eliminazione di un paese/area geografica provocherebbe, ad esempio, l'eliminazione di tutte le province e città e di tutti i clienti appartenenti al paese/area geografica eliminato. Se un paese/area geografica include una sola provincia, eliminando tale provincia verrebbe eliminato anche il paese/area geografica.  
   
- I membri di una dimensione writeback possono essere spostati solo all'interno dello stesso livello. Una città, ad esempio, può essere spostata al livello City in un diverso paese/regione o provincia, ma non può essere spostata al livello Province o CountryRegion. In una gerarchia padre-figlio tutti i membri sono membri foglia e pertanto un membro può essere spostato in qualsiasi livello ad esclusione del livello **(All)** .  
+ I membri di una dimensione writeback possono essere spostati solo all'interno dello stesso livello. Una città, ad esempio, può essere spostata al livello City in un diverso paese/area geografica o provincia, ma non può essere spostata al livello Province o CountryRegion. In una gerarchia padre-figlio tutti i membri sono membri foglia e pertanto un membro può essere spostato in qualsiasi livello ad esclusione del livello **(All)** .  
   
  Se un membro di una gerarchia padre-figlio viene eliminato, i figli del membro vengono spostati nell'elemento padre del membro. Nel membro eliminato sono necessarie le autorizzazioni di aggiornamento per la tabella relazionale, mentre nei membri spostati non è richiesta alcuna autorizzazione. Quando tramite un'applicazione viene spostato un membro in una gerarchia padre-figlio, nell'operazione UPDATE è possibile specificare se i discendenti del membro devono essere spostati con il membro oppure spostati nell'elemento padre del membro. Per eliminare in modo ricorsivo un membro in una gerarchia padre-figlio, è necessario che l'utente disponga delle autorizzazioni di aggiornamento per la tabella relazionale sia per il membro che per tutti i relativi discendenti.  
   
@@ -62,14 +47,14 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Il writeback della dimensione non è supportato dalle dimensioni collegate.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Gli unici utenti aziendali autorizzati ad aggiornare una dimensione abilitata per la scrittura sono quelli inclusi nei ruoli del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a cui sono state concesse le autorizzazioni di lettura/scrittura nella dimensione. Per ogni ruolo, è possibile impostare i membri che possono o meno essere aggiornati. Affinché gli utenti aziendali possano aggiornare le dimensioni abilitate per la scrittura, è necessario che le applicazioni client utilizzate supportino questa funzionalità. Per tali utenti, è necessario che la dimensione abilitata per la scrittura sia inclusa in un cubo elaborato dopo l'ultima modifica della dimensione. Per altre informazioni, vedere [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
  Gli utenti e i gruppi inclusi nel ruolo Administrators possono aggiornare i membri degli attributi di una dimensione abilitata per la scrittura, anche se la dimensione non è inclusa in un cubo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà delle dimensioni di database](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
- [Partizioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Partizioni abilitate per scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Dimensioni & #40; Analysis Services - dati multidimensionali & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

@@ -1,32 +1,33 @@
 ---
 title: sp_changearticle (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_changearticle
 - sp_changearticle_TSQL
-helpviewer_keywords: sp_changearticle
+helpviewer_keywords:
+- sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-caps.latest.revision: "77"
+caps.latest.revision: 77
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1f68944355ce8af106d46ebba123e4c1fff05b04
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +51,16 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione in cui è contenuto l'articolo. *pubblicazione* è **sysname**, con un valore predefinito è NULL.  
+ Nome della pubblicazione in cui è contenuto l'articolo. *pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@article=**] **'***articolo***'**  
- Nome dell'articolo di cui modificare la proprietà. *articolo* è **sysname**, con un valore predefinito è NULL.  
+ Nome dell'articolo di cui modificare la proprietà. *articolo* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@property=**] **'***proprietà***'**  
- Proprietà dell'articolo da modificare. *proprietà* è **nvarchar (100)**.  
+ Proprietà dell'articolo da modificare. *proprietà* viene **nvarchar(100)**.  
   
  [  **@value=**] **'***valore***'**  
- Nuovo valore della proprietà dell'articolo. *valore* è **nvarchar (255)**.  
+ Nuovo valore della proprietà dell'articolo. *valore* viene **nvarchar(255**.  
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
@@ -67,7 +68,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |--------------|------------|-----------------|  
 |**creation_script**||Percorso e nome di uno script di schema dell'articolo utilizzato per la creazione delle tabelle di destinazione. Il valore predefinito è NULL.|  
 |**del_cmd**||Istruzione DELETE da eseguire. In alternativa, viene creata dal log.|  
-|**Descrizione**||Nuova voce descrittiva per l'articolo.|  
+|**description**||Nuova voce descrittiva per l'articolo.|  
 |**dest_object**||Disponibile per compatibilità con le versioni precedenti. Utilizzare **dest_table**.|  
 |**dest_table**||Nuova tabella di destinazione.|  
 |**destination_owner**||Nome del proprietario dell'oggetto di destinazione.|  
@@ -78,11 +79,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**ins_cmd**||Istruzione INSERT da eseguire. In alternativa, viene creata dal log.|  
 |**pre_creation_cmd**||Comando preliminare per eliminare, rimuovere o troncare la tabella di destinazione prima della sincronizzazione.|  
 ||**Nessuno**|Non utilizza alcun comando.|  
-||**eliminare**|Rimuove la tabella di destinazione.|  
-||**eliminare**|Elimina la tabella di destinazione.|  
-||**troncare**|Tronca la tabella di destinazione.|  
+||**drop**|Rimuove la tabella di destinazione.|  
+||**delete**|Elimina la tabella di destinazione.|  
+||**truncate**|Tronca la tabella di destinazione.|  
 |**pub_identity_range**||Controlla le dimensioni degli intervalli di valori Identity assegnati nel Sottoscrittore. Non supportato per la replica peer-to-peer.|  
-|**schema_option**||Specifica la mappa di bit dell'opzione di generazione dello schema per l'articolo specificato. *schema_option* è **Binary (8)**. Per ulteriori informazioni, vedere la sezione Osservazioni di seguito in questo argomento.|  
+|**schema_option**||Specifica la mappa di bit dell'opzione di generazione dello schema per l'articolo specificato. *schema_option* viene **binari (8)**. Per ulteriori informazioni, vedere la sezione Osservazioni di seguito in questo argomento.|  
 ||**0x00**|Disabilita la creazione di script eseguita dall'agente snapshot.|  
 ||**0x01**|Genera le istruzioni per la creazione di oggetti (CREATE TABLE, CREATE PROCEDURE e così via).|  
 ||**0x02**|Genera le stored procedure che propagano le eventuali modifiche per l'articolo.|  
@@ -121,7 +122,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x400000000**|Replica l'opzione di compressione per dati e indici. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 ||**0x800000000**|Impostare questa opzione per archiviare i dati FILESTREAM nel relativo filegroup nel Sottoscrittore. Se questa opzione non è impostata, i dati FILESTREAM vengono archiviati nel filegroup predefinito. Tramite la replica non vengono creati filegroup, pertanto, se si imposta questa opzione, è necessario creare il filegroup prima di applicare lo snapshot nel Sottoscrittore. Per ulteriori informazioni su come creare gli oggetti prima di applicare lo snapshot, vedere [eseguire script prima e dopo l'applicazione dello Snapshot](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> Vedere l'opzione correlata **0x100000000**.|  
 ||**0x1000000000**|Converte i tipi common language runtime (CLR) definito dall'utente (UDT) maggiori di 8000 byte in **varbinary (max)** in modo che le colonne di tipo definito dall'utente possono essere replicate nei Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||**0x2000000000**|Converte il **hierarchyid** tipo di dati **varbinary (max)** in modo che le colonne di tipo **hierarchyid** possano essere replicate nei Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per ulteriori informazioni su come usare **hierarchyid** colonne nelle tabelle replicate, vedere [hierarchyid &#40; Transact-SQL &#41; ](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x2000000000**|Converte il **hierarchyid** tipo di dati **varbinary (max)** in modo che le colonne di tipo **hierarchyid** possano essere replicate nei Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per ulteriori informazioni su come usare **hierarchyid** le colonne nelle tabelle replicate, vedere [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Replica gli eventuali indici filtrati sulla tabella. Per ulteriori informazioni sugli indici filtrati, vedere [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).|  
 ||**0x8000000000**|Converte il **geography** e **geometry** tipi di dati di **varbinary (max)** in modo che le colonne di questi tipi possono essere replicate nei Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|Replica gli indici su colonne di tipo **geography** e **geometry**.|  
@@ -132,13 +133,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**partizioni orizzontali DTS**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 ||**Includi nomi di colonna**|I nomi delle colonne sono inclusi nell'istruzione INSERT replicata.|  
 ||**Nessun nome di colonna**|I nomi delle colonne non sono inclusi nell'istruzione INSERT replicata.|  
-||**Nessun partizioni orizzontali dts**|La partizione orizzontale per l'articolo non è definita da una sottoscrizione trasformabile.|  
+||**no dts horizontal partitions '**|La partizione orizzontale per l'articolo non è definita da una sottoscrizione trasformabile.|  
 ||**Nessuno**|Cancella tutte le opzioni di stato di [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabella e contrassegna l'articolo come inattivo.|  
-||**parametri**|Le modifiche vengono propagate al Sottoscrittore tramite i comandi con parametri. Questa è l'impostazione predefinita per un nuovo articolo.|  
-||**valori letterali stringa**|Le modifiche vengono propagate al Sottoscrittore tramite i valori letterali stringa.|  
+||**parameters**|Le modifiche vengono propagate al Sottoscrittore tramite i comandi con parametri. Questa è l'impostazione predefinita per un nuovo articolo.|  
+||**Valori letterali stringa**|Le modifiche vengono propagate al Sottoscrittore tramite i valori letterali stringa.|  
 |**sync_object**||Nome della tabella o vista utilizzata per generare un file di output di sincronizzazione. Il valore predefinito è NULL. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
-|**spazio di tabella**||Identifica lo spazio tabella utilizzato dalla tabella di registrazione per un articolo pubblicato da un database Oracle. Per altre informazioni, vedere [Gestire spazi di tabella Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
-|**soglia**||Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Non supportato per la replica peer-to-peer.|  
+|**Spazio di tabella**||Identifica lo spazio tabella utilizzato dalla tabella di registrazione per un articolo pubblicato da un database Oracle. Per altre informazioni, vedere [Gestire spazi di tabella Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
+|**Soglia**||Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Non supportato per la replica peer-to-peer.|  
 |**type**||Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 ||**logbased**|Articolo basato su un log.|  
 ||**logbased manualboth**|Articolo basato su log con filtro manuale e vista manuale. Questa opzione richiede che il *sync_object* e *filtro* anche essere impostate. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
@@ -151,32 +152,32 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||Istruzione UPDATE da eseguire. In alternativa, viene creata dal log.|  
 |NULL|NULL|Restituisce un elenco di proprietà dell'articolo che è possibile modificare.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
   
- **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
+ **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
- **1** specifica che le modifiche apportate all'articolo possono invalidare lo snapshot potrebbe non essere valido e se sono disponibili sottoscrizioni che richiedono un nuovo snapshot, consente lo snapshot esistente deve essere contrassegnato come obsoleto e di generarne uno nuovo.  
+ **1** specifica che le modifiche apportate all'articolo possono invalidare lo snapshot non è valido e se sono disponibili sottoscrizioni che richiedono un nuovo snapshot, consente l'autorizzazione per lo snapshot esistente deve essere contrassegnato come obsoleto e di generarne uno nuovo.  
   
  Per informazioni sulle proprietà che richiedono la generazione di un nuovo snapshot quando vengono modificate, vedere la sezione Osservazioni.  
   
- [  **@force_reinit_subscription=]***force_reinit_subscription*  
- Segnala che l'azione eseguita dalla stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** il valore predefinito è **0**.  
+ [**@force_reinit_subscription=] * * * force_reinit_subscription*  
+ Segnala che l'azione eseguita dalla stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** con valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo non causano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   
- **1** specifica che le modifiche apportate all'articolo causano reinizializzazione delle sottoscrizioni esistenti e concede l'autorizzazione per la reinizializzazione della sottoscrizione.  
+ **1** specifica che le modifiche apportate all'articolo causano reinizializzazione delle sottoscrizioni esistenti e concede l'autorizzazione per la reinizializzazione.  
   
  Per ulteriori informazioni sulle proprietà che richiedono la reinizializzazione di tutte le sottoscrizioni esistenti in caso di modifica, vedere la sezione Osservazioni.  
   
- [  **@publisher** =] **'***publisher***'**  
- Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* è **sysname**, con un valore predefinito è NULL.  
+ [ **@publisher**=] **'***publisher***'**  
+ Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzato quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_changearticle** viene utilizzata nella replica snapshot e transazionale.  
@@ -251,11 +252,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà di articolo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [Modifica delle proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
+ [sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

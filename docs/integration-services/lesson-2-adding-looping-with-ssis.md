@@ -1,30 +1,28 @@
 ---
 title: 'Lezione 2: Aggiungere cicli con SSIS | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 683a2db5f7af5292051b5ce5c4cec9d49d465c2e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a17dbabd2998f4578da9faca1d217fdee00b559d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Lezione 2: Aggiungere cicli con SSIS
 Nella [Lezione 1: Creazione del progetto e del pacchetto di base](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)è stato creato un pacchetto che ha estratto i dati da un'unica origine file flat, ha trasformato i dati usando la trasformazione Ricerca e infine ha caricato i dati nella tabella dei fatti **FactCurrency** del database di esempio **AdventureWorksDW2012** .  

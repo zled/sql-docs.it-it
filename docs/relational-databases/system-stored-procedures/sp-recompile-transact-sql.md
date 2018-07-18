@@ -1,32 +1,33 @@
 ---
 title: sp_recompile (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_recompile_TSQL
 - sp_recompile
-dev_langs: TSQL
-helpviewer_keywords: sp_recompile
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_recompile
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 200bf01ba1127281d5ff25b9c69f3616c4cf64bd
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 484008523d109f8852cdef34911c52d8f081218f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>Argomenti  
  [ @objname=] '*oggetto*'  
- Nome qualificato o non qualificato di una stored procedure, un trigger, una tabella, una vista o una funzione definita dall'utente nel database corrente. *oggetto* è **nvarchar(776)**, non prevede alcun valore predefinito. Se *oggetto* è il nome della stored procedure, trigger o funzione definita dall'utente, la stored procedure, trigger o funzione verrà ricompilata alla successiva esecuzione. Se *oggetto* è il nome di un trigger della tabella o vista, tutte le stored procedure o funzioni definite dall'utente che fanno riferimento a tabella o della vista verranno ricompilate alla successiva esecuzione degli stessi.  
+ Nome qualificato o non qualificato di una stored procedure, un trigger, una tabella, una vista o una funzione definita dall'utente nel database corrente. *oggetto* viene **nvarchar(776)**, non prevede alcun valore predefinito. Se *oggetto* è il nome della stored procedure, trigger o funzione definita dall'utente, la stored procedure, trigger o funzione verrà ricompilata alla successiva esecuzione. Se *oggetto* è il nome di un trigger della tabella o vista, tutte le stored procedure o funzioni definite dall'utente che fanno riferimento a tabella o della vista verranno ricompilate alla successiva esecuzione degli stessi.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  

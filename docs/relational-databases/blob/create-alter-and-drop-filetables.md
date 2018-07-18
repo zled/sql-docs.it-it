@@ -1,36 +1,34 @@
 ---
 title: Creare, modificare ed eliminare FileTable | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], altering
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5e402ae5344d8dcae116954856644d206d62f0e5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: ba8ada2a67db9c0f6ea4882fb6fd04b26caa4f9f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>Creare, modificare e rilasciare FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Viene descritto come creare una nuova tabella FileTable o modificarne o eliminarne una esistente.  
+  Viene descritto come creare una nuova tabella FileTable o modificarne o eliminarne una esistente.  
   
 ##  <a name="BasicsCreate"></a> Creazione di una tabella FileTable  
  Una tabella FileTable è una tabella utente specializzata con uno schema predefinito e fisso. In questo schema sono archiviati dati FILESTREAM, informazioni su file e directory e attributi dei file. Per informazioni sullo schema FileTable, vedere [FileTable Schema](../../relational-databases/blob/filetable-schema.md).  

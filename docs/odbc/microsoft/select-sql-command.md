@@ -1,28 +1,26 @@
 ---
 title: Selezionare - comando SQL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: select [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 7d3803c1e51a21e8006994db5ba89f9b2cb41ad6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select---sql-command"></a>Selezionare - comando SQL
 Recupera dati da una o più tabelle.  
@@ -52,7 +50,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  Oggetto *sottoquery*, a cui gli argomenti seguenti, è un'istruzione SELECT all'interno di un'istruzione SELECT e devono essere racchiusi tra parentesi. È possibile avere fino a due sottoquery allo stesso livello (non annidati) nella clausola WHERE. (Vedere la sezione degli argomenti). Sottoquery possono contenere più condizioni di join.  
   
- [Tutti &#124; DISTINCT] [*Alias*.] *Select_Item* [AS *Column_Name*] [, [*Alias*.] *Select_Item* [AS *Column_Name*]...]  
+ [Tutte le &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*] [, [*Alias*.] *Select_Item* [AS *Column_Name*]...]  
  La clausola SELECT specifica i campi, costanti ed espressioni che vengono visualizzate nei risultati della query.  
   
  Per impostazione predefinita, tutti vengono visualizzate tutte le righe nei risultati della query.  
@@ -108,7 +106,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias* specifica un nome temporaneo per la tabella denominata *tabella*. Se si specifica un alias locale, è necessario utilizzare l'alias locale anziché il nome della tabella in tutta l'istruzione SELECT. L'alias locale non incidono sull'ambiente di Visual FoxPro.  
   
- DOVE *JoinCondition* [AND *JoinCondition* ...]    [E &#124; O *FilterCondition* [AND &#124; O *FilterCondition* ...]]  
+ In cui *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; o *FilterCondition* [AND &#124; o *FilterCondition* ...]]  
  Indica di Visual FoxPro da includere solo alcuni record nei risultati della query. In cui è necessario per recuperare dati da più tabelle.  
   
  *Elemento JoinCondition* specifica i campi che si collegano tabelle nella clausola FROM. Se si include più di una tabella in una query, è necessario specificare una condizione di join per ogni tabella dopo il primo.  
@@ -139,7 +137,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  Quando si utilizza l'operatore = con stringhe, funziona in modo diverso, a seconda dell'impostazione di SET ANSI. Quando SET ANSI è impostata su OFF, Visual FoxPro considera i confronti di stringhe in modo familiare agli utenti di Xbase. Quando il SET ANSI è impostata su ON, Visual FoxPro segue gli standard ANSI per confronti tra stringhe. Vedere [SET ANSI](../../odbc/microsoft/set-ansi-command.md) e [SET EXACT](../../odbc/microsoft/set-exact-command.md) per ulteriori informazioni sulla modalità di Visual FoxPro esegue confronti tra stringhe.  
   
- *FilterCondition* specifica i criteri che i record devono soddisfare per essere inclusi nei risultati della query. È possibile includere molte condizioni in una query di filtro desiderati, la connessione con l'operatore AND o OR (operatore). È inoltre possibile utilizzare l'operatore NOT per invertire il valore di un'espressione logica, o è possibile utilizzare **(vuoto)** per verificare la presenza di un campo vuoto. *FilterCondition* può accettare uno qualsiasi dei formati negli esempi seguenti:  
+ *FilterCondition* specifica i criteri che i record devono soddisfare per essere incluse nei risultati della query. È possibile includere molte condizioni in una query di filtro desiderati, la connessione con l'operatore AND o OR (operatore). È inoltre possibile utilizzare l'operatore NOT per invertire il valore di un'espressione logica, o è possibile utilizzare **(vuoto)** per verificare la presenza di un campo vuoto. *FilterCondition* può assumere una delle forme negli esempi seguenti:  
   
  **Esempio 1** *FieldName1 confronto FieldName2*  
   
@@ -149,7 +147,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `payments.amount >= 1000`  
   
- **Esempio 3** *FieldName confronto* tutti (*sottoquery*)  
+ **Esempio 3** *confronto FieldName* tutte (*sottoquery*)  
   
  `company < ALL ;`  
   
@@ -157,7 +155,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  Quando la condizione di filtro include tutti, il campo deve soddisfare la condizione di confronto per tutti i valori generati dalla sottoquery prima che il record è inclusa nei risultati della query.  
   
- **Esempio 4** *FieldName confronto* qualsiasi &#124; ALCUNI (*sottoquery*)  
+ **Esempio 4** *confronto FieldName* ANY &#124; SOME (*sottoquery*)  
   
  `company < ANY ;`  
   
@@ -167,7 +165,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  Nell'esempio seguente viene verificato se i valori nel campo sono all'interno di un intervallo di valori specificato:  
   
- **Esempio 5** *FieldName* [NOT] BETWEEN *Start_Range* AND *End_Range*  
+ **Esempio 5** *FieldName* [NOT] tra *Start_Range* AND *End_Range*  
   
  `customer.postalcode BETWEEN 90000 AND 99999`  
   

@@ -1,30 +1,20 @@
 ---
 title: StrToSet (MDX) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: STRTOSET
-dev_langs: kbMDX
-helpviewer_keywords: StrToSet function
-ms.assetid: 1700a563-6527-450a-8d3b-975c65bb6e51
-caps.latest.revision: "31"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 98095d2d8910a9e69d74712b99e1ccc7954826ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 30a69fa1c80c453aabea282d4e6293e28e244069
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582183"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,10 +32,10 @@ StrToSet(Set_Specification [,CONSTRAINED] )
  *Set_Specification*  
  Espressione stringa valida che specifica, direttamente o indirettamente, un set.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **StrToSet** funzione restituisce il set specificato nell'espressione stringa. Il **StrToSet** funzione viene in genere utilizzata con funzioni definite dall'utente per restituire una specifica di set da una funzione esterna a un'istruzione MDX o quando una query MDX con parametri.  
   
--   Quando viene utilizzato il flag CONSTRAINED, la specifica di set deve includere nomi di membri completi o non qualificati o un set di tuple contenenti nomi di membri completi o non qualificati racchiusi tra parentesi graffe {}. Questo flag viene utilizzato per ridurre il rischio di attacchi intrusivi tramite la stringa specificata. Se si specifica una stringa non direttamente risolvibile in nomi di membro completi o non qualificati, verrà visualizzato l'errore seguente: "Le restrizioni imposte dal flag CONSTRAINED nella funzione STRTOSET sono state violate".  
+-   Quando viene utilizzato il flag CONSTRAINED, la specifica di set deve contenere nomi di membri completi o non qualificati o un set di tuple contenente i nomi dei membri completi o non qualificati racchiusi tra parentesi graffe {}. Questo flag viene utilizzato per ridurre il rischio di attacchi intrusivi tramite la stringa specificata. Se si specifica una stringa non direttamente risolvibile in nomi di membro completi o non qualificati, verrà visualizzato l'errore seguente: "Le restrizioni imposte dal flag CONSTRAINED nella funzione STRTOSET sono state violate".  
   
 -   Quando non viene utilizzato il flag CONSTRAINED, è possibile risolvere la specifica di set specificata in un'espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
@@ -79,6 +69,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

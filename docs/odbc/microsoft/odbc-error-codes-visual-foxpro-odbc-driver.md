@@ -1,16 +1,14 @@
 ---
 title: Codici di errore ODBC (Driver ODBC di Visual FoxPro) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], error codes
 - Visual FoxPro error codes
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error codes
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d867b0a2a61c9d60ce91453b43d1a19b2f37935e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f9ba3a447912b61b38fc8742cf9ac876c01f4197
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>Codici di errore ODBC (Driver ODBC di Visual FoxPro)
 Nella tabella seguente sono elencati i codici di errore di Visual FoxPro mappati ai valori SQLSTATE codice di errore ODBC. I valori SQLSTATE mappati derivano da [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) e [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Vengono eseguito il mapping perché non esistono altri valori da un'altra API ODBC SQLSTATE **SQLExecDirect** e **SQLPrepare** sono le uniche funzioni che accedono al motore di Visual FoxPro.  

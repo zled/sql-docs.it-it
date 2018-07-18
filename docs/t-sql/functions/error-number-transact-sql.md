@@ -1,16 +1,14 @@
 ---
-title: ERROR_NUMBER (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ERROR_NUMBER (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ERROR_NUMBER_TSQL
@@ -24,16 +22,16 @@ helpviewer_keywords:
 - ERROR_NUMBER function
 - CATCH block
 ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 88a6b73698c38e88905ea5efe3883a5d0d73d85e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 45ad8be1da81b29b446ed18dd0c4688013a18875
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,10 +54,10 @@ ERROR_NUMBER ( )
   
  Restituisce NULL se chiamata all'esterno dell'ambito di un blocco CATCH.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa funzione può essere chiamata ovunque all'interno dell'ambito di un blocco CATCH.  
   
- ERROR_NUMBER restituisce il numero di errore indipendentemente dal numero di esecuzioni o dalla posizione in cui viene eseguita nell'ambito del blocco CATCH. È in contrasto con@ERROR, che restituisce solo il numero di errore nell'istruzione immediatamente successiva a quella che provoca un errore o bloccare la prima istruzione di un blocco CATCH.  
+ ERROR_NUMBER restituisce il numero di errore indipendentemente dal numero di esecuzioni o dalla posizione in cui viene eseguita nell'ambito del blocco CATCH. Il funzionamento è quindi diverso rispetto a @@ERROR, che restituisce solo il numero di errore nell'istruzione immediatamente successiva a quella che ha causato l'errore o la prima istruzione di un blocco CATCH.  
   
  In blocchi CATCH nidificati, ERROR_NUMBER restituisce il numero di errore specifico dell'ambito del blocco CATCH che include il riferimento alla funzione. Ad esempio, il blocco CATCH di un costrutto esterno TRY...CATCH potrebbe includere un costrutto TRY...CATCH nidificato. Nell'ambito del blocco CATCH nidificato, ERROR_NUMBER restituisce il numero dell'errore che ha richiamato il blocco CATCH nidificato. Se la funzione ERROR_NUMBER viene eseguita nel blocco CATCH esterno, restituisce il numero dell'errore che ha richiamato tale blocco CATCH.  
   
@@ -100,7 +98,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilizzo di ERROR_NUMBER in un blocco CATCH con altri strumenti di gestione degli errori  
  Nell'esempio seguente viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. Oltre al numero dell'errore vengono restituite informazioni correlate all'errore.  
@@ -129,7 +127,7 @@ GO
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

@@ -1,32 +1,31 @@
 ---
 title: Oggetto Deprecated Features di SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
 - performance counters [SQL Server], deprecated features
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: "61"
+caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 92353cf4dde604e191d26dc971edf83f16ae4b51
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |------------------------------------------------------|-----------------|  
 |'#' e '##' come nomi di tabelle e stored procedure temporanee|È stato rilevato un identificatore che non contiene alcun carattere diverso da #. Usare almeno un carattere aggiuntivo. Si verifica una volta per ogni compilazione.|  
 |Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituirla con `SELECT column_list FROM` *< nome_funzione>*`()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
-|"@" e nomi che iniziano con "@@" come identificatori di [!INCLUDE[tsql](../../includes/tsql-md.md)]|È stato rilevato un identificatore che inizia con @ o @@. Non usare @ o @@ o nomi che iniziano con @@ come identificatori. Si verifica una volta per ogni compilazione.|  
+|"\@" e nomi che iniziano con "\@\@" come identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)]|È stato rilevato un identificatore che inizia con \@ o \@\@. Non usare come identificatori \@ o \@v@ o nomi che iniziano con \@\@. Si verifica una volta per ogni compilazione.|  
 |ADDING TAPE DEVICE|È stata rilevata la caratteristica deprecata sp_addumpdevice'**tape**'. In alternativa, usare sp_addumpdevice'**disk**'. Si verifica una volta per ogni utilizzo.|  
 |Autorizzazione ALL|Numero totale di volte in cui è stata rilevata la sintassi GRANT ALL, DENY ALL o REVOKE ALL. Modificare la sintassi in modo da negare autorizzazioni specifiche. Si verifica una volta per ogni query.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Numero totale di volte in cui è stata usata la funzionalità deprecata TORN_PAGE_DETECTION di ALTER DATABASE dall'avvio dell'istanza del server. Usare la sintassi PAGE_VERIFY. Si verifica una volta per ogni utilizzo in un'istruzione DDL.|  
@@ -98,7 +97,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |EXT_soap_endpoints|È stata rilevata la vista sys.soap_endpoints. I servizi Web XML nativi sono deprecati. Usare Windows Communications Foundation (WCF) o ASP.NET.|  
 |EXTPROP_LEVEL0TYPE|È stato rilevato TYPE in level0type. Usare SCHEMA come level0type e TYPE come level1type. Si verifica una volta per ogni query.|  
 |EXTPROP_LEVEL0USER|È stato rilevato level0type USER quando è specificato anche level1type. Usare USER solo come level0type per le proprietà estese direttamente in un utente. Si verifica una volta per ogni query.|  
-|FASTFIRSTROW|È stata rilevata la sintassi FASTFIRSTROW. Riscrivere le istruzioni in modo che usino la sintassi OPTION (FAST *n*). Si verifica una volta per ogni compilazione.|  
+|FASTFIRSTROW|È stata rilevata la sintassi FASTFIRSTROW. Riscrivere le istruzioni in modo che utilizzino la sintassi OPTION (FAST *n*). Si verifica una volta per ogni compilazione.|  
 |FILE_ID|È stata rilevata la sintassi FILE_ID. Riscrivere le istruzioni in modo che utilizzino FILE_IDEX. Si verifica una volta per ogni compilazione.|  
 |fn_get_sql|È stata compilata la funzione fn_get_sql. Utilizzare sys.dm_exec_sql_text. Si verifica una volta per ogni compilazione.|  
 |fn_servershareddrives|È stata compilata la funzione fn_servershareddrives. Utilizzare sys.dm_io_cluster_shared_drives. Si verifica una volta per ogni compilazione.|  
@@ -192,7 +191,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |sp_defaultlanguage|È stata rilevata la procedura sp_defaultlanguage. In alternativa, usare ALTER LOGIN. Si verifica una volta per ogni compilazione.|  
 |sp_denylogin|È stata rilevata la procedura sp_denylogin. In alternativa, usare ALTER LOGIN DISABLE. Si verifica una volta per ogni query.|  
 |sp_depends|È stata rilevata la procedura sp_depends. Utilizzare sys.dm_sql_referencing_entities e sys.dm_sql_referenced_entities. Si verifica una volta per ogni query.|  
-|sp_detach_db @keepfulltextindexfile|È stato rilevato l'argomento @keepfulltextindexfile in un'istruzione sp_detach_db. Non usare questo argomento.|  
+|sp_detach_db \@keepfulltextindexfile|È stato rilevato l'argomento \@keepfulltextindexfile in un'istruzione sp_detach_db. Non usare questo argomento.|  
 |sp_dropalias|È stata rilevata la procedura sp_dropalias. Sostituire gli alias con una combinazione di account utente e ruoli del database. Utilizzare sp_dropalias per rimuovere gli alias in database aggiornati. Si verifica una volta per ogni compilazione.|  
 |sp_dropapprole|È stata rilevata la procedura sp_dropapprole. In alternativa, usare DROP APPLICATION ROLE. Si verifica una volta per ogni query.|  
 |sp_dropextendedproc|È stata rilevata la procedura sp_dropextendedproc. In alternativa, usare CLR. Si verifica una volta per ogni compilazione.|  
@@ -205,10 +204,10 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |sp_fulltext_catalog|È stata rilevata la procedura sp_fulltext_catalog. In alternativa, usare CREATE/ALTER/DROP FULLTEXT CATALOG. Si verifica una volta per ogni compilazione.|  
 |sp_fulltext_column|È stata rilevata la procedura sp_fulltext_column. In alternativa, usare ALTER FULLTEXT INDEX. Si verifica una volta per ogni compilazione.|  
 |sp_fulltext_database|È stata rilevata la procedura sp_fulltext_database. In alternativa, usare ALTER DATABASE. Si verifica una volta per ogni compilazione.|  
-|sp_fulltext_service @action=clean_up|È stata rilevata l'opzione clean_up della procedura sp_fulltext_service. Si verifica una volta per ogni query.|  
-|sp_fulltext_service @action=connect_timeout|È stata rilevata l'opzione connect_timeout della procedura sp_fulltext_service. Si verifica una volta per ogni query.|  
-|sp_fulltext_service @action=data_timeout|È stata rilevata l'opzione data_timeout della procedura sp_fulltext_service. Si verifica una volta per ogni query.|  
-|sp_fulltext_service @action=resource_usage|È stata rilevata l'opzione resource_usage della procedura sp_fulltext_service. Questa opzione non ha alcuna funzione. Si verifica una volta per ogni query.|  
+|sp_fulltext_service \@action=clean_up|È stata rilevata l'opzione clean_up della procedura sp_fulltext_service. Si verifica una volta per ogni query.|  
+|sp_fulltext_service \@action=connect_timeout|È stata rilevata l'opzione connect_timeout della procedura sp_fulltext_service. Si verifica una volta per ogni query.|  
+|sp_fulltext_service \@action=data_timeout|È stata rilevata l'opzione data_timeout della procedura sp_fulltext_service. Si verifica una volta per ogni query.|  
+|sp_fulltext_service \@action=resource_usage|È stata rilevata l'opzione resource_usage della procedura sp_fulltext_service. Questa opzione non ha alcuna funzione. Si verifica una volta per ogni query.|  
 |sp_fulltext_table|È stata rilevata la procedura sp_fulltext_table. In alternativa, usare CREATE/ALTER/DROP FULLTEXT INDEX. Si verifica una volta per ogni compilazione.|  
 |sp_getbindtoken|È stata rilevata la procedura sp_getbindtoken. In alternativa, usare MARS (Multiple Active Result Set) o transazioni distribuite. Si verifica una volta per ogni compilazione.|  
 |sp_grantdbaccess|È stata rilevata la procedura sp_grantdbaccess. In alternativa, usare CREATE USER. Si verifica una volta per ogni query.|  

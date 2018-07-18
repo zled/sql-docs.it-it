@@ -1,16 +1,14 @@
 ---
-title: Parole chiave (Transact-SQL) riservate | Documenti Microsoft
-ms.custom: 
+title: Parole chiave riservate (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-caps.latest.revision: 
+caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 65ef776b119b40bbeb4bbdddcfe0a4a99379a833
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a66fd4a0f1cc0d0ccabdf206dc0bccc49d726b6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords-transact-sql"></a>Parole chiave riservate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,14 +82,14 @@ ms.lasthandoff: 01/25/2018
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|DELETE|ON|UNION|  
+|Elimina|ON|UNION|  
 |DENY|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
 |DOUBLE|OPTION|Utente|  
-|DROP|OPPURE|VALUES|  
+|DROP|o|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
@@ -106,7 +104,7 @@ ms.lasthandoff: 01/25/2018
  Lo standard ISO definisce inoltre un elenco di parole chiave riservate. Non utilizzare le parole chiave riservate di ISO per i nomi di oggetto e gli identificatori. Le parole chiave riservate di ODBC, elencate nella tabella seguente, corrispondono a quelle di ISO.  
   
 > [!NOTE]  
->  L'elenco delle parole chiave riservate degli standard ISO può essere più o meno restrittivo rispetto a quello di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ad esempio, l'elenco di parole chiave riservate di ISO contiene **INT**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tale valore non deve essere distinto come parola chiave riservata.  
+>  L'elenco delle parole chiave riservate degli standard ISO può essere più o meno restrittivo rispetto a quello di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ad esempio, l'elenco di parole chiave riservate ISO contiene **INT**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tale valore non deve essere distinto come parola chiave riservata.  
   
  È possibile utilizzare le parole chiave riservate [!INCLUDE[tsql](../../includes/tsql-md.md)] come identificatori o nomi di database o di oggetti di database, ad esempio tabelle, colonne, viste e così via. A tale scopo, utilizzare identificatori tra virgolette o delimitati. È inoltre possibile utilizzare le parole chiave riservate come nomi di variabili e parametri di stored procedure.  
   
@@ -117,85 +115,85 @@ ms.lasthandoff: 01/25/2018
   
 ||||  
 |-|-|-|  
-|**ABSOLUTE**|**EXEC**|**SI SOVRAPPONE**|  
-|**AZIONE**|**EXECUTE**|**PAD**|  
-|**ADA**|**EXISTS**|**PARZIALE**|  
+|**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
+|**ACTION**|**EXECUTE**|**PAD**|  
+|**ADA**|**EXISTS**|**PARTIAL**|  
 |**ADD**|**EXTERNAL**|**PASCAL**|  
-|**ALL**|**EXTRACT**|**POSIZIONE**|  
-|**ALLOCARE**|**FALSE**|**PRECISIONE**|  
-|**ALTER**|**FETCH**|**PREPARARE**|  
-|**AND**|**FIRST**|**MANTENERE**|  
+|**ALL**|**EXTRACT**|**POSITION**|  
+|**ALLOCATE**|**FALSE**|**PRECISION**|  
+|**ALTER**|**FETCH**|**PREPARE**|  
+|**AND**|**FIRST**|**PRESERVE**|  
 |**ANY**|**FLOAT**|**PRIMARY**|  
-|**SONO**|**PER**|**PRIMA**|  
-|**Analysis Services**|**ESTERNA**|**PRIVILEGI**|  
+|**ARE**|**FOR**|**PRIOR**|  
+|**Analysis Services**|**FOREIGN**|**PRIVILEGES**|  
 |**ASC**|**FORTRAN**|**PROCEDURE**|  
-|**ASSERZIONE**|**TROVATO**|**PUBLIC**|  
+|**ASSERTION**|**FOUND**|**PUBLIC**|  
 |**AT**|**FROM**|**READ**|  
 |**AUTHORIZATION**|**FULL**|**REAL**|  
-|**AVG**|**GET**|**RIFERIMENTI**|  
-|**BEGIN**|**GLOBALE**|**RELATIVO**|  
+|**AVG**|**GET**|**REFERENCES**|  
+|**BEGIN**|**GLOBAL**|**RELATIVE**|  
 |**BETWEEN**|**GO**|**RESTRICT**|  
 |**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**ENTRAMBI**|**GRUPPO**|**ROLLBACK**|  
-|**BY**|**CON**|**ROWS**|  
-|**CASCADE**|**ORA**|**SCHEMA**|  
-|**CASCADED**|**IDENTITÀ**|**SCORRIMENTO**|  
-|**CASE**|**CONTROLLO IMMEDIATO**|**SECONDO**|  
-|**CAST**|**IN**|**SEZIONE**|  
+|**BOTH**|**GROUP**|**ROLLBACK**|  
+|**BY**|**HAVING**|**ROWS**|  
+|**CASCADE**|**HOUR**|**SCHEMA**|  
+|**CASCADED**|**IDENTITY**|**SCROLL**|  
+|**CASE**|**IMMEDIATE**|**SECOND**|  
+|**CAST**|**IN**|**SECTION**|  
 |**CATALOG**|**INCLUDE**|**SELECT**|  
-|**CHAR**|**INDEX**|**SESSIONE**|  
-|**CHAR_LENGTH**|**INDICATORE**|**SESSION_USER**|  
-|**CARATTERE**|**INIZIALMENTE**|**SET**|  
-|**CHARACTER_LENGTH**|**INTERNA**|**DIMENSIONI**|  
+|**CHAR**|**INDEX**|**SESSION**|  
+|**CHAR_LENGTH**|**INDICATOR**|**SESSION_USER**|  
+|**CHARACTER**|**INITIALLY**|**SET**|  
+|**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
 |**CHECK**|**INPUT**|**SMALLINT**|  
-|**CLOSE**|**DISTINZIONE**|**ALCUNI**|  
+|**CLOSE**|**INSENSITIVE**|**SOME**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
 |**COLLATE**|**INT**|**SQL**|  
-|**REGOLE DI CONFRONTO**|**VALORE INTEGER**|**SQLCA**|  
-|**COLONNA**|**INTERSECT**|**SQLCODE**|  
-|**COMMIT**|**INTERVALLO**|**SQLERROR**|  
-|**CONNECT**|**IN**|**SQLSTATE**|  
-|**CONNESSIONE**|**È**|**SQLWARNING**|  
-|**CONSTRAINT**|**ISOLAMENTO**|**SUBSTRING**|  
-|**VINCOLI**|**CREARE UN JOIN**|**SUM**|  
+|**COLLATION**|**INTEGER**|**SQLCA**|  
+|**COLUMN**|**INTERSECT**|**SQLCODE**|  
+|**COMMIT**|**INTERVAL**|**SQLERROR**|  
+|**CONNECT**|**INTO**|**SQLSTATE**|  
+|**CONNECTION**|**IS**|**SQLWARNING**|  
+|**CONSTRAINT**|**ISOLATION**|**SUBSTRING**|  
+|**CONSTRAINTS**|**JOIN**|**SUM**|  
 |**CONTINUE**|**KEY**|**SYSTEM_USER**|  
-|**CONVERTI**|**LANGUAGE**|**TABLE**|  
-|**CORRISPONDENTE**|**LAST**|**TEMPORANEO**|  
-|**COUNT**|**INIZIALI**|**QUINDI**|  
-|**CREARE**|**LEFT**|**ORA**|  
+|**CONVERT**|**LANGUAGE**|**TABLE**|  
+|**CORRESPONDING**|**LAST**|**TEMPORARY**|  
+|**COUNT**|**LEADING**|**THEN**|  
+|**CREATE**|**LEFT**|**TIME**|  
 |**CROSS**|**LEVEL**|**TIMESTAMP**|  
-|**CORRENTE**|**LIKE**|**TIMEZONE_HOUR**|  
+|**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
 |**CURRENT_TIME**|**LOWER**|**TO**|  
-|**CURRENT_TIMESTAMP**|**MATCH**|**FINALI**|  
-|**CURRENT_USER**|**MAX**|**TRANSAZIONE**|  
-|**CURSORE**|**MIN**|**TRANSLATE**|  
-|**DATA**|**MINUTO**|**TRANSLATION**|  
-|**DAY**|**MODULO**|**TRIM**|  
+|**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
+|**CURRENT_USER**|**MAX**|**TRANSACTION**|  
+|**CURSOR**|**MIN**|**TRANSLATE**|  
+|**DATE**|**MINUTE**|**TRANSLATION**|  
+|**DAY**|**MODULE**|**TRIM**|  
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
-|**DEC**|**NOMI**|**UNIONE**|  
-|**DECIMALE**|**NAZIONALE**|**UNIVOCO**|  
-|**DICHIARARE**|**NATURALE**|**UNKNOWN**|  
+|**DEC**|**NAMES**|**UNION**|  
+|**DECIMAL**|**NATIONAL**|**UNIQUE**|  
+|**DECLARE**|**NATURAL**|**UNKNOWN**|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
-|**PUÒ ESSERE RINVIATO**|**NEXT**|**UPPER**|  
-|**POSTICIPATA**|**NO**|**USAGE**|  
+|**DEFERRABLE**|**NEXT**|**UPPER**|  
+|**DEFERRED**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
-|**DESC**|**NOT**|**UTILIZZO**|  
+|**DESC**|**NOT**|**USING**|  
 |**DESCRIBE**|**NULL**|**VALUE**|  
-|**DESCRITTORE**|**NULLIF**|**VALORI**|  
-|**DIAGNOSTICA**|**NUMERIC**|**VARCHAR**|  
-|**DISCONNECT**|**OCTET_LENGTH**|**VARIABILE**|  
+|**DESCRIPTOR**|**NULLIF**|**VALUES**|  
+|**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**VARYING**|  
 |**DISTINCT**|**OF**|**VIEW**|  
-|**DOMINIO**|**ON**|**QUANDO**|  
-|**DOPPIA**|**ONLY**|**OGNI VOLTA CHE**|  
+|**DOMAIN**|**ON**|**WHEN**|  
+|**DOUBLE**|**ONLY**|**WHENEVER**|  
 |**DROP**|**OPEN**|**WHERE**|  
-|**ELSE**|**OPZIONE**|**WITH**|  
-|**END**|**OPPURE**|**LAVORO**|  
-|**END-EXEC**|**ORDINE**|**SCRITTURA**|  
-|**ESCAPE**|**ESTERNO**|**YEAR**|  
+|**ELSE**|**OPTION**|**WITH**|  
+|**END**|**OR**|**WORK**|  
+|**END-EXEC**|**ORDER**|**WRITE**|  
+|**ESCAPE**|**OUTER**|**YEAR**|  
 |**EXCEPT**|**OUTPUT**|**ZONE**|  
-|**ECCEZIONE**|||  
+|**EXCEPTION**|||  
   
 ## <a name="future-keywords"></a>Parole chiave di versioni future  
  Nelle versioni future di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le parole chiave elencate di seguito potrebbero diventare riservate in seguito all'implementazione di nuove funzionalità. È consigliabile evitare l'utilizzo di queste parole come identificatori.  
@@ -246,7 +244,7 @@ ms.lasthandoff: 01/25/2018
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|TIMESTAMP|  
+|CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|No|TIMEZONE_MINUTE|  
 |CURRENT_PATH|Nessuno|TRAILING|  
@@ -260,7 +258,7 @@ ms.lasthandoff: 01/25/2018
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|VALUE|  
+|DEFERRED|OUTPUT|Value|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|Parametro|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -280,7 +278,7 @@ ms.lasthandoff: 01/25/2018
 |EVERY|PRIVILEGES|XMLCONCAT|  
 |EXCEPTION|RANGE|XMLDOCUMENT|  
 |FALSE|READS|XMLELEMENT|  
-|FILTER|REAL|XMLEXISTS|  
+|FILTER|real|XMLEXISTS|  
 |FIRST|RECURSIVE|XMLFOREST|  
 |FLOAT|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
@@ -295,7 +293,7 @@ ms.lasthandoff: 01/25/2018
 |HOLD|REGR_SYY|ZONE|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SET QUOTED_IDENTIFIER &#40; Transact-SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

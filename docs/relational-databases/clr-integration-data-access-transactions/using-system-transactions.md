@@ -1,15 +1,14 @@
 ---
 title: Using System. Transactions | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,26 +18,25 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b6a16064cbff2b859f627271784d170b0c812078
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-systemtransactions"></a>Utilizzo di System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Il **System. Transactions** spazio dei nomi fornisce un framework di transazioni che è completamente integrato con ADO.NET e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione common language runtime (CLR). Il **Transactions** rende un blocco di codice transazionale elencando implicitamente le connessioni in una transazione distribuita. È necessario chiamare il **completa** metodo alla fine del blocco di codice contrassegnato mediante il **TransactionScope**. Il **Dispose** metodo viene richiamato quando l'esecuzione del programma lascia un blocco di codice, la transazione non viene più utilizzata se il **completa** non viene chiamato. Se è stata generata un'eccezione che determina l'uscita del codice dall'ambito, la transazione non viene più utilizzata.  
+  Il **System. Transactions** spazio dei nomi fornisce un framework di transazioni che è completamente integrato con ADO.NET e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione common language runtime (CLR). Il **Transactions** rende un blocco di codice transazionale elencando implicitamente le connessioni in una transazione distribuita. È necessario chiamare il **completa** metodo alla fine del blocco di codice contrassegnato mediante il **TransactionScope**. Il **Dispose** metodo viene richiamato quando l'esecuzione del programma lascia un blocco di codice, la transazione non viene più utilizzata se il **completa** non viene chiamato. Se è stata generata un'eccezione che determina l'uscita del codice dall'ambito, la transazione non viene più utilizzata.  
   
  Si consiglia di utilizzare un **utilizzando** blocco per garantire che il **Dispose** metodo viene chiamato sul **TransactionScope** oggetto quando il **utilizzando**blocco viene chiuso. Impossibile eseguire il commit o il rollback delle transazioni in sospeso può compromettere notevolmente le prestazioni perché il timeout predefinito per il **TransactionScope** è un minuto. Se non si utilizza un **utilizzando** istruzione, è necessario eseguire le operazioni in un **provare** bloccare e chiamare in modo esplicito il **Dispose** metodo il **infine**blocco.  
   
  Se si verifica un'eccezione all'interno di **TransactionScope**, la transazione viene contrassegnata come incoerente e viene interrotta. Viene eseguito il rollback quando il **TransactionScope** è stato eliminato. Se non si verifica alcuna eccezione, viene eseguito il commit delle transazioni partecipanti.  
   
- **TransactionScope** deve essere utilizzato solo quando le origini dati locali e remoti o gestori di risorse esterni vengano utilizzati. In questo modo **TransactionScope** comporta sempre promozione delle transazioni, anche se è utilizzato solo all'interno di una connessione di contesto.  
+ **TransactionScope** deve essere utilizzato solo quando le origini dati locali e remoti o gestori di risorse esterni sono a cui si accede. In questo modo **TransactionScope** comporta sempre promozione delle transazioni, anche se è utilizzato solo all'interno di una connessione di contesto.  
   
 > [!NOTE]  
 >  Il **TransactionScope** classe crea una transazione con un **System.Transactions.Transaction.IsolationLevel** di **Serializable** per impostazione predefinita. A seconda dell'applicazione, è possibile abbassare il livello di isolamento per evitare che si verifichi un numero elevato di contese.  

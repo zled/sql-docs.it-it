@@ -1,16 +1,14 @@
 ---
-title: Z (tipo di dati geometry) | Documenti Microsoft
-ms.custom: 
+title: Z (tipo di dati geometry) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Z (geometry Data Type)
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - Z (geometry Data Type)
 ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a490bed46d662a6bf73a5428a42019b893cfd4f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fa3e07bf10dce9934bd463591d5866eab68fe62c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="z-geometry-data-type"></a>Z (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,12 +41,12 @@ Valore Z (elevazione) dell'istanza. La semantica del valore di elevazione è def
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Tipo CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
- Il valore di questa proprietà sarà null se l'istanza di geometria non è un punto per qualsiasi **punto** istanza per cui non è impostata.  
+## <a name="remarks"></a>Remarks  
+ Il valore di questa proprietà sarà Null se l'istanza di geometria non è un punto e per qualsiasi istanza **Point** per cui la proprietà non è impostata.  
   
  Questa proprietà è di sola lettura.  
   
@@ -65,8 +62,8 @@ SELECT @g.Z;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [M &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [AsTextZM &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
+ [M &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [AsTextZM &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
  [Metodi estesi sulle istanze di geometria](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

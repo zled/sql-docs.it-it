@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLGetInstalledDrivers | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLGetInstalledDrivers
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLGetInstalledDrivers
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetInstalledDrivers
-helpviewer_keywords: SQLGetInstalledDrivers function [ODBC]
+f1_keywords:
+- SQLGetInstalledDrivers
+helpviewer_keywords:
+- SQLGetInstalledDrivers function [ODBC]
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 64b8479b23f76c8af74be77b4f44e3bca6f8a6f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 6b45bd7c06b5c8e87c13fd8d9e956072ffebe858
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers (funzione)
 **Conformità**  

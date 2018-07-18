@@ -1,30 +1,31 @@
 ---
 title: BottomCount (DMX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: BOTTOMCOUNT
-dev_langs: DMX
-helpviewer_keywords: BottomCount function
+f1_keywords:
+- BOTTOMCOUNT
+dev_langs:
+- DMX
+helpviewer_keywords:
+- BottomCount function
 ms.assetid: bbe2f1d6-c8b5-49ce-ae13-337114a50aee
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 90362587d913e70447157a353b738410122c6c38
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6301719854c05bd6243df446a5f6f2cdfab52402
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -110,10 +111,10 @@ NATURAL PREDICTION JOIN
  **Nota** questo esempio viene fornito solo per illustrare l'uso di BottomCount. A seconda della dimensione del set di dati, questa query potrebbe impiegare molto tempo per l'esecuzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [DMX funzioni &#40; &#41;](../dmx/functions-dmx.md)   
- [Funzioni di stima generale &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [DMX BottomPercent &#40; &#41;](../dmx/bottompercent-dmx.md)   
- [DMX BottomSum &#40; &#41;](../dmx/bottomsum-dmx.md)   
- [DMX TopCount &#40; &#41;](../dmx/topcount-dmx.md)  
+ [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
+ [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
+ [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  
   
   

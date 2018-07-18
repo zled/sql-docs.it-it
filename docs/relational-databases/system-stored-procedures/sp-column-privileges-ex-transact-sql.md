@@ -1,32 +1,32 @@
 ---
 title: sp_column_privileges_ex (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_column_privileges_ex
 - sp_column_privileges_ex_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_column_privileges_ex
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_column_privileges_ex
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1f374a87fe41d08774eca9bd0e90de42d5204cbe
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 36e3f3c95614fda36c12309c1252b76cdc2da208
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,35 +48,35 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@table_server =** ] **'***table_server***'**  
- Nome del server collegato per cui si desidera restituire le informazioni. *table_server* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del server collegato per cui si desidera restituire le informazioni. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@table_name =** ] **'***table_name***'**  
- Nome della tabella che include la colonna specificata. *TABLE_NAME* è **sysname**, con un valore predefinito è NULL.  
+ Nome della tabella che include la colonna specificata. *TABLE_NAME* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@table_schema =** ] **'***table_schema***'**  
- Schema della tabella. *TABLE_SCHEMA* è **sysname**, con un valore predefinito è NULL.  
+ Schema della tabella. *TABLE_SCHEMA* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@table_catalog =** ] **'***table_catalog***'**  
- Il nome del database in cui è specificato *table_name* risiede. *TABLE_CATALOG* è **sysname**, con un valore predefinito è NULL.  
+ Il nome del database in cui è specificato *table_name* risiede. *TABLE_CATALOG* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@column_name =** ] **'***column_name***'**  
- Nome della colonna di cui si desidera ottenere informazioni sui privilegi. *column_name* è **sysname**, con un valore predefinito è NULL (tutti comune).  
+ [  **@column_name =** ] **'***nome_colonna***'**  
+ Nome della colonna di cui si desidera ottenere informazioni sui privilegi. *column_name* viene **sysname**, con un valore predefinito è NULL (tutti comune).  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nella tabella seguente vengono descritte le colonne dei set di risultati. I risultati restituiti vengono ordinati in base **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, **COLUMN_NAME**, e  **PRIVILEGIO**.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*qualificatore***.** *proprietario***.** *nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
+|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*qualificatore ***.*** proprietario ***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna, per ogni colonna del **TABLE_NAME** restituito. Questo campo restituisce sempre un valore.|  
 |**GRANTOR**|**sysname**|Nome utente del database che ha concesso autorizzazioni al **COLUMN_NAME** per la tabella **utente autorizzato**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre lo stesso come il **TABLE_OWNER**. Questo campo restituisce sempre un valore.<br /><br /> Il **GRANTOR** colonna può essere il proprietario del database (**TABLE_OWNER**) o un utente a cui il proprietario del database concesso autorizzazioni tramite la clausola WITH GRANT OPTION dell'istruzione GRANT.|  
 |**UTENTE AUTORIZZATO**|**sysname**|Nome utente del database che ha concesso autorizzazioni al **COLUMN_NAME** da elencato **GRANTOR**. Questo campo restituisce sempre un valore.|  
-|**CON PRIVILEGI**|**varchar (**32**)**|Una delle autorizzazioni di colonna disponibili. Le autorizzazioni di colonna possono essere rappresentate da uno dei valori riportati di seguito o da altri valori supportati dall'origine dei dati in fase di definizione dell'implementazione:<br /><br /> Selezionare = **utente autorizzato** può recuperare dati per le colonne.<br /><br /> INSERT = **utente autorizzato** può fornire dati per la colonna quando vengono inserite nuove righe (per il **utente autorizzato**) nella tabella.<br /><br /> UPDATE = **utente autorizzato** può modificare i dati nella colonna.<br /><br /> RIFERIMENTI = **utente autorizzato** possono fare riferimento a una colonna in una tabella esterna in una relazione chiave primaria/esterna chiave. Questo tipo di relazione viene definito tramite vincoli di tabella.|  
-|**IS_GRANTABLE**|**varchar (**3**)**|Indica se il **utente autorizzato** può concedere autorizzazioni ad altri utenti (noto anche come "concedere con concessione" autorizzazione). I possibili valori sono YES, NO e NULL. Un valore sconosciuto, o NULL, corrisponde a un'origine dei dati per la quale questo tipo di assegnazione delle autorizzazioni non è consentito.|  
+|**CON PRIVILEGI**|**varchar (** 32 **)**|Una delle autorizzazioni di colonna disponibili. Le autorizzazioni di colonna possono essere rappresentate da uno dei valori riportati di seguito o da altri valori supportati dall'origine dei dati in fase di definizione dell'implementazione:<br /><br /> Selezionare = **utente autorizzato** può recuperare dati per le colonne.<br /><br /> INSERT = **utente autorizzato** può fornire dati per la colonna quando vengono inserite nuove righe (per il **utente autorizzato**) nella tabella.<br /><br /> UPDATE = **utente autorizzato** può modificare i dati nella colonna.<br /><br /> RIFERIMENTI = **utente autorizzato** possono fare riferimento a una colonna in una tabella esterna in una relazione chiave primaria/esterna chiave. Questo tipo di relazione viene definito tramite vincoli di tabella.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se il **utente autorizzato** può concedere autorizzazioni ad altri utenti (noto anche come "concedere con concessione" autorizzazione). I possibili valori sono YES, NO e NULL. Un valore sconosciuto, o NULL, corrisponde a un'origine dei dati per la quale questo tipo di assegnazione delle autorizzazioni non è consentito.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="examples"></a>Esempi  
@@ -90,7 +90,7 @@ EXEC sp_column_privileges_ex @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_table_privileges_ex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)   
+ [sp_table_privileges_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,31 +1,30 @@
 ---
 title: Note sulla versione di SQL Server 2012 | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.technology: server-general
-ms.custom: 
+ms.prod: sql
+ms.prod_service: sql
+ms.technology: supportability
+ms.custom: ''
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Release Notes, SQL Server
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: "21"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e7adc5d4b4fdcf8886b2c8d08bce8de90d9b3eb1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: cf9360da746f08bc555a4796d5134a11c6b08d32
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-2012-release-notes"></a>Note sulla versione di SQL Server 2012
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Questo documento descrive i problemi noti di cui è necessario essere a conoscenza prima di installare Microsoft SQL Server 2012 o di risolverne i problemi ([fare clic qui per scaricarlo](http://go.microsoft.com/fwlink/?LinkId=238647)). Questo documento è disponibile solo online, non nei supporti di installazione, e viene aggiornato periodicamente.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+Questo documento descrive i problemi noti di cui è necessario essere a conoscenza prima di installare Microsoft SQL Server 2012 o di risolverne i problemi ([fare clic qui per scaricarlo](http://go.microsoft.com/fwlink/?LinkId=238647)). Questo documento è disponibile solo online, non nei supporti di installazione, e viene aggiornato periodicamente.  
   
 Per informazioni su come installare SQL Server 2012, vedere il file Leggimi di SQL Server 2012 disponibile nei supporti di installazione e nella pagina di download del [file Leggimi](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Altre informazioni sono disponibili nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?LinkId=190948) e nel [forum su SQL Server](http://go.microsoft.com/fwlink/?LinkId=213599).  
   
@@ -68,7 +67,7 @@ Prima di installare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], si consi
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
   
-Oppure  
+o Gestione configurazione  
   
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
@@ -98,7 +97,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 **Soluzione alternativa:** per configurare il database di statistiche lingua semantica come prerequisito per l'indicizzazione semantica, seguire questa procedura:  
   
-1.  Individuare ed eseguire il pacchetto di Windows Installer denominato SemanticLanguageDatabase.msi sui supporti di installazione di SQL Server al fine di estrarre il database. Per SQL Server 2012 Express, scaricare il database di statistiche lingua semantica dall' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787) ed eseguire il pacchetto di Windows Installer.  
+1.  Individuare ed eseguire il pacchetto di Windows Installer denominato SemanticLanguageDatabase.msi sui supporti di installazione di SQL Server al fine di estrarre il database. Per SQL Server 2012 Express, scaricare il database di Semantic Language Statistics dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787)) ed eseguire il pacchetto Windows Installer.  
   
 2.  Spostare il database in una cartella di dati adeguata. Se si decide di lasciare il database nella posizione predefinita, è necessario modificare le relative autorizzazioni prima di poter collegarlo correttamente.  
   
@@ -155,7 +154,7 @@ Di seguito viene descritto il comportamento dell'installazione dei prerequisiti 
   
         2.  Per abilitare **Microsoft .NET Framework 3.5.1**, selezionare la casella di controllo accanto alla funzionalità. Per disattivare una funzionalità di Windows, deselezionare la casella di controllo.  
   
-        3.  Scegliere **OK**.  
+        3.  Fare clic su **OK**.  
   
         **Per abilitare .NET Framework 3.5 SP1 usare Gestione e manutenzione immagini distribuzione (DISM.exe):**  
   
@@ -346,7 +345,7 @@ Si verificano problemi con l'attività Elaborazione Analysis Services quando si 
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 I controlli non scalano correttamente con dimensioni del carattere grandi  
 **Problema:** se si modifica la dimensione del testo in "Grande – 150%" (in Windows Server 2008 o Windows 7) o si modifica l'impostazione personalizzata DPI in 200% (in Windows 7), i pulsanti **Annulla** e **Crea** nella pagina **Nuova Knowledge Base** non saranno accessibili.  
   
-**Soluzione alternativa:**per risolvere il problema, impostare il tipo di carattere su una dimensione minore.  
+**Soluzione alternativa:** per risolvere il problema, impostare il tipo di carattere su una dimensione minore.  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 La risoluzione dello schermo di 800x600 non è supportata  
 **Problema:** l'applicazione client Data Quality non viene visualizzata correttamente se la risoluzione dello schermo è impostata su 800x600.  
@@ -477,7 +476,7 @@ Il nome di oggetto sys.federations' non è valido. (Microsoft SQL Server, Error:
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 Layout del nuovo piano di manutenzione non compatibile con gli strumenti precedenti di SQL Server  
 **Problema:** quando gli strumenti di gestione di SQL Server 2012 vengono usati per modificare un piano di manutenzione esistente creato in una precedente versione degli strumenti di gestione di SQL Server (SQL Server 2008 R2, SQL Server 2008 o SQL Server 2005), il piano di manutenzione viene salvato in un nuovo formato. Le precedenti versioni degli strumenti di gestione di SQL Server non supportano questo nuovo formato.  
   
-**Soluzione alternativa:**nessuna.  
+**Soluzione alternativa:** nessuna.  
   
 ### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 Limitazioni di Intellisense in caso di accesso a un database indipendente  
 Problema: Intellisense in SQL Server Management Studio (SSMS) e SQL Server Data Tools (SSDT) non funziona come previsto quando utenti indipendenti accedono a database indipendenti. In questo caso potrebbero verificarsi i problemi seguenti:  
@@ -488,7 +487,7 @@ Problema: Intellisense in SQL Server Management Studio (SSMS) e SQL Server Data 
   
 3.  Mancato funzionamento della descrizione comando per le funzioni predefinite.  
   
-**Soluzione alternativa:**nessuna.  
+**Soluzione alternativa:** nessuna.  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 Gruppi di disponibilità AlwaysOn  
 Prima di provare a creare un gruppo di disponibilità, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn (SQL Server)](http://go.microsoft.com/?linkid=9753168) nella documentazione online. Per un'introduzione ai gruppi di disponibilità AlwaysOn, vedere la pagina relativa ai [gruppi di disponibilità AlwaysOn (SQL Server)](http://go.microsoft.com/?linkid=9753166)nella documentazione online.  
@@ -505,14 +504,14 @@ Nella seguente tabella viene riepilogato il supporto dei driver per i gruppi di 
 |Driver|Failover su più subnet|Finalità dell'applicazione|Routing di sola lettura|Failover su più subnet: failover dell'endpoint su una sola subnet più rapido|Failover su più subnet: risoluzione dell'istanza denominata per le istanze cluster di SQL|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Sì|Sì|Sì|Sì|Sì|  
-|SQL Native Client 11.0 OLEDB|No|Sì|Sì|No|No|  
+|SQL Native Client 11.0 OLEDB|no|Sì|Sì|no|no|  
 |ADO.NET con .NET Framework 4.0 con patch di connettività**\&#42;**|Sì|Sì|Sì|Sì|Sì|  
 |ADO.NET con.NET Framework 3.5 SP1 con patch di connettività **\&#42;\&#42;**|Sì|Sì|Sì|Sì|Sì|  
 |Microsoft JDBC Driver 4.0 per SQL Server|Sì|Sì|Sì|Sì|Sì|  
   
-**\&#42;** Scaricare la patch di connettività per ADO.NET con .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
+**\&#42;** Scaricare la patch di connettività per ADO .NET con .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
   
-**\&#42;\&#42;** Scaricare la patch di connettività per ADO.NET con .NET Framework 3.5 SP1: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
+**\&#42;\&#42;** Scaricare la patch di connettività per ADO .NET con .NET Framework 3.5 SP1: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
   
 **Parola chiave MultiSubnetFailover e funzionalità associate**  
   

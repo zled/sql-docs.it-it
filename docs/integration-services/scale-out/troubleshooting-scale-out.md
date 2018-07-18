@@ -1,28 +1,26 @@
 ---
 title: Risolvere i problemi di SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs
 ms.description: This article describes how to troubleshoot common issues with SSIS Scale Out
-ms.custom: 
-ms.date: 12/19/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 05/09/2018
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
-caps.latest.revision: 
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bc22e1bac1e2a409061f73131cdfd203c8948fa3
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6d1fa967fa5e755a8072a6837df44c327b39087c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="troubleshoot-scale-out"></a>Risolvere i problemi di Scale Out
 
@@ -142,6 +140,16 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
     Tipo valore: **REG_DWORD** 
 
     Dati valore: **0 (False)**
+
+4.  Se non è possibile pulire tutti i certificati non autofirmati come descritto nel passaggio 2, impostare il valore della chiave del Registro di sistema seguente su 2.
+
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
+
+    Nome valore: **ClientAuthTrustMode** 
+
+    Tipo valore: **REG_DWORD** 
+
+    Dati valore: **2**
 
 ## <a name="http-request-error"></a>Errore di richiesta HTTP
 

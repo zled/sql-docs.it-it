@@ -1,30 +1,17 @@
 ---
 title: Distribuire il modello R e usarla in SQL (procedura dettagliata) | Documenti Microsoft
-ms.custom: 
-ms.date: 07/26/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 771683f472af17292de62fb1591539f1215ebf57
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 8476381c60a63d85ce6d3cb0153578416856f8fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Distribuire il modello R e usarla in SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,9 +58,9 @@ Quando è stato inizialmente eseguito lo script di PowerShell, è stata creata u
     END
     ```
 
-    + Utilizzare un'istruzione SELECT per chiamare il modello archiviato da una tabella SQL. Il modello viene recuperato dalla tabella **varbinary (max)** dati, archiviati nella variabile SQL  _@lmodel2_ e passato come parametro *mod* al sistema archiviato procedura [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Utilizzare un'istruzione SELECT per chiamare il modello archiviato da una tabella SQL. Il modello viene recuperato dalla tabella **varbinary (max)** dati, archiviati nella variabile SQL _@lmodel2_e passato come parametro *mod* al sistema archiviato procedura [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + I dati utilizzati come input per il punteggio è definito come una query SQL e archiviato come una stringa in variabile SQL  _@input_ . Come i dati vengono recuperati dal database, questo viene archiviato in un frame di dati denominato *InputDataSet*, che è semplicemente il nome predefinito per i dati di input di [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedura; è possibile definire un altro nome variabile, se necessario, utilizzando il parametro   *_@input_data_1_name_*  .
+    + I dati utilizzati come input per il punteggio è definito come una query SQL e archiviato come una stringa in variabile SQL _@input_. Come i dati vengono recuperati dal database, questo viene archiviato in un frame di dati denominato *InputDataSet*, che è semplicemente il nome predefinito per i dati di input di [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedura; è possibile definire un altro nome variabile, se necessario, utilizzando il parametro *_@input_data_1_name_*.
 
     + Per generare i punteggi, la stored procedure chiama la funzione `rxPredict` dalla libreria **RevoScaleR** .
 
@@ -201,7 +188,7 @@ La stored procedure *PredictTipSingleMode* illustra questo approccio. Accetta co
     ```
 
     >[!TIP]
-    > Strumenti R per Visual Studio (RTVS) fornisce un'integrazione ottima con SQL Server e R. Vedere l'articolo per ulteriori esempi di utilizzo RODBC con una connessione di SQL Server: [utilizzo di SQL Server e R](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
+    > Strumenti R per Visual Studio (RTVS) fornisce un'integrazione ottimale con SQL Server e R. Vedere questo articolo per ulteriori esempi di utilizzo RODBC con una connessione di SQL Server: [uso di R e SQL Server](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
 
 ## <a name="summary"></a>Riepilogo
 

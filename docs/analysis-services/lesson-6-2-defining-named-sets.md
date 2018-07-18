@@ -1,29 +1,19 @@
 ---
 title: Definizione dei set denominati | Documenti Microsoft
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e81b2dda4ddf65105da50dede9b3a82a5436dcec
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 705c263d425985d23c823eee9cdd550b5a44db1f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Lezione 6-2 - definizione di set denominati
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -142,7 +132,7 @@ Nelle procedure descritte in questo argomento si definiranno due set denominati:
     ![Riquadro filtro contenente due denominato imposta](../analysis-services/media/l6-named-set-05.gif "riquadro filtro contenente due denominato imposta")  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 7: Definizione di indicatori di prestazioni chiave &#40; Gli indicatori KPI &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Lezione 7: Definizione di indicatori di prestazioni chiave & #40; Gli indicatori KPI & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Calcoli](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

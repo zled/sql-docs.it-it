@@ -1,16 +1,14 @@
 ---
-title: ALTER BROKER PRIORITY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER BROKER PRIORITY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_BROKER_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - ALTER BROKER PRIORITY statement
 - ssbdiagnose
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 27
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 833c0bed38d02905b3a260f50824825c9859484f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b2d1a1a436c099e2a3f9dc7e29ebffdb79ddeb48
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,10 +62,10 @@ FOR CONVERSATION
  Specifica i criteri per determinare se la priorità di conversazione si applica a una conversazione. L'argomento SET è obbligatorio e deve contenere almeno un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
- Viene specificato il nome di un contratto da utilizzare come criterio per determinare se la priorità di conversazione si applica a una conversazione. *ContractName* è un [!INCLUDE[ssDE](../../includes/ssde-md.md)] identificatore e deve specificare il nome di un contratto nel database corrente.  
+ Viene specificato il nome di un contratto da utilizzare come criterio per determinare se la priorità di conversazione si applica a una conversazione. *ContractName* è un identificatore [!INCLUDE[ssDE](../../includes/ssde-md.md)] e deve specificare il nome di un contratto nel database corrente.  
   
  *ContractName*  
- Specifica che la priorità di conversazione può essere applicata solo alle conversazioni in cui l'istruzione BEGIN DIALOG che ha avviato la conversazione specificata ON CONTRACT *ContractName*.  
+ Specifica che la priorità di conversazione può essere applicata solo alle conversazioni dove l'istruzione BEGIN DIALOG che ha avviato la conversazione ha specificato il valore ON CONTRACT *ContractName*.  
   
  ANY  
  Specifica che la priorità di conversazione può essere applicata a qualsiasi conversazione, indipendentemente dal contratto utilizzato.  
@@ -78,14 +75,14 @@ FOR CONVERSATION
  LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
  Specifica il nome di un servizio da utilizzare come criterio per determinare se la priorità di conversazione si applica a un endpoint di conversazione.  
   
- *LocalServiceName* è un [!INCLUDE[ssDE](../../includes/ssde-md.md)] identificatore e deve specificare il nome di un servizio nel database corrente.  
+ *LocalServiceName* è un identificatore [!INCLUDE[ssDE](../../includes/ssde-md.md)] e deve specificare il nome di un servizio nel database corrente.  
   
  *LocalServiceName*  
  Specifica che la priorità di conversazione può essere applicata agli elementi seguenti:  
   
--   Qualsiasi endpoint di conversazione dell'initiator il cui nome del servizio initiator corrisponde *LocalServiceName*.  
+-   Qualsiasi endpoint di conversazione dell'initiator il cui nome del servizio Initiator corrisponde a *LocalServiceName*.  
   
--   Qualsiasi endpoint di conversazione di destinazione il cui nome di servizio di destinazione corrisponde *LocalServiceName*.  
+-   Qualsiasi endpoint di conversazione di destinazione il cui nome del servizio di destinazione corrisponde a *LocalServiceName*.  
   
  ANY  
  -   Specifica che la priorità di conversazione può essere applicata a qualsiasi endpoint di conversazione, indipendentemente dal nome del servizio locale utilizzato dall'endpoint.  
@@ -95,32 +92,32 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Specifica il nome di un servizio da utilizzare come criterio per determinare se la priorità di conversazione si applica a un endpoint di conversazione.  
   
- *RemoteServiceName* è un valore letterale di tipo **nvarchar (256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)]utilizza un confronto byte per byte per trovare la corrispondenza di *RemoteServiceName* stringa. Nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Il servizio di destinazione può trovarsi nell'istanza corrente di [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in un'istanza remota di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* è un valore letterale di tipo **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa un confronto byte per byte per la corrispondenza con la stringa *RemoteServiceName*. Nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Il servizio di destinazione può trovarsi nell'istanza corrente di [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in un'istanza remota di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  '*RemoteServiceName*'  
  Specifica la priorità di conversazione da assegnare agli elementi seguenti:  
   
--   Qualsiasi endpoint di conversazione dell'initiator il cui nome di servizio di destinazione associato corrisponde *RemoteServiceName*.  
+-   Qualsiasi endpoint di conversazione dell'initiator il cui nome del servizio di destinazione associato corrisponde a *RemoteServiceName*.  
   
--   Qualsiasi endpoint di conversazione di destinazione il cui nome del servizio initiator associato corrisponde *RemoteServiceName*.  
+-   Qualsiasi endpoint di conversazione di destinazione il cui nome del servizio dell'initiator associato corrisponde a *RemoteServiceName*.  
   
  ANY  
  Specifica che la priorità di conversazione si applica a qualsiasi endpoint di conversazione, indipendentemente dal nome del servizio remoto associato all'endpoint.  
   
  Se REMOTE_SERVICE_NAME non è specificato, la proprietà del servizio remoto relativa alla priorità di conversazione non viene modificata.  
   
- PRIORITY_LEVEL = { *PriorityValue* | **predefinito** }  
- Specifica il livello di priorità da assegnare a qualsiasi endpoint di conversazione che utilizza i contratti e servizi specificati nella priorità di conversazione. *PriorityValue* deve essere un integer come valore letterale compreso tra 1 (priorità più bassa) e 10 (priorità più alta).  
+ PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
+ Specifica il livello di priorità da assegnare a qualsiasi endpoint di conversazione che utilizza i contratti e servizi specificati nella priorità di conversazione. *PriorityValue* deve essere un valore letterale intero compreso tra 1 (priorità più bassa) e 10 (priorità più elevata).  
   
  Se PRIORITY_LEVEL non è specificato, la proprietà del livello di priorità relativa alla priorità di conversazione non viene modificata.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Nessuna delle proprietà modificate da ALTER BROKER PRIORITY viene applicata alle conversazioni esistenti. Le conversazioni esistenti continuano con la priorità assegnata al momento dell'avvio.  
   
- Per ulteriori informazioni, vedere [CREATE BROKER PRIORITY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-broker-priority-transact-sql.md).  
+ Per altre informazioni, vedere [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Autorizzazione per la creazione di impostazioni predefinite per i membri di una priorità di conversazione di **db_ddladmin** o **db_owner** ruoli predefiniti del database e il **sysadmin** ruolo predefinito del server. È richiesta l'autorizzazione ALTER per il database.  
+ L'autorizzazione per la creazione di una priorità di conversazione viene assegnata per impostazione predefinita ai membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e al ruolo predefinito del server **sysadmin**. È richiesta l'autorizzazione ALTER per il database.  
   
 ## <a name="examples"></a>Esempi  
   

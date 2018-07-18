@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLFetch | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLFetch
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLFetch
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLFetch
-helpviewer_keywords: SQLFetch function [ODBC]
+f1_keywords:
+- SQLFetch
+helpviewer_keywords:
+- SQLFetch function [ODBC]
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 3af90114b88e3f54f14bbb94357f4f3bf805bb30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 2a340283066558215e5534e327026350cdcab589
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetch-function"></a>SQLFetch-funzione
 **Conformità**  
@@ -92,7 +93,7 @@ SQLRETURN SQLFetch(
 ## <a name="comments"></a>Commenti  
  **SQLFetch** restituisce il successivo set di righe nel set di risultati. Può essere chiamato solo quando esiste un set di risultati: ovvero, dopo una chiamata che crea un set di risultati e prima del cursore sopra di set di risultati viene chiuso. Se tutte le colonne sono associate, restituisce i dati in tali colonne. Se l'applicazione non è specificato un puntatore a una matrice di stato di riga o di un buffer in cui restituire il numero di righe recuperate, **SQLFetch** anche restituisce queste informazioni. Le chiamate a **SQLFetch** può essere combinato con chiamate a **SQLFetchScroll** ma non può essere combinato con chiamate a **SQLExtendedFetch**. Per ulteriori informazioni, vedere [il recupero di una riga di dati](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   
- Se un'applicazione ODBC 3*x* applicazione funziona con un'API ODBC 2*x* esegue il mapping di driver, Driver Manager **SQLFetch** le chiamate a **SQLExtendedFetch** per un ODBC 2*x* driver che supporta **SQLExtendedFetch**. Se l'API ODBC 2*. x* driver non supporta **SQLExtendedFetch**, viene eseguito il mapping di gestione Driver **SQLFetch** le chiamate a **SQLFetch** in ODBC 2 *x* driver, che è possibile recuperare una sola riga.  
+ Se un'applicazione ODBC 3*x* applicazione funziona con un'API ODBC 2*x* esegue il mapping di driver, Driver Manager **SQLFetch** le chiamate a **SQLExtendedFetch** per un ODBC 2*x* driver che supporta **SQLExtendedFetch**. Se l'API ODBC 2 *. x* driver non supporta **SQLExtendedFetch**, viene eseguito il mapping di gestione Driver **SQLFetch** le chiamate a **SQLFetch** in ODBC 2 *x* driver, che è possibile recuperare una sola riga.  
   
  Per ulteriori informazioni, vedere [cursori a blocchi, i cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
   
@@ -133,9 +134,9 @@ SQLRETURN SQLFetch(
 |52 a 56|SQL_SUCCESS|57 a 61|5|  
 |91 a 95|SQL_SUCCESS|96 a 100|5|  
 |93-97|SQL_SUCCESS|98 e 100. Le righe 4 e 5 della matrice di stato di riga vengono impostate su SQL_ROW_NOROW.|3|  
-|96 a 100|SQL_NO_DATA|nessuna.|0|  
-|99 e 100.|SQL_NO_DATA|nessuna.|0|  
-|Dopo la fine|SQL_NO_DATA|nessuna.|0|  
+|96 a 100|SQL_NO_DATA|Nessuno|0|  
+|99 e 100.|SQL_NO_DATA|Nessuno|0|  
+|Dopo la fine|SQL_NO_DATA|Nessuno|0|  
   
 ## <a name="returning-data-in-bound-columns"></a>Restituzione di dati in colonne associate  
  Come **SQLFetch** restituisce ogni riga, vengono inseriti i dati per ogni colonna associata nel buffer associato a tale colonna. Se nessuna colonna è associata, **SQLFetch** non restituisce dati ma spostarsi in avanti il cursore a blocchi. I dati possono ancora essere recuperati tramite **SQLGetData**. Se il cursore è di più righe (ovvero, l'oggetto SQL_ATTR_ROW_ARRAY_SIZE è maggiore di 1), **SQLGetData** può essere chiamato solo se viene restituito SQL_GD_BLOCK quando **SQLGetInfo** viene chiamato con un  *InfoType* di SQL_GETDATA_EXTENSIONS. (Per ulteriori informazioni, vedere [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).)  
@@ -218,7 +219,7 @@ SQLRETURN SQLFetch(
   
 -   Imposta i campi numero di riga e colonna record di stato. Se **SQLFetch** non può determinare un numero di riga o colonna, imposta tale numero SQL_ROW_NUMBER_UNKNOWN o SQL_COLUMN_NUMBER_UNKNOWN, rispettivamente. Se il record di stato non viene applicato a una determinata colonna, **SQLFetch** SQL_NO_COLUMN_NUMBER imposta il numero di colonna.  
   
- **SQLFetch** continua il recupero delle righe fino a quando non essere recuperati tutte le righe nel set di righe. Restituisce SQL_SUCCESS_WITH_INFO, a meno che non si verifica un errore in ogni riga del set di righe (escluse le righe con stato SQL_ROW_NOROW), nel qual caso viene restituito SQL_ERROR. In particolare, se le dimensioni del set di righe sono 1 e si verifica un errore in tale riga, **SQLFetch** restituisce SQL_ERROR.  
+ **SQLFetch** continua il recupero delle righe fino a quando non dispone di recuperare tutte le righe nel set di righe. Restituisce SQL_SUCCESS_WITH_INFO, a meno che non si verifica un errore in ogni riga del set di righe (escluse le righe con stato SQL_ROW_NOROW), nel qual caso viene restituito SQL_ERROR. In particolare, se le dimensioni del set di righe sono 1 e si verifica un errore in tale riga, **SQLFetch** restituisce SQL_ERROR.  
   
  **SQLFetch** restituisce i record di stato nell'ordine di numero di riga. Ovvero, restituisce tutti i record di stato per le righe sconosciute (se presente); Restituisce quindi tutti i record di stato per la prima riga (se presente) e quindi restituisce tutti i record di stato per la seconda riga (se presente) e così via. I record di stato per ogni riga vengono ordinati in base alle normali regole per l'ordinamento dei record di stato. Per ulteriori informazioni, vedere "Sequenza di record di stato" in [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
   

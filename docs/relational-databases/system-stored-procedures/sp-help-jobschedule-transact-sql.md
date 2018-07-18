@@ -1,16 +1,14 @@
 ---
 title: sp_help_jobschedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobschedule
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 87131f3a5347f24593798bbb81e9f81494897593
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: edaebbc89b6422bd529963dc851371747f7d22be
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,21 +48,21 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo. *job_id*è **uniqueidentifier**, con un valore predefinito è NULL.  
+ Numero di identificazione del processo. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name=** ] **'***job_name***'**  
- Nome del processo. *job_name*è **sysname**, con un valore predefinito è NULL.  
+ Nome del processo. *job_name*viene **sysname**, con un valore predefinito è NULL.  
   
 > **Nota:** entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [  **@schedule_name=** ] **'***schedule_name***'**  
- Nome dell'elemento di pianificazione per il processo. *schedule_name*è **sysname**, con un valore predefinito è NULL.  
+ Nome dell'elemento di pianificazione per il processo. *schedule_name*viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@schedule_id=** ] *schedule_id*  
- Numero di identificazione dell'elemento di pianificazione per il processo. *schedule_id*è **int**, con un valore predefinito è NULL.  
+ [  **@schedule_id=** ] *schedule_id*  
+ Numero di identificazione dell'elemento di pianificazione per il processo. *schedule_id*viene **int**, con un valore predefinito è NULL.  
   
- [ **@include_description=** ] *include_description*  
- Specifica se includere la descrizione della pianificazione nel set dei risultati. *include_description* è **bit**, il valore predefinito è **0**. Quando *include_description* è **0**, la descrizione della pianificazione non è incluso nel set di risultati. Quando *include_description* è **1**, la descrizione della pianificazione è incluso nel set di risultati.  
+ [  **@include_description=** ] *include_description*  
+ Specifica se includere la descrizione della pianificazione nel set dei risultati. *include_description* viene **bit**, il valore predefinito è **0**. Quando *include_description* è **0**, la descrizione della pianificazione non è incluso nel set di risultati. Quando *include_description* è **1**, la descrizione della pianificazione è incluso nel set di risultati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -77,11 +74,11 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_id**|**int**|Numero di identificazione della pianificazione.|  
 |**schedule_name**|**sysname**|Nome della pianificazione.|  
 |**enabled**|**int**|Se la pianificazione è abilitata (**1**) o non è abilitata (**0**).|  
-|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = una volta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa al **freq_interval**<br /><br /> **64** = eseguite quando **SQLServerAgent** avvio del servizio.|  
-|**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Il valore dipende dal valore di **freq_type**. Per ulteriori informazioni, vedere [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|Unità per **freq_subday_interval**. Per ulteriori informazioni, vedere [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|Numero di **freq_subday_type** periodi devono intercorrere tra ogni esecuzione del processo. Per ulteriori informazioni, vedere [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**int**|Istanza del processo pianificata del **freq_interval** in ogni mese. Per ulteriori informazioni, vedere [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = una volta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile, relativo al **freq_interval**<br /><br /> **64** = esecuzione **SQLServerAgent** all'avvio del servizio.|  
+|**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Il valore dipende dal valore di **freq_type**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**int**|Unità per **freq_subday_interval**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**int**|Numero di **freq_subday_type** periodi devono intercorrere tra ogni esecuzione del processo. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**int**|Istanza del processo pianificata del **freq_interval** in ogni mese. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**int**|Numero di mesi tra l'esecuzione pianificata del processo.|  
 |**active_start_date**|**int**|Data di attivazione della pianificazione.|  
 |**active_end_date**|**int**|Data di fine della pianificazione.|  

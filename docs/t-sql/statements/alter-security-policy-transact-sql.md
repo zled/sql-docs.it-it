@@ -1,16 +1,14 @@
 ---
-title: MODIFICARE il criterio di sicurezza (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SECURITY_POLICY_TSQL
@@ -22,18 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - ALTER SECURITY POLICY statement
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f5ce90660a43e5285735a74a01b560ec210ba3f0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2943e1c1d85e1868ba51433a213e0c6ebfafcdd3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="alter-security-policy-transact-sql"></a>MODIFICARE il criterio di sicurezza (Transact-SQL)
+# <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Modifica un criterio di sicurezza.  
@@ -67,10 +64,10 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  Nome del criterio di sicurezza. I nomi dei criteri sicurezza devono essere conformi alle regole per gli identificatori e devono essere univoci all'interno del database e rispetto al relativo schema.  
   
  schema_name  
- Nome dello schema a cui appartiene il criterio di sicurezza. *schema_name* è necessario a causa di associazione allo schema.  
+ Nome dello schema a cui appartiene il criterio di sicurezza. *schema_name* è necessario per l'associazione allo schema.  
   
- [FILTRO | BLOCCO]  
- Il tipo del predicato di sicurezza per la funzione associata alla tabella di destinazione. I predicati del filtro filtrano automaticamente le righe che sono disponibili per le operazioni di lettura. Predicati di blocco in modo esplicito le operazioni di scrittura di blocco che violano la funzione di predicato.  
+ [ FILTER | BLOCK ]  
+ Tipo del predicato di sicurezza per la funzione da associare alla tabella di destinazione. I predicati FILTER filtrano automaticamente le righe disponibili per le operazioni di lettura. I predicati BLOCK bloccano in modo esplicito le operazioni di scrittura che violano la funzione di predicato.  
   
  tvf_schema_name.security_predicate_function_name  
  Funzione con valori di tabella inline che verrà usata come predicato e che verrà applicata durante l'esecuzione di query su una tabella di destinazione. È possibile definire al massimo un predicato di sicurezza per una specifica operazione DML su una determinata tabella. La funzione con valori di tabella inline deve essere stata creata con l'opzione SCHEMABINDING.  
@@ -78,13 +75,13 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  { column_name | arguments }  
  Espressione o nome di colonna usato come parametro per la funzione di predicato di sicurezza. Tutte le colonne nella tabella di destinazione possono essere usate come argomenti per la funzione di predicato. È possibile usare espressioni che includono valori letterali, valori builtin ed espressioni che usano operatori aritmetici.  
   
- *table_schema_name.TABLE_NAME*  
- Tabella di destinazione a cui verrà applicato il predicato di sicurezza. Una singola tabella per una specifica operazione DML possono fare riferimento più criteri di sicurezza disabilitati, ma solo uno può essere abilitato in qualsiasi momento.  
+ *table_schema_name.table_name*  
+ Tabella di destinazione a cui verrà applicato il predicato di sicurezza. A una singola tabella possono fare riferimento più criteri di sicurezza disabilitati per un'operazione DML specifica, ma è possibile abilitarne solo uno.  
   
- *\<block_dml_operation >*  
- La specifica operazione DML per cui verrà applicato il predicato di blocco. Specifica dopo che il predicato verrà valutato i valori delle righe dopo l'operazione DML (INSERT o UPDATE) eseguita. Specifica prima che il predicato verrà valutato i valori delle righe prima che l'operazione DML venga eseguita (UPDATE o DELETE). Se non è stata specificata alcuna operazione, il predicato verrà applicate a tutte le operazioni.  
+ *\<block_dml_operation>*  
+ Operazione DML specifica per la quale verrà applicato il predicato di blocco. AFTER specifica che il predicato verrà valutato in base ai valori delle righe dopo l'esecuzione dell'operazione DML (INSERT o UPDATE). BEFORE specifica che il predicato verrà valutato in base ai valori delle righe prima dell'esecuzione dell'operazione DML (UPDATE o DELETE). Se non è specificata alcuna operazione, il predicato verrà applicato a tutte le operazioni.  
   
- È possibile modificare l'operazione per il quale verrà applicato un predicato di blocco, perché l'operazione viene utilizzato per identificare in modo univoco il predicato. In alternativa, è necessario eliminare il predicato e aggiungerne uno nuovo per la nuova operazione.  
+ Non è possibile modificare l'operazione ALTER per la quale verrà applicato un predicato di blocco, poiché l'operazione viene usata per identificare in modo univoco il predicato. In alternativa, è necessario eliminare il predicato e aggiungerne uno nuovo per la nuova operazione.  
   
  WITH ( STATE = { ON | OFF } )  
  Abilita o disabilita il criterio di sicurezza per l'applicazione dei relativi predicati di sicurezza alle tabelle di destinazione. Se non specificato, il criterio di sicurezza creato è disabilitato.  
@@ -95,12 +92,12 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  table_schema_name.table_name  
  Tabella di destinazione a cui verrà applicato il predicato di sicurezza. A una singola tabella possono fare riferimento più criteri di sicurezza disabilitati, ma è possibile abilitarne solo uno.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'istruzione ALTER SECURITY POLICY è nell'ambito di una transazione. L'esecuzione del rollback della transazione comporta il rollback anche per l'istruzione.  
   
- Quando si utilizzano le funzioni di predicato con tabelle con ottimizzazione per la memoria, è necessario includere i criteri di sicurezza **SCHEMABINDING** e utilizzare il **WITH NATIVE_COMPILATION** hint per la compilazione. L'argomento SCHEMABINDING non può essere modificato con l'istruzione ALTER perché si applica a tutti i predicati. Per modificare l'associazione allo schema è necessario eliminare e ricreare i criteri di sicurezza.  
+ Quando si usano le funzioni di predicato con tabelle ottimizzate per la memoria, i criteri di sicurezza devono includere **SCHEMABINDING** e usare l'hint per la compilazione**WITH NATIVE_COMPILATION**. L'argomento SCHEMABINDING non può essere modificato con l'istruzione ALTER perché si applica a tutti i predicati. Per modificare l'associazione allo schema è necessario eliminare e ricreare i criteri di sicurezza.  
   
- I predicati di blocco vengono valutati dopo l'esecuzione dell'operazione DML corrispondente. Pertanto, una query READ UNCOMMITTED possa vedere valori temporanei che sarà possibile eseguire il rollback.  
+ I predicati di blocco vengono valutati dopo l'esecuzione dell'operazione DML corrispondente. Pertanto una query READ UNCOMMITTED può rilevare valori temporanei che saranno sottoposti a rollback.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione ALTER ANY SECURITY POLICY.  
@@ -112,7 +109,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
 -   L'autorizzazione REFERENCES per ogni colonna della tabella di destinazione usata come argomento.  
   
 ## <a name="examples"></a>Esempi  
- Negli esempi seguenti viene illustrato l'utilizzo del **ALTER SECURITY POLICY** sintassi. Per un esempio di uno scenario di criteri di sicurezza completa, vedere [sicurezza a livello di riga](../../relational-databases/security/row-level-security.md).  
+ Negli esempi seguenti viene illustrato l'uso della sintassi di **CREATE SECURITY POLICY** . Per un esempio di scenario completo dei criteri di sicurezza, vedere [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md).  
   
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. Aggiunta di un altro predicato a un criterio  
  La sintassi seguente modifica un criterio di sicurezza, aggiungendo un predicato del filtro per la tabella `mytable`.  
@@ -152,8 +149,8 @@ ALTER SECURITY POLICY pol1
         ON myschema.mytable;  
 ```  
   
-### <a name="e-changing-a-block-predicate"></a>E. La modifica di un predicato di blocco  
- Modifica la funzione di predicato di blocco per un'operazione su una tabella.  
+### <a name="e-changing-a-block-predicate"></a>E. Modifica di un predicato di blocco  
+ Modifica della funzione del predicato di blocco per un'operazione su una tabella.  
   
 ```  
 ALTER SECURITY POLICY rls.SecPol  
@@ -166,6 +163,6 @@ ALTER SECURITY POLICY rls.SecPol
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [Sys. security_predicates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   

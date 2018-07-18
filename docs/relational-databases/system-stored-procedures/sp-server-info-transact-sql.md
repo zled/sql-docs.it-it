@@ -1,32 +1,32 @@
 ---
 title: sp_server_info (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_info
 - sp_server_info_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_server_info
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0261a011e7c331745494070efb5a3d38e37ffa23
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 0715ea7f2f58b8212b48e990c3e2d2f76301b373
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
   
 ## <a name="arguments"></a>Argomenti  
  [  **@attribute_id =** ] **'***attribute_id***'**  
- ID dell'attributo. *attribute_id* è **int**, con un valore predefinito è NULL.  
+ ID dell'attributo. *attribute_id* viene **int**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  Nessuno  
@@ -54,10 +54,10 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|ID dell'attributo.|  
-|**ATTRIBUTE_NAME**|**varchar (**60**)**|Nome dell'attributo.|  
-|**ATTRIBUTE_VALUE**|**varchar (**255**)**|Impostazione corrente dell'attributo.|  
+|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Nome dell'attributo.|  
+|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Impostazione corrente dell'attributo.|  
   
- Nella tabella seguente sono elencati gli attributi. [!INCLUDE[msCoName](../../includes/msconame-md.md)]Le librerie client ODBC vengono utilizzano gli attributi **1**, **2**, **18**, **22**, e **500** in tempo di connessione.  
+ Nella tabella seguente sono elencati gli attributi. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Le librerie client ODBC vengono utilizzano gli attributi **1**, **2**, **18**, **22**, e **500** in fase di connessione ora.  
   
 |ATTRIBUTE_ID|Descrizione ATTRIBUTE_NAME|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -94,11 +94,11 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ## <a name="remarks"></a>Osservazioni  
  **sp_server_info** restituisce un subset delle informazioni fornite da **SQLGetInfo** in ODBC.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Catalogo Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Stored procedure di catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

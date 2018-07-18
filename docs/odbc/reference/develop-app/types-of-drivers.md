@@ -1,32 +1,29 @@
 ---
 title: Tipi di driver | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
 - backward compatibility [ODBC], application and driver compatibility
 - compatibility [ODBC], application and driver compatibility
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c2068bb92d1aaa00debc46277c117d4134091666
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e75e5827becd5457d0e310ca5ec0cc2a13259be5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="types-of-drivers"></a>Tipi di driver
 Driver ODBC possono essere classificati come segue:  
@@ -38,7 +35,7 @@ Driver ODBC possono essere classificati come segue:
   
     -   Presenta ODBC 2. *x* comportamento per le modifiche di comportamento.  
   
--   **ISO e aprire i Driver compatibili con gruppo** driver A 32 bit che:  
+-   **ISO e aprire un Driver conforme con gruppo** driver A 32 bit che:  
   
     -   Esporta tutte le funzioni che sono documentate nei documenti Open Group o ISO CLI. Questo include alcune delle funzioni che sono deprecate in ODBC.  
   

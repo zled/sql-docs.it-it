@@ -1,16 +1,14 @@
 ---
 title: SAVE TRANSACTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SAVE
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - marked transactions [SQL Server], SAVE TRANSACTION statement
 - duplicate savepoints
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
-caps.latest.revision: 
+caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4acf3a47b6c023320caad72764dae20f3e16d460
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1a3de19407e472098b13a3f7f98fc5867791fc1e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,13 +53,13 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>Argomenti  
  *savepoint_name*  
- Nome assegnato al punto di salvataggio. I nomi di punto di salvataggio devono essere conformi alle regole per gli identificatori, ma non possono contenere più di 32 caratteri. *savepoint_name* è sempre distinzione maiuscole/minuscole, anche quando l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene fatta distinzione tra maiuscole e minuscole.  
+ Nome assegnato al punto di salvataggio. I nomi di punto di salvataggio devono essere conformi alle regole per gli identificatori, ma non possono contenere più di 32 caratteri. In *savepoint_name* viene sempre applicata la distinzione tra maiuscole e minuscole, anche quando l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non prevede distinzione tra maiuscole e minuscole.  
   
  @*savepoint_variable*  
- Nome di una variabile definita dall'utente contenente un nome di punto di salvataggio valido. La variabile deve essere dichiarata con un **char**, **varchar**, **nchar**, o **nvarchar** tipo di dati. È possibile passare alla variabile più di 32 caratteri, ma in tal caso verranno utilizzati solo i primi 32.  
+ Nome di una variabile definita dall'utente contenente un nome di punto di salvataggio valido. La variabile deve essere dichiarata con un tipo di dati **char**, **varchar**, **nchar** o **nvarchar**. È possibile passare alla variabile più di 32 caratteri, ma in tal caso verranno utilizzati solo i primi 32.  
   
-## <a name="remarks"></a>Osservazioni  
- Un utente può impostare un punto di salvataggio o marcatore all'interno di una transazione. Il punto di salvataggio consente di contrassegnare il punto fino a cui conservare una transazione se parte della transazione viene annullata in modo condizionale. Se si esegue il rollback di una transazione fino a un punto di salvataggio, è necessario che la transazione venga completata (se necessario con più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e con un'istruzione COMMIT TRANSACTION) oppure annullata completamente (tramite il rollback fino all'inizio della transazione). Per annullare un'intera transazione, utilizzare la sintassi ROLLBACK TRANSACTION *transaction_name*. In tal caso, verranno annullate tutte le istruzioni o procedure della transazione.  
+## <a name="remarks"></a>Remarks  
+ Un utente può impostare un punto di salvataggio o marcatore all'interno di una transazione. Il punto di salvataggio consente di contrassegnare il punto fino a cui conservare una transazione se parte della transazione viene annullata in modo condizionale. Se si esegue il rollback di una transazione fino a un punto di salvataggio, è necessario che la transazione venga completata (se necessario con più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e con un'istruzione COMMIT TRANSACTION) oppure annullata completamente (tramite il rollback fino all'inizio della transazione). Per annullare un'intera transazione, usare la sintassi ROLLBACK TRANSACTION *transaction_name*. In tal caso, verranno annullate tutte le istruzioni o procedure della transazione.  
   
  In una transazione è consentito l'utilizzo di nomi di punto di salvataggio duplicati. Un'istruzione ROLLBACK TRANSACTION contenente un nome di punto di salvataggio, tuttavia, eseguirà il rollback della transazione solo fino all'istruzione SAVE TRANSACTION più recente che utilizza tale nome.  
   
@@ -176,7 +173,7 @@ GO
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   

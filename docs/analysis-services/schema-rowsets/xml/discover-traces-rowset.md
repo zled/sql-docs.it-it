@@ -1,33 +1,23 @@
 ---
 title: Set di righe DISCOVER_TRACES | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c79aa16cc7dc0d232c3acaa4407588932befc124
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 63bcb03d27abdacf675acd56c95a2dbd49adb362
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discovertraces-rowset"></a>Set di righe DISCOVER_TRACES
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Vengono fornite informazioni sulle tracce attualmente attive nel server.  
+  Vengono fornite informazioni sulle tracce attualmente attive nel server.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
   
@@ -41,7 +31,7 @@ Vengono fornite informazioni sulle tracce attualmente attive nel server.
 |**LogFileName**|**DBTYPE_WSTR**|Nome del file di log di traccia.|  
 |**LogFileSize**|**DBTYPE_I4**|Dimensioni del file di log di traccia.|  
 |**LogFileRollover**|**DBTYPE_BOOL**|Se true, indica che il file di log deve essere sottoposto a rollover; in caso contrario false.|  
-|**AutoRestart**|**DBTYPE_BOOL**|Se true, indica che l'opzione di riavvio automatico è abilitata; in caso contrario false.|  
+|**Riavvio automatico**|**DBTYPE_BOOL**|Se true, indica che l'opzione di riavvio automatico è abilitata; in caso contrario false.|  
 |**CreationTime**|**DBTYPE_TIME**|Data e ora di creazione della traccia.|  
 |**StopTime**|**DBTYPE_TIME**|Data e ora di arresto di una traccia.|  
 |**Tipo**|**PF_DBTYPE_WSTR**|Tipo di traccia.|  

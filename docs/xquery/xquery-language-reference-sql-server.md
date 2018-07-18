@@ -1,16 +1,15 @@
 ---
 title: Riferimento al linguaggio XQuery (SQL Server) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,21 +20,20 @@ helpviewer_keywords:
 - XML [SQL Server], XQuery
 - queries [XML in SQL Server], XQuery
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5c242348870d6b6862e02cc8d14ec1fdc184d62e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 759904d735b754d9f51314b92c3d7763a0aa4ef2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xquery-language-reference-sql-server"></a>Riferimento al linguaggio XQuery (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[tsql](../includes/tsql-md.md)] supporta un subset del linguaggio XQuery utilizzato per l'esecuzione di query di **xml** tipo di dati. Questa implementazione di XQuery è allineata con le specifiche Working Draft di XQuery del luglio 2004. Il linguaggio è sviluppato da WC3 (World Wide Web Consortium), con la partecipazione di tutti i principali fornitori di database e di Microsoft. Poiché le specifiche W3C sono soggette a modifiche prima di diventare raccomandazioni ufficiali, questa implementazione può essere diversa dalla raccomandazione W3C finale. In questo argomento vengono descritte la semantica e la sintassi del subset di XQuery supportato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  [!INCLUDE[tsql](../includes/tsql-md.md)] supporta un subset del linguaggio XQuery utilizzato per l'esecuzione di query il **xml** tipo di dati. Questa implementazione di XQuery è allineata con le specifiche Working Draft di XQuery del luglio 2004. Il linguaggio è sviluppato da WC3 (World Wide Web Consortium), con la partecipazione di tutti i principali fornitori di database e di Microsoft. Poiché le specifiche W3C sono soggette a modifiche prima di diventare raccomandazioni ufficiali, questa implementazione può essere diversa dalla raccomandazione W3C finale. In questo argomento vengono descritte la semantica e la sintassi del subset di XQuery supportato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Per ulteriori informazioni, vedere il [specifiche del linguaggio XQuery 1.0 W3C](http://go.microsoft.com/fwlink/?LinkId=48846).  
   
@@ -74,7 +72,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  L'organizzazione di questa sezione è basata sulle specifiche W3C (World Wide Web Consortium ) per XQuery. Alcuni dei diagrammi disponibili in questa sezione provengono da questa specifica. In questa sezione l'implementazione Microsoft di XQuery viene confrontata alla specifica W3C, vengono descritte le differenze fra Microsoft XQuery e la specifica W3C e vengono illustrate le caratteristiche W3C non supportate. La specifica W3C è disponibile all'indirizzo [http://www.w3.org/TR/2004/WD-xquery-20040723](http://go.microsoft.com/fwlink/?LinkId=48846).  
+>  L'organizzazione di questa sezione è basata sulle specifiche W3C (World Wide Web Consortium ) per XQuery. Alcuni dei diagrammi disponibili in questa sezione provengono da questa specifica. In questa sezione l'implementazione Microsoft di XQuery viene confrontata alla specifica W3C, vengono descritte le differenze fra Microsoft XQuery e la specifica W3C e vengono illustrate le caratteristiche W3C non supportate. La specifica W3C è disponibile all'indirizzo [ http://www.w3.org/TR/2004/WD-xquery-20040723 ](http://go.microsoft.com/fwlink/?LinkId=48846).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
@@ -82,7 +80,7 @@ WHERE ProductModelID=7
 |-----------|-----------------|  
 |[Nozioni fondamentali su XQuery](../xquery/xquery-basics.md)|Contiene una panoramica di base sui concetti relativi a XQuery, valutazione dell'espressione (contesto statico e dinamico), atomizzazione, valore booleano effettivo, sistema di tipi XQuery, corrispondenza del tipo di sequenza e gestione degli errori.|  
 |[Espressioni XQuery](../xquery/xquery-expressions.md)|Descrive le espressioni primarie XQuery, espressioni di percorso, espressioni di sequenza, espressioni di confronto aritmetico e logiche, costruzione XQuery, espressione FLWOR, espressioni condizionali e quantificate e diverse espressioni TypeSequence.|  
-|[I moduli e prologhi &#40; XQuery &#41;](../xquery/modules-and-prologs-xquery.md)|Descrive il prologo della XQuery.|  
+|[Moduli e prologhi &#40;XQuery&#41;](../xquery/modules-and-prologs-xquery.md)|Descrive il prologo della XQuery.|  
 |[Funzioni XQuery per il tipo di dati XML](../xquery/xquery-functions-against-the-xml-data-type.md)|Contiene un elenco delle funzioni XQuery supportate.|  
 |[Operatori di XQuery per il tipo di dati xml](../xquery/xquery-operators-against-the-xml-data-type.md)|Descrive gli operatori XQuery supportati.|  
 |[Query XQuery di esempio aggiuntive per il tipo di dati xml](../xquery/additional-sample-xqueries-against-the-xml-data-type.md)|Contiene altri esempi di XQuery.|  

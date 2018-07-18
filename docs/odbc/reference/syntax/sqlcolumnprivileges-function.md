@@ -1,32 +1,33 @@
 ---
 title: Sqlcolumnprivileges-funzione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLColumnPrivileges
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLColumnPrivileges
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLColumnPrivileges
-helpviewer_keywords: SQLColumnPrivileges function [ODBC]
+f1_keywords:
+- SQLColumnPrivileges
+helpviewer_keywords:
+- SQLColumnPrivileges function [ODBC]
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 5058ae7c097858469db0aad57509f013e68db7ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ae5170239706601def7efcb251e4def31f938b21
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges Function
 **Conformità**  
@@ -56,7 +57,7 @@ SQLRETURN SQLColumnPrivileges(
  [Input] Handle di istruzione.  
   
  *CatalogName*  
- [Input] Nome del catalogo. Se un driver supporta i nomi per alcuni cataloghi ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica i cataloghi che non dispongono di nomi. *CatalogName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome del catalogo. Se un driver supporta i nomi per alcuni cataloghi ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica i cataloghi che non dispongono di nomi. *CatalogName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *CatalogName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *CatalogName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa. Per ulteriori informazioni, vedere [argomenti delle funzioni di catalogo in](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
@@ -64,7 +65,7 @@ SQLRETURN SQLColumnPrivileges(
  [Input] Lunghezza in caratteri del **CatalogName*.  
   
  *NomeSchema*  
- [Input] Nome dello schema. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *NomeSchema* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome dello schema. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *NomeSchema* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore. Se è SQL_FALSE, *SchemaName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -72,14 +73,14 @@ SQLRETURN SQLColumnPrivileges(
  [Input] Lunghezza in caratteri del **SchemaName*.  
   
  *TableName*  
- [Input] Nome della tabella. Questo argomento non può essere un puntatore null. *TableName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome della tabella. Questo argomento non può essere un puntatore null. *TableName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *TableName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *TableName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
  *NameLength3*  
  [Input] Lunghezza in caratteri del **TableName*.  
   
- *Nome colonna*  
+ *ColumnName*  
  [Input] Stringa criterio di ricerca per i nomi di colonna.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *ColumnName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *ColumnName* è un argomento di valore modello; viene considerato letteralmente e il relativo case è significativa.  
@@ -117,7 +118,7 @@ SQLRETURN SQLColumnPrivileges(
 |IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente dell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato per l'handle per eseguire la post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLColumnPrivileges** restituisce i risultati come set di risultati standard, ordinati in base a TABLE_SCHEM, TABLE_CAT, TABLE_NAME, COLUMN_NAME e dei privilegi.  
+ **SQLColumnPrivileges** restituisce i risultati come set di risultati standard, ordinati in base TABLE_CAT TABLE_SCHEM, TABLE_NAME, COLUMN_NAME e privilegi.  
   
 > [!NOTE]  
 >  **SQLColumnPrivileges** potrebbe non restituire i privilegi per tutte le colonne. Ad esempio, un driver potrebbe non restituire informazioni sui privilegi per pseudo-colonne, ad esempio Oracle ROWID. Le applicazioni possono utilizzare qualsiasi colonna valida, indipendentemente dal fatto se viene restituito da **SQLColumnPrivileges**.  

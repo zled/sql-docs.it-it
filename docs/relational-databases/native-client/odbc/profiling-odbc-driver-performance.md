@@ -1,15 +1,14 @@
 ---
 title: Profilatura delle prestazioni del Driver ODBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client|ODBC
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - profiling ODBC driver performance data [SQL Server Native Client]
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92048dd38dc58683f3726fc23dcc106731eda739
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 337209ac91faecab319f66bcb9b61252e3444f5a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profiling delle prestazioni del driver ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +111,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SumConnectionsOpened|Somma del numero di handle di connessione aperti dopo SQL_PERF_START.|  
 |SumConnectionTime|Somma del periodo di tempo in cui tutte le connessioni sono state aperte dopo SQL_PERF_START. Se ad esempio un'applicazione ha aperto 10 connessioni e ha mantenuto ogni connessione per 5 secondi, SumConnectionTime sarà uguale a 50 secondi.|  
 |AvgTimeOpened|È uguale a SumConnectionsOpened/SumConnectionTime.|  
-|**Statistiche di rete:**||  
+|**Statistiche della rete:**||  
 |ServerRndTrips|Numero di volte in cui il driver ha inviato comandi al server e ottenuto una risposta.|  
 |BuffersSent|Numero di pacchetti di flussi TDS (Tabular Data Stream) inviati a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dal driver dopo SQL_PERF_START. I comandi di grandi dimensioni possono accettare più buffer, pertanto se un comando di grandi dimensioni viene inviato al server e riempie sei pacchetti, ServerRndTrips viene incrementato di uno e BuffersSent viene incrementato di sei.|  
 |BuffersRec|Numero di pacchetti TDS ricevuti dal driver da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dopo l'avvio dell'applicazione mediante il driver.|  
@@ -127,7 +126,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msNetworkServerTime|Tempo cumulativo di attesa del driver per le risposte dal server.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native Client &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Profilatura procedure relative alle prestazioni del Driver ODBC &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Profilatura procedure relative alle prestazioni del Driver ODBC & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

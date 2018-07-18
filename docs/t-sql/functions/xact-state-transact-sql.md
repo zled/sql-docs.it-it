@@ -1,16 +1,14 @@
 ---
-title: XACT_STATE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: XACT_STATE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - XACT_STATE
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - transactions [SQL Server], state
 - active transactions
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 81d8b98cf6f7ddd80e3952b82ae13cea75a81abd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6b3293dab60c9b3f7f39b47c15397d29c5892ec9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,16 +50,16 @@ XACT_STATE()
 ## <a name="return-type"></a>Tipo restituito  
  **smallint**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  XACT_STATE restituisce i valori seguenti.  
   
 |Valore restituito|Significato|  
 |------------------|-------------|  
 |1|La richiesta corrente include una transazione utente attiva. La richiesta può eseguire qualsiasi azione, tra cui la scrittura di dati e il commit della transazione.|  
 |0|La richiesta corrente non include una transazione utente attiva.|  
-|-1|La richiesta corrente include una transazione utente attiva, ma si è verificato un errore che ne ha causato la classificazione come transazione bloccata. La richiesta non può eseguire il commit della transazione né eseguirne il rollback fino a un punto di salvataggio. L'unica operazione consentita è la richiesta di un rollback completo della transazione. Finché non verrà eseguito il rollback della transazione, non sarà possibile eseguire operazioni di scrittura e saranno consentite solo operazioni di lettura. Dopo il rollback della transazione, la richiesta potrà eseguire operazioni sia di lettura che di scrittura e potrà avviare una nuova transazione.<br /><br /> Al termine dell'esecuzione di un batch, [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguirà automaticamente il rollback di tutte le transazioni attive di cui non è possibile eseguire il commit. Se non sono stati inviati messaggi di errore al momento dell'attivazione dello stato di blocco per la transazione, al termine dell'esecuzione del batch, verrà inviato un messaggio di errore all'applicazione client. Questo messaggio indica che è stata rilevata una transazione di cui non è possibile eseguire il commit e che ne è stato eseguito il rollback.|  
+|-1|La richiesta corrente include una transazione utente attiva, ma si è verificato un errore che ne ha causato la classificazione come transazione bloccata. La richiesta non può eseguire il commit della transazione né eseguirne il rollback fino a un punto di salvataggio. L'unica operazione consentita è la richiesta di un rollback completo della transazione. Finché non verrà eseguito il rollback della transazione, non sarà possibile eseguire operazioni di scrittura e saranno consentite solo operazioni di lettura. Dopo il rollback della transazione, la richiesta potrà eseguire operazioni sia di lettura che di scrittura e potrà avviare una nuova transazione.<br /><br /> Al termine dell'esecuzione del batch più esterno, [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguirà automaticamente il rollback di tutte le transazioni attive di cui non è possibile eseguire il commit. Se non sono stati inviati messaggi di errore al momento dell'attivazione dello stato di blocco per la transazione, al termine dell'esecuzione del batch, verrà inviato un messaggio di errore all'applicazione client. Questo messaggio indica che è stata rilevata una transazione di cui non è possibile eseguire il commit e che ne è stato eseguito il rollback.|  
   
- Entrambi i XACT_STATE e @@TRANCOUNT funzioni possono essere utilizzate per rilevare se la richiesta corrente include una transazione utente attiva. @@TRANCOUNT non può essere utilizzato per determinare se tale transazione è stata classificata come transazione bloccata. Non è possibile utilizzare XACT_STATE per determinare se esistono transazioni nidificate.  
+ Per verificare se la richiesta corrente include una transazione utente attiva, è possibile usare entrambe le funzioni XACT_STATE e @@TRANCOUNT. Non è possibile usare @@TRANCOUNT per determinare se la transazione è stata classificata come transazione di cui non è possibile eseguire il commit. Non è possibile utilizzare XACT_STATE per determinare se esistono transazioni nidificate.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzata la funzione `XACT_STATE` nel blocco `CATCH` di un costrutto `TRY…CATCH` per determinare se è necessario eseguire il commit o il rollback di una transazione. Poiché il valore di `SET XACT_ABORT` è `ON`, l'errore di violazione del vincolo attiva lo stato di blocco per la transazione.  

@@ -1,16 +1,14 @@
 ---
 title: NCHAR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - nchar
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - NCHAR function
 - Unicode [SQL Server], NCHAR function
 ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ec589a342f347dc7fc56b62ed33ac544c5da0c55
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: eec278aab588bece400b3ba5bfa32e583b594970
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,21 +45,21 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argomenti  
  *integer_expression*  
- Quando le regole di confronto del database non contengono il flag di caratteri supplementari (SC), si tratta di un numero intero positivo compreso tra 0 e 65535 (tra 0 e 0xFFFF). Se viene specificato un valore non compreso in questo intervallo, viene restituito NULL. Per ulteriori informazioni sui caratteri supplementari, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Quando le regole di confronto del database non contengono il flag di caratteri supplementari (SC), si tratta di un numero intero positivo compreso tra 0 e 65535 (tra 0 e 0xFFFF). Se viene specificato un valore non compreso in questo intervallo, viene restituito NULL. Per altre informazioni sui caratteri supplementari, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Quando le regole di confronto del database supportano il flag di caratteri supplementari (SC), si tratta di un numero intero positivo compreso tra 0 e 1114111 (tra 0 e 0x10FFFF). Se viene specificato un valore non compreso in questo intervallo, viene restituito NULL.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **nchar (1)** quando le regole di confronto predefinite del database non supporta i caratteri supplementari.  
+ **nchar(1)** quando le regole di confronto predefinite del database non supportano i caratteri supplementari.  
   
- **nvarchar(2)** quando le regole di confronto predefinite del database supportano caratteri supplementari.  
+ **nvarchar(2)** quando le regole di confronto predefinite del database supportano i caratteri supplementari.  
   
  Se il parametro *integer_expression* rientra nell'intervallo 0 - 0xFFFF, viene restituito un solo carattere. Per i valori superiori, NCHAR restituisce la coppia di surrogati corrispondente. Non creare una coppia di surrogati tramite `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Utilizzare invece regole di confronto del database che supportano caratteri supplementari, quindi specificare il punto di codice Unicode per la coppia di surrogati. Nell'esempio seguente vengono illustrati sia il metodo obsoleto per la creazione di una coppia di surrogati che il metodo preferito per la specifica del punto di codice Unicode.  
   
 ```  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
-DECLARE @d nvarchar(10) = N'ࣅ炙   
--– Old style method.  
+DECLARE @d nvarchar(10) = N'𣅿';
+-- Old style method.  
 SELECT NCHAR(0xD84C) + NCHAR(0xDD7F);   
   
 -- Preferred method.   
@@ -223,7 +221,7 @@ Character # Unicode Character UNICODE Value
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

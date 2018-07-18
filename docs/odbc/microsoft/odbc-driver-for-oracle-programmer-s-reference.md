@@ -1,29 +1,26 @@
 ---
-title: Il Driver ODBC per Oracle programmatore &#39; riferimento s | Documenti Microsoft
-ms.custom: 
+title: Driver ODBC per Oracle programmatore&#39;riferimento s | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bbf7dee4e5b9b00d2e07c4dafeb5b0fdd0a778f0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f68964557d5878b4575a1a6a9592514b3abe8cb7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Il Driver ODBC per Oracle programmatore &#39; s riferimento
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Driver ODBC per Oracle programmatore&#39;riferimento s
 > [!IMPORTANT]  
 >  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, utilizzare il driver ODBC fornito da Oracle.  
   
@@ -47,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Limitazioni dell'uso dei cursori gestiti da keyset](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
--   [Il Driver ODBC per Oracle Stored procedure](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
+-   [Driver ODBC per Oracle Stored procedure](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
 -   [Driver ODBC per i messaggi di errore Oracle](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   

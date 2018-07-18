@@ -1,16 +1,14 @@
 ---
-title: IDENTITY (funzione) (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: IDENTITY (funzione) (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IDENTITY_TSQL
@@ -24,21 +22,20 @@ helpviewer_keywords:
 - columns [SQL Server], creating
 - identity columns [SQL Server], IDENTITY function
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 70fbbbae7e04331130346702c8f974669d53942a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c3bd578e42141de98839b61444a1112d3773247c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (funzione) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Viene usato solo in un'istruzione SELECT con un INTO *tabella* clausola per inserire una colonna identity in una nuova tabella. Pur essendo simili, la funzione IDENTITY e la proprietà IDENTITY utilizzata con CREATE TABLE e ALTER TABLE non sono equivalenti.  
+  Viene usata solo in istruzioni SELECT che includono una clausola INTO *table* per l'inserimento di una colonna Identity in una nuova tabella. Pur essendo simili, la funzione IDENTITY e la proprietà IDENTITY utilizzata con CREATE TABLE e ALTER TABLE non sono equivalenti.  
   
 > [!NOTE]  
 >  Per creare un numero a incremento automatico da usare in più tabelle o da chiamare dalle applicazioni senza fare riferimento ad alcuna tabella, vedere [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).  
@@ -54,21 +51,21 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
   
 ## <a name="arguments"></a>Argomenti  
  *data_type*  
- Tipo di dati della colonna Identity. Tipi di dati validi per una colonna identity sono tutti tipi di dati della categoria di tipi di dati integer, ad eccezione di **bit** tipo di dati, o **decimale** tipo di dati.  
+ Tipo di dati della colonna Identity. I tipi di dati validi per una colonna Identity sono tutti i tipi di dati della categoria integer, con l'eccezione di **bit** e **decimal**.  
   
- *valore di inizializzazione*  
- Valore intero da assegnare alla prima riga della tabella. Ogni riga successiva viene assegnato il successivo valore identity, è uguale all'ultimo valore IDENTITY più il *incremento* valore. Se non si specifica *valore di inizializzazione* né *incremento* viene specificato, sia impostata su 1.  
+ *seed*  
+ Valore intero da assegnare alla prima riga della tabella. A ogni riga successiva viene assegnato il valore Identity successivo, che corrisponde all'ultimo valore IDENTITY più il valore *increment*. Se vengono omessi sia *seed* che *increment*, verrà usato il valore predefinito 1 per entrambi.  
   
- *incremento*  
- Valore intero per aggiungere il *valore di inizializzazione* valore per le righe successive nella tabella.  
+ *increment*  
+ Valore intero da aggiungere al valore *seed* per le righe successive della tabella.  
   
  *column_name*  
  Nome della colonna da inserire nella nuova tabella.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- Restituisce lo stesso come *data_type*.  
+ Restituisce lo stesso tipo dell'argomento *data_type*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Poiché questa funzione crea una colonna in una tabella, nell'elenco di selezione è necessario specificare un nome per la colonna in uno dei modi seguenti:  
   
 ```  
@@ -112,8 +109,8 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [Selezionare @local_variable &#40; Transact-SQL &#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
+ [SELECT @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [Sys. identity_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

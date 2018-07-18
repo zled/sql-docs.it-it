@@ -1,16 +1,14 @@
 ---
-title: sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_instance_name_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_warehouse_instance_name
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d82ac58a086f09b104515300d92704e62b6aea1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b8a41db8df8316720f1a88b090de51e39a5d4d5e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +45,12 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
   
 ## <a name="arguments"></a>Argomenti  
  [ @instance_name =] '*instance_name*'  
- Nome dell'istanza. *instance_name* è **sysname** e i valori predefiniti per l'istanza locale se NULL.  
+ Nome dell'istanza. *nome_istanza* viene **sysname** e i valori predefiniti per l'istanza locale se NULL.  
   
-> **Nota:***instance_name* deve essere il nome di istanza completo, che include il nome del computer e il nome dell'istanza nel formato *computerName* \\ *instanceName*.  
+> **Nota:***nome_istanza* deve essere il nome, nome completo dell'istanza che include il nome del computer e il nome dell'istanza nel formato *computerName* \\ *NomeIstanza*.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  È necessario disabilitare l'agente di raccolta dati prima di modificarne la configurazione. La procedura non ha esito positivo se l'agente di raccolta dati è abilitato.  

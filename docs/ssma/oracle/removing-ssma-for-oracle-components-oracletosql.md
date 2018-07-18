@@ -1,28 +1,27 @@
 ---
 title: Rimozione di SSMA per i componenti Oracle (OracleToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Uninstalling the Extension Pack
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Uninstalling the Extension Pack
 ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: 369c3d4cba7e60bde7c7f55bb1e96fd0d7ac4381
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dc119244850dd7e7925b9f858fe8ea5cbf28ecda
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Rimozione di SSMA per i componenti Oracle (OracleToSQL)
 Al termine di migrazione di database da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile disinstallare i componenti SSMA. È possibile disinstallare i componenti client in qualsiasi momento. Tuttavia, non è opportuno disinstallare il pacchetto di estensione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , a meno che i database migrati non usare più funzioni nel **ssma_oracle** dello schema del **sysdb** database.  
@@ -30,7 +29,7 @@ Al termine di migrazione di database da Oracle a [!INCLUDE[ssNoVersion](../../in
 ## <a name="uninstalling-the-ssma-for-oracle-client"></a>Disinstallazione di SSMA per Client Oracle  
 È possibile disinstallare SSMA utilizzando **Aggiungi / Rimuovi programmi**.  
   
-**Per disinstallare SSMA**  
+**Per disinstallare di SSMA**  
   
 1.  Nel Pannello di controllo aprire **Aggiungi / Rimuovi programmi**.  
   
@@ -62,6 +61,6 @@ Se si è certi dei database migrati non utilizzano gli oggetti di **sysdb.ssma_o
 Dopo la disinstallazione, è possibile confermare che gli oggetti di **sysdb.ssma_oracle** schema ed eventualmente l'intero **sysdb** del database, è stato rimosso utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Tuttavia, se si utilizzano altri prodotti SSMA, anche usano il **sysdb** database. Se il database esista e si è certi che nessun altro database fanno riferimento a oggetti in questo database, è possibile scollegare il database.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Installazione di SSMA per Client Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[Installazione dei componenti SSMA OracleToSQL SQL Server &#40; &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
+[Installazione di SSMA per Client Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[Installazione dei componenti di SSMA in SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
   

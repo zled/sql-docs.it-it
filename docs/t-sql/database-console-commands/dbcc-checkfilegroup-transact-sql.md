@@ -1,16 +1,13 @@
 ---
-title: DBCC CHECKFILEGROUP (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKFILEGROUP_TSQL
@@ -28,19 +25,19 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 60
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fc36aa0cfddcceefda1aefc6f4e7dc040f9a4b5f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 76189bd8ce8057d50671c93c09fbb7a5f0883544
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Controlla l'allocazione e l'integrità strutturale di tutte le tabelle e viste indicizzate nel filegroup specificato del database corrente.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Controlla l'integrità strutturale e di allocazione di tutte le tabelle e le viste indicizzate nel filegroup specificato del database corrente.
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
@@ -66,7 +63,7 @@ DBCC CHECKFILEGROUP
   
 ## <a name="arguments"></a>Argomenti  
  *filegroup_name*  
- Nome del filegroup nel database corrente di cui si desidera controllare l'integrità strutturale e di allocazione delle tabelle. Se omesso oppure se viene specificato 0, per impostazione predefinita viene utilizzato il filegroup primario. Nomi di filegroup devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
+ Nome del filegroup nel database corrente di cui si desidera controllare l'integrità strutturale e di allocazione delle tabelle. Se omesso oppure se viene specificato 0, per impostazione predefinita viene utilizzato il filegroup primario. I nomi di filegroup devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
  *filegroup_name* non può essere un filegroup FILESTREAM.  
   
  *filegroup_id*  
@@ -98,30 +95,30 @@ DBCC CHECKFILEGROUP
 >  Se si specifica PHYSICAL_ONLY, DBCC CHECKFILEGROUP ignora tutti i controlli dei dati FILESTREAM.  
   
  MAXDOP  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 tramite [versione](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **Si applica a**: da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- Esegue l'override di **massimo grado di parallelismo** opzione di configurazione di **sp_configure** per l'istruzione. Il MAXDOP può superare il valore configurato con sp_configure. Se MAXDOP supera il valore configurato con Resource Governor, il motore di Database utilizza il valore MAXDOP di Resource Governor, descritto in ALTER WORKLOAD GROUP (Transact-SQL). Quando si utilizza l'hint per la query MAXDOP sono valide tutte le regole semantiche utilizzate con l'opzione di configurazione max degree of parallelism. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Esegue l'override dell'opzione di configurazione **Massimo grado di parallelismo** di **sp_configure** per l'istruzione. MAXDOP può superare il valore configurato con sp_configure. Se MAXDOP supera il valore configurato con Resource Governor, il motore di database usa il valore MAXDOP di Resource Governor descritto in ALTER WORKLOAD GROUP (Transact-SQL). Quando si utilizza l'hint per la query MAXDOP sono valide tutte le regole semantiche utilizzate con l'opzione di configurazione max degree of parallelism. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!CAUTION]  
 >  Se MAXDOP è impostato su zero, il server sceglie il grado massimo di parallelismo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKFILEGROUP e DBCC CHECKDB sono comandi DBCC simili. La differenza principale consiste nel fatto che il comando DBCC CHECKFILEGROUP è limitato al singolo filegroup specificato e alle tabelle obbligatorie.
 Tramite DBCC CHECKFILEGROUP vengono eseguiti i comandi seguenti:
--   [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) del filegroup.  
--   [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) di ogni tabella e vista indicizzata nel filegroup.  
+-   [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) per il filegroup.  
+-   [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) per ogni tabella e vista indicizzata nel filegroup.  
   
 Non è necessario eseguire DBCC CHECKALLOC o DBCC CHECKTABLE separatamente da DBCC CHECKFILEGROUP.
   
 ## <a name="internal-database-snapshot"></a>Snapshot di database interno  
-DBCC CHECKFILEGROUP utilizza uno snapshot interno del database per garantire la consistenza delle transazioni necessaria per eseguire questi controlli. Per ulteriori informazioni, vedere [visualizzare le dimensioni del File Sparse di uno Snapshot del Database &#40; Transact-SQL &#41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e la sezione "DBCC dell'utilizzo di Snapshot interno del Database" in [DBCC &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKFILEGROUP utilizza uno snapshot interno del database per garantire la consistenza delle transazioni necessaria per eseguire questi controlli. Per altre informazioni, vedere [Visualizzare le dimensioni del file sparse di uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e la sezione "Utilizzo dello snapshot interno del database DBCC" in [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 Se non è possibile creare uno snapshot oppure viene specificata l'opzione TABLOCK, DBCC CHECKFILEGROUP acquisisce blocchi per ottenere la consistenza necessaria. In questo caso, è necessario un blocco esclusivo a livello di database per eseguire i controlli di allocazione, nonché blocchi condivisi a livello di tabella per eseguire i controlli delle tabelle. TABLOCK consente l'esecuzione più rapida di DBCC CHECKFILEGROUP in un database con carico di lavoro elevato, ma comporta una diminuzione del livello di concorrenza del database durante l'esecuzione dell'istruzione.
   
 > [!NOTE]  
 >  L'esecuzione di DBCC CHECKFILEGROUP nel database tempdb non comporta l'esecuzione di controlli di allocazione ed è pertanto necessario acquisire blocchi condivisi a livello di tabella per eseguire i controlli delle tabelle. Questo funzionamento dipende dal fatto che per motivi di prestazioni gli snapshot di database non sono disponibili in tempdb. Ciò significa che non è possibile ottenere la consistenza delle transazioni necessaria.  
   
 ## <a name="checking-objects-in-parallel"></a>Controllo parallelo degli oggetti  
-Per impostazione predefinita, DBCC CHECKFILEGROUP esegue il controllo parallelo degli oggetti. Il grado di parallelismo viene determinato in modo automatico da Query Processor. Il livello massimo di parallelismo viene configurato allo stesso modo delle query parallele. Per limitare il numero massimo di processori disponibili per la verifica DBCC, utilizzare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+Per impostazione predefinita, DBCC CHECKFILEGROUP esegue il controllo parallelo degli oggetti. Il grado di parallelismo viene determinato in modo automatico da Query Processor. Il livello massimo di parallelismo viene configurato allo stesso modo delle query parallele. Per limitare il numero massimo di processori disponibili per la verifica DBCC, usare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 È possibile disabilitare il controllo parallelo tramite il flag di traccia 2528. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
 ## <a name="nonclustered-indexes-on-separate-filegroups"></a>Indici non cluster in filegroup separati  
@@ -147,8 +144,8 @@ Al termine del comando DBCC CHECKFILEGROUP, viene scritto un messaggio nel log d
 |5|Si è verificato un errore sconosciuto che ha causato l'interruzione del comando DBCC.|  
   
 ## <a name="error-reporting"></a>Segnalazione errori  
-Un file di minidump (denominato SQLDUMP*nnnn*. txt) viene creato nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory LOG DBCC CHECKFILEGROUP rileva un errore di danneggiamento. Se le funzionalità di segnalazione degli errori e di raccolta di dati relativi all'utilizzo delle funzionalità sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file verrà inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-Il file di dump contiene i risultati dell'esecuzione del comando DBCC CHECKFILEGROUP e l'output di dati diagnostici supplementari. Il file dispone di elenchi di controllo di accesso discrezionale (DACL) limitati. L'accesso è limitato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account e i membri del servizio di **sysadmin** ruolo. Per impostazione predefinita, il **sysadmin** ruolo contiene tutti i membri del gruppo BUILTIN\Administrators di Windows e il gruppo Administrators locale. Se il processo di raccolta dei dati non ha esito positivo, l'esecuzione del comando DBCC viene completata comunque.
+Quando un comando DBCC CHECKFILEGROUP rileva un errore di danneggiamento, viene creato un piccolo file di dump, denominato SQLDUMP*nnnn*.txt, nella directory LOG di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se le funzionalità di segnalazione degli errori e di raccolta di dati relativi all'utilizzo delle funzionalità sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file verrà inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Il file di dump contiene i risultati dell'esecuzione del comando DBCC CHECKFILEGROUP e l'output di dati diagnostici supplementari. Il file dispone di elenchi di controllo di accesso discrezionale (DACL) limitati. L'accesso è limitato all'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ai membri del ruolo **sysadmin**. Per impostazione predefinita il ruolo **sysadmin** contiene tutti i membri del gruppo BUILTIN\Administrators di Windows e del gruppo dell'amministratore locale. Se il processo di raccolta dei dati non ha esito positivo, l'esecuzione del comando DBCC viene completata comunque.
   
 ## <a name="resolving-errors"></a>Risoluzione degli errori  
 Se vengono segnalati errori da DBCC CHECKFILEGROUP, è consigliabile ripristinare il database dal backup. Non è possibile specificare le opzioni di correzione nel comando DBCC CHECKFILEGROUP.
@@ -212,7 +209,7 @@ GO
 ```  
   
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. Controllo del filegroup PRIMARY nel database AdventureWorks senza indici non cluster  
-Nell'esempio seguente viene controllato il `AdventureWorks2012` filegroup primario del database (escludendo gli indici non cluster), specificando il numero di identificazione del filegroup primario e specificando `NOINDEX`.
+Nell'esempio seguente viene controllato il filegroup primario del database `AdventureWorks2012`senza gli indici non cluster, specificando il numero di identificazione del filegroup primario e l'opzione `NOINDEX`.
   
 ```sql  
 USE AdventureWorks2012;  

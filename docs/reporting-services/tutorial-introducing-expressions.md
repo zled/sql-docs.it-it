@@ -1,29 +1,27 @@
 ---
 title: 'Esercitazione: Introduzione alle espressioni | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: 
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a75e3eb0532359a4528af38270820126e14f4b36
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e2b42df295abda51349793a4db8697ab03cb3cd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
 In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] vengono usate espressioni e operatori comuni per creare report impaginati di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] potenti e flessibili. 
@@ -285,7 +283,7 @@ Per conservare il colore che è stato applicato alla cella della tabella durante
 
 9. Aggiungere una virgola. 
   
-5.  Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **Sesso** di nuovo.  
+5.  Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **Sesso** di nuovo.  
   
 7.  Digitare **="Femmina",** (inclusa la virgola). 
 
@@ -377,7 +375,7 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
   
 4.  Nella finestra di dialogo **Espressione** espandere **Funzioni comuni** e fare clic su **Vari**e nell'elenco **Elemento** fare doppio clic su **Ricerca**.  
   
-6.  Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **IDPaeseRegione**.  
+6.  Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **IDPaeseRegione**.  
   
 8.  Collocare il cursore immediatamente dopo `CountryRegionID.Value`e digitare **,Fields!ID.value, Fields!PaeseRegione.value, "PaeseRegione")**  
   
@@ -410,7 +408,7 @@ In questa sezione viene aggiunta una colonna e viene usata la funzione **Now** o
   
 7.  Immediatamente dopo `DateDiff(`, digitare **"d",** (incluso virgolette "" e virgola). 
   
-9. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **UltimoAcquisto**.  
+9. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **UltimoAcquisto**.  
   
 11. Immediatamente dopo `Fields!LastPurchase.Value`, digitare **,** (una virgola). 
   
@@ -464,13 +462,13 @@ La configurazione dell'indicatore e dei relativi stati richiede numerosi passagg
   
 4.  Nell'elenco **Elemento** fare doppio clic su **Round**.  
   
-5.  Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
+5.  Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
   
 7.  Immediatamente dopo `Fields!YTDPurchase.Value`, digitare  **-** (segno di sottrazione). 
   
 9. Espandere di nuovo **Funzioni comuni** , fare clic su **Aggregazione**e nell'elenco **Elemento** fare doppio clic su **AVG**.  
   
-11. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
+11. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
   
 13. Immediatamente dopo `Fields!YTDPurchase.Value`, digitare **, "Espressioni"))**  
   
@@ -488,13 +486,13 @@ La configurazione dell'indicatore e dei relativi stati richiede numerosi passagg
   
 19. Nell'elenco **Elemento** fare doppio clic su **Round**.  
   
-20. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
+20. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
   
 22. Immediatamente dopo `Fields!YTDPurchase.Value`, digitare  **-** (segno di sottrazione). 
   
 24. Espandere di nuovo **Funzioni comuni** , fare clic su **Aggregazione**e nell'elenco **Elemento** fare doppio clic su **Avg**.  
   
-26. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
+26. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
   
 28. Immediatamente dopo `Fields!YTDPurchase.Value`, digitare **, "Espressioni")) < 0**  
   

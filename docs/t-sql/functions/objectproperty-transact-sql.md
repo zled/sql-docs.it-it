@@ -1,16 +1,14 @@
 ---
-title: OBJECTPROPERTY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: OBJECTPROPERTY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OBJECTPROPERTY
@@ -24,21 +22,21 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-caps.latest.revision: 
+caps.latest.revision: 81
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 34a522a15c9069ddf0da083ad107ea464b0587a1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b6c05f2cc886070dee8c4d0ff586904cdfc964f8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce informazioni sugli oggetti con ambito schema nel database corrente. Per un elenco di oggetti con ambito schema, vedere [Sys. Objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Questa funzione non può essere utilizzata per gli oggetti che non sono definiti a livello di ambito schema, ad esempio i trigger DDL (Data Definition Language) e le notifiche di eventi.  
+  Restituisce informazioni sugli oggetti con ambito schema nel database corrente. Per un elenco degli oggetti con ambito schema, vedere [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Questa funzione non può essere utilizzata per gli oggetti che non sono definiti a livello di ambito schema, ad esempio i trigger DDL (Data Definition Language) e le notifiche di eventi.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,13 +48,13 @@ OBJECTPROPERTY ( id , property )
   
 ## <a name="arguments"></a>Argomenti  
  *id*  
- Espressione che rappresenta l'ID dell'oggetto nel database corrente. *ID* è **int** e si presuppone che sia un oggetto con ambito schema nel contesto del database corrente.  
+ Espressione che rappresenta l'ID dell'oggetto nel database corrente. *id* è di tipo **int** e si presuppone che sia un oggetto con ambito schema nel contesto di database corrente.  
   
- *proprietà*  
- È un'espressione che rappresenta le informazioni da restituire per l'oggetto specificato da *id*. *proprietà* può essere uno dei valori seguenti.  
+ *property*  
+ Espressione che rappresenta le informazioni da restituire per l'oggetto specificato dall'argomento *id*. I possibili valori per la *proprietà* sono i seguenti.  
   
 > [!NOTE]  
->  Se non diversamente specificato, viene restituito NULL quando *proprietà* non è un nome di proprietà valido, *id* non è un ID di oggetto valido, *id* è un tipo di oggetto non supportato per l'oggetto specificato *proprietà*, oppure il chiamante non dispone dell'autorizzazione per visualizzare i metadati dell'oggetto.  
+>  Se non specificato diversamente, viene restituito NULL quando *property* non è un nome di proprietà valido, *id* non è un ID di oggetto valido, *id* è un tipo di oggetto non supportato per la *property* specificata oppure il chiamante non dispone dell'autorizzazione necessaria per visualizzare i metadati dell'oggetto.  
   
 |Nome proprietà|Tipo oggetto|Descrizione e valori restituiti|  
 |-------------------|-----------------|-------------------------------------|  
@@ -96,7 +94,7 @@ OBJECTPROPERTY ( id , property )
 |IsDefault|Qualsiasi oggetto con ambito schema|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Valore predefinito associato.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDefaultCnst|Qualsiasi oggetto con ambito schema|Vincolo DEFAULT.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDeterministic|Funzione, vista|Proprietà deterministica della funzione o della vista.<br /><br /> 1 = Deterministica<br /><br /> 0 = Non deterministica|  
-|IsEncrypted|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)], procedura [!INCLUDE[tsql](../../includes/tsql-md.md)], tabella, trigger [!INCLUDE[tsql](../../includes/tsql-md.md)], vista|Indica che il testo originale dell'istruzione del modulo è stato convertito in un formato offuscato. L'output dell'offuscamento non è visibile direttamente nelle viste del catalogo in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Gli utenti che non hanno accesso a tabelle di sistema o file del database non possono recuperare il testo offuscato. Tuttavia, il testo è disponibile agli utenti di accesso a tabelle di sistema tramite il [porta DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o accesso diretto a file di database. Gli utenti in grado di collegare un debugger al processo del server possono inoltre recuperare la procedura originale dalla memoria in fase di esecuzione.<br /><br /> 1 = Crittografato<br /><br /> 0 = Non crittografato<br /><br /> Tipo di dati di base: **int**|  
+|IsEncrypted|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)], procedura [!INCLUDE[tsql](../../includes/tsql-md.md)], tabella, trigger [!INCLUDE[tsql](../../includes/tsql-md.md)], vista|Indica che il testo originale dell'istruzione del modulo è stato convertito in un formato offuscato. L'output dell'offuscamento non è visibile direttamente nelle viste del catalogo in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Gli utenti che non hanno accesso a tabelle di sistema o file del database non possono recuperare il testo offuscato. Il testo è tuttavia disponibile per gli utenti con privilegi di accesso a tabelle di sistema attraverso la [porta DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oppure con privilegi di accesso diretto a file del database. Gli utenti in grado di collegare un debugger al processo del server possono inoltre recuperare la procedura originale dalla memoria in fase di esecuzione.<br /><br /> 1 = Crittografato<br /><br /> 0 = Non crittografato<br /><br /> Tipo di dati di base: **int**|  
 |IsExecuted|Qualsiasi oggetto con ambito schema|L'oggetto può essere eseguito (vista, procedura, funzione o trigger).<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsExtendedProc|Qualsiasi oggetto con ambito schema|Procedura estesa.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsForeignKey|Qualsiasi oggetto con ambito schema|Vincolo FOREIGN KEY.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -118,16 +116,16 @@ OBJECTPROPERTY ( id , property )
 |IsTrigger|Qualsiasi oggetto con ambito schema|Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|Qualsiasi oggetto con ambito schema|Vincolo UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Tabella|Tabella definita dall'utente.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsView|Visualizza|Vista.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|Qualsiasi oggetto con ambito schema|Proprietario dell'oggetto.<br /><br /> **Nota:** proprietario dello schema non è necessariamente il proprietario dell'oggetto. Ad esempio, gli oggetti figlio (quelli che *parent_object_id* è diverso da null) restituirà sempre lo stesso ID proprietario dell'elemento padre.<br /><br /> Valore non Null = ID utente del database per il proprietario dell'oggetto.|  
+|IsView|Vista|Vista.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|OwnerId|Qualsiasi oggetto con ambito schema|Proprietario dell'oggetto.<br /><br /> **Nota:** Il proprietario dello schema non deve necessariamente corrispondere al proprietario dell'oggetto. Ad esempio, gli oggetti figlio (per i quali il parametro *parent_object_id* è impostato su un valore diverso da Null) restituiscono sempre lo stesso ID di proprietario del padre.<br /><br /> Valore non Null = ID utente del database per il proprietario dell'oggetto.|  
 |TableDeleteTrigger|Tabella|La tabella include un trigger DELETE.<br /><br /> >1 = ID del primo trigger del tipo specificato.|  
 |TableDeleteTriggerCount|Tabella|La tabella include il numero di trigger DELETE specificato.<br /><br /> >0 = Numero di trigger DELETE.|  
 |TableFullTextMergeStatus|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se una tabella dispone di un indice full-text su cui è attualmente in corso un'operazione di unione.<br /><br /> 0 = La tabella non dispone di un indice full-text o sull'indice full-text non è in corso un'operazione di unione.<br /><br /> 1 = Sull'indice full-text è in corso un'operazione di unione.|  
 |TableFullTextBackgroundUpdateIndexOn|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nella tabella è abilitato l'indice full-text ad aggiornamento in background (rilevamento automatico delle modifiche).<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
 |TableFulltextCatalogId|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID del catalogo full-text contenente i dati dell'indice full-text per la tabella.<br /><br /> Valore diverso da zero = ID del catalogo full-text associato all'indice univoco che identifica le righe di una tabella con indicizzazione full-text.<br /><br /> 0 = La tabella non include un indice full-text.|  
 |TableFulltextChangeTrackingOn|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nella tabella è abilitato il rilevamento delle modifiche full-text.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di righe elaborate dopo l'avvio dell'indicizzazione full-text. In una tabella sottoposta a indicizzazione ai fini della ricerca full-text tutte le colonne di una riga vengono considerate come appartenenti a un unico documento da indicizzare.<br /><br /> 0 = Nessuna ricerca per indicizzazione attiva oppure l'indicizzazione full-text è stata completata.<br /><br /> > 0 = uno dei seguenti (A o B): A) il numero di documenti elaborati da inserire o aggiornare operazioni dopo l'avvio completo, incrementale o manuale popolamento con rilevamento delle. B) il numero di righe elaborate da insert o operazioni di aggiornamento dopo l'attivazione di rilevamento con popolamento dell'indice di aggiornamento in background, modificare lo schema di indice full-text, il ricompilazione del catalogo full-text o l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riavviate e così via.<br /><br /> NULL = La tabella non include un indice full-text.<br /><br /> Questa proprietà non monitora né conta le righe eliminate.|  
-|TableFulltextFailCount|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di righe non indicizzate dalla ricerca full-text.<br /><br /> 0 = Popolamento completato.<br /><br /> > 0 = uno dei seguenti (A o B): A) il numero di documenti non indicizzati dopo l'avvio del popolamento di rilevamento delle modifiche completo, incrementale e aggiornamento manuale. B) di rilevamento delle modifiche con sfondo aggiornare l'indice, il numero di righe che non indicizzati dopo l'inizio della popolazione o il riavvio della popolazione. Questa situazione può essere dovuta a una modifica dello schema, alla ricompilazione del catalogo, al riavvio del server e così via.<br /><br /> NULL = La tabella non include un indice full-text.|  
+|TableFulltextDocsProcessed|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di righe elaborate dopo l'avvio dell'indicizzazione full-text. In una tabella sottoposta a indicizzazione ai fini della ricerca full-text tutte le colonne di una riga vengono considerate come appartenenti a un unico documento da indicizzare.<br /><br /> 0 = Nessuna ricerca per indicizzazione attiva oppure l'indicizzazione full-text è stata completata.<br /><br /> > 0 = Possibili valori (A o B): Numero di documenti elaborati dalle operazioni di inserimento o aggiornamento dopo l'avvio del popolamento con rilevamento delle modifiche Completo, Incrementale o Manuale. B) Numero di righe elaborate dalle operazioni di inserimento o aggiornamento dopo l'abilitazione del rilevamento delle modifiche con popolamento dell'indice ad aggiornamento in background, la modifica dello schema dell'indice full-text, la ricompilazione del catalogo full-text, il riavvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e così via.<br /><br /> NULL = La tabella non include un indice full-text.<br /><br /> Questa proprietà non monitora né conta le righe eliminate.|  
+|TableFulltextFailCount|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di righe non indicizzate dalla ricerca full-text.<br /><br /> 0 = Popolamento completato.<br /><br /> > 0 = Possibili valori (A o B): A) Numero di documenti non indicizzati dopo l'avvio del popolamento con rilevamento delle modifiche ad aggiornamento Completo, Incrementale e Manuale. B) Per il rilevamento delle modifiche con un indice ad aggiornamento in background, numero di righe non indicizzate dopo l'avvio o il riavvio del popolamento. Questa situazione può essere dovuta a una modifica dello schema, alla ricompilazione del catalogo, al riavvio del server e così via.<br /><br /> NULL = La tabella non include un indice full-text.|  
 |TableFulltextItemCount|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di righe per cui l'indicizzazione full-text ha avuto esito positivo.|  
 |TableFulltextKeyColumn|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID della colonna associata all'indice univoco a colonna singola a cui viene fatto riferimento nella definizione dell'indice full-text.<br /><br /> 0 = La tabella non include un indice full-text.|  
 |TableFulltextPendingChanges|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di voci in sospeso del rilevamento delle modifiche da elaborare.<br /><br /> 0 = Il rilevamento delle modifiche non è abilitato.<br /><br /> NULL = La tabella non include un indice full-text.|  
@@ -144,23 +142,23 @@ OBJECTPROPERTY ( id , property )
 |TableHasInsertTrigger|Tabella|L'oggetto include un trigger INSERT.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasNonclustIndex|Tabella|La tabella include un indice non cluster.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasPrimaryKey|Tabella|La tabella include una chiave primaria.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasRowGuidCol|Tabella|Tabella include un ROWGUIDCOL per una **uniqueidentifier** colonna.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasTextImage|Tabella|Tabella include un **testo**, **ntext**, o **immagine** colonna.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasTimestamp|Tabella|Tabella include un **timestamp** colonna.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasRowGuidCol|Tabella|La tabella include un ROWGUIDCOL per una colonna **uniqueidentifier**.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasTextImage|Tabella|La tabella include una colonna **text**, **ntext**, o **immagine**.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasTimestamp|Tabella|La tabella include una colonna **timestamp**.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasUniqueCnst|Tabella|La tabella include un vincolo UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasUpdateTrigger|Tabella|L'oggetto include un trigger UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasVarDecimalStorageFormat|Tabella|Tabella è abilitata per **vardecimal** il formato di archiviazione.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasVarDecimalStorageFormat|Tabella|Tabella abilitata per il formato di archiviazione **vardecimal**.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableInsertTrigger|Tabella|La tabella include un trigger INSERT.<br /><br /> >1 = ID del primo trigger del tipo specificato.|  
 |TableInsertTriggerCount|Tabella|La tabella include il numero specificato di trigger INSERT.<br /><br /> >0 = Numero di trigger INSERT.|  
 |TableIsFake|Tabella|La tabella non è reale, ma viene creata internamente su richiesta da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsLockedOnBulkLoad|Tabella|Nella tabella è bloccata a causa di un **bcp** o BULK INSERT.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableIsLockedOnBulkLoad|Tabella|La tabella è bloccata a causa di un processo **bcp** o BULK INSERT.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableIsMemoryOptimized|Tabella|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> La tabella prevede l'ottimizzazione per la memoria<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Tipo di dati di base: **int**<br /><br /> Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
 |TableIsPinned|Tabella|La tabella è bloccata per essere mantenuta nella cache dei dati.<br /><br /> 0 = False<br /><br /> Questa funzionalità non è supportata in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.|  
 |TableTextInRowLimit|Tabella|Numero massimo di byte consentito per l'opzione text in row.<br /><br /> 0 se l'opzione text in row non è impostata.|  
 |TableUpdateTrigger|Tabella|La tabella include un trigger UPDATE.<br /><br /> > 1 = ID del primo trigger del tipo specificato.|  
 |TableUpdateTriggerCount|Tabella|La tabella include il numero specificato di trigger UPDATE.<br /><br /> > 0 = Numero di trigger UPDATE.|  
 |TableHasColumnSet|Tabella|Indica se la tabella include un set di colonne.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Per altre informazioni, vedere [Usare set di colonne](../../relational-databases/tables/use-column-sets.md).|  
-|TableTemporalType|Tabella|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Specifica il tipo di tabella.<br /><br /> 0 = la tabella non temporale<br /><br /> 1 = la tabella di cronologia per la tabella con controllo delle versioni del sistema<br /><br /> 2 = tabella temporale con controllo delle versioni del sistema|  
+|TableTemporalType|Tabella|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Specifica il tipo di tabella.<br /><br /> 0 = tabella non temporale<br /><br /> 1 = tabella di cronologia per tabella con controllo delle versioni di sistema<br /><br /> 2 = tabella temporale con controllo delle versioni di sistema|  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
@@ -170,8 +168,8 @@ OBJECTPROPERTY ( id , property )
   
  Un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come OBJECTPROPERTY possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Osservazioni  
- Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] si presuppone che *object_id* è nel contesto del database corrente. Una query che fa riferimento a un *object_id* in un altro database restituisce NULL oppure risultati errati. Ad esempio, nella query seguente il contesto del database corrente è il database master. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenterà di restituire il valore della proprietà per l'oggetto specificato *object_id* in tale database anziché il database specificato nella query. La query restituisce risultati non corretti perché la vista `vEmployee` non è presente nel database master.  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] presuppone che *object_id* si trovi nel contesto di database corrente. Una query in cui viene fatto riferimento a un *object_id* in un altro database restituisce NULL oppure risultati non corretti. Nella query seguente, ad esempio, il contesto di database corrente è il database master. [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenterà di restituire il valore della proprietà per *object_id* specificato in quel database invece del database specificato nella query. La query restituisce risultati non corretti perché la vista `vEmployee` non si trova nel database master.  
   
 ```  
 USE master;  
@@ -180,11 +178,11 @@ SELECT OBJECTPROPERTY(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'),
 GO  
 ```  
   
- OBJECTPROPERTY (*view_id*, 'IsIndexable') può richiedere risorse significative computer perché la valutazione della proprietà IsIndexable richiede l'analisi della definizione della vista, della normalizzazione e ottimizzazione parziale. Sebbene la proprietà IsIndexable identifichi tabelle o viste che è possibile indicizzare, la creazione effettiva dell'indice può avere esito negativo se non vengono soddisfatti determinati requisiti riguardanti la chiave di indice. Per altre informazioni, vedere [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+ OBJECTPROPERTY(*view_id*, 'IsIndexable') può richiedere una quantità elevata di memoria perché la valutazione della proprietà IsIndexable richiede l'analisi della definizione, normalizzazione e ottimizzazione parziale della vista. Sebbene la proprietà IsIndexable identifichi tabelle o viste che è possibile indicizzare, la creazione effettiva dell'indice può avere esito negativo se non vengono soddisfatti determinati requisiti riguardanti la chiave di indice. Per altre informazioni, vedere [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
- OBJECTPROPERTY (*table_id*, 'TableHasActiveFulltextIndex') restituirà il valore 1 (true) quando almeno una colonna di una tabella viene aggiunta per l'indicizzazione. L'indicizzazione full-text risulta attiva per il popolamento non appena viene aggiunta la prima colonna per l'indicizzazione.  
+ OBJECTPROPERTY(*table_id*, 'TableHasActiveFulltextIndex') restituisce il valore 1 (true) quando almeno una colonna di una tabella viene aggiunta per l'indicizzazione. L'indicizzazione full-text risulta attiva per il popolamento non appena viene aggiunta la prima colonna per l'indicizzazione.  
   
- Durante la creazione di una tabella, l'opzione QUOTED IDENTIFIER viene sempre archiviata con l'impostazione ON nei metadati della tabella, anche se l'opzione viene impostata su OFF quando si crea la tabella. Pertanto, OBJECTPROPERTY (*table_id*, 'IsQuotedIdentOn') restituirà sempre un valore pari a 1 (true).  
+ Durante la creazione di una tabella, l'opzione QUOTED IDENTIFIER viene sempre archiviata con l'impostazione ON nei metadati della tabella, anche se l'opzione viene impostata su OFF quando si crea la tabella. Pertanto, OBJECTPROPERTY(*table_id*, 'IsQuotedIdentOn') restituirà sempre 1 (true).  
   
 ## <a name="examples"></a>Esempi  
   
@@ -205,7 +203,7 @@ GO
 ```  
   
 ### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. Verifica che una funzione a valori scalari definita dall'utente sia deterministica  
- Nell'esempio seguente viene verificato se la funzione a valori scalari definita dall'utente `ufnGetProductDealerPrice`, che restituisce un **money** valore, è deterministica.  
+ Nell'esempio seguente viene verificato se la funzione definita dall'utente con valori scalari `ufnGetProductDealerPrice`, che restituisce un valore **money**, è o meno deterministica.  
   
 ```  
 USE AdventureWorks2012;  
@@ -221,7 +219,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C: ricerca di tabelle che appartengono a uno schema specifico  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C. Ricerca di tabelle appartenenti a uno schema specifico  
  L'esempio seguente restituisce tutte le tabelle nello schema dbo.  
   
 ```  
@@ -234,9 +232,9 @@ ORDER BY type_desc, name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>Unità d: verifica che un oggetto è una tabella  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D. Verifica che un oggetto sia una tabella  
  Nell'esempio seguente viene verificato se `dbo.DimReseller` è una tabella nel database [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  
@@ -250,12 +248,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [COLUMNPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [OBJECTPROPERTYEX &#40; Transact-SQL &#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
- [AUTORIZZAZIONE ALTER &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
- [Sys. Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

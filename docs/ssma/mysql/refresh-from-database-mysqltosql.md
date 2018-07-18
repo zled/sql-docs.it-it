@@ -1,30 +1,28 @@
 ---
 title: Aggiornamento dal database (MySQLToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 18656f8929e52d23e10ccc5fafe8139544bf44a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 48f6be5540fa8c703e56c7326dd015df17a72ff5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Aggiornamento dal database (MySQLToSQL)
 Il **aggiornamento dal Database** la finestra di dialogo consente di selezionare gli oggetti da aggiornare dal database di MySQL. Le righe nella finestra di dialogo sono codificate con colori in base allo stato dei metadati:  
@@ -37,7 +35,7 @@ Il **aggiornamento dal Database** la finestra di dialogo consente di selezionare
   
 -   Se l'oggetto è nuovo nel database di MySQL, la riga è rosa.  
   
-È possibile specificare le impostazioni di aggiornamento oggetto predefinite nel **impostazioni progetto** la finestra di dialogo. Per ulteriori informazioni, vedere [impostazioni progetto &#40; Sincronizzazione &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+È possibile specificare le impostazioni di aggiornamento oggetto predefinite nel **impostazioni progetto** la finestra di dialogo. Per altre informazioni, vedere [impostazioni del progetto di &#40;sincronizzazione&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
 Per l'accesso di **aggiornamento dal Database** nella finestra di dialogo scelta di un oggetto in Visualizzatore metadati MySQL e fare clic su **aggiornamento dal Database**.  
   
@@ -46,10 +44,10 @@ Per l'accesso di **aggiornamento dal Database** nella finestra di dialogo scelta
 |||  
 |-|-|  
 |**Nome**|**Definizione**|  
-|**Compressione (-)**|Comprimere tutti i gruppi di oggetti per nascondere singoli oggetti.|  
+|**Comprimi (-)**|Comprimere tutti i gruppi di oggetti per nascondere singoli oggetti.|  
 |**Espansione (+)**|Espandere tutti i gruppi di oggetti per visualizzare i singoli oggetti.|  
 |**Mostra/Nascondi oggetti uguali**|Nasconde gli oggetti nell'elenco se l'oggetto di metadati sono lo stesso del database MySQL in SSMA.|  
-|**Aggiornamento dal Database (freccia)**|Utilizzare il pulsante freccia per specificare che i metadati per gli oggetti selezionati devono essere aggiornati in SSMA.|  
-|**Eseguire non aggiornato dal Database (pulsante) X**|Utilizzare il pulsante X per specificare che i metadati per gli oggetti selezionati non devono essere aggiornati in SSMA.|  
+|**Aggiornamento dal Database (clic sul pulsante freccia)**|Utilizzare il pulsante freccia per specificare che i metadati per gli oggetti selezionati devono essere aggiornati in SSMA.|  
+|**Eseguire l'operazione non aggiornato dal Database (pulsante) X**|Utilizzare il pulsante X per specificare che i metadati per gli oggetti selezionati non devono essere aggiornati in SSMA.|  
 |**Legenda**|Consente di visualizzare un **legenda** la finestra di dialogo. La legenda contiene il mapping tra i colori di riga e gli stati di metadati.<br /><br />Per mantenere il **legenda** la finestra di dialogo in cima il **aggiornamento dal Database** la finestra di dialogo, seleziona il **visualizzare in primo piano** casella di controllo.|  
   

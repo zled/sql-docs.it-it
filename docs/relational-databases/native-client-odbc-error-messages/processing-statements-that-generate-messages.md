@@ -1,15 +1,14 @@
 ---
 title: L'elaborazione delle istruzioni che generano messaggi | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-error-messages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - PRINT statement
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - ODBC error handling, statements generating messages
 - SQLExecDirect function
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7a9deaa7c1890c327de38663e99e83f6ce526491
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9475afda740b4c2b2d6b279c0ea0a454fd397bf0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-statements-that-generate-messages"></a>Elaborazione di istruzioni che generano messaggi
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-dbcc-statements"></a>Utilizzo di istruzioni DBCC  
- Le istruzioni DBCC restituiscono i dati come messaggi, non come set di risultati. **SQLExecDirect** o **SQLExecute** restituiscono SQL_SUCCESS_WITH_INFO e l'applicazione recupera l'output chiamando **SQLGetDiagRec** fino a quando non viene restituito SQL_NO_DATA.  
+ Le istruzioni DBCC restituiscono i dati come messaggi, non come set di risultati. **SQLExecDirect** oppure **SQLExecute** restituiscono SQL_SUCCESS_WITH_INFO e l'applicazione recupera l'output chiamando **SQLGetDiagRec** fino a quando non viene restituito SQL_NO_DATA.  
   
  Nell'istruzione seguente, ad esempio, viene restituito SQL_SUCCESS_WITH_INFO:  
   
@@ -105,7 +104,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>Utilizzo delle istruzioni PRINT e RAISERROR  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]Istruzioni PRINT e RAISERROR restituiscono dati chiamando **SQLGetDiagRec**. Le istruzioni PRINT comportano l'esecuzione dell'istruzione SQL restituisce SQL_SUCCESS_WITH_INFO, mentre una chiamata successiva a **SQLGetDiagRec** restituisce un *SQLState* 01000. Un'istruzione RAISERROR con livello di gravità dieci o inferiore si comporta esattamente come PRINT. Un'istruzione RAISERROR con un livello di gravità 11 o superiore causa dell'esecuzione restituisce SQL_ERROR e una chiamata successiva a **SQLGetDiagRec** restituisce *SQLState* 42000. Nell'istruzione seguente, ad esempio, viene restituito SQL_SUCCESS_WITH_INFO:  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Le istruzioni PRINT e RAISERROR anche restituire dati chiamando **SQLGetDiagRec**. Le istruzioni PRINT comportano l'esecuzione dell'istruzione SQL restituisce SQL_SUCCESS_WITH_INFO, mentre una chiamata successiva a **SQLGetDiagRec** restituisce un *SQLState* 01000. Un'istruzione RAISERROR con livello di gravità dieci o inferiore si comporta esattamente come PRINT. Un'istruzione RAISERROR con un livello di gravità 11 o superiore causa dell'esecuzione restituisce SQL_ERROR e una chiamata successiva a **SQLGetDiagRec** restituisce *SQLState* 42000. Nell'istruzione seguente, ad esempio, viene restituito SQL_SUCCESS_WITH_INFO:  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  

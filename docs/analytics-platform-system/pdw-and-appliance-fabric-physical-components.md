@@ -1,29 +1,22 @@
 ---
-title: PDW e dell'infrastruttura dello strumento componenti fisici (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: "17"
-ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Componenti fisici accessorio - Analitica Platform System | Documenti Microsoft
+description: I nomi e descrizioni per i componenti fisici dell'infrastruttura PDW e il dispositivo.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-and-appliance-fabric-physical-components"></a>Componenti fisici PDW e dell'infrastruttura di dispositivo
-I nomi e descrizioni per i componenti fisici dell'infrastruttura PDW e il dispositivo. L'area PDW contiene tutti questi componenti.  
+# <a name="appliance-physical-components---analytics-platform-system"></a>Componenti fisici accessorio - Analitica Platform System
+I nomi e descrizioni per i componenti fisici dell'infrastruttura PDW e il dispositivo. 
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
@@ -38,7 +31,7 @@ Analogamente, il nome effettivo per i componenti dell'infrastruttura di disposit
   
 Ecco una visualizzazione consolidata di un'area PDW con 6 nodi di calcolo.  
   
-![Nomi dei componenti PDW](./media/pdw-and-appliance-fabric-physical-components/APS_HW_Names.png "APS_HW_Names")  
+![I nomi dei componenti PDW](./media/pdw-and-appliance-fabric-physical-components/APS_HW_Names.png "APS_HW_Names")  
   
 ## <a name="pdw"></a>Componenti PDW  
 Le macchine virtuali PDW fanno parte dell'area PDW.  
@@ -52,11 +45,11 @@ Una macchina virtuale che esegue il nodo di controllo. Questo viene eseguito su 
 *PDW_region*-CMP01 tramite *PDW_Region*-CMP06  
 Una macchina virtuale che esegue il nodo di calcolo. In questo diagramma del nodo di calcolo di 6, gli host HSA01 tramite HSA06 esecuzione nodo di calcolo CMP01 macchine virtuali tramite CMP06 rispettivamente.  
   
-## <a name="fabric"></a>Componenti dell'infrastruttura di dispositivo  
+## <a name="fabric"></a>Componenti dell'infrastruttura Appliance  
 Questi componenti fanno parte dell'infrastruttura dello strumento.  
   
 ### <a name="virtual-machines"></a>Macchine virtuali  
-*appliance_domain*- servizi di distribuzione Windows  
+*appliance_domain*-WDS  
 L'host di macchine virtuali servizi di distribuzione Windows (WDS), che utilizza il sistema di piattaforma Analitica distribuire sistemi operativi Windows in rete accessorio. Include anche il servizio DHCP, che consente agli host di dispositivo per connettersi alla rete dispositivo senza un indirizzo IP configurato in precedenza.  
   
 Il *appliance_domain*macchina virtuale - WDS viene eseguito su HST01 ed eseguire il failover a HST02. La macchina virtuale di servizi di distribuzione Windows e la macchina virtuale VMM, distribuire Windows in host fisici durante l'installazione dello strumento. Durante il ciclo di vita dello strumento, WDS e VMM eseguire operazioni quali la sostituzione di un host.  
@@ -87,6 +80,6 @@ Questo è l'archiviazione collegata direttamente connessa ai nodi di calcolo. HP
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
-[Configurazione del dispositivo &#40; Sistema della piattaforma Analitica &#41;](appliance-configuration.md)  
-[Attività di gestione dispositivo &#40; Sistema della piattaforma Analitica &#41;](appliance-management-tasks.md)  
+[Configurazione dello strumento &#40;Analitica Platform System&#41;](appliance-configuration.md)  
+[Attività di gestione dello strumento &#40;Analitica Platform System&#41;](appliance-management-tasks.md)  
   

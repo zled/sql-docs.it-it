@@ -1,17 +1,15 @@
 ---
-title: sp_xtp_flush_temporal_history | Microsoft Docs
-ms.custom: 
+title: sp_xtp_flush_temporal_history | Documenti Microsoft
+ms.custom: ''
 ms.date: 02/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - SQL Server (starting with 2016 CTP3)
 f1_keywords:
@@ -22,18 +20,18 @@ f1_keywords:
 helpviewer_keywords:
 - sp_xtp_flush_temporal_history
 ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
-caps.latest.revision: 
+caps.latest.revision: 7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f68bb1a07ba3edb33c99339b53b0f85e343576ad
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1e4ea75e11840c91e6fcac81d43a33272d9882bf
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="temporal-table---spxtpflushtemporalhistory"></a>Tabella temporale - sp_xtp_flush_temporal_history
+# <a name="spxtpflushtemporalhistory-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Richiama l'attività di scaricamento di dati per spostare i commit di tutte le righe dalla tabella di gestione temporanea in memoria per la tabella di cronologia basata su disco.  

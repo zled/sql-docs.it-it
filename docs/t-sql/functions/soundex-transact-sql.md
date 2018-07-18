@@ -1,16 +1,14 @@
 ---
-title: SOUNDEX (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SOUNDEX (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SOUNDEX
@@ -24,16 +22,16 @@ helpviewer_keywords:
 - strings [SQL Server], comparing
 - SOUNDEX values
 ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 05114a7506ec05b4a52cce5c1b91d9a5fb2d2073
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1256b573bd1fd2c1bee7de27e0a25a6dae3510a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,13 +48,13 @@ SOUNDEX ( character_expression )
   
 ## <a name="arguments"></a>Argomenti  
  *character_expression*  
- È un carattere alfanumerico [espressione](../../t-sql/language-elements/expressions-transact-sql.md) dati di tipo carattere. *character_expression* può essere una costante, variabile o colonna.  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) alfanumerica di dati di tipo carattere. *character_expression* può essere una costante, una variabile o una colonna.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **varchar**  
   
-## <a name="remarks"></a>Osservazioni  
- Tramite SOUNDEX una stringa alfanumerica viene convertita in un codice a quattro caratteri basato sul risultato della pronuncia della stringa. Il primo carattere del codice è il primo carattere di *character_expression*, convertito in lettere maiuscole. I caratteri compresi tra il secondo e il quarto del codice sono numeri che rappresentano le lettere dell'espressione. Le lettere A, E, I, O, U, H, W e Y vengono ignorate, a meno che non rappresentino la prima lettera della stringa. Se necessario per generare un codice di quattro caratteri, vengono aggiunti gli zeri finali. Per ulteriori informazioni sul codice SOUNDEX, vedere [il sistema di indicizzazione di Soundex](https://www.archives.gov/research/census/soundex.html).  
+## <a name="remarks"></a>Remarks  
+ Tramite SOUNDEX una stringa alfanumerica viene convertita in un codice a quattro caratteri basato sul risultato della pronuncia della stringa. Il primo carattere del codice è il primo carattere di *character_expression*, convertito in maiuscolo. I caratteri compresi tra il secondo e il quarto del codice sono numeri che rappresentano le lettere dell'espressione. Le lettere A, E, I, O, U, H, W e Y vengono ignorate, a meno che non rappresentino la prima lettera della stringa. Se necessario per generare un codice di quattro caratteri, vengono aggiunti gli zeri finali. Per altre informazioni sul codice SOUNDEX, vedere [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html) (Sistema di indicizzazione di Soundex).  
   
  È possibile confrontare i codici SOUNDEX di stringhe diverse per vedere le pronunce simili della stringa. Tramite la funzione DIFFERENCE viene eseguito SOUNDEX in due stringhe e viene restituito un Integer che rappresenta la similitudine dei codici SOUNDEX per le stringhe in questione.  
   
@@ -81,7 +79,7 @@ SOUNDEX ( character_expression )
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Valido per le regole di confronto Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valido per le regole di confronto Latin1_General.  
   
 ```  
   
@@ -99,7 +97,7 @@ SELECT DIFFERENCE('Smithers', 'Smythers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Valido per le regole di confronto Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valido per le regole di confronto Latin1_General.  
   
 ```  
 -----------   
@@ -115,7 +113,7 @@ SELECT DIFFERENCE('Anothers', 'Brothers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Valido per le regole di confronto Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valido per le regole di confronto Latin1_General.  
   
 ```  
 -----------   
@@ -125,8 +123,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DIFFERENZA &#40; Transact-SQL &#41;](../../t-sql/functions/difference-transact-sql.md)   
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [DIFFERENCE &#40;Transact-SQL&#41;](../../t-sql/functions/difference-transact-sql.md)   
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

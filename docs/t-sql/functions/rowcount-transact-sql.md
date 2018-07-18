@@ -1,16 +1,14 @@
 ---
-title: '@@ROWCOUNT (Transact-SQL) | Documenti Microsoft'
-ms.custom: 
+title: '@@ROWCOUNT (Transact-SQL) | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@ROWCOUNT_TSQL'
@@ -24,21 +22,20 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - counting rows
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: dd23d2af2f35dd0d76557723639f1870ee22e0ee
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dca98f41e55d0b55d7a3eb74725f3eeb9acec92a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;Conteggio delle righe (Transact-SQL)
+# <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il numero di righe modificate dall'ultima istruzione. Se il numero di righe è superiore a 2 miliardi, utilizzare [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
+  Restituisce il numero di righe modificate dall'ultima istruzione. Se il numero di righe è superiore a 2 miliardi, usare [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,28 +48,28 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]le istruzioni possono impostare il valore di @@ROWCOUNT nei modi seguenti:  
+## <a name="remarks"></a>Remarks  
+ Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono impostare il valore di @@ROWCOUNT come descritto di seguito:  
   
--   Impostare@ROWCOUNT al numero di righe modificate o lette. Le righe possono venire inviate al client o meno.  
+-   Impostare @@ROWCOUNT sul numero di righe modificate o lette. Le righe possono venire inviate al client o meno.  
   
--   Mantenere@ROWCOUNT dall'esecuzione dell'istruzione precedente.  
+-   Mantenere il valore di @@ROWCOUNT della precedente istruzione eseguita.  
   
--   Reimpostare@ROWCOUNT su 0 ma non restituiscono il valore al client.  
+-   Reimpostare @@ROWCOUNT su 0 senza restituire il valore al client.  
   
- Le istruzioni che effettuano un'assegnazione semplice impostare sempre il @@ROWCOUNT valore su 1. Non vengono inviate righe al client. Esempi di queste istruzioni sono: SET @*local_variable*, RETURN, READTEXT e selezione senza query istruzioni quali SELECT GETDATE () o SELECT **'***testo generico* **'**.  
+ Le istruzioni che effettuano un'assegnazione semplice impostano sempre il valore di @@ROWCOUNT su 1. Non vengono inviate righe al client. Esempi di istruzioni di questo tipo sono: SET @*local_variable*, RETURN, READTEXT e le istruzioni di selezione senza query, ad esempio SELECT GETDATE() o SELECT **'***testo generico***'**.  
   
- Le istruzioni che effettuano un'assegnazione in una query o utilizzano RETURN in un set di query di @@ROWCOUNT valore per il numero di righe modificate o lette dalla query, ad esempio: SELECT @*local_variable* = c1 FROM t1.  
+ Le istruzioni che effettuano un'assegnazione in una query o usano RETURN in una query impostano il valore di @@ROWCOUNT sul numero di righe modificate o lette dalla query, ad esempio: SELECT @*local_variable* = c1 FROM t1.  
   
- Data manipulation language (DML) istruzioni set il @@ROWCOUNT valore per il numero di righe interessate dalla query e restituisce tale valore al client. Le istruzioni DML possono non inviare righe al client.  
+ Le istruzioni DML (Data Manipulation Language) impostano il valore di @@ROWCOUNT sul numero di righe modificate dalla query e restituiscono tale valore al client. Le istruzioni DML possono non inviare righe al client.  
   
- DECLARE CURSOR e FETCH impostare il @@ROWCOUNT valore su 1.  
+ DECLARE CURSOR e FETCH impostano il valore di @@ROWCOUNT su 1.  
   
- Le istruzioni EXECUTE mantengono il precedente @@ROWCOUNT.  
+ Le istruzioni EXECUTE mantengono il precedente valore di @@ROWCOUNT.  
   
- Le istruzioni, ad esempio, utilizzare SET \<opzione >, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION o COMMIT TRANSACTION Reimposta il valore ROWCOUNT su 0.  
+ Le istruzioni USE, SET \<opzione>, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION e COMMIT TRANSACTION reimpostano il valore di ROWCOUNT su 0.  
   
- Le stored procedure compilate in modo nativo mantenere precedente @@ROWCOUNT. [!INCLUDE[tsql](../../includes/tsql-md.md)]le istruzioni all'interno di stored procedure compilate in modo nativo non si impostano@ROWCOUNT. Per ulteriori informazioni, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Nelle stored procedure compilate in modo nativo viene mantenuto il valore @@ROWCOUNT precedente. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle stored procedure compilate in modo nativo non prevedono l'impostazione di @@ROWCOUNT. Per altre informazioni, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) (Stored procedure compilate in modo nativo).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eseguita un'istruzione `UPDATE` e viene utilizzato `@@ROWCOUNT` per rilevare se sono state modificate righe.  
@@ -90,6 +87,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [SET ROWCOUNT &#40; Transact-SQL &#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
+ [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
   
   

@@ -1,41 +1,39 @@
 ---
 title: Date, Time e Timestamp letterali | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: escape sequences [ODBC], literals
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c41d78b848009083abef2595d8628bb8fa1c0b0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-time-and-timestamp-literals"></a>Date, Time e Timestamp letterali
 La sequenza di escape per i valori letterali data, ora e timestamp  
   
- **{***-tipo* **'** *valore* **'}**   
+ **{***-tipo* **'** *valore* **'}**  
   
  dove *-tipo di valore letterale* è uno dei valori elencati nella tabella seguente.  
   
 |*tipo di valore letterale*|Significato|Formato di *valore*|  
 |---------------------|-------------|-----------------------|  
-|**d**|date|*aaaa*-*mm*-*gg*|  
+|**d**|Data|*aaaa*-*mm*-*gg*|  
 |**t**|Ora *|*hh*:*mm*:*ss*[1]|  
-|**Servizi terminal**|Timestamp|*aaaa*-*mm*-*gg* *hh*:*mm*:*ss* [. *f...* ] [1]|  
+|**Servizi terminal**|Timestamp|*aaaa*-*mm*-*gg* *hh*:*mm*:*ss*[.*f...*] [1]|  
   
  [1] il numero di cifre a destra del separatore decimale in un intervallo di tempo o timestamp letterale contenente un componente di secondi dipende la precisione dei secondi, come contenuto nel campo SQL_DESC_PRECISION descrittore. (Per ulteriori informazioni, vedere [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

@@ -1,15 +1,14 @@
 ---
 title: Richiamo di funzioni di aggregazione definita dall'utente CLR | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -20,20 +19,19 @@ helpviewer_keywords:
 - invoking user-defined aggregate functions
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
-caps.latest.revision: 
+caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4c15694986403c4b4eba39e7b4a70738fbf40cc8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 967475fc3c9781a999fe3d4dabc2f79d6324a492
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>Aggregazione definita dall'utente CLR - chiamata di funzioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Nelle istruzioni SELECT di [!INCLUDE[tsql](../../includes/tsql-md.md)] è possibile richiamare funzioni di aggregazione CLR (Common Language Runtime) definite dall'utente in base a tutte le regole applicabili alle funzioni di aggregazione del sistema.  
+  Nelle istruzioni SELECT di [!INCLUDE[tsql](../../includes/tsql-md.md)] è possibile richiamare funzioni di aggregazione CLR (Common Language Runtime) definite dall'utente in base a tutte le regole applicabili alle funzioni di aggregazione del sistema.  
   
  Sono valide le regole aggiuntive seguenti:  
   

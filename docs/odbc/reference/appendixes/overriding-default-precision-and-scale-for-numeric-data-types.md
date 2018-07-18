@@ -1,16 +1,14 @@
 ---
 title: Si esegue l'override di scala e precisione predefinita per i tipi di dati numerici | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], precision and scale
 - precision [ODBC], numeric data types
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - numeric data type [ODBC]
 - numeric literals [ODBC]
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e2be244dd3ad258ab3fa6b5679e5989d8a08778e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 9cfe7bcedb96f5a7ff311d90b5dcdc28fc77b79f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Si esegue l'override di scala e precisione predefinita per i tipi di dati numerici
 Quando il campo SQL_DESC_TYPE in un ARD è SQL_C_NUMERIC, con una chiamata a **SQLBindCol** o **SQLSetDescField**, il campo SQL_DESC_SCALE nel ARD è impostato su 0 e il campo SQL_DESC_PRECISION è impostato a una precisione predefiniti definiti dal driver. Ciò vale anche quando il campo SQL_DESC_TYPE in un APD è impostato su SQL_C_NUMERIC, con una chiamata a **SQLBindParameter** o **SQLSetDescField**. Questo vale per l'input, input/output o i parametri di output.  

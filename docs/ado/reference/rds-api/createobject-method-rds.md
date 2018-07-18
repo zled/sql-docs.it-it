@@ -1,31 +1,28 @@
 ---
 title: CreateObject (metodo) (RDS) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aeca3cd5d525a3712511a3d7fd59f82210c041e0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f5759c1b1b9faaaa9262879a614913a5fcf16c42
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="createobject-method-rds"></a>CreateObject (metodo) (RDS)
 Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore a esso. I pacchetti ed esegue il marshalling dei dati proxy allo stub sul lato server per le comunicazioni con l'oggetto business per l'invio di richieste e dei dati tramite Internet. Per gli oggetti di componente in-process, non vengono utilizzati proxy, viene fornito solo un puntatore all'oggetto.  
@@ -38,8 +35,8 @@ Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore 
   
 |Protocollo|Sintassi|  
 |--------------|------------|  
-|HTTP|Set object = DataSpace.CreateObject("ProgId", "http://awebsrvr")|  
-|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https://awebsrvr")|  
+|HTTP|Oggetto set = DataSpace.CreateObject ("ProgId", "http://awebsrvr")|  
+|HTTPS|Oggetto set = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |In-Process|Set object = DataSpace.CreateObject("ProgId", "")|  
   

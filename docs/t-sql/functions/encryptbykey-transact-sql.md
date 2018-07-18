@@ -1,16 +1,14 @@
 ---
-title: ENCRYPTBYKEY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENCRYPTBYKEY_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], ENCRYPTBYKEY function
 - ENCRYPTBYKEY function
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fe0267020c4100794593731c0f0651b35ea30395
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5b3d8f7ba013058b16dfe79b27a814a5a273f2a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,32 +49,34 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
   
 ## <a name="arguments"></a>Argomenti  
  *key_GUID*  
- È il GUID della chiave da utilizzare per crittografare il *come testo non crittografato*. **uniqueidentifier**.  
+ GUID della chiave da usare per crittografare la variabile *cleartext*. **uniqueidentifier**.  
   
- '*come testo non crittografato*'  
+ '*cleartext*'  
  Dati da crittografare tramite la chiave.  
   
  @cleartext  
- È una variabile di tipo **nvarchar**, **char**, **varchar**, **binario**, **varbinary**, o **nchar** che contiene i dati che deve essere crittografata con la chiave.  
+ Variabile di tipo **nvarchar**, **char**, **varchar**, **binary**, **varbinary** o **nchar** contenente i dati da crittografare con la chiave.  
   
  *add_authenticator*  
- Indica se un autenticatore verrà crittografato con la *come testo non crittografato*. Deve essere 1 se si usa un autenticatore. **int**.  
+ Indica se un autenticatore verrà crittografato insieme al *testo non crittografato*. Deve essere 1 se si usa un autenticatore. **int**.  
   
  @add_authenticator  
- Indica se un autenticatore verrà crittografato con la *come testo non crittografato*. Deve essere 1 se si usa un autenticatore. **int**.  
+ Indica se un autenticatore verrà crittografato insieme al *testo non crittografato*. Deve essere 1 se si usa un autenticatore. **int**.  
   
- *autenticatore*  
+ *authenticator*  
  Dati da cui derivare un autenticatore. **sysname**.  
   
  @authenticator  
  Variabile contenente i dati da cui derivare un autenticatore.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **varbinary** con una dimensione massima di 8.000 byte.  
+ **varbinary** con un valore massimo di 8.000 byte.  
   
  Restituisce NULL se la chiave non è aperta, non esiste o se è una chiave RC4 deprecata e il database non è nel livello di compatibilità 110 o superiore.  
+ 
+ Restituisce NULL se il valore *cleartext* è NULL.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  EncryptByKey usa una chiave simmetrica. Tale chiave deve essere aperta. Se la chiave simmetrica è già aperta nella sessione corrente, non è necessario aprirla nuovamente nel contesto della query.  
   
  L'autenticatore consente di ridurre la sostituzione di valori interi dei campi crittografati. Si consideri, ad esempio, la tabella seguente contenente dati relativi alle retribuzioni.  
@@ -97,10 +96,10 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  La crittografia e decrittografia simmetriche sono operazioni relativamente veloci, ideali per operazioni basate su quantità elevate di dati.  
   
 > [!IMPORTANT]  
->  L'uso delle funzioni di crittografia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'impostazione ANSI_PADDING OFF può provocare la perdita di dati a causa delle conversioni implicite. Per ulteriori informazioni relative ad ANSI_PADDING, vedere [SET ANSI_PADDING &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  L'uso delle funzioni di crittografia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'impostazione ANSI_PADDING OFF può provocare la perdita di dati a causa delle conversioni implicite. Per altre informazioni sull'impostazione ANSI_PADDING, vedere [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
- La funzionalità illustrata negli esempi seguenti si basa sulle chiavi e certificati creati in [procedura: crittografare una colonna di dati](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ La funzionalità illustrata negli esempi seguenti si basa sulle chiavi e sui certificati creati in [Procedura: Crittografia di una colonna di dati](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Crittografia di una stringa tramite una chiave simmetrica  
  Nell'esempio seguente viene aggiunta una colonna alla tabella `Employee`, quindi viene crittografato il valore del numero di previdenza sociale archiviato nella colonna `NationalIDNumber`.  
@@ -150,11 +149,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [HASHBYTES &#40; Transact-SQL &#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+ [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

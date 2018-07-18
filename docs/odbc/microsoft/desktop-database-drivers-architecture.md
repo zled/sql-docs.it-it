@@ -1,31 +1,28 @@
 ---
 title: Architettura di driver di Database desktop | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], architecture
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3f5c7b12e5413441476e70dc63fe9d3da9284635
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b54a98aea619949ab51d20dd599fdc0fe3e71321
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="desktop-database-drivers-architecture"></a>Architettura di driver di Database desktop
 Questi driver sono progettati per l'uso in Microsoft Windows 95 o versioni successive o Windows NT 4.0 e Windows 2000. Sono supportate sole applicazioni a 32 bit in Windows 95 o versione successiva. applicazioni a 16 bit e a 32 bit sono supportate in Windows NT 4.0 e Windows 2000.  
@@ -37,13 +34,13 @@ Questi driver sono progettati per l'uso in Microsoft Windows 95 o versioni succe
   
  L'architettura applicazione/driver in Windows 95 o versioni successive è:  
   
- ![App &#47; architettura del driver: Windows 95 e versioni successive](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![App&#47;architettura dei driver: Windows 95 e versioni successive](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
  L'utilizzo di questi driver per applicazioni a 16 bit in Windows 95 non è supportato.  
   
  L'architettura applicazione/driver in Windows NT 4.0 e Windows 2000 è:  
   
- ![App &#47; architettura del driver: NT 4.0 e Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![App&#47;architettura dei driver: NT 4.0 e Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
  I driver di Database Desktop sono i driver a due livelli. In una configurazione a due livelli, il driver non esegue il processo di analisi, convalida, l'ottimizzazione e l'esecuzione della query. In alternativa, Microsoft Jet esegue queste attività. Elabora le chiamate all'API ODBC e funge da un motore SQL. Microsoft Jet è diventata una parte integrante, non separabile driver: viene fornito con i driver e risiede con i driver, anche se altre applicazioni nel computer non utilizzarla.  
   

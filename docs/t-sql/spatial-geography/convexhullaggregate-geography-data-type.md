@@ -1,16 +1,14 @@
 ---
-title: ConvexHullAggregate (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: ConvexHullAggregate (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ConvexHullAggregate_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - ConvexHullAggregate method (geography)
 ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dfbddd12cab58c441925fa113226adb4b671af46
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 05814b71197b400b0445fa2461de3ea14c50a9fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce una struttura convessa per un determinato set di **geography** oggetti.
+Restituisce una struttura convessa per un set specificato di oggetti **geography**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,24 +42,24 @@ ConvexHullAggregate ( geography_operand )
   
 ## <a name="arguments"></a>Argomenti  
  *geography_operand*  
- È un **geography** colonna di tabella di tipo che rappresenta un set di **geography** oggetti.  
+ Colonna della tabella di tipo **geography** che rappresenta un set di oggetti **geography**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
 ## <a name="exception"></a>Eccezione  
- Genera un'eccezione `FormatException` in presenza di valori di input non validi. Vedere [STIsValid &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+ Genera un'eccezione `FormatException` in presenza di valori di input non validi. Vedere [STIsValid &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Metodo **null** quando l'input è vuoto o l'input dispone di SRID diversi. Vedere [identificatori SRID &#40; Identificatori SRID &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Remarks  
+ Il metodo restituisce **Null** quando l'input è vuoto o dispone di SRID diversi. Vedere [Identificatori SRID &#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- Metodo ignora **null** input.  
+ Il metodo ignora gli input **Null**.  
   
 > [!NOTE]  
->  Metodo **null** se tutti i valori immessi sono **null**.  
+>  Il metodo restituisce **Null** se tutti i valori immessi sono **Null**.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce una struttura convessa del set di **geography** oggetti.  
+ Nell'esempio seguente viene restituita una struttura convessa del set di oggetti **geography**.  
   
  ```
  USE AdventureWorks2012  

@@ -1,41 +1,19 @@
 ---
 title: Annullamento di comandi (XMLA) | Documenti Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- connections [XML for Analysis]
-- associated connections [XML for Analysis]
-- XML for Analysis, canceling
-- associated sessions [XML for Analysis]
-- canceling connections
-- canceling commands
-- canceling sessions
-- SPID
-- XMLA, canceling
-- server process IDs [XML for Analysis]
-- sessions [XML for Analysis]
-ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0751c7216716f46e12e8b864386adc3e4806b0cb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0894379d301cc38084c3ee5e8d48e181d9d91dd4
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="canceling-commands-xmla"></a>Annullamento di comandi (XMLA)
   A seconda delle autorizzazioni amministrative dell'utente che invia il comando, il [Annulla](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) comando nel codice XML per Analysis (XMLA) può annullare un comando in una sessione, una sessione, una connessione, un processo del server o una sessione associata o connessione.  
@@ -69,7 +47,7 @@ ms.lasthandoff: 02/15/2018
  È possibile impostare il [CancelAssociated](../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md) proprietà su true per annullare le connessioni, sessioni e comandi associati alla connessione, una sessione o un valore SPID specificato nel **Annulla** comando.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Individuare metodo &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
+ [Metodo Discover &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [Sviluppo con XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

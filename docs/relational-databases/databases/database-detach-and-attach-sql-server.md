@@ -1,17 +1,16 @@
 ---
 title: Collegamento e scollegamento di un database (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [SQL Server], detaching
@@ -30,20 +29,19 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
-caps.latest.revision: 
+caps.latest.revision: 98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 7338e364e970aaccc6c24cdba04e1b43a188c8c9
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d77629ddd1ebd711d9ec026c0b1a7a4ae9001f1b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Collegamento e scollegamento di un database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-È possibile scollegare i file di dati e di log delle transazioni di un database e, successivamente, ricollegarli alla stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o a un'istanza diversa. Scollegare e collegare un database risulta utile se si desidera assegnare il database a un'istanza diversa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer oppure spostarlo.  
+  È possibile scollegare i file di dati e di log delle transazioni di un database e, successivamente, ricollegarli alla stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o a un'istanza diversa. Scollegare e collegare un database risulta utile se si desidera assegnare il database a un'istanza diversa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer oppure spostarlo.  
   
   
 ##  <a name="Security"></a> Security  
@@ -111,7 +109,10 @@ ms.lasthandoff: 02/23/2018
 ###  <a name="Metadata"></a> Modifiche ai metadati durante il collegamento di un database  
  Quando si esegue lo scollegamento e il successivo ricollegamento di un database di sola lettura, le informazioni sul backup relative alla base differenziale corrente vanno perdute. La *base differenziale* è il backup completo più recente di tutti i dati nel database o in un subset dei file o dei filegroup del database. Senza le informazioni sul backup di base, il database **master** non risulta più sincronizzato con il database di sola lettura, per cui i backup differenziali eseguiti successivamente possono restituire risultati imprevisti. Di conseguenza, se si utilizzano backup differenziali con un database di sola lettura, è consigliabile definire una nuova base differenziale eseguendo un backup completo dopo aver ricollegato il database. Per informazioni sui backup differenziali, vedere [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
- Al momento del collegamento, viene eseguito l'avvio del database. In genere, il collegamento di un database non altera lo stato in cui questo si trovava al momento dello scollegamento o della copia. Tuttavia, le operazioni di collegamento e scollegamento comportano la disabilitazione del concatenamento della proprietà tra database relativo al database in oggetto. Per informazioni su come abilitare il concatenamento, vedere [Opzione di configurazione del server cross db ownership chaining](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). Inoltre, quando il database viene collegato, l'opzione TRUSTWORTHY è impostata su OFF. Per informazioni su come impostare TRUSTWORTHY su ON, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ Al momento del collegamento, viene eseguito l'avvio del database. In genere, il collegamento di un database non altera lo stato in cui questo si trovava al momento dello scollegamento o della copia. Tuttavia, le operazioni di collegamento e scollegamento comportano la disabilitazione del concatenamento della proprietà tra database relativo al database in oggetto. Per informazioni su come abilitare il concatenamento, vedere [Opzione di configurazione del server cross db ownership chaining](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). 
+
+ >[!IMPORTANT]
+ > Per impostazione predefinita e per questioni di sicurezza, le opzioni *is_broker_enabled*, *is_honor_broker_priority_on* e *is_trustworthy_on* sono disattivate ogni volta che il database viene collegato. Per informazioni su come attivare queste opzioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  Per altre informazioni sui metadati, vedere [Gestione dei metadati quando si rende disponibile un database in un altro server](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
   
 ### <a name="backup-and-restore-and-attach"></a>Backup e ripristino e collegamento  
  Analogamente a qualsiasi database completamente o parzialmente offline, non è possibile collegare un database con file in fase di ripristino. Se si arresta la sequenza di ripristino, è possibile collegare il database. Sarà quindi possibile riavviare la sequenza di ripristino.  

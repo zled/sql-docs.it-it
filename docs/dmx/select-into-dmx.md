@@ -1,37 +1,36 @@
 ---
 title: SELECT INTO (DMX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SELECT
 - SELECT_INTO
 - SELECT INTO
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - mining models [Analysis Services], copying
 - SELECT INTO statement
 - mining models [Analysis Services], creating
 - copying mining models
 ms.assetid: 31ab9b4c-e20d-41ee-886f-6665c22c6ad5
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5d373c62b61469835ed8a6c41e9231c5eff67fd8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ab2052950624fa7c322336e3855bda72e74726f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,14 +50,14 @@ FROM <existing model>
  *nuovo modello*  
  Nome univoco del nuovo modello da creare.  
   
- *algoritmo*  
+ *Algoritmo*  
  Nome definito dal provider di un algoritmo di data mining.  
   
- *elenco di parametri*  
- Facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
+ *Elenco di parametri*  
+ Facoltativa. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
- *expression*  
- Espressione che restituisce una condizione di filtro valida sui dati di training. Per ulteriori informazioni sulle espressioni che possono essere utilizzate come filtri, vedere [filtri per i modelli di Data Mining &#40; Analysis Services - Data Mining &#41; ](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ *espressione*  
+ Espressione che restituisce una condizione di filtro valida sui dati di training. Per ulteriori informazioni sulle espressioni che possono essere utilizzate come filtri, vedere [filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
  *modello esistente*  
  Nome del modello esistente da copiare.  
@@ -92,8 +91,8 @@ FROM [TM Clustering]
 >  I filtri applicati alla tabella del case possono essere modificati mediante l'istruzione SELECT INTO come mostrato in questo esempio. Tuttavia, se il modello originale contiene un filtro in una tabella nidificata, il filtro della tabella nidificata non può essere modificato o rimosso mediante questa sintassi, ma viene copiato dal modello originale senza alcuna modifica. Per creare un modello con un filtro diverso in una tabella nidificata, utilizzare la sintassi ALTER STRTUCTURE...ADD MODEL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

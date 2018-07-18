@@ -1,16 +1,14 @@
 ---
-title: SESSIONPROPERTY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SESSIONPROPERTY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SESSIONPROPERTY
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - SESSIONPROPERTY function
 - sessions [SQL Server], SET options settings
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72a7770b39b985f9e438743e24f8b4c7a076572f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 682ed62332c2fcc2e70c77fa75ac43b7249c3cac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ SESSIONPROPERTY (option)
   
 ## <a name="arguments"></a>Argomenti  
  *opzione*  
- Impostazione corrente dell'opzione per questa sessione. *opzione* può essere uno dei valori seguenti.  
+ Impostazione corrente dell'opzione per questa sessione. *option* può essere uno dei valori seguenti.  
   
 |Opzione|Description|  
 |------------|-----------------|  
@@ -60,12 +57,12 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|Determina se i risultati della concatenazione di valori Null vengono gestiti come valori Null o valori di stringa vuota.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|Specifica se vengono generati messaggi di errore o avvisi quando si verifica una perdita di precisione in seguito all'arrotondamento di un'espressione.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|Specifica se devono essere seguite le regole ISO sull'utilizzo delle virgolette per delimitare gli identificatori e le stringhe letterali.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|\<Qualsiasi altra stringa >|NULL = Input non valido.|  
+|\<Qualsiasi altra stringa>|NULL = Input non valido.|  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **sql_variant**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Le opzioni SET vengono calcolate combinando opzioni a livello di server, di database e specifiche dell'utente.  
   
 ## <a name="examples"></a>Esempi  

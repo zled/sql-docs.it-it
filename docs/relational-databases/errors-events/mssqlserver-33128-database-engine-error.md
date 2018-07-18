@@ -1,28 +1,25 @@
 ---
 title: MSSQLSERVER_33128 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-helpviewer_keywords: 33128 (Database Engine error)
+helpviewer_keywords:
+- 33128 (Database Engine error)
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
-caps.latest.revision: "8"
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 8
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3ce51b520a52bc799bb987a1c4e6851c75029fcf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e06181582c7a08a7165f7e8545a170b5eec27310
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ Quando il livello di compatibilità del database è 110 o superiore, le operazio
 > [!NOTE]  
 > Il buffer circolare è un componente interno non documentato pienamente e che non deve essere utilizzato dai clienti. I messaggi dal buffer circolare sono utili quando si contatta il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Per visualizzare il buffer circolare, eseguire una query sulla DMV sys.dm_os_ring_buffers.  
   
-|State|Description|  
+|State|Descrizione|  
 |---------|---------------|  
 |1|Una chiave RC4 viene utilizzata nella funzione encryptbykey() predefinita. La funzione predefinita restituisce NULL. Questo messaggio viene visualizzato solo nel buffer circolare.|  
 |2|Una chiave RC4 viene utilizzata nella funzione decryptbykey() predefinita. Questo messaggio viene visualizzato solo nel buffer circolare.|  

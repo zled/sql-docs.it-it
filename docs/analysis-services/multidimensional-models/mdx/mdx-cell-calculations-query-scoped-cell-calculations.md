@@ -1,34 +1,23 @@
 ---
 title: Creazione di calcoli di celle con ambito Query (MDX) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- WITH keyword
-- query-scoped cell calculations [MDX]
-ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34ef680e855c0a6b29363923ba6984189a4e9119
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c9cb6f083751b14ad3cd8f2ffaac692ef4e6eb86
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Calcoli MDX di cella - calcoli di celle con ambito Query
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Nel linguaggio MDX (Multidimensional Expressions) è possibile usare la parola chiave **WITH** per descrivere celle calcolate nel contesto di una query. La parola chiave **WITH** ha la sintassi seguente:  
+  Nel linguaggio MDX (Multidimensional Expressions) è possibile usare la parola chiave **WITH** per descrivere celle calcolate nel contesto di una query. La parola chiave **WITH** ha la sintassi seguente:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -61,6 +50,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  La formula di calcolo, invece, viene elaborata ogni volta che sul cubo viene eseguita una query MDX che coinvolge celle incluse nella definizione delle celle calcolate, indipendentemente dall'ambito di creazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREARE l'istruzione di calcolo di celle &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [CREARE l'istruzione di calcolo di celle & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

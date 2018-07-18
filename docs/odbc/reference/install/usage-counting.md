@@ -1,36 +1,33 @@
 ---
 title: Il conteggio di utilizzo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - usage counts [ODBC]
 - file usage counts [ODBC]
 - installing ODBC components [ODBC], usage counts
 - subkeys [ODBC], usage counts
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: deb6923a2e842241eea1434997194f6e6d19ce1a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 51d1acca922245a4b57ecd30428e0b4079327e29
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="usage-counting"></a>Il conteggio di utilizzo
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo in modo esplicito, è necessario installare ODBC nelle versioni precedenti di Windows.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  Due tipi di conteggi dell'utilizzo vengono mantenuti nel Registro di sistema per ogni componente: un conteggio di utilizzo del componente e uno o più conteggi dell'utilizzo di file facoltativo. Il conteggio di utilizzo del componente consente l'installazione DLL mantenere le voci del Registro di sistema. Viene archiviato nel valore UsageCount in ODBC Core, driver e le sottochiavi di funzione di conversione. Per il formato del valore di UsageCount e ulteriori informazioni su queste sottochiavi, vedere [le voci del Registro di sistema per i componenti ODBC](../../../odbc/reference/install/registry-entries-for-odbc-components.md).  
   
@@ -65,9 +62,9 @@ ms.lasthandoff: 12/21/2017
   
  Nella tabella seguente è riportato il formato del valore del conteggio di utilizzo di file.  
   
-|nome|Tipo di dati|data|  
+|Nome|Tipo di dati|data|  
 |----------|---------------|----------|  
-|*Full-path*|REG_DWORD|*count*|  
+|*percorso completo*|REG_DWORD|*count*|  
   
  Ad esempio, si supponga che un driver per Informix utilizza i file Infrmx32.dll e Infrmx32.hlp e si supponga che questo driver è stato installato due volte. I valori nella sottochiave SharedDlls per il driver Informix sarà come segue:  
   

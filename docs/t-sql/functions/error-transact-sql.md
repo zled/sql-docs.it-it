@@ -1,16 +1,14 @@
 ---
 title: '@@ERROR (Transact-SQL) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@ERROR'
@@ -22,18 +20,18 @@ helpviewer_keywords:
 - errors [SQL Server], Transact-SQL
 - error numbers [SQL Server]
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 9ce2b79b12af1ae4894cd33867bccc27b2354185
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 703cf3bf71844337ce6dd25e74c2b0c2da9661fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="x40x40error-transact-sql"></a>&#x40;&#x40; Errore (Transact-SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce il numero di errore per l'ultima istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguita.  
@@ -49,18 +47,18 @@ ms.lasthandoff: 01/18/2018
 ## <a name="return-types"></a>Tipi restituiti  
  integer  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Restituisce 0 se nell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] precedente non è stato rilevato alcun errore.  
   
- Restituisce un numero di errore se nell'istruzione precedente è stato rilevato un errore. Se l'errore è uno degli errori nella vista del catalogo sys. Messages, quindi@ERROR contiene il valore dalla colonna message_id per tale errore. È possibile visualizzare il testo associato a un @@ERROR il numero di errore in sys. Messages.  
+ Restituisce un numero di errore se nell'istruzione precedente è stato rilevato un errore. Se l'errore rilevato è descritto nella vista del catalogo sys.messages, la funzione @@ERROR include il valore riportato nella colonna sys.messages.message_id per tale errore. È possibile esaminare il testo associato a un numero di errore @@ERROR in sys.messages.  
   
- Poiché @@ERROR viene cancellato e reimpostato a ogni istruzione eseguita, verificarla immediatamente dopo l'istruzione in corso la verifica o salvarlo in una variabile locale che può essere archiviata in un secondo momento.  
+ Poiché la funzione @@ERROR viene cancellata e reimpostata ogni volta che viene eseguita un'istruzione, è necessario controllarne il valore subito dopo l'esecuzione dell'istruzione da verificare oppure salvarla in una variabile locale verificabile in un secondo momento.  
   
- Il costrutto TRY...CATCH viene utilizzato per la gestione degli errori. TRY... CATCH costruire inoltre funzioni di sistema aggiuntivi supporta (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY ed ERROR_STATE) che restituiscono più informazioni di errore di @@ERROR . TRY...CATCH supporta anche una funzione ERROR_NUMBER che non si limita a restituire il numero di errore nell'istruzione immediatamente successiva a quella in cui è stato generato un errore. Per altre informazioni, vedere [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
+ Il costrutto TRY...CATCH viene utilizzato per la gestione degli errori. Il costrutto TRY...CATCH supporta anche funzioni di sistema aggiuntive (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE) che restituiscono un maggior numero di informazioni sull'errore rispetto a @@ERROR. TRY...CATCH supporta anche una funzione ERROR_NUMBER che non si limita a restituire il numero di errore nell'istruzione immediatamente successiva a quella in cui è stato generato un errore. Per altre informazioni, vedere [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>A. Tramite@ERROR per rilevare un errore specifico  
+### <a name="a-using-error-to-detect-a-specific-error"></a>A. Uso di @@ERROR per trovare un errore specifico  
  Nell'esempio seguente si utilizza `@@ERROR` per rilevare una violazione di vincolo CHECK (errore numero 547) in un'istruzione `UPDATE`.  
   
 ```  
@@ -74,8 +72,8 @@ IF @@ERROR = 547
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. Tramite@ERROR uscire in modo condizionale una stored procedure  
- L'esempio seguente usa `IF...ELSE` istruzioni per testare `@@ERROR` dopo un `DELETE` istruzione in una stored procedure. Il valore della variabile `@@ERROR` determina il codice restituito inviato al programma chiamante per segnalare se la procedura ha avuto esito positivo o negativo.  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. Uso di @@ERROR per l'uscita condizionale da una procedura  
+ Nell'esempio seguente vengono usate istruzioni `IF...ELSE` per testare `@@ERROR` dopo un'istruzione `DELETE` in una stored procedure. Il valore della variabile `@@ERROR` determina il codice restituito inviato al programma chiamante per segnalare se la procedura ha avuto esito positivo o negativo.  
   
 ```  
 USE AdventureWorks2012;  
@@ -109,7 +107,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. Tramite@ERROR con @@ROWCOUNT   
+### <a name="c-using-error-with-rowcount"></a>C. Uso di @@ERROR con @@ROWCOUNT  
  Nell'esempio seguente si utilizza `@@ERROR` con `@@ROWCOUNT` per verificare l'operazione di un'istruzione `UPDATE`. Il valore di `@@ERROR` viene controllato per verificare la presenza di errori, mentre la funzione `@@ROWCOUNT` viene utilizzata per assicurare che l'aggiornamento di una riga della tabella sia stato eseguito correttamente.  
   
 ```  
@@ -179,9 +177,9 @@ GO
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [Sys. Messages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   
 

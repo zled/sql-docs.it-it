@@ -1,16 +1,14 @@
 ---
-title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/18/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMN_ENCRYPTION_KEY_TSQL
@@ -31,21 +29,20 @@ helpviewer_keywords:
 - column encryption key
 - CREATE COLUMN ENCRYPTION KEY statement
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 921b1901cac16a2d9a3788785ef1d6ab82f41d30
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3ffa1b8d42fa25d78081c453843126f14b9e9121
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Crea una chiave di crittografia di colonna con il set iniziale di valori, crittografati con chiavi master della colonna specificata. Si tratta di un'operazione di metadati. Una CEK può avere fino a due valori che consente una rotazione della chiave master della colonna. È necessario creare una CEK prima di qualsiasi colonna nel database può essere crittografato usando il [Always Encrypted &#40; motore di Database &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) funzionalità. CEK può inoltre essere creata utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Prima di creare una CEK, è necessario definire una CMK con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) istruzione.  
+  Crea una chiave di crittografia della colonna con il set iniziale di valori, crittografati con le chiavi master della colonna specificata. Si tratta di un'operazione sui metadati. Una chiave di crittografia della colonna può avere fino a due valori in moda da consentire la rotazione della chiave master della colonna. Prima di poter crittografare una colonna nel database usando la funzionalità [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) è necessario creare una chiave di crittografia della colonna. Le chiavi di crittografia della colonna possono essere create anche tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Prima di creare una chiave di crittografia della colonna è necessario definire una chiave master della colonna usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o l'istruzione [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,38 +66,38 @@ WITH VALUES
   
 ## <a name="arguments"></a>Argomenti  
  *key_name*  
- È il nome mediante il quale la chiave di crittografia di colonna sarà noto nel database.  
+ Nome con il quale sarà nota la chiave di crittografia della colonna all'interno del database.  
   
  *column_master_key_name*  
- Specifica il nome della chiave master colonna personalizzata (CMK) utilizzata per crittografare la chiave di crittografia di colonna (CEK).  
+ Specifica il nome della chiave master della colonna personalizzata usata per crittografare la chiave di crittografia della colonna.  
   
- *nome_algoritmo*  
- Nome dell'algoritmo di crittografia utilizzato per crittografare il valore della chiave di crittografia della colonna. L'algoritmo per i provider di sistema deve essere **RSA_OAEP**.  
+ *algorithm_name*  
+ Nome dell'algoritmo di crittografia usato per crittografare il valore della chiave di crittografia della colonna. L'algoritmo per i provider di sistema deve essere **RSA_OAEP**.  
   
  *varbinary_literal*  
- Il valore CEK crittografato BLOB.  
+ BLOB del valore della chiave di crittografia della colonna crittografato.  
   
 > [!WARNING]  
->  Non passare mai in testo normale valori CEK in questa istruzione. In questo modo includerà il vantaggio di questa funzionalità.  
+>  Non passare mai i valori della chiave di crittografia della colonna in testo non crittografato in questa istruzione, altrimenti sarà compromesso il vantaggio di questa funzionalità.  
   
-## <a name="remarks"></a>Osservazioni  
- L'istruzione CREATE COLUMN ENCRYPTION KEY deve includere almeno una clausola VALUES e potrebbero essere presenti fino a due. Se solo uno viene fornito, è possibile utilizzare l'istruzione ALTER COLUMN ENCRYPTION KEY per aggiungere un secondo valore in un secondo momento. È inoltre possibile utilizzare l'istruzione ALTER COLUMN ENCRYPTION KEY per rimuovere una clausola VALUES.  
+## <a name="remarks"></a>Remarks  
+ L'istruzione CREATE COLUMN ENCRYPTION KEY deve includere almeno una clausola VALUES e può includerne fino a due. Se ne viene specificata solo una, è possibile usare l'istruzione ALTER COLUMN ENCRYPTION KEY per aggiungere un secondo valore in un secondo momento. L'istruzione ALTER COLUMN ENCRYPTION KEY può anche essere usata per rimuovere una clausola VALUES.  
   
- In genere, una chiave di crittografia di colonna viene creata con un solo valore crittografato. Quando una chiave master della colonna deve essere ruotato (la colonna chiave master esigenze correnti da sostituire con la nuova chiave master di colonna), è possibile aggiungere un nuovo valore della chiave di crittografia della colonna, crittografata con la nuova chiave master della colonna. In questo modo sarà possibile verificare applicazioni client possono accedere ai dati crittografati con la chiave di crittografia di colonna, mentre la nuova chiave master della colonna reso disponibile alle applicazioni client. Un Always Encrypted abilitato driver in un'applicazione client che non ha accesso alla nuova chiave master, sarà possibile utilizzare il valore chiave crittografia della colonna crittografato con la vecchia chiave master di colonna per accedere a dati sensibili.  
+ In genere, una chiave di crittografia della colonna viene creata con un solo valore crittografato. Quando una chiave master della colonna deve essere ruotata, vale a dire la chiave master della colonna corrente deve essere sostituita dalla nuova chiave master della colonna, è possibile aggiungere un nuovo valore della chiave di crittografia della colonna, crittografato con la nuova chiave master della colonna. In questo modo è possibile garantire alle applicazioni client l'accesso ai dati crittografati con la chiave di crittografia della colonna, mentre la nuova chiave master della colonna sarà resa disponibile alle applicazioni client. Un driver abilitato per Always Encrypted in un'applicazione client che non ha accesso alla nuova chiave master potrà usare il valore della chiave di crittografia della colonna crittografato con la vecchia chiave master della colonna per accedere ai dati sensibili.  
   
- Gli algoritmi di crittografia, supporta Always Encrypted, richiedono il valore di testo normale di 256 bit.  
+ Per gli algoritmi di crittografia supportati da Always Encrypted è necessario che il valore del testo non crittografato sia di 256 bit.  
   
- Un valore crittografato dovrebbe essere generato utilizzando un provider dell'archivio chiavi che incapsula l'archivio chiavi contenente la chiave master della colonna. Per ulteriori informazioni, vedere [Always Encrypted &#40; sviluppo client &#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md).  
+ È necessario generare un valore crittografato tramite un provider dell'archivio chiavi in cui è incapsulato l'archivio chiavi contenente la chiave master della colonna. Per altre informazioni, vedere [Always Encrypted &#40;sviluppo client&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md).  
   
- Utilizzare [Columns &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [column_encryption_keys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) e [column_encryption_key_values &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) per visualizzare informazioni sulle chiavi di crittografia di colonna.  
+ Usare [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) e [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) per visualizzare le informazioni sulle chiavi di crittografia della colonna.  
   
-## <a name="permissions"></a>Permissions  
- Richiede il **ALTER ANY COLUMN ENCRYPTION KEY** autorizzazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ È necessaria l'autorizzazione **ALTER ANY COLUMN ENCRYPTION KEY**.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-column-encryption-key"></a>A. Creazione di una chiave di crittografia di colonna  
- L'esempio seguente crea una chiave di crittografia di colonna denominata `MyCEK`.  
+### <a name="a-creating-a-column-encryption-key"></a>A. Creazione di una chiave di crittografia della colonna  
+ Nell'esempio seguente viene creata una chiave di crittografia della colonna denominata `MyCEK`.  
   
 ```  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
@@ -113,8 +110,8 @@ WITH VALUES
 GO  
 ```  
   
-### <a name="creating-a-column-encryption-key-with-2-values"></a>Creazione di una chiave di crittografia di colonna con i 2 valori  
- L'esempio seguente crea una chiave di crittografia di colonna denominata `TwoValueCEK` con due valori.  
+### <a name="creating-a-column-encryption-key-with-2-values"></a>Creazione di una chiave di crittografia della colonna con due valori  
+ Nell'esempio seguente viene creata una chiave di crittografia della colonna denominata `TwoValueCEK` con due valori.  
   
 ```  
   
@@ -134,8 +131,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ALTER COLUMN ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   

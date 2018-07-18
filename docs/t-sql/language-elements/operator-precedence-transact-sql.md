@@ -1,16 +1,14 @@
 ---
-title: Precedenza degli operatori (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: Precedenza degli operatori (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - order of operator execution [Transact-SQL]
 - precedence [SQL Server], operators
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c9de4447c5918edbc33ec67c783272f724883e81
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 01c6a268d0a4e7a833f4a121abc46cc396de2bed
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operator-precedence-transact-sql"></a>Precedenza degli operatori (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,9 +38,9 @@ ms.lasthandoff: 01/25/2018
 |Level|Operatori|  
 |-----------|---------------|  
 |1|~ (NOT bit per bit)|  
-|2|* (Moltiplicazione), / (divisione), % (modulo)|  
-|3|+ (Positivo), - (negativo) + (addizione), (+ concatenazione)-(sottrazione), & (AND bit per bit), ^ (OR bit per bit esclusivo), &#124; (OR bit per bit)|  
-|4|=, >, \<, > =, < =, <>,! =,! >,! < (operatori di confronto)|  
+|2|* (moltiplicazione), / (divisione), % (modulo)|  
+|3|+ (positivo), - (negativo), + (addizione), + (concatenazione), - (sottrazione), & (AND bit per bit), ^ (OR esclusivo bit per bit), &#124; (OR bit per bit)|  
+|4|=, >, \<, >=, <=, <>, !=, !>, !< (operatori di confronto)|  
 |5|NOT|  
 |6|AND|  
 |7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  
@@ -89,8 +86,8 @@ SELECT @MyNumber;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operatori logici &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori logici &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

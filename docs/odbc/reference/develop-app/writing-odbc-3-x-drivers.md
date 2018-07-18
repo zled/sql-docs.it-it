@@ -1,37 +1,34 @@
 ---
 title: Scrittura di driver di ODBC 3. x | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading drivers [ODBC]
 - ODBC drivers [ODBC], upgrading
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b73a32d607bb2fc2c1cd2392ab4d1b436e7ed94d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f9b926d45e6556b53957ecd2934d7068418f3101
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-odbc-3x-drivers"></a>Driver di scrittura ODBC 3. x
 Nella tabella seguente viene illustrato il supporto di funzione in un'applicazione ODBC 3. *x* driver e un'applicazione ODBC e il mapping eseguita da Gestione Driver quando le funzioni vengono chiamate su un'applicazione ODBC 3. *x* driver.  
   
-|Funzione|Supportato<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> driver?|Supportato<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> applicazione?|Il mapping supportati<br /><br /> per ODBC 3. *x*<br /><br /> Gestione driver per<br /><br /> un'applicazione ODBC 3. *x* driver?|  
+|Funzione|Supported<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> driver?|Supported<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> applicazione?|Il mapping supportati<br /><br /> per ODBC 3. *x*<br /><br /> Gestione driver per<br /><br /> un'applicazione ODBC 3. *x* driver?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|no|[1]|Sì|  
 |**SQLAllocEnv**|no|[1]|Sì|  
@@ -60,7 +57,7 @@ Nella tabella seguente viene illustrato il supporto di funzione in un'applicazio
 |**SQLError**|no|[1]|Sì|  
 |**SQLExecDirect**|Sì|Sì|no|  
 |**SQLExecute**|Sì|Sì|no|  
-|**SQLExtendedFetch.**|Sì|no|no|  
+|**SQLExtendedFetch.**|Sì|No|no|  
 |**SQLFetch**|Sì|Sì|no|  
 |**SQLFetchScroll**|Sì|Sì|no|  
 |**SQLForeignKeys**|Sì|Sì|no|  
@@ -87,23 +84,23 @@ Nella tabella seguente viene illustrato il supporto di funzione in un'applicazio
 |**SQLNumParams**|Sì|Sì|no|  
 |**SQLNumResultCols**|Sì|Sì|no|  
 |**SQLParamData**|Sì|Sì|no|  
-|**SQLParamOptions**|no|no|Sì|  
+|**SQLParamOptions**|no|No|Sì|  
 |**SQLPrepare**|Sì|Sì|no|  
 |**SQLPrimaryKeys**|Sì|Sì|no|  
 |**SQLProcedureColumns**|Sì|Sì|no|  
 |**SQLProcedures**|Sì|Sì|no|  
 |**SQLPutData**|Sì|Sì|no|  
 |**SQLRowCount**|Sì|Sì|no|  
-|**SQLSetConnectAttr**|Sì|Sì|no|  
+|**Funzione SQLSetConnectAttr**|Sì|Sì|no|  
 |**SQLSetConnectOption**|[5]|[1]|Sì|  
 |**SQLSetCursorName**|Sì|Sì|no|  
 |**SQLSetDescField**|Sì|Sì|no|  
 |**SQLSetDescRec**|Sì|Sì|no|  
 |**SQLSetEnvAttr**|Sì|Sì|no|  
 |**SQLSetPos**|Sì|Sì|no|  
-|**SQLSetParam**|no|no|Sì|  
+|**SQLSetParam**|no|No|Sì|  
 |**SQLSetScrollOption**|Sì|Sì|no|  
-|**SQLSetStmtAttr**|Sì|Sì|no|  
+|**Funzione SQLSetStmtAttr**|Sì|Sì|no|  
 |**SQLSetStmtOption**|[5]|[1]|Sì|  
 |**SQLSpecialColumns**|Sì|Sì|no|  
 |**SQLStatistics**|Sì|Sì|no|  

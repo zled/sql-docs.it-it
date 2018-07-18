@@ -1,16 +1,14 @@
 ---
-title: SUSER_NAME (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SUSER_NAME (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SUSER_NAME
@@ -26,16 +24,16 @@ helpviewer_keywords:
 - logins [SQL Server], names
 - names [SQL Server], logins
 ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: cb236dc3ae7f74ad77ba398e328d4a0bf93a079b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 39a9c9edb8618b4a8c28a7671994ea3797b2bb38
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="susername-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -53,15 +51,15 @@ SUSER_NAME ( [ server_user_id ] )
   
 ## <a name="arguments"></a>Argomenti  
  *server_user_id*  
- Numero di identificazione dell'account di accesso dell'utente. *server_user_id*, che è facoltativo e **int**. *server_user_id* può essere il numero di identificazione di qualsiasi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o [!INCLUDE[msCoName](../../includes/msconame-md.md)] utente o gruppo che dispone dell'autorizzazione per connettersi a un'istanza di Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *server_user_id* viene omesso, viene restituito il nome di identificazione di account di accesso per l'utente corrente. Se nel parametro è inclusa la parola NULL, verrà restituito NULL.  
+ Numero di identificazione dell'account di accesso dell'utente. *server_user_id* è facoltativo ed è di tipo **int**. *server_user_id* può essere il numero di identificazione di qualsiasi account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure di qualsiasi utente o gruppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows autorizzato a connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *server_user_id* viene omesso, viene restituito il nome di identificazione dell'account di accesso dell'utente corrente. Se nel parametro è inclusa la parola NULL, verrà restituito NULL.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0 l'ID dell'utente del server (SUID) è stato sostituito con l'ID di sicurezza (SID).  
   
- SUSER_NAME restituisce un nome di account di accesso solo per un account di accesso che ha una voce nel **syslogins** tabella di sistema.  
+ SUSER_NAME restituisce un nome di account di accesso solo per gli account a cui corrisponde una voce nella tabella di sistema **syslogins**.  
   
  È possibile utilizzare SUSER_NAME in un elenco di selezione, in una clausola WHERE e in qualsiasi posizione in cui è consentita un'espressione. La funzione SUSER_NAME deve essere sempre seguita dalle parentesi, anche se non si specifica alcun parametro.  
   
@@ -73,7 +71,7 @@ SELECT SUSER_NAME(1);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SUSER_ID &#40; Transact-SQL &#41;](../../t-sql/functions/suser-id-transact-sql.md)   
+ [SUSER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-id-transact-sql.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

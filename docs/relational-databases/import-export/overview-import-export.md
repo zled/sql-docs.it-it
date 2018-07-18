@@ -1,28 +1,30 @@
 ---
 title: Importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
-ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 57b59258776e0bd4d582e44a650cd0450a82d549
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708199"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile usare diversi metodi per importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure. Tali metodi includono istruzioni Transact-SQL, strumenti da riga di comando e procedure guidate.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+È possibile usare diversi metodi per importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure. Tali metodi includono istruzioni Transact-SQL, strumenti da riga di comando e procedure guidate.
 
 È anche possibile importare ed esportare dati in una vasta gamma di formati. Tali formati includono file flat, Excel, database relazionali principali e vari servizi cloud.
 

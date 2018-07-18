@@ -1,16 +1,14 @@
 ---
-title: Costanti (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: Costanti (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -34,16 +32,16 @@ helpviewer_keywords:
 - real data type
 - negative values
 ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: aae955a177f637e3c359eabf02679025cbecdb3a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 45c45040a1dad4cd3647c2a40a269e064e37fb05
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constants-transact-sql"></a>Costanti (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +70,7 @@ Le stringhe vuote vengono rappresentate da due virgolette singole che non racchi
 Le costanti di stringhe di caratteri supportano regole di confronto avanzate.
   
 > [!NOTE]  
->  Costanti di dimensioni superiori a 8000 byte vengono tipizzate come caratteri **varchar (max)** dati.  
+>  Le costanti carattere di dimensioni superiori a 8000 byte vengono tipizzate come dati **varchar(max)**.  
   
 ## <a name="unicode-strings"></a>Stringhe Unicode
 Il formato delle stringhe Unicode è simile a quello delle stringhe di caratteri, ma sono precedute da un identificatore N, che nello standard SQL-92 sta per National Language. Il prefisso N deve essere maiuscolo. 'Michél', ad esempio, è una costante di caratteri, mentre N'Michél' è una costante Unicode. Le costanti Unicode vengono interpretate come dati Unicode e non vengono valutate in base a una tabella codici. Alle costanti Unicode vengono associate regole di confronto, la cui funzione principale è il controllo dei confronti e la rilevanza di maiuscole e minuscole. Non vi sono assegnate tuttavia le regole di confronto predefinite del database corrente, a meno che non siano state specificate regole di confronto specifiche tramite la clausola COLLATE. I dati Unicode vengono archiviati utilizzando 2 byte per carattere, mentre per i dati di caratteri viene utilizzato 1 byte per carattere. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
@@ -80,7 +78,7 @@ Il formato delle stringhe Unicode è simile a quello delle stringhe di caratteri
 Le costanti di stringa Unicode supportano le regole di confronto avanzate.
   
 > [!NOTE]  
->  Le costanti Unicode superiori a 8000 byte vengono tipizzate come **nvarchar (max)** dati.  
+>  Le costanti Unicode superiori a 8000 byte vengono tipizzate come dati **nvarchar(max)**.  
   
 ## <a name="binary-constants"></a>Costanti binarie
 Le costanti binarie hanno il prefisso `0x` e sono stringhe di numeri esadecimali non racchiuse tra virgolette.
@@ -95,15 +93,15 @@ Di seguito sono riportati esempi di stringhe binarie.
 ```  
   
 > [!NOTE]  
->  Le costanti binarie superiori a 8000 byte vengono tipizzate come **varbinary (max)** dati.  
+>  Le costanti binarie superiori a 8000 byte vengono tipizzate come dati **varbinary(max)**.  
   
-## <a name="bit-constants"></a>costanti di bit
-**bit** costanti sono rappresentate dai numeri 0 o 1 e non sono racchiusi tra virgolette. I numeri maggiori di uno vengono convertiti nel numero uno.
+## <a name="bit-constants"></a>Costanti bit
+Le costanti **bit** vengono rappresentate dai numeri 0 o 1 e non sono racchiuse tra virgolette. I numeri maggiori di uno vengono convertiti nel numero uno.
   
-## <a name="datetime-constants"></a>costanti di data/ora
-**DateTime** costanti sono rappresentate tramite valori di data di tipo carattere in formati specifici, racchiusi tra virgolette singole.
+## <a name="datetime-constants"></a>Costanti datetime
+Le costanti **datetime** vengono rappresentate tramite valori di data di tipo carattere in formati specifici e sono racchiuse tra virgolette singole.
   
-Di seguito sono riportati esempi di **datetime** costanti:
+Di seguito sono riportati esempi di costanti **datetime**:
   
 ```sql
 'December 5, 1985'  
@@ -112,7 +110,7 @@ Di seguito sono riportati esempi di **datetime** costanti:
 '12/5/98'  
 ```  
   
-Esempi di costanti datetime sono:
+Esempi di costanti datetime:
   
 ```sql
 '14:30:24'  
@@ -120,19 +118,19 @@ Esempi di costanti datetime sono:
 ```  
   
 ## <a name="integer-constants"></a>costanti Integer
-**intero** costanti sono rappresentate da una stringa di numeri non racchiusa tra virgolette e priva di separatori decimali. **intero** le costanti devono essere numeri interi; e non includere decimali.
+Le costanti **integer** sono rappresentate da una stringa di numeri non racchiusa tra virgolette e priva di separatori decimali. Le costanti **integer** devono essere numeri interi e non includere decimali.
   
-Di seguito sono riportati esempi di **intero** costanti:
+Di seguito sono riportati esempi di costanti **integer**:
   
 ```sql
 1894  
 2  
 ```  
   
-## <a name="decimal-constants"></a>costanti decimali
-**decimale** costanti sono rappresentate da una stringa di numeri non racchiusa tra virgolette e che contiene un separatore decimale.
+## <a name="decimal-constants"></a>Costanti decimal
+Le costanti **decimal** sono rappresentate da una stringa di numeri non racchiusa tra virgolette e con un separatore decimale.
   
-Di seguito sono riportati esempi di **decimale** costanti:
+Di seguito sono riportati esempi di costanti **decimal**:
   
 ```sql
 1894.1204  
@@ -140,32 +138,32 @@ Di seguito sono riportati esempi di **decimale** costanti:
 ```  
   
 ## <a name="float-and-real-constants"></a>Costanti float e real
-**float** e **reale** costanti sono rappresentate tramite la notazione scientifica.
+Le costanti **float** e **real** sono rappresentate tramite la notazione scientifica.
   
-Di seguito sono riportati esempi di **float** o **reale** valori:
+Di seguito sono riportati esempi di valori **float** o **real**:
   
 ```sql
 101.5E5  
 0.5E-2  
 ```  
   
-## <a name="money-constants"></a>costanti Money
-**Money** costanti vengono rappresentate come stringhe di numeri con separatore decimale facoltativo e un simbolo di valuta facoltativo come prefisso. **Money** non vengono racchiuse tra virgolette.
+## <a name="money-constants"></a>Costanti money
+Le costanti **money** vengono rappresentate come stringhe di numeri con separatore decimale facoltativo e un simbolo di valuta come prefisso facoltativo. Le costanti **money** non vengono racchiuse tra virgolette.
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non vengono imposte regole di raggruppamento quali, ad esempio, l'inserimento di un punto (.) ogni tre cifre nelle stringhe che rappresentano valori monetari.
   
 > [!NOTE]  
->  Le virgole vengono ignorate in qualsiasi punto nell'oggetto specificato **money** letterale.  
+>  I punti vengono ignorati in qualsiasi posizione nella costante letterale **money** specificata.  
   
-Di seguito sono riportati esempi di **money** costanti:
+Di seguito sono riportati esempi di costanti **money**:
   
 ```sql
 $12  
 $542023.14  
 ```  
   
-## <a name="uniqueidentifier-constants"></a>costanti di tipo uniqueidentifier
-**uniqueidentifier** costanti sono una stringa che rappresenta un GUID. Possono essere specificate in formato di stringa binaria o di caratteri.
+## <a name="uniqueidentifier-constants"></a>Costanti uniqueidentifier
+Le costanti **uniqueidentifier** sono stringhe che rappresentano un identificatore univoco globale (GUID). Possono essere specificate in formato di stringa binaria o di caratteri.
   
 In entrambi gli esempi seguenti viene specificato lo stesso GUID.
   
@@ -175,29 +173,29 @@ In entrambi gli esempi seguenti viene specificato lo stesso GUID.
 ```  
   
 ## <a name="specifying-negative-and-positive-numbers"></a>Specificazione di numeri negativi e positivi  
-Per indicare se un numero è positivo o negativo, applicare il  **+**  o  **-**  gli operatori unari per una costante numerica. In tal modo viene creata un'espressione numerica che rappresenta il valore numerico con segno. Costanti numeriche utilizzano il segno positivo quando la  **+**  o  **-**  non vengono applicati gli operatori unari.
+Per indicare se un numero è positivo o negativo, è necessario includere l'operatore unario **+** o **-** in una costante numerica. In tal modo viene creata un'espressione numerica che rappresenta il valore numerico con segno. Se l'operatore unario **+** o **-** non viene applicato, le costanti numeriche usano il segno positivo.
   
-Firma **intero** espressioni:  
+Espressioni **integer** con segno:  
   
 ```sql
 +145345234
 -2147483648
 ```
-Firma **decimale** espressioni:  
+Espressioni **decimal** con segno:  
   
 ```sql
 +145345234.2234
 -2147483648.10
 ```
   
-Firma **float** espressioni:  
+Espressioni **float** con segno:  
   
 ```sql
 +123E-3
 -12E5
 ```
   
-Firma **money** espressioni:  
+Espressioni **money** con segno:  
   
 ```sql
 -$45.56
@@ -205,11 +203,11 @@ Firma **money** espressioni:
 ```
   
 ## <a name="enhanced-collations"></a>Regole di confronto avanzate  
-SQL Server supporta le costanti di stringhe di caratteri e Unicode che supportano regole di confronto avanzate. Per ulteriori informazioni, vedere il [COLLATE &#40; Transact-SQL &#41; ](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) clausola.
+SQL Server supporta le costanti di stringhe di caratteri e Unicode che supportano regole di confronto avanzate. Per altre informazioni, vedere la clausola [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
   
 ## <a name="see-also"></a>Vedere anche
 [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)
+[Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
   
   

@@ -1,40 +1,36 @@
 ---
 title: Classe di evento Sort Warnings | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Sort Warnings event class
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1d4516aaaeb429ae735251a272dc77b1f6ba4edb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7bf11715befc4dac7813e8d08afaec074b042710
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento Sort Warnings indica che per le operazioni di ordinamento non è disponibile memoria sufficiente. Ciò vale soltanto per le operazioni di ordinamento eseguite in una query, ad esempio una clausola ORDER BY in un'istruzione SELECT, e non per le operazioni di ordinamento che implicano la creazione di indici.  
+  La classe di evento Sort Warnings indica che per le operazioni di ordinamento non è disponibile memoria sufficiente. Ciò vale soltanto per le operazioni di ordinamento eseguite in una query, ad esempio una clausola ORDER BY in un'istruzione SELECT, e non per le operazioni di ordinamento che implicano la creazione di indici.  
   
  Se una query che implica un'operazione di ordinamento genera una classe di evento Sort Warnings e il valore della colonna di dati EventSubClass è uguale a 2, è possibile che l'esecuzione della query risulti rallentata perché l'ordinamento richiede l'esecuzione di più passaggi sui dati. Per determinare se l'operazione di ordinamento può essere eliminata, analizzare ulteriormente la query.  
   
 ## <a name="sort-warnings-event-class-data-columns"></a>Colonne di dati della classe di evento Sort Warnings  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  

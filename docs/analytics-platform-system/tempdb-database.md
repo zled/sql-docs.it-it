@@ -1,29 +1,21 @@
 ---
-title: Database (SQL Server PDW) tempdb
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
-caps.latest.revision: "22"
-ms.workload: not set
-ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Database tempdb - Parallel Data Warehouse | Documenti Microsoft
+description: Database tempdb in Parallel Data Warehouse.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 7e11f4eff980358f4b4906f8a100cfc509d19dd5
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="tempdb-database"></a>Database tempdb
+# <a name="tempdb-database-in-parallel-data-warehouse"></a>database tempdb in Parallel Data Warehouse
 **tempdb** è un database di sistema di SQL Server PDW che archivia le tabelle temporanee locali per i database utente. Tabelle temporanee vengono spesso utilizzate per migliorare le prestazioni delle query. Ad esempio, utilizzare una tabella temporanea per modularizzare uno script e il riutilizzo dei dati calcolati.  
   
 Per ulteriori informazioni sui database di sistema, vedere [database di sistema](system-databases.md).  
@@ -35,7 +27,7 @@ Oggetto *tabella temporanea locale* utilizza il prefisso # prima il nome della t
 Ogni sessione è possibile visualizzare i metadati per le tabelle temporanee locali in tutte le sessioni. Ad esempio, tutte le sessioni possono visualizzare i metadati per tutte le tabelle temporanee locali con la `SELECT * FROM tempdb.sys.tables` query.  
   
 tabella temporanea globale  
-*Tabelle temporanee globali*supportati in SQL Server con il # # sintassi, non sono supportati in questa versione di SQL Server PDW.  
+*Le tabelle temporanee globali*, supportata in SQL Server con il # # sintassi, non sono supportati in questa versione di SQL Server PDW.  
   
 pdwtempdb  
 **pdwtempdb** è il database che archivia le tabelle temporanee locali.  
@@ -75,13 +67,13 @@ Limitazioni e restrizioni per le tabelle temporanee locali. Si *non è possibile
   
 -   Rinominare una tabella temporanea  
   
--   Creare indici non cluster, viste o le partizioni in una tabella temporanea. **ALTER INDEX** può essere utilizzato per ricompilare un indice cluster per una tabella creato con uno.  
+-   Creare indici non cluster, viste o le partizioni in una tabella temporanea. **ALTER INDEX** può essere usato per ricompilare un indice cluster per una tabella creato con uno.  
   
 -   Modificare le autorizzazioni per le tabelle temporanee con l'istruzione GRANT, DENY o revocare le istruzioni.  
   
 -   Eseguire i comandi della console database nelle tabelle temporanee.  
   
--   Utilizzare lo stesso nome per due o più tabelle temporanee all'interno dello stesso batch. Se più di una tabella temporanea locale viene utilizzata all'interno di un batch, ognuna deve avere un nome univoco. Se più sessioni eseguono lo stesso batch e crea la tabella temporanea locale stesso, SQL Server PDW aggiunge internamente un suffisso numerico al nome della tabella temporanea locale per gestire un nome univoco per ogni tabella temporanea locale.  
+-   Utilizzare lo stesso nome per due o più tabelle temporanee all'interno dello stesso batch. Se si usa più di una tabella temporanea locale all'interno di un batch, ogni tabella deve avere un nome univoco. Se più sessioni eseguono lo stesso batch e crea la tabella temporanea locale stesso, SQL Server PDW aggiunge internamente un suffisso numerico al nome della tabella temporanea locale per gestire un nome univoco per ogni tabella temporanea locale.  
   
 > [!NOTE]  
 > Si *possibile* creare e aggiornare le statistiche in una tabella temporanea. **ALTER INDEX** può essere utilizzato per ricompilare un indice cluster.  

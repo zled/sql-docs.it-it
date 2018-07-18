@@ -1,16 +1,15 @@
 ---
 title: sp_wait_for_database_copy_sync (Database SQL di Azure) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: database-engine, sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_wait_for_database_copy_sync_TSQL
@@ -20,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_wait_for_database_copy_sync
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6ca693b57fe2178a1b817ca76579ad3e7194f7c0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6658ab7b1b68637978ca76ea709c4c0a23414d07
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Replica geografica attiva - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
  [ @target_server =] 'nome_server'  
  Nome del server di database SQL che ospita il database secondario attivo. server_name è di tipo sysname e non prevede alcun valore predefinito.  
   
- [ @target_database = ] 'database_name'  
+ [ @target_database =] 'database_name'  
  Nome del database secondario attivo. database_name è di tipo sysname e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -63,7 +62,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   Il collegamento al nome del server o al database specificato non viene trovato.  
   
--   La connettività dell'interlink viene persa. **sp_wait_for_database_copy_sync** verrà restituito dopo il timeout della connessione.  
+-   La connettività dell'interlink viene persa. **l'operazione sp_wait_for_database_copy_sync** verrà restituito dopo il timeout della connessione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente nel database primario può chiamare questa stored procedure di sistema. L'account di accesso deve essere un utente in entrambi i database primario e secondario attivo.  
@@ -82,7 +81,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys.dm continuous_copy_status &#40; Database SQL di Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [Funzioni e viste a gestione dinamica replica geografica &#40; Database SQL di Azure &#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+ [Sys.dm_continuous_copy_status &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [Funzioni e viste a gestione dinamica replica geografica &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

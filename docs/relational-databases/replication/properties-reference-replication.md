@@ -1,31 +1,32 @@
 ---
-title: "Riferimento alle proprietà (replica) | Microsoft Docs"
-ms.custom: 
+title: Riferimento alle proprietà (replica) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: F1 Help [SQL Server replication]
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- F1 Help [SQL Server replication]
 ms.assetid: 0c8c282a-d428-417f-ac83-7f37593d40c5
-caps.latest.revision: "19"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 19
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9f95a8dc9bf49d315ee857ae08c1e29efc8ce72
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d5c8dc27cfc44251a151f6b31b9e7a0b8cb13bb8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-reference-replication"></a>Riferimento alle proprietà (replica)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa sezione della documentazione contiene informazioni sulle procedure guidate e le finestre di dialogo seguenti relative alla replica:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questa sezione della documentazione vengono fornite informazioni sulle procedure guidate e le finestre di dialogo seguenti relative alla replica:  
   
 -   [Configurazione guidata distribuzione](../../relational-databases/replication/configure-distribution-wizard.md)  
   

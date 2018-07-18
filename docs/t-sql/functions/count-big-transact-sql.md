@@ -1,16 +1,14 @@
 ---
-title: COUNT_BIG (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: COUNT_BIG (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COUNT_BIG_TSQL
@@ -24,21 +22,21 @@ helpviewer_keywords:
 - number of group items
 - COUNT_BIG function
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ad2b7e5343547bb65c6d81de8c6586ef5209e52a
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a76766659a771d1ab88d0fa33a9ef62f986a8a06
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Consente di restituire il numero di elementi di un gruppo. Il funzionamento di COUNT_BIG è analogo a quello della funzione COUNT. L'unica differenza è il valore restituito. COUNT_BIG infatti restituisce sempre un **bigint** valore del tipo di dati. Funzione COUNT restituisce sempre un **int** valore del tipo di dati.
+Questa funzione restituisce il numero di elementi presenti in un gruppo. Il funzionamento di `COUNT_BIG` è analogo a quello della funzione [COUNT](../../t-sql/functions/count-transact-sql.md). Queste funzioni differiscono solo per i tipi di dati dei valori restituiti. `COUNT_BIG` restituisce sempre un valore con tipo di dati **bigint**. `COUNT` restituisce sempre un valore con tipo di dati **int**.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,48 +61,39 @@ COUNT_BIG ( { expression | * } ) OVER ( [ <partition_by_clause> ] )
   
 ## <a name="arguments"></a>Argomenti  
 ALL  
-Applica la funzione di aggregazione a tutti i valori. Il valore predefinito è ALL.
+Applica la funzione di aggregazione a tutti i valori. ALL funge da valore predefinito.
   
 DISTINCT  
-Specifica che COUNT_BIG deve restituire il numero di valori univoci non Null.
+Specifica che `COUNT_BIG` restituisce il numero di valori univoci non Null.
   
 *expression*  
-È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo. Non è possibile utilizzare funzioni di aggregazione e sottoquery.
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo. Si noti che `COUNT_BIG` non supporta le funzioni di aggregazione o le sottoquery in un'espressione.
   
 *\**  
-Specifica il conteggio di tutte le righe in modo che venga restituito il numero totale delle righe di una tabella. COUNT_BIG (*\**) non accetta parametri e non può essere utilizzato con DISTINCT. COUNT_BIG (*\**) non richiede un *espressione* parametro perché, per definizione, non utilizza informazioni di colonne particolari. COUNT_BIG (*\**) restituisce il numero di righe in una tabella specificata senza eliminare i duplicati. Ogni riga viene contata separatamente, incluse le righe contenenti valori Null.
+Specifica che `COUNT_BIG` deve conteggiare tutte le righe per determinare il numero totale delle righe della tabella da restituire. `COUNT_BIG(*)` non accetta parametri e non supporta l'uso di DISTINCT. `COUNT_BIG(*)` non richiede un parametro *expression* perché per definizione non usa informazioni relative a colonne particolari. `COUNT_BIG(*)` restituisce il numero di righe di una tabella specificata e mantiene le righe duplicate. Ogni riga viene contata separatamente, incluse le righe contenenti valori Null.
   
-ALL  
-Applica la funzione di aggregazione a tutti i valori. Il valore predefinito è ALL.
-  
-DISTINCT  
-Indica che la funzione AVG deve essere eseguita solo in ogni istanza univoca di un valore, indipendentemente dal numero di occorrenze del valore.
-  
-*expression*  
-È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di uno, categoria del tipo di dati numerici o numerici approssimativi, ad eccezione del **bit** tipo di dati. Non è possibile utilizzare funzioni di aggregazione e sottoquery.
-  
-SU **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
-*partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni a cui viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. Per ulteriori informazioni, vedere [la clausola OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
+*partition_by_clause* divide il set di risultati generato dalla clausola `FROM` in partizioni alle quali viene applicata la funzione `COUNT_BIG`. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico dell'operazione. Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Tipi restituiti
 **bigint**
   
-## <a name="remarks"></a>Osservazioni  
-COUNT_BIG(*) restituisce il numero di elementi in un gruppo, inclusi valori NULL e duplicati.
+## <a name="remarks"></a>Remarks  
+COUNT_BIG(\*) restituisce il numero di elementi in un gruppo, inclusi valori NULL e duplicati.
   
-COUNT_BIG (tutti *espressione*) restituisce *espressione* per ogni riga in un gruppo e restituisce il numero di valori non null.
+COUNT_BIG (ALL *expression*) valuta *expression* per ogni riga in un gruppo e restituisce il numero di valori non Null.
   
-COUNT_BIG (DISTINCT *espressione*) restituisce *espressione* per ogni riga in un gruppo e restituisce il numero di valori univoci non null.
+COUNT_BIG (DISTINCT *expression*) valuta *expression* per ogni riga in un gruppo e restituisce il numero di valori univoci non Null.
   
-COUNT_BIG è una funzione deterministica quando viene utilizzata senza le clausole ORDER BY e OVER. Non è deterministica quando viene specificata con le clausole ORDER BY e OVER. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+COUNT_BIG è una funzione deterministica quando viene usata ***senza*** le clausole ORDER BY e OVER. Non è deterministica quando viene usata ***con*** le clausole ORDER BY e OVER. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Esempi  
-Per esempi, vedere [COUNT &#40; Transact-SQL &#41; ](../../t-sql/functions/count-transact-sql.md).
+Per esempi, vedere [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md).
   
 ## <a name="see-also"></a>Vedere anche
-[Funzioni di aggregazione &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[Numero &#40; Transact-SQL &#41;](../../t-sql/functions/count-transact-sql.md)  
-[int, bigint, smallint e tinyint &#40; Transact-SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
-[IN una clausola &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[Funzioni di aggregazione &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)  
+[int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
+[Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

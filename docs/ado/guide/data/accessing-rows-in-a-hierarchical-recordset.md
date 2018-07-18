@@ -1,36 +1,33 @@
 ---
 title: Accesso alle righe in un Recordset gerarchico | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 829afb6aecaa50b521a86201351f6c071d934b5f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6b1b387eaa01a3a3d71c51172becf196ec6474ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Accesso alle righe in un Recordset gerarchico (ad esempio)
 L'esempio seguente mostra i passaggi necessari per accedere alle righe in un modello gerarchico [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
 
-1.  **Recordset** oggetti dal **autori** e **titleauthor** tabelle sono correlate dall'ID autore.
+1.  **Recordset** oggetti dal **autori** e **titleauthor** le tabelle vengono associate tramite ID autore.
 
 2.  Il ciclo esterno viene visualizzato il nome e cognome, stato e identificazione di ogni autore.
 
@@ -75,4 +72,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>Vedere anche
- [Data Shaping Panoramica](../../../ado/guide/data/data-shaping-overview.md) [campo oggetto](../../../ado/reference/ado-api/field-object.md) [campi insieme (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [grammatica formale forma](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft servizio Data Shaping per OLE DB (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [provider obbligatori per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md) [forma clausola APPEND](../../../ado/guide/data/shape-append-clause.md) [Forma comandi in genere](../../../ado/guide/data/shape-commands-in-general.md) [clausola COMPUTE Shape](../../../ado/guide/data/shape-compute-clause.md) [le funzioni di Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [Data Shaping Overview](../../../ado/guide/data/data-shaping-overview.md) [oggetto Field](../../../ado/reference/ado-api/field-object.md) [campi insieme (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [grammatica formale forma](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft servizio Data Shaping per OLE DB (Provider di servizi ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [provider obbligatori per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md) [forma clausola APPEND](../../../ado/guide/data/shape-append-clause.md) [forma comandi Generali](../../../ado/guide/data/shape-commands-in-general.md) [clausola COMPUTE forma](../../../ado/guide/data/shape-compute-clause.md) [le funzioni di Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)

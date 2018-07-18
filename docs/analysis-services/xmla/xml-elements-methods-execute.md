@@ -1,41 +1,24 @@
 ---
 title: Metodo Execute (XMLA) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Execute Method
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- EXECUTE
-- urn:schemas-microsoft-com:xml-analysis#
-- http://schemas.microsoft.com/analysisservices/2003/engine#
-- microsoft.xml.analysis.execute
-- urn:schemas-microsoft-com:xml-analysis#Execute
-helpviewer_keywords: Execute method
-ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
-caps.latest.revision: "34"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 083137b2c739916210113373c709ab04c0e8f4e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6c47a3c1a297bd636c64e52fcb83fda6a2b7bad5
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574933"
 ---
 # <a name="xml-elements---methods---execute"></a>Eseguire gli elementi XML - metodi-
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Invia XML per i comandi Analysis (XMLA) a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Include richieste che comportano il trasferimento dei dati, ad esempio recuperando o aggiornando dati nel server.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Invia XML per i comandi Analysis (XMLA) a un'istanza di Analysis Services. Include richieste che comportano il trasferimento dei dati, ad esempio recuperando o aggiornando dati nel server.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -67,7 +50,7 @@ ms.lasthandoff: 01/08/2018
 |Elemento padre|None|  
 |Elementi figlio|[Comando](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md), [parametri](../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md), [proprietà](../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **Execute** comandi XMLA forniti nell'esecuzione del metodo di **comando** elemento e restituisce eventuali dati risultanti utilizzando XMLA [set di righe](../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) tipo di dati (per i risultati tabulari Imposta) o XMLA [MDDataSet](../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) del tipo di dati (per il set di risultati multidimensionali.)  
   
 ## <a name="example"></a>Esempio  
@@ -91,11 +74,11 @@ ms.lasthandoff: 01/08/2018
 </Execute>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di dati XML &#40; XMLA &#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [Individuare metodo &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
- [Metodi &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-methods.md)   
- [Gli elementi XML &#40; XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
+## <a name="see-also"></a>Vedere anche
+ [Tipi di dati XML &#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
+ [Metodo Discover &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
+ [I metodi &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods.md)   
+ [Elementi XML &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [Set di righe dello schema di Analysis Services](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

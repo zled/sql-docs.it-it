@@ -1,30 +1,31 @@
 ---
 title: Stima (DMX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: PREDICT
-dev_langs: DMX
-helpviewer_keywords: Predict function
+f1_keywords:
+- PREDICT
+dev_langs:
+- DMX
+helpviewer_keywords:
+- Predict function
 ms.assetid: f02ff4b3-9bd7-409d-ad14-ead67b3206c4
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6f2aa8ba77b19aab0821777d669866409dbf01df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,9 +46,9 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>Tipo restituito  
  \<riferimento a colonna scalare >  
   
- o Gestione configurazione  
+ o  
   
- \<tabella di riferimento di colonna >  
+ \<riferimento a una colonna di tabella >  
   
  Il tipo restituito dipende dal tipo di colonna a cui è applicata la funzione.  
   
@@ -62,7 +63,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  Se è specificato il parametro INCLUDE_NODE_ID, nel risultato verrà restituita la colonna $NODEID. NODE_ID è il nodo di contenuto su cui viene eseguita la stima per un case specifico. Questo parametro è facoltativo quando si utilizza Predict sulle colonne della tabella.  
   
- Il  *n*  parametro si applica alle colonne della tabella. Imposta il numero delle righe restituite in base al tipo di stima. Se la colonna sottostante è una sequenza, chiama il **PredictSequence** (funzione). Se la colonna sottostante contiene una serie temporale, chiama il **PredictTimeSeries** (funzione). Per i tipi di stima associativi viene chiamata la **PredictAssociation** (funzione).  
+ Il *n* parametro si applica alle colonne della tabella. Imposta il numero delle righe restituite in base al tipo di stima. Se la colonna sottostante è una sequenza, chiama il **PredictSequence** (funzione). Se la colonna sottostante contiene una serie temporale, chiama il **PredictTimeSeries** (funzione). Per i tipi di stima associativi viene chiamata la **PredictAssociation** (funzione).  
   
  Il **Predict** funzione supporta il polimorfismo.  
   
@@ -98,8 +99,8 @@ FROM     [Association]
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions &#40; DMX &#41; Riferimento (funzione)](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX funzioni &#40; &#41;](../dmx/functions-dmx.md)   
- [Funzioni di stima generale &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

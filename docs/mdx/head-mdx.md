@@ -1,30 +1,31 @@
 ---
 title: Head (MDX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: HEAD
-dev_langs: kbMDX
-helpviewer_keywords: Head function
+f1_keywords:
+- HEAD
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Head function
 ms.assetid: 2a909bda-1366-4537-93b0-c089554fc11f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7276608bf6d50410cd157fe82ec96d006639d5df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b0e25718c55dbe433bd34438b459aed31b2097f9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="head-mdx"></a>Head (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +43,7 @@ Head(Set_Expression [ ,Count ] )
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Conteggio*  
+ *Count*  
  Espressione numerica valida che specifica il numero di tuple che devono essere restituite.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -66,10 +67,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tail &#40; MDX &#41;](../mdx/tail-mdx.md)   
- [Elemento &#40; Tupla &#41; &#40; MDX &#41;](../mdx/item-tuple-mdx.md)   
- [Elemento &#40; Membro &#41; &#40; MDX &#41;](../mdx/item-member-mdx.md)   
- [Numero di dimensioni &#40; MDX &#41;](../mdx/rank-mdx.md)   
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Della parte finale del &#40;MDX&#41;](../mdx/tail-mdx.md)   
+ [Elemento &#40;tupla&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
+ [Elemento &#40;membro&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
+ [Numero di dimensioni &#40;MDX&#41;](../mdx/rank-mdx.md)   
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

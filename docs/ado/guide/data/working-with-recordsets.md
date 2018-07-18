@@ -1,30 +1,27 @@
 ---
 title: Utilizzo di recordset | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b83fb8d5ad4e2e063ca840b7e8fb31bbf15fde14
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-recordsets"></a>Utilizzo di recordset
 Il **Recordset** oggetto dispone di funzionalità incorporate che consentono ridisporre l'ordine dei dati nel set di risultati, per cercare un record specifico in base a criteri specificati e anche per ottimizzare le operazioni di ricerca tramite gli indici. Se queste funzionalità sono disponibili per l'uso dipende dal provider e in alcuni casi, ad esempio quelle del [indice](../../../ado/reference/ado-api/index-property.md) proprietà, ovvero la struttura dell'origine dati stessa.  
@@ -92,11 +89,11 @@ Il **Recordset** oggetto dispone di funzionalità incorporate che consentono rid
 ### <a name="filtering-with-a-criteria-string"></a>Applicazione di filtri con una stringa di criteri  
  La stringa di criteri è costituita da clausole nel formato *nomecampo operatore valore* (ad esempio, `"LastName = 'Smith'"`). È possibile creare clausole composte concatenando clausole singole con **AND** (ad esempio, `"LastName = 'Smith' AND FirstName = 'John'"`) e **o** (ad esempio, `"LastName = 'Smith' OR LastName = 'Jones'"`). Utilizzare le seguenti linee guida per le stringhe di criteri:  
   
--   *FieldName* deve essere un nome di campo valido di **Recordset**. Se il nome del campo contiene spazi, è necessario racchiudere il nome tra parentesi quadre.  
+-   *FieldName* deve essere un nome di campo valido dal **Recordset**. Se il nome del campo contiene spazi, è necessario racchiudere il nome tra parentesi quadre.  
   
--   *Operatore* deve essere uno dei seguenti:  **\<** ,  **>** ,  **\< =** ,  **>=**  ,  **<>** ,  **=** , o **come**.  
+-   *Operatore* deve essere uno dei seguenti: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, oppure **come**.  
   
--   *Valore* è il valore con cui si confronteranno i valori dei campi (ad esempio, `'Smith'`, `#8/24/95#`, `12.345`, o `$50.00`). Utilizzare le virgolette singole (') con le stringhe e caratteri cancelletto (`#`) con le date. Per i numeri, è possibile utilizzare la notazione scientifica, segni di dollaro e decimali. Se *operatore* è **come**, *valore* possono usare caratteri jolly. Solo l'asterisco (\*) e segno di percentuale (%) jolly sono consentiti i caratteri e devono essere l'ultimo carattere nella stringa. *Valore* non può essere null.  
+-   *Valore* è il valore con cui si confronteranno i valori dei campi (ad esempio `'Smith'`, `#8/24/95#`, `12.345`, o `$50.00`). Utilizzare le virgolette singole (') con le stringhe e caratteri cancelletto (`#`) con le date. Per i numeri, è possibile utilizzare la notazione scientifica, segni di dollaro e decimali. Se *operatore* è **come**, *valore* possono usare caratteri jolly. Solo l'asterisco (\*) e segno di percentuale (%) jolly sono consentiti i caratteri e devono essere l'ultimo carattere nella stringa. *Valore* non può essere null.  
   
     > [!NOTE]
     >  Per includere le virgolette singole (') nel filtro *valore*, utilizzare due virgolette singole per rappresentare uno. Ad esempio, per filtrare *base*, la stringa di criteri deve essere `"col1 = 'O''Malley'"`. Per includere virgolette all'inizio e alla fine del valore del filtro, racchiudere la stringa tra segni di cancelletto (#). Ad esempio, per filtrare *'1'*, la stringa di criteri deve essere `"col1 = #'1'#"`.  

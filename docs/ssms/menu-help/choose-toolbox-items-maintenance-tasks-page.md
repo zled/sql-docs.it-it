@@ -1,34 +1,34 @@
 ---
-title: "Scegli elementi della Casella degli strumenti (pagina Attività di manutenzione) | Microsoft Docs"
-ms.custom: 
+title: Scegli elementi della Casella degli strumenti (pagina Attività di manutenzione) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vs.chooseitems.maintenance_tasks
 - VS.ToolboxPages.Maintenance_Tasks
-helpviewer_keywords: Customize Toolbox dialog box
+helpviewer_keywords:
+- Customize Toolbox dialog box
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5f53e840362768dde02db91d5305f043fc384985
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c9126d758d0b51948072a924da34a5f8674ce2f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Scegli elementi Casella degli strumenti (pagina Attività di manutenzione)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questa scheda della finestra di dialogo **Personalizza Casella degli strumenti** visualizza un elenco di tutti i componenti delle attività di manutenzione registrati nel computer e offre la possibilità di modificare quelli visualizzati nella Casella degli strumenti. È possibile aprire la finestra di dialogo **Personalizza Casella degli strumenti** dal menu **Strumenti** . Per ordinare l'elenco di componenti selezionare un'intestazione di colonna.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Questa scheda della finestra di dialogo **Personalizza Casella degli strumenti** visualizza un elenco di tutti i componenti delle attività di manutenzione registrati nel computer e offre la possibilità di modificare quelli visualizzati nella Casella degli strumenti. È possibile aprire la finestra di dialogo **Personalizza Casella degli strumenti** dal menu **Strumenti** . Per ordinare l'elenco di componenti selezionare un'intestazione di colonna.  
   
 ## <a name="options"></a>Opzioni  
 La scheda **Attività di manutenzione** contiene le colonne di informazioni seguenti.  

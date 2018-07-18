@@ -1,32 +1,33 @@
 ---
-title: sp_adjustpublisheridentityrange (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: sp_adjustpublisheridentityrange (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_adjustpublisheridentityrange_TSQL
 - sp_adjustpublisheridentityrange
-helpviewer_keywords: sp_adjustpublisheridentityrange
+helpviewer_keywords:
+- sp_adjustpublisheridentityrange
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c2f0214309eb060bbc02c7c05bf5243444ed5796
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e8d39485c2ed9519353a2175fa4e127a5900b0e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +47,16 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione in cui vengono riallocati i nuovi intervalli di valori Identity. *pubblicazione* è **sysname**, con un valore predefinito è NULL.  
+ Nome della pubblicazione in cui vengono riallocati i nuovi intervalli di valori Identity. *pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@table_name=**] **'***table_name***'**  
- Nome della tabella in cui vengono riallocati i nuovi intervalli di valori Identity. *TABLE_NAME* è **sysname**, con un valore predefinito è NULL.  
+ Nome della tabella in cui vengono riallocati i nuovi intervalli di valori Identity. *TABLE_NAME* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_owner=**] **'***table_owner***'**  
- Proprietario della tabella nel server di pubblicazione. *TABLE_OWNER* è **sysname**, con un valore predefinito è NULL. Se *table_owner* viene omesso, viene utilizzato il nome dell'utente corrente.  
+ [ **@table_owner=**] **'***table_owner***'**  
+ Proprietario della tabella nel server di pubblicazione. *TABLE_OWNER* viene **sysname**, con un valore predefinito è NULL. Se *table_owner* viene omesso, viene utilizzato il nome dell'utente corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_adjustpublisheridentityrange** viene utilizzata in tutti i tipi di replica.  
@@ -64,7 +65,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
   
  Quando si esegue **sp_adjustpublisheridentityrange**, *pubblicazione* o *table_name* deve essere specificato. Se vengono specificati entrambi oppure viene omesso uno dei due, viene restituito un errore.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_adjustpublisheridentityrange**.  
   
 ## <a name="see-also"></a>Vedere anche  

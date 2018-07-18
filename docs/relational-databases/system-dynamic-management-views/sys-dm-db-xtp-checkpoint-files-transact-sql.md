@@ -1,16 +1,14 @@
 ---
 title: sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_xtp_checkpoint_files
@@ -22,36 +20,36 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_files dynamic management view
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fff8a7cff566b555c0cc28ff6e60c67815956738
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c4ad13459024604d748c1dac8a6649c09a53f10f
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Visualizza informazioni sui file del checkpoint, incluse le dimensioni del file, la posizione fisica e l'ID transazione.  
   
-> **Nota:** per il checkpoint corrente che non è chiusa, la colonna stato della s`ys.dm_db_xtp_checkpoint_files` sarà UNDER CONSTRUCTION per i nuovi file. Un checkpoint viene chiuso automaticamente quando è sufficiente aumento delle dimensioni del log delle transazioni dall'ultimo checkpoint oppure se si esegue il `CHECKPOINT` comando ([CHECKPOINT &#40; Transact-SQL &#41; ](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
+> **Nota:** per il checkpoint corrente che non è chiusa, la colonna stato di s`ys.dm_db_xtp_checkpoint_files` sarà UNDER CONSTRUCTION per i nuovi file. Un checkpoint viene chiuso automaticamente quando è sufficiente aumento delle dimensioni del log delle transazioni dall'ultimo checkpoint oppure se si esegue il `CHECKPOINT` comando ([CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
   
  Un filegroup con ottimizzazione per la memoria utilizza internamente solo aggiungere i file per archiviare le righe inserite ed eliminate per le tabelle in memoria. Sono disponibili due tipi di file. Un file di dati contiene le righe inserite mentre un file differenziale contiene riferimenti alle righe eliminate. 
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è notevolmente diverso rispetto alle versioni più recenti e viene illustrato più basso nell'argomento in [SQL Server 2014](#bkmk_2014).  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è notevolmente diverso rispetto alle versioni più recenti e viene illustrato più basso nell'argomento relativo alla [SQL Server 2014](#bkmk_2014).  
   
  Per ulteriori informazioni, vedere [creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
-##  <a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive  
- Nella tabella seguente vengono descritte le colonne per `sys.dm_db_xtp_checkpoint_files`, a partire da  **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
+##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive  
+ Nella tabella seguente vengono descritte le colonne per `sys.dm_db_xtp_checkpoint_files`, a partire da **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
   
 |Nome colonna|Tipo|Description|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|ID del contenitore (rappresentato come file con tipo FILESTREAM in sys.database_files) di cui fa parte il file di dati o il file differenziale. Join con file_id in [Sys. database_files &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
+|container_id|**int**|ID del contenitore (rappresentato come file con tipo FILESTREAM in sys.database_files) di cui fa parte il file di dati o il file differenziale. Join con file_id in [Sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID del contenitore, ovvero il file radice, dati o differenziale. Crea un join con file_guid nella tabella sys. database_files.|  
 |checkpoint_file_id|**uniqueidentifier**|GUID del file del checkpoint.|  
 |relative_file_path|**nvarchar(256)**|Percorso del file relativo contenitore a che è mappata.|  
@@ -70,14 +68,14 @@ ms.lasthandoff: 02/03/2018
 |end_checkpoint_id|**bigint**|ID del checkpoint finale.|  
 |last_updated_checkpoint_id|**bigint**|ID dell'ultimo checkpoint che il file aggiornato.|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 = > UNENCRTPTED<br /><br /> 1 = > CRITTOGRAFATO CON CHIAVE 1<br /><br /> 2 = > CRITTOGRAFATO CON CHIAVE 2. Valido solo per i file attivi.|  
+|encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; CRITTOGRAFATO CON CHIAVE 1<br /><br /> 2 = &GT; CRITTOGRAFATO CON CHIAVE 2. Valido solo per i file attivi.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- Nella tabella seguente vengono descritte le colonne per `sys.dm_db_xtp_checkpoint_files`, per  **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
+ Nella tabella seguente vengono descritte le colonne per `sys.dm_db_xtp_checkpoint_files`, per **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
 |Nome colonna|Tipo|Description|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|ID del contenitore (rappresentato come file con tipo FILESTREAM in sys.database_files) di cui fa parte il file di dati o il file differenziale. Join con file_id in [Sys. database_files &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
+|container_id|**int**|ID del contenitore (rappresentato come file con tipo FILESTREAM in sys.database_files) di cui fa parte il file di dati o il file differenziale. Join con file_id in [Sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID del contenitore di cui fa parte il file di dati o il file differenziale.|  
 |checkpoint_file_id|**GUID**|ID del file di dati o differenziale.|  
 |relative_file_path|**nvarchar(256)**|Percorso del file di dati o differenziale, relativo al percorso del contenitore.|  
@@ -128,6 +126,6 @@ ORDER BY state, file_type
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica tabella con ottimizzazione per la memoria &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica tabella ottimizzazione della memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,31 +1,29 @@
 ---
 title: Programma di installazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/31/2016
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: installing ODBC components [ODBC], setup program
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- installing ODBC components [ODBC], setup program
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 615f3151212c362ad0a813ee1af9718f83398270
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 175991bd2aafe25f25848b1476d07c9e2e1e29b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-program"></a>Programma di installazione
-> **Nota:** a partire da Windows XP e Windows Server 2003, **ODBC è incluso nel sistema operativo Windows**. Solo in modo esplicito, è necessario installare ODBC nelle versioni precedenti di Windows.  
+> **Nota:** a partire da Windows XP e Windows Server 2003 **ODBC è incluso nel sistema operativo Windows**. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  L'utente esegue il programma di installazione per avviare il processo di installazione. Il programma di installazione viene scritto dallo sviluppatore dell'applicazione o driver. Oltre a installare i componenti ODBC, è possibile installare il software. Ad esempio, gli sviluppatori di applicazioni potrebbero utilizzare lo stesso programma di installazione per installare i componenti ODBC e per installare le applicazioni.  
   

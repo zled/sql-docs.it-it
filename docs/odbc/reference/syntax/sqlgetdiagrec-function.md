@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLGetDiagRec | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLGetDiagRec
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLGetDiagRec
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetDiagRec
-helpviewer_keywords: SQLGetDiagRec function [ODBC]
+f1_keywords:
+- SQLGetDiagRec
+helpviewer_keywords:
+- SQLGetDiagRec function [ODBC]
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 34aa67ed374f525f6195403b299500019192c19a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: a926e8de729fe5d654f880128371bfc48dd39fdd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdiagrec-function"></a>Funzione SQLGetDiagRec
 **Conformità**  
  Introdotta: versione ODBC 3.0 aderenza: 92 ISO  
   
  **Riepilogo**  
- **SQLGetDiagRec** restituisce i valori di più campi di un record di diagnostica che contiene informazioni sull'errore, avviso e lo stato correnti. A differenza di **SQLGetDiagField**, che restituisce un campo di diagnostica per ogni chiamata, **SQLGetDiagRec** restituisce diversi campi di un record di diagnostica, tra cui il valore SQLSTATE, il codice di errore nativo di uso comune e il testo del messaggio di diagnostica.  
+ **SQLGetDiagRec** restituisce i valori correnti di più campi di un record di diagnostica che contiene informazioni sull'errore, avviso e stato. A differenza di **SQLGetDiagField**, che restituisce un campo di diagnostica per ogni chiamata, **SQLGetDiagRec** restituisce diversi campi di un record di diagnostica, tra cui il valore SQLSTATE, il codice di errore nativo di uso comune e il testo del messaggio di diagnostica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -93,7 +94,7 @@ SQLRETURN SQLGetDiagRec(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- **SQLGetDiagRec** non registra record di diagnostica per se stesso. Usa i seguenti valori restituiti per segnalare il risultato della propria esecuzione:  
+ **SQLGetDiagRec** non invia i record di diagnostica per se stesso. Usa i seguenti valori restituiti per segnalare il risultato della propria esecuzione:  
   
 -   SQL_SUCCESS: La funzione ha restituito correttamente le informazioni di diagnostica.  
   
@@ -105,11 +106,11 @@ SQLRETURN SQLGetDiagRec(
   
     -   *RecNumber* è negativo o 0.  
   
-    -   *BufferLength* è minore di zero.  
+    -   *BufferLength* era minore di zero.  
   
     -   Quando si utilizza la notifica asincrona, l'operazione asincrona dell'handle non è completo.  
   
--   SQL_NO_DATA: *RecNumber* è maggiore del numero di record di diagnostica esistenti per l'handle specificato nel *gestire.* La funzione restituisce SQL_NO_DATA per qualsiasi positivo *RecNumber* se non sono presenti record di diagnostica per *gestire*.  
+-   SQL_NO_DATA: *RecNumber* era maggiore del numero dei record di diagnostica esistenti per l'handle specificato nel *gestire.* La funzione restituisce SQL_NO_DATA per qualsiasi positivo *RecNumber* se non sono presenti record di diagnostica per *gestire*.  
   
 ## <a name="comments"></a>Commenti  
  Un'applicazione chiama in genere **SQLGetDiagRec** quando una chiamata precedente a una funzione ODBC ha restituito SQL_ERROR o SQL_SUCCESS_WITH_INFO. Tuttavia, poiché una funzione ODBC registrare zero o più record di diagnostica ogni volta che viene chiamato, un'applicazione può chiamare **SQLGetDiagRec** dopo ogni chiamata di funzione ODBC. Un'applicazione può chiamare **SQLGetDiagRec** più volte per restituire alcuni o tutti i record nella struttura di dati di diagnostica. ODBC non impone alcun limite al numero di record di diagnostica che possono essere archiviati in qualsiasi momento.  

@@ -1,30 +1,28 @@
 ---
 title: Impostazioni globali (finestre di dialogo) (DB2ToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6c61fd0cdadaa0da27d737785755705b8b8e7d79
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 88ada3b15e6c3b0ff23661876a713f633ea93262
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="global-settings-dialogs-db2tosql"></a>Impostazioni globali (finestre di dialogo) (DB2ToSQL)
 Utilizzare la pagina di finestre di dialogo del **impostazioni globali** la finestra di dialogo per specificare l'azione predefinita dell'utente e impostazioni di avviso per SSMA.  
@@ -41,7 +39,7 @@ Utilizzare questa opzione per specificare se SSMA venga chiesto di sovrascrivere
   
 -   Se si seleziona **False**, **azione predefinita di sovrascrittura dell'oggetto** opzione viene visualizzata in cui si specifica l'azione predefinita.  
   
-**Azione predefinita di sovrascrittura di oggetto**  
+**Azione predefinita sovrascrittura di oggetto**  
 Questa opzione viene visualizzata se si seleziona **False** per il **Avvisa prima di sovrascrivere gli oggetti** opzione.  
   
 Utilizzare questa opzione per specificare l'oggetto predefinito sovrascrivere il comportamento:  

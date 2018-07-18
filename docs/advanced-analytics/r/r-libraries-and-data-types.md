@@ -1,29 +1,20 @@
 ---
-title: Uso dei tipi di dati di R | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 01/31/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 977d358981e3382a0ea8ee224362098627424e88
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Utilizzo di tipi di dati R in SQL Server Machine Learning | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586043"
 ---
-# <a name="r-libraries-and-r-data-types"></a>Librerie di R e i tipi di dati
+# <a name="r-libraries-and-r-data-types"></a>Librerie R e i tipi di dati R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo argomento descrive le librerie di R inclusi e i tipi di dati che sono supportati nei seguenti prodotti:
@@ -39,12 +30,12 @@ Entrambi i prodotti, servizi R e i servizi di Machine Learning con R, sono allin
 
 Per visualizzare la versione di R associata a una particolare istanza di SQL Server, aprire RGui.
 
-1. Per l'istanza predefinita, il percorso dovrebbe essere come segue:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+1. Per l'istanza predefinita, il percorso dovrebbe essere come segue: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 2. Viene visualizzato un messaggio che elenca la distribuzione di R e il numero di versione di Microsoft R Open.
 
 Per trovare la versione di R inclusi in una particolare versione di Microsoft R Server, vedere [R Server - Novità](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
 
-Si noti che il sistema di gestione di pacchetti in SQL Server significa che più versioni di un pacchetto R possono essere installate nello stesso computer, con più utenti di condividere lo stesso pacchetto o versioni diverse dello stesso pacchetto. Per ulteriori informazioni, vedere [gestione dei pacchetti R in SQL Server](../r/r-package-management-for-sql-server-r-services.md).
+Si noti che il sistema di gestione di pacchetti in SQL Server significa che più versioni di un pacchetto R possono essere installate nello stesso computer, con più utenti di condividere lo stesso pacchetto o versioni diverse dello stesso pacchetto. Per ulteriori informazioni, vedere [gestione dei pacchetti R in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## <a name="r-and-sql-data-types"></a>R e i tipi di dati SQL
 
@@ -84,7 +75,7 @@ La tabella seguente mostra le modifiche del tipo di dati e dei valori quando i d
 
 Tra le categorie di tipi di dati supportati dal [sistema di tipi di SQL Server](../../t-sql/data-types/data-types-transact-sql.md), i tipi seguenti possono porre problemi se passati al codice R:
 
-+ Tipi di dati elencati nel **altri** sezione dell'argomento di sistema di tipo SQL: **cursore**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **tabella**
++ Tipi di dati elencati nella **altri** sezione dell'argomento di sistema di tipo SQL: **cursore**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **tabella**
 + Tutti i tipi spaziali
 + **image**
 

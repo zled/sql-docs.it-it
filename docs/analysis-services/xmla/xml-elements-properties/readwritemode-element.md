@@ -1,32 +1,24 @@
 ---
 title: Elemento ReadWriteMode | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: ReadWriteMode command
-ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
-caps.latest.revision: "13"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05a5397987761530d783097ec76914b01fe5356c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0d528567e22c3ba19b49eefff10d886703a0d29a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576493"
 ---
 # <a name="readwritemode-element"></a>Elemento ReadWriteMode
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Il **ReadWriteMode** proprietà di database consente di specificare se il database è in **ReadWrite** modalità o in **ReadOnly** modalità. Questi sono i due soli valori possibili della proprietà.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Il **ReadWriteMode** proprietà di database consente di specificare se il database è in **ReadWrite** modalità o in **ReadOnly** modalità. Questi sono i due soli valori possibili della proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 |Elementi padre|[Database](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I database vengono creati **ReadWrite** solo in modalità. Non possono essere creati **ReadOnly** modalità.  
   
  Il valore di **ReadWriteMode** elemento è limitato a una delle stringhe elencate nella tabella seguente.  
@@ -64,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 |*Sola lettura*|Non è possibile applicare modifiche o aggiornamenti al database.|  
 |*Lettura/scrittura*|È possibile applicare modifiche e aggiornamenti al database.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
  [Elemento Attach](../../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [Collegamento e scollegamento di database di Analysis Services](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Spostare un Database di Analysis Services](../../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

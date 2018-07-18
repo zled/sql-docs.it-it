@@ -1,34 +1,31 @@
 ---
 title: Concorrenza ottimistica | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 - optimistic concurrency [ODBC]
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ff92590df7cbc65f3fb349327827c652fe1dd567
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 95593c35e55f899c3fb062adf4f5edde197f813c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimistic-concurrency"></a>Concorrenza ottimistica
-*Concorrenza ottimistica* il relativo nome deriva dal presupposto ottimistico che raramente si verificheranno conflitti tra le transazioni, viene definito un conflitto si sono verificati quando un'altra transazione aggiorna o elimina una riga di dati tra il momento in cui è in lettura la transazione corrente e l'ora venga aggiornato o eliminato. È l'opposto di *concorrenza pessimistica,* o di blocco, in cui lo sviluppatore dell'applicazione ritiene che tali conflitti siano comuni.  
+*Concorrenza ottimistica* il relativo nome deriva dal presupposto ottimistico che raramente si verificheranno conflitti tra le transazioni, viene definito un conflitto si sono verificati quando un'altra transazione aggiorna o elimina una riga di dati tra il momento in cui viene letto la transazione corrente e l'ora viene aggiornata o eliminata. È l'opposto di *concorrenza pessimistica,* o di blocco, in cui lo sviluppatore dell'applicazione ritiene che tali conflitti siano comuni.  
   
  Nella concorrenza ottimistica, una riga viene sbloccato fino a quando l'ora di aggiornare o eliminare. A questo punto, la riga viene letto nuovamente e controllata per verificare se è stato modificato dopo l'ultima lettura. Se la riga è stata modificata, l'aggiornamento o eliminazione di ha esito negativo e deve essere eseguito un nuovo tentativo.  
   

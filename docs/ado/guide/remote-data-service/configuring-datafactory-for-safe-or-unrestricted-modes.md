@@ -1,30 +1,27 @@
 ---
-title: "Configurazione di data factory per la modalità provvisoria o senza restrizioni | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Configurazione di data factory per la modalità provvisoria o senza restrizioni | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory configuration in RDS [ADO]
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34b33a8b1d729a97fd246edcb4d6056954130c27
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e3af0bf538b8d2fb774b06644e8089cf201b5fc6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Configurazione di data factory per la modalità provvisoria o senza restrizioni
 > [!IMPORTANT]
@@ -38,7 +35,7 @@ ms.lasthandoff: 02/09/2018
   
 3.  MSDFMAP file viene installato nella directory di Windows. È necessario configurare il file in base alle esigenze, prima di usare servizi desktop remoto in modalità a tre livelli.  
   
- Facoltativamente, è possibile configurare un'autorizzazione **DataFactory** installazione. **DataFactory** può essere utilizzato direttamente senza il gestore personalizzato. Sarà quindi possibile utilizzare un gestore personalizzato modificando le stringhe di connessione, ma non è necessaria. Per ulteriori informazioni sulle implicazioni dell'utilizzo di **RDSServer** , vedere [protezione delle applicazioni di servizi desktop remoto](../../../ado/guide/remote-data-service/securing-rds-applications.md).  
+ Facoltativamente, è possibile configurare un'autorizzazione **DataFactory** installazione. **DataFactory** può essere usato direttamente senza il gestore personalizzato. Sarà quindi possibile utilizzare un gestore personalizzato modificando le stringhe di connessione, ma non è necessaria. Per ulteriori informazioni sulle implicazioni dell'utilizzo di **RDSServer** , vedere [protezione delle applicazioni di servizi desktop remoto](../../../ado/guide/remote-data-service/securing-rds-applications.md).  
   
  Il file di registro di sistema handsafe. reg è stato specificato per impostare le voci di registro del gestore per una configurazione sicura. Per eseguire in modalità provvisoria, eseguire handsafe.  
   

@@ -1,34 +1,32 @@
 ---
 title: Struttura del codice | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], outlining code
 - Query Editor [SQL Server Management Studio], hiding code
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0aa528dd30f068d74f708c064fd8a8812abdae9
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 59bc3f30f3a2fe663f15aaf8260bb3b83982022a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="code-outlining"></a>Struttura del codice
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La modalità struttura negli editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di nascondere in modo selettivo il codice quando si modificano query. In questo modo è possibile visualizzare più facilmente il codice utilizzato, soprattutto in file di query di dimensioni elevate.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  La modalità struttura negli editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di nascondere in modo selettivo il codice quando si modificano query. In questo modo è possibile visualizzare più facilmente il codice utilizzato, soprattutto in file di query di dimensioni elevate.  
   
 ## <a name="outlining-overview"></a>Panoramica sulla struttura  
  Per impostazione predefinita, quando si apre una finestra dell'editor di query tutto il codice è visibile. È possibile comprimere alcune aree del codice per nasconderne la visualizzazione. In una riga verticale sul bordo sinistro della finestra dell'editor viene utilizzato un quadrato con un segno meno (-) per identificare l'inizio di ogni area di codice comprimibile. Quando si fa clic sul segno meno, il testo dell'area del codice viene sostituito con una casella che contiene tre punti (...) e il segno meno viene modificato in un segno più (+). Quando si fa clic sul segno più, il codice compresso viene visualizzato e il segno più viene modificato in un segno meno. Quando si sposta il puntatore su una casella in cui sono presenti i tre punti, viene visualizzata una descrizione di comando in cui viene mostrato il codice contenuto nella sezione compressa.  

@@ -1,32 +1,29 @@
 ---
 title: La soluzione ODBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - SQL [ODBC], database access
 - database access [ODBC]
 - standardizing database access [ODBC], using ODBC
 ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e0afa0862dc69aa093a662e44732f396e3f48f78
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: a071ce8c5fc767b3cb7dc998562328e4a6b94d53
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-odbc-solution"></a>La soluzione ODBC
 La domanda, quindi, è come ODBC standardizzare accesso al database? Esistono due requisiti di architettura:  
@@ -49,13 +46,13 @@ La domanda, quindi, è come ODBC standardizzare accesso al database? Esistono du
   
      Le applicazioni possono inviare le istruzioni che utilizzano ODBC o specifici del DBMS di grammatica. Se un'istruzione utilizza grammatica ODBC che è diversa dalla grammatica specifici del DBMS, il driver converte prima dell'invio all'origine dati. Tuttavia, queste conversioni sono rare, poiché la maggior parte dei DBMS già in uso la grammatica SQL standard.  
   
--   **ODBC fornisce un gestore di Driver per gestire l'accesso simultaneo di più DBMS.** Sebbene l'utilizzo di driver risolve il problema dell'accesso a più DBMS contemporaneamente, è possibile che il codice per eseguire questa operazione può essere complesso. Le applicazioni che vengono progettate per funzionare con tutti i driver non possono essere collegate staticamente per tutti i driver. Ma è necessario caricare i driver in fase di esecuzione e chiamare le funzioni in essi contenuti tramite una tabella di puntatori a funzione. La situazione diventa più complessa se l'applicazione usa più driver contemporaneamente.  
+-   **ODBC fornisce una gestione Driver per gestire l'accesso simultaneo a più DBMS.** Sebbene l'utilizzo di driver risolve il problema dell'accesso a più DBMS contemporaneamente, è possibile che il codice per eseguire questa operazione può essere complesso. Le applicazioni che vengono progettate per funzionare con tutti i driver non possono essere collegate staticamente per tutti i driver. Ma è necessario caricare i driver in fase di esecuzione e chiamare le funzioni in essi contenuti tramite una tabella di puntatori a funzione. La situazione diventa più complessa se l'applicazione usa più driver contemporaneamente.  
   
      Anziché richiedere ogni applicazione a tale scopo, ODBC offre una gestione Driver. Gestione Driver implementa tutte le funzioni ODBC, principalmente come pass-through chiamate a funzioni ODBC driver e in modo statico è collegata all'applicazione o caricate dall'applicazione in fase di esecuzione. Di conseguenza, l'applicazione chiama funzioni ODBC in base al nome in Gestione Driver, anziché dal puntatore in tutti i driver.  
   
      Quando un'applicazione richiede un driver specifico, innanzitutto richiede un handle di connessione da utilizzare per identificare i driver e le richieste di gestione Driver caricare il driver. Gestione Driver viene caricato il driver e archivia l'indirizzo di ogni funzione nel driver. Per chiamare una funzione ODBC nel driver, l'applicazione chiama tale funzione in Gestione Driver e passa l'handle di connessione per il driver. Gestione Driver quindi chiama la funzione utilizzando l'indirizzo memorizzate in precedenza.  
   
--   **ODBC espone un numero significativo di funzionalità DBMS, ma non richiede i driver per supportare tutti gli elementi.** Se ODBC esposte solo le funzionalità che sono comuni a tutti i DBMS, sarebbe di grande utilità; Dopo tutto, il motivo, in modo DBMS diversi più attualmente esistenti è che dispongono di funzionalità diversi. Se ODBC esposte tutte le funzionalità che sono disponibile in qualsiasi sistema DBMS, sarebbe impossibile per implementare i driver.  
+-   **ODBC espone un numero significativo di funzionalità DBMS, ma non hanno bisogno di driver per supportare tutti gli elementi.** Se ODBC esposte solo le funzionalità che sono comuni a tutti i DBMS, sarebbe di grande utilità; Dopo tutto, il motivo, in modo DBMS diversi più attualmente esistenti è che dispongono di funzionalità diversi. Se ODBC esposte tutte le funzionalità che sono disponibile in qualsiasi sistema DBMS, sarebbe impossibile per implementare i driver.  
   
      Invece ODBC espone un numero significativo di funzionalità, più sono supportati da DBMS la maggior parte, ma richiede driver di implementare solo un subset di tali funzionalità. I driver di implementano le funzionalità rimanenti solo se sono supportate dal sistema DBMS sottostante o se si sceglie di emulare li. Di conseguenza, le applicazioni possono essere scritti per sfruttare le funzionalità di un singolo DBMS esposto dal driver per DBMS, per utilizzare solo le funzionalità utilizzate da tutti i DBMS, o per verificare il supporto di una particolare funzionalità e reagire di conseguenza.  
   

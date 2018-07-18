@@ -1,27 +1,25 @@
 ---
 title: Controllo della visualizzazione dell'area dati Tablix in una pagina del report | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 3a175f5a33591459b302919a2f8af72dee945551
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 05ebc27d8ca5ac641819e01c0e9cf3e5cbc27457
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Controllo della visualizzazione dell'area dati Tablix in una pagina del report
 Informazioni sulle proprietà che è possibile impostare in un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] per le aree dati tabella, matrice o elenco, per modificare l'aspetto del report durante la visualizzazione.  
@@ -33,13 +31,13 @@ Le aree dati tabella, matrice ed elenco sono tutte esempi di aree dati *Tablix* 
   
 -   **Scrittura di espressioni**. Per altre informazioni, vedere [Uso delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) ed [Esempi di espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
--   **Controllo dell'ordinamento**. Per controllare l'ordinamento, definire espressioni di ordinamento nell'area dati. Per controllare l'ordinamento di righe e colonne associate a un gruppo, definire espressioni di ordinamento nel gruppo includendo i gruppi di dettagli. È possibile aggiungere anche pulsanti di ordinamento interattivi per consentire all'utente di ordinare un'area dati Tablix o i rispettivi gruppi. Per altre informazioni, vedere [Ordinare i dati in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+-   **Controllo dell'ordinamento**. Per controllare l'ordinamento, definire espressioni di ordinamento nell'area dati. Per controllare l'ordinamento di righe e colonne associate a un gruppo, definire espressioni di ordinamento nel gruppo includendo i gruppi di dettagli. È possibile aggiungere anche pulsanti di ordinamento interattivi per consentire all'utente di ordinare un'area dati Tablix o i rispettivi gruppi. Per altre informazioni, vedere [Ordinare i dati in un'area dati &#40;Generatore report e SSRS& #41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 -   **Visualizzazione di un messaggio quando non sono presenti dati**. Quando per un set di dati del report non esistono dati in fase di esecuzione, è possibile scrivere un messaggio personalizzato da visualizzare in sostituzione dell'area dati. Per altre informazioni, vedere [Impostazione di una proprietà NoDataMessage per un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
 -   **Nascondere i dati in modo condizionale**. Per controllare in modo condizionale la visualizzazione di un'area dati o di parti di un'area dati, è possibile impostare la proprietà Hidden su **True** o su un'espressione. Le espressioni possono includere riferimenti ai parametri di report. È inoltre possibile specificare un elemento Toggle in modo da consentire all'utente di visualizzare i dati di dettaglio. Per altre informazioni, vedere [Azione di drill-down &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md).  
   
--   **Unione di celle.** È possibile combinare più celle contigue di una tabella in un'unica cella. Questa operazione viene denominata estensione su più colonne o unione di celle. Le celle possono essere combinate solo orizzontalmente o verticalmente. Quando si uniscono le celle, vengono mantenuti soltanto i dati della prima cella, mentre i dati delle altre celle vengono rimossi. Le celle unite possono essere nuovamente suddivise nelle colonne originali. Per altre informazioni, vedere [Unire le celle in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
+-   **Unione di celle.** È possibile combinare più celle contigue di una tabella in un'unica cella. Questa operazione viene denominata estensione su più colonne o unione di celle. Le celle possono essere combinate solo orizzontalmente o verticalmente. Quando si uniscono le celle, vengono mantenuti soltanto i dati della prima cella, mentre i dati delle altre celle vengono rimossi. Le celle unite possono essere nuovamente suddivise nelle colonne originali. Per altre informazioni, vedere [Unire le celle in un'area dati &#40;Generatore report e SSRS& #41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="controlling-tablix-data-region-position-and-expansion-on-a-page"></a>Controllo dell'espansione e della posizione dell'area dati Tablix in una pagina  
  Le caratteristiche seguenti consentono di controllare la modalità di visualizzazione di un'area dati Tablix in un report visualizzabile:  

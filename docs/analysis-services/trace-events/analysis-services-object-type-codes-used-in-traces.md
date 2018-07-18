@@ -1,31 +1,23 @@
 ---
 title: Oggetto di Analysis Services usati nelle tracce di tipi di codice | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: trace-events
 ms.topic: reference
-ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4d451b0348604c4b824bb5bf77c0e719990b1643
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Codici del tipo di oggetto di Analysis Services usati nelle tracce
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Questa pagina elenca il tipo di oggetto (un numero di sei cifre) di ogni oggetto disponibile in un modello di dati di Analysis Services. Questi codici vengono visualizzati nei log di traccia e vengono usati per identificare il tipo di oggetto associato a un blocco specifico. Ad esempio, un timeout di blocco su un database indicherà il tipo di oggetto 100002, ovvero il tipo di oggetto Database.  
+  Questa pagina elenca il tipo di oggetto (un numero di sei cifre) di ogni oggetto disponibile in un modello di dati di Analysis Services. Questi codici vengono visualizzati nei log di traccia e vengono usati per identificare il tipo di oggetto associato a un blocco specifico. Ad esempio, un timeout di blocco su un database indicherà il tipo di oggetto 100002, ovvero il tipo di oggetto Database.  
   
 > [!NOTE]  
 >  I codici elencati di seguito sono più numerosi rispetto a quelli effettivamente visualizzati in un log di traccia. L'elenco seguente è un elenco completo di tipi di codice per ogni oggetto, ma solo gli oggetti che accettano un blocco presenteranno un codice del tipo di oggetto in un log di traccia.  
@@ -35,7 +27,7 @@ Questa pagina elenca il tipo di oggetto (un numero di sei cifre) di ogni oggetto
 |Tipo oggetto|Nome oggetto|  
 |-----------------|-----------------|  
 |100000|Server|  
-|100001|Command|  
+|100001|Comando|  
 |100002|Database|  
 |100003|DataSource|  
 |100004|DatabasePermission|  
@@ -77,7 +69,7 @@ Questa pagina elenca il tipo di oggetto (un numero di sei cifre) di ogni oggetto
 |100050|Traccia|  
 |100051|ServerAssembly|  
 |100052|CubeAssembly|  
-|100053|Command|  
+|100053|Comando|  
 |100054|Indicatore KPI|  
 |100055|DataSourceView|  
 |100056|Prospettiva|  

@@ -1,16 +1,14 @@
 ---
-title: ACOS (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ACOS (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ACOS
@@ -22,21 +20,21 @@ helpviewer_keywords:
 - ACOS function
 - arccosine
 ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 42132bf92af16aedcd82581c1b658623da5f6df1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 165cd76209927d223e90be73bad6fd0b383e5404
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Funzione matematica che restituisce l'angolo, espresso in radianti, il cui coseno è specificato **float** espressione denominato anche arcocoseno.
+Funzione che restituisce l'angolo, espresso in radianti, il cui coseno corrisponde all'espressione float specificata. Il valore restituito viene definito anche arcocoseno.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,14 +45,14 @@ ACOS ( float_expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*argomento float_expression*  
-È un'espressione di tipo **float** o di un tipo che può essere convertito in modo implicito in **float**, con un valore compreso tra -1 e 1. I valori non compresi in questo intervallo restituiscono NULL e segnalano un errore di dominio.
+*float_expression*  
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **float** oppure di un tipo che può essere convertito in modo implicito in float. È valido solo un valore compreso tra -1,00 e 1,00. I valori non compresi in questo intervallo restituiscono NULL e ASIN e segnalano un errore di dominio.
   
 ## <a name="return-types"></a>Tipi restituiti  
 **float**
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene restituito l'arcocoseno del numero specificato.
+In questo esempio viene restituito il valore `ACOS` del numero specificato.
   
 ```sql
 SET NOCOUNT OFF;  
@@ -72,27 +70,8 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
-
-Nell'esempio seguente viene restituito l'arcocoseno del numero specificato.
-  
-```sql
-DECLARE @cos float;  
-SET @cos = -1.0;  
-SELECT 'The ACOS of the number is: ' + CONVERT(varchar, ACOS(@cos));  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
----------------------------------   
-The ACOS of the number is: 3.14159   
-  
-(1 row(s) affected)  
-```  
-  
 ## <a name="see-also"></a>Vedere anche
-[Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[Funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [Funzioni](../../t-sql/functions/functions.md)
   
   

@@ -1,33 +1,33 @@
 ---
 title: Oggetto Trasporto Broker/DBM di SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2939dbbd505021da7a8623c5671ad7bd3063cc7a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: dc79e7ca28f76cb2a2e81995448ea6f645d058a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server, oggetto Trasporto Broker/DBM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'oggetto prestazione **Trasporto Broker/DBM** include contatori delle prestazioni che contengono informazioni di rete per Service Broker e il mirroring del database. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L'oggetto prestazione **Trasporto Broker/DBM** include contatori delle prestazioni che contengono informazioni di rete per Service Broker e il mirroring del database. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
   
 |Contatore Trasporto Broker/DBM di SQL Server|Description|  
 |------------------------------------------------|-----------------|  

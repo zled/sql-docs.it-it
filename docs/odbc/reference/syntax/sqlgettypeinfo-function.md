@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLGetTypeInfo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLGetTypeInfo
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLGetTypeInfo
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetTypeInfo
-helpviewer_keywords: SQLGetTypeInfo function [ODBC]
+f1_keywords:
+- SQLGetTypeInfo
+helpviewer_keywords:
+- SQLGetTypeInfo function [ODBC]
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 508b89f5ff60b5cf64a03d167bf1ad4476edb734
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ac27290ce265a673e113d0cb59195708a34bebd7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgettypeinfo-function"></a>Funzione SQLGetTypeInfo
 **Conformità**  
@@ -51,7 +52,7 @@ SQLRETURN SQLGetTypeInfo(
  *StatementHandle*  
  [Input] Handle di istruzione per il set di risultati.  
   
- *Tipo di dati*  
+ *DataType*  
  [Input] Il tipo di dati SQL. Deve essere uno dei valori di [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) sezione dell'appendice d: i tipi di dati o un tipo di dati specifici del driver SQL. SQL_ALL_TYPES specifica che devono essere restituite informazioni su tutti i tipi di dati.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
@@ -83,7 +84,7 @@ SQLRETURN SQLGetTypeInfo(
 |IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente dell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato per l'handle per eseguire la post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLGetTypeInfo** restituisce i risultati come set di risultati standard, ordinati in base a DATA_TYPE e quindi al precisione il tipo di dati esegue il mapping al tipo di dati SQL ODBC corrispondente. Tipi di dati definiti dall'origine dati hanno la precedenza su tipi di dati definito dall'utente. Di conseguenza, l'ordinamento non è necessariamente coerenza, ma può essere generalizzato come DATA_TYPE prima, seguito da TYPE_NAME, entrambi crescente. Ad esempio, si supponga che tipi di dati INTEGER e contatore, contatore, in cui è a incremento automatico, è definita da un'origine dati e che un tipo di dati definito dall'utente WHOLENUM sia stato definito. Questi verrebbe restituito nell'ordine di numero intero, WHOLENUM e contatore, perché esegue il mapping da vicino ai dati SQL ODBC WHOLENUM tipo SQL_INTEGER, mentre il tipo di dati a incremento automatico, anche se supportato dall'origine dati, non è associato strettamente a un tipo di dati SQL ODBC. Per informazioni sulla modalità di utilizzo queste informazioni, vedere [istruzioni DDL](../../../odbc/reference/develop-app/ddl-statements.md).  
+ **SQLGetTypeInfo** restituisce i risultati come set di risultati standard, ordinati in base a DATA_TYPE e quindi in base alla precisione il tipo di dati esegue il mapping al tipo di dati SQL ODBC corrispondente. Tipi di dati definiti dall'origine dati hanno la precedenza su tipi di dati definito dall'utente. Di conseguenza, l'ordinamento non è necessariamente coerenza, ma può essere generalizzato come DATA_TYPE prima, seguito da TYPE_NAME, entrambi crescente. Ad esempio, si supponga che tipi di dati INTEGER e contatore, contatore, in cui è a incremento automatico, è definita da un'origine dati e che un tipo di dati definito dall'utente WHOLENUM sia stato definito. Questi verrebbe restituito nell'ordine di numero intero, WHOLENUM e contatore, perché esegue il mapping da vicino ai dati SQL ODBC WHOLENUM tipo SQL_INTEGER, mentre il tipo di dati a incremento automatico, anche se supportato dall'origine dati, non è associato strettamente a un tipo di dati SQL ODBC. Per informazioni sulla modalità di utilizzo queste informazioni, vedere [istruzioni DDL](../../../odbc/reference/develop-app/ddl-statements.md).  
   
  Se il *DataType* argomento specifica un tipo di dati che è valido per la versione di ODBC supportati dal driver, ma non è supportata dal driver, quindi verrà restituito un set di risultati vuoto.  
   
@@ -113,11 +114,11 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo** potrebbe non restituire tutti i tipi di dati. Ad esempio, un driver potrebbe non restituire i tipi di dati definito dall'utente. Le applicazioni possono utilizzare qualsiasi tipo di dati valido, indipendentemente dal fatto se viene restituito da **SQLGetTypeInfo**. I tipi di dati restituiti da **SQLGetTypeInfo** sono quelli supportati dall'origine dati. Essi devono essere utilizzati nelle istruzioni Data Definition Language (DDL). I driver possono restituire dati di set di risultati utilizzando tipi di dati diversi dai tipi restituiti dalla **SQLGetTypeInfo**. Nella creazione di set di risultati per una funzione di catalogo, il driver potrebbe utilizzare un tipo di dati che non è supportato dall'origine dati.  
   
-|Nome colonna|colonna<br /><br /> number|Tipo di dati|Commenti|  
+|Nome colonna|Colonna<br /><br /> number|Tipo di dati|Commenti|  
 |-----------------|-----------------------|---------------|--------------|  
 |TYPE_NAME (ODBC 2.0)|1|Varchar non NULL|Nome del tipo di dati dipende dall'origine dati. ad esempio, "Char ()", "Varchar ()", "MONEY", "LONG VARBINARY" o "CHAR () FOR BIT DATA". Le applicazioni devono utilizzare il nome specificato nel **CREATE TABLE** e **ALTER TABLE** istruzioni.|  
 |DATA_TYPE (ODBC 2.0)|2|Smallint non NULL|Tipo di dati SQL. Può trattarsi di un tipo di dati SQL ODBC o un tipo di dati specifici del driver SQL. Per i tipi di dati datetime o intervallo, questa colonna restituisce il tipo di dati conciso (ad esempio SQL_TYPE_TIME o SQL_INTERVAL_YEAR_TO_MONTH). Per un elenco dei tipi di dati ODBC SQL validi, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) appendice d: tipo di dati. Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.|  
-|COLUMN_SIZE (ODBC 2.0)|3|Valore intero|La dimensione massima delle colonne supportati dal server per questo tipo di dati. Per i dati numerici, è la massima precisione. Per i dati stringa, si tratta della lunghezza in caratteri. Per i tipi di dati datetime, si tratta della lunghezza in caratteri della rappresentazione di stringa (presupponendo la precisione massima consentita del componente delle frazioni di secondo). Viene restituito NULL per i tipi di dati in dimensioni di colonna non sono applicabile. Per i tipi di dati di intervallo, questo è il numero di caratteri nella rappresentazione di caratteri dell'intervallo di valori letterale (come definito in base all'intervallo iniziali precisione; vedere [lunghezza del tipo di dati intervallo](../../../odbc/reference/appendixes/interval-data-type-length.md) appendice d: tipo di dati).<br /><br /> Per ulteriori informazioni sulle dimensioni di colonna, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) appendice d: tipo di dati.|  
+|COLUMN_SIZE (ODBC 2.0)|3|Integer|La dimensione massima delle colonne supportati dal server per questo tipo di dati. Per i dati numerici, è la massima precisione. Per i dati stringa, si tratta della lunghezza in caratteri. Per i tipi di dati datetime, si tratta della lunghezza in caratteri della rappresentazione di stringa (presupponendo la precisione massima consentita del componente delle frazioni di secondo). Viene restituito NULL per i tipi di dati in dimensioni di colonna non sono applicabile. Per i tipi di dati di intervallo, questo è il numero di caratteri nella rappresentazione di caratteri dell'intervallo di valori letterale (come definito in base all'intervallo iniziali precisione; vedere [lunghezza del tipo di dati intervallo](../../../odbc/reference/appendixes/interval-data-type-length.md) appendice d: tipo di dati).<br /><br /> Per ulteriori informazioni sulle dimensioni di colonna, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) appendice d: tipo di dati.|  
 |:: SQLGETTYPEINFO (ODBC 2.0)|4|Varchar|Carattere o caratteri utilizzati come prefisso un valore letterale; ad esempio, una virgoletta singola (') per i tipi di dati carattere o 0x per tipi di dati binari. Viene restituito NULL per i tipi di dati in cui non è applicabile un prefisso letterale.|  
 |SQL_VARCHAR (ODBC 2.0)|5|Varchar|Carattere o caratteri utilizzati per terminare un valore letterale; ad esempio, una virgoletta singola (') per i tipi di dati carattere. Viene restituito NULL per i tipi di dati in cui un suffisso letterale non è applicabile.|  
 |CREATE_PARAMS (ODBC 2.0)|6|Varchar|Un elenco di parole chiave, separati da virgole, corrispondente a ciascun parametro quando si utilizza il nome che viene restituito nel campo TYPE_NAME, l'applicazione può specificare tra parentesi. Le parole chiave nell'elenco possono essere uno dei seguenti: lunghezza, precisione o scala. Vengono visualizzate nell'ordine che la sintassi richiede che vengano utilizzati. Ad esempio, si sarebbe CREATE_PARAMS per decimale "precisione, scala"; CREATE_PARAMS per VARCHAR daranno "lunghezza". Viene restituito NULL se non sono presenti parametri per la definizione di tipo di dati. ad esempio INTEGER.<br /><br /> Il driver fornisce il testo CREATE_PARAMS nella lingua del paese/area geografica in cui viene utilizzato.|  
@@ -132,7 +133,7 @@ SQLRETURN SQLGetTypeInfo(
 |MAXIMUM_SCALE (ODBC 2.0)|15|Smallint|Scala massima del tipo di dati nell'origine dati. Se la scala non è applicabile, viene restituito NULL. Se la scala massima non viene definita separatamente nell'origine dati, ma viene invece definita come la precisione massima, questa colonna contiene lo stesso valore di colonna COLUMN_SIZE. Per ulteriori informazioni, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) appendice d: tipo di dati.|  
 |SQL_DATA_TYPE (ODBC 3.0)|16|Smallint non NULL|Il valore del tipo di dati SQL come viene visualizzato nel campo SQL_DESC_TYPE del descrittore. Questa colonna corrisponde alla colonna DATA_TYPE, tranne i tipi di dati di intervallo e datetime.<br /><br /> Per i tipi di dati datetime e di intervallo, il campo SQL_DATA_TYPE nel set di risultati restituirà SQL_INTERVAL o SQL_DATETIME e il campo SQL_DATETIME_SUB restituirà il codice secondario per il tipo di dati di intervallo o data/ora specifico. (Vedere [appendice d: i tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).)|  
 |SQL_DATETIME_SUB (ODBC 3.0)|17|Smallint|Quando il valore di SQL_DATA_TYPE è SQL_DATETIME o SQL_INTERVAL, questa colonna contiene il codice secondario datetime o intervallo. Per i tipi di dati diverso da datetime e interval, questo campo è NULL.<br /><br /> Per i tipi di dati datetime o di intervallo, il campo SQL_DATA_TYPE nel set di risultati restituirà SQL_INTERVAL o SQL_DATETIME e il campo SQL_DATETIME_SUB restituirà il codice secondario per il tipo di dati di intervallo o data/ora specifico. (Vedere [appendice d: i tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).)|  
-|NUM_PREC_RADIX (ODBC 3.0)|18|Valore intero|Se il tipo di dati è un tipo numerico approssimato, questa colonna contiene il valore 2 per indicare che COLUMN_SIZE specifica un numero di bit. Per i tipi numerici esatti, questa colonna contiene il valore 10 per indicare che COLUMN_SIZE specifica un numero di cifre decimali. Negli altri casi la colonna è NULL.|  
+|NUM_PREC_RADIX (ODBC 3.0)|18|Integer|Se il tipo di dati è un tipo numerico approssimato, questa colonna contiene il valore 2 per indicare che COLUMN_SIZE specifica un numero di bit. Per i tipi numerici esatti, questa colonna contiene il valore 10 per indicare che COLUMN_SIZE specifica un numero di cifre decimali. Negli altri casi la colonna è NULL.|  
 |INTERVAL_PRECISION (ODBC 3.0)|19|Smallint|Se il tipo di dati è un tipo di dati di intervallo, questa colonna contiene il valore di precisione iniziale intervallo. (Vedere [precisione del tipo di dati di intervallo](../../../odbc/reference/appendixes/interval-data-type-precision.md) appendice d: tipo di dati.) Negli altri casi la colonna è NULL.|  
   
  Informazioni sugli attributi è possibile applicare ai tipi di dati o a colonne specifiche in un set di risultati. **SQLGetTypeInfo** restituisce informazioni sugli attributi associati a tipi di dati. **SQLColAttribute** restituisce informazioni sugli attributi associati alle colonne in un set di risultati.  

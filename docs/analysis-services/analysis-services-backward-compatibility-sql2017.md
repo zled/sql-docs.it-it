@@ -1,34 +1,19 @@
 ---
-title: "Compatibilità con le versioni precedenti di Analysis Services di SQL Server 2017 | Documenti Microsoft"
-ms.date: 07/11/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- installing Analysis Services, backward compatibility
-- backward compatibility [Analysis Services]
-- compatibility [Analysis Services]
-- Analysis Services, backward compatibility
-- upgrading Analysis Services
-- SSAS, backward compatibility
-- SQL Server Analysis Services, backward compatibility
-ms.assetid: 
-author: Minewiskan
+title: Compatibilità con le versioni precedenti di Analysis Services di SQL Server 2017 | Documenti Microsoft
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 97a19e2f1bf40216163208136d22103eddc89cc2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7dc1581fd2940ec5bad7698985eeab2c8ed96b2c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilità con le versioni precedenti di Analysis Services (2017 SQL)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -47,6 +32,9 @@ Le funzionalità seguenti sono deprecate in questa versione:
 |Multidimensionale|Gruppi di misure collegati remoti|
 |Tabella|Modelli a livello di compatibilità 1100 e 1103|
 |Tabella|Proprietà di modello a oggetti tabulare: Column.IsDefaultImage Column.TableDetailPosition, Column.IsDefaultLabel,|
+|Strumenti|SQL Server Profiler per l'acquisizione della traccia<br /><br /> La sostituzione prevede l'uso del profiler di eventi estesi incorporato in SQL Server Management Studio.  <br /> Vedere [Monitorare Analysis Services con eventi estesi di SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
+|Strumenti|Server Profiler per la riproduzione della traccia <br />Sostituzione. Non è prevista alcuna sostituzione.|  
+|Trace Management Objects e API di traccia|Oggetti Microsoft.AnalysisServices.Trace (contiene le API per gli oggetti Analysis Services Trace e Replay). La sostituzione è multiparte:<br /><br /> -Configurazione della traccia: Microsoft.SqlServer.Management.XEvent<br />-Lettura di traccia: Microsoft.SqlServer.XEvent.Linq<br />-   Riproduzione della traccia: nessuna|  
 
 
 ## <a name="discontinued-features"></a>Funzionalità non più supportate
@@ -62,9 +50,7 @@ Le funzionalità seguenti sono state deprecate in una versione precedente e non 
 |Multidimensionale|Gruppi di misure collegati remoti|  
 |Multidimensionale|Writeback dimensionale|  
 |Multidimensionale|Dimensioni collegate|
-|Strumenti|SQL Server Profiler per l'acquisizione della traccia<br /><br /> La sostituzione prevede l'uso del profiler di eventi estesi incorporato in SQL Server Management Studio.  <br /> Vedere [Monitorare Analysis Services con eventi estesi di SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
-|Strumenti|Server Profiler per la riproduzione della traccia <br />Sostituzione. Non è prevista alcuna sostituzione.|  
-|Trace Management Objects e API di traccia|Oggetti Microsoft.AnalysisServices.Trace (contiene le API per gli oggetti Analysis Services Trace e Replay). La sostituzione è multiparte:<br /><br /> -Configurazione della traccia: Microsoft.SqlServer.Management.XEvent<br />-Lettura di traccia: Microsoft.SqlServer.XEvent.Linq<br />-   Riproduzione della traccia: nessuna|  
+
 
 ## <a name="breaking-changes"></a>Modifiche di rilievo
 Oggetto *modifica di rilievo* causa una funzionalità, modello di dati, il codice dell'applicazione o script non corretto dopo l'aggiornamento alla versione corrente.

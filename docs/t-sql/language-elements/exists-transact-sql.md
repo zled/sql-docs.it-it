@@ -1,16 +1,14 @@
 ---
 title: EXISTS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - EXISTS_TSQL
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - NOT EXISTS keyword
 - row existence testing [SQL Server]
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
-caps.latest.revision: 
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 40abe8ec35a89a51ecfb3d2100ffb47a40c58f23
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 17bfb170d4c269051a3fb6b242b3a8425759e55c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +51,7 @@ EXISTS ( subquery )
   
 ## <a name="arguments"></a>Argomenti  
  *subquery*  
- Istruzione SELECT con restrizioni. La parola chiave INTO non è consentita. Per ulteriori informazioni, vedere le informazioni sulle sottoquery in [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
+ Istruzione SELECT con restrizioni. La parola chiave INTO non è consentita. Per altre informazioni, vedere la descrizione delle sottoquery in [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="result-types"></a>Tipi restituiti  
  **Boolean**  
@@ -119,7 +117,7 @@ Willis                                             Johnson
  ```  
   
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. Confronto di query con le parole chiave EXISTS e = ANY  
- Nell'esempio seguente vengono illustrate due query per la ricerca di negozi il cui nome coincide con quello del fornitore. La prima query utilizza `EXISTS` e il secondo Usa `=``ANY`.  
+ Nell'esempio seguente vengono illustrate due query per la ricerca di negozi il cui nome coincide con quello del fornitore. La prima query usa `EXISTS` e la seconda usa `=``ANY`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -302,10 +300,10 @@ Peng                           Wu                             Quality Assurance 
 (91 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="f-using-exists"></a>F. L'utilizzo di EXISTS  
- Nell'esempio seguente identifica se una qualsiasi delle righe nel `ProspectiveBuyer` tabella potrebbe essere corrisponde alle righe nel `DimCustomer` tabella. La query restituirà righe solo quando sia il `LastName` e `BirthDate` valori in corrispondenza di due tabelle.  
+### <a name="f-using-exists"></a>F. Uso di EXISTS  
+ L'esempio seguente consente di stabilire se nella tabella `ProspectiveBuyer` sono presenti righe corrispondenti a righe nella tabella `DimCustomer`. La query restituirà righe solo in caso di corrispondenza di entrambi i valori `LastName` e `BirthDate` nelle due tabelle.  
   
 ```  
 -- Uses AdventureWorks  
@@ -319,7 +317,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>G. Utilizzo della parola chiave NOT EXISTS  
- Parola chiave NOT EXISTS funziona come l'opposto di EXISTS. La clausola WHERE in NOT EXISTS viene soddisfatta se la sottoquery non restituisce alcuna riga. Nell'esempio seguente consente di trovare le righe nel `DimCustomer` tabella in cui il `LastName` e `BirthDate` non corrispondono a tutte le voci di `ProspectiveBuyers` tabella.  
+ La parola chiave NOT EXISTS funziona in modo inverso rispetto a EXISTS. La clausola WHERE in NOT EXISTS viene soddisfatta se la sottoquery non restituisce alcuna riga. L'esempio seguente consente di trovare le righe nella tabella `DimCustomer` in cui `LastName` e `BirthDate` non corrispondono ad alcuna voce nella tabella `ProspectiveBuyers`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -333,7 +331,7 @@ WHERE NOT EXISTS
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

@@ -1,33 +1,31 @@
 ---
 title: Processi di SQL Server Agent per i pacchetti | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: packages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [Integration Services]
 - automatic package execution
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 6b43c3a8b3d438bb211570921e06bb2085c0d022
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9cb26adf331696cb98901c6c9db387dc4d47f052
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
   È possibile automatizzare e pianificare l'esecuzione dei pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile pianificare i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e nel file system.  
@@ -153,7 +151,7 @@ ms.lasthandoff: 01/25/2018
     |**Advanced**<br /><br /> Si trova nella scheda **Configurazione** .|Configurare le impostazioni aggiuntive seguenti per l'esecuzione del pacchetto:|  
     ||**Override di proprietà**:<br /><br /> Fare clic su **Aggiungi** per immettere un nuovo valore per una proprietà del pacchetto, specificare il percorso della proprietà e indicare se il valore della proprietà è sensibile. Il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crittografa i dati sensibili. Per modificare o rimuovere le impostazioni per una proprietà, fare clic su una riga nel contenitore di override **Proprietà** , quindi fare clic su **Modifica** o **Rimuovi**. È possibile trovare il percorso della proprietà con una delle operazioni seguenti:<br /><br /> -Copiare il percorso della proprietà dal file di configurazione XML (\*.dtsconfig). Il percorso è elencato nella sezione Configurazione del file, come valore dell'attributo Path. Di seguito è riportato un esempio del percorso per la proprietà MaximumErrorCount: \Package.Properties[MaximumErrorCount]<br /><br /> -Eseguire la **Configurazione guidata pacchetto** e copiare i percorsi delle proprietà dalla pagina finale **Completamento procedura guidata** . È possibile annullare la procedura guidata.<br /><br /> <br /><br /> Nota: l'opzione **Override di proprietà** è destinata ai pacchetti con configurazioni aggiornate da una versione precedente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. I pacchetti creati tramite [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] e distribuiti al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizzano parametri anziché configurazioni.|  
     ||**Livello di registrazione**<br /><br /> Selezionare uno dei livelli di registrazione seguenti per l'esecuzione del pacchetto. La selezione del livello di registrazione **Prestazioni** o **Dettagliato** può influire sulle prestazioni di esecuzione del pacchetto.<br /><br /> **Nessuno**:<br />                          La registrazione è disabilitata. Solo lo stato dell'esecuzione del pacchetto viene registrato.<br /><br /> **Base**:<br />                          Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. È il valore predefinito per il livello di registrazione.<br /><br /> **Prestazioni**:<br />                          Vengono registrati solo le statistiche sulle prestazioni e gli eventi OnError e OnWarning.<br /><br /> **Dettagliato**:<br />                          Tutti gli eventi vengono registrati, inclusi gli eventi personalizzati e di diagnostica.<br /><br /> Il livello di registrazione selezionato determina le informazioni visualizzate nelle viste SSISDB e nei report per il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Registrazione di Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).|  
-    ||**Dump su errori**<br /><br /> Specificare se vengono generati file di dump del debug quando si verifica un errore durante l'esecuzione del pacchetto. I file contengono le informazioni sull'esecuzione del pacchetto che possono consentire di risolvere i problemi dell'esecuzione. Quando si seleziona questa opzione e si verifica un errore durante l'esecuzione, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un file con estensione MDMP (file binario) e un file con estensione TMP (file di testo). Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file nella cartella *\<unità>:*\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.|  
+    ||**Dump su errori**<br /><br /> Specificare se vengono generati file di dump del debug quando si verifica un errore durante l'esecuzione del pacchetto. I file contengono le informazioni sull'esecuzione del pacchetto che possono consentire di risolvere i problemi dell'esecuzione. Quando si seleziona questa opzione e si verifica un errore durante l'esecuzione, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un file con estensione MDMP (file binario) e un file con estensione TMP (file di testo). Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file nella cartella *\<unità>:* \Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.|  
     ||**Runtime a 32 bit**<br /><br /> Indicare se eseguire il pacchetto utilizzando la versione a 32 bit dell'utilità dtexec in un computer a 64 bit con la versione a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent installata.<br /><br /> Potrebbe essere necessario eseguire il pacchetto utilizzando la versione a 32 bit di dtexec se, ad esempio, il pacchetto utilizza un provider OLE DB nativo che non è disponibile in una versione a 64 bit. Per ulteriori informazioni, vedere [Considerazioni a 64r bit per Integration Services](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> Per impostazione predefinita, quando si seleziona il tipo di passaggio di processo **Pacchetto di SQL Server Integration Services** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent esegue il pacchetto utilizzando la versione dell'utilità dtexec che è richiamata automaticamente dal sistema. Il sistema richiama la versione a 32 bit o la versione a 64 bit dell'utilità a seconda del processore del computer e la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in esecuzione nel computer.|  
   
      **Origine pacchetto**: SQL Server, archivio pacchetti SSIS o file system  

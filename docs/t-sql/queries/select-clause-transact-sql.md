@@ -1,16 +1,14 @@
 ---
-title: Clausola SELECT (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SELECT Clause (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SELECT Clause
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - $ROWGUID keyword
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 34a1dee420dd8e409df2043f3278a32235656ace
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 098b5850d8570e10672518f2c93f8a2faeb8cd66
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-clause-transact-sql"></a>SELECT Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,27 +74,27 @@ SELECT [ ALL | DISTINCT ]
  DISTINCT  
  Specifica che nel set di risultati devono essere visualizzate solo righe univoche. I valori Null vengono considerati valori uguali.  
   
- TOP (*espressione* ) [percentuale] [WITH TIES]  
+ TOP (*expression* ) [ PERCENT ] [ WITH TIES ]  
  Indica che dal set di risultati della query verrà restituito solamente un primo set specificato o una prima percentuale di righe specificata. Il valore di*expression* può essere specificato come numero o come percentuale di righe.  
   
- Per garantire la compatibilità con le versioni precedenti, utilizzo di TOP *espressione* senza parentesi nelle selezionare istruzioni è supportato, ma non è consigliabile. Per ulteriori informazioni, vedere [torna all'inizio &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+ L'uso di TOP *expression* senza parentesi nelle istruzioni SELECT è supportato per compatibilità con le versioni precedenti, ma non è consigliato. Per altre informazioni, vedere [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
-\<select_list > le colonne da selezionare per il set di risultati. Tale elenco è una serie di espressioni separate da virgola Il numero massimo di espressioni che è possibile specificare nell'elenco selezionato è 4096.  
+\< select_list > Colonne che si vuole selezionare per il set di risultati. Tale elenco è una serie di espressioni separate da virgola Il numero massimo di espressioni che è possibile specificare nell'elenco selezionato è 4096.  
   
  \*  
  Specifica che devono essere restituite tutte le colonne di tutte le tabelle e viste elencate nella clausola FROM. Le colonne vengono restituite in base alla tabella o vista, a seconda di quanto specificato nella clausola FROM, nello stesso ordine in cui sono visualizzate nella tabella o vista.  
   
- *TABLE_NAME* | *view_name* | *tabella*_*alias*. *  
- Limita l'ambito del \* per la tabella o vista specificata.  
+ *table_name* | *view_name* | *table*_*alias*.*  
+ Limita l'ambito dell'argomento \* alla tabella o vista specificata.  
   
  *column_name*  
- Nome della colonna da restituire. Qualificare *column_name* per impedire riferimenti ambigui, ad esempio si verifica quando due tabelle nella clausola FROM includono colonne con nomi duplicati. Ad esempio, le tabelle SalesOrderHeader e SalesOrderDetail nel [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database entrambi disporre di una colonna ModifiedDate. Se le due tabelle sono unite in join in una query, la data modificata delle voci SalesOrderDetail può essere specificata nell'elenco di selezione come SalesOrderDetail.ModifiedDate.  
+ Nome della colonna da restituire. Qualificare l'argomento *column_name* in modo da impedire riferimenti ambigui, come nel caso di due tabelle della clausola FROM che includono colonne con nomi duplicati. Ad esempio, entrambe le tabelle SalesOrderHeader e SalesOrderDetail nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] hanno una colonna ModifiedDate. Se le due tabelle sono unite in join in una query, la data modificata delle voci SalesOrderDetail può essere specificata nell'elenco di selezione come SalesOrderDetail.ModifiedDate.  
   
- *espressione*  
+ *expression*  
  Costante, funzione o qualsiasi combinazione di nomi di colonna, costanti e funzioni collegati da uno o più operatori oppure da una sottoquery.  
   
  $IDENTITY  
- Restituisce la colonna Identity. Per ulteriori informazioni, vedere [identità &#40; Proprietà &#41; &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql-identity-property.md), [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md), e [crea una tabella &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md).  
+ Restituisce la colonna Identity. Per altre informazioni, vedere [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md), [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) e [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  Se più tabelle della clausola FROM includono una colonna con la proprietà IDENTITY, è necessario qualificare la funzione $IDENTITY con il nome della tabella, ad esempio T1.$IDENTITY.  
   
@@ -110,19 +107,19 @@ SELECT [ ALL | DISTINCT ]
  Nome di colonna CLR (Common Language Runtime) definito dall'utente da restituire.  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] restituisce i valori dei tipi definiti dall'utente in una rappresentazione binaria. Per restituire i valori di tipo definito dall'utente in formato XML o stringa, utilizzare [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) o [CONVERTIRE](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] restituisce i valori dei tipi definiti dall'utente in una rappresentazione binaria. Per restituire i valori dei tipi definiti dall'utente in formato XML o stringa, usare [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) o [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
  { . | :: }  
- Specifica un metodo, una proprietà o un campo CLR definito dall'utente. Utilizzare. per metodi, proprietà o campi (non statici) di un'istanza. Utilizzare :: per metodi, proprietà o campi statici. Per richiamare un metodo, una proprietà o un campo di un tipo CLR definito dall'utente, è necessario disporre dell'autorizzazione EXECUTE per il tipo.  
+ Specifica un metodo, una proprietà o un campo CLR definito dall'utente. Usare . per metodi, proprietà o campi (non statici) di un'istanza. Utilizzare :: per metodi, proprietà o campi statici. Per richiamare un metodo, una proprietà o un campo di un tipo CLR definito dall'utente, è necessario disporre dell'autorizzazione EXECUTE per il tipo.  
   
  *property_name*  
- È una proprietà pubblica di *udt_column_name*.  
+ Proprietà pubblica di *udt_column_name*.  
   
  *field_name*  
- È un membro dati pubblico di *udt_column_name*.  
+ Membro dati pubblico di *udt_column_name*.  
   
  *method_name*  
- È un metodo pubblico di *udt_column_name* che accetta uno o più argomenti. *nome_metodo* non può essere un metodo mutatore.  
+ Metodo pubblico di *udt_column_name* che accetta uno o più argomenti. *method_name* non può essere un metodo mutatore.  
   
  Nell'esempio seguente vengono selezionati i valori per la colonna `Location`, definita come tipo `point`, dalla tabella `Cities`, richiamando un metodo del tipo `Distance`:  
   
@@ -138,7 +135,7 @@ SELECT Location.Distance (@p)
 FROM Cities;  
 ```  
   
- *alias column_*  
+ *column_ alias*  
  Nome alternativo per la colonna specificata nel set di risultati della query. Per una colonna denominata quantity, ad esempio, è possibile specificare come alias Quantity, Quantity to Date o Qty.  
   
  Gli alias vengono utilizzati inoltre come nomi dei risultati di espressioni, ad esempio:  
@@ -150,10 +147,10 @@ FROM Cities;
  FROM Sales.SalesOrderDetail;
  ```  
   
- *column_alias* può essere utilizzato in una clausola ORDER BY. ma non in una clausola WHERE, GROUP BY o HAVING. Se l'espressione di query fa parte di un'istruzione DECLARE CURSOR, *column_alias* non può essere utilizzato nella clausola FOR UPDATE.  
+ È possibile usare *column_alias* in una clausola ORDER BY, ma non in una clausola WHERE, GROUP BY o HAVING. Se l'espressione della query fa parte di un'istruzione DECLARE CURSOR, non è possibile usare l'argomento *column_alias* nella clausola FOR UPDATE.  
   
-## <a name="remarks"></a>Osservazioni  
- La lunghezza dei dati restituiti per **testo** o **ntext** colonne incluse nell'elenco di selezione è impostata sul valore più piccolo di quanto segue: le dimensioni effettive del **testo** colonna, l'impostazione della sessione TEXTSIZE predefinito o il limite dell'applicazione. Per modificare la lunghezza del testo restituito per una sessione, utilizzare l'istruzione SET. Per impostazione predefinita il limite della lunghezza dei dati di testo restituiti con un'istruzione SELECT è pari a 4.000 byte.  
+## <a name="remarks"></a>Remarks  
+ La lunghezza dei dati restituiti per colonne di tipo **text** o **ntext** incluse nell'elenco di selezione viene impostata sul valore più basso tra i seguenti: dimensioni reali della colonna **text**, impostazione predefinita della sessione TEXTSIZE e limite dell'applicazione specificato a livello di codice. Per modificare la lunghezza del testo restituito per una sessione, utilizzare l'istruzione SET. Per impostazione predefinita il limite della lunghezza dei dati di testo restituiti con un'istruzione SELECT è pari a 4.000 byte.  
   
  In [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] viene generata l'eccezione 511 e viene eseguito il rollback dell'istruzione in fase di esecuzione se si verifica una delle condizioni seguenti:  
   
@@ -164,8 +161,8 @@ FROM Cities;
  Se non si assegna un nome a una colonna creata con un'istruzione SELECT INTO o CREATE VIEW, viene generato un errore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Selezionare esempi &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Esempi di istruzioni SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

@@ -1,16 +1,14 @@
 ---
-title: sp_syscollector_create_collector_type (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_syscollector_create_collector_type (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collector_type
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4165bdb2ddf2bdfa713fb88a787221a9838bce97
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b65f9ccc2c68fffd8137dfc7a6d289e7c4f38e13
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,25 +51,25 @@ sp_syscollector_create_collector_type
   
 ## <a name="arguments"></a>Argomenti  
  [ @collector_type_uid =] '*collector_type_uid*'  
- GUID del tipo di agente di raccolta. *collector_type_uid* è **uniqueidentifier** e se è NULL verrà creato automaticamente e restituito come OUTPUT.  
+ GUID del tipo di agente di raccolta. *collector_type_uid* viene **uniqueidentifier** e se è NULL verrà creato automaticamente e restituito come OUTPUT.  
   
  [ @name =] '*nome*'  
- Nome del tipo di agente di raccolta. *nome* è **sysname** e deve essere specificato.  
+ Nome del tipo di agente di raccolta. *nome* viene **sysname** e deve essere specificato.  
   
  [ @parameter_schema =] '*parameter_schema*'  
- XML Schema per questo tipo di agente di raccolta. *parameter_schema* è **xml** con un valore predefinito è NULL.  
+ XML Schema per questo tipo di agente di raccolta. *parameter_schema* viene **xml** con un valore predefinito è NULL.  
   
  [ @parameter_formatter =] '*parameter_formatter*'  
- Modello da utilizzare per trasformare l'XML per l'utilizzo nella pagina delle proprietà del set di raccolta. *parameter_formatter* è **xml** con un valore predefinito è NULL.  
+ Modello da utilizzare per trasformare l'XML per l'utilizzo nella pagina delle proprietà del set di raccolta. *parameter_formatter* viene **xml** con un valore predefinito è NULL.  
   
- [@collection_package_id = ] *collection_package_id*  
- È un identificatore univoco locale che punta al pacchetto di raccolta [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *collection_package_id* è **uniqueidentifier** ed è obbligatorio.  
+ [@collection_package_id =] *collection_package_id*  
+ È un identificatore univoco locale che punta al pacchetto di raccolta [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *collection_package_id* viene **uniqueidentifier** ed è obbligatorio.  
   
- [@upload_package_id = ] *upload_package_id*  
- Identificatore univoco locale che punta al pacchetto di caricamento di [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *upload_package_id* è **uniqueidentifier** ed è obbligatorio.  
+ [@upload_package_id =] *upload_package_id*  
+ Identificatore univoco locale che punta al pacchetto di caricamento di [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *upload_package_id* viene **uniqueidentifier** ed è obbligatorio.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  

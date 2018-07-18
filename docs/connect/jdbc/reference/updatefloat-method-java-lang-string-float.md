@@ -1,30 +1,29 @@
 ---
 title: Metodo updateFloat (lang, float) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerResultSet.updateFloat (java.lang.String, float)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerResultSet.updateFloat (java.lang.String, float)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 19a6164f-f560-4304-8466-e55f0667a3d4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: aedcc76775443671a8eb1e393b61a0b86c13ebb0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: dddcdec489ffe4d81afa2e483f74acdb3ae81ee2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updatefloat-method-javalangstring-float"></a>Metodo updateFloat (java.lang.String, float)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +54,7 @@ public void updateFloat(java.lang.String columnName,
  Questo metodo updateFloat viene specificato dal metodo updateFloat nell'interfaccia Java.SQL. ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo updateFloat &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)   
+ [Metodo updateFloat &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)   
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

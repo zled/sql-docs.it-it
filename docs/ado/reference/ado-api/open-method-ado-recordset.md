@@ -1,17 +1,15 @@
 ---
 title: Open (metodo) (Recordset ADO) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Open
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 74e6fc58d5b32313806301467ca48b9f033b083b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e562f329f6f95a36777fc4db9131091003be37e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-method-ado-recordset"></a>Open (metodo) (Recordset ADO)
 Apre un cursore su un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -50,7 +47,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  *CursorType*  
  Facoltativa. Oggetto [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) valore che determina il tipo di cursore che il provider deve utilizzare quando si apre il **Recordset**. Il valore predefinito è **adOpenForwardOnly**.  
   
- *Tipo di blocco*  
+ *LockType*  
  Facoltativa. Oggetto [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valore che determina il tipo di blocco (concorrenza) il provider deve utilizzare quando si apre il **Recordset**. Il valore predefinito è **adLockReadOnly**.  
   
  *Opzioni*  
@@ -67,7 +64,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Utilizzando il **aprire** metodo su un **Recordset** oggetto viene aperto un cursore che rappresenta i record da una tabella di base, i risultati di una query o salvato in precedenza **Recordset**.  
   
- Utilizzare l'opzione facoltativa *origine* argomento per specificare un'origine dati utilizzando uno dei seguenti: un **comando** variabile oggetto, un'istruzione SQL, una stored procedure, un nome di tabella, un URL o un nome di percorso completo del file. Se *origine* è un nome di percorso di file, può essere un percorso completo ("c:\dir\file.rst"), un percorso relativo ("... \File.rst") o un URL ("http://files/file.rst").  
+ Utilizzare l'opzione facoltativa *origine* argomento per specificare un'origine dati utilizzando uno dei seguenti: un **comando** variabile oggetto, un'istruzione SQL, una stored procedure, un nome di tabella, un URL o un nome di percorso completo del file. Se *origine* è un nome di percorso di file, può essere un percorso completo ("c:\dir\file.rst"), un percorso relativo ("... \File.rst"), o un URL ("http://files/file.rst").  
   
  Non è consigliabile utilizzare il *origine* argomento del **aprire** metodo per eseguire una query di azione che restituisce record perché non è un modo semplice per determinare se la chiamata ha avuto esito positivo. Il **Recordset** restituito da ad una query verrà chiusa. Per eseguire una query che restituisce record, ad esempio un'istruzione SQL INSERT, chiamare il [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) metodo di un **comando** oggetto o [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) metodo di un [Connessione](../../../ado/reference/ado-api/connection-object-ado.md) invece dell'oggetto.  
   

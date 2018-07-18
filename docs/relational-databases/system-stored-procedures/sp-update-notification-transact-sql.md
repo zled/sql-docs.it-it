@@ -1,16 +1,14 @@
 ---
 title: sp_update_notification (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9574169f49b8ae2c0736a99d657fd7ef5d17cc48
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: bc08790ad08ce6bb4e94e61a8c3bdfc58615edf9
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,15 +48,15 @@ sp_update_notification
   
 ## <a name="arguments"></a>Argomenti  
  [  **@alert_name =**] **'***avviso***'**  
- Nome dell'avviso associato alla notifica. *avviso* è **sysname**, non prevede alcun valore predefinito.  
+ Nome dell'avviso associato alla notifica. *avviso* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@operator_name =**] **'***operatore***'**  
- Operatore a cui inviare una notifica quando viene generato l'avviso. *operatore* è **sysname**, non prevede alcun valore predefinito.  
+ Operatore a cui inviare una notifica quando viene generato l'avviso. *operatore* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@notification_method =**] *notifica*  
- Metodo adottato per l'invio della notifica all'operatore. *notifica*è **tinyint**e non prevede alcun valore predefinito può essere uno o più dei valori seguenti.  
+ Metodo adottato per l'invio della notifica all'operatore. *notifica*viene **tinyint**e non prevede alcun valore predefinito può essere uno o più dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
@@ -67,7 +64,7 @@ sp_update_notification
 |**7**|Tutti i metodi|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_update_notification** deve essere eseguita la **msdb** database.  

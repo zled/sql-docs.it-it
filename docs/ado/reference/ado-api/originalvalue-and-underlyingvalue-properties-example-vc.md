@@ -1,33 +1,30 @@
 ---
-title: "Esempio di proprietà UnderlyingValue (VC + +) e OriginalValue | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Esempio di proprietà UnderlyingValue (VC + +) e OriginalValue | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 458d61ec4c0d35376b4d989a7a2974483abe591e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0ebcdbff0183da0bb389279d642e3a9129aff955
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Esempio OriginalValue e UnderlyingValue proprietà (VC + +)
 Questo esempio viene illustrato il [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) proprietà visualizzando un messaggio se i dati sottostanti di un record è stata modificata durante un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aggiornamento batch.  
@@ -207,7 +204,7 @@ void PrintComError(_com_error &e) {
 **Valore originale: psicologia**   
 **Il valore di base: sociologia**   
 **Dati sono stati modificati.**  
-**ID Title: PS2091**  
+**Titolo ID: PS2091**  
 **Valore corrente: self_help**   
 **Valore originale: psicologia**   
 **Il valore di base: sociologia**   

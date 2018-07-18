@@ -1,32 +1,33 @@
 ---
 title: sp_reinitpullsubscription (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_reinitpullsubscription_TSQL
 - sp_reinitpullsubscription
-helpviewer_keywords: sp_reinitpullsubscription
+helpviewer_keywords:
+- sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d9020182762ac7f74e888e64814cedcae6fedec2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c1f044d6ae29565326b130e248e4e0e770ab8e60
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +47,16 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publisher=**] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- Nome del database del server di pubblicazione. *publisher_db* è **sysname**, non prevede alcun valore predefinito.  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ Nome del database del server di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* è **sysname**, con un valore predefinito è all, che indica che tutte le sottoscrizioni per la reinizializzazione.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è all, che indica che tutte le sottoscrizioni per la reinizializzazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_reinitpullsubscription** viene utilizzata nella replica transazionale.  
@@ -64,14 +65,14 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription** può essere chiamato dal sottoscrittore per reinizializzare la sottoscrizione, durante l'esecuzione successiva dell'agente di distribuzione.  
   
- Sottoscrizioni alle pubblicazioni create con un valore di **false** per  **@immediate_sync**  non è possibile reinizializzare dal sottoscrittore.  
+ Sottoscrizioni alle pubblicazioni create con un valore di **false** per **@immediate_sync** non è possibile reinizializzare dal sottoscrittore.  
   
  È possibile reinizializzare una sottoscrizione pull, eseguire **sp_reinitpullsubscription** nel Sottoscrittore o **sp_reinitsubscription** nel server di pubblicazione.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  

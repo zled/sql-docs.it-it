@@ -1,27 +1,24 @@
 ---
 title: Informazioni di ODBC a 64 bit | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c1c7c878a850134d625c6c956449a400672ad6f7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 10f225602ed302aa8573b09e0b0a852f50a1971f
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="odbc-64-bit-information"></a>Informazioni di ODBC a 64 bit
 A partire da Windows Server 2003, Microsoft sono supportati i sistemi operativi le librerie ODBC a 64 bit. Le intestazioni ODBC e librerie fornite con il SDK di MDAC 2.7 contengono le modifiche per consentire ai programmatori di scrivere facilmente il codice per nuove piattaforme a 64 bit. Assicurando che il codice vengono utilizzati i tipi ODBC definiti elencati di seguito, è possibile compilare il codice sorgente stesso sia per le piattaforme a 64 bit e a 32 bit basati sul **Win64** o **WIN32** macro.  
@@ -380,7 +377,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ROWSET_SIZE  
   
- **SQLSetConnectAttr**  
+ **Funzione SQLSetConnectAttr**  
   
  Quando il *attributo* parametro dispone di uno dei valori seguenti, viene passato un valore a 64 bit *valore*:  
   
@@ -400,7 +397,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetDescField**  
   
- Quando il *FieldIdentifier* parametro dispone di uno dei valori seguenti, viene passato un valore a 64 bit **ValuePtr*:  
+ Quando il *FieldIdentifier* parametro presenta uno dei valori seguenti, viene passato un valore a 64 bit *ValuePtr*:  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -422,9 +419,9 @@ typedef SQLULEN BOOKMARK;
   
  SQL_DESC_ROWS_PROCESSED_PTR  
   
- **SQLSetStmtAttr**  
+ **Funzione SQLSetStmtAttr**  
   
- Quando il *attributo* parametro dispone di uno dei valori seguenti, viene passato un valore a 64 bit **ValuePtr*:  
+ Quando il *attributo* parametro presenta uno dei valori seguenti, viene passato un valore a 64 bit *ValuePtr*:  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -492,7 +489,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- Quando il *opzione* parametro dispone di uno dei valori seguenti, viene passato un valore a 64 bit **valore*:  
+ Quando il *opzione* parametro presenta uno dei valori seguenti, viene passato un valore a 64 bit *valore*:  
   
  SQL_KEYSET_SIZE  
   

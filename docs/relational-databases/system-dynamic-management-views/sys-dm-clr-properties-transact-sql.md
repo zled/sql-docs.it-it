@@ -1,16 +1,13 @@
 ---
 title: sys.dm_clr_properties (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_clr_properties
@@ -22,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 77f8652347f0093b84be4853880bb504defc3b6c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f95f4d1596d84648034b51833738a26817f5e96b
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +47,7 @@ ms.lasthandoff: 02/03/2018
   
  Il **versione** proprietà indica la versione di .NET Framework e CLR hosted nel server.  
   
- Il **Sys.dm clr_properties** vista a gestione dinamica può restituire sei diversi valori per il **stato** proprietà, che riflette lo stato del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hosted. ovvero:  
+ Il **Sys.dm clr_properties** vista a gestione dinamica può restituire sei diversi valori per il **stato** proprietà, che riflette lo stato del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hosted. Sono:  
   
 -   Mscoree is not loaded.  
   
@@ -66,7 +63,7 @@ ms.lasthandoff: 02/03/2018
   
  Il **Mscoree non caricato** e **viene caricato Mscoree** stati indicano l'avanzamento dell'inizializzazione del CLR hosted all'avvio del server e non probabilmente essere visualizzati.  
   
- Il **versione CLR bloccato con mscoree** stato può essere visualizzato in cui il CLR hosted non è in uso e, pertanto, non è ancora stato inizializzato. Il CLR hosted viene inizializzato alla prima esecuzione di un'istruzione DDL (ad esempio [CREATE ASSEMBLY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-assembly-transact-sql.md)) o un oggetto di database gestito venga eseguito.  
+ Il **versione CLR bloccato con mscoree** stato può essere visualizzato in cui il CLR hosted non è in uso e, pertanto, non è ancora stato inizializzato. Il CLR hosted viene inizializzato alla prima esecuzione di un'istruzione DDL (ad esempio [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) o un oggetto di database gestito viene eseguito.  
   
  Il **CLR viene inizializzato** stato indica che il CLR hosted è stato inizializzato correttamente. Si noti che questo stato non indica se l'esecuzione del codice CLR utente è stata abilitata. Se l'esecuzione del codice CLR utente viene prima abilitata e quindi disabilitata utilizzando la [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) stored procedure, il valore di stato verrà comunque essere **CLR viene inizializzato**.  
   
@@ -78,10 +75,10 @@ ms.lasthandoff: 02/03/2018
  Le proprietà e i valori di questa vista potrebbero cambiare nelle versioni future di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a causa di miglioramenti della funzionalità di integrazione CLR.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessaria l'autorizzazione VIEW SERVER STATE nel server.  
   
- In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Premium richiede l'autorizzazione VIEW DATABASE STATE nel database. In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Standard e Basic richiede il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] account amministratore.  
-  
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+
 ## <a name="examples"></a>Esempi  
  L'esempio seguente recupera informazioni relative al CLR hosted:  
   
@@ -92,6 +89,6 @@ FROM sys.dm_clr_properties;
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Common Language Runtime relative viste a gestione dinamica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica relative a Common Language Runtime &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

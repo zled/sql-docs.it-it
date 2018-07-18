@@ -1,30 +1,31 @@
 ---
 title: TopCount (DMX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: TOPCOUNT
-dev_langs: DMX
-helpviewer_keywords: TopCount function
+f1_keywords:
+- TOPCOUNT
+dev_langs:
+- DMX
+helpviewer_keywords:
+- TopCount function
 ms.assetid: cbe031c9-4ff0-45df-9810-ebaebacf161d
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 412c741e3f48c23f65eafa2a998a257f07034dd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 48a53d01219290dd50bd192a6ee2adf5b51ad7b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +50,7 @@ TopCount(<table expression>, <rank expression>, <count>)
   
  La funzione TopCount è stata introdotta originalmente per consentire le stime associative e in generale, produce gli stessi risultati di un'istruzione che include **seleziona le prime** e **ORDER BY** clausole. È possibile ottenere prestazioni migliori per le stime associative se si utilizza il **stima (DMX)** (funzione), che supporta la specifica di un numero di stime da restituire.  
   
- Tuttavia, esistono casi in cui si potrebbe essere ancora necessario utilizzare TopCount. Ad esempio, DMX non supporta il **TOP** qualificatore in un'istruzione Sub-select. Il [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) funzione inoltre non supporta l'aggiunta di **TOP**.  
+ Tuttavia, esistono casi in cui si potrebbe essere ancora necessario utilizzare TopCount. Ad esempio, DMX non supporta il **TOP** qualificatore in un'istruzione Sub-select. Il [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) funzione inoltre non supporta l'aggiunta di **superiore**.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti sono le query di stima sul modello di associazione che si compila con il [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Le query restituiscono gli stessi risultati, ma il primo esempio Usa TopCount e nel secondo esempio viene utilizzata la funzione di stima.  
@@ -122,10 +123,10 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  I risultati contengono le prime tre stime ordinate in base al valore di supporto. È possibile sostituire $SUPPORT con $PROBABILITY o $ADJUSTED_PROBABILITY per restituire stime classificate in base alla probabilità o alla probabilità adattata. Per ulteriori informazioni, vedere **stima (DMX)**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [DMX funzioni &#40; &#41;](../dmx/functions-dmx.md)   
- [Funzioni di stima generale &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [DMX BottomCount &#40; &#41;](../dmx/bottomcount-dmx.md)   
- [DMX TopPercent &#40; &#41;](../dmx/toppercent-dmx.md)   
- [DMX TopSum &#40; &#41;](../dmx/topsum-dmx.md)  
+ [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
+ [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
+ [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  
   
   

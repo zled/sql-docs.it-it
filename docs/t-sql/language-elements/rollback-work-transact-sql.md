@@ -1,16 +1,14 @@
 ---
-title: ROLLBACK WORK (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ROLLBACK WORK (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ROLLBACK WORK
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - rolling back transactions, ROLLBACK WORK
 - savepoints [SQL Server]
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 12fbcc7758c2cc1a299607959f6210df2a68b99b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 00a8bf9dd5dbc7e7915b909f04d8176ff1a33afb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +49,10 @@ ROLLBACK [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa istruzione funziona esattamente come l'istruzione ROLLBACK TRANSACTION, con la sola differenza che ROLLBACK TRANSACTION accetta un nome di transazione definita dall'utente. Questa sintassi ROLLBACK è compatibile con ISO, con o senza la parola chiave facoltativa WORK.  
   
- Quando le transazioni sono nidificate, ROLLBACK WORK sempre il rollback per l'istruzione BEGIN TRANSACTION più esterna e decrementa il @@TRANCOUNT funzione di sistema su 0.  
+ Quando le transazioni sono nidificate, l'istruzione ROLLBACK WORK esegue sempre il rollback dell'istruzione BEGIN TRANSACTION più esterna e riduce il valore della funzione di sistema @@TRANCOUNT fino a 0.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per l'istruzione ROLLBACK WORK vengono assegnate per impostazione predefinita a qualsiasi utente valido.  

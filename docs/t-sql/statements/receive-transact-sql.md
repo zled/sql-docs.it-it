@@ -1,16 +1,14 @@
 ---
-title: RICEZIONE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: RECEIVE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RECEIVE_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - receiving messages
 - retrieving messages
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ed6bfbd57bda9c2c3e7649be91ded91605af153f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d3a405bf525cc5203b82860097e8904fca2de4f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +71,7 @@ ms.lasthandoff: 11/21/2017
  WAITFOR  
  Specifica che l'istruzione RECEIVE deve rimanere in attesa dell'arrivo di un messaggio nella coda, se non sono presenti messaggi.  
   
- TOP (  *n*  )  
+ TOP( *n* )  
  Specifica il numero massimo di messaggi da restituire. Se questa clausola viene omessa, vengono restituiti tutti i messaggi corrispondenti ai criteri dell'istruzione.  
   
  \*  
@@ -83,7 +80,7 @@ ms.lasthandoff: 11/21/2017
  *column_name*  
  Nome di una colonna da includere nel set di risultati.  
   
- *espressione*  
+ *expression*  
  Nome di colonna, costante, funzione o qualsiasi combinazione di nomi di colonna, costanti e funzioni concatenati da un operatore.  
   
  *column_alias*  
@@ -93,55 +90,55 @@ ms.lasthandoff: 11/21/2017
  Specifica la coda contenente i messaggi da recuperare.  
   
  *database_name*  
- Nome del database contenente la coda da cui ricevere i messaggi. Se non si *nome del database* viene omesso, viene utilizzato il database corrente.  
+ Nome del database contenente la coda da cui ricevere i messaggi. Se non si specifica *database_name*, per impostazione predefinita viene usato il database corrente.  
   
  *schema_name*  
- Nome dello schema proprietario della coda da cui ricevere i messaggi. Se non si *nome dello schema* viene omesso, viene utilizzato lo schema predefinito per l'utente corrente.  
+ Nome dello schema proprietario della coda da cui ricevere i messaggi. Se non si specifica *schema_name*, per impostazione predefinita viene usato lo schema predefinito dell'utente corrente.  
   
- *nome_coda*  
+ *queue_name*  
  Nome della coda da cui ricevere i messaggi.  
   
- IN *table_variable*  
+ INTO *table_variable*  
  Specifica la variabile di tabella in cui vengono inseriti i messaggi tramite RECEIVE. La variabile di tabella deve includere un numero di colonne uguale a quello presente nei messaggi. Il tipo di dati di ogni colonna nella variabile di tabella deve supportare la conversione implicita nel tipo di dati della colonna corrispondente nei messaggi. Se non si specifica INTO, i messaggi vengono restituiti come set di risultati.  
   
  WHERE  
  Specifica la conversazione o il gruppo di conversazioni per i messaggi ricevuti. Se la clausola viene omessa, vengono restituiti i messaggi dal successivo gruppo di conversazioni disponibile.  
   
  conversation_handle = *conversation_handle*  
- Specifica la conversazione per i messaggi ricevuti. Il *handle di conversazione* specificato deve essere un **uniqueidentifier**, o un tipo convertibile in **uniqueidentifier**.  
+ Specifica la conversazione per i messaggi ricevuti. L'*handle di conversazione* specificato deve essere un tipo **uniqueidentifier** o un tipo convertibile in **uniqueidentifier**.  
   
  conversation_group_id = *conversation_group_id*  
- Specifica il gruppo di conversazioni per i messaggi ricevuti. Il *ID gruppo di conversazioni è* specificato deve essere un **uniqueidentifier**, o un tipo convertibile in **uniqueidentifier**.  
+ Specifica il gruppo di conversazioni per i messaggi ricevuti. L'*ID gruppo di conversazioni* specificato deve essere un tipo **uniqueidentifier** o un tipo convertibile in **uniqueidentifier**.  
   
  TIMEOUT *timeout*  
- Specifica l'intervallo di tempo, in millisecondi, per cui l'istruzione deve rimanere in attesa di un messaggio. È possibile utilizzare questa clausola solo insieme alla clausola WAITFOR. Se non si specifica questa clausola, o il timeout è -**1**, il tempo di attesa è illimitato. Alla scadenza del timeout, l'istruzione RECEIVE restituisce un set di risultati vuoto.  
+ Specifica l'intervallo di tempo, in millisecondi, per cui l'istruzione deve rimanere in attesa di un messaggio. È possibile utilizzare questa clausola solo insieme alla clausola WAITFOR. Se non si specifica questa clausola o se il timeout è -**1**, il tempo di attesa è illimitato. Alla scadenza del timeout, l'istruzione RECEIVE restituisce un set di risultati vuoto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Se l'istruzione RECEIVE non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola (;).  
   
- L'istruzione RECEIVE legge i messaggi da una coda e restituisce un set di risultati. Il set di risultati è composto da zero o più righe, ognuna contenente un singolo messaggio. Se si omette la clausola INTO, e *column_specifier* assegna valori a variabili locali, l'istruzione restituisce un set di risultati al programma chiamante.  
+ L'istruzione RECEIVE legge i messaggi da una coda e restituisce un set di risultati. Il set di risultati è composto da zero o più righe, ognuna contenente un singolo messaggio. Se non si usa la clausola INTO e il parametro *column_specifier* non assegna valori a variabili locali, l'istruzione restituisce un set di risultati al programma chiamante.  
   
- I messaggi restituiti dall'istruzione RECEIVE possono essere di tipi diversi. Le applicazioni possono utilizzare il **message_type_name** colonna per indirizzare ogni messaggio a codice che gestisce il tipo di messaggio associato. Esistono due classi di tipi di messaggi:  
+ I messaggi restituiti dall'istruzione RECEIVE possono essere di tipi diversi. Le applicazioni possono usare la colonna **message_type_name** per indirizzare ogni messaggio a codice che gestisce il tipo di messaggio associato. Esistono due classi di tipi di messaggi:  
   
 -   Tipi di messaggi definiti dall'applicazione creati utilizzando l'istruzione CREATE MESSAGE TYPE. Il set di tipi di messaggi definiti dall'applicazione consentiti in una conversazione è definito dal contratto [!INCLUDE[ssSB](../../includes/sssb-md.md)] specificato per la conversazione.  
   
 -   Messaggi del sistema di [!INCLUDE[ssSB](../../includes/sssb-md.md)] che restituiscono informazioni sullo stato o sull'errore.  
   
- L'istruzione RECEIVE rimuove i messaggi ricevuti dalla coda a meno che per la coda non sia specificato un periodo di memorizzazione dei messaggi. Quando l'impostazione di memorizzazione per la coda è impostata su ON, l'istruzione RECEIVE Aggiorna la **stato** colonna **0** e lascia i messaggi nella coda. Se viene eseguito il rollback di una transazione che contiene un'istruzione RECEIVE, viene eseguito il rollback anche di tutte le modifiche apportate alla coda nella transazione, con conseguente ripristino dei messaggi nella coda.  
+ L'istruzione RECEIVE rimuove i messaggi ricevuti dalla coda a meno che per la coda non sia specificato un periodo di memorizzazione dei messaggi. Se l'impostazione di RETENTION per la coda è ON, l'istruzione RECEIVE aggiorna la colonna **status** impostando il valore **0** e lascia i messaggi nella coda. Se viene eseguito il rollback di una transazione che contiene un'istruzione RECEIVE, viene eseguito il rollback anche di tutte le modifiche apportate alla coda nella transazione, con conseguente ripristino dei messaggi nella coda.  
   
- Tutti i messaggi restituiti da un'istruzione RECEIVE appartengono allo stesso gruppo di conversazioni. L'istruzione RECEIVE blocca il gruppo di conversazioni per i messaggi restituiti fino al completamento della transazione che contiene l'istruzione. Un'istruzione RECEIVE restituisce messaggi contenenti un **stato** di **1.** Il set di risultati restituito da un'istruzione RECEIVE viene ordinato in modo implicito:  
+ Tutti i messaggi restituiti da un'istruzione RECEIVE appartengono allo stesso gruppo di conversazioni. L'istruzione RECEIVE blocca il gruppo di conversazioni per i messaggi restituiti fino al completamento della transazione che contiene l'istruzione. Un'istruzione **RECEIVE** restituisce messaggi per cui il valore della colonna status è **1**. Il set di risultati restituito da un'istruzione RECEIVE viene ordinato in modo implicito:  
   
 -   Se i messaggi di più conversazioni soddisfano le condizioni della clausola WHERE, l'istruzione RECEIVE restituisce tutti i messaggi di una conversazione prima di restituire i messaggi di qualsiasi altra conversazione. Le conversazioni vengono elaborate in ordine di livello di priorità decrescente.  
   
--   Per una determinata conversazione, un'istruzione RECEIVE restituisce i messaggi in ordine crescente **message_sequence_number** ordine.  
+-   Per una determinata conversazione, l'istruzione RECEIVE restituisce i messaggi in base all'ordine crescente di **message_sequence_number**.  
   
- La clausola WHERE dell'istruzione RECEIVE può contenere solo una condizione di ricerca che utilizza una **conversation_handle** o **conversation_group_id**. La condizione di ricerca non può contenere una o più altre colonne nella coda. Il **conversation_handle** o **conversation_group_id** non può essere un'espressione. Il set di messaggi restituito dipende dalle condizioni specificate nella clausola WHERE:  
+ Nella clausola WHERE dell'istruzione RECEIVE è possibile includere una sola condizione di ricerca che usa parametri **conversation_handle** o **conversation_group_id**. La condizione di ricerca non può contenere una o più altre colonne nella coda. **conversation_handle** o **conversation_group_id** non può essere un'espressione. Il set di messaggi restituito dipende dalle condizioni specificate nella clausola WHERE:  
   
--   Se **conversation_handle** viene specificato, RECEIVE restituisce tutti i messaggi della conversazione specificata disponibili nella coda.  
+-   Se è specificato **conversation_handle**, RECEIVE restituisce tutti i messaggi della conversazione specificata disponibili nella coda.  
   
--   Se **conversation_group_id** è specificato, RECEIVE restituisce tutti i messaggi che sono disponibili nella coda di qualsiasi conversazione membro del gruppo di conversazioni specificato.  
+-   Se è specificato **conversation_group_id**, RECEIVE restituisce tutti i messaggi disponibili nella coda di qualsiasi conversazione membro del gruppo di conversazioni specificato.  
   
 -   Se non è presente la clausola WHERE, RECEIVE determina quale gruppo di conversazioni:  
   
@@ -168,22 +165,22 @@ ms.lasthandoff: 11/21/2017
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**status**|**tinyint**|Stato del messaggio. Per i messaggi restituiti dal comando RECEIVE, lo stato è sempre **0**. I messaggi nella coda possono contenere uno dei valori seguenti:<br /><br /> **0**= pronto**1**= messaggio ricevuto**2**= non ancora completo**3**= messaggio inviato memorizzato|  
-|**priorità**|**tinyint**|Livello di priorità della conversazione applicato al messaggio.|  
+|**status**|**tinyint**|Stato del messaggio. Per i messaggi restituiti dal comando RECEIVE, lo stato è sempre **0**. I messaggi nella coda possono contenere uno dei valori seguenti:<br /><br /> **0**=Pronto**1**=Messaggio ricevuto**2**=Non ancora completo**3**=Messaggio inviato memorizzato|  
+|**priority**|**tinyint**|Livello di priorità della conversazione applicato al messaggio.|  
 |**queuing_order**|**bigint**|Numero progressivo del messaggio nella coda.|  
 |**conversation_group_id**|**uniqueidentifier**|Identificatore del gruppo di conversazioni a cui appartiene il messaggio.|  
 |**conversation_handle**|**uniqueidentifier**|Handle della conversazione di cui fa parte il messaggio.|  
 |**message_sequence_number**|**bigint**|Numero di sequenza del messaggio nella conversazione.|  
-|**SERVICE_NAME**|**nvarchar(512)**|Nome del servizio a cui è destinata la conversazione.|  
+|**service_name**|**nvarchar(512)**|Nome del servizio a cui è destinata la conversazione.|  
 |**service_id**|**int**|Identificatore di oggetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del servizio a cui è destinata la conversazione.|  
 |**service_contract_name**|**nvarchar(256)**|Nome del contratto rispettato dalla conversazione.|  
 |**service_contract_id**|**int**|Identificatore di oggetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del contratto rispettato dalla conversazione.|  
 |**message_type_name**|**nvarchar(256)**|Nome del tipo di messaggio che descrive il formato del messaggio. I messaggi possono essere tipi di messaggi dell'applicazione o messaggi di sistema di Service Broker.|  
 |**message_type_id**|**int**|Identificatore di oggetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del tipo di messaggio che descrive il messaggio.|  
-|**convalida**|**nchar(2)**|Convalida utilizzata per il messaggio.<br /><br /> **E**= vuoto**N**= None**X**= XML|  
-|**message_body**|**varbinary (max)**|Contenuto del messaggio.|  
+|**validation**|**nchar(2)**|Convalida utilizzata per il messaggio.<br /><br /> **E**=Empty**N**=None**X**=XML|  
+|**message_body**|**varbinary(MAX)**|Contenuto del messaggio.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per ricevere un messaggio, l'utente corrente deve disporre dell'autorizzazione RECEIVE per la coda.  
   
 ## <a name="examples"></a>Esempi  
@@ -339,14 +336,14 @@ WAITFOR(
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [Istruzione END CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [Crea contratto &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [Crea tipo di messaggio &#40; Transact-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
- [Invia &#40; Transact-SQL &#41;](../../t-sql/statements/send-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
- [DROP QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
   
   

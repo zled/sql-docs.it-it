@@ -1,26 +1,17 @@
 ---
-title: Monitorare R Services tramite i report personalizzati in Management Studio | Microsoft Docs
-ms.custom: 
-ms.date: 10/09/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 565041e140178055b4839985c10ba4633b5f0334
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+title: Monitorare i servizi R con i report personalizzati in Management Studio | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 0e444612a5acd0726bdd6fb743e43813d6b0caf7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Monitoraggio Machine Learning Services utilizzando i report personalizzati in Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,6 +109,6 @@ Repository di esempi di prodotto in GitHub include attualmente i report seguenti
 
 ## <a name="see-also"></a>Vedere anche
 
-[Monitoraggio di R Services](../../advanced-analytics/r-services/monitoring-r-services.md)
+[Monitoraggio dei servizi](managing-and-monitoring-r-solutions.md)
 
-[Eventi estesi per R Services](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
+[Eventi estesi per R Services](extended-events-for-sql-server-r-services.md)

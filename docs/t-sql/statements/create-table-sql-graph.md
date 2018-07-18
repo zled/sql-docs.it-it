@@ -1,16 +1,14 @@
 ---
-title: CREARE una tabella (SQL grafico) | Documenti Microsoft
-ms.custom: 
+title: CREATE TABLE (grafo SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQL_GRAPH_TSQL
@@ -33,25 +31,25 @@ helpviewer_keywords:
 - NODE
 - EDGE
 - SQL graph, CREATE TABLE statement
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fe8ace1b8f8c55c14d4807514fcb1436f6966fed
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 12582cd78a60d141008cdb05ff3e6d559f29944e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="create-table-sql-graph"></a>CREARE una tabella (SQL grafico)
+# <a name="create-table-sql-graph"></a>CREATE TABLE (grafo SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Crea una nuova tabella grafico SQL come un `NODE` o `EDGE` tabella. 
+Crea una nuova tabella di grafi SQL come tabella `NODE` o `EDGE`. 
   
 > [!NOTE]   
->  Per istruzioni Transact-SQL standard, vedere [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
+>  Per le istruzioni Transact-SQL standard, vedere [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,37 +65,37 @@ CREATE TABLE
   
   
 ## <a name="arguments"></a>Argomenti  
-Questo documento elenca solo gli argomenti relativi al grafico SQL. Per un elenco completo e una descrizione di argomenti supportati, vedere [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
+Questo documento include solo gli argomenti relativi al grafo SQL. Per un elenco completo e una descrizione degli argomenti supportati, vedere [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
  *database_name*    
- Nome del database in cui è viene creata la tabella. *database_name* deve specificare il nome di un database esistente. Se non specificato, *database_name* impostazioni predefinite per il database corrente. L'account di accesso per la connessione corrente deve essere associata a un ID utente esistente nel database specificato da *database_name*, e all'ID utente deve disporre delle autorizzazioni CREATE TABLE.  
+ Nome del database in cui è viene creata la tabella. *database_name* deve specificare il nome di un database esistente. Se non viene specificato, per impostazione predefinita *database_name* è il database corrente. L'account di accesso per la connessione corrente deve essere associato a un ID utente esistente nel database specificato da *database_name*. Questo ID utente deve avere le autorizzazioni CREATE TABLE.  
   
  *schema_name*    
  Nome dello schema a cui appartiene la nuova tabella.  
   
  *table_name*    
- È il nome della tabella di nodo o bordo. I nomi di tabella devono seguire le regole per [identificatori](../../relational-databases/databases/database-identifiers.md). *TABLE_NAME* può contenere un massimo di 128 caratteri, ad eccezione dei nomi di tabella temporanea locale (i nomi preceduti da un solo simbolo di cancelletto (#)) che non può superare i 116 caratteri.  
+ Nome della tabella nodi o bordi. I nomi delle tabelle devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). *table_name* può essere costituito al massimo da 128 caratteri, ad eccezione dei nomi di tabelle temporanee locali, ovvero i nomi preceduti da un solo simbolo di cancelletto (#), che non possono superare i 116 caratteri.  
   
- NODO   
- Crea una tabella di nodo.
+ NODE   
+ Crea una tabella nodi.
 
  EDGE  
- Crea una tabella edge.  
+ Crea una tabella bordi.  
   
-## <a name="remarks"></a>Osservazioni  
-Creazione di una tabella temporanea come nodo o una tabella edge non è supportata.  
+## <a name="remarks"></a>Remarks  
+La creazione di una tabella temporanea come tabella nodi o bordi non è supportata.  
 
-Creazione di una tabella di nodo o edge come una tabella temporale non è supportata.
+La creazione di una tabella nodi o bordi come tabella temporanea non è supportata.
 
-Estensione database non è supportato per la tabella di nodo o bordo.
+Stretch Database non è supportato per la tabella nodi o bordi.
 
-Tabelle di bordo o di nodo non possono essere tabelle esterne (Nessun supporto di polybase per le tabelle di graph). 
+Le tabelle nodi o bordi non possono essere tabelle esterne. PolyBase non supporta le tabelle di grafi. 
   
  
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-create-a-node-table"></a>A. Creare un `NODE` tabella
- Nell'esempio seguente viene illustrato come creare un `NODE` tabella
+### <a name="a-create-a-node-table"></a>A. Creare una tabella `NODE`
+ L'esempio seguente illustra come creare una tabella `NODE`
 
 ```
  CREATE TABLE Person (
@@ -107,8 +105,8 @@ Tabelle di bordo o di nodo non possono essere tabelle esterne (Nessun supporto d
  ) AS NODE;
 ```
 
-### <a name="b-create-an-edge-table"></a>B. Creare un `EDGE` tabella
-Gli esempi seguenti mostrano come creare `EDGE` tabelle
+### <a name="b-create-an-edge-table"></a>B. Creare una tabella `EDGE`
+L'esempio seguente illustra come creare tabelle `EDGE`
 
 ```
  CREATE TABLE friends (
@@ -127,6 +125,6 @@ Gli esempi seguenti mostrano come creare `EDGE` tabelle
 
 ## <a name="see-also"></a>Vedere anche  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [INSERT (SQL grafico)](../../t-sql/statements/insert-sql-graph.md)]  
- [L'elaborazione con SQL Server 2017 grafico](../../relational-databases/graphs/sql-graph-overview.md)
+ [INSERT (grafo SQL)](../../t-sql/statements/insert-sql-graph.md)  
+ [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Elaborazione di grafi con SQL Server 2017)
 

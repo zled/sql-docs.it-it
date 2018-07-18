@@ -1,18 +1,19 @@
 ---
 title: SELECT (DMX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: SELECT
-dev_langs: DMX
+f1_keywords:
+- SELECT
+dev_langs:
+- DMX
 helpviewer_keywords:
 - browsing mining model [Analysis Services]
 - TOP clause, SELECT
@@ -24,16 +25,15 @@ helpviewer_keywords:
 - statements [DMX], SELECT statement
 - WHERE clause, DMX
 ms.assetid: 32d9e8fd-796b-4e1c-ae59-73cd6f645485
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a769e8dc2157140718a4a4c35e45fa9ccdd2e43d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 461f727337c4d03944b1f774cfddd91385aaf4c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -111,9 +111,9 @@ WHERE < condition expression >
 ## <a name="predictions"></a>Stime  
  Esistono due tipi di sintassi che è possibile utilizzare per la creazione di stime:  
   
--   [SELECT FROM &#60; modello di &#62; DMX PREDICTION JOIN &#40; &#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+-   [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
--   [SELECT FROM &#60; modello di &#62; &#40; DMX &#41;](../dmx/select-from-model-dmx.md)  
+-   [SELECT FROM &#60;modello&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
  Il primo tipo consente di creare stime complesse in tempo reale o in batch.  
   
@@ -130,26 +130,26 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
 ## <a name="clause-syntax"></a>Sintassi delle clausole  
  A causa della complessità della visualizzazione con il **selezionare** istruzione, gli elementi della sintassi e gli argomenti sono descritti dalla clausola. Per ulteriori informazioni su ciascuna clausola, fare clic su un argomento indicato nell'elenco seguente:  
   
- [SELECT DISTINCT FROM &#60; modello di &#62; &#40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md)  
+ [SELECT DISTINCT FROM &#60;modello &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
- [SELECT FROM &#60; modello di &#62;. DMX contenuto &#40; &#41;](../dmx/select-from-model-content-dmx.md)  
+ [SELECT FROM &#60;modello&#62;. CONTENUTO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
- [SELECT FROM &#60; modello di &#62;. DMX casi &#40; &#41;](../dmx/select-from-model-cases-dmx.md)  
+ [SELECT FROM &#60;modello&#62;. CASI &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
   
- [SELECT FROM &#60; modello di &#62;. DMX SAMPLE_CASES &#40; &#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+ [SELECT FROM &#60;modello&#62;. SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
- [SELECT FROM &#60; modello di &#62;. DMX DIMENSION_CONTENT &#40; &#41;](../dmx/select-from-model-dimension-content-dmx.md)  
+ [SELECT FROM &#60;modello&#62;. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
- [SELECT FROM &#60; modello di &#62; DMX PREDICTION JOIN &#40; &#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+ [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
- [SELECT FROM &#60; modello di &#62; &#40; DMX &#41;](../dmx/select-from-model-dmx.md)  
+ [SELECT FROM &#60;modello&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
- [SELECT FROM &#60; struttura &#62;. CASI](../dmx/select-from-structure-cases.md)  
+ [SELECT FROM &#60;struttura&#62;. CASI](../dmx/select-from-structure-cases.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)  
+ [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)  
   
   

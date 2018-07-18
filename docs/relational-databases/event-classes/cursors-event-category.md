@@ -1,40 +1,36 @@
 ---
 title: Categoria di eventi Cursori | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Cursors event category [SQL Server]
 - event classes [SQL Server], Cursors event category
 - SQL Server event classes, Cursors event category
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f5a384535583fd7ae18329061a4f7d34d1f927e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5060041eef9f55f319fd528965f4872c4dfa7ad5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="cursors-event-category"></a>Categoria di eventi Cursori
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La categoria di eventi **Cursori** include le classi di evento usate per monitorare il funzionamento dei cursori.  
+  La categoria di eventi **Cursori** include le classi di evento usate per monitorare il funzionamento dei cursori.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Classe di evento CursorClose](../../relational-databases/event-classes/cursorclose-event-class.md)|Descrive gli eventi di chiusura del cursore che si verificano nei cursori API.|  
 |[Classe di evento CursorExecute](../../relational-databases/event-classes/cursorexecute-event-class.md)|Descrive gli eventi di esecuzione del cursore che si verificano nei cursori API.|  

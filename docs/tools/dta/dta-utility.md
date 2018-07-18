@@ -1,16 +1,16 @@
 ---
-title: "Utilità DTA | Documenti Microsoft"
-ms.custom: 
+title: Utilità dta | Microsoft Docs
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
 - command prompt utilities [SQL Server], dta
@@ -22,19 +22,19 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 8196476349cbe6f2e376a4ac651fb6b1eeb65b34
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dta-utility"></a>dta - utilità
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il **dta** utilità è la versione del prompt dei comandi di ottimizzazione guidata motore di Database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L'utilità **dta** è la versione per il prompt dei comandi dello strumento Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
   
  In modo analogo a Ottimizzazione guidata motore di database, l'utilità **dta** analizza il carico di lavoro e propone strutture di progettazione fisica per ottimizzare le prestazioni a livello di server per il carico di lavoro specifico. Il carico di lavoro può essere una cache dei piani, un file o una tabella di traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le strutture di progettazione fisica includono indici, viste indicizzate e schemi di partizionamento. Dopo aver analizzato un carico di lavoro, l'utilità **dta** visualizza un'indicazione di progettazione fisica dei database e quindi genera lo script necessario per implementare tale indicazione. I carichi di lavoro possono essere specificati dal prompt dei comandi con gli argomenti **-if** o **-it** . È anche possibile specificare un file di input XML dal prompt dei comandi con l'argomento **-ix** . In quest'ultimo caso, il carico di lavoro viene specificato nel file di input XML.  
   
@@ -134,7 +134,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** *database_name*  
- Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Esempio:  
+ Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Ad esempio  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -158,7 +158,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*database_name* specificato con l'opzione **–D**||  
 |*owner_name*|**dbo**|*owner_name* deve essere **dbo**. Se si specifica un qualsiasi altro valore, l'esecuzione di **dta** ha esito negativo e viene restituito un errore.|  
-|*table_name*|Nessuno||  
+|*table_name*|None||  
   
  Se si utilizza un file, specificare l'estensione xml, ad esempio TuningLog.xml.  
   
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Specifica i tipi di strutture di progettazione fisica che **dta** deve includere nell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento. Se non si specifica alcun valore, **dta** usa l'argomento predefinito **-fa****IDX**.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |IDX_IV|Indici e viste indicizzate.|  
 |IDX|Solo indici.|  
@@ -182,8 +182,8 @@ dta -d AdventureWorks2012 ...
  Specifica gli indici filtrati da considerare per le nuove indicazioni. Per altre informazioni, vedere [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Specifica che gli indici columnstore deve essere considerata per le nuove indicazioni. DTA prenderà in considerazione entrambi gli indici columnstore cluster e non cluster. Per ulteriori informazioni, vedere    
-[Indicazioni relative agli indici ColumnStore nel Database di ottimizzazione guidata motore (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
+ Specifica che gli indici columnstore devono essere considerati per nuove indicazioni. DTA prenderà in considerazione entrambi gli indici columnstore cluster e non cluster. Per ulteriori informazioni, vedere    
+[Indicazioni relative agli indici columnstore in Ottimizzazione guidata motore di database](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
 |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Specifica le strutture di progettazione fisica esistenti che **dta** deve conservare durante la generazione dell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Nessuno|Nessuna struttura esistente.|  
 |ALL|Tutte le strutture esistenti.|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Specifica se le nuove strutture di progettazione fisica, ovvero indici e viste indicizzate, proposte da **dta** devono essere partizionate e definisce la modalità di partizionamento. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Nessuno|Nessun partizionamento.|  
 |FULL|Partizionamento completo (scegliere questo valore per ottimizzare le prestazioni).|  
@@ -221,7 +221,7 @@ dta -d AdventureWorks2012 ...
  Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **–n** .  
  
 **-iq**  
- Specifica che l'archivio Query utilizzabile come carico di lavoro. Vengono analizzati i primi 1.000 eventi dall'archivio Query per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **–n** .  Vedere [archivio Query](../../relational-databases/performance/how-query-store-collects-data.md) e [ottimizzazione di Database con carico di lavoro dall'archivio Query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) per ulteriori informazioni.
+ Specifica che l'archivio Query utilizzabile come carico di lavoro. Vengono analizzati i primi 1.000 eventi dall'archivio Query per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **–n** .  Per altre informazioni, vedere [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) e [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
 |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -231,7 +231,7 @@ dta -d AdventureWorks2012 ...
  Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
   
  **-it** *workload_trace_table_name*  
- Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome è specificato nel formato: [*database_name*]**.** [*owner_name*] **. * * * table_name*.  
+ Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome viene specificato in formato [*database_name*]**.**[*owner_name*]**.***table_name*.  
   
  Nella tabella seguente sono riportati i valori predefiniti per ogni parametro.  
   
@@ -239,7 +239,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|  
 |*database_name*|*database_name* specificato con l'opzione **–D** .|  
 |*owner_name*|**dbo**|  
-|*table_name*|Nessuno|  
+|*table_name*|Nessuna.|  
   
 > [!NOTE]  
 >  *owner_name* deve essere **dbo**. Se viene specificato un altro valore, l'esecuzione di **dta** ha esito negativo e viene restituito un errore. È inoltre necessario specificare una tabella o un file del carico di lavoro.  
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Specifica se le strutture di progettazione fisica vengono create online. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |OFF|Le strutture di progettazione fisica indicate non possono essere create online.|  
 |ON|Tutte le strutture di progettazione fisica indicate possono essere create online.|  
@@ -306,7 +306,7 @@ In questo caso, DTA verrà usare archivio Query come origine del carico di lavor
  **-rl** *analysis_report_list*  
  Specifica l'elenco dei report di analisi da generare. Nella tabella seguente sono riportati i valori che è possibile specificare per questo argomento.  
   
-|Valore|Report|  
+|valore|Report|  
 |-----------|------------|  
 |ALL|Tutti i report di analisi|  
 |STMT_COST|Report costo istruzioni|  
@@ -366,11 +366,11 @@ In questo caso, DTA verrà usare archivio Query come origine del carico di lavor
  **-x**  
  Avvia la sessione di ottimizzazione e chiude l'utilità.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Premere CTRL+C una volta per arrestare la sessione di ottimizzazione e generare le indicazioni in base all'analisi completata da **dta** fino a quel momento. Verrà richiesto di decidere se generare le indicazioni o meno. Premere nuovamente CTRL+C per arrestare la sessione di ottimizzazione senza generare le indicazioni.  
   
 ## <a name="examples"></a>Esempi  
- **A. Ottimizzare un carico di lavoro che include indici e viste indicizzate nell'indicazione**  
+ **A. Ottimizzazione di un carico di lavoro che include indici e viste indicizzate nell'indicazione**  
   
  Questo esempio usa una connessione sicura (`-E`) per connettersi al database **tpcd1G** in MyServer per analizzare un carico di lavoro e creare indicazioni. Scrive l'output in un file di script denominato script.sql. Se script.sql esiste già, l'utilità **dta** sovrascriverà il file in quanto è stato specificato l'argomento `-F` . La sessione di ottimizzazione viene eseguita per un periodo illimitato di tempo per garantire l'analisi completa del carico di lavoro (`-A 0`). L'indicazione deve fornire un miglioramento minimo del 5% (`-m 5`). **dta** deve includere indici e viste indicizzate nell'indicazione finale (`-fa IDX_IV`).  
   
@@ -378,7 +378,7 @@ In questo caso, DTA verrà usare archivio Query come origine del carico di lavor
 dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
 ```  
   
- **B. Limitare l'utilizzo del disco**  
+ **B. Limitazione dell'utilizzo del disco**  
   
  Nell'esempio seguente viene limitata la dimensione totale del database, che include i dati non elaborati e gli indici aggiuntivi, a 3 GB (`-B 3000`) e l'output viene reindirizzato su d:\result_dir\script1.sql. Il tempo di esecuzione non è maggiore di 1 ora (`-A 60`).  
   
@@ -386,7 +386,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
 dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
 ```  
   
- **C. Limitare il numero di query ottimizzate**  
+ **C. Limitazione del numero di query ottimizzate**  
   
  Nell'esempio seguente il numero di query lette dal file orders_wkld.sql viene limitato a un massimo di 10 (`-n 10`) oppure il tempo di esecuzione viene limitato a 15 minuti (`-A 15`), a seconda di quale dei due eventi si verifica per primo. Per assicurarsi che tutte e 10 le query vengano ottimizzate, specificare un tempo di ottimizzazione illimitato tramite `-A 0`. Se il fattore tempo è rilevante, specificare un limite di tempo adeguato impostando il numero di minuti disponibili per l'ottimizzazione con l'argomento `-A` come illustrato nell'esempio seguente.  
   

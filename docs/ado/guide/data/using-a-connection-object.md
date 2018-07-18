@@ -1,30 +1,27 @@
 ---
 title: Utilizzo di un oggetto di connessione | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e27a3da94c2699e2281d331e6aa1fff4b9a62001
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 24dd06d812a1234fd9a7458600e71f77cccdcf63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-a-connection-object"></a>Utilizzo di un oggetto di connessione
 Prima di aprire un **connessione** dell'oggetto, è necessario definire alcune informazioni sull'origine dati e il tipo di connessione. È assegnata la maggior parte delle informazioni di *ConnectionString* parametro del [Open (metodo)](../../../ado/reference/ado-api/open-method-ado-connection.md) sul **connessione** oggetto, o dal [ConnectionString proprietà](../../../ado/reference/ado-api/connectionstring-property-ado.md) sul **connessione** oggetto. Una stringa di connessione è costituita da un elenco di coppie valore/argomento separati da punti e virgola, con i valori racchiusi tra virgolette singole. Esempio:  

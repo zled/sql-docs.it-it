@@ -1,37 +1,34 @@
 ---
-title: STCurveToLine (tipo di dati geometry) | Documenti Microsoft
-ms.custom: 
+title: STCurveToLine (tipo di dati geometry) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - STCurveToLine method (geometry)
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d5950ba5609fdd34008c051166f089cf3433890d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d2b8e54971337520c8d96caa7560436f34a692a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Restituisce un'approssimazione poligonale di un' **geometry** istanza contenente i segmenti di arco circolare.
+Restituisce un'approssimazione poligonale di un'istanza **geometry** contenente segmenti di arco circolare.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,27 +38,27 @@ Restituisce un'approssimazione poligonale di un' **geometry** istanza contenente
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- Restituisce un oggetto vuoto **GeometryCollection**istanza per vuoto **geometry** istanza variabili e restituisce **NULL** per non inizializzata **geometry** variabili.  
+## <a name="remarks"></a>Remarks  
+ Restituisce un'istanza **GeometryCollection** vuota per variabili di istanza **geometry** vuote e restituisce **NULL** per variabili **geometry** non inizializzate.  
   
- L'approssimazione poligonale restituita dal metodo dipende il **geometry** istanza che viene utilizzata per chiamare il metodo:  
+ L'approssimazione poligonale restituita dal metodo dipende dall'istanza **geometry** usata per chiamare il metodo:  
   
--   Restituisce un **LineString** istanza per un **CircularString** o **CompoundCurve** istanza.  
+-   Restituisce un'istanza **LineString** per un'istanza **CircularString** o **CompoundCurve**.  
   
--   Restituisce un **poligono** istanza per un **CurvePolygon** istanza.  
+-   Restituisce un'istanza **Polygon** per un'istanza **CurvePolygon**.  
   
--   Restituisce una copia del **geometry** istanza, se tale istanza non è un **CircularString**, **CompoundCurve**, o **CurvePolygon** istanza . Ad esempio, il `STCurveToLine` metodo restituisce un **punto** istanza per un **geometry** che è un **punto** istanza.  
+-   Restituisce una copia dell'istanza **geometry** se l'istanza non è di tipo **CircularString**, **CompoundCurve** o **CurvePolygon**. Ad esempio, il metodo `STCurveToLine` restituisce un'istanza **Point** per un'istanza **geometry** di tipo **Point**.  
   
- A differenza della specifica SQL/MM, il `STCurveToLine` metodo non utilizza i valori di coordinata z per calcolare l'approssimazione poligonale. Il metodo ignora qualsiasi coordinata z di valori presenti nel chiamante **geometry** istanza.  
+ A differenza della specifica SQL/MM, il metodo `STCurveToLine` non usa i valori della coordinata z per calcolare l'approssimazione poligonale. Il metodo ignora qualsiasi valore della coordinata z presente nell'istanza **geometry** chiamante.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Utilizzo di una variabile di geometria non inizializzata e di un'istanza vuota  
- Nell'esempio seguente, il primo **selezionare** istruzione utilizza l'oggetto non inizializzato **geometry** istanza per chiamare il `STCurveToLine` (metodo), mentre la seconda **selezionare** istruzione utilizza un oggetto vuoto **geometry** istanza. Di conseguenza, il metodo restituisce **NULL** alla prima istruzione e una **GeometryCollection** insieme per la seconda istruzione.  
+ Nell'esempio seguente, la prima istruzione **SELECT** usa un'istanza **geometry** non inizializzata per chiamare il metodo `STCurveToLine` e la seconda istruzione **SELECT** usa un'istanza **geometry** vuota. Pertanto, il metodo restituisce **NULL** alla prima istruzione e una raccolta **GeometryCollection** alla seconda istruzione.  
   
 ```
  DECLARE @g geometry; 
@@ -72,7 +69,7 @@ Restituisce un'approssimazione poligonale di un' **geometry** istanza contenente
  ```  
   
 ### <a name="b-using-a-linestring-instance"></a>B. Utilizzo di un'istanza LineString  
- Il **selezionare** istruzione nell'esempio seguente viene utilizzato un **LineString** istanza per chiamare il metodo STCurveToLine. Di conseguenza, il metodo restituisce un **LineString** istanza.  
+ L'istruzione **SELECT** nell'esempio seguente usa un'istanza **LineString** per chiamare il metodo STCurveToLine. In questo caso, il metodo restituisce un'istanza **LineString**.  
   
 ```
  DECLARE @g geometry; 
@@ -82,7 +79,7 @@ Restituisce un'approssimazione poligonale di un' **geometry** istanza contenente
  ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>C. Utilizzo di un'istanza CircularString  
- Il primo **selezionare** istruzione nell'esempio seguente viene utilizzato un **CircularString** istanza per chiamare il metodo STCurveToLine. Di conseguenza, il metodo restituisce un **LineString** istanza. Questo **selezionare** istruzione confronta inoltre le lunghezze delle due istanze sono pressoché identiche.  Infine, il secondo **selezionare** l'istruzione restituisce il numero di punti per ogni istanza.  Restituisce solo 5 punti per il **CircularString** istanza, ma 65 per il **LineString**istanza.  
+ La prima istruzione **SELECT** nell'esempio seguente usa un'istanza **CircularString** per chiamare il metodo STCurveToLine. In questo caso, il metodo restituisce un'istanza **LineString**. Questa istruzione **SELECT** confronta inoltre le lunghezze delle due istanze, che sono pressoché identiche.  Infine, la seconda istruzione **SELECT** restituisce il numero di punti per ogni istanza.  Restituisce solo 5 punti per l'istanza **CircularString**, ma 65 punti per l'istanza **LineString**.  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -93,7 +90,7 @@ Restituisce un'approssimazione poligonale di un' **geometry** istanza contenente
  ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>D. Utilizzo di un'istanza CurvePolygon  
- Il **selezionare** istruzione nell'esempio seguente viene utilizzato un **CurvePolygon** istanza per chiamare il metodo STCurveToLine. Di conseguenza, il metodo restituisce un **poligono** istanza.  
+ L'istruzione **SELECT** nell'esempio seguente usa un'istanza **CurvePolygon** per chiamare il metodo STCurveToLine. In questo caso, il metodo restituisce un'istanza **Polygon**.  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 

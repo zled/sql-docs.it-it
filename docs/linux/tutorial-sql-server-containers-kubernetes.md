@@ -1,24 +1,21 @@
 ---
-title: "Configurazione di un contenitore di SQL Server in Kubernetes per la disponibilità elevata | Documenti Microsoft"
-description: "In questa esercitazione viene illustrato come distribuire una soluzione di disponibilità elevata di SQL Server con Kubernetes sul servizio contenitore di Azure."
+title: Configurazione di un contenitore di SQL Server in Kubernetes per la disponibilità elevata | Documenti Microsoft
+description: In questa esercitazione viene illustrato come distribuire una soluzione di disponibilità elevata di SQL Server con Kubernetes sul servizio contenitore di Azure.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
-ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: a21856b3a864373f84ad304484ecdd88ac17f52a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.technology: linux
+ms.openlocfilehash: 4aaaee69ab9c81df2161f465c2c725d5b2be3c17
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Configurazione di un contenitore di SQL Server in Kubernetes per la disponibilità elevata
 
@@ -279,7 +276,7 @@ Se il contenitore è stato configurato come descritto, è possibile connettersi 
 
 Per connettersi all'istanza di SQL Server, è possibile utilizzare le seguenti applicazioni. 
 
-* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssms)
+* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
 
 * [SSDT](http://docs.microsoft.com/en-us/sql/linux/sql-server-linux-develop-use-ssdt)
 

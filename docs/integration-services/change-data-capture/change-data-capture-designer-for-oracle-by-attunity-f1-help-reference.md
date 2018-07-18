@@ -1,30 +1,28 @@
 ---
 title: Riferimento alla Guida sensibile al contesto di Change Data Capture Designer per Oracle di Attunity | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9b325d98bfad926ae8832c2cc765ddfb05c8da5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7ee0c024e172072ed89c64e10c3e1cacaac3e2e2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Riferimento alla Guida sensibile al contesto di Change Data Capture Designer for Oracle by Attunity
   Change Data Capture Designer for Oracle by Attunity viene utilizzato per creare e gestire l'istanza di Oracle CDC. Negli argomenti di questa sezione viene illustrato come eseguire le attività disponibili in CDC Designer Console.  

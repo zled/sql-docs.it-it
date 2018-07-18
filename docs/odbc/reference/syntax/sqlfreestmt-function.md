@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLFreeStmt | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLFreeStmt
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLFreeStmt
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLFreeStmt
-helpviewer_keywords: SQLFreeStmt function [ODBC]
+f1_keywords:
+- SQLFreeStmt
+helpviewer_keywords:
+- SQLFreeStmt function [ODBC]
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 2d758d7ec03a7d67e7f943a01d19c4959aa18bc9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d20a486a644a5608accef46a9558c1754efd975d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt Function
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: 92 ISO  
   
  **Riepilogo**  
- **SQLFreeStmt** Arresta elaborazione associata a un'istruzione specifica, chiude tutti i cursori aperti associati all'istruzione, Elimina risultati in sospeso o, facoltativamente, libera tutte le risorse associate all'handle di istruzione.  
+ **SQLFreeStmt** Arresta elaborazione associata a una specifica istruzione, chiude tutti i cursori aperti associati all'istruzione, viene eliminato in attesa di risultati o, facoltativamente, libera tutte le risorse associate all'handle di istruzione.  
   
 ## <a name="syntax"></a>Sintassi  
   

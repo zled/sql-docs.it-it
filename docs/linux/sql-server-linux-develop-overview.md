@@ -1,25 +1,22 @@
 ---
 title: Sviluppo di applicazioni per SQL Server in Linux | Documenti Microsoft
-description: 
+description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 11/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.custom: sql-linux
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.workload: On Demand
-ms.openlocfilehash: fb07628c8818b16709abab07efc1f52248426305
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 5445deb30d2e3c3dfd5cc4964f3b5d3ed2d9d391
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Come iniziare a sviluppare applicazioni destinate a SQL Server in Linux
 
@@ -57,11 +54,11 @@ Strumenti attualmente eseguiti su Windows, ad esempio SQL Server Management Stud
 
 Vedere gli argomenti seguenti per ulteriori informazioni:
 
-- [SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
 - [PowerShell SQL](sql-server-linux-manage-powershell.md)
 
-> [!Note] 
+> [!Note]
 > Assicurarsi che le versioni più recenti di questi strumenti si utilizza per risultati ottimali.
 
 ## <a name="use-new-sql-tools-for-linux"></a>Utilizzare nuovi strumenti SQL per Linux
@@ -78,7 +75,7 @@ Vedere gli argomenti seguenti per ulteriori informazioni:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per iniziare, installare SQL Server in Linux con una delle Guide rapide seguenti:
+Per iniziare, installare SQL Server in Linux con una delle seguenti esercitazioni di avvio rapido:
 
 - [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

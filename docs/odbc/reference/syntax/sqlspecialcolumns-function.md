@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLSpecialColumns | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLSpecialColumns
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLSpecialColumns
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSpecialColumns
-helpviewer_keywords: SQLSpecialColumns function [ODBC]
+f1_keywords:
+- SQLSpecialColumns
+helpviewer_keywords:
+- SQLSpecialColumns function [ODBC]
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 80afdd42ee17c77a44035854207812ecac3afb46
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 2bae2c5a51d7d16798bc2d7fca0e9d38509a0d6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlspecialcolumns-function"></a>Funzione SQLSpecialColumns
 **Conformità**  
  Versione è stato introdotto: Conformità di 1.0 standard ODBC: Open Group  
   
  **Riepilogo**  
- **SQLSpecialColumns** recupera le informazioni seguenti sulle colonne all'interno di una tabella specificata:  
+ **SQLSpecialColumns** recupera le informazioni seguenti relative alle colonne all'interno di una tabella specificata:  
   
 -   Set di colonne ottimale che identifica in modo univoco una riga nella tabella.  
   
@@ -68,7 +69,7 @@ SQLRETURN SQLSpecialColumns(
  SQL_ROWVER: Restituisce le colonne della tabella specificata, se presente, che vengono aggiornate automaticamente dall'origine dati quando qualsiasi valore nella riga viene aggiornato da una transazione (come SQLBase ROWID o Sybase TIMESTAMP).  
   
  *CatalogName*  
- [Input] Nome del catalogo per la tabella. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *CatalogName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome del catalogo per la tabella. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *CatalogName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *CatalogName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *CatalogName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa. Per ulteriori informazioni, vedere [argomenti delle funzioni di catalogo in](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
@@ -76,7 +77,7 @@ SQLRETURN SQLSpecialColumns(
  [Input] Lunghezza in caratteri del **CatalogName*.  
   
  *NomeSchema*  
- [Input] Nome dello schema per la tabella. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *NomeSchema* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome dello schema per la tabella. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *NomeSchema* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *SchemaName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -84,7 +85,7 @@ SQLRETURN SQLSpecialColumns(
  [Input] Lunghezza in caratteri del **SchemaName*.  
   
  *TableName*  
- [Input] Nome della tabella. Questo argomento non può essere un puntatore null. *TableName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome della tabella. Questo argomento non può essere un puntatore null. *TableName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *TableName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *TableName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -139,7 +140,7 @@ SQLRETURN SQLSpecialColumns(
 |IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente dell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato per l'handle per eseguire la post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
- Quando il *IdentifierType* argomento è SQL_BEST_ROWID, **SQLSpecialColumns** restituisce le colonne che identificano in modo univoco ogni riga della tabella. Queste colonne possono sempre essere utilizzate un *elenco select* o **dove** clausola. **SQLColumns**, che viene utilizzata per restituire un'ampia gamma di informazioni sulle colonne di una tabella, non necessariamente restituire le colonne che identificano in modo univoco ogni riga o le colonne che vengono aggiornate automaticamente quando qualsiasi valore nella riga viene aggiornata da un transazione. Ad esempio, **SQLColumns** potrebbe non restituire il valore ROWID pseudo-colonna Oracle. Questo è il motivo **SQLSpecialColumns** viene utilizzata per restituire le colonne. Per ulteriori informazioni, vedere [utilizza dei dati del catalogo](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
+ Quando il *IdentifierType* argomento è SQL_BEST_ROWID, **SQLSpecialColumns** restituisce le colonne che identificano in modo univoco ogni riga della tabella. Queste colonne possono sempre essere utilizzate un *elenco select* o **dove** clausola. **SQLColumns**, che viene utilizzato per restituire una varietà di informazioni sulle colonne di una tabella, non necessariamente restituire le colonne che identificano in modo univoco ogni riga o le colonne che vengono aggiornate automaticamente quando qualsiasi valore nella riga viene aggiornata da un transazione. Ad esempio, **SQLColumns** potrebbe non restituire il valore ROWID pseudo-colonna Oracle. Questo è il motivo **SQLSpecialColumns** viene utilizzata per restituire le colonne. Per ulteriori informazioni, vedere [utilizza dei dati del catalogo](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
   
 > [!NOTE]  
 >  Per ulteriori informazioni sull'utilizzo generale, gli argomenti e i dati restituiti delle funzioni di catalogo ODBC, vedere [funzioni di catalogo](../../../odbc/reference/develop-app/catalog-functions.md).  
@@ -170,8 +171,8 @@ SQLRETURN SQLSpecialColumns(
 |COLUMN_NAME (ODBC 1.0)|2|Varchar non NULL|Nome colonna. Il driver restituisce una stringa vuota per una colonna che non dispone di un nome.|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint non NULL|Tipo di dati SQL. Può trattarsi di un tipo di dati SQL ODBC o un tipo di dati specifici del driver SQL. Per un elenco dei tipi di dati ODBC SQL validi, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md). Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.|  
 |TYPE_NAME (ODBC 1.0)|4|Varchar non NULL|Nome del tipo di dati dipende dall'origine dati; ad esempio, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" o "CHAR () FOR BIT DATA".|  
-|COLUMN_SIZE (ODBC 1.0)|5|Valore intero|Le dimensioni della colonna nell'origine dati. Per ulteriori informazioni sulle dimensioni della colonna, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|BUFFER_LENGTH (ODBC 1.0)|6|Valore intero|La lunghezza in byte di dati trasferiti in un **SQLGetData** o **SQLFetch** operazione se si specifica SQL_C_DEFAULT. Per dati numerici, questa dimensione può essere diversa rispetto alle dimensioni dei dati archiviati nell'origine dati. Questo valore è lo stesso come colonna COLUMN_SIZE per dati carattere o binario. Per ulteriori informazioni, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
+|COLUMN_SIZE (ODBC 1.0)|5|Integer|Le dimensioni della colonna nell'origine dati. Per ulteriori informazioni sulle dimensioni della colonna, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
+|BUFFER_LENGTH (ODBC 1.0)|6|Integer|La lunghezza in byte di dati trasferiti in un **SQLGetData** o **SQLFetch** operazione se si specifica SQL_C_DEFAULT. Per dati numerici, questa dimensione può essere diversa rispetto alle dimensioni dei dati archiviati nell'origine dati. Questo valore è lo stesso come colonna COLUMN_SIZE per dati carattere o binario. Per ulteriori informazioni, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|Le cifre decimali della colonna nell'origine dati. Viene restituito NULL per i tipi di dati in cui non sono applicabili cifre decimali. Per ulteriori informazioni sulle cifre decimali, vedere [dimensioni di colonna, cifre decimali, trasferimento ottetto lunghezza e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indica se la colonna è una pseudo-colonna, ad esempio Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Nota:** per garantire la massima interoperabilità, Pseudocolonne non devono essere delimitate con l'identificatore di virgolette restituito da **SQLGetInfo**.|  
   

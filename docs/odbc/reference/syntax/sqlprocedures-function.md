@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLProcedures | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLProcedures
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLProcedures
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLProcedures
-helpviewer_keywords: SQLProcedures function [ODBC]
+f1_keywords:
+- SQLProcedures
+helpviewer_keywords:
+- SQLProcedures function [ODBC]
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b919ad9ca1e42ea87e1ac4891870dc8091beb722
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 486616002b58db8de8de5cd3e54e13c286b2587d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlprocedures-function"></a>Funzione SQLProcedures
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: ODBC  
   
  **Riepilogo**  
- **SQLProcedures** restituisce l'elenco di nomi di procedure archiviati in un'origine dati specifica. *Procedura* è un termine generico utilizzato per descrivere un *oggetto eseguibile*, o un'entità denominata che può essere richiamata utilizzando i parametri di input e outpui. Per ulteriori informazioni sulle procedure, vedere il [procedure](../../../odbc/reference/develop-app/procedures-odbc.md).  
+ **SQLProcedures** restituisce l'elenco di nomi di procedure archiviati in un'origine dati specifica. *Stored procedure* è un termine generico utilizzato per descrivere un *oggetto eseguibile*, o un'entità denominata che può essere richiamata utilizzando i parametri di input e outpui. Per ulteriori informazioni sulle procedure, vedere il [procedure](../../../odbc/reference/develop-app/procedures-odbc.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,7 +55,7 @@ SQLRETURN SQLProcedures(
  [Input] Handle di istruzione.  
   
  *CatalogName*  
- [Input] Catalogo di stored procedure. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *CatalogName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Catalogo di stored procedure. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *CatalogName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *CatalogName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *CatalogName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa. Per ulteriori informazioni, vedere [argomenti delle funzioni di catalogo in](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   

@@ -1,33 +1,19 @@
 ---
 title: Recupero di dati tramite XmlReader | Documenti Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- retrieving data
-- XmlReader object
-- data retrieval [ADOMD.NET], XmlReader object
-ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: adomd
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b5bfef8a355dea36e3444afe4ff32a1e783f96da
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e3dceaad0eed7f251962b9b86b6979093c62fdfa
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Recupero di dati tramite XmlReader
   Il **XmlReader** parte della classe di **System. XML** spazio dei nomi per la libreria di classi Microsoft .NET Framework, è simile al <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> classe in cui il **XmlReader**classe fornisce anche veloce, non in cache e forward-only ai dati. Se non è necessario per la visualizzazione in memoria, analisi dei dati mediante il <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> oggetto, il **XmlReader** oggetto è perfetto per il recupero dei dati XML, in particolare per grandi quantità di dati. Poiché **XmlReader** flussi di dati, **XmlReader** non è necessario recuperare e memorizzare nella cache di tutti i dati prima di esporli al chiamante, come nel caso un <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> oggetti utilizzati per convertire il Risposta XML for Analysis in una rappresentazione del modello oggetto analitici.  

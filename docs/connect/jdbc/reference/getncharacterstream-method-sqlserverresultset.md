@@ -1,27 +1,24 @@
 ---
 title: Metodo getNCharacterStream (SQLServerResultSet) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 69620047-78fd-4be9-a245-1851afaeac1b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ef71bb479fccd07ad394c63005974dd2500518a5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 207944467105887da6d04ae71590079119e3f2d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getncharacterstream-method-sqlserverresultset"></a>Metodo getNCharacterStream (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,8 +29,8 @@ ms.lasthandoff: 11/18/2017
   
 |Nome|Description|  
 |----------|-----------------|  
-|[Metodo getNCharacterStream &#40; int &#41; &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getncharacterstream-method-int-sqlserverresultset.md)|Recupera il valore della colonna designata nella riga corrente del [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come lettore.|  
-|[Metodo getNCharacterStream &#40;java.lang.String &#41; &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string-sqlserverresultset.md)|Recupera il valore della colonna designata nella riga corrente del [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come lettore.|  
+|[Metodo getNCharacterStream &#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-int-sqlserverresultset.md)|Recupera il valore della colonna designata nella riga corrente del [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come lettore.|  
+|[Metodo getNCharacterStream &#40;lang&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string-sqlserverresultset.md)|Recupera il valore della colonna designata nella riga corrente del [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto come lettore.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

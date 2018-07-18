@@ -1,16 +1,14 @@
 ---
-title: "CREARE priorità di Service BROKER (Transact-SQL) | Documenti Microsoft"
-ms.custom: 
+title: CREATE BROKER PRIORITY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE BROKER PRIORITY
@@ -28,21 +26,20 @@ dev_langs:
 helpviewer_keywords:
 - CREATE BROKER PRIORITY statement
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 40
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 524909a3f12040460950448e77c177f3b1aeef8d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b05a5095ccae50b33b2ad1ccb2a68f12f59b2531
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Definisce un livello di priorità e il set di criteri da utilizzare per determinare a quali conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve essere assegnato il livello di priorità. Il livello di priorità è assegnato a qualsiasi endpoint di conversazione che utilizza la stessa combinazione di contratti e i servizi specificati nella priorità di conversazione. Il valore delle priorità va da 1 (basso) a 10 (alto). Il valore predefinito è 5.  
+  Definisce un livello di priorità e il set di criteri da utilizzare per determinare a quali conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve essere assegnato il livello di priorità. Il livello di priorità è assegnato a qualsiasi endpoint di conversazione che usa la stessa combinazione di contratti e servizi specificata nella priorità di conversazione. Il valore delle priorità va da 1 (basso) a 10 (alto). Il valore predefinito è 5.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,16 +61,16 @@ FOR CONVERSATION
   
 ## <a name="arguments"></a>Argomenti  
  *ConversationPriorityName*  
- Specifica il nome per la priorità di conversazione. Il nome deve essere univoco nel database corrente e deve essere conforme alle regole per [!INCLUDE[ssDE](../../includes/ssde-md.md)] [identificatori](../../relational-databases/databases/database-identifiers.md).  
+ Specifica il nome per la priorità di conversazione. Il nome deve essere univoco nel database corrente e deve essere conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md) di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  SET  
  Specifica i criteri per determinare se la priorità di conversazione si applica a una conversazione. Se specificato, l'argomento SET deve contenere almeno un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL. Se SET non è specificato, per tutti e tre i criteri vengono utilizzate le impostazioni predefinite.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
- Viene specificato il nome di un contratto da utilizzare come criterio per determinare se la priorità di conversazione si applica a una conversazione. *ContractName* è un [!INCLUDE[ssDE](../../includes/ssde-md.md)] identificatore e deve specificare il nome di un contratto nel database corrente.  
+ Viene specificato il nome di un contratto da utilizzare come criterio per determinare se la priorità di conversazione si applica a una conversazione. *ContractName* è un identificatore [!INCLUDE[ssDE](../../includes/ssde-md.md)] e deve specificare il nome di un contratto nel database corrente.  
   
  *ContractName*  
- Specifica che la priorità di conversazione può essere applicata solo alle conversazioni in cui l'istruzione BEGIN DIALOG che ha avviato la conversazione specificata ON CONTRACT *ContractName*.  
+ Specifica che la priorità di conversazione può essere applicata solo alle conversazioni dove l'istruzione BEGIN DIALOG che ha avviato la conversazione ha specificato il valore ON CONTRACT *ContractName*.  
   
  ANY  
  Specifica che la priorità di conversazione può essere applicata a qualsiasi conversazione, indipendentemente dal contratto utilizzato.  
@@ -83,14 +80,14 @@ FOR CONVERSATION
  LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
  Specifica il nome di un servizio da utilizzare come criterio per determinare se la priorità di conversazione si applica a un endpoint di conversazione.  
   
- *LocalServiceName* è un [!INCLUDE[ssDE](../../includes/ssde-md.md)] identificatore. e deve specificare il nome di un servizio nel database corrente.  
+ *LocalServiceName* è un identificatore [!INCLUDE[ssDE](../../includes/ssde-md.md)]. e deve specificare il nome di un servizio nel database corrente.  
   
  *LocalServiceName*  
  Specifica che la priorità di conversazione può essere applicata agli elementi seguenti:  
   
--   Qualsiasi endpoint di conversazione dell'initiator il cui nome del servizio initiator corrisponde *LocalServiceName*.  
+-   Qualsiasi endpoint di conversazione dell'initiator il cui nome del servizio Initiator corrisponde a *LocalServiceName*.  
   
--   Qualsiasi endpoint di conversazione di destinazione il cui nome di servizio di destinazione corrisponde *LocalServiceName*.  
+-   Qualsiasi endpoint di conversazione di destinazione il cui nome del servizio di destinazione corrisponde a *LocalServiceName*.  
   
  ANY  
  -   Specifica che la priorità di conversazione può essere applicata a qualsiasi endpoint di conversazione, indipendentemente dal nome del servizio locale utilizzato dall'endpoint.  
@@ -100,24 +97,24 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Specifica il nome di un servizio da utilizzare come criterio per determinare se la priorità di conversazione si applica a un endpoint di conversazione.  
   
- *RemoteServiceName* è un valore letterale di tipo **nvarchar (256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)]utilizza un confronto byte per byte per trovare la corrispondenza di *RemoteServiceName* stringa. Nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Il servizio di destinazione può trovarsi nell'istanza corrente di [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in un'istanza remota di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* è un valore letterale di tipo **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa un confronto byte per byte per la corrispondenza con la stringa *RemoteServiceName*. Nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Il servizio di destinazione può trovarsi nell'istanza corrente di [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in un'istanza remota di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  '*RemoteServiceName*'  
  Specifica che la priorità di conversazione può essere applicata agli elementi seguenti:  
   
--   Qualsiasi endpoint di conversazione dell'initiator il cui nome di servizio di destinazione associato corrisponde *RemoteServiceName*.  
+-   Qualsiasi endpoint di conversazione dell'initiator il cui nome del servizio di destinazione associato corrisponde a *RemoteServiceName*.  
   
--   Qualsiasi endpoint di conversazione di destinazione il cui nome del servizio initiator associato corrisponde *RemoteServiceName*.  
+-   Qualsiasi endpoint di conversazione di destinazione il cui nome del servizio dell'initiator associato corrisponde a *RemoteServiceName*.  
   
  ANY  
  Specifica che la priorità di conversazione può essere applicata a qualsiasi endpoint di conversazione, indipendentemente dal nome del servizio remoto associato all'endpoint.  
   
  Il valore predefinito è ANY.  
   
- PRIORITY_LEVEL = { *PriorityValue* | **predefinito** }  
- Viene specificata la priorità da assegnare a qualsiasi endpoint di conversazione in cui vengono utilizzati i contratti e i servizi specificati nella priorità di conversazione. *PriorityValue* deve essere un integer come valore letterale compreso tra 1 (priorità più bassa) e 10 (priorità più alta). Il valore predefinito è 5.  
+ PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
+ Viene specificata la priorità da assegnare a qualsiasi endpoint di conversazione in cui vengono utilizzati i contratti e i servizi specificati nella priorità di conversazione. *PriorityValue* deve essere un valore letterale intero compreso tra 1 (priorità più bassa) e 10 (priorità più elevata). Il valore predefinito è 5.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] assegna i livelli di priorità agli endpoint di conversazione. I livelli di priorità controllano la priorità delle operazioni associate all'endpoint. Ciascuna conversazione presenta due endpoint di conversazione:  
   
 -   L'endpoint di conversazione dell'initiator associa un lato della conversazione al servizio Initiator e alla coda dell'initiator. L'endpoint di conversazione dell'Initiator viene creato quando l'istruzione BEGIN DIALOG viene eseguita. Le operazioni associate all'endpoint di conversazione dell'initiator includono:  
@@ -138,7 +135,7 @@ FOR CONVERSATION
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] assegna i livelli di priorità di conversazione quando vengono creati gli endpoint di conversazione. L'endpoint di conversazione conserva il livello di priorità fino alla fine della conversazione. Le nuove priorità o le modifiche alle priorità esistenti non sono applicate alle conversazioni esistenti.  
   
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]Assegna il livello di priorità di un endpoint di conversazione di priorità di conversazione con criteri di contratto e servizi maggiormente corrispondenti proprietà dell'endpoint. Nella tabella seguente viene indicata la precedenza tra le corrispondenze:  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] assegna il livello di priorità a un endpoint di conversazione in base alla priorità di conversazione con i criteri di contratto e servizi maggiormente corrispondenti alle proprietà dell'endpoint. Nella tabella seguente viene indicata la precedenza tra le corrispondenze:  
   
 |Contratto dell'operazione|Servizio locale dell'operazione|Servizio remoto dell'operazione|  
 |------------------------|-----------------------------|------------------------------|  
@@ -163,7 +160,7 @@ FOR CONVERSATION
   
 -   Tra servizi nella stessa istanza del Motore di database.  
   
--   Tutti [!INCLUDE[ssSB](../../includes/sssb-md.md)] operazioni in un database sono assegnate la priorità predefinita di 5 se alcuna priorità di conversazione non sono state create nel database.  
+-   Se non sono state create priorità di conversazione nel database, a tutte le operazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] in un database viene assegnata la priorità predefinita 5.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione per la creazione di una priorità di conversazione viene assegnata per impostazione predefinita ai membri del ruolo predefinito del database db_ddladmin o db_owner e al ruolo predefinito del server sysadmin. È richiesta l'autorizzazione ALTER per il database.  

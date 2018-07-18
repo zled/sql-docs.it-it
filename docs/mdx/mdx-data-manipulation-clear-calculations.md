@@ -1,39 +1,20 @@
 ---
 title: Istruzione CLEAR CALCULATIONS (MDX) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords:
-- CLEAR CALCULATIONS
-- clalculations
-- clear
-dev_langs: kbMDX
-helpviewer_keywords:
-- clearing calculations
-- CLEAR CALCULATIONS statement
-- deleting calculations
-- removing calculations
-- calculations [Analysis Services], clearing
-- cubes [Analysis Services], calculations
-ms.assetid: aebec9a1-1d1d-4697-aa3f-cc2449625603
-caps.latest.revision: "30"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: ad7569a1db3d080c85dc0c45347c2dc011ee312d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f210f2ad8af7b0d4e71482946a496d326fe63f24
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579783"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>Manipolazione dei dati MDX - CLEAR CALCULATIONS
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,13 +32,13 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  *Cube_Expression*  
  Espressione di cubo MDX (Multidimensional Expression) valida.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **FROM** clausola può essere omessa quando il contesto del cubo è noto, ad esempio uno script MDX.  
   
 > [!NOTE]  
 >  Questa istruzione può essere eseguita soltanto da un amministratore di database o del server oppure da un membro di un ruolo che ha accesso ai dati di origine nel cubo (ReadSourceData=true)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le istruzioni di manipolazione dei dati MDX &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Istruzioni MDX di manipolazione dei dati &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

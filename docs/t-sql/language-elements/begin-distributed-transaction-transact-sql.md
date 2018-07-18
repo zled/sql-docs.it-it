@@ -1,16 +1,14 @@
 ---
-title: AVVIARE la transazione distribuita (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DISTRIBUTED
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - remote servers [SQL Server], distributed transactions
 - starting transactions
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ba68a3a1a4cde26a94acd47000f46d1a0ceb40ef
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9ffa8e41ef713891227994a79c1179e16992f9d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,12 +56,12 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Argomenti  
  *transaction_name*  
- Nome di transazione definito dall'utente e utilizzato per tenere traccia della transazione distribuita nelle utilità MS DTC. *transaction_name* deve essere conforme alle regole per gli identificatori e devono essere \<= 32 caratteri.  
+ Nome di transazione definito dall'utente e utilizzato per tenere traccia della transazione distribuita nelle utilità MS DTC. *transaction_name* deve essere conforme alle regole per gli identificatori e deve rispettare il limite \<= 32 per il numero di caratteri.  
   
  @*tran_name_variable*  
- Nome di una variabile definita dall'utente contenente un nome di transazione utilizzato per tenere traccia della transazione distribuita nelle utilità MS DTC. La variabile deve essere dichiarata con un **char**, **varchar**, **nchar**, o **nvarchar** tipo di dati.  
+ Nome di una variabile definita dall'utente contenente un nome di transazione utilizzato per tenere traccia della transazione distribuita nelle utilità MS DTC. La variabile deve essere dichiarata con un tipo di dati **char**, **varchar**, **nchar** o **nvarchar**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in cui viene eseguita l'istruzione BEGIN DISTRIBUTED TRANSACTION è l'origine della transazione e controlla il completamento della transazione. Quando viene successivamente eseguita un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION per la sessione, l'istanza di controllo richiede che il completamento della transazione distribuita in tutte le istanze coinvolte venga gestito da MS DTC.  
   
  L'isolamento dello snapshot a livello di transazione non supporta le transazioni distribuite.  
@@ -75,11 +72,11 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  Le sessioni coinvolte in transazioni distribuite [!INCLUDE[tsql](../../includes/tsql-md.md)] non ottengono un oggetto transazione passabile a un'altra sessione per l'integrazione esplicita nella transazione distribuita. L'unico modo per consentire l'integrazione di un server remoto nella transazione consiste nell'utilizzare il server come destinazione di una chiamata di stored procedure remota o di una query distribuita.  
   
- Quando una query distribuita viene eseguita in una transazione locale, la transazione viene promossa automaticamente a una transazione distribuita se l'origine dati OLE DB di destinazione supporta ITransactionLocal. Se l'origine dati OLE DB di destinazione non supporta ITransactionLocal, sono consentite solo operazioni di sola lettura nella query distribuita.  
+ Quando una query distribuita viene eseguita in una transazione locale, la transazione viene promossa automaticamente a una transazione distribuita se l'origine dati OLE DB di destinazione supporta ITransactionLocal. Se l'origine dati OLE DB di destinazione non supporta ITransactionLocal, nella query distribuita è possibile eseguire solo operazioni di lettura.  
   
  Una sessione già integrata nella transazione distribuita esegue una chiamata di stored procedure remota in cui viene fatto riferimento a un server remoto.  
   
- Il **sp_configure remote proc trans** opzione controlli se le chiamate a stored procedure remote in una transazione locale causano automaticamente la transazione locale viene promosso a una transazione distribuita gestita da MS DTC. L'opzione SET a livello di connessione REMOTE_PROC_TRANSACTIONS può essere utilizzato per sostituire il valore predefinito di istanza stabilito da **sp_configure remote proc trans**. Quando si attiva questa opzione, una chiamata di stored procedure remota causa la promozione di una transazione locale a una transazione distribuita. La connessione in cui viene creata la transazione MS DTC diventa l'origine della transazione. L'istruzione COMMIT TRANSACTION avvia un'operazione di commit coordinata da MS DTC. Se il **sp_configure remote proc trans** opzione è impostata su ON, le chiamate di stored procedure remote in transazioni locali vengono protette automaticamente come parte di transazioni distribuite senza dover riscrivere le applicazioni in modo specifico problema BEGIN DISTRIBUTED TRANSACTION anziché BEGIN TRANSACTION.  
+ L'opzione **sp_configure remote proc trans** determina se le chiamate di stored procedure remote in una transazione locale causano automaticamente la promozione della transazione locale a una transazione distribuita gestita da MS DTC. È possibile usare l'opzione SET REMOTE_PROC_TRANSACTIONS a livello di connessione per ignorare l'impostazione predefinita dell'istanza specificata da **sp_configure remote proc trans**. Quando si attiva questa opzione, una chiamata di stored procedure remota causa la promozione di una transazione locale a una transazione distribuita. La connessione in cui viene creata la transazione MS DTC diventa l'origine della transazione. L'istruzione COMMIT TRANSACTION avvia un'operazione di commit coordinata da MS DTC. Se l'opzione **sp_configure remote proc trans** è impostata su ON, le chiamate di stored procedure remote eseguite in transazioni locali vengono protette automaticamente come parte di transazioni distribuite senza che sia necessario riprogrammare le applicazioni in modo che eseguano l'istruzione BEGIN DISTRIBUTED TRANSACTION anziché l'istruzione BEGIN TRANSACTION.  
   
  Per ulteriori informazioni sull'ambiente e sul processo delle transazioni distribuite, vedere la documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator.  
   

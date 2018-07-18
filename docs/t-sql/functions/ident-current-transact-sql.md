@@ -1,16 +1,14 @@
 ---
-title: La funzione IDENT_CURRENT (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: IDENT_CURRENT (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IDENT_CURRENT
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - identity columns, current value
 - IDENT_CURRENT function
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 9e303b59af41301be2b171c9b6a917dfad6139dc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8ad92b06aee95a2de975909ad90f3001b92169fc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identcurrent-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,22 +47,22 @@ IDENT_CURRENT( 'table_name' )
   
 ## <a name="arguments"></a>Argomenti  
  *table_name*  
- Nome della tabella per la quale viene restituito il valore Identity. *TABLE_NAME* è **varchar**, non prevede alcun valore predefinito.  
+ Nome della tabella per la quale viene restituito il valore Identity. *table_name* è di tipo **varchar** e non prevede alcun valore predefinito.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **Numeric(38,0)**  
+ **numeric(38,0)**  
   
 ## <a name="exceptions"></a>Eccezioni  
  Restituisce NULL in caso di errore o se un chiamante non dispone dell'autorizzazione necessaria per visualizzare l'oggetto.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come IDENT_CURRENT possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Osservazioni  
- IDENT_CURRENT è simile al [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] identità funzioni SCOPE_IDENTITY e @@IDENTITY. Queste tre funzioni restituiscono infatti gli ultimi valori Identity generati. Tuttavia, l'ambito e la sessione in cui *ultimo* è definito in ognuna di queste funzioni sono diversi:  
+## <a name="remarks"></a>Remarks  
+ IDENT_CURRENT è simile alle funzioni per valori Identity SCOPE_IDENTITY e @@IDENTITY di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Queste tre funzioni restituiscono infatti gli ultimi valori Identity generati. Tuttavia, l'ambito e la sessione in cui *ultimo* è definito in ciascuna di queste funzioni differiscono:  
   
 -   La funzione IDENT_CURRENT restituisce l'ultimo valore Identity generato per una tabella specifica in qualsiasi sessione e in qualsiasi ambito.  
   
--   @@IDENTITY restituisce l'ultimo valore identity generato per qualsiasi tabella nella sessione corrente, in tutti gli ambiti.  
+-   La funzione @@IDENTITY restituisce l'ultimo valore Identity generato per qualsiasi tabella della sessione corrente in tutti gli ambiti.  
   
 -   La funzione SCOPE_IDENTITY restituisce l'ultimo valore Identity generato per qualsiasi tabella della sessione e dell'ambito correnti.  
   
@@ -87,7 +84,7 @@ SELECT IDENT_CURRENT ('Person.Address') AS Current_Identity;
 GO  
 ```  
   
-### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>B. Confronto dei valori identity restituiti da IDENT_CURRENT, @@IDENTITY e SCOPE_IDENTITY  
+### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>B. Confronto dei valori Identity restituiti da IDENT_CURRENT, @@IDENTITY e SCOPE_IDENTITY  
  Nell'esempio seguente vengono illustrati i diversi valori Identity restituiti dalle funzioni `IDENT_CURRENT`, `@@IDENTITY` e `SCOPE_IDENTITY`.  
   
 ```  
@@ -147,9 +144,9 @@ SELECT IDENT_CURRENT('t7');
 ## <a name="see-also"></a>Vedere anche  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
- [IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

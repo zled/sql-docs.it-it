@@ -1,28 +1,25 @@
 ---
-title: "Novità di SSMA per Oracle (OracleToSQL) | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Novità di SSMA per Oracle (OracleToSQL) | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 63bc96b49c351d9923c5e4d4ae59056c7911ae40
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: d80bf7637c5c17cdade7c47f25265a6d2b6c94c1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novità di SSMA per Oracle (OracleToSQL)
 Questo argomento elenca SSMA delle modifiche Oracle in ogni versione.  
@@ -83,10 +80,10 @@ La versione v7.3 di SSMA per Oracle sono incluse le modifiche seguenti:
   - Librerie che possono essere utilizzate da SSMA per l'esecuzione di conversioni personalizzate.
     - È ora possibile creare codice in grado di gestire le conversioni di sintassi personalizzata e che non sono stati precedentemente gestite dal SSMA.
       - Le istruzioni su come costruire un convertitore personalizzato sono disponibili in questo post di blog [funzionalità di conversione della estensione SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Progetto di esempio per la conversione possibile scaricare questo [post di blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Scaricare un progetto di esempio per la conversione da questo [post di blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 
-## <a name="ssma-v72"></a>SSMA v7.2
+## <a name="ssma-v72"></a>Versione 7.2 SSMA
 La versione di SSMA per Oracle di versione 7.2 contiene le seguenti modifiche:
 - Metrica qualità e la conversione migliorata con le correzioni di destinazione in base ai suggerimenti dei clienti.
 - Miglioramenti di telemetria per fornire una migliore punti dati per risolvere i problemi dei clienti e migliorare il tasso di conversione di SSMA.
@@ -106,18 +103,28 @@ La versione v 7.1 di SSMA per Oracle sono incluse le seguenti modifiche:
 ## <a name="may-2016"></a>Maggio 2016  
 La versione di maggio 2016 di SSMA per Oracle sono incluse le seguenti modifiche:  
 
--   Aggiunta del supporto per SQL Server 2016.
--   Aggiunta conversione delle tabelle di archiviazione di Oracle flashback alle tabelle temporali di SQL Server.
--   Aggiunta la conversione del criterio VPD Oracle convertire in oggetti Criteri di SQL Server (protezione di livello di riga per Oracle).
--   Ora di una riduzione del carico iniziale per Oracle.
--   Resolver e il parser migliorate.
--   Rimuovere il controllo di programma di installazione per .net 2.0.
--   Aggiornato estensione dipendenza del Pack da .net 3.5 per .net 4.0.
--   Fisso "Salva"progetto "progetto aperto" comandi e per la Console di SSMA.
--   Comando predefinito "securepassword" per la Console di SSMA.
--   Fissa il conteggio di oggetti per il caricamento iniziale.
--   Correzione di conversione dei tipi di dati carattere per Oracle.
--   Correzione del bug nelle impostazioni globali.
+- Aggiunta del supporto per SQL Server 2016.
+- Aggiunta conversione delle tabelle di archiviazione di Oracle flashback alle tabelle temporali di SQL Server.
+
+    **Nota** -SSMA non copia i dati di cronologia dalle tabelle di Oracle Flashback Data Archive. Di conseguenza, i dati di cronologia devono essere copiati manualmente durante il processo di migrazione. Inoltre, mentre SSMA non viene visualizzata la tabella di cronologia in Visualizzatore metadati SQL Server perché viene considerata come una tabella di sistema, è possibile visualizzare la tabella di cronologia in SQL Server Management Studio.
+    SQL Server 2016 non supporta più funzionalità il Flashback Oracle, tra cui:
+    - Query di Oracle Flashback delle transazioni
+    - Pacchetto DBMS_FLASHBACK
+    - Transazione flashback
+    - Archivio dati flashback
+    - Tabella flashback
+    - Drop flashback
+    - Database flashback
+- Aggiunta conversione di Oracle VPD criteri agli oggetti Criteri di SQL Server (protezione di livello di riga per Oracle).
+- Ora di una riduzione del carico iniziale per Oracle.
+- Resolver e il parser migliorate.
+- Rimuovere il controllo di programma di installazione per .net 2.0.
+- Aggiornato estensione dipendenza del Pack da .net 3.5 per .net 4.0.
+- Fisso "Salva"progetto "progetto aperto" comandi e per la Console di SSMA.
+- Comando predefinito "securepassword" per la Console di SSMA.
+- Fissa il conteggio di oggetti per il caricamento iniziale.
+- Correzione di conversione dei tipi di dati carattere per Oracle.
+- Correzione del bug nelle impostazioni globali.
   
 ## <a name="march-2016"></a>Marzo 2016  
 La versione di anteprima di marzo 2016 di SSMA per Oracle sono incluse le seguenti modifiche:  
@@ -216,5 +223,5 @@ La versione di agosto 2007 di SSMA per Oracle sono incluse le seguenti modifiche
 -   Aggiungere che una nuova funzionalità di sincronizzazione consente di sincronizzare oggetti specifici con database di SQL Server.  
 -   Aggiunte nuove opzioni di conversione.  
   
-## <a name="april-2007"></a>April 2007  
+## <a name="april-2007"></a>Aprile 2007  
 La versione di aprile 2007 di SSMA per Oracle è la versione iniziale.

@@ -1,16 +1,14 @@
 ---
-title: Punto (tipo di dati geometry) | Documenti Microsoft
-ms.custom: 
+title: Point (tipo di dati geometry) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Point
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - Point (geometry Data Type)
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 89f1a91310ea7ccbc6d4ab8724022c3463e4ea8d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a0818b4fb51beb4e9a42bae0893b02e7771ff448
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="point-geometry-data-type"></a>Point (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Costruisce un **geometry** istanza che rappresenta un **punto** istanza da valori X e Y e un identificatore SRID.
+Costruisce un'istanza **geometry** che rappresenta un'istanza **Point** a partire dai valori X e Y e un identificatore SRID.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,20 +42,20 @@ Point ( X, Y, SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *X*  
- È un **float** espressione che rappresenta la coordinata X del **punto** in corso la generazione.  
+ Espressione **float** che rappresenta la coordinata X dell'istanza **Point** da generare.  
   
  *S*  
- È un **float** espressione che rappresenta la coordinata Y del **punto** in corso la generazione.  
+ Espressione **float** che rappresenta la coordinata Y dell'istanza **Point** da generare.  
   
  *SRID*  
- È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **geometry** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometry** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato il metodo `Point()` per creare un'istanza `geometry`.  

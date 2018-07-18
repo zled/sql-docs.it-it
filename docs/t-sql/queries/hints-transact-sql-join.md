@@ -1,16 +1,14 @@
 ---
-title: Hint (Transact-SQL) di join | Documenti Microsoft
-ms.custom: 
+title: Hint di join (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Join Hint
@@ -25,24 +23,23 @@ helpviewer_keywords:
 - MERGE join hint
 - hints [SQL Server], join
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 9e0652286a1f9da56df54ec2e00eee5bea20e1be
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b350421cd40a23f6fdebefa797b22367f1ef6a58
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hints-transact-sql---join"></a>Hint (Transact-SQL) - Join
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gli hint di join specificano che Query Optimizer deve imporre una strategia di join tra due tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni generali sui join e sintassi di join, vedere [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md).  
+  Gli hint di join specificano che Query Optimizer deve imporre una strategia di join tra due tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni generali sui join e sulla relativa sintassi, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 > [!IMPORTANT]  
->  Poiché il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer seleziona in genere il piano di esecuzione migliore per una query, è consigliabile che i parametri, tra cui \<join_hint >, essere utilizzata solo come ultima risorsa dagli sviluppatori esperti e amministratori di database.
+>  Poiché Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglie in genere il piano di esecuzione migliore per una query, è consigliabile che gli hint come \<join_hint> vengano usati solo se strettamente necessario da sviluppatori e amministratori esperti di database.
   
  **Si applica a:**  
   
@@ -75,7 +72,7 @@ ms.lasthandoff: 01/25/2018
   
  L'opzione REMOTE può essere utilizzata solo per operazioni INNER JOIN.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Gli hint di join vengono specificati nella clausola FROM di una query e consentono di imporre una strategia di join tra due tabelle. Se tra due tabelle viene specificato un hint di join, Query Optimizer impone in modo automatico l'ordine di join per tutte le tabelle unite in join della query, in base alla posizione delle parole chiave ON. Se si utilizza un CROSS JOIN senza la clausola ON, è possibile utilizzare le parentesi per indicare l'ordine di join.  
   
 ## <a name="examples"></a>Esempi  
@@ -115,6 +112,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
+ [Hint &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
   
   

@@ -1,27 +1,27 @@
 ---
 title: Importare documenti JSON in SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 5
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e88356f3f8de8ba463b945c5806ea3cbed14bf2c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 726b1d8bf70204912f9ebbf4c2352dcc0dc55fc7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importare documenti JSON in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -144,10 +144,10 @@ SELECT value
 OPENROWSET legge un singolo valore di testo dal file, lo restituisce come BulkColumn e lo passa alla funzione OPENJSON. OPENJSON esegue l'iterazione della matrice di oggetti JSON nella matrice BulkColumn e restituisce un libro, formattato come JSON, in ogni riga:
 
 ```json
-{"id":"978-0641723445″, "cat":["book","hardcover"], "name":"The Lightning Thief", … 
-{"id":"978-1423103349″, "cat":["book","paperback"], "name":"The Sea of Monsters", … 
-{"id":"978-1857995879″, "cat":["book","paperback"], "name":"Sophie’s World : The Greek … 
-{"id":"978-1933988177″, "cat":["book","paperback"], "name":"Lucene in Action, Second … 
+{"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", … }
+{"id":"978-1423103349", "cat":["book","paperback"], "name":"The Sea of Monsters", … }
+{"id":"978-1857995879", "cat":["book","paperback"], "name":"Sophie’s World : The Greek", … } 
+{"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", … }
 ```
 
 ### <a name="example-3"></a>Esempio 3

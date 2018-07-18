@@ -1,16 +1,15 @@
 ---
-title: "Proprietà PropertyNumVal (classe ServerNetworkProtocolProperty) | Documenti Microsoft"
-ms.custom: 
+title: Proprietà PropertyNumVal (classe ServerNetworkProtocolProperty) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - PropertyNumVal Property (ServerNetworkProtocolProperty Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyNumVal property
 ms.assetid: 93fce2e8-adf5-48cf-8106-1fead7501a6f
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 32
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a434d70c5fe477054bfc24f49c169817959b4ef0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a0f733da489fc21b8361be99cfb9ac4f7fde0090
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="propertynumval-property-servernetworkprotocolproperty-class"></a>Proprietà PropertyNumVal (classe ServerNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ottiene il valore numerico di una proprietà a cui si fa riferimento.  
+  Ottiene il valore numerico di una proprietà a cui si fa riferimento.  
   
 ## <a name="syntax"></a>Sintassi  
   

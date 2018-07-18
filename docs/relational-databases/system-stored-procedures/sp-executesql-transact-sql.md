@@ -1,34 +1,34 @@
 ---
-title: sp_executesql (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: sp_executesql (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_executesql
 - sp_executesql_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_executesql
 - dynamic SQL
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-caps.latest.revision: "64"
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: b6dec48efa27a14443e69158ed9e9fffb55eba29
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b0b0e9906c39de7875edc183e36fd5257afbe303
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,15 +54,15 @@ sp_executesql [ @stmt = ] statement
   
 ## <a name="arguments"></a>Argomenti  
  [ @stmt=] *istruzione*  
- È una stringa Unicode che contiene un [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch. @stmtdeve essere una costante Unicode o una variabile Unicode. Non sono consentite le espressioni Unicode più complesse, ad esempio per la concatenazione di due stringhe tramite l'operatore +. Le costanti di tipo carattere non sono consentite. Se viene specificata una costante Unicode, devono essere preceduto da un **N**. Ad esempio, la costante Unicode **n' sp_who'** è valido, ma la costante carattere **'sp_who'** non. Le dimensioni massime della stringa dipendono dalla memoria disponibile nel server di database. Nel server a 64 bit, le dimensioni della stringa sono limitata a 2 GB, la dimensione massima di **nvarchar (max)**.  
+ È una stringa Unicode che contiene un [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch. @stmt deve essere una costante Unicode o una variabile Unicode. Non sono consentite le espressioni Unicode più complesse, ad esempio per la concatenazione di due stringhe tramite l'operatore +. Le costanti di tipo carattere non sono consentite. Se viene specificata una costante Unicode, devono essere preceduto da un **N**. Ad esempio, la costante Unicode **n' sp_who'** è valido, ma la costante carattere **'sp_who'** non. Le dimensioni massime della stringa dipendono dalla memoria disponibile nel server di database. Nel server a 64 bit, le dimensioni della stringa sono limitata a 2 GB, la dimensione massima di **nvarchar (max)**.  
   
 > [!NOTE]  
->  @stmtpuò contenere parametri con lo stesso formato di un nome di variabile, ad esempio:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  @stmt può contenere parametri con lo stesso formato di un nome di variabile, ad esempio: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  A ogni parametro incluso in @stmt deve corrispondere una voce nell'elenco delle definizioni dei parametri @params e nell'elenco dei valori dei parametri.  
   
- [ @params=] N'@*parameter_name**data_type* [,... *n* ] '  
- Stringa contenente le definizioni di tutti i parametri che sono stati incorporati in @stmt. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n*è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in @stmtmust essere definito in @params. Se l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] o il batch in @stmt non contiene parametri, @params non è necessario. Il valore predefinito per questo parametro è NULL.  
+ [ @params=] N'@*parameter_name * * data_type* [,... *n* ] '  
+ Stringa contenente le definizioni di tutti i parametri che sono stati incorporati in @stmt. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in @stmtmust essere definito in @params. Se l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] o il batch in @stmt non contiene parametri, @params non è necessario. Il valore predefinito per questo parametro è NULL.  
   
  [ @param1=] '*value1*'  
  Valore per il primo parametro definito nella stringa di parametri. Il valore può essere una costante o una variabile Unicode. È necessario che sia disponibile un valore di parametro per ogni parametro incluso in @stmt. I valori non sono necessari se l'istruzione o il batch [!INCLUDE[tsql](../../includes/tsql-md.md)] in @stmt è privo di parametri.  
@@ -138,7 +138,7 @@ SELECT @max_title;
   
 -   Il parametro integer viene specificato nel formato nativo. Non è necessario eseguire il cast a Unicode.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples"></a>Esempi  
@@ -238,7 +238,7 @@ FROM Sales.SalesOrderHeader
 WHERE SalesOrderNumber = @SalesOrderNumber;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-executing-a-simple-select-statement"></a>D. Esecuzione di un'istruzione SELECT semplice  
  Nell'esempio seguente viene creata ed eseguita un'istruzione `SELECT` semplice che contiene un parametro incorporato denominato `@level`.  

@@ -1,27 +1,17 @@
 ---
-title: Creazione di flussi di lavoro di Business Intelligence con R | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 04/18/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Creare flussi di lavoro di Business Intelligence con R | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: b1c16ac069942af02c2b2d337e887c43d4dff468
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>Creazione di flussi di lavoro di Business Intelligence con R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,9 +20,9 @@ Un database relazionale è una tecnologia altamente ottimizzata per la realizzaz
 
 Al contrario, sempre soluzioni R hanno in genere basata sull'importazione di dati da diverse origini, spesso in formato CSV, per eseguire la modellazione e l'esplorazione dei dati di altre. Si tratta di procedure non solo poco efficienti, ma anche non sicure.
 
-Questo argomento descrive scenari di integrazione di R con SQL Server in modo da non comuni problemi e rischi di protezione che può verificarsi se le soluzioni di machine learning vengono sviluppate all'esterno del database.
+Questo articolo descrive scenari di integrazione di R con SQL Server in cui evitare comuni problemi e rischi di sicurezza che possono verificarsi se le soluzioni di machine learning vengono sviluppate all'esterno del database.
 
-Vengono inoltre descritti esempi di come applicazioni di business intelligence, in particolare i servizi di integrazione e Reportng, è possano interagire con il codice R e utilizzare dati o la grafica generati da R.
+Vengono inoltre descritti esempi di come applicazioni di business intelligence, in particolare Integration Services e Reporting Services, è possano interagire con codice R e utilizzano dati o la grafica generata da R.
 
 Si applica a: R Services SQL Server 2016, SQL Server 2017 di Machine Learning Services
 
@@ -44,7 +34,7 @@ Per portare analitica dati, è stato un obiettivo chiave della progettazione del
 
 + Velocità. I database sono ottimizzati per le operazioni basate su set. Le innovazioni recenti nel database come tabelle in memoria rendono riepiloghi e aggregazioni fulmine e sono la soluzione ideale per l'analisi scientifica dei dati.
 
-+ Facilità di distribuzione e l'integrazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è il punto centrale di operazioni per molte altre attività di gestione dati e applicazioni. Utilizzando i dati che si trovano i database warehouse per reporting, assicurarsi che i dati utilizzati da soluzioni di apprendimento automatico siano aggiornato e coerente. 
++ Facilità di distribuzione e l'integrazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è il punto centrale di operazioni per molte altre attività di gestione dati e applicazioni. Utilizzando i dati che si trovano i database warehouse per reporting, assicurarsi che i dati utilizzati da soluzioni di apprendimento automatico siano aggiornato e coerente. 
 
 + Efficienza tra cloud e locali. Invece di elaborare i dati in R, è possibile usare le pipeline di dati aziendali, inclusi [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Azure Data Factory. La creazione di report con i risultati o l'analisi è semplice con Power BI o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
@@ -56,7 +46,7 @@ I flussi di lavoro per l'analisi scientifica dei dati sono altamente iterativi e
 
 Poiché [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] consente di eseguire operazioni complesse in R tramite Transact-SQL e stored procedure, è possibile integrare attività specifiche di R con i processi ETL esistenti senza dover intervenire per adattare lo sviluppo. Invece di eseguire una catena di attività a elevato utilizzo di memoria di R, la preparazione dei dati può essere ottimizzata tramite gli strumenti più efficienti, tra cui [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
-Ecco alcuni ideass per come è possibile automatizzare l'elaborazione di un dmodeling dati pipeline utilizzando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
+Ecco alcuni suggerimenti per come è possibile automatizzare l'elaborazione dei dati e modellazione pipeline utilizzando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
 
 + Utilizzare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] attività per creare le funzionalità di dati necessari nel database SQL
 + Usare la diramazione condizionale per cambiare il contesto di calcolo per i processi R
@@ -75,7 +65,7 @@ Questo post di blog illustra le tecniche di base per la modifica di codice R usa
 
 + Eseguire l'assegnazione dei punteggi al modello usando l'attività Script e l'attività Esegui SQL
 
-##  <a name="bkmk_ssrs"></a>Utilizzare Reporting Services per la visualizzazione
+##  <a name="bkmk_ssrs"></a> Utilizzare Reporting Services per la visualizzazione
 
 Anche se R consente di creare grafici e visualizzazioni interessanti, non è ben integrato con le origini dati esterne e questo significa che ogni grafico deve essere prodotto singolarmente. Anche la condivisione può essere difficile.
 

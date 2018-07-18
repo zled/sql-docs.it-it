@@ -1,16 +1,14 @@
 ---
 title: ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER DATABASE SCOPED CREDENTIAL
@@ -19,21 +17,21 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], ALTER DATABASE SCOPED CREDENTIAL statement
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0b64dc761f5af95ab913291d6aa488ced8fba8cf
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: e4a0d0fac45816dd8cde887b3bd33619cb6cb095
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  Credenziali con ambito di modifica delle proprietà di un database.  
+  Modifica le proprietà di una credenziale con ambito database.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,31 +45,31 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
 ## <a name="arguments"></a>Argomenti  
  *credential_name*  
- Specifica il nome delle credenziali con ambito database che viene modificata.  
+ Specifica il nome della credenziale con ambito database che si vuole modificare.  
   
- IDENTITÀ **='***identity_name***'**  
- Specifica il nome dell'account da utilizzare per la connessione all'esterno del server. Per importare un file dall'archiviazione Blob di Azure, è necessario essere il nome dell'identità `SHARED ACCESS SIGNATURE`.  Per ulteriori informazioni sulle firme di accesso condiviso, vedere [utilizzando di firme di accesso condiviso (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
+ IDENTITY **='***identity_name***'**  
+ Specifica il nome dell'account da utilizzare per la connessione all'esterno del server. Per importare un file dall'archiviazione BLOB di Azure, il nome dell'identità deve essere `SHARED ACCESS SIGNATURE`.  Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
     
   
- SEGRETO **='***secret***'**  
- Specifica il segreto richiesto per l'autenticazione in uscita. *segreto* per importare un file dall'archiviazione Blob di Azure è necessaria. *segreto* può essere facoltativo per altri scopi.   
+ SECRET **='***secret***'**  
+ Specifica il segreto richiesto per l'autenticazione in uscita. È necessario specificare *secret* per importare un file dall'archiviazione BLOB di Azure. *secret* può essere facoltativo per altri scopi.   
 >  [!WARNING]
->  Il valore della chiave di firma di accesso condiviso potrebbe iniziare con un '?' (punto interrogativo). Quando si usa la chiave di firma di accesso condiviso, è necessario rimuovere il carattere '?'. In caso contrario potrebbero essere bloccate le attività.    
+>  Il valore della chiave di firma di accesso condiviso può iniziare con '?' (punto interrogativo). Quando si usa la chiave di firma di accesso condiviso, è necessario rimuovere il carattere "?" iniziale, altrimenti potrebbe verificarsi un blocco.    
   
-## <a name="remarks"></a>Osservazioni  
- Quando un database con ambito delle credenziali viene modificato, i valori della proprietà *identity_name* e *secret* vengono reimpostate. Se l'argomento facoltativo SECRET viene omesso, il valore del segreto archiviato verrà impostato su NULL.  
+## <a name="remarks"></a>Remarks  
+ Quando si modifica una credenziale con ambito database, i valori di *identity_name* e *secret* vengono reimpostati. Se l'argomento facoltativo SECRET viene omesso, il valore del segreto archiviato verrà impostato su NULL.  
   
  Il segreto viene crittografato tramite la chiave master del servizio. Se la chiave master del servizio viene rigenerata, il segreto verrà crittografato nuovamente tramite la nuova chiave master del servizio.  
   
- Informazioni sulle credenziali con ambito database sono visibili nella [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) vista del catalogo.  
+ Altre informazioni sulle credenziali con ambito database sono disponibili nella vista del catalogo [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È necessario `ALTER` l'autorizzazione per la credenziale.  
+ È necessaria l'autorizzazione `ALTER` per la credenziale.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. Credenziali con ambito di modifica della password di un database  
- Nell'esempio seguente viene modificato il segreto archiviato in una credenziale con ambito database chiamata `Saddles`. Le credenziali con ambito database contengono l'account di accesso di Windows `RettigB` e la relativa password. La nuova password viene aggiunta alle credenziali con ambito database tramite la clausola SECRET.  
+### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. Modifica della password di una credenziale con ambito database  
+ Nell'esempio seguente viene modificato il segreto archiviato nella credenziale con ambito database denominata `Saddles`. La credenziale con ambito database include l'account di accesso Windows `RettigB` e la relativa password. La nuova password viene aggiunta alla credenziale con ambito database tramite la clausola SECRET.  
   
 ```  
 ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',   
@@ -80,7 +78,7 @@ GO
 ```  
   
 ### <a name="b-removing-the-password-from-a-credential"></a>B. Rimozione della password da una credenziale  
- Nell'esempio seguente la password viene rimossa da una credenziale con ambito database denominata `Frames`. Le credenziali con ambito database contengono account di accesso Windows `Aboulrus8` e una password. Dopo l'istruzione viene eseguita, le credenziali con ambito database avrà una password NULL perché non è specificato l'opzione SECRET.  
+ Nell'esempio seguente la password viene rimossa da una credenziale con ambito database denominata `Frames`. La credenziale con ambito database include l'account di accesso Windows `Aboulrus8` e una password. Dopo l'esecuzione dell'istruzione, la credenziale con ambito database includerà una password NULL perché l'opzione SECRET è stata omessa.  
   
 ```  
 ALTER DATABASE SCOPED CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
@@ -88,7 +86,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Credenziali &#40; motore di Database &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [Credenziali &#40;motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   

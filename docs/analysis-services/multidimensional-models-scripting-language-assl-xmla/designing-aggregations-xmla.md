@@ -1,37 +1,19 @@
 ---
 title: Progettazione di aggregazioni (XMLA) | Documenti Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- statistical information [XML for Analysis]
-- batches [XML for Analysis]
-- aggregations [Analysis Services], XML for Analysis
-- XMLA, aggregations
-- queries [XMLA]
-- XML for Analysis, aggregations
-- iterative aggregation process [XMLA]
-ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 102e6070f9c9c6af487dced8465bde5087fe2b7a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="designing-aggregations-xmla"></a>Progettazione di aggregazioni (XMLA)
   Le progettazioni delle aggregazioni sono associate alle partizioni di un gruppo di misure specifico per garantire che utilizzino la stessa struttura nell'archiviazione delle aggregazioni. Utilizzando la stessa struttura di archiviazione per le partizioni consente di definire in modo semplice partizioni che possono essere unite in un secondo momento utilizzando il [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Per ulteriori informazioni sulle progettazioni delle aggregazioni, vedere [aggregazioni e progettazione di aggregazioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
@@ -74,7 +56,7 @@ ms.lasthandoff: 02/15/2018
  La stringa "011" fa riferimento ad esempio a una query relativa a una dimensione con tre attributi, di cui il secondo e il terzo sono inclusi nella query.  
   
 > [!NOTE]  
->  Alcuni attributi non vengono considerati nel set di dati. Per ulteriori informazioni sugli attributi esclusi, vedere [elemento Query &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
+>  Alcuni attributi non vengono considerati nel set di dati. Per ulteriori informazioni sugli attributi esclusi, vedere [elemento di Query &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
   
  Ogni dimensione nel gruppo di misure che contiene la progettazione delle aggregazioni è rappresentata da un valore *Dataset* nell'elemento **Query** . L'ordine dei valori *Dataset* deve corrispondere all'ordine delle dimensioni incluse nel gruppo di misure.  
   
@@ -85,7 +67,7 @@ ms.lasthandoff: 02/15/2018
  Per progettare in modo iterativo le aggregazioni, inviare più **DesignAggregations** comandi per fornire un controllo accurato sul processo di progettazione. Questo approccio viene utilizzato anche dalla Progettazione guidata aggregazioni per ottenere lo stesso scopo. Per ulteriori informazioni, vedere [aggregazione progettazione guidata F1 Guida](http://msdn.microsoft.com/library/39e23cf1-6405-4fb6-bc14-ba103314362d).  
   
 > [!NOTE]  
->  Per progettare in modo iterativo le aggregazioni, è necessaria una sessione esplicita. Per ulteriori informazioni sulle sessioni esplicite, vedere [alla gestione delle connessioni e sessioni &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
+>  Per progettare in modo iterativo le aggregazioni, è necessaria una sessione esplicita. Per ulteriori informazioni sulle sessioni esplicite, vedere [gestione delle connessioni e sessioni &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
   
  Per avviare il processo iterativo, inviare innanzitutto un **DesignAggregations** comando che contiene le informazioni seguenti:  
   
@@ -104,7 +86,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="designing-aggregations-using-a-batch-process"></a>Progettazione di aggregazioni tramite un'elaborazione batch  
  È inoltre possibile progettare le aggregazioni in un processo batch inviando un singolo **DesignAggregations** comando che contiene il **passaggi**, **ora**, **archiviazione** , e **ottimizzazione** i valori delle proprietà in cui è destinato e limitato l'intero processo di progettazione. Se si desidera ottimizzazione basata sull'utilizzo, includere anche le query di tipo goal in cui è indirizzato il processo di progettazione nel **query** proprietà. Assicurarsi anche che il **Materialize** proprietà è impostata su true, in modo che il processo di progettazione Salva le aggregazioni definite per la progettazione delle aggregazioni quando il comando termina.  
   
- È possibile progettare aggregazioni tramite un'elaborazione batch in una sessione implicita oppure in una esplicita. Per ulteriori informazioni sulle sessioni implicite ed esplicite, vedere [alla gestione delle connessioni e sessioni &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
+ È possibile progettare aggregazioni tramite un'elaborazione batch in una sessione implicita oppure in una esplicita. Per ulteriori informazioni sulle sessioni implicite ed esplicite, vedere [gestione delle connessioni e sessioni &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
   
 ## <a name="returning-design-statistics"></a>Restituzione di statistiche relative alla progettazione  
  Quando il **DesignAggregations** comando restituisce il controllo all'applicazione client, il comando restituisce un set di righe che contiene una singola riga che rappresenta le statistiche relative alla progettazione per il comando. Nel set di righe sono contenute le colonne elencate nella tabella seguente.  

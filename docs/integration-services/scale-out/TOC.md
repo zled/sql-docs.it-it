@@ -9,4 +9,5 @@
 # [Modificare l'account per la registrazione di Scale Out](change-logdb-account.md)
 # [Gestire certificati per scalabilità orizzontale](deal-with-certificates-in-ssis-scale-out.md)
 # [Disponibilità elevata per scalabilità orizzontale](scale-out-support-for-high-availability.md)
+# [Disponibilità elevata tramite un'istanza del cluster di failover di SQL Server](scale-out-failover-cluster-instance.md)
 # [Risoluzione dei problemi di scalabilità orizzontale](troubleshooting-scale-out.md)

@@ -1,32 +1,29 @@
 ---
-title: "La serializzabilità è infatti | Documenti Microsoft"
-ms.custom: 
+title: La serializzabilità è infatti | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], serialization
 - serialization [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 19a70f6afcceeac41ef983a5756409fabcb428af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f6e912ec51bc0b7c77d73aae1b473dee9242b3f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="serializability"></a>Serializzabilità è infatti
 In teoria, le transazioni devono essere *serializzabile*. Le transazioni vengono considerate serializzabile se i risultati dell'esecuzione di transazioni contemporaneamente sono gli stessi, come i risultati dell'esecuzione di tali in modo seriale, vale a dire, una dopo l'altra. Non è importante la transazione viene eseguito per primo, solo che il risultato non rifletta qualsiasi combinazione delle transazioni.  

@@ -1,16 +1,14 @@
 ---
 title: BEGIN TRANSACTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BEGIN_TRANSACTION_TSQL
@@ -32,16 +30,16 @@ helpviewer_keywords:
 - starting point marked for transactions
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-caps.latest.revision: 
+caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 260399c0964afeeafc0f8a221de13169ef277496
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 68995aed72fd9fb793499d65e7c6e31bf0e72317
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -72,24 +70,24 @@ BEGIN { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Argomenti  
  *transaction_name*  
- **Si applica a:** (a partire da 2008) di SQL Server, Database SQL di Azure
+ **SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure
  
- Nome assegnato alla transazione. *transaction_name* deve essere conforme alle regole per gli identificatori, ma identificatori composti da più di 32 caratteri non consentiti. Nel caso di istruzioni BEGIN...COMMIT o BEGIN...ROLLBACK nidificate, utilizzare solo i nomi di transazione nella coppia esterna. *transaction_name* è sempre distinzione maiuscole/minuscole, anche quando l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene fatta distinzione tra maiuscole e minuscole.  
+ Nome assegnato alla transazione. *transaction_name* deve essere conforme alle regole per gli identificatori, ma non sono consentiti identificatori composti da più di 32 caratteri. Nel caso di istruzioni BEGIN...COMMIT o BEGIN...ROLLBACK nidificate, utilizzare solo i nomi di transazione nella coppia esterna. In *transaction_name* viene sempre applicata la distinzione tra maiuscole e minuscole, anche quando l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non prevede distinzione tra maiuscole e minuscole.  
   
  @*tran_name_variable*  
- **Si applica a:** (a partire da 2008) di SQL Server, Database SQL di Azure
+ **SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure
  
- Nome di una variabile definita dall'utente contenente un nome di transazione valido. La variabile deve essere dichiarata con un **char**, **varchar**, **nchar**, o **nvarchar** tipo di dati. Se alla variabile vengono passati più di 32 caratteri, verranno utilizzati solo i primi 32 e i restanti caratteri saranno troncati.  
+ Nome di una variabile definita dall'utente contenente un nome di transazione valido. La variabile deve essere dichiarata con un tipo di dati **char**, **varchar**, **nchar** o **nvarchar**. Se alla variabile vengono passati più di 32 caratteri, verranno utilizzati solo i primi 32 e i restanti caratteri saranno troncati.  
   
- WITH MARK ['*descrizione*']  
-**Si applica a:** (a partire da 2008) di SQL Server, Database SQL di Azure
+ WITH MARK [ '*description*' ]  
+**SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure
 
-Viene specificato che la transazione è contrassegnata nel log. *Descrizione* è una stringa che descrive il contrassegno. Oggetto *descrizione* più di 128 caratteri, viene troncata a 128 caratteri prima di essere archiviati nella tabella msdb.dbo.  
+Viene specificato che la transazione è contrassegnata nel log. *description* è una stringa che descrive il contrassegno. Un argomento *description* con più di 128 caratteri viene troncato in corrispondenza di questo limite prima di essere archiviato nella tabella msdb.dbo.logmarkhistory.  
   
  Se si utilizza WITH MARK, è necessario specificare un nome di transazione. Questa opzione consente di ripristinare un log delle transazioni fino al punto, o contrassegno, specificato.  
   
 ## <a name="general-remarks"></a>Osservazioni generali
-Istruzione BEGIN TRANSACTION incrementa@TRANCOUNT di 1.
+L'istruzione BEGIN TRANSACTION incrementa la funzione @@TRANCOUNT di una unità.
   
 L'istruzione BEGIN TRANSACTION rappresenta un punto in cui i dati a cui viene fatto riferimento in una connessione sono consistenti dal punto di vista logico e fisico. Se vengono rilevati uno o più errori, è possibile eseguire il rollback di tutte le modifiche apportate ai dati dopo l'istruzione BEGIN TRANSACTION per ripristinare questo stato di consistenza noto dei dati. Una transazione risulta aperta fino a quando non viene eseguita l'istruzione COMMIT TRANSACTION per rendere permanenti le modifiche se non si è verificato alcun errore oppure fino a quando non viene eseguita l'istruzione ROLLBACK TRANSACTION per annullare tutte le modifiche se vengono rilevati errori.  
   
@@ -101,24 +99,24 @@ L'istruzione BEGIN TRANSACTION avvia una transazione locale per la connessione i
   
  La transazione locale avviata dall'istruzione BEGIN TRANSACTION viene trasformata mediante escalation in una transazione distribuita se vengono eseguite le operazioni seguenti prima del commit o del rollback dell'istruzione:  
   
--   Esecuzione di un'istruzione INSERT, DELETE o UPDATE in cui viene fatto riferimento a una tabella remota in un server collegato. L'istruzione INSERT, UPDATE o DELETE ha esito negativo se il provider OLE DB utilizzato per accedere al server collegato non supporta l'interfaccia ITransactionJoin.  
+-   Esecuzione di un'istruzione INSERT, DELETE o UPDATE in cui viene fatto riferimento a una tabella remota in un server collegato. L'istruzione INSERT, UPDATE o DELETE ha esito negativo se il provider OLE DB usato per l'accesso al server collegato non supporta l'interfaccia ITransactionJoin.  
   
 -   Esecuzione di una chiamata a una stored procedure remota quando l'opzione REMOTE_PROC_TRANSACTIONS è impostata su ON.  
   
  La copia locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diventa il controller della transazione e utilizza [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) per gestire la transazione distribuita.  
   
- È possibile eseguire una transazione in modo esplicito come transazione distribuita tramite l'istruzione BEGIN DISTRIBUTED TRANSACTION. Per ulteriori informazioni, vedere [BEGIN DISTRIBUTED TRANSACTION &#40; Transact-SQL &#41; ](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
+ È possibile eseguire una transazione in modo esplicito come transazione distribuita tramite l'istruzione BEGIN DISTRIBUTED TRANSACTION. Per altre informazioni, vedere [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
   
- Quando l'opzione SET IMPLICIT_TRANSACTIONS è impostata su ON, tramite un'istruzione BEGIN TRANSACTION vengono create due transazioni nidificate. Per ulteriori informazioni, vedere [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
+ Quando l'opzione SET IMPLICIT_TRANSACTIONS è impostata su ON, tramite un'istruzione BEGIN TRANSACTION vengono create due transazioni nidificate. Per ulteriori informazioni, vedere [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
 ## <a name="marked-transactions"></a>Transazioni contrassegnate  
- Quando si specifica l'opzione WITH MARK, il nome della transazione viene inserito nel log delle transazioni. La transazione contrassegnata può essere utilizzata in sostituzione della data e dell'ora per il ripristino di uno stato precedente di un database. Per ulteriori informazioni, vedere [usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40; Modello di recupero con registrazione completa &#41; ](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) e [RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-transact-sql.md).  
+ Quando si specifica l'opzione WITH MARK, il nome della transazione viene inserito nel log delle transazioni. La transazione contrassegnata può essere utilizzata in sostituzione della data e dell'ora per il ripristino di uno stato precedente di un database. Per altre informazioni, vedere [Usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) e [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  I contrassegni del log delle transazioni sono inoltre necessari quando si desidera recuperare uno stato consistente dal punto di vista logico per un set di database correlati. È possibile inserire contrassegni nei log delle transazioni dei database correlati tramite una transazione distribuita. Il recupero fino a questi contrassegni consente di ottenere un set di database consistenti dal punto di vista transazionale. Per la posizione di contrassegni in database correlati, è necessario seguire procedure specifiche.  
   
  Il contrassegno viene inserito nel log delle transazioni solo se il database viene aggiornato dalla transazione contrassegnata. Le transazioni che non modificano i dati non sono contrassegnate.  
   
- BEGIN TRAN *nuovo_nome* WITH MARK possono essere annidati all'interno di una transazione già esistente che non è contrassegnata. In questo modo, *nuovo_nome* diventa il nome del contrassegno della transazione, nonostante il nome che la transazione potrebbe già assegnata. Nell'esempio seguente `M2` è il nome del contrassegno.  
+ È possibile annidare l'istruzione BEGIN TRAN *new_name* WITH MARK in una transazione esistente non contrassegnata. In questo modo, *new_name* diventa il nome di contrassegno della transazione, indipendentemente dall'eventuale nome già assegnato alla transazione. Nell'esempio seguente `M2` è il nome del contrassegno.  
   
 ```  
 BEGIN TRAN T1;  
@@ -150,10 +148,10 @@ COMMIT TRAN T1;
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-an-explicit-transaction"></a>A. Utilizzo di una transazione esplicita
-**Si applica a:** (a partire da 2008) di SQL Server, Database SQL di Azure, Azure SQL Data Warehouse, Parallel Data Warehouse
+### <a name="a-using-an-explicit-transaction"></a>A. Uso di una transazione esplicita
+**SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure, Azure SQL Data Warehouse, Parallel Data Warehouse
 
-Questo esempio viene usato AdventureWorks. 
+Questo esempio usa AdventureWorks. 
 
 ```
 BEGIN TRANSACTION;  
@@ -162,10 +160,10 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```
 
-### <a name="b-rolling-back-a-transaction"></a>B. Eseguire il rollback di una transazione
-**Si applica a:** (a partire da 2008) di SQL Server, Database SQL di Azure, Azure SQL Data Warehouse, Parallel Data Warehouse
+### <a name="b-rolling-back-a-transaction"></a>B. Rollback di una transazione
+**SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure, Azure SQL Data Warehouse, Parallel Data Warehouse
 
-Nell'esempio seguente viene illustrato l'effetto del rollback di una transazione. In questo esempio, l'istruzione ROLLBACK viene eseguito il rollback dell'istruzione INSERT, ma sarà ancora presente nella tabella creata.
+Nell'esempio seguente viene illustrato l'effetto del rollback di una transazione. In questo esempio l'istruzione ROLLBACK esegue il rollback dell'istruzione INSERT, ma la tabella creata sarà ancora presente.
 
 ```
  
@@ -178,7 +176,7 @@ ROLLBACK;
 ```
 
 ### <a name="c-naming-a-transaction"></a>C. Denominazione di una transazione 
-**Si applica a:** (a partire da 2008) di SQL Server, Database SQL di Azure
+**SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure
 
 Nell'esempio seguente viene illustrato come denominare una transazione.  
   
@@ -196,7 +194,7 @@ GO
 ```  
   
 ### <a name="d-marking-a-transaction"></a>D. Contrassegno di una transazione  
-**Si applica a:** (a partire da 2008) di SQL Server, Database SQL di Azure
+**SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure
 
 Nell'esempio seguente viene illustrato come contrassegnare una transazione. Viene contrassegnata la transazione `CandidateDelete`.  
   

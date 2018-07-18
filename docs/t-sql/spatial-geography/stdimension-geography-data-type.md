@@ -1,16 +1,14 @@
 ---
-title: STDimension (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: STDimension (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STDimension (geography Data Type)
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - STDimension method
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fd3ad0cfcdd9574e3939fa9f08a970be7e0426f7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 490838e94e0448ef7bbd1fdb1fa708a6a49acc49
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce le dimensioni massime di un **geography** istanza.  
+  Restituisce le dimensioni massime di un'istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,15 +41,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **int**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **int**  
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Osservazioni  
- STDimension() restituisce -1 se il **geography** istanza è vuota.  
+## <a name="remarks"></a>Remarks  
+ STDimension() restituisce -1 se l'istanza **geography** è vuota.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `STDimension()` per creare una variabile di tabella per contenere `geography` le istanze e inserisce un `Point`, `LineString`e un `Polygon`.  
+ L'esempio seguente usa `STDimension()` per creare una variabile di tabella per contenere le istanze `geography` e inserisce un valore `Point`, un valore `LineString` e un valore `Polygon`.  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geography);  
@@ -65,13 +62,13 @@ SELECT [name], [geom].STDimension() as [dim]
 FROM @temp;  
 ```  
   
- Nell'esempio vengono restituite le dimensioni di ogni `geography`istanza.  
+ L'esempio restituisce quindi le dimensioni di ogni istanza `geography`.  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |Punto|0|  
 |LineString|1|  
-|Poligono|2|  
+|Polygon|2|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi OGC sulle istanze geografiche](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

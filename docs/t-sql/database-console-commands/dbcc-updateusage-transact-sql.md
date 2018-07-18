@@ -1,16 +1,13 @@
 ---
 title: DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATEUSAGE
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - row count accuracy [SQL Server]
 - page count accuracy [SQL Server]
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 56
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 12a05d112f55fd4323b5f6e4278c6134f581f4ae
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0ef83c4b349e44f7a5f399a7bf84c2be9cd2ca01
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +62,7 @@ DBCC UPDATEUSAGE
   
 ## <a name="arguments"></a>Argomenti  
 *database_name* | *database_id* | 0  
-Nome o ID del database per cui si desidera segnalare e correggere le statistiche sull'utilizzo dello spazio. Se si specifica 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
+Nome o ID del database per cui si desidera segnalare e correggere le statistiche sull'utilizzo dello spazio. Se si specifica 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
 *table_name* | *table_id* | *view_name* | *view_id*  
 Nome o ID della tabella o della vista indicizzata per cui si desidera segnalare e correggere le statistiche sull'utilizzo dello spazio. I nomi delle tabelle e delle viste devono essere conformi alle regole per gli identificatori.  
@@ -83,13 +79,13 @@ Disattiva tutti i messaggi informativi.
 COUNT_ROWS  
 Specifica che la colonna row count viene aggiornata in base al numero di righe corrente della tabella o della vista.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 L'istruzione DBCC UPDATEUSAGE corregge i conteggi delle righe, delle pagine utilizzate, delle pagine riservate, delle pagine foglia e delle pagine di dati per ogni partizione di una tabella o di un indice. Se nelle tabelle di sistema non vengono rilevate imprecisioni, l'istruzione DBCC UPDATEUSAGE non restituisce alcun dato. Se vengono rilevate e corrette alcune imprecisioni e l'opzione WITH NO_INFOMSGS non è stata utilizzata, l'istruzione DBCC UPDATEUSAGE restituisce le righe e le colonne aggiornate nelle tabelle di sistema.
   
 DBCC CHECKDB è stato migliorato in modo da rilevare i casi in cui il conteggio delle pagine o delle righe diventa negativo. In tali situazioni, l'output DBCC CHECKDB include un avviso e l'indicazione di eseguire DBCC UPDATEUSAGE per risolvere il problema.
   
 ## <a name="best-practices"></a>Procedure consigliate  
-Si consiglia quanto segue:
+È consigliabile attenersi alle linee guida seguenti:
 -   Non eseguire regolarmente DBCC UPDATEUSAGE. Poiché l'istruzione DBCC UPDATEUSAGE può richiedere una certa quantità di tempo se eseguita in tabelle o database di grandi dimensioni, deve essere utilizzata solo se si ritiene che valori non corretti vengano restituiti da sp_spaceused.
 -   Prevedere un'esecuzione regolare di DBCC UPDATEUSAGE, ad esempio ogni settimana, solo se il database subisce frequenti modifiche DDL (Data Definition Language), come l'istruzione CREATE, ALTER o DROP.  
   
@@ -120,7 +116,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. Aggiornamento del conteggio delle pagine, delle righe o di entrambi per la tabella Employee  
-L'esempio seguente segnala informazioni aggiornate di conteggio di pagine o delle righe per il `Employee` tabella il [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
+Nell'esempio seguente vengono restituite informazioni aggiornate relative al conteggio delle pagine o delle righe per la tabella `Employee` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  

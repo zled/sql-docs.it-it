@@ -1,16 +1,14 @@
 ---
-title: DROP INDEX (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DROP INDEX (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
@@ -34,26 +32,26 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 
+caps.latest.revision: 99
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 821782102f7c9c6014c3ec46c5e9f9223eca98a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b20a1f1203a4c40e4dce7f4c153e86255c501112
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Rimuove uno o più indici relazionali, spaziali, filtrati o XML dal database corrente. È possibile eliminare un indice cluster e spostare la tabella risultante in un altro filegroup o schema di partizione in una singola transazione specificando l'opzione MOVE TO.  
   
- L'istruzione DROP INDEX non è valida per gli indici creati tramite i vincoli PRIMARY KEY o UNIQUE. Per rimuovere il vincolo e l'indice corrispondente, utilizzare [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) con la clausola DROP CONSTRAINT.  
+ L'istruzione DROP INDEX non è valida per gli indici creati tramite i vincoli PRIMARY KEY o UNIQUE. Per rimuovere il vincolo e l'indice corrispondente, usare [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) con la clausola DROP CONSTRAINT.  
   
 > [!IMPORTANT]  
->  La sintassi definita in `<drop_backward_compatible_index>` verrà rimossa in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarla in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare in alternativa la sintassi specificata in `<drop_relational_or_xml_index>`. Gli indici XML non possono essere eliminati utilizzando la sintassi compatibile con le versioni precedenti.  
+>  La sintassi definita in `<drop_backward_compatible_index>` verrà rimossa in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarla in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare in alternativa la sintassi specificata in `<drop_relational_or_xml_index>`. Gli indici XML non possono essere eliminati utilizzando la sintassi compatibile con le versioni precedenti.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -119,8 +117,8 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Rimuove in modo condizionale l'indice solo se esiste già.  
   
@@ -136,19 +134,19 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  *table_or_view_name*  
  Nome della tabella o della vista associata all'indice. Gli indici spaziali sono supportati solo nelle tabelle.  
   
- Per visualizzare un report degli indici in un oggetto, utilizzare il [Sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vista del catalogo.  
+ Per visualizzare un report degli indici di un oggetto, usare la vista del catalogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
  Il database SQL di Windows Azure supporta il formato del nome in tre parti, nome_database.[nome_schema].nome_oggetto, quando nome_database è il database corrente oppure nome_database è tempdb e nome_oggetto inizia con #.  
   
- \<drop_clustered_index_option >  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ \<drop_clustered_index_option>  
+ **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Controlla le opzioni degli indici cluster. Non è possibile utilizzare queste opzioni con altri tipi di indice.  
   
  MAXDOP = *max_degree_of_parallelism*  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (livelli di prestazioni P2 e P3 solo).  
+ **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (solo livelli di prestazioni P2 e P3).  
   
- Esegue l'override di **massimo grado di parallelismo** opzione di configurazione per la durata dell'operazione sull'indice. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
+ Sostituisce l'opzione di configurazione **max degree of parallelism** per la durata dell'operazione sull'indice. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
   
 > [!IMPORTANT]  
 >  MAXDOP non è consentito per indici spaziali o XML.  
@@ -170,7 +168,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 >  Le operazioni sugli indici parallele sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ONLINE = ON | **OFF**  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifica se le tabelle sottostanti e gli indici associati sono disponibili per le query e la modifica dei dati durante l'operazione sugli indici. Il valore predefinito è OFF.  
   
@@ -185,17 +183,17 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- Sposta in { *partition_scheme_name***(***column_name***)** | *filegroup_name*  |  **"**predefinito**"**  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]supporta "default" come nome del filegroup.  
+ MOVE TO { *partition_scheme_name ***(*** column_name***)** | *filegroup_name* | **"** default **"**  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Il [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] supporta "default" come nome del filegroup.  
   
  Specifica una posizione in cui spostare le righe dei dati attualmente nel livello foglia dell'indice cluster. I dati vengono spostati nella nuova posizione sotto forma di heap. È possibile specificare come nuova posizione uno schema di partizione o un filegroup, ma questo deve essere già esistente. MOVE TO non può essere utilizzata per viste indicizzate o indici non cluster. Se uno schema di partizione o filegroup non viene specificato, la tabella risultante si troverà nello stesso schema di partizione o filegroup definito per l'indice cluster.  
   
- Se un indice cluster viene eliminato tramite MOVE TO, tutti gli indici non cluster nella tabella di base vengono ricostruiti, ma rimangono nei filegroup o negli schemi di partizione originali. Se la tabella di base viene spostata in un filegroup o in uno schema di partizione diverso, gli indici non cluster non vengono spostati in base alla nuova posizione della tabella di base (heap). Pertanto, anche se in precedenza gli indici non cluster erano allineati con gli indici cluster, potrebbero non essere più allineati con l'heap. Per ulteriori informazioni sull'allineamento degli indici partizionati, vedere [tabelle e indici partizionati](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Se un indice cluster viene eliminato tramite MOVE TO, tutti gli indici non cluster nella tabella di base vengono ricostruiti, ma rimangono nei filegroup o negli schemi di partizione originali. Se la tabella di base viene spostata in un filegroup o in uno schema di partizione diverso, gli indici non cluster non vengono spostati in base alla nuova posizione della tabella di base (heap). Pertanto, anche se in precedenza gli indici non cluster erano allineati con gli indici cluster, potrebbero non essere più allineati con l'heap. Per altre informazioni sull'allineamento degli indici partizionati, vedere [Tabelle e indici partizionati](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  *partition_scheme_name* **(** *column_name* **)**  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Specifica uno schema di partizione come posizione per la tabella risultante. Lo schema di partizione deve essere già stato creato mediante l'esecuzione di una [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Se non viene specificata alcuna posizione e la tabella è partizionata, la tabella viene inclusa nello stesso schema di partizione dell'indice cluster esistente.  
+ Specifica uno schema di partizione come posizione per la tabella risultante. È necessario che lo schema di partizione sia già stato creato tramite [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Se non viene specificata alcuna posizione e la tabella è partizionata, la tabella viene inclusa nello stesso schema di partizione dell'indice cluster esistente.  
   
  Il nome di colonna nello schema non è limitato alle colonne nella definizione dell'indice. È possibile specificare qualsiasi colonna nella tabella di base.  
   
@@ -204,56 +202,56 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Specifica un filegroup come posizione per la tabella risultante. Se non viene specificata una posizione e la tabella non è partizionata, la tabella risultante viene inclusa nello stesso filegroup dell'indice cluster. Il filegroup deve essere già esistente.  
   
- **"**predefinito**"**  
+ **"** default **"**  
  Specifica la posizione predefinita per la tabella risultante.  
   
 > [!NOTE]  
->  In questo contesto, default non è una parola chiave, È un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"**predefinito**"** o MOVE TO **[**predefinito**]**. Se **"**predefinito**"** viene specificato, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"** default **"** o MOVE TO **[** default **]**. Se si specifica **"** default **"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"**predefinito**"** }  
+ FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifica una posizione in cui spostare la tabella FILESTREAM che attualmente si trova al livello foglia dell'indice cluster. I dati vengono spostati nella nuova posizione sotto forma di heap. È possibile specificare come nuova posizione uno schema di partizione o un filegroup, ma questo deve essere già esistente. FILESTREAM ON non è valido per viste indicizzate o indici non cluster. Se non viene specificato uno schema di partizione, i dati verranno inclusi nello stesso schema di partizione definito per l'indice cluster.  
   
  *partition_scheme_name*  
- Specifica uno schema di partizione per i dati FILESTREAM. Lo schema di partizione deve essere già stato creato mediante l'esecuzione di una [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Se non viene specificata alcuna posizione e la tabella è partizionata, la tabella viene inclusa nello stesso schema di partizione dell'indice cluster esistente.  
+ Specifica uno schema di partizione per i dati FILESTREAM. È necessario che lo schema di partizione sia già stato creato tramite [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Se non viene specificata alcuna posizione e la tabella è partizionata, la tabella viene inclusa nello stesso schema di partizione dell'indice cluster esistente.  
   
  Se si specifica un schema di partizione per MOVE TO, è necessario utilizzare lo stesso schema di partizione per FILESTREAM ON.  
   
  *filestream_filegroup_name*  
  Specifica un filegroup FILESTREAM per i dati FILESTREAM. Se non viene specificata una posizione e la tabella non è partizionata, i dati vengono inclusi nel filegroup FILESTREAM predefinito.  
   
- **"**predefinito**"**  
+ **"** default **"**  
  Specifica la posizione predefinita dei dati FILESTREAM.  
   
 > [!NOTE]  
->  In questo contesto, default non è una parola chiave, È un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"**predefinito**"** o MOVE TO **[**predefinito**]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"** default **"** o MOVE TO **[** default **]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando si elimina un indice non cluster, la definizione dell'indice viene rimossa dai metadati e le pagine dei dati dell'indice (albero B) vengono rimosse dai file del database. Quando viene eliminato un indice cluster, la definizione dell'indice viene rimossa dai metadati e le righe di dati precedentemente archiviate nel livello foglia dell'indice cluster vengono archiviate nella tabella non ordinata risultante, o heap. Tutto lo spazio occupato in precedenza dall'indice viene recuperato, e può essere quindi utilizzato per qualsiasi oggetto di database.  
   
  Non è possibile eliminare un indice se il filegroup in cui si trova è offline oppure è in sola lettura.  
   
  Quando si elimina l'indice cluster di una vista indicizzata, tutte le statistiche create automaticamente e tutti gli indici non cluster della stessa vista vengono eliminati automaticamente. Le statistiche create manualmente non vengono eliminate.  
   
- La sintassi*table_or_view_name***.** *index_name* viene mantenuto per compatibilità con le versioni precedenti. Non è possibile eliminare un indice XML o spaziale tramite la sintassi compatibile con le versioni precedenti.  
+ La sintassi *table_or_view_name ***.*** index_name* è stata mantenuta per la compatibilità con le versioni precedenti. Non è possibile eliminare un indice XML o spaziale tramite la sintassi compatibile con le versioni precedenti.  
   
  Quando vengono eliminati gli indici con 128 o più extent, [!INCLUDE[ssDE](../../includes/ssde-md.md)] posticipa le deallocazioni effettive delle pagine e dei relativi blocchi associati fino al termine dell'esecuzione del commit della transazione.  
   
- Talvolta gli indici vengono eliminati e ricreati per riorganizzare o ricompilare l'indice, ad esempio per applicare un nuovo fattore di riempimento o riorganizzare i dati dopo un'operazione di caricamento bulk. A tale scopo, utilizzare [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)è più efficiente, in particolare per gli indici cluster. Per ALTER INDEX REBUILD sono disponibili ottimizzazioni per impedire che gli indici non cluster vengano ricompilati.  
+ Talvolta gli indici vengono eliminati e ricreati per riorganizzare o ricompilare l'indice, ad esempio per applicare un nuovo fattore di riempimento o riorganizzare i dati dopo un'operazione di caricamento bulk. Per eseguire questa operazione, l'uso di [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) risulta più efficace, in particolare per gli indici cluster. Per ALTER INDEX REBUILD sono disponibili ottimizzazioni per impedire che gli indici non cluster vengano ricompilati.  
   
 ## <a name="using-options-with-drop-index"></a>Utilizzo delle opzioni con DROP INDEX  
  Quando si elimina un indice cluster, è possibile impostare le opzioni di indice MAXDOP, ONLINE e MOVE TO.  
   
  Utilizzare l'opzione MOVE TO per eliminare l'indice cluster e spostare la tabella risultante in un altro filegroup o schema di partizione in una singola transazione.  
   
- Quando si specifica ONLINE = ON, le query e le modifiche ai dati sottostanti e agli indici non cluster associati non vengono bloccate dalla transazione DROP INDEX. È possibile eliminare un solo indice cluster online alla volta. Per una descrizione completa dell'opzione ONLINE, vedere [CREATE INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-index-transact-sql.md).  
+ Quando si specifica ONLINE = ON, le query e le modifiche ai dati sottostanti e agli indici non cluster associati non vengono bloccate dalla transazione DROP INDEX. È possibile eliminare un solo indice cluster online alla volta. Per una descrizione completa dell'opzione ONLINE, vedere [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
- Non è possibile eliminare un indice cluster online se l'indice è disabilitato in una vista o include **testo**, **ntext**, **immagine**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml** colonne delle righe di dati a livello foglia.  
+ Non è possibile eliminare un indice cluster online se l'indice è disabilitato in una vista o contiene colonne di tipo **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** o **xml** nelle righe di dati a livello foglia.  
   
  Per l'utilizzo delle opzioni ONLINE = ON e MOVE TO è necessario spazio su disco temporaneo aggiuntivo.  
   
- Dopo l'eliminazione di un indice, l'heap risultante viene visualizzato nel **Sys. Indexes** visualizzazione con il valore NULL nel catalogo di **nome** colonna. Per visualizzare il nome della tabella, creare un join **Sys. Indexes** con **Sys. Tables** su **object_id**. Per una query di esempio, vedere l'esempio D.  
+ Dopo aver eliminato un indice, l'heap risultante viene visualizzato nella vista del catalogo **sys.indexes** con un valore NULL nella colonna **name**. Per visualizzare il nome della tabella, creare un join tra **sys.indexes** e **sys.tables** su **object_id**. Per una query di esempio, vedere l'esempio D.  
   
  Nei computer multiprocessore in cui è in esecuzione [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] o versione successiva l'istruzione DROP INDEX, allo stesso modo di altre query, può utilizzare più processori per eseguire le operazioni di analisi e di ordinamento associate all'eliminazione dell'indice cluster. È possibile configurare manualmente il numero di processori utilizzati per eseguire l'istruzione DROP INDEX mediante l'opzione di indice MAXDOP. Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
@@ -263,25 +261,25 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 2.  Modificare la tabella utilizzando un'opzione ALTER TABLE ... REBUILD... specificando l'opzione di compressione.  
   
-Quando un indice cluster viene eliminato offline, vengono rimossi solo i livelli superiori degli indici cluster, pertanto l'operazione è piuttosto veloce. Quando un indice cluster viene eliminato ONLINE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricompila l'heap due volte, una volta per il passaggio 1 e una volta per il passaggio 2. Per ulteriori informazioni sulla compressione dei dati, vedere [la compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
+Quando un indice cluster viene eliminato offline, vengono rimossi solo i livelli superiori degli indici cluster, pertanto l'operazione è piuttosto veloce. Quando un indice cluster viene eliminato ONLINE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricompila l'heap due volte, una volta per l'operazione descritta nel passaggio 1 e una volta per quella descritta nel passaggio 2. Per altre informazioni sulla compressione dei dati, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="xml-indexes"></a>Indici XML  
- Impossibile specificare le opzioni quando si elimina indice anXML. Inoltre, è possibile utilizzare il *table_or_view_name***.** *index_name* sintassi. Quando viene eliminato un indice XML primario, tutti gli indici XML secondari associati vengono eliminati automaticamente. Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ Quando si elimina un indice XML non è possibile specificare opzioni né usare la sintassi *table_or_view_name ***.*** index_name*. Quando viene eliminato un indice XML primario, tutti gli indici XML secondari associati vengono eliminati automaticamente. Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="spatial-indexes"></a>Indici spaziali  
- Gli indici spaziali sono supportati solo nelle tabelle. Quando si elimina un indice spaziale, è possibile specificare le opzioni o utilizzare **.** *index_name*. La sintassi corretta è la seguente:  
+ Gli indici spaziali sono supportati solo nelle tabelle. Quando si elimina un indice spaziale non è possibile specificare alcuna opzione o usare **.***index_name*. La sintassi corretta è la seguente:  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   
- Per ulteriori informazioni sugli indici spaziali, vedere [panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md).  
+ Per altre informazioni sugli indici spaziali, vedere [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire DROP INDEX è necessario disporre almeno dell'autorizzazione ALTER sulla tabella o sulla vista. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-dropping-an-index"></a>A. Eliminazione di un indice  
- Nell'esempio seguente elimina l'indice `IX_ProductVendor_VendorID` sul `ProductVendor` tabella il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ Nell'esempio seguente viene eliminato l'indice `IX_ProductVendor_VendorID` nella tabella `ProductVendor` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
 DROP INDEX IX_ProductVendor_BusinessEntityID   
@@ -302,7 +300,7 @@ GO
 ### <a name="c-dropping-a-clustered-index-online-and-setting-the-maxdop-option"></a>C. Eliminazione di un indice cluster online e impostazione dell'opzione MAXDOP  
  Nell'esempio seguente viene eliminato un indice cluster con l'opzione `ONLINE` impostata su `ON` e l'opzione `MAXDOP` impostata su `8`. Poiché l'opzione MOVE TO non è stata specificata, la tabella risultante viene archiviata nello stesso filegroup dell'indice. In questo esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -311,7 +309,7 @@ GO
 ```  
   
 ### <a name="d-dropping-a-clustered-index-online-and-moving-the-table-to-a-new-filegroup"></a>D. Eliminazione di un indice cluster online e spostamento di una tabella in un nuovo filegroup  
- Nell'esempio seguente viene eliminato un indice cluster online e la tabella risultante (heap) viene spostata nel filegroup `NewGroup` tramite la clausola `MOVE TO` . Vengono eseguite query sulle viste del catalogo `sys.indexes`, `sys.tables`e `sys.filegroups` per verificare la posizione dell'indice e della tabella nei filegroup prima e dopo lo spostamento. (A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile utilizzare la sintassi DROP INDEX IF EXISTS.)  
+ Nell'esempio seguente viene eliminato un indice cluster online e la tabella risultante (heap) viene spostata nel filegroup `NewGroup` tramite la clausola `MOVE TO` . Vengono eseguite query sulle viste del catalogo `sys.indexes`, `sys.tables`e `sys.filegroups` per verificare la posizione dell'indice e della tabella nei filegroup prima e dopo lo spostamento. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile usare la sintassi DROP INDEX IF EXISTS.  
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -364,7 +362,7 @@ GO
 ```  
   
 ### <a name="e-dropping-a-primary-key-constraint-online"></a>E. Eliminazione di un vincolo PRIMARY KEY online  
- Gli indici creati come risultato della creazione dei vincoli PRIMARY KEY o UNIQUE non possono essere eliminati tramite DROP INDEX, ma vengono eliminati tramite l'istruzione ALTER TABLE DROP CONSTRAINT. Per ulteriori informazioni, vedere [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+ Gli indici creati come risultato della creazione dei vincoli PRIMARY KEY o UNIQUE non possono essere eliminati tramite DROP INDEX, ma vengono eliminati tramite l'istruzione ALTER TABLE DROP CONSTRAINT. Per altre informazioni, vedere [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
  Nell'esempio seguente viene eliminato un indice cluster con un vincolo PRIMARY KEY eliminando il vincolo. La tabella `ProductCostHistory` non ha vincoli FOREIGN KEY. In caso contrario, sarebbe stato necessario rimuovere prima i vincoli.  
   
@@ -399,17 +397,17 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
- [ALTER PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [CREATE SPATIAL INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
- [CREATE XML INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [Sys. FileGroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
 

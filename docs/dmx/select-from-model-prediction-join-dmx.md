@@ -1,15 +1,14 @@
 ---
 title: SELECT FROM &lt;modello&gt; PREDICTION JOIN (DMX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PREDICTION
@@ -18,7 +17,8 @@ f1_keywords:
 - join
 - FROM
 - PREDICTION JOIN
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - prediction joins [DMX]
 - PREDICTION JOIN statement
@@ -27,16 +27,15 @@ helpviewer_keywords:
 - singleton query predictions [DMX]
 - SELECT FROM <model> PREDICTION JOIN statement
 ms.assetid: 7ca37fec-4a50-4d79-b1d6-1c7c12176946
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 77afa48b63dd145406cdead7e7b0b0bf675aedb5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7014d546d0484dcd5d741844a98c8060f925c96c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modello&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,9 +55,9 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativa. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
- *Selezionare l'elenco di espressioni*  
+ *elenco di espressioni SELECT*  
  Elenco delimitato da virgole contenente espressioni e identificatori di colonna derivati dal modello di data mining.  
   
  *model*  
@@ -71,15 +70,15 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Query di origine.  
   
  *elenco di mapping di join*  
- Facoltativo. Espressione logica che confronta le colonne del modello con quelle della query di origine.  
+ Facoltativa. Espressione logica che confronta le colonne del modello con quelle della query di origine.  
   
- *espressione della condizione*  
- Facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
+ *Espressione della condizione*  
+ Facoltativa. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
- *expression*  
- Facoltativo. Espressione che restituisce un valore scalare.  
+ *espressione*  
+ Facoltativa. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La clausola ON definisce il mapping tra le colonne della query di origine e quelle del modello di data mining. Tale mapping viene utilizzato per dirigere le colonne dalla query di origine alle colonne nel modello di data mining, di modo che possano essere utilizzate come input durante la creazione delle stime. Le colonne di \< *elenco mapping join*> correlati usando un segno di uguale (=), come illustrato nell'esempio seguente:  
   
 ```  
@@ -94,7 +93,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  È possibile specificare funzioni di stima che non restituiscono un'espressione di tabella nel \< *elenco di espressioni select*> e \< *espressione di condizione*>.  
   
- **NATURAL PREDICTION JOIN** esegue automaticamente il mapping tra loro i nomi di colonna della query di origine che corrispondono a nomi di colonna nel modello. Se si utilizza **NATURAL PREDICTION**, è possibile omettere la clausola ON.  
+ **NATURAL PREDICTION JOIN** esegue automaticamente il mapping tra loro i nomi di colonna della query di origine corrispondano ai nomi di colonna nel modello. Se si utilizza **NATURAL PREDICTION**, è possibile omettere la clausola ON.  
   
  La condizione WHERE può essere applicata solo a colonne stimabili o colonne correlate.  
   
@@ -111,7 +110,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   Ha due figli  
   
- Utilizza il modello di data mining TM Decision Tree e le caratteristiche note sull'oggetto, la query restituisce un valore booleano che indica se la persona ha acquistato la bicicletta e un set di valori tabulari, restituiti dal [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) (funzione), che descrivono la modalità in cui è stata effettuata la stima.  
+ Utilizza il modello di data mining TM Decision Tree e le caratteristiche note sull'oggetto, la query restituisce un valore booleano che indica se la persona ha acquistato la bicicletta e un set di valori tabulari, restituiti dal [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) (funzione), che descrivono la modalità in cui è stata effettuata la stima.  
   
 ```  
 SELECT  
@@ -185,7 +184,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- Il [DMX Predict &#40; &#41;](../dmx/predict-dmx.md) funzione è polimorfica e può essere utilizzata con tutti i tipi di modello. Viene utilizzato value3 come argomento della funzione per limitare il numero di articoli restituiti dalla query. Il **selezionare** elenco che segue la clausola NATURAL PREDICTION JOIN fornisce i valori da utilizzare come input per la stima.  
+ Il [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) funzione è polimorfica e può essere utilizzata con tutti i tipi di modello. Viene utilizzato value3 come argomento della funzione per limitare il numero di articoli restituiti dalla query. Il **selezionare** elenco che segue la clausola NATURAL PREDICTION JOIN fornisce i valori da utilizzare come input per la stima.  
   
 ```  
 SELECT FLATTENED  
@@ -209,9 +208,9 @@ NATURAL PREDICTION JOIN
  Poiché la colonna che contiene l'attributo stimabile, `[v Assoc Seq Line Items]`, è una colonna della tabella, la query restituisce una singola colonna contenente una tabella nidificata. Per impostazione predefinita, la colonna della tabella nidificata viene denominata `Expression`. Se il provider non supporta set di righe gerarchici, è possibile utilizzare il **FLATTENED** (parola chiave), come illustrato in questo esempio, per rendere più semplice visualizzare i risultati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [DMX SELECT &#40; &#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

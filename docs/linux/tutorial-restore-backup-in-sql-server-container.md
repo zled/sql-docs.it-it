@@ -6,19 +6,16 @@ ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: ea1aa01f3917c0d6ee4423861a3bf4fb985f53fa
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.technology: linux
+ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Ripristinare un database di SQL Server in un contenitore Linux Docker
 
@@ -35,16 +32,16 @@ In questa esercitazione viene illustrato come spostare e il ripristino di un fil
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* Motore docker 1.8 + su qualsiasi supportata di Linux o Docker per Mac e Windows. Per ulteriori informazioni, vedere [installare Docker](https://docs.docker.com/engine/installation/).
-* Almeno 2 GB di spazio su disco
-* Almeno 2 GB di RAM
-* [Requisiti di sistema per SQL Server in Linux](sql-server-linux-setup.md#system).
+* Motore Docker 1.8 o versione successiva in qualsiasi distribuzione di Linux supportata oppure Docker per Mac/Windows. Per altre informazioni, vedere [Installare Docker](https://docs.docker.com/engine/installation/).
+* Almeno 2 GB di spazio su disco.
+* Almeno 2 GB di RAM.
+* [Requisiti di sistema per SQL Server su Linux](sql-server-linux-setup.md#system).
 
 ## <a name="pull-and-run-the-container-image"></a>Effettuare il pull ed eseguire l'immagine del contenitore
 
 1. Aprire una sessione di PowerShell con privilegi elevata in Windows o di un terminale bash su Linux/Mac.
 
-1. Effettuare il pull dell'immagine di SQL Server per Linux 2017 contenitore dall'Hub Docker.
+1. Eseguire il pull dell'immagine del contenitore di SQL Server 2017 su Linux dall'hub Docker.
 
     ```bash
     sudo docker pull microsoft/mssql-server-linux:2017-latest
@@ -76,9 +73,9 @@ In questa esercitazione viene illustrato come spostare e il ripristino di un fil
     Questo comando crea un contenitore 2017 di SQL Server con l'edizione Developer edition (impostazione predefinita). Porta di SQL Server **1433** viene esposto nell'host come porta **1401**. Facoltativo `-v sql1data:/var/opt/mssql` parametro crea un contenitore di volumi di dati denominato **sql1ddata**. Viene utilizzato per rendere persistenti i dati creati da SQL Server.
 
    > [!NOTE]
-   > Il processo di esecuzione le edizioni di SQL Server di produzione in contenitori è leggermente diverso. Per ulteriori informazioni, vedere [eseguire produzione immagini contenitore](sql-server-linux-configure-docker.md#production). Se si utilizza lo stesso nome di contenitore e le stesse porte, il resto di questa procedura dettagliata funziona comunque con i contenitori di produzione.
+   > Il processo di esecuzione le edizioni di SQL Server di produzione in contenitori è leggermente diverso. Per altre informazioni, vedere [Run production container images](sql-server-linux-configure-docker.md#production) (Eseguire immagini del contenitore di produzione). Se si utilizza lo stesso nome di contenitore e le stesse porte, il resto di questa procedura dettagliata funziona comunque con i contenitori di produzione.
 
-1. Per visualizzare i contenitori di Docker, usare il `docker ps` comando.
+1. Per visualizzare i contenitori di Docker, usare il comando `docker ps`.
 
     ```bash
     sudo docker ps -a
@@ -88,7 +85,7 @@ In questa esercitazione viene illustrato come spostare e il ripristino di un fil
     docker ps -a
     ```
  
-1. Se il **stato** colonna viene visualizzato lo stato **backup**, quindi viene eseguito SQL Server nel contenitore e in ascolto sulla porta specificata nella **porte** colonna. Se il **stato** colonna per il contenitore di SQL Server viene illustrata **Exited**, vedere il [sezione della Guida alla configurazione di risoluzione dei problemi](sql-server-linux-configure-docker.md#troubleshooting).
+1. Se nella colonna **STATUS** è impostato lo stato**Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](sql-server-linux-configure-docker.md#troubleshooting).
 
    ```
    $ sudo docker ps -a
@@ -97,7 +94,7 @@ In questa esercitazione viene illustrato come spostare e il ripristino di un fil
    941e1bdf8e1d        microsoft/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
    ```
 
-## <a name="change-the-sa-password"></a>Modificare la password SA
+## <a name="change-the-sa-password"></a>Cambiare la password dell'amministratore di sistema
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 
@@ -141,7 +138,7 @@ Questa esercitazione viene utilizzato il [database di esempio Wide World Importe
 Il file di backup è ora disponibile all'interno del contenitore. Prima di ripristinare il backup, è importante conoscere i nomi di file logico e i tipi di file all'interno del backup. I comandi Transact-SQL seguenti ispezionare il backup ed eseguire il ripristino utilizzando **sqlcmd** nel contenitore.
 
 > [!TIP]
-> Questa esercitazione viene utilizzato **sqlcmd** all'interno del contenitore, in quanto il contenitore viene fornito con questo strumento di pre-installato. Tuttavia, è possibile inoltre eseguire istruzioni Transact-SQL con altri client di strumenti di fuori del contenitore, ad esempio [codice di Visual Studio](sql-server-linux-develop-use-vscode.md) o [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md). Per connettersi, utilizzare la porta dell'host che è stato eseguito il mapping alla porta 1433 nel contenitore. In questo esempio, che è **localhost, 1401** nel computer host e **Host_IP_Address, 1401** in modalità remota.
+> Questa esercitazione viene utilizzato **sqlcmd** all'interno del contenitore, in quanto il contenitore viene fornito con questo strumento di pre-installato. Tuttavia, è possibile inoltre eseguire istruzioni Transact-SQL con altri client di strumenti di fuori del contenitore, ad esempio [codice di Visual Studio](sql-server-linux-develop-use-vscode.md) o [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Per connettersi, utilizzare la porta dell'host che è stato eseguito il mapping alla porta 1433 nel contenitore. In questo esempio, che è **localhost, 1401** nel computer host e **Host_IP_Address, 1401** in modalità remota.
 
 1. Eseguire **sqlcmd** all'interno del contenitore all'elenco di nomi di file logico e i percorsi all'interno del backup. Questa operazione viene eseguita con il **RESTORE FILELISTONLY** istruzione Transact-SQL.
 

@@ -1,16 +1,14 @@
 ---
-title: WITH XMLNAMESPACES (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WITH_XMLNAMESPACES_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 - declaring XML namespaces
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2ac45cd469430bd6fd9852ca6eb6b58831b29fef
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7e7e6763f0cbd2228e9781876fe198e529e0dedc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +70,9 @@ DEFAULT <xml_namespace_uri>
  URI (Uniform Resource Identifier) che identifica lo spazio dei nomi XML da dichiarare. *xml_namespace_uri* è una stringa SQL.  
   
  *xml_namespace_prefix*  
- Specifica un prefisso per eseguire il mapping e associato al valore URI dello spazio dei nomi specificato in *xml_namespace_uri*. *xml_namespace_prefix* deve essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificatore.  
+ Specifica un prefisso da mappare e associare al valore dell'URI dello spazio dei nomi in *xml_namespace_uri*. *xml_namespace_prefix* deve essere un identificatore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se si utilizza la clausola WITH XMLNAMESPACES in un'istruzione che include inoltre un'espressione di tabella comune, è necessario che la clausola WITH XMLNAMESPACES preceda tale espressione.  
   
  Di seguito sono riportate le regole sintattiche generali in caso di utilizzo della clausola WITH XMLNAMESPACES:  
@@ -96,7 +93,7 @@ DEFAULT <xml_namespace_uri>
   
 -   I valori stringa dell'URI sono codificati in base alla tabella codici delle regole di confronto del database corrente e vengono convertite internamente in Unicode.  
   
--   Lo spazio dei nomi XML URI può essere spazio compresso segue lo spazio vuoto XSD comprimere le regole utilizzate per **xs: anyURI**. Non viene eseguita alcuna operazione di sostituzione con entità o sostituzione con caratteri nei valori di URI dello spazio dei nomi XML.  
+-   Gli spazi vuoti dell'URI dello spazio dei nomi XML verranno compressi in base alle regole XSD di compressione degli spazi vuoti usate per **xs:anyURI**. Non viene eseguita alcuna operazione di sostituzione con entità o sostituzione con caratteri nei valori di URI dello spazio dei nomi XML.  
   
 -   Nell'URI dello spazio dei nomi XML verrà controllato se sono inclusi caratteri XML 1.0 non validi. Se il controllo ha esito positivo, verrà generato un errore, ad esempio U+0007.  
   
@@ -105,7 +102,7 @@ DEFAULT <xml_namespace_uri>
 -   La parola chiave XMLNAMESPACES è riservata nel contesto della clausola WITH.  
   
 ## <a name="examples"></a>Esempi  
- Per esempi, vedere [aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ Per alcuni esempi, vedere [Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

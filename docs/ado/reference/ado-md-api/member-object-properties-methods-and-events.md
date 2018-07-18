@@ -1,30 +1,27 @@
 ---
-title: "Proprietà membro, metodi ed eventi | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Proprietà membro, metodi ed eventi | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Member object [ADO MD]
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e860d8d676b82e718271324472fd399261082f6a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b0e96a5fd882e5a801ff8c4eccef29fe6e6f5299
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-object-properties-methods-and-events"></a>Membro oggetto proprietà, metodi ed eventi
 ## <a name="propertiescollections"></a>Raccolte di proprietà /  
@@ -50,7 +47,7 @@ ms.lasthandoff: 02/09/2018
   
  [Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Proprietà di tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md)  
+ [Proprietà del tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md)  
   
  [Proprietà UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   

@@ -1,31 +1,23 @@
 ---
 title: Colonne di dati di eventi individuazione | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: trace-events
 ms.topic: reference
-helpviewer_keywords: Discover Events event category
-ms.assetid: 10ec598e-5b51-4767-b4f7-42e261d96a40
-caps.latest.revision: "29"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eee3ed0e00d25e255d1cf8de5cc08f0645cdd0dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 064bfcc90845082ad47caea23fa671152af486a2
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discover-events-data-columns"></a>Colonne di dati degli eventi di individuazione
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria di eventi di individuazione include le classi di evento seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoria degli eventi di individuazione include le classi di eventi seguenti:  
   
 -   Classe Discover Begin  
   
@@ -65,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Contiene l'ora corrente dell'evento di individuazione, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene l'ora, se disponibile, in cui è iniziato l'evento di fine individuazione. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene l'ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Duration|5|2|Contiene la durata dell'evento di individuazione in millisecondi.|  
+|Durata|5|2|Contiene la durata dell'evento di individuazione in millisecondi.|  
 |CPUTime|6|2|Contiene il tempo della CPU in millisecondi utilizzato dall'evento.|  
 |Severity|22|1|Contiene il livello di gravità di un'eccezione.|  
 |Esito positivo|23|1|Contiene informazioni sull'esito positivo o negativo dell'evento di individuazione. I valori possibili sono:<br /><br /> 0 = esito negativo<br /><br /> 1 = esito positivo|  
@@ -84,6 +76,6 @@ ms.lasthandoff: 01/08/2018
 |RequestProperties|45|9|Contiene le proprietà nella richiesta XMLA.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
+ [Categoria di eventi eventi di individuazione](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

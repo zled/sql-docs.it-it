@@ -1,16 +1,14 @@
 ---
-title: COS (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: COS (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COS
@@ -21,21 +19,21 @@ helpviewer_keywords:
 - cosine
 - COS function
 ms.assetid: c9fa8ae1-3373-4f3e-9b97-fa05077c1040
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef4c3de755304ff2b61452570fe218ab42382f37
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5ad420e56dd205772cf8d7b2a9ec8013c3ddfccc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cos-transact-sql"></a>COS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Funzione matematica che restituisce il coseno dell'angolo specificato, espresso in radianti, nell'espressione specificata.
+Funzione matematica che restituisce il coseno dell'angolo specificato, misurato in radianti, nell'espressione specificata.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,14 +44,14 @@ COS ( float_expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*argomento float_expression*  
-È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **float**.
+*float_expression*  
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **float**.
   
 ## <a name="return-types"></a>Tipi restituiti
 **float**
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene restituito il coseno dell'angolo specificato.
+In questo esempio viene restituito il valore `COS` dell'angolo specificato:
   
 ```sql
 DECLARE @angle float;  
@@ -69,13 +67,11 @@ The COS of the angle is: -0.599465
   
 (1 row(s) affected)  
 ```  
-
-## <a name="examples"></a>Esempi
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 
-Nell'esempio seguente viene restituito il coseno dell'angolo specificato.
+In questo esempio vengono restituiti i valori COS degli angoli specificati:
   
 ```sql
 SELECT COS(14.76) AS cosCalc1, COS(-0.1472738) AS cosCalc2;   
@@ -90,7 +86,7 @@ cosCalc1  cosCalc2
 ```
   
 ## <a name="see-also"></a>Vedere anche
-[Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[Funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

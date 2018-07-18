@@ -1,31 +1,17 @@
 ---
 title: Eseguire analisi di suddivisione in blocchi utilizzando rxDataStep (SQL e R approfondimento) | Documenti Microsoft
-ms.custom: 
-ms.date: 12/14/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-- SQL Server 2017
-dev_langs:
-- R
-ms.assetid: 4290ee5f-be90-446a-91e8-3095d694bd82
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 5b5ba8c59ca5dfb84a7c062a8c09b40e0528fb5d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 5db0acfb90c200442489cd7c3ec464223195eec6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-and-r-deep-dive"></a>Eseguire analisi di suddivisione in blocchi utilizzando rxDataStep (SQL e R approfondimento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +63,7 @@ In questa lezione, utilizza il **rxDataStep** funzione per elaborare i dati in b
         colInfo = list(DayOfWeek = list(type = "factor",
             levels = as.character(1:7))))
     ```
-4. Facoltativamente, è possibile eseguire **rxGetVarInfo** su questa origine dati. A questo punto, contiene una singola colonna: *Var 1: DayOfWeek, digitare: non fattori, fattori sono disponibili livelli*
+4. Facoltativamente, è possibile eseguire **rxGetVarInfo** su questa origine dati. A questo punto, contiene una singola colonna: *Var 1: DayOfWeek, digitare: non refactoring, a fattori sono disponibili livelli*
      
 5. Prima di applicare questa variabile di fattore all'origine dati, creare una tabella separata in cui includere i risultati intermedi. Nuovamente, solo la funzione RxSqlServerData per definire i dati, makign assicurarsi di eliminare tutte le tabelle esistenti con lo stesso nome.
   

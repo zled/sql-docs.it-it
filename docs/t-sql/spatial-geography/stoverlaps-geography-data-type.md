@@ -1,37 +1,34 @@
 ---
-title: STOverlaps (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: STOverlaps (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - STOverlaps method (geography)
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1a70088ef45b2cf8f5682e3779f5a9011d502c61
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1c387d178f4455eb863c6a08c7b80e50e598d512
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce 1 se un **geography** istanza spazialmente si sovrappone a altra **geography** istanza oppure 0 in caso contrario.  
+  Restituisce 1 se un'istanza **geography** si sovrappone a livello spaziale a un'altra istanza **geography** oppure 0 in caso contrario.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,18 +39,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geography*  
- Un altro **geography** istanza da confrontare con l'istanza sulla quale `STOverlaps()` viene richiamato.  
+ Altra istanza **geography** da confrontare con l'istanza sulla quale viene chiamato `STOverlaps()`.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geography** istanze non corrispondono.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `STOverlaps()` per verificare se due **geography** istanze si sovrappongono.  
+ L'esempio seguente usa `STOverlaps()` per verificare se due istanze **geography** si sovrappongono.  
   
 ```  
 DECLARE @g geography;  

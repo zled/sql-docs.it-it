@@ -1,16 +1,15 @@
 ---
 title: Tipi di query (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - Query Designer [SQL Server], query creation
@@ -18,19 +17,19 @@ helpviewer_keywords:
 - View Designer, query creation
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 71a0f7fbd4edf00b9f2eb8f84807f0fb2baa6318
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0c9e40baacaa66fffb2a8c9ee100f6367a1a4057
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Tipi di query (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In Progettazione query e Progettazione viste sono disponibili funzionalità incorporate per alcuni tipi di query, ovvero query di selezione (Select), di accodamento (Insert Results), di inserimento valori (Insert Values), di aggiornamento (Update), di eliminazione (Delete) e di creazione tabella (Make Table), e sono supportate le query di unione (UNION), di ricerca full-text e con l'espressione CASE.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In Progettazione query e Progettazione viste sono disponibili caratteristiche incorporate per alcuni tipi di query, ovvero query di selezione (Select), di accodamento (Insert Results), di accodamento valori (Insert Values), di aggiornamento (Update), di eliminazione (Delete) e di creazione tabella (Make Table), e sono supportate le query di unione (UNION), di ricerca full-text e con l'espressione CASE.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
 [Tipi di query supportati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  

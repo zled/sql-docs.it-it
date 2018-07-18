@@ -1,16 +1,14 @@
 ---
-title: ATAN (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ATAN (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ATAN_TSQL
@@ -22,21 +20,21 @@ helpviewer_keywords:
 - ATAN function
 - tangent
 ms.assetid: 6d3dd28e-4fa6-40ba-94cf-b33c0ff614ec
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: efb6cbe8dcc58d8989b8f8ce9b4deb6ce587dc83
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a954e32f5a8a3e7ad34b881c6a208ba973bb39e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atan-transact-sql"></a>ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Restituisce l'angolo in radianti, la cui tangente è un oggetto specificato **float** espressione. (definito anche arcotangente).
+Funzione che restituisce l'angolo, espresso in radianti, la cui tangente corrisponde a un'espressione di tipo **float** specificata. (definito anche arcotangente).
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,14 +45,14 @@ ATAN ( float_expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*argomento float_expression*  
-È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) del tipo **float** o di un tipo che può essere convertito in modo implicito in **float**.
+*float_expression*  
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **float** oppure di un tipo che viene convertito in modo implicito in **float**.
   
 ## <a name="return-types"></a>Tipi restituiti
 **float**
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente accetta un **float** espressione che restituisce l'ARCOTANGENTE dell'angolo specificato.
+L'esempio seguente accetta un'espressione **float** e restituisce ATAN dell'angolo specificato.
   
 ```sql
 SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
@@ -95,8 +93,8 @@ The ATAN of 197.1099392 is: 1.56572
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-Nell'esempio seguente accetta un **float** espressione e restituisce l'arcotangente dell'angolo specificato.
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+L'esempio seguente accetta un'espressione **float** e restituisce l'arcotangente dell'angolo specificato.
   
 ```sql
 SELECT ATAN(45.87) AS atanCalc1,  
@@ -115,8 +113,8 @@ atanCalc1  atanCalc2  atanCalc3  atanCalc4  atanCalc5
 ```
   
 ## <a name="see-also"></a>Vedere anche
-[CEILING &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
+[Funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

@@ -1,30 +1,28 @@
 ---
 title: sqlsrv_num_rows | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - API Reference, sqlsrv_num_rows
 - sqlsrv_num_rows
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d0be1f022460ed99445de32e6dcac439cc5365ca
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: a6268d095bf3a560e30ea0494c7664663a7fd9a2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +43,7 @@ sqlsrv_num_rows( resource $stmt )
 **false** se si è verificato un errore durante il calcolo del numero di righe. In caso contrario, restituisce il numero di righe del set di risultati.  
   
 ## <a name="remarks"></a>Osservazioni  
-sqlsrv_num_rows richiede sul lato client, statico o keyset e restituirà **false** se si utilizza un cursore forward o un cursore dinamico. (Un cursore forward è il valore predefinito). Per ulteriori informazioni sui cursori, vedere [sqlsrv_query](../../connect/php/sqlsrv-query.md) e [tipi di cursore &#40; Driver SQLSRV &#41; ](../../connect/php/cursor-types-sqlsrv-driver.md).  
+sqlsrv_num_rows richiede sul lato client, statico o keyset e restituirà **false** se si utilizza un cursore forward o un cursore dinamico. (Un cursore forward è il valore predefinito). Per altre informazioni sui cursori, vedere [sqlsrv_query](../../connect/php/sqlsrv-query.md) e [tipi di cursore &#40;Driver SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Esempio  
   

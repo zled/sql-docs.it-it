@@ -1,16 +1,15 @@
 ---
 title: sys.sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rda_reauthorize_db
@@ -20,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3450d9d9dc491e0c3c57b560281148929d0ce907
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b387bbd432eb01df84661a61b1f9528857cd74c3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +48,13 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  Sia le credenziali con ambito database associate al database locale abilitata per l'estensione.  
   
  @with_copy = *@with_copy*  
- Specifica se eseguire una copia dei dati remoti e connettersi alla copia (scelta consigliata). *@with_copy*è di tipo bit.  
+ Specifica se eseguire una copia dei dati remoti e connettersi alla copia (scelta consigliata). *@with_copy* è di tipo bit.  
   
  @azure_servername = *@azure_servername*  
- Specifica il nome del server Azure che contiene i dati remoti. *@azure_servername*è di tipo sysname.  
+ Specifica il nome del server Azure che contiene i dati remoti. *@azure_servername* è di tipo sysname.  
   
  @azure_databasename = *@azure_databasename*  
- Specifica il nome del database di Azure che contiene i dati remoti. *@azure_databasename*è di tipo sysname.  
+ Specifica il nome del database di Azure che contiene i dati remoti. *@azure_databasename* è di tipo sysname.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o >0 (esito negativo)  

@@ -1,16 +1,14 @@
 ---
-title: sp_kill_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_kill_filestream_non_transacted_handles (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_kill_filestream_non_transacted_handles_TSQL
@@ -20,18 +18,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_kill_filestream_non_transacted_handles
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cb1054ec1ce9bab7311417e109ac0cece16c9c88
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: de6599caa4881800063a47d6adb25651a4c92f2c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="filestream-and-filetable---spkillfilestreamnontransactedhandles"></a>FileStream e FileTable - sp_kill_filestream_non_transacted_handles
+# <a name="spkillfilestreamnontransactedhandles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Consente di chiudere handle di file non transazionali per dati di tabelle FileTable.  
@@ -51,12 +48,12 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
  È possibile passare NULL per il valore di *table_name* per chiudere handle non transazionali aperti tutti per tutte le tabelle Filetable nel database corrente. Il valore predefinito è NULL.  
   
  *handle_id*  
- ID facoltativo del singolo handle da chiudere. È possibile ottenere il *handle_id* dal [Sys.dm filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) vista a gestione dinamica. Ogni ID è univoco in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si specifica *handle_id*, quindi è necessario fornire anche un valore per *table_name*.  
+ ID facoltativo del singolo handle da chiudere. È possibile ottenere il *handle_id* dal [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) vista a gestione dinamica. Ogni ID è univoco in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si specifica *handle_id*, quindi è necessario fornire anche un valore per *table_name*.  
   
  È possibile passare NULL per il valore di *handle_id* per chiudere handle non transazionali tutti aperti per la tabella FileTable specificata da *table_name*. Il valore predefinito è NULL.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-set"></a>Set di risultati  
  Nessuno  
@@ -67,7 +64,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
  Per altre informazioni, vedere [Gestire le tabelle FileTable](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="metadata"></a>Metadati  
- Per informazioni sugli handle di file non transazionali aperti, eseguire una query sulla DMV [Sys.dm filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
+ Per informazioni sull'handle di file non transazionali aperti, eseguire query sulla vista a gestione dinamica [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
 ## <a name="security"></a>Sicurezza  
   
@@ -103,5 +100,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
-  
+ [FileStream e viste a gestione dinamica FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+ <br>[FileStream e viste del catalogo FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+ <br>[sp_filestream_force_garbage_collection (Transact-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   

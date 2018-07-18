@@ -1,32 +1,32 @@
 ---
 title: sp_helprotect (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helprotect
 - sp_helprotect_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_helprotect
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7c254488d42940c2f88b395082db1cd0079f79f3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6ec420b58bf179d607326164a56ce8c257ba6725
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +52,18 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@name =** ] **'***object_statement***'**  
- Nome dell'oggetto nel database corrente, o di un'istruzione, a cui sono associate le autorizzazioni di cui si desidera ottenere informazioni. *object_statement* è **nvarchar(776)**, il valore predefinito è NULL, che restituisce tutte le autorizzazioni oggetto e di istruzione. Se il valore è un oggetto, quale una tabella, una vista, una stored procedure o una stored procedure estesa, deve essere un oggetto valido nel database corrente. Il nome dell'oggetto può includere un qualificatore del proprietario nel formato *proprietario***.** *oggetto*.  
+ Nome dell'oggetto nel database corrente, o di un'istruzione, a cui sono associate le autorizzazioni di cui si desidera ottenere informazioni. *object_statement* viene **nvarchar(776)**, con un valore predefinito è NULL, che restituisce tutte le autorizzazioni oggetto e l'istruzione. Se il valore è un oggetto, quale una tabella, una vista, una stored procedure o una stored procedure estesa, deve essere un oggetto valido nel database corrente. Il nome dell'oggetto può includere un qualificatore del proprietario nel formato *proprietario ***.*** oggetto*.  
   
  Se *object_statement* è un'istruzione, può essere un'istruzione CREATE.  
   
  [  **@username =** ] **'***security_account***'**  
- Nome dell'entità per cui vengono restituite le autorizzazioni. *security_account* è **sysname**, il valore predefinito è NULL, che restituisce tutte le entità nel database corrente. *security_account* deve esistere nel database corrente.  
+ Nome dell'entità per cui vengono restituite le autorizzazioni. *security_account* viene **sysname**, con un valore predefinito è NULL, che restituisce tutte le entità nel database corrente. *security_account* deve esistere nel database corrente.  
   
  [  **@grantorname =** ] **'***grantor***'**  
- Nome dell'entità mediante la quale vengono concesse le autorizzazioni. *GRANTOR* è **sysname**, il valore predefinito è NULL, che restituisce tutte le informazioni relative alle autorizzazioni concesse da qualsiasi entità nel database.  
+ Nome dell'entità mediante la quale vengono concesse le autorizzazioni. *utente che concede* viene **sysname**, con un valore predefinito è NULL, che restituisce tutte le informazioni relative alle autorizzazioni concesse da qualsiasi entità nel database.  
   
  [  **@permissionarea =** ] **'***tipo***'**  
- È una stringa di caratteri che indica se visualizzare le autorizzazioni di oggetto (stringa di caratteri **o**), le autorizzazioni di istruzione (stringa di caratteri **s**), o entrambi (**os**). *tipo* è **varchar (10)**, il valore predefinito è **os**. *tipo* può essere qualsiasi combinazione di **o** e **s**, con o senza virgole o spazi tra **o** e **s**.  
+ È una stringa di caratteri che indica se visualizzare le autorizzazioni di oggetto (stringa di caratteri **o**), le autorizzazioni di istruzione (stringa di caratteri **s**), o entrambi (**os**). *tipo di* viene **varchar(10**, il valore predefinito è **os**. *tipo di* può essere qualsiasi combinazione di **on** e **s**, con o senza virgole o spazi tra **o** e **s**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -74,9 +74,9 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |-----------------|---------------|-----------------|  
 |**Proprietario**|**sysname**|Nome del proprietario dell'oggetto.|  
 |**Oggetto**|**sysname**|Nome dell'oggetto.|  
-|**Utente autorizzato**|**sysname**|Nome dell'entità a cui sono state concesse le autorizzazioni.|  
+|**utente autorizzato**|**sysname**|Nome dell'entità a cui sono state concesse le autorizzazioni.|  
 |**Utente che concede le autorizzazioni**|**sysname**|Nome dell'entità che ha concesso le autorizzazioni all'entità autorizzata specificata.|  
-|**ProtectType**|**nvarchar (10)**|Nome del tipo di protezione:<br /><br /> GRANT REVOKE|  
+|**ProtectType**|**nvarchar(10)**|Nome del tipo di protezione:<br /><br /> GRANT REVOKE|  
 |**Azione**|**nvarchar(60)**|Nome dell'autorizzazione. La validità delle istruzioni di autorizzazione dipende dal tipo di oggetto.|  
 |**Colonna**|**sysname**|Tipo di autorizzazione:<br /><br /> All = L'autorizzazione è valida per tutte le colonne correnti dell'oggetto.<br /><br /> New = L'autorizzazione è valida per le nuove colonne che potrebbero essere modificate in futuro nell'oggetto (tramite l'istruzione ALTER).<br /><br /> All+New = L'autorizzazione è valida sia per le colonne correnti che per le nuove colonne.<br /><br /> Restituisce un punto se il tipo di autorizzazione non si applica alle colonne.|  
   
@@ -97,7 +97,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
   
  Il report di output viene ordinato in base a categoria di autorizzazioni, proprietario, oggetto, entità a cui è stata concessa l'autorizzazione, entità che ha concesso l'autorizzazione, categoria del tipo di protezione, tipo di protezione, azione e ID sequenziale di colonna.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
  Le informazioni restituite sono soggette a limitazioni di accesso ai metadati. Non vengono visualizzate le entità per le quali l'entità di database non dispone dell'autorizzazione. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -140,7 +140,7 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

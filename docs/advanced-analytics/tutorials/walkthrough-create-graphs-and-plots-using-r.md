@@ -1,29 +1,18 @@
 ---
 title: Creare grafici e grafici utilizzando SQL e R (procedura dettagliata) | Documenti Microsoft
-ms.date: 11/10/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 2a1572cf1bc6f8e3f6aff99255e5805bf977978d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 4d4b573bc2aa0cc48e7c158edafa0dd604e6fc87
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585473"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Creare grafici e grafici utilizzando SQL e R (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -109,8 +98,8 @@ In genere, i server di database bloccano l'accesso a Internet. Può essere poco 
 
 ## <a name="next-lesson"></a>Lezione successiva
 
-[Creare le funzionalità di dati con R e SQL](/walkthrough-create-data-features.md)
+[Creare le funzionalità di dati con R e SQL](walkthrough-create-data-features.md)
 
 ## <a name="previous-lesson"></a>Lezione precedente
 
-[Riepilogare i dati con R](/walkthrough-view-and-summarize-data-using-r.md)
+[Riepilogare i dati con R](walkthrough-view-and-summarize-data-using-r.md)

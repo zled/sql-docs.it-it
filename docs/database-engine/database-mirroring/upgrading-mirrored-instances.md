@@ -1,34 +1,33 @@
 ---
 title: Aggiornamento di istanze con mirroring | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/01/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 06f9d525bc46843dcf5456fc70db0cdd4bd78b74
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 33ef8a942301b3f29fec9c468faaccf016ee257d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrading-mirrored-instances"></a>Aggiornamento di istanze con mirroring
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si aggiorna un'istanza con mirroring di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nuova versione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a un nuovo Service Pack o aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure a un nuovo Service Pack o aggiornamento cumulativo di Windows, è possibile ridurre i tempi di inattività per ogni database con mirroring a un singolo failover manuale eseguendo un aggiornamento in sequenza o due failover manuali in caso di failback all'istanza primaria originale. L'aggiornamento in sequenza è un processo in più fasi che, nella forma più semplice, implica l'aggiornamento dell'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che in quel momento funge da server mirror in una sessione di mirroring, seguito dal failover manuale del database con mirroring, dall'aggiornamento della prima istanza principale di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e dalla ripresa del mirroring. Nella pratica, il processo esatto dipende dalla modalità operativa, nonché dal numero e dal layout della sessione di mirroring in esecuzione nelle istanze di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da aggiornare.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Quando si aggiorna un'istanza con mirroring di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nuova versione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , a un nuovo Service Pack o aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oppure a un nuovo Service Pack o aggiornamento cumulativo di Windows, è possibile ridurre i tempi di inattività per ogni database con mirroring a un singolo failover manuale eseguendo un aggiornamento in sequenza o due failover manuali in caso di failback all'istanza primaria originale. L'aggiornamento in sequenza è un processo in più fasi che, nella forma più semplice, implica l'aggiornamento dell'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che in quel momento funge da server mirror in una sessione di mirroring, seguito dal failover manuale del database con mirroring, dall'aggiornamento della prima istanza principale di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e dalla ripresa del mirroring. Nella pratica, il processo esatto dipende dalla modalità operativa, nonché dal numero e dal layout della sessione di mirroring in esecuzione nelle istanze di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da aggiornare.  
   
 > [!NOTE]  
 >  Per informazioni sull'uso del mirroring del database con log shipping durante una migrazione, scaricare il [white paper Database Mirroring and Log Shipping](https://t.co/RmO6ruCT4J)(Mirroring del database e log shipping).  

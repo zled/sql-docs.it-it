@@ -1,5 +1,5 @@
-# [SQL Operations Studio (anteprima)](what-is.md)
-# [Installare](download.md)
+# [SQL Operations Studio (preview)](what-is.md)
+# [Installazione](download.md)
 # [Note sulla versione](release-notes.md)
 # Guide introduttive
 ## [Connettersi ed eseguire query in SQL Server](quickstart-sql-server.md)
@@ -8,11 +8,12 @@
 # Esercitazioni
 ## [Editor T-SQL](tutorial-sql-editor.md) 
 ## [Widget insight di esempio: query lente](tutorial-qds-sql-server.md)
-## [Widget insight di esempio: utilizzo dello spazio delle tabelle](tutorial-table-space-sql-server.md)
+## [Widget di informazioni dettagliate di esempio: spazio utilizzato dalle tabelle](tutorial-table-space-sql-server.md)
 ## [Creazione di un widget insight personalizzato](tutorial-build-custom-insight-sql-server.md) 
 ## [Backup e ripristino](tutorial-backup-restore-sql-server.md)
 # Guide pratiche
 ## [Dashboard e widget insight](insight-widgets.md)
+## [Estensioni](extensions.md)
 ## [Frammenti di codice](code-snippets.md)
 ## [Terminale integrato (PowerShell, Bash)](integrated-terminal.md)
 ## [Tasti di scelta rapida](keyboard-shortcuts.md)
@@ -23,7 +24,7 @@
 ## [Raccolta dati di utilizzo](usage-data-collection.md)
 # Risorse
 ## [Guida di riferimento a Transact-SQL](../t-sql/language-reference.md)
-## [Repository GitHub di SQL Operations Studio (anteprima)](https://www.github.com/Microsoft/SqlOpsStudio)
+## [Repository GitHub di SQL Operations Studio (preview)](https://www.github.com/Microsoft/SqlOpsStudio)
 ## [Blog su SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ## [Articoli nuovi e aggiornati](new-updated-sql-operations-studio.md)
 # [FAQ](faq.md)

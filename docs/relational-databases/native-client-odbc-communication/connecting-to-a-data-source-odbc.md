@@ -1,15 +1,14 @@
 ---
 title: Connessione a un'origine dati (ODBC) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-communication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - checking connection states
@@ -25,16 +24,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data sources
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88fb99a39ca8050c72622e1c4d6a99bc041561e6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4daa642cbd60846cc4211de5e33cdad8e7a6d8db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Connessione a un'origine dati (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +50,7 @@ ms.lasthandoff: 01/25/2018
  Per ulteriori informazioni sull'esecuzione di connessioni a un'origine dati, tra cui le diverse opzioni di stringa di connessione disponibili, vedere [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="sqlconnect"></a>SQLConnect  
- **SQLConnect** è la funzione di connessione più semplice. La funzione accetta tre parametri: un nome di origine dati, un ID utente e una password. Utilizzare **SQLConnect** quando questi tre parametri contengono tutte le informazioni necessarie per connettersi al database. A tale scopo, creare un elenco di origini dati utilizzando **SQLDataSources**; richiedere all'utente per un'origine dati, l'ID utente e password; quindi chiamare **SQLConnect**.  
+ **SQLConnect** è la più semplice funzione di connessione. La funzione accetta tre parametri: un nome di origine dati, un ID utente e una password. Utilizzare **SQLConnect** quando questi tre parametri contengono tutte le informazioni necessarie per connettersi al database. A tale scopo, creare un elenco di origini dati utilizzando **SQLDataSources**; richiedere all'utente per un'origine dati, l'ID utente e password; quindi chiamare **SQLConnect**.  
   
  **SQLConnect** presuppone che un nome dell'origine dati, l'ID utente e password siano sufficienti per connettersi a un'origine dati e che l'origine dati ODBC contenga tutte le altre informazioni, il driver ODBC deve effettuare la connessione. A differenza di [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) e [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md), **SQLConnect** non utilizza una stringa di connessione.  
   
@@ -121,6 +120,6 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
  Funzione di un'applicazione per la gestione degli errori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connessioni devono chiamare **SQLGetDiagRec** fino a quando non viene restituito SQL_NO_DATA. Deve quindi intervenire su qualsiasi messaggio diverso da quelli con un *pfNative* codice 5701 o 5703.  
   
 ## <a name="see-also"></a>Vedere anche  
- [La comunicazione con SQL Server &#40; ODBC &#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [La comunicazione con SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

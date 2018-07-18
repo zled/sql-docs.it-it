@@ -1,16 +1,14 @@
 ---
 title: core.sp_purge_data (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_data_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fb74c4993f7a7d013e56061e3a572052c2939a99
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 002ba9d499039651eecdd2d05c92cda63c9dab62
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,21 +51,21 @@ core.sp_purge_data
   
 ## <a name="arguments"></a>Argomenti  
  [@retention_days =] *retention_days*  
- Numero di giorni per cui conservare i dati nelle tabelle del data warehouse di gestione. I dati con un timestamp meno recente *retention_days* viene rimosso. *retention_days* è **smallint**, con un valore predefinito è NULL. Se specificato, il valore deve essere positivo. Quando è NULL, il valore nella colonna valid_through della vista core.snapshots determina le righe da rimuovere.  
+ Numero di giorni per cui conservare i dati nelle tabelle del data warehouse di gestione. I dati con un timestamp meno recente *retention_days* viene rimosso. *retention_days* viene **smallint**, con un valore predefinito è NULL. Se specificato, il valore deve essere positivo. Quando è NULL, il valore nella colonna valid_through della vista core.snapshots determina le righe da rimuovere.  
   
  [@instance_name =] '*instance_name*'  
- Nome dell'istanza per l'insieme di raccolta. *instance_name* è **sysname**, con un valore predefinito è NULL.  
+ Nome dell'istanza per l'insieme di raccolta. *nome_istanza* viene **sysname**, con un valore predefinito è NULL.  
   
- *instance_name* deve essere il nome di istanza completo, che include il nome del computer e il nome dell'istanza nel formato *computername*\\*instancename*. Quando è NULL, viene utilizzata l'istanza predefinita nel server locale.  
+ *nome_istanza* deve essere il nome, nome completo dell'istanza che include il nome del computer e il nome dell'istanza nel formato *nomecomputer*\\*instancename*. Quando è NULL, viene utilizzata l'istanza predefinita nel server locale.  
   
  [@collection_set_uid = ] '*collection_set_uid*'  
- GUID per il set di raccolta. *collection_set_uid* è **uniqueidentifier**, con un valore predefinito è NULL. Quando è NULL, vengono rimosse le righe risultanti da tutti i set di raccolta. Per ottenere questo valore, eseguire una query sulla vista del catalogo syscollector_collection_sets.  
+ GUID per il set di raccolta. *collection_set_uid* viene **uniqueidentifier**, con un valore predefinito è NULL. Quando è NULL, vengono rimosse le righe risultanti da tutti i set di raccolta. Per ottenere questo valore, eseguire una query sulla vista del catalogo syscollector_collection_sets.  
   
  [@duration =] *durata*  
- Numero massimo di minuti per l'esecuzione dell'operazione di eliminazione. *durata* è **smallint**, con un valore predefinito è NULL. Se specificato, il valore deve essere zero o un numero intero positivo. Quando è NULL, l'operazione viene eseguita finché non vengono rimosse tutte le righe restituite o l'operazione non viene arrestata manualmente.  
+ Numero massimo di minuti per l'esecuzione dell'operazione di eliminazione. *durata* viene **smallint**, con un valore predefinito è NULL. Se specificato, il valore deve essere zero o un numero intero positivo. Quando è NULL, l'operazione viene eseguita finché non vengono rimosse tutte le righe restituite o l'operazione non viene arrestata manualmente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  Questa procedura seleziona le righe della vista core.snapshots risultanti per la rimozione in base a un periodo di memorizzazione. Tutte le righe risultanti per la rimozione vengono eliminate dalla tabella core.snapshots_internal. L'eliminazione delle righe precedenti genera un'azione di eliminazione a catena in tutte le tabelle del data warehouse di gestione. Questa operazione viene eseguita utilizzando la clausola ON DELETE CASCADE definita per tutte le tabelle in cui vengono archiviati i dati raccolti.  

@@ -1,16 +1,14 @@
 ---
 title: Recupero di dati Long | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - fetches [ODBC], long data
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4bb349dd9bc791659dc518aa66cbc40e958dbe66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: a465c8200181c87caa49d6e36df50cb5c158cdbf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-long-data"></a>Recupero di dati Long
 Definiscono DBMS *dati long* come qualsiasi carattere o dati binari in una determinata dimensione, ad esempio i 255 caratteri. Tali dati possono essere sufficientemente ridotto da archiviare in un unico buffer, ad esempio una descrizione di parte di diverse migliaia di caratteri. Tuttavia, potrebbe essere troppo lungo per archiviare in memoria, ad esempio documenti di testo lungo o bitmap. Poiché tali dati non possono essere archiviati in un unico buffer, viene recuperato dal driver in parti con **SQLGetData** dopo gli altri dati nella riga sono stati recuperati.  
@@ -35,11 +32,11 @@ Definiscono DBMS *dati long* come qualsiasi carattere o dati binari in una deter
 > [!NOTE]  
 >  Un'applicazione può recuperare qualsiasi tipo di dati con **SQLGetData**, long non solo i dati, anche se solo i caratteri e i dati binari possono essere recuperati in parti. Tuttavia, se i dati sono sufficientemente piccoli da rientrare in un unico buffer, non è in genere utilizzare **SQLGetData**. È molto più semplice associare un buffer per la colonna e consentire il driver di restituire i dati nel buffer.  
   
- Per recuperare dati long da una colonna, un'applicazione chiama innanzitutto **SQLFetchScroll** o **SQLFetch** per spostare una riga e recuperare i dati per le colonne associate. L'applicazione chiama quindi **SQLGetData**. **SQLGetData** ha gli stessi argomenti **SQLBindCol**: un handle di istruzione; un numero di colonna; il C byte, l'indirizzo e tipo lunghezza dei dati di una variabile di applicazione e l'indirizzo di un buffer di lunghezza/indicatore. Entrambe le funzioni hanno gli stessi argomenti poiché eseguono essenzialmente la stessa attività: descrivono una variabile di applicazione per il driver e specificare che devono essere restituiti i dati per una determinata colonna in tale variabile. Le principali differenze sono che **SQLGetData** viene chiamato dopo che viene recuperata una riga (e talvolta come *ad associazione tardiva* per questo motivo) e che l'associazione specificata da **SQLGetData**  dura solo per la durata della chiamata.  
+ Per recuperare dati long da una colonna, un'applicazione chiama innanzitutto **SQLFetchScroll** o **SQLFetch** per spostare una riga e recuperare i dati per le colonne associate. L'applicazione chiama quindi **SQLGetData**. **SQLGetData** ha gli stessi argomenti **SQLBindCol**: un handle di istruzione, un numero di colonna, il C lunghezza dei dati tipo, l'indirizzo e byte di una variabile di applicazione; e l'indirizzo di un buffer di lunghezza/indicatore. Entrambe le funzioni hanno gli stessi argomenti poiché eseguono essenzialmente la stessa attività: descrivono una variabile di applicazione per il driver e specificare che devono essere restituiti i dati per una determinata colonna in tale variabile. Le principali differenze sono che **SQLGetData** viene chiamato dopo che viene recuperata una riga (e talvolta come *ad associazione tardiva* per questo motivo) e che l'associazione specificata da **SQLGetData**  dura solo per la durata della chiamata.  
   
  Per quanto riguarda una singola colonna, **SQLGetData** si comporta come **SQLFetch**: recupera i dati per la colonna, lo converte il tipo della variabile di applicazione e restituisce tale variabile. Restituisce anche la lunghezza in byte dei dati nel buffer di lunghezza/indicatore. Per ulteriori informazioni su come **SQLFetch** restituisce dati, vedere [il recupero di una riga di dati](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   
- **SQLGetData** è diverso da **SQLFetch** per un aspetto importante. Se viene chiamato più volte in successione per la stessa colonna, ogni chiamata restituisce una parte successiva dei dati. Ogni chiamata tranne l'ultima chiamata restituisce SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (dati String, destra troncati); l'ultima chiamata restituisce SQL_SUCCESS. Si tratta come **SQLGetData** viene utilizzato per recuperare dati long in parti. Quando non sono presenti ulteriori dati da restituire, **SQLGetData** restituisce SQL_NO_DATA. L'applicazione è responsabile della combinazione di dati long, che potrebbe indicare la concatenazione di parti dei dati. Ogni parte è con terminazione null; l'applicazione è necessario rimuovere il carattere di terminazione null se le parti di concatenazione. Il recupero dei dati in parti può essere eseguita per segnalibri a lunghezza variabile anche per altri dati di tipo long. Il valore restituito in diminuisce il buffer di lunghezza/indicatore in ogni chiamata per il numero di byte restituiti nella chiamata precedente, anche se è comune per il driver a non essere in grado di individuare la quantità di dati disponibili e restituire una lunghezza in byte del SQL_NO_TOTAL. Ad esempio  
+ **SQLGetData** è diverso da **SQLFetch** per un aspetto importante. Se viene chiamato più volte in successione per la stessa colonna, ogni chiamata restituisce una parte successiva dei dati. Ogni chiamata tranne l'ultima chiamata restituisce SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (dati String, destra troncati); l'ultima chiamata restituisce SQL_SUCCESS. Si tratta come **SQLGetData** viene utilizzato per recuperare dati long in parti. Quando non sono presenti ulteriori dati da restituire, **SQLGetData** restituisce SQL_NO_DATA. L'applicazione è responsabile della combinazione di dati long, che potrebbe indicare la concatenazione di parti dei dati. Ogni parte è con terminazione null; l'applicazione è necessario rimuovere il carattere di terminazione null se le parti di concatenazione. Il recupero dei dati in parti può essere eseguita per segnalibri a lunghezza variabile anche per altri dati di tipo long. Il valore restituito in diminuisce il buffer di lunghezza/indicatore in ogni chiamata per il numero di byte restituiti nella chiamata precedente, anche se è comune per il driver a non essere in grado di individuare la quantità di dati disponibili e restituire una lunghezza in byte del SQL_NO_TOTAL. Esempio:  
   
 ```  
 // Declare a binary buffer to retrieve 5000 bytes of data at a time.  

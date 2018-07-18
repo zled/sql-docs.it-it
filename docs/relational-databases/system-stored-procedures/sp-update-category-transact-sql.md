@@ -1,16 +1,14 @@
 ---
-title: sp_update_category (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_update_category (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_category
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fab5ea9aea708af028114ef59e9274931c8257f9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f07e44e12193e506146e299bd57f84b02c802856
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +47,22 @@ sp_update_category
   
 ## <a name="arguments"></a>Argomenti  
  [  **@class =**] **'***classe***'**  
- Classe della categoria da aggiornare. *classe*è **varchar (8)**e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
+ Classe della categoria da aggiornare. *classe*viene **varchar (8)** e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**ALERT**|Aggiorna una categoria di avvisi.|  
+|**AVVISO**|Aggiorna una categoria di avvisi.|  
 |**JOB**|Aggiorna una categoria di processi.|  
 |**(OPERATORE)**|Aggiorna una categoria di operatori.|  
   
  [  **@name =**] **'***vecchio_nome***'**  
- Nome corrente della categoria. *vecchio_nome*è **sysname**, non prevede alcun valore predefinito.  
+ Nome corrente della categoria. *vecchio_nome*viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@new_name =**] **'***new_name***'**  
- Nuovo nome della categoria. *nuovo_nome*è **sysname**, non prevede alcun valore predefinito.  
+ Nuovo nome della categoria. *nuovo_nome*viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_update_category** deve essere eseguita la **msdb** database.  

@@ -1,42 +1,41 @@
 ---
 title: ALTER CUBE Statement (MDX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Cube
 - ALTER_CUBE
 - ALTER CUBE
 - ALTER
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - ALTER CUBE statement
 - cubes [Analysis Services], modifying
 - modifying cubes
 ms.assetid: 2f0af61b-f509-4e1a-990f-20a215d22994
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a91092f5a62f1c21312ca585834795d678216ae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definizione dei dati MDX - ALTER CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Modifica la struttura di un cubo specificato, utilizzato in genere per supportare il writeback della dimensione. Per ulteriori informazioni sull'utilizzo del writeback in un'applicazione, vedere questo post di blog: [la creazione di un'applicazione di Writeback con Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)  
+  Modifica la struttura di un cubo specificato, utilizzato in genere per supportare il writeback della dimensione. Per ulteriori informazioni sull'utilizzo del writeback in un'applicazione, vedere questo post di blog: [compilazione di un'applicazione di Writeback con Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Si tenga presente che i writeback delle dimensioni concorrenti possono provocare un deadlock, dove il primo writeback viene bloccato da un commit a causa del blocco condiviso tenuto dal secondo writeback. In tale situazione non viene generato alcun errore ma non potrà essere eseguita alcuna operazione. Infine, viene eseguito il rollback sia del timeout che delle modifiche.  
   
@@ -109,7 +108,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Espressione stringa valida che specifica il nome del padre del nuovo membro della dimensione, a meno che questo non venga creato nella radice.  
   
- *Nome di membro*  
+ *Nome membro*  
  Espressione stringa valida che specifica il nome di un membro.  
   
  *Key_Value*  
@@ -135,7 +134,7 @@ CELL CALCULATION Calculation_Name
  Se non si utilizza la clausola WITH DESCENDANTS, i figli del membro eliminato diventano figli del padre di tale membro. Se si utilizza la clausola WITH DESCENDANTS, vengono inoltre eliminati tutti i discendenti e le relative righe nella tabella della dimensione.  
   
 > [!NOTE]  
->  Per informazioni sull'eliminazione di membri calcolati, set denominati, azioni e calcoli di celle, vedere [DROP MEMBER-istruzione &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-member.md), [Eliminare istruzione SET &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION-istruzione &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-action.md), e [eliminare cella CALCULATION-istruzione &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Per informazioni sull'eliminazione di membri calcolati, set denominati, azioni e calcoli di celle, vedere [DROP MEMBER-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [DROP SET-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), e [rilascio cella CALCULATION-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Aggiornamento del membro predefinito in una dimensione  
  Questa clausola consente di aggiornare il membro predefinito di un cubo e viene utilizzata nello script di calcolo MDX per definire un membro predefinito. È possibile specificare il membro predefinito per la dimensione del database, la dimensione di un cubo o l'account di accesso di un utente. È inoltre possibile cambiare il membro predefinito durante una sessione.  
@@ -157,7 +156,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Espressione stringa valida che specifica il nome del nuovo padre per il membro della dimensione da spostare.  
   
- *Nome di membro*  
+ *Nome membro*  
  Espressione stringa valida che specifica il nome di un membro.  
   
  Unsigned_*Integer*  
@@ -169,7 +168,7 @@ CELL CALCULATION Calculation_Name
  La clausola UPDATE DIMENSION MEMBER consente di modificare le proprietà di un membro oltre alla formula personalizzata membro associata a un membro.  
   
 ### <a name="arguments"></a>Argomenti  
- *Nome di membro*  
+ *Nome membro*  
  Espressione stringa valida che specifica il nome di un membro.  
   
  *MDX_Expression*  
@@ -179,9 +178,9 @@ CELL CALCULATION Calculation_Name
  Espressione scalare MDX valida che definisce il valore della proprietà di un membro calcolato.  
   
 ## <a name="creating-a-cell-calculation"></a>Creazione di una formula per il calcolo di celle  
- Per ulteriori informazioni sulla creazione di un calcolo di celle tramite l'istruzione ALTER CUBE, vedere [istruzione DROP calcolo di celle &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ Per ulteriori informazioni sulla creazione di una formula di calcolo di celle tramite l'istruzione ALTER CUBE, vedere [DROP cella CALCULATION-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le istruzioni di definizione dei dati MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

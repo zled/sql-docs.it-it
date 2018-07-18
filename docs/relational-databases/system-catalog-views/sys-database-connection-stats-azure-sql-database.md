@@ -1,41 +1,42 @@
 ---
 title: Sys. database_connection_stats (Database SQL di Azure) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/25/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 - database_connection_stats_TSQL
 - sys.database_connection_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 16a713efdc16c13ce50f1f7b2465df55568df194
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 2de813bc474d59deb417b5aec1e1d02b5e9f5967
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contiene le statistiche per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database **connettività** eventi, che forniscono una panoramica di connessioni al database riuscite e non riuscite. Per ulteriori informazioni sugli eventi di connettività, vedere tipi di eventi in [Sys. event_log &#40; Database SQL di Azure &#41; ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Contiene le statistiche per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database **connettività** eventi, che forniscono una panoramica di connessioni al database riuscite e non riuscite. Per ulteriori informazioni sugli eventi di connettività, vedere tipi di eventi in [Sys. event_log &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 |Statistiche|Tipo|Description|  
 |---------------|----------|-----------------|  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>start_time e end_time dell'intervallo  
- Un evento è incluso in un intervallo di aggregazione quando si verifica l'evento *su* o *dopo***start_time** e *prima*  **end_time** per tale intervallo. Ad esempio, un evento che si verifica esattamente il `2012-10-30 19:25:00.0000000` è incluso solo nel secondo intervallo indicato di seguito:  
+ Un evento è incluso in un intervallo di aggregazione quando si verifica l'evento *sul* o *dopo * * * start_time** e *prima * * * end_time** per tale intervallo. Ad esempio, un evento che si verifica esattamente il `2012-10-30 19:25:00.0000000` è incluso solo nel secondo intervallo indicato di seguito:  
   
 ```  
   
@@ -78,13 +79,13 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>Errori non inclusi  
  In questa vista non possono essere incluse tutte le informazioni relative a connessioni ed errori:  
   
--   Questa vista non include tutti [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database errori che potrebbero verificarsi, bensì solo quelli specificati in tipi di eventi in [Sys. event_log &#40; Database SQL di Azure &#41; ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+-   Questa vista non include tutti [!INCLUDE[ssSDS](../../includes/sssds-md.md)] gli errori che potrebbero verificarsi, bensì solo quelli specificati in tipi di eventi in database [Sys. event_log &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 -   Se si verifica un errore del computer nel data center del [!INCLUDE[ssSDS](../../includes/sssds-md.md)], è possibile che dalla tabella eventi manchi una piccola quantità di dati per il server logico.  
   
 -   Se un indirizzo IP è stato bloccato tramite DoSGuard, gli eventi di tentativi di connessione dall'indirizzo IP in questione non possono essere raccolti, né verranno visualizzati in questa vista.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Gli utenti con autorizzazioni di accesso di **master** database hanno accesso in sola lettura a questa vista.  
   
 ## <a name="example"></a>Esempio  

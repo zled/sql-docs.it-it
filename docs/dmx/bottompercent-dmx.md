@@ -1,30 +1,31 @@
 ---
 title: BottomPercent (DMX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: BOTTOMPERCENT
-dev_langs: DMX
-helpviewer_keywords: BottomPercent function
+f1_keywords:
+- BOTTOMPERCENT
+dev_langs:
+- DMX
+helpviewer_keywords:
+- BottomPercent function
 ms.assetid: 984eb18a-c55c-49f3-81fa-918dfc983174
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 086ac8bb714bca7c182a59040d64badf89f261d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 84b87d2bea1431b6e33a47e09887f1ab0ff753ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +40,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *\<Espressione di tabella >*  
+ *\<espressione di tabella >*  
  Nome di una colonna della tabella nidificata o espressione valutata a livello di tabella.  
   
  *\<Rank expression >*  
@@ -118,13 +119,13 @@ NATURAL PREDICTION JOIN
 |Mountain-200|1755|0.117951475|0.111260823|  
 |Mountain Tire Tube|1992|0.133879965|0.125304948|  
   
- **Nota** in questo esempio viene fornito solo per illustrare l'utilizzo di BottomPercent. A seconda della dimensione del set di dati, questa query potrebbe impiegare molto tempo per l'esecuzione.  
+ **Nota** questo esempio viene fornito solo per illustrare l'utilizzo di BottomPercent. A seconda della dimensione del set di dati, questa query potrebbe impiegare molto tempo per l'esecuzione.  
   
 > [!WARNING]  
->  Le funzioni MDX per TOPPERCENT e BOTTOMPERCENT possono generare risultati imprevisti quando i valori utilizzati per calcolare la percentuale includono numeri negativi. Questo comportamento non influisce sulle funzioni DMX. Per ulteriori informazioni, vedere [BottomPercent &#40; MDX &#41; ](../mdx/bottompercent-mdx.md).  
+>  Le funzioni MDX per TOPPERCENT e BOTTOMPERCENT possono generare risultati imprevisti quando i valori utilizzati per calcolare la percentuale includono numeri negativi. Questo comportamento non influisce sulle funzioni DMX. Per altre informazioni, vedere [BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions &#40; DMX &#41; Riferimento (funzione)](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX funzioni &#40; &#41;](../dmx/functions-dmx.md)  
+ [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)  
   
   

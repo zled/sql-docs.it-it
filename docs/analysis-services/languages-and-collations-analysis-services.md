@@ -1,36 +1,19 @@
 ---
 title: Lingue e regole di confronto (Analysis Services) | Documenti Microsoft
-ms.custom: 
-ms.date: 04/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-keywords: Test di Analysis Services
-helpviewer_keywords:
-- Windows collations [Analysis Services]
-- default collations
-- languages [Analysis Services]
-- sort orders [Analysis Services]
-- language identifiers [Analysis Services]
-- default languages
-- collations [Analysis Services]
-ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: "26"
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 75a28b8a2e0d40ae453fce13058bb3cb53c0ea3e
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: a1b066f23c0c5a4e92b6b1f86886cc54c7451f6c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>Lingue e regole di confronto (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -185,7 +168,7 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Scenari di globalizzazione per Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Suggerimenti per la globalizzazione e procedure consigliate &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
+ [Suggerimenti per la globalizzazione e procedure consigliate & #40; Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

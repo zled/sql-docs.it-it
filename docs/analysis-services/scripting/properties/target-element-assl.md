@@ -1,36 +1,23 @@
 ---
 title: Destinazione elemento (ASSL) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: Target Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Target
-helpviewer_keywords: Target element
-ms.assetid: 08ce0441-94b6-4f1d-acba-f31c8212cb79
-caps.latest.revision: "33"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 948f6a2b21ced3ecbdca2e039464f25a03980de4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 98ec5c729f5735343f5eaa87e5232fcfb138cf38
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="target-element-assl"></a>Elemento Target (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifica la destinazione di [azione](../../../analysis-services/scripting/objects/action-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Identifica la destinazione di [azione](../../../analysis-services/scripting/objects/action-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,10 +32,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String|  
-|Valore predefinito|None|  
+|Valore predefinito|Nessuno|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -56,7 +43,7 @@ ms.lasthandoff: 01/08/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[Azione](../../../analysis-services/scripting/objects/action-element-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il valore previsto di questo elemento dipende dal valore del [TargetType](../../../analysis-services/scripting/properties/targettype-element-assl.md) elemento per l'elemento padre **azione**. Nella tabella seguente vengono descritti i valori previsti di **destinazione** in base al valore di **TargetType**.  
@@ -69,11 +56,11 @@ ms.lasthandoff: 01/08/2018
 |*Gerarchia, HierarchyMembers*|Nome di una gerarchia.|  
 |*Dimensione, DimensionMembers*|Nome di una dimensione.|  
 |*Livello, LevelMembers*|Nome di un livello.|  
-|*Attributo AttributeMembers*|Nome di un attributo.|  
+|*Attributo, AttributeMembers*|Nome di un attributo.|  
   
  L'elemento che corrisponde all'elemento padre **destinazione** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -1,30 +1,27 @@
 ---
 title: Formato stringa di connessione e gli attributi | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connection strings
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: c3bc1fc7fcefb034b30c604c358b15ae1db6353e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 258391853e03879b6b970347c8ca3f6f2e0eacc9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-string-format-and-attributes"></a>Gli attributi e formato di stringa di connessione
 > [!IMPORTANT]  
@@ -45,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  Gli attributi per la stringa di connessione sono i seguenti:  
   
-|attribute|Description|Valore predefinito|  
+|Attribute|Description|Valore predefinito|  
 |---------------|-----------------|-------------------|  
 |DSN|Nome dell'origine dati è elencato nella scheda dei driver del **Amministrazione origine dati ODBC** la finestra di dialogo.|""|  
 |PWD|La password per il Server Oracle che si desidera accedere. Il driver supporta le limitazioni che Oracle inserisce alle password.|""|  

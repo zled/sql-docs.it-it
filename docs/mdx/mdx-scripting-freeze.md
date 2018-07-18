@@ -1,32 +1,20 @@
 ---
 title: Istruzione FREEZE (MDX) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: FREEZE
-dev_langs: kbMDX
-helpviewer_keywords:
-- FREEZE statement
-- locking cell values [MDX]
-ms.assetid: 59f1e860-6f37-41af-97d6-7708bdaac933
-caps.latest.revision: "32"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 981baf5a25d77884444320e832e35d8b16623c46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 9b7eb3a3939ce8525dc57d27a24ac005ecb2cf2d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579903"
 ---
 # <a name="mdx-scripting---freeze"></a>Creazione di script MDX - blocca
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +32,7 @@ FREEZE Subcube_Expression
  *Subcube_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un sottocubo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **bloccare** istruzione blocca i valori delle celle del sottocubo specificato, impedendo le successive istruzioni MDX passa script di modificare i valori nel calcolo successivo.  
   
  Nell'esempio seguente A e B rappresentano sottocubi in uno script di calcolo MDX:  
@@ -69,6 +57,6 @@ B = 3
  Ora A è uguale a 2 e B è uguale a 3.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni di Scripting MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Istruzioni di Scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

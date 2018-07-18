@@ -1,28 +1,23 @@
 ---
-title: Gestione del carico di lavoro (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 
-ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+title: Gestione del carico di lavoro nel sistema della piattaforma Analitica | Documenti Microsoft
+description: Gestione del carico di lavoro nel sistema della piattaforma Analitica.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a4f748ed39705f865a303f1b59ae352068f93431
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707099"
 ---
-# <a name="workload-management"></a>Gestione del carico di lavoro
+# <a name="workload-management-in-analytics-platform-system"></a>Gestione del carico di lavoro nel sistema della piattaforma Analitica
+
 Funzionalità di gestione del SQL Server PDW carico di lavoro consentono agli utenti e agli amministratori di assegnare le richieste di pre-impostare le configurazioni di memoria e concorrenza. Gestione del carico di lavoro per migliorare le prestazioni del carico di lavoro, coerenza o mista, consentendo le richieste senza un'insufficienza delle risorse per tutte le richieste per le risorse appropriate.  
   
 Ad esempio, con le tecniche di gestione del carico di lavoro in SQL Server PDW, è possibile:  
@@ -42,7 +37,7 @@ Gestione del carico di lavoro
 Classe di risorse  
 In SQL Server PDW, un *classe di risorse* è un ruolo predefinito del server che dispone di limiti di pre-assegnati per la memoria e concorrenza. SQL Server PDW alloca le risorse per le richieste in base l'appartenenza al ruolo di risorsa classe server dell'account di accesso che invia le richieste.  
   
-Nei nodi di calcolo, l'implementazione di classi di risorse utilizza la funzionalità Resource Governor in SQL Server. Per ulteriori informazioni su Resource Governor, vedere [Resource Governor](http://msdn.microsoft.com/en-us/library/bb933866(v=sql.11).aspx) su MSDN.  
+Nei nodi di calcolo, l'implementazione di classi di risorse utilizza la funzionalità Resource Governor in SQL Server. Per ulteriori informazioni su Resource Governor, vedere [Resource Governor](http://msdn.microsoft.com/library/bb933866(v=sql.11).aspx) su MSDN.  
   
 ### <a name="understand-current-resource-utilization"></a>Comprendere l'utilizzo delle risorse correnti  
 Per comprendere l'utilizzo delle risorse di sistema per le richieste attualmente in esecuzione, utilizzare le DMV di SQL Server PDW. Ad esempio, è possibile utilizzare viste a gestione dinamica per comprendere se un join hash di grandi dimensioni con esecuzione prolungata può trarre vantaggio dalla presenza di più memoria.  
@@ -136,7 +131,7 @@ Istruzioni SQL e operazioni di classi di risorse:
   
 -   UPDATE  
   
--   DELETE  
+-   Elimina  
   
 -   RESTORE DATABASE durante il ripristino in un dispositivo con più nodi di calcolo.  
   
@@ -145,7 +140,7 @@ Istruzioni SQL e operazioni di classi di risorse:
 ## <a name="Limits"></a>Limitazioni e restrizioni  
 Le classi di risorse determinano le allocazioni di memoria e concorrenza.  Non controllano le operazioni di input/output.  
   
-## <a name="Metadata"></a>Metadata  
+## <a name="Metadata"></a>Metadati  
 Viste a gestione dinamica che contengono informazioni sulle classi di risorse e i membri di classe di risorse.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  

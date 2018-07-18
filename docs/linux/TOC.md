@@ -47,7 +47,6 @@
 ## [Sviluppo](sql-server-linux-develop-overview.md)
 ### [Librerie di connettività](sql-server-linux-develop-connectivity-libraries.md)
 ### [Usare Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-### [Usare SSMS](sql-server-linux-develop-use-ssms.md)
 ### [Usare SSDT](sql-server-linux-develop-use-ssdt.md)
 
 ## [Gestire](sql-server-linux-management-overview.md)
@@ -55,7 +54,6 @@
 ### [Usare PowerShell per la gestione](sql-server-linux-manage-powershell.md)
 ### [Usare il log shipping](sql-server-linux-use-log-shipping.md)
 ### [Usare gli avvisi di posta elettronica e Posta elettronica database](sql-server-linux-db-mail-sql-agent.md)
-### [Configurare più subnet per la disponibilità](sql-server-linux-configure-multiple-subnet.md)
 
 ## [Migrazione](sql-server-linux-migrate-overview.md)
 ### [Esportare e importare un file BACPAC in Windows](sql-server-linux-migrate-ssms.md)
@@ -83,7 +81,9 @@
 ##### [Configurare su RHEL](sql-server-linux-availability-group-cluster-rhel.md)
 ##### [Configurare su SLES](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Configurare su Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
-##### [Gestire](sql-server-linux-availability-group-failover-ha.md)
+##### [Failover](sql-server-linux-availability-group-failover-ha.md)
+##### [Gestire](sql-server-linux-availability-group-operate-ha.md)
+##### [Configurare più subnet per la disponibilità](sql-server-linux-configure-multiple-subnet.md)
 #### [Creare solo per la scalabilità in lettura]()
 ##### [Configurare AG](sql-server-linux-availability-group-configure-rs.md)
 #### [Configurazione multipiattaforma (Windows e Linux)](sql-server-linux-availability-group-cross-platform.md)

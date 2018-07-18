@@ -1,16 +1,15 @@
 ---
 title: Preparazione dei database di Access per la migrazione (AccessToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -26,16 +25,15 @@ helpviewer_keywords:
 - versions of Access
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.workload: On Demand
-ms.openlocfilehash: fb7743e870b97882ad2bcec0428b3047f28f538d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1862e57551ccbc4a41c14c58b1fb0f9de43998d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Preparazione dei database di Access per la migrazione (AccessToSQL)
 Prima di migrare i database di Access per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è necessario determinare quali database, eseguire la migrazione e verificare che tali database siano pronti per la migrazione.  
@@ -46,7 +44,7 @@ Il motore di database Jet, che viene utilizzato come il motore di database per l
 Dopo la migrazione dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile continuare a usare l'accesso usando le tabelle collegate o manualmente è possibile eseguire la migrazione delle applicazioni per [!INCLUDE[msCoName](../../includes/msconame_md.md)] codice basato su .NET Framework che interagisce direttamente con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="determining-which-databases-to-migrate"></a>Determinazione di database di cui eseguire la migrazione  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) per l'accesso è possibile individuare i database di Access per l'utente. È quindi possibile esportare i metadati relativi a tali database per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Per ulteriori informazioni su come esportare e query sui metadati, vedere [l'esportazione di un inventario di accesso](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) per l'accesso può individuare i database di Access per l'utente. È quindi possibile esportare i metadati relativi a tali database per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Per ulteriori informazioni su come esportare e query sui metadati, vedere [l'esportazione di un inventario di accesso](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed).  
 
    > [!NOTE]
    > Non tutte le funzionalità di accesso e le impostazioni sono supportate da, o può essere facilmente convertite, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Prima di iniziare la migrazione di database, vedere [funzionalità di accesso non compatibili](http://msdn.microsoft.com/99d45b9c-e3b9-4d56-8c25-b594b887ace1).
@@ -85,5 +83,5 @@ Per informazioni su come eseguire il backup [!INCLUDE[ssNoVersion](../../include
 È inoltre possibile documentare le proprietà, quali gli elenchi di oggetti di database, le dimensioni dei file e autorizzazioni di database di Access. Per generare in Access, questa documentazione sul **strumenti** dal menu **Analizza**e quindi fare clic su **documentazione**.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database di Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Il collegamento alle applicazioni di accesso di SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)
+[La migrazione dei database di Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Collegamento applicazioni l'accesso a SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)

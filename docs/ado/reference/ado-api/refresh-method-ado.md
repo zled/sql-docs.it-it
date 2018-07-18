@@ -1,17 +1,15 @@
 ---
 title: Metodo Refresh (ADO) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Collection::Refresh
@@ -20,16 +18,15 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [ADO]
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 422f04618e6e63b6143a8459c869316e47450796
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: af7917817022b83ae5a8da4955ba3c08d05b0819
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-method-ado"></a>Metodo Refresh (ADO)
 Aggiorna gli oggetti in una raccolta in modo da riflettere gli oggetti disponibili e specifiche del provider.  
@@ -64,12 +61,12 @@ collection.Refresh
   
 ||||  
 |-|-|-|  
-|[Raccolta di assi](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Raccolta di colonne](../../../ado/reference/adox-api/columns-collection-adox.md)|[Insieme CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
+|[Raccolta assi](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Raccolta delle colonne](../../../ado/reference/adox-api/columns-collection-adox.md)|[Insieme CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
 |[Raccolta di dimensioni](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Raccolta di errori](../../../ado/reference/ado-api/errors-collection-ado.md)|[Raccolta di campi](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Raccolta di gruppi](../../../ado/reference/adox-api/groups-collection-adox.md)|[Raccolta di gerarchie](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Raccolta di indici](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
+|[Raccolta di gruppi](../../../ado/reference/adox-api/groups-collection-adox.md)|[Raccolta hierarchies](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Raccolta di indici](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
 |[Raccolta di chiavi](../../../ado/reference/adox-api/keys-collection-adox.md)|[Raccolta di livelli](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Raccolta di membri](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
 |[Raccolta di parametri](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Raccolta di posizioni](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Raccolta di procedure](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)|[Raccolta di tabelle](../../../ado/reference/adox-api/tables-collection-adox.md)|[Raccolta di utenti](../../../ado/reference/adox-api/users-collection-adox.md)|  
+|[Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)|[Raccolta di tabelle](../../../ado/reference/adox-api/tables-collection-adox.md)|[Raccolta degli utenti](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Raccolta di viste](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>Vedere anche  

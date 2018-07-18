@@ -1,34 +1,27 @@
 ---
 title: Corrispondenza automatica di coppie della sintassi | Microsoft Docs
-ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: sql
+ms.technology: scripting
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
 - IntelliSense [SQL Server], syntax pair matching
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c92287748c6724f10c5b89cf82ca7ff3be8a39bd
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8c60ef8354c5c484297bbb4d8a10c3f632bbdbef
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Corrispondenza automatica di coppie della sintassi
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La corrispondenza automatica di coppie della sintassi consente di verificare immediatamente se gli elementi della sintassi che devono essere codificati in coppie sono abbinati correttamente. Questa corrispondenza è nota come corrispondenza tra delimitatori nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , corrispondenza tra parentesi graffe nell'editor di query XMLA di Analysis Services e corrispondenza tra parentesi negli editor MDX e DMX.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  La corrispondenza automatica di coppie della sintassi consente di verificare immediatamente se gli elementi della sintassi che devono essere codificati in coppie sono abbinati correttamente. Questa corrispondenza è nota come corrispondenza tra delimitatori nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , corrispondenza tra parentesi graffe nell'editor di query XMLA di Analysis Services e corrispondenza tra parentesi negli editor MDX e DMX.  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>Corrispondenza tra delimitatori nell'editor di query del Motore di database  
  Nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene individuata la corrispondenza tra i delimitatori che identificano i limiti dei blocchi di codice. Ciò avviene in due modi:  
@@ -76,6 +69,4 @@ ms.lasthandoff: 01/24/2018
 -   Virgolette di apertura e di chiusura sugli attributi.  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>Corrispondenza tra parentesi negli editor DMX e MDX  
- Negli editor MDX (Multidimensional Expressions) e DMX (Data Mining Expressions) vengono messe in automaticamente in corrispondenza le coppie di parentesi nelle funzioni.  
-  
-  
+ Negli editor MDX (Multidimensional Expressions) e DMX (Data Mining Expressions) vengono messe in automaticamente in corrispondenza le coppie di parentesi nelle funzioni.

@@ -1,30 +1,17 @@
 ---
 title: Analitica Python nel database per gli sviluppatori SQL | Documenti Microsoft
-ms.custom: 
-ms.date: 10/13/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-- TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: a8b41b1c0c48cb0cf5c9be5db8b7d59007bc22c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Analitica Python nel Database per gli sviluppatori SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +67,7 @@ Tutte le attività eseguibili tramite [!INCLUDE[tsql](../../includes/tsql-md.md)
 
 ### <a name="prerequisites"></a>Prerequisiti
 
-+ Installare un'istanza di SQL Server 2017 con servizi di Machine Learning e Python abilitato. Per ulteriori informazioni, vedere [configurare servizi di SQL Server Machine Learning con Python](../python/setup-python-machine-learning-services.md).
++ Installare un'istanza di SQL Server 2017 con servizi di Machine Learning e Python abilitato. Per altre informazioni, vedere [installare SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 + L'account di accesso usato per questa procedura deve avere le autorizzazioni necessarie per creare database e altri oggetti, per caricare i dati, selezionare i dati ed eseguire le stored procedure.
 
 ### <a name="experience-level"></a>Livello di esperienza

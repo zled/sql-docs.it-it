@@ -1,30 +1,28 @@
 ---
-title: "Nuove funzionalità di interfaccia utente grafica di SSMA per MySQL (MySQLToSQL) | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Nuove funzionalità di interfaccia utente grafica di SSMA per MySQL (MySQLToSQL) | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d5278d3427e8dc30f4cbc4986745c22ee9bf0f77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c24f067cfdc29a31eed7de5a0f4c9572bcadf3fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>Nuove funzionalità di interfaccia utente grafica di SSMA per MySQL (MySQLToSQL)
 In questo capitolo descrive nuove funzionalità dell'interfaccia utente di SSMA  

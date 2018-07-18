@@ -1,32 +1,32 @@
 ---
 title: sp_indexes (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_indexes_TSQL
 - sp_indexes
-dev_langs: TSQL
-helpviewer_keywords: sp_indexes
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c63e05b45d16e8fdbe00f98957851e00408ac7c5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 95940aac67d5f525503721246025ff25bbfc7e1c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,24 +49,24 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="arguments"></a>Argomenti  
  [ @table_server=] '*table_server*'  
- Nome di un server collegato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui vengono richieste informazioni di tabella. *table_server* è **sysname**, non prevede alcun valore predefinito.  
+ Nome di un server collegato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui vengono richieste informazioni di tabella. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ @table_name=] '*table_name*'  
- Nome della tabella remota per cui si desidera ottenere le informazioni di indice. *TABLE_NAME* è **sysname**, con un valore predefinito è NULL. con cui vengono restituite tutte le tabelle del database specificato.  
+ Nome della tabella remota per cui si desidera ottenere le informazioni di indice. *TABLE_NAME* viene **sysname**, con un valore predefinito è NULL. con cui vengono restituite tutte le tabelle del database specificato.  
   
  [ @table_schema=] '*table_schema*'  
- Specifica lo schema di tabella. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al proprietario della tabella. *TABLE_SCHEMA* è **sysname**, con un valore predefinito è NULL.  
+ Specifica lo schema di tabella. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al proprietario della tabella. *TABLE_SCHEMA* viene **sysname**, con un valore predefinito è NULL.  
   
  [ @table_catalog=] '*table_db*'  
- È il nome del database in cui *table_name* risiede. *table_db* è **sysname**, con un valore predefinito è NULL. Se NULL, *table_db* per impostazione predefinita **master**.  
+ È il nome del database in cui *table_name* risiede. *table_db* viene **sysname**, con un valore predefinito è NULL. Se NULL, *table_db* per impostazione predefinita **master**.  
   
  [ @index_name=] '*index_name*'  
- Nome dell'indice per cui si desidera ottenere informazioni. *indice* è **sysname**, con un valore predefinito è NULL.  
+ Nome dell'indice per cui si desidera ottenere informazioni. *indice* viene **sysname**, con un valore predefinito è NULL.  
   
  [ @is_unique=] '*is_unique*'  
- Tipo di indice per cui si desidera ottenere informazioni. *is_unique* è **bit**, con un valore predefinito è NULL, e può essere uno dei valori seguenti.  
+ Tipo di indice per cui si desidera ottenere informazioni. *is_unique* viene **bit**, con un valore predefinito è NULL, e può essere uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Description|  
 |-----------|-----------------|  
 |1|Restituisce informazioni sugli indici univoci.|  
 |0|Restituisce informazioni sugli indici non univoci.|  
@@ -88,9 +88,9 @@ sp_indexes [ @table_server = ] 'table_server'
 |ASC_OR_DESC|**varchar**|Ordine adottato nelle regole di confronto:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Non applicabile<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce sempre A.|  
 |CARDINALITY|**int**|Numero di righe della tabella o valori univoci dell'indice.|  
 |PAGES|**int**|Numero di pagine necessarie per l'archiviazione dell'indice o della tabella.|  
-|FILTER_CONDITION|**nvarchar (**4000**)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
+|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="examples"></a>Esempi  
@@ -104,13 +104,13 @@ EXEC sp_indexes @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query distribuite Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_tables_ex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [Distributed query Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

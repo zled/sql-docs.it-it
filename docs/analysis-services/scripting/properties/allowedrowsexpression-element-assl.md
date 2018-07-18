@@ -1,33 +1,23 @@
 ---
 title: Elemento AllowedRowsExpression (ASSL) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: ec24b11d-d11e-4369-a619-7e41a3c46159
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 01f8ab2e7383058fb7fc322f2c06943f1499daca
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b3b1a25e02e987c86dd07ed618e481ddf8fcadf9
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="allowedrowsexpression-element-assl"></a>Elemento AllowedRowsExpression (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Contiene un'espressione DAX (Data Analysis Expression) di tipo booleano, che definisce il contenuto dell'elemento padre.  
+  Contiene un'espressione DAX (Data Analysis Expression) di tipo booleano, che definisce il contenuto dell'elemento padre.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,6 +53,6 @@ Contiene un'espressione DAX (Data Analysis Expression) di tipo booleano, che def
  Gli elementi che corrispondono agli elementi padre nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.CellPermission> e <xref:Microsoft.AnalysisServices.StandardAction>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

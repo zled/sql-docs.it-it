@@ -1,35 +1,33 @@
 ---
 title: EXPLAIN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 13
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 515c21cbf7874c0268eeedad0b67e0ce7cf3726d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: f5dfb29ff0e824ebb596a3d7c2a483e7445d2a42
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Restituisce il piano di query per un [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] istruzione senza eseguire l'istruzione. Utilizzare **ESPLICATIVO** per le operazioni che richiede lo spostamento dei dati di anteprima e visualizzare i costi stimati delle operazioni di query.  
+  Restituisce il piano di query per un'istruzione [!INCLUDE[DWsql](../../includes/dwsql-md.md)] [!INCLUDE[ssDW](../../includes/ssdw-md.md)] senza eseguire l'istruzione. Usare **EXPLAIN** per un'anteprima delle operazioni che richiedono lo spostamento di dati e per visualizzare i costi stimati delle operazioni di query.  
   
- Per ulteriori informazioni sui piani di query, vedere "Informazioni sui piani di Query" nel [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
+ Per altre informazioni sui piani di query, vedere la sezione introduttiva sui piani di query nella [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,15 +39,15 @@ EXPLAIN SQL_statement
   
 ## <a name="arguments"></a>Argomenti  
  *SQL_statement*  
- Il [!INCLUDE[DWsql](../../includes/dwsql-md.md)] istruzione in cui **ESPLICATIVO** verrà eseguito. *SQL_statement* può essere uno dei seguenti comandi: **selezionare**, **inserire**, **aggiornamento**, **eliminare**,  **CREATE TABLE AS SELECT**, **crea una tabella remota**.  
+ L'istruzione [!INCLUDE[DWsql](../../includes/dwsql-md.md)] per la quale viene eseguita l'istruzione **EXPLAIN**. *SQL_statement* può essere uno qualsiasi dei comandi seguenti: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede il **SHOWPLAN** autorizzazione e dell'autorizzazione per eseguire *SQL_statement*. Vedere [autorizzazioni: GRANT, DENY, REVOKE &#40; Azure SQL Data Warehouse, Parallel Data Warehouse &#41; ](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
+ È necessaria l'autorizzazione **SHOWPLAN** autorizzazione e l'autorizzazione per eseguire *SQL_statement*. Vedere [Autorizzazioni: GRANT, DENY o REVOKE &#40;Azure SQL Data Warehouse, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>Valore restituito  
- Il valore restituito dal **ESPLICATIVO** comando è un documento XML con la struttura illustrato di seguito. Questo documento XML vengono elencate tutte le operazioni nel piano di query per una determinata query, ognuno racchiuso il `<dsql_operation>` tag. Il valore restituito è di tipo **nvarchar (max)**.  
+ Il valore restituito dal comando **EXPLAIN** è un documento XML con la struttura illustrata di seguito. Questo documento XML elenca tutte le operazioni nel piano di query per la query specificata, ognuna racchiuso nel tag `<dsql_operation>`. Il valore restituito è di tipo **nvarchar(max)**.  
   
- Il piano di query restituita illustra sequenziale istruzioni SQL. Quando viene eseguita la query può implicare parallelizzate operazioni, in modo alcune istruzioni sequenziale visualizzate possono essere eseguite nello stesso momento.  
+ Il piano di query restituito illustra istruzioni SQL sequenziali. Quando la query viene eseguita, può implicare operazioni eseguite in parallelo e quindi alcune delle istruzioni sequenziali illustrate possono essere eseguite contemporaneamente.  
   
 ```  
 \<?xml version="1.0" encoding="utf-8"?>  
@@ -67,33 +65,33 @@ EXPLAIN SQL_statement
   
  I tag XML contengono queste informazioni:  
   
-|XML Tag|Riepilogo, attributi e contenuto|  
+|Tag XML|Riepilogo, attributi e contenuto|  
 |-------------|--------------------------------------|  
 |\<dsql_query>|Elemento di livello superiore o documento.|
-|\<sql>|Esegue l'eco del *SQL_statement*.|  
-|\<params>|Questo tag non viene usato in questo momento.|  
-|\<dsql_operations>|Vengono riepilogati e contiene i passaggi di query e include informazioni sui costi per la query. Contiene anche tutte le `<dsql_operation>` blocchi. Il tag contiene informazioni relative al conteggio per l'intera query:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* il tempo stimato per la query da eseguire, in millisecondi.<br /><br /> *total_number_operations* è il numero totale di operazioni per la query. Un'operazione che verrà eseguito in parallelo ed eseguire su più nodi viene conteggiata come una singola operazione.|  
-|\<dsql_operation>|Descrive una singola operazione all'interno del piano di query. Il \<dsql_operation > tag contiene il tipo di operazione come attributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* è uno dei valori disponibili nel [query su dati (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Il contenuto di `\<dsql_operation>` blocco dipende dal tipo di operazione.<br /><br /> Vedere la tabella riportata di seguito.|  
+|\<sql>|Esegue l'eco di *SQL_statement*.|  
+|\<params>|Tag attualmente non usato.|  
+|\<dsql_operations>|Riepiloga e contiene i passaggi della query e include informazioni sui costi per la query. Contiene anche tutti i blocchi `<dsql_operation>`. Questo tag contiene informazioni relative ai conteggi per l'intera query:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* è il tempo stimato totale per l'esecuzione della query in ms.<br /><br /> *total_number_operations* è il numero totale di operazioni per la query. Un'operazione da eseguire in parallelo in più nodi viene conteggiata come operazione singola.|  
+|\<dsql_operation>|Descrive una singola operazione all'interno del piano di query. Il tag \<dsql_operation > contiene il tipo di operazione come attributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* è uno dei valori descritti in [Querying Data (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c) (Query sui dati (SQL Server PDW)).<br /><br /> Il contenuto del blocco `\<dsql_operation>` dipende dal tipo di operazione.<br /><br /> Vedere la tabella riportata di seguito.|  
   
 |Tipo di operazione|Contenuto|Esempio|  
 |--------------------|-------------|-------------|  
-|BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE e TRIM_MOVE|`<operation_cost>`elemento, con questi attributi. I valori riflettono solo l'operazione locale:<br /><br /> -   *costo* è il costo dell'operatore locale e Mostra il tempo stimato per l'operazione da eseguire, in millisecondi.<br />-   *accumulative_cost* è la somma di tutte le operazioni visualizzate nel piano inclusi i valori sommati di operazioni parallele, in ms.<br />-   *average_rowsize* le dimensioni medie delle righe stimate (in byte) di righe recuperato e passato durante l'operazione.<br />-   *output_rows* è la cardinalità di output (nodo) e Mostra il numero di righe di output.<br /><br /> `<location>`: I nodi o le distribuzioni in cui si verificherà l'operazione. Le opzioni sono: "Controllo", "ComputeNode", "AllComputeNodes", "AllDistributions", "SubsetDistributions", "Distribuzione" e "SubsetNodes".<br /><br /> `<source_statement>`: Spostare i dati di origine per la riproduzione casuale.<br /><br /> `<destination_table>`: La tabella temporanea interna i dati verranno spostati in.<br /><br /> `<shuffle_columns>`: (Applicabile solo alle operazioni SHUFFLE_MOVE). Uno o più colonne utilizzate come colonne di distribuzione per la tabella temporanea.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`: Vedere `<operation_cost>` sopra.<br /><br /> `<DestinationCatalog>`: Il nodo di destinazione o i nodi.<br /><br /> `<DestinationSchema>`: Lo schema di destinazione in DestinationCatalog.<br /><br /> `<DestinationTableName>`: Nome della tabella di destinazione o "TableName".<br /><br /> `<DestinationDatasource>`: Le informazioni di connessione o nome per l'origine dati di destinazione.<br /><br /> `<Username>`e `<Password>`: questi campi indicano che un nome utente e una password per la destinazione potrebbe essere necessari.<br /><br /> `<BatchSize>`: La dimensione di batch per l'operazione di copia.<br /><br /> `<SelectStatement>`: L'istruzione select utilizzata per eseguire la copia.<br /><br /> `<distribution>`: La distribuzione in cui viene eseguita la copia.|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
-|MetaDataCreate_Operation|`<source_table>`: La tabella di origine per l'operazione.<br /><br /> `<destionation_table>`: La tabella di destinazione per l'operazione.|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
-|ON|`<location>`: Vedere `<location>` sopra.<br /><br /> `<sql_operation>`: Individua il comando SQL che verrà eseguito su un nodo.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
-|RemoteOnOperation|`<DestinationCatalog>`: Il catalogo di destinazione.<br /><br /> `<DestinationSchema>`: Lo schema di destinazione in DestinationCatalog.<br /><br /> `<DestinationTableName>`: Nome della tabella di destinazione o "TableName".<br /><br /> `<DestinationDatasource>`: Nome dell'origine dati di destinazione.<br /><br /> `<Username>`e `<Password>`: questi campi indicano che un nome utente e una password per la destinazione potrebbe essere necessari.<br /><br /> `<CreateStatement>`: L'istruzione di creazione della tabella per il database di destinazione.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
-|RETURN|`<resultset>`: L'identificatore per il set di risultati.|`<resultset>RS_19</resultset>`|  
-|RND_ID|`<identifier>`: L'identificatore per l'oggetto creato.|`<identifier>TEMP_ID_260</identifier>`|  
+|BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE e TRIM_MOVE|Elemento `<operation_cost>` con questi attributi. I valori riflettono solo l'operazione locale:<br /><br /> -   *cost* è il costo dell'operatore locale e visualizza il tempo stimato per l'operazione da eseguire, in ms.<br />-   *accumulative_cost* è la somma di tutte le operazioni visualizzate nel piano inclusa la somma dei valori di operazioni parallele, in ms.<br />-   *average_rowsize* è la dimensione media stimata (in byte) delle righe recuperate e passate durante l'operazione.<br />-   *output_rows* è la cardinalità di output (nodo) e visualizza il numero di righe di output.<br /><br /> `<location>`: i nodi o le distribuzioni in cui verrà eseguita l'operazione. Le opzioni sono: "Control", "ComputeNode", "AllComputeNodes", "AllDistributions", "SubsetDistributions", "Distribution" e "SubsetNodes".<br /><br /> `<source_statement>`: i dati di origine per lo spostamento casuale.<br /><br /> `<destination_table>`: la tabella temporanea interna in cui i dati verranno spostati.<br /><br /> `<shuffle_columns>`: applicabile solo alle operazioni SHUFFLE_MOVE. Una o più colonne che verranno usate come colonne di distribuzione per la tabella temporanea.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
+|CopyOperation|`<operation_cost>`: vedere `<operation_cost>` più indietro.<br /><br /> `<DestinationCatalog>`: il nodo o i nodi di destinazione.<br /><br /> `<DestinationSchema>`: lo schema di destinazione in DestinationCatalog.<br /><br /> `<DestinationTableName>`: il nome della tabella di destinazione o "TableName".<br /><br /> `<DestinationDatasource>`: il nome della connessione o le relative informazioni di connessione per l'origine dati di destinazione.<br /><br /> `<Username>` e `<Password>`: questi campi indicano che la destinazione può richiedere un nome utente e una password.<br /><br /> `<BatchSize>`: la dimensione del batch per l'operazione di copia.<br /><br /> `<SelectStatement>`: l'istruzione SELECT usata per eseguire la copia.<br /><br /> `<distribution>`: la distribuzione in cui viene eseguita la copia.|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
+|MetaDataCreate_Operation|`<source_table>`: la tabella di origine per l'operazione.<br /><br /> `<destionation_table>`: la tabella di destinazione per l'operazione.|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
+|ON|`<location>`: vedere `<location>` più indietro.<br /><br /> `<sql_operation>`: identifica il comando SQL che verrà eseguito in un nodo.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
+|RemoteOnOperation|`<DestinationCatalog>`: il catalogo di destinazione.<br /><br /> `<DestinationSchema>`: lo schema di destinazione in DestinationCatalog.<br /><br /> `<DestinationTableName>`: il nome della tabella di destinazione o "TableName".<br /><br /> `<DestinationDatasource>`: il nome dell'origine dati di destinazione.<br /><br /> `<Username>` e `<Password>`: questi campi indicano che la destinazione può richiedere un nome utente e una password.<br /><br /> `<CreateStatement>`: l'istruzione per la creazione della tabella per il database di destinazione.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
+|RETURN|`<resultset>`: l'identificatore per il set di risultati.|`<resultset>RS_19</resultset>`|  
+|RND_ID|`<identifier>`: l'identificatore per l'oggetto creato.|`<identifier>TEMP_ID_260</identifier>`|  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
- **Spiegare** può essere applicato a *ottimizzabili* solo query sono query che può essere migliorata o modificata in base ai risultati di un **spiegare** comando. Supportato **ESPLICATIVO** sono elencati i comandi. Tentativo di utilizzare **ESPLICATIVO** con una query non supportata tipo verrà restituito un errore o echo la query.  
+ È possibile applicare **EXPLAIN** solo a query a *ottimizzabili*, ovvero a query che possono essere migliorate o modificate in base ai risultati di un comando **EXPLAIN**. I comandi **EXPLAIN** sono elencati più indietro. Se si tenta di usare **EXPLAIN** con un tipo di query non supportato, verrà restituito un errore o verrà eseguito l'eco della query.  
   
- **Spiegare** non è supportato in una transazione utente.  
+ **EXPLAIN** non è supportato nelle transazioni utente.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente un **ESPLICATIVO** comando eseguito in un **selezionare** istruzione e il risultato XML.  
+ L'esempio seguente illustra un comando **EXPLAIN** eseguito per un'istruzione **SELECT** e il risultato XML.  
   
- **Invio di un'istruzione di descrizione**  
+ **Invio di un'istruzione EXPLAIN**  
   
  Il comando inviato per questo esempio è:  
   
@@ -118,21 +116,21 @@ EXPLAIN
 GO  
 ```  
   
- Dopo l'esecuzione dell'istruzione con il **ESPLICATIVO** , l'opzione di scheda messaggio presenta una sola riga denominata **spiegare**e che inizia con il testo XML `\<?xml version="1.0" encoding="utf-8"?>` fare clic su XML per aprire l'intero testo in un Finestra XML. Per comprendere meglio i commenti seguenti, è necessario attivare la visualizzazione dei numeri di riga in SSDT.  
+ Dopo l'esecuzione dell'istruzione con l'opzione **EXPLAIN**, la scheda dei messaggi presenta una sola riga denominata **explain** che inizia con il testo XML `\<?xml version="1.0" encoding="utf-8"?>` Fare clic sull'XML per aprire l'intero testo in un finestra XML. Per comprendere meglio i commenti seguenti, è necessario attivare la visualizzazione dei numeri di riga in SSDT.  
   
 #### <a name="to-turn-on-line-numbers"></a>Per attivare i numeri di riga  
   
-1.  Con l'output visualizzato nella **spiegare** scheda SSDT, il **strumenti** dal menu **opzioni**.  
+1.  Con l'output visualizzato nella scheda **explain** di SSDT selezionare **Opzioni** dal menu **STRUMENTI**.  
   
-2.  Espandere il **Editor di testo** , quindi espandere **XML**, quindi fare clic su **generale**.  
+2.  Espandere la sezione **Editor di testo**, espandere **XML** e quindi fare clic su **Generale**.  
   
-3.  Nel **visualizzazione** area controllo **i numeri di riga**.  
+3.  Nell'area **Visualizzazione** selezionare **Numeri di riga**.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
- **Esempio di output descrizione**  
+ **Output di EXPLAIN di esempio**  
   
- Il risultato XML di **ESPLICATIVO** è con numeri di riga attivati:  
+ L'XML risultante del comando **EXPLAIN** con i numeri di riga attivati è il seguente:  
   
 ```  
 1  \<?xml version="1.0" encoding="utf-8"?>  
@@ -282,31 +280,31 @@ GO
   
 ```  
   
- **Significato dell'output descrizione**  
+ **Significato dell'output di EXPLAIN**  
   
- L'output precedente contiene righe numerate 144. L'output della query possono differire leggermente. L'elenco seguente descrive le sezioni significative.  
+ L'output precedente contiene 144 righe numerate. L'output della query può essere diverso per diversi utenti. L'elenco seguente descrive le sezioni significative.  
   
--   Le righe da 3 a 16 forniscono una descrizione della query in fase di analisi.  
+-   Le righe da 3 a 16 forniscono una descrizione della query in corso di analisi.  
   
--   Riga 17, specifica che il numero totale di operazioni è 9. È possibile trovare l'inizio di ogni operazione, cercando le parole **dsql_operation**.  
+-   La riga 17 specifica che il numero totale di operazioni è 9. È possibile individuare l'inizio di ogni operazione cercando le parole **dsql_operation**.  
   
--   Riga 18 avvia l'operazione 1. Linee 18 e 19 indicano che un **RND_ID** operazione consente di creare un numero di ID casuale che verrà utilizzato per una descrizione dell'oggetto. L'oggetto descritto nell'output precedente è **TEMP_ID_16893**. Il numero sarà diverso.  
+-   Alla riga 18 inizia l'operazione 1. Le righe 18 e 19 indicano che un'operazione **RND_ID** creerà un numero ID casuale che verrà usato per la descrizione di un oggetto. L'oggetto descritto nell'output precedente è **TEMP_ID_16893**. Il numero sarà diverso per ogni utente.  
   
--   Riga 20 inizia operazione 2. Righe compresi tra 21 e 25: su tutti i nodi di calcolo, creare una tabella temporanea denominata **TEMP_ID_16893**.  
+-   Alla riga 20 inizia l'operazione 2. Righe da 21 a 25: in tutti i nodi di calcolo creano una tabella temporanea denominata **TEMP_ID_16893**.  
   
--   Riga 26 inizia operazione 3. Righe 27 tramite 37: spostare i dati **TEMP_ID_16893** utilizzando uno spostamento di trasmissione. Viene fornita la query inviata a ogni nodo di calcolo. Riga 37 specifica la tabella di destinazione è **TEMP_ID_16893**.  
+-   Alla riga 26 inizia l'operazione 3. Righe da 27 a 37: spostano i dati in **TEMP_ID_16893** tramite uno spostamento di trasmissione. Viene fornita la query inviata a ogni nodo di calcolo. La riga 37 specifica la tabella di destinazione, **TEMP_ID_16893**.  
   
--   Riga 38 avvia l'operazione di 4. Righe 39 a 40: creare un ID casuale per una tabella. **TEMP_ID_16894** è il numero di ID nell'esempio precedente. Il numero sarà diverso.  
+-   Alla riga 38 inizia l'operazione 4. Righe 39 e 40: creano un ID casuale per una tabella. Nell'esempio qui sopra l'ID è **TEMP_ID_16894**. Il numero sarà diverso per ogni utente.  
   
--   Riga 41 inizia operazione 5. Righe 42 tramite 46: su tutti i nodi, creare una tabella temporanea denominata **TEMP_ID_16894**.  
+-   Alla riga 41 inizia l'operazione 5. Righe da 42 a 46: in tutti i nodi creano una tabella temporanea denominata **TEMP_ID_16894**.  
   
--   Riga 47 inizia operazione 6. 48 e 91 righe: spostare i dati da diverse tabelle (inclusi **TEMP_ID_16893**) alla tabella **TEMP_ID_16894**, utilizzando una casuale dell'operazione di spostamento. Viene fornita la query inviata a ogni nodo di calcolo. Riga 90 specifica la tabella di destinazione come **TEMP_ID_16894**. Riga 91 specifica le colonne.  
+-   Alla riga 47 inizia l'operazione 6. Righe da 48 a 91: spostano i dati da diverse tabelle (inclusa **TEMP_ID_16893**) alla tabella **TEMP_ID_16894** tramite un'operazione di spostamento casuale. Viene fornita la query inviata a ogni nodo di calcolo. La riga 90 specifica la tabella di destinazione, **TEMP_ID_16894**. La riga 91 specifica le colonne.  
   
--   Riga 92 avvia 7. Righe 93 tramite 97: su tutti i nodi di calcolo, eliminare la tabella temporanea **TEMP_ID_16893**.  
+-   Alla riga 92 inizia l'operazione 7. Righe da 93 a 97: in tutti i nodi di calcolo rilasciano la tabella temporanea **TEMP_ID_16893**.  
   
--   Riga 98 avvia 8. Righe 99 tramite 135: restituire risultati al client. Usa la query fornita per ottenere i risultati.  
+-   Alla riga 98 inizia l'operazione 8. Righe da 99 a 135: restituiscono i risultati al client. Usa la query fornita per ottenere i risultati.  
   
--   Riga 136 inizia operazione 9. Le righe dalla 137 alla 140: su tutti i nodi, eliminare la tabella temporanea **TEMP_ID_16894**.  
+-   Alla riga 136 inizia l'operazione 9. Righe da 137 a 140: in tutti i nodi rilasciano la tabella temporanea **TEMP_ID_16894**.  
   
   
 

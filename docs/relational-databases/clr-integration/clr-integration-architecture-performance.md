@@ -1,35 +1,33 @@
 ---
 title: Prestazioni dell'integrazione con CLR | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: 
+caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 327c531d44fc883afa144252dda3ba43d188682a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ad749572b54e76c751002db3516fdf46ce31f729
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>Architettura dell'integrazione CLR - prestazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In questo argomento vengono descritte alcune delle scelte di progettazione che migliorano le prestazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione con il [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common language runtime (CLR).  
+  In questo argomento vengono descritte alcune delle scelte di progettazione che migliorano le prestazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione con il [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common language runtime (CLR).  
   
 ## <a name="the-compilation-process"></a>Processo di compilazione  
  Durante la compilazione di espressioni SQL, quando viene rilevato un riferimento a una routine gestita, viene generato uno stub di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language (MSIL). Questo stub include il codice che consente di effettuare il marshalling dei parametri di routine da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a CLR, richiamare la funzione e restituire il risultato. Questo codice di "unione" si basa sul tipo di parametro e sulla direzione del parametro (interna, esterna o di riferimento).  
@@ -72,9 +70,9 @@ In questo argomento vengono descritte alcune delle scelte di progettazione che m
 >  È consigliabile non sviluppare nuove stored procedure estese, in quanto questa caratteristica è deprecata.  
   
 ### <a name="native-serialization-for-user-defined-types"></a>Serializzazione nativa per i tipi definiti dall'utente  
- I tipi definiti dall'utente sono progettati come un meccanismo di extensibility per il sistema di tipo scalare. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implementa un formato di serializzazione per tipi definiti dall'utente denominata **Format.Native**. Durante la compilazione, la struttura del tipo viene esaminata per generare un codice MSIL personalizzato per la definizione del tipo specifico.  
+ I tipi definiti dall'utente sono progettati come un meccanismo di extensibility per il sistema di tipo scalare. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa un formato di serializzazione per tipi definiti dall'utente denominato **Format.Native**. Durante la compilazione, la struttura del tipo viene esaminata per generare un codice MSIL personalizzato per la definizione del tipo specifico.  
   
- La serializzazione nativa è l'implementazione predefinita per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La serializzazione definita dall'utente richiama un metodo definito dall'autore del tipo per eseguire la serializzazione. **Format.Native** serializzazione deve essere utilizzata quando possibile per ottenere prestazioni ottimali.  
+ La serializzazione nativa è l'implementazione predefinita per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La serializzazione definita dall'utente richiama un metodo definito dall'autore del tipo per eseguire la serializzazione. **Format.Native** serializzazione deve essere utilizzata quando possibile per prestazioni ottimali.  
   
 ### <a name="normalization-of-comparable-udts"></a>Normalizzazione dei tipi definiti dall'utente confrontabili  
  Le operazioni relazionali, ad esempio l'ordinamento e il confronto dei tipi definiti dall'utente, agiscono direttamente sulla rappresentazione binaria del valore. A tale scopo, è necessario archiviare una rappresentazione normalizzata (con ordinamento binario) dello stato del tipo definito dall'utente su disco.  

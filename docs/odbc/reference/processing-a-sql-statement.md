@@ -1,16 +1,14 @@
 ---
 title: L'elaborazione di un'istruzione SQL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - sending SQL statements to DBMS [ODBC]
 - SQL statements [ODBC], processing
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - SQL statements [ODBC]
 - ODBC [ODBC], SQL
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: aaf3c1fddb673e0cd62d334e9b87eeb2d9016ec6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 7068b61081a368382b109af99f60bf6bf254e800
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-a-sql-statement"></a>L'elaborazione di un'istruzione SQL
 Prima di illustrare le tecniche per l'utilizzo a livello di codice SQL, è necessario illustrare la modalità di elaborazione di un'istruzione SQL. I passaggi sono comuni a tutti e tre le tecniche, anche se ogni tecnica vengano eseguite in momenti diversi. Nella figura seguente vengono illustrati i passaggi coinvolti nell'elaborazione di un'istruzione SQL, che vengono discussi in tutto il resto di questa sezione.  

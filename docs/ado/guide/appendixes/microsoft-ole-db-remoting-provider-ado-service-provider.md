@@ -1,32 +1,29 @@
 ---
 title: Il Provider di servizi remoti Microsoft OLE DB (ADO Service Provider) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB remoting provider [ADO]
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 189be564682e59c64a49e7b53dd9e6a763e92cdd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b69c6f64de019aadf71476958c26f99a46dabac2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Cenni preliminari sul Provider di servizi remoti Microsoft OLE DB
 Il Provider remoto Microsoft OLE DB consente a un utente locale in un computer client richiamare i provider di dati in un computer remoto. Specificare i parametri di provider di dati per il computer remoto come se fosse un utente locale sul computer remoto. Quindi specificare i parametri utilizzati dal Provider di servizi remoti di accedere al computer remoto. È quindi possibile accedere al computer remoto, come se trattasse di un utente locale.
@@ -56,11 +53,11 @@ Il Provider remoto Microsoft OLE DB consente a un utente locale in un computer c
 |**DFMode**|Indica la modalità DataFactory. Stringa che specifica la versione desiderata del [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto sul server. Impostare questa proprietà prima di aprire una connessione per una particolare versione di richiedere la **DataFactory**. Se la versione richiesta non è disponibile, verrà effettuato un tentativo di utilizzare la versione precedente. Se non è una versione precedente, si verificherà un errore. Se **DFMode** è inferiore rispetto a quella disponibile, si verificherà un errore. Questa proprietà è di sola lettura dopo che viene stabilita una connessione.<br /><br /> Può essere uno dei seguenti valori di stringa valida:<br /><br /> -"25", versione 2.5 (impostazione predefinita)<br />-"21", versione 2.1<br />-"20", versione 2.0<br />-"15", versione 1.5|
 |**Proprietà dei comandi**|Indica i valori che verranno aggiunti alla stringa di proprietà del comando (set di righe) inviati al server dal provider MS Remote. Il valore predefinito di questa stringa è vt_empty.|
 |**DFMode corrente**|Indica il numero di versione effettiva di **DataFactory** sul server. Questa proprietà per verificare se la versione richiesta nel **DFMode** proprietà è stata rispettata.<br /><br /> Può essere uno dei valori interi lunghi validi seguenti:<br /><br /> -25-versione 2.5 (impostazione predefinita)<br />-21-versione 2.1<br />-20-versione 2.0<br />-15-versione 1.5<br /><br /> Aggiunta di "DFMode = 20;" alla stringa di connessione quando si utilizza il **MSRemote** provider può migliorare le prestazioni del server durante l'aggiornamento dati. Con questa impostazione, il **RDSServer** oggetto sul server utilizza una modalità meno risorse. Tuttavia, le funzionalità seguenti non sono disponibili in questa configurazione:<br /><br /> -Utilizzo di query con parametri.<br />-Recupero di informazioni di parametro o una colonna prima di chiamare il **Execute** metodo.<br />-Impostazione **Transact Updates** a **True**.<br />-Ottenere lo stato di riga.<br />-La chiamata di **Resync** metodo.<br />-Aggiornamento (in modo esplicito o automatico) tramite il **Update Resync** proprietà.<br />-Impostazione **comando** o **Recordset** proprietà.<br />-Utilizzo **adCmdTableDirect**.|
-|**Gestore**|Indica il nome di un programma di personalizzazione lato server (o gestore) che estende la funzionalità del [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)ed eventuali parametri utilizzati dal gestore*,* tutti separati da virgole ( ","). Oggetto **stringa** valore.|
+|**gestore**|Indica il nome di un programma di personalizzazione lato server (o gestore) che estende la funzionalità del [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)ed eventuali parametri utilizzati dal gestore *,* tutti separati da virgole ( ","). Oggetto **stringa** valore.|
 |**Timeout Internet**|Indica il numero massimo di millisecondi di attesa per una richiesta di trasmessi da e verso il server. (Il valore predefinito è 5 minuti).|
 |**Provider remoto**|Indica il nome del provider di dati da utilizzare nel server remoto.|
 |**Server remoto**|Indica il protocollo di comunicazione e nome del server utilizzabile da questa connessione. Questa proprietà è equivalente al [RDS. DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto [Server](../../../ado/reference/rds-api/server-property-rds.md) proprietà.|
-|**Transact Updates**|Se impostato su **True**, questo valore indica che quando [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) viene eseguita nel server, verrà eseguita all'interno di una transazione. Il valore predefinito per questa proprietà dinamica booleana è **False**.|
+|**Transact aggiornamenti**|Se impostato su **True**, questo valore indica che quando [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) viene eseguita nel server, verrà eseguita all'interno di una transazione. Il valore predefinito per questa proprietà dinamica booleana è **False**.|
 
  È inoltre possibile impostare le proprietà dinamiche scrivibile specificando i relativi nomi come parole chiave nella stringa di connessione. Ad esempio, impostare il **Timeout Internet** proprietà dinamiche a cinque secondi, specificando:
 
@@ -81,7 +78,7 @@ cn.Properties("Internet Timeout") = 5000
 
  L'equivalente di **RDS. DataControl** oggetto [SQL](../../../ado/reference/rds-api/sql-property.md) proprietà non è disponibile. Il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto **aprire** metodo *origine* viene invece utilizzato l'argomento.
 
- **Nota** specificando ".... Provider remoto = MS Remote;... "verrà creato uno scenario con quattro livelli. Scenario oltre a tre livelli non è stati testati e non sono necessari.
+ **Nota** specificando ".... Provider remoto = MS Remote;... "verrà creato uno scenario a quattro livelli. Scenario oltre a tre livelli non è stati testati e non sono necessari.
 
 ## <a name="example"></a>Esempio
  In questo esempio viene eseguita una query sul **autori** sommario il **Pubs** database in un server denominato *server*. I nomi di origine dati remota e server remoti vengono forniti nel [aprire](../../../ado/reference/ado-api/open-method-ado-connection.md) metodo il[connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto e la query SQL viene specificata nel[aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto. Oggetto **Recordset** oggetto viene restituito, modificato e utilizzato per aggiornare l'origine dati.
@@ -98,4 +95,4 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ```
 
 ## <a name="see-also"></a>Vedere anche
- [Panoramica del Provider OLE DB remota](http://msdn.microsoft.com/en-us/4083b72f-68c4-4252-b366-abb70db5ca2b)
+ [Panoramica del Provider OLE DB per la comunicazione remota](http://msdn.microsoft.com/en-us/4083b72f-68c4-4252-b366-abb70db5ca2b)

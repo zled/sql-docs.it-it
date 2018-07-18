@@ -1,16 +1,14 @@
 ---
-title: STRelate (tipo di dati geometry) | Documenti Microsoft
-ms.custom: 
+title: STRelate (tipo di dati geometry) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STRelate (geometry Data Type)
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - STRelate (geometry Data Type)
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: beb2ce0ebcba2c290dbb56d6df62a820734871cd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1a8bf19c488dc9ab24ad0c2e59a8e65c90acb9fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce 1 se un **geometry** istanza è correlata a un'altra **geometry** istanza, in cui la relazione è definita da un valore di una matrice di modello Dimensionally Extended 9 Intersection Model (DE-9IM); in caso contrario , restituisce 0.  
+  Restituisce 1 se un'istanza **geometry** è correlata a un'altra istanza **geometry**. La relazione è definita da un valore della matrice del modello DE-9IM (Dimensionally Extended 9 Intersection Model). In caso contrario, restituisce 0.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,21 +42,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geometry*  
- Un altro **geometry** istanza da confrontare con l'istanza sulla quale `STRelate()` viene richiamato.  
+ Altra istanza **geometry** da confrontare con l'istanza sulla quale viene chiamato `STRelate()`.  
   
  *intersection_pattern_matrix*  
- È una stringa di tipo **nchar(9)** codifica valori accettabili per il dispositivo a matrice del modello DE-9IM tra i due **geometry** istanze.  
+ Stringa di tipo **nchar(9)** che codifica valori accettabili per il dispositivo a matrice del modello DE-9IM tra le due istanze **geometry**.  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono. Questo metodo genererà un' **ArgumentException** se la matrice non è corretta.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono. Questo metodo genererà un'eccezione **ArgumentException** se la matrice non è formattata in modo corretto.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `STRelate()` per verificare se due **geometry** istanze spaziali non contiguo utilizzando un modello DE-9IM esplicito.  
+ Nell'esempio seguente viene usato `STRelate()` per verificare se due istanze **geometry** sono disgiunte a livello spaziale usando un modello DE-9IM esplicito.  
   
 ```  
 DECLARE @g geometry;  

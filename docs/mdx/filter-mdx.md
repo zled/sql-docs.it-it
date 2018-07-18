@@ -1,30 +1,31 @@
 ---
 title: Filtro (MDX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: filter
-dev_langs: kbMDX
-helpviewer_keywords: Filter function
+f1_keywords:
+- filter
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Filter function
 ms.assetid: f2df51c8-6acb-4300-b71c-2a480c9fbdf8
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 729adc2230242798e67914907b6928ec7346b871
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 66f71d8fe604eb2002b6c1ed47afaf5ef09b1eb5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +46,7 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  Espressione logica MDX (Multidimensional Expression) valida che restituisce true o false.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il **filtro** funzione valuta l'espressione logica specificata rispetto a ogni tupla nel set specificato. La funzione restituisce un set costituito da ogni tupla nel set specificato in cui l'espressione logica restituisce **true**. Se nessuna tupla restituisce **true**, viene restituito un set vuoto.  
   
  Il **filtro** funzione funziona in modo simile a quello del [IIf](../mdx/iif-mdx.md) (funzione). Il **IIf** funzione restituisce solo una delle due opzioni in base alla valutazione di un'espressione logica MDX, mentre il **filtro** funzione restituisce un set di tuple che soddisfano la condizione di ricerca specificati. In effetti, il **filtro** funzione esegue `IIf(Logical_Expression, Set_Expression.Current, NULL)` su ogni tupla del set e restituisce il set risultante.  
@@ -95,6 +96,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

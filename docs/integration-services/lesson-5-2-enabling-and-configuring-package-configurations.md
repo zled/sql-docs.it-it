@@ -1,30 +1,28 @@
 ---
 title: 'Passaggio 2: Abilitazione e impostazione delle configurazioni dei pacchetti | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1a63c43606d2a27da3469c4cedb83654c79c1bf1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1e70fa8824db8bebf314d3b8d0280ec3d321df6a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lezione 5-2 - Abilitazione e impostazione delle configurazioni dei pacchetti
 In questa attività si convertirà il progetto nel modello di distribuzione del pacchetto e si abiliteranno le configurazioni di pacchetto utilizzando la Configurazione guidata pacchetto. Questa procedura guidata consente di generare un file di configurazione XML contenente le impostazioni di configurazione per la proprietà **Directory** del contenitore Ciclo Foreach. Il valore della proprietà Directory è specificato da una variabile a livello di pacchetto che è possibile aggiornare in fase di esecuzione. Verrà inoltre popolata una cartella di dati di esempio da utilizzare durante il test.  
@@ -52,7 +50,7 @@ In questa attività si convertirà il progetto nel modello di distribuzione del 
   
 9. In **Editor espressioni di proprietà**fare clic nell'elenco **Proprietà** e selezionare **Directory**.  
   
-10. Nella casella **Espressione** fare clic sul pulsante con i puntini di sospensione**(…)**.  
+10. Nella casella **Espressione** fare clic sul pulsante con i puntini di sospensione **(…)**.  
   
 11. In **Generatore di espressioni**espandere la cartella Variabili e trascinare la variabile **User::varFolderName** nella casella **Espressione** .  
   

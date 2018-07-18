@@ -1,34 +1,33 @@
 ---
 title: Annullare le modifiche apportate alle query (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - reverting queries
 - queries [SQL Server], discarding changes
 - discarding query changes
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5412ede653f8bd6eb67091dd4ebc532b1d7f1b19
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4a328d434b06f785fd5d2e3816c635dc7c039e78
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>Annullamento di modifiche apportate alle query (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile annullare le modifiche apportate alla definizione di una query prima di salvarle. Dopo il salvataggio, non sarà più possibile ripristinarne lo stato precedente.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+È possibile annullare le modifiche apportate alla definizione di una query prima di salvarle. Dopo il salvataggio, non sarà più possibile ripristinarne lo stato precedente.  
   
 > [!NOTE]  
 > Per annullare una modifica apportata ai valori nel riquadro Risultati, premere ESC prima di uscire dal record. Sarà possibile premere ESC per ripristinare il valore precedente anche se si esce da un record e un avviso segnala che non verrà eseguito il commit delle modifiche nel database.  

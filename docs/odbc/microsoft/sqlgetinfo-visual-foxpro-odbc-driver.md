@@ -1,28 +1,26 @@
 ---
 title: SQLGetInfo (Driver ODBC di Visual FoxPro) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: SQLGetInfo function [ODBC], Visual FoxPro ODBC Driver
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- SQLGetInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a4c1d3356b91e3cb311c1dbf5ee7246bbb4baaa8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b05ab71a12059535986cbd452e993e01178342fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Driver ODBC di Visual FoxPro)
 > [!NOTE]  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  Per ulteriori informazioni, vedere [SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) nel *riferimento per programmatori ODBC*.  
   
-## <a name="a"></a>Un  
+## <a name="a"></a>A  
  SQL_ACCESSIBLE_PROCEDURES restituisce ' N' '.  
   
  SQL_ACCESSIBLE_TABLES restituisce 'Y'.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="b"></a>B  
  SQL_BOOKMARK_PERSISTENCE restituisce SQL_BP_SCROLL.  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  SQL_COLUMN_ALIAS restituisce 'Y'.  
   
  SQL_CONCAT_NULL_BEHAVIOR restituisce SQL_CB_NULL.  
@@ -311,7 +309,7 @@ ms.lasthandoff: 12/21/2017
   
  SQL_QUOTED_IDENTIFIER_CASE restituisce SQL_IC_MIXED.  
   
-## <a name="r"></a>R  
+## <a name="r"></a>L  
  Restituisce SQL_ROW_UPDATES "N". Il Driver ODBC di Visual FoxPro supporta solo e in avanti i cursori statici.  
   
 ## <a name="s"></a>S  

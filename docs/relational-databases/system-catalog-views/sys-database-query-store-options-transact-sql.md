@@ -1,16 +1,14 @@
 ---
 title: sys.database_query_store_options (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE_QUERY_STORE_OPTIONS_TSQL
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 46710eb543ae038d22052cd55b356df9458201e3
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a9ce2b5f63405a0754782e0dddae5584c1b47ee2
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,9 +52,9 @@ ms.lasthandoff: 02/01/2018
 |**max_storage_size_mb**|**bigint**|Dimensione massima del disco per l'archivio Query. Valore predefinito è 100 MB.<br />Per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition il valore predefinito è 1Gb, mentre per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition il valore predefinito è 10Mb.<br /><br /> Modifica utilizzando il `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` istruzione.|  
 |**stale_query_threshold_days**|**bigint**|Numero di giorni che esegue una query con le impostazioni di criteri non viene mantenuta nell'archivio Query. Valore predefinito è 30. Impostare su 0 per disabilitare i criteri di conservazione.<br />Per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, l'impostazione predefinita è 7 giorni.<br /><br /> Modifica utilizzando il `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` istruzione.|  
 |**max_plans_per_query**|**bigint**|Limita il numero massimo di piani stored. Valore predefinito è 200. Se viene raggiunto il valore massimo, archivio Query smette di acquisire nuovi piani per tale query. Impostazione su 0 consente di rimuovere la limitazione per quanto riguarda il numero di piani acquisiti.<br /><br /> Modifica utilizzando il `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` istruzione.|  
-|**query_capture_mode**|**smallint**|La modalità di acquisizione query attualmente attiva:<br /><br /> 1 = ALL - vengono acquisite tutte le query. Questo è il valore di configurazione predefinito per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 2 = AUTO - acquisizione le query pertinenti in base al consumo di conteggio e risorse di esecuzione. Questo è il valore di configurazione predefinito per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = Nessuna: arrestare l'acquisizione di nuove query. Archivio query continuerà a raccogliere le statistiche di compilazione e runtime per le query che già acquisite. Utilizzare questa configurazione con cautela, poiché potrebbe non essere implementato per acquisire le query importante.|  
+|**query_capture_mode**|**smallint**|La modalità di acquisizione query attualmente attiva:<br /><br /> 1 = ALL - vengono acquisite tutte le query. Questo è il valore di configurazione predefinito per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 2 = AUTO - acquisizione le query pertinenti in base al consumo di conteggio e risorse di esecuzione. Questo è il valore di configurazione predefinito per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = Nessuna: arrestare l'acquisizione di nuove query. Query Store continuerà a raccogliere le statistiche di compilazione e runtime per le query che sono già state acquisite. Utilizzare questa configurazione con cautela, poiché potrebbe non essere implementato per acquisire le query importante.|  
 |**query_capture_mode_desc**|**nvarchar(60)**|Descrizione della modalità di acquisizione effettivi dell'archivio Query:<br /><br /> TUTTI (impostazione predefinita per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> AUTO (impostazione predefinita per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> Nessuno|  
-|**size_based_cleanup_mode**|**smallint**|Controlla se i pulizia verrà attivata automaticamente quando la quantità totale di dati sta per raggiungere le dimensioni massime:<br /><br /> 1 = OFF, non verrà attivata automaticamente la pulizia basata su dimensione.<br /><br /> 2 = AUTO - pulizia in base verrà attivata automaticamente quando la dimensione su disco raggiunge il 90% delle dimensioni **max_storage_size_mb**. Questo è il valore di configurazione predefinito.<br /><br />Pulizia basati sulle dimensioni consente di rimuovere innanzitutto le query meno recenti e meno costose. Si ferma in corrispondenza di circa l'80% di max_storage_size_mb.|  
+|**size_based_cleanup_mode**|**smallint**|Determina se la pulizia viene attivata automaticamente quando la quantità totale dei dati ha quasi raggiunto le dimensioni massime:<br /><br /> 1 = OFF, non verrà attivata automaticamente la pulizia basata su dimensione.<br /><br /> 2 = AUTO - pulizia in base verrà attivata automaticamente quando la dimensione su disco raggiunge il 90% delle dimensioni **max_storage_size_mb**. Si tratta del valore di configurazione predefinito.<br /><br />La pulizia basata sulle dimensioni rimuove per prime le query meno recenti e meno dispendiose. Si ferma in corrispondenza di circa l'80% di max_storage_size_mb.|  
 |**size_based_cleanup_mode_desc**|**smallint**|Descrizione della modalità di pulizia basati sulle dimensioni effettive dell'archivio Query:<br /><br /> OFF <br /><br /> AUTO (impostazione predefinita)|  
 |**wait_stats_capture_mode**|**smallint**|Controlla se archivio Query esegue l'acquisizione delle statistiche di attesa: <br /><br /> 0 = OFF <br /><br /> 1 = ON<br /> **Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|
 |**wait_stats_mode_capture_desc**|**nvarchar(60)**|Descrizione della modalità di acquisizione di statistiche di attesa effettivo: <br /><br /> OFF <br /><br /> (Impostazione predefinita)<br /> **Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -75,6 +73,6 @@ ms.lasthandoff: 02/01/2018
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
- [Archivio query Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [Stored procedure di archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

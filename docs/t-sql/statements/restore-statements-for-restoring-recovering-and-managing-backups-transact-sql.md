@@ -1,16 +1,14 @@
 ---
-title: Le istruzioni di ripristino per il ripristino, il ripristino, la gestione dei backup (Transact-SQL) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: sql-non-specified
+title: Istruzioni RESTORE per il ripristino, il recupero e la gestione dei backup (Transact-SQL) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -24,26 +22,28 @@ helpviewer_keywords:
 - file restores [SQL Server], RESTORE statement
 - transaction log backups [SQL Server], RESTORE statement
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 15
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d756c4fb9f299abe88ef46c14726f613e8f66497
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 003f3adce58a228e4965f91c1104ff33b60b8398
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>Istruzioni RESTORE per il ripristino, il recupero e la gestione dei backup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   In questa sezione vengono descritte le istruzioni RESTORE per i backup. Oltre all'istruzione principale per il ripristino e il recupero dei backup, RESTORE {DATABASE | LOG}, sono disponibili numerose istruzioni RESTORE ausiliarie che semplificano la gestione dei backup e la pianificazione delle sequenze di ripristino. I comandi RESTORE ausiliari sono: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY e RESTORE VERIFYONLY.  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!IMPORTANT]  
 >  Nelle versioni precedenti di SQL Server qualsiasi utente poteva ottenere informazioni sui set e i dispositivi di backup tramite le istruzioni Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY e RESTORE VERIFYONLY. Poiché tali istruzioni rivelano informazioni sul contenuto dei file di backup, per eseguirle in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive è necessaria l'autorizzazione CREATE DATABASE. Questo requisito consente di proteggere i file di backup in modo da rendere le informazioni di backup più sicure rispetto alle versioni precedenti. Per informazioni su questa autorizzazione, vedere [GRANT - autorizzazioni per database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 |.|Description|  
 |---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/25/2018
 |[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE FILELISTONLY, che consente di restituire un set di risultati contenente un elenco dei file di database e di log inclusi nel set di backup.|  
 |[RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE HEADERONLY, che consente di restituire un set di risultati contente tutte le informazioni di intestazione del backup per tutti i set di backup in un dispositivo di backup specifico.|  
 |[RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE LABELONLY, che consente di restituire un set di risultati contenente informazioni sui supporti di backup identificati dal dispositivo di backup specificato.|  
-|[RESTORE REWINDONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE REWINDONLY, che consente di riavvolgere e chiudere i dispositivi nastro lasciati aperti da istruzioni BACKUP o RESTORE eseguiti con l'opzione NOREWIND.|  
+|[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE REWINDONLY, che consente di riavvolgere e chiudere i dispositivi nastro lasciati aperti da istruzioni BACKUP o RESTORE eseguiti con l'opzione NOREWIND.|  
 |[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE VERIFYONLY, che consente di verificare il backup ma non di ripristinarlo e di controllare che il set di backup sia completo e l'intero backup leggibile. Non viene verificata la struttura dei dati.|  
   
 ## <a name="see-also"></a>Vedere anche  

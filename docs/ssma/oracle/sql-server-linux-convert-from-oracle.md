@@ -3,22 +3,20 @@ title: Eseguire la migrazione dello Schema Oracle HR a SQL Server in Linux | Doc
 description: Convertire l'esempio di schema Oracle a SQL Server in Linux
 author: edmacauley
 ms.author: edmacauley
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: f4ab25f440db693c0fd81093f6191fc0c3390ebb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b044f54f172bc354c9c0a14e6628678911dbb82c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Eseguire la migrazione di uno schema Oracle a SQL Server 2017 in Linux con SQL Server Migration Assistant
 
@@ -32,7 +30,7 @@ Questa esercitazione viene utilizzato SQL Server Migration Assistant (SSMA) per 
 > * Convertire lo schema di esempio delle risorse Umane
 > * la migrazione dei dati
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Un'istanza di Oracle 12C (12.2.0.1.0) con il **HR** installato lo schema
 - Un'istanza di lavoro di SQL Server in Linux

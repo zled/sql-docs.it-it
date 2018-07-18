@@ -1,31 +1,23 @@
 ---
 title: Distribuzione della soluzione di modello tabulare | Documenti Microsoft
-ms.custom: 
-ms.date: 02/13/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 276ff67a2c3dac1e557d782616bf9096349d3246
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 47e051027f4596f6638f6c13551c35becfa8b54d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tabular-model-solution-deployment"></a>Distribuzione della soluzione di modello tabulare 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Una volta creato, un progetto di modello tabulare deve essere distribuito affinché gli utenti esplorino il modello tramite un'applicazione client di creazione report. Questo articolo descrive le varie proprietà e metodi che utilizzabili durante la distribuzione di soluzioni di modelli tabulari nell'ambiente in uso.  
+  Una volta creato, un progetto di modello tabulare deve essere distribuito affinché gli utenti esplorino il modello tramite un'applicazione client di creazione report. Questo articolo descrive le varie proprietà e metodi che utilizzabili durante la distribuzione di soluzioni di modelli tabulari nell'ambiente in uso.  
   
 ##  <a name="bkmk_benefits"></a> Vantaggi  
  La distribuzione di un modello tabulare consente di creare un database modello in un ambiente di testing, di gestione temporanea e di produzione. Gli utenti possono quindi connettersi al modello distribuito tramite un file di connessione con estensione bism in Sharepoint o utilizzando una connessione dati direttamente dalle applicazioni client di creazione report quali Microsoft Excel, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]o un'applicazione personalizzata. Il database dell'area di lavoro del modello, generato quando si crea un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e usato per creare il modello rimarrà nell'istanza del server dell'area di lavoro consentendo di apportare modifiche al progetto del modello e di eseguire nuovamente la distribuzione nell'ambiente di testing, di gestione temporanea o di produzione quando necessario.  
@@ -70,7 +62,7 @@ Una volta creato, un progetto di modello tabulare deve essere distribuito affinc
 |Metodo|Description|Collegamento|  
 |------------|-----------------|----------|  
 |**Comando Distribuisci in SQL Server Data Tools**|Il comando Distribuisci offre un metodo semplice e intuitivo per distribuire un progetto di modello tabulare dall'ambiente di creazione [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .<br /><br /> **Attenzione** questo metodo non deve essere utilizzato per distribuire il server di produzione. Questo metodo può sovrascrivere alcune proprietà in un già distribuito, esistente modello. ad esempio, quando si utilizzano script o SQL Server Management Studio per modificare le proprietà.|[Distribuire da SQL Server Data Tools](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|  
-|**Automazione AMO (Analysis Management Objects)**|AMO (Analysis Management Objects) offre un'interfaccia di programmazione per il set di comandi completo per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], inclusi comandi che possono essere utilizzati per la distribuzione della soluzione. Come approccio per la distribuzione della soluzione, l'automazione AMO (Analysis Management Objects) è la più flessibile, ma richiede anche un lavoro di programmazione.  Il vantaggio principale offerto da AMO è che consente di utilizzare SQL Server Agent insieme all'applicazione AMO per eseguire la distribuzione in base a una pianificazione predefinita.|[Lo sviluppo con Analysis Management Objects &#40; AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|**Automazione AMO (Analysis Management Objects)**|AMO (Analysis Management Objects) offre un'interfaccia di programmazione per il set di comandi completo per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], inclusi comandi che possono essere utilizzati per la distribuzione della soluzione. Come approccio per la distribuzione della soluzione, l'automazione AMO (Analysis Management Objects) è la più flessibile, ma richiede anche un lavoro di programmazione.  Il vantaggio principale offerto da AMO è che consente di utilizzare SQL Server Agent insieme all'applicazione AMO per eseguire la distribuzione in base a una pianificazione predefinita.|[Lo sviluppo con Analysis Management Objects & #40; AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|Utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per generare uno script XMLA dei metadati di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente, quindi eseguire tale script in un altro server per ricreare il database iniziale. Per creare script XMLA in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , è sufficiente definire il processo di distribuzione e quindi codificarlo e memorizzarlo in uno script XMLA. Dopo aver salvato lo script XMLA in un file, è possibile eseguire lo script in base a una pianificazione oppure incorporarlo nello script di un'applicazione che si connette direttamente a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> È inoltre possibile eseguire script XMLA a intervalli predefiniti tramite SQL Server Agent, ma questo metodo non è caratterizzato dalla stessa flessibilità del metodo basato sull'automazione AMO. Nella libreria AMO è disponibile un'ampia gamma di funzionalità che supportano l'insieme completo di comandi amministrativi.|[Distribuire soluzioni di modelli utilizzando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**Distribuzione guidata**|Distribuzione guidata consente di utilizzare i file di output XMLA generati da un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per distribuire i metadati del progetto in un server di destinazione. Grazie alla Distribuzione guidata è possibile eseguire la distribuzione direttamente dal file di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creato nella directory di output tramite la compilazione del progetto.<br /><br /> Il vantaggio principale rappresentato dall'utilizzo della Distribuzione guidata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è la praticità. È possibile salvare script della Distribuzione guidata nello stesso modo in cui è possibile salvare uno script XMLA per un utilizzo successivo in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. La Distribuzione guidata può essere eseguita sia in modalità interattiva sia dal prompt dei comandi tramite l'utilità di distribuzione.|[Distribuire soluzioni di modelli tramite la distribuzione guidata](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**Utilità di distribuzione**|L'utilità di distribuzione consente di avviare il motore di distribuzione di Analysis Services da un prompt dei comandi.|[Distribuire soluzioni di modelli con l'utilità di distribuzione](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|  

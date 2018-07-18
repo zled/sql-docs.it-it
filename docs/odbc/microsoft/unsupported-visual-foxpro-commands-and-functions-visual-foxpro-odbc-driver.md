@@ -1,16 +1,14 @@
 ---
 title: Non supportato di comandi di Visual FoxPro e funzioni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], commands and functions
 - functions [ODBC], Visual FoxPro
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 85d11ebb5fd4245a7c6b5cf7c277e45d8df90011
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: cfef52f471f9b87e7f6560b76e191aca1ba26172
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>I comandi di Visual FoxPro non supportato e funzioni (Driver ODBC di Visual FoxPro)
 La tabella seguente elenca in FoxPro comandi e funzioni che non sono supportate dal Driver ODBC Visual FoxPro, ma sono supportate da Microsoft® Visual FoxPro.  
@@ -38,15 +35,15 @@ La tabella seguente elenca in FoxPro comandi e funzioni che non sono supportate 
   
 ||||  
 |-|-|-|  
-|#DEFINE... #UNDEF|... #IF #ENDIF per il preprocessore|#IFDEF &#124; #IFNDEF|  
-|#INCLUDE per il preprocessore (direttiva)|:: Operatore di risoluzione dell'ambito|! Comando (vedere Esegui &#124;! Comando)|  
+|#DEFINE... #UNDEF|... #IF #ENDIF per il preprocessore|#IFDEF &AMP;#124; #IFNDEF|  
+|#INCLUDE per il preprocessore (direttiva)|:: Operatore di risoluzione dell'ambito|! Comando (vedere esecuzione di &#124; . Comando)|  
 |? &#124; ?? Comando|??? Comando|\ &#124; \\\ Comando|  
 |@ ... Comando casella|@ ... Comando di classe|@ ... Comando CLEAR|  
 |@ ... Modifica - comando caselle di modifica|@ ... RIEMPIMENTO di comando|@ ... GET|  
 |@ ... Comando di MENU|@ ... Comando PROMPT|@ ... Ad esempio di comando|  
 |@ ... Comando di scorrimento|@ ... AL comando||  
   
-## <a name="a"></a>Un  
+## <a name="a"></a>A  
   
 ||||  
 |-|-|-|  
@@ -66,7 +63,7 @@ La tabella seguente elenca in FoxPro comandi e funzioni che non sono supportate 
 |Variabile di memoria di sistema browser|COMPILARE il comando di APP|COMPILA file EXE (comando)|  
 |COMPILA progetto (comando)|Variabile di memoria di sistema _BUILDER||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
@@ -228,7 +225,7 @@ La tabella seguente elenca in FoxPro comandi e funzioni che non sono supportate 
 |-|-|-|  
 |Chiudere comando|||  
   
-## <a name="r"></a>R  
+## <a name="r"></a>L  
   
 ||||  
 |-|-|-|  
@@ -242,7 +239,7 @@ La tabella seguente elenca in FoxPro comandi e funzioni che non sono supportate 
 |RINOMINARE il comando di connessione|RINOMINARE il comando di tabella|RIPRISTINO dal comando|  
 |Comando REPORT|REQUERY () (funzione)|FINESTRA di comando di ripristino|  
 |RIPRISTINARE il comando macro|RESTORE-comando SCHERMATA|Funzione RGBSCHEME)|  
-|Comando Riprendi|Funzione RGB)|ESEGUI &#124;! Comando|  
+|Comando Riprendi|Funzione RGB)|ESEGUIRE &AMP;#124; . Comando|  
 |Comando RMDIR|Funzione di riga)||  
 |Comando RUNSCRIPT|Funzione RDLEVEL)||  
   

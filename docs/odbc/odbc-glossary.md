@@ -1,37 +1,34 @@
 ---
 title: Glossario ODBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], glossary
 - glossary [ODBC]
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4bb77308b74a57fa192acf9aba3fa7d88090d93a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 0bd26d6d8d95399bfe1126f56f6f9b8c2d176e71
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-glossary"></a>Glossario ODBC
-## <a name="a"></a>Un  
+## <a name="a"></a>A  
  **piano di accesso**  
  Un piano generato dal motore di database per eseguire un'istruzione SQL. Equivalente a codice eseguibile compilato da un linguaggio generazione terzo, ad esempio C.  
   
- **funzione di aggregazione**  
+ **Funzione di aggregazione**  
  Una funzione che genera un singolo valore da un gruppo di valori, spesso usato con **GROUP BY** e **HAVING** clausole. Funzioni di aggregazione includono **AVG**, **conteggio**, **MAX**, **MIN**, e **somma**. Noto anche come *funzioni set*. *Vedere anche* funzione scalare.  
   
  **ANSI**  
@@ -43,13 +40,13 @@ ms.lasthandoff: 11/20/2017
  **API**  
  Interfaccia di programmazione di applicazioni. Un set di routine che un'applicazione utilizza per richiedere e svolgere servizi di livello inferiore. L'API ODBC include le funzioni ODBC.  
   
- **applicazione**  
+ **Applicazione**  
  Un programma eseguibile che chiama le funzioni dell'API ODBC.  
   
- **descrittore del parametro dell'applicazione (APD)**  
+ **Descrittore del parametro dell'applicazione (APD)**  
  Oggetto descrittore che descrive i parametri dinamici utilizzati in un'istruzione SQL prima di qualsiasi conversione specificato dall'applicazione.  
   
- **descrittore della riga di applicazione (ARD)**  
+ **Descrittore della riga di applicazione (ARD)**  
  Descrittore di tipo che rappresenta i metadati di colonna e i dati nel buffer dell'applicazione, che descrive una riga di dati dopo qualsiasi conversione di dati specificato dall'applicazione.  
   
  **ARD**  
@@ -65,7 +62,7 @@ ms.lasthandoff: 11/20/2017
  **Oggetto binario di grandi dimensioni (BLOB)**  
  Eventuali dati binari in un determinato numero di byte, ad esempio 255. In genere molto più tempo. Tali dati vengono in genere inviati ed recuperati dall'origine dei dati in parti. Noto anche come *dati long*.  
   
- **associazione**  
+ **Associazione**  
  Come un verbo, l'operazione di associazione di una colonna in un set di risultati o un parametro in un'istruzione SQL con una variabile di applicazione. Come nome, l'associazione.  
   
  **offset di associazione**  
@@ -74,17 +71,17 @@ ms.lasthandoff: 11/20/2017
  **cursore rettangolare**  
  Un cursore in grado di recuperare più righe di dati alla volta.  
   
- **buffer**  
+ **Buffer**  
  Una parte di memoria dell'applicazione utilizzata per passare dati tra l'applicazione e i driver. I buffer sono spesso in coppia: un *buffer dei dati* e un *buffer di lunghezza dati*.  
   
- **byte**  
+ **Byte**  
  Otto bit o a un ottetto. *Vedere anche* ottetto.  
   
 ## <a name="c"></a>C  
  **Tipo di dati C**  
  Il tipo di dati di una variabile in un programma C, in questo caso l'applicazione.  
   
- **catalogo**  
+ **catalog**  
  Il set di tabelle di sistema in un database che descrivono la forma del database. Noto anche come un *schema* o *dizionario dei dati*.  
   
  **funzione di catalogo**  
@@ -96,16 +93,16 @@ ms.lasthandoff: 11/20/2017
  **client/server**  
  Una strategia di accesso ai database in cui uno o più client di accedere ai dati tramite un server. In genere, i client implementano l'interfaccia utente durante l'accesso al database i controlli server.  
   
- **colonna**  
+ **column**  
  Contenitore per un singolo elemento di informazioni in una riga. Noto anche come *campo*.  
   
  **commit**  
  Per rendere permanenti le modifiche in una transazione.  
   
- **concorrenza**  
+ **Concorrenza**  
  La possibilità di più di una transazione di accedere agli stessi dati nello stesso momento.  
   
- **livello di conformità**  
+ **Livello di conformità**  
  Un set discreto di funzionalità supportate da un driver o l'origine dati. ODBC definisce i livelli di conformità di API e livelli di conformità di SQL.  
   
  **connessione**  
@@ -117,7 +114,7 @@ ms.lasthandoff: 11/20/2017
  **handle di connessione**  
  Un handle a una struttura di dati che contiene informazioni su una connessione.  
   
- **riga corrente**  
+ **Riga corrente**  
  La riga attualmente a cui fa riferimento il cursore. Operazioni posizionate agiscono sulla riga corrente.  
   
  **cursor**  
@@ -133,10 +130,10 @@ ms.lasthandoff: 11/20/2017
  **buffer di lunghezza dei dati**  
  Un buffer utilizzato per passare la lunghezza del valore di un corrispondente *buffer dei dati*. Il buffer di lunghezza dei dati viene inoltre utilizzato per archiviare gli indicatori, ad esempio se il valore dei dati è con terminazione null.  
   
- **origine dati**  
+ **Origine dati**  
  I dati che l'utente desidera accesso e il relativo sistema operativo associato, DBMS e piattaforma di rete (se presente).  
   
- **tipo di dati**  
+ **Tipo di dati**  
  Il tipo di una porzione di dati. ODBC definisce tipi di dati C e SQL. *Vedere anche* indicatore del tipo.  
   
  **colonna data-at-execution**  
@@ -148,7 +145,7 @@ ms.lasthandoff: 11/20/2017
  **database**  
  Raccolta di dati in un DBMS discreta. Anche un DBMS.  
   
- **motore di database**  
+ **Motore di database**  
  Il software in un sistema DBMS che analizza ed esegue istruzioni SQL e accede ai dati fisici.  
   
  **DBMS**  
@@ -169,13 +166,13 @@ ms.lasthandoff: 11/20/2017
  **database desktop**  
  DBMS progettato per essere eseguito su un personal computer. In genere, questi DBMS non forniscono un motore di database autonoma e deve essere accessibile tramite un driver basati su file. I motori di questi driver in genere risulteranno ridotte di supporto per SQL e le transazioni. Ad esempio, dBASE, Paradox, Btrieve o Microsoft® FoxPro.  
   
- **diagnostica**  
+ **Diagnostica**  
  Un record contenente le informazioni diagnostiche sull'ultima funzione chiamata che è usato un handle specifico. I record di diagnostica sono associati a handle descrittore, connessione, l'istruzione e ambiente.  
   
  **DML**  
  Data Manipulation Language. Istruzioni SQL che modificano, anziché per definire, i dati. Ad esempio, **inserire**, **aggiornamento**, **eliminare**, e **selezionare**.  
   
- **driver**  
+ **Driver**  
  Routine della libreria che espone le funzioni dell'API ODBC. I driver sono specifici per un singolo DBMS.  
   
  **Gestione driver**  
@@ -192,28 +189,28 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="e"></a>E  
  **Embedded SQL**  
- Le istruzioni SQL che sono inclusi direttamente in un programma scritto in un altro linguaggio, ad esempio COBOL o ODBC C. non utilizzare embedded SQL. *Vedere anche* SQL statico *e* SQL dinamico.  
+ Le istruzioni SQL che sono inclusi direttamente in un programma scritto in un altro linguaggio, ad esempio COBOL o ODBC C. non utilizzare embedded SQL. *Vedere anche* SQL statico *e* istruzioni SQL dinamiche.  
   
- **ambiente**  
+ **Ambiente**  
  Un contesto globale in cui si desidera accedere ai dati. associato all'ambiente sono le informazioni che sono globale in natura, ad esempio un elenco di tutte le connessioni in tale ambiente.  
   
  **handle di ambiente**  
  Un handle a una struttura di dati che contiene informazioni sull'ambiente.  
   
- **clausola escape**  
+ **clausola di escape**  
  Una clausola in un'istruzione SQL.  
   
- **eseguire**  
+ **Eseguire**  
  Per eseguire un'istruzione SQL.  
   
 ## <a name="f"></a>F  
  **cursore a blocchi**  
- *Vedere* cursore a blocchi.  
+ *Vedere* cursore rettangolare.  
   
  **operazione di recupero**  
  Per recuperare una o più righe da un set di risultati.  
   
- **campo**  
+ **field**  
  *Vedere* colonna.  
   
  **driver basati su file**  
@@ -225,60 +222,60 @@ ms.lasthandoff: 11/20/2017
  **chiave esterna**  
  Una o più colonne in una tabella che corrispondano alla chiave primaria in un'altra tabella.  
   
- **cursore forward-only**  
+ **con cursori forward-only**  
  Un cursore che può solo passare attraverso il set di risultati e in genere recupera solo una riga alla volta. La maggior parte dei database relazionali supportano solo i cursori forward-only.  
   
 ## <a name="h"></a>H  
- **handle**  
+ **Handle**  
  Un valore che identifica in modo univoco un elemento, ad esempio una struttura di dati o file. Gli handle sono significativi solo per il software che crea e li utilizza ma viene passato da altri software per identificare elementi. ODBC definisce gli handle per gli ambienti, le connessioni, istruzioni e descrittori.  
   
 ## <a name="i"></a>I  
  **Descrizione del parametro di implementazione (IPD)**  
  Oggetto descrittore che descrive i parametri dinamici utilizzati in un'istruzione SQL dopo la conversione specificata dall'applicazione.  
   
- **descrittore della riga di implementazione (IRD)**  
+ **Descrittore della riga di implementazione (IRD)**  
  Oggetto descrittore che descrive una riga di dati prima di qualsiasi conversione specificato dall'applicazione.  
   
- **programma di installazione di DLL**  
+ **Programma di installazione di DLL**  
  Una DLL che vengono installati i componenti ODBC e configura le origini dati.  
   
- **Funzionalità di miglioramento dell'integrità**  
+ **Miglioramento dell'integrità**  
  Un subset di SQL è progettato per mantenere l'integrità di un database.  
   
  **livello di conformità di interfaccia**  
  Il livello di interfaccia ODBC 3.7 supportata da un driver. può essere componenti di base, livello 1 o 2 di livello.  
   
- **interoperabilità**  
+ **Interoperabilità**  
  La possibilità di un'applicazione a usare lo stesso codice quando l'accesso ai dati in diversi DBMS.  
   
  **IPD**  
  *Vedere* descrittore del parametro di implementazione (IPD).  
   
  **IRD**  
- *Vedere* descrittore delle righe di implementazione (IRD).  
+ *Vedere* descrittore della riga di implementazione (IRD).  
   
  **ISO/IEC**  
  Standard internazionali organizzazione/International Electrotechnical Commission. L'API ODBC è basato sull'interfaccia ISO/IEC a livello di chiamata.  
   
 ## <a name="j"></a>J  
- **join**  
+ **Creare un join**  
  Un'operazione in un database relazionale che collega le righe in due o più tabelle facendo corrispondere i valori nelle colonne specificate.  
   
 ## <a name="k"></a>K  
  **chiave**  
  Una o più colonne i cui valori identificano una riga. *Vedere anche* chiave esterna *e* chiave primaria.  
   
- **keyset**  
+ **Keyset**  
  Un set di chiavi usate da un cursore misto o basati su keyset di recupero di righe.  
   
- **da keyset**  
+ **cursori basati su keyset**  
  Un cursore scorrevole che rileva le righe aggiornate ed eliminate tramite un keyset.  
   
 ## <a name="l"></a>L  
- **valore letterale**  
+ **literal**  
  Una rappresentazione dei caratteri di un valore effettivo dei dati in un'istruzione SQL.  
   
- **il blocco**  
+ **Il blocco**  
  Il processo mediante il quale un DBMS limita l'accesso a una riga in un ambiente multiutente. Il sistema DBMS in genere imposta un bit su una riga o pagina fisica che contiene una riga che indica la riga o pagina è bloccata.  
   
  **dati di tipo Long**  
@@ -291,7 +288,7 @@ ms.lasthandoff: 11/20/2017
  **modalità di commit manuale**  
  Una modalità di commit transazione in cui le transazioni devono essere esplicitamente eseguito il commit chiamando **SQLTransact**.  
   
- **metadati**  
+ **Metadati**  
  Dati che descrivono un parametro in un'istruzione SQL o una colonna in un set di risultati. Ad esempio, il tipo di dati, lunghezza in byte e una precisione di un parametro.  
   
  **driver a più livelli**  
@@ -302,7 +299,7 @@ ms.lasthandoff: 11/20/2017
  Non hanno nessun valore assegnato in modo esplicito. In particolare, un valore NULL è diverso da zero o uno spazio vuoto.  
   
 ## <a name="o"></a>O  
- **ottetto**  
+ **ottetti**  
  Otto bit o a un byte. *Vedere anche* byte.  
   
  **lunghezza dell'ottetto**  
@@ -317,7 +314,7 @@ ms.lasthandoff: 11/20/2017
  Apri gruppo  
  Una società che pubblica standard. In particolare, vengono pubblicati gli standard di gruppo di accesso SQL (SAG).  
   
- **concorrenza ottimistica**  
+ **Concorrenza ottimistica**  
  Una strategia per aumentare la concorrenza in cui le righe non bloccate. Prima di essere aggiornati o eliminati, un cursore controlla per vedere se sono state modificate dall'ultima lettura. In questo caso, update o delete ha esito negativo. *Vedere anche* concorrenza pessimistica.  
   
  **outer join**  
@@ -327,7 +324,7 @@ ms.lasthandoff: 11/20/2017
  Il proprietario di una tabella.  
   
 ## <a name="p"></a>P  
- **parametro**  
+ **parameter**  
  Una variabile in un'istruzione SQL, è contrassegnato con un marcatore di parametro o un punto interrogativo (?). I parametri sono associati a variabili di applicazione e i relativi valori recuperati quando viene eseguita l'istruzione.  
   
  **descrittore del parametro**  
@@ -336,11 +333,11 @@ ms.lasthandoff: 11/20/2017
  **Matrice di parametri operazione**  
  Matrice contenente i valori che è possibile impostare un'applicazione per indicare che il parametro corrispondente deve essere ignorato un **SQLExecDirect** o **SQLExecute** operazione.  
   
- **Matrice di parametri stato**  
+ **Matrice di stato di parametro**  
  Matrice che contiene lo stato di un parametro dopo una chiamata a **SQLExecDirect** o **SQLExecute**.  
   
  **concorrenza pessimistica**  
- Una strategia per l'implementazione serializzabilità, in cui le righe vengono bloccate in modo che altre transazioni non è possibile modificarle. *Vedere anche* la concorrenza ottimistica *e* serializzabilità.  
+ Una strategia per l'implementazione serializzabilità, in cui le righe vengono bloccate in modo che altre transazioni non è possibile modificarle. *Vedere anche* concorrenza ottimistica *e* serializzabilità.  
   
  **operazione posizionata**  
  Qualsiasi operazione che agisce sulla riga corrente. Ad esempio, posizionato aggiornamento ed eliminazione di istruzioni, **SQLGetData**, e **SQLSetPos**.  
@@ -351,7 +348,7 @@ ms.lasthandoff: 11/20/2017
  **istruzione delete posizionata**  
  Un'istruzione SQL utilizzata per eliminare la riga corrente.  
   
- **preparare**  
+ **Preparare**  
  Per compilare un'istruzione SQL. La preparazione di un'istruzione SQL viene creato un piano di accesso.  
   
  **chiave primaria**  
@@ -360,11 +357,11 @@ ms.lasthandoff: 11/20/2017
  **procedure**  
  Un gruppo di uno o più precompilata di istruzioni SQL che vengono archiviate come un oggetto denominato in un database.  
   
- **colonna di procedure**  
+ **colonna procedura**  
  Un argomento nella chiamata di routine, il valore restituito da una stored procedure o una colonna in un set di risultati creato da una stored procedure.  
   
 ## <a name="q"></a>Q  
- **qualificatore**  
+ **Qualificatore**  
  Un database che contiene una o più tabelle.  
   
  **query**  
@@ -377,19 +374,19 @@ ms.lasthandoff: 11/20/2017
  **radice**  
  La base di un numero di sistema. In genere 2 o 10.  
   
- **record**  
+ **Record**  
  *Vedere* riga.  
   
  **set di risultati**  
  Il set di righe creato tramite l'esecuzione di un **selezionare** istruzione.  
   
- **codice restituito**  
+ **Codice restituito**  
  Il valore restituito da una funzione ODBC.  
   
  **eseguire il rollback**  
  Per restituire i valori modificati da una transazione allo stato originale.  
   
- **riga**  
+ **Riga**  
  Un set di colonne correlate che descrivono un'entità specifica. Noto anche come un *record*.  
   
  **descrittore della riga**  
@@ -420,7 +417,7 @@ ms.lasthandoff: 11/20/2017
  **con cursori scorrevoli**  
  Un cursore che può spostarsi in avanti o indietro tra il set di risultati.  
   
- **serializzabilità è infatti**  
+ **Serializzabilità è infatti**  
  Se l'esecuzione simultanea di due transazioni producono un risultato di esecuzione seriale (o sequenziale) di tali transazioni. Le transazioni serializzabili sono tenute a mantenere l'integrità del database.  
   
  **database del server**  
@@ -432,7 +429,7 @@ ms.lasthandoff: 11/20/2017
  **DLL di installazione**  
  *Vedere* DLL di installazione del driver *e* DLL di installazione del convertitore.  
   
- **driver a livello singolo**  
+ **livello di singolo driver**  
  *Vedere* driver basati su file.  
   
  **SQL**  
@@ -441,7 +438,7 @@ ms.lasthandoff: 11/20/2017
  **Gruppo di accesso SQL (SAG)**  
  Un settore consorzio di società in questione con SQL DBMS. Interfaccia a livello di chiamata dell'Open Group è basato sul lavoro svolto originariamente dal gruppo di accesso SQL.  
   
- **Livello di conformità di SQL**  
+ **Livello di conformità SQL**  
  Il livello di grammatica SQL-92 supportato da un driver. può essere una voce, FIPS transitorio, intermedio o Full.  
   
  **Tipo di dati SQL**  
@@ -453,7 +450,7 @@ ms.lasthandoff: 11/20/2017
  **Istruzione SQL**  
  Una frase completa in SQL che inizia con una parola chiave e una descrizione completa di un'azione da intraprendere. Ad esempio, selezionare * FROM Orders. Istruzioni SQL non devono essere confuso con le istruzioni.  
   
- **stato**  
+ **state**  
  Una condizione ben definita di un elemento. Ad esempio, una connessione dispone di sette stati, inclusi i dati non allocati, allocati, connessi e debbano essere applicati. Alcune operazioni possono essere eseguite solo quando è un elemento in un determinato stato. Ad esempio, una connessione può essere liberata solo quando si trova in uno stato allocato e non, ad esempio, quando è in uno stato di connessione.  
   
  **transizione di stato**  
@@ -469,9 +466,9 @@ ms.lasthandoff: 11/20/2017
  Un cursore scorrevole che non è in grado di rilevare gli aggiornamenti, Elimina o inserisce nel set di risultati. In genere implementata mediante la copia del set di risultati.  
   
  **SQL statico**  
- Tipo di embedded SQL, le istruzioni SQL sono hardcoded e compilate quando viene compilato il resto del programma. *Vedere anche* SQL dinamico.  
+ Tipo di embedded SQL, le istruzioni SQL sono hardcoded e compilate quando viene compilato il resto del programma. *Vedere anche* istruzioni SQL dinamiche.  
   
- **stored procedure**  
+ **Stored procedure**  
  *Vedere* stored procedure.  
   
 ## <a name="t"></a>T  
@@ -484,13 +481,13 @@ ms.lasthandoff: 11/20/2017
  **transazione**  
  Unità atomica di lavoro. Il lavoro in una transazione deve essere completato nel suo complesso; Se qualsiasi parte della transazione non riesce, l'intera transazione avrà esito negativo.  
   
- **isolamento delle transazioni**  
+ **Isolamento delle transazioni**  
  L'atto di isolamento transazione dagli effetti di tutte le altre transazioni.  
   
- **livello di isolamento delle transazioni**  
+ **Livello di isolamento delle transazioni**  
  Misura l'accuratezza una transazione è isolata. Sono disponibili cinque livelli di isolamento delle transazioni: Read Uncommitted, Read Committed, Repeatable Read, Serializable e controllo delle versioni.  
   
- **DLL di conversione**  
+ **funzione di conversione DLL**  
  Una DLL utilizzato per convertire i dati da un set di caratteri da un altro.  
   
  **DLL di installazione di funzione di conversione**  
@@ -503,5 +500,5 @@ ms.lasthandoff: 11/20/2017
  Valore integer passato a o restituito da una funzione ODBC per indicare il tipo di dati di una variabile di applicazione, un parametro o una colonna. ODBC definisce gli indicatori di tipo per tipi di dati C e SQL.  
   
 ## <a name="v"></a>V  
- **visualizzazione**  
+ **Visualizzazione**  
  Un modo alternativo per visualizzare i dati in una o più tabelle. In genere è possibile creare una vista come un subset delle colonne di una o più tabelle. In ODBC, le visualizzazioni sono in genere equivalenti alle tabelle.

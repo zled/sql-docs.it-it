@@ -1,31 +1,23 @@
 ---
 title: Errori e avvisi Events Data Columns | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: trace-events
 ms.topic: reference
-helpviewer_keywords: Errors and Warnings event category [SQL Server]
-ms.assetid: f375d303-7aab-4c51-a955-05a2762cc4d1
-caps.latest.revision: "24"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7c3e94c56f836301b853902751c2fb4085e2df7e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 84a1f21e5556efcf64e1ff1b7c6d5ab2208d1038
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="errors-and-warnings-events-data-columns"></a>Colonne di dati degli eventi di errore e di avviso
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria di eventi di controllo di sicurezza include la classe di evento seguente:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoria di eventi Errori e avvisi include la classe di evento seguente:  
   
 -   Classe Error  
   

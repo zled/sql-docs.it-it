@@ -1,39 +1,24 @@
 ---
 title: Elemento LastSchemaUpdate (XMLA) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: LastSchemaUpdate Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#LastSchemaUpdate
-- urn:schemas-microsoft-com:xml-analysis#LastSchemaUpdate
-- microsoft.xml.analysis.lastschemaupdate
-helpviewer_keywords: LastSchemaUpdate element
-ms.assetid: 2109955c-2817-413e-93aa-95d9910e8b24
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8addad27e8524f84a1a86b8b2f0fe8662825d223
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3430efc1a71dc4ab0219a19d4ae29bd026e0b30b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575383"
 ---
 # <a name="lastschemaupdate-element-xmla"></a>Elemento LastSchemaUpdate (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene la data e l'ora dei metadati del cubo rappresentato dall'elemento padre [cubo](../../../analysis-services/xmla/xml-elements-properties/cube-element-olapinfo-xmla.md) dell'ultimo aggiornamento dell'elemento.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene la data e l'ora dell'ultimo aggiornamento dei metadati del cubo rappresentato dall'elemento padre [Cube](../../../analysis-services/xmla/xml-elements-properties/cube-element-olapinfo-xmla.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,9 +46,9 @@ ms.lasthandoff: 01/08/2018
 |Elementi padre|[Cube](../../../analysis-services/xmla/xml-elements-properties/cube-element-olapinfo-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vedere anche
+ [Proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

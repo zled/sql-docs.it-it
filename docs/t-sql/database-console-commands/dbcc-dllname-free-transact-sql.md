@@ -1,16 +1,13 @@
 ---
-title: DBCC nomedll (FREE) (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DBCC dllname (FREE) (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbcc_dllname_(FREE)_TSQL
@@ -29,19 +26,19 @@ helpviewer_keywords:
 - freeing DLLs
 - unloading DLLs
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 27
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0ad6b900d45ef1c87c0aca0d961685c68a72a33d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 24a49dae91a5b37743d223cf1e7cbdaaa952aa46
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Scarica la stored procedure estesa specificata DLL dalla memoria.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Scarica dalla memoria la DLL della stored procedure estesa specificata.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,11 +54,11 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
  WITH NO_INFOMSGS  
  Disattiva tutti i messaggi informativi.  
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Remarks
 Quando si esegue una stored procedure estesa, la DLL rimane caricata nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fino alla chiusura del server. Questa istruzione consente di scaricare una DLL dalla memoria senza chiudere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per visualizzare i file DLL attualmente caricati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eseguire **sp_helpextendedproc**
   
 ## <a name="result-sets"></a>Set di risultati  
-Quando viene specificata una DLL valida, DBCC *NomeDLL* (FREE) restituisce:
+Se si specifica una DLL valida, DBCC *dllname* (FREE) restituisce:
   
 ```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
@@ -71,7 +68,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente si presuppone che `xp_sample` viene implementata come xp_sample.dll ed è stata eseguita. DBCC \< *NomeDLL*> (FREE) Scarica il file xp_sample.dll associato il `xp_sample` procedure estesa.
+Nell'esempio seguente si presuppone che la stored procedure estesa `xp_sample` sia stata implementata come xp_sample.dll ed eseguita. DBCC \<*dllname*> (FREE) scarica il file xp_sample.dll associato alla stored procedure estesa `xp_sample`.
   
 ```sql  
 DBCC xp_sample (FREE);  

@@ -1,31 +1,18 @@
 ---
 title: Analitica R nel database per gli sviluppatori SQL (esercitazione) | Documenti Microsoft
-ms.custom: 
-ms.date: 07/26/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-- TSQL
-ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 0062a75b92fc633e61b0aa73ae2c955ccd60cec5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585273"
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>Analitica R nel database per gli sviluppatori SQL (esercitazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +61,7 @@ Questa esercitazione viene utilizzato un noto pubblica set di dati in base a tri
 
 ### <a name="requirements"></a>Requisiti
 
-In questa esercitazione è destinata agli utenti che hanno già familiarità con operazioni fondamentali sui database, ad esempio la creazione di tabelle e database, l'importazione di dati in tabelle e la creazione di query SQL. È disponibile tutto il codice R, quindi non è richiesto un ambiente di sviluppo di R. Un programmatore SQL deve essere in grado di completare l'esempio utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ed eseguendo gli script di PowerShell specificati.
+Questa esercitazione è per gli utenti che hanno familiarità con le operazioni di database basic, ad esempio la creazione di tabelle e database, l'importazione di dati in tabelle e la scrittura di query SQL. È disponibile tutto il codice R, quindi non è richiesto un ambiente di sviluppo di R. Un programmatore SQL esperto potrebbe essere possibile utilizzare [! Includi [tsql] (... /.. / incluso/tsql md.md)] in [! Includi [ssManStudioFull] (... /.. / incluso / ssmanstudiofull md.md) ed eseguire lo script di PowerShell fornito per completare questo esempio. Tuttavia, prima di iniziare questa esercitazione, è necessario completare le operazioni preliminari seguenti:
 
 Tuttavia, prima di iniziare l'esercitazione, è necessario completare le operazioni di preparazione:
 

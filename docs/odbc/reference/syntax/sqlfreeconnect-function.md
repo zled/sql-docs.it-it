@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLFreeConnect | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLFreeConnect
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLFreeConnect
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLFreeConnect
-helpviewer_keywords: SQLFreeConnect function [ODBC]
+f1_keywords:
+- SQLFreeConnect
+helpviewer_keywords:
+- SQLFreeConnect function [ODBC]
 ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 80cdfde73eb32c183bd5f3ddf618024d6cba5eba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 1e24dff9385f43393451f207d8fdac2b2d4b57c5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreeconnect-function"></a>SQLFreeConnect (funzione)
 **Conformità**  

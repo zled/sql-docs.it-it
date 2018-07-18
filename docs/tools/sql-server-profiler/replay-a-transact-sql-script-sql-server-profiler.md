@@ -1,34 +1,32 @@
 ---
-title: Riprodurre uno Script Transact-SQL (SQL Server Profiler) | Documenti Microsoft
-ms.custom: 
+title: Riprodurre uno script Transact-SQL (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: profiler
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - scripts [SQL Server], traces
 - replaying traces
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b21ed5c4b270a64c6eee3cc2d41cb4f1ba0518df
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: bfda646b7bd7211067bb146ff31d95bcd3662ccc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>Riprodurre uno script Transact-SQL (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Quando si desidera provare possibili soluzioni a un problema di prestazioni, utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] riprodurre [!INCLUDE[tsql](../../includes/tsql-md.md)] script e confrontare così le prestazioni prima e dopo le modifiche.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Quando si desidera provare possibili soluzioni a un problema di prestazioni, è possibile utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per riprodurre script [!INCLUDE[tsql](../../includes/tsql-md.md)] e confrontare così le prestazioni prima e dopo aver effettuato le modifiche.  
   
 ### <a name="to-replay-a-transact-sql-script"></a>Per riprodurre uno script Transact-SQL  
   

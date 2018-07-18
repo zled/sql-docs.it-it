@@ -1,16 +1,15 @@
 ---
 title: Espressioni di confronto (XQuery) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - comparison operators [XQuery]
 - value comparison operators
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-caps.latest.revision: 
+caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dfaf22d056759c6dc9350bec0bd265d1909d46b5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f80838771b36f59f58203dfc687957ea2f208522
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparison-expressions-xquery"></a>Espressioni di confronto (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -227,9 +225,9 @@ ProductModelID       Result
   
  I confronti eseguiti, basati sull'ordine dei nodi all'interno del documento, sono i seguenti:  
   
--   `<<`: Non **operando 1** precedere **operando 2** nell'ordine del documento.  
+-   `<<` : Non **operando 1** precedere **operando 2** nell'ordine del documento.  
   
--   `>>`: Non **operando 1** seguire **operando 2** nell'ordine del documento.  
+-   `>>` : Non **operando 1** seguire **operando 2** nell'ordine del documento.  
   
  La query seguente restituisce True se la descrizione del catalogo prodotti di \<garanzia > elemento visualizzato prima di \<manutenzione > elemento nell'ordine del documento di un prodotto specifico.  
   
@@ -254,7 +252,7 @@ where ProductModelID=19
 -   La query restituisce True.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipo di sistema &#40; XQuery &#41;](../xquery/type-system-xquery.md)   
+ [Sistema di tipi &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [Espressioni XQuery](../xquery/xquery-expressions.md)  
   
   

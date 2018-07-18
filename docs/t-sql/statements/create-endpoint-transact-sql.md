@@ -1,16 +1,14 @@
 ---
 title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENDPOINT
@@ -34,21 +32,20 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 135
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 21424f46b3cfcf969e687b7044c337022ca598f9
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crea gli endpoint e ne definisce le proprietà, inclusi i metodi disponibili alle applicazioni client. Per le informazioni sulle autorizzazioni correlate, vedere [GRANT-autorizzazioni per Endpoint &#40; Transact-SQL &#41; ](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+  Crea gli endpoint e ne definisce le proprietà, inclusi i metodi disponibili alle applicazioni client. Per altre informazioni relative alle autorizzazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
  La sintassi di CREATE ENDPOINT può essere logicamente suddivisa in due parti:  
   
@@ -60,7 +57,7 @@ ms.lasthandoff: 01/25/2018
   
      In questa parte viene definito il payload supportato dall'endpoint. I tipi di payload supportati sono [!INCLUDE[tsql](../../includes/tsql-md.md)], SERVICE BROKER e DATABASE MIRRORING. In questa parte è inoltre possibile includere informazioni specifiche della lingua.  
   
-> **Nota:** servizi Web XML nativi (endpoint SOAP/HTTP) è stata rimossa in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **Nota:** i servizi Web XML nativi (endpoint SOAP/HTTP) sono stati eliminati in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -118,14 +115,14 @@ FOR DATABASE_MIRRORING (
  *endPointName*  
  Nome assegnato per l'endpoint in fase di creazione. Utilizzare questo nome in caso di aggiornamento o eliminazione dell'endpoint.  
   
- AUTORIZZAZIONE *account di accesso*  
+ AUTHORIZATION *login*  
  Specifica un account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Windows valido a cui viene assegnata la proprietà del nuovo oggetto endpoint creato. Se si omette AUTHORIZATION, per impostazione predefinita il chiamante diventerà il proprietario del nuovo oggetto creato.  
   
- Per assegnare la proprietà tramite Authorization, il chiamante deve disporre dell'autorizzazione IMPERSONATE per l'oggetto specificato *accesso*.  
+ Per assegnare la proprietà tramite AUTHORIZATION, il chiamante deve avere l'autorizzazione IMPERSONATE per l'account di accesso *login* specificato.  
   
- Per riassegnare la proprietà, vedere [ALTER ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ Per riassegnare la proprietà, vedere [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
- STATO  **=**  {AVVIATO | **ARRESTATO** | DISABILITATO}  
+ STATE **=** { STARTED | **STOPPED** | DISABLED }  
  Stato dell'endpoint al momento della creazione. Se durante la procedura di creazione non viene specificato uno stato, per impostazione predefinita verrà utilizzato STOPPED.  
   
  STARTED  
@@ -134,10 +131,10 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  L'endpoint è disabilitato. In questo stato, tramite il server vengono attese le richieste della porta, ma anche restituiti errori ai client.  
   
- **ARRESTATO**  
+ **STOPPED**  
  L'endpoint è arrestato. In questo stato, tramite il server non vengono attese le richieste della porta dell'endpoint né viene fornita una risposta ai tentativi di richiesta di utilizzare l'endpoint.  
   
- Per modificare lo stato, utilizzare [ALTER ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ Per modificare lo stato, vedere [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
  AS { TCP }  
  Viene specificato il protocollo di trasporto da utilizzare.  
@@ -154,7 +151,7 @@ FOR DATABASE_MIRRORING (
  LISTENER_PORT **=***listenerPort*  
  Specifica il numero della porta della quale il protocollo TCP/IP di Service Broker è in attesa delle connessioni. Per convenzione, viene utilizzato il valore 4022 ma sono validi tutti i numeri compresi tra 1024 e 32767.  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
  Specifica l'indirizzo IP in corrispondenza del quale verrà eseguita l'attesa dell'endpoint. Il valore predefinito è ALL. Ciò significa che il listener accetterà una connessione su qualsiasi indirizzo IP valido.  
   
  Se si configura il mirroring del database con un indirizzo IP anziché con un nome di dominio completo (`ALTER DATABASE SET PARTNER = partner_IP_address` o `ALTER DATABASE SET WITNESS = witness_IP_address`), è necessario specificare `LISTENER_IP =IP_address` anziché `LISTENER_IP=ALL` quando si creano gli endpoint del mirroring.  
@@ -166,7 +163,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Per le opzioni specifiche per SERVICE_BROKER, vedere "Opzioni di SERVICE_BROKER" di seguito in questo argomento. Per le opzioni specifiche per DATABASE_MIRRORING, vedere "Opzioni di DATABASE_MIRRORING" di seguito in questo argomento.  
   
- AUTENTICAZIONE  **=**  \<authentication_options > specifica i requisiti di autenticazione TCP/IP per le connessioni per questo endpoint. Il valore predefinito è WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options> Specifica i requisiti di autenticazione TCP/IP per le connessioni per questo endpoint. Il valore predefinito è WINDOWS.  
   
  I metodi di autenticazione supportati includono NTLM o Kerberos oppure entrambi.  
   
@@ -175,21 +172,21 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [{NTLM | KERBEROS | **NEGOTIATE** }]  
+ **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  Specifica che l'endpoint deve connettersi utilizzando il protocollo di autenticazione di Windows per autenticare gli endpoint Impostazione predefinita.  
   
  Se si specifica un metodo di autenticazione (NTLM o KERBEROS), il metodo specificato viene utilizzato sempre come protocollo di autenticazione. Il valore predefinito NEGOTIATE imposta l'utilizzo da parte dell'endpoint di uno dei protocolli di negoziazione di Windows (NTLM o Kerberos).  
   
- CERTIFICATO *nome_certificato*  
- Specifica che l'endpoint deve autenticare la connessione utilizzando il certificato specificato dalla *nome_certificato* per stabilire l'identità per l'autorizzazione. L'endpoint sull'altro lato della connessione deve disporre di un certificato con chiave pubblica corrispondente alla chiave privata del certificato specificato.  
+ CERTIFICATE *certificate_name*  
+ Specifica che l'endpoint deve autenticare la connessione tramite il certificato specificato da *certificate_name* per definire l'identità per l'autorizzazione. L'endpoint sull'altro lato della connessione deve disporre di un certificato con chiave pubblica corrispondente alla chiave privata del certificato specificato.  
   
- WINDOWS [{NTLM | KERBEROS | **NEGOTIATE** }] CERTIFICATO *nome_certificato*  
+ WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  Specifica che l'endpoint deve tentare di connettersi utilizzando l'autenticazione di Windows e, se il tentativo ha esito negativo, di provare a utilizzare il certificato specificato.  
   
- CERTIFICATO *nome_certificato* WINDOWS [{NTLM | KERBEROS | **NEGOTIATE** }]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  Specifica che l'endpoint deve tentare di connettersi utilizzando il certificato specificato e, se il tentativo ha esito negativo, di provare a utilizzare l'autenticazione di Windows.  
   
- CRITTOGRAFIA = {DISABILITATO | SUPPORTATI | **REQUIRED** } [ALGORITMO { **AES** | RC4 | AES RC4 | RC4 AES}]  
+ ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
  Specifica se nel processo viene utilizzata la crittografia. Il valore predefinito è REQUIRED.  
   
  DISABLED  
@@ -207,7 +204,7 @@ FOR DATABASE_MIRRORING (
  Specifica che l'endpoint deve utilizzare l'algoritmo AES. Questo è l'impostazione predefinita in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
   
  RC4  
- Specifica che l'endpoint deve utilizzare l'algoritmo RC4. Questa è l'impostazione predefinita tramite [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+ Specifica che l'endpoint deve utilizzare l'algoritmo RC4. Questa è l'impostazione predefinita fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 > [!NOTE]  
 >  L'algoritmo RC4 è supportato solo per motivi di compatibilità con le versioni precedenti. È possibile crittografare il nuovo materiale usando RC4 o RC4_128 solo quando il livello di compatibilità del database è 90 o 100. (Non consigliato.) Usare un algoritmo più recente, ad esempio uno degli algoritmi AES. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive il materiale crittografato utilizzando RC4 o RC4_128 può essere decrittografato in qualsiasi livello di compatibilità.  
@@ -227,7 +224,7 @@ FOR DATABASE_MIRRORING (
   
  Gli argomenti seguenti sono specifici dell'opzione SERVICE_BROKER.  
   
- MESSAGE_FORWARDING  **=**  {ABILITATO | **DISABILITATO** }  
+ MESSAGE_FORWARDING **=** { ENABLED | **DISABLED** }  
  Determina se i messaggi ricevuti da questo endpoint e destinati a servizi ubicati altrove verranno inoltrati.  
   
  ENABLED  
@@ -243,7 +240,7 @@ FOR DATABASE_MIRRORING (
   
  L'argomento seguente è specifico dell'opzione DATABASE_MIRRORING.  
   
- RUOLO  **=**  {CONTROLLO | PARTNER | TUTTI I}  
+ ROLE **=** { WITNESS | PARTNER | ALL }  
  Specifica il ruolo o i ruoli di mirroring del database supportati dall'endpoint.  
   
  WITNESS  
@@ -258,17 +255,17 @@ FOR DATABASE_MIRRORING (
  ALL  
  Consente all'endpoint di assumere i ruoli di controllo e partner del mirroring durante il processo di mirroring.  
   
- Per ulteriori informazioni su questi ruoli, vedere [il mirroring del Database &#40; SQL Server &#41; ](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ Per altre informazioni su questi ruoli, vedere[Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 > [!NOTE]  
 >  Non esiste alcuna porta predefinita per DATABASE_MIRRORING.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Non è possibile eseguire le istruzioni ENDPOINT DDL all'interno di una transazione utente. Le istruzioni ENDPOINT DDL non avranno esito negativo anche in presenza di una transazione attiva a livello di isolamento dello snapshot che utilizza l'endpoint in fase di modifica.  
   
  Le richieste possono essere eseguite su ENDPOINT da:  
   
--   I membri di **sysadmin** ruolo predefinito del server  
+-   Membri del ruolo predefinito del server **sysadmin**  
   
 -   Il proprietario dell'endpoint  
   
@@ -295,8 +292,8 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
- [Scegliere un algoritmo di crittografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [DROP ENDPOINT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [Scelta di un algoritmo di crittografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
+ [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

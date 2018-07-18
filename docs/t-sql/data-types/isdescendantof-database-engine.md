@@ -1,16 +1,14 @@
 ---
-title: IsDescendantOf (motore di Database) | Documenti Microsoft
-ms.custom: 
+title: IsDescendantOf (motore di database) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IsDescendant_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - IsDescendantOf [Database Engine]
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 291a38e51da8e342d96b3a5feac90fbbc2a00d46
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 679f75007cc60521f569a42a5c580f8553b61eca
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce true se *questo* è un discendente dell'elemento padre.
+Restituisce true se l'*elemento* è un discendente dell'elemento padre.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,15 +46,15 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*elemento padre*  
-Il **hierarchyid** nodo per cui il test di IsDescendantOf deve essere eseguito.
+*parent*  
+Nodo **hierarchyid** per cui il test IsDescendantOf deve essere eseguito.
   
 ## <a name="return-types"></a>Tipi restituiti  
-**Tipo di SQL Server restituito: bit**
+**Tipo SQL Server restituito: bit**
   
 **Tipo CLR restituito: SqlBoolean**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 Restituisce true per tutti i nodi nel sottoalbero con radice nel padre specificato e false per tutti gli altri nodi.
   
 Un padre è considerato discendente di se stesso.

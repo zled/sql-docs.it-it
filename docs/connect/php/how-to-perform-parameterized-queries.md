@@ -1,30 +1,28 @@
 ---
 title: 'Procedura: eseguire query con parametri | Documenti Microsoft'
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 946380fdce8f3ac0d976840e569e35db077a4202
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 60e92bc71cb0be67a9b4680da19b79e01f815353
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Procedura: Eseguire query con parametri
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +35,7 @@ I passaggi per l'esecuzione di una query con parametri sono fondamentalmente qua
   
 2.  Inizializzare o aggiornare le variabili PHP che corrispondono ai segnaposto della query Transact-SQL.  
   
-3.  Usare le variabili PHP del passaggio 2 per creare o aggiornare una matrice di valori di parametri che corrispondono nell'ordine ai segnaposto della stringa di Transact-SQL.  
+3.  Utilizzare le variabili PHP del passaggio 2 per creare o aggiornare una matrice di valori di parametri che corrispondono ai segnaposto della stringa Transact-SQL. I valori dei parametri nella matrice deve essere nello stesso ordine come segnaposto progettate per illustrare le.
   
 4.  Eseguire la query:  
   
@@ -55,7 +53,7 @@ L'esempio seguente aggiorna la quantità di un ID prodotto specificato nella tab
   
 L'esempio esegue quindi una query nel database per verificare che la quantità sia stata aggiornata correttamente. ID prodotto è un parametro nella query SELECT.  
   
-Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  
+Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -121,7 +119,7 @@ L'esempio precedente usa la funzione **sqlsrv_query** per eseguire le query. Que
 ## <a name="example"></a>Esempio  
 L'esempio seguente mostra l'associazione implicita delle variabili durante l'uso della funzione **sqlsrv_prepare** . L'esempio inserisce più ordini di vendita nella tabella *Sales.SalesOrderDetail* . Il *$params* matrice è associata all'istruzione (*$stmt*) quando **sqlsrv_prepare** viene chiamato. Prima di ogni esecuzione di una query che inserisce un nuovo ordine di vendita nella tabella, la matrice *$params* viene aggiornata con i nuovi valori corrispondenti ai dettagli dell'ordine di vendita. La successiva esecuzione della query usa i nuovi valori di parametri.  
   
-Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  
+Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -194,8 +192,11 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Conversione dei tipi di dati](../../connect/php/converting-data-types.md)  
-[Considerazioni sulla sicurezza per il driver SQL PHP](../../connect/php/security-considerations-for-php-sql-driver.md)
-[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
+[Conversione dei tipi di dati](../../connect/php/converting-data-types.md)
+
+[Considerazioni sulla sicurezza per i driver Microsoft per PHP per SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+
+[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)
+
 [sqlsrv_rows_affected](../../connect/php/sqlsrv-rows-affected.md)  
   

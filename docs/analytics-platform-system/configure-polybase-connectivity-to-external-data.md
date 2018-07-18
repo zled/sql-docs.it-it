@@ -1,29 +1,22 @@
 ---
-title: "Configurare la connettività di PolyBase ai dati esterni (Analitica piattaforma sistema)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: 
-ms.openlocfilehash: d9777fb2bbfd9af2598a422fc072877ff0b78959
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+title: Configurare la connettività tra PolyBase - Analitica Platform System | Documenti Microsoft
+description: Viene illustrato come configurare PolyBase in Parallel Data Warehouse a cui connettersi Hadoop o in Microsoft Azure archiviazione blob le origini dati esterne. Usare PolyBase per eseguire query che si integrano dati da più origini, tra cui Hadoop, archiviazione blob di Azure e Parallel Data Warehouse.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d87ea2b126fde6bf0b18f7a777216f04d45d98f6
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>Configurazione della connettività di PolyBase per i dati esterni
-Viene descritto come configurare PolyBase in SQL Server PDW per connettersi a Microsoft Azure o Hadoop archiviazione blob le origini dati esterne. Usare PolyBase per eseguire query che si integrano dati da più origini, tra cui Hadoop, archiviazione blob di Azure e SQL Server PDW.  
+Viene illustrato come configurare PolyBase in Parallel Data Warehouse a cui connettersi Hadoop o in Microsoft Azure archiviazione blob le origini dati esterne. Usare PolyBase per eseguire query che si integrano dati da più origini, tra cui Hadoop, archiviazione blob di Azure e Parallel Data Warehouse.  
   
 ### <a name="to-configure-connectivity"></a>Per configurare la connettività  
   
@@ -121,7 +114,7 @@ Viene descritto come configurare PolyBase in SQL Server PDW per connettersi a Mi
   
     Per eseguire PolyBase su sia l'area di HDInsight e un Cluster di 2.0 Hadoop esterno, usare le impostazioni predefinite yarn-Site.XML il cluster Hadoop esterno.  
   
-6.  Riavviare l'area PDW. A tale scopo, utilizzare lo strumento di Configuration Manager. Vedere [avviare Gestione configurazione &#40; Sistema della piattaforma Analitica &#41; ](launch-the-configuration-manager.md).  
+6.  Riavviare l'area PDW. A tale scopo, utilizzare lo strumento di Configuration Manager. Vedere [avviare Gestione configurazione &#40;Analitica Platform System&#41;](launch-the-configuration-manager.md).  
   
 7.  Verificare le impostazioni di sicurezza per le connessioni di Hadoop. Se il **autenticazione debole** in Hadoop lato abilitato utilizzando `dfs.permission = true`, è necessario creare un utente di Hadoop **pdw_user** e concedono autorizzazioni di lettura completa e delle autorizzazioni di scrittura a questo utente. SQL Server PDW e chiamate corrispondenti da SQL Server PDW sono sempre generate come **pdw_user**.  Questo è un nome utente fisso e non può essere modificato in questa versione di connettività di Hadoop e la versione di SQL Server PDW. Se la sicurezza in Hadoop è disabilitata tramite `dfs.permission = false`, quindi non occorre effettuare alcuna azione ulteriore.  
   
@@ -129,12 +122,12 @@ Viene descritto come configurare PolyBase in SQL Server PDW per connettersi a Mi
   
 9. Per le connessioni di Hadoop, decidere quali utenti possono creare un'origine dati esterna in Hadoop. Concedere a ciascuno di questi utenti il numero di porta e indirizzo IP di ogni nodo del nome di Hadoop e fornire loro **ALTER ANY EXTERNAL DATA SOURCE** o **CONTROL SERVER** autorizzazione.  
   
-10. Connessione a WASB richiede anche l'inoltro di DNS da configurare nel dispositivo. Per configurare l'inoltro di DNS, vedere [utilizzare un server d'inoltro DNS per risolvere nomi DNS Non dispositivo &#40; Sistema della piattaforma Analitica &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+10. Connessione a WASB richiede anche l'inoltro di DNS da configurare nel dispositivo. Per configurare l'inoltro di DNS, vedere [utilizzare un server d'inoltro di DNS per risolvere nomi DNS Non accessorio &#40;Analitica Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 Gli utenti autorizzati a questo punto è possono creare origini dati esterne, formati di file esterni e le tabelle esterne. È possibile utilizzarli per integrare dati da più origini, tra cui Hadoop, archiviazione blob di Microsoft Azure e SQL Server PDW.  
 
 ## <a name="kerberos-configuration"></a>Configurazione di Kerberos  
-Si noti che quando PolyBase esegue l'autenticazione a un cluster protetto con Kerberos, l'impostazione hadoop.rpc.protection deve essere impostata per l'autenticazione. In questo modo la comunicazione dati tra i nodi di Hadoop non crittografati. 
+Si noti che quando PolyBase esegue l'autenticazione a un cluster protetto con Kerberos, l'impostazione hadoop.rpc.protection deve essere impostata per l'autenticazione. La comunicazione dei dati tra i nodi Hadoop rimane non crittografata. 
 
  Per connettersi a un cluster Hadoop protetto con Kerberos [utilizzando KDC MIT]:
    
@@ -161,9 +154,9 @@ Si noti che quando PolyBase esegue l'autenticazione a un cluster protetto con Ke
   
 4. Creare un oggetto credenziali con ambito database per specificare le informazioni di autenticazione per ogni utente di Hadoop. Vedere [Oggetti T-SQL PolyBase](../relational-databases/polybase/polybase-t-sql-objects.md).  
 
-5. Riavviare l'area PDW. A tale scopo, utilizzare lo strumento di Configuration Manager. Vedere [avviare Gestione configurazione &#40; Sistema della piattaforma Analitica &#41; ](launch-the-configuration-manager.md).
+5. Riavviare l'area PDW. A tale scopo, utilizzare lo strumento di Configuration Manager. Vedere [avviare Gestione configurazione &#40;Analitica Platform System&#41;](launch-the-configuration-manager.md).
  
 ## <a name="see-also"></a>Vedere anche  
-[Configurazione del dispositivo &#40; Sistema della piattaforma Analitica &#41;](appliance-configuration.md)  
+[Configurazione dello strumento &#40;Analitica Platform System&#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

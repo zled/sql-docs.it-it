@@ -1,32 +1,33 @@
 ---
 title: sp_tables (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tables
 - sp_tables_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_tables
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 95a0bae2722c519cea3e1dac14c633fe582ed5a8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b0a4e8b4ae1b78da17beb1a5289a90782979ad3c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,25 +52,25 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_name=** ] **'***nome***'**  
- Tabella utilizzata per restituire informazioni del catalogo. *nome* è **nvarchar (384)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata.  
+ [ **@table_name=** ] **'***name***'**  
+ Tabella utilizzata per restituire informazioni del catalogo. *nome* viene **nvarchar (384)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata.  
   
  [  **@table_owner=** ] **'***proprietario***'**  
- Proprietario della tabella utilizzata per restituire informazioni sul catalogo. *proprietario* è **nvarchar (384)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se owner viene omesso, vengono applicate le regole di visibilità della tabella predefinite nel sistema DBMS sottostante.  
+ Proprietario della tabella utilizzata per restituire informazioni sul catalogo. *proprietario* viene **nvarchar (384)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se owner viene omesso, vengono applicate le regole di visibilità della tabella predefinite nel sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se owner viene omesso e l'utente corrente non è il proprietario di una tabella avente il nome specificato, viene eseguita la ricerca di una tabella avente il nome specificato e il cui proprietario corrisponde al proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
   
  [  **@table_qualifier=** ] **'***qualificatore***'**  
- Nome del qualificatore di tabella. *qualificatore* è **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*qualificatore***.** *proprietario***.** *nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+ Nome del qualificatore di tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*qualificatore ***.*** proprietario ***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
- [ **,** [  **@table_type=** ] **"'***tipo***'**, **'**tipo **'"** ]  
- Elenco di valori separati da virgola che fornisce informazioni su tutte le tabelle dei tipi specificati. Questi includono **tabella**, **SYSTEMTABLE**, e **vista**. *tipo* è **varchar(100)**, con un valore predefinito è NULL.  
+ [ **,** [  **@table_type=** ] **"'***tipo***'**, **'** tipo **'"** ]  
+ Elenco di valori separati da virgola che fornisce informazioni su tutte le tabelle dei tipi specificati. Questi includono **tabella**, **SYSTEMTABLE**, e **vista**. *tipo di* viene **varchar(100)**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  È necessario racchiudere ogni tipo di tabella tra virgolette singole e l'intero parametro tra virgolette doppie. I tipi di tabella devono essere specificati in maiuscolo. Se l'opzione SET QUOTED_IDENTIFIER è impostata su ON, è necessario sostituire le virgolette singole con quelle doppie e racchiudere l'intero parametro tra virgolette singole.  
   
  [  **@fUsePattern =** ] **'***fUsePattern***'**  
- Determina se il carattere di sottolineatura ( _ ), il simbolo di percentuale ( % ) e le parentesi quadre ( [ o ] ) vengono interpretate come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è **bit**, con un valore predefinito è 1.  
+ Determina se il carattere di sottolineatura ( _ ), il simbolo di percentuale ( % ) e le parentesi quadre ( [ o ] ) vengono interpretate come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* viene **bit**, con un valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  Nessuno  
@@ -91,7 +92,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
  **sp_tables** equivale a **SQLTables** in ODBC. I risultati restituiti vengono ordinati in base **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**, e **TABLE_NAME**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="examples"></a>Esempi  
@@ -115,7 +116,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorks2012';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>C. Restituzione di un elenco di oggetti su cui è possibile eseguire query nell'ambiente corrente  
  Nell'esempio seguente viene restituito un elenco di oggetti su cui è possibile eseguire una query nell'ambiente corrente.  
@@ -137,7 +138,7 @@ EXEC sp_tables
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Synonyms &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
+ [Sys. Synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

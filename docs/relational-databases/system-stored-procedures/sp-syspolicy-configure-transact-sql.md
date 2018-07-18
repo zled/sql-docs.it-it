@@ -1,16 +1,14 @@
 ---
-title: sp_syspolicy_configure (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_syspolicy_configure (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_configure
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_configure
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e4ff49cd5be072fb288bb721b781474da93b7ba9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c51d30c8453cd5a9c2a92a3eb2ad22016c461b8f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@name =** ] **'***nome***'**  
- Nome dell'impostazione che si desidera configurare. *nome* è **sysname**, è necessario e non può essere NULL o una stringa vuota.  
+ Nome dell'impostazione che si desidera configurare. *nome* viene **sysname**, è necessario e non può essere NULL o una stringa vuota.  
   
  *nome* può essere uno dei valori seguenti:  
   
@@ -59,7 +56,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 -   'LogOnSuccess' - Specifica se vengono registrate le valutazioni di criteri riuscite nella gestione basata su criteri.  
   
  [  **@value =** ] *valore*  
- È il valore è associato il valore specificato per *nome*. *valore* è **sql_variant**ed è obbligatorio.  
+ È il valore è associato il valore specificato per *nome*. *valore* viene **sql_variant**ed è obbligatorio.  
   
 -   Se si specifica 'Enabled' per *nome*, è possibile utilizzare uno dei valori seguenti:  
   
@@ -76,7 +73,7 @@ sp_syspolicy_configure [ @name = ] 'name'
     -   1 = Registra sia le valutazioni di criteri riuscite che quelle fallite.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  È necessario eseguire sp_syspolicy_configure nel contesto del database di sistema msdb.  
@@ -118,7 +115,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione basata su criteri di Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Stored procedure della gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_set_config_enabled &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
  [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_set_log_on_success &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  

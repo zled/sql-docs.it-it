@@ -1,36 +1,19 @@
 ---
 title: Requisiti di architettura client per l'analisi di sviluppo di servizi | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- local mining models [Analysis Services]
-- Analysis Services, architecture
-- providers [Analysis Services]
-- data pumps [Analysis Services]
-- client architecture [Analysis Services]
-- local cubes [Analysis Services]
-ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fa4192b9852d88100c1520a8c274dac199e1f48
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ef45e149fc70fdf338a60cd823497eb2efb6a215
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Requisiti di architettura client per sviluppo Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +36,7 @@ ms.lasthandoff: 02/15/2018
 |Linguaggi .NET|ADO MD.NET|  
 |Qualsiasi linguaggio che supporta SOAP|XML for Analysis|  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] è un'architettura Web con un livello intermedio pienamente scalabile per la distribuzione da grandi e piccole organizzazioni. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fornisce supporto del livello intermedio largo per i servizi Web. Le applicazioni ASP sono supportate tramite OLE DB per OLAP e ADO MD, applicazioni ASP.NET sono supportate tramite ADOMD.NET. Il livello intermedio, illustrato nella figura seguente, è scalabile per un numero elevato di utenti simultanei.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] è dotato di un'architettura Web con un livello intermedio pienamente scalabile che ne consente la distribuzione in organizzazioni sia di piccole che di grandi dimensioni. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fornisce supporto del livello intermedio largo per i servizi Web. Le applicazioni ASP sono supportate tramite OLE DB per OLAP e ADO MD, applicazioni ASP.NET sono supportate tramite ADOMD.NET. Il livello intermedio, illustrato nella figura seguente, è scalabile per un numero elevato di utenti simultanei.  
   
  ![Diagramma logico per l'architettura di livello intermedio](../../../analysis-services/multidimensional-models/olap-physical/media/as-midtierarch9.gif "diagramma logico per l'architettura di livello intermedio")  
   
@@ -62,7 +45,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>Analysis Services in modalità tabulare o SharePoint  
  In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], il server può essere avviato in modalità del motore (VertiPaq) analitica in memoria xVelocity per i database tabulari e per [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] le cartelle di lavoro sono stati pubblicati in un sito di SharePoint.  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] sono gli unici ambienti client supportati per la creazione e l'esecuzione di query su database in memoria che utilizzano SharePoint o in modalità tabulare, rispettivamente. L'oggetto incorporato [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] database creato tramite Excel e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] strumenti è contenuto all'interno della cartella di lavoro di Excel e viene salvato come parte del file con estensione xlsx di Excel.  
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] sono gli unici ambienti client supportati per la creazione e l'esecuzione di query su database in memoria in cui viene utilizzata rispettivamente la modalità SharePoint o tabulare. L'oggetto incorporato [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] database creato tramite Excel e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] strumenti è contenuto all'interno della cartella di lavoro di Excel e viene salvato come parte del file con estensione xlsx di Excel.  
   
  Tuttavia, una cartella di lavoro [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] può utilizzare dati archiviati in un cubo tradizionale se si importano i dati del cubo nella cartella di lavoro. È possibile importare anche dati da un'altra cartella di lavoro di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] se è stata pubblicata in un sito di SharePoint.  
   

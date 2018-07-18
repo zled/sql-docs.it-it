@@ -1,16 +1,14 @@
 ---
-title: DECRYPTBYPASSPHRASE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DECRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECRYPTBYPASSPHRASE
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], DECRYPTBYPASSPHRASE function
 - DECRYPTBYPASSPHRASE function
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: dc2880109f8b58cc1712b58f68883cab1cace348
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 01e01348ab88ef33ab38a9fd9040d5ff0174cb26
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,13 +52,13 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
  Passphrase che sarà usata per generare la chiave per la decrittografia.  
   
  @passphrase  
- È una variabile di tipo **nvarchar**, **char**, **varchar**, o **nchar** che contiene la passphrase che verrà utilizzata per generare la chiave per decrittografia.  
+ Variabile di tipo **nvarchar**, **char**, **varchar** o **nchar** contenente la passphrase da usare per generare la chiave per la decrittografia.  
   
- '*testo crittografato*'  
+ '*ciphertext*'  
  Testo crittografato da decrittografare.  
   
  @ciphertext  
- È una variabile di tipo **varbinary** che contiene il testo crittografato. Le dimensioni massime sono pari a 8.000 byte.  
+ Variabile di tipo **varbinary** contenente il testo crittografato. Le dimensioni massime sono pari a 8.000 byte.  
   
  *add_authenticator*  
  Indica se un autenticatore è stato crittografato insieme al testo normale. Il valore è 1 se è stato usato un autenticatore. **int**.  
@@ -69,16 +66,16 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
  @add_authenticator  
  Indica se un autenticatore è stato crittografato insieme al testo normale. Il valore è 1 se è stato usato un autenticatore. **int**.  
   
- *autenticatore*  
+ *authenticator*  
  Dati relativi all'autenticatore. **sysname**.  
   
  @authenticator  
  Variabile contenente i dati da cui derivare un autenticatore.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **varbinary** con una dimensione massima di 8.000 byte.  
+ **varbinary** con un valore massimo di 8.000 byte.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Non sono necessarie autorizzazioni per eseguire questa funzione.  
   
  Restituisce NULL se viene usata una passphrase non corretta o informazioni errate sull'autenticatore.  
@@ -88,7 +85,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
  Se è stato incluso un autenticatore al momento della crittografia del testo non crittografato, l'autenticatore deve essere incluso anche in fase di decrittografia. Se il valore dell'autenticatore fornito in fase di decrittografia non corrisponde al valore dell'autenticatore crittografato con i dati, non sarà possibile completare la decrittografia.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene decrittografato il record aggiornato [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
+ Nell'esempio seguente viene decrittografato il record aggiornato in [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  

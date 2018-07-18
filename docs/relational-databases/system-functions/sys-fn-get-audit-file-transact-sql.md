@@ -1,16 +1,14 @@
 ---
 title: sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_audit_file_TSQL
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3b7a7d79b8cbaf65e803d042efd86a790e2eeb1d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e09491347fec046bef09dc2fca06756998055150
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ fn_get_audit_file ( file_pattern,
     
     Questo argomento deve includere sia un percorso (lettera di unità o condivisione di rete) che un nome di file, che può includere un carattere jolly. Per raccogliere più file da un set di file di controllo, è possibile utilizzare un asterisco (*). Esempio:  
   
-    -   **\<percorso >\\ \***  : raccoglie tutti i file nel percorso specificato di controllo.  
+    -   **\<percorso >\\ \***  : raccoglie tutti i file si trova nel percorso di controllo.  
   
     -   **\<percorso > \LoginsAudit_{GUID}** : raccoglie tutti i file con il nome specificato e la coppia GUID di controllo.  
   
@@ -69,7 +67,7 @@ fn_get_audit_file ( file_pattern,
  
       - **\<Storage_endpoint\>/\<contenitore\>/\<ServerName\>/\<DatabaseName\> /**  -raccoglie tutti i file di controllo (BLOB) per il database specifico.    
       
-      - **\<Storage_endpoint\>/\<contenitore\>/\<ServerName\>/\<DatabaseName\> / \<AuditName\>/\<CreationDate\>/\<FileName\>xel** -raccoglie un file di controllo specifico (blob).
+      - **\<Storage_endpoint\>/\<contenitore\>/\<ServerName\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>xel** -raccoglie un file di controllo specifico (blob).
   
 > [!NOTE]  
 >  Se si passa un percorso senza un criterio del nome di file, verrà generato un errore.  
@@ -119,23 +117,25 @@ fn_get_audit_file ( file_pattern,
 |additional_information|**nvarchar(4000)**|Le informazioni univoche applicabili solo a un singolo evento vengono restituite in formato XML. Questo tipo di informazioni è contenuto in un numero ridotto di azioni controllabili.<br /><br /> Un livello di stack TSQL sarà visualizzato in formato XML per le azioni associate a tale stack. Il formato XML sarà:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indica il livello di nidificazione corrente del frame. Il nome del modulo viene rappresentato in un formato composto da tre parti (nome_database, nome_schema e nome_oggetto)  Il nome del modulo verrà analizzato per eseguire l'escape di caratteri xml non valido, ad esempio `'\<'`, `'>'`, `'/'`, `'_x'`. Saranno sottoposti a escape come `_xHHHH\_`. dove HHHH rappresenta il codice UCS-2 esadecimale a quattro cifre per il carattere.<br /><br /> Ammette i valori Null. Restituisce NULL quando non sono presenti informazioni aggiuntive segnalate dall'evento.|  
 |file_name|**varchar(260)**|Percorso e nome del file di log di controllo da cui proviene il record. Non ammette i valori Null.|  
 |audit_file_offset|**bigint**|Offset del buffer nel file che contiene il record di controllo. Non ammette i valori Null.|  
-|user_defined_event_id|**smallint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Id evento definito dall'utente passato come argomento di **sp_audit_write**. **NULL** per gli eventi di sistema (impostazione predefinita) e diverso da zero per evento definito dall'utente. Per ulteriori informazioni, vedere [sp_audit_write &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
+|user_defined_event_id|**smallint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Id evento definito dall'utente passato come argomento di **sp_audit_write**. **NULL** per eventi di sistema (impostazione predefinita) e diverso da zero per evento definito dall'utente. Per altre informazioni, vedere [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Utilizzato per registrare qualsiasi informazione aggiuntiva che l'utente desidera registrare in |log di controllo utilizzando il **sp_audit_write** stored procedure.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | Solo SQL Server (a partire da 2016) |  
-|transaction_id |**bigint** | Solo SQL Server (a partire da 2016) |  
-|client_ip |**nvarchar(128)** | Azure SQL database + SQL Server (a partire da 2017) |  
-|application_name |**nvarchar(128)** | Azure SQL database + SQL Server (a partire da 2017) |  
-|duration_milliseconds |**bigint** | Solo i database di SQL Azure |  
-|response_rows |**bigint** | Solo i database di SQL Azure |  
-|affected_rows |**bigint** | Solo i database di SQL Azure |  
+|sequence_group_id |**varbinary** | **Si applica a**: solo SQL Server (a partire da 2016) |  
+|transaction_id |**bigint** | **Si applica a**: solo SQL Server (a partire da 2016) |  
+|client_ip |**nvarchar(128)** | **Si applica a**: database SQL di Azure + SQL Server (a partire 2017) |  
+|application_name |**nvarchar(128)** | **Si applica a**: database SQL di Azure + SQL Server (a partire 2017) |  
+|duration_milliseconds |**bigint** | **Si applica a**: solo i database di SQL Azure |  
+|response_rows |**bigint** | **Si applica a**: solo i database di SQL Azure |  
+|affected_rows |**bigint** | **Si applica a**: solo i database di SQL Azure |  
+|connection_id |GUID | **Si applica a**: solo i database di SQL Azure |
+|data_sensitivity_information |nvarchar(4000) | **Si applica a**: solo i database di SQL Azure |
   
 ## <a name="remarks"></a>Osservazioni  
  Se il *file_pattern* argomento passato a **fn_get_audit_file** fa riferimento a un percorso o un file che non esiste, o se il file non è un file di controllo, il **MSG_INVALID_AUDIT_FILE**viene restituito il messaggio di errore.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- - **SQL Server**: richiede la **CONTROL SERVER** autorizzazione.  
- - **Database SQL di Azure**: richiede la **CONTROL DATABASE** autorizzazione.     
+ - **SQL Server**: richiede la **CONTROL SERVER** l'autorizzazione.  
+ - **Database SQL di Azure**: richiede la **CONTROL DATABASE** l'autorizzazione.     
     - Gli amministratori di server possono accedere i log di controllo di tutti i database nel server.
     - Gli amministratori di server non è possono accedere solo i log di controllo dal database corrente.
     - BLOB che non soddisfano i criteri precedenti verranno ignorati (verrà visualizzato un elenco di BLOB ignorate nel messaggio di output della query), e la funzione restituirà i registri solo dal BLOB per cui è consentito l'accesso.  
@@ -176,15 +176,15 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```
 
-Per un esempio completo su come creare un controllo, vedere [SQL Server Audit &#40; motore di Database &#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
+Per un esempio completo delle modalità di creazione di un controllo, vedere [SQL Server Audit &#40;motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
 Per informazioni sull'impostazione di controllo del Database SQL di Azure, vedere [Introduzione al controllo del Database SQL](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing).
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [CREATE SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
  [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   

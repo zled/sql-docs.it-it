@@ -1,30 +1,28 @@
 ---
 title: I comandi di menu e altri tasti di scelta rapida (AccessToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b55ad469f71c1ac0a0b5a0e0c4f5f908b831bae0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c9119662915a4c2b83d8e50b33ab041f1fd248bd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>I comandi di menu e altri tasti di scelta rapida (AccessToSQL)
 Nelle sezioni seguenti vengono descritti i tasti di scelta rapida per accedere ai comandi di menu e altri tasti di scelta rapida utilizzati in diverse finestre di dialogo di SSMA per l'applicazione di accesso.  
@@ -43,7 +41,7 @@ Per accedere dal menu File, tasto di scelta rapida utilizzato è ALT + F. La tab
 |Visualizzare la finestra di dialogo Creazione guidata di migrazione.|ALT + F + W|  
 |Aggiungere i database.|ALT + F + A|  
 |Rimuovere il database.|ALT + F + R|  
-|Visualizzare la finestra di dialogo Trova database procedura guidata.|ALT + F O F|  
+|Visualizzare la finestra di dialogo Trova database procedura guidata.|ALT + F + F|  
 |Uscire dall'applicazione di SSMA.|ALT + F + X|  
   
 ## <a name="edit-menu-commands"></a>Modificare i comandi di menu  
@@ -199,5 +197,5 @@ Per accedere ai menu di scelta rapida per l'oggetto selezionato in Esplora ogget
 |Vai a dichiarazione.|F12|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Tasti di scelta rapida &#40; AccessToSQL &#41;](../../ssma/access/shortcut-keys-accesstosql.md)  
+[Tasti di scelta rapida &#40;AccessToSQL&#41;](../../ssma/access/shortcut-keys-accesstosql.md)  
   

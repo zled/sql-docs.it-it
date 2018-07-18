@@ -1,30 +1,27 @@
 ---
 title: La grammatica SQL minima | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 130f434bfb0b41829d2c49782454fcf888af1e27
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: a3e31f53abf8d8788f719adc9e00e180ca7aa96f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-minimum-grammar"></a>Grammatica SQL minima
 Questa sezione descrive la sintassi SQL minima che deve supportare un driver ODBC. La sintassi descritta in questa sezione è un subset della sintassi del livello di voce di SQL-92.  
@@ -43,7 +40,7 @@ Questa sezione descrive la sintassi SQL minima che deve supportare un driver ODB
 > [!IMPORTANT]  
 >  Come un *-tipo di dati* in un *-istruzione create table*, le applicazioni devono utilizzare un tipo di dati dalla colonna TYPE_NAME del set di risultati restituito da **SQLGetTypeInfo**.  
   
- *la ricerca istruzione DELETE* :: =  
+ *la ricerca Delete-istruzione* :: =  
   
  DELETE FROM *-nome della tabella* [dove *condizione di ricerca*]  
   
@@ -55,35 +52,35 @@ Questa sezione descrive la sintassi SQL minima che deve supportare un driver ODB
   
  INSERT INTO *-nome della tabella* [( *colonna identificatore* [, *colonna identificatore*]...)]      VALORI (*Inserisci valore*[, *Inserisci valore*]...)  
   
- *istruzioni SELECT* :: =  
+ *istruzione SELECT* :: =  
   
- Selezionare [tutti &#124; DISTINCT] *elenco select*  
+ Selezionare [tutti i &#124; DISTINCT] *elenco select*  
   
- DA *elenco di riferimento di tabella*  
+ DA *elenco di riferimenti tabella*  
   
  [In *condizione di ricerca*]  
   
  [*clausola order by*]  
   
- *istruzione* :: = *-istruzione create table*  
+ *istruzione* :: = *dall'istruzione create table*  
   
- &#124; *ricerca delete-istruzione*  
+ &#124;*ricerca delete-istruzione*  
   
- &#124; *rilascio-tabella-istruzione*  
+ &#124;*rilascio-tabella-istruzione*  
   
- &#124; *insert-istruzione*  
+ &#124;*insert-istruzione*  
   
- &#124; *select-istruzione*  
+ &#124;*select-istruzione*  
   
- &#124; *ricerca update-istruzione*  
+ &#124;*ricerca update-istruzione*  
   
  *la ricerca Update-istruzione*  
   
  AGGIORNAMENTO *-nome della tabella*  
   
- IMPOSTARE *colonna identificatore* = {*espressione* &#124; NULL}  
+ IMPOSTARE *-identificatore della colonna* = {*espressione* &#124; NULL}  
   
- [, *colonna identificatore* = {*espressione* &#124; NULL}]...  
+ [, *-identificatore della colonna* = {*espressione* &#124; NULL}]...  
   
  [In *condizione di ricerca*]  
   

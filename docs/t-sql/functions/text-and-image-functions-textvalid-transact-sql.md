@@ -1,16 +1,14 @@
 ---
-title: TEXTVALID (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: TEXTVALID (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTVALID_TSQL
@@ -25,21 +23,20 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d64916b441c65dc00e0e387e08c2967124721514
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cf78bace0ee983375553433b5da117cfc02abbfc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="text-and-image-functions---textvalid-transact-sql"></a>Testo e immagine funzioni - TEXTVALID (Transact-SQL)
+# <a name="text-and-image-functions---textvalid-transact-sql"></a>Funzioni per i valori text e image - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Oggetto **testo**, **ntext**, o **immagine** funzione che controlla se un puntatore di testo specifico è valido.  
+  Funzione **text**, **ntext** o **image** che controlla se un puntatore di testo specifico è valido.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Non è disponibile una funzionalità alternativa.  
@@ -57,7 +54,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
  *table*  
  Nome della tabella che si desidera utilizzare.  
   
- *colonna*  
+ *column*  
  Nome della colonna che si desidera utilizzare.  
   
  *text_ptr*  
@@ -66,22 +63,22 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
- Restituisce 1 se il puntatore è valido e 0 in caso contrario. Si noti che l'identificatore per il **testo** la colonna deve contenere il nome della tabella. Non è possibile utilizzare UPDATETEXT, WRITETEXT o READTEXT senza un puntatore di testo valido.  
+## <a name="remarks"></a>Remarks  
+ Restituisce 1 se il puntatore è valido e 0 in caso contrario. Si noti che l'identificatore per la colonna di tipo **text** deve includere il nome della tabella. Non è possibile utilizzare UPDATETEXT, WRITETEXT o READTEXT senza un puntatore di testo valido.  
   
- Le istruzioni e funzioni seguenti sono utili anche quando si lavora con **testo**, **ntext**, e **immagine** dati.  
+ Le funzioni e istruzioni seguenti sono utili anche quando si usano dati di tipo **text**, **ntext** e **image**.  
   
 |Funzione o istruzione|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**(**'*modello %**'***,** *espressione***)**|Restituisce la posizione di carattere della stringa di caratteri specificato in **testo** e **ntext** colonne.|  
-|DATALENGTH**(***espressione***)**|Restituisce la lunghezza dei dati in **testo**, **ntext**, e **immagine** colonne.|  
-|SET TEXTSIZE|Restituisce il limite, in byte, del **testo**, **ntext**, o **immagine** dati da restituire con un'istruzione SELECT.|  
+|PATINDEX **(**'*%pattern%**'***,** *expression***)**|Restituisce la posizione dei caratteri di una determinata stringa di caratteri nelle colonne di tipo **text** e **ntext**.|  
+|DATALENGTH **(***expression***)**|Restituisce la lunghezza dei dati nelle colonne **text**, **ntext** e **image**.|  
+|SET TEXTSIZE|Restituisce il limite in byte dei dati di tipo **text**, **ntext** o **image** da restituire con un'istruzione SELECT.|  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene stabilito se esiste un puntatore di testo valido per ogni valore della colonna `logo` della tabella `pub_info`.  
   
 > [!NOTE]  
->  Per eseguire questo esempio, è necessario installare il **pubs** database.  
+>  Per eseguire l'esempio, è necessario installare il database **pubs**.  
   
 ```  
 USE pubs;  
@@ -111,10 +108,10 @@ pub_id Valid (if 1) Text data
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [SET TEXTSIZE &#40; Transact-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Testo e immagine funzioni &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
- [TEXTPTR &#40; Transact-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
+ [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
+ [Funzioni per i valori text e image &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
   
   

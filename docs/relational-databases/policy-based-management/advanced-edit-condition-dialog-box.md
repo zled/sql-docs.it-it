@@ -1,31 +1,32 @@
 ---
 title: Finestra di dialogo Modifica avanzata (Condizione) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.dmf.condition.advancededit.f1
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6f7d494c40e02e96d53f827e9553c743d72660d0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 375d21441757d274dbd62bcd94638b03a0ded57f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Finestra di dialogo Modifica avanzata (Condizione)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la finestra di dialogo **Modifica avanzata** per creare espressioni complesse per le condizioni della gestione basata su criteri.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Usare la finestra di dialogo **Modifica avanzata** per creare espressioni complesse per le condizioni della gestione basata su criteri.  
   
 ## <a name="options"></a>Opzioni  
  **Valore cella**  
@@ -88,15 +89,15 @@ ms.lasthandoff: 01/18/2018
 |**Guid()**|Guid Guid(String *guidString*)|Restituisce un GUID da una stringa.|*guidString* : rappresentazione stringa del GUID da creare.|Restituisce il GUID creato dalla stringa.|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)|Il valore di *check_expression* viene restituito se non è NULL. In caso contrario, viene restituito *replacement_value* . Se i tipi sono diversi, *replacement_value* viene convertito in modo implicito nel tipo *check_expression*.|*check_expression* : l'espressione da verificare per determinare se è NULL. *check_expression* può essere uno dei tipi supportati dalla gestione basata su criteri: Numeric, String, Bool, DateTime, Array e Guid.<br /><br /> *replacement_value* : espressione da restituire se *check_expression* è NULL. *replacement_value* deve essere di un tipo che viene convertito in modo implicito nel tipo *check_expression*.|Il tipo restituito è il tipo di *check_expression* se *check_expression* non è NULL. In caso contrario, viene restituito il tipo di *replacement_value* .||  
 |**Len()**|Numeric Len (*string_expression*)|Restituisce il numero dei caratteri contenuti nell'espressione stringa specificata, esclusi gli spazi vuoti finali.|*string_expression* : espressione stringa da valutare.|Restituisce un valore della categoria di tipi di dati integer.|`Len('Hello')` restituisce `5` in questo esempio.|  
-|**Lower()**|String Lower (String*_expression*)|Restituisce la stringa dopo aver convertito in minuscolo tutti i caratteri in maiuscolo.|*expression* : espressione stringa di origine.|Restituisce una stringa che rappresenta l'espressione stringa di origine dopo che tutti i caratteri in maiuscolo sono stati convertiti in minuscolo.|`Len('HeLlO')` restituisce `'hello'` in questo esempio.|  
+|**Lower()**|String Lower (String *_expression*)|Restituisce la stringa dopo aver convertito in minuscolo tutti i caratteri in maiuscolo.|*expression* : espressione stringa di origine.|Restituisce una stringa che rappresenta l'espressione stringa di origine dopo che tutti i caratteri in maiuscolo sono stati convertiti in minuscolo.|`Len('HeLlO')` restituisce `'hello'` in questo esempio.|  
 |**Mod()**|Numeric Mod (Numeric *expression_dividend*, Numeric *expression_divisor*)|Viene restituito il resto intero dopo aver diviso la prima espressione numerica per la seconda espressione numerica.|*expression_dividend* : espressione numerica da dividere. *expression_dividend* deve essere un'espressione valida di uno dei tipi di dati nelle categorie di dati Integer o Numeric.<br /><br /> *expression_divisor* : espressione numerica per cui dividere il dividendo. *expression_dividend* deve essere un'espressione valida di uno dei tipi di dati nelle categorie di tipi di dati Integer o Numeric.|Restituisce un valore della categoria di tipi di dati integer.|`Mod(Property1, 3)`|  
 |**Multiply()**|Numeric Multiply (Numeric *expression1*, Numeric *expression2*)|Moltiplica due espressioni.|*expression1* ed *expression2* : qualsiasi espressione valida di un qualsiasi tipo di dati della categoria numerica, ad eccezione del tipo **datetime** .|Restituisce il tipo di dati dell'argomento con precedenza maggiore.|`Multiply(Property1, .20)`|  
 |**Power()**|Numeric Power (Numeric *numeric_expression*, Numeric *expression_power*)|Restituisce il valore dell'espressione specificata elevata alla potenza specificata.|*numeric_expression* : espressione della categoria dei tipi di dati numerici esatti o numerici approssimativi, ad eccezione del tipo di dati bit.<br /><br /> *expression_power* : potenza a cui elevare *numeric_expression*. *expression_power* può essere un'espressione della categoria dei tipi di dati numerici esatti o numerici approssimativi, ad eccezione del tipo di dati **bit** .|Il tipo restituito è identico a *numeric_expression*.|`Power(Property1, 3)`|  
 |**Round()**|Numeric Round (Numeric *expression*, Numeric *expression_precision*)|Restituisce un'espressione numerica arrotondata alla lunghezza o alla precisione specificata.|*expression* : espressione della categoria dei tipi di dati numerici esatti o numerici approssimativi, ad eccezione del tipo di dati **bit** .<br /><br /> *expression_precision* : precisione a cui arrotondare l'espressione. Quando *expression_precision* è un numero positivo, *numeric_expression* viene arrotondato al numero di posizioni decimali specificato da length. Quando *expression_precision* è un numero negativo, *numeric_expression* viene arrotondato a sinistra del punto decimale, come specificato da *expression_precision*.|Restituisce lo stesso tipo di *numeric_expression*.|`Round(5.333, 0)`|  
-|**String()**|String String (Variant*_expression*)|Converte un'espressione Variant in una stringa.|*expression* : espressione Variant da convertire in stringa.|Restituisce il valore stringa dell'espressione Variant.|`String(4)`|  
+|**String()**|String String (Variant *_expression*)|Converte un'espressione Variant in una stringa.|*expression* : espressione Variant da convertire in stringa.|Restituisce il valore stringa dell'espressione Variant.|`String(4)`|  
 |**Sum()**|Numeric Sum (*VarArgs*)|Restituisce la somma di tutti i valori nell'elenco di argomenti. È possibile utilizzare Sum con valori numerici.|*VarArgs*: elenco di espressioni Variant, della categoria dei tipi di dati numerici esatti o numerici approssimativi, ad eccezione del tipo **bit** .|Restituisce la somma di tutti i valori dell'espressione nel tipo di dati di espressione più preciso.<br /><br /> Se il risultato dell'espressione è della categoria **integer**, **numeric**, **money** e **smallmoney**, **float** e **real** , i tipi restituiti sono rispettivamente **int**, **numeric**, **money**e **float**.|`Sum(1.0, 2.0, 3.0, 4.0, 5.0)` restituisce `15` in questo esempio.|  
 |**True()**|Bool TRUE()|Restituisce il valore booleano TRUE.||Restituisce il valore booleano TRUE.|`IsDatabaseMailEnabled = True()`|  
-|**Upper()**|String Upper (String*_expression*)|Restituisce la stringa dopo aver convertito in maiuscolo tutti i caratteri in minuscolo.|*expression* : espressione stringa di origine.|Restituisce una stringa che rappresenta l'espressione stringa di origine dopo che tutti i caratteri in minuscolo sono stati convertiti in maiuscolo.|`Upper('HeLlO')` restituisce `'HELLO'` in questo esempio.|  
+|**Upper()**|String Upper (String *_expression*)|Restituisce la stringa dopo aver convertito in maiuscolo tutti i caratteri in minuscolo.|*expression* : espressione stringa di origine.|Restituisce una stringa che rappresenta l'espressione stringa di origine dopo che tutti i caratteri in minuscolo sono stati convertiti in maiuscolo.|`Upper('HeLlO')` restituisce `'HELLO'` in questo esempio.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Crea nuova condizione o Apri condizione, pagina Generale](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   

@@ -1,15 +1,14 @@
 ---
 title: Ambiente di hosting CLR | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -29,16 +28,15 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 
+caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b3aaf081b264cd74614af93fd58d130b19dfa4d5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 603b0d66a4a8b7f406708442f18e9c98c4414b26
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architettura dell'integrazione CLR - ambiente di hosting CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +65,7 @@ ms.lasthandoff: 02/09/2018
  Il codice utente non deve essere in grado di eseguire operazioni che danneggiano l'integrità dell'elaborazione del Motore di database, quali la visualizzazione di una finestra di messaggio popup in cui viene richiesta una risposta dell'utente o l'uscita dal processo. Il codice utente non deve essere in grado di sovrascrivere i buffer di memoria del Motore di database o le strutture di dati interne.  
   
 ###### <a name="scalability"></a>Scalabilità  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e CLR includono modelli interni diversi per la pianificazione e gestione della memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un modello di threading cooperativo in modalità non preemptive in cui i thread producono volontariamente l'esecuzione con frequenza periodica o quando sono in attesa di blocchi o I/O. CLR supporta un modello di threading preemptive. Se il codice utente in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può chiamare direttamente le primitive di threading del sistema operativo, non si integra in modo soddisfacente nell'Utilità di pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può influire negativamente sulla scalabilità del sistema. CLR non distingue tra memoria virtuale e fisica, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestisce direttamente la memoria fisica e deve utilizzarla entro un limite configurabile.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e CLR dispongono di modelli interni diversi per la pianificazione e la gestione della memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un modello di threading cooperativo in modalità non preemptive in cui i thread producono volontariamente l'esecuzione con frequenza periodica o quando sono in attesa di blocchi o I/O. CLR supporta un modello di threading preemptive. Se il codice utente in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può chiamare direttamente le primitive di threading del sistema operativo, non si integra in modo soddisfacente nell'Utilità di pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può influire negativamente sulla scalabilità del sistema. CLR non distingue tra memoria virtuale e fisica, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestisce direttamente la memoria fisica e deve utilizzarla entro un limite configurabile.  
   
  I modelli diversi per threading, pianificazione e gestione della memoria presentano una sfida di integrazione per un sistema di gestione di database relazionali (RDBMS) con scalabilità in grado di supportare migliaia di sessioni utente simultanee. L'architettura deve garantire che la scalabilità del sistema non venga danneggiata dal codice utente che chiama direttamente le API per le primitive di threading, memoria e sincronizzazione.  
   
@@ -142,7 +140,7 @@ ms.lasthandoff: 02/09/2018
   
  EXTERNAL_ACCESS fornisce un'opzione di sicurezza intermedia e consente al codice di accedere alle risorse esterne al database, offrendo lo stesso livello di affidabilità di SAFE.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Usa il livello di criteri di CA a livello di host per impostare un criterio host che concede uno dei tre set di autorizzazioni in base all'autorizzazione archiviata nei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cataloghi. Il codice gestito in esecuzione all'interno del database ottiene sempre uno di questi set di autorizzazioni di accesso per il codice.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza il livello dei criteri di protezione dall'accesso di codice a livello di host per configurare un criterio host che concede uno dei tre set di autorizzazioni in base all'autorizzazione archiviata nei cataloghi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il codice gestito in esecuzione all'interno del database ottiene sempre uno di questi set di autorizzazioni di accesso per il codice.  
   
 ### <a name="programming-model-restrictions"></a>Restrizioni del modello di programmazione  
  Il modello di programmazione per il codice gestito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comporta la scrittura di funzioni, procedure e tipi che in genere non richiedono l'utilizzo dello stato gestito tra più chiamate né la condivisione dello stato tra più sessioni utente. Come descritto in precedenza, la presenza dello stato condiviso può inoltre determinare eccezioni critiche che influiscono sulla scalabilità e l'affidabilità dell'applicazione.  

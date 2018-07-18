@@ -1,16 +1,14 @@
 ---
-title: ASIN (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ASIN (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASIN_TSQL
@@ -22,21 +20,21 @@ helpviewer_keywords:
 - sine
 - arcsine
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 687c8bfde3b2f78d0136044ebe75c7206cb31d90
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 086f83d267e6de0b55b2f77a0d8caf3c766d61bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Restituisce l'angolo, espresso in radianti, il cui seno è specificato **float** espressione. Il valore restituito viene definito anche arcoseno.
+Funzione che restituisce l'angolo, espresso in radianti, il cui seno corrisponde all'espressione **float** specificata. Il valore restituito viene definito anche **arcoseno**.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,14 +45,14 @@ ASIN ( float_expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*argomento float_expression*  
-È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) del tipo **float** o di un tipo che può essere convertito in modo implicito in float, con un valore compreso tra -1 e 1. I valori non compresi in questo intervallo restituiscono NULL e segnalano un errore di dominio.
+*float_expression*  
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **float** oppure di un tipo che può essere convertito in modo implicito in float. È valido solo un valore compreso tra -1,00 e 1,00. I valori non compresi in questo intervallo restituiscono NULL e ASIN e segnalano un errore di dominio.
   
 ## <a name="return-types"></a>Tipi restituiti
 **float**
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente accetta un **float** espressione che restituisce l'ARCOSENO dell'angolo specificato.
+L'esempio seguente accetta un'espressione **float** e restituisce il valore ASIN dell'angolo specificato.
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   
@@ -95,24 +93,24 @@ The ASIN of the angle is: 0.147811
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-L'esempio seguente restituisce l'arcoseno di 1,00.
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+In questo esempio viene restituito l'arcoseno di 1,00.
   
 ```sql
 SELECT ASIN(1.00) AS asinCalc;  
 ```  
   
-L'esempio seguente restituisce un errore, in quanto prevede l'arcoseno di un valore compreso nell'intervallo consentito.
+L'esempio restituisce un errore perché richiede l'arcoseno di un valore non compreso nell'intervallo consentito.
   
 ```sql
 SELECT ASIN(1.1472738) AS asinCalc;  
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[CEILING &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-[SET ARITHIGNORE &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
-[SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
+[CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
+[Funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
+[SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
   
   
 

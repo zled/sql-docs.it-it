@@ -1,27 +1,19 @@
 ---
 title: 'Lezione supplementare di Analysis Services tutorial: gerarchie incomplete | Documenti Microsoft'
-description: Viene descritto come correggere le gerarchie incomplete nelle esercitazioni su Analysis Services.
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: 
-author: Minewiskan
-manager: kfile
-editor: 
-tags: 
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
-ms.openlocfilehash: ebadf3498d7047873bfcd79099a02c387618367e
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bc5a2164576e2e6142d8835dad6f6c114b7a9c5b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Lezione supplementare - gerarchie incomplete
 
@@ -82,7 +74,7 @@ Se si crea il progetto AW Internet Sales come parte dell'esercitazione, il model
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],2,1)) 
     ```
 
-    Level3 
+    **Level3** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],3,1)) 
     ```
@@ -119,7 +111,7 @@ Se si crea il progetto AW Internet Sales come parte dell'esercitazione, il model
 
 2.  In **proprietà** > **Nascondi membri**selezionare **nascondere i membri vuoti**. 
 
-    ![as-lesson-detail-ragged-hierarchies-hidemembers](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-hidemembers.png)
+    ![As-Lesson-Detail-ragged-hierarchies-hidemembers](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-hidemembers.png)
 
 3.  In Excel, aggiornare la tabella pivot. 
 

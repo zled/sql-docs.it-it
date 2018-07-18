@@ -1,35 +1,33 @@
 ---
 title: Notifiche degli eventi | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: service-broker
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
-caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 18
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8590e3177aefa3889743069c8b69b63ec5f93953
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 37602cb45dabc2c00d47dd3c7be28ed6e8fe63e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-notifications"></a>Notifiche degli eventi
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Le notifiche degli eventi consentono l'invio di informazioni sugli eventi a un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Le notifiche degli eventi vengono eseguite in risposta a una serie di istruzioni DDL (Data Definition Language) [!INCLUDE[tsql](../../includes/tsql-md.md)] ed eventi di Traccia SQL mediante l'invio di informazioni sugli eventi a un servizio [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
+  Le notifiche degli eventi consentono l'invio di informazioni sugli eventi a un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Le notifiche degli eventi vengono eseguite in risposta a una serie di istruzioni DDL (Data Definition Language) [!INCLUDE[tsql](../../includes/tsql-md.md)] ed eventi di Traccia SQL mediante l'invio di informazioni sugli eventi a un servizio [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
  È possibile utilizzare le notifiche degli eventi per eseguire le attività seguenti:  
   

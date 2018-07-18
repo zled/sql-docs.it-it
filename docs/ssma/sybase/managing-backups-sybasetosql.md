@@ -1,31 +1,30 @@
 ---
 title: La gestione dei backup (SybaseToSQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Tester Component,Managing Backups
+helpviewer_keywords:
+- Tester Component,Managing Backups
 ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 89df7322e4025ffb79f3ae2aecb2ef67fa52c8d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 85ccefaddf6e8f0bad35d3a01d1b355f0482db9c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-backups-sybasetosql"></a>La gestione dei backup (SybaseToSQL)
 Gestione dei Backup Sybase consente di backup e ripristino dati di tabelle, prima o dopo l'esecuzione di un test. È inoltre possibile gestire il contenuto di backup con la finestra di gestione contenuto di Backup.  
@@ -43,7 +42,7 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo:
   
 -   Fare clic su di **Annulla** per chiudere la finestra di dialogo.  
   
-### <a name="restore"></a>Ripristina  
+### <a name="restore"></a>Restore  
 Per aprire la finestra di dialogo di ripristino, scegliere il menu di Tester per la gestione del Backup Sybase, quindi fare clic su Ripristina... Sarà possibile trovare una struttura ad albero contenente le tabelle disponibili nel backup. Selezionare uno o più tabelle per ripristinare i dati.  
   
 I pulsanti seguenti sono disponibili nella finestra di dialogo:  
@@ -79,7 +78,7 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo:
   
 -   Fare clic su di **Annulla** per chiudere la finestra di dialogo.  
   
-### <a name="restore"></a>Ripristina  
+### <a name="restore"></a>Restore  
 Per aprire la finestra di dialogo di ripristino, il Tester scegliere dal menu Gestione Backup di SQL Server, fare clic su Ripristina... Sarà possibile trovare una struttura ad albero contenente le tabelle disponibili nel backup. Selezionare almeno una tabella per ripristinare i dati.  
   
 I pulsanti seguenti sono disponibili nella finestra di dialogo:  
@@ -102,5 +101,5 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo:
 -   Fare clic su di **chiudere** per chiudere la finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Test di eseguire la migrazione di oggetti di Database &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Test di eseguire la migrazione di oggetti di Database &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

@@ -1,16 +1,14 @@
 ---
-title: "IDENTITY (proprietà) (Transact-SQL) | Documenti Microsoft"
-ms.custom: 
+title: IDENTITY (proprietà) (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IDENTITY_TSQL
@@ -23,24 +21,24 @@ helpviewer_keywords:
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: c8ed5f2b2dd8daaf244f9e12ea17a69ff489ae3b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 30d8a0ff473f1a52fdb0e8e52353650ef2803854
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="create-table-transact-sql-identity-property"></a>CREARE una tabella (Transact-SQL) IDENTITY (proprietà)
+# <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (proprietà)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Crea una colonna Identity in una tabella. Questa proprietà viene utilizzata con le istruzioni CREATE TABLE e ALTER TABLE di [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  La proprietà IDENTITY è diversa da SQL-DMO **identità** proprietà che espone la proprietà identity di riga di una colonna.  
+>  La proprietà IDENTITY è diversa dalla proprietà **Identity** di SQL-DMO, la quale espone la proprietà di identità di riga di una colonna.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,15 +50,15 @@ IDENTITY [ (seed , increment) ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *valore di inizializzazione*  
+ *seed*  
  Valore usato per la prima riga caricata nella tabella.  
   
- *incremento*  
+ *increment*  
  Valore incrementale aggiunto al valore Identity della riga caricata in precedenza.  
   
  È necessario specificare sia il valore di inizializzazione che l'incremento oppure nessuno dei due valori. In questo secondo caso, il valore predefinito è (1,1).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Le colonne Identity possono essere usate per la generazione di valori di chiave. Tramite la proprietà Identity in una colonna viene garantito quanto riportato di seguito:  
   
 -   Ogni nuovo valore viene generato in base all'incremento e al valore di inizializzazione correnti.  
@@ -69,13 +67,13 @@ IDENTITY [ (seed , increment) ]
   
  Tramite la proprietà Identity in una colonna non viene garantito quanto riportato di seguito:  
   
--   **L'univocità del valore** : deve essere implementata tramite un **chiave primaria** o **UNIQUE** vincolo o **UNIQUE** indice.  
+-   **Univocità del valore**. L'univocità deve essere applicata tramite un vincolo **PRIMARY KEY** o **UNIQUE** o un indice **UNIQUE**.  
   
--   **Valori consecutivi in una transazione** : non è garantita che una transazione di inserimento di più righe per ottenere valori consecutivi per le righe, poiché potrebbero verificarsi altri inserimenti simultanei nella tabella. Se i valori devono essere consecutivi, la transazione deve utilizzare un blocco esclusivo sulla tabella o utilizzare il **SERIALIZABLE** livello di isolamento.  
+-   **Valori consecutivi in una transazione**. In una transazione con la quale vengono inserite più righe non viene garantito il recupero di valori consecutivi per le righe, dal momento che si possono verificare altri inserimenti simultanei nella tabella. Se i valori devono essere consecutivi, nella transazione deve essere usato un blocco esclusivo sulla tabella o il livello di isolamento **SERIALIZABLE**.  
   
--   **Valori consecutivi dopo il riavvio del server o altri errori** –[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe memorizzare nella cache di valori identity per motivi di prestazioni e alcuni dei valori assegnati possono essere persi durante un riavvio del server o errore di database. Questo può comportare dei gap nel valore Identity al momento dell'inserimento. Se i gap non sono accettabili, l'applicazione dovrà usare un meccanismo specifico per generare i valori chiave. Usando un generatore di sequenza con la **NOCACHE** opzione possibile limitare i gap a transazioni che non sono mai eseguito il commit.  
+-   **Valori consecutivi dopo il riavvio del server o altri errori**. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile memorizzare nella cache valori Identity per motivi di prestazioni e alcuni dei valori assegnati possono essere persi durante un errore del database o il riavvio del server. Questo può comportare dei gap nel valore Identity al momento dell'inserimento. Se i gap non sono accettabili, l'applicazione dovrà usare un meccanismo specifico per generare i valori chiave. L'uso di un generatore di sequenze con l'opzione **NOCACHE** può limitare i gap a transazioni di cui non è mai eseguito il commit.  
   
--   **Riutilizzo di valori** : per una determinata proprietà identity con valore di inizializzazione/incremento specifico, l'identità di valori non vengono riutilizzati dal motore di. Se una particolare istruzione INSERT non riesce o se viene eseguito il rollback di quest'ultima, i valori Identity usati vengono persi e non saranno generati di nuovo. Questa condizione può comportare dei gap quando vengono generati i successivi valori Identity.  
+-   **Riuso di valori**. In caso di una determinata proprietà Identity con un valore di inizializzazione/incremento specifico, i valori Identity non vengono riusati dal motore. Se una particolare istruzione INSERT non riesce o se viene eseguito il rollback di quest'ultima, i valori Identity usati vengono persi e non saranno generati di nuovo. Questa condizione può comportare dei gap quando vengono generati i successivi valori Identity.  
   
  Queste restrizioni fanno parte della progettazione per migliorare le prestazioni e perché sono accettabili in molte situazioni comuni. Se non è possibile usare valori Identity a causa di queste restrizioni, creare una tabella separata contenente un valore corrente e gestire l'accesso all'assegnazione di numeri e tabelle con l'applicazione.  
   
@@ -83,7 +81,7 @@ IDENTITY [ (seed , increment) ]
   
  Ogni tabella può includere una sola colonna Identity.  
   
- Nelle tabelle ottimizzate per la memoria il valore di inizializzazione e l'incremento devono essere impostati su 1,1. Impostare il valore di inizializzazione o incremento su un valore diverso da 1 comporta l'errore seguente: l'utilizzo di inizializzazione e incremento valori diversi rispetto a 1 non è supportato con le tabelle con ottimizzazione per la memoria.  
+ Nelle tabelle ottimizzate per la memoria il valore di inizializzazione e l'incremento devono essere impostati su 1,1. Se si imposta il valore di inizializzazione o incremento su un valore diverso da 1 viene visualizzato l'errore seguente: L'uso di valori di inizializzazione e di incremento diversi da 1 non è supportato in tabelle con ottimizzazione per la memoria.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -177,12 +175,12 @@ SET IDENTITY_INSERT img OFF;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
- [IDENTITÀ &#40; Funzione &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [IDENTITY &#40;Function&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [SET IDENTITY_INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)   
+ [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)   
  [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

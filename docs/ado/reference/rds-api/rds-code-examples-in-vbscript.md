@@ -1,33 +1,30 @@
 ---
 title: Servizi Desktop remoto di codice negli esempi contenuti in VBScript | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - RDS samples [ADO], VBScript
 - VBScript RDS examples [ADO]
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 81e6ae7dd9b72fba1ad33cbd2f4bcac7627a38a4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6d5cb6a687bec80175c2fa70102cf4f824bfac24
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-code-examples-in-vbscript"></a>Esempi di codice RDS in VBScript
 > [!IMPORTANT]
@@ -68,15 +65,15 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="properties"></a>Proprietà  
   
--   [Esempio di proprietà di connessione](../../../ado/reference/rds-api/connect-property-example-vbscript.md)  
+-   [Esempio di proprietà Connect](../../../ado/reference/rds-api/connect-property-example-vbscript.md)  
   
 -   [ExecuteOptions e FetchOptions](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)  
   
--   [FilterColumn, FilterCriterion, FilterValue, SortColumn e SortDirection esempio delle proprietà](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [Esempio di proprietà SortDirection, FilterCriterion, FilterValue, SortColumn e FilterColumn](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
 -   [Esempio di proprietà ReadyState](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)  
   
--   [Esempio di proprietà di SourceRecordset e Recordset](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
+-   [Esempio di proprietà SourceRecordset e Recordset](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
   
 -   [Esempio di proprietà di server](../../../ado/reference/rds-api/server-property-example-vbscript.md)  
   

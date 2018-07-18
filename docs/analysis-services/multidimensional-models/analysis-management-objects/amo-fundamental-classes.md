@@ -1,38 +1,19 @@
 ---
 title: Le classi fondamentali AMO | Documenti Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data sources [AMO]
-- AMO, database objects
-- AMO, server objects
-- Analysis Management Objects, server objects
-- database objects [AMO]
-- Analysis Management Objects, database objects
-- AMO, data sources
-- Analysis Management Objects, data sources
-ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: amo
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd2d58e6791a7dd576523f3400264e538ac01307
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6b7efa520db59a104452b8bcd799808e7a27a35d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="amo-fundamental-classes"></a>Classi fondamentali AMO
   Le classi fondamentali rappresentano il punto di partenza per l'utilizzo della libreria AMO (Analysis Management Objects). Tali classi consentono di stabilire l'ambiente per gli altri che verranno utilizzati nell'applicazione. Le classi fondamentali includono gli oggetti <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> e <xref:Microsoft.AnalysisServices.DataSourceView>.  
@@ -73,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.Database> in <xref:Microsoft.AnalysisServices>.  
   
-##  <a name="DSandDSV">Oggetti DataSource e DataSourceView</a>  
+##  <a name="DSandDSV"></a> Oggetti DataSource e DataSourceView  
  Le origini dati vengono gestite tramite l'oggetto <xref:Microsoft.AnalysisServices.DataSourceCollection> della classe di database. Per creare un'istanza di <xref:Microsoft.AnalysisServices.DataSource>, è possibile utilizzare il metodo Add di un oggetto <xref:Microsoft.AnalysisServices.DataSourceCollection>, mentre per eliminare un'istanza di <xref:Microsoft.AnalysisServices.DataSource> è possibile utilizzare il metodo Remove di un oggetto <xref:Microsoft.AnalysisServices.DataSourceCollection>.  
   
  Gli oggetti <xref:Microsoft.AnalysisServices.DataSourceView> vengono gestiti dall'oggetto <xref:Microsoft.AnalysisServices.DataSourceViewCollection> nella classe di database.  

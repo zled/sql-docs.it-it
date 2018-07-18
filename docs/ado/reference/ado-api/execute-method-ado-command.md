@@ -1,17 +1,15 @@
 ---
 title: Eseguire il metodo (comando ADO) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Command15::Execute
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7f16d3c01fb219bdbe7f52bbc39d3c410b5de918
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8936219aa3d8e75a43efcc51936ac23916c51d96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-method-ado-command"></a>Eseguire il metodo (comando ADO)
 Esegue la query, l'istruzione SQL o stored procedure specificata nel [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) proprietà del [oggetto comando](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -45,7 +42,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
 #### <a name="parameters"></a>Parametri  
  *RecordsAffected*  
- Facoltativa. Oggetto **lungo** variabile in cui il provider restituisce il numero di record interessati dall'operazione. Il *RecordsAffected* parametro si applica solo a query o stored procedure. *RecordsAffected* non restituisce il numero di record restituito da una stored procedure o la restituzione di risultati di query. Per ottenere queste informazioni, utilizzare il [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) proprietà. Il **Execute** metodo non restituirà le informazioni corrette quando si utilizza **adAsyncExecute**, semplicemente perché quando viene eseguito un comando in modo asincrono, il numero di record interessati non può ancora essere noto al momento il metodo restituisce.  
+ Facoltativa. Oggetto **lungo** variabile in cui il provider restituisce il numero di record interessati dall'operazione. Il *RecordsAffected* parametro si applica solo a query o stored procedure. *RecordsAffected* non restituisce il numero di record restituito da una stored procedure o query con restituzione di risultati. Per ottenere queste informazioni, utilizzare il [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) proprietà. Il **Execute** metodo non restituirà le informazioni corrette quando si utilizza **adAsyncExecute**, semplicemente perché quando viene eseguito un comando in modo asincrono, il numero di record interessati non può ancora essere noto al momento il metodo restituisce.  
   
  *Parametri*  
  Facoltativa. Oggetto **Variant** matrice di valori dei parametri utilizzati in combinazione con la stringa di input o di un flusso specificato in **CommandText** o **CommandStream**. (I parametri di output non restituisce valori corretti quando passati in questo argomento).  

@@ -1,17 +1,15 @@
 ---
 title: Evento WillExecute (ADO) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - WillExecute
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dafc71b9f9da6dde5cf9ef7acf7909236441f656
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 28d9fee251d53f5966f83fb1a49d3ecd75fe0813
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 Il **WillExecute** eventi viene chiamato prima dell'esecuzione di un comando in sospeso su una connessione.  
@@ -45,10 +42,10 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  Oggetto **stringa** che contiene un comando SQL o un nome della stored procedure.  
   
  *CursorType*  
- Oggetto [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) che contiene il tipo di cursore per il **Recordset** che verrà aperto. Con questo parametro, è possibile modificare il cursore in qualsiasi tipo durante un **Recordset**[Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) operazione. *CursorType* verrà ignorato per qualsiasi altra operazione.  
+ Oggetto [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) che contiene il tipo di cursore per il **Recordset** che verrà aperto. Con questo parametro, è possibile modificare il cursore in qualsiasi tipo durante un **Recordset**[Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) operazione. *CursorType* per qualsiasi altra operazione verrà ignorata.  
   
- *Tipo di blocco*  
- Oggetto [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) che contiene il tipo di blocco per il **Recordset** che verrà aperto. Con questo parametro, è possibile modificare il blocco a qualsiasi tipo durante un **RecordsetOpen** operazione. *LockType* verrà ignorato per qualsiasi altra operazione.  
+ *LockType*  
+ Oggetto [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) che contiene il tipo di blocco per il **Recordset** che verrà aperto. Con questo parametro, è possibile modificare il blocco a qualsiasi tipo durante un **RecordsetOpen** operazione. *LockType* per qualsiasi altra operazione verrà ignorata.  
   
  *Opzioni*  
  Oggetto **lungo** valore che indica le opzioni che possono essere utilizzate per eseguire il comando o aprire il **Recordset**.  

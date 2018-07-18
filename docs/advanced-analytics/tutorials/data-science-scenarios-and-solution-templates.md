@@ -1,28 +1,17 @@
 ---
-title: Scenari di analisi scientifica dei dati e modelli di soluzioni | Documenti Microsoft
-ms.custom: 
-ms.date: 08/22/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Scenari di analisi scientifica dei dati e modelli di soluzioni (SQL Server Machine Learning) | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 5317f42d3acd85f7865f79405b2daf12793a7de4
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: d67fd15c44d188870989f2ad6498733c5901fb9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scenari di analisi scientifica dei dati e modelli di soluzioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,15 +24,15 @@ Ogni soluzione include dati di esempio, il codice R o codice Python e le stored 
 > 
 > La maggior parte dei modelli disponibili in più versioni che supporta sia in locale e cloud piattaforme per machine learning. Ad esempio, è possibile compilare la soluzione utilizza solo SQL Server oppure è possibile compilare la soluzione in Microsoft R Server o in Azure Machine Learning.
 
-+ Per informazioni dettagliate e gli aggiornamenti, vedere questo annuncio: [eccezionali nuovi modelli in Azure Machine Learning](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
++ Per informazioni dettagliate e gli aggiornamenti, vedere questo annuncio: [interessanti nuovi modelli in Azure Machine Learning](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 + Per il download e le istruzioni di installazione, vedere [illustrato come utilizzare i modelli](#bkmk_HowTo).
 
 ## <a name="fraud-detection"></a>Rilevamento di frodi
 
-[Modello di rilevamento di frodi in linea (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
+[Modello di rilevamento di frodi online (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
-**Novità:** la possibilità di rilevare le transazioni illecite è importante per le aziende online. Per ridurre le perdite di addebito, le aziende devono identificare rapidamente le transazioni effettuate utilizzando strumenti di pagamento rubato o le credenziali. Quando vengono rilevate transazioni illecite, le aziende in genere adottano misure per bloccare immediatamente determinati conti, al fine di evitare ulteriori perdite. In questo scenario, si imparare a utilizzare dati da transazioni di acquisto in linea per identificare le frodi probabile.
+**Che cosa:** la capacità di rilevare le transazioni illecite è importante per le aziende online. Per ridurre le perdite di addebito, le aziende devono identificare rapidamente le transazioni effettuate utilizzando strumenti di pagamento rubato o le credenziali. Quando vengono rilevate transazioni illecite, le aziende in genere adottano misure per bloccare immediatamente determinati conti, al fine di evitare ulteriori perdite. In questo scenario, si imparare a utilizzare dati da transazioni di acquisto in linea per identificare le frodi probabile.
 
 **Procedura:** rilevazione delle frodi viene risolto come un problema di classificazione binaria. La metodologia usata in questo modello può essere facilmente applicata al rilevamento di frodi in altri domini.
 
@@ -52,15 +41,15 @@ Ogni soluzione include dati di esempio, il codice R o codice Python e le stored 
 
 [Prevedere come e quando contattare lead](https://microsoft.github.io/r-server-campaign-optimization/)
 
-**Novità:** questa soluzione Usa dati settore assicurazione per stimare i lead in base a dati demografici, i dati cronologici di risposta e dettagli specifici del prodotto.  Indicazioni vengono generate anche per indicare la migliore canale e l'ora agli utenti di approccio per influenzare il comportamento di acquisto.
+**Che cosa:** questa soluzione Usa dati assicurazione del settore per stimare lead basate su dati demografici, i dati di risposta cronologico e dettagli specifici del prodotto.  Indicazioni vengono generate anche per indicare la migliore canale e l'ora agli utenti di approccio per influenzare il comportamento di acquisto.
 
-**Procedura:** la soluzione creata e confronta più modelli. La soluzione illustra inoltre l'integrazione automatica dei dati e la preparazione dei dati tramite le stored procedure. Esempi di parallela vengono forniti per SQL Server in-database, in Azure e HDInsight Spark. 
+**Procedura:** crea e confronta più modelli della soluzione. La soluzione illustra inoltre l'integrazione automatica dei dati e la preparazione dei dati tramite le stored procedure. Esempi di parallela vengono forniti per SQL Server in-database, in Azure e HDInsight Spark. 
 
 ## <a name="health-care-predict-length-of-stay-in-hospital"></a>Sanità: stimare durata della permanenza in ospedale 
 
-[Durata della permanenza in ospedale un numero di stima](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
+[Stima di durata di viene](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
 
-**Novità:** prevedere con precisione quali pazienti potrebbero richiedere ricovero a lungo termine è una parte importante di attenzione e pianificazione. Gli amministratori devono essere in grado di determinare quali strutture richiedono ulteriori risorse e operatori sanitari desidera garantire che soddisfino le esigenze di pazienti.
+**Che cosa:** stimare in modo accurato quali pazienti potrebbero richiedere ricovero a lungo termine è una parte importante di attenzione e pianificazione. Gli amministratori devono essere in grado di determinare quali strutture richiedono ulteriori risorse e operatori sanitari desidera garantire che soddisfino le esigenze di pazienti.
 
 **Procedura:** questa soluzione Usa la macchina virtuale di analisi scientifica dei dati e include un'istanza di SQL Server con machine learning abilitato. Include inoltre un set di report di Power BI che è possibile utilizzare per interagire con un modello distribuito.
 
@@ -68,7 +57,7 @@ Ogni soluzione include dati di esempio, il codice R o codice Python e le stored 
 
 [Modello di stima della varianza del cliente (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
 
-**Novità:** analisi e stima della varianza del cliente è importante ogni settore in cui deve essere gestita e ha impedita la perdita di clienti alla concorrenza: banking, telecomunicazioni e delle vendite al dettaglio, solo per citarne alcune. L'obiettivo dell'analisi dell'abbandono dei clienti è l'identificazione dei clienti con alta probabilità di abbandono e l'adozione di misure appropriate per mantenere tali clienti e la loro attività.
+**Che cosa:** analisi e stima della varianza del cliente è importante in ogni settore in cui deve essere gestita e ha impedita la perdita di clienti da concorrenti: banking, telecomunicazioni e delle vendite al dettaglio, solo per citarne alcune. L'obiettivo dell'analisi dell'abbandono dei clienti è l'identificazione dei clienti con alta probabilità di abbandono e l'adozione di misure appropriate per mantenere tali clienti e la loro attività.
 
 **Procedura:** questo modello formula il problema di varianza come un **classificazione binaria** problema. Mediante dati di esempio provenienti da due origini (dati demografici e transazioni dei clienti), il modello indica se la probabilità di abbandono dei singoli clienti è alta o bassa.
   
@@ -76,11 +65,11 @@ Ogni soluzione include dati di esempio, il codice R o codice Python e le stored 
 
 [Modello di manutenzione predittiva (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
 
-**Novità:** manutenzione predittiva ha lo scopo di aumentare l'efficienza delle attività di manutenzione acquisendo precedenti errori e utilizzo di tali informazioni per stimare quando o in un dispositivo potrebbe non riuscire. La possibilità di previsione obsolescenza dei dispositivi è particolarmente importante per le applicazioni che si basano sui dati distribuiti o sensori. Questo metodo può anche essere applicato per monitorare o stimare errori nei dispositivi IoT (Internet of Things).
+**Che cosa:** manutenzione predittiva ha lo scopo di aumentare l'efficienza delle attività di manutenzione acquisendo precedenti errori e utilizzo di tali informazioni per stimare quando o in un dispositivo potrebbe non riuscire. La possibilità di previsione obsolescenza dei dispositivi è particolarmente importante per le applicazioni che si basano sui dati distribuiti o sensori. Questo metodo può anche essere applicato per monitorare o stimare errori nei dispositivi IoT (Internet of Things).
 
 Questo annuncio per altre informazioni: [nuovo modello di manutenzione predittiva](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
-**Procedura:** questa soluzione è incentrata sulla risposta alla domanda "Quando una macchina in circolazione riuscirà?" I dati di input rappresentano misurazioni simulate di sensori per motori di aerei. Dati ottenuti dal monitoraggio corrente operazione condizioni del modulo, ad esempio il ciclo di lavoro corrente, impostazioni e le misurazioni sensore, vengono utilizzati per creare tre tipi di modelli predittivi:
+**Procedura:** questa soluzione è incentrata sulla rispondere alla domanda "Quando una macchina in circolazione riuscirà?" I dati di input rappresentano misurazioni simulate di sensori per motori di aerei. Dati ottenuti dal monitoraggio corrente operazione condizioni del modulo, ad esempio il ciclo di lavoro corrente, impostazioni e le misurazioni sensore, vengono utilizzati per creare tre tipi di modelli predittivi:
 
 -   **Modelli di regressione**per stimare quanto un motore può continuare a funzionare prima di bloccarsi. Il modello di esempio consente di stimare la metrica "Rimanenti vita utile" (RUL), denominato anche "Per errore di runtime" (TTF).
   
@@ -92,11 +81,11 @@ Questo annuncio per altre informazioni: [nuovo modello di manutenzione predittiv
 
 ## <a name="energy-demand-forecasting"></a>Previsione della domanda di energia
 
-[Richiesta di energia previsione modello con SQL Server R Services](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
+[Domanda di energia previsione modello con SQL Server R Services](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
 
-**Novità:**: Demand forecasting è un problema importante in vari domini inclusi energia, vendita al dettaglio e servizi. Previsione accurata richiesta aiuta le aziende condurre produzione migliori la pianificazione, l'allocazione delle risorse e altre decisioni aziendali più importanti. Nel settore dell'energia, è fondamentale per ridurre il costo di archiviazione di energia e bilanciamento del carico di domanda e offerta richiesta previsione.
+**Che cosa:**: Demand forecasting è un problema importante in vari domini inclusi energia, delle vendite al dettaglio e servizi. Previsione accurata richiesta aiuta le aziende condurre produzione migliori la pianificazione, l'allocazione delle risorse e altre decisioni aziendali più importanti. Nel settore dell'energia, è fondamentale per ridurre il costo di archiviazione di energia e bilanciamento del carico di domanda e offerta richiesta previsione.
 
-**Procedura:** questo modello viene utilizzato SQL Server R Services per stimare una domanda di energia elettrica. Il modello utilizzato per la stima è un modello di regressione di foresta casuale basato su **rxDForest**, un'ad alte prestazioni algoritmo di machine learning inclusa in Microsoft R Server. La soluzione include un simulatore di domanda, tutto il codice R e T-SQL necessario per il training del modello e le stored procedure da usare per generare le previsioni e includerle in report. 
+**Procedura:** questo modello utilizza SQL Server R Services per stimare domanda di energia elettrica. Il modello utilizzato per la stima è un modello di regressione di foresta casuale basato su **rxDForest**, un'ad alte prestazioni algoritmo di machine learning inclusa in Microsoft R Server. La soluzione include un simulatore di domanda, tutto il codice R e T-SQL necessario per il training del modello e le stored procedure da usare per generare le previsioni e includerle in report. 
 
 
 ## <a name="bkmk_HowTo"></a>Come utilizzare i modelli

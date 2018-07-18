@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLForeignKeys | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLForeignKeys
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLForeignKeys
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLForeignKeys
-helpviewer_keywords: SQLForeignKeys function [ODBC]
+f1_keywords:
+- SQLForeignKeys
+helpviewer_keywords:
+- SQLForeignKeys function [ODBC]
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ba8f395a556d976f2698ce9646db2e830e7a69aa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c5e90ce8d272b7345a9cd6f450df6293c63d4151
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlforeignkeys-function"></a>Funzione SQLForeignKeys
 **Conformità**  
@@ -66,7 +67,7 @@ SQLRETURN SQLForeignKeys(
  [Input] Handle di istruzione.  
   
  *PKCatalogName*  
- [Input] Nome del catalogo tabella chiave primaria. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *PKCatalogName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome del catalogo tabella chiave primaria. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *PKCatalogName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *PKCatalogName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *PKCatalogName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa. Per ulteriori informazioni, vedere [argomenti delle funzioni di catalogo in](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
@@ -74,7 +75,7 @@ SQLRETURN SQLForeignKeys(
  [Input] Lunghezza di **PKCatalogName*, in caratteri.  
   
  *PKSchemaName*  
- [Input] Nome dello schema di tabella della chiave primaria. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *PKSchemaName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome dello schema di tabella della chiave primaria. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *PKSchemaName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *PKSchemaName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *PKSchemaName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -82,7 +83,7 @@ SQLRETURN SQLForeignKeys(
  [Input] Lunghezza di **PKSchemaName*, in caratteri.  
   
  *PKTableName*  
- [Input] Nome della tabella chiave primaria. *PKTableName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome della tabella chiave primaria. *PKTableName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *PKTableName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *PKTableName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -90,7 +91,7 @@ SQLRETURN SQLForeignKeys(
  [Input] Lunghezza di **PKTableName*, in caratteri.  
   
  *FKCatalogName*  
- [Input] Nome del catalogo tabella chiave esterna. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *FKCatalogName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome del catalogo tabella chiave esterna. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *FKCatalogName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *FKCatalogName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *FKCatalogName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -98,7 +99,7 @@ SQLRETURN SQLForeignKeys(
  [Input] Lunghezza di **FKCatalogName*, in caratteri.  
   
  *FKSchemaName*  
- [Input] Nome dello schema di tabella della chiave esterna. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *FKSchemaName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome dello schema di tabella della chiave esterna. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *FKSchemaName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *FKSchemaName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *FKSchemaName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -106,7 +107,7 @@ SQLRETURN SQLForeignKeys(
  [Input] Lunghezza di **FKSchemaName*, in caratteri.  
   
  *FKTableName*  
- [Input] Nome della tabella chiave esterna. *FKTableName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome della tabella chiave esterna. *FKTableName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *FKTableName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *FKTableName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -159,7 +160,7 @@ SQLRETURN SQLForeignKeys(
   
  La lunghezza delle colonne VARCHAR non viene visualizzata nella tabella. le lunghezze effettivi variano a seconda dell'origine dati. Per determinare la lunghezza effettiva del PKTABLE_CAT o FKTABLE_CAT, PKTABLE_SCHEM o FKTABLE_SCHEM, colonne PKTABLE_NAME o FKTABLE_NAME e PKCOLUMN_NAME o FKCOLUMN_NAME, un'applicazione può chiamare **SQLGetInfo** con il SQL_MAX_ Opzioni CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_TABLE_NAME_LEN e SQL_MAX_COLUMN_NAME_LEN.  
   
- Le colonne seguenti sono state rinominate per ODBC 3*. x.* Le modifiche ai nomi di colonna non influiscono sulla compatibilità con le versioni precedenti poiché nelle applicazioni associati dal numero di colonna.  
+ Le colonne seguenti sono state rinominate per ODBC 3 *. x.* Le modifiche ai nomi di colonna non influiscono sulla compatibilità con le versioni precedenti poiché nelle applicazioni associati dal numero di colonna.  
   
 |Colonna ODBC 2.0|ODBC 3*x* colonna|  
 |---------------------|-----------------------|  

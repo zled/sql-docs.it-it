@@ -1,32 +1,29 @@
 ---
-title: "Ottimizzare l'esempio di proprietà (VC + +) | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Ottimizzare l'esempio di proprietà (VC + +) | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 927448414395ded11b0896b0f0e692ef05c13ce1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dd78e57693ccd87cd04bb389a119f7a274d2b1e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimize-property-example-vc"></a>Ottimizzare l'esempio di proprietà (VC + +)
 Questo esempio viene illustrato il [campo](../../../ado/reference/ado-api/field-object.md) oggetto dinamico **Ottimizza** proprietà. Il **zip** campo il **autori** tabella il **Pubs** database non è indicizzato. Impostazione di [Ottimizza](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) proprietà **True** sul **zip** campo autorizza ADO a creare un indice che migliora le prestazioni del [trovare](../../../ado/reference/ado-api/find-method-ado.md)metodo.  

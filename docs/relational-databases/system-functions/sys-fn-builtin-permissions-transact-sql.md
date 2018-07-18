@@ -1,16 +1,14 @@
 ---
 title: sys.fn_builtin_permissions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_builtin_permissions
@@ -29,21 +27,21 @@ helpviewer_keywords:
 - displaying permission hierarchy
 - sys.fn_builtin_permissions function
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
-caps.latest.revision: 
+caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 41e53169a20ff3082afc0e4b8f10ab76e79ca87d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ff815d345d1cddc58ca484351c71baf8df40fcc8
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una descrizione della gerarchia delle autorizzazioni predefinite del server. `sys.fn_builtin_permissions`può essere chiamato solo su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], e restituisce tutte le autorizzazioni, indipendentemente dal fatto sono supportati sulla piattaforma corrente. La maggior parte delle autorizzazioni si applica a tutte le piattaforme, mentre alcune non si applicano a tutte le piattaforme. Ad esempio non è possibile concedere autorizzazioni a livello di server SQL Database. Per informazioni su quali piattaforme supportano ogni autorizzazione, vedere [autorizzazioni &#40; motore di Database &#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Restituisce una descrizione della gerarchia delle autorizzazioni predefinite del server. `sys.fn_builtin_permissions` può essere chiamato solo su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], e restituisce tutte le autorizzazioni, indipendentemente dal fatto sono supportati sulla piattaforma corrente. La maggior parte delle autorizzazioni si applica a tutte le piattaforme, mentre alcune non si applicano a tutte le piattaforme. Ad esempio non è possibile concedere autorizzazioni a livello di server SQL Database. Per informazioni su quali piattaforme supportano ogni autorizzazione, vedere [autorizzazioni &#40;motore di Database&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +71,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  Equivale a DEFAULT.  
   
- **'**<securable_class>**'**  
+ **'**< securable_class >**'**  
  Quando viene chiamato con il nome di una classe di entità a protezione diretta, sys. fn_builtin_permissions restituirà tutte le autorizzazioni valide per la classe. < securable_class > è un valore letterale stringa che richiede le virgolette. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>Tabelle restituite  
@@ -82,7 +80,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|Regole di confronto del server|Descrizione della classe a protezione diretta.|  
 |permission_name|**nvarchar(60)**|Regole di confronto del server|Nome dell'autorizzazione.|  
-|tipo|**varchar(4)**|Regole di confronto del server|Codice abbreviato del tipo di autorizzazione. Vedere la tabella seguente.|  
+|Tipo|**varchar(4)**|Regole di confronto del server|Codice abbreviato del tipo di autorizzazione. Vedere la tabella seguente.|  
 |covering_permission_name|**nvarchar(60)**|Regole di confronto del server|Se non è NULL, corrisponde al nome dell'autorizzazione per la classe specifica, che implica altre autorizzazioni per tale classe.|  
 |parent_class_desc|**nvarchar(60)**|Regole di confronto del server|Se non è NULL, corrisponde al nome della classe padre contenente la classe corrente.|  
 |parent_covering_permission_name|**nvarchar(60)**|Regole di confronto del server|Se non è NULL, corrisponde al nome dell'autorizzazione per la classe padre specifica, che implica tutte le altre autorizzazioni per tale classe.|  
@@ -335,13 +333,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
  `sys.fn_builtin_permissions` restituirà un set vuoto se viene chiamata con un nome di classe non valido.  
  
-La figura seguente illustra le autorizzazioni e le relative relazioni. Alcune delle autorizzazioni di livello superiore (ad esempio `CONTROL SERVER`) sono elencate più volte.   
- 
-![Autorizzazioni del motore di database](../../relational-databases/security/media/database-engine-permissions.PNG) 
-
->[!NOTE]
-> Come parte di questo argomento il poster è molto piccolo e non può essere consultato. Scaricare il poster relativo alle autorizzazioni del motore di database da [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
-   
+[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  

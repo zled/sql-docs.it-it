@@ -1,23 +1,23 @@
 ---
 title: Eseguire un pacchetto SSIS con Transact-SQL (Visual Studio Code) | Microsoft Docs
-ms.date: 09/25/2017
-ms.topic: article
-ms.prod: sql-non-specified
+ms.date: 05/21/2018
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c962285d10ca05434deafc9cf1d071a09f8cca65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 33c48b9438d141fac721d246ff2218cb0ccde542
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455154"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Eseguire un pacchetto SSIS da Visual Studio Code con Transact-SQL
 Questa guida introduttiva illustra come usare Visual Studio Code per connettersi al database del catalogo SSIS e quindi usare istruzioni Transact-SQL per eseguire un pacchetto SSIS archiviato nel catalogo SSIS.
@@ -30,6 +30,16 @@ Prima di iniziare, assicurarsi di aver installato la versione più recente di Vi
 -   [Scaricare il codice per Visual Studio](https://code.visualstudio.com/Download)
 -   [Estensione mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
+## <a name="supported-platforms"></a>Piattaforme supportate
+
+È possibile usare le informazioni di questa guida introduttiva per eseguire un pacchetto SSIS nelle piattaforme seguenti:
+
+-   SQL Server in Windows.
+
+-   Database SQL di Azure. Per altre informazioni sulla distribuzione e l'esecuzione di pacchetti in Azure, vedere [Spostare i carichi di lavoro di SQL Server Integration Services nel cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Non è possibile usare le informazioni di questa guida introduttiva per eseguire un pacchetto SSIS in Linux. Per altre informazioni sull'esecuzione di pacchetti in Linux, vedere [Estrarre, trasformare e caricare i dati in Linux con SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Impostare la modalità di linguaggio su SQL in Visual Studio Code
 
 Per abilitare i comandi `mssql` e Transact-SQL IntelliSense, la modalità di linguaggio è impostata su **SQL** in Visual Studio Code.
@@ -39,6 +49,15 @@ Per abilitare i comandi `mssql` e Transact-SQL IntelliSense, la modalità di lin
 2. Fare clic su **Testo normale** nell'angolo inferiore destro della barra di stato.
 
 3. Nel menu a discesa **Seleziona modalità linguaggio** visualizzato selezionare o immettere **SQL** e quindi premere **INVIO** per impostare la modalità del linguaggio su SQL. 
+
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Ottenere le informazioni di connessione per il database SQL di Azure
+
+Per eseguire il pacchetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
+
+1. Accedere al [portale di Azure](https://portal.azure.com/).
+2. Selezionare **Database SQL** nel menu a sinistra, quindi selezionare il database SSISDB nella pagina dei **database SQL**. 
+3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
+4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>Connettersi al database del catalogo SSIS
 
@@ -59,9 +78,9 @@ Usare SQL Visual Studio Code per stabilire una connessione al catalogo SSIS.
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome server** | Nome completo del server | Se si sta eseguendo la connessione a un server di database SQL di Azure, il nome è nel formato `<server_name>.database.windows.net`. |
    | **Nome database** | **SSISDB** | Il nome del database a cui si effettua la connessione. |
-   | **Autenticazione** | Account di accesso SQL| In questa guida rapida viene usata l'autenticazione SQL. |
-   | **User name** | Account amministratore del server | Si tratta dell'account specificato al momento della creazione del server. |
-   | **Password (account di accesso SQL)** | Password per l'account amministratore del server | Si tratta della password specificata al momento della creazione del server. |
+   | **Autenticazione** | Account di accesso SQL | Con l'autenticazione di SQL Server è possibile connettersi a SQL Server o al database SQL di Azure. Se ci si connette a un server di database SQL di Azure, non è possibile usare l'autenticazione di Windows. |
+   | **User name** | Account amministratore del server | Account specificato al momento della creazione del server. |
+   | **Password (account di accesso SQL)** | Password per l'account amministratore del server | Password specificata al momento della creazione del server. |
    | **Salvare la password?** | Sì o No | Se non si vuole immettere la password ogni volta, selezionare Sì. |
    | **Immettere un nome per questo profilo** | Un nome di profilo, ad esempio **mySSISServer** | Se si salva un nome di profilo, gli accessi successivi saranno più rapidi. | 
 

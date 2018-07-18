@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLStatistics | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLStatistics
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLStatistics
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLStatistics
-helpviewer_keywords: SQLStatistics function [ODBC]
+f1_keywords:
+- SQLStatistics
+helpviewer_keywords:
+- SQLStatistics function [ODBC]
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c1e66748edcc81f87c261d6958a766f5b651c31a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b5d7396e972d2c43798ca6a993c96355595e5e9c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstatistics-function"></a>Funzione SQLStatistics
 **Conformità**  
@@ -56,7 +57,7 @@ SQLRETURN SQLStatistics(
  [Input] Handle di istruzione.  
   
  *CatalogName*  
- [Input] Nome del catalogo. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *CatalogName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome del catalogo. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *CatalogName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *CatalogName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *CatalogName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa. Per ulteriori informazioni, vedere [argomenti delle funzioni di catalogo in](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
@@ -64,7 +65,7 @@ SQLRETURN SQLStatistics(
  [Input] Lunghezza in caratteri del **CatalogName*.  
   
  *NomeSchema*  
- [Input] Nome dello schema. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *NomeSchema* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome dello schema. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *NomeSchema* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *SchemaName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -72,7 +73,7 @@ SQLRETURN SQLStatistics(
  [Input] Lunghezza in caratteri del **SchemaName*.  
   
  *TableName*  
- [Input] Nome della tabella. Questo argomento non può essere un puntatore null. *NomeSchema* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome della tabella. Questo argomento non può essere un puntatore null. *NomeSchema* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *TableName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *TableName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -82,7 +83,7 @@ SQLRETURN SQLStatistics(
  *Univoco*  
  [Input] Tipo di indice: SQL_INDEX_UNIQUE o SQL_INDEX_ALL.  
   
- *Reserved*  
+ *Riservato*  
  [Input] Indica l'importanza delle colonne della CARDINALITÀ e le pagine nel set di risultati. Le opzioni seguenti interessano la restituzione delle pagine e CARDINALITÀ colonne di sola lettura. informazioni sugli indici viene restituite anche se la CARDINALITÀ e le pagine non vengono restituite.  
   
  SQL_ENSURE richiede che il driver in modo incondizionato a recuperare le statistiche. (Driver conformi solo allo standard Open Group e non sono supportate estensioni ODBC non sarà in grado di supportare SQL_ENSURE.)  
@@ -120,7 +121,7 @@ SQLRETURN SQLStatistics(
 |IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente dell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato per l'handle per eseguire la post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLStatistics** restituisce informazioni su una singola tabella come set di risultati standard, ordinati in base al tipo, NON_UNIQUE, INDEX_QUALIFIER, INDEX_NAME e ORDINAL_POSITION. Il set di risultati combina le informazioni statistiche (in colonne CARDINALITÀ e le pagine del set di risultati) per la tabella con le informazioni su ogni indice. Per informazioni sulla modalità di utilizzo queste informazioni, vedere [utilizza dei dati del catalogo](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
+ **SQLStatistics** restituisce informazioni su una singola tabella come set di risultati standard, ordinati in base NON_UNIQUE, tipo, INDEX_QUALIFIER, INDEX_NAME e ORDINAL_POSITION. Il set di risultati combina le informazioni statistiche (in colonne CARDINALITÀ e le pagine del set di risultati) per la tabella con le informazioni su ogni indice. Per informazioni sulla modalità di utilizzo queste informazioni, vedere [utilizza dei dati del catalogo](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
   
  Per determinare la lunghezza effettiva delle colonne TABLE_CAT, TABLE_SCHEM, TABLE_NAME e COLUMN_NAME, un'applicazione può chiamare **SQLGetInfo** con SQL_MAX_CATALOG_NAME_LEN SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_TABLE_NAME_LEN, e le opzioni di SQL_MAX_COLUMN_NAME_LEN.  
   
@@ -150,8 +151,8 @@ SQLRETURN SQLStatistics(
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|Numero di sequenza di colonne nell'indice (a partire da 1); Se il tipo è SQL_TABLE_STAT, viene restituito NULL.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|Nome colonna. Se la colonna è basata su un'espressione, ad esempio stipendio + vantaggi, verrà restituito l'espressione. Se l'espressione non può essere determinato, viene restituita una stringa vuota. Se il tipo è SQL_TABLE_STAT, viene restituito NULL.|  
 |ASC_OR_DESC (ODBC 1.0)|10|Char (1)|Sequenza per la colonna di ordinamento: "A" per ordine crescente; "D" per l'ordinamento decrescente; Se la sequenza di ordinamento colonne non è supportata dall'origine dati o se il tipo è SQL_TABLE_STAT, viene restituito NULL.|  
-|CARDINALITÀ (ODBC 1.0)|11|Valore intero|Cardinalità della tabella o indice. numero di righe nella tabella se il tipo è SQL_TABLE_STAT; numero di valori univoci nell'indice se il tipo non è SQL_TABLE_STAT; Se il valore non è disponibile dall'origine dati, viene restituito NULL.|  
-|PAGINE (ODBC 1.0)|12|Valore intero|Numero di pagine utilizzate per archiviare l'indice o tabella. numero di pagine per la tabella, se il tipo è SQL_TABLE_STAT; numero di pagine per l'indice se il tipo non è SQL_TABLE_STAT; Se il valore non è disponibile dall'origine dati o se non è applicabile all'origine dati, viene restituito NULL.|  
+|CARDINALITÀ (ODBC 1.0)|11|Integer|Cardinalità della tabella o indice. numero di righe nella tabella se il tipo è SQL_TABLE_STAT; numero di valori univoci nell'indice se il tipo non è SQL_TABLE_STAT; Se il valore non è disponibile dall'origine dati, viene restituito NULL.|  
+|PAGINE (ODBC 1.0)|12|Integer|Numero di pagine utilizzate per archiviare l'indice o tabella. numero di pagine per la tabella, se il tipo è SQL_TABLE_STAT; numero di pagine per l'indice se il tipo non è SQL_TABLE_STAT; Se il valore non è disponibile dall'origine dati o se non è applicabile all'origine dati, viene restituito NULL.|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|Se l'indice è un indice filtrato, si tratta della condizione di filtro, ad esempio stipendio > 30000; Se non è possibile determinare la condizione di filtro, questa è una stringa vuota.<br /><br /> NULL se l'indice non è un indice filtrato, non è possibile determinare se l'indice è un indice filtrato o il tipo è SQL_TABLE_STAT.|  
   
  Se la riga nel set di risultati corrisponde a una tabella, il driver Imposta tipo SQL_TABLE_STAT e imposta NON_UNIQUE, INDEX_QUALIFIER, INDEX_NAME, ORDINAL_POSITION, COLUMN_NAME e ASC_OR_DESC su NULL. Se la CARDINALITÀ o le pagine non sono disponibili dall'origine dati, il driver imposta su NULL.  

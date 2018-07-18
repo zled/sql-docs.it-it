@@ -1,16 +1,14 @@
 ---
 title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 20
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1bab9267495b6e5f41507bf058f84ca571f9728e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: de1709f83d00cf8afae0e6bedde156f3d9458889
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce un token che rappresenta il contesto di transazione corrente di una sessione. Il token viene utilizzato da un'applicazione per associare le operazioni di flusso di file system FILESTREAM alla transazione. Per un elenco di argomenti FILESTREAM, vedere [Binary Large Object &#40; BLOB &#41; Dati &#40; SQL Server &#41; ](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  Restituisce un token che rappresenta il contesto di transazione corrente di una sessione. Il token viene utilizzato da un'applicazione per associare le operazioni di flusso di file system FILESTREAM alla transazione. Per un elenco di argomenti correlati a FILESTREAM, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +48,13 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>Valore restituito  
  Se la transazione non è stata avviata o se è stata annullata oppure se ne è stato eseguito il commit, viene restituito Null.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La transazione deve essere esplicita. Utilizzare BEGIN TRANSACTION seguita da COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
   
  Quando si chiama GET_FILESTREAM_TRANSACTION_CONTEXT, al chiamante viene concesso l'accesso al file system relativo alla transazione per la durata della transazione stessa. Per consentire a un altro utente di accedere alla transazione tramite il file system, utilizzare EXECUTE AS per eseguire GET_FILESTREAM_TRANSACTION_CONTEXT come un altro utente.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `GET_FILESTREAM_TRANSACTION_CONTEXT` in un [!INCLUDE[tsql](../../includes/tsql-md.md)] transaction per ottenere il contesto di transazione.  
+ Nell'esempio seguente viene usato `GET_FILESTREAM_TRANSACTION_CONTEXT` in una transazione [!INCLUDE[tsql](../../includes/tsql-md.md)] per ottenerne il contesto.  
   
 ```csharp  
 using System;  

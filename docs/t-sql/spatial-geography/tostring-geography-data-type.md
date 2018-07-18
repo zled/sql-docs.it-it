@@ -1,16 +1,14 @@
 ---
-title: ToString (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: ToString (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ToString (geography Data Type)
@@ -19,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - ToString method
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcec246b4358b3d8b59467975bb836ea226463ab
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b739df985e4f8eb5378bb8abc830ac40ba9e1c84
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tostring-geography-data-type"></a>ToString (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce la rappresentazione di Open Geospatial Consortium (OGC) Well-Known Text (WKT) di un **geography** istanza integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.  
+  Restituisce una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) di un'istanza **geography** integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.  
   
- Metodo supportata dal tipo di dati geography **FullGlobe** istanze o le istanze spaziali con dimensioni maggiori di un emisfero.  
+ Questo metodo con tipo di dati geography supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,17 +42,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **nvarchar (max)**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **nvarchar(max)**  
   
  Tipo CLR restituito: **SqlString**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce la stringa "Null" se viene chiamato su istanze Null. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il set di risultati possibili nel server è stato esteso per **FullGlobe** istanze. Questo metodo restituirà lo stesso valore di `AsTextZM()`.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce la stringa "Null" se viene chiamato su istanze Null. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il set di possibili risultati nel server è stato esteso alle istanze **FullGlobe**. Questo metodo restituirà lo stesso valore di `AsTextZM()`.  
   
  Il metodo non è preciso.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata una `LineString` istanza e viene utilizzato `ToString()` per restituire la descrizione di testo dell'istanza.  
+ Nell'esempio seguente viene creata un'istanza `LineString` e viene usato `ToString()` per restituire la descrizione di testo dell'istanza.  
   
 ```  
 DECLARE @g geography;  

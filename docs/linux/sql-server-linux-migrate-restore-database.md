@@ -6,20 +6,17 @@ ms.author: mikeray
 manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.workload: On Demand
-ms.openlocfilehash: f68f5aae50460dc1e39a24ac1213ac477c96d552
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 559ae24a819cfff1172d1829ef3ca5e679a40122
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Eseguire la migrazione di un database di SQL Server da Windows per Linux tramite backup e ripristino
 
@@ -84,7 +81,7 @@ Per ripristinare il database, è necessario trasferire il file di backup da comp
 1. Installare una shell Bash nel computer Windows che supporta il **scp** (protetto copia) e **ssh** comandi (account di accesso remoto). Due esempi:
 
    * Il [sottosistema Windows per Linux](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
-   * La Shell Git Bash ([https://git-scm.com/downloads](https://git-scm.com/downloads))
+   * La Shell di Git Bash ([https://git-scm.com/downloads](https://git-scm.com/downloads))
 
 1. Aprire una sessione Bash in Windows.
 

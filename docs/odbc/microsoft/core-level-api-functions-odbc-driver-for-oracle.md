@@ -1,32 +1,29 @@
 ---
 title: Funzioni API di livello, il Driver ODBC per Oracle, di base | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], functions
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 118ea5f86f89e73eadd5c0bef79770b438d53f9b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 4135e192a2a97944ff455c72c76c136faaac4652
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Funzioni API di livello principale (Driver ODBC per Oracle)
 > [!IMPORTANT]  
@@ -46,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |**SQLDescribeCol**|Restituisce il nome, tipo, precisione, scala e supporto di valori null della colonna di risultati specificato. **Nota:****SQLDescribeCol** riporta le colonne calcolate come SQL_VARCHAR.|  
 |**SQLDisconnect**|Chiude una connessione. Se il pool di connessioni è abilitato per un ambiente condiviso e un'applicazione chiama **SQLDisconnect** su una connessione in tale ambiente, la connessione viene restituita al pool di connessioni ed è ancora disponibile per altri componenti utilizzando lo stesso ambiente condiviso.|  
 |**SQLError**|Restituisce le informazioni di stato o di errore sull'ultimo errore. Il driver gestisce un stack o un elenco di errori che possono essere restituite per il *hstmt*, *hdbc*, e *henv* argomenti, a seconda di come la chiamata a **SQLError**  viene eseguita. La coda di errore viene svuotata dopo ogni istruzione. In genere recupera un messaggio di errore Oracle e in caso contrario è vuoto.|  
-|**SQLExecDirect**|Esegue un'istruzione SQL nuovo, non preparata. Il driver utilizza i valori correnti delle variabili di marcatore di parametro, se sono presenti parametri nell'istruzione. La tabella, vista o i nomi dei campi contengono spazi, racchiudere i nomi di backup offerta contrassegni. Ad esempio, se il database contiene una tabella denominata *tabella personale* e il campo *My Field*, racchiudere ogni elemento dell'identificatore in questo modo:<br /><br /> Selezionare \`tabella\`. \`My Field1\`, \`Tabella\`.\` My Field2\` FROM \`la tabella '|  
+|**SQLExecDirect**|Esegue un'istruzione SQL nuovo, non preparata. Il driver utilizza i valori correnti delle variabili di marcatore di parametro, se sono presenti parametri nell'istruzione. La tabella, vista o i nomi dei campi contengono spazi, racchiudere i nomi di backup offerta contrassegni. Ad esempio, se il database contiene una tabella denominata *tabella personale* e il campo *My Field*, racchiudere ogni elemento dell'identificatore in questo modo:<br /><br /> Selezionare \`tabella\`. \`My Field1\`, \`Della tabella\`.\` My Field2\` FROM \`la tabella '|  
 |**SQLExecute**|Esegue un'istruzione SQL preparata (un'istruzione già preparata da **SQLPrepare**). Il driver utilizza i valori correnti delle variabili di marcatore di parametro, se sono presenti parametri nell'istruzione.|  
 |**SQLFetch**|Recupera una riga da un set di risultati in percorsi specificati dalle chiamate precedenti alla **SQLBindCol**. Prepara il driver per una chiamata a **SQLGetData** per le colonne non associate.|  
 |**SQLFreeConnect**|Rilascia un handle di connessione e libera tutta la memoria allocata per l'handle.|  

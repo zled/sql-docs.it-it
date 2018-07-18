@@ -1,16 +1,13 @@
 ---
-title: sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm sql_referencing_entities (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_sql_referencing_entities
@@ -22,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: adf5f058b8eb39f4eecfd13d922ba723664a73a0
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,12 +68,12 @@ sys.dm_sql_referencing_entities (
   
  *schema_name* è obbligatoria, tranne quando la classe di riferimento è PARTITION_FUNCTION.  
   
- *schema_name.referenced_entity_name* è **nvarchar (517)**.  
+ *schema_name.referenced_entity_name* viene **nvarchar(517)**.  
   
  *< Referenced_class >* :: = {oggetto | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  Classe dell'entità a cui si fa riferimento. È possibile specificare solo una classe per istruzione.  
   
- *< referenced_class >* è **nvarchar**(60).  
+ *< referenced_class >* viene **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -109,14 +106,14 @@ sys.dm_sql_referencing_entities (
 |-----------------|------------------------|-----------------------|  
 |Tabella|Sì*|Sì|  
 |Visualizza|Sì|Sì|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure * *|Sì|Sì|  
+|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
 |stored procedure CLR|no|Sì|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] funzione definita dall'utente|Sì|Sì|  
+|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
 |Funzione CLR definita dall'utente|no|Sì|  
 |Trigger CLR (DML e DDL)|no|no|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] Trigger DML|Sì|no|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] trigger DDL a livello di database|Sì|no|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] trigger DDL a livello di server|Sì|no|  
+|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|no|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Sì|no|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Sì|no|  
 |Stored procedure estese|no|Sì|  
 |Coda|no|Sì|  
 |Sinonimo|no|Sì|  
@@ -124,7 +121,7 @@ sys.dm_sql_referencing_entities (
 |Raccolta di XML Schema|no|Sì|  
 |Funzione di partizione|no|Sì|  
   
- \*Una tabella viene registrata come un'entità di riferimento solo quando fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
+ \* Una tabella viene registrata come un'entità di riferimento solo quando si fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
   
  ** Le stored procedure numerate con un valore intero maggiore di 1 non vengono registrate come entità di riferimento o a cui viene fatto riferimento.  
   

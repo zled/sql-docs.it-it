@@ -1,29 +1,28 @@
 ---
 title: Funzione SQLCancelHandle | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: SQLCancelHandle
-helpviewer_keywords: SQLCancelHandle function [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- SQLCancelHandle
+helpviewer_keywords:
+- SQLCancelHandle function [ODBC]
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3760400f23b558c27cd70a3ecd288171cbd56534
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 122e4dc49082e3bd6853ebee299e8b37d1a39596
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle (funzione)
 **Conformità**  

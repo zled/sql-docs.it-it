@@ -1,16 +1,14 @@
 ---
-title: Selezionare @local_variable (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SELECT @local_variable (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - variable_TSQL
@@ -27,23 +25,22 @@ helpviewer_keywords:
 - '@local_variable'
 - local variables [SQL Server]
 ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 44fd55346e8a4a27f1d3301d6cb3c6bdf7bdf548
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2e6b368c571c67ba4a65e5caceb680145adb5a53
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="select-localvariable-transact-sql"></a>Selezionare @local_variable (Transact-SQL)
+# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Imposta una variabile locale per il valore di un'espressione.  
+  Imposta una variabile locale sul valore di un'espressione.  
   
- Per l'assegnazione delle variabili, è consigliabile utilizzare [impostare @local_variable ](../../t-sql/language-elements/set-local-variable-transact-sql.md) anziché SELECT @*local_variable*.  
+ Per l'assegnazione delle variabili è consigliabile usare [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) anziché SELECT @*local_variable*.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,23 +61,23 @@ Assegna il valore a destra alla variabile a sinistra.
 Operatore di assegnazione composto:  
   |operatore |action |   
   |-----|-----|  
-  | = | Assegna l'espressione seguente, la variabile. |  
-  | += | Aggiungere e assegnare |   
+  | = | Assegna l'espressione seguente alla variabile |  
+  | += | Aggiunta e assegnazione |   
   | -= | Sottrazione e assegnazione |  
-  | \*= | Moltiplicare e assegnare |  
+  | \*= | Moltiplicazione e assegnazione |  
   | /= | Divisione e assegnazione |  
-  | %= | Modulo e assegnare |  
+  | %= | Modulo e assegnazione |  
   | &= | AND bit per bit e assegnazione |  
-  | ^= | XOR bit per bit e assegnare |  
+  | ^= | XOR bit per bit e assegnazione |  
   | \|= | OR bit per bit e assegnazione |  
   
- *espressione*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md). Include una sottoquery scalare.  
+ *expression*  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida. Include una sottoquery scalare.  
   
-## <a name="remarks"></a>Osservazioni  
- SELECT @*local_variable* viene in genere utilizzata per restituire un singolo valore nella variabile. Tuttavia, quando *espressione* è il nome di una colonna, può restituire più valori. Se l'istruzione SELECT restituisce più valori, alla variabile viene assegnato l'ultimo valore restituito.  
+## <a name="remarks"></a>Remarks  
+ L'istruzione SELECT @*local_variable* viene in genere usata per restituire un valore singolo nella variabile. Se tuttavia *expression* corrisponde al nome di una colonna, è possibile che restituisca più valori. Se l'istruzione SELECT restituisce più valori, alla variabile viene assegnato l'ultimo valore restituito.  
   
- Se l'istruzione SELECT non restituisce righe, la variabile mantiene il valore corrente. Se *espressione* è una sottoquery scalare che restituisce alcun valore, la variabile non viene impostata su NULL.  
+ Se l'istruzione SELECT non restituisce righe, la variabile mantiene il valore corrente. Se *expression* è una sottoquery scalare che non restituisce valori, la variabile viene impostata su NULL.  
   
  Un'istruzione SELECT può inizializzare più variabili locali.  
   
@@ -89,7 +86,7 @@ Operatore di assegnazione composto:
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Utilizzare un'istruzione SELECT @local_variable per restituire un valore singolo  
+### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Usare SELECT @local_variable per restituire un valore singolo  
  Nell'esempio seguente alla variabile `@var1` viene assegnato `Generic Name` come valore. La query eseguita nella tabella `Store` non restituisce righe perché il valore specificato per `CustomerID` non esiste nella tabella. La variabile mantiene il valore `Generic Name`.  
   
 ```sql  
@@ -111,7 +108,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>B. Utilizzare un'istruzione SELECT @local_variable per restituire null  
+### <a name="b-use-select-localvariable-to-return-null"></a>B. Usare SELECT @local_variable per restituire Null  
  Nell'esempio seguente viene utilizzata una sottoquery per assegnare un valore a `@var1`. Poiché il valore richiesto da `CustomerID` non esiste, la sottoquery non restituisce valori e la variabile viene impostata su `NULL`.  
   
 ```sql  
@@ -135,8 +132,8 @@ NULL
   
 ## <a name="see-also"></a>Vedere anche  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operatori composti &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

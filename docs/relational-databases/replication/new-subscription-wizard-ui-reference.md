@@ -1,31 +1,33 @@
 ---
 title: Creazione guidata nuova sottoscrizione (Guida di riferimento all'interfaccia utente) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: New Subscription Wizard
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- New Subscription Wizard
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
-caps.latest.revision: "18"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 18
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3dfa511ecb0302be2417dbffb0c4b794261b4668
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f12efc7be3cec13cbe976f5713b4bc6f3f2cfb1c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Creazione guidata nuova sottoscrizione (Guida di riferimento all'interfaccia utente)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Questa sezione contiene informazioni sulle pagine seguenti della Creazione guidata nuova sottoscrizione:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In questa sezione vengono fornite informazioni sulle pagine seguenti della Creazione guidata nuova sottoscrizione:  
   
 -   [Posizione in cui eseguire l'agente &#60;NomeAgente&#62;](../../relational-databases/replication/agentname-agent-location.md)  
   

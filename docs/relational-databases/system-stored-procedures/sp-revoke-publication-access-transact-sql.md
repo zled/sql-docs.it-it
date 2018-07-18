@@ -1,32 +1,33 @@
 ---
 title: sp_revoke_publication_access (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_revoke_publication_access_TSQL
 - sp_revoke_publication_access
-helpviewer_keywords: sp_revoke_publication_access
+helpviewer_keywords:
+- sp_revoke_publication_access
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b5f65077097b5ad19e1cec0e3a7380731ab1eb70
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3b3dc5b01c23ca0bf504c92845f2083d1f640d5e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sprevokepublicationaccess-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,25 +45,25 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione a cui si desidera accedere. *pubblicazione* è **sysname**, non prevede alcun valore predefinito.  
+ Nome della pubblicazione a cui si desidera accedere. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@login=**] **'***accesso***'**  
- ID di accesso. *account di accesso* è **sysname**, non prevede alcun valore predefinito.  
+ [  **@login=**] **'***account di accesso***'**  
+ ID di accesso. *account di accesso* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_revoke_publication_access** viene utilizzata in repliche snapshot, transazionali e di tipo merge.  
   
  **sp_revoke_publication_access** può essere chiamato più volte.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_revoke_publication_access**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_grant_publication_access &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_help_publication_access &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
+ [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
  [Proteggere il server di pubblicazione](../../relational-databases/replication/security/secure-the-publisher.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

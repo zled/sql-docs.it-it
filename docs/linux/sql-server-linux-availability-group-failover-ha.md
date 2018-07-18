@@ -1,50 +1,51 @@
 ---
-title: "Utilizzare il gruppo di disponibilità SQL Server in Linux | Documenti Microsoft"
-description: 
+title: Gestisci failover del gruppo di disponibilità, SQL Server in Linux | Documenti Microsoft
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 07/20/2017
+ms.date: 03/01/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.assetid: 
-ms.workload: Inactive
-ms.openlocfilehash: 68e41573c107725ef7af12e8b990678f8991bb02
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.technology: linux
+ms.assetid: ''
+ms.openlocfilehash: 26868cfd136f3d06366a47ec7d52fa17e3c8fe39
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
-# <a name="operate-always-on-availability-groups-on-linux"></a>Utilizzare sempre i gruppi di disponibilità su Linux
+# <a name="always-on-availability-group-failover-on-linux"></a>Failover gruppo di disponibilità AlwaysOn su Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-## <a name="failover"></a>Gruppo di disponibilità il failover
+Nel contesto di un gruppo di disponibilità (AG), il ruolo primario e il ruolo secondario delle repliche di disponibilità sono generalmente intercambiabili in un processo noto come failover. Sono disponibili tre tipi di failover: failover automatico (senza perdita di dati), failover manuale pianificato (senza perdita di dati) e failover manuale forzato (con possibile perdita di dati), in genere chiamato *failover forzato*. Failover manuale automatico e pianificato vengono conservati tutti i dati. Un gruppo di disponibilità il failover a livello di replica di disponibilità. Ovvero, un gruppo di disponibilità viene eseguito in una delle relative repliche secondarie (la destinazione del failover corrente). 
+
+Per informazioni generali sul failover, vedere [il Failover e modalità](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
+
+## <a name="failover"></a>failover manuale
 
 Utilizzare gli strumenti di Gestione cluster di failover a un gruppo di disponibilità gestito da un gestore cluster esterno. Ad esempio, se una soluzione Usa Pacemaker per gestire un cluster Linux, usare `pcs` per eseguire il failover manuale su RHEL o Ubuntu. SLES utilizza `crm`. 
 
 > [!IMPORTANT]
-> In condizioni normali, non viene eseguito con gli strumenti di gestione di Transact-SQL o SQL Server come SQL Server Management Studio o PowerShell. Quando `CLUSTER_TYPE = EXTERNAL`, l'unico valore accettabile per `FAILOVER_MODE` è `EXTERNAL`. Con queste impostazioni, tutte le azioni di failover manuale o automatica vengono eseguite dal gestore del cluster esterno. 
+> In condizioni normali, non viene eseguito con gli strumenti di gestione di Transact-SQL o SQL Server come SQL Server Management Studio o PowerShell. Quando `CLUSTER_TYPE = EXTERNAL`, l'unico valore accettabile per `FAILOVER_MODE` è `EXTERNAL`. Con queste impostazioni, tutte le azioni di failover manuale o automatica vengono eseguite dal gestore del cluster esterno. Per istruzioni su come forzare il failover con potenziale perdita di dati, vedere [forzare il failover](#forceFailover).
 
-### <a name="manual-failover-examples"></a>Esempi di failover manuale
+### <a name="a-namemanualfailovermanual-failover-steps"></a><a name="manualFailover">Passaggi del failover manuale
 
-Eseguire manualmente il failover del gruppo di disponibilità con gli strumenti di gestione del cluster esterno. In condizioni normali, non avviare il failover con Transact-SQL. Se gli strumenti di gestione del cluster esterno non risponde, è possibile forzare il gruppo di disponibilità per il failover. Per istruzioni per forzare il failover manuale, vedere [manuale spostare quando gli strumenti di cluster non sono reattivi](#forceManual).
+Per eseguire il failover, la replica secondaria che diventerà la replica primaria deve essere sincrona. Se una replica secondaria è asincrona, [modificare la modalità di disponibilità](../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md).
 
-Completare il failover manuale in due passaggi. 
+Failover manuale in due passaggi.
 
-1. Spostare la risorsa del gruppo di disponibilità dal nodo del cluster che sia proprietario delle risorse in un nuovo nodo.
+   Prima di tutto,[ manualmente il failover spostando risorsa gruppo di disponibilità](#manualMove) dal nodo del cluster che sia proprietario delle risorse in un nuovo nodo.
 
-   Gestione cluster di sposta la risorsa del gruppo di disponibilità e aggiunge un vincolo di percorso. Questo vincolo consente di configurare la risorsa per l'esecuzione del nuovo nodo. Per spostare che una manualmente o automaticamente il failover in futuro, è necessario rimuovere questo vincolo.
+   Il cluster di failover della risorsa del gruppo di disponibilità e aggiunge un vincolo di percorso. Questo vincolo consente di configurare la risorsa per l'esecuzione del nuovo nodo. Per eseguire il failover in futuro, è necessario rimuovere questo vincolo.
 
-2. Rimuovere il vincolo di percorso.
+   In secondo luogo, [rimuovere il vincolo di percorso](#removeLocConstraint).
 
-#### <a name="1-manually-fail-over"></a>1. Il failover manuale
+#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">Passaggio 1. Eseguire manualmente spostando risorsa gruppo di disponibilità
 
 Per eseguire manualmente il failover di una risorsa del gruppo di disponibilità denominata *ag_cluster* al nodo cluster denominato *nodeName2*, eseguire il comando appropriato per la distribuzione:
 
@@ -60,14 +61,12 @@ Per eseguire manualmente il failover di una risorsa del gruppo di disponibilità
    crm resource migrate ag_cluster nodeName2
    ```
 
-
-
 >[!IMPORTANT]
->Dopo aver eseguito manualmente su una risorsa, è necessario rimuovere un vincolo di percorso che viene aggiunto automaticamente durante lo spostamento.
+>Dopo aver eseguito manualmente su una risorsa, è necessario rimuovere un vincolo di percorso che viene aggiunto automaticamente.
 
-#### <a name="2-remove-the-location-constraint"></a>2. Rimuovere il vincolo di posizione
+#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> Passaggio 2. Rimuovere il vincolo di posizione
 
-Durante lo spostamento manuale, il `pcs` comando `move` o `crm` comando `migrate` aggiunge un vincolo di percorso per la risorsa da inserire nel nuovo nodo di destinazione. Per visualizzare il nuovo vincolo, eseguire il comando seguente dopo aver spostato manualmente la risorsa:
+Durante un failover manuale, il `pcs` comando `move` o `crm` comando `migrate` aggiunge un vincolo di percorso per la risorsa da inserire nel nuovo nodo di destinazione. Per visualizzare il nuovo vincolo, eseguire il comando seguente dopo aver spostato manualmente la risorsa:
 
 - **Esempio RHEL/Ubuntu**
 
@@ -81,13 +80,13 @@ Durante lo spostamento manuale, il `pcs` comando `move` o `crm` comando `migrate
    crm config show
    ```
 
-È necessario rimuovere il vincolo di posizione per consentire la corretta esecuzione degli spostamenti futuri, incluso il failover automatico. 
+Rimuovere il vincolo di percorso failover future, incluso il failover automatico, avere esito positivo. 
 
-Per rimuovere il vincolo, eseguire il comando seguente. 
+Per rimuovere il vincolo, eseguire il comando seguente: 
 
 - **Esempio RHEL/Ubuntu**
 
-   In questo esempio `ag_cluster-master` è il nome della risorsa che è stato spostato. 
+   In questo esempio `ag_cluster-master` è il nome della risorsa che è stato eseguito il failover. 
 
    ```bash
    sudo pcs resource clear ag_cluster-master 
@@ -95,7 +94,7 @@ Per rimuovere il vincolo, eseguire il comando seguente.
 
 - **Esempio SLES**
 
-   In questo esempio `ag_cluster` è il nome della risorsa che è stato spostato. 
+   In questo esempio `ag_cluster` è il nome della risorsa che è stato eseguito il failover. 
 
    ```bash
    crm resource clear ag_cluster
@@ -128,167 +127,64 @@ Per ulteriori informazioni:
 - [Pacemaker - spostare manualmente le risorse](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
  [Guida all'amministrazione SLES - risorse](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
+## <a name="forceFailover"></a> Forzare il failover 
 
-### <a name="forceManual"></a> Manuale spostare quando gli strumenti di cluster non risponde 
+Un failover forzato è progettato esclusivamente per il ripristino di emergenza. In questo caso, è possibile eseguire il failover con gli strumenti di gestione di cluster perché il data center principale è inattivo. Se si forza il failover in una replica secondaria non sincronizzata, è possibile che vengano persi alcuni dati. Forzare il failover solo se è necessario ripristinare il servizio per il gruppo di disponibilità immediatamente e sono disposti a rischiare la perdita di dati.
 
-In casi estremi, se un utente non è possibile utilizzare gli strumenti di gestione di cluster per l'interazione con il cluster (ad esempio il cluster non risponde, gli strumenti di gestione di cluster hanno un comportamento non corretto), l'utente potrebbe essere necessario eseguire il failover manualmente, ignorando la gestione del cluster esterno. Questo non è consigliabile per le normali operazioni e deve essere utilizzato in cluster non riesce a eseguire l'azione di failover utilizzando gli strumenti di Gestione cluster di case.
-
-Se è possibile eseguire il failover del gruppo di disponibilità con gli strumenti di gestione di cluster, attenersi alla seguente procedura per eseguire il failover da strumenti di SQL Server:
+Se è possibile utilizzare gli strumenti di gestione di cluster per l'interazione con il cluster, ad esempio, se il cluster è bloccato a causa di un evento di emergenza nel data center principale, è necessario forzare il failover per ignorare la gestione del cluster esterno. Questa procedura non è consigliata per le normali operazioni, perché si rischia di perdita di dati. Utilizzarlo quando gli strumenti di gestione di cluster non riescono a eseguire l'azione di failover. A livello funzionale, questa procedura è simile a [esegue un failover manuale forzato](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) in un gruppo di disponibilità in Windows.
+ 
+Questo processo per il failover forzato è specifico di SQL Server in Linux.
 
 1. Verificare che la risorsa del gruppo di disponibilità non è gestita dal cluster più. 
 
-      - Tentativo di impostare la risorsa in modalità non gestita. Segnala l'agente di risorsa per arrestare il monitoraggio delle risorse e la gestione. Esempio: 
+      - Impostare le risorse in modalità non gestita nel nodo del cluster di destinazione. Questo comando segnala l'agente di risorsa per il monitoraggio delle risorse di arresto e gestione. Esempio: 
       
       ```bash
-      sudo pcs resource unmanage <**resourceName**>
+      sudo pcs resource unmanage <resourceName>
       ```
 
       - Se il tentativo di impostare la modalità di risorsa in modalità non gestita non riesce, eliminare la risorsa. Esempio:
 
       ```bash
-      sudo pcs resource delete <**resourceName**>
+      sudo pcs resource delete <resourceName>
       ```
 
       >[!NOTE]
-      >Quando si elimina una risorsa verranno inoltre eliminati tutti i vincoli associati. 
+      >Quando si elimina una risorsa, verranno inoltre eliminati tutti i vincoli associati. 
 
-1. Impostare manualmente la variabile di contesto di sessione `external_cluster`.
+1. Nell'istanza di SQL Server che ospita la replica secondaria, impostare la variabile di contesto di sessione `external_cluster`.
 
    ```Transact-SQL
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. Failover del gruppo di disponibilità con Transact-SQL. Nell'esempio seguente, sostituire `<**MyAg**>` con il nome del gruppo di disponibilità. Connettersi all'istanza di SQL Server che ospita la replica secondaria di destinazione ed eseguire il comando seguente:
+1. Eseguire il failover del gruppo di disponibilità con Transact-SQL. Nell'esempio seguente, sostituire `<MyAg>` con il nome del gruppo di disponibilità. Connettersi all'istanza di SQL Server che ospita la replica secondaria di destinazione ed eseguire il comando seguente:
 
    ```Transact-SQL
-   ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
+   ALTER AVAILABILITY GROUP <MyAg> FORCE_FAILOVER_ALLOW_DATA_LOSS;
    ```
 
-1. Riavviare Gestione e monitoraggio delle risorse cluster. Eseguire il comando seguente:
+1.  Dopo un failover forzato, portare il gruppo di disponibilità a uno stato integro prima di riavviare la gestione e monitoraggio delle risorse del cluster o ricreare la risorsa del gruppo di disponibilità. Esaminare il [attività essenziali dopo un Failover forzato](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#FollowUp).
+
+1.  Riavviare Gestione e monitoraggio delle risorse cluster:
+
+   Per riavviare la gestione e monitoraggio delle risorse cluster, eseguire il comando seguente:
 
    ```bash
-   sudo pcs resource manage <**resourceName**>
-   sudo pcs resource cleanup <**resourceName**>
+   sudo pcs resource manage <resourceName>
+   sudo pcs resource cleanup <resourceName>
    ```
+
+   Se è stata eliminata la risorsa cluster, è necessario ricrearlo. Per ricreare la risorsa cluster, seguire le istruzioni in [Crea risorsa gruppo di disponibilità](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).
+
+>[!Important]
+>Non utilizzare i passaggi precedenti per l'analisi di ripristino di emergenza in quanto è il rischio di perdita di dati. Invece di modificare la replica asincrona sincrono e le istruzioni per [normale failover manuale](#manualFailover).
 
 ## <a name="database-level-monitoring-and-failover-trigger"></a>Trigger di monitoraggio e failover di livello database
 
-Per `CLUSTER_TYPE=EXTERNAL`, la semantica di trigger di failover è diversa rispetto a WSFC. Quando il gruppo di disponibilità in un'istanza di SQL Server in un cluster WSFC, la transizione da `ONLINE` stato per il database fa sì che l'integrità del gruppo di disponibilità segnalare un errore. Questo segnalerà la gestione di cluster per attivare un'azione di failover. In Linux, l'istanza di SQL Server non può comunicare con il cluster. Monitoraggio per l'integrità del database viene eseguito "esterno in". Se utente scelto per il monitoraggio del failover di livello database e il failover (impostando l'opzione `DB_FAILOVER=ON` quando si crea il gruppo di disponibilità), il cluster viene verificato se lo stato del database `ONLINE` ogni volta che al momento dell'esecuzione di un'azione di monitoraggio. Il cluster esegue query sullo stato in `sys.databases`. Per qualsiasi stato diverso da quello `ONLINE`, attiverà un failover automaticamente (se vengono soddisfatte le condizioni di failover automatico). Il tempo effettivo del failover dipende dalla frequenza dell'azione di monitoraggio, nonché lo stato del database viene aggiornato in sys. Databases.
+Per `CLUSTER_TYPE=EXTERNAL`, la semantica di trigger di failover è diversa rispetto a WSFC. Quando il gruppo di disponibilità si trova in un'istanza di SQL Server in un cluster WSFC, la transizione da `ONLINE` stato per il database fa sì che l'integrità del gruppo di disponibilità segnalare un errore. In risposta, la gestione di cluster avvia un'azione di failover. In Linux, l'istanza di SQL Server non può comunicare con il cluster. Il monitoraggio per l'integrità del database avviene *esterno aggiuntivo*. Se utente scelto per il monitoraggio del failover di livello database e il failover (impostando l'opzione `DB_FAILOVER=ON` durante la creazione del gruppo di disponibilità), il cluster viene verificato se lo stato del database `ONLINE` ogni volta che esegue un'azione di monitoraggio. Il cluster esegue query sullo stato in `sys.databases`. Per qualsiasi stato diverso da quello `ONLINE`, attiverà un failover automaticamente (se vengono soddisfatte le condizioni di failover automatico). Il tempo effettivo del failover dipende dalla frequenza dell'azione di monitoraggio, nonché lo stato del database viene aggiornato in sys. Databases.
 
-## <a name="upgrade-availability-group"></a>Aggiornare il gruppo di disponibilità
-
-Prima di aggiornare un gruppo di disponibilità, esaminare le procedure consigliate in [l'aggiornamento di istanze di replica di disponibilità gruppo](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
-
-Le sezioni seguenti illustrano come eseguire un aggiornamento in sequenza con istanze di SQL Server in Linux con gruppi di disponibilità. 
-
-### <a name="upgrade-steps-on-linux"></a>Passaggi di aggiornamento su Linux
-
-Quando repliche del gruppo di disponibilità si trovano in istanze di SQL Server in Linux, il tipo di cluster del gruppo di disponibilità è `EXTERNAL` o `NONE`. Un gruppo di disponibilità che è gestito da Gestione cluster di diversi da Windows Server Failover Cluster (WSFC) `EXTERNAL`. Pacemaker con Corosync è riportato un esempio di Gestione cluster esterno. Dispone di un gruppo di disponibilità con alcuna Gestione cluster di tipo cluster `NONE` i passaggi di aggiornamento descritti di seguito sono specifici per i gruppi di disponibilità di tipo cluster `EXTERNAL` o `NONE`.
-
-1. Prima di iniziare, eseguire il backup di ogni database.
-2. Aggiornare le istanze di SQL Server di ospitare le repliche secondarie.
-
-    A. Prima di tutto aggiornare repliche secondarie asincrone.
-
-    B. Aggiornare le repliche secondarie sincrone.
-
-   >[!NOTE]
-   >Se un gruppo di disponibilità dispone solo di asincrona repliche - per evitare eventuali perdite di dati modificare una replica sincrona e attendere fino a quando viene sincronizzata. Quindi aggiornare la replica.
-   
-   b.1. Interrompere la risorsa nel nodo che ospita la replica secondaria di destinazione per l'aggiornamento
-   
-   Prima di eseguire il comando di aggiornamento, è possibile interrompere la risorsa in modo che il cluster non verrà monitorarlo e negativo inutilmente. Nell'esempio seguente aggiunge un vincolo di percorso sul nodo che si tradurrà sulla risorsa da arrestare. Aggiornamento `ag_cluster-master` con il nome della risorsa e `nodeName1` con il nodo che ospita la replica di destinazione per l'aggiornamento.
-
-   ```bash
-   pcs constraint location ag_cluster-master avoids nodeName1
-   ```
-   b.2. Aggiornamento di SQL Server nella replica secondaria
-
-   Nell'esempio seguente viene aggiornata `mssql-server` e `mssql-server-ha` pacchetti.
-
-   ```bash
-   sudo yum update mssql-server
-   sudo yum update mssql-server-ha
-   ```
-   b.3. Rimuovere il vincolo di posizione
-
-   Prima di eseguire il comando di aggiornamento, è possibile interrompere la risorsa in modo che il cluster non verrà monitorarlo e negativo inutilmente. Nell'esempio seguente aggiunge un vincolo di percorso sul nodo che si tradurrà sulla risorsa da arrestare. Aggiornamento `ag_cluster-master` con il nome della risorsa e `nodeName1` con il nodo che ospita la replica di destinazione per l'aggiornamento.
-
-   ```bash
-   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
-   ```
-   Come procedura consigliata, verificare la risorsa sia stata avviata (utilizzando `pcs status` comando) e la replica secondaria è connesso e sincronizzato lo stato dopo l'aggiornamento.
-
-1. Dopo avere aggiornate tutte le repliche secondarie, eseguire manualmente il failover a una delle repliche secondarie sincrone.
-
-   Per i gruppi di disponibilità con `EXTERNAL` tipo di cluster, utilizzare gli strumenti di gestione di cluster per eseguire il failover; gruppi di disponibilità con `NONE` tipo di cluster deve utilizzare Transact-SQL per eseguire il failover. 
-   Nell'esempio seguente viene eseguito il failover di un gruppo di disponibilità con gli strumenti di gestione di cluster. Sostituire `<targetReplicaName>` con il nome della replica sincrona secondaria che diventerà principale:
-
-   ```bash
-   sudo pcs resource move ag_cluster-master <targetReplicaName> --master  
-   ``` 
-   
-   >[!IMPORTANT]
-   >I passaggi seguenti si applicano solo ai gruppi di disponibilità che non dispongono di un gestore cluster.  
-   Se il tipo di cluster di gruppo di disponibilità è `NONE`manualmente il failover. Completare i passaggi seguenti nell'ordine indicato:
-
-      A. Il comando seguente imposta la replica primaria a secondaria. Sostituire `AG1` con il nome del gruppo di disponibilità. Eseguire il comando Transact-SQL nell'istanza di SQL Server che ospita la replica primaria.
-
-      ```transact-sql
-      ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
-      ```
-
-      B. Il comando seguente imposta una replica secondaria asincrona primario. Il seguente comando Transact-SQL nell'istanza di destinazione di SQL Server - l'istanza che ospita la replica secondaria asincrona.
-
-      ```transact-sql
-      ALTER AVAILABILITY GROUP [ag1] FAILOVER;
-      ```
-
-1. Dopo il failover, è possibile aggiornare SQL Server nella replica primaria precedente ripetendo la stessa procedura descritta nei passaggi da b. 1-b. 3.
-
-   Nell'esempio seguente viene aggiornata `mssql-server` e `mssql-server-ha` pacchetti.
-
-   ```bash
-   # add constraint for the resource to stop on the upgraded node
-   # replace 'nodename2' with the name of the cluster node targeted for upgrade
-   pcs constraint location ag_cluster-master avoids nodeName2
-   sudo yum update mssql-server
-   sudo yum update mssql-server-ha
-   ```
-   
-   ```bash
-   # upgrade mssql-server and mssql-server-ha packages
-   sudo yum update mssql-server
-   sudo yum update mssql-server-ha
-   ```
-
-   ```bash
-   # remove the constraint; make sure the resource is started and replica is connected and synchronized
-   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
-   ```
-
-1. Per un gruppi di disponibilità con un gestore cluster esterno - tipo di cluster in cui è esterno, eliminare il vincolo di percorso che è stato causato dal failover manuale. 
-
-   ```bash
-   sudo pcs constraint remove cli-prefer-ag_cluster-master  
-   ```
-
-1. Riprendere lo spostamento dei dati per la replica secondaria appena aggiornata - la replica primaria precedente. Ciò è necessario quando un'istanza di versione superiore di SQL Server è il trasferimento di blocchi di log in un'istanza di versione inferiore in un gruppo di disponibilità. Eseguire il comando seguente nella nuova replica secondaria (la replica primaria precedente).
-
-   ```transact-sql
-   ALTER DATABASE database_name SET HADR RESUME;
-   ```
-
-Dopo l'aggiornamento di tutti i server, è possibile eseguire il failback - failover back alla replica primaria originale, se necessario. 
-
-## <a name="drop-an-availability-group"></a>Eliminare un gruppo di disponibilità
-
-Per eliminare un gruppo di disponibilità, eseguire [DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md). Se il tipo di cluster è `EXTERNAL` o `NONE` eseguire il comando in ogni istanza di SQL Server che ospita una replica. Ad esempio, per eliminare un gruppo di disponibilità denominato `group_name` eseguire il comando seguente:
-
-   ```transact-sql
-   DROP AVAILABILITY GROUP group_name
-   ```
- 
+Failover automatico richiede almeno una replica sincrona.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

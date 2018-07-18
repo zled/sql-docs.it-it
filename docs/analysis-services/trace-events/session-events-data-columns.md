@@ -1,31 +1,23 @@
 ---
 title: Colonne di dati degli eventi di sessione | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: trace-events
 ms.topic: reference
-helpviewer_keywords: Session Events event category
-ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
-caps.latest.revision: "21"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2a11895ad8a966a95b9ea4b78fa78236bc3d88d9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6e3a0287edc3081273f2a3c3075f355e9b2b2493
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="session-events-data-columns"></a>Colonne di dati degli eventi di sessione
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria degli eventi di sessione include la classe di evento seguente:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoria di eventi Eventi di sessione include la classe di evento seguente:  
   
 |**ID evento**|**Nome evento**|**Descrizione evento**|  
 |------------------|--------------------|---------------------------|  
@@ -56,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Duration|5|2|Durata dell'evento in millisecondi.|  
+|Durata|5|2|Durata dell'evento in millisecondi.|  
 |CPUTime|6|2|Tempo della CPU in millisecondi utilizzato dall'evento.|  
 |ConnectionID|25|1|ID connessione univoco.|  
 |DatabaseName|28|8|Nome del database in cui è in esecuzione l'istruzione dell'utente.|  

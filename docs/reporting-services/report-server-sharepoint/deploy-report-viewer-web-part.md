@@ -1,25 +1,23 @@
 ---
 title: Distribuire la web part Visualizzatore report di SQL Server Reporting Services in un sito di SharePoint | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f5fd405e91f9ca16caf9345a4a3e8f7852a3ad37
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 155e01d4c19f111b553510a8db648d66b4f4a788
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Distribuire la web part Visualizzatore report di SQL Server Reporting Services in un sito di SharePoint
 
@@ -33,7 +31,11 @@ Usare le istruzioni seguenti per distribuire manualmente il pacchetto di soluzio
 
 ## <a name="requirements"></a>Requisiti
 
-**Versioni supportate di SharePoint Server:**  
+> [!IMPORTANT]
+> Attualmente non è possibile installare questa web part se è già configurata la modalità integrata SharePoint di Reporting Service.
+>
+
+**Versioni supportate di SharePoint Server:**
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -148,6 +150,26 @@ La web part supporta le lingue seguenti:
 * Russo (ru)
 * Cinese (semplificato - zh-HANS e zh-CHS)
 * Cinese (tradizionale - zh-HANT e zh-CHT)
+
+## <a name="troubleshoot"></a>Risoluzione dei problemi
+
+* Errore durante la disinstallazione di SSRS se è configurata la modalità integrata SharePoint:
+
+    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService cannot be cast cast to [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Type A originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. Type B originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.
+    
+    Soluzione
+    1. Rimuovere la web part Visualizzatore report
+    2. Disinstallare SSRS
+    3. Reinstallare la web part Visualizzatore report
+
+* Errore durante il tentativo di aggiornamento di SharePoint se è configurata la modalità integrata SharePoint:
+
+    Could not load file or assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. Impossibile trovare il file specificato. 00000000-0000-0000-0000-000000000000
+    
+    Soluzione
+    1. Rimuovere la web part Visualizzatore report
+    2. Disinstallare SSRS
+    3. Reinstallare la web part Visualizzatore report
 
 ## <a name="next-steps"></a>Passaggi successivi
 

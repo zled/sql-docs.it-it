@@ -1,11 +1,11 @@
 ---
 title: Linee guida per le operazioni sugli indici online | Microsoft Docs
-ms.custom: 
-ms.date: 07/10/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.technology: dbe-indexes
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.date: 05/14/2018
+ms.prod: sql
+ms.reviewer: ''
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clustered indexes, online operations
@@ -15,20 +15,18 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: "64"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
+caps.latest.revision: 64
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.suite: sql
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: indexes
-ms.workload: On Demand
-ms.openlocfilehash: 2c5e3f669cd2789676e334beedb4e8ee410c5cd6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.prod_service: table-view-index, sql-database
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Linee guida per operazioni di indice online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,6 +111,19 @@ In generale non vi sono differenze di prestazioni tra la ricompilazione degli in
 - Per i carichi di lavoro con intensa attività di aggiornamento, è possibile riscontrare una riduzione delle prestazioni in termini di velocità effettiva (i test indicano una riduzione inferiore al 10%).
 
 In generale non vi sono differenze di qualità della deframmentazione nella ricompilazione degli indici online ripristinabili rispetto agli indici non ripristinabili.
+
+## <a name="online-default-options"></a>Opzioni online predefinite 
+
+> [!IMPORTANT]
+> Queste opzioni sono in anteprima pubblica.
+
+È possibile impostare opzioni predefinite per determinare lo stato online o resumable (ripristinabile) a livello di database impostando le opzioni di configurazione con ambito database ELEVATE_ONLINE o ELEVATE_RESUMABLE. Con queste opzioni predefinite, è possibile evitare l'esecuzione accidentale di un'operazione che attiva la modalità offline della tabella di database. Entrambe le opzioni fanno sì che il motore del database imposti automaticamente determinate operazioni per l'esecuzione online o ripristinabile.  
+È possibile impostare le opzioni come FAIL_UNSUPPORTED, WHEN_SUPPORTED o OFF tramite il comando [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). È possibile impostare valori diversi per ONLINE e RESUMABLE. 
+
+Sia ELEVATE_ONLINE sia ELEVATE_RESUMABLE si applicano solo a istruzioni DDL che supportano rispettivamente la sintassi ONLINE e la sintassi RESUMABLE. Se ad esempio si prova a creare un indice XML con ELEVATE_ONLINE=FAIL_UNSUPPORTED l'operazione viene eseguita offline, perché gli indici XML non supportano la sintassi ONLINE=. Le opzioni hanno effetto solo su istruzioni DDL che vengono inviate senza specificare un'opzione ONLINE o RESUMABLE. Ad esempio, inoltrando un'istruzione con ONLINE=OFF o RESUMABLE=OFF, l'utente può eseguire l'override di un'impostazione FAIL_UNSUPPORTED ed eseguire un'istruzione offline e/o in modo non ripristinabile. 
+ 
+> [!NOTE]
+> ELEVATE_ONLINE ed ELEVATE_RESUMABLE non si applicano alle operazioni degli indici XML. 
  
 ## <a name="related-content"></a>Contenuto correlato  
  [Funzionamento delle operazioni sugli indici online](../../relational-databases/indexes/how-online-index-operations-work.md)  

@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLDataSources | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLDataSources
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLDataSources
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLDataSources
-helpviewer_keywords: SQLDataSources function [ODBC]
+f1_keywords:
+- SQLDataSources
+helpviewer_keywords:
+- SQLDataSources function [ODBC]
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8aee3d9e1caa424f4792fb1fae0551adcacfcdc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c2faa7631aaba8192f04270236b3ff9ef4e48240
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources (funzione)
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: 92 ISO  
   
  **Riepilogo**  
- **SQLDataSources** restituisce informazioni su un'origine dati. Questa funzione è implementata solo da Gestione Driver.  
+ **SQLDataSources** restituisce informazioni relative a un'origine dati. Questa funzione è implementata solo da Gestione Driver.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -72,7 +73,7 @@ SQLRETURN SQLDataSources(
  *NameLength1Ptr*  
  [Output] Puntatore a un buffer in cui restituire il numero totale di caratteri (escluso il carattere di terminazione null) disponibile per restituire \* *ServerName*. Se il numero di caratteri disponibili da restituire è maggiore o uguale a *BufferLength1*, il nome dell'origine dati in \* *ServerName* viene troncato a *BufferLength1* meno la lunghezza di un carattere di terminazione null.  
   
- *Descrizione*  
+ *Description*  
  [Output] Puntatore a un buffer in cui si desidera restituire la descrizione del driver associato all'origine dati. Ad esempio, file dBASE o SQL Server.  
   
  Se *descrizione* è NULL, *NameLength2Ptr* continuerà a restituire il numero totale di caratteri (escluso il carattere di terminazione null per i dati di tipo carattere) disponibile da restituire nel buffer a cui fa riferimento *Descrizione*.  

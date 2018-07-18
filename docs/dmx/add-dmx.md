@@ -1,31 +1,30 @@
 ---
 title: + (Aggiungere) (DMX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - + (add)
 - add operator (+)
 ms.assetid: 35e7636f-814c-44c3-94a7-384a305d65ea
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1fffcda76eba3c0e58c3cc632a14d8701eac0db2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b28cf10467c7c321c60ba0a433fc1c883d58d403
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-add-dmx"></a>+ (addizione) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,8 +49,8 @@ Numeric_Expression + Numeric_Expression
  È necessario che alle due espressioni sia applicato lo stesso tipo di dati oppure che un'espressione possa essere convertita in modo implicito nel tipo di dati dell'altra espressione. Se una delle due espressioni restituisce un valore Null, l'operatore restituirà il risultato dell'altra espressione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aritmetici operatori &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operatori &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [Operatori aritmetici &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [Estensioni Data Mining &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Gli operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

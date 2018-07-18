@@ -1,32 +1,33 @@
 ---
 title: SQLManageDataSources | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLManageDataSources
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLManageDataSources
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLManageDataSources
-helpviewer_keywords: SQLManageDataSources [ODBC]
+f1_keywords:
+- SQLManageDataSources
+helpviewer_keywords:
+- SQLManageDataSources [ODBC]
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1b10fd1109c41d1d19418ce83dd14b60488a85fd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 649d01dbea741c29d1e7d0ec6b63dfeb436caf3b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformità**  
@@ -61,15 +62,15 @@ BOOL SQLManageDataSources(
 |ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione: Impossibile eseguire la funzione a causa della mancanza di memoria.|  
   
 ## <a name="managing-data-sources"></a>Gestione delle origini dati  
- **SQLManageDataSources** vengono inizialmente visualizzate sia la **Amministrazione origine dati ODBC** la finestra di dialogo, come illustrato nella figura seguente.  
+ **SQLManageDataSources** vengono inizialmente visualizzate sia la **Amministrazione origine dati ODBC** della finestra di dialogo come illustrato nella figura seguente.  
   
- ![La finestra di dialogo Amministratore origine dati ODBC](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
+ ![Finestra di dialogo Amministrazione origine dati ODBC](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
  Nella finestra di dialogo consente di visualizzare le origini dati elencate nelle informazioni di sistema in tre schede: **DSN utente**, **DSN di sistema**, e **DSN su File**. Se l'utente fa doppio clic su un'origine dati o seleziona un'origine dati e sceglie **configura**, **SQLManageDataSources** chiamate **ConfigDSN** nel programma di installazione DLL con il ODBC_CONFIG_ Opzione DSN.  
   
  Se l'utente fa clic **Aggiungi**, **SQLManageDataSources** consente di visualizzare il **Crea nuova origine dati** finestra di dialogo, illustrata nella figura seguente.  
   
- ![Creare la finestra di dialogo Nuova origine dati](../../../odbc/reference/syntax/media/ch23f.gif "CH23F")  
+ ![Crea nuova origine dati, finestra di dialogo](../../../odbc/reference/syntax/media/ch23f.gif "CH23F")  
   
  Nella finestra di dialogo Visualizza un elenco di driver installati. Se l'utente fa doppio clic su un driver o seleziona un driver e fa clic su **OK**, **SQLManageDataSources** chiamate **ConfigDSN** nel programma di installazione DLL e passa l'opzione ODBC_ADD_DSN.  
   

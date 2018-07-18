@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLPutData | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLPutData
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLPutData
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLPutData
-helpviewer_keywords: SQLPutData function [ODBC]
+f1_keywords:
+- SQLPutData
+helpviewer_keywords:
+- SQLPutData function [ODBC]
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6d1a3d60c2a6cd5ed19f0183ba51a5a016ccfc36
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 0e612ac7a6df03349f7cf00eb83433a86556cf8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlputdata-function"></a>SQLPutData Function
 **Conformità**  
@@ -89,7 +90,7 @@ SQLRETURN SQLPutData(
 |HY009|Utilizzo non valido del puntatore null|(DM) l'argomento *DataPtr* era un puntatore null e l'argomento *StrLen_or_Ind* non è 0, SQL_DEFAULT_PARAM o SQL_NULL_DATA.|  
 |HY010|Errore nella sequenza (funzione)|(DM) la chiamata di funzione precedente non è una chiamata a **SQLPutData** o **SQLParamData**.<br /><br /> (DM) a cui è stata chiamata per l'handle di connessione associata a una funzione in modo asincrono in esecuzione il *StatementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione SQLPutData.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per il *StatementHandle* e restituito SQL_PARAM_DATA_ È DISPONIBILE. Questa funzione è stata chiamata prima che i dati sono stati recuperati per tutti i parametri con flusso.<br /><br /> (DM) a cui è stata chiamata per una funzione in modo asincrono in esecuzione (non è presente uno) di *StatementHandle* ed era ancora in esecuzione quando questa funzione è stata chiamata.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché gli oggetti di memoria sottostante non è accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY019|Dati non carattere e non binari inviati in blocchi|**SQLPutData** è stato chiamato più di una volta per un parametro o una colonna, e non è stato utilizzato per inviare dati di tipo carattere C a una colonna con un tipo di carattere, binary o dati specifici dell'origine dati o per inviare i dati binari C a una colonna con un carattere , binario o il tipo di dati specifici dell'origine dati.|  
+|HY019|Dati non carattere e non binari inviati in blocchi|**SQLPutData** è stato chiamato più di una volta per un parametro o una colonna e non stato viene utilizzato per inviare dati di tipo carattere C a una colonna con un tipo di carattere, binary o dati specifici dell'origine dati o per inviare i dati binari C a una colonna con un carattere , binary o tipo di dati specifici dell'origine dati.|  
 |HY020|Tentativo di concatenare un valore null|**SQLPutData** è stato chiamato più volte dopo la chiamata che ha restituito SQL_NEED_DATA in una di tali chiamate, il *StrLen_or_Ind* argomento contenuti SQL_NULL_DATA o SQL_DEFAULT_PARAM.|  
 |HY090|Lunghezza di stringa o di buffer non valida|L'argomento *DataPtr* non è un puntatore null e l'argomento *StrLen_or_Ind* è minore di 0 ma non è uguale a SQL_NTS o SQL_NULL_DATA.|  
 |HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettersi e sono consentite funzioni di sola lettura.|(DM) per ulteriori informazioni sullo stato sospeso, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -101,11 +102,11 @@ SQLRETURN SQLPutData(
  Se **SQLPutData** viene chiamato durante l'invio dei dati per un parametro in un'istruzione SQL, può restituire qualsiasi SQLSTATE che può essere restituite dalla funzione chiamata per eseguire l'istruzione (**SQLExecute** o **SQLExecDirect**). Se viene chiamato durante l'invio di dati per una colonna da aggiornare o aggiungere con **SQLBulkOperations** o che venga aggiornato con **SQLSetPos**, può restituire qualsiasi SQLSTATE che può essere restituiti da  **SQLBulkOperations** o **SQLSetPos**.  
   
 ## <a name="comments"></a>Commenti  
- **SQLPutData** può essere chiamato per fornire i dati di data-at-execution per due funzioni: dati del parametro da utilizzare in una chiamata a **SQLExecute** o **SQLExecDirect**, o i dati della colonna da utilizzare quando una riga è aggiornare o aggiungere da una chiamata a **SQLBulkOperations** o viene aggiornato da una chiamata a **SQLSetPos**.  
+ **SQLPutData** può essere chiamato per fornire i dati di data-at-execution per due scopi: i dati dei parametri da utilizzare in una chiamata a **SQLExecute** o **SQLExecDirect**, dati colonna da utilizzare quando viene aggiornata una riga o o aggiunto mediante una chiamata a **SQLBulkOperations** o viene aggiornato da una chiamata a **SQLSetPos**.  
   
  Quando un'applicazione chiama **SQLParamData** a determinare quali dati devono inviare, il driver restituisce un indicatore che l'applicazione può utilizzare per determinare quali dati di parametro per inviare o in cui sono presenti dati della colonna. Viene inoltre restituito SQL_NEED_DATA, che è un indicatore per l'applicazione deve chiamare **SQLPutData** per inviare i dati. Nel *DataPtr* argomento **SQLPutData**, l'applicazione passa un puntatore al buffer contenente i dati effettivi per il parametro o una colonna.  
   
- Quando il driver restituisce SQL_SUCCESS per **SQLPutData**, l'applicazione chiama **SQLParamData** nuovamente. **SQLParamData** restituisce SQL_NEED_DATA se più i dati devono essere inviati, nel qual caso l'applicazione chiama **SQLPutData** nuovamente. Restituisce SQL_SUCCESS se tutti i dati di data-at-execution è stato inviato. L'applicazione chiama quindi **SQLParamData** nuovamente. Se il driver restituisce SQL_NEED_DATA e un altro indicatore in  *\*ValuePtrPtr*, è necessario che i dati per un altro parametro o una colonna e **SQLPutData** viene chiamata nuovamente. Se il driver restituisce SQL_SUCCESS, quindi tutti i data-at-execution dati sono stati inviati e può essere eseguita l'istruzione SQL o **SQLBulkOperations** o **SQLSetPos** chiamata può essere elaborata.  
+ Quando il driver restituisce SQL_SUCCESS per **SQLPutData**, l'applicazione chiama **SQLParamData** nuovamente. **SQLParamData** restituisce SQL_NEED_DATA se necessita di più dati da inviare, nel qual caso l'applicazione chiama **SQLPutData** nuovamente. Restituisce SQL_SUCCESS se tutti i dati di data-at-execution è stato inviato. L'applicazione chiama quindi **SQLParamData** nuovamente. Se il driver restituisce SQL_NEED_DATA e un altro indicatore in  *\*ValuePtrPtr*, è necessario che i dati per un altro parametro o una colonna e **SQLPutData** viene chiamata nuovamente. Se il driver restituisce SQL_SUCCESS, quindi tutti i data-at-execution dati sono stati inviati e può essere eseguita l'istruzione SQL o **SQLBulkOperations** o **SQLSetPos** chiamata può essere elaborata.  
   
  Per ulteriori informazioni sui dati di parametro come data-at-execution viene passate in fase di esecuzione di istruzione, vedere "Passaggio di valori di parametro" in [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) e [l'invio di dati Long](../../../odbc/reference/develop-app/sending-long-data.md). Per ulteriori informazioni su dati di colonna come data-at-execution sono state aggiornate o aggiunti, vedere la sezione "Utilizzo SQLSetPos" in [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md), "Esecuzione delle operazioni Bulk aggiornamenti mediante segnalibri" in [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), e [Dati di tipo long e SQLSetPos e SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   

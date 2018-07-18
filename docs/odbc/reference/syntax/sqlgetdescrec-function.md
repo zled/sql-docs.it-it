@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLGetDescRec | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLGetDescRec
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLGetDescRec
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetDescRec
-helpviewer_keywords: SQLGetDescRec function [ODBC]
+f1_keywords:
+- SQLGetDescRec
+helpviewer_keywords:
+- SQLGetDescRec function [ODBC]
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 569a3708c13a4182e651c902ce7e1f1f9c7711dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: a7ab64e1ecaf3839f918f4e4208d2631e1cbfad9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdescrec-function"></a>Funzione SQLGetDescRec
 **Conformità**  
  Introdotta: versione ODBC 3.0 aderenza: 92 ISO  
   
  **Riepilogo**  
- **SQLGetDescRec** restituisce le impostazioni correnti o valori di più campi di un record del descrittore. Il nome, tipo di dati e archiviazione dei dati di colonna o parametro, vengono descritti i campi restituiti.  
+ **SQLGetDescRec** restituisce le impostazioni correnti o i valori di più campi di un record del descrittore. Il nome, tipo di dati e archiviazione dei dati di colonna o parametro, vengono descritti i campi restituiti.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -107,7 +108,7 @@ SQLRETURN SQLGetDescRec(
 |08S01|Errore del collegamento di comunicazione|Collegamento di comunicazione tra il driver e l'origine dati a cui era connesso il driver non è stato possibile prima dell'elaborazione della funzione è stata completata.|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria che è necessario per supportare l'esecuzione o il completamento della funzione.|  
-|HY007|L'istruzione associata non è stato preparato|*DescriptorHandle* è stata associata a un IRD e l'handle di istruzione associata non è nello stato preparato o eseguito.|  
+|HY007|L'istruzione associata non è stato preparato|*DescriptorHandle* non associato a un IRD e l'handle di istruzione associata non è stato in stato preparato o eseguito.|  
 |HY010|Errore nella sequenza (funzione)|(DM) *DescriptorHandle* è stato associato un *StatementHandle* per i quali è stata chiamata una funzione in modo asincrono in esecuzione (non presente) ed era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) *DescriptorHandle* è stato associato un *StatementHandle* per il quale **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, o **SQLSetPos** è stato chiamato e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima che sono stati inviati dati per tutti i parametri data-at-execution o colonne.<br /><br /> (DM) a cui è stata chiamata per l'handle di connessione associata a una funzione in modo asincrono in esecuzione il *DescriptorHandle*. Questa funzione asincrona era ancora in esecuzione quando **SQLGetDescRec** è stato chiamato.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché gli oggetti di memoria sottostante non è accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettersi e sono consentite funzioni di sola lettura.|(DM) per ulteriori informazioni sullo stato sospeso, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -131,7 +132,7 @@ SQLRETURN SQLGetDescRec(
   
 -   SQL_DESC_NULLABLE  
   
- **SQLGetDescRec** non recupera i valori dei campi di intestazione.  
+ **SQLGetDescRec** non recuperare i valori per campi di intestazione.  
   
  Un'applicazione può impedire la restituzione dell'impostazione di un campo impostando l'argomento che corrisponde al campo a un puntatore null.  
   

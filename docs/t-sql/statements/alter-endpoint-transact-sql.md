@@ -1,16 +1,14 @@
 ---
 title: ALTER ENDPOINT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER ENDPOINT
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - modifying endpoints
 - endpoints [SQL Server], modifying
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 56
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f33dfa3c49397a5f69a59420b74e3cfdeae25857
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: cbb49c1753cb486fb4a2fa289df74db0a0bc8bce
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ ms.lasthandoff: 01/25/2018
 -   La modifica delle proprietà di un endpoint.  
   
 > [!NOTE]  
->  In questo argomento vengono descritti la sintassi e gli argomenti specifici dell'istruzione ALTER ENDPOINT. Per una descrizione degli argomenti che sono comuni a CREATE ENDPOINT e ALTER ENDPOINT, vedere [CREATE ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-endpoint-transact-sql.md).  
+>  In questo argomento vengono descritti la sintassi e gli argomenti specifici dell'istruzione ALTER ENDPOINT. Per le descrizioni degli argomenti comuni sia a CREATE ENDPOINT che a ALTER ENDPOINT, vedere [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
  I servizi Web XML nativi (endpoint SOAP/HTTP) verranno eliminati a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
@@ -106,23 +103,23 @@ FOR DATABASE_MIRRORING (
 ## <a name="arguments"></a>Argomenti  
   
 > [!NOTE]  
->  Gli argomenti seguenti sono specifici dell'istruzione ALTER ENDPOINT. Per una descrizione degli argomenti rimanenti, vedere [CREATE ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-endpoint-transact-sql.md).  
+>  Gli argomenti seguenti sono specifici dell'istruzione ALTER ENDPOINT. Per una descrizione degli altri argomenti, vedere [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
  **AS** { **TCP** }  
  Non è possibile modificare il protocollo di trasporto con **ALTER ENDPOINT**.  
   
- **AUTORIZZAZIONE** *account di accesso*  
- Il **autorizzazione** opzione non è disponibile in **ALTER ENDPOINT**. La proprietà può essere assegnata solo quando l'endpoint viene creato.  
+ **AUTHORIZATION** *login*  
+ L'opzione **AUTHORIZATION** non è disponibile in **ALTER ENDPOINT**. La proprietà può essere assegnata solo quando l'endpoint viene creato.  
   
  **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  Non è possibile modificare il tipo di payload con **ALTER ENDPOINT**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se si utilizza ALTER ENDPOINT, specificare solo i parametri che si desidera aggiornare. Tutte le proprietà di un endpoint esistente rimangono invariate a meno che non vengano modificate in modo esplicito.  
   
  Non è possibile eseguire le istruzioni ENDPOINT DDL all'interno di una transazione utente.  
   
- Per informazioni sulla scelta di un algoritmo di crittografia per l'utilizzo con un endpoint, vedere [scegliere un algoritmo di crittografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
+ Per informazioni sulla scelta di un algoritmo di crittografia da usare con un endpoint, vedere [Scelta di un algoritmo di crittografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
 > [!NOTE]  
 >  L'algoritmo RC4 è supportato solo per motivi di compatibilità con le versioni precedenti. È possibile crittografare il nuovo materiale usando RC4 o RC4_128 solo quando il livello di compatibilità del database è 90 o 100. (Non consigliato.) Usare un algoritmo più recente, ad esempio uno degli algoritmi AES. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive il materiale crittografato utilizzando RC4 o RC4_128 può essere decrittografato in qualsiasi livello di compatibilità.  
@@ -130,14 +127,14 @@ FOR DATABASE_MIRRORING (
 >  RC4 è un algoritmo relativamente vulnerabile, mentre AES costituisce un algoritmo relativamente avanzato ma notevolmente più lento rispetto a RC4. Se la sicurezza ha una priorità superiore rispetto alla velocità, è consigliabile utilizzare AES.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Utente deve essere un membro del **sysadmin** ruolo predefinito del server, il proprietario dell'endpoint oppure disporre dell'autorizzazione ALTER ANY ENDPOINT.  
+ L'utente deve essere membro del ruolo predefinito del server **sysadmin**, proprietario dell'endpoint oppure disporre dell'autorizzazione ALTER ANY ENDPOINT.  
   
- Per modificare la proprietà di un endpoint esistente, è necessario utilizzare l'autorizzazione ALTER AUTHORIZATION. Per ulteriori informazioni, vedere [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Per modificare la proprietà di un endpoint esistente, è necessario utilizzare l'autorizzazione ALTER AUTHORIZATION. Per altre informazioni, vedere [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  Per altre informazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [DROP ENDPOINT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,34 +1,32 @@
 ---
 title: Riferimento all'API del Driver SQLSRV | Documenti Microsoft
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 48d43c13a850e057d675d3abaaec612bc51723e1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 44f0da4f969f145e66eb309f2cc90d7f5981d7f2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Riferimento all'API del driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Il nome dell'API per il driver SQLSRV nei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] è **sqlsrv**. Tutti **sqlsrv** funzioni iniziano con **sqlsrv _** e sono seguiti da un verbo o un sostantivo. Quelle seguite da un verbo eseguono un'azione e quelle seguite da un sostantivo restituiscono un tipo di metadati.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 Il driver SQLSRV contiene le funzioni seguenti:  
   
 |Funzione|Description|  
@@ -61,11 +59,14 @@ Il driver SQLSRV contiene le funzioni seguenti:
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|Fornisce informazioni sul server.|  
   
 ## <a name="reference"></a>Riferimento  
-[Manuale PHP](http://go.microsoft.com/fwlink/?LinkId=105500)  
+[Manuale PHP](http://php.net/manual)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Panoramica del Driver SQL PHP](../../connect/php/overview-of-the-php-sql-driver.md)
-[costanti &#40; Driver Microsoft per PHP per SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Guida di programmazione per il driver SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Introduzione al driver SQL PHP](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Panoramica dei driver Microsoft per PHP per SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+
+[Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Guida introduttiva con i driver Microsoft per PHP per SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
   

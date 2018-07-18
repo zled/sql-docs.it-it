@@ -1,35 +1,33 @@
 ---
 title: Oggetto SqlPipe | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom result sets [CLR integration]
 - SqlPipe object
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
-caps.latest.revision: 
+caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5db45b3c67fcf865214ad422662acfb80bab293e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 15786a3af4b6598f73c822a8196039ec3e335d2a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlpipe-object"></a>Oggetto SqlPipe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è molto comune scrivere una stored procedure (o una stored procedure estesa) per l'invio di risultati o parametri di output al client chiamante.  
+  Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è molto comune scrivere una stored procedure (o una stored procedure estesa) per l'invio di risultati o parametri di output al client chiamante.  
   
  In un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, di qualsiasi **selezionare** istruzione che restituisce zero o più righe invia i risultati del chiamante connesso "pipe."  
   
@@ -58,7 +56,7 @@ Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
  **SendResultsStart** accetta un **SqlDataRecord** come input. Indica l'inizio di un set di risultati e utilizza i metadati del record per costruire i metadati che descrivono il set in questione. Non invia il valore del record con **SendResultsStart**. Tutte le righe successive, inviate mediante **SendResultsRow**, deve corrispondere una definizione dei metadati.  
   
 > [!NOTE]  
->  Dopo la chiamata di **SendResultsStart** solo metodo **SendResultsRow** e **SendResultsEnd** può essere chiamato. La chiamata a qualsiasi altro metodo nella stessa istanza di **SqlPipe** provoca un **InvalidOperationException**. **SendResultsEnd** imposta **SqlPipe** lo stato iniziale in cui è possibile chiamare altri metodi.  
+>  Dopo la chiamata di **SendResultsStart** solo metodo **SendResultsRow** e **SendResultsEnd** può essere chiamato. La chiamata a qualsiasi altro metodo nella stessa istanza di **SqlPipe** provoca un **InvalidOperationException**. **SendResultsEnd** imposta **SqlPipe** allo stato iniziale in cui è possibile chiamare altri metodi.  
   
 ### <a name="example"></a>Esempio  
  Il **uspGetProductLine** stored procedure restituisce il nome, numero di prodotto, colore e di listino di tutti i prodotti all'interno di una linea di prodotti specificata. Questa stored procedure accetta corrispondenze esatte per *prodLine*.  

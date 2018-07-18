@@ -1,27 +1,24 @@
 ---
 title: Informazioni sui livelli di isolamento | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 5acd91539652aefd7eee0049bb2e1ccc277c16a0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: a7c09de18ede2c5230179f4ac4df68686d9d256c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-isolation-levels"></a>Informazioni sui livelli di isolamento
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,10 +49,10 @@ ms.lasthandoff: 11/18/2017
 |Livello di isolamento|Lettura dirty|Lettura non ripetibile|Lettura fantasma|  
 |---------------------|----------------|-------------------------|-------------|  
 |Read Uncommitted|Sì|Sì|Sì|  
-|Read Committed|No|Sì|Sì|  
-|Repeatable Read|No|No|Sì|  
-|Snapshot|No|No|No|  
-|Serializable|No|No|No|  
+|Read Committed|no|Sì|Sì|  
+|Repeatable Read|no|No|Sì|  
+|Snapshot|no|No|no|  
+|Serializable|no|No|no|  
   
  Le transazioni devono essere eseguite almeno a un livello di isolamento Repeatable read, per impedire la perdita di aggiornamenti che può verificarsi quando due transazioni recuperano entrambe la stessa riga e successivamente la aggiornano in base ai valori recuperati in origine. Se le due transazioni aggiornano le righe utilizzando una singola istruzione UPDATE e non basano l'aggiornamento sui valori recuperati in precedenza, non possono verificarsi perdite di aggiornamenti al livello di isolamento predefinito Read committed.  
   

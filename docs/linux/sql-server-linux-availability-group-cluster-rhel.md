@@ -1,25 +1,22 @@
 ---
-title: "Configurare RHEL Cluster per il gruppo di disponibilità di SQL Server | Documenti Microsoft"
-description: 
+title: Configurare RHEL Cluster per il gruppo di disponibilità di SQL Server | Documenti Microsoft
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.workload: Inactive
-ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 784f98acb1e8223e14d3f1e1a74e73cfdc3561bc
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurare RHEL Cluster per il gruppo di disponibilità di SQL Server
 
@@ -127,18 +124,31 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >La disattivazione STONITH è solo a scopo di test. Se si prevede di utilizzare Pacemaker in un ambiente di produzione, pianificare un'implementazione STONITH a seconda dell'ambiente e mantenerla abilitato. RHEL non fornisce fencing agenti per ambienti cloud (Azure inclusi) o Hyper-V. Consequentially, il fornitore del cluster non offre il supporto per i cluster di produzione in esecuzione in questi ambienti. Stiamo lavorando su una soluzione per questo spazio che sarà disponibile nelle versioni future.
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Impostare la proprietà cluster start-errore-è-errore irreversibile per false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Impostare proprietà di cluster del cluster-nuova verifica del-intervallo
 
-`start-failure-is-fatal` indica se un errore di avvio di una risorsa in un nodo impedisce ulteriori tentativi di avvio in tale nodo. Se impostato su `false`, il cluster decide di provare ad avviare nello stesso nodo in base alle corrente conteggio e la migrazione soglia di errore della risorsa. Dopo che si verifica il failover, tentativi Pacemaker avvio la disponibilità gruppo risorsa per il primo primario quando l'istanza SQL è disponibile. Pacemaker Abbassa di livello la replica secondaria e viene automaticamente aggiunto nuovamente il gruppo di disponibilità. 
+`cluster-recheck-interval` indica l'intervallo di polling durante il quale controlla il cluster per la modifica in parametri delle risorse, i vincoli o altre opzioni di cluster. Se una replica diventa inattiva, il cluster tenta di riavviare la replica a un intervallo che è associato il `failure-timeout` valore e il `cluster-recheck-interval` valore. Ad esempio, se `failure-timeout` è impostata su 60 secondi e `cluster-recheck-interval` è impostato su 120 secondi, il riavvio viene eseguito un tentativo a un intervallo che è maggiore di 60 secondi ma inferiore a 120 secondi. È consigliabile impostare timeout errore 60s e intervallo di nuova verifica del cluster su un valore maggiore di 60 secondi. Non è consigliabile impostare l'intervallo di nuova verifica del cluster su un valore basso.
 
-Per aggiornare il valore della proprietà da `false` eseguire:
+Per aggiornare il valore della proprietà da `2 minutes` eseguire:
 
 ```bash
-sudo pcs property set start-failure-is-fatal=false
+sudo pcs property set cluster-recheck-interval=2min
 ```
 
->[!WARNING]
->Dopo un failover automatico, quando `start-failure-is-fatal = true` Gestione risorse tenterà di avviare la risorsa. Se non riesce al primo tentativo, eseguire manualmente `pcs resource cleanup <resourceName>` per pulire il conteggio degli errori di risorse e reimpostare la configurazione.
+> [!IMPORTANT] 
+> Tutte le distribuzioni (inclusi RHEL 7.3 e 7.4) che usano la versione più recente disponibile Pacemaker pacchetto 1.1.18-11.el7 introducono una modifica del comportamento per l'impostazione di start-errore-è-irreversibile cluster quando il relativo valore è false. Questa modifica interessa il flusso di lavoro di failover. Se una replica primaria di cui si verifichi un'interruzione del servizio, il cluster deve eseguire il failover su una delle repliche secondarie disponibili. Al contrario, gli utenti noteranno che il cluster mantiene tenta di avviare la replica primaria non riuscita. Se il database primario non viene portato online (a causa di un'interruzione permanente), failover del cluster mai a un'altra replica secondaria disponibile. Grazie a questa modifica, una configurazione consigliata in precedenza per impostare inizio-errore-è-errore irreversibile non è più valida e l'impostazione deve essere ripristinato il valore predefinito `true`. Inoltre, la risorsa gruppo di disponibilità deve essere aggiornato per includere il `failover-timeout` proprietà. 
+
+Per aggiornare il valore della proprietà da `true` eseguire:
+
+```bash
+sudo pcs property set start-failure-is-fatal=true
+```
+
+Per aggiornare il `ag1` proprietà della risorsa `failure-timeout` a `60s` eseguire:
+
+```bash
+pcs resource update ag1 meta failure-timeout=60s
+```
+
 
 Per informazioni sulle proprietà cluster Pacemaker, vedere [Pacemaker cluster proprietà](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
@@ -151,8 +161,8 @@ Per informazioni sulle proprietà cluster Pacemaker, vedere [Pacemaker cluster p
 Per creare la risorsa del gruppo di disponibilità, utilizzare `pcs resource create` comando e impostare le proprietà della risorsa. Il comando seguente crea un `ocf:mssql:ag` master/slave, tipo di risorsa per il gruppo di disponibilità con nome `ag1`.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
-```
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true
+``` 
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

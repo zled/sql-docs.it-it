@@ -1,31 +1,23 @@
 ---
-title: "Creare e configurare l'applicazione del servizio PowerPivot in Autorità di certificazione | Documenti Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: 
-author: Minewiskan
+title: Creare e configurare l'applicazione del servizio PowerPivot in Autorità di certificazione | Documenti Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 581bcc4777121d42b8f7e6b629d98e26b49b425d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Creare e configurare l'applicazione del servizio PowerPivot nella CA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è un'istanza di servizio condiviso del servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Ogni applicazione del servizio possiede impostazioni di configurazione, proprietà, un'identità e un sistema di archiviazione dati interno propri.  
+  Un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è un'istanza di servizio condiviso del servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Ogni applicazione del servizio possiede impostazioni di configurazione, proprietà, un'identità e un sistema di archiviazione dati interno propri.  
   
  In questo argomento sono incluse le sezioni seguenti:  
   

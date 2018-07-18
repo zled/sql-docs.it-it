@@ -1,16 +1,14 @@
 ---
-title: TRASMISSIONE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SEND (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SEND_ON_CONVERSATION_TSQL
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - messages [Service Broker], sending
 - sending messages
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7d40948dad23dca9dc4905d29a94995f087f78b1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 70bfd0c1f507a9ee27cd0f1286dfa29f9b57071f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,16 +54,16 @@ SEND
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Nella conversazione *conversation_handle [... @conversation_handle_n]*  
- Specifica le conversazioni a cui appartiene il messaggio. Il *conversation_handle* deve contenere un identificatore di conversazione valido. Impossibile utilizzare più di una volta lo stesso handle di conversazione.  
+ ON CONVERSATION *conversation_handle [.. @conversation_handle_n]*  
+ Specifica le conversazioni a cui appartiene il messaggio. *conversation_handle* deve contenere un identificatore di conversazione valido. Impossibile utilizzare più di una volta lo stesso handle di conversazione.  
   
- TIPO di messaggio *message_type_name*  
+ MESSAGE TYPE *message_type_name*  
  Specifica il tipo di messaggio del messaggio inviato. Questo tipo di messaggio deve essere incluso nei contratti di servizio utilizzati da queste conversazioni. I contratti devono consentire al tipo di messaggio di essere inviato da questo lato della conversazione. Ad esempio, i servizi di destinazione delle conversazioni possono soltanto inviare messaggi specificati nel contratto come SENT BY TARGET o SENT BY ANY. Se questa clausola viene omessa, il messaggio sarà del tipo DEFAULT.  
   
  *message_body_expression*  
- Fornisce un'espressione che rappresenta il corpo del messaggio. Il *message_body_expression* è facoltativo. Tuttavia, se il *message_body_expression* è presente l'espressione deve essere di un tipo che può essere convertito in **varbinary (max)**. L'espressione non può essere NULL. Se questa clausola viene omessa, il corpo del messaggio sarà vuoto.  
+ Fornisce un'espressione che rappresenta il corpo del messaggio. *message_body_expression* è facoltativo. Se però *message_body_expression* è presente, l'espressione deve essere di un tipo convertibile in **varbinary(max)**. L'espressione non può essere NULL. Se questa clausola viene omessa, il corpo del messaggio sarà vuoto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Se l'istruzione SEND non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola (;).  
@@ -81,7 +78,7 @@ SEND
   
  In molti casi, il codice che contiene l'istruzione SEND è separato dal codice che contiene l'istruzione BEGIN DIALOG or RECEIVE che fornisce l'handle di conversazione. In questi casi, l'handle di conversazione deve essere uno degli elementi di dati nelle informazioni sullo stato passate al codice contenente l'istruzione SEND.  
   
- I messaggi inviati a servizi in altre istanze del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vengono archiviati in una coda di trasmissione nel database corrente fino a quando non vengono trasmessi alle code dei servizi nelle istanze remote. I messaggi inviati ai servizi nella stessa istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono inseriti direttamente nelle code associate a tali servizi. Se una condizione impedisce di inserire un messaggio locale direttamente nella coda del servizio di destinazione, il messaggio può essere archiviato nella coda di trasmissione fino quando la condizione non viene risolta. Questo può accadere quando si verificano alcuni tipi di errori o quando la coda del servizio di destinazione non è attiva. È possibile utilizzare il **transmission_queue** vista di sistema per visualizzare i messaggi nella coda di trasmissione.  
+ I messaggi inviati a servizi in altre istanze del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vengono archiviati in una coda di trasmissione nel database corrente fino a quando non vengono trasmessi alle code dei servizi nelle istanze remote. I messaggi inviati ai servizi nella stessa istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono inseriti direttamente nelle code associate a tali servizi. Se una condizione impedisce di inserire un messaggio locale direttamente nella coda del servizio di destinazione, il messaggio può essere archiviato nella coda di trasmissione fino quando la condizione non viene risolta. Questo può accadere quando si verificano alcuni tipi di errori o quando la coda del servizio di destinazione non è attiva. Per visualizzare i messaggi nella coda di trasmissione, è possibile usare la vista di sistema **sys.transmission_queue**.  
   
  SEND è un'istruzione atomica, ovvero, se l'invio di un messaggio in più conversazioni da parte di un'istruzione SEND non riesce, ad esempio perché una conversazione è si trova in stato d'errore, non verrà archiviato alcun messaggio nella coda di trasmissione o inserito in una coda del servizio di destinazione.  
   
@@ -99,11 +96,11 @@ SEND
   
  L'istruzione SEND non è valida in una funzione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per inviare un messaggio, l'utente corrente deve disporre dell'autorizzazione RECEIVE per la coda di ogni servizio che invia il messaggio.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene avviato un dialogo e viene inviato un messaggio XML nel dialogo. Per inviare il messaggio, l'esempio converte l'oggetto xml **varbinary (max)**.  
+ Nell'esempio seguente viene avviato un dialogo e viene inviato un messaggio XML nel dialogo. Per inviare il messaggio, l'oggetto xml viene convertito in **varbinary(max)**.  
   
 ```  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
@@ -152,9 +149,9 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [Istruzione END CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [RICEZIONE &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [Sys. transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

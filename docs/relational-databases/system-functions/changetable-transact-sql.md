@@ -1,16 +1,14 @@
 ---
-title: CHANGETABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: CHANGETABLE (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6fa552ec5c819773153118be3b45374570b5d6e2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8b0062a473b403a62f2805f28f84d5e0d9651dcb
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,11 +64,11 @@ CHANGETABLE (
   
  Poiché last_sync_version viene ottenuto dall'applicazione chiamante, il relativo valore dovrà essere salvato in modo permanente in tale applicazione. In caso di perdita del valore, sarà necessario reinizializzare i dati.  
   
- *last_sync_version* è **bigint**. Il valore deve essere scalare. Un'espressione provocherà un errore di sintassi.  
+ *last_sync_version* viene **bigint**. Il valore deve essere scalare. Un'espressione provocherà un errore di sintassi.  
   
  Se il valore è NULL, vengono restituite tutte le modifiche rilevate.  
   
- *last_sync_version* devono essere convalidati per assicurarsi che non sia troppo vecchio, in quanto alcune o tutte le informazioni sulle modifiche potrebbero essere state eliminate in base al periodo di memorizzazione configurato per il database. Per ulteriori informazioni, vedere [CHANGE_TRACKING_MIN_VALID_VERSION &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) e [ALTER DATABASE SET di opzioni &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ *last_sync_version* devono essere convalidati per assicurarsi che non sia troppo vecchio, in quanto alcune o tutte le informazioni sulle modifiche potrebbero essere state eliminate in base al periodo di memorizzazione configurato per il database. Per altre informazioni, vedere [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) e [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  VERSIONE *tabella*, {< primary_key_values >}  
  Restituisce le informazioni più recenti sul rilevamento delle modifiche per una riga specificata. I valori della chiave primaria devono consentire di identificare la riga. <primary_key_values> consente di identificare le colonne chiave primarie e di specificare i valori. I nomi delle colonne chiave primaria possono essere specificati in qualsiasi ordine.  
@@ -84,11 +82,11 @@ CHANGETABLE (
  *Valore*  
  Il valore della chiave primaria. Se sono presenti più colonne chiave primaria, i valori devono essere specificati nello stesso ordine come le colonne vengono visualizzate nel *column_name* elenco.  
   
- [COME] *table_alias* [(*column_alias* [,... *n* ] ) ]  
+ [COME] *table_alias* [(*column_alias* [,... *n* ])]  
  Fornisce nomi per i risultati restituiti da CHANGETABLE.  
   
  *table_alias*  
- Nome alias della tabella restituito da CHANGETABLE. *table_alias* è obbligatorio e deve essere valido [identificatore](../../relational-databases/databases/database-identifiers.md).  
+ Nome alias della tabella restituito da CHANGETABLE. *table_alias* è obbligatorio e deve essere un valore valido [identificatore](../../relational-databases/databases/database-identifiers.md).  
   
  *column_alias*  
  Alias di colonna facoltativo o elenco di alias di colonna per le colonne restituite da CHANGETABLE. Consente la personalizzazione dei nomi di colonna in caso di nomi duplicati nei risultati.  
@@ -105,7 +103,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valore della versione associato all'ultima modifica alla riga|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valori della versione associati all'ultima operazione di inserimento.|  
-|SYS_CHANGE_OPERATION|**nchar(1)**|Specifica il tipo di modifica:<br /><br /> **U** = aggiornamento<br /><br /> **Si** = inserimento<br /><br /> **D** = eliminazione|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|Specifica il tipo di modifica:<br /><br /> **U** = aggiornamento<br /><br /> **È possibile** = inserimento<br /><br /> **1!d** = eliminazione|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Vengono elencate le colonne modificate a partire da last_sync_version (versione di riferimento). Si noti che le colonne calcolate non vengono mai elencate come modificata.<br /><br /> Il valore è NULL quando viene soddisfatta una o più delle condizioni seguenti:<br /><br /> Il rilevamento delle modifiche per le colonne non è abilitato.<br /><br /> L'operazione è di inserimento o di eliminazione.<br /><br /> Tutte le colonne chiave non primaria sono state aggiornate in un'unica operazione. Questo valore binario non deve essere interpretato direttamente. Per interpretarlo, utilizzare invece [change_tracking_is_column_in_mask ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Modificare le informazioni di contesto che è possibile specificare facoltativamente utilizzando il [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) clausola come parte di un'istruzione INSERT, UPDATE o DELETE.|  
 |\<valore della colonna chiave primaria >|Come per le colonne della tabella utente|Valori della chiave primaria per la tabella rilevata. Questi valori identificano in modo univoco ogni riga nella tabella utente.|  

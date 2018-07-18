@@ -1,31 +1,28 @@
 ---
 title: Metodi ADO | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e35be40ea3023338048bf729b9f4cea5b6048449
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7a774f4be083e87b81f2200305faaa1802c84c52
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-methods"></a>Metodi ADO
 |||  
@@ -33,7 +30,7 @@ ms.lasthandoff: 02/09/2018
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Crea un nuovo record per un aggiornabile **Recordset** oggetto.|  
 |[Accoda](../../../ado/reference/ado-api/append-method-ado.md)|Aggiunge un oggetto a una raccolta. Se la raccolta è **campi**, un nuovo **campo** oggetto può essere creato prima di essere aggiunto alla raccolta.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Aggiunge dati a un testo di grandi dimensioni o dati binari **campo**, o a un **parametro** oggetto.|  
-|[BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|All'interno di elaborazione delle transazioni gestisce un **connessione** come illustrato di seguito:<br /><br /> **BeginTrans** , inizia una nuova transazione.<br /><br /> **CommitTrans** , Salva le modifiche e termina la transazione corrente. È possibile anche avviare una nuova transazione.<br /><br /> **RollbackTrans** -Annulla le modifiche e termina la transazione corrente. È possibile anche avviare una nuova transazione.|  
+|[BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|All'interno di elaborazione delle transazioni gestisce un **connessione** come illustrato di seguito:<br /><br /> **BeginTrans** , inizia una nuova transazione.<br /><br /> **CommitTrans** , Salva le modifiche e termina la transazione corrente. È possibile anche avviare una nuova transazione.<br /><br /> **RollbackTrans** , ovvero Annulla tutte le modifiche e termina la transazione corrente. È possibile anche avviare una nuova transazione.|  
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Annulla l'esecuzione di un in sospeso, chiamata asincrona.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Annulla un aggiornamento batch in sospeso.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Annulla le modifiche apportate alla riga corrente o nuova di un **Recordset** oggetto, o **campi** raccolta di un **Record** oggetto, prima di chiamare il  **Aggiornamento** metodo.|  
@@ -44,8 +41,8 @@ ms.lasthandoff: 02/09/2018
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Copia un file o directory e il relativo contenuto, in un'altra posizione.|  
 |[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|Copia il numero specificato di caratteri o byte (in base alle **tipo**) nei **flusso** a un altro **flusso** oggetto.|  
 |[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)|Crea un nuovo **parametro** oggetto contenente le proprietà specificate.|  
-|[Delete (insieme Parameters ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)|Elimina un oggetto di **parametri** insieme.|  
-|[Delete (insieme Fields ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)|Elimina un oggetto di **campi** insieme.|  
+|[Delete (raccolta di parametri ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)|Elimina un oggetto di **parametri** insieme.|  
+|[Elimina (raccolta di campi ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)|Elimina un oggetto di **campi** insieme.|  
 |[Delete (Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Elimina il record corrente o un gruppo di record.|  
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Elimina un file o directory e tutte le relative sottodirectory.|  
 |[Eseguire (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Esegue la query, l'istruzione SQL o stored procedure specificata nel **CommandText** proprietà.|  
@@ -91,7 +88,7 @@ ms.lasthandoff: 02/09/2018
  [Raccolte di ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Costanti enumerate ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Appendice b: errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Appendice b: errori di ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventi ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Le interfacce e gli oggetti ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   

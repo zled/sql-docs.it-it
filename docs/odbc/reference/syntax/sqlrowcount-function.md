@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLRowCount | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLRowCount
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLRowCount
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLRowCount
-helpviewer_keywords: SQLRowCount function [ODBC]
+f1_keywords:
+- SQLRowCount
+helpviewer_keywords:
+- SQLRowCount function [ODBC]
 ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 04a4e5061a80fec51361e82c57102df8e3fa34c8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f9ad642032c2bee346381bd74a2dc5db46bb3d0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount Function
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: 92 ISO  
   
  **Riepilogo**  
- **SQLRowCount** restituisce il numero di righe interessate da un **aggiornamento**, **inserire**, o **eliminare** istruzione; un SQL_ADD, SQL_UPDATE_BY_BOOKMARK o SQL _ Operazione DELETE_BY_BOOKMARK **SQLBulkOperations**; o di un'operazione SQL_UPDATE o SQL_DELETE in **SQLSetPos**.  
+ **SQLRowCount** restituisce il numero di righe interessate da un' **aggiornamento**, **inserire**, o **eliminare** istruzione; un SQL_ADD SQL_UPDATE_BY_BOOKMARK o SQL _ Operazione DELETE_BY_BOOKMARK **SQLBulkOperations**; o di un'operazione SQL_UPDATE o SQL_DELETE in **SQLSetPos**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +52,7 @@ SQLRETURN SQLRowCount(
  *RowCountPtr*  
  [Output] Punta a un buffer in cui si desidera restituire un conteggio delle righe. Per **aggiornamento**, **inserire**, e **eliminare** istruzioni, per le operazioni SQL_ADD SQL_UPDATE_BY_BOOKMARK e SQL_DELETE_BY_BOOKMARK  **SQLBulkOperations**e per le operazioni SQL_UPDATE o SQL_DELETE **SQLSetPos**, il valore restituito in **RowCountPtr* è il numero di righe interessate dal richiesta o – 1 se il numero di righe interessate non è disponibile.  
   
- Quando **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, **SQLSetPos o SQLMoreResults** viene chiamato, il SQL_DIAG_ROW_COUNT campo della struttura di dati di diagnostica è impostato per il conteggio delle righe e il conteggio delle righe viene memorizzato nella cache in modo dipendente dall'implementazione. **SQLRowCount** restituisce il valore di numero di riga memorizzata nella cache. Il valore di numero di riga memorizzata nella cache è valido finché l'handle di istruzione viene impostato lo stato allocato o preparato, l'istruzione viene rieseguita, o **SQLCloseCursor** viene chiamato. Si noti che se una funzione è stata chiamata poiché il campo SQL_DIAG_ROW_COUNT è stato impostato, il valore restituito da **SQLRowCount** potrebbe essere diverso dal valore nel campo SQL_DIAG_ROW_COUNT perché il campo SQL_DIAG_ROW_COUNT viene reimpostato su 0 per qualsiasi chiamata di funzione.  
+ Quando **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, **SQLSetPos o SQLMoreResults** viene chiamato, il SQL_DIAG_ROW_COUNT campo della struttura di dati di diagnostica è impostato per il conteggio delle righe e il conteggio delle righe viene memorizzato nella cache in modo dipendente dall'implementazione. **SQLRowCount** restituisce il valore del conteggio riga memorizzata nella cache. Il valore di numero di riga memorizzata nella cache è valido finché l'handle di istruzione viene impostato lo stato allocato o preparato, l'istruzione viene rieseguita, o **SQLCloseCursor** viene chiamato. Si noti che se una funzione è stata chiamata poiché il campo SQL_DIAG_ROW_COUNT è stato impostato, il valore restituito da **SQLRowCount** potrebbe essere diverso dal valore nel campo SQL_DIAG_ROW_COUNT perché il campo SQL_DIAG_ROW_COUNT viene reimpostato su 0 per qualsiasi chiamata di funzione.  
   
  Per altre istruzioni e funzioni, il driver può definire il valore restituito in \* *RowCountPtr*. Ad esempio, alcune origini dati possono essere in grado di restituire il numero di righe restituite da una **selezionare** istruzione o una funzione di catalogo prima di recuperare le righe.  
   

@@ -1,28 +1,22 @@
 ---
-title: Backup e ripristino
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: Viene descritto come dati di backup e ripristino works per SQL Server Parallel Data Warehouse (PDW).
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 
-ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+title: Backup e ripristino - Parallel Data Warehouse | Documenti Microsoft
+description: Viene descritto come dati di backup e ripristino eseguito per Parallel Data Warehouse (PDW). Operazioni di backup e ripristino vengono utilizzate per il ripristino di emergenza. Backup e ripristino è consente anche di copiare un database da un dispositivo a un altro dispositivo.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 118b9ced12e01ac6655d85969bb61717f2b31e0b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="backup-and-restore"></a>Backup e ripristino
-Viene descritto come dati di backup e ripristino works per SQL Server Parallel Data Warehouse (PDW). Operazioni di backup e ripristino vengono utilizzate per il ripristino di emergenza. Backup e ripristino è consente anche di copiare un database da un dispositivo a un altro dispositivo.  
+Viene descritto come dati di backup e ripristino eseguito per Parallel Data Warehouse (PDW). Operazioni di backup e ripristino vengono utilizzate per il ripristino di emergenza. Backup e ripristino è consente anche di copiare un database da un dispositivo a un altro dispositivo.  
     
 ## <a name="BackupRestoreBasics"></a>Nozioni di base di backup e ripristino  
 Un PDW *backup del database* è una copia di un database dello strumento, archiviato in un formato in modo che può essere utilizzato per ripristinare il database originale in un'applicazione.  
@@ -35,7 +29,7 @@ The [master database](master-database.md) is a SMP SQL Server database. It is ba
 
 -->
   
-PDW utilizza tecnologia di backup di SQL Server per eseguire il backup e ripristino di database di dispositivo. Opzioni di backup di SQL Server sono preconfigurate per utilizzare la compressione dei backup. È possibile impostare le opzioni di backup, ad esempio la compressione, checksum, dimensione del blocco e il numero di buffer.  
+PDW utilizza tecnologia di backup di SQL Server per eseguire il backup e ripristino di database di dispositivo. Opzioni di backup di SQL Server sono preconfigurate per utilizzare la compressione dei backup. Non è possibile impostare opzioni di backup come la compressione, il checksum, la dimensione blocco e il conteggio buffer.  
   
 Backup di database vengono archiviati in uno o più server di backup, che esiste nella rete di clienti.  PDW scrive un backup del database utente in parallelo direttamente dai nodi di calcolo in un server di backup e ripristina un backup del database utente in parallelo direttamente dal server di backup per i nodi di calcolo.  
   
@@ -46,7 +40,7 @@ Esistono due tipi di dati che richiedono un backup: database di sistema (ad esem
   
 Un backup completo del database è un backup di un intero database PDW. Questo è il tipo di backup predefinito. Un backup completo di un database utente include gli utenti del database e i ruoli del database. Un backup del database master include gli account di accesso.  
   
-Un backup differenziale contiene tutte le modifiche apportate dopo l'ultimo backup completo. Un backup differenziale è in genere richiede meno tempo rispetto a un backup completo e può essere eseguito più di frequente. Quando più copie di backup differenziale si basano su stesso backup completo, ogni backup differenziale include tutte le modifiche nel backup differenziale precedente.  
+Un backup differenziale contiene tutte le modifiche apportate dopo l'ultimo backup completo. Un backup differenziale richiede in genere meno tempo rispetto a un backup completo e può essere eseguito più di frequente. Quando più copie di backup differenziale si basano su stesso backup completo, ogni backup differenziale include tutte le modifiche nel backup differenziale precedente.  
   
 Ad esempio, è possibile creare un backup completo ogni settimana e ogni giorno un backup differenziale. Per ripristinare il database utente, il backup completo più l'ultimo backup differenziale (se presente) deve essere ripristinato.  
   
@@ -123,11 +117,11 @@ Quando il ripristino dei dati, lo strumento rileva il numero di nodi di calcolo 
   
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Ripristino in un'applicazione con un numero maggiore di nodi di calcolo  
   
-Ripristino di un backup in un'applicazione con un numero maggiore di nodi di calcolo aumenta la dimensione allocata database proporzionalmente al numero di nodi di calcolo.  
+Il ripristino di un backup in un'appliance con un numero maggiore di nodi di calcolo aumenta la dimensione allocata al database proporzionalmente al numero di nodi di calcolo.  
   
 Ad esempio, quando si ripristina un database di 60 GB da un dispositivo 2 nodi (30 GB per ogni nodo) in un'applicazione di 6 nodi, SQL Server PDW crea un database di 180 GB (6 nodi con 30 GB per ogni nodo) nel dispositivo 6-nodo. SQL Server PDW inizialmente Ripristina il database a 2 nodi in modo che corrisponda alla configurazione dell'origine e quindi vengono ridistribuiti i dati da tutti i nodi di 6.  
   
-Dopo la ridistribuzione ogni nodo di calcolo contiene meno dati effettivi e più spazio rispetto a ogni nodo di calcolo nel dispositivo di origine più piccolo. Utilizzare lo spazio aggiuntivo per aggiungere ulteriori dati al database. Se le dimensioni del database ripristinato sono superiore al necessario, è possibile utilizzare [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) per compattare le dimensioni dei file di database.  
+Dopo la ridistribuzione, ogni nodo di calcolo contiene meno dati effettivi e più spazio disponibile rispetto a ogni nodo di calcolo nell'appliance di origine di dimensioni inferiori. Usare lo spazio aggiuntivo per l'aggiunta di altri dati al database. Se le dimensioni del database ripristinato sono superiore al necessario, è possibile utilizzare [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) per compattare le dimensioni dei file di database.  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

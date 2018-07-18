@@ -1,30 +1,29 @@
 ---
 title: setBytes (long, byte, int, int) (metodo) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerBlob.setBytes (long.byte[], int, int)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerBlob.setBytes (long.byte[], int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 583b53edb45215c3c103e78465e1a4dd1bd14294
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 4b18005c16cd62358eb5f269504fc9d80eadb6de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setbytes-method-long-byte-int-int"></a>setBytes (long, byte, int, int) (metodo)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public int setBytes(long pos,
   
  Posizione (in base 1) nell'oggetto BLOB in corrispondenza della quale iniziare la scrittura dei dati.  
   
- *byte*  
+ *Byte*  
   
  Matrice di byte da scrivere nell'oggetto BLOB.  
   
@@ -54,7 +53,7 @@ public int setBytes(long pos,
   
  L'offset in byte della matrice in cui iniziare la lettura dei dati dal **byte** matrice.  
   
- *Len*  
+ *len*  
   
  Numero di byte di cui tentare la lettura dalla matrice di byte nell'oggetto BLOB.  
   
@@ -70,7 +69,7 @@ public int setBytes(long pos,
  I dati vengono sovrascritti a partire dalla posizione specificata e possono superare la lunghezza iniziale dell'oggetto BLOB. Se si specifica un valore posizione+1, verranno aggiunti byte. Se si passa un valore posizione+2 o superiore (o zero o inferiore) verrà generato un errore di posizione. Il passaggio di lunghezza zero **byte** matrice restituirà zero perché è stato scritto alcun byte.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo setBytes &#40; SQLServerBlob &#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
+ [Metodo setBytes &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [Metodi di SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [Membri di SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [Classe SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)  

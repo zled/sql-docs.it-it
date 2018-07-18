@@ -1,26 +1,24 @@
 ---
 title: Esempio del tipo di dati SQLXML | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: ffd9ba36871ff40eca7b61b02503f979d9aa30c7
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 35259e7c9f6bc0129933117b0202b4ec61e52010
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlxml-data-type-sample"></a>Esempio di tipo di dati SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,6 +59,6 @@ ms.lasthandoff: 11/18/2017
  [!code[JDBC#UsingSQLXML1](../../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di tipi di dati &#40; JDBC &#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
+ [Utilizzo dei tipi di dati di &#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
   
   

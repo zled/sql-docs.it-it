@@ -1,27 +1,21 @@
 ---
-title: Ripristinare un Database protetto con TDE in Parallel Data Warehouse
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: Utilizzare la procedura seguente per ripristinare un database crittografato con la crittografia dati trasparente.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
-caps.latest.revision: "4"
-ms.openlocfilehash: 5df3843a3e329901f8f77b65e5f6d4ff69cf6dbf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Ripristinare un database protetto con TDE - Parallel Data Warehouse | Documenti Microsoft
+description: Utilizzare la procedura seguente per ripristinare un database che verrà crittografato tramite transparent data encryption in Analitica piattaforma Parallel Data Warehouse di System.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="restore-a-database-protected-by-tde"></a>Ripristinare un database protetto con TDE
+# <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Ripristinare un database protetto con TDE in Parallel Data Warehouse
 Utilizzare la procedura seguente per ripristinare un database crittografato con la crittografia dati trasparente.  
   
 Il [tramite Transparent Data Encryption](transparent-data-encryption.md#using-tde) esempio include il codice per abilitare TDE nel `AdventureWorksPDW2012` database. Il codice seguente continua tale esempio, creando un backup del database sull'accessorio Analitica piattaforma di strumenti analitici originale e quindi ripristinare il certificato e il database in un dispositivo diverso.  

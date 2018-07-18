@@ -1,16 +1,14 @@
 ---
-title: STGeomCollFromWKB (tipo di dati geometry) | Documenti Microsoft
-ms.custom: 
+title: STGeomCollFromWKB (tipo di dati geometry) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STGeomCollFromWKB (geometry Data Type)
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - STGeomCollFromWKB (geometry Data Type)
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 87203352667ccca98f440a136cd12917c64b48ad
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a713ad564565fd21150c7f499e4008ec762d7cfb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **geometrycollection** istanza da una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Restituisce un'istanza **geometrycollection** da una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,23 +42,23 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *WKB_geometrycollection*  
- Rappresentazione WKB del **geometrycollection** istanza da restituire. *WKB_geometrycollection* è un **varbinary (max)** espressione.  
+ Rappresentazione WKB dell'istanza **geometrycollection** da restituire. *WKB_geometrycollection* è un'espressione **varbinary(max)**.  
   
  *SRID*  
- È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **geometry** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometry** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- Il tipo OGC del **geometry** istanza restituita dalla `STGeomCollFromWKB()` è impostato su **GeomCollection**, **MultiPolygon**, **MultiLineString**, o **MulitPoint**, in base all'input WKB corrispondente.  
+## <a name="remarks"></a>Remarks  
+ Il tipo OGC dell'istanza **geometry** restituito da `STGeomCollFromWKB()` è impostato su **GeomCollection**, **MultiPolygon**, **MultiLineString** o **MulitPoint**, in base all'input WKB corrispondente.  
   
  Questo metodo genererà un'eccezione FormatException se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `STGeomCollFromWKB()` per creare un **geometry** istanza.  
+ Nell'esempio seguente viene usato `STGeomCollFromWKB()` per creare un'istanza **geometry**.  
   
 ```  
 DECLARE @g geometry;  

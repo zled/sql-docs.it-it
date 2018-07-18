@@ -1,30 +1,31 @@
 ---
 title: Esempi di regole di business (Master Data Services) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
-caps.latest.revision: 
+caps.latest.revision: 21
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e01b4c5141011209f5fdf314711e9cc26595c5f5
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 68be5f600da960023548a5b9e5678c995766a71b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="business-rule-examples-master-data-services"></a>Esempi di regole di business (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 In questo articolo vengono illustrati esempi di regole di business per [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Questi esempi sono disponibili nei modelli di esempio inclusi nell'installazione di [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
 Per istruzioni su come distribuire i modelli di esempio, vedere [Installazione e configurazione di Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
@@ -64,7 +65,7 @@ Else
   
 Modello di esempio  |Entità  |Nome della regola di business| Description    
 ---------|---------|---------|-----------  
-Product     |  Product       | DaysToManufacture |Specifica l'intervallo di giorni alla produzione per la produzione interna.          
+Prodotto     |  Prodotto       | DaysToManufacture |Specifica l'intervallo di giorni alla produzione per la produzione interna.          
 Nella regola di business seguente, se il valore dell'attributo InHouseManufacture soddisfa la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. In caso contrario, non viene eseguita alcuna azione.  
 ```  
 If  
@@ -80,7 +81,7 @@ Else
   
 Modello di esempio  |Entità  |Nome della regola di business|Description    
 ---------|---------|---------|-------------  
-Product     |Product         |Required fields| Specifica gli attributi obbligatori per i membri dell'entità Product.           
+Prodotto     |Product         |Required fields| Specifica gli attributi obbligatori per i membri dell'entità Product.           
 Nella regola di business seguente, l' `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. I valori di attributo non possono essere Null o vuoti.  
 ```  
 If  
@@ -105,7 +106,7 @@ Else
   
 Modello di esempio  |Entità  |Nome della regola di business|Description    
 ---------|---------|---------|-----------  
-Product     | Product        |  Std Cost| Richiede che il costo standard sia maggiore di 0.        
+Prodotto     | Prodotto        |  Std Cost| Richiede che il costo standard sia maggiore di 0.        
 Nella regola di business seguente, l' `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
 ```  
 If  
@@ -121,7 +122,7 @@ Else
   
 Modello di esempio  |Entità  |Nome della regola di business|Description    
 ---------|---------|---------|------------  
-Product     | Product        | FG MSRP Cost|Specifica che se il prodotto è un prodotto finito, il prezzo consigliato e il prezzo del rivenditore devono essere maggiori di 0.           
+Prodotto     | Prodotto        | FG MSRP Cost|Specifica che se il prodotto è un prodotto finito, il prezzo consigliato e il prezzo del rivenditore devono essere maggiori di 0.           
   
 Nella regola di business seguente, se il valore dell'attributo FinishedGoodIndicator soddisfa la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the MSRP and DealerCost attributes.  
 ```  
@@ -139,7 +140,7 @@ Else
   
 Modello di esempio  |Entità  |Nome della regola di business|Description    
 ---------|---------|---------|------------  
-Product     | Product        |  Default Name| Specifica il nome di prodotto predefinito in base ai valori degli attributi Color e Class. Quando il valore dell'attributo Color non è YLO e l'attributo Class non è NA, il nome predefinito è Yellow NA.         
+Prodotto     | Prodotto        |  Default Name| Specifica il nome di prodotto predefinito in base ai valori degli attributi Color e Class. Quando il valore dell'attributo Color non è YLO e l'attributo Class non è NA, il nome predefinito è Yellow NA.         
 Nella regola di business seguente, se gli attributi Color e Class non soddisfano la condizione della regola `is equal` , viene applicata l' `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the Name attribute.  
 ```  
 If  
@@ -160,8 +161,7 @@ Per istruzioni sulla configurazione del sito Web, vedere [Installazione e config
 3. Fare clic sull'entità a cui si applica la regola, come indicato nelle tabelle precedenti, quindi fare clic su **Regole di business**.  
 4. Fare clic sul nome della regola di business che si vuole visualizzare. L'interfaccia utente viene espansa per visualizzare le istruzioni **If**, **Then** ed **Else** .  
   
-## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Commenti e suggerimenti   
-Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Microsoft incoraggia gli utenti a inviare i propri commenti per migliorare i contenuti Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com).   
+ 
   
   
   

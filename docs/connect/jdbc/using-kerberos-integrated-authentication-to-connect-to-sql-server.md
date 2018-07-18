@@ -1,27 +1,24 @@
 ---
 title: Kerberos mediante l'autenticazione integrata di connettersi a SQL Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 4ddd65d18a4a335ac7ad5d416d87afccf1748fbb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 6e2019cba57870cf9e22bdeb4d27f52c055fcdc8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -79,7 +76,7 @@ ms.lasthandoff: 11/18/2017
   
  Per ulteriori informazioni sui nomi dell'entità servizio (SPN), vedere:  
   
--   [Come utilizzare l'autenticazione Kerberos in SQL Server](http://support.microsoft.com/kb/319723)  
+-   [Come usare l'autenticazione Kerberos in SQL Server](http://support.microsoft.com/kb/319723)  
   
 -   [Utilizzo di Kerberos con SQL Server](http://go.microsoft.com/fwlink/?LinkId=207814)  
 
@@ -167,7 +164,7 @@ Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.kr
 ## <a name="verifying-that-sql-server-can-be-accessed-via-kerberos"></a>Verifica dell'accesso a SQL Server tramite Kerberos  
  Eseguire la query seguente in SQL Server Management Studio:  
   
- **Selezionare auth_scheme da Sys.dm exec_connections dove session_id = @@spid**  
+ **Selezionare auth_scheme DM exec_connections dove session_id = @@spid**  
   
  Assicurarsi di disporre dell'autorizzazione necessaria per l'esecuzione della query.  
 

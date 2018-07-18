@@ -1,29 +1,17 @@
 ---
 title: Mediante il pacchetto MicrosoftML con SQL Server | Documenti Microsoft
-ms.custom: 
-ms.date: 08/23/2017
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- R
-ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 4f94d2eaaaa9fc70014e5d333dede4919ca198f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>Mediante il pacchetto MicrosoftML con SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,11 +22,11 @@ In SQL Server 2017 CTP 2.0 è stato aggiunto il supporto per la lingua di Python
 
 + **MicrosoftML per R**
 
-    Riferimento di introduzione e pacchetto: [MicrosoftML: computer gli algoritmi di apprendimento R](https://docs.microsoft.com/en-us/r-server/r-reference/microsoftml/microsoftml-package)
+    Introduzione e pacchetto fanno riferimento a: [MicrosoftML: computer gli algoritmi di apprendimento R](https://docs.microsoft.com/en-us/r-server/r-reference/microsoftml/microsoftml-package)
 
     Essendo distinzione maiuscole/minuscole R, assicurarsi che si fa riferimento il nome corretto durante il caricamento del pacchetto.
 
-+ **microsoftml per Python**
++ **Microsoftml per Python**
 
     Riferimento di introduzione e pacchetto: [microsoftml (libreria di funzioni per Python)](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package). 
 
@@ -52,7 +40,7 @@ MicrosoftML contiene un'ampia gamma di trasformazioni che sono state ottimizzate
 
 - Modelli di foresta delle decisioni e di struttura ad albero delle decisioni: `rxFastTree` è un algoritmo albero delle decisioni con Boosting originariamente noto come FastRank, che è stata sviluppata per l'utilizzo in Bing. È uno degli strumenti di apprendimento più noti e veloci. Supporta la regressione e la classificazione binaria.
 
-  `rxFastForest`un modello di regressione logistica è basato sul metodo foreste casuali. È simile alla funzione `rxLogit` in RevoScaleR, ma supporta la regolarizzazione L1 ed L2. Supporta la regressione e la classificazione binaria.
+  `rxFastForest` un modello di regressione logistica è basato sul metodo foreste casuali. È simile alla funzione `rxLogit` in RevoScaleR, ma supporta la regolarizzazione L1 ed L2. Supporta la regressione e la classificazione binaria.
 
 - La regressione logistica: `rxLogisticRegression` è simile a un modello di regressione logistica il `rxLogit` funzione RevoScaleR, con supporto aggiuntivo per la regolarizzazione L1 e L2. Supporta la classificazione multiclasse o binaria.
 
@@ -80,7 +68,7 @@ In questa sezione viene descritto come individuare e caricare il pacchetto nel c
 
 + Il pacchetto MicrosoftML per R è installato per impostazione predefinita con Microsoft R Server 9.1.0 e in SQL Server 2017.
 
-    È inoltre disponibile per l'utilizzo con SQL Server 2016, se si aggiornano i componenti di R per l'istanza, tramite il programma di installazione di Microsoft R Server come descritto qui: [aggiornare un'istanza di SQL Server utilizzando l'associazione](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+    È anche disponibile per l'uso con SQL Server 2016, se si aggiornano i componenti di R per l'istanza, tramite il programma di installazione di Microsoft R Server come descritto qui: [aggiornare un'istanza di SQL Server utilizzando l'associazione](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 
 + Il **microsoftml** per Python è installato per impostazione predefinita con SQL Server 2017 del pacchetto 
 

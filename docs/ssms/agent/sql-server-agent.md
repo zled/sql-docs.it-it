@@ -1,33 +1,37 @@
 ---
 title: SQL Server Agent | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 67b44d5e9057cc9ede6cdece28b23ae3ab8bf037
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 80b6776f555fd5bdaa8ed4c4977dc5193a27eba2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708939"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent è un servizio di Microsoft Windows per l'esecuzione di attività amministrative pianificate, denominate *processi* in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)].  
   
 **Contenuto dell'argomento**  
@@ -116,7 +120,7 @@ Un *operatore* definisce le informazioni di contatto relative al responsabile de
 > [!IMPORTANT]  
 > Le opzioni Cercapersone e **Net Send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
   
-Per inviare notifiche agli operatori usando la posta elettronica o i cercapersone, è necessario configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent per l'uso di Posta elettronica database. Per altre informazioni, vedere [Posta elettronica database](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
+Per inviare notifiche agli operatori usando la posta elettronica o i cercapersone, è necessario configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent per l'uso di Posta elettronica database. Per altre informazioni, vedere [Posta elettronica database](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
   
 È possibile definire un operatore come alias assegnato a un gruppo di utenti. In questo modo la notifica può raggiungere contemporaneamente tutti i membri dell'alias. Per altre informazioni, vedere [Operatori](../../ssms/agent/operators.md).  
   
@@ -127,11 +131,11 @@ Per inviare notifiche agli operatori usando la posta elettronica o i cercaperson
 I membri dei ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** in **msdb**e i membri del ruolo predefinito del server **sysadmin** hanno accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Un utente che non appartiene a nessuno di questi ruoli non può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Per altre informazioni sui ruoli usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Sottosistemi  
-Un sottosistema è un oggetto predefinito che rappresenta funzionalità disponibili per un passaggio di processo. Ogni proxy ha accesso a uno o più sottosistemi. I sottosistemi offrono sicurezza in quanto delimitano l'accesso alle funzionalità disponibili per un proxy. Ogni passaggio di processo viene eseguito nel contesto di un proxy, ad eccezione dei passaggi di processo [!INCLUDE[tsql](../../includes/tsql_md.md)] . [!INCLUDE[tsql](../../includes/tsql_md.md)] utilizzano il comando EXECUTE AS per impostare il contesto di sicurezza.  
+Un sottosistema è un oggetto predefinito che rappresenta funzionalità disponibili per un passaggio di processo. Ogni proxy ha accesso a uno o più sottosistemi. I sottosistemi offrono sicurezza in quanto delimitano l'accesso alle funzionalità disponibili per un proxy. Ogni passaggio di processo viene eseguito nel contesto di un proxy, ad eccezione dei passaggi di processo [!INCLUDE[tsql](../../includes/tsql_md.md)] . I passaggi di processo [!INCLUDE[tsql](../../includes/tsql_md.md)] usano il comando EXECUTE AS per impostare il contesto di sicurezza sul proprietario del processo.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] vengono definiti i sottosistemi inclusi nella tabella seguente:  
   
-|Nome sottosistema|Description|  
+|Nome sottosistema|Descrizione|  
 |--------------|-----------|  
 |Script Microsoft ActiveX|Esegue un passaggio di processo con script ActiveX.<br /><br />**Avviso** Il sottosistema di scripting ActiveX verrà rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |Sistema operativo (**CmdExec**)|Esegue un programma eseguibile.|  
@@ -171,16 +175,16 @@ Se si eseguono più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 Per un'introduzione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , utilizzare le attività riportate di seguito.  
   
-|Description|Argomento|  
+|Descrizione|Argomento|  
 |-----------|-----|  
 |Viene descritto come configurare SQL Server Agent.|[Configurazione di SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)|  
 |Viene descritto come avviare, arrestare e sospendere il servizio SQL Server Agent.|[Avvio, arresto o sospensione del servizio SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
 |Descrive le considerazioni di cui tener conto per specificare un account per il servizio SQL Server Agent.|[Selezionare un account per il servizio SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |Descrive come utilizzare il log degli errori di SQL Server Agent.|[Log degli errori di SQL Server Agent](../../ssms/agent/sql-server-agent-error-log.md)|  
 |Viene descritto come utilizzare gli oggetti prestazioni.|[Utilizzo degli oggetti prestazioni](../../ssms/agent/use-performance-objects.md)|  
-|Viene descritta la Creazione guidata piano di manutenzione, un'utilità che è possibile utilizzare per creare processi, avvisi e operatori allo scopo di automatizzare l'amministrazione di un'istanza di SQL Server.|[Utilizzare la Creazione guidata piano di manutenzione](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
+|Viene descritta la Creazione guidata piano di manutenzione, un'utilità che è possibile utilizzare per creare processi, avvisi e operatori allo scopo di automatizzare l'amministrazione di un'istanza di SQL Server.|[Utilizzare la Creazione guidata piano di manutenzione](http://msdn.microsoft.com/db65c726-9892-480c-873b-3af29afcee44)|  
 |Viene descritto come utilizzare SQL Server Agent per automatizzare le attività amministrative.|[Automatizzazione delle attività amministrative &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Configurazione superficie di attacco](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
+[Configurazione superficie di attacco](http://msdn.microsoft.com/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

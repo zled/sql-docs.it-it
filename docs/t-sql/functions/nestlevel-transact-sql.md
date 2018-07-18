@@ -1,16 +1,14 @@
 ---
-title: '@@NESTLEVEL (Transact-SQL) | Documenti Microsoft'
-ms.custom: 
+title: '@@NESTLEVEL (Transact-SQL) | Microsoft Docs'
+ms.custom: ''
 ms.date: 09/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@NESTLEVEL'
@@ -22,18 +20,17 @@ helpviewer_keywords:
 - nesting stored procedures
 - stored procedure nesting levels [SQL Server]
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3f513fe1db6c1d3cea11eb2c1d52f246214fb76c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 23dc9c9b67dc7fa07e1ac8688be264f6e00b935c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL è (Transact-SQL)
+# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce il livello di nidificazione dell'esecuzione corrente di stored procedure (il livello iniziale è 0) nel server locale.  
@@ -49,14 +46,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Ogni volta che una stored procedure ne richiama un'altra oppure esegue codice gestito tramite un riferimento a una routine CLR, un tipo CLR o una funzione di aggregazione CLR, il livello di nidificazione viene incrementato. Quando viene superato il livello massimo pari a 32, la transazione viene interrotta.  
   
- Quando @@NESTLEVEL viene eseguita all'interno di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stringa, il valore restituito è 1 + corrente livello di nidificazione. Quando @@NESTLEVEL viene eseguita in modo dinamico utilizzando sp_executesql il valore restituito è 2 + il livello di nidificazione corrente.  
+ Se la funzione @@NESTLEVEL viene eseguita all'interno di una stringa [!INCLUDE[tsql](../../includes/tsql-md.md)], il valore restituito è 1 + il livello di annidamento corrente. Se la funzione @@NESTLEVEL viene eseguita dinamicamente usando la stored procedure sp_executesql, il valore restituito è 2 + il livello di annidamento corrente.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>A. Tramite@NESTLEVEL in una stored procedure  
+### <a name="a-using-nestlevel-in-a-procedure"></a>A. Uso di @@NESTLEVEL in una procedura  
  Nell'esempio seguente vengono create due procedure: una procedura che richiama l'altra e una che visualizza le impostazioni della funzione `@@NESTLEVEL` di ciascuna procedura.  
   
 ```  
@@ -91,8 +88,8 @@ Inner Level
 2
 ```  
   
-### <a name="b-calling-nestlevel"></a>B. La chiamata a @@NESTLEVEL  
- Nell'esempio seguente viene illustrata la differenza in valori restituiti da `SELECT`, `EXEC`, e `sp_executesql` quando ciascuno di essi chiama `@@NESTLEVEL`.  
+### <a name="b-calling-nestlevel"></a>B. Chiamata a @@NESTLEVEL  
+ Nell'esempio seguente viene illustrata la differenza dei valori restituiti dalle istruzioni `SELECT`, `EXEC` e `sp_executesql` quando ogni istruzione richiama la funzione `@@NESTLEVEL`.  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  

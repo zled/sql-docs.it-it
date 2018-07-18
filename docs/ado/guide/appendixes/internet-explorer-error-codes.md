@@ -1,31 +1,28 @@
 ---
 title: Codici di errore di Internet Explorer | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Internet Explorer errors [ADO]
 - errors [ADO], Internet Explorer
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf4ee8c31a09ad1c1bf88ffb37d987f5dabb8bf0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 085303cd68087d882ff8c843b2dd5d12ebe37b96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Codici di errore di Internet Explorer per Remote Data Service
 Nella tabella seguente sono elencati i codici di errore di Microsoft® Internet Explorer correlati all'utilizzo di Remote Data Service. Conversione decimale positiva dei due byte bassi, vengono visualizzati la conversione decimale negativa del codice di errore completo e i valori esadecimali.

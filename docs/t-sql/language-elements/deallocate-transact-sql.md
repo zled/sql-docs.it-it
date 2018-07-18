@@ -1,16 +1,14 @@
 ---
-title: DEALLOCATE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DEALLOCATE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DEALLOCATE
@@ -24,21 +22,20 @@ helpviewer_keywords:
 - deleting cursor references
 - removing cursor references
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fb05fdd9da2f4f724976092bf027f5dde5edd412
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: df5acd97fb4e32f8ac70dad82e49ce3bb7ecdb45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Rimuove un riferimento a un cursore. Quando l'ultimo riferimento al cursore viene deallocato, le strutture di dati che includono il cursore vengono rilasciate da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Rimuove un riferimento a un cursore. Dopo che l'ultimo riferimento al cursore è stato deallocato, le strutture di dati che includono il cursore vengono rilasciate da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +48,12 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>Argomenti  
  *cursor_name*  
- Nome di un cursore già dichiarato. Se esiste un globali e un cursore locale con *cursor_name* per il proprio nome, *cursor_name* fa riferimento il cursore globale se viene specificato e il cursore locale se non è stato specificato.  
+ Nome di un cursore già dichiarato. Se esistono sia un cursore globale che un cursore locale con il nome *cursor_name*, *cursor_name* indica il cursore globale se viene specificata la parola chiave GLOBAL e il cursore locale se la parola chiave GLOBAL viene omessa.  
   
  @*cursor_variable_name*  
- È il nome di un **cursore** variabile. @*cursor_variable_name* deve essere di tipo **cursore**.  
+ Nome di una variabile di **cursore**. @*cursor_variable_name* deve essere di tipo **cursor**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Le istruzioni che hanno effetto sui cursori utilizzano un nome di cursore o una variabile di cursore per fare riferimento al cursore. L'istruzione DEALLOCATE elimina l'associazione tra un cursore e il nome di cursore o la variabile di cursore. Se il nome o la variabile è l'ultimo riferimento al cursore, il cursore viene deallocato e le risorse da esso utilizzate vengono rilasciate. I blocchi di scorrimento utilizzati per proteggere l'isolamento delle operazioni di recupero vengono rilasciati dall'istruzione DEALLOCATE. I blocchi a livello di transazione utilizzati per proteggere gli aggiornamenti, inclusi gli aggiornamenti posizionati eseguiti con il cursore, vengono mantenuti attivi fino al termine della transazione.  
   
  L'istruzione DECLARE CURSOR consente di allocare un cursore e di associarlo a un nome di cursore.  
@@ -85,7 +82,7 @@ SELECT * FROM Person.Person;
     SELECT * FROM Person.Person;  
     ```  
   
- Un'istruzione DEALLOCATE @*cursor_variable_name* istruzione rimuove solo il riferimento della variabile denominata fino al cursore. La variabile verrà deallocata solo quando non sarà più compresa nell'ambito al termine dell'esecuzione del batch, della stored procedure o del trigger. Dopo un'istruzione DEALLOCATE @*cursor_variable_name* istruzione, la variabile può essere associata a un altro cursore tramite l'istruzione SET.  
+ Un'istruzione DEALLOCATE @*cursor_variable_name* elimina solo il riferimento al cursore dalla variabile specificata. La variabile verrà deallocata solo quando non sarà più compresa nell'ambito al termine dell'esecuzione del batch, della stored procedure o del trigger. Dopo l'esecuzione di un'istruzione DEALLOCATE @*cursor_variable_name*, è possibile associare la variabile a un altro cursore tramite l'istruzione SET.  
   
 ```  
 USE AdventureWorks2012;  

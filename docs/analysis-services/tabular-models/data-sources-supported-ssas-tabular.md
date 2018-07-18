@@ -1,33 +1,28 @@
 ---
-title: Origini dati supportate nei modelli tabulari di SQL Server Analysis Services | Documenti Microsoft
-ms.custom: 
-ms.date: 02/22/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 
-author: Minewiskan
+title: Origini dati supportate nei modelli di SQL Server Analysis Services tabulari 1200 | Documenti Microsoft
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 31ef1eb37f85e3e9ec7a7ea7d7eadee03b6c9c20
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="data-sources-supported-in-tabular-models"></a>Origini dati supportate nei modelli tabulari
+# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Origini dati supportate in SQL Server Analysis Services i modelli tabulari 1200
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Per Azure Analysis Services, vedere [origini dati supportate in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
+  
+In questo articolo descrive i tipi di origini dati che possono essere utilizzate con i modelli tabulari di SQL Server Analysis Services il 1200 e livello di compatibilità inferiore. 
 
-  In questo articolo vengono descritti i tipi di origini dati che possono essere utilizzate con i modelli tabulari.  
+Per i modelli a livello di compatibilità 1400, vedere [origini dati supportate nei modelli di SQL Server Analysis Services tabulari 1400](data-sources-supported-ssas-tabular-1400.md).
+
+Per Azure Analysis Services, vedere [origini dati supportate in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
   
 ##  <a name="bkmk_supported_ds"></a> Origini dati supportate per i modelli tabulari in memoria  
 Il programma di installazione di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non consente di installare i provider elencati per ogni origine dati. Alcuni provider potrebbero essere installati con altre applicazioni nel computer in uso. In altri casi, potrebbe essere necessario scaricare e installare il provider.  
@@ -73,3 +68,9 @@ L'importazione di tabelle dai database relazionali consente di risparmiare alcun
 Le colonne in cui sono contenuti dati simili in origini dati diverse costituiscono la base per la creazione di relazioni all'interno di Progettazione modelli. Quando si utilizzano origini dati eterogenee, scegliere tabelle con colonne di cui è possibile eseguire il mapping alle tabelle in altre origini dati in cui sono contenuti dati identici o simili.  
   
 Provider OLE DB offrono talvolta prestazioni più veloci per i dati su larga scala. Quando si sceglie tra provider diversi per la stessa origine dati, provare innanzitutto il provider OLE DB.  
+
+## <a name="see-also"></a>Vedere anche
+
+[Origini dati supportate in SQL Server Analysis Services i modelli tabulari 1400](data-sources-supported-ssas-tabular-1400.md)
+
+[Origini dati supportate in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   

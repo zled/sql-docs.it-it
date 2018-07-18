@@ -1,34 +1,23 @@
 ---
 title: Elemento HoldoutSeed | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: HoldoutSeed
-helpviewer_keywords: HoldoutSeed element
-ms.assetid: 6b608bb3-c075-4744-9722-f5fb9fa1cc7e
-caps.latest.revision: "23"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 910372435e504efb7afabfe245bba65e430fe1d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f0fbf102dcfc731f02195964c6657244e9bf0b70
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="holdoutseed-element"></a>Elemento HoldoutSeed
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Specifica il valore di inizializzazione per una partizione di dati di controllo ripetibile che contiene il set di test di un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) elemento. Questo valore di inizializzazione assicura che il contenuto del modello rimanga lo stesso durante la rielaborazione. Se non specificato o impostato su 0, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea un valore di inizializzazione utilizzando un algoritmo di hash sul nome della struttura di data mining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Specifica il valore di inizializzazione per una partizione di dati di controllo ripetibile che contiene il set di test di un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) elemento. Questo valore di inizializzazione assicura che il contenuto del modello rimanga lo stesso durante la rielaborazione. Se non specificato o impostato su 0, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea un valore di inizializzazione utilizzando un algoritmo di hash sul nome della struttura di data mining.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|Long|  
 |Valore predefinito|0|  
@@ -54,7 +43,7 @@ ms.lasthandoff: 01/08/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Osservazioni  
  Quando si crea per la prima volta una struttura di data mining, l'ID e il nome sono gli stessi. Tuttavia, è possibile modificare il nome della struttura di data mining. Pertanto, per garantire la ripetibilità della partizione, non ci si deve basare sul valore di inizializzazione creato dal nome, ma è necessario impostare espressamente un valore di inizializzazione.  
@@ -68,7 +57,7 @@ ms.lasthandoff: 01/08/2018
  L'elemento che corrisponde all'elemento padre **HoldoutSeed** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
+ [Proprietà &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [Elemento HoldoutActualSize](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)   
  [Elemento HoldoutMaxPercent](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)   
  [Elemento HoldoutMaxCases](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)  

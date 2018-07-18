@@ -1,37 +1,34 @@
 ---
-title: STNumCurves (tipo di dati geometry) | Documenti Microsoft
-ms.custom: 
+title: STNumCurves (tipo di dati geometry) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - STNumCurves method (geometry)
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92cf7af65b64c412aff37311ccf1e9b44484968b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: eec3bd116f3d8f3a5a6dd485cbd02c5de5201fe3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Questo metodo restituisce il numero di curve in un **geometry** istanza quando l'istanza è un tipo di dati spaziali unidimensionali. I tipi di dati spaziali unidimensionali includono **LineString**, **CircularString**, e **CompoundCurve**. `STNumCurves`() funziona solo su tipi semplici; non funziona con **geometry** come raccolte **MultiLineString**.
+Questo metodo restituisce il numero di curve di un'istanza **geometry** quando l'istanza è un tipo di dati spaziali unidimensionali. I tipi di dati spaziali unidimensionali includono **LineString**, **CircularString** e **CompoundCurve**. `STNumCurves`() funziona solo su tipi semplici; non funziona con raccolte **geometry** come **MultiLineString**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,12 +38,12 @@ Questo metodo restituisce il numero di curve in un **geometry** istanza quando l
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- Un oggetto vuoto unidimensionale **geometry** istanza restituisce 0. **NULL** viene restituito quando il **geometry** istanza non è un'istanza unidimensionale oppure è un'istanza non inizializzata.  
+## <a name="remarks"></a>Remarks  
+ Un'istanza **geometry** unidimensionale vuota restituisce 0. Viene restituito **NULL** quando l'istanza **geometry** non è un'istanza unidimensionale oppure è un'istanza non inizializzata.  
   
 ## <a name="examples"></a>Esempi  
   

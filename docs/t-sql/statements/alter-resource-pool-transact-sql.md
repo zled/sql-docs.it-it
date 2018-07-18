@@ -1,16 +1,14 @@
 ---
-title: ALTER RESOURCE POOL (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_RESOURCE_POOL_TSQL
@@ -20,23 +18,22 @@ dev_langs:
 helpviewer_keywords:
 - ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 47
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4edf3d8f20cc3705a6303d55f471dfa74c250f74
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a28a68d4260d0e8a7cda255fb9bd1ec833cc062e
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifica una configurazione esistente del pool di risorse di Resource Governor in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento argomento](../../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -74,26 +71,26 @@ ALTER RESOURCE POOL { pool_name | "default" }
 > [!NOTE]  
 >  Per i gruppi del carico di lavoro e pool di risorse predefiniti vengono utilizzati sempre nomi scritti in lettere minuscole, ad esempio "default". Questo aspetto deve essere preso in considerazione per i server in cui vengono utilizzate regole di confronto con distinzione tra maiuscole e minuscole. In server con regole di confronto senza distinzione tra maiuscole e minuscole, ad esempio SQL_Latin1_General_CP1_CI_AS, le parole "default" e "Default" vengono considerate uguali.  
   
- MIN_CPU_PERCENT =*valore*  
- Specifica la larghezza di banda media garantita della CPU concessa per tutte le richieste nel pool di risorse, in caso di contesa di CPU. *valore* è un intero con valore predefinito è 0. L'intervallo consentito per *valore* è compreso tra 0 e 100.  
+ MIN_CPU_PERCENT =*value*  
+ Specifica la larghezza di banda media garantita della CPU concessa per tutte le richieste nel pool di risorse, in caso di contesa di CPU. *value* è un intero con impostazione predefinita 0. L'intervallo consentito per *value* è compreso tra 0 e 100.  
   
  MAX_CPU_PERCENT =*value*  
- Specifica la larghezza di banda media massima della CPU ricevuta da tutte le richieste nel pool di risorse in caso di contesa di CPU. *valore* è un intero con valore predefinito è pari a 100. L'intervallo consentito per *valore* è compreso tra 1 e 100.  
+ Specifica la larghezza di banda media massima della CPU ricevuta da tutte le richieste nel pool di risorse in caso di contesa di CPU. *value* è un intero con impostazione predefinita 100. L'intervallo consentito per *value* è compreso tra 1 e 100.  
   
- Valore di CAP_CPU_PERCENT =*valore*  
+ CAP_CPU_PERCENT =*value*  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Specifica la capacità della CPU di destinazione massima per le richieste nel pool di risorse. *valore* è un intero con valore predefinito è pari a 100. L'intervallo consentito per *valore* è compreso tra 1 e 100.  
+ Specifica la capacità di CPU massima di destinazione per le richieste nel pool di risorse. *value* è un intero con impostazione predefinita 100. L'intervallo consentito per *value* è compreso tra 1 e 100.  
   
 > [!NOTE]  
->  A causa della natura statistica di governance di CPU, è possibile riscontrare picchi occasionali supera il valore specificato nel valore di CAP_CPU_PERCENT.  
+>  Data la natura statistica di governance della CPU, è possibile riscontrare occasionali picchi che superano il valore specificato in CAP_CPU_PERCENT.  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Associa il pool di risorse a utilità di pianificazione specifiche. Il valore predefinito è AUTO.  
   
- AFFINITY SCHEDULER = (Scheduler_range_spec) esegue il mapping del pool di risorse alle pianificazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificate dagli ID specificati. Questi ID mapping ai valori nella colonna scheduler_id [Sys.dm os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).  
+ AFFINITY SCHEDULER = (Scheduler_range_spec) esegue il mapping del pool di risorse alle pianificazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificate dagli ID specificati. Questi ID eseguono il mapping ai valori nella colonna scheduler_id di [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).  
   
  Se si utilizza AFFINITY NAMANODE = (NUMA_node_range_spec), viene creata un'affinità tra il pool di risorse e le utilità di pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che eseguono il mapping alle CPU fisiche corrispondenti al nodo o all'intervallo di nodi NUMA specificato. È possibile utilizzare la seguente query Transact-SQL per individuare il mapping tra la configurazione NUMA fisica e gli ID delle utilità di pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -105,41 +102,41 @@ INNER JOIN sys.dm_os_schedulers AS sc
       AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*valore*  
- Specifica la quantità minima di memoria riservata al pool di risorse non condivisibile con altri pool di risorse. *valore* è un intero con valore predefinito è 0. L'intervallo consentito per *valore* è compreso tra 0 e 100.  
+ MIN_MEMORY_PERCENT =*value*  
+ Specifica la quantità minima di memoria riservata al pool di risorse non condivisibile con altri pool di risorse. *value* è un intero con impostazione predefinita 0. L'intervallo consentito per *value* è compreso tra 0 e 100.  
   
- MAX_MEMORY_PERCENT =*valore*  
- Specifica la memoria totale del server utilizzabile dalle richieste in questo pool di risorse. *valore* è un intero con valore predefinito è pari a 100. L'intervallo consentito per *valore* è compreso tra 1 e 100.  
+ MAX_MEMORY_PERCENT =*value*  
+ Specifica la memoria totale del server utilizzabile dalle richieste in questo pool di risorse. *value* è un intero con impostazione predefinita 100. L'intervallo consentito per *value* è compreso tra 1 e 100.  
   
  MIN_IOPS_PER_VOLUME =*value*  
  **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Specifica il numero minimo di operazioni di I/O al secondo per volume di disco da riservare per il pool di risorse. L'intervallo consentito per *valore* è compreso tra 0 e 2 ^ 31-1 (2.147.483.647). Specificare 0 per indicare che non è impostata alcuna soglia minima per il pool.  
+ Specifica il numero minimo di operazioni di I/O al secondo per volume di disco da riservare per il pool di risorse. L'intervallo consentito per *value* è compreso tra 0 e 2^31-1 (2,147,483,647). Specificare 0 per indicare che non è impostata alcuna soglia minima per il pool.  
   
  MAX_IOPS_PER_VOLUME =*value*  
  **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Specifica il numero massimo di operazioni di I/O al secondo per volume di disco da riservare per il pool di risorse. L'intervallo consentito per *valore* è compreso tra 0 e 2 ^ 31-1 (2.147.483.647). Specificare 0 per impostare una soglia illimitata per il pool. Il valore predefinito è 0.  
+ Specifica il numero massimo di operazioni di I/O al secondo per volume di disco da riservare per il pool di risorse. L'intervallo consentito per *value* è compreso tra 0 e 2^31-1 (2,147,483,647). Specificare 0 per impostare una soglia illimitata per il pool. Il valore predefinito è 0.  
   
  Se il valore MAX_IOPS_PER_VOLUME per un pool è impostato su 0, il pool non è governato e può accettare tutti gli IOPS nel sistema anche se in altri pool è stato impostato il valore MIN_IOPS_PER_VOLUME. In questo caso, è consigliabile impostare il valore MAX_IOPS_PER_VOLUME per questo pool su un numero elevato, ad esempio il valore massimo 2^31-1, se si desidera che questo pool sia governato per l'I/O.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  MAX_CPU_PERCENT e MAX_MEMORY_PERCENT devono essere maggiori o uguali rispettivamente a MIN_CPU_PERCENT e MIN_MEMORY_PERCENT.  
   
- MAX_CPU_PERCENT è possibile utilizzare la capacità della CPU superiore al valore di MAX_CPU_PERCENT se è disponibile. Sebbene vi siano picchi periodici sopra CAP_CPU_PERCENT, i carichi di lavoro non deve superare CAP_CPU_PERCENT per lunghi periodi di tempo, anche quando la capacità della CPU aggiuntiva è disponibile.  
+ MAX_CPU_PERCENT può usare la capacità di CPU superiore al valore di MAX_CPU_PERCENT se è disponibile. Sebbene si possano riscontrare occasionali picchi superiori al valore di CAP_CPU_PERCENT, i carichi di lavoro non devono superare CAP_CPU_PERCENT per periodi prolungati, anche nel caso in cui sia disponibile una capacità di CPU aggiuntiva.  
   
  La percentuale totale di CPU per ogni componente per il quale è impostata l'affinità (utilità di pianificazione o nodi NUMA) non deve superare il 100%.  
   
- Per l'esecuzione di istruzioni DDL, è consigliabile avere familiarità con gli stati di Resource Governor. Per ulteriori informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
+ Per l'esecuzione di istruzioni DDL, è consigliabile avere familiarità con gli stati di Resource Governor. Per altre informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- Quando si modifica un piano di influire sull'impostazione, le nuove impostazioni diventeranno effettive solo nei piani precedentemente memorizzata nella cache dopo l'esecuzione di DBCC FREEPROCCACHE (*pool_name*), dove *pool_name* è il nome di una risorsa Pool di resource Governor.  
+ Quando si modifica un'impostazione che influisce sul piano, la nuova impostazione diventerà effettiva nei piani memorizzati precedentemente nella cache solo dopo l'esecuzione di DBCC FREEPROCCACHE (*pool_name*), dove *pool_name* è il nome di un pool di risorse di Resource Governor.  
   
--   Se si modifica l'AFFINITÀ dalle utilità di pianificazione più a una singola utilità di pianificazione, l'esecuzione di DBCC FREEPROCCACHE non è necessario poiché possono essere eseguiti piani paralleli in modalità seriale. Tuttavia, potrebbe non essere più efficiente a un piano compilato come un piano seriale.  
+-   Se si modifica AFFINITY da utilità di pianificazione multiple a singola utilità di pianificazione, non è necessario eseguire DBCC FREEPROCCACHE poiché i piani paralleli possono essere eseguiti in modalità seriale. Potrebbe però non essere efficiente quanto un piano compilato come piano seriale.  
   
--   Se si modifica l'AFFINITÀ da un'unica utilità di pianificazione di più utilità di pianificazione, l'esecuzione di DBCC FREEPROCCACHE non è obbligatorio. Tuttavia, i piani seriali non è possibile eseguire in parallelo, in modo la cancellazione della cache corrispondente che per i nuovi piani potenzialmente essere compilato utilizzando il parallelismo.  
+-   Se si modifica AFFINITY da utilità di pianificazione singola a utilità di pianificazione multiple, non è necessario eseguire DBCC FREEPROCCACHE. I piani seriali non possono però essere eseguiti in parallelo. È quindi necessario cancellare la cache corrispondente in modo che i nuovi piani possano essere potenzialmente compilati tramite il parallelismo.  
   
 > [!CAUTION]  
->  La cancellazione di piani memorizzati nella cache da un pool di risorse che è associata a più di un gruppo di carico di lavoro avranno effetto su tutti i gruppi di carico di lavoro con il pool di risorse definiti dall'utente identificato da *pool_name*.  
+>  La cancellazione dei piani memorizzati nella cache da un pool di risorse associato a più di un gruppo del carico di lavoro avrà effetto su tutti i gruppi di carico di lavoro che hanno il pool di risorse definito dall'utente identificato da *pool_name*.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  

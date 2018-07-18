@@ -1,33 +1,32 @@
 ---
 title: Finestra di dialogo Selezione colonne (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnselection
 - vdtsql.chm:65548
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4e13dc3712d55ec542cdb783ec3482127c527638
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5a90789da720dc0f8a660076e775aad8d97c03de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Finestra di dialogo Selezione colonne (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Consente di modificare la vista personalizzata per le tabelle nel diagramma di database. La vista personalizzata mostra soltanto le proprietà della colonna identificata dall'utente.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Consente di modificare la vista personalizzata per le tabelle nel diagramma di database. La vista personalizzata mostra soltanto le proprietà della colonna identificata dall'utente.  
   
 Questa finestra di dialogo viene visualizzata quando si fa clic con il pulsante destro del mouse su una tabella e si sceglie **Modifica visualizzazione personalizzata** dal menu di scelta rapida.  
   

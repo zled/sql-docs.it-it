@@ -1,35 +1,32 @@
 ---
 title: Utilizzo di dati multidimensionali | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c96d7fda2e02aeefa6225f1cea602f6ed6c7dc2e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1d7b5257bf0161c4064f1f25be5c223f46787e4f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-multidimensional-data"></a>Utilizzo di dati multidimensionali
 Oggetto *set di celle* è il risultato di una query sui dati multidimensionali. È costituito da una raccolta di assi, in genere non più di quattro assi e in genere solo due o tre. Un *asse* è una raccolta di membri di uno o più dimensioni, che viene utilizzata per individuare o filtrare valori specifici in un cubo.  
   
- Oggetto *posizione* è un punto di un asse. Per un asse è costituito da una singola dimensione, queste posizioni sono un subset dei membri della dimensione. Se un asse è costituito da più di una dimensione, quindi ogni posizione è un'entità composta, che ha  *n*  parti dove  *n*  è il numero di dimensioni orientati lungo l'asse. Ogni parte della posizione è un membro da una dimensione che lo costituiscono.  
+ Oggetto *posizione* è un punto di un asse. Per un asse è costituito da una singola dimensione, queste posizioni sono un subset dei membri della dimensione. Se un asse è costituito da più di una dimensione, quindi ogni posizione è un'entità composta, che ha *n* parti where *n* è il numero di dimensioni orientati lungo l'asse. Ogni parte della posizione è un membro da una dimensione che lo costituiscono.  
   
  Ad esempio, se le dimensioni di geografia e prodotto da un cubo contenente i dati di vendita sono orientate lungo l'asse x di un set di celle, una posizione lungo l'asse può contenere i membri "USA" e "Computer". In questo esempio, determinare una posizione lungo l'asse x richiede che i membri di ogni dimensione sono orientati lungo l'asse.  
   
@@ -37,7 +34,7 @@ Oggetto *set di celle* è il risultato di una query sui dati multidimensionali. 
   
  Ad esempio, un cubo include le seguenti sei dimensioni (si noti che questo schema cubo differisce leggermente dall'esempio riportato [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
   
--   Salesperson  
+-   Venditore  
   
 -   Geography (gerarchia naturale): continenti, paesi, stati e così via  
   

@@ -1,25 +1,22 @@
 ---
 title: Utilizzare SQL Server Management Studio per la gestione di SQL Server in Linux | Documenti Microsoft
-description: 
+description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 08/23/2017
+ms.date: 05/21/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: sql-linux
-ms.workload: On Demand
-ms.openlocfilehash: 31bff0cb43048585fb03246b683ad71e673bb7f4
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 2b6293e7c0d80eb1ebe02d6cd03f17626d793c05
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Utilizzare SQL Server Management Studio in Windows per la gestione di SQL Server in Linux
 
@@ -27,29 +24,82 @@ ms.lasthandoff: 02/13/2018
 
 Questo articolo descrive [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) e viene descritto un paio di attività comuni. SQL Server Management Studio è un'applicazione Windows, pertanto utilizzare SQL Server Management Studio, quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux.
 
-[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) fa parte di un gruppo di strumenti SQL che offerte Microsoft gratuitamente alle proprie esigenze di sviluppo e gestione. SQL Server Management Studio è un ambiente integrato per accedere, configurare, gestire, amministrare e sviluppare tutti i componenti di SQL Server in esecuzione in locale o nel cloud, Linux, Windows o Docker macOS e Database SQL di Azure e Azure SQL Data Warehouse. SSMS integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per fornire l'accesso a SQL Server a sviluppatori e amministratori di tutti i livelli di.
+> [!TIP]
+> Se non si dispone di una macchina Windows da eseguire SSMS in, prendere in considerazione il nuovo [SQL Server operazioni Studio](../sql-operations-studio/index.md). Fornisce uno strumento grafico per la gestione di SQL Server e viene eseguito su Linux e Windows.
+
+[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) fa parte di un gruppo di strumenti SQL che offerte Microsoft gratuitamente alle proprie esigenze di sviluppo e gestione. SSMS è un ambiente integrato per accedere, configurare, gestire, amministrare e sviluppare tutti i componenti di SQL Server. È possibile connettersi a SQL Server in esecuzione su qualsiasi piattaforma sia in locale, in contenitori di Docker e nel cloud. Inoltre si connette al Database SQL di Azure e Azure SQL Data Warehouse. SSMS integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per fornire l'accesso a SQL Server a sviluppatori e amministratori di tutti i livelli di.
 
 SQL Server Management Studio offre un'ampia gamma di funzionalità di sviluppo e gestione per SQL Server, inclusi gli strumenti per:
 
-- configurare, monitorare e amministrare una o più istanze di SQL Server
+- Configurare, monitorare e amministrare una o più istanze di SQL Server
 - distribuire, monitorare e aggiornare i componenti di livello dati, ad esempio database e i data warehouse
 - backup e ripristino di database
 - compilare ed eseguire script e query T-SQL e risultati
 - Genera script T-SQL per gli oggetti di database
 - Consente di visualizzare e modificare i dati nel database
-- progettare visivamente query T-SQL e gli oggetti di database, ad esempio viste, tabelle e stored procedure
+- Progettare visivamente query T-SQL e gli oggetti di database, ad esempio viste, tabelle e stored procedure
 
-Vedere [usare SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx) per ulteriori informazioni.
+Vedere [novità di SQL Server Management Studio?](../ssms/sql-server-management-studio-ssms.md) per ulteriori informazioni su SQL Server Management Studio.
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio-ssms"></a>Installare la versione più recente di SQL Server Management Studio (SSMS)
 
-Quando si utilizza SQL Server, è consigliabile utilizzare sempre la versione più recente di SQL Server Management Studio (SSMS). La versione più recente di SQL Server Management Studio viene aggiornata continuamente, ottimizzazione e attualmente funziona con SQL Server Linux su 2017. Per scaricare e installare la versione più recente, vedere [scaricare SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per rimanere aggiornati, la versione più recente di SSMS chiede di quando è disponibile una nuova versione disponibile per il download. 
+Quando si utilizza SQL Server, è consigliabile utilizzare sempre la versione più recente di SQL Server Management Studio (SSMS). La versione più recente di SQL Server Management Studio viene aggiornata continuamente, ottimizzazione e attualmente funziona con SQL Server Linux su 2017. Per scaricare e installare la versione più recente, vedere [scaricare SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per rimanere aggiornati, la versione più recente di SSMS chiede di quando è disponibile una nuova versione disponibile per il download.
 
-## <a name="before-you-begin"></a>Operazioni preliminari
-- Vedere [utilizzare SQL Server Management Studio in Windows per connettersi a SQL Server in Linux](sql-server-linux-develop-use-ssms.md) per informazioni su come connettersi ed eseguire una Query tramite SQL Server Management Studio
-- Lettura di [problemi noti](sql-server-linux-release-notes.md) per SQL Server, 2017 su Linux
+> [!NOTE]
+> Prima di utilizzare SSMS per gestire Linux, esaminare i [problemi noti](sql-server-linux-release-notes.md) per SQL Server Management Studio in Linux.
+
+## <a name="connect-to-sql-server-on-linux"></a>Connettersi a SQL Server in Linux
+
+Utilizzare i seguenti passaggi di base per la connessione:
+
+1. Avviare SSMS digitando **Microsoft SQL Server Management Studio** nelle finestre di casella di ricerca e quindi fare clic sull'app desktop.
+
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png)
+
+1. Nel **Connetti al Server** finestra, immettere le informazioni seguenti (se è già in esecuzione SQL Server Management Studio, fare clic su **Connetti > motore di Database** per aprire la **Connetti al Server** finestra):
+
+   | Impostazione | Description |
+   |-----|-----|
+   | **Tipo server** | Il valore predefinito è il motore di database; non modificare questo valore. |
+   | **Nome server** | Immettere il nome di computer Linux SQL Server di destinazione o il relativo indirizzo IP. |
+   | **Autenticazione** | Per SQL Server 2017 in Linux, usare **autenticazione di SQL Server**. |
+   | **Account di accesso** | Immettere il nome di un utente con accesso a un database nel server (ad esempio, il valore predefinito **SA** account creato durante l'installazione). |
+   | **Password** | Immettere la password per l'utente specificato (per il **SA** account, creato questo durante l'installazione). |
+
+    ![SQL Server Management Studio: Connettersi al server di Database SQL](./media/sql-server-linux-manage-ssms/connect.png)
+
+1. Fare clic su **Connetti**.
+
+    > [!TIP]
+    > Se si verifica un errore di connessione, provare a diagnosticare il problema dal messaggio di errore. Rivedere poi i [consigli per la risoluzione dei problemi di connessione](sql-server-linux-troubleshooting-guide.md#connection).
+ 
+1. Dopo la connessione a SQL Server **Esplora oggetti** verrà aperto e sarà ora possibile accedere al database per eseguire attività amministrative o eseguire query sui dati.
+
+## <a name="run-transact-sql-queries"></a>Eseguire query Transact-SQL
+
+Dopo la connessione al server, è possibile connettersi a un database ed eseguire query Transact-SQL. Per quasi tutte le attività del database, è possibile utilizzare query Transact-SQL.
+
+1. In **Esplora oggetti**, passare al database di destinazione nel server. Ad esempio, espandere **database di sistema** per funzionare con il **master** database.
+
+1. Il database e quindi scegliere **nuova Query**.
+
+1. Nella finestra query, scrivere una query Transact-SQL per selezionare restituiscono i nomi di tutti i database nel server.
+
+   ```sql
+   SELECT [Name]
+   FROM sys.Databases
+   ```
+
+   Se si ha familiarità con la scrittura di query, vedere [la scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+
+1. Fare clic sui **Execute** pulsante per eseguire la query e visualizzare i risultati.
+
+   ![Esito positivo. Connettersi al Database di SQL server: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+
+Sebbene sia possibile eseguire questa operazione quasi qualsiasi attività di gestione con query Transact-SQL, SQL Server Management Studio è uno strumento grafico che rende più facile da gestire SQL Server. Le sezioni seguenti forniscono alcuni esempi di utilizzo dell'interfaccia utente grafica.
 
 ## <a name="create-and-manage-databases"></a>Creare e gestire i database
+
 Durante la connessione al *master* database, è possibile creare database sul server e modificare o eliminare i database esistenti. I passaggi seguenti viene descritto come eseguire più comuni attività di gestione di database tramite Management Studio. Per eseguire queste attività, assicurarsi che si è connessi al *master* database con l'account di accesso dell'entità a livello di server creati quando si configura SQL Server 2017 in Linux.
 
 ### <a name="create-a-new-database"></a>Creare un nuovo database
@@ -76,13 +126,14 @@ Il database viene eliminato correttamente dal server. Se si preferisce eliminare
 
 ## <a name="use-activity-monitor-to-see-information-about-sql-server-activity"></a>Utilizzare Monitoraggio attività per visualizzare informazioni sulle attività di SQL Server
 
-Il [Monitoraggio attività](../relational-databases/performance-monitor/activity-monitor.md) strumento è incorporato in SQL Server Management Studio (SSMS) e Visualizza informazioni sui processi di SQL Server e come questi processi influiscono sull'istanza corrente di SQL Server.
+Il [Monitoraggio attività](../relational-databases/performance-monitor/activity-monitor.md) strumento viene compilato in SQL Server Management Studio (SSMS) e Visualizza informazioni sui processi di SQL Server e come questi processi influiscono sull'istanza corrente di SQL Server.
 
 1. Avviare SQL Server Management Studio e connettersi al server in SQL Server 2017 su Linux
 
-2. In Esplora oggetti, fare doppio clic su di *server* nodo e quindi fare clic su *Monitoraggio attività*
+1. In Esplora oggetti, fare doppio clic su di *server* nodo e quindi fare clic su *Monitoraggio attività*
 
-Monitoraggio attività Mostra i riquadri espandibili e comprimibili con le seguenti informazioni:
+Monitoraggio attività Mostra i riquadri espandibili e comprimibili con le informazioni seguenti:
+
 - Panoramica
 - Processi
 - Attesa di risorse
@@ -93,8 +144,8 @@ Monitoraggio attività Mostra i riquadri espandibili e comprimibili con le segue
 Quando un riquadro è espanso, Monitoraggio attività esegue una query di istanza per ottenere informazioni. Quando un riquadro è compresso, significa che tutte le relative attività di query sono arrestate. È possibile espandere uno o più riquadri contemporaneamente per visualizzare diversi tipi di attività sull'istanza.
 
 ## <a name="see-also"></a>Vedere anche
-- [Utilizzo di SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx)
+- [Che cos'è SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Esportare e importare un database con SSMS](sql-server-linux-migrate-ssms.md)
-- [Esercitazione su SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
+- [Esercitazione su SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 - [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Monitoraggio delle prestazioni e dell'attività del server](../relational-databases/performance/server-performance-and-activity-monitoring.md)

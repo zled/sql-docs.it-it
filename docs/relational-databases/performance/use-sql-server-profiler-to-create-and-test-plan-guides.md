@@ -1,16 +1,13 @@
 ---
 title: Usare SQL Server Profiler per creare e testare guide di piano | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: performance
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-plan-guides
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - checking plan guides
 - plan guides [SQL Server], testing
@@ -24,19 +21,19 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], plan guides
 - query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5bbb800f0f0bd06e32357cda69d9a01a5c25e866
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9b35d7d96c21c4e3883f1f36df325d3128d9492f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usare SQL Server Profiler per creare e testare guide di piano
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando si crea una guida di piano è possibile usare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per acquisire il testo esatto della query da usare nell'argomento *statement_text* della stored procedure **sp_create_plan_guide**. Questo garantisce che in fase di compilazione la guida di piano corrisponderà alla query. Dopo la creazione della guida di piano è possibile utilizzare ancora [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificare che la guida di piano corrisponda effettivamente alla query. È in genere consigliabile testare le guide di piano tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificarne la corrispondenza con la query.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Quando si crea una guida di piano è possibile usare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per acquisire il testo esatto della query da usare nell'argomento *statement_text* della stored procedure **sp_create_plan_guide** . Questo garantisce che in fase di compilazione la guida di piano corrisponderà alla query. Dopo la creazione della guida di piano è possibile utilizzare ancora [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificare che la guida di piano corrisponda effettivamente alla query. È in genere consigliabile testare le guide di piano tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificarne la corrispondenza con la query.  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Acquisizione del testo di una query tramite SQL Server Profiler  
  Se si esegue una query e se ne acquisisce il testo esattamente come è stato inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], sarà possibile creare una guida di piano di tipo SQL o TEMPLATE che corrisponderà esattamente al testo della query. Questo garantisce che la guida di piano verrà utilizzata da Query Optimizer.  
@@ -72,7 +69,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Aprire il file del testo del batch nel Blocco note e copiare il testo.  
   
-8.  Creare la guida di piano e incollare il testo copiato tra le virgolette (**"**) specificate per l'argomento **@stmt** . È necessario usare caratteri di escape per ogni virgoletta singola nell'argomento **@stmt** facendola precedere da un'altra virgoletta singola. Fare attenzione a non aggiungere o rimuovere altri caratteri quando si inseriscono queste virgolette. Ad esempio, il valore letterale di data **'**20000101**'** deve essere delimitato come **''**20000101**''**.  
+8.  Creare la guida di piano e incollare il testo copiato tra le virgolette (**"**) specificate per l'argomento **@stmt** . È necessario usare caratteri di escape per ogni virgoletta singola nell'argomento **@stmt** facendola precedere da un'altra virgoletta singola. Fare attenzione a non aggiungere o rimuovere altri caratteri quando si inseriscono queste virgolette. Ad esempio, il valore letterale di data **'** 20000101 **'** deve essere delimitato come **''** 20000101 **''**.  
   
  La guida di piano ottenuta è la seguente:  
   

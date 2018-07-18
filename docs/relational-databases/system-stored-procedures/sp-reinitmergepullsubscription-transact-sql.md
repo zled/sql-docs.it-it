@@ -1,32 +1,33 @@
 ---
 title: sp_reinitmergepullsubscription (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_reinitmergepullsubscription
 - sp_reinitmergepullsubscription_TSQL
-helpviewer_keywords: sp_reinitmergepullsubscription
+helpviewer_keywords:
+- sp_reinitmergepullsubscription
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5d6f906cf3335079618629c03cc5503debd9a519
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 20c701adf431f550f107a9cef08f1a3e49a9d611
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,20 +47,20 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher**  =] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* è **sysname**, con un valore predefinito è ALL.  
+ [ **@publisher** =] **'***publisher***'**  
+ Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è ALL.  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
- Nome del database del server di pubblicazione. *publisher_db* è **sysname**, con un valore predefinito è ALL.  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
+ Nome del database del server di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è ALL.  
   
- [  **@publication**  =] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* è **sysname**, con un valore predefinito è ALL.  
+ [ **@publication** =] **'***pubblicazione***'**  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è ALL.  
   
- [  **@upload_first**  =] **'***upload_first***'**  
- Indica se le modifiche nel Sottoscrittore vengono caricate prima della reinizializzazione della sottoscrizione. *upload_first* è **nvarchar (5)**, con un valore predefinito è FALSE. Se **true**, le modifiche vengono caricate prima della reinizializzazione della sottoscrizione. Se **false**, le modifiche non vengono caricate.  
+ [ **@upload_first** =] **'***upload_first***'**  
+ Indica se le modifiche nel Sottoscrittore vengono caricate prima della reinizializzazione della sottoscrizione. *upload_first* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **true**, le modifiche vengono caricate prima della reinizializzazione della sottoscrizione. Se **false**, le modifiche non vengono caricate.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_reinitmergepullsubscription** viene utilizzata nella replica di tipo merge.  
@@ -72,7 +73,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_reinitmergepullsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  

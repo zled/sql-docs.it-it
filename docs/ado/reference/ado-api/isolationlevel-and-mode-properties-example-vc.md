@@ -1,33 +1,30 @@
 ---
-title: "Esempio di proprietà di modalità (VC + +) e IsolationLevel | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Esempio di proprietà di modalità (VC + +) e IsolationLevel | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dfb9da4ee435ef3ebbf6980f6d9dfd9822c3450d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 42663a71291a107bad179ad9ef3c614ed75b40be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Esempio IsolationLevel e Mode proprietà (VC + +)
 Questo esempio viene utilizzato il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà per aprire una connessione esclusiva e [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) proprietà per aprire una transazione eseguita in isolamento dalle altre transazioni.  
@@ -232,23 +229,23 @@ void PrintComError(_com_error &e) {
   
  **Modalità di connessione è esclusiva**  
 **Transazione è isolata**  
-**Database Guida della disponibilità Executive - business**  
-**Cucina con i computer: clandestina conti patrimoniali - business**  
+**Guida della disponibilità Executive di Database - business**  
+**Cucina con computer: clandestina conti patrimoniali - business**  
 **È possibile contrastare Stress Computer! -business**  
-**Direttamente in contatto sui computer - business**  
+**Retta Talk sui computer - business**  
 **Considera Gastronomic Silicon Valley - libro mod_cook non includono**  
 **Microonde specialità - libro mod_cook non includono**  
-**Il psicologia di Computer Cooking - trasformazione**  
+**Psicologia di Computer Cooking - trasformazione**  
 **Ma è facile? -popular_comp**  
 **Segreti di Silicon Valley - popular_comp**  
 **Utilizzo della rete - popular_comp**  
-**Un computer e utenti singoli Non-un: Comportamento variazioni - self_help**  
+**Un computer e Non un individui: Comportamento variazioni - self_help**  
 **Is Anger the Enemy? -self_help**  
-**Senza timore - self_help**  
-**Prolungata dati privative: Quattro Case study - self_help**  
+**Vita senza timore - self_help**  
+**Prolungato dati privative: Quattro Case study - self_help**  
 **Sicurezza affettivi: Un nuovo algoritmo - self_help**  
-**Cipolle Leeks e aglio: cucina segreti del Mediterraneo - trad_cook**  
-**50 anni Buckingham Palace cucine - trad_cook**  
+**Cipolle Leeks e il pane all'aglio: Cooking segreti del Mediterraneo - trad_cook**  
+**50 anni in Buckingham Palace cucine - trad_cook**  
 **Sushi, tutti gli utenti? -trad_cook**   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   

@@ -1,37 +1,28 @@
 ---
 title: Set di righe DISCOVER_LOCKS | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DISCOVER_LOCKS rowset
-ms.assetid: dea48167-212c-40b7-a416-434042a1b697
-caps.latest.revision: "14"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7f0b52b875793df4074e9feb4e0cc1737224a901
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discoverlocks-rowset"></a>Set di righe DISCOVER_LOCKS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornisce informazioni sui blocchi correnti presenti nel server.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Fornisce informazioni sui blocchi correnti presenti nel server.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DISCOVER_LOCKS** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Length|Description|  
+|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**LOCK_CREATION_TIME**|**DBTYPE_DBTIMESTAMP**||L'ora UTC del server al momento della richiesta del blocco.|  
 |**LOCK_GRANT_TIME**|**DBTYPE_DBTIMESTAMP**||L'ora UTC del server nel momento in cui è stato concesso il blocco sulla risorsa.|  
@@ -49,18 +40,18 @@ ms.lasthandoff: 01/08/2018
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|SPID|DBTYPE_I4|Facoltativo.|  
-|LOCK_TRANSACTION_ID|DBTYPE_GUID|Facoltativo.|  
-|LOCK_OBJECT_ID|DBTYPE_WSTR|Facoltativo.|  
-|LOCK_STATUS|DBTYPE_I4|Facoltativo.|  
-|LOCK_TYPE|DBTYPE_I4|Facoltativo.|  
-|LOCK_MIN_TOTAL_MS|DBTYPE_I8|Facoltativo.|  
+|SPID|DBTYPE_I4|Facoltativa.|  
+|LOCK_TRANSACTION_ID|DBTYPE_GUID|Facoltativa.|  
+|LOCK_OBJECT_ID|DBTYPE_WSTR|Facoltativa.|  
+|LOCK_STATUS|DBTYPE_I4|Facoltativa.|  
+|LOCK_TYPE|DBTYPE_I4|Facoltativa.|  
+|LOCK_MIN_TOTAL_MS|DBTYPE_I8|Facoltativa.|  
   
 ## <a name="remarks"></a>Osservazioni  
   
 ## <a name="lock-types"></a>Tipi di blocco  
   
-|Nome del blocco|valore|Description|  
+|Nome del blocco|Value|Description|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|Nessun blocco.|  
 |LOCK_SESSION_LOCK|0x0000001|Sessione inattiva; nessuna interferenza con altri blocchi.|  
@@ -73,6 +64,6 @@ ms.lasthandoff: 01/08/2018
 |LOCK_INVALID|0x0000080|Blocco non valido.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML per set di righe dello schema di analisi](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis i rowset dello Schema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

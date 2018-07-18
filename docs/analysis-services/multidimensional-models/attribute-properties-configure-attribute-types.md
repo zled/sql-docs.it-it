@@ -1,38 +1,23 @@
 ---
 title: Configurare i tipi di attributo | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- attributes [Analysis Services], types
-- slowly changing dimensions
-- account dimensions [Analysis Services]
-- currency dimensions [Analysis Services]
-- Type property
-ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8e7be9da1b7405aa522dc29057764e7351924b41
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>Attributo di proprietà: configurare i tipi di attributo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i tipi di attributi consentono di classificare un attributo in termini di funzionalità aziendali. Sono disponibili numerosi tipi di attributi, la maggior parte dei quali viene utilizzata dalle applicazioni client per visualizzare o supportare un attributo. Alcuni tipi di attributi, tuttavia, hanno un significato specifico in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Alcuni tipi identificano ad esempio attributi che rappresentano periodi di tempo in calendari diversi per le dimensioni temporali.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i tipi di attributi consentono di classificare un attributo in termini di funzionalità aziendali. Sono disponibili numerosi tipi di attributi, la maggior parte dei quali viene utilizzata dalle applicazioni client per visualizzare o supportare un attributo. Alcuni tipi di attributi, tuttavia, hanno un significato specifico in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Alcuni tipi identificano ad esempio attributi che rappresentano periodi di tempo in calendari diversi per le dimensioni temporali.  
   
 ##  <a name="setting_attibute_types"></a> Impostazione dei tipi di attributi  
  Il valore della proprietà **Type** per un attributo determina il tipo dell'attributo stesso. Diverse procedure guidate di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consentono di impostare i tipi di attributi durante la definizione di dimensioni o attributi. Tali procedure guidate di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consentono inoltre di impostare i tipi di attributi durante l'aggiunta di funzionalità alle dimensioni. Tramite la Configurazione guidata funzionalità di Business Intelligence, ad esempio, vengono applicati numerosi tipi di attributi agli attributi in una dimensione durante l'aggiunta di funzionalità di Business Intelligence per la contabilità, per identificare attributi contenenti nomi, codici, numeri e struttura dei conti nella dimensione. Nella Configurazione guidata funzionalità di Business Intelligence vengono inoltre utilizzati i tipi di attributi, ad esempio per la conversione di valuta. Per altre informazioni, vedere [Creare una dimensione di tipo Valuta](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
@@ -54,7 +39,7 @@ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](..
 |**Indirizzo**|Rappresenta un indirizzo.|  
 |**AddressBuilding**|Rappresenta l'identificatore di edificio per un indirizzo.|  
 |**AddressCity**|Rappresenta la città per un indirizzo.|  
-|**AddressCountry**|Rappresenta il paese/regione per un indirizzo.|  
+|**AddressCountry**|Rappresenta il paese/area geografica per un indirizzo.|  
 |**AddressFax**|Rappresenta un numero di fax.|  
 |**AddressFloor**|Rappresenta l'identificatore di piano per un indirizzo.|  
 |**AddressHouse**|Rappresenta il numero civico per un indirizzo.|  
@@ -72,7 +57,7 @@ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](..
 |**City**|Rappresenta una città.|  
 |**Company**|Rappresenta una società.|  
 |**Continent**|Rappresenta un continente.|  
-|**Country**|Rappresenta un paese/regione.|  
+|**Country**|Rappresenta un paese/area geografica.|  
 |**Country**|Rappresenta una regione.|  
 |**CustomerGroup**|Rappresenta un gruppo di clienti.|  
 |**CustomerHousehold**|Rappresenta l'unità familiare dei clienti.|  

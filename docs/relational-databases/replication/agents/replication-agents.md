@@ -1,33 +1,33 @@
 ---
 title: Agenti di replica | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication]
 - replication [SQL Server], agents and profiles
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
-caps.latest.revision: "10"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 10
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 306304e967336f428bece315b0e36651afe1d668
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ad8ee600974a2888c699ff57454a533c064e4b84
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-agents"></a>Agenti di replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replica usa numerosi programmi autonomi, denominati "agenti", per eseguire le attività associate al rilevamento delle modifiche e alla distribuzione dei dati. In questa sezione della documentazione vengono forniti riferimenti ai parametri per gli agenti di replica seguenti.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La replica utilizza numerosi programmi autonomi, denominati "agenti", per eseguire le attività associate al rilevamento delle modifiche e alla distribuzione dei dati. In questa sezione della documentazione vengono forniti riferimenti ai parametri per gli agenti di replica seguenti.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
  [Panoramica degli agenti di replica](../../../relational-databases/replication/agents/replication-agents-overview.md)  

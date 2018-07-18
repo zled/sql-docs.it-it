@@ -6,19 +6,16 @@ ms.author: mikeray
 manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.workload: On Demand
-ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.technology: linux
+ms.openlocfilehash: 239d4418c5e7d59a980d9028e2533dd9d7a2c566
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Distribuire un cluster Pacemaker per SQL Server in Linux
 
@@ -51,7 +48,9 @@ Utilizzare la sintassi seguente per installare i pacchetti che costituiscono il 
     
     ```bash
     sudo subscription-manager list --available
-3.  Run the following command to associate RHEL high availability with the subscription
+    ```
+
+3.  Eseguire il comando seguente per associare la disponibilità elevata RHEL con la sottoscrizione
     
     ```bash
     sudo subscription-manager attach --pool=<PoolID>

@@ -1,35 +1,34 @@
 ---
-title: 'Lezione 3: Eliminazione di oggetti di Database | Documenti Microsoft'
-ms.custom: 
+title: 'Lezione 3: Eliminazione degli oggetti di database | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - deleting database objects
 ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9cf4ee2807a9a62a215a16862d50959884047a7c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 716b859ef9aec1d4dde8f71e96fb1741d1689a8a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-deleting-database-objects"></a>Lezione 3: Eliminazione di oggetti di database
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Questa breve lezione rimuove gli oggetti creati nelle lezioni 1 e 2 e quindi Elimina il database.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+In questa breve lezione viene illustrato come rimuovere gli oggetti creati nelle lezioni 1 e 2 e come procedere quindi all'eliminazione del database.  
   
 In questa lezione sono inclusi gli argomenti seguenti:  
   

@@ -1,30 +1,17 @@
 ---
-title: 'Passaggio 5: Eseguire il training e salvare un modello di Python con T-SQL | Documenti Microsoft'
-ms.custom: 
-ms.date: 10/17/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Passaggio 5 Train e salvare un modello di Python utilizzando T-SQL | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-- TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: a2f0ffafb466030802b87dc96f905e9c875dd548
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 173df47b5862a892efcd0c5e7064349daedf7efb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>Passaggio 5: Eseguire il training e salvare un modello di Python con T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +126,7 @@ Per rendere più semplice ripetere il training del modello su nuovi dati, esegui
 
 Questa stored procedure utilizza il nuovo **revoscalepy** pacchetto, ovvero un nuovo pacchetto per Python. Contiene gli oggetti, trasformazione e algoritmi simili a quelli forniti per il linguaggio R **RevoScaleR** pacchetto. 
 
-Utilizzando **revoscalepy**, è possibile creare contesti di calcolo remoto, spostare i dati tra contesti, i dati di trasformazione e training di modelli predittivi utilizzando algoritmi comuni, ad esempio la regressione logistica e lineare, gli alberi delle decisioni, di calcolo e altre. Per ulteriori informazioni, vedere [novità revoscalepy?](../python/what-is-revoscalepy.md)
+Utilizzando **revoscalepy**, è possibile creare contesti di calcolo remoto, spostare i dati tra contesti, i dati di trasformazione e training di modelli predittivi utilizzando algoritmi comuni, ad esempio la regressione logistica e lineare, gli alberi delle decisioni, di calcolo e altre. Per altre informazioni, vedere [novità revoscalepy?](../python/what-is-revoscalepy.md)
 
 1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], aprire una nuova **Query** finestra ed eseguire l'istruzione seguente per creare la stored procedure _TrainTipPredictionModelRxPy_.  Poiché la stored procedure include già una definizione dei dati di input, non è necessario fornire una query di input.
 

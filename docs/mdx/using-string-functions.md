@@ -1,29 +1,20 @@
 ---
 title: Utilizzo di funzioni stringa | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: string functions
-ms.assetid: 962e820a-a1f9-49b5-90f0-a05261e6682b
-caps.latest.revision: "24"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5b260cc6523f0e9938eaff8e98207fe7dbe739c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 464bbe4ad20085571103a64f48716773c8352dea
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581753"
 ---
 # <a name="using-string-functions"></a>Utilizzo di funzioni stringa
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -111,12 +102,12 @@ ms.lasthandoff: 01/08/2018
 >  Il **StrToMember** e **StrToSet** funzioni devono essere utilizzate con cautela. in quanto, se utilizzate all'interno di definizioni di calcoli, possono ridurre drasticamente le prestazioni delle query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Genera &#40; MDX &#41;](../mdx/generate-mdx.md)   
- [Nome &#40; MDX &#41;](../mdx/name-mdx.md)   
- [UniqueName &#40; MDX &#41;](../mdx/uniquename-mdx.md)   
- [Funzioni &#40; La sintassi MDX &#41;](../mdx/functions-mdx-syntax.md)   
- [Tramite le Stored procedure &#40; MDX &#41;](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40; MDX &#41;](../mdx/strtomember-mdx.md)   
- [StrToSet &#40; MDX &#41;](../mdx/strtoset-mdx.md)  
+ [Genera &#40;MDX&#41;](../mdx/generate-mdx.md)   
+ [Nome &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [Le funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)   
+ [Utilizzo di Stored procedure &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   
+ [StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)   
+ [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)  
   
   

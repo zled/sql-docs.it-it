@@ -1,29 +1,18 @@
 ---
 title: Prerequisiti per la procedura dettagliata dell'analisi scientifica dei dati per SQL Server e R | Documenti Microsoft
-ms.date: 11/10/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: 0b0582b8-8843-4787-94a8-2e28bdc04fb2
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 6ac8e646c93c0371f959afc212601e5abe0de213
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 4f0e6130882ea5af6dd0827ed2d5e798d3c11c5f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585493"
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>Prerequisiti per la procedura dettagliata dell'analisi scientifica dei dati per SQL Server e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +28,7 @@ ms.lasthandoff: 02/11/2018
 + Per SQL Server 2017 di Machine Learning Services (In-Database)
 + SQL Server 2016 R Services
 
-Per ulteriori informazioni, vedere [configurare SQL Server R Services (In-Database](../r/set-up-sql-server-r-services-in-database.md).
+Per altre informazioni, vedere [installare SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) oppure [installare SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 > [!IMPORTANT]
 > Versioni di SQL Server precedenti a 2016 non supportano l'integrazione con R. Tuttavia, è possibile utilizzare il database SQL precedenti come un'origine dati ODBC.
@@ -48,11 +37,11 @@ Per ulteriori informazioni, vedere [configurare SQL Server R Services (In-Databa
 
 Per questa procedura dettagliata, è consigliabile utilizzare un ambiente di sviluppo R. Di seguito sono riportati alcuni suggerimenti:
 
-- **Strumenti R per Visual Studio** (RTVS) è un plug-in che fornisce Intellisense, debug e il supporto per Microsoft R. È possibile utilizzarlo con R Server e servizi di SQL Server Machine Learning. Per scaricarlo, vedere [R Tools per Visual Studio](https://www.visualstudio.com/vs/rtvs/).
+- **Strumenti R per Visual Studio** (RTVS) è un plug-in che fornisce Intellisense, debug e il supporto per Microsoft R. È possibile utilizzare con R Server e servizi di SQL Server Machine Learning. Per scaricarlo, vedere [R Tools per Visual Studio](https://www.visualstudio.com/vs/rtvs/).
 
 - **Microsoft R Client** è uno strumento di sviluppo leggero che supporta lo sviluppo di R usando il pacchetto RevoScaleR. Per ottenerlo, vedere [Introduzione a Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client).
 
-- **RStudio** è uno degli ambienti più diffusi per lo sviluppo di R. Per altre informazioni, vedere [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
+- **RStudio** è uno degli ambienti più diffusi per lo sviluppo di R. Per ulteriori informazioni, vedere [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/).
 
     Non è possibile completare questa esercitazione Usa un'installazione generica di RStudio o un altro ambiente; è inoltre necessario installare i pacchetti R e librerie di connettività per Microsoft R Open. Per altre informazioni, vedere [Configurare un client per l'analisi scientifica dei dati](../r/set-up-a-data-science-client.md).
 
@@ -76,4 +65,4 @@ Questa procedura dettagliata, abbiamo utilizzato l'account di accesso SQL **RTes
 
 ## <a name="next-lesson"></a>Lezione successiva
 
-[Preparare i dati di utilizzo di PowerShell](/walkthrough-prepare-the-data.md)
+[Preparare i dati di utilizzo di PowerShell](walkthrough-prepare-the-data.md)

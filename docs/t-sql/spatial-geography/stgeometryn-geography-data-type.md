@@ -1,16 +1,14 @@
 ---
-title: STGeometryN (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: STGeometryN (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STGeometryN (geography Data Type)
@@ -19,21 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryN method
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e92224c6ea0aae9ad389353a705f3c1c3c9aa21c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 18181e778e1b10f5c7f3cf531b3961efe7007d8a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un oggetto specificato **geography** elemento in un **GeometryCollection** o uno dei relativi sottotipi. Quando STGeometryN() viene utilizzato un sottotipo di un **GeometryCollection**, ad esempio **MultiPoint** o **MultiLineString**, questo metodo restituisce il **geography**  istanza se chiamato con N = 1.  
+  Restituisce un elemento **geography** specificato in un tipo **GeometryCollection** o in uno dei sottotipi. Quando STGeometryN() viene usato su un sottotipo di **GeometryCollection**, ad esempio **MultiPoint** o **MultiLineString**, questo metodo restituisce l'istanza **geography** se chiamato con N = 1.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,19 +40,19 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È un **int** espressione compreso tra 1 e il numero di **geography** istanze di **GeometryCollection**.  
+ *expression*  
+ Espressione **int** compresa tra 1 e il numero di istanze **geography** in **GeometryCollection**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce null se il parametro è maggiore del risultato di [stnumgeometries ()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) e genererà un **ArgumentOutOfRangeException** se il *espressione* il parametro è minore di 1.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce Null se il parametro è maggiore del risultato di [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) e genererà un'eccezione **ArgumentOutOfRangeException** se il parametro *expression* è minore di 1.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creato un `MultiPoint``geography` istanza e viene utilizzato `STGeometryN()` per trovare la seconda `geography` istanza il **GeometryCollection**.  
+ Nell'esempio seguente viene creata un'istanza `MultiPoint``geography` e viene usato `STGeometryN()` per trovare la seconda istanza `geography` del tipo **GeometryCollection**.  
   
 ```  
 DECLARE @g geography;  

@@ -1,16 +1,14 @@
 ---
-title: GET_TRANSMISSION_STATUS (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STATUS_TSQL
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - status information [SQL Server], conversations
 - GET_TRANSMISSION_STATUS statement
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5ef506faa6df757ac3a1a89af5b1d1b0715e33fd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8c42273e0ca58a0b510fc6b5ec5adab3f53bae17
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gettransmissionstatus-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +57,8 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="return-types"></a>Tipi restituiti  
  **nchar**  
   
-## <a name="remarks"></a>Osservazioni  
- Restituisce una stringa che descrive lo stato dell'ultimo tentativo di trasmissione per la conversazione specificata. Restituisce una stringa vuota se l'ultimo tentativo di trasmissione ha avuto esito positivo, se non è stato effettuato alcun tentativo di trasmissione o il *conversation_handle* non esiste.  
+## <a name="remarks"></a>Remarks  
+ Restituisce una stringa che descrive lo stato dell'ultimo tentativo di trasmissione per la conversazione specificata. Restituisce una stringa vuota se l'ultimo tentativo di trasmissione ha avuto esito positivo, se non è ancora stato effettuato alcun tentativo di trasmissione oppure se *conversation_handle* non esiste.  
   
  Le informazioni restituite da questa funzione corrispondono alle stesse informazioni visualizzate nella colonna last_transmission_error della vista di gestione sys.transmission_queue. Tuttavia, questa funzione può essere utilizzata per ricercare lo stato di trasmissione delle conversazioni che non includono messaggi nella coda di trasmissione.  
   
@@ -87,7 +84,7 @@ SELECT Status =
  In questo caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è configurato in modo da consentire le comunicazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] nella rete.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys. conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [Sys. transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

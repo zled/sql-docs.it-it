@@ -1,25 +1,22 @@
 ---
-title: "Novità di SQL Server, 2017 in Linux | Documenti Microsoft"
-description: "In questo articolo evidenzia novità di SQL Server 2017 in Linux."
+title: Novità di SQL Server, 2017 in Linux | Documenti Microsoft
+description: In questo articolo evidenzia novità di SQL Server 2017 in Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.workload: On Demand
-ms.openlocfilehash: fd7f69a8cb21fa8aaabb518f9b3d1d178606a685
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: f0e20a06faed4b2d6cda1b80f5be9d41aa2c14f1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novità di SQL Server 2017 su Linux
 
@@ -28,7 +25,7 @@ ms.lasthandoff: 02/24/2018
 Questo articolo descrive le principali funzionalità e i servizi disponibili per SQL Server 2017 su Linux.
 
 > [!NOTE]
-> Oltre a queste funzionalità in questo articolo, gli aggiornamenti cumulativi vengono rilasciati a intervalli regolari dopo il rilascio GA. che mettono a disposizione numerosi miglioramenti e diverse correzioni. Per informazioni sulla versione di aggiornamento Cumulativo più recente, vedere [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). Per il download del pacchetto e problemi noti, vedere il [note sulla versione](sql-server-linux-release-notes.md).
+> Oltre a queste funzionalità in questo articolo, gli aggiornamenti cumulativi vengono rilasciati a intervalli regolari dopo il rilascio GA. che mettono a disposizione numerosi miglioramenti e diverse correzioni. Per informazioni sulla versione di aggiornamento Cumulativo più recente, vedere [ http://aka.ms/sql2017cu ](http://aka.ms/sql2017cu). Per il download del pacchetto e problemi noti, vedere il [note sulla versione](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>Motore di database di SQL Server
 

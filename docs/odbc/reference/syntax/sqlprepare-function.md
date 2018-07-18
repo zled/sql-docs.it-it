@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLPrepare | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLPrepare
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLPrepare
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLPrepare
-helpviewer_keywords: SQLPrepare function [ODBC]
+f1_keywords:
+- SQLPrepare
+helpviewer_keywords:
+- SQLPrepare function [ODBC]
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0f4f752416fd704d3976728eabbe6a8b9d00bd37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e2134b972d8cceebb5928f856f8a4361aa4199fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlprepare-function"></a>Pagina relativa alla funzione SQLPrepare
 **Conformità**  
@@ -66,22 +67,22 @@ SQLRETURN SQLPrepare(
 |01000|Avviso generico.|Messaggio informativo specifici del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01S02|Valore di opzione modificato|Un attributo di istruzione specificata non è valido a causa di condizioni di lavoro di implementazione, in modo temporaneamente con cui sostituire un valore analogo. (**SQLGetStmtAttr** può essere chiamato per determinare il valore di sostituzione temporaneamente.) Il valore di sostituzione è valido per il *StatementHandle* fino a quando il cursore è chiuso. Gli attributi di istruzione che può essere modificato: SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08S01|Errore del collegamento di comunicazione|Collegamento di comunicazione tra il driver e l'origine dati a cui era connesso il driver non è stato possibile prima dell'elaborazione della funzione è stata completata.|  
-|21S01|Elenco di valori delle INSERT non corrisponde all'elenco di colonne|\**StatementText* contenuti un **inserire** istruzione e il numero di valori da inserire non corrispondeva il grado della tabella derivata.|  
-|21S02|Il grado della tabella derivata non corrisponde all'elenco di colonne|\**StatementText* contenuti un **CREATE VIEW** istruzione e il numero dei nomi specificato non è lo stesso livello della tabella derivata definito dalla specifica di query.|  
+|21S01|Elenco di valori delle INSERT non corrisponde all'elenco di colonne|\**StatementText* contenuti un' **inserire** istruzione e il numero di valori da inserire non corrispondeva il grado della tabella derivata.|  
+|21S02|Il grado della tabella derivata non corrisponde all'elenco di colonne|\**StatementText* contenuti un **CREATE VIEW** istruzione e il numero dei nomi specificato non è lo stesso grado della tabella derivata definito dalla specifica di query.|  
 |22018|Valore di carattere non valido per la specifica del cast|**StatementText* conteneva un'istruzione SQL contenente un valore letterale o un parametro e il valore è incompatibile con il tipo di dati della colonna della tabella associata.|  
 |22019|Carattere di escape non valido|L'argomento *StatementText* contenuti un **come** predicato con un **ESCAPE** nel **dove** clausola e la lunghezza del carattere di escape carattere che segue **ESCAPE** non è uguale a 1.|  
 |22025|Sequenza di escape non valido|L'argomento *StatementText* contenuti "**come** *valore di schema* **ESCAPE** *caratterediescape*"nel **dove** clausola e il carattere che segue il carattere di escape nel valore del criterio era"%"né"_".|  
 |24000|Stato del cursore non valido|(DM) un cursore è stato aperto nel *StatementHandle*, e **SQLFetch** o **SQLFetchScroll** fosse stata chiamata.<br /><br /> Un cursore è stato aperto nel *StatementHandle*, ma **SQLFetch** o **SQLFetchScroll** non è stato chiamato.|  
-|34000|Nome di cursore non valido|\**StatementText* contenuti un posizionato **eliminare** o un oggetto posizionato **aggiornamento**, e il cursore a cui fa riferimento l'istruzione viene preparata non è stato aperto.|  
+|34000|Nome di cursore non valido|\**StatementText* contenuti un posizionati **eliminare** o un oggetto posizionato **aggiornamento**, e il cursore fanno riferimento l'istruzione preparata non è stato aperto.|  
 |3D000|Nome catalogo non valido|Il nome del catalogo specificato in *StatementText* non è valido.|  
 |3F000|Nome dello schema non valido|Il nome dello schema specificato in *StatementText* non è valido.|  
-|42000|Sintassi o violazione di accesso|\**StatementText* conteneva un'istruzione SQL che non è stato preparabile o essere contenuto un errore di sintassi.<br /><br /> **StatementText* conteneva un'istruzione per il quale l'utente dispone dei privilegi necessari.|  
+|42000|Sintassi o violazione di accesso|\**StatementText* conteneva un'istruzione SQL che non è stato preparabile o essere contenuto un errore di sintassi.<br /><br /> **StatementText* conteneva un'istruzione per il quale l'utente non dispone dei privilegi necessari.|  
 |42S01|Vista o tabella di base già esistente|\**StatementText* contenuti un **CREATE TABLE** o **CREATE VIEW** istruzione e il nome della tabella o vista nome specificato esiste già.|  
-|42S02|Vista o tabella di base non trovata|\**StatementText* contenuti un **DROP TABLE** o **DROP VIEW** istruzione e la vista nome non esiste o il nome di tabella specificata.<br /><br /> \**StatementText* contenuti un **ALTER TABLE** istruzione e il nome della tabella specificato non esiste.<br /><br /> \**StatementText* contenuti un **CREATE VIEW** istruzione e un nome di tabella o vista nome definito dalla specifica di query non esiste.<br /><br /> \**StatementText* contenuti un **CREATE INDEX** istruzione e il nome della tabella specificato non esiste.<br /><br /> \**StatementText* contenuti un **GRANT** o **revocare** istruzione e la vista nome non esiste o il nome di tabella specificata.<br /><br /> \**StatementText* contenuti un **selezionare** istruzione e una vista nome non esiste o il nome di tabella specificata.<br /><br /> \**StatementText* contenuti un **eliminare**, **inserire**, o **aggiornamento** istruzione e il nome della tabella specificato non esiste.<br /><br /> \**StatementText* contenuti un **CREATE TABLE** istruzione e una tabella specificata in un vincolo (riferimento a una tabella diversa da quella creata) non esiste.|  
+|42S02|Vista o tabella di base non trovata|\**StatementText* contenuti un **DROP TABLE** o un **DROP VIEW** istruzione e la vista nome non esiste o il nome di tabella specificata.<br /><br /> \**StatementText* contenuti un' **ALTER TABLE** istruzione e il nome della tabella specificato non esiste.<br /><br /> \**StatementText* contenuti un **CREATE VIEW** istruzione e un nome della tabella o vista nome definito per la specifica di query non esiste.<br /><br /> \**StatementText* contenuti un **CREATE INDEX** istruzione e il nome della tabella specificato non esiste.<br /><br /> \**StatementText* contenuti un **GRANT** o **revocare** istruzione e la vista nome non esiste o il nome di tabella specificata.<br /><br /> \**StatementText* contenuti un **selezionare** istruzione e una vista nome non esiste o il nome di tabella specificata.<br /><br /> \**StatementText* contenuti un **eliminare**, **inserire**, o **aggiornamento** istruzione e il nome della tabella specificato non esiste.<br /><br /> \**StatementText* contenuti un **CREATE TABLE** istruzione e una tabella specificata in un vincolo (riferimento a una tabella diversa da quella creata) non esiste.|  
 |42S11|Indice già esistente.|\**StatementText* contenuti un **CREATE INDEX** istruzione e il nome dell'indice specificato esiste già.|  
 |42S12|Indice non trovato|\**StatementText* contenuti un **DROP INDEX** istruzione e il nome dell'indice specificato non esiste.|  
-|42S21|Esiste già una colonna|\**StatementText* contenuti un **ALTER TABLE** istruzione e la colonna specificata nel **aggiungere** clausola non è univoca o identifica una colonna esistente nella tabella di base.|  
-|42S22|Colonna non trovata|\**StatementText* contenuti un **CREATE INDEX** istruzione e uno o più della colonna dei nomi specificati nell'elenco delle colonne non esiste.<br /><br /> \**StatementText* contenuti un **GRANT** o **revocare** istruzione e un nome di colonna specificato non esiste.<br /><br /> \**StatementText* contenuti un **selezionare**, **eliminare**, **inserire**, o **aggiornamento** istruzione e una colonna specificata nome non esiste.<br /><br /> \**StatementText* contenuti un **CREATE TABLE** istruzione e una colonna specificata in un vincolo (riferimento a una tabella diversa da quella creata) non esiste.|  
+|42S21|Esiste già una colonna|\**StatementText* contenuti un' **ALTER TABLE** istruzione e la colonna specificata nel **aggiungere** clausola non è univoca o identifica una colonna esistente nella tabella di base.|  
+|42S22|Colonna non trovata|\**StatementText* contenuti un **CREATE INDEX** istruzione e uno o più della colonna dei nomi specificati nell'elenco delle colonne non esisteva.<br /><br /> \**StatementText* contenuti un **GRANT** o **revocare** istruzione e un nome di colonna specificato non esiste.<br /><br /> \**StatementText* contenuti un **selezionare**, **eliminare**, **inserire**, o **aggiornamento** istruzione e un nome di colonna specificato non esiste.<br /><br /> \**StatementText* contenuti un **CREATE TABLE** istruzione e una colonna specificata in un vincolo (riferimento a una tabella diversa da quella creata) non esiste.|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operazione annullata|L'elaborazione asincrona è stata abilitata per il *StatementHandle*. La funzione è stata chiamata e prima ha completato l'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato sul *StatementHandle*, e quindi è stata chiamata la funzione nuovo di *StatementHandle*.<br /><br /> La funzione è stata chiamata e prima ha completato l'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato sul *StatementHandle* da un thread diverso in un applicazioni multithread.|  

@@ -1,16 +1,16 @@
 ---
 title: Ruoli a livello di database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.roleproperties.database.f1
 - sql13.swb.roleproperties.object.f1
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 - groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 96a567e1fe27c5302d9adf3857539af2336d5d6f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b1a99af7b5758f77883da3f2a755aaa4bdfdd1a9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ Per aggiungere e rimuovere utenti a un ruolo del database, usare le opzioni `ADD
 
 Le autorizzazioni dei ruoli del database definiti dall'utente possono essere personalizzate usando le istruzioni GRANT, DENY e REVOKE. Per altre informazioni, vedere [Autorizzazioni (motore di database)](../../../relational-databases/security/permissions-database-engine.md).
 
-Per un elenco di tutte le autorizzazioni, vedere il poster [Autorizzazioni del motore di database](http://go.microsoft.com/fwlink/?LinkId=229142) . Non è possibile concedere autorizzazioni a livello di server ai ruoli del database. Gli account di accesso e altre entità a livello di server (come i ruoli del server) non possono essere aggiunti ai ruoli del database. Per sicurezza a livello di server in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], usare invece i [ruoli del server](../../../relational-databases/security/authentication-access/server-level-roles.md) . Non è possibile concedere autorizzazioni a livello di server tramite ruoli in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].
+Per un elenco di tutte le autorizzazioni, vedere il poster [Autorizzazioni del motore di database](https://aka.ms/sql-permissions-poster) . Non è possibile concedere autorizzazioni a livello di server ai ruoli del database. Gli account di accesso e altre entità a livello di server (come i ruoli del server) non possono essere aggiunti ai ruoli del database. Per sicurezza a livello di server in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], usare invece i [ruoli del server](../../../relational-databases/security/authentication-access/server-level-roles.md) . Non è possibile concedere autorizzazioni a livello di server tramite ruoli in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].
 
 ## <a name="fixed-database-roles"></a>ruoli predefiniti del database
   
@@ -139,16 +139,16 @@ Quando R Services è installato, i ruoli di database aggiuntivi sono disponibili
 |[sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)|Metadati|Restituisce informazioni sui membri di un ruolo del database corrente.|  
 |[sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)|Metadati|Restituisce una riga per ogni membro di ogni ruolo del database.|  
 |[IS_MEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-member-transact-sql.md)|Metadati|Indica se l'utente corrente è membro del gruppo di Microsoft Windows o del ruolo di database di Microsoft SQL Server specificato.|  
-|[CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)|Command|Crea un nuovo ruolo di database nel database corrente.|  
-|[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)|Command|Modifica il nome o l'appartenenza di un ruolo del database.|  
-|[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Command|Rimuove un ruolo dal database.|  
-|[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Command|Crea un nuovo ruolo di database nel database corrente.|  
-|[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|Rimuove un ruolo del database dal database corrente.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|Aggiunge un utente del database, un ruolo del database, un account di accesso di Windows o un gruppo di Windows a un ruolo del database nel database corrente. Tutte le piattaforme ad accezione di [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] devono usare invece `ALTER ROLE`.|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|Rimuove un account di sicurezza da un ruolo di SQL Server nel database corrente. Tutte le piattaforme ad accezione di [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] devono usare invece `ALTER ROLE` .|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | Aggiunge autorizzazioni a un ruolo.
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | Nega un'autorizzazione a un ruolo.
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | Rimuove un'autorizzazione precedentemente concessa o negata.
+|[CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)|Comando|Crea un nuovo ruolo di database nel database corrente.|  
+|[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)|Comando|Modifica il nome o l'appartenenza di un ruolo del database.|  
+|[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Comando|Rimuove un ruolo dal database.|  
+|[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Comando|Crea un nuovo ruolo di database nel database corrente.|  
+|[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Comando|Rimuove un ruolo del database dal database corrente.|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Comando|Aggiunge un utente del database, un ruolo del database, un account di accesso di Windows o un gruppo di Windows a un ruolo del database nel database corrente. Tutte le piattaforme ad accezione di [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] devono usare invece `ALTER ROLE` .|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Comando|Rimuove un account di sicurezza da un ruolo di SQL Server nel database corrente. Tutte le piattaforme ad accezione di [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] devono usare invece `ALTER ROLE` .|
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Autorizzazioni | Aggiunge autorizzazioni a un ruolo.
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Autorizzazioni | Nega un'autorizzazione a un ruolo.
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Autorizzazioni | Rimuove un'autorizzazione precedentemente concessa o negata.
   
   
 ## <a name="public-database-role"></a>Ruolo di database public  

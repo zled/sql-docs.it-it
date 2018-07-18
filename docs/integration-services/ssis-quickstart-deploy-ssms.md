@@ -1,26 +1,26 @@
 ---
 title: Distribuire un progetto SSIS con SSMS | Microsoft Docs
-ms.date: 09/25/2017
-ms.topic: article
-ms.prod: sql-non-specified
+ms.date: 05/21/2018
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 151089d319a1106f81426beee4aa2989bc72b978
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d93e2d18fa2d13106ae0add8c9be5bfe269602e3
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455346"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Distribuire un progetto SSIS con SQL Server Management Studio (SSMS)
-Questa guida introduttiva illustra come usare SQL Server Management Studio (SSMS) per connettersi al database del catalogo SSIS e quindi eseguire la distribuzione guidata di Integration Services per distribuire un progetto SSIS nel catalogo SSIS. 
+Questa guida introduttiva illustra come usare SQL Server Management Studio (SSMS) per connettersi al database del catalogo SSIS e quindi eseguire la Distribuzione guidata di Integration Services per distribuire un progetto SSIS nel catalogo SSIS. 
 
 SQL Server Management Studio è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL, da SQL Server al database SQL. Per altre informazioni su SSMS, vedere [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
@@ -28,12 +28,38 @@ SQL Server Management Studio è un ambiente integrato per la gestione di qualsia
 
 Prima di iniziare, verificare di avere l'ultima versione di SQL Server Management Studio. Per scaricare SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
+La convalida descritta in questo articolo per la distribuzione al database SQL di Azure richiede SQL Server Data Tools (SSDT) 17.4 o versione successiva. Per scaricare la versione più recente di SSDT, vedere [Scaricare la versione più recente di SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
+
+Un server di database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
+
+## <a name="supported-platforms"></a>Piattaforme supportate
+
+È possibile usare le informazioni di questa guida introduttiva per distribuire un progetto SSIS nelle piattaforme seguenti:
+
+-   SQL Server in Windows.
+
+-   Database SQL di Azure. Per altre informazioni sulla distribuzione e l'esecuzione di pacchetti in Azure, vedere [Spostare i carichi di lavoro di SQL Server Integration Services nel cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Non è possibile usare le informazioni di questa guida introduttiva per distribuire un pacchetto SSIS a SQL Server in Linux. Per altre informazioni sull'esecuzione di pacchetti in Linux, vedere [Estrarre, trasformare e caricare i dati in Linux con SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Ottenere le informazioni di connessione per il database SQL di Azure
+
+Per distribuire il progetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
+
+1. Accedere al [portale di Azure](https://portal.azure.com/).
+2. Selezionare **Database SQL** nel menu a sinistra, quindi selezionare il database SSISDB nella pagina dei **database SQL**. 
+3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
+4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
+
+## <a name="wizard_auth"></a> Metodi di autenticazione della Distribuzione guidata
+
+Se si esegue la distribuzione a un server SQL Server con la Distribuzione guidata, è necessario usare l'autenticazione di Windows. Non è possibile usare l'autenticazione di SQL Server.
+
+Se si esegue la distribuzione a un server di database SQL di Azure, è necessario usare l'autenticazione di SQL Server o l'autenticazione di Azure Active Directory. Non è possibile usare l'autenticazione di Windows.
+
 ## <a name="connect-to-the-ssisdb-database"></a>Connettersi al database SSISDB
 
 Usare SQL Server Management Studio per stabilire una connessione al catalogo SSIS. 
-
-> [!NOTE]
-> Un server di database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
 
 1. Aprire SQL Server Management Studio.
 
@@ -43,16 +69,16 @@ Usare SQL Server Management Studio per stabilire una connessione al catalogo SSI
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo server** | Motore di database | Questo valore è obbligatorio. |
    | **Nome server** | Nome completo del server | Se si sta eseguendo la connessione a un server di database SQL di Azure, il nome è nel formato `<server_name>.database.windows.net`. |
-   | **Autenticazione** | autenticazione di SQL Server | In questa guida rapida viene usata l'autenticazione SQL. |
-   | **Account di accesso** | Account amministratore del server | Si tratta dell'account specificato al momento della creazione del server. |
-   | **Password** | Password per l'account amministratore del server | Si tratta della password specificata al momento della creazione del server. |
+   | **Autenticazione** | autenticazione di SQL Server | Con l'autenticazione di SQL Server è possibile connettersi a SQL Server o al database SQL di Azure. Vedere [Metodi di autenticazione della Distribuzione guidata](#wizard_auth) in questo articolo. |
+   | **Account di accesso** | Account amministratore del server | Account specificato al momento della creazione del server. |
+   | **Password** | Password per l'account amministratore del server | Password specificata al momento della creazione del server. |
 
 3. Fare clic su **Connetti**. In SSMS si apre la finestra Esplora oggetti. 
 
 4. In Esplora oggetti espandere **Cataloghi di Integration Services** e quindi espandere **SSISDB** per visualizzare gli oggetti nel database del catalogo SSIS.
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Avviare la Distribuzione guidata Integration Services
-1. In Esplora oggetti, con i nodi **Cataloghi di Integration Services** e **SSISDB** espansi, espandere una cartella di progetto.
+1. In Esplora oggetti, con i nodi **Cataloghi di Integration Services** e **SSISDB** espansi, espandere una cartella.
 
 2.  Selezionare il nodo **Progetti**.
 
@@ -62,20 +88,23 @@ Usare SQL Server Management Studio per stabilire una connessione al catalogo SSI
 1. Nella pagina **Introduzione** della procedura guidata leggere l'introduzione. Fare clic su **Avanti** per aprire la pagina **Seleziona origine**.
 
 2. Nella pagina **Seleziona origine** selezionare il progetto SSIS esistente da distribuire.
-    -   Per distribuire un file di distribuzione del progetto creato, selezionare **File distribuzione progetto** e immettere il percorso al file con estensione ispac.
-    -   Per distribuire un progetto che si trova in un catalogo SSIS, selezionare **Catalogo di Integration Services**, quindi immettere il nome del server e il percorso del progetto nel catalogo.
+    -   Per distribuire un file di distribuzione del progetto creato impostando un progetto nell'ambiente di sviluppo, selezionare **File di distribuzione progetto** e immettere il percorso del file con estensione ispac.
+    -   Per distribuire un progetto che è già distribuito in un database del catalogo SSIS, selezionare **Catalogo di Integration Services**, quindi immettere il nome del server e il percorso del progetto nel catalogo.
     Fare clic su **Avanti** per visualizzare la pagina **Seleziona destinazione** .
   
 3.  Nella pagina **Seleziona destinazione** selezionare la destinazione per il progetto.
     -   Immettere il nome completo del server. Se il server di destinazione è un server del database SQL di Azure, il nome è nel formato `<server_name>.database.windows.net`.
-    -   Fare clic su **Sfoglia** per selezionare la cartella di destinazione in SSISDB.
-    Fare clic su **Avanti** per aprire la pagina **Verifica**.  
+    -   Specificare le informazioni di autenticazione e quindi selezionare **Connetti**. Vedere [Metodi di autenticazione della Distribuzione guidata](#wizard_auth) in questo articolo.
+    -   Selezionare **Sfoglia** per selezionare la cartella di destinazione in SSISDB.
+    -   Quindi selezionare **Avanti** per aprire la pagina **Verifica**. Il pulsante **Avanti** è abilitato solo dopo che è stato selezionato **Connetti**.
   
 4.  Nella pagina **Verifica** rivedere le impostazioni selezionate.
     -   È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro.
     -   Fare clic su **Distribuisci** per avviare il processo di distribuzione.
-  
-5.  Al termine del processo di distribuzione viene visualizzata la pagina **Risultati**. Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
+
+5.  Se si esegue la distribuzione a un server di database SQL di Azure viene visualizzata la pagina **Convalida**, in cui si verifica che i pacchetti del progetto non contengano problemi noti, che potrebbero impedire la corretta esecuzione del runtime di integrazione Azure-SSIS. Per altre informazioni, vedere [Convalidare pacchetti SSIS distribuiti in Azure](lift-shift/ssis-azure-validate-packages.md).
+
+6.  Al termine del processo di distribuzione viene visualizzata la pagina **Risultati**. Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
     -   Se l'azione ha avuto esito negativo, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore.
     -   In alternativa, fare clic su **Salva report...** per salvare i risultati in un file XML.
     -   Per uscire dalla procedura guidata, fare clic su **Chiudi**.

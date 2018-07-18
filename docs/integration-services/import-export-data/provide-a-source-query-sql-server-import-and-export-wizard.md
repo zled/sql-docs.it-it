@@ -1,30 +1,28 @@
 ---
 title: Impostazione query di origine (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 
+caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4399fdeb68ee0768ac083e0193ae0513b221021d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 77a6cbbc88e7ba0077b7cb68e013e4b7e8251c08
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Impostazione query di origine (Importazione/Esportazione guidata SQL Server)
 Se è stato specificato che si vuole fornire una query per selezionare i dati da copiare, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Impostazione query di origine**. In questa pagina è necessario scrivere e testare la query SQL che seleziona i dati da copiare dall'origine dati alla destinazione. È anche possibile impostare il testo di una query salvata o caricarlo da un file.
@@ -64,7 +62,10 @@ Se l'origine dati è Excel, vedere [Specificare una query di origine per Excel](
  Selezionare un file salvato contenente il testo di una query SQL usando la finestra di dialogo **Apri**. La selezione di un file copia il testo dal file alla casella di testo **Istruzione SQL** .  
  
 ## <a name="excelQueries"></a> Specificare una query di origine per Excel
-### <a name="specify-excel-objects-in-queries"></a>Specificare oggetti di Excel nelle query
+
+> [!IMPORTANT]
+> Per informazioni dettagliate sulla connessione ai file di Excel e sulle limitazioni e i problemi noti per il caricamento di dati da o a file di Excel, vedere [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+
 Le query possono essere eseguite in tre tipi di oggetti Excel.
 -   **Foglio di lavoro.** Per eseguire una query in un foglio di lavoro, aggiungere il carattere $ alla fine del nome del foglio e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$]**.
 
@@ -83,9 +84,6 @@ Le query possono essere eseguite in tre tipi di oggetti Excel.
     ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
-
-### <a name="prepare-the-excel-source-data"></a>Preparare i dati di origine di Excel
-Quando si specifica un foglio di lavoro o un intervallo come tabella di origine, il driver legge il blocco di celle *contigue* che inizia con la prima cella non vuota nell'angolo superiore sinistro del foglio di lavoro o dell'intervallo. Per questa ragione, i dati di origine non possono includere righe vuote. Ad esempio, non può essere presente una riga vuota tra le intestazioni di colonna e le righe di dati. Se è presente un titolo seguito da righe vuote nella parte superiore del foglio di lavoro sopra i dati, non è possibile eseguire query nel foglio di lavoro. In Excel è necessario assegnare un nome all'intervallo di dati ed eseguire una query nell'intervallo denominato anziché nel foglio di lavoro.
 
 ## <a name="whats-next"></a>Quali sono le operazioni successive?  
  Dopo aver scritto e testato la query SQL che seleziona i dati da copiare, la pagina successiva dipende dalla destinazione dei dati.  

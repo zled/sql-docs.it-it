@@ -1,27 +1,17 @@
 ---
-title: Rendere operativo il codice R (servizi di Machine Learning) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/26/2016
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: f15696b1-2479-4e5f-ac5e-4beaf958a043
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: c982c62fbe79fffc878465a48ca993b8b720dc41
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Rendere operativo il codice R in servizi di SQL Server Machine Learning | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: f5fa7806ad70c37c7d51c5ae2cc9606191560e58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>Rendere operativo il codice R (servizi di Machine Learning)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +22,7 @@ In questo articolo sono riepilogati i punti chiave per lo sviluppatore del datab
 
 ## <a name="get-started-with-r-code-in-sql-server"></a>Iniziare con il codice R in SQL Server
 
-Tradizionalmente, integrazione di soluzioni di machine learning mira ricodifica esteso per supportare l'integrazione e prestazioni. Tuttavia, lo spostamento di codice R e Python per un ambiente di produzione è molto più semplice nei servizi di Microsoft Machine Learning, perché il codice può essere eseguito in SQL Server e chiamato utilizzando le stored procedure. È possibile continuare a usare strumenti comuni e non è necessario installare un ambiente di sviluppo R. 
+Tradizionalmente, integrazione di soluzioni di machine learning mira ricodifica esteso per supportare l'integrazione e prestazioni. Tuttavia, lo spostamento di codice R e Python per un ambiente di produzione è molto più semplice in SQL Server Machine Learning Services, perché il codice può essere eseguito in SQL Server e utilizzando le stored procedure. È possibile continuare a usare strumenti comuni e non è necessario installare un ambiente di sviluppo R. 
 
 Per ulteriori informazioni sulla sintassi di base, vedere:
 
@@ -49,7 +39,7 @@ Naturalmente, conversione del codice R in SQL è più semplice se alcune ottimiz
 
 + [Librerie e tipi di dati R](r-libraries-and-data-types.md)
 
-+ [Conversione del codice R per l'uso di R Services](converting-r-code-for-use-in-sql-server.md)
++ [Conversione di codice R per utilizzarlo in R Services](converting-r-code-for-use-in-sql-server.md)
 
 + [Generazione di una R stored procedure usando sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 
@@ -61,17 +51,17 @@ Ad esempio, si potrebbe ripetere il training di un modello in una pianificazione
 
 Il punteggio è un'importante attività che può facilmente essere automatizzata o avviata da applicazioni esterne. È possibile impostare in anticipo, il modello con R, Python o una stored procedure e salvare il modello in formato binario in una tabella. Quindi, è possibile caricare il modello in una variabile come parte di una chiamata di stored procedure, utilizzando una delle seguenti opzioni per il punteggio di T-SQL:
 
-+ [In tempo reale](../real-time-scoring.md) punteggio, ottimizzata per i batch di piccole dimensioni
++ [In tempo reale](../real-time-scoring.md) punteggi, ottimizzata per i batch piccoli
 + Assegnazione dei punteggi, in cui viene chiamato da un'applicazione a riga singola
-+ [Punteggio native](../sql-native-scoring.md), per la stima batch rapido da SQL Server senza chiamare R
++ [Assegnazione dei punteggi native](../sql-native-scoring.md), per la stima batch rapido da SQL Server senza chiamare R
 
 Questa procedura dettagliata vengono forniti esempi di assegnazione dei punteggi utilizzando una stored procedure in batch sia la modalità a riga singola:
 
-+ [Fine per terminare la procedura dettagliata dell'analisi scientifica dei dati di R in SQL Server](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [-To-end procedura dettagliata di analisi scientifica dei dati di R in SQL Server](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
 Visualizzare questi modelli di soluzioni per gli esempi di integrazione in un'applicazione di punteggio:
 
-+ [Previsioni di vendita al dettaglio](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
++ [La previsione delle vendite al dettaglio](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
 + [Rilevazione di frodi](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
 + [Cliente clustering](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
 
@@ -102,5 +92,5 @@ Per ulteriori informazioni su come ottimizzare le soluzioni di Microsoft R esegu
 
 + [Elaborazione dati di grandi dimensioni in R](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips)
 
-+ [Sviluppare un algoritmo parallelo personalizzato](https://docs.microsoft.com/r-server/r-reference/revopemar/pemar)
++ [Sviluppare un algoritmo parallelo](https://docs.microsoft.com/r-server/r-reference/revopemar/pemar)
 

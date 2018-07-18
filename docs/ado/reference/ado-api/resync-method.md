@@ -1,17 +1,15 @@
 ---
 title: Metodo Resync | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset20::raw_Resync
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Resync method [ADO]
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 68c8642b778f6fe73f30096101308328b7b46ebc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 187f1397cbdb4e6ccdfc39b573f301fce1a957ed
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="resync-method"></a>Risincronizzazione (metodo)
 Aggiorna i dati nell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto dal database sottostante.  
@@ -69,7 +66,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
  Il valore di **stato** proprietà per ogni **campo** oggetto al momento della chiamata influisce anche sul comportamento di **Resync**. Per **campo** gli oggetti che hanno **stato** valori di **su adFieldPendingUnknown** o **adFieldPendingInsert**, **Resync**  non ha alcun effetto. Per **stato** valori di **uguali a adFieldPendingChange** o **adFieldPendingDelete**, **Resync** Sincronizza i valori dei dati per i campi che ancora presenti nell'origine dati.  
   
- **Risincronizzazione** non modificherà **stato** valori di **campo** oggetti a meno che non si verifica un errore quando **Resync** viene chiamato. Ad esempio, se il campo non esiste più, il provider restituirà un oggetto appropriato **stato** valore per il **campo** dell'oggetto, ad esempio **adFieldDoesNotExist**. Restituito **stato** valori possono essere combinati logicamente all'interno del valore del **stato** proprietà.  
+ **Risincronizzazione** non modificherà **stato** i valori di **campo** oggetti a meno che non si verifica un errore quando **Resync** viene chiamato. Ad esempio, se il campo non esiste più, il provider restituirà un oggetto appropriato **stato** valore per il **campo** dell'oggetto, ad esempio **adFieldDoesNotExist**. Restituito **stato** valori possono essere combinati logicamente all'interno del valore del **stato** proprietà.  
   
 ## <a name="applies-to"></a>Si applica a  
   

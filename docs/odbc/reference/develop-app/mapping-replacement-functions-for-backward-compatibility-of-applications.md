@@ -1,16 +1,14 @@
 ---
-title: "Mapping di funzioni di sostituzione per la compatibilità delle applicazioni - ODBC | Documenti Microsoft"
-ms.custom: 
+title: Mapping di funzioni di sostituzione per la compatibilità delle applicazioni - ODBC | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping replacement functions [ODBC]
 - upgrading applications [ODBC], mapping replacement functions
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - application upgrades [ODBC], mapping replacement functions
 - backward compatibility [ODBC], mapping replacement functions
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 14ca73aefb033580c2770da05189e3de04a424e3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapping di funzioni di sostituzione per la compatibilità delle applicazioni
 Un'applicazione ODBC 3*x* applicazione utilizzo tramite ODBC 3*x* gestione Driver funzionerà con un ODBC 2. *x* driver, purché non nuove funzionalità vengono utilizzati. Entrambi duplicati funzionalità e modifiche del comportamento, tuttavia, influiscono sulla modalità che ODBC 3. *x* applicazione funziona su un ODBC 2. *x* driver. Quando si lavora con un ODBC 2. *x* driver, Driver Manager viene eseguito il mapping seguente ODBC 3. *x* funzioni, che sono sostituiti uno o più ODBC 2. *x* funzioni, nel corrispondente ODBC 2. *x* funzioni.  
@@ -46,8 +43,8 @@ Un'applicazione ODBC 3*x* applicazione utilizzo tramite ODBC 3*x* gestione Drive
 |**SQLGetConnectAttr**|**SQLGetConnectOption**|  
 |**SQLGetDiagRec**|**SQLError**|  
 |**SQLGetStmtAttr**|**SQLGetStmtOption**[1]|  
-|**SQLSetConnectAttr**|**SQLSetConnectOption**|  
-|**SQLSetStmtAttr**|**SQLSetStmtOption**[1]|  
+|**Funzione SQLSetConnectAttr**|**SQLSetConnectOption**|  
+|**Funzione SQLSetStmtAttr**|**SQLSetStmtOption**[1]|  
   
  [1] altre azioni potrebbero anche prendere, a seconda dell'attributo richiesto.  
   
@@ -422,13 +419,13 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  Quando un'applicazione ODBC 3. *x* applicazione che utilizza un ODBC 2. *x* driver chiama **SQLColAttribute** con il *ColumnNumber* argomento impostato su 0, la gestione Driver restituisce il *FieldIdentifier* valori elencati nella tabella seguente.  
   
-|*FieldIdentifier*|valore|  
+|*FieldIdentifier*|Value|  
 |-----------------------|-----------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|  
 |SQL_DESC_CATALOG_NAME|"" (stringa vuota)|  
 |SQL_DESC_CONCISE_TYPE|SQL_BINARY|  
-|SQL_DESC_COUNT|Il valore restituito da **SQLNumResultCols**|  
+|SQL_DESC_COUNT|Lo stesso valore restituito da **SQLNumResultCols**|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|0|  
 |SQL_DESC_DISPLAY_SIZE|8|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|  
@@ -454,7 +451,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Quando un'applicazione ODBC 3. *x* applicazione che utilizza un ODBC 2. *x* driver chiama **SQLDescribeCol** con il *ColumnNumber* argomento impostato su 0, la gestione Driver restituisce i valori elencati nella tabella seguente.  
   
-|Buffer|valore|  
+|Buffer|Value|  
 |------------|-----------|  
 |ColumnName|"" (stringa vuota)|  
 |* NameLengthPtr|0|  
@@ -480,7 +477,7 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
  Questo mapping è necessario tenere conto per il caso in cui **SQLFetch** è stato chiamato prima della chiamata a **SQLGetData** e ODBC 2. *x* driver non supporta **SQLExtendedFetch**. In questo caso, **SQLFetch** potrebbe essere passato tramite l'API ODBC 2. *x* driver, in cui il recupero di case segnalibro non è supportato.  
   
- **SQLGetData** non può essere chiamato più volte in un ODBC 2. *x* driver di recuperare un segnalibro in parti, pertanto la chiamata di **SQLGetData** con il *BufferLength* argomento impostato su un valore inferiore a 4 e *ColumnNumber*argomento impostato su 0 restituiranno SQLSTATE HY090 (stringa di lunghezza o non valida del buffer). **SQLGetData** , tuttavia, può essere chiamato più volte per recuperare lo stesso segnalibro.  
+ **SQLGetData** non può essere chiamato più volte in un'API ODBC 2. *x* driver per recuperare un segnalibro in parti, pertanto la chiamata **SQLGetData** con il *BufferLength* argomento impostato su un valore inferiore a 4 e *ColumnNumber*argomento impostato su 0 restituiranno SQLSTATE HY090 (stringa di lunghezza o non valida del buffer). **SQLGetData** può tuttavia essere chiamato più volte per recuperare lo stesso segnalibro.  
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  Quando un'applicazione ODBC 3. *x* applicazione che utilizza un ODBC 2. *x* driver chiama **SQLSetStmtAttr** per impostare l'attributo SQL_ATTR_USE_BOOKMARKS SQL_UB_VARIABLE, gestione Driver imposta l'attributo SQL_UB_ON in sottostante ODBC 2. *x* driver.

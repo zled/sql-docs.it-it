@@ -1,32 +1,33 @@
 ---
 title: sp_changesubscriber (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_changesubscriber
 - sp_changesubscriber_TSQL
-helpviewer_keywords: sp_changesubscriber
+helpviewer_keywords:
+- sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4b52c51d2e516b8d4c4f787c8e5d56d95922b2d4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c2cb0047dd66b0c3fd96d399e404b801401d202a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,16 +64,16 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@subscriber=**] **'***sottoscrittore***'**  
- Nome del Sottoscrittore in cui si desidera modificare le opzioni. *Sottoscrittore* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del Sottoscrittore in cui si desidera modificare le opzioni. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@type=**] *tipo*  
- Tipo di Sottoscrittore. *tipo* è **tinyint**, con un valore predefinito è NULL. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittore. **1** specifica non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro server di origine dati ODBC sottoscrittore.  
+ Tipo di Sottoscrittore. *tipo di* viene **tinyint**, con un valore predefinito è NULL. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittore. **1** specifica un non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro server di origine dati ODBC sottoscrittore.  
   
- [  **@login=**] **'***accesso***'**  
- ID dell'account di accesso per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account di accesso* è **sysname**, con un valore predefinito è NULL.  
+ [  **@login=**] **'***account di accesso***'**  
+ ID dell'account di accesso per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di tipo **sysname** e il valore predefinito è NULL.  
   
  [  **@password=**] **'***password***'**  
- Password utilizzata per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *password* è **sysname**, il valore predefinito è  **%** . **%**non indica nessuna modifica per la proprietà della password.  
+ Password utilizzata per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *password* viene **sysname**, il valore predefinito è **%**. **%** indica che non è stata modificata per la proprietà della password.  
   
  [  **@commit_batch_size=**] *commit_batch_size*  
  Supportata unicamente per compatibilità con le versioni precedenti.  
@@ -84,9 +85,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Supportata unicamente per compatibilità con le versioni precedenti.  
   
  [  **@frequency_type=**] *frequency_type*  
- Frequenza di pianificazione dell'attività di distribuzione. *frequency_type* è **int**, i possibili valori sono i seguenti.  
+ Frequenza di pianificazione dell'attività di distribuzione. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Su richiesta|  
@@ -98,12 +99,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**128**|Periodica|  
   
  [  **@frequency_interval=**] *frequency_interval*  
- Intervallo per *frequency_type*. *frequency_interval* è **int**, con un valore predefinito è NULL.  
+ Intervallo per *frequency_type*. *frequency_interval* viene **int**, con un valore predefinito è NULL.  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- Data dell'attività di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostato su **32** (frequenza mensile relativa). *frequency_relative_interval* è **int**, i possibili valori sono i seguenti.  
+ Data dell'attività di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostato su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, e può essere uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -112,12 +113,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**16**|Ultimo|  
   
  [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- È la frequenza con cui l'attività di distribuzione deve ricorrere durante il periodo definito *frequency_type*. *frequency_recurrence_factor* è **int**, con un valore predefinito è NULL.  
+ È la frequenza con cui l'attività di distribuzione deve ricorrere durante il periodo definito *frequency_type*. *frequency_recurrence_factor* viene **int**, con un valore predefinito è NULL.  
   
  [  **@frequency_subday=**] *frequency_subday*  
- Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è **int**, i possibili valori sono i seguenti.  
+ Frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -125,51 +126,51 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|Ora|  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Intervallo per *frequence_subday*. *frequency_subday_interval* è **int**, con un valore predefinito è NULL.  
+ Intervallo per *frequence_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- Ora del giorno della prima esecuzione pianificata dell'attività di distribuzione, nel formato HHMMSS. *active_start_time_of_day* è **int**, con un valore predefinito è NULL.  
+ Ora del giorno della prima esecuzione pianificata dell'attività di distribuzione, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Ora del giorno dell'ultima esecuzione pianificata dell'attività di distribuzione, nel formato HHMMSS. *active_end_time_of_day*è **int**, con un valore predefinito è NULL.  
+ Ora del giorno dell'ultima esecuzione pianificata dell'attività di distribuzione, nel formato HHMMSS. *active_end_time_of_day*viene **int**, con un valore predefinito è NULL.  
   
  [  **@active_start_date=**] *active_start_date*  
- Data della prima esecuzione pianificata per l'attività di distribuzione, nel formato AAAAMMGG. *active_start_date* è **int**, con un valore predefinito è NULL.  
+ Data della prima esecuzione pianificata per l'attività di distribuzione, nel formato AAAAMMGG. *active_start_date* viene **int**, con un valore predefinito è NULL.  
   
  [  **@active_end_date=**] *active_end_date*  
- Data dell'ultima esecuzione pianificata dell'attività di distribuzione, nel formato AAAAMMGG. *active_end_date*è **int**, con un valore predefinito è NULL.  
+ Data dell'ultima esecuzione pianificata dell'attività di distribuzione, nel formato AAAAMMGG. *active_end_date*viene **int**, con un valore predefinito è NULL.  
   
  [  **@description=**] **'***descrizione***'**  
- Descrizione facoltativa in formato testo. *Descrizione* è **nvarchar (255)**, con un valore predefinito è NULL.  
+ Descrizione facoltativa in formato testo. *Descrizione* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
  [  **@security_mode=**] *security_mode*  
- Modalità di sicurezza implementata. *security_mode* è **int**, i possibili valori sono i seguenti.  
+ Modalità di sicurezza implementata. *security_mode* viene **int**, e può essere uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticazione|  
 |**1**|Autenticazione di Windows|  
   
- [  **@publisher** =] **'***publisher***'**  
- Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* è **sysname**, con un valore predefinito è NULL.  
+ [ **@publisher**=] **'***publisher***'**  
+ Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzato quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_changesubscriber** viene utilizzata in tutti i tipi di replica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_changesubscriber**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addsubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

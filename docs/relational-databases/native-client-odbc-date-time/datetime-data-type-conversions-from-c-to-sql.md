@@ -1,28 +1,28 @@
 ---
 title: Le conversioni da C a SQL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-helpviewer_keywords: conversions [ODBC], C to SQL
+helpviewer_keywords:
+- conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: de47b5b75d0823d7cae56db844a1d84bbac25f2f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1e307f12de6f298381e1e314a343eaece6353ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>le conversioni di tipo di dati da C a SQL DateTime
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,13 +56,13 @@ ms.lasthandoff: 01/25/2018
   
 -   **1**: se i dati forniti non sono validi, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "formato di datetime non valido".  
   
--   **2**: campi dell'ora devono essere zero o viene generato un record di diagnostica con SQLSTATE 22008 e il messaggio "Troncamento frazionario".  
+-   **2**: i campi dell'ora devono essere zero o viene generato un record di diagnostica con SQLSTATE 22008 e il messaggio "Troncamento frazionario".  
   
 -   **3**: secondi frazionari devono essere zero o viene generato un record di diagnostica con SQLSTATE 22008 e il messaggio "Troncamento frazionario".  
   
--   **4**: il componente Data viene ignorato.  
+-   **4**: il componente relativo alla data viene ignorato.  
   
--   **5**: il fuso orario è impostato per l'impostazione del fuso orario del client.  
+-   **5**: il fuso orario è impostato su impostazioni di fuso orario del client.  
   
 -   **6**: l'ora è impostata su zero.  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **10**: se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22008 e il messaggio "formato di ora non valida". Questo errore si verifica anche se il valore non è incluso nell'intervallo che può essere rappresentato dall'intervallo UTC utilizzato dal server.  
   
--   **11**: se la lunghezza in byte dei dati sono uguali alle dimensioni della struttura richiesta dal tipo SQL, viene generato un record di diagnostica con SQLSTATE 22003 e il messaggio "Valore numerico non compreso nell'intervallo".  
+-   **11**: se la lunghezza in byte dei dati non equivale alla dimensione della struttura richiesta dal tipo SQL, viene generato un record di diagnostica con SQLSTATE 22003 e il messaggio "Valore numerico compreso nell'intervallo".  
   
 -   **12**: se la lunghezza in byte dei dati è 4 o 8, i dati vengono inviati al server in formato di smalldatetime o datetime TDS non elaborato. Se la lunghezza in byte dei dati corrisponde esattamente alla dimensione di SQL_TIMESTAMP_STRUCT, i dati vengono convertiti nel formato TDS per datetime2.  
   
@@ -98,6 +98,6 @@ ms.lasthandoff: 01/25/2018
 -   **N/d**: esistente [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e viene mantenuto il comportamento precedente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e ora miglioramenti &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Data e ora miglioramenti & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

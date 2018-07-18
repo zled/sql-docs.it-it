@@ -1,30 +1,27 @@
 ---
-title: "Gruppo di proprietà, metodi ed eventi | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Gruppo di proprietà, metodi ed eventi | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - group object [ADOX], members
 ms.assetid: ba9642d0-9025-4eff-8885-e6e7f8154c73
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2ddac2e0dfe6d592fb247ffe11734361ab72cbab
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e2c832d599f9c332bfef7e8c1bdd595a3df2b76d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="group-object-properties-methods-and-events"></a>Gruppo di proprietà, metodi ed eventi
 ## <a name="propertiescollections"></a>Raccolte di proprietà /  
@@ -32,7 +29,7 @@ ms.lasthandoff: 02/09/2018
   
  [Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Raccolta di utenti](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Raccolta degli utenti](../../../ado/reference/adox-api/users-collection-adox.md)  
   
 ## <a name="methods"></a>Metodi  
  [Metodo GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)  

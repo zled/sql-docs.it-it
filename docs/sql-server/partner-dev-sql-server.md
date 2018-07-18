@@ -4,29 +4,28 @@ description: Elenchi di partner di terze parti con soluzioni di sviluppo per SQL
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
-ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 17/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 291991498ddf8deb28f77f2551b7e835086495cf
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 5fe3417539d0d4bf031845804a3863b66d409f5c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-development-partners"></a>Partner di sviluppo per SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per il supporto allo sviluppo delle soluzioni di database SQL Server, è possibile scegliere tra una vasta gamma di strumenti leader nel settore.  In questo articolo vengono evidenziate le aziende partner di Microsoft con soluzioni di sviluppo per Microsoft SQL Server.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Per il supporto allo sviluppo delle soluzioni di database SQL Server, è possibile scegliere tra una vasta gamma di strumenti leader nel settore.  In questo articolo vengono evidenziate le aziende partner di Microsoft con soluzioni di sviluppo per Microsoft SQL Server.
 
 ## <a name="our-development-partners"></a>I partner di sviluppo Microsoft
 | Partner | Description | Collegamenti |

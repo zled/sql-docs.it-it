@@ -1,27 +1,19 @@
 ---
 title: Il cmdlet Add-RoleMember | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
 ms.topic: reference
-ms.assetid: 827c8bbc-d48f-4e49-9ea5-abb1380f7623
-caps.latest.revision: "14"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f9aabb7cd07ad5864373e566766c7980dd00f9b0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8144e76d8d3ba7e0ff588c9f22875af430b68a1b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="add-rolemember-cmdlet"></a>Cmdlet Add-RoleMember
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -95,8 +87,8 @@ ms.lasthandoff: 01/08/2018
   
 |||  
 |-|-|  
-|Input|nessuna.|  
-|Output|None|  
+|Input|Nessuno|  
+|Output|Nessuno|  
   
 ## <a name="example-1"></a>Esempio 1  
   

@@ -1,31 +1,28 @@
 ---
 title: Metodi ADOX | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 73fcca57a0cb497694bf843f1569a51868282a89
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bf7837fb749222fe3083671632758ea04a112728
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adox-methods"></a>Metodi ADOX
 |||  
@@ -37,7 +34,7 @@ ms.lasthandoff: 02/09/2018
 |[Append (procedure)](../../../ado/reference/adox-api/append-method-adox-procedures.md)|Aggiunge un nuovo **procedura** dell'oggetto per il **procedure** insieme.|  
 |[Append (tabelle)](../../../ado/reference/adox-api/append-method-adox-tables.md)|Aggiunge un nuovo **tabella** dell'oggetto per il **tabelle** insieme.|  
 |[Append (utenti)](../../../ado/reference/adox-api/append-method-adox-users.md)|Aggiunge un nuovo **utente** dell'oggetto per il **utenti** insieme.|  
-|[Append (visualizzazioni)](../../../ado/reference/adox-api/append-method-adox-views.md)|Aggiunge un nuovo **vista** dell'oggetto per il **viste** insieme.|  
+|[Append (Views)](../../../ado/reference/adox-api/append-method-adox-views.md)|Aggiunge un nuovo **vista** dell'oggetto per il **viste** insieme.|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Modifica la password per un account utente.|  
 |[Create](../../../ado/reference/adox-api/create-method-adox.md)|Crea un nuovo catalogo.|  
 |[Elimina](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Rimuove un oggetto da una raccolta.|  

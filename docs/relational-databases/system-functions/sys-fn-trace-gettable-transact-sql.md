@@ -1,16 +1,14 @@
 ---
 title: sys.fn_trace_gettable (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_gettable
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - fn_trace_gettable function
 - sys.fn_trace_gettable function
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2624c7ea8a3c118f1bb1da2e456bd03cbbdbe968
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4e8c573a9995ee8ca0d23cd89ab2e032a88c6f9e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +48,13 @@ fn_trace_gettable ( 'filename' , number_files )
   
 ## <a name="arguments"></a>Argomenti  
  '*filename*'  
- Specifica il file di traccia iniziale da leggere. *nome del file* è **nvarchar (256)**, non prevede alcun valore predefinito.  
+ Specifica il file di traccia iniziale da leggere. *filename* viene **nvarchar(256)**, non prevede alcun valore predefinito.  
   
  *number_files*  
  Specifica il numero di file di rollover da leggere. Questo numero include il file iniziale specificato *filename*. *number_files* è un **int**.  
   
 ## <a name="remarks"></a>Osservazioni  
- Se *number_files* è specificato come **predefinito**, **fn_trace_gettable** legge tutti i file di rollover fino a quando non viene raggiunta la fine della traccia. **fn_trace_gettable** restituisce una tabella con tutte le colonne valide per la traccia specificata. Per ulteriori informazioni, vedere [sp_trace_setevent &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ Se *number_files* è specificato come **predefinito**, **fn_trace_gettable** legge tutti i file di rollover fino a quando non viene raggiunta la fine della traccia. **fn_trace_gettable** restituisce una tabella con tutte le colonne valide per la traccia specificata. Per altre informazioni, vedere [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  Tenere presente che la funzione fn_trace_gettable non caricherà i file di rollover (quando questa opzione viene specificata tramite il *number_files* argomento) in cui il nome di file di traccia originale termina con un carattere di sottolineatura e un valore numerico. Ciò non vale per il carattere di sottolineatura e il numero che vengono aggiunti automaticamente all'esecuzione del rollover di un file. Come soluzione alternativa, è possibile rinominare i file di traccia in modo da rimuovere i caratteri di sottolineatura nel nome del file originale. Ad esempio, se il file originale è denominato **Trace_Oct_5.trc** e il file di rollover è denominato **Trace_Oct_5_1.trc**, è possibile rinominare i file **TraceOct5.trc** e  **TraceOct5_1.trc**.  
   

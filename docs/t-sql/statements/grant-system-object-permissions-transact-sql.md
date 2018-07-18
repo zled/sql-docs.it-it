@@ -1,16 +1,14 @@
 ---
-title: Autorizzazioni per gli oggetti di sistema GRANT (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: GRANT - autorizzazioni per oggetti di sistema (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - system objects [SQL Server]
 - GRANT statement, system objects
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 68fc428edb12c5b62d5e6eadb6d92bc090e66fde
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 39130687751acab7c86051625f41db644b567a8c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT - autorizzazioni per oggetti di sistema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +42,16 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [sys]. .  
+ [ sys.] .  
  Il qualificatore sys è obbligatorio solo per riferimenti a viste del catalogo e viste a gestione dinamica.  
   
  *system_object*  
  Specifica l'oggetto per cui viene concessa l'autorizzazione.  
   
- *entità*  
+ *principal*  
  Specifica l'entità a cui viene concessa l'autorizzazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile utilizzare questa istruzione per concedere le autorizzazioni per particolari stored procedure, stored procedure estese, funzioni con valori di tabella, funzioni scalari, viste, viste del catalogo, viste di compatibilità, viste INFORMATION_SCHEMA, viste a gestione dinamica e tabelle di sistema installate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ognuno di questi oggetti di sistema esiste come record univoco nel database delle risorse del server (mssqlsystemresource). Il database delle risorse è di sola lettura. Un collegamento all'oggetto è disponibile in forma di record nello schema sys di tutti i database. È possibile concedere, negare o revocare le autorizzazioni per l'esecuzione o la selezione di un oggetto di sistema.  
   
  La concessione dell'autorizzazione per l'esecuzione o la selezione di un oggetto non include necessariamente tutte le autorizzazioni necessarie per l'utilizzo dell'oggetto. La maggior parte degli oggetti esegue operazioni per cui sono richieste autorizzazioni aggiuntive. Ad esempio, un utente a cui viene concessa l'autorizzazione EXECUTE per sp_addlinkedserver non potrà creare un server collegato a meno che non sia anche membro del ruolo predefinito del server sysadmin.  
@@ -65,7 +62,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  Le autorizzazioni per gli oggetti di sistema vengono mantenute in caso di aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Gli oggetti di sistema sono visibili nella vista del catalogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Le autorizzazioni per oggetti di sistema sono visibili nel [Sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) vista nel database master del catalogo.  
+ Gli oggetti di sistema sono visibili nella vista del catalogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Le autorizzazioni per gli oggetti di sistema sono visibili nella vista del catalogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) nel database master.  
   
  La query seguente restituisce informazioni sulle autorizzazioni degli oggetti di sistema:  
   
@@ -77,13 +74,13 @@ SELECT * FROM master.sys.database_permissions AS dp
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. Concessione dell'autorizzazione SELECT per una vista  
- Nell'esempio seguente viene concessa la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso `Sylvester1` dell'autorizzazione per selezionare una vista che elenca [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli account di accesso. Nell'esempio viene poi concessa l'autorizzazione aggiuntiva necessaria per la visualizzazione dei metadati relativi agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui l'utente non è proprietario.  
+ Nell'esempio seguente viene concessa all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Sylvester1` l'autorizzazione per la selezione di una vista che elenca gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nell'esempio viene poi concessa l'autorizzazione aggiuntiva necessaria per la visualizzazione dei metadati relativi agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui l'utente non è proprietario.  
   
 ```  
 USE AdventureWorks2012;  
@@ -101,9 +98,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys. system_objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
- [Sys. database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [REVOCARE autorizzazioni per gli oggetti di sistema &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)   
- [NEGARE autorizzazioni per gli oggetti di sistema &#40; Transact-SQL &#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
+ [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [REVOKE - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)   
+ [DENY - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
   
   

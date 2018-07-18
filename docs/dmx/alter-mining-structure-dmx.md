@@ -1,20 +1,20 @@
 ---
 title: MODIFICARE LA STRUTTURA DI DATA MINING (DMX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_MINING_STRUCTURE
 - ALTER MINING STRUCTURE
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - mining structures [DMX], creating
 - WITH DRILLTHROUGH clause
@@ -22,21 +22,20 @@ helpviewer_keywords:
 - parameter lists [DMX]
 - ALTER MINING STRUCTURE statement
 ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e52b312871dd76ee1e72f515ce83a2e7269d5ab3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 05d1a7c0d1e28ae380be05058661221a4952228c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Crea un nuovo modello di data mining basato su una struttura di data mining esistente.  Quando si utilizza il **ALTER MINING STRUCTURE** istruzione per creare un nuovo modello di data mining, la struttura deve essere già esistente. Al contrario, quando si utilizza l'istruzione, [DMX CREATE MINING MODEL &#40; &#41;](../dmx/create-mining-model-dmx.md), si crea un modello e generare automaticamente la struttura di data mining sottostante nello stesso momento.  
+  Crea un nuovo modello di data mining basato su una struttura di data mining esistente.  Quando si utilizza il **ALTER MINING STRUCTURE** istruzione per creare un nuovo modello di data mining, la struttura deve essere già esistente. Al contrario, quando si utilizza l'istruzione [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), si crea un modello e genera automaticamente la struttura di data mining sottostante nello stesso momento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -69,14 +68,14 @@ USING <algorithm> [(<parameter list>)]
  *criteri di filtro nidificato*  
  Espressione di filtro applicata alle colonne di una tabella nidificata.  
   
- *algoritmo*  
+ *Algoritmo*  
  Nome di un algoritmo di data mining, definito dal provider.  
   
 > [!NOTE]  
 >  Un elenco degli algoritmi supportati dal provider corrente può essere recuperato tramite [set di righe DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vedere [proprietà di Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
   
- *elenco di parametri*  
- Facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
+ *Elenco di parametri*  
+ Facoltativa. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
  *criteri di filtro*  
  Espressione di filtro applicata alle colonne della tabella del case.  
@@ -132,7 +131,7 @@ USING <algorithm> [(<parameter list>)]
 |**REGRESSOR**|Indica che l'algoritmo può utilizzare la colonna specificata nella formula di regressione degli algoritmi di regressione.|  
 |**MODEL_EXISTENCE_ONLY**|Indica che i valori per la colonna di attributi sono meno importanti rispetto alla presenza dell'attributo.|  
   
- È invece possibile definire più flag di modellazione per una stessa colonna. Per ulteriori informazioni su come usare i flag di modellazione, vedere [DMX flag di modellazione &#40; &#41;](../dmx/modeling-flags-dmx.md).  
+ È invece possibile definire più flag di modellazione per una stessa colonna. Per ulteriori informazioni su come usare i flag di modellazione, vedere [flag di modellazione &#40;DMX&#41;](../dmx/modeling-flags-dmx.md).  
   
 ### <a name="prediction-clause"></a>Clausola di stima  
  La clausola di stima consente di descrivere la modalità di utilizzo della colonna di stima. Nella tabella seguente sono elencate le clausole possibili.  
@@ -147,7 +146,7 @@ USING <algorithm> [(<parameter list>)]
   
  Le espressioni di criteri di filtro sono predicati DMX semplificati, simili a una clausola WHERE. Le espressioni di filtro sono limitate a formule che utilizzano operatori matematici di base, valori scalari e nomi di colonna. L'operatore EXISTS, che restituisce true se per la sottoquery viene restituita almeno una riga, rappresenta un'eccezione. I predicati possono essere combinati utilizzando gli operatori logici comuni: AND, OR e NOT.  
   
- Per ulteriori informazioni sui filtri utilizzati con modelli di data mining, vedere [filtri per i modelli di Data Mining &#40; Analysis Services - Data Mining &#41; ](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ Per ulteriori informazioni sui filtri utilizzati con modelli di data mining, vedere [filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Le colonne di un filtro devono essere colonne della struttura di data mining. Non è possibile creare un filtro su una colonna del modello o una colonna in forma di alias.  
@@ -155,7 +154,7 @@ USING <algorithm> [(<parameter list>)]
  Per ulteriori informazioni sulla sintassi e gli operatori DMX, vedere [colonne del modello di Data Mining](../analysis-services/data-mining/mining-model-columns.md).  
   
 ## <a name="parameter-definition-list"></a>Elenco delle definizioni di parametro  
- È possibile modificare le prestazioni e le funzionalità di un modello aggiungendo parametri dell'algoritmo all'elenco di parametri. I parametri che è possibile utilizzare variano in base all'algoritmo specificato nella clausola USING. Per un elenco di parametri associati a ogni algoritmo, vedere [algoritmi di Data Mining &#40; Analysis Services - Data Mining &#41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ È possibile modificare le prestazioni e le funzionalità di un modello aggiungendo parametri dell'algoritmo all'elenco di parametri. I parametri che è possibile utilizzare variano in base all'algoritmo specificato nella clausola USING. Per un elenco di parametri associati a ogni algoritmo, vedere [algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
  La sintassi dell'elenco dei parametri è la seguente:  
   
@@ -219,8 +218,8 @@ USING Microsoft_Decision Trees
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

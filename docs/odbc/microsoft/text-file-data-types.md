@@ -1,16 +1,14 @@
 ---
 title: Tipi di dati di File di testo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - text file driver [ODBC], data types
 - ODBC desktop database drivers [ODBC], text file driver
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - text file data types [ODBC]
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ad5f3d62138693caae19e51a80b1dd5a49d4072a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 14b808ff5d2cdc22afa050e2c7e0b760532b880d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="text-file-data-types"></a>Tipi di dati di File di testo
 Nella tabella seguente viene illustrato come tipi di dati di testo vengono eseguito il mapping ai tipi di dati SQL ODBC. Si noti che non tutti i tipi di dati SQL ODBC sono supportati dal driver ODBC testo.  
@@ -41,7 +38,7 @@ Nella tabella seguente viene illustrato come tipi di dati di testo vengono esegu
 |LONGCHAR|SQL_LONGVARCHAR|  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** restituisce i tipi di dati ODBC. Tutte le conversioni nell'appendice D il *riferimento per programmatori ODBC* sono supportati per i tipi di dati SQL elencati nella tabella precedente.  
+>  **SQLGetTypeInfo** restituisce tipi di dati ODBC. Tutte le conversioni nell'appendice D il *riferimento per programmatori ODBC* sono supportati per i tipi di dati SQL elencati nella tabella precedente.  
   
  La tabella seguente illustra le limitazioni sui tipi di dati di testo.  
   

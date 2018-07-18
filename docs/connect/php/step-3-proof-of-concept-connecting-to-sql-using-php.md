@@ -1,27 +1,25 @@
 ---
 title: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite PHP | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: deb18077283a1512c09aa223f9790079bdae5855
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 28115f9d9f22143ed177f10e761a22fd65f0cbb0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Passaggio 3: Modello di verifica per la connessione a SQL tramite PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -171,4 +169,5 @@ Questo esempio di codice viene illustrato l'utilizzo di transazioni in cui è:
 ## <a name="additional-examples"></a>Esempi aggiuntivi  
   
 [Applicazione di esempio (driver SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  
+
 [Applicazione di esempio (driver PDO_SQLSRV)](../../connect/php/example-application-pdo-sqlsrv-driver.md)

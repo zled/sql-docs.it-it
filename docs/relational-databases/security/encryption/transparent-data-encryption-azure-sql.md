@@ -1,33 +1,31 @@
 ---
 title: Transparent Data Encryption per il database SQL di Azure e Azure SQL Data Warehouse | Microsoft Docs
-description: "Panoramica di Transparent Data Encryption per database e data warehouse SQL. Il documento illustra i vantaggi della tecnologia e le opzioni per la configurazione, incluse le funzionalità Transparent Data Encryption gestita dal servizio e Bring Your Own Key."
-keywords: 
+description: Panoramica di Transparent Data Encryption per database e data warehouse SQL. Il documento illustra i vantaggi della tecnologia e le opzioni per la configurazione, incluse le funzionalità Transparent Data Encryption gestita dal servizio e Bring Your Own Key.
+keywords: ''
 author: becczhang
 manager: craigg
-editor: 
-ms.prod: 
-ms.reviewer: 
+editor: ''
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.component: security
-ms.custom: 
-ms.workload: On Demand
-ms.tgt_pltfrm: 
-ms.devlang: na
-ms.topic: article
-ms.date: 08/07/2017
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+ms.date: 05/08/2018
 ms.author: rebeccaz
-ms.openlocfilehash: 5c9ff69d5219e3cd508031669d67002931fa4060
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Transparent Data Encryption per database e data warehouse SQL
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Transparent Data Encryption contribuisce a proteggere il database SQL di Azure e Azure Data Warehouse dagli attacchi di attività dannose. Esegue la crittografia e la decrittografia in tempo reale del database, dei backup associati e dei file di log delle transazioni inattivi senza richiedere modifiche all'applicazione.
+Transparent Data Encryption (TDE) contribuisce a proteggere il database SQL di Azure e Azure Data Warehouse dagli attacchi di attività dannose. Esegue la crittografia e la decrittografia in tempo reale del database, dei backup associati e dei file di log delle transazioni inattivi senza richiedere modifiche all'applicazione. Per impostazione predefinita, Transparent Data Encryption è abilitato per tutti i database SQL di Azure appena distribuiti, ma potrebbe essere necessario abilitarlo manualmente per i database meno recenti.  
 
 Transparent Data Encryption crittografa l'archivio di un intero database usando una chiave simmetrica denominata chiave di crittografia del database. La chiave di crittografia del database è protetta dalla protezione di Transparent Data Encryption. La protezione può essere un certificato gestito dal servizio (Transparent Data Encryption gestita dal servizio) o una chiave asimmetrica archiviata in Azure Key Vault (Bring Your Own Key). La protezione di Transparent Data Encryption si imposta a livello di server. 
 
@@ -45,9 +43,9 @@ Microsoft inoltre sposta e gestisce le chiavi in base alle esigenze per la repli
 > Tutti i nuovi database SQL vengono crittografati per impostazione predefinita usando la funzionalità Transparent Data Encryption gestita dal servizio. I database esistenti prima di maggio 2017 e quelli creati con una procedura di ripristino, replica geografica e copia del database non vengono crittografati per impostazione predefinita.
 >
 
-## <a name="bring-your-own-key-preview"></a>Bring Your Own Key (anteprima)
+## <a name="bring-your-own-key"></a>Bring Your Own Key
 
-Il supporto Bring Your Own Key (nell'anteprima) consente all'utente di assumere il controllo delle proprie chiavi di Transparent Data Encryption e di stabilire chi può accedervi e quando. Key Vault, ovvero il sistema di gestione delle chiavi esterne basato sul cloud di Azure, è il primo servizio di gestione delle chiavi con cui è stato integrato Transparent Data Encryption per il supporto Bring Your Own Key. Con il supporto Bring Your Own Key, la chiave di crittografia del database è protetta da una chiave asimmetrica archiviata in Key Vault. La chiave asimmetrica non viene mai rimossa da Key Vault. Quando il server ottiene le autorizzazioni per un insieme di credenziali delle chiavi, invia a tale insieme le richieste di operazioni di base relative alle chiavi attraverso Key Vault. La chiave asimmetrica viene impostata a livello di server ed ereditata da tutti i database presenti nel server.
+Il supporto Bring Your Own Key consente all'utente di assumere il controllo delle proprie chiavi di Transparent Data Encryption e di stabilire chi può accedervi e quando. Key Vault, ovvero il sistema di gestione delle chiavi esterne basato sul cloud di Azure, è il primo servizio di gestione delle chiavi con cui è stato integrato Transparent Data Encryption per il supporto Bring Your Own Key. Con il supporto Bring Your Own Key, la chiave di crittografia del database è protetta da una chiave asimmetrica archiviata in Key Vault. La chiave asimmetrica non viene mai rimossa da Key Vault. Quando il server ottiene le autorizzazioni per un insieme di credenziali delle chiavi, invia a tale insieme le richieste di operazioni di base relative alle chiavi attraverso Key Vault. La chiave asimmetrica viene impostata a livello di server ed ereditata da tutti i database presenti nel server.
 
 Con il supporto Bring Your Own Key ora è possibile controllare le attività di gestione delle chiavi, ad esempio le rotazioni delle chiavi e le autorizzazioni dell'insieme di credenziali delle chiavi. È anche possibile eliminare le chiavi e abilitare il controllo o il reporting per tutte le chiavi di crittografia. Key Vault offre una gestione centrale delle chiavi e usa moduli di protezione hardware accuratamente monitorati. Key Vault alza di livello la separazione della gestione delle chiavi e dei dati per consentire il rispetto delle conformità alle normative. Per altre informazioni su Key Vault, vedere la [pagina della documentazione di Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
 
@@ -86,7 +84,7 @@ Impostare la chiave master, nota anche come protezione, di Transparent Data Encr
 
 Per configurare Transparent Data Encryption usando PowerShell, è necessario essere connessi come proprietario, collaboratore o Gestore Sicurezza SQL di Azure. 
 
-| Cmdlet | Description |
+| Cmdlet | Descrizione |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |Abilita o disabilita Transparent Data Encryption per un database|
 | [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Ottiene lo stato di Transparent Data Encryption per un database |
@@ -102,7 +100,7 @@ Per configurare Transparent Data Encryption usando PowerShell, è necessario ess
 
 Connettersi al database con un account di accesso di amministratore o membro del ruolo **dbmanager** nel database master.
 
-| Comando | Description |
+| Comando | Descrizione |
 | --- | --- |
 | [ALTER DATABASE (database SQL di Azure)](/sql/t-sql/statements/alter-database-azure-sql-database) | SET ENCRYPTION ON/OFF consente di crittografare o decrittografare un database |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |Restituisce informazioni sullo stato della crittografia di un database e sulle chiavi di crittografia del database associate |
@@ -115,7 +113,7 @@ Non è possibile passare dalla protezione di Transparent Data Encryption a una c
  
 Per configurare Transparent Data Encryption usando l'API REST, è necessario essere connessi come proprietario, collaboratore o Gestore Sicurezza SQL di Azure. 
 
-| Comando | Description |
+| Comando | Descrizione |
 | --- | --- |
 |[Create Or Update Server](/rest/api/sql/servers/createorupdate)|Aggiunge un'identità di Azure Active Directory a un'istanza di SQL Server (usata per concedere accesso a Key Vault)|
 |[Create Or Update Server Key](/rest/api/sql/serverkeys/createorupdate)|Aggiunge una chiave di Key Vault a un'istanza di SQL Server|

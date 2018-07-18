@@ -1,31 +1,28 @@
 ---
 title: Il recupero dei parametri di Output tramite SQLGetData | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], retrieving output parameters
 - output parameters [ODBC]
 - retrieving output parameters [ODBC]
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 73a76a7c78a6dc5b9cc1d3128863d7c8a0de2ff4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e410618b8a110cbb978f45d4ac5cf37f1a77e845
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Il recupero dei parametri di Output tramite SQLGetData
 Prima di ODBC 3.8, un'applicazione può recuperare solo i parametri di output di una query con un buffer di output associata. Tuttavia, è difficile allocare un buffer di dimensioni molto grande quando le dimensioni del valore del parametro sono molto grande (ad esempio, un'immagine di grandi dimensioni). ODBC 3.8 introduce un nuovo modo per recuperare i parametri di output in parti. Un'applicazione può chiamare **SQLGetData** con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. È simile al recupero di dati della colonna di grandi dimensioni.  
@@ -111,14 +108,14 @@ Prima di ODBC 3.8, un'applicazione può recuperare solo i parametri di output di
   
 -   **SQLDisconnect**  
   
--   **SQLFreeHandle** (con HandleType = impostato su SQL_HANDLE_STMT)  
+-   **SQLFreeHandle** (con HandleType = SQL_HANDLE_STMT)  
   
 -   **SQLGetStmtAttr**  
   
  Le applicazioni possono ancora utilizzare **SQLSetDescField** o **SQLSetDescRec** per impostare le informazioni di associazione. Mapping di campo non verranno modificate. Tuttavia, i campi all'interno di descrittore potrebbero restituire nuovi valori. Ad esempio, SQL_DESC_PARAMETER_TYPE potrebbe restituire SQL_PARAM_INPUT_OUTPUT_STREAM o SQL_PARAM_OUTPUT_STREAM.  
   
 ## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>Scenario di utilizzo: Recupera un'immagine in parti da un Set di risultati  
- **SQLGetData** può essere usato per ottenere i dati in parti quando una stored procedure restituisce un set di risultati che contiene una riga di metadati su un'immagine e l'immagine viene restituito in un parametro di output di grandi dimensioni.  
+ **SQLGetData** utilizzabile per ottenere i dati in parti quando una stored procedure restituisce un set di risultati che contiene una riga di metadati relativi a un'immagine e l'immagine viene restituito in un parametro di output di grandi dimensioni.  
   
 ```  
 // CREATE PROCEDURE SP_TestOutputPara  
@@ -200,7 +197,7 @@ BOOL displayPicture(SQLUINTEGER idOfPicture, SQLHSTMT hstmt) {
 ```  
   
 ## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>Scenario di utilizzo: Inviare e ricevere un oggetto di grandi dimensioni come un parametro di Input/Output flusso  
- **SQLGetData** può essere utilizzato per ottenere e inviare i dati in parti quando una stored procedure passa un oggetto di grandi dimensioni come parametro di input/output, il valore da e verso il database di flusso. Non è necessario archiviare tutti i dati in memoria.  
+ **SQLGetData** utilizzabile per ottenere e inviare i dati in parti quando una stored procedure ha esito positivo di un oggetto di grandi dimensioni come parametro di input/output, il valore da e verso il database di streaming. Non è necessario archiviare tutti i dati in memoria.  
   
 ```  
 // CREATE PROCEDURE SP_TestInOut  

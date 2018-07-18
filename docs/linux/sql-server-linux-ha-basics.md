@@ -1,24 +1,21 @@
 ---
-title: "Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni di Linux | Documenti Microsoft"
-description: 
+title: Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni di Linux | Documenti Microsoft
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.workload: On Demand
-ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.technology: linux
+ms.openlocfilehash: f311d9c3116083120b97fa78486242939a438de9
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni di Linux
 
@@ -90,7 +87,7 @@ Simile a Windows, le distribuzioni Linux dispone di un firewall incorporato. Se 
 
 | Numero di porta | Tipo     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS: `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (se usati): Mapper di endpoint                                                                                          |
 | 137         | UDP      | Samba (se usati)-servizio nomi NetBIOS                                                                                      |
 | 138         | UDP      | Samba (se usati) – datagrammi NetBIOS                                                                                          |

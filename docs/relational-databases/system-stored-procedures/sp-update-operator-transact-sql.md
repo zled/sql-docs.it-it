@@ -1,16 +1,14 @@
 ---
 title: sp_update_operator (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_operator_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 38da9010e434570fbcd75e026f11c50450e10691
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9f0cdd4e69655ac469e875b37f3e299b89b1be2f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,42 +58,42 @@ sp_update_operator
   
 ## <a name="arguments"></a>Argomenti  
  [ @name=] '*nome*'  
- Nome dell'operatore da modificare. *nome* è **sysname**, non prevede alcun valore predefinito.  
+ Nome dell'operatore da modificare. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ @new_name=] '*nuovo_nome*'  
- Nuovo nome dell'operatore. Il nome deve essere univoco. *nuovo_nome* è **sysname**, con un valore predefinito è NULL.  
+ Nuovo nome dell'operatore. Il nome deve essere univoco. *nuovo_nome* viene **sysname**, con un valore predefinito è NULL.  
   
  [ @enabled=] *abilitato*  
- Un numero che indica lo stato corrente dell'operatore (**1** se è abilitato, **0** in caso contrario). *abilitato* è **tinyint**, con un valore predefinito è NULL. Gli operatori non abilitati non ricevono le notifiche di avviso.  
+ Un numero che indica lo stato corrente dell'operatore (**1** se è abilitato, **0** in caso contrario). *abilitata* viene **tinyint**, con un valore predefinito è NULL. Gli operatori non abilitati non ricevono le notifiche di avviso.  
   
  [ @email_address=] '*email_address*'  
- Indirizzo di posta elettronica dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *email_address* è **nvarchar (100)**, con un valore predefinito è NULL.  
+ Indirizzo di posta elettronica dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *email_address* viene **nvarchar(100)**, con un valore predefinito è NULL.  
   
  [ @pager_address=] '*pager_number*'  
- Indirizzo del cercapersone dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *pager_number* è **nvarchar (100)**, con un valore predefinito è NULL.  
+ Indirizzo del cercapersone dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *pager_number* viene **nvarchar(100)**, con un valore predefinito è NULL.  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
- Indica l'ora dei giorni lavorativi da lunedì a venerdì oltre la quale è possibile inviare una notifica al cercapersone dell'operatore specificato. *weekday_pager_start_time*è **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'utilizzo con un formato a 24 ore.  
+ Indica l'ora dei giorni lavorativi da lunedì a venerdì oltre la quale è possibile inviare una notifica al cercapersone dell'operatore specificato. *weekday_pager_start_time*viene **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'utilizzo con un formato a 24 ore.  
   
  [ @weekday_pager_end_time=] *weekday_pager_end_time*  
- Indica l'ora dei giorni lavorativi da lunedì a venerdì oltre la quale non è possibile inviare una notifica al cercapersone dell'operatore specificato. *weekday_pager_end_time*è **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'utilizzo con un formato a 24 ore.  
+ Indica l'ora dei giorni lavorativi da lunedì a venerdì oltre la quale non è possibile inviare una notifica al cercapersone dell'operatore specificato. *weekday_pager_end_time*viene **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'utilizzo con un formato a 24 ore.  
   
  [ @saturday_pager_start_time=] *saturday_pager_start_time*  
- Indica l'ora del sabato oltre la quale è possibile inviare una notifica sul cercapersone dell'operatore specificato. *saturday_pager_start_time*è **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'utilizzo con un formato a 24 ore.  
+ Indica l'ora del sabato oltre la quale è possibile inviare una notifica sul cercapersone dell'operatore specificato. *saturday_pager_start_time*viene **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'utilizzo con un formato a 24 ore.  
   
  [ @saturday_pager_end_time=] *saturday_pager_end_time*  
- Indica l'ora del sabato oltre la quale non è possibile inviare una notifica sul cercapersone dell'operatore specificato. *saturday_pager_end_time*è **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'utilizzo con un formato a 24 ore.  
+ Indica l'ora del sabato oltre la quale non è possibile inviare una notifica sul cercapersone dell'operatore specificato. *saturday_pager_end_time*viene **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'utilizzo con un formato a 24 ore.  
   
  [ @sunday_pager_start_time=] *sunday_pager_start_time*  
- Indica l'ora della domenica oltre la quale è possibile inviare una notifica sul cercapersone dell'operatore specificato. *sunday_pager_start_time*è **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'utilizzo con un formato a 24 ore.  
+ Indica l'ora della domenica oltre la quale è possibile inviare una notifica sul cercapersone dell'operatore specificato. *sunday_pager_start_time*viene **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'utilizzo con un formato a 24 ore.  
   
  [ @sunday_pager_end_time=] *sunday_pager_end_time*  
- Indica l'ora della domenica oltre la quale non è possibile inviare una notifica sul cercapersone dell'operatore specificato. *sunday_pager_end_time*è **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'utilizzo con un formato a 24 ore.  
+ Indica l'ora della domenica oltre la quale non è possibile inviare una notifica sul cercapersone dell'operatore specificato. *sunday_pager_end_time*viene **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'utilizzo con un formato a 24 ore.  
   
  [ @pager_days=] *pager_days*  
- Indica i giorni in cui l'operatore può essere rintracciato tramite cercapersone (in base all'ora di inizio e fine specificata). *pager_days*è **tinyint**, con un valore predefinito è NULL e deve essere un valore da **0** tramite **127**. *pager_days* viene calcolato sommando i singoli valori dei giorni necessari. Ad esempio, da lunedì a venerdì è **2**+**4**+**8**+**16** + **32** = **64**.  
+ Indica i giorni in cui l'operatore può essere rintracciato tramite cercapersone (in base all'ora di inizio e fine specificata). *pager_days*viene **tinyint**, con un valore predefinito è NULL e deve essere un valore compreso tra **0** tramite **127**. *pager_days* viene calcolato sommando i singoli valori dei giorni necessari. Ad esempio, da lunedì a venerdì è **2**+**4**+**8**+**16** + **32** = **64**.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Domenica|  
 |**2**|Lunedì|  
@@ -107,13 +104,13 @@ sp_update_operator
 |**64**|Sabato|  
   
  [ @netsend_address=] '*netsend_address*'  
- Indirizzo di rete dell'operatore a cui viene inviato il messaggio di rete. *netsend_address*è **nvarchar (100)**, con un valore predefinito è NULL.  
+ Indirizzo di rete dell'operatore a cui viene inviato il messaggio di rete. *netsend_address*viene **nvarchar(100)**, con un valore predefinito è NULL.  
   
  [ @category_name=] '*categoria*'  
- Nome della categoria di questo avviso. *categoria* è **sysname**, con un valore predefinito è NULL.  
+ Nome della categoria di questo avviso. *categoria* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  La stored procedure sp_update_operator deve essere eseguita nel database msdb.  

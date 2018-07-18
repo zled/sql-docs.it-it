@@ -1,16 +1,16 @@
 ---
 title: Guida di riferimento a errori ed eventi (replica) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], errors
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - errors [SQL Server replication]
 - errors and events reference [SQL Server replication]
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
-caps.latest.revision: "25"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 25
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7a053348a203ad7d1e3a9a3cf9fa0f7672300b64
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 484dca1df1d644799bc64bc552c9648029129d76
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-and-events-reference-replication"></a>Guida di riferimento a errori ed eventi (replica)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa sezione della documentazione fornisce informazioni sulla causa e sulla risoluzione di diversi errori correlati alla replica.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questa sezione della documentazione vengono fornite informazioni sulla causa e sulla risoluzione di diversi errori correlati alla replica.  
   
 |Errore|Message|  
 |-----------|-------------|  

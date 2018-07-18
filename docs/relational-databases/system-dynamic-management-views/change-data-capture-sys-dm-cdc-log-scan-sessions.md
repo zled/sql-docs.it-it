@@ -1,16 +1,12 @@
 ---
 title: sys.dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_cdc_log_scan_sessions
@@ -23,16 +19,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f7d81782bac9590aac7fb1905304aec53f531db1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 74a99cc08a030327c4f0b70f11c64f6c2a952dec
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>Change Data Capture - Sys.dm cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +54,7 @@ ms.lasthandoff: 02/03/2018
 |**first_begin_cdc_lsn**|**nvarchar(23)**|Primo numero LSN contenente transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, il primo numero LSN contenente transazioni di acquisizione dati delle modifiche.|  
 |**last_commit_cdc_lsn**|**nvarchar(23)**|Numero LSN dell'ultimo record di log del commit contenente transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, l'ultimo record di log commit LSN per qualsiasi sessione contenente transazioni di acquisizione dei dati di modifica|  
 |**last_commit_cdc_time**|**datetime**|Ora di elaborazione dell'ultimo record di log del commit contenente transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, l'ora in cui l'ultimo log commit registrare per qualsiasi sessione contenente transazioni di acquisizione dei dati di modifica.|  
-|**latency**|**int**|La differenza in secondi, tra **end_time** e **last_commit_cdc_time** nella sessione. Questo contatore viene popolato al termine della fase 7.<br /><br /> Quando **session_id** = 0, l'ultimo valore di latenza diverso da zero registrato da una sessione.|  
+|**Latenza**|**int**|La differenza in secondi, tra **end_time** e **last_commit_cdc_time** nella sessione. Questo contatore viene popolato al termine della fase 7.<br /><br /> Quando **session_id** = 0, l'ultimo valore di latenza diverso da zero registrato da una sessione.|  
 |**empty_scan_count**|**int**|Numero di sessioni consecutive che non contengono transazioni di acquisizione dei dati delle modifiche.|  
 |**failed_sessions_count**|**int**|Numero di sessioni non riuscite.|  
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 02/03/2018
  I valori in questa vista a gestione dinamica vengono reimpostati ogni volta che l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviata.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione VIEW DATABASE STATE per eseguire query di **Sys.dm cdc_log_scan_sessions** vista a gestione dinamica. Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ È richiesta l'autorizzazione VIEW DATABASE STATE per eseguire query di **Sys.dm cdc_log_scan_sessions** vista a gestione dinamica. Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni relative alla sessione più recente.  

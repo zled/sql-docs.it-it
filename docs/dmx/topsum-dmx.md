@@ -1,30 +1,31 @@
 ---
 title: TopSum (DMX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: TOPSUM
-dev_langs: DMX
-helpviewer_keywords: TopSum function
+f1_keywords:
+- TOPSUM
+dev_langs:
+- DMX
+helpviewer_keywords:
+- TopSum function
 ms.assetid: a0bebdfa-3db2-4818-ab8c-440598de71f1
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c3f3a81f804673fa0f9586a224d881b284719ebf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 83382c6fba828d1dc438f380dad72c670feb6c6b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -110,8 +111,8 @@ NATURAL PREDICTION JOIN
  **Nota** in questo esempio viene fornito solo per illustrare l'utilizzo di **TopSum**. A seconda della dimensione del set di dati, questa query potrebbe impiegare molto tempo per l'esecuzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [DMX funzioni &#40; &#41;](../dmx/functions-dmx.md)   
- [Funzioni di stima generale &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [DMX TopPercent &#40; &#41;](../dmx/toppercent-dmx.md)  
+ [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
   
   

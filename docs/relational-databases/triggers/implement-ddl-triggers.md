@@ -1,34 +1,33 @@
 ---
 title: Implementare trigger DDL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-ddl
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - DDL triggers, implementing
 ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c38f38fcdea2edf93780629c8eabeb03edcfa531
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b380884e3b80ea9d88f20ebd6f031d3dcf8e0cd5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implement-ddl-triggers"></a>Implementazione di trigger DDL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-In questo argomento vengono fornite informazioni sulla creazione, la modifica, la disabilitazione o l'eliminazione di trigger DDL.  
+  In questo argomento vengono fornite informazioni sulla creazione, la modifica, la disabilitazione o l'eliminazione di trigger DDL.  
   
 ## <a name="creating-ddl-triggers"></a>Creazione di trigger DDL  
  I trigger DDL vengono creati mediante l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER per trigger DDL.  

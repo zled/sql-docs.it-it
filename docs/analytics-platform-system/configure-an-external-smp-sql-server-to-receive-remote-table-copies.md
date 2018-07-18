@@ -1,30 +1,23 @@
 ---
-title: Configurare il Server SQL SMP esterni per la ricezione di copie della tabella remota (PDW)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6bbd2ed6-064e-4b45-b67b-608dc0f2b2bc
-caps.latest.revision: "13"
-ms.openlocfilehash: 18b61d60e8ca771feab84b24a9ff53cc7bdfc193
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Configurare SQL Server per ricevono una copia di tabella remota - Parallel Data Warehouse | Documenti Microsoft
+description: Viene descritto come configurare un'istanza esterna SMP SQL Server per ricevere copie tabella remota da Parallel Data Warehouse.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ae6799d468d57dec04046b443c613823c0a8cb8c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a>Configurare un Server SQL SMP esterni per ricevono una copia di tabella remota
-Viene descritto come configurare un'istanza esterna di SQL Server per ricevere copie tabella remota di SQL Server PDW.  
-  
+# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Configurare un Server SQL SMP esterno per la ricezione di tabella remota copie - Parallel Data Warehouse
+Viene descritto come configurare un'istanza di SQL Server esterna per la ricezione copie tabella remota da Parallel Data Warehouse.  
+
 In questo argomento viene descritto uno dei passaggi di configurazione per la configurazione di copia della tabella remota. Per un elenco di tutti i passaggi di configurazione, vedere [copia della tabella remota](remote-table-copy.md).  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
@@ -51,7 +44,7 @@ Per configurare SQL Server, attenersi alla procedura seguente:
   
 5.  Stabilire un account di SQL Server nel Server SQL SMP che verrà utilizzato per l'autenticazione. Concedere all'account il privilegio per creare, eliminare e inserire dati in tabelle nel database di destinazione per l'operazione di esportazione di dati paralleli.  
   
-## <a name="BPSQLConfig"></a>Procedure consigliate per la configurazione di Server SQL SMP per la copia della tabella remota  
+## <a name="BPSQLConfig"></a>Procedure consigliate per la configurazione del Server SQL SMP per copia della tabella remota  
 Quando si configura il Server SQL SMP per ricevono una copia di tabella remota, è possibile utilizzare le seguenti procedure consigliate per migliorare le prestazioni.  
   
 1.  Seguire le procedure consigliate, come illustrato nella documentazione del prodotto SQL Server. Ad esempio, abilitare la crittografia dei dati. Per ulteriori informazioni sulla sicurezza di SQL Server, vedere [sicurezza di SQL Server](../relational-databases/security/securing-sql-server.md) su MSDN.  

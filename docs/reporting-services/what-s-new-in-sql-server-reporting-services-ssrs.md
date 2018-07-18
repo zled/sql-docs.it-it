@@ -1,25 +1,23 @@
 ---
-title: "Novità di Reporting Services (SSRS) | Microsoft Docs"
-ms.date: 10/10/2017
+title: Novità di Reporting Services (SSRS) | Microsoft Docs
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: f739af4e274a8d9ccdb4ccb3bc4ab3de3776d8a8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a279a399575f6272b3cefc22a2a319637de6c7b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novità di SQL Server Reporting Services (SSRS)
 
@@ -33,7 +31,9 @@ Informazioni sulle novità di SQL Server [!INCLUDE[ssRSnoversion](../includes/ss
 
 - Per scaricare SQL Server 2017 Reporting Services, accedere all'**[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
-Per le note sulla versione corrente, vedere [Note sulla versione di SQL Server 2017](../sql-server/sql-server-2017-release-notes.md) o [Power BI Report Server release notes](https://powerbi.microsoft.com/documentation/reportserver-release-notes/) (Note sulla versione di Server di report di Power BI). Per informazioni su Server di report di Power BI, vedere [Introduzione al server di Report di Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+Per le note sulla versione corrente, vedere [Note sulla versione di SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). 
+
+Per informazioni su Server di report di Power BI, vedere [Introduzione al server di Report di Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 ## <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
 
@@ -78,7 +78,7 @@ Altre informazioni nel [blog di Reporting Services](https://blogs.msdn.microsoft
  #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Personalizzazione del [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   È possibile personalizzare il [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] con il logo e i colori dell'organizzazione mediante un pacchetto di personalizzazione.  
   
-  Per altre informazioni sulla personalizzazione, vedere [Personalizzazione del portale Web](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
+  Per altre informazioni sulla personalizzazione, vedere [Personalizzazione del portale Web](http://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
  
  #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Indicatori di prestazioni chiave (KPI) nel [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -86,7 +86,7 @@ Altre informazioni nel [blog di Reporting Services](https://blogs.msdn.microsoft
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
- Per altre informazioni, vedere [Utilizzo degli indicatori KPI nel portale Web](http://msdn.microsoft.com/en-us/a28cf500-6d47-4268-a248-04837e7a09eb)
+ Per altre informazioni, vedere [Usare gli indicatori KPI in Reporting Services](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
   
  
  ### <a name="mobile-reports"></a>Report per dispositivi mobili
@@ -189,13 +189,11 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Novità di Analysis Services](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[Technical Preview dei report di Power BI in SSRS - Note sulla versione](../reporting-services/reporting-services-release-notes.md)  
+[Novità di Analysis Services](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [Note sulla versione di SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)   
-[Compatibilità con le versioni precedenti](http://msdn.microsoft.com/en-us/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
-[Funzionalità di Reporting Services supportate dalle edizioni di SQL Server 2016](http://msdn.microsoft.com/en-us/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[Compatibilità con le versioni precedenti](http://msdn.microsoft.com/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
+[Funzionalità di Reporting Services supportate dalle edizioni di SQL Server 2016](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Eseguire l'aggiornamento e la migrazione di Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
-[Server di report di Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

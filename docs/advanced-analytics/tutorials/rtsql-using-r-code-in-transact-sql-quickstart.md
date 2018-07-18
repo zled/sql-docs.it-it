@@ -1,31 +1,17 @@
 ---
 title: Utilizzo di codice R in Transact-SQL (R nella Guida rapida SQL) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/20/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Active
-ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: c11e2bba73cef8a8b6f59d5a92de22cddb19ccd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Utilizzo di codice R in Transact-SQL (R nella Guida rapida SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,7 +70,7 @@ Per questa esercitazione, per mostrare come sia facile eseguire R all'interno di
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-+ Se si verificano errori di questa query, l'installazione potrebbe essere incompleta. Dopo aver aggiunto la funzionalità usando l'Installazione guidata di SQL Server, è necessario eseguire alcuni passaggi aggiuntivi per abilitare l'uso di librerie di codice esterne.  Vedere [Configurare SQL Server R Services](../r/set-up-sql-server-r-services-in-database.md).
++ Se si verificano errori di questa query, l'installazione potrebbe essere incompleta. Dopo aver aggiunto la funzionalità usando l'Installazione guidata di SQL Server, è necessario eseguire alcuni passaggi aggiuntivi per abilitare l'uso di librerie di codice esterne.  Vedere [installare SQL Server 2017 apprendimento servizi](../install/sql-machine-learning-services-windows-install.md) oppure [installare SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 + Assicurarsi che il servizio Launchpad sia in esecuzione. A seconda dell'ambiente, potrebbe essere necessario abilitare gli account di lavoro R per la connessione a SQL Server, installare librerie di rete aggiuntive, abilitare l'esecuzione remota del codice o riavviare l'istanza dopo aver completato la configurazione. Vedere [R Services Installation and Upgrade FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md) (Domande frequenti sull'installazione e l'aggiornamento di R Services)
 
@@ -96,9 +82,9 @@ Ora che l'istanza è pronto per funzionare con R, è possibile iniziare subito.
 
 Lezione 1: [utilizzo di input e output](rtsql-working-with-inputs-and-outputs.md)
 
-Lezione 2: [R e SQL dati e i tipi di oggetti dati](rtsql-r-and-sql-data-types-and-data-objects.md)
+Lezione 2: [SQL e R dati e i tipi di oggetti dati](rtsql-r-and-sql-data-types-and-data-objects.md)
 
-Lezione 3: [R di uso delle funzioni con i dati di SQL Server](rtsql-using-r-functions-with-sql-server-data.md)
+Lezione 3: [uso R delle funzioni con i dati di SQL Server](rtsql-using-r-functions-with-sql-server-data.md)
 
 Lezione 4: [creare un modello predittivo](rtsql-create-a-predictive-model-r.md)
 

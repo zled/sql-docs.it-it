@@ -1,42 +1,23 @@
 ---
 title: Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
-helpviewer_keywords:
-- dimensions [Analysis Services], security
-- AllowedSet property
-- IsAllowed property
-- DeniedSet property
-- user access rights [Analysis Services], dimensions
-- custom dimension data access [Analysis Services]
-- permissions [Analysis Services], dimensions
-- DefaultMember property
-- VisualTotals property
-- ApplyDenied property
-ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: "40"
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eb93b4aeeaae9d659a225763286fc15a7d9f52a3
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dopo aver abilitato l'accesso in lettura a un cubo, è possibile impostare autorizzazioni aggiuntive che consentiranno o negare l'accesso a membri di dimensione, inclusi misure contenute nella dimensione Measures che contiene tutte le misure usate in un cubo, in modo esplicito. Se ad esempio sono presenti più categorie di rivenditori, si potrebbe voler impostare le autorizzazioni per escludere i dati per un tipo di attività specifico. La seguente figura mostra l'effetto che si ottiene prima e dopo avere negato l'accesso al tipo di attività Warehouse nella dimensione Reseller.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Dopo avere abilitato l'accesso in lettura a un cubo, è possibile impostare ulteriori autorizzazioni che consentono o negano in modo esplicito l'accesso ai membri della dimensione, comprese le misure presenti all'interno della Dimensione di tipo misure in cui sono contenute tutte le misure usate in un cubo. Se ad esempio sono presenti più categorie di rivenditori, si potrebbe voler impostare le autorizzazioni per escludere i dati per un tipo di attività specifico. La seguente figura mostra l'effetto che si ottiene prima e dopo avere negato l'accesso al tipo di attività Warehouse nella dimensione Reseller.  
   
  ![Le tabelle pivot con e senza un membro della dimensione](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "tabelle pivot con e senza un membro della dimensione")  
   
@@ -49,7 +30,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Le istruzioni seguenti presuppongono una connessione client che esegue query in MDX. Se il client usa DAX, ad esempio Power View in Power BI, la sicurezza delle dimensioni non è evidente nei risultati della query. Per altre informazioni, vedere [Informazioni su Power View per modelli multidimensionali](understanding-power-view-for-multidimensional-models.md) .
       
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Negli scenari di accesso personalizzati non è possibile usare tutte le misure e i membri della dimensione. La connessione non riesce se un ruolo limita l'accesso a una misura o un membro predefinito oppure limita l'accesso a misure che fanno parte di espressioni di misura.  
   
  **Verificare la presenza di limitazioni alla sicurezza delle dimensioni: misure predefinite, membri predefiniti e misure usate in espressioni di misura**  
@@ -96,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
  Per scrivere l'istruzione MDX, è possibile usare Generatore MDX. Per informazioni dettagliate, vedere [Generatore MDX &#40;Analysis Services - Dati multidimensionali&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f). Nella scheda **Avanzate** sono disponibili le opzioni seguenti:  
   
- **Attribute**  
+ **Attributo**  
  Consente di selezionare l'attributo per cui gestire la sicurezza dei membri.  
   
  **Set di membri autorizzati**  
@@ -105,7 +86,7 @@ ms.lasthandoff: 01/08/2018
  La creazione di AllowedSet genera una reazione a catena quando l'attributo fa parte di una gerarchia a più livelli. Si supponga, ad esempio, che un ruolo consenta l'accesso allo stato di Washington. Si consideri uno scenario in cui il ruolo conceda le autorizzazioni alla divisione vendite dello stato di Washington di una società. Per gli utenti che si connettono tramite questo ruolo, le query che includono predecessori (Stati Uniti) o discendenti (Seattle e Redmond) visualizzeranno solo i membri in una catena che includono lo stato di Washington. Poiché gli altri stati non vengono consentiti in modo esplicito, l'effetto sarà identico a quello del caso in cui gli stati vengano negati.  
   
 > [!NOTE]  
->  Se si definisce un set vuoto ({}) di membri dell'attributo, nessun membro dell'attributo sarà visibile nel ruolo del database. L'assenza di un set delle autorizzazioni concesse non viene interpretata come set vuoto.  
+>  Se si definisce un set vuoto ({}) dei membri dell'attributo, nessun membro dell'attributo sarà visibile nel ruolo del database. L'assenza di un set delle autorizzazioni concesse non viene interpretata come set vuoto.  
   
  **Set di membri non autorizzati**  
  La proprietà DeniedSet può restituire nessun membro, tutti i membri (impostazione predefinita) o alcuni membri dell'attributo. Se il set delle autorizzazioni negate contiene solo un set specifico di membri dell'attributo, al ruolo del database viene negato l'accesso solo a tali membri specifici, oltre ai discendenti se l'attributo fa parte di una gerarchia a più livelli. Si consideri l'esempio della divisione vendite dello stato di Washington. Se Washington viene inserito in DeniedSet, gli utenti che si connettono tramite questo ruolo visualizzeranno tutti gli altri stati eccetto Washington e gli attributi dei relativi discendenti.  
@@ -135,8 +116,8 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Concedere l'accesso personalizzato a una cella di dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [Concedere le autorizzazioni per strutture di data mining e modelli &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Concedere le autorizzazioni per un oggetto origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [Concedere le autorizzazioni per modelli e strutture di data mining &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Concedere le autorizzazioni per un oggetto origine dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

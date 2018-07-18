@@ -1,31 +1,28 @@
 ---
 title: Servizio cursore Microsoft per OLE DB (componente del servizio ADO) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9ba0513f0a450a57e4d25088f16d96398af9f936
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a829fa8510054489bdc8f310941d9526f25b82a9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Servizio cursore per una panoramica OLE DB Microsoft
 Il servizio di cursore per OLE DB Microsoft integra le funzioni di supporto cursore dei provider di dati. Di conseguenza, l'utente utilizza funzionalità relativamente uniforme di tutti i provider di dati.
@@ -76,7 +73,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |[Catalogo univoca](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica il nome del database contenente la tabella a cui fa riferimento il **tabella univoca** proprietà.|
 |[Schema univoco](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica il nome del proprietario della tabella a cui fa riferimento il **tabella univoca** proprietà.|
 |[Tabella univoca](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica il nome di una tabella in un **Recordset** creato da più tabelle che possono essere modificate per gli inserimenti, aggiornamenti o eliminazioni.|
-|Update Criteria (DBPROP_ADC_UPDATECRITERIA)|Indica che i campi di **dove** clausola vengono utilizzati per gestire i conflitti che si verificano durante un aggiornamento.|
+|Criteri di aggiornamento (DBPROP_ADC_UPDATECRITERIA)|Indica che i campi di **dove** clausola vengono utilizzati per gestire i conflitti che si verificano durante un aggiornamento.|
 |[Aggiornare risincronizzazione](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Indica se il **Resync** metodo viene richiamato in modo implicito dopo la [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) metodo (e il relativo comportamento), quando il **tabella univoca** è attiva.|
 
  È anche possibile impostare o recuperare una proprietà dinamica specificandone il nome dell'indice per il **proprietà** insieme. Ad esempio, ottenere e visualizzare il valore corrente del [Ottimizza](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) proprietà dinamiche, quindi impostare un nuovo valore, come indicato di seguito:
@@ -92,7 +89,7 @@ rs.Properties("Optimize") = True
 |Nome proprietà|Description|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Integra i tipi di cursori che sono disponibili per un **Recordset**.|
-|[Tipo di blocco](../../../ado/reference/ado-api/locktype-property-ado.md)|Integra i tipi di blocchi disponibili per un **Recordset**. Consente gli aggiornamenti in blocco.|
+|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Integra i tipi di blocchi disponibili per un **Recordset**. Consente gli aggiornamenti in blocco.|
 |[Sort](../../../ado/reference/ado-api/sort-property.md)|Specifica i nomi dei campi di uno o più che il **Recordset** viene ordinato se e in ogni campo viene ordinato in ordine crescente o decrescente.|
 
 ## <a name="method-behavior"></a>Comportamento del metodo

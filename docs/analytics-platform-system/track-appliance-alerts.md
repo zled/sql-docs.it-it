@@ -1,28 +1,21 @@
 ---
-title: Registrare gli avvisi di dispositivo (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: "14"
-ms.openlocfilehash: a780aa34667280d9e079dad4f44954ba919275d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Tenere traccia degli avvisi accessorio - Analitica Platform System | Documenti Microsoft
+description: Registrare gli avvisi di dispositivo nel sistema della piattaforma Analitica.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 82803e6f20e4a710f317e2e7a541c4a1c72ed08d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="track-appliance-alerts"></a>Avvisi dello strumento di traccia
+# <a name="track-appliance-alerts-in-analytics-platform-system"></a>Avvisi accessorio traccia Analitica Platform System
 In questo argomento viene illustrato come utilizzare le Console di amministrazione e le viste di sistema per tenere traccia degli avvisi in un dispositivo di SQL Server PDW.  
   
 ## <a name="to-track-appliance-alerts"></a>Per tenere traccia degli avvisi di dispositivo  
@@ -78,5 +71,5 @@ ORDER BY
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Monitoraggio dispositivo &#40; Sistema della piattaforma Analitica &#41;](appliance-monitoring.md)  
+[Monitoraggio dello strumento &#40;Analitica Platform System&#41;](appliance-monitoring.md)  
   

@@ -1,26 +1,17 @@
 ---
 title: Governance delle risorse per machine learning in SQL Server | Documenti Microsoft
-ms.custom: 
-ms.date: 11/16/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: d1eb0f1cce23d084516b5446d39274ac3078b0b8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: abe130ef7e465326999e0c71ce01e88dfa6269a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>Governance delle risorse per machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +19,7 @@ ms.lasthandoff: 02/11/2018
 Questo articolo fornisce una panoramica di governance delle risorse di funzionalità di SQL Server che consentono di allocare e bilanciare le risorse utilizzate dagli script R e Python.
 
 **Si applica a:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
- [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] e [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] e [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 
 ## <a name="goals-of-resource-governance-for-machine-learning"></a>Obiettivi di governance delle risorse per machine learning
 
@@ -71,7 +62,7 @@ SQL Server supporta tre tipi di pool di risorse predefiniti:
   
 ## <a name="resource-management-walkthrough-with-resource-governor"></a>Procedura dettagliata di gestione di risorse con Resource Governor
 
-Se si ha familiarità di Resource Governor, vedere l'argomento per una rapida procedura dettagliata per modificare le risorse di un'istanza predefinita e creare un nuovo pool di risorse esterne: [creare un pool di risorse per gli script esterni](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
+Se si ha familiarità di Resource Governor, vedere l'argomento per una rapida procedura dettagliata per modificare le risorse predefinite di istanza e creare un nuovo pool di risorse esterne: [creare un pool di risorse per gli script esterni](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
   
  È possibile utilizzare il *pool di risorse esterne* meccanismo per gestire le risorse usate dai seguenti file eseguibili che vengono usati in machine learning:
 
@@ -90,7 +81,7 @@ Se si ha familiarità di Resource Governor, vedere l'argomento per una rapida pr
 
 Il supporto per gli script esterni è facoltativo nell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Anche dopo l'installazione di machine learning funzionalità, la possibilità di eseguire gli script esterni è impostata su OFF per impostazione predefinita e manualmente necessario riconfigurare le proprietà e riavviare l'istanza per consentire l'esecuzione dello script.
 
-Pertanto, se si verifica un problema di risorse che devono essere risolti immediatamente o un problema di sicurezza, un amministratore può immediatamente disabilitare qualsiasi esecuzione dello script esterno utilizzando [sp_configure &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e impostando la proprietà `external scripts enabled` su FALSE o 0.
+Pertanto, se si verifica un problema della risorsa che deve essere risolti immediatamente o un problema di sicurezza, un amministratore può immediatamente disabilitare qualsiasi esecuzione dello script esterno usando [sp_configure &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e impostando la proprietà `external scripts enabled` su FALSE o 0.
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -98,4 +89,4 @@ Pertanto, se si verifica un problema di risorse che devono essere risolti immedi
 
 [Creare un pool di risorse per Machine Learning](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
 
-[Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
+[Pool di risorse](../../relational-databases/resource-governor/resource-governor-resource-pool.md)

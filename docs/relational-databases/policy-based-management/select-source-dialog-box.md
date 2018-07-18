@@ -1,31 +1,32 @@
 ---
 title: Finestra di dialogo Seleziona origine | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.dmf.selectsource.f1
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.dmf.selectsource.f1
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9bd5115125244859cb147dbc4a5028f87111aaed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f5138982829e14779632ddbb60aad34c63ac1b54
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-source-dialog-box"></a>Finestra di dialogo Seleziona origine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa finestra di dialogo per selezionare l'origine dei criteri da eseguire. Per selezionare uno o più file XML che contengono criteri, selezionare **File**. Per eseguire i criteri individuati nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare **Server**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilizzare questa finestra di dialogo per selezionare l'origine dei criteri da eseguire. Per selezionare uno o più file XML che contengono criteri, selezionare **File**. Per eseguire i criteri individuati nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare **Server**.  
   
  È possibile aprire questa finestra di dialogo in diversi modi.  
   

@@ -1,16 +1,15 @@
 ---
 title: Specifica di Test di nodo in un passo dell'espressione di percorso | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - axis step [XQuery]
 - node test [XQuery]
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1fd2f4955285cec9ba0569ac39138088b8015df5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3460ecf0a821d5c7ffa39f242650e06c0e8ddaf4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="path-expressions---specifying-node-test"></a>Espressioni di percorso - specifica di Test di nodo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [Zero o più predicati (facoltativo)](../xquery/path-expressions-specifying-predicates.md)  
   
- Per ulteriori informazioni, vedere [espressioni di percorso &#40; XQuery &#41; ](../xquery/path-expressions-xquery.md).  
+ Per altre informazioni, vedere [espressioni di percorso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
   
  Un test di nodo è una condizione e rappresenta il secondo componente del passo dell'asse in un'espressione di percorso. È necessario che tutti i nodi selezionati da un passo soddisfino questa condizione. Per l'espressione di percorso `/child::ProductDescription`, il test di nodo è `ProductDescription`. Questo passo recupera i nodi elemento figlio con nome ProductDescription.  
   

@@ -1,32 +1,33 @@
 ---
 title: sp_scriptpublicationcustomprocs (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_scriptpublicationcustomprocs
 - sp_scriptpublicationcustomprocs_TSQL
-helpviewer_keywords: sp_scriptpublicationcustomprocs
+helpviewer_keywords:
+- sp_scriptpublicationcustomprocs
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 258a82812bbda7f572bb56178dd65973769ce357
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7e3cad96acad0e5e08d92a70cd795a6022be26f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +44,11 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication** =] **'***publication_name***'**  
- Nome della pubblicazione. *publication_name* è **sysname** prevede alcun valore predefinito.  
+ [ **@publication**=] **'***publication_name***'**  
+ Nome della pubblicazione. *publication_name* viene **sysname** non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce un set di risultati è costituito da un singolo **nvarchar (4000)** colonna. Il set di risultati forma l'istruzione CREATE PROCEDURE completa utilizzata per creare la stored procedure personalizzata.  
@@ -81,7 +82,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
   
  **sp_scriptxupdproc**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Eseguire l'autorizzazione viene concessa per **pubblica**; un controllo della sicurezza procedurale viene eseguito all'interno di questa stored procedure per limitare l'accesso ai membri del **sysadmin** ruolo predefinito del server e **DB _ proprietario** ruolo predefinito del database nel database corrente.  
   
 ## <a name="see-also"></a>Vedere anche  

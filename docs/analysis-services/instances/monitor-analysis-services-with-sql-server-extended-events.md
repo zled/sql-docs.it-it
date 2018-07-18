@@ -1,37 +1,23 @@
 ---
 title: Monitoraggio di Analysis Services con eventi estesi di SQL Server | Documenti Microsoft
-ms.custom: 
-ms.date: 12/29/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- XEvents
-- Sql13.ssms.XeASNewEventSession.General.f1
-- Sql13.ssms.XeASNewEventSession.Events.f1
-- Sql13.ssms.XeASNewEventSession.Targets.f1
-- Sql13.ssms.XeASNewEventSession.Advanced.f1
-ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: abe5ce23dfb6f16fcc8fb27f16918895f6a51650
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b95231d3065a07339bd5b4817bb614d97a9a91ca
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Monitorare Analysis Services con eventi estesi di SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-Gli eventi estesi (*xEvents*) rappresentano un sistema di monitoraggio delle prestazioni e di traccia leggero, che usa una quantità molto limitata di risorse di sistema. Sono quindi uno strumento ideale per la diagnosi dei problemi, sia nei server di produzione che in quelli di prova. È anche un sistema altamente scalabile e che offre ampie possibilità di configurazione, oltre a essere più facile da usare in SQL Server 2016 grazie al nuovo supporto predefinito dello strumento. In SQL Server Management Studio, per le connessioni a istanze di Analysis Services, è possibile configurare, eseguire e monitorare una traccia in tempo reale, in modo simile all'uso di SQL Server Profiler. L'aggiunta di strumenti migliori dovrebbe rendere XEvents una sostituzione più ragionevole per SQL Server Profiler e creare maggiore simmetria per le modalità di diagnosi dei problemi nel motore di database e nei carichi di lavoro di Analysis Services.  
+  Gli eventi estesi (*xEvents*) rappresentano un sistema di monitoraggio delle prestazioni e di traccia leggero, che usa una quantità molto limitata di risorse di sistema. Sono quindi uno strumento ideale per la diagnosi dei problemi, sia nei server di produzione che in quelli di prova. È anche un sistema altamente scalabile e che offre ampie possibilità di configurazione, oltre a essere più facile da usare in SQL Server 2016 grazie al nuovo supporto predefinito dello strumento. In SQL Server Management Studio, per le connessioni a istanze di Analysis Services, è possibile configurare, eseguire e monitorare una traccia in tempo reale, in modo simile all'uso di SQL Server Profiler. L'aggiunta di strumenti migliori dovrebbe rendere XEvents una sostituzione più ragionevole per SQL Server Profiler e creare maggiore simmetria per le modalità di diagnosi dei problemi nel motore di database e nei carichi di lavoro di Analysis Services.  
   
  Oltre a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], per la configurazione delle sessioni di eventi estesi di  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è anche possibile usare la modalità precedente, tramite script XMLA, supportata nelle versioni precedenti.  
   
@@ -40,11 +26,6 @@ Gli eventi estesi (*xEvents*) rappresentano un sistema di monitoraggio delle pre
 > [!NOTE]  
 >  Per sapere di più su xEvents per Analysis Services in SQL Server 2016, guardare questa [breve introduzione video](https://www.youtube.com/watch?v=ja2mOHWRVC0&index=1&list=PLv2BtOtLblH1YvzQ5YnjfQFr_oKEvMk19) o leggere il [post di blog di supporto](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx) .  
   
-##  <a name="bkmk_top"></a> Contenuto dell'argomento  
-  
--   [Usare Management Studio per configurare Analysis Services](#bkmk_ssas_extended_events_ssms)  
-  
--   [Script XMLA per avviare eventi estesi in Analysis Services](#bkmk_script_start)  
   
 ##  <a name="bkmk_ssas_extended_events_ssms"></a> Usare Management Studio per configurare Analysis Services  
  Sia per le istanze tabulari che per quelle multidimensionali, Management Studio include una nuova cartella Gestione che contiene le sessioni xEvents avviate dall'utente. È possibile eseguire più sessioni contemporaneamente. Nell'implementazione corrente, tuttavia, l'interfaccia utente degli eventi estesi di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non supporta l'aggiornamento o la riproduzione di una sessione esistente.  
@@ -139,9 +120,6 @@ Gli eventi estesi (*xEvents*) rappresentano un sistema di monitoraggio delle pre
  *metadata_filename*  
  Nome del file in cui sono contenuti i metadati degli eventi. Nel nome è incluso un suffisso timestamp per evitare la sovrascrittura dei dati qualora la traccia venga inviata ripetutamente.  
   
-||  
-|-|  
-|![Icona freccia usata con Back collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento](#bkmk_top)|  
   
 ##  <a name="bkmk_script_stop"></a> Script XMLA per arrestare eventi estesi in Analysis Services  
  Per arrestare l'oggetto traccia di eventi estesi è necessario eliminare tale oggetto utilizzando una specifica XMLA simile per eliminare un comando script dell'oggetto come illustrato di seguito:  
@@ -167,9 +145,6 @@ Gli eventi estesi (*xEvents*) rappresentano un sistema di monitoraggio delle pre
  *trace_id*  
  Consente di definire l'identificatore univoco della traccia da eliminare.  
   
-||  
-|-|  
-|![Icona freccia usata con Back collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento](#bkmk_top)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  

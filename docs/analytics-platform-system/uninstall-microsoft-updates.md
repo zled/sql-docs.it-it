@@ -1,42 +1,35 @@
 ---
-title: Disinstallazione di aggiornamenti di Microsoft (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: df61570a-210d-4154-822f-98acd721f075
-caps.latest.revision: "19"
-ms.openlocfilehash: 52bd212a753f4bb69c79d8b8e274664d2100cbee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Disinstallazione di aggiornamenti Microsoft - Analitica Platform System | Documenti di Microsoft"
+description: Disinstallazione di aggiornamenti Microsoft nel sistema della piattaforma Analitica (AP).
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 57d0eb3616cf3567f63d75029f79cea6709ed955
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="uninstall-microsoft-updates"></a>Disinstallazione di aggiornamenti Microsoft
-In questo argomento viene descritto come disinstallare un aggiornamento di Microsoft installato in precedenza nel dispositivo di sistema della piattaforma Analitica.  
+# <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Disinstallazione di aggiornamenti Microsoft nel sistema della piattaforma Analitica
+In questo articolo viene descritto come disinstallare un aggiornamento di Microsoft installato in precedenza sull'accessorio Analitica Platform System.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
 Per eseguire queste operazioni, è necessario:  
   
--   Account di accesso di sistema della piattaforma Analitica con le autorizzazioni per accedere alla Console di amministrazione per il monitoraggio del dispositivo.  
+-   Un account di accesso Analitica Platform System con autorizzazioni per accedere alla Console di amministrazione per il monitoraggio del dispositivo.  
   
--   Informazioni dell'account amministratore di dominio dell'infrastruttura di accesso per il  *<Fabric Domain>*  **-HST01** nodo.  
+-   Informazioni dell'account amministratore di dominio dell'infrastruttura per accedere ai  *<Fabric Domain>* * *-HST01** nodo.  
   
 ## <a name="HowToUninstallMSFT"></a>Per disinstallare gli aggiornamenti Microsoft  
   
-1.  Account di accesso per il  *<Fabric Domain>*  **-HST01** nodo come amministratore di dominio dell'infrastruttura.  
+1.  Accedi per il  *<Fabric Domain>* * *-HST01** nodo come amministratore di dominio dell'infrastruttura.  
   
 2.  Per disinstallare tutti gli aggiornamenti approvati per Windows Server Update Services disinstallare, aprire una finestra del prompt dei comandi e immettere il comando seguente. Sostituire gli elementi di segnaposto *< >* con le informazioni appropriate.  
   
@@ -44,9 +37,10 @@ Per eseguire queste operazioni, è necessario:
     C:\pdwinst\media\setup.exe /action="RemoveMicrosoftUpdate" /DomainAdminPasswords="<password>"  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
-[Scaricare e applicare gli aggiornamenti di Microsoft &#40; Sistema della piattaforma Analitica &#41;](download-and-apply-microsoft-updates.md)  
-[Applica gli hotfix del sistema di piattaforma Analitica &#40; Sistema della piattaforma Analitica &#41;](apply-analytics-platform-system-hotfixes.md)  
-[Disinstallare gli aggiornamenti rapidi del sistema di piattaforma Analitica &#40; Sistema della piattaforma Analitica &#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[Software di manutenzione &#40; Sistema della piattaforma Analitica &#41;](software-servicing.md)  
+## <a name="next-steps"></a>Passaggi successivi
+Per altre informazioni, vedere:
+- [Scaricare e applicare gli aggiornamenti di Microsoft &#40;Analitica Platform System&#41;](download-and-apply-microsoft-updates.md) 
+- [Applicare aggiornamenti rapidi di sistema della piattaforma Analitica &#40;Analitica Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
+- [Disinstallare Analitica piattaforma sistema hotfix &#40;Analitica Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+- [Manutenzione del software &#40;Analitica Platform System&#41;](software-servicing.md)  
   

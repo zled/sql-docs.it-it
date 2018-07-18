@@ -1,16 +1,14 @@
 ---
-title: '@@IDENTITY (Transact-SQL) | Documenti Microsoft'
-ms.custom: 
+title: '@@IDENTITY (Transact-SQL) | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@IDENTITY_TSQL'
@@ -22,18 +20,17 @@ helpviewer_keywords:
 - identity values [SQL Server], last-inserted
 - '@@IDENTITY function'
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 5ab8dcb49d8f799699df4f9af4c30b72a4a550be
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cc55633e0af348d226566cbf0bd981185efef2fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="x40x40identity-transact-sql"></a>&#x40;&#x40; l'identità (Transact-SQL)
+# <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Funzione di sistema che restituisce l'ultimo valore Identity immesso.  
@@ -47,25 +44,25 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **Numeric(38,0)**  
+ **numeric(38,0)**  
   
-## <a name="remarks"></a>Osservazioni  
- Dopo aver INSERT, SELECT INTO o bulk copia istruzione viene completata, @@IDENTITY contiene l'ultimo valore identity generato dall'istruzione. Se l'istruzione non ha influito tutte le tabelle con colonne identity, @@IDENTITY restituisce NULL. Se vengono inserite più righe, la generazione di più valori identity, @@IDENTITY restituisce l'ultimo valore identity generato. Se l'istruzione attiva uno o più trigger per l'esecuzione di inserimenti che generano valori identity, la chiamata@IDENTITY subito dopo l'istruzione restituisce l'ultimo valore identity generato dai trigger. Se un trigger viene attivato dopo un'operazione di inserimento in una tabella che include una colonna identity e il trigger inserisce in un'altra tabella che non dispone di una colonna identity, @@IDENTITY restituisce il valore di identità del primo inserimento. Il @@IDENTITY valore non viene ripristinato un valore precedente, se la copia di istruzione o bulk INSERT o SELECT INTO non riesce o se viene eseguito il rollback della transazione.  
+## <a name="remarks"></a>Remarks  
+ Al termine di un'istruzione INSERT, SELECT INTO o di copia bulk, la funzione @@IDENTITY include l'ultimo valore Identity generato dall'istruzione. Se l'istruzione non ha modificato alcuna tabella contenente la colonna Identity, la funzione @@IDENTITY restituisce NULL. Se vengono inserite più righe, con la conseguente generazione di più valori Identity, la funzione @@IDENTITY restituisce l'ultimo valore Identity generato. Se l'istruzione attiva uno o più trigger per l'esecuzione di inserimenti che generano valori Identity, la chiamata della funzione @@IDENTITY subito dopo l'istruzione restituisce l'ultimo valore Identity generato dai trigger. Se un trigger viene attivato dopo un'operazione di inserimento in una tabella che include una colonna Identity e il trigger esegue l'inserimento in un'altra tabella che non include una colonna Identity, la funzione @@IDENTITY restituisce il valore Identity del primo inserimento. Il valore della funzione @@IDENTITY non viene ripristinato su un'impostazione precedente se l'istruzione INSERT, SELECT INTO o l'operazione di copia bulk ha esito negativo o se viene eseguito il rollback della transazione.  
   
  Le istruzioni e le transazioni con esito negativo sono in grado di modificare i dati Identity correnti di una tabella e creare gap nei valori della colonna Identity. Non viene mai eseguito il rollback del valore Identity, anche se non si esegue il commit della transazione che ha tentato l'inserimento del valore nella tabella. Se, ad esempio, un'istruzione INSERT ha esito negativo a causa di una violazione di IGNORE_DUP_KEY, il valore Identity corrente per la tabella viene comunque incrementato.  
   
  @@IDENTITY, SCOPE_IDENTITY e IDENT_CURRENT sono funzioni simili perché restituiscono l'ultimo valore inserito nella colonna IDENTITY di una tabella.  
   
- @@IDENTITY e SCOPE_IDENTITY restituiscono l'ultimo valore identity generato in qualsiasi tabella nella sessione corrente. Tuttavia, la funzione SCOPE_IDENTITY restituisce il valore solo nell'ambito corrente; @@IDENTITY non è limitato a un ambito specifico.  
+ Le funzioni @@IDENTITY e SCOPE_IDENTITY restituiscono l'ultimo valore Identity generato in una tabella durante la sessione corrente. La funzione SCOPE_IDENTITY tuttavia restituisce il valore solo all'interno dell'ambito corrente, mentre la funzione @@IDENTITY non è limitata a un ambito specifico.  
   
- Per la funzione IDENT_CURRENT non esiste alcuna restrizione di ambito o di sessione. La funzione è limitata tuttavia a una tabella specifica. La funzione IDENT_CURRENT restituisce il valore Identity generato per una tabella specifica in qualsiasi sessione e in qualsiasi ambito. Per ulteriori informazioni, vedere [IDENT_CURRENT &#40; Transact-SQL &#41; ](../../t-sql/functions/ident-current-transact-sql.md).  
+ Per la funzione IDENT_CURRENT non esiste alcuna restrizione di ambito o di sessione. La funzione è limitata tuttavia a una tabella specifica. La funzione IDENT_CURRENT restituisce il valore Identity generato per una tabella specifica in qualsiasi sessione e in qualsiasi ambito. Per altre informazioni, vedere [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  
   
- L'ambito del @@IDENTITY funzione è la sessione corrente nel server locale in cui viene eseguito. Questa funzione non può essere applicata a server remoti o collegati. Per ottenere un valore Identity in un server diverso, eseguire una stored procedure nel contesto di un server remoto o collegato specifico in modo che recuperi il valore Identity e lo restituisca alla connessione chiamante nel server locale.  
+ L'ambito della funzione @@IDENTITY è quello della sessione corrente nel server locale in cui viene eseguita. Questa funzione non può essere applicata a server remoti o collegati. Per ottenere un valore Identity in un server diverso, eseguire una stored procedure nel contesto di un server remoto o collegato specifico in modo che recuperi il valore Identity e lo restituisca alla connessione chiamante nel server locale.  
   
- La replica può influire sul @@IDENTITY valore, perché è utilizzata all'interno delle stored procedure e trigger di replica. @@IDENTITY non è un indicatore affidabile dell'identità del più recente creato dall'utente se la colonna fa parte di un articolo di replica. È possibile utilizzare la sintassi della funzione SCOPE_IDENTITY () anziché @@IDENTITY. Per ulteriori informazioni, vedere [SCOPE_IDENTITY &#40; Transact-SQL &#41;](../../t-sql/functions/scope-identity-transact-sql.md)  
+ La replica può influire sul valore di @@IDENTITY poiché viene usato nei trigger di replica e nelle stored procedure. Se la colonna è inclusa in un articolo di replica, @@IDENTITY non costituisce un indicatore affidabile del valore Identity più recente creato dall'utente. È possibile usare la sintassi della funzione SCOPE_IDENTITY() anziché @@IDENTITY. Per altre informazioni, vedere [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)  
   
 > [!NOTE]  
->  La stored procedure chiamante o [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione deve essere riscritte per utilizzare il `SCOPE_IDENTITY()` che restituisce l'ultimo valore identity utilizzato nell'ambito di tale istruzione utente e non l'identità nell'ambito del trigger nidificato utilizzato dalla funzione replica.  
+>  La stored procedure chiamante o l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] deve essere riscritta in modo che usi la funzione `SCOPE_IDENTITY()`. Verrà così restituito l'ultimo valore Identity usato nell'ambito dell'istruzione utente e non il valore Identity nell'ambito del trigger annidato usato dalla replica.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene inserita una riga in una tabella contenente una colonna Identity (`LocationID`) e viene utilizzata la funzione `@@IDENTITY` per visualizzare il valore Identity nella nuova riga.  

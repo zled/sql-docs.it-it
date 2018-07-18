@@ -1,29 +1,31 @@
 ---
-title: "Funzionalità e attività di Data Quality Services | Microsoft Docs"
-ms.custom: 
+title: Funzionalità e attività di Data Quality Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a25ca166e540ebc6708f369d2434776242ae6788
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: 7be6f532d8a0439bd9ccfb28986b5e4526f3eca1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Funzionalità e attività di Data Quality Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In questo argomento sono incluse le informazioni che consentono a qualsiasi tipologia di utente, amministratore dati, amministratore di Data Quality Services o amministratore di SQL Server, di preparare ed eseguire un progetto Data Quality.  
   
  ![Icona cartella File di piccole dimensioni](../analysis-services/media/filefolder-small.png "Icona cartella File di piccole dimensioni") **Progettazione e implementazione di una soluzione Data Quality**  

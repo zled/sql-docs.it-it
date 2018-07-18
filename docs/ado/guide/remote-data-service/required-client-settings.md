@@ -1,30 +1,27 @@
 ---
 title: Le impostazioni Client necessarie | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5f542390110169a88b387856ca887a8b3183e01b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fb864cb5489cc5cd1a82343995ed7a1e73c3a0b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="required-client-settings"></a>Impostazioni Client richieste
 > [!IMPORTANT]
@@ -75,7 +72,7 @@ rs.CursorLocation = adUseClient
   
  Specificare il [proprietà gestore (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) proprietà o la parola chiave; il [proprietà Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) proprietà o la parola chiave; e *CustomerById* e  *CustomerDatabase* gli identificatori. Aprire quindi il **Recordset** oggetto  
   
- rs.Open "CustomerById(4)", "Handler=MSDFMAP.Handler;" & _  
+ Reporting Services. Aprire "CustomerByID (4)", "gestore = MSDFMAP. Gestore;"& _  
   
 ```  
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  

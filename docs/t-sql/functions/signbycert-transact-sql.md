@@ -1,16 +1,14 @@
 ---
-title: SIGNBYCERT (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SIGNBYCERT (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SIGNBYCERT
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - SIGNBYCERT function
 - cryptography [SQL Server], certificates
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cd5940957c3a75555db9032097a99f73639f89bb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9c1ff2191ec5a324073d08d5b75994affa691bad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,22 +50,22 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
   
 ## <a name="arguments"></a>Argomenti  
  *certificate_ID*  
- ID di un certificato nel database corrente. *certificate_ID* è **int**.  
+ ID di un certificato nel database corrente. *certificate_ID* è di tipo **int**.  
   
  *@cleartext*  
- È una variabile di tipo **nvarchar**, **char**, **varchar**, o **nchar** che contiene i dati da firmare.  
+ Variabile di tipo **nvarchar**, **char**, **varchar** o **nchar** contenente i dati che verranno firmati.  
   
  **'** *password* **'**  
- Password con cui è stata crittografata la chiave privata del certificato. *password* è **nvarchar (128)**.  
+ Password con cui è stata crittografata la chiave privata del certificato. *password* è di tipo **nvarchar(128)**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **varbinary** con una dimensione massima di 8.000 byte.  
+ **varbinary** con un valore massimo di 8.000 byte.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È richiesta l'autorizzazione CONTROL per il certificato.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente consente di firmare il testo `@SensitiveData` con certificato `ABerglundCert07`, visto prima decrittografare il certificato con la password "pGFD4bb925DGvbd2439587y". Il testo non crittografato e la firma vengono quindi inseriti nella tabella `SignedData04`.  
+ Nell'esempio seguente il testo archiviato in `@SensitiveData` viene firmato con il certificato `ABerglundCert07`, che prima è stato decrittografato con la password "pGFD4bb925DGvbd2439587y". Il testo non crittografato e la firma vengono quindi inseriti nella tabella `SignedData04`.  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  
@@ -82,11 +79,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [VERIFYSIGNEDBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
- [CERT_ID &#40; Transact-SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)   
+ [VERIFYSIGNEDBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [Istruzione ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

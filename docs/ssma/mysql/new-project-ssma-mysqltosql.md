@@ -1,30 +1,28 @@
 ---
 title: Nuovo progetto (SSMA) (MySQLToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 5607f0d2cbcfb01cd7aa5846f114d07d8020b557
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 37c620e110ea2d096c5085f0d040dd13e35f65f0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Nuovo progetto (SSMA) (MySQLToSQL)
 Utilizzare il **nuovo progetto** la finestra di dialogo per creare un nuovo progetto SSMA. Per accedere al **nuovo progetto** della finestra di dialogo di **File** menu, fare clic su **nuovo progetto**.  

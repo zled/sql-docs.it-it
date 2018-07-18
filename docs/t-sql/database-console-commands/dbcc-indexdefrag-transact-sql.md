@@ -1,16 +1,13 @@
 ---
 title: DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - INDEXDEFRAG
@@ -26,16 +23,15 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 49
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7e601ebb9a795445e4b49e0f60e134923edba104
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0421192834696a0fb6b785b3a3387507a3b9d827
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +39,9 @@ ms.lasthandoff: 01/25/2018
 Deframmenta gli indici della tabella o vista specificata.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilizzare [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] In alternativa, usare [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [versione](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +59,7 @@ DBCC INDEXDEFRAG
   
 ## <a name="arguments"></a>Argomenti  
  *database_name* | *database_id* | 0  
- Database contenente l'indice da deframmentare. Se si specifica 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
+ Database contenente l'indice da deframmentare. Se si specifica 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  *table_name* | *table_id* | *view_name* | *view_id*  
  Tabella o vista contenente l'indice da deframmentare. I nomi delle tabelle e delle viste devono essere conformi alle regole per gli identificatori.  
@@ -77,7 +73,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 L'istruzione DBCC INDEXDEFRAG deframmenta il livello foglia di un indice in modo che l'ordine fisico delle pagine corrisponda all'ordine logico da sinistra a destra dei nodi foglia, con un conseguente miglioramento delle prestazioni di analisi dell'indice.
   
 > [!NOTE]  
@@ -93,7 +89,7 @@ A differenza di DBCC DBREINDEX e dell'operazione di compilazione degli indici in
   
 La deframmentazione viene sempre registrata indipendentemente dal modello di recupero del database impostato. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). La deframmentazione di un indice molto frammentato può generare un log molto maggiore di quello generato per una creazione di indice a registrazione completa. Dato tuttavia che la deframmentazione viene eseguita come una serie di transazioni brevi, se si eseguono backup del log frequenti o si imposta il modello di recupero su SIMPLE, non è necessario un log molto esteso.
   
-## <a name="restrictions"></a>Restrizioni  
+## <a name="restrictions"></a>Restrictions  
 DBCC INDEXDEFRAG sposta le pagine foglia dell'indice. Pertanto, se un indice è intercalato con altri indici sul disco, l'esecuzione di DBCC INDEXDEFRAG su quell'indice non rende contigue tutte le pagine foglia dell'indice. Per migliorare il raggruppamento delle pagine, è necessario ricompilare l'indice.
 Non è possibile utilizzare DBCC INDEXDEFRAG per deframmentare gli indici seguenti:
 -   Un indice disabilitato.  
@@ -116,11 +112,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Autorizzazioni  
-Chiamante deve essere proprietario della tabella o essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database, o **db_ddladmin** ruolo predefinito del database.
+Il chiamante deve essere proprietario della tabella o membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_owner** e **db_ddladmin**.
   
 ## <a name="examples"></a>Esempi  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. Utilizzo di DBCC INDEXDEFRAG per deframmentare un indice  
-Nell'esempio seguente consente di deframmentare tutte le partizioni del `PK_Product_ProductID` indicizzare il `Production.Product` tabella il `AdventureWorks` database.
+Nell'esempio seguente vengono deframmentate tutte le partizioni dell'indice `PK_Product_ProductID` nella tabella `Production.Product` del database `AdventureWorks`.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

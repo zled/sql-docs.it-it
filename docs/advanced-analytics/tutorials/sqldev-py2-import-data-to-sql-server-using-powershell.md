@@ -1,30 +1,17 @@
 ---
-title: 'Passaggio 2: Importare dati in SQL Server tramite PowerShell | Documenti Microsoft'
-ms.custom: 
-ms.date: 10/17/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Passaggio 2 di importazione di dati in SQL Server tramite PowerShell | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-- TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 1c97a15d3b70d42337d3054f97e2e695813ca6f8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: d85419c06915cc7d96c9713053239c27c70a9f0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>Passaggio 2: Importare dati in SQL Server tramite PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -67,7 +54,7 @@ Se si verificano problemi, è possibile utilizzare lo script come riferimento pe
   
 4. Quando lo script viene completato, l'accesso per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza utilizzando l'account di accesso specificato, per verificare che il database, tabelle, funzioni e stored procedure sono state create. La figura seguente mostra gli oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-    ![sfogliare le tabelle in SQL Server Management Studio](media/sqldev-python-browsetables1.png "visualizzare tabelle in SQL Server Management Studio")
+    ![sfogliare le tabelle in SSMS](media/sqldev-python-browsetables1.png "visualizzare tabelle in SQL Server Management Studio")
 
     > [!NOTE]
     > Se gli oggetti di database già esistente, non possono essere creati nuovamente.

@@ -1,17 +1,16 @@
 ---
 title: Viste degli schemi delle informazioni del sistema (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: system-information-schema-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - information schema views
 - schemas [SQL Server], information schema views
@@ -19,19 +18,18 @@ helpviewer_keywords:
 - views [SQL Server], information schema
 - system views [SQL Server], information schema
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 361e6385eb14d6ea3ae2826c1b8aa184c167e50a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2a3c0ef6d8a3c4c774b441e807c4ca513b214f26
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Viste degli schemi delle informazioni del sistema (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Una vista dello schema delle informazioni rappresenta uno dei metodi disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ottenere metadati. Le viste degli schemi delle informazioni offrono una panoramica interna dei metadati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indipendente dalle tabelle di sistema, nonché garantiscono il corretto funzionamento delle applicazioni anche se sono state apportate modifiche significative alle tabelle di sistema sottostanti. Le viste degli schemi delle informazioni incluse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono conformi alla definizione dello standard ISO per INFORMATION_SCHEMA.  
   
@@ -43,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |Nome di SQL Server|Nome SQL standard equivalente|  
 |---------------------|-----------------------------------------------|  
 |Database|Catalogo|  
-|schema|schema|  
+|Schema|Schema|  
 |Oggetto|Oggetto|  
 |Tipo di dati definito dall'utente|Dominio|  
   
@@ -74,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste di sistema &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Viste di sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

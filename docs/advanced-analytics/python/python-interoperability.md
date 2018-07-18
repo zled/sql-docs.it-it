@@ -1,29 +1,22 @@
 ---
-title: "Interoperabilità di Python con SQL Server | Documenti Microsoft"
-ms.custom: 
-ms.date: 11/03/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: Interoperabilità di Python con SQL Server Machine Learning | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 3ad52bb3774c1534ac745e1dc93d18c75260723c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>Interoperabilità di Python con SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo argomento vengono descritti i componenti di Python che vengono installati se si abilita la funzionalità **Machine Learning Services (In-Database)** e selezionare il linguaggio Python.
+In questo articolo vengono descritti i componenti di Python installati se si abilita la funzionalità **Machine Learning Services (In-Database)** e selezionare il linguaggio Python.
 
 ## <a name="python-components"></a>Componenti di Python
 
@@ -39,7 +32,7 @@ Installazione di SQL Server 2017 Machine Learning Services aggiunge la distribuz
 
 ## <a name="new-python-packages-in-this-release"></a>Nuovi pacchetti Python in questa versione
 
-Per un elenco di pacchetti supportati dalla distribuzione Anaconda, visitare il sito di analitica Continuum: [l'elenco dei pacchetti Anaconda](https://docs.continuum.io/anaconda/pkg-docs)
+Per un elenco dei pacchetti supportati dalla distribuzione Anaconda, visitare il sito analitica Continuum: [l'elenco dei pacchetti Anaconda](https://docs.continuum.io/anaconda/pkg-docs)
 
 Machine Learning Services in SQL Server 2017 include anche il nuovo **revoscalepy** libreria per Python.
 
@@ -63,8 +56,8 @@ Si può lavorare con dati locali, ottenere dati da SQL Server o altre origini da
 
 **Per ulteriori informazioni**
 
-+ Funzionalità supportate: [novità revoscalepy](what-is-revoscalepy.md) 
-+ Tipi di dati di Python supportati: [Python librerie e tipi di dati](python-libraries-and-data-types.md)
++ Funzioni supportate: [novità revoscalepy](what-is-revoscalepy.md) 
++ Tipi di dati Python supportati: [Python librerie e tipi di dati](python-libraries-and-data-types.md)
 + Origini dati supportate: ODBC database, SQL Server e i file con estensione XDF
 + Contesti di calcolo è supportato: locale o SQL Server
 

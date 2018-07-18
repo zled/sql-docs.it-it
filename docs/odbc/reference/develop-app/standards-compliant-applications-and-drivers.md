@@ -1,31 +1,28 @@
 ---
 title: Applicazioni conformi agli standard e i driver | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - standards-compliant applications and drivers [ODBC]
 - ODBC drivers [ODBC], standards-compliant
 - application features are standards-compliant [ODBC]
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 14d3ca332605e2d40d967e0e8b27b54e82613f46
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: fc733f6a9bf4d7edeae5c06f577b206f8232281b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>I driver e applicazioni conformi agli standard
 Un driver o un'applicazione conforme agli standard è conforme a Open Specification CAE gruppo "Data Management: SQL chiamata a livello di interfaccia (CLI)" e ISO/IEC 9075-3:1995 interfaccia a livello di chiamata (E) (SQL/CLI).  

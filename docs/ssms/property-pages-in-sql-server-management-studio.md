@@ -1,31 +1,31 @@
 ---
-title: "Pagine delle proprietà in SQL Server Management Studio | Microsoft Docs"
-ms.custom: 
+title: Pagine delle proprietà in SQL Server Management Studio | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: property pages [SQL Server Management Studio]
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- property pages [SQL Server Management Studio]
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a74c0a9090936fc172642e06d3608c407718712
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 350043c219ea1a35d681da8bd4718a54376430f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Pagine delle proprietà in SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Tutte le finestre di dialogo Proprietà in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] usano un formato comune per visualizzare le informazioni con categorie che è possibile espandere e comprimere. I campi visualizzati dipendono dalla proprietà. Le proprietà visualizzate in grigio sono di sola lettura. Nella parte superiore di ogni pagina delle proprietà si trovano i pulsanti Per categoria e Per nome.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Tutte le finestre di dialogo Proprietà in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] usano un formato comune per visualizzare le informazioni con categorie che è possibile espandere e comprimere. I campi visualizzati dipendono dalla proprietà. Le proprietà visualizzate in grigio sono di sola lettura. Nella parte superiore di ogni pagina delle proprietà si trovano i pulsanti Per categoria e Per nome.  
   
 Nella tabella seguente vengono descritti gli elementi comuni delle finestre di dialogo Proprietà di [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] .  
   

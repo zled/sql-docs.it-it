@@ -1,16 +1,15 @@
 ---
 title: Rimuovere colonne dai risultati di una query (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], deleting
 - result sets [SQL Server], queries
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - deleting columns
 - queries [SQL Server], results
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 80bc4b357c8abbe7fc34d36c82203d4568fc5c6e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4d0f1d6d45a88383760954f334e375f5e3f2b9df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Rimuovere colonne dai risultati di una query (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se si usa una colonna nella query di selezione ma si preferisce escluderla dal set di risultati che verranno visualizzati (vale a dire, escluderla dall'elenco di campi selezionati nella query), sarà possibile rimuoverla dall'output. Dopo avere rimosso la colonna dall'output della query, sarà comunque possibile utilizzarla nelle condizioni di ricerca o come campo di ordinamento.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Se si utilizza una colonna nella query di selezione ma si preferisce escluderla dal set di risultati che verranno visualizzati (vale a dire, escluderla dall'elenco di campi selezionati nella query), sarà possibile rimuoverla dall'output. Dopo avere rimosso la colonna dall'output della query, sarà comunque possibile utilizzarla nelle condizioni di ricerca o come campo di ordinamento.  
   
 > [!NOTE]  
 > Per rimuovere completamente una colonna dalla query, vedere [Rimozione di colonne da query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md).  

@@ -1,28 +1,26 @@
 ---
 title: 'Lezione 1: Connessione al motore di database | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 02/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 
+caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a7b0242b6c69f2ecb3b9ef077eae956d3f7d3f18
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1795e19eb13aaac59009ea610b0d261d3dc4d649
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al Motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +38,7 @@ In questa lezione sono incluse le attività seguenti:
  -In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è disponibile un'ampia gamma di strumenti. In questo argomento vengono illustrati i primi strumenti necessari e vengono fornite indicazioni utili per selezionare lo strumento appropriato per le operazioni da eseguire. A tutti gli strumenti è possibile accedere dal menu **Start** . Alcuni strumenti, quali [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], non vengono installati per impostazione predefinita. ma devono essere selezionati tra i componenti client durante l'installazione. Per una descrizione completa degli strumenti illustrati di seguito, eseguire una ricerca nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contiene solo un subset degli strumenti.  
 
 ### <a name="basic-tools"></a>Strumenti di base
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) è lo strumento principale per l'amministrazione di [!INCLUDE[ssDE](../includes/ssde-md.md)] e la scrittura di codice [!INCLUDE[tsql](../includes/tsql-md.md)]. È ospitato nella shell di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. SSMS è disponibile gratuitamente per il download nell' [Area download Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). La versione più recente può essere usata con le versioni precedenti di [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) è lo strumento principale per l'amministrazione di [!INCLUDE[ssDE](../includes/ssde-md.md)] e la scrittura di codice [!INCLUDE[tsql](../includes/tsql-md.md)] . È ospitato nella shell di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . SSMS è disponibile gratuitamente per il download nell' [Area download Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). La versione più recente può essere usata con le versioni precedenti di [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione viene installato sia con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che con gli strumenti client. Consente di abilitare protocolli server, configurare le opzioni relative ai protocolli quali le porte TCP, configurare i servizi server per l'avvio automatico e configurare i computer client per la connessione con le modalità preferite. Questo strumento consente di configurare gli elementi di connettività più avanzati ma non le funzionalità.  
 
@@ -66,7 +64,7 @@ I database di esempio e gli esempi non sono inclusi in [!INCLUDE[ssNoVersion](..
 1.  Accedere a Windows come membro del gruppo Administrators e aprire [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
 2.  Nella finestra di dialogo **Connetti al server** fare clic su **Annulla**.  
 3.  Se Server registrati non è visualizzato, scegliere **Server registrati** dal menu **Visualizza**.
-4.  Dopo avere selezionato **Motore di database** nella barra degli strumenti Server registrati, espandere **Motore di database**, fare clic con il pulsante destro del mouse su **Gruppi di server locali**, scegliere **Attività**e quindi fare clic su **Registra server locali**. Verranno visualizzate tutte le istanze di [!INCLUDE[ssDE](../includes/ssde-md.md)] installate nel computer, L'istanza predefinita non è denominata e viene visualizzata come nome del computer. Un'istanza denominata viene visualizzata come nome del computer seguito da una barra rovesciata (\\) e dal nome dell'istanza. Per [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], l'istanza è denominata *<nome_computer>*\sqlexpress, se non è stato specificato un nome diverso durante l'installazione.  
+4.  Dopo avere selezionato **Motore di database** nella barra degli strumenti Server registrati, espandere **Motore di database**, fare clic con il pulsante destro del mouse su **Gruppi di server locali**, scegliere **Attività**e quindi fare clic su **Registra server locali**. Verranno visualizzate tutte le istanze di [!INCLUDE[ssDE](../includes/ssde-md.md)] installate nel computer, L'istanza predefinita non è denominata e viene visualizzata come nome del computer. Un'istanza denominata viene visualizzata come nome del computer seguito da una barra rovesciata (\\) e dal nome dell'istanza. Per [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], l'istanza è denominata *<nome_computer>* \sqlexpress, se non è stato specificato un nome diverso durante l'installazione.  
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Per verificare che il Motore di database sia in esecuzione
 
@@ -85,7 +83,7 @@ I database di esempio e gli esempi non sono inclusi in [!INCLUDE[ssNoVersion](..
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  Nella casella **Nome server** digitare il nome dell'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Per l'istanza predefinita di SQL Server il nome del server è il nome del computer. Per un'istanza denominata di SQL Server, il nome del server è *<nome_computer>***\\***<nome_istanza>,* ad esempio **ACCTG_SRVR\SQLEXPRESS**. La schermata seguente mostra la connessione all'istanza predefinita (non denominata) di [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] in un computer denominato 'PracticeComputer'. L'utente attualmente connesso a Windows è Mary dal dominio Contoso. Quando si usa l'autenticazione di Windows non è possibile modificare il nome utente. 
+3.  Nella casella **Nome server** digitare il nome dell'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Per l'istanza predefinita di SQL Server il nome del server è il nome del computer. Per un'istanza denominata di SQL Server, il nome del server è *<nome_computer>***\\***<nome_istanza>*, ad esempio **ACCTG_SRVR\SQLEXPRESS**. La schermata seguente mostra la connessione all'istanza predefinita (non denominata) di [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] in un computer denominato 'PracticeComputer'. L'utente attualmente connesso a Windows è Mary dal dominio Contoso. Quando si usa l'autenticazione di Windows non è possibile modificare il nome utente. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 

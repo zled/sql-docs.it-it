@@ -1,32 +1,34 @@
 ---
 title: Guida sensibile al contesto del componente Casella degli strumenti | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: vs.toolbox
-helpviewer_keywords: Toolbox [SQL Server Management Studio]
+f1_keywords:
+- vs.toolbox
+helpviewer_keywords:
+- Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a339068c7fe7f467a40f0b04bb3f08a6eecaefa9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3c2e4f0eb18863a51fc7fa1b81870ff74ed47ca7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="toolbox-component-f1-help"></a>Guida sensibile al contesto del componente Casella degli strumenti
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La **Casella degli strumenti** include numerosi elementi utilizzabili nei progetti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile accedere alla **Casella degli strumenti** dal menu **Visualizza** e ancorare la finestra nel modo desiderato. Se ancorata, la finestra **Casella degli strumenti** può essere bloccata in posizione aperta o impostata su **Nascondi automaticamente** quando non in uso.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Nella**Casella degli strumenti** sono inclusi numerosi elementi utilizzabili nei progetti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . È possibile accedere alla **Casella degli strumenti** dal menu **Visualizza** e ancorare la finestra nel modo desiderato. Se ancorata, la finestra **Casella degli strumenti** può essere bloccata in posizione aperta o impostata su **Nascondi automaticamente** quando non in uso.  
   
  Le icone della**Casella degli strumenti** possono essere trascinate con il mouse oppure copiate e incollate nell'area di visualizzazione della finestra di progettazione all'interno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

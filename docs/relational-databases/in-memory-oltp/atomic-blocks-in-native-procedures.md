@@ -1,28 +1,26 @@
 ---
 title: Blocchi atomici | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: in-memory-oltp
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 13
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cadb8454b9d9470afc7b0add40e21fd9f1346b00
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e26743a1020bc71e20e17d64aad7c14ccd29c325
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocchi atomici nelle procedure native
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,18 +137,18 @@ GO
   
  Le opzioni seguenti sono necessarie con **BEGIN ATOMIC**:  
   
-|Impostazione necessaria|Description|  
+|Impostazione necessaria|Descrizione|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|I valori supportati sono **SNAPSHOT**, **REPEATABLEREAD**e **SERIALIZABLE**.|  
 |**LANGUAGE**|Determina i formati data e ora e i messaggi di sistema. Tutti i linguaggi e gli alias in [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) sono supportati.|  
   
  Le impostazioni seguenti sono facoltative:  
   
-|Impostazione facoltativa|Description|  
+|Impostazione facoltativa|Descrizione|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|Tutti i formati data di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati. Quando viene specificata, **DATEFORMAT** esegue l'override del formato data predefinito associato a **LANGUAGE**.|  
 |**DATEFIRST**|Quando viene specificata, **DATEFIRST** esegue l'override del valore predefinito associato a **LANGUAGE**.|  
-|**DELAYED_DURABILITY**|I valori supportati sono **OFF** e **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il commit delle transazioni può essere completamente durevole, che è l'impostazione predefinita, oppure con durabilità ritardata. Per altre informazioni, vedere [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).|  
+|**DELAYED_DURABILITY**|I valori supportati sono **OFF** e **ON**.<br /><br /> Il commit delle transazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere completamente durevole, che è l'impostazione predefinita, oppure con durabilità ritardata. Per altre informazioni, vedere [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).|  
   
  Le opzioni SET seguenti presentano lo stesso valore predefinito di sistema per tutti i blocchi atomici in tutte le stored procedure compilate in modo nativo:  
   

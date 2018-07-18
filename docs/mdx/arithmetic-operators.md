@@ -1,29 +1,20 @@
 ---
 title: Operatori aritmetici | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: arithmetic operators
-ms.assetid: 1dff3e20-fe9d-4155-bf06-27d6458188e9
-caps.latest.revision: "27"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6e835905fb1d51d4918c3d382ad6268925d469e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4bf4a182c73acb18d649de3888f735f8842964dc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576953"
 ---
 # <a name="arithmetic-operators"></a>Operatori aritmetici
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +26,7 @@ ms.lasthandoff: 01/08/2018
 |Operatore|Description|  
 |--------------|-----------------|  
 |[+ (addizione)](../mdx/add-mdx.md)|Esegue la somma di due numeri.|  
-|[/ (Divisione)](../mdx/divide-mdx-operator-reference.md)|Esegue una divisione di un numero per un altro.|  
+|[/ (Divide)](../mdx/divide-mdx-operator-reference.md)|Esegue una divisione di un numero per un altro.|  
 |[* (moltiplicazione)](../mdx/multiply-mdx.md)|Moltiplica due numeri.|  
 |[- (sottrazione)](../mdx/subtract-mdx.md)|Sottrae un numero da un altro.|  
 |^ (elevamento a potenza)|Eleva un numero a un altro numero.|  
@@ -53,7 +44,7 @@ ms.lasthandoff: 01/08/2018
 -   Le espressioni tra parentesi hanno la precedenza su tutte le altre operazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Operatori &#40; La sintassi MDX &#41;](../mdx/operators-mdx-syntax.md)  
+ [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Gli operatori &#40;sintassi MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

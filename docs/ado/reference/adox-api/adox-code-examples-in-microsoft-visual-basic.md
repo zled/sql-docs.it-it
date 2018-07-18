@@ -1,32 +1,29 @@
 ---
 title: Esempi di codice ADOX in Microsoft Visual Basic | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ADOX code examples, Visual Basic
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 61b67a730c2518aa4e7779c1ccc85a015df5c74c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f62008a47dad96ff2322e2f2bfd71dbddd8b3476
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Esempi di codice ADOX in Microsoft Visual Basic
 Questi argomenti includono il codice di esempio per comprendere come utilizzare ADOX. Tutti gli esempi di codice vengono scritti utilizzando Microsoft Visual Basic.  
@@ -50,7 +47,7 @@ Questi argomenti includono il codice di esempio per comprendere come utilizzare 
   
 -   [Esempio di metodo Append oggetti Index (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)  
   
--   [Chiavi Aggiungi metodo, tipo di chiave, RelatedColumn, RelatedTable e UpdateRule proprietà esempio (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [Le chiavi Append (metodo), tipo di chiave, RelatedColumn, RelatedTable e UpdateRule proprietà esempio (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
 -   [Esempio di metodo Append oggetti Procedure (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)  
   

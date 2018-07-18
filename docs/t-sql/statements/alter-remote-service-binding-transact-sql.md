@@ -1,16 +1,14 @@
 ---
-title: ALTER REMOTE SERVICE BINDING (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER REMOTE SERVICE BINDING
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - ALTER REMOTE SERVICE BINDING statement
 - modifying remote service bindings
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b9f6a49e18234d5728a3e1dc9856e72272400fc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5985acaca76b19a1a863ecc066f6a9da9b900008
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +50,17 @@ ALTER REMOTE SERVICE BINDING binding_name
  *binding_name*  
  Nome dell'associazione al servizio remoto da modificare. Non è possibile specificare i nomi del server, del database e dello schema.  
   
- CON utente = \< *nome_utente >*  
+ WITH USER = \<*user_name>*  
  Specifica l'utente di database che dispone del certificato associato al servizio remoto per questa associazione. La chiave pubblica di questo certificato viene utilizzata per la crittografia e l'autenticazione dei messaggi scambiati con il servizio remoto.  
   
  ANONYMOUS  
  Specifica se viene utilizzato l'accesso anonimo durante la comunicazione con il servizio remoto. Se ANONYMOUS = ON, viene utilizzato l'accesso anonimo e le credenziali utente locale non vengono trasferite al servizio remoto. Se ANONYMOUS = OFF, le credenziali utente vengono trasferite. Se questa clausola viene omessa, il valore predefinito è OFF.  
   
-## <a name="remarks"></a>Osservazioni  
- La chiave pubblica nel certificato associato *nome_utente* viene utilizzato per autenticare i messaggi inviati al servizio remoto e per crittografare una chiave di sessione che viene quindi utilizzata per crittografare la conversazione. Il certificato per *nome_utente* deve corrispondere al certificato per un account di accesso nel database che ospita il servizio remoto.  
+## <a name="remarks"></a>Remarks  
+ La chiave pubblica nel certificato associato a *user_name* viene usata per autenticare i messaggi inviati al servizio remoto e crittografare una chiave di sessione che verrà quindi usata per crittografare la conversazione. Il certificato per *user_name* deve corrispondere al certificato per un account utente nel database che ospita il servizio remoto.  
   
-## <a name="permissions"></a>Permissions  
- L'autorizzazione per modificare un'associazione al servizio remoto per impostazione predefinita al proprietario dell'associazione, appartenenti al servizio remoto il **db_owner** predefinito del database e i membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ L'autorizzazione per la modifica dell'associazione al servizio remoto viene concessa per impostazione predefinita al proprietario dell'associazione al servizio remoto, ai membri del ruolo predefinito del database **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
   
  L'utente che esegue l'istruzione ALTER REMOTE SERVICE BINDING deve disporre dell'autorizzazione di rappresentazione per l'utente specificato nell'istruzione.  
   
@@ -79,7 +76,7 @@ ALTER REMOTE SERVICE BINDING APBinding
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [ELIMINARE l'associazione al servizio remoto &#40; Transact-SQL &#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
+ [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,27 +1,24 @@
 ---
-title: "Configurare un gruppo di disponibilità distribuito (gruppo di disponibilità AlwaysOn) | Microsoft Docs"
-ms.custom: 
+title: Configurare un gruppo di disponibilità distribuito (gruppo di disponibilità AlwaysOn) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: "28"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 28
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 67aaeb56b3d3230e650dc24d16221e2af6872344
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6dd177d3094f50cd226ed5613ded8fc0d76e6891
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769067"
 ---
 # <a name="configure-distributed-availability-group"></a>Configurare un gruppo di disponibilità distribuito  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +180,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Il parametro **LISTENER_URL** specifica il listener per ogni gruppo di disponibilità insieme all'endpoint del mirroring del database del gruppo di disponibilità. Questo esempio riguarda la porta `5022` (non la porta `60173` usata per creare il listener).  
+>  Il parametro **LISTENER_URL** specifica il listener per ogni gruppo di disponibilità insieme all'endpoint del mirroring del database del gruppo di disponibilità. Questo esempio riguarda la porta `5022` (non la porta `60173` usata per creare il listener). Se si usa un bilanciamento del carico, ad esempio in Azure, [aggiungere una regola per il bilanciamento del carico per la porta del gruppo di disponibilità distribuito](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Aggiungere la regola per la porta del listener, oltre che alla porta dell'istanza di SQL Server. 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Aggiungere un gruppo di disponibilità distribuito nel secondo cluster  
  Creare quindi un join del gruppo di disponibilità distribuito nel secondo WSFC.  
@@ -210,10 +207,10 @@ GO
 ```  
 
 ## <a name="failover"></a> Aggiungere il database nella replica secondaria del secondo gruppo di disponibilità
-Quando il database nella replica secondaria del secondo gruppo di disponibilità entra in uno stato di ripristino, è necessario aggiungerlo manualmente al gruppo di disponibilità.
+Quando il database nella replica secondaria del secondo gruppo di disponibilità è in uno stato di ripristino, è necessario aggiungerlo manualmente al gruppo di disponibilità.
 
 ```sql  
-ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```  
   
 ## <a name="failover"></a> Failover su un gruppo di disponibilità secondario  

@@ -1,33 +1,32 @@
 ---
-title: "Visualizzare le proprietà di un diagramma (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: Visualizzare le proprietà di un diagramma (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], properties
 - diagrams [SQL Server], properties
 ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 591c7f95401b89a8584d67ead8f3ecccca836593
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4623ad1d912e2044b2102debf3c232b12cfc579e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>Visualizzazione delle proprietà di un diagramma (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Per visualizzare le proprietà di un diagramma di database, è possibile usare la finestra Proprietà.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Per visualizzare le proprietà di un diagramma di database, è possibile utilizzare la finestra Proprietà.  
   
 ### <a name="to-show-database-diagram-properties-in-the-properties-window"></a>Per visualizzare le proprietà di un diagramma di database nella finestra Proprietà  
   

@@ -1,27 +1,24 @@
 ---
 title: Schermata della procedura guidata 2, il Driver ODBC per SQL Server, dell'origine dati | Documenti Microsoft
-ms.custom: 
-ms.date: 09/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/21/2018
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c2291b951c0df4f365b76f80ebab3572a39375d1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.author: v-jizho2
+manager: craigg
+ms.openlocfilehash: 96907675f7bdb1072923da9ad56412dd7dcd59c4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>Creazione guidata origine dati - Schermata 2
 
@@ -47,9 +44,13 @@ Specifica che il driver si autenticano a SQL Server utilizzando un ID di accesso
 
 Specifica che il driver si autenticano a SQL Server utilizzando un ID di accesso di Azure Active Directory e una password.
 
+### <a name="with-active-directory-interactive-authentication"></a>Con l'autenticazione di Active Directory interattiva
+
+Specifica che il driver si autenticano a SQL Server utilizzando la modalità interattiva Azure Active Directory, fornendo l'ID di accesso. In questo modo verrà attivata la finestra di dialogo prompt dei comandi di Windows Azure Authentication.
+
 ### <a name="login-id"></a>ID accesso
 
-Specifica l'ID di accesso, il driver utilizza per la connessione a SQL Server se **con autenticazione di SQL Server tramite un ID di accesso e password immessi dall'utente** o **l'autenticazione con Password di Active Directory utilizzando un ID di accesso e la password immessi dall'utente** è selezionata. Si applica solo alla connessione effettuata per determinare le impostazioni predefinite del server. Non si applica invece alle connessioni successive effettuate utilizzando l'origine dati dopo la relativa creazione.
+Specifica l'ID di accesso vengono utilizzate quando ci si connette a SQL Server se **con autenticazione di SQL Server tramite un ID di accesso e password immessi dall'utente** o **l'autenticazione con Password di Active Directory utilizzando un ID di accesso e la password immessi dall'utente** oppure **autenticazione con Active Directory interattiva tramite un ID di accesso immessi dall'utente** sia selezionata. Si applica solo alla connessione effettuata per determinare le impostazioni predefinite del server. Non si applica invece alle connessioni successive effettuate utilizzando l'origine dati dopo la relativa creazione.
 
 ### <a name="password"></a>Password
 

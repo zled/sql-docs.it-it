@@ -1,34 +1,30 @@
 ---
 title: Classe di evento Object:Altered | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Object:Altered event class
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 21eafbc19f9659ca6fc22cf59c242f0b4857b699
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5ec82c09240dfd74a9ceae2422699179ad95db1b
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento Object:Altered indica che un oggetto è stato modificato, ad esempio mediante un'istruzione ALTER INDEX, ALTER TABLE o ALTER DATABASE. È possibile utilizzare questa classe di evento per determinare se gli oggetti sono stati modificati, ad esempio tramite applicazioni ODBC che spesso creano stored procedure temporanee.  
+  La classe di evento Object:Altered indica che un oggetto è stato modificato, ad esempio mediante un'istruzione ALTER INDEX, ALTER TABLE o ALTER DATABASE. È possibile utilizzare questa classe di evento per determinare se gli oggetti sono stati modificati, ad esempio tramite applicazioni ODBC che spesso creano stored procedure temporanee.  
   
  La classe di evento Object:Altered viene generata sempre con due eventi. Il primo evento indica la fase di inizio, mentre il secondo evento indica la fase di rollback o di commit.  
   
@@ -36,7 +32,7 @@ La classe di evento Object:Altered indica che un oggetto è stato modificato, ad
   
 ## <a name="objectaltered-event-class-data-columns"></a>Colonne di dati della classe di evento Object:Altered  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  

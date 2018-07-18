@@ -1,17 +1,16 @@
 ---
 title: Rilevare le modifiche ai dati (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
 - change data capture vs. change tracking
@@ -22,16 +21,17 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 53c05afb9651f14f3d917d0d74e0b42f8cfdc056
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708879"
 ---
 # <a name="track-data-changes-sql-server"></a>Rilevare le modifiche ai dati (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
   
 -   Le funzioni sono fornite per ottenere informazioni sulle modifiche.  
   
--   Overhead basso per le operazioni DML. Al rilevamento delle modifiche sincrono è sempre associato un livello di overhead. L'utilizzo del rilevamento delle modifiche può consentire la riduzione dell'overhead, che risulterà in genere minore rispetto a quello relativo all'utilizzo di soluzioni alternative, soprattutto soluzioni per cui è necessario utilizzare i trigger.  
+-   Overhead basso per le operazioni DML. Al rilevamento delle modifiche sincrono è sempre associato un livello di overhead. L'utilizzo del rilevamento delle modifiche può consentire la riduzione dell'overhead, che risulterà in genere minore rispetto a quello relativo all'utilizzo di soluzioni alternative, soprattutto soluzioni per cui è necessario usare i trigger.  
   
 -   Utilizzo delle transazioni di cui è stato eseguito il commit come base per il rilevamento delle modifiche. L'ordine delle modifiche si basa sull'ora in cui è stato eseguito il commit della transazione. In questo modo è possibile ottenere risultati affidabili quando sono presenti transazioni sovrapposte e con tempi di esecuzione prolungati. Per la gestione di questi scenari, è necessario progettare specificamente soluzioni personalizzate che usano valori **timestamp** .  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/09/2018
 ##  <a name="Capture"></a> Change Data Capture  
  Change Data Capture fornisce informazioni cronologiche sulle modifiche per una tabella utente acquisendo l'esecuzione di modifiche DML e le modifiche effettive apportate ai dati. Le modifiche vengono acquisite utilizzando un processo asincrono che legge il log delle transazioni senza un impatto significativo sul sistema.  
   
- Come illustrato nella figura seguente, le modifiche apportate alle tabelle utente vengono acquisite nella tabella delle modifiche corrispondente. In tali tabelle è disponibile una vista cronologica delle modifiche nel tempo. Le funzioni di [Change Data Capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consentono di utilizzare i dati delle modifiche in modo semplice e sistematico.  
+ Come illustrato nella figura seguente, le modifiche apportate alle tabelle utente vengono acquisite nella tabella delle modifiche corrispondente. In tali tabelle è disponibile una vista cronologica delle modifiche nel tempo. Le funzioni di [Change Data Capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consentono di usare i dati delle modifiche in modo semplice e sistematico.  
   
  ![Illustrazione concettuale di Change Data Capture](../../relational-databases/track-changes/media/cdcart1.gif "Illustrazione concettuale di Change Data Capture")  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 02/09/2018
  Per accedere ai dati delle modifiche associati a un'istanza di acquisizione, l'utente deve disporre dell'autorizzazione SELECT per l'accesso a tutte le colonne acquisite della tabella di origine associata. Se, inoltre, al momento della creazione dell'istanza di acquisizione viene specificato un ruolo di controllo, il chiamante deve essere anche un membro del ruolo di controllo specificato. Le altre funzioni generali di Change Data Capture per l'accesso ai metadati saranno accessibili a tutti gli utenti del database tramite il ruolo public, sebbene l'accesso ai metadati restituiti venga controllato in genere utilizzando anche l'autorizzazione SELECT per l'accesso alle tabelle di origine sottostanti e tramite l'appartenenza a qualsiasi ruolo di controllo definito.  
   
  **Operazioni DDL nelle tabelle delle modifiche abilitate per Change Data Capture**  
- Quando una tabella è abilitata per Change Data Capture, le operazioni DDL possono essere applicate alla tabella solo da un membro del ruolo predefinito del server **sysadmin**, del **ruolo del database db_owner**o del **ruolo del database db_ddladmin**. Se un utente che dispone di autorizzazioni esplicite per eseguire operazioni DDL nella tabella tenta di eseguire tali operazioni, verrò restituito l'errore 22914.  
+ Quando una tabella è abilitata per Change Data Capture, le operazioni DDL possono essere applicate alla tabella solo da un membro del ruolo predefinito del server **sysadmin**, del **ruolo del database db_owner**o del **ruolo del database db_ddladmin**. Agli utenti che dispongono di autorizzazioni esplicite per eseguire operazioni DDL nella tabella verrà restituito l'errore 22914 se tentano di eseguire tali operazioni.  
   
 ### <a name="data-type-considerations-for-change-data-capture"></a>Considerazioni sui tipi di dati per Change Data Capture  
  La funzionalità Change Data Capture supporta tutti i tipi di colonna di base. Nella tabella seguente vengono descritti il comportamento e i limiti per numerosi tipi di colonna.  

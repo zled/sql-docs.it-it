@@ -1,16 +1,16 @@
 ---
 title: Creare un account di accesso | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.login.status.f1
 - sql13.swb.login.effectivepermissions.f1
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 40163a185516fc5d101baedf6632b46112dda52e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/06/2017
   
     4.  Fare clic su **Avanzate...** per le opzioni di ricerca più avanzate. Per altre informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi - Pagina Avanzate](http://technet.microsoft.com/library/cc733110.aspx).  
   
-    5.  Scegliere **OK**.  
+    5.  Fare clic su **OK**.  
   
 4.  Per creare un account di accesso basato su un'entità di Windows, selezionare **Autenticazione di Windows**. Si tratta della selezione predefinita.  
   
@@ -169,13 +169,13 @@ ms.lasthandoff: 12/06/2017
   
 1.  Fare clic su **Cerca**.  
   
-2.  Nella finestra di dialogo **Aggiungi oggetti** selezionare una delle opzioni seguenti: **Oggetti specifici**, **Tutti gli oggetti di tipo**o **Il server***nome_server*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Nella finestra di dialogo **Aggiungi oggetti** selezionare una delle opzioni seguenti: **Oggetti specifici**, **Tutti gli oggetti di tipo** o **Il server***nome_server*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **NOTA:** quando si seleziona **il server***nome_server* , la griglia superiore viene automaticamente compilata con tutti gli oggetti a protezione diretta di tale server.  
+    > **NOTA:** quando si seleziona **Il server***nome_server*, la griglia superiore viene automaticamente compilata con tutti gli oggetti a protezione diretta di tale server.  
   
 3.  Se si seleziona **Oggetti specifici…**:  
   
-    1.  Nella finestra di dialogo **Seleziona oggetti** , fare clic su **Tipi di oggetti...**sotto **Selezionare i tipi di oggetti seguenti**.  
+    1.  Nella finestra di dialogo **Seleziona oggetti** , fare clic su **Tipi di oggetti...** sotto **Selezionare i tipi di oggetti seguenti**.  
   
     2.  Nella casella del finestra di dialogo **Seleziona tipi di oggetti** e selezionare tutte le seguenti opzioni o solo alcune di esse: **Endpoint**, **Account di accesso**, **Server**, **Gruppi di disponibilità**e **Ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -238,7 +238,7 @@ ms.lasthandoff: 12/06/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     -- Create a login for SQL Server by specifying a server name and a Windows domain account name.  
@@ -254,7 +254,7 @@ ms.lasthandoff: 12/06/2017
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     -- Creates the user "shcooper" for SQL Server using the security credential "RestrictedFaculty"   

@@ -1,16 +1,14 @@
 ---
-title: MODIFICARE l'origine dati esterna (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/09/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL DATA SOURCE
@@ -21,21 +19,20 @@ helpviewer_keywords:
 - polybase, alter external data source statement
 - ALTER EXTERNAL DATA SOURCE statement
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 8
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 16ea77011039c1b48ab83bfd335028c83c6f3c3e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7ff97e4cc6549b7d441fe7f6124a3b60b1a3041c
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Modifica di un'origine dati esterna utilizzata per creare una tabella esterna. L'origine dati esterna può essere Hadoop o blob nell'archivio Azure (WASB).
+  Modifica un'origine dati esterna usata per creare una tabella esterna. L'origine dati esterna può essere un'archiviazione BLOB di Azure o di Hadoop.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,32 +58,32 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- data_source_name specifica il nome definito dall'utente per l'origine dati. Il nome deve essere univoco.
+ data_source_name Specifica il nome definito dall'utente per l'origine dati. Il nome deve essere univoco.
   
- PERCORSO = 'server_name_or_IP' specifica il nome del server o un indirizzo IP.
+ LOCATION = ‘server_name_or_IP’ Specifica il nome del server o un indirizzo IP.
   
- RESOURCE_MANAGER_LOCATION = '\<indirizzo IP. Porta >' specifica il percorso di gestione risorse di Hadoop. Quando specificato, query optimizer potrebbe scegliere di pre-elaborare i dati di una query di PolyBase con funzionalità di calcolo di Hadoop. Questa è una decisione basata sui costi. La distribuzione del predicato di chiamata, questo può ridurre notevolmente il volume di dati trasferiti tra Hadoop e SQL e pertanto migliorare le prestazioni delle query.
+ RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port>’ Specifica la Gestione risorse di Hadoop. Quando specificato, Query Optimizer può scegliere di pre-elaborare i dati di una query PolyBase usando le funzionalità di calcolo di Hadoop. Questa decisione si basa sui costi. La cosiddetta distribuzione del predicato può ridurre notevolmente il volume dei dati trasferiti tra Hadoop e SQL e pertanto migliorare le prestazioni delle query.
   
- CREDENZIALE = Credential_Name specifica la credenziale denominata. Vedere [CREATE DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41; ](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+ CREDENTIAL = Credential_Name Specifica la credenziale denominata. Vedere [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
-TIPO = BLOB_STORAGE   
+TYPE = BLOB_STORAGE   
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Per le operazioni bulk, solo `LOCATION` deve essere valido l'URL di archiviazione Blob di Azure. Non inserire  **/** , nome del file o condiviso i parametri di firma di accesso alla fine del `LOCATION` URL.
-La credenziale utilizzata, deve essere creata usando `SHARED ACCESS SIGNATURE` come identità. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+Solo per le operazioni bulk, `LOCATION` deve essere l'URL valido dell'archiviazione BLOB di Azure. Non inserire **/**, nome file o parametri di firma per l'accesso condiviso alla fine dell'URL `LOCATION`.
+La credenziale usata deve essere creata usando `SHARED ACCESS SIGNATURE` come identità. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   
   
-## <a name="remarks"></a>Osservazioni
- Solo singola origine può essere modificata alla volta. Richieste simultanee per modificare la stessa origine causano un'istruzione di attesa. Tuttavia, è possono modificare origini diverse nello stesso momento. Questa istruzione è possibile eseguire contemporaneamente altre istruzioni.
+## <a name="remarks"></a>Remarks
+ È possibile modificare una sola origine per volta. Le richieste simultanee di modifica della stessa origine mettono in attesa un'istruzione. È invece possibile modificare origini diverse nello stesso momento. Questa istruzione può essere eseguita contemporaneamente ad altre istruzioni.
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione ALTER ANY EXTERNAL DATA SOURCE.
+ È necessaria l'autorizzazione ALTER ANY EXTERNAL DATA SOURCE.
  > [!IMPORTANT]  
- >  L'autorizzazione ALTER ANY EXTERNAL DATA SOURCE concede a qualsiasi entità la possibilità di creare e modificare qualsiasi oggetto di origine dati esterna e di conseguenza, concede inoltre la possibilità di accedere a tutte le credenziali con ambito database nel database. Questa autorizzazione deve essere considerata privilegi elevati e pertanto devono essere concesse solo a entità attendibili nel sistema.
+ >  L'autorizzazione ALTER ANY EXTERNAL DATA SOURCE concede a qualsiasi entità di sicurezza la possibilità di creare e modificare qualsiasi oggetto origine dati esterna e, di conseguenza, la possibilità di accedere a tutte le credenziali con ambito database per il database. Questa autorizzazione deve essere considerata con privilegi elevati e quindi essere concessa solo a entità attendibili nel sistema.
 
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente modifica il percorso e il percorso di gestione risorse di un'origine dati esistente.
+ Nell'esempio seguente viene modificato il percorso e il percorso di Gestione risorse di un'origine dati esistente.
   
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
@@ -96,7 +93,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
   
 ```  
 
- L'esempio seguente modifica le credenziali per connettersi a un'origine dati esistente.
+ Nell'esempio seguente viene modificata la credenziale per connettersi a un'origine dati esistente.
   
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET

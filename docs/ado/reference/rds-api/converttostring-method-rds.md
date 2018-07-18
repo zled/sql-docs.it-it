@@ -1,31 +1,28 @@
 ---
 title: Metodo ConvertToString (RDS) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95425c734f254bf534eacdad606025fca43c2158
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: da21cb2208e11ffa502b3788e36a1bc034ae1c33
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converttostring-method-rds"></a>Metodo ConvertToString (RDS)
 Converte un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in una stringa MIME che rappresenta i dati di recordset.  
@@ -41,7 +38,7 @@ DataFactory.ConvertToString(Recordset)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *DataFactory*  
+ *Data factory*  
  Una variabile oggetto che rappresenta un [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto.  
   
  *Recordset*  
@@ -50,7 +47,7 @@ DataFactory.ConvertToString(Recordset)
 ## <a name="remarks"></a>Osservazioni  
  I file ASP, usare **ConvertToString** per incorporare il **Recordset** in una pagina HTML generata nel server per il trasporto in un computer client.  
   
- **ConvertToString** carica innanzitutto il **Recordset** nel servizio cursore le tabelle e quindi genera un flusso in formato MIME.  
+ **ConvertToString** carica innanzitutto il **Recordset** nel servizio cursore tabelle e quindi genera un flusso in formato MIME.  
   
  Nel client, Remote Data Service può convertire la stringa MIME in completamente funzionante **Recordset**. Funziona anche per la gestione di meno di 400 righe di dati con non più di larghezza di 1024 byte per ogni riga. Non è consigliabile utilizzare per trasmettere dati BLOB e di set di risultati di grandi dimensioni tramite HTTP. Nessuna compressione in transito viene eseguita nella stringa di molto grandi set di dati verrà richiedere tempi lunghi di trasporto su HTTP rispetto al formato con ottimizzazione per la trasmissione viene definito e distribuito da Remote Data Service come formato di protocollo di trasporto nativi.  
   

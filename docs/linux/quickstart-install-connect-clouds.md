@@ -6,17 +6,16 @@ ms.author: annashres
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.assetid: 
-ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.technology: linux
+ms.assetid: ''
+ms.openlocfilehash: f5d67ff25cb5d2816672fafe0602d56921c034bb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>Guida introduttiva: Eseguire il 2017 di SQL Server nel cloud
 

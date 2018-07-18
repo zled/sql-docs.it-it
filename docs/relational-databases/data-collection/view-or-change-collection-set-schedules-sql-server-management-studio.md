@@ -1,17 +1,13 @@
 ---
 title: Visualizzare o modificare le pianificazioni dei set di raccolta (SQL Server Management Studio) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: data-collection
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dc.collectionsetprop.uploads.f1
 - sql13.swb.dc.collectionsetprop.description.f1
@@ -22,20 +18,19 @@ helpviewer_keywords:
 - collection sets [SQL Server], viewing schedules
 - schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
-caps.latest.revision: 
-author: stevestein
-ms.author: sstein
+caps.latest.revision: 26
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f58af1ebf8e039b935c235ef35118a62f725053
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 3e0633f95e2179cacb62c811365878485be61d3a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Visualizzazione o modifica delle pianificazioni dei set di raccolta (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-È possibile visualizzare o modificare le pianificazioni dei set di raccolta utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  È possibile visualizzare o modificare le pianificazioni dei set di raccolta utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  La modalità di raccolta, ovvero in cache o non in cache, determina il tipo di modifiche che è possibile apportare a una pianificazione. La modalità cache utilizza pianificazioni separate per la raccolta e il caricamento. La modalità non in cache utilizza la stessa pianificazione per la raccolta e il caricamento. I tipi di modalità di raccolta per ognuno dei set di raccolta dati di sistema sono i seguenti:  
   

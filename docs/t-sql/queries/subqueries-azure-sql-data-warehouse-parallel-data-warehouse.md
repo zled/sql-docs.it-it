@@ -1,35 +1,33 @@
 ---
-title: Le sottoquery (Azure SQL Data Warehouse, Parallel Data Warehouse) | Documenti Microsoft
-ms.custom: 
+title: Sottoquery (Azure SQL Data Warehouse, Parallel Data Warehouse) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 7
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5b30ff820d9a9003a1832c8b4226adf20072fceb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: ab20f771fae4aa1ea5a31a11bc8c3e3f1e7c4ead
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Sottoquery (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  In questo argomento vengono forniti alcuni esempi di utilizzo di sottoquery in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+  Questo argomento contiene esempi dell'uso delle sottoquery in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- Per l'istruzione SELECT, vedere [SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-transact-sql.md)  
+ Per l'istruzione SELECT, vedere [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
 ## <a name="contents"></a>Sommario  
   
@@ -37,18 +35,18 @@ ms.lasthandoff: 01/25/2018
   
 -   [Esempi: SQL Data Warehouse e Parallel Data Warehouse](#Examples)  
   
-##  <a name="Basics"></a> Basics  
+##  <a name="Basics"></a> Nozioni di base  
  Sottoquery  
- Una sottoquery è una query nidificata in un'istruzione SELECT, INSERT, UPDATE o DELETE o in un'altra sottoquery. Questo è l'acronimo di una query interna o un'istruzione select interna.  
+ Una sottoquery è una query nidificata in un'istruzione SELECT, INSERT, UPDATE o DELETE o in un'altra sottoquery. Viene anche denominata query interna o istruzione SELECT interna.  
   
  Query esterna  
- L'istruzione che contiene la sottoquery. Si tratta inoltre di un'istruzione select esterna.  
+ Istruzione che contiene la sottoquery. Viene anche denominata istruzione SELECT esterna.  
   
  Sottoquery correlata  
  Una sottoquery che fa riferimento a una tabella nella query esterna.  
   
-##  <a name="Examples"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- In questa sezione vengono forniti esempi di sottoquery è supportato in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+##  <a name="Examples"></a> Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Questa sezione contiene esempi di sottoquery supportate in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>A. TOP e ORDER BY in una sottoquery  
   
@@ -59,7 +57,7 @@ WHERE col1 IN
   
 ```  
   
-### <a name="b-having-clause-with-a-correlated-subquery"></a>B. HAVING (clausola) con una sottoquery correlata  
+### <a name="b-having-clause-with-a-correlated-subquery"></a>B. Clausola HAVING con una sottoquery correlata  
   
 ```  
 SELECT dm.EmployeeKey, dm.FirstName, dm.LastName   
@@ -73,7 +71,7 @@ ORDER BY EmployeeKey;
   
 ```  
   
-### <a name="c-correlated-subqueries-with-analytics"></a>C. Sottoquery correlate con analitica  
+### <a name="c-correlated-subqueries-with-analytics"></a>C. Sottoquery correlate con analisi  
   
 ```  
 SELECT * FROM ReplA AS A   
@@ -81,7 +79,7 @@ WHERE A.ID IN
     (SELECT sum(B.ID2) OVER() FROM ReplB AS B WHERE A.ID2 = B.ID);  
 ```  
   
-### <a name="d-correlated-union-statements-in-a-subquery"></a>D. Istruzioni unione correlate in una sottoquery  
+### <a name="d-correlated-union-statements-in-a-subquery"></a>D. Istruzioni UNION correlate in una sottoquery  
   
 ```  
 SELECT * FROM RA   
@@ -90,7 +88,7 @@ WHERE EXISTS
      UNION ALL SELECT 1 FROM RC);  
 ```  
   
-### <a name="e-join-predicates-in-a-subquery"></a>E. I predicati di join in una sottoquery  
+### <a name="e-join-predicates-in-a-subquery"></a>E. Predicati di join in una sottoquery  
   
 ```  
 SELECT * FROM RA INNER JOIN RB   
@@ -113,14 +111,14 @@ SELECT * FROM RA
         FROM (SELECT b1 FROM RB WHERE RB.b1 = RA.a1) X);  
 ```  
   
-### <a name="h-correlated-subqueries-in-the-data-values--used-with-aggregates"></a>H. Sottoquery correlate nei valori dei dati utilizzati con funzioni di aggregazione  
+### <a name="h-correlated-subqueries-in-the-data-values--used-with-aggregates"></a>H. Sottoquery correlate nei valori di dati usati con le aggregazioni  
   
 ```  
 SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;  
 ```  
   
-### <a name="i-using-in-with-a-correlated-subquery"></a>I. Utilizzo con una sottoquery correlata  
- Nell'esempio seguente viene utilizzata la parola chiave `IN` in una sottoquery correlata o ripetuta. È una query che dipende dalla query esterna. La query interna viene eseguita ripetutamente, una volta per ogni riga che può essere selezionata dalla query esterna. Questa query recupera un'istanza del `EmployeeKey` oltre a nome e cognome di ogni dipendente per il quale il `OrderQuantity` nel `FactResellerSales` tabella è `5` e per cui i numeri di identificazione del dipendente corrispondano nel `DimEmployee` e `FactResellerSales` tabelle.  
+### <a name="i-using-in-with-a-correlated-subquery"></a>I. Uso di IN con una sottoquery correlata  
+ Nell'esempio seguente viene utilizzata la parola chiave `IN` in una sottoquery correlata o ripetuta. È una query che dipende dalla query esterna. La query interna viene eseguita ripetutamente, una volta per ogni riga che può essere selezionata dalla query esterna. Questa query recupera un'istanza di `EmployeeKey`, nonché il nome e cognome di ogni dipendente per il quale `OrderQuantity` nella tabella `FactResellerSales` corrisponde a `5` e con numero di identificazione uguale nelle tabelle `DimEmployee` e `FactResellerSales`.  
   
 ```  
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   
@@ -132,8 +130,8 @@ WHERE 5 IN
 ORDER BY EmployeeKey;  
 ```  
   
-### <a name="j-using-exists-versus-in-with-a-subquery"></a>J. L'utilizzo di EXISTS e con una sottoquery  
- Nell'esempio seguente vengono illustrate query semanticamente equivalenti per illustrare la differenza tra l'utilizzo di `EXISTS` (parola chiave) e `IN` (parola chiave). Entrambi sono esempi di sottoquery che recupera un'istanza di ogni nome di prodotto per i quali è la sottocategoria di prodotto `Road Bikes`. `ProductSubcategoryKey`corrispondente tra il `DimProduct` e `DimProductSubcategory` tabelle.  
+### <a name="j-using-exists-versus-in-with-a-subquery"></a>J. Uso di EXISTS e IN con una sottoquery  
+ Nell'esempio seguente vengono illustrate query semanticamente equivalenti per evidenziare la differenza tra l'uso della parola chiave `EXISTS` e della parola chiave `IN`. Entrambe sono esempi di una sottoquery che recupera un'istanza di ogni nome di prodotto per il quale la sottocategoria di prodotto è `Road Bikes`. `ProductSubcategoryKey` corrisponde nelle tabelle `DimProduct` e `DimProductSubcategory`.  
   
 ```  
 SELECT DISTINCT EnglishProductName  
@@ -146,7 +144,7 @@ WHERE EXISTS
 ORDER BY EnglishProductName;  
 ```  
   
- Oppure  
+ e  
   
 ```  
 SELECT DISTINCT EnglishProductName  
@@ -158,7 +156,7 @@ WHERE dp.ProductSubcategoryKey IN
 ORDER BY EnglishProductName;  
 ```  
   
-### <a name="k-using-multiple-correlated-subqueries"></a>K. Utilizzo di più sottoquery correlate  
+### <a name="k-using-multiple-correlated-subqueries"></a>K. Uso di più sottoquery correlate  
  In questo esempio vengono utilizzate due sottoquery correlate per trovare i nomi dei dipendenti che hanno venduto un determinato prodotto.  
   
 ```  

@@ -1,30 +1,29 @@
 ---
 title: Metodo getURL (SQLServerDatabaseMetaData) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerDatabaseMetaData.getURL
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerDatabaseMetaData.getURL
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: fcb66851-db5f-4ae8-b728-d129480b6f42
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: cbc569dbd45ede9429b6299e2f37d7f7a5cb269c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 2a247a542516c9579a31be0e8a0ad8e3401f36e8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>Metodo getURL (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +50,7 @@ public java.lang.String getURL()
   
 -   Un valore URL di "jdbc:sqlserver://"  
   
--   Proprietà di connessione facoltative, ad esempio **serverName**, **instanceName**, e **NumeroPorta**  
+-   Proprietà di connessione facoltative, ad esempio **serverName**, **NomeIstanza**, e **NumeroPorta**  
   
 -   Altre proprietà di connessione impostate dall'utente e tutte le connessioni con il driver non vuoto o non null. i valori predefiniti ad eccezione di **userName**, **password**, e **integratedSecurity**.  
   

@@ -1,39 +1,24 @@
 ---
 title: Cella elemento (MDDataSet) (XMLA) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Cell Element (MDDataSet)
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- microsoft.xml.analysis.cell
-- http://schemas.microsoft.com/analysisservices/2003/engine#Cell
-- urn:schemas-microsoft-com:xml-analysis#Cell
-helpviewer_keywords: Cell element
-ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
-caps.latest.revision: "13"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d6c59b1833e211e43c9429e6bf4aeb265325d76d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1ba73a6ea5926de6f445c5ca5cec8142b3e196bd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576273"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Elemento Cell (MDDataSet) (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene informazioni su una sola cella contenuta in un elemento padre [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene informazioni su una sola cella contenuta in un elemento padre [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -69,7 +54,7 @@ ms.lasthandoff: 01/08/2018
 |---------------|-----------------|  
 |CellOrdinal|Richiesto **unsignedInt** attributo. La posizione ordinale della cella all'interno del dataset multidimensionale.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Nell'elemento padre **radice** elemento, il **assi** elemento è seguito dal **CellData** elemento, una raccolta di **cella** elementi contenenti i valori di proprietà per ogni cella restituita nel dataset multidimensionale. Il **cella** elemento contiene il **CellOrdinal** attributo, che indica la posizione ordinale in base zero della cella all'interno del dataset multidimensionale e di un elemento per ogni valore della proprietà cella associato alla cella. Valore di proprietà di ogni cella di **cella** è definita da un elemento XML separato. Il valore della proprietà della cella è i dati contenuti nell'elemento XML e il nome della proprietà della cella, come definito nel **CellInfo** elemento dell'elemento radice padre, corrisponde al nome dell'elemento XML.  
   
  Nella sintassi seguente viene descritto un valore della proprietà della cella:  
@@ -81,7 +66,7 @@ ms.lasthandoff: 01/08/2018
  Il tipo di dati del valore proprietà della cella viene specificato solo per la proprietà VALORE della cella. I tipi di dati di altre proprietà della cella sono determinati dalla definizione della proprietà di cella inclusa nel **CellInfo** elemento. Un elemento di valore di proprietà di cella può essere escluso se è stato specificato un valore predefinito (includendo un **predefinito** elemento per una definizione di proprietà di cella contenuta nel **CellInfo** elemento) per una proprietà di cella, o se non è stato specificato alcun valore predefinito e il valore della proprietà della cella è null.  
   
 ## <a name="cell-property-errors"></a>Errori proprietà cella  
- Se una proprietà della cella non può essere restituita un errore che si verifica nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], ad esempio un errore di calcolo che impedisce che il valore restituito per una cella specificata, un **errore** elemento sostituisce il contenuto della proprietà della cella in questione. Nell'esempio XML seguente è descritto un errore di proprietà della cella:  
+ Se una proprietà della cella non può essere restituita a causa di un errore che si verifica nell'istanza di Analysis Services, ad esempio un errore di calcolo che impedisce che il valore restituito per una cella specificata, un **errore** elemento sostituisce il contenuto del proprietà della cella in questione. Nell'esempio XML seguente è descritto un errore di proprietà della cella:  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -141,8 +126,8 @@ ms.lasthandoff: 01/08/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipo di dati MDDataSet &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Proprietà &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vedere anche
+ [Tipo di dati MDDataSet &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

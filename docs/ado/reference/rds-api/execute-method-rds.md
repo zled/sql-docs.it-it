@@ -1,31 +1,28 @@
 ---
 title: Eseguire il metodo (RDS) | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: be0dfb94d6681af706d75437143dcde28e63587d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c050ef685d6e3ef566d78307db2c10c2c01c23e7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-method-rds"></a>Eseguire il metodo (RDS)
 Esegue la richiesta e crea un recordset ADO per l'utilizzo in ADO 2.5 e versioni successive.  
@@ -41,7 +38,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *ConnectionString*  
+ *connectionString*  
  Stringa utilizzata per la connessione al provider OLE DB in cui verrà inviata la richiesta per l'esecuzione. Se viene specificato un gestore con *HandlerString* può modificare o sostituire la stringa di connessione.  
   
  *HandlerString*  

@@ -1,32 +1,34 @@
 ---
 title: Monitoraggio replica | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.rep.monitor.beta2.f1
-helpviewer_keywords: Replication Monitor, help
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.rep.monitor.beta2.f1
+helpviewer_keywords:
+- Replication Monitor, help
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
-caps.latest.revision: "26"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 26
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4875b39c775e1e62b81c325386833a3be7860b46
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ee498b770f9261a3f4fb7e90a8a37996ac8de6ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-monitor"></a>Monitoraggio replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa sezione della documentazione contiene informazioni su Monitoraggio replica. Le pagine e le finestre di dialogo visualizzate dipendono dal tipo di replica e dalla versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitorata.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questa sezione della documentazione vengono fornite informazioni su Monitoraggio replica. Le pagine e le finestre di dialogo visualizzate dipendono dal tipo di replica e dalla versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitorata.  
   
 -   [Monitoraggio replica, pagina principale](../../relational-databases/replication/replication-monitor-main-page.md)  
   

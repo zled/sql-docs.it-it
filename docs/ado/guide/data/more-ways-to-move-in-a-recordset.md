@@ -1,17 +1,15 @@
 ---
 title: Metodi di spostamento in un Recordset | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MoveNext method [ADO]
 - MoveLast method [ADO]
@@ -19,23 +17,22 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8fb1557723421cefa94a14de420d1f4619de65a7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 21c9c99d9e168d73a333fe001b56dcdf845339f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Metodi di spostamento in un Recordset
 I quattro metodi seguenti consentono di spostarsi all'interno o lo scorrimento, il **Recordset**: [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Alcuni di questi metodi sono disponibili sui cursori forward-only).  
   
- **MoveFirst** cambia la posizione corrente per il primo record di **Recordset**. **MoveLast** il record corrente posizionare all'ultima modifica il record nel **Recordset**. Per utilizzare **MoveFirst** o **MoveLast**, **Recordset** oggetto deve supportare lo spostamento del cursore con le versioni precedenti o i segnalibri; in caso contrario, la chiamata al metodo genererà un errore.  
+ **MoveFirst** cambia la posizione corrente per il primo record il **Recordset**. **MoveLast** modifica il record corrente all'ultima posizione il record nel **Recordset**. Per utilizzare **MoveFirst** o **MoveLast**, **Recordset** oggetto deve supportare lo spostamento del cursore con le versioni precedenti o i segnalibri; in caso contrario, la chiamata al metodo genererà un errore.  
   
- **MoveNext** sposta il record corrente posizionare un'unica posizione in avanti. Se si utilizza l'ultimo record quando si chiama **MoveNext**, **EOF** verrà impostato su **True**. **MovePrevious** si sposta un'unica posizione con le versioni precedenti di posizionare il record corrente. Se si utilizza il primo record quando si chiama **MovePrevious**, **BOF** verrà impostato su **True**. È consigliabile controllare il **EOF** e **BOF** proprietà quando si usano questi metodi e a spostare il cursore in un posizione valida del record corrente se si sposta da delle estremità del **Recordset**, come illustrato di seguito:  
+ **MoveNext** sposta il record corrente posizionare un'unica posizione in avanti. Se si utilizza l'ultimo record quando si chiama **MoveNext**, **EOF** verrà impostato su **True**. **MovePrevious** sposta il record corrente posizionare un'unica posizione con le versioni precedenti. Se si utilizza il primo record quando si chiama **MovePrevious**, **BOF** verrà impostato su **True**. È consigliabile controllare il **EOF** e **BOF** proprietà quando si usano questi metodi e a spostare il cursore in un posizione valida del record corrente se si sposta da delle estremità del **Recordset**, come illustrato di seguito:  
   
 ```  
 . . .  

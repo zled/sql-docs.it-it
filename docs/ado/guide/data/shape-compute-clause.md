@@ -1,32 +1,29 @@
 ---
 title: Forma clausola COMPUTE | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-compute-clause"></a>Clausola COMPUTE forma
 Una clausola COMPUTE forma genera un elemento padre **Recordset**, le cui colonne sono costituiti da un riferimento al figlio **Recordset**; facoltativo colonne il cui contenuto è capitolo, nuovo, o le colonne calcolate, o risultato dell'esecuzione di funzioni di aggregazione sull'elemento figlio **Recordset** o una forma precedentemente **Recordset**; e tutte le colonne dal figlio **Recordset** elencate parametro facoltativo nella clausola.  
@@ -45,7 +42,7 @@ SHAPE child-command [AS] child-alias
  *child-command*  
  È costituita da uno dei seguenti:  
   
--   Un comando di query all'interno delle parentesi graffe ("{") che restituisce un elemento figlio **Recordset** oggetto. Il comando viene immesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Ciò corrisponderà in genere il linguaggio SQL, anche se ADO non richieda qualsiasi linguaggio di query specifico.  
+-   Un comando di query all'interno di parentesi graffe ("{}") che restituisce un elemento figlio **Recordset** oggetto. Il comando viene immesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Ciò corrisponderà in genere il linguaggio SQL, anche se ADO non richieda qualsiasi linguaggio di query specifico.  
   
 -   Il nome di un oggetto esistente a forma di **Recordset**.  
   
@@ -54,7 +51,7 @@ SHAPE child-command [AS] child-alias
 -   La parola chiave nella tabella, seguita dal nome di una tabella nel provider di dati.  
   
  *child-alias*  
- Un alias utilizzato per fare riferimento al **Recordset** restituito dal *comando figlio.* Il *figlio alias* è obbligatoria nell'elenco di colonne nella clausola COMPUTE e definisce la relazione tra padre e figlio **Recordset** oggetti.  
+ Un alias usati per fare riferimento ai **Recordset** restituito dal *comando figlio.* Il *figlio alias* è obbligatoria nell'elenco di colonne nella clausola COMPUTE e definisce la relazione tra padre e figlio **Recordset** oggetti.  
   
  *appended-column-list*  
  Un elenco in cui ogni elemento definisce una colonna nell'elemento padre generato. Ogni elemento contiene una colonna a capitoli, una nuova colonna, una colonna calcolata o un valore risultante da una funzione di aggregazione sull'elemento figlio **Recordset**.  

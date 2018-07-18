@@ -1,28 +1,25 @@
 ---
 title: MSSQLSERVER_2579 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-helpviewer_keywords: 2579 (Database Engine error)
+helpviewer_keywords:
+- 2579 (Database Engine error)
 ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
-caps.latest.revision: "18"
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 18
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 59c0fff1d160a804e272468c41df6c153711c9b7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3a1e743e667887697be1048cd40477c7e382fef2
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver2579"></a>MSSQLSERVER_2579
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 |Testo del messaggio|Errore di tabella: l'extent ID_P nell'oggetto con ID ID_O, ID di indice ID_I, ID di partizione ID_PN, ID di unità di allocazione ID_A (tipo TIPO) è oltre l'intervallo consentito per questo database.|  
   
 ## <a name="explanation"></a>Spiegazione  
-*P_ID* è l'ID di pagina del form *(filenum:pageinfile)*. Il valore *pageinfile* di questo extent è maggiore della dimensione fisica del file (*filenum)*del database. L'extent è contrassegnato per l'allocazione in una pagina IAM con l'ID di unità di allocazione indicato.  
+*P_ID* è l'ID di pagina del form *(filenum:pageinfile)*. Il valore *pageinfile* di questo extent è maggiore della dimensione fisica del file (*filenum)* del database. L'extent è contrassegnato per l'allocazione in una pagina IAM con l'ID di unità di allocazione indicato.  
   
 ## <a name="user-action"></a>Azione dell'utente  
   

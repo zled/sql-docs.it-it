@@ -1,29 +1,27 @@
 ---
 title: Le impostazioni di configurazione (SQL Server Data Migration Assistant) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-dma
-ms.tgt_pltfrm: 
-ms.topic: article
-keywords: 
-helpviewer_keywords: Data Migration Assistant, Assess
-ms.assetid: 
-caps.latest.revision: 
+ms.technology: dma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+keywords: ''
+helpviewer_keywords:
+- Data Migration Assistant, Assess
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3dde0c93d09a8c273e74820428a617a24f7ee150
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b42f816755b312f95609bd25ac6122b8fbf321c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-settings-for-data-migration-assistant"></a>Impostazioni di configurazione per dati Migration Assistant
 
@@ -148,4 +146,4 @@ A partire dalla versione 2.0 Data Migration Assistant, è possibile controllare 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Download dei dati della migrazione guidata](https://www.microsoft.com/download/details.aspx?id=53595)
+[Download di Assistente per la migrazione dei dati](https://www.microsoft.com/download/details.aspx?id=53595)

@@ -1,28 +1,26 @@
 ---
 title: Costrutti Transact-SQL non supportati da OLTP in memoria | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: in-memory-oltp
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: 
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 572486311385af37057641e6f2371791bcfe70f8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 99ad6992ff407c74d30f8260267d3a5da01812b5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Costrutti Transact-SQL non supportati da OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +57,7 @@ ms.lasthandoff: 02/12/2018
 |----------|----------|----------------|  
 |Funzionalità|ON|Le tabelle con ottimizzazione per la memoria non possono essere posizionate in uno schema di partizione o filegroup. Rimuovere la clausola ON dall'istruzione **CREATE TABLE** .<br /><br /> Tutte le tabelle ottimizzate per la memoria vengono mappate al filegroup ottimizzato per la memoria.|  
 |Tipo di dati|*Nome del tipo di dati*|Il tipo di dati indicato non è supportato. Sostituirlo con un tipo di dati supportato. Per altre informazioni, vedere [Tipi di dati supportati](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Funzionalità|Colonne calcolate|**Si applica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Le colonne calcolate non sono supportate dalle tabelle ottimizzate per la memoria. Rimuovere le colonne calcolate dall'istruzione **CREATE TABLE** .<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] supportano le colonne calcolate nelle tabelle e negli indici ottimizzati per la memoria.|  
+|Funzionalità|Colonne calcolate|**Si applica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e a [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Le colonne calcolate non sono supportate dalle tabelle ottimizzate per la memoria. Rimuovere le colonne calcolate dall'istruzione **CREATE TABLE** .<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] supportano le colonne calcolate nelle tabelle e negli indici ottimizzati per la memoria.|  
 |Funzionalità|Replica|La replica non è supportata con le tabelle ottimizzate per la memoria.|  
 |Funzionalità|FILESTREAM|L'archiviazione FILESTREAM non è supportata dalle colonne delle tabelle ottimizzate per la memoria. Rimuovere la parola chiave **FILESTREAM** dalla definizione della colonna.|  
 |Funzionalità|SPARSE|Le colonne delle tabelle ottimizzate per la memoria non possono essere definite come SPARSE. Rimuovere la parola chiave **SPARSE** dalla definizione della colonna.|  
@@ -162,7 +160,7 @@ ms.lasthandoff: 02/12/2018
 |Hint per il join|HASH, MERGE|Nelle stored procedure compilate in modo nativo sono supportati solo i join a cicli annidati. I join merge e hash non sono supportati. Rimuovere l'hint per il join.|  
 |Hint per la query|*Hint per la query*|Questo hint per la query non è all'interno di stored procedure compilate in modo nativo. Per gli hint per la query supportati, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).|  
 |Opzione|PERCENT|Questa opzione non è supportata con le clausole **TOP** . Rimuovere **PERCENT** dalla query nella stored procedure compilata in modo nativo.|  
-|Opzione|WITH TIES|**Si applica a:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Questa opzione non è supportata con le clausole **TOP** . Rimuovere **WITH TIES** dalla query nella stored procedure compilata in modo nativo.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supportano **TOP WITH TIES**.|  
+|Opzione|WITH TIES|**Si applica a:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] e a [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Questa opzione non è supportata con le clausole **TOP** . Rimuovere **WITH TIES** dalla query nella stored procedure compilata in modo nativo.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supportano **TOP WITH TIES**.|  
 |Funzione di aggregazione|*Funzione di aggregazione*|Non tutte le funzioni di aggregazione sono supportate. Per altre informazioni sulle funzioni di aggregazione supportate nei moduli T-SQL compilati in modo nativo, vedere [Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
 |Funzione di rango|*Funzione di rango*|Le funzioni di rango non sono supportate nelle stored procedure compilate in modo nativo. Rimuoverle dalla definizione della procedura.|  
 |Funzione|*Funzione*|Questa funzione non è supportata. Per altre informazioni sulle funzioni supportate nei moduli T-SQL compilati in modo nativo, vedere [Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
@@ -177,7 +175,7 @@ ms.lasthandoff: 02/12/2018
 |Funzionalità|Dichiarazioni di variabili di tabelle inline.|Le variabili di tabella devono fare riferimento ai tipi di tabella ottimizzata per la memoria definiti in modo esplicito. È consigliabile creare un tipo di tabella ottimizzata per la memoria e usare tale tipo per la dichiarazione di variabili, anziché specificare il tipo inline.|  
 |Funzionalità|Tabelle basate su disco|Non è possibile accedere alle tabelle basate su dico dalle stored procedure compilate in modo nativo. Rimuovere i riferimenti alle tabelle basate su disco dalle stored procedure compilate in modo nativo. In alternativa, eseguire la migrazione delle tabelle basate su disco alle tabelle con ottimizzazione per la memoria.|  
 |Funzionalità|Viste|Non è possibile accedere alle viste dalle stored procedure compilate in modo nativo. Anziché alle viste, fare riferimento alle tabelle di base sottostanti.|  
-|Funzionalità|Funzioni con valori di tabella|**Si applica a**: [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Non è possibile accedere alle funzioni con valori di tabella con istruzioni multiple dai moduli T-SQL compilati in modo nativo. Le funzioni con valori di tabella inline sono supportate, ma devono essere create con la clausola WITH NATIVE_COMPILATION.<br/><br/>**Si applica a**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>Non è possibile fare riferimento alle funzioni con valori di tabella da moduli T-SQL compilati in modo nativo.|  
+|Funzionalità|Funzioni con valori di tabella|**Si applica a:**  [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Non è possibile accedere alle funzioni con valori di tabella con istruzioni multiple dai moduli T-SQL compilati in modo nativo. Le funzioni con valori di tabella inline sono supportate, ma devono essere create con la clausola WITH NATIVE_COMPILATION.<br/><br/>**Si applica a**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>Non è possibile fare riferimento alle funzioni con valori di tabella da moduli T-SQL compilati in modo nativo.|  
 |Opzione|PRINT|Rimuovere il riferimento.|  
 |Funzionalità|DDL|All'interno di moduli T-SQL compilati in modo nativo non sono supportate DLL.|  
 |Opzione|STATISTICS XML|Non supportato. Quando si esegue una query, con l'opzione STATISTICS XML abilitata, viene restituito il contenuto XML senza la parte per la stored procedure compilata in modo nativo.|  

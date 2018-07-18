@@ -1,27 +1,24 @@
 ---
 title: Funzione SQLAsyncNotificationCallback | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0a60a959b842c344631ed38ceba33f020e6b8800
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 3c785f8547730817c0b1723da38f7ee021aa4f00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback (funzione)
 **Conformità**  
@@ -30,7 +27,7 @@ ms.lasthandoff: 12/21/2017
  Conformità agli standard: nessuno  
   
  **Riepilogo**  
- **SQLAsyncNotificationCallback** consente al driver di richiamata a gestione Driver quando è presente un corso per l'operazione asincrona corrente dopo che il driver restituisce SQL_STILL_EXECUTING. **SQLAsyncNotificationCallback** può essere solo chiamato dal driver.  
+ **SQLAsyncNotificationCallback** consente al driver per la richiamata al Driver Manager quando si verifica alcuni lo stato di avanzamento dell'operazione asincrona corrente dopo che il driver restituisce SQL_STILL_EXECUTING. **SQLAsyncNotificationCallback** può essere solo chiamato dal driver.  
   
  I driver non chiamano **SQLAsyncNotificationCallback** con nome di funzione **SQLAsyncNotificationCallback**. Al contrario, gestione Driver passa un puntatore a funzione a un driver come il valore dell'attributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK o SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK per l'handle di connessione corrispondente o l'handle di istruzione, rispettivamente. È possibile assegnare gli handle di diversi valori del puntatore funzione diversa. Il tipo del puntatore a funzione è definito come SQL_ASYNC_NOTIFICATION_CALLBACK.  
   

@@ -1,42 +1,41 @@
 ---
 title: Impostazioni relative alle informazioni sul dispositivo PDF | Microsoft Docs
-ms.custom: 
-ms.date: 03/16/2017
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dccc67734b6cf54758ec14b326b171a6effef30b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0f0ec8d6bfe88182f84078aa8155afed9f149828
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pdf-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo PDF
   Nella tabella seguente sono elencate le impostazioni relative alle informazioni sul dispositivo per il rendering dei report nel formato PDF.  
   
 |Impostazione|valore|  
 |-------------|-----------|  
+| **AccessiblePDF** | Indica se eseguire il rendering di un file PDF accessibile/con tag, di dimensioni maggiori ma più semplice da leggere e scorrere per le utilità per la lettura dello schermo e altri strumenti di assistive technology. Il valore predefinito è **false**. [Disponibile in Server di report di Power BI (marzo 2018) e versioni successive] |
 |**Colonne**|Numero di colonne da impostare per il report. Questo valore ha la priorità sulle impostazioni originali del report.|  
 |**ColumnSpacing**|Spaziatura delle colonne da impostare per il report. Questo valore ha la priorità sulle impostazioni originali del report.|  
 |**DpiX**|Risoluzione del dispositivo di output nella direzione x.|  
 |**DpiY**|Risoluzione del dispositivo di output nella direzione y.|  
 |**EndPage**|Ultima pagina del report di cui eseguire il rendering. Il valore predefinito è il valore di **StartPage**.|  
-|**HumanReadablePDF**|Indica se il formato PDF deve essere compresso, per migliorare la leggibilità dell'origine. Il valore predefinito è **false**.|  
+|**HumanReadablePDF**|Indica se eseguire il rendering di un file PDF non compresso, di dimensioni maggiori ma più leggibile per gli utenti in un editor di testo normale. Il valore predefinito è **false**.|  
 |**MarginBottom**|Valore in pollici del margine inferiore da impostare per il report. È necessario includere un numero intero o un valore decimale seguito da "in", ad esempio 1in. Questo valore ha la priorità sulle impostazioni originali del report.|  
 |**MarginLeft**|Valore in pollici del margine sinistro da impostare per il report. È necessario includere un numero intero o un valore decimale seguito da "in", ad esempio 1in. Questo valore ha la priorità sulle impostazioni originali del report.|  
 |**MarginRight**|Valore in pollici del margine destro da impostare per il report. È necessario includere un numero intero o un valore decimale seguito da "in", ad esempio 1in. Questo valore ha la priorità sulle impostazioni originali del report.|  

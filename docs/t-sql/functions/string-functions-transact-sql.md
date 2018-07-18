@@ -1,16 +1,14 @@
 ---
-title: Funzioni (Transact-SQL) stringa | Documenti Microsoft
-ms.custom: 
+title: Funzioni per i valori stringa (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/15/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - string functions
 - strings [SQL Server]
 ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 7cf1c000411dd8971621447e1202fe7400b69560
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: caca208b0b7fc9750786d7321a37dab573298870
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions-transact-sql"></a>Funzioni per i valori stringa (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,9 +50,9 @@ ms.lasthandoff: 11/21/2017
 
 
   
- Funzioni di stringa incorporata tutti tranne `FORMAT` sono deterministiche. ovvero restituiscono sempre lo stesso valore ogni volta che vengono richiamate in base a un set di valori di input specifico. Per ulteriori informazioni sulle funzioni deterministiche, vedere [funzioni deterministiche e non](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Tutte le funzioni per i valori stringa predefinite sono deterministiche, ad eccezione di `FORMAT`. ovvero restituiscono sempre lo stesso valore ogni volta che vengono richiamate in base a un set di valori di input specifico. Per altre informazioni sul determinismo delle funzioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
- Quando le funzioni per i valori stringa vengono passate come argomenti che non sono valori stringa, il tipo di input viene convertito in modo implicito in un tipo di dati testo. Per ulteriori informazioni, vedere [conversione tipo di dati &#40; motore di Database &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+ Quando le funzioni per i valori stringa vengono passate come argomenti che non sono valori stringa, il tipo di input viene convertito in modo implicito in un tipo di dati testo. Per altre informazioni, vedere [Conversione del tipo di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  

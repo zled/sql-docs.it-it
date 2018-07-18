@@ -1,39 +1,40 @@
 ---
 title: Funzione SQLCopyDesc | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLCopyDesc
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLCopyDesc
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLCopyDesc
-helpviewer_keywords: SQLCopyDesc function [ODBC]
+f1_keywords:
+- SQLCopyDesc
+helpviewer_keywords:
+- SQLCopyDesc function [ODBC]
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d2df05d157c7079a3b5c1a8ef9286dd2c4c7a633
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 9b87ee611e74cc9adc0015ce0f9b6b0c15c3bc7a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc (funzione)
 **Conformità**  
  Introdotta: versione ODBC 3.0 aderenza: 92 ISO  
   
  **Riepilogo**  
- **SQLCopyDesc** copia informazioni sul descrittore da un descrittore handle a un altro.  
+ **SQLCopyDesc** copia le informazioni sul descrittore da handle di uno descrittore a altro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +50,7 @@ SQLRETURN SQLCopyDesc(
  [Input] Handle di descrittore di origine.  
   
  *TargetDescHandle*  
- [Input] Handle di descrittore di destinazione. Il *TargetDescHandle* argomento può essere un handle a un descrittore di applicazione o un IPD. *TargetDescHandle* non può essere impostata su un handle a un IRD, o **SQLCopyDesc** restituiranno SQLSTATE HY016 (non è possibile modificare un descrittore della riga di implementazione).  
+ [Input] Handle di descrittore di destinazione. Il *TargetDescHandle* argomento può essere un handle a un descrittore di applicazione o un IPD. *TargetDescHandle* non può essere impostata su un handle per un'implementazione, oppure **SQLCopyDesc** restituiranno SQLSTATE HY016 (non è possibile modificare un descrittore della riga di implementazione).  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -67,10 +68,10 @@ SQLRETURN SQLCopyDesc(
 |08S01|Errore del collegamento di comunicazione|Collegamento di comunicazione tra il driver e l'origine dati a cui era connesso il driver non è stato possibile prima dell'elaborazione della funzione è stata completata.|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY007|L'istruzione associata non è stato preparato|*SourceDescHandle* è stata associata a un IRD e l'handle di istruzione associata non è nello stato preparato o eseguito.|  
+|HY007|L'istruzione associata non è stato preparato|*SourceDescHandle* non associato a un IRD e l'handle di istruzione associata non è stato in stato preparato o eseguito.|  
 |HY010|Errore nella sequenza (funzione)|(DM) il descrittore di gestire *SourceDescHandle* o *TargetDescHandle* è stato associato un *StatementHandle* per il quale un'esecuzione asincrona (not (funzione) uno) è stato chiamato ed era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) il descrittore di gestire *SourceDescHandle* o *TargetDescHandle* è stato associato un *StatementHandle* per il quale **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** è stato chiamato e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima che sono stati inviati dati per tutti i parametri data-at-execution o colonne.<br /><br /> (DM) a cui è stata chiamata per l'handle di connessione associata a una funzione in modo asincrono in esecuzione il *SourceDescHandle* o *TargetDescHandle*. Questa funzione asincrona era ancora in esecuzione quando il **SQLCopyDesc** funzione è stata chiamata.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati il *SourceDescHandle* o *TargetDescHandle* e SQL_PARAM_DATA_AVAILABLE restituito. Questa funzione è stata chiamata prima che i dati sono stati recuperati per tutti i parametri con flusso.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché gli oggetti di memoria sottostante non è accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY016|Non è possibile modificare un descrittore della riga di implementazione|*TargetDescHandle* è stata associata a un IRD.|  
+|HY016|Non è possibile modificare un descrittore della riga di implementazione|*TargetDescHandle* non associato a un IRD.|  
 |HY021|Informazioni del descrittore incoerenti.|Le informazioni sul descrittore controllati durante una verifica coerenza non era coerente. Per ulteriori informazioni, vedere "Verifiche coerenza" nella **SQLSetDescField**.|  
 |HY092|Identificatore di attributo/opzione non valida|La chiamata a **SQLCopyDesc** richiesto una chiamata a **SQLSetDescField**, ma  *\*ValuePtr* non valido per il *FieldIdentifier* argomento *TargetDescHandle*.|  
 |HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettersi e sono consentite funzioni di sola lettura.|(DM) per ulteriori informazioni sullo stato sospeso, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  

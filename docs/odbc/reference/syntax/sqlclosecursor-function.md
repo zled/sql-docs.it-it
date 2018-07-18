@@ -1,32 +1,33 @@
 ---
 title: Funzione SQLCloseCursor | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLCloseCursor
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLCloseCursor
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLCloseCursor
-helpviewer_keywords: SQLCloseCursor function [ODBC]
+f1_keywords:
+- SQLCloseCursor
+helpviewer_keywords:
+- SQLCloseCursor function [ODBC]
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8c8e82312bda206d941bb08fe21fdcd27dbc0f56
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 57afef7eec7089f4769e0f5f7a72475c5028aca1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlclosecursor-function"></a>Funzione SQLCloseCursor
 **Conformità**  

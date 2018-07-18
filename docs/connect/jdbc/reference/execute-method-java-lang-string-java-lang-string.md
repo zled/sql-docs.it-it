@@ -1,30 +1,29 @@
 ---
 title: Metodo Execute (lang, lang) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerStatement.execute (java.lang.String.java.lang.String[])
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerStatement.execute (java.lang.String.java.lang.String[])
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9451c7c2-4c0d-4d1e-9b42-a26ff28e3f6a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3b2563671069c6dc90b3cd346c64cf624cae392c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: b4f566b1832ed88e933533f47b0b532fdc45bee1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-method-javalangstring-javalangstring"></a>Metodo Execute (lang, lang)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ public final boolean execute(java.lang.String sql,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *SQL*  
+ *sql*  
   
  Oggetto **stringa** che contiene un'istruzione SQL.  
   
@@ -58,7 +57,7 @@ public final boolean execute(java.lang.String sql,
  Questo metodo execute viene specificato dal metodo execute nell'interfaccia Java.SQL. Statement.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esegui metodo &#40; SQLServerStatement &#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
+ [eseguire il metodo &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
  [Membri di SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Classe SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

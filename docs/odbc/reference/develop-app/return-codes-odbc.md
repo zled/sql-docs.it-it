@@ -1,30 +1,27 @@
 ---
 title: Restituiscono codici di ODBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [ODBC]
 - diagnostic information [ODBC], return codes
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 9e5daaf1389631ac392fd487e99b28864b71efb8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 12751f87c9f9832567dc04ba7df7659e80e66897
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="return-codes-odbc"></a>Codici restituiti ODBC
 Ogni funzione ODBC restituisce un codice, noto come relativo *codice restituito,* che indica l'esito positivo o negativo della funzione complessivo. La logica del programma si basa generalmente sui codici restituiti.  
@@ -56,6 +53,6 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_SUCCESS_WITH_INFO|Funzione è stata completata correttamente, possibilmente con un errore non irreversibile (avviso). L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive.|  
 |SQL_ERROR|Funzione non riuscita. L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive. Il contenuto di tutti gli argomenti di output per la funzione è indefinito.|  
 |SQL_INVALID_HANDLE|Funzione non riuscita a causa di un handle di ambiente, connessione, istruzione o descrittore non valido. Ciò indica un errore di programmazione. Nessuna informazione aggiuntiva disponibile da **SQLGetDiagRec** o **SQLGetDiagField**. Questo codice viene restituito solo quando l'handle è un puntatore null o è di tipo non corretto, ad esempio quando un handle di istruzione viene passato un argomento che richiede un handle di connessione.|  
-|SQL_NO_DATA|Nessun altro dato era disponibile. L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive. Uno o più record di stato definito dal driver nella classe 02xxx possono essere restituiti. **Nota:** In ODBC 2. *x*, questo restituisce il codice è stato denominato SQL_NO_DATA_FOUND.|  
+|SQL_NO_DATA|Nessun altro dato era disponibile. L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive. Uno o più record di stato definito dal driver nella classe 02xxx possono essere restituiti. **Nota:** In ODBC 2. *x*, questo restituito il codice è stato denominato SQL_NO_DATA_FOUND.|  
 |SQL_NEED_DATA|Sono necessari più dati, ad esempio l'invio di dati del parametro in fase di esecuzione o sono necessarie informazioni di connessione aggiuntive. L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive, se presente.|  
 |SQL_STILL_EXECUTING|Una funzione che è stata avviata in modo asincrono è ancora in esecuzione. L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive, se presente.|

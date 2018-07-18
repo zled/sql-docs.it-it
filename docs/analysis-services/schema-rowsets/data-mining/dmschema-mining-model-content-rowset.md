@@ -1,41 +1,30 @@
 ---
 title: Set di righe DMSCHEMA_MINING_MODEL_CONTENT | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: DMSCHEMA_MINING_MODEL_CONTENT
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DMSCHEMA_MINING_MODEL_CONTENT rowset
-ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
-caps.latest.revision: "32"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1b1fec6efb8ec638c54226ffa9d2ef335beb19f0
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>Set di righe DMSCHEMA_MINING_MODEL_CONTENT
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Consente all'applicazione client di esplorare il contenuto di un modello di data mining. Per passare al contenuto del modello di data mining, le applicazioni client possono utilizzare le restrizioni speciali relative alle operazioni sull'albero descritte alla fine di questo argomento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Consente alle applicazioni client di esplorare il contenuto di un modello di data mining. Per passare al contenuto del modello di data mining, le applicazioni client possono utilizzare le restrizioni speciali relative alle operazioni sull'albero descritte alla fine di questo argomento.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DMSCHEMA_MINING_MODEL_CONTENT** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Length|Description|  
+|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**||Nome del catalogo. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] popola questa colonna con il nome del database di cui il modello è un membro.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**||Nome del catalogo. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Popola questa colonna con il nome del database di cui il modello è un membro.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**||Nome dello schema non qualificato. Questa colonna non è supportata da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; contiene sempre **VT_NULL**.|  
 |**MODEL_NAME**|**DBTYPE_WSTR**||Nome del modello al quale è associato il contenuto descritto da questa riga.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Nomi degli attributi che corrispondono a questo nodo.|  
@@ -62,20 +51,20 @@ ms.lasthandoff: 01/08/2018
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|Facoltativo.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facoltativo.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**ATTRIBUTE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**NODE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**NODE_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**NODE_TYPE**|**DBTYPE_I4**|Facoltativo.|  
-|**NODE_GUID**|**DBTYPE_WSTR**|Facoltativo.|  
-|**NODE_CAPTION**|**DBTYPE_WSTR**|Facoltativo.|  
-|**TREE_OPERATION**|**DBTYPE_UI4**|Facoltativo. Vedere di seguito per osservazioni aggiuntive.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**ATTRIBUTE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**NODE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**NODE_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**NODE_TYPE**|**DBTYPE_I4**|Facoltativa.|  
+|**NODE_GUID**|**DBTYPE_WSTR**|Facoltativa.|  
+|**NODE_CAPTION**|**DBTYPE_WSTR**|Facoltativa.|  
+|**TREE_OPERATION**|**DBTYPE_UI4**|Facoltativa. Vedere di seguito per osservazioni aggiuntive.|  
   
  La restrizione **TREE_OPERATION**, non si trova in qualsiasi colonna specifica del **DMSCHEMA_MINING_MODEL_CONTENT** set di righe; indica, invece, un operatore di albero. Il consumer può specificare un **NODE_UNIQUE_NAME** restrizione e l'operatore di albero (**PREDECESSORI**, **figli**, **elementi di pari livello**,  **PADRE**, **DISCENDENTI**, **SELF**) per ottenere il set di membri richiesto. Il **SELF** operatore include la riga per il nodo stesso nell'elenco di righe restituite. Nella tabella seguente vengono descritte le costanti che costituiscono la definizione di bitmap per il **TREE_OPERATION** restrizione. Possono essere combinati utilizzando l'operatore logico **o** operatore.  
   
-|Costante|valore|  
+|Costante|Value|  
 |--------------|-----------|  
 |**DMTREEOP_ANCESTORS**|**0x00000020**|  
 |**DMTREEOP_CHILDREN**|**0x00000001**|  
@@ -85,6 +74,6 @@ ms.lasthandoff: 01/08/2018
 |**DMTREEOP_DESCENDANTS**|**0x00000010**|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di righe dello schema di data mining](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Set di righe dello Schema di Data Mining](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

@@ -1,28 +1,25 @@
 ---
 title: Ottimizzazione del database tramite un carico di lavoro dell'archivio query | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: performance
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Database Engine Tuning Advisor, Query Store
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Database Engine Tuning Advisor, Query Store
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d43a90f7c4bebef8bb9753dd02b29b46a2f30b8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a68d9193aef2fdfceba9b2d7e68995de4c97ab3d
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Ottimizzazione del database tramite un carico di lavoro dell'archivio query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ Nella GUI di DTA selezionare il pulsante di opzione **Archivio query** nel riqua
 Dalla riga di comando (dta.exe) scegliere l'opzione **-iq** per selezionare il carico di lavoro dall'archivio query. 
 
 Tramite la riga di comando sono disponibili altre due opzioni che consentono di regolare il comportamento di DTA quando si seleziona il carico di lavoro dall'archivio query. Queste opzioni non disponibili tramite la GUI:
-  1. Numero di eventi del carico di lavoro da ottimizzare: questa opzione, specificata usando l'argomento della riga di comando **-n**, consente all'utente di controllare il numero di eventi di Query Store che devono essere ottimizzati. Per impostazione predefinita, DTA usa il valore 1000 per questa opzione. Si noti che DTA sceglie sempre gli eventi con costo più elevato in termini di durata totale. 
+  1. Numero di eventi del carico di lavoro da ottimizzare: questa opzione, specificata usando l'argomento della riga di comando **-n**, consente all'utente di controllare il numero di eventi da Archivio query ottimizzati. Per impostazione predefinita, DTA usa il valore 1000 per questa opzione. Si noti che DTA sceglie sempre gli eventi con costo più elevato in termini di durata totale. 
   
   2. Intervalli di tempo degli eventi da ottimizzare: poiché l'archivio query può contenere query eseguite molto tempo fa, questa opzione consente all'utente di specificare un intervallo di tempo precedente (in ore) in cui una query deve essere stata eseguita per essere considerata da DTA per l'ottimizzazione. Questa opzione si specifica usando l'argomento della riga di comando **-I**. 
 

@@ -1,24 +1,17 @@
 ---
 title: Punteggio nativa | Documenti Microsoft
-ms.custom: 
-ms.date: 09/19/2017
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: e08cb48335f956298c387e2a621a8e8de7a91a98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="native-scoring"></a>Assegnazione dei punteggi nativo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +49,7 @@ Per supportare il punteggio veloce, servizi di SQL Server Machine Learning (e i 
 
 Per tutti i metodi di valutazione, è necessario utilizzare un modello che è stato eseguito il training utilizzando uno degli algoritmi supportati RevoScaleR o MicrosoftML.
 
-Per un esempio di in tempo reale di punteggio in azione, vedere [End-to End prestito ChargeOff stima compilato utilizzando Azure HDInsight Spark cluster e il servizio SQL Server 2016 R](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
+Per un esempio di assegnazione dei punteggi nell'azione in tempo reale, vedere [End-to End prestito ChargeOff stima compilato utilizzando Azure HDInsight Spark cluster e il servizio SQL Server 2016 R](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 ## <a name="how-native-scoring-works"></a>Funzionamento del punteggio nativo
 
@@ -92,14 +85,14 @@ Piattaforme supportate sono i seguenti:
 + SQL Server 2016
 
    In tempo reale di punteggio usando sp_rxPredict è possibile con SQL Server 2016 e può anche essere eseguito su Microsoft R Server. Questa opzione richiede SQLCLR deve essere abilitata e che si installa l'aggiornamento di Microsoft R Server.
-   Per ulteriori informazioni, vedere [assegnazione dei punteggi in tempo reale](Real-time-scoring.md)
+   Per altre informazioni, vedere [assegnazione dei punteggi in tempo reale](Real-time-scoring.md)
 
 ### <a name="model-preparation"></a>Preparazione del modello
 
 + Training del modello deve essere eseguito in precedenza tramite uno dei supportati **rx** algoritmi. Per informazioni dettagliate, vedere [supportati gli algoritmi](#bkmk_native_supported_algos).
 + È necessario salvare il modello utilizzando la nuova funzione di serializzazione disponibile in Microsoft R Server 9.1.0. La funzione di serializzazione è ottimizzata per supportare il punteggio veloce.
 
-### <a name="bkmk_native_supported_algos"></a>Algoritmi che supportano il punteggio nativo
+### <a name="bkmk_native_supported_algos"></a> Algoritmi che supportano l'assegnazione dei punteggi native
 
 + Modelli RevoScaleR
 

@@ -1,32 +1,20 @@
 ---
 title: (Commento) (MDX) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: //
-dev_langs: kbMDX
-helpviewer_keywords:
-- commenting characters
-- // (comment)
-ms.assetid: 9a3ee822-4689-41a8-9997-8b307850cd68
-caps.latest.revision: "37"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 35d02bc4e809048f80b90c2b11f0cf278c2f0c71
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7d6e981e279d8ab9fc9239ed7be56528d2f2018b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577413"
 ---
 # <a name="comment-mdx-double-slash"></a>Doppia barra di commento MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +32,7 @@ ms.lasthandoff: 01/08/2018
  *Comment_Text*  
  Stringa contenente il testo del commento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I commenti possono essere inseriti su una riga distinta oppure nidificati alla fine di una riga di script MDX (Multidimensional Expressions) o in un'istruzione MDX. Nel server il commento non viene valutato.  
   
  Per commenti su una sola riga, utilizzare //. I commenti inseriti con // sono delimitati dal carattere di nuova riga.  
@@ -69,7 +57,7 @@ WHERE
   
 ## <a name="see-also"></a>Vedere anche  
  [Commento &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [-&#40; Commento &#41; &#40; MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
- [Riferimento agli operatori MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

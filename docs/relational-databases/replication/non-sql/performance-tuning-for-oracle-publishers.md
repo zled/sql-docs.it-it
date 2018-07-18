@@ -1,31 +1,32 @@
 ---
 title: Ottimizzazione delle prestazioni per i server di pubblicazione Oracle | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Oracle publishing [SQL Server replication], performance tuning
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], performance tuning
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
-caps.latest.revision: "34"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 34
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 48afc3f5b4123b4a08b4be4ffe248a01dbd10461
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0c2aed39db447588ec446f3f6cd54e118fe7d044
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Ottimizzazione delle prestazioni per i server di pubblicazione Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'architettura di pubblicazione Oracle è simile all'architettura di pubblicazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pertanto per ottimizzare le prestazioni della replica è necessario innanzitutto seguire le indicazioni generali disponibili in [Migliorare le prestazioni generali della replica](../../../relational-databases/replication/administration/enhance-general-replication-performance.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L'architettura di pubblicazione Oracle è simile all'architettura di pubblicazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , pertanto per ottimizzare le prestazioni della replica è necessario innanzitutto seguire le indicazioni generali disponibili in [Enhance General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md).  
   
  Sono inoltre disponibili due opzioni per i server di pubblicazione Oracle relative alle prestazioni:  
   

@@ -1,25 +1,22 @@
 ---
 title: Sviluppare e distribuire SQL Server di database per Linux | Documenti Microsoft
-description: 
-author: erickangMSFT
-ms.author: erickang
-manager: jroth
+description: ''
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.workload: On Demand
-ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: efc03030c4d0c329fa7736e3622c621f684eecb3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utilizzare Visual Studio per creare database per SQL Server in Linux
 
@@ -113,10 +110,10 @@ Creare un nuovo database nell'istanza di SQL Server in Linux e appreso le nozion
 
 Se si ha familiarità con T-SQL, vedere [esercitazione: scrittura di istruzioni Transact-SQL] e [riferimento a Transact-SQL (motore di Database)].
 
-Per ulteriori informazioni sullo sviluppo di un database con gli strumenti dati SQL, vedere [documenti MSDN di SSDT]
+Per ulteriori informazioni sullo sviluppo di un database con gli strumenti dati SQL, vedere [Documenti di MSDN di SSDT]
 
-[scaricare e installare Visual Studio]:https://www.visualstudio.com/downloads/
+[Scaricare e installare Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
-[documenti MSDN di SSDT]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
-[esercitazione: scrittura di istruzioni Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
-[riferimento a Transact-SQL (motore di Database)]:https://msdn.microsoft.com/library/bb510741.aspx
+[Documenti di MSDN di SSDT]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
+[Esercitazione: Scrittura di istruzioni Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
+[Riferimento a Transact-SQL (motore di Database)]:https://msdn.microsoft.com/library/bb510741.aspx

@@ -1,16 +1,14 @@
 ---
-title: ALTER ASYMMETRIC KEY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ASYMMETRIC_KEY_TSQL
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - ALTER ASYMMETRIC KEY statement
 - asymmetric keys [SQL Server], modifying
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 13acb5d893188d08d8855d755c89cf9672eee066
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f746dd302ef4ce303225f6fe822173a6f6b37b86
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,27 +68,27 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  Modifica la protezione della chiave privata.  
   
  ENCRYPTION BY PASSWORD **='***stongPassword***'**  
- Specifica una nuova password per proteggere la chiave privata. *password* deve soddisfare i requisiti dei criteri password Windows del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se questa opzione viene omessa, la chiave privata verrà crittografata con la chiave master del database.  
+ Specifica una nuova password per proteggere la chiave privata. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se questa opzione viene omessa, la chiave privata verrà crittografata con la chiave master del database.  
   
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  Specifica la vecchia password, attualmente utilizzata per proteggere la chiave privata. Questo parametro non è richiesto se la chiave privata è crittografata con la chiave master del database.  
   
-## <a name="remarks"></a>Osservazioni  
- Se non è presente una chiave master del database, l'opzione ENCRYPTION BY PASSWORD è obbligatoria e l'operazione avrà esito negativo se non si specifica una password. Per informazioni su come creare una chiave master del database, vedere [CREATE MASTER KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-master-key-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Se non è presente una chiave master del database, l'opzione ENCRYPTION BY PASSWORD è obbligatoria e l'operazione avrà esito negativo se non si specifica una password. Per altre informazioni su come creare una chiave master del database, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
   
  È possibile utilizzare ALTER ASYMMETRIC KEY per modificare la protezione della chiave privata specificando le opzioni PRIVATE KEY come illustrato nella tabella seguente.  
   
 |Modifica della protezione|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|Sostituzione della vecchia password con una nuova password|Obbligatorio|Required|  
-|Sostituzione della password con la chiave master|Omettere|Required|  
-|Sostituzione della chiave master con una password|Required|Omettere|  
+|Sostituzione della vecchia password con una nuova password|Obbligatorio|Obbligatorio|  
+|Sostituzione della password con la chiave master|Omettere|Obbligatorio|  
+|Sostituzione della chiave master con una password|Obbligatorio|Omettere|  
   
- È necessario aprire la chiave master del database prima di poterla utilizzare per proteggere una chiave privata. Per ulteriori informazioni, vedere [OPEN MASTER KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/open-master-key-transact-sql.md).  
+ È necessario aprire la chiave master del database prima di poterla utilizzare per proteggere una chiave privata. Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md).  
   
- Per modificare il proprietario di una chiave asimmetrica, utilizzare [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Per modificare il proprietario di una chiave asimmetrica, usare [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la chiave asimmetrica se si rimuove la chiave privata.  
   
 ## <a name="examples"></a>Esempi  
@@ -131,7 +128,7 @@ GO
  [Chiavi di crittografia del database e di SQL Server &#40;Motore di database&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [Aprire la chiave MASTER &#40; Transact-SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
  [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

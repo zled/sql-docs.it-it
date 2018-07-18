@@ -1,30 +1,27 @@
 ---
 title: Oggetto Field | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7d537c963fa1e93c07289380f8eed682768961b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 872bb5e1ccede336f85b7bbcbdc7e91c89dd1688
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-field-object"></a>Oggetto Field
 Ogni **campo** oggetto è in genere corrisponde a una colonna in una tabella di database. Tuttavia, un **campo** può anche rappresentare un puntatore a un altro **Recordset**, denominato capitolo. Eccezioni, ad esempio le colonne a capitoli, verranno trattate più avanti in questa Guida.  
@@ -70,7 +67,7 @@ Ogni **campo** oggetto è in genere corrisponde a una colonna in una tabella di 
  Per modificare i dati in un campo, impostare il **valore** proprietà è uguale a un nuovo valore del tipo corretto. Il tipo di cursore deve supportare gli aggiornamenti per modificare il contenuto di un campo. La convalida del database non viene eseguita di seguito in modalità batch, pertanto è necessario controllare gli errori quando si chiama **UpdateBatch** in questo caso. Alcuni provider supportano inoltre ADO **campo** dell'oggetto **UnderlyingValue** e **OriginalValue** proprietà per agevolare la risoluzione dei conflitti quando si tenta di eseguire gli aggiornamenti batch. Per informazioni dettagliate su come risolvere tali conflitti, vedere [modifica dei dati](../../../ado/guide/data/editing-data.md).  
   
 > [!NOTE]
->  **Recordset Field** non è possibile impostare i valori quando si Accoda nuova **campi** per un **Recordset**. Piuttosto, nuova **campi** può essere aggiunto a un oggetto chiuso **Recordset**. Il **Recordset** deve essere aperto e quindi solo possibile assegnare valori a questi **campi**.  
+>  **Recordset Field** i valori non possono essere impostati quando si accoda nuove **campi** a un **Recordset**. Piuttosto, nuova **campi** può essere aggiunto a un oggetto chiuso **Recordset**. Il **Recordset** deve essere aperto e quindi solo possibile assegnare valori a questi **campi**.  
   
 ### <a name="getting-more-field-information"></a>Recupero di informazioni di campo  
  Gli oggetti ADO hanno due tipi di proprietà: incorporato e dinamici. A questo punto, solo le proprietà predefinite del **campo** oggetto sono state illustrate.  
@@ -87,7 +84,7 @@ Ogni **campo** oggetto è in genere corrisponde a una colonna in una tabella di 
   
 -   Il **tipo** proprietà è un numero intero che specifica il tipo di dati di proprietà.  
   
--   Il **valore** proprietà è una variabile variant contenente l'impostazione della proprietà. **Valore** la proprietà predefinita per un **proprietà** oggetto.  
+-   Il **valore** proprietà è una variabile variant contenente l'impostazione della proprietà. **Valore** è la proprietà predefinita per un **proprietà** oggetto.  
   
 -   Il **attributi** proprietà è un **lungo** valore che indica le caratteristiche della proprietà specifiche del provider.  
   

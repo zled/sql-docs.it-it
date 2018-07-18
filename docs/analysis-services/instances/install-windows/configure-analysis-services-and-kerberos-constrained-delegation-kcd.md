@@ -1,31 +1,23 @@
 ---
 title: Configurare Analysis Services la delega vincolata Kerberos (KCD) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: be9fde53d440ff82a34fafce3230cdfbf85f2897
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Configurare Analysis Services per la delega vincolata Kerberos
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-La delega vincolata Kerberos è un protocollo di autenticazione che è possibile configurare con l'autenticazione di Windows per delegare le credenziali client da servizio a servizio in tutto l'ambiente. La delega vincolata Kerberos richiede un'infrastruttura aggiuntiva, ad esempio un controller di dominio, e un'ulteriore configurazione dell'ambiente. La delega vincolata Kerberos è un requisito in alcuni scenari che coinvolgono dati di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in SharePoint 2016. In SharePoint 2016 Excel Services si trova all'esterno della farm di SharePoint, in un nuovo server separato, **Office Online Server**. Visto che Office Online Server è un server separato, è ancora più importante trovare una soluzione per delegare le credenziali client negli scenari tipici a due hop.  
+  La delega vincolata Kerberos è un protocollo di autenticazione che è possibile configurare con l'autenticazione di Windows per delegare le credenziali client da servizio a servizio in tutto l'ambiente. La delega vincolata Kerberos richiede un'infrastruttura aggiuntiva, ad esempio un controller di dominio, e un'ulteriore configurazione dell'ambiente. La delega vincolata Kerberos è un requisito in alcuni scenari che coinvolgono dati di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in SharePoint 2016. In SharePoint 2016 Excel Services si trova all'esterno della farm di SharePoint, in un nuovo server separato, **Office Online Server**. Visto che Office Online Server è un server separato, è ancora più importante trovare una soluzione per delegare le credenziali client negli scenari tipici a due hop.  
   
 ## <a name="overview"></a>Panoramica  
  La delega vincolata Kerberos consente a un account di rappresentare un altro account allo scopo di fornire accesso alle risorse. L'account rappresentante sarebbe un account di servizio assegnato a un'applicazione Web o l'account computer di un server Web, mentre l'account che viene rappresentato sarebbe un account utente che richiede l'accesso alle risorse. La delega vincolata Kerberos opera a livello di servizio, affinché l'account rappresentante possa consentire l'accesso a determinati servizi in un server, negandolo ad altri servizi nello stesso server o in altri server.  

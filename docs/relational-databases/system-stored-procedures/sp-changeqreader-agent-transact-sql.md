@@ -1,32 +1,33 @@
 ---
 title: sp_changeqreader_agent (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_changeqreader_agent_TSQL
 - sp_changeqreader_agent
-helpviewer_keywords: sp_changeqreader_agent
+helpviewer_keywords:
+- sp_changeqreader_agent
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0ce63f317910d84aae14f2457f383bce7ba291c1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 033d33a282c7359895aba95c0e8f9d4d03e02c90
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +46,17 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_login** =] **'***job_login***'**  
- Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente. *job_login* è **nvarchar (257)**, con un valore predefinito è NULL.  
+ [ **@job_login**=] **'***job_login***'**  
+ Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente. *job_login* viene **nvarchar(257)**, con un valore predefinito è NULL.  
   
- [  **@job_password** =] **'***job_password***'**  
- Password dell'account di Windows utilizzato per l'esecuzione dell'agente. *job_password* è **sysname**, con un valore predefinito è NULL.  
+ [ **@job_password**=] **'***job_password***'**  
+ Password dell'account di Windows utilizzato per l'esecuzione dell'agente. *job_password* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@frompublisher=** ] *frompublisher*  
- Specifica se la procedura viene eseguita nel server di pubblicazione. *frompublisher* è di tipo bit e un valore predefinito di **0**. Il valore **1** significa che la procedura viene eseguita dal server di pubblicazione nel database di pubblicazione.  
+ Specifica se la procedura viene eseguita nel server di pubblicazione. *frompublisher* è di tipo bit e il valore predefinito è **0**. Il valore **1** significa che la procedura viene eseguita dal server di pubblicazione nel database di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_changeqreader_agent** viene utilizzata nella replica transazionale.  
@@ -64,7 +65,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
   
  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_changeqreader_agent**.  
   
 ## <a name="see-also"></a>Vedere anche  

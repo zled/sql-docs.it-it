@@ -1,16 +1,14 @@
 ---
-title: SUSER_SNAME (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SUSER_SNAME (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SUSER_SNAME_TSQL
@@ -28,16 +26,16 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - names [SQL Server], logins
 ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 177c7802c3a9c7ca7fadbb279c0be35fd57af820
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 33b01f5a066fcc985cecf8dea7ca8ecc58d4a353
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,14 +52,14 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="arguments"></a>Argomenti  
  *server_user_sid*  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Numero identificativo di sicurezza facoltativo dell'account di accesso. *server_user_sid* è **varbinary (85)**. *server_user_sid* può essere l'ID di protezione di qualsiasi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o [!INCLUDE[msCoName](../../includes/msconame-md.md)] utente o gruppo Windows. Se *server_user_sid* viene omesso, vengono restituite informazioni sull'utente corrente. Se nel parametro è inclusa la parola NULL, verrà restituito NULL.  
+ Numero identificativo di sicurezza facoltativo dell'account di accesso. *server_user_sid* è di tipo **varbinary(85)**. *server_user_sid* può essere l'ID di sicurezza (SID) di qualsiasi account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o di qualsiasi utente o gruppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Se non si specifica *server_user_sid*, vengono restituite informazioni sull'utente corrente. Se nel parametro è inclusa la parola NULL, verrà restituito NULL.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La funzione SUSER_SNAME può essere utilizzata come vincolo DEFAULT nell'istruzione ALTER TABLE o CREATE TABLE. È possibile utilizzare SUSER_SNAME nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. SUSER_SNAME deve essere sempre seguita da una coppia di parentesi, anche se non si specifica alcun parametro.  
   
  Se chiamata senza argomenti, la funzione SUSER_SNAME restituisce il nome del contesto di sicurezza corrente. Se chiamata senza argomenti all'interno di un batch che ha cambiato contesto tramite EXECUTE AS, la funzione SUSER_SNAME restituisce il nome del contesto rappresentato. Se chiamata da un contesto rappresentato, ORIGINAL_LOGIN restituisce il nome del contesto originale.  
@@ -84,7 +82,7 @@ GO
 ### <a name="b-using-susersname-with-a-windows-user-security-id"></a>B. Utilizzo della funzione SUSER_SNAME con l'ID di sicurezza di un utente di Windows  
  Nell'esempio seguente viene restituito il nome dell'account di accesso associato a un ID di sicurezza di Windows.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
@@ -111,7 +109,7 @@ GO
 ### <a name="d-calling-susersname-in-combination-with-execute-as"></a>D. Chiamata della funzione SUSER_SNAME in combinazione con EXECUTE AS  
  In questo esempio viene illustrato il funzionamento della funzione SUSER_SNAME quando viene chiamata da un contesto rappresentato.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SNAME();  
@@ -133,7 +131,7 @@ WanidaBenShoof
 sa
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-susersname"></a>E. Utilizzo di SUSER_SNAME  
  Nell'esempio seguente viene restituito il nome dell'account di accesso corrispondente all'ID di sicurezza `0x01`.  
@@ -143,8 +141,8 @@ SELECT SUSER_SNAME(0x01);
 GO  
 ```  
   
-### <a name="f-returning-the-current-login"></a>F. Restituisce l'account di accesso corrente  
- Nell'esempio seguente restituisce il nome di account di accesso dell'account di accesso corrente.  
+### <a name="f-returning-the-current-login"></a>F. Restituzione dell'account di accesso corrente  
+ L'esempio seguente restituisce il nome dell'account di accesso corrente.  
   
 ```  
 SELECT SUSER_SNAME() AS CurrentLogin;  
@@ -152,10 +150,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SUSER_SID &#40; Transact-SQL &#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
+ [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [ESEGUIRE AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)  
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   
 

@@ -1,16 +1,14 @@
 ---
-title: STPointN (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: STPointN (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STPointN_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - STPointN method
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 26a3974bfb122bcd44de25ba1a82cae6caba7e9b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 784c8827315356a78d4c725224e1ac8c1cd3cabc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il punto specificato in un **geography** istanza.  
+  Restituisce il punto specificato in un'istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,22 +41,22 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È un **int** espressione compreso tra 1 e il numero di punti di **geography** istanza.  
+ *expression*  
+ Espressione **int** compresa tra 1 e il numero di punti nell'istanza **geography**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
- Aprire tipo Geospatial Consortium (OGC): **punto**  
+ Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Osservazioni  
- Se un **geography** istanza è creata dall'utente, STPointN() restituisce il punto specificato da *espressione* ordinando i punti nell'ordine in cui sono stati originalmente immessi.  
+## <a name="remarks"></a>Remarks  
+ Se un'istanza **geography** è creata dall'utente, restituisce il punto specificato da *expression* ordinando i punti con l'ordine di immissione originale.  
   
- Se un **geography** istanza viene costruita dal sistema, STPointN() restituisce il punto specificato da *espressione* ordinando tutti i punti nello stesso ordine sarebbero output: innanzitutto in base  **Geography** istanza, quindi in base all'anello all'interno dell'istanza (se appropriato), quindi dal punto all'interno dell'anello. Questo ordine è deterministico.  
+ Se un'istanza **geography** è costruita dal sistema, STPointN() restituisce il punto specificato da *expression* ordinando tutti i punti nello stesso ordine di restituzione, ovvero in primo luogo in base all'istanza **geography**, quindi in base all'anello all'interno dell'istanza (se appropriato), infine in base ai punti all'interno dell'anello. Questo ordine è deterministico.  
   
- Se questo metodo viene chiamato con un valore minore di 1, viene generata una **ArgumentOutOfRangeException**.  
+ Se questo metodo viene chiamato con un valore minore di 1, genera un'eccezione **ArgumentOutOfRangeException**.  
   
  Se questo metodo viene chiamato con un valore maggiore del numero di punti nell'istanza, restituisce Null.  
   

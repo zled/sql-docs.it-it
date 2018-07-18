@@ -1,16 +1,14 @@
 ---
-title: CREARE la chiave SIMMETRICA (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE SYMMETRIC KEY
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 - symmetric keys [SQL Server]
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f5604a0c32049d274610a600ebf1a2174c40d088
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: 0762a4dfb78edcad361cb8d51dd2c61579ccfef9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,13 +74,13 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>Argomenti  
  *Key_name*  
- Specifica il nome univoco con il quale la chiave simmetrica è nota all'interno del database. I nomi delle chiavi temporanee devono iniziare con un simbolo di cancelletto (#), Ad esempio, **#temporaryKey900007**. Non è possibile creare una chiave simmetrica con un nome che inizia con più di un simbolo di cancelletto (#). Non è possibile creare una chiave simmetrica temporanea utilizzando un provider EKM.  
+ Specifica il nome univoco con il quale la chiave simmetrica è nota all'interno del database. I nomi delle chiavi temporanee devono iniziare con un simbolo di cancelletto (#), ad esempio **#temporaryKey900007**. Non è possibile creare una chiave simmetrica con un nome che inizia con più di un simbolo di cancelletto (#). Non è possibile creare una chiave simmetrica temporanea utilizzando un provider EKM.  
   
- AUTORIZZAZIONE *owner_name*  
+ AUTHORIZATION *owner_name*  
  Specifica il nome dell'utente di database o del ruolo applicazione che sarà il proprietario della chiave.  
   
- DAL PROVIDER *provider_name*  
- Specifica un nome e un provider EKM. La chiave non viene esportata dal dispositivo EKM. È necessario innanzitutto definire il provider utilizzando l'istruzione CREATE PROVIDER. Per ulteriori informazioni sulla creazione di provider di chiavi esterne, vedere [Extensible Key Management &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ FROM PROVIDER *provider_name*  
+ Specifica un nome e un provider EKM. La chiave non viene esportata dal dispositivo EKM. È necessario innanzitutto definire il provider utilizzando l'istruzione CREATE PROVIDER. Per altre informazioni sulla creazione di provider di chiavi esterne, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
@@ -94,53 +91,53 @@ CREATE SYMMETRIC KEY key_name
  IDENTITY_VALUE **='***identity_phrase***'**  
  Specifica una frase identificativa da cui generare un GUID per contrassegnare i dati crittografati con una chiave temporanea.  
   
- PROVIDER_KEY_NAME**='***key_name_in_provider***'**  
+ PROVIDER_KEY_NAME **='***key_name_in_provider***'**  
  Specifica il nome a cui viene fatto riferimento nel provider EKM.  
   
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
+ CREATION_DISPOSITION **=** CREATE_NEW  
  Crea una nuova chiave nel dispositivo EKM.  Se nel dispositivo esiste già una chiave, l'istruzione genererà un errore.  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
+ CREATION_DISPOSITION **=** OPEN_EXISTING  
  Definisce il mapping di una chiave simmetrica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una chiave EKM esistente. Se non si specifica CREATION_DISPOSITION = OPEN_EXISTING, l'impostazione predefinita sarà CREATE_NEW.  
   
- *nome_certificato*  
+ *certificate_name*  
  Specifica il nome del certificato che verrà utilizzato per crittografare la chiave simmetrica. Il certificato deve esistere nel database corrente.  
   
  **'** *password* **'**  
- Specifica una password dalla quale derivare una chiave TRIPLE_DES con cui proteggere la chiave simmetrica. *password* deve soddisfare i requisiti dei criteri password Windows del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilizzare sempre password complesse.  
+ Specifica una password dalla quale derivare una chiave TRIPLE_DES con cui proteggere la chiave simmetrica. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare sempre password complesse.  
   
  *symmetric_key_name*  
- Specifica una chiave simmetrica utilizzata per crittografare la chiave che viene creata. La chiave specificata deve esistere nel database ed essere aperta.  
+ Specifica una chiave simmetrica usata per crittografare la chiave creata. La chiave specificata deve esistere nel database ed essere aperta.  
   
  *asym_key_name*  
- Specifica una chiave asimmetrica utilizzata per crittografare la chiave che viene creata. Tale chiave asimmetrica deve esistere nel database.  
+ Specifica una chiave asimmetrica usata per crittografare la chiave creata. Tale chiave asimmetrica deve esistere nel database.  
   
- \<algoritmo >  
-Specificare l'algoritmo di crittografia.   
+ \<algorithm>  
+Specifica l'algoritmo di crittografia.   
 > [!WARNING]  
-> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tutti gli algoritmi diversi da AES_128, AES_192 e AES_256 sono deprecati. Per usare algoritmi meno recenti (sconsigliato), è necessario impostare il livello di compatibilità del database per database 120 o inferiore.  
+> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tutti gli algoritmi diversi da AES_128, AES_192 e AES_256 sono deprecati. Per usare algoritmi meno recenti (sconsigliato), è necessario impostare il database sul livello di compatibilità del database 120 o su un livello inferiore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando si crea una chiave simmetrica è necessario crittografarla con almeno uno degli elementi seguenti: certificato, password, chiave simmetrica, chiave asimmetrica o PROVIDER. Una chiave può essere crittografata con più elementi di ogni tipo, ovvero una singola chiave simmetrica può essere crittografata contemporaneamente con più certificati, password, chiavi simmetriche e chiavi asimmetriche.  
   
 > [!CAUTION]  
->  Quando una chiave simmetrica viene crittografata con una password anziché con un certificato (o un'altra chiave), viene utilizzato l'algoritmo di crittografia TRIPLE DES per crittografare la password. Per questo motivo, le chiavi create con un algoritmo di crittografia avanzato, come AES, vengono a loro volta protette con un algoritmo meno avanzato.  
+>  Se si crittografa una chiave simmetrica con una password anziché con un certificato o un'altra chiave, la password viene crittografata con l'algoritmo di crittografia TRIPLE DES. Per questo motivo, le chiavi create con un algoritmo di crittografia avanzato, come AES, vengono a loro volta protette con un algoritmo meno avanzato.  
   
  È possibile utilizzare la password facoltativa per crittografare la chiave simmetrica prima di distribuirla a più utenti.  
   
  Le chiavi temporanee sono di proprietà dell'utente che le crea e sono valide solo per la sessione corrente.  
   
- La clausola IDENTITY_VALUE genera un GUID per contrassegnare i dati crittografati con la nuova chiave simmetrica. Tale contrassegno può essere utilizzato per eseguire il mapping delle chiavi ai dati crittografati. Il GUID generato da una frase specifica è sempre lo stesso. Dopo aver utilizzato una frase per generare un GUID, non è possibile utilizzare di nuovo la stessa frase finché viene utilizzata in modo attivo da almeno una sessione. IDENTITY_VALUE è una clausola facoltativa, ma è consigliabile utilizzarla per l'archiviazione di dati crittografati con una chiave temporanea.  
+ La clausola IDENTITY_VALUE genera un GUID per contrassegnare i dati crittografati con la nuova chiave simmetrica. Tale contrassegno può essere utilizzato per eseguire il mapping delle chiavi ai dati crittografati. Il GUID generato da una frase specifica è sempre uguale. Dopo aver utilizzato una frase per generare un GUID, non è possibile utilizzare di nuovo la stessa frase finché viene utilizzata in modo attivo da almeno una sessione. IDENTITY_VALUE è una clausola facoltativa, ma è consigliabile utilizzarla per l'archiviazione di dati crittografati con una chiave temporanea.  
   
  Non è previsto un algoritmo di crittografia predefinito.  
   
 > [!IMPORTANT]  
 >  Non è consigliabile utilizzare crittografie a flussi RC4 e RC4_128 per proteggere dati riservati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta ulteriori codifiche per la crittografia eseguita con tali chiavi.  
   
- Informazioni sulle chiavi simmetriche sono visibili nella [symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) vista del catalogo.  
+ Le informazioni sulle chiavi simmetriche sono visibili nella vista del catalogo [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  Non è possibile crittografare delle chiavi simmetriche con chiavi simmetriche create dal provider di crittografia.  
   
@@ -150,9 +147,9 @@ Specificare l'algoritmo di crittografia.
 -   Le chiavi simmetriche create con ALGORITHM = TRIPLE_DES_3KEY utilizzano TRIPLE DES con una chiave a 192 bit.  
 -   Le chiavi simmetriche create con ALGORITHM = TRIPLE_DES utilizzano TRIPLE DES con una chiave a 128 bit.  
   
- **Deprecazione dell'algoritmo RC4:**  
+ **Rimozione dell'algoritmo RC4:**  
   
- Uso ripetuto della stessa RC4 o RC4_128 KEY_GUID su blocchi di dati, diversi comporta la stessa chiave RC4 perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non fornisce automaticamente un valore salt. L'utilizzo ripetuto della stessa chiave RC4 è un errore noto che comporta una crittografia molto debole. Per questo motivo le parole chiave RC4 e RC4_128 sono deprecate. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ L'uso ripetuto della stessa funzione KEY_GUID RC4 o RC4_128 su blocchi di dati diversi produce la stessa chiave RC4 perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non specifica automaticamente un valore salt. L'utilizzo ripetuto della stessa chiave RC4 è un errore noto che comporta una crittografia molto debole. Per questo motivo le parole chiave RC4 e RC4_128 sono deprecate. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  L'algoritmo RC4 è supportato solo per motivi di compatibilità con le versioni precedenti. È possibile crittografare il nuovo materiale usando RC4 o RC4_128 solo quando il livello di compatibilità del database è 90 o 100. (Non consigliato.) Usare un algoritmo più recente, ad esempio uno degli algoritmi AES. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] il materiale crittografato utilizzando RC4 o RC4_128 può essere decrittografato in qualsiasi livello di compatibilità.  
@@ -204,7 +201,7 @@ GO
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   

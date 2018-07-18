@@ -1,16 +1,15 @@
 ---
 title: Impostazioni (Mapping dei tipi) del progetto (AccessToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 81c2512eacc634de526ecffb0d56d86dbcecca87
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 072d8aaf4582237cc60a3e3e6d76b02a86dc27c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Impostazioni (Mapping dei tipi) del progetto (AccessToSQL)
 Le impostazioni di Mapping dei tipi del progetto consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA. È inoltre possibile specificare i mapping dei tipi per singoli oggetti di database. Per ulteriori informazioni, vedere [Mapping tipi di origine e destinazione dati](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
@@ -55,20 +53,20 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |--------------------|------------------------|  
 |**binario [\*... \*]**|**varbinary [\*]**|  
 |**boolean**|**bit**|  
-|**byte**|**tinyint**|  
-|**valuta**|**money**|  
+|**Byte**|**tinyint**|  
+|**Valuta**|**money**|  
 |**data**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**GUID**|**uniqueidentifier**|  
+|**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
 |**Long**|**int**|  
-|**LongBinary**|**varbinary(max)**|  
-|**Memo**|**nvarchar(max)**|  
-|**Memo** : per Access 97|**ntext**|  
-|**singolo**|**real**|  
-|**text[\*.. \*]**|**nvarchar [\*]**|  
-|**text[\*.. \*]** : per Access 97|**varchar [\*]**|  
+|**longbinary**|**varbinary(max)**|  
+|**memo**|**nvarchar(max)**|  
+|**Memo** - per Access 97|**ntext**|  
+|**Singolo**|**real**|  
+|**testo [\*... \*]**|**nvarchar [\*]**|  
+|**testo [\*... \*]** - per Access 97|**varchar [\*]**|  
   
 **Aggiungi**  
 Fare clic per aggiungere un tipo di dati nell'elenco di mapping.  

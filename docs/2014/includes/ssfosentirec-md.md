@@ -1,0 +1,1 @@
+Failover intero impostato

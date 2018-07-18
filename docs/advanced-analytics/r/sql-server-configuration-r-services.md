@@ -1,26 +1,17 @@
 ---
 title: Configurazione di SQL Server (R Services) | Microsoft Docs
-ms.custom: 
-ms.date: 07/26/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 382b39a7209480f7f02b0cee5d91eb6cbd662cd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configurazione di SQL Server per l'uso con R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -82,7 +73,7 @@ Ottimizzazione dell'istanza di SQL Server è la chiave per l'esecuzione efficien
 > [!NOTE]
 > Le impostazioni ottimali variano a seconda della dimensione e tipo di dati, il numero di colonne utilizzato per l'assegnazione dei punteggi o training di un modello.
 > 
-> È possibile esaminare i risultati delle ottimizzazioni specifiche nell'articolo finale: [ottimizzazione delle prestazioni - risultati di case study](../../advanced-analytics/r/performance-case-study-r-services.md)
+> È possibile esaminare i risultati delle ottimizzazioni specifiche nell'articolo finale: [ottimizzazione delle prestazioni - case study sulla risultati](../../advanced-analytics/r/performance-case-study-r-services.md)
 > 
 > Per gli script di esempio, vedere le varie [repository GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning).
 
@@ -98,7 +89,7 @@ Per altre informazioni, vedere i documenti seguenti:
 
 + [Abilitare la compressione in una tabella o un indice](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
-+ [Guida agli indici ColumnStore](../../relational-databases/indexes/columnstore-indexes-overview.md)
++ [Guida agli indici columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
 ### <a name="memory-optimized-tables"></a>Tabelle con ottimizzazione per la memoria
 
@@ -126,7 +117,7 @@ Governance delle risorse di SQL Server consente di centralizzare il monitoraggio
 
 Il valore predefinito per il consumo di memoria tramite gli script esterni è limitato al 20% della memoria totale disponibile per SQL Server. Questo limite viene applicato per impostazione predefinita per garantire che tutte le attività che si basano sul server di database non sono gravemente condizionate dai processi R esecuzione prolungata. Tuttavia, questi limiti possono essere modificati dall'amministratore del database. In molti casi, il limite di 20% non è sufficiente per supportare i carichi di lavoro di apprendimento automatico grave.
 
-Le opzioni di configurazione supportate sono **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, e **MAX_PROCESSES**. Per visualizzare le impostazioni correnti, utilizzare l'istruzione seguente:`SELECT * FROM sys.resource_governor_external_resource_pools`
+Le opzioni di configurazione supportate sono **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, e **MAX_PROCESSES**. Per visualizzare le impostazioni correnti, utilizzare l'istruzione seguente: `SELECT * FROM sys.resource_governor_external_resource_pools`
 
 -  Se il server viene utilizzato principalmente per R Services, potrebbe essere utile aumentare MAX_CPU_PERCENT fino al 40% o % di 60.
 
@@ -134,11 +125,11 @@ Le opzioni di configurazione supportate sono **MAX_CPU_PERCENT**, **MAX_MEMORY_P
 
 Per modificare i valori delle risorse allocate, utilizzare le istruzioni T-SQL.
 
-+ Questa istruzione imposta l'utilizzo della memoria al 40%:`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
++ Questa istruzione imposta l'utilizzo della memoria a 40%: `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
 
-+ Questa istruzione imposta tutti e tre i valori configurabili:`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
++ Questa istruzione imposta tutti e tre i valori configurabili: `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
 
-+ Se si modifica una memoria, CPU o max di processo e quindi si desidera applicare immediatamente le impostazioni, eseguire l'istruzione seguente:`ALTER RESOURCE GOVERNOR RECONFIGURE`
++ Se si modifica una memoria, CPU o l'impostazione max di processo e quindi si desidera applicare immediatamente le impostazioni, eseguire l'istruzione seguente: `ALTER RESOURCE GOVERNOR RECONFIGURE`
 
 ## <a name="soft-numa-hardware-numa-and-cpu-affinity"></a>Affinità di CPU, l'hardware NUMA e soft-NUMA
 
@@ -163,18 +154,18 @@ Il processo generale per la configurazione soft-NUMA e affinità di CPU per supp
 
 1. Abilita soft-NUMA, se disponibile
 2. Definire l'affinità processori
-3. Creare pool di risorse per i processi esterni, utilizzando [Resource Governor](../r/resource-governance-for-r-services.md)
+3. Creare i pool di risorse per i processi esterni, utilizzando [Resource Governor](../r/resource-governance-for-r-services.md)
 4. Assegnare il [gruppi del carico di lavoro](../../relational-databases/resource-governor/resource-governor-workload-group.md) a specifici gruppi di affinità
 
-Per informazioni dettagliate, incluso il codice di esempio, vedere l'esercitazione: [SQL ottimizzazione suggerimenti (Ke Huang)](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
+Per informazioni dettagliate, incluso il codice di esempio, vedere l'esercitazione: [SQL ottimizzazione suggerimenti e trucchi (Ke Huang)](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 
 **Altre risorse:**
 
-+ [Soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Architettura soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Come eseguire il mapping di nodi soft-NUMA alle CPU
 
-+ [Soft-NUMA automatica: esegue semplicemente più veloce (Bob Ward)](https://blogs.msdn.microsoft.com/bobsql/2016/06/03/sql-2016-it-just-runs-faster-automatic-soft-numa/)
++ [Architettura soft-NUMA automatica: esegue semplicemente più veloce (Bob Ward)](https://blogs.msdn.microsoft.com/bobsql/2016/06/03/sql-2016-it-just-runs-faster-automatic-soft-numa/)
 
    Viene descritto cronologia nonché i dettagli di implementazione, le prestazioni nel server multi-core più recenti.
 
@@ -239,8 +230,8 @@ Tuttavia, a seconda dell'algoritmo utilizzato, alcuni modelli possono essere not
 
 [Prestazioni di ottimizzazione per R: introduzione](../r/sql-server-r-services-performance-tuning.md)
 
-[Ottimizzazione delle prestazioni per R - configurazione di SQL Server](../r/sql-server-configuration-r-services.md)
+[Ottimizzazione delle prestazioni per R - configurazione SQL Server](../r/sql-server-configuration-r-services.md)
 
 [Ottimizzazione delle prestazioni per R - R ottimizzazione di codice e i dati](../r/r-and-data-optimization-r-services.md)
 
-[Ottimizzazione delle prestazioni - risultati di case study](../r/performance-case-study-r-services.md)
+[Ottimizzazione delle prestazioni - case study sulla risultati](../r/performance-case-study-r-services.md)

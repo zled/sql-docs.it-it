@@ -1,38 +1,36 @@
 ---
 title: Gestione degli errori e avvisi | Documenti Microsoft
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: fd8e347c839a5e7e5219a552e203d90732ca75dd
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 5e57c6a84a12bd148dc45c868a514da37cd87543
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-errors-and-warnings"></a>Gestione di errori e avvisi
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Se si utilizza il driver PDO_SQLSRV, è possibile trovare ulteriori informazioni sugli errori e in di gestione degli errori di [PDO](http://go.microsoft.com/fwlink/?LinkID=187441) sito Web.  
+Se si utilizza il driver PDO_SQLSRV, è possibile trovare ulteriori informazioni sugli errori e in di gestione degli errori di [PDO](http://php.net/manual/book.pdo.php) sito Web.  
   
 Negli argomenti di questa sezione vengono fornite informazioni sulla gestione di errori e avvisi con il driver SQLSRV dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |---------|---------------|  
 |[Procedura: Configurare la gestione degli errori e degli avvisi usando il driver SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|Viene illustrato come modificare le impostazioni di configurazione per la gestione degli errori e degli avvisi.|  
 |[Procedura: Gestire errori e avvisi usando il driver SQLSRV](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|Illustra come gestire errori e avvisi separatamente.|  
@@ -45,5 +43,5 @@ Negli argomenti di questa sezione vengono fornite informazioni sulla gestione di
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Guida di programmazione per il driver SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

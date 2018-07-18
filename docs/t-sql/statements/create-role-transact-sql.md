@@ -1,16 +1,14 @@
 ---
-title: CREARE ruolo (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: CREATE ROLE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE ROLE
@@ -29,16 +27,16 @@ helpviewer_keywords:
 - roles [SQL Server], creating
 - CREATE ROLE statement
 ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
-caps.latest.revision: 
+caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: cccfc9f6f9810d8f674ea32858e08683160b2ef1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 88babc3ef56449b2f3e7be43102a333635183bef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,11 +55,11 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  *role_name*  
  Nome del ruolo che si desidera creare.  
   
- AUTORIZZAZIONE *owner_name*  
+ AUTHORIZATION *owner_name*  
  Utente o ruolo del database che sarà proprietario del nuovo ruolo. Se non viene specificato alcun utente, il ruolo sarà di proprietà dell'utente che esegue l'istruzione CREATE ROLE.  
   
-## <a name="remarks"></a>Osservazioni  
- I ruoli sono entità a protezione diretta a livello di database. Dopo aver creato un ruolo, configurare le autorizzazioni a livello di database per il ruolo tramite GRANT, DENY e REVOKE. Per aggiungere membri a un ruolo del database, utilizzare [ALTER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md). Per ulteriori informazioni, vedere [ruoli a livello di Database](../../relational-databases/security/authentication-access/database-level-roles.md).  
+## <a name="remarks"></a>Remarks  
+ I ruoli sono entità a protezione diretta a livello di database. Dopo aver creato un ruolo, configurare le autorizzazioni a livello di database per il ruolo tramite GRANT, DENY e REVOKE. Per aggiungere membri a un ruolo del database, usare [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Per altre informazioni, vedere [Ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
  I ruoli del database sono visibili nelle viste del catalogo sys.database_role_members e sys.database_principals.  
   
@@ -70,8 +68,8 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
- Richiede **CREATE ROLE** l'autorizzazione per il database o l'appartenenza di **db_securityadmin** ruolo predefinito del database. Quando si utilizza il **autorizzazione** opzione, le autorizzazioni seguenti sono necessari anche:  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione **CREATE ROLE** per il database o l'appartenenza al ruolo predefinito del database **db_securityadmin**. Se si usa l'opzione **AUTHORIZATION**, sono necessarie anche le autorizzazioni seguenti:  
   
 -   Per assegnare la proprietà di un ruolo a un altro utente, è richiesta l'autorizzazione IMPERSONATE per quell'utente.  
   
@@ -80,7 +78,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 -   Per assegnare la proprietà di un ruolo a un ruolo applicazione, è richiesta l'autorizzazione ALTER per il ruolo applicazione.  
   
 ## <a name="examples"></a>Esempi  
-Gli esempi seguenti vengono utilizzano il database AdventureWorks.   
+Tutti gli esempi seguenti usano il database AdventureWorks.   
 
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. Creazione di un ruolo del database di proprietà di un utente del database  
  Nell'esempio seguente viene creato il ruolo del database `buyers` di proprietà dell'utente `BenMiller`.  
@@ -100,8 +98,8 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [DROP ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

@@ -1,0 +1,251 @@
+---
+title: DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.prod_service: sql-database
+ms.service: ''
+ms.component: t-sql|database-console-commands
+ms.reviewer: ''
+ms.suite: sql
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: language-reference
+f1_keywords:
+- CLONEDATABASE
+- CLONE DATABASE
+- DBCC_CLONEDATABASE_TSQL
+- DBCC CLONEDATABASE
+- DBCC CLONE DATABASE
+- CLONEDATABASE_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- database cloning [SQL Server]
+- cloning databases
+- clone databases
+- cloning database
+- clone database
+- copying databases
+- copy databases
+- copying database
+- copy database
+- NO_STATISTICS option
+- NO_QUERYSTORE option
+- VERIFY_CLONEDB option
+- BACKUP_CLONEDB option
+- database copying [SQL Server]
+- database cloning [SQL Server]
+- DBCC CLONEDATABASE statement
+ms.assetid: ''
+caps.latest.revision: ''
+author: pamela
+ms.author: pamela
+manager: amitban
+ms.openlocfilehash: 8b9f0b4a625797e3aeb6dc879c13cc625149e49e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/10/2018
+---
+# <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+Genera un clone solo schema di un database tramite DBCC CLONEDATABASE per esaminare i problemi di prestazioni relativi a Query Optimizer.
+
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+  
+## <a name="syntax"></a>Sintassi  
+  
+```
+DBCC CLONEDATABASE   
+(  
+    source_database_name
+    ,  target_database_name
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB ] [ , BACKUP_CLONEDB ] } ]   
+)  
+```  
+  
+## <a name="arguments"></a>Argomenti  
+*nome_database_di_origine*  
+Nome del database da copiare. 
+  
+*target_database_name*  
+Nome del database in cui verrà copiato il database di origine. Questo database verrà creato da DBCC CLONEDATABASE e non deve esistere già. 
+  
+NO_STATISTICS  
+Specifica se le statistiche di tabella/indice devono essere escluse dal clone. Se questa opzione non è specificata, le statistiche di tabella/indice vengono incluse automaticamente. Questa opzione è disponibile a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+
+NO_QUERYSTORE Specifica se i dati di archivio query devono essere esclusi dal clone. Se questa opzione non è specificata, i dati dell'archivio query verranno copiati nel clone se l'archivio query è abilitato nel database di origine. Questa opzione è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+
+VERIFY_CLONEDB  
+Controlla la coerenza del database.  Questa opzione è obbligatoria se il database clonato è destinato all'utilizzo per la produzione.  L'abilitazione di VERIFY_CLONEDB disabilita anche la raccolta di archivio query e statistiche pertanto, è equivalente all'esecuzione con VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  Questa opzione è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
+
+> [!NOTE]  
+> Per confermare che il database clonato è pronto per la produzione è possibile utilizzare il comando seguente: <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
+
+BACKUP_CLONEDB  
+Crea e verifica una copia di backup del database clone.  Se utilizzato in combinazione con VERIFY_CLONEDB, il database clone viene verificato prima della creazione della copia di backup.  Questa opzione è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
+  
+## <a name="remarks"></a>Remarks
+Le convalide seguenti vengono eseguite da DBCC CLONEDATABASE. Il comando non riesce se una delle convalide ha esito negativo.
+- Il database di origine deve essere un database utente. La clonazione dei database di sistema (master, modello, msdb, tempdb, database di distribuzione e così via) non è consentita.
+- Il database di origine deve essere online e leggibile.
+- Non deve esistere già un database che utilizza lo stesso nome del database clone.
+- Il comando non si trova in una transazione utente.
+
+Se tutte le convalide hanno esito positivo, la clonazione del database di origine viene eseguita con le operazioni seguenti:
+- Crea un nuovo database di destinazione che utilizza lo stesso layout di file del database di origine ma con le dimensioni di file predefinite del database modello.
+- Crea uno snapshot interno del database di origine.
+- Copia i metadati di sistema dal database di origine al database di destinazione.
+- Copia gli schemi di tutti gli oggetti dal database di origine al database di destinazione.
+- Copia le statistiche per tutti gli indici dal database di origine al database di destinazione.
+
+> [!NOTE]  
+> Il nuovo database generato da DBCC CLONEDATABASE è progettato principalmente per scopi di diagnosi e per la risoluzione dei problemi.  Affinché il database clonato sia supportato per l'utilizzo come database di produzione, l'opzione VERIFY_CLONEDB deve essere utilizzata.
+
+Tutti i file nel database di destinazione erediteranno le impostazioni di dimensione e aumento dal database modello. I nomi dei file per il database di destinazione seguiranno la convenzione di numero source_file_name _underscore_random. Se il nome del file generato esiste già nella cartella di destinazione, DBCC CLONEDATABASE avrà esito negativo.
+
+DBCC CLONEDATABASE non supporta la creazione di un clone se sono presenti oggetti utente (tabelle, indici, schemi, ruoli e così via) che sono stati creati nel database modello. Se nel database modello sono presenti oggetti utente, il clone database ha esito negativo e viene visualizzato il messaggio di errore seguente:
+
+```
+Msg 2601, Level 14, State 1, Line 1
+Cannot insert duplicate key row in object <system table> with unique index 'index name'. The duplicate key value is <key value>   
+```
+
+> [!IMPORTANT]
+> Se si dispone di indici columnstore, vedere [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) (Considerazioni sull'ottimizzazione delle query con gli indici columnstore nei database clone) per aggiornare le statistiche degli indici columnstore prima di eseguire il comando **DBCC CLONEDATABASE**.
+
+Per informazioni correlate alla sicurezza dei dati nei database clonati, vedere [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/) (Informazioni sulla sicurezza dei dati nei database clonati).
+
+## <a name="internal-database-snapshot"></a>Snapshot di database interno
+DBCC CLONEDATABASE utilizza uno snapshot di database interno del database di origine per assicurare la coerenza transazionale necessaria per eseguire la copia. L'uso dello snapshot consente di evitare problemi di blocco e concorrenza durante l'esecuzione di questi comandi. Se non è possibile creare uno snapshot, DBCC CLONEDATABASE avrà esito negativo. 
+
+Vengono mantenuti blocchi a livello di database durante i passaggi del processo di copia seguenti:
+- Convalidare il database di origine
+- Ottenere il blocco S per il database di origine
+- Creare uno snapshot del database di origine
+- Creare un database clone (un database vuoto ereditato dal database modello)
+- Ottenere il blocco X per il database di origine
+- Copiare i metadati nel database clone
+- Rilasciare tutti i blocchi di database
+
+Non appena il comando è terminato, lo snapshot interno viene eliminato. Nei database clonati le opzioni DB_CHAINING e TRUSTWORTHY sono disattivate. 
+
+## <a name="supported-objects"></a>Oggetti supportati
+Nel database di destinazione possono essere clonati solo gli oggetti seguenti. Gli oggetti crittografati sono clonati, ma non sono utilizzabili nel database clone. Tutti gli oggetti che non sono elencati nella sezione seguente non sono supportati nel clone: 
+- APPLICATION ROLE
+- AVAILABILITY GROUP
+- COLUMNSTORE INDEX
+- CDB
+- CDC
+- CLR (a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive)
+- DATABASE PROPERTIES
+- DEFAULT
+- FILES AND FILEGROUPS
+- Full-text (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2)
+- FUNCTION
+- INDEX
+- Account di accesso
+- PARTITION FUNCTION
+- PARTITION SCHEME
+- PROCEDURE   
+> [!NOTE]   
+> Le procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] sono supportate in tutte le versioni a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2. Le procedure CLR sono supportate a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3. Le procedure compilate in modo nativo sono supportate a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.  
+
+- QUERY STORE (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)   
+> [!NOTE]   
+> I dati di archivio query vengono copiati solo se sono abilitati nel database di origine. Per copiare le statistiche di runtime più recenti come parte dell'archivio query, eseguire sp_query_store_flush_db per cancellare le statistiche di runtime nell'archivio query prima di eseguire DBCC CLONEDATABASE.  
+
+- ROLE
+- RULE
+- SCHEMA
+- SEQUENCE
+- SPATIAL INDEX
+- STATISTICS
+- SYNONYM
+- TABLE
+- MEMORY OPTIMIZED TABLES (solo in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive).
+- FILESTREAM AND FILETABLE OBJECTS (a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive). 
+- TRIGGER
+- TYPE
+- UPGRADED DB
+- Utente
+- VIEW
+- XML INDEX
+- XML SCHEMA COLLECTION  
+
+## <a name="permissions"></a>Autorizzazioni  
+È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .
+
+## <a name="error-log-messages"></a>Messaggi del registro errori
+I messaggi seguenti sono un esempio di quelli registrati nel registro errori durante il processo di clonazione:
+
+```
+2018-03-26 15:33:56.05 spid53 Database cloning for 'sourcedb' has started with target as 'sourcedb_clone'.
+
+2018-03-26 15:33:56.46 spid53 Starting up database 'sourcedb_clone'.
+
+2018-03-26 15:33:57.80 spid53 Setting database option TRUSTWORTHY to OFF for database 'sourcedb_clone'.
+
+2018-03-26 15:33:57.80 spid53 Setting database option DB_CHAINING to OFF for database 'sourcedb_clone'.
+
+2018-03-26 15:33:57.88 spid53 Starting up database 'sourcedb_clone'.
+
+2018-03-26 15:33:57.91 spid53 Database 'sourcedb_clone' is a cloned database. A cloned database should be used for diagnostic purposes only and is not supported for use in a production environment.
+
+2018-03-26 15:33:57.92 spid53 Database cloning for 'sourcedb' has finished. Cloned database is 'sourcedb_clone'.
+```
+
+## <a name="database-properties"></a>Proprietà dei database
+`DATABASEPROPERTYEX('dbname', 'IsClone')` restituisce 1 se il database è stato generato utilizzando DBCC CLONEDATABASE.
+
+`DATABASEPROPERTYEX('dbname', 'IsVerifiedClone')` restituisce 1 se il database è stato verificato usando con WITH VERIFY_CLONEDB.
+
+## <a name="examples"></a>Esempi  
+  
+### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. Creazione del clone di un database che include schema, statistiche e archivio query 
+L'esempio seguente crea un clone del database AdventureWorks che include i dati dello schema, delle statistiche e dell'archivio query ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive)
+
+```sql  
+DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);    
+GO 
+```  
+  
+### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>B. Creazione di un clone solo schema di un database senza statistiche 
+L'esempio seguente crea un clone del database AdventureWorks che non include le statistiche ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 e versioni successive)
+
+```sql  
+DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS;    
+GO 
+```  
+
+### <a name="c-creating-a-schema-only-clone-of-a-database-without-statistics-and-query-store"></a>C. Creazione di un clone solo schema di un database senza statistiche e archivio query 
+L'esempio seguente crea un clone del database AdventureWorks che non include le statistiche e l'archivio query ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive)
+
+```sql  
+DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS, NO_QUERYSTORE;    
+GO 
+```  
+
+### <a name="d-creating-a-clone-of-a-database-that-is-verified-for-production-use"></a>D. Creazione di un clone di un database verificato per l'uso in produzione
+L'esempio seguente crea un clone solo schema del database AdventureWorks senza statistiche e archivio query verificato per l'uso come database di produzione ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e versioni successive).
+
+```sql  
+DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB;    
+GO 
+```  
+  
+### <a name="e-creating-a-clone-of-a-database-that-is-verified-for-production-use-that-includes-a-backup-of-the-cloned-database"></a>E. Creazione di un clone di un database verificato per l'uso in produzione che include un backup del database clonato
+L'esempio seguente crea un clone solo schema del database AdventureWorks senza statistiche e dati dell'archivio query verificato per l'uso come database di produzione.  Verrà inoltre creato un backup verificato del database clonato ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e versioni successive).
+
+```sql  
+DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, BACKUP_CLONEDB;    
+GO 
+```
+
+## <a name="see-also"></a>Vedere anche
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)    
+[Come generare uno script dei metadati del database necessari per creare un database solo statistiche in SQL Server](http://support.microsoft.com/help/914288)   
+

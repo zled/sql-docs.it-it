@@ -1,16 +1,14 @@
 ---
 title: sp_syspolicy_purge_health_state (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_purge_health_state_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_purge_health_state
 ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9ae3d46c7a50cc8b7f5a56e3807cb44eb4edd922
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 80d1aa2edc25fceeb23ddd3db82f0153ee7197ab
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +43,13 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@target_tree_root_with_id =** ] **'***target_tree_root_with_id***'**  
- Rappresenta il nodo in cui si desidera cancellare lo stato di integrità in Esplora oggetti. *target_tree_root_with_id* è **nvarchar (400)**, con un valore predefinito è NULL.  
+ [  **@target_tree_root_with_id =** ] **'***target_tree_root_with_id***'**  
+ Rappresenta il nodo in cui si desidera cancellare lo stato di integrità in Esplora oggetti. *target_tree_root_with_id* viene **nvarchar(400)**, con un valore predefinito è NULL.  
   
  È possibile specificare i valori della colonna target_query_expression_with_id nella vista di sistema msdb.dbo.syspolicy_system_health_state.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  È necessario eseguire sp_syspolicy_purge_health_state nel contesto del database di sistema msdb.  
@@ -75,6 +72,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione basata su criteri di Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+ [Stored procedure della gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

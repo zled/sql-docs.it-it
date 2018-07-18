@@ -1,31 +1,28 @@
 ---
 title: Oggetto di associazione di dati della Rubrica indirizzi | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9689d8c41a899c9446f3f21ede83ea88c68b77a3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8efa72c893f0b2ddd07c834a07976babfbb46233
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="address-book-data-binding-object"></a>Oggetto di associazione di dati della Rubrica
 L'applicazione Address Book utilizza il [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto per associare i dati dal database di SQL Server a un oggetto visivo (in questo caso, una tabella DHTML) la pagina dell'applicazione client HTML. Usa la logica di programma VBScript basati sugli eventi di [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) per:  

@@ -1,28 +1,26 @@
 ---
-title: "Prendere in considerazione le funzionalità di Database da utilizzare | Documenti Microsoft"
-ms.custom: 
+title: Prendere in considerazione le funzionalità di Database da utilizzare | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: interoperability [ODBC], database features
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f879d11b4c9f393accaaf96beda6a159aec2363f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 264acbea3c73679cf14e9459aea98c0a2a646b0a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="considering-database-features-to-use"></a>Prendere in considerazione le funzionalità di Database da utilizzare
 Una volta noto il livello di base di interoperabilità, è necessario considerare le funzionalità del database utilizzate dall'applicazione. Ad esempio, le istruzioni SQL l'applicazione eseguirà? L'applicazione utilizzerà i cursori scorrevoli? Transazioni? Procedure? Dati di tipo Long? Per informazioni su quali funzionalità potrebbero non essere supportati da tutti i DBMS, vedere il [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), e [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) le descrizioni delle funzioni e [ Appendice c: la grammatica SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Le funzionalità richieste da un'applicazione potrebbero eliminare alcuni DBMS dall'elenco di DBMS di destinazione. Si potrebbe anche essere indicato che l'applicazione può utilizzare facilmente DBMS più.  
@@ -33,9 +31,9 @@ Una volta noto il livello di base di interoperabilità, è necessario considerar
   
 -   **Interoperabilità inferiore, altre funzionalità.** L'applicazione include le funzionalità ma funziona solo con DBMS che li supportano.  
   
--   **Maggiore interoperabilità, il numero di funzionalità.** L'applicazione elimina le funzionalità, ma può essere utilizzata con più DBMS.  
+-   **Maggiore interoperabilità, meno funzionalità.** L'applicazione elimina le funzionalità, ma può essere utilizzata con più DBMS.  
   
--   **Maggiore interoperabilità, le funzionalità facoltative.** L'applicazione include le funzionalità, ma sono disponibili solo con tali DBMS che li supportano.  
+-   **Interoperabilità superiore, le funzionalità facoltative.** L'applicazione include le funzionalità, ma sono disponibili solo con tali DBMS che li supportano.  
   
 -   **Maggiore interoperabilità, altre funzionalità.** L'applicazione utilizza le caratteristiche con DBMS che li supportano e li emula per DBMS che non.  
   
@@ -45,10 +43,10 @@ Una volta noto il livello di base di interoperabilità, è necessario considerar
   
  L'applicazione dispone di un numero di scelte, in base a ciò che il driver restituisce per l'opzione SQL_MAX_CONCURRENT_ACTIVITIES in **SQLGetInfo**:  
   
--   **Supporta sempre più query.** Dopo la connessione a un driver, l'applicazione controlla il numero di istruzioni attive. Se il driver supporta solo un'istruzione attiva, l'applicazione chiude la connessione e avvisa l'utente che il driver non supporta la funzionalità richiesta. L'applicazione è facile da implementare e ha le funzionalità complete ma interoperabilità inferiore.  
+-   **Supportano sempre più query.** Dopo la connessione a un driver, l'applicazione controlla il numero di istruzioni attive. Se il driver supporta solo un'istruzione attiva, l'applicazione chiude la connessione e avvisa l'utente che il driver non supporta la funzionalità richiesta. L'applicazione è facile da implementare e ha le funzionalità complete ma interoperabilità inferiore.  
   
 -   **Non supporta più query.** L'applicazione elimina completamente la funzionalità. È facile da implementare e ha interoperabilità elevata ma dispone di meno funzionalità.  
   
 -   **Supporta più query solo se il driver non.** Dopo la connessione a un driver, l'applicazione controlla il numero di istruzioni attive. L'applicazione consente all'utente di avviare una nuova istruzione quando è già attivo solo se il driver supporta più istruzioni attive. L'applicazione dispone di più funzionalità e l'interoperabilità, ma è più difficile da implementare.  
   
--   **Quando è necessario emulare sempre supporta più query.** Dopo la connessione a un driver, l'applicazione controlla il numero di istruzioni attive. Sempre l'applicazione consente all'utente di avviare una nuova istruzione quando è già attivo. Se il driver supporta solo un'istruzione attiva, l'applicazione apre una connessione aggiuntiva per il driver ed esegue l'istruzione di nuovo su tale connessione. L'applicazione dispone di funzionalità complete e interoperabilità elevata ma è più difficile da implementare.
+-   **Emulare li quando è necessario sempre supporta più query.** Dopo la connessione a un driver, l'applicazione controlla il numero di istruzioni attive. Sempre l'applicazione consente all'utente di avviare una nuova istruzione quando è già attivo. Se il driver supporta solo un'istruzione attiva, l'applicazione apre una connessione aggiuntiva per il driver ed esegue l'istruzione di nuovo su tale connessione. L'applicazione dispone di funzionalità complete e interoperabilità elevata ma è più difficile da implementare.

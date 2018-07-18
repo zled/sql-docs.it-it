@@ -1,31 +1,29 @@
 ---
 title: Esercitazioni di SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/31/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-query-tuning
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: bc186af612e9ca8952a8adc16b3438c166a568a8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: 954ab1ff985054fa0aebaa3aba0711cacd5b4a35
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorials-for-sql-server"></a>Esercitazioni di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] include esercitazioni che consentono l'apprendimento di nuove tecnologie e funzionalità. In genere le esercitazioni per le versioni precedenti possono essere usate con le versioni più recenti. Quando le esercitazioni riguardano una nuova funzionalità viene indicata la versione minima necessaria per il completamento dell'esercitazione.  
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornisce esercitazioni che consentono l'apprendimento di nuove tecnologie e funzionalità. In genere le esercitazioni per le versioni precedenti possono essere usate con le versioni più recenti. Quando le esercitazioni riguardano una nuova funzionalità viene indicata la versione minima necessaria per il completamento dell'esercitazione.  
      
 -   Se in un'esercitazione viene usato uno dei database di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] è necessario scaricare e usare la versione più recente da CodePlex. Per altre informazioni, vedere [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (Script e database AdventureWorks per SQL Server 2016 CTP3).    
 -   Scaricare una cartella di lavoro di [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e i report di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] da usare con le esercitazioni di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vedere la pagina relativa agli [esempi di Power View per SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
@@ -53,3 +51,5 @@ ms.lasthandoff: 12/05/2017
  - [Esercitazioni di SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

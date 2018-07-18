@@ -1,32 +1,32 @@
 ---
 title: sp_OAMethod (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAMethod
 - sp_OAMethod_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_OAMethod
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0dcf9235953ca1e907c4bae97562d5ea0a00049b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ef5d79a14aaee0b8f23738c3e359e37032d80318
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_OAMethod objecttoken , methodname
  *NomeMetodo*  
  Nome del metodo dell'oggetto OLE da chiamare.  
   
- *ReturnValue***OUTPUT**   
+ *ReturnValue***OUTPUT**  
  Valore restituito del metodo dell'oggetto OLE. Se specificato, deve essere una variabile locale del tipo di dati appropriato.  
   
  Se il metodo restituisce un valore singolo, specificare una variabile locale per *returnvalue*, che restituisce il metodo restituisce un valore nella variabile locale o non si specifica *returnvalue*, che restituisce il metodo valore restituito al client come set di risultati a colonna singola e una sola riga.  
@@ -68,18 +68,18 @@ sp_OAMethod objecttoken , methodname
   
 -   Il metodo restituisce una matrice come parametro di output.  
   
- [  *@parametername*   **=**  ] *parametro*[ **OUTPUT** ]  
+ [  *@parametername* * * =**] *parametro*[ **OUTPUT** ]  
  Parametro del metodo. Se specificato, *parametro* deve essere un valore del tipo di dati appropriato.  
   
  Per ottenere il valore restituito di un parametro di output, *parametro* deve essere una variabile locale del tipo di dati appropriato, e **OUTPUT** deve essere specificato. Se viene specificato un parametro costante oppure se **OUTPUT** viene omesso, qualsiasi restituito valore da un parametro di output viene ignorato.  
   
- Se specificato, *parametername* deve essere il nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parametro denominato. Si noti che  **@**  *parametername*non è un [!INCLUDE[tsql](../../includes/tsql-md.md)] variabile locale. Il simbolo di chiocciola (**@**) viene rimosso e *parametername*viene passato all'oggetto OLE come nome del parametro. Tutti i parametri denominati devono essere specificati dopo tutti i parametri posizionali.  
+ Se specificato, *parametername* deve essere il nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parametro denominato. Si noti che  **@** *parametername*non è un [!INCLUDE[tsql](../../includes/tsql-md.md)] variabile locale. Il simbolo di chiocciola (**@ * *) viene rimosso, e *parametername*viene passato all'oggetto OLE come nome del parametro. Tutti i parametri denominati devono essere specificati dopo tutti i parametri posizionali.  
   
  *n*  
  Segnaposto che indica la possibilità di specificare più parametri.  
   
 > [!NOTE]  
->  *@parametername*può essere un parametro denominato perché fa parte del metodo specificato e viene passato all'oggetto. Gli altri parametri della stored procedure vengono specificati in base alla posizione e non in base al nome.  
+>  *@parametername* può essere un parametro denominato perché fa parte del metodo specificato e viene passata all'oggetto. Gli altri parametri della stored procedure vengono specificati in base alla posizione e non in base al nome.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o un numero diverso da zero (esito negativo) corrispondente al valore intero del codice HRESULT restituito dall'oggetto di automazione OLE.  
@@ -109,7 +109,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="remarks"></a>Osservazioni  
  È inoltre possibile utilizzare **sp_OAMethod** per ottenere un valore della proprietà.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -142,7 +142,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Automazione OLE Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Automazione OLE Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Script di automazione OLE di esempio](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

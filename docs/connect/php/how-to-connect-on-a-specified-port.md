@@ -1,28 +1,27 @@
 ---
 title: 'Procedura: connettersi a una porta specifica | Documenti Microsoft'
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: connecting to the server, specifying a port
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- connecting to the server, specifying a port
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c8f5fcabd257f602c9ceba97806b031e95142a76
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 4c744ded8b11ea659d632e996a611edb5e2ec70c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>Procedura: Connessione a una porta specifica
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +30,7 @@ In questo argomento viene descritto come connettersi a SQL Server mediante una p
   
 ### <a name="to-connect-on-a-specified-port"></a>Per connettersi a una porta specifica  
   
-1.  Verificare la porta del server configurata per accettare le connessioni. Per informazioni sulla configurazione di un server per accettare le connessioni a una porta specifica, vedere [procedura: configurare un Server per l'attesa su una porta TCP specifica (Gestione configurazione SQL Server)](http://go.microsoft.com/fwlink/?LinkId=121865).  
+1.  Verificare la porta del server configurata per accettare le connessioni. Per informazioni sulla configurazione di un server per accettare le connessioni a una porta specifica, vedere [procedura: configurare un Server per l'attesa su una porta TCP specifica (Gestione configurazione SQL Server)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 2.  Aggiungere la porta desiderata per il *$serverName* parametro del [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) (funzione). Separare il nome del server e la porta con una virgola. Ad esempio, le righe di codice seguente usano il driver SQLSRV per illustrare come connettersi a un server denominato *myServer* sulla porta 1521:  
   
@@ -49,9 +48,13 @@ In questo argomento viene descritto come connettersi a SQL Server mediante una p
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Connessione al server](../../connect/php/connecting-to-the-server.md)  
-[Guida di programmazione per il driver SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Introduzione al driver SQL PHP](../../connect/php/getting-started-with-the-php-sql-driver.md) 
-[Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Connessione al server](../../connect/php/connecting-to-the-server.md)
+
+[Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Guida introduttiva con i driver Microsoft per PHP per SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+
+[Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
 [Guida di riferimento del driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   

@@ -1,16 +1,13 @@
 ---
-title: DBCC PROCCACHE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DBCC PROCCACHE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC PROCCACHE
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - displaying procedure cache information
 - DBCC PROCCACHE statement
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 31
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 27a247f0900ad39ef77d96a54d68c795dc8f6f07
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 33589511fcb6461143a25558121d3ad66c65ea52
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +51,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  NO_INFOMSGS  
  Disattiva la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 La cache delle procedure viene utilizzata per inserire nella cache i piani compilati e piani di esecuzione per velocizzare l'esecuzione di batch. Le voci in una cache delle procedure si trovano a livello di batch. La cache delle procedure include le voci seguenti:
 -   Piani compilati  
 -   Piani di esecuzione  
@@ -67,12 +63,12 @@ Nella tabella seguente vengono descritte le colonne del set di risultati.
   
 |Nome colonna|Description|  
 |-----------------|-----------------|  
-|**Num proc esperti**|Numero totale di pagine utilizzate da tutte le voci nella cache delle procedure.|  
-|**Num proc esperti utilizzati**|Numero totale di pagine utilizzate da tutte le voci in uso.|  
-|**Num proc esperti active**|Disponibile solo per compatibilità con le versioni precedenti. Numero totale di pagine utilizzate da tutte le voci in uso.|  
-|**dimensione della cache proc**|Numero totale di voci nella cache delle procedure.|  
-|**proc cache utilizzata**|Numero totale di voci in uso.|  
-|**proc cache attiva**|Disponibile solo per compatibilità con le versioni precedenti. Numero totale di voci in uso.|  
+|**num proc buffs**|Numero totale di pagine utilizzate da tutte le voci nella cache delle procedure.|  
+|**num proc buffs used**|Numero totale di pagine utilizzate da tutte le voci in uso.|  
+|**num proc buffs active**|Disponibile solo per compatibilità con le versioni precedenti. Numero totale di pagine utilizzate da tutte le voci in uso.|  
+|**proc cache size**|Numero totale di voci nella cache delle procedure.|  
+|**proc cache used**|Numero totale di voci in uso.|  
+|**proc cache active**|Disponibile solo per compatibilità con le versioni precedenti. Numero totale di voci in uso.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .

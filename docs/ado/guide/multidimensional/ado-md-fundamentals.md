@@ -1,30 +1,27 @@
 ---
 title: Nozioni di base di ADO MD | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 02/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, fundamentals
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8c2097cbf365febffd6582fc31c0af753f929e21
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5d15a76c1a7109c6c08d95610278ba4ac9d5c37a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-md-fundamentals"></a>Nozioni di base di ADO MD
 Microsoft® ActiveX® Data Objects (ADO MD) (multidimensionale) consente di accedere ai dati multidimensionali da linguaggi, ad esempio Microsoft Visual Basic®, Microsoft Visual C++®. ADO MD estende Microsoft® dati oggetti ADO (ActiveX) per includere oggetti specifici di dati multidimensionali, ad esempio il [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) e [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetti. Con ADO MD è Sfoglia schema multidimensionale, un cubo di query e recuperare i risultati.  
@@ -45,7 +42,7 @@ Microsoft® ActiveX® Data Objects (ADO MD) (multidimensionale) consente di acce
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello a oggetti ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [Manuale del programmatore ADO](../../../ado/guide/ado-programmer-s-guide.md)   
+ [Guida per programmatori ADO](../../../ado/guide/ado-programmer-s-guide.md)   
  [Estensioni ADO per Data Definition Language e protezione (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)   
  [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Programmazione con ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   

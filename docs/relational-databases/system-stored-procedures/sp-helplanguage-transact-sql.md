@@ -1,34 +1,34 @@
 ---
 title: sp_helplanguage (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helplanguage
 - sp_helplanguage_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_helplanguage
 - default languages
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a94f66688ce53aef2dcf575d58e16ed6f2f1672b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fdea1704b8942191bf79cb9074715f61eb9a9e81
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@language=** ] **'***language***'**  
- Nome della lingua alternativa per la quale visualizzare le informazioni. *lingua* è **sysname**, con un valore predefinito è NULL. Se *language* è specificato, vengono restituite informazioni sulla lingua specifica. Se non viene specificato alcun linguaggio, informazioni su tutte le lingue nel **Sys. syslanguages** vista di compatibilità viene restituito.  
+ Nome della lingua alternativa per la quale visualizzare le informazioni. *linguaggio* viene **sysname**, con un valore predefinito è NULL. Se *language* è specificato, vengono restituite informazioni sulla lingua specifica. Se non viene specificato alcun linguaggio, informazioni su tutte le lingue nel **Sys. syslanguages** vista di compatibilità viene restituito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -55,19 +55,19 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**LangID**|**smallint**|Numero di identificazione della lingua.|  
-|**DateFormat**|**nchar(3)**|Formato della data.|  
+|**langid**|**smallint**|Numero di identificazione della lingua.|  
+|**dateformat**|**nchar(3)**|Formato della data.|  
 |**DATEFIRST**|**tinyint**|Primo giorno della settimana: 1 per lunedì, 2 per martedì e così via fino a 7 per domenica.|  
-|**aggiornamento**|**int**|Versione dell'ultimo aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la lingua specificata.|  
+|**Aggiornamento**|**int**|Versione dell'ultimo aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la lingua specificata.|  
 |**name**|**sysname**|Nome della lingua.|  
 |**alias**|**sysname**|Nome alternativo per la lingua.|  
-|**mesi**|**nvarchar(372)**|Nomi dei mesi.|  
+|**Mesi**|**nvarchar(372)**|Nomi dei mesi.|  
 |**shortmonths**|**nvarchar(132)**|Nomi brevi dei mesi.|  
-|**giorni**|**nvarchar(217)**|Nomi dei giorni.|  
-|**LCID**|**int**|ID delle impostazioni locali di Windows relative alla lingua.|  
+|**Giorni**|**nvarchar(217)**|Nomi dei giorni.|  
+|**lcid**|**int**|ID delle impostazioni locali di Windows relative alla lingua.|  
 |**msglangid**|**smallint**|ID del gruppo di messaggi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -87,9 +87,9 @@ sp_helplanguage;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
- [SET LANGUAGE &#40; Transact-SQL &#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

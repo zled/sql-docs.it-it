@@ -1,33 +1,33 @@
 ---
 title: Oggetto Broker Statistics di SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Broker Statistics
 - Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4dfb78d1b381649353ef872ed22e0bb4725d65cc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a3d221c9f2d3b7e9e1c91d9b11d21afc537856c4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-broker-statistics-object"></a>Oggetto Statistiche Broker di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nell'oggetto prestazione SQLServer:statistiche broker sono inclusi contatori delle prestazioni che contengono informazioni generali su [!INCLUDE[ssSB](../../includes/sssb-md.md)] per un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Nell'oggetto prestazione SQLServer:Statistiche Broker sono inclusi contatori delle prestazioni che contengono informazioni generali su [!INCLUDE[ssSB](../../includes/sssb-md.md)] per un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto:  
   
 |Contatori dell'oggetto Statistiche Broker di SQL Server|Description|  
 |-------------------------------------------|-----------------|  

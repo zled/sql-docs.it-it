@@ -1,32 +1,33 @@
 ---
 title: sp_replcmds (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_replcmds_TSQL
 - sp_replcmds
-helpviewer_keywords: sp_replcmds
+helpviewer_keywords:
+- sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 279d002e0a088386440cd978410476dee8def3ac
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3690b3eaad187b341e4ad31fae1068aa56e45b05
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +48,17 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="arguments"></a>Argomenti  
  [  **@maxtrans=**] *maxtrans*  
- Numero di transazioni su cui si desidera ottenere informazioni. *maxtrans* è **int**, il valore predefinito è **1**, che specifica la transazione successiva in attesa per la distribuzione.  
+ Numero di transazioni su cui si desidera ottenere informazioni. *maxtrans* viene **int**, il valore predefinito è **1**, che specifica la transazione successiva in attesa per la distribuzione.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**id articolo**|**int**|ID dell'articolo.|  
+|**id dell'articolo**|**int**|ID dell'articolo.|  
 |**che**|**bit**|Indica se si tratta di un comando parziale.|  
 |**comando**|**varbinary(1024)**|Valore del comando.|  
 |**xactid**|**binary(10)**|ID della transazione.|  
-|**xact_seqno**|**varbinary (16)**|Numero di sequenza della transazione.|  
+|**xact_seqno**|**varbinary(16)**|Numero di sequenza della transazione.|  
 |**publication_id**|**int**|ID della pubblicazione.|  
 |**command_id**|**int**|ID del comando in [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
 |**command_type**|**int**|Tipo di comando.|  
@@ -66,7 +67,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**pkHash**|**int**|Solo per uso interno.|  
 |**originator_publication_id**|**int**|ID della pubblicazione in cui ha origine la transazione.|  
 |**originator_db_version**|**int**|Versione del database in cui ha origine la transazione.|  
-|**originator_lsn**|**varbinary (16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine.|  
+|**originator_lsn**|**varbinary(16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine.|  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_replcmds** viene utilizzato dal processo di lettura log nella replica transazionale.  
@@ -82,14 +83,14 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  Viene aggiunto un numero di messaggio di avviso 18759 sia il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log degli errori e [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows se **sp_replcmds** non è in grado di replicare un comando di testo poiché non è il puntatore di testo recuperato nella stessa transazione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_replcmds**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Messaggi di errore](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_repldone &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

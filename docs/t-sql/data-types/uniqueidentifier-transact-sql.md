@@ -1,16 +1,14 @@
 ---
-title: uniqueidentifier (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: uniqueidentifier (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/1/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - uniqueidentifier
@@ -22,39 +20,39 @@ helpviewer_keywords:
 - globally unique identifiers [SQL Server]
 - GUIDs [SQL Server]
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 76f7a3c784c0d05e1a6f94da0b33207bfbb1efec
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7128398c7ebec1317cb23dede5565c93ed29b169
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
 GUID a 16 byte.
   
-## <a name="remarks"></a>Osservazioni  
-Una colonna o una variabile locale di **uniqueidentifier** tipo di dati può essere inizializzato su un valore nei modi seguenti:
--   Tramite il [NEWID](../../t-sql/functions/newid-transact-sql.md) o [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) funzioni.    
--   Tramite la conversione da una costante stringa nel formato *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx* - *xxxxxxxxxxxx*, in cui ogni *x* è una cifra esadecimale compresa nell'intervallo 0-9 o a-f. Ad esempio, 6F9619FF-8B86-D011-B42D-00C04FC964FF è un valido **uniqueidentifier** valore.  
+## <a name="remarks"></a>Remarks  
+È possibile inizializzare una colonna o variabile locale di tipo **uniqueidentifier** su un valore specifico nei modi seguenti:
+-   Usando le funzioni [NEWID](../../t-sql/functions/newid-transact-sql.md) o [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md).    
+-   Tramite la conversione da una costante stringa nel formato *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx*, in cui ogni *x* rappresenta una cifra esadecimale compresa nell'intervallo 0-9 oppure a-f. Ad esempio, 6F9619FF-8B86-D011-B42D-00C04FC964FF è un valore **uniqueidentifier** valido.  
   
-Gli operatori di confronto possono essere utilizzati con **uniqueidentifier** valori. Quando si confrontano gli schemi di bit dei due valori, tuttavia, l'ordinamento non viene implementato. Le uniche operazioni che possono essere eseguite con un **uniqueidentifier** valore sono i confronti (=, <>, \<, >, \<=, > =) e la ricerca di NULL (IS NULL e IS NOT NULL). Non è possibile utilizzare altri operatori aritmetici. Tutti i vincoli di colonna e le proprietà, ad eccezione di IDENTITY possono essere utilizzate nel **uniqueidentifier** tipo di dati.
+Con i valori **uniqueidentifier** è possibile usare gli operatori di confronto. Quando si confrontano gli schemi di bit dei due valori, tuttavia, l'ordinamento non viene implementato. Le uniche operazioni che è possibile eseguire su un valore **uniqueidentifier** sono i confronti (=, <>, \<, >, \<=, >=) e la verifica del valore NULL (IS NULL e IS NOT NULL). Non è possibile utilizzare altri operatori aritmetici. Con il tipo di dati **uniqueidentifier** è possibile usare tutti i vincoli e le proprietà delle colonne, ad eccezione di IDENTITY.
   
-Merge di replica e la replica transazionale con aggiornamento delle sottoscrizioni utilizzano **uniqueidentifier** colonne per garantire che le righe vengano identificate univocamente in più copie della tabella.
+Le colonne **uniqueidentifier** vengono usate nella replica transazionale e di tipo merge con sottoscrizioni aggiornabili, per garantire che le righe siano identificate in modo univoco in più copie della tabella.
   
 ## <a name="converting-uniqueidentifier-data"></a>Conversione del tipo di dati uniqueidentifier  
-Il **uniqueidentifier** viene considerato un tipo di carattere ai fini di conversione da un'espressione di caratteri e pertanto è soggetto alle regole di troncamento per la conversione in un tipo di carattere. Vale a dire che, se un'espressione di caratteri viene convertita in un tipo di dati carattere di dimensioni diverse, i valori troppo lunghi per il nuovo tipo di dati vengono troncati. Vedere la sezione relativa agli esempi.
+Per la conversione da un'espressione di caratteri, il tipo **uniqueidentifier** è considerato un tipo di dati carattere ed è pertanto soggetto alle regole di troncamento per la conversione in un tipo di dati carattere. Vale a dire che, se un'espressione di caratteri viene convertita in un tipo di dati carattere di dimensioni diverse, i valori troppo lunghi per il nuovo tipo di dati vengono troncati. Vedere la sezione relativa agli esempi.
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
 
-Questi strumenti e funzionalità non supportano il `uniqueidentifier` tipo di dati:
+I seguenti strumenti e funzionalità non supportano il tipo di dati `uniqueidentifier`:
 - PolyBase
-- [strumento di caricamento dwloader](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader) per Parallel Data Warehouse
+- [Strumento di caricamento dwloader](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader) per Parallel Data Warehouse
 
 ## <a name="examples"></a>Esempi  
 Nell'esempio seguente un valore `uniqueidentifier` viene convertito in un tipo di dati `char`.
@@ -64,7 +62,7 @@ DECLARE @myid uniqueidentifier = NEWID();
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
-Nell'esempio seguente viene illustrato il troncamento dei dati quando il valore è troppo lungo per il tipo di dati in cui avviene la conversione. Poiché il **uniqueidentifier** tipo è limitato a 36 caratteri, i caratteri che superano tale lunghezza vengono troncati.
+Nell'esempio seguente viene illustrato il troncamento dei dati quando il valore è troppo lungo per il tipo di dati in cui avviene la conversione. Poiché la lunghezza del tipo **uniqueidentifier** è limitata a 36 caratteri, i caratteri eccedenti vengono troncati.
   
 ```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
@@ -87,8 +85,8 @@ String                                       TruncatedValue
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[NEWID &#40; Transact-SQL &#41;](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40; Transact-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
+[NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)  
+[NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
   

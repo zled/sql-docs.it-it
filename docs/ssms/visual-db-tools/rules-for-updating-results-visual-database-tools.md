@@ -1,35 +1,34 @@
 ---
 title: Regole per l'aggiornamento dei risultati (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - updating query results
 - Query Designer [SQL Server], Results pane
 - Results pane
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0ab1925f265eb27a6c0efd1b55b4770e4be7cf3d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ba9929b2588bb3d168e54d49c0eb95278011dbec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Regole per l'aggiornamento dei risultati (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Normalmente è possibile aggiornare il set di risultati visualizzato nel [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Talvolta non è tuttavia possibile.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Normalmente è possibile aggiornare il set di risultati visualizzato nel [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Talvolta non è tuttavia possibile.  
   
 Normalmente, per aggiornare i risultati, è necessario che in [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) siano disponibili informazioni sufficienti per identificare in modo univoco la riga specifica all'interno della tabella. Questo è ad esempio possibile quando la query include una chiave primaria nell'elenco di output. Occorre inoltre disporre delle autorizzazioni necessarie per l'aggiornamento del database.  
   

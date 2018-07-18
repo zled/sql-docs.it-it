@@ -1,16 +1,13 @@
 ---
-title: DBCC CLEANTABLE (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DBCC CLEANTABLE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CLEANTABLE_TSQL
@@ -29,19 +26,19 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 53
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: dbc034e7ed5dd1d6f4704376adf73d517d3b5c47
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 69a27059322729c71bd4791cded935d983ad205d
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Recupera lo spazio delle colonne a lunghezza variabile eliminate nelle tabelle o viste indicizzate.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Recupera lo spazio delle colonne a lunghezza variabile eliminate nelle tabelle e nelle viste indicizzate.
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
@@ -59,7 +56,7 @@ DBCC CLEANTABLE
   
 ## <a name="arguments"></a>Argomenti  
  *database_name* | *database_id* | 0  
- Database a cui appartiene la tabella in cui recuperare lo spazio. Se si specifica 0, viene utilizzato il database corrente. I nomi di database devono seguire le regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
+ Database a cui appartiene la tabella in cui recuperare lo spazio. Se si specifica 0, viene utilizzato il database corrente. I nomi di database devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  *table_name* | *table_id* | *view_name*| *view_id*  
  Tabella o vista indicizzata in cui recuperare lo spazio.  
@@ -70,8 +67,8 @@ DBCC CLEANTABLE
  WITH NO_INFOMSGS  
  Disattiva tutti i messaggi informativi.  
   
-## <a name="remarks"></a>Osservazioni  
-DBCC CLEANTABLE recupera lo spazio dopo l'eliminazione di una colonna a lunghezza variabile. Una colonna a lunghezza variabile può essere uno dei seguenti tipi di dati: **varchar**, **nvarchar**, **varchar (max)**, **nvarchar (max)**, **varbinary**, **varbinary (max)**, **testo**, **ntext**, **immagine**,  **sql_variant**, e **xml**. Questo comando non consente di recuperare spazio dopo l'eliminazione di colonne a lunghezza fissa.
+## <a name="remarks"></a>Remarks  
+DBCC CLEANTABLE recupera lo spazio dopo l'eliminazione di una colonna a lunghezza variabile. I possibili tipi di dati per una colonna a lunghezza variabile sono i seguenti: **varchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **varbinary**, **varbinary(max)**, **text**, **ntext**, **image**, **sql_variant** e **xml**. Questo comando non consente di recuperare spazio dopo l'eliminazione di colonne a lunghezza fissa.
 Se le colonne eliminate erano archiviate all'interno di righe, DBCC CLEANTABLE recupera lo spazio dall'unità di allocazione IN_ROW_DATA della tabella. Se le colonne erano archiviate all'esterno di righe, lo spazio viene recuperato dall'unità di allocazione ROW_OVERFLOW_DATA o LOB_DATA a seconda del tipo di dati della colonna eliminata. Se l'operazione di recupero di spazio da una pagina ROW_OVERFLOW_DATA o LOB_DATA restituisce una pagina vuota, DBCC CLEANTABLE rimuove tale pagina.
 DBCC CLEANTABLE viene eseguita come una o più transazioni. Se non si specificano le dimensioni di batch, il comando elabora l'intera tabella in una sola transazione e per la tabella viene acquisito un blocco esclusivo durante l'operazione. Per tabelle di grandi dimensioni, la lunghezza della singola transazione e lo spazio del log necessario potrebbero risultare eccessivi. Se si specificano le dimensioni del batch, il comando viene eseguito in una serie di transazioni, ognuna con il numero di righe specificato. Non è possibile eseguire DBCC CLEANTABLE come una transazione all'interno di un'altra transazione.
 Questa operazione viene registrata completamente.
@@ -88,7 +85,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Chiamante deve essere proprietario della tabella o vista indicizzata o essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database, o **db_ddladmin** ruolo predefinito del database.  
+ Il chiamante deve essere il proprietario della tabella o della vista indicizzata oppure un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_owner** o **db_ddladmin**.  
   
 ## <a name="examples"></a>Esempi  
 ### <a name="a-using-dbcc-cleantable-to-reclaim-space"></a>A. Utilizzo di DBCC CLEANTABLE per il recupero di spazio  

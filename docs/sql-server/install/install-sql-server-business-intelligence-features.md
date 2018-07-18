@@ -1,36 +1,31 @@
 ---
-title: "Installare le funzionalità di business intelligence di SQL Server 2016 | Microsoft Docs"
-ms.custom: 
+title: Installare le funzionalità di business intelligence di SQL Server 2016 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/02/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
-caps.latest.revision: 
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: c63c70bdd99e31466aa94f72d765e50e0db78779
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+caps.latest.revision: 27
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: fd04cdfc45360c2c44de4da4b4950e956450b4bc
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772477"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Installare le funzionalità di business intelligence di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Le funzionalità di SQL Server che fanno parte della piattaforma di Microsoft Business Intelligence includono [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e diverse applicazioni client utilizzate per la creazione o l'utilizzo di dati analitici. In questa sezione della documentazione relativa al programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene descritto come installare queste funzionalità.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere installati come server autonomi, in configurazioni con scalabilità orizzontale o come applicazioni di servizio condivise in una farm SharePoint. L'installazione dei servizi in una farm consente di abilitare le funzionalità di Business Intelligence disponibili solo in SharePoint, incluso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint e [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], la nuova la finestra di progettazione di report ad hoc interattiva di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in esecuzione in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o database modello tabulare di [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)].  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere installati come server autonomi, in configurazioni con scalabilità orizzontale o come applicazioni di servizio condivise in una farm SharePoint. L'installazione dei servizi in una farm consente di abilitare le funzionalità di Business Intelligence disponibili solo in SharePoint, incluso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint e [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], la nuova la finestra di progettazione di report ad hoc interattiva di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in esecuzione in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o database modello tabulare di [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="sql-server-bi-features"></a>Funzionalità di business intelligence di SQL Server  
  Tutte le funzionalità di SQL Server, inclusi i componenti di business intelligence, vengono installate durante l'installazione di SQL Server. I collegamenti seguenti forniscono informazioni aggiuntive specifiche per ogni funzionalità di business intelligence.  

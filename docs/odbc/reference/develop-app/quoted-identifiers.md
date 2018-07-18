@@ -1,31 +1,28 @@
 ---
 title: Gli identificatori tra virgolette | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], quoted identifiers
 - quoted identifiers [ODBC]
 ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 9a530e24368339305fc510a3a3f6fc9a6193e694
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e74c39ad73357e50c1040e8a90029c0bf65f7b6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="quoted-identifiers"></a>Identificatori delimitati
 In un'istruzione SQL, gli identificatori che contengono caratteri speciali o parole chiave con corrispondenza devono essere racchiuso tra *virgolette identificatore*; gli identificatori racchiusi tra tali caratteri sono note come *identificatoritravirgolette*(noto anche come *identificatori delimitati* in SQL-92). Ad esempio, l'identificatore di contabilità fornitori è racchiuso tra virgolette nell'esempio seguente **selezionare** istruzione:  

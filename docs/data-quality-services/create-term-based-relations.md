@@ -1,30 +1,33 @@
 ---
 title: Creare relazioni basate su termini | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/08/2011
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.dqs.dm.kbtermsbased.f1
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: fef7b422366598e1974a07e4ee36e0100157dfa2
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: 1e35e6dbe790faff29ac5a34a664aec5a99d6bc1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-term-based-relations"></a>Creare relazioni basate su termini
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In questo argomento viene descritto come creare relazioni basate su termini per un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una relazione basata su termini (TRB) consente di effettuare una correzione a un termine che fa parte di un valore in un dominio, consentendo in questo modo a più valori identici ad eccezione dell'ortografia di una parte in comune tra essi di essere considerati sinonimi identici. È possibile, ad esempio, configurare una relazione basata su termini che modifica il termine "Inc." in "Incorporated". Il termine "Inc." verrà modificato ogni volta che viene trovato nel dominio. Le istanze di "Contoso, Inc." verranno modificate in "Contoso, Incorporated" e i due valori saranno considerati sinonimi esatti.  
   
  Per usare le relazioni basate su termini, è possibile compilare un elenco di coppie Valore/Correggi in, ad esempio "Inc." e "Incorporated" oppure "Senior" e "Sr.". L'utilizzo di una relazione basata su termini consente di modificare un termine in tutto il dominio senza impostare manualmente i valori di singoli domini come sinonimi. È possibile specificare di correggere un valore anche se l'individuazione delle informazioni non ha individuato tale valore in precedenza. Se una trasformazione delle relazioni basate su termini fa in modo che due valori siano identici, in DQS verrà creata tra essi una relazione di sinonimi (in individuazione delle informazioni), una relazione di correzioni (in correzione dei dati), o una corrispondenza esatta (in corrispondenza).  

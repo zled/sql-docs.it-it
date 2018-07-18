@@ -1,16 +1,14 @@
 ---
-title: ASYMKEY_ID (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ASYMKEY_ID (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AsymKey_ID
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - IDs [SQL Server], asymmetric keys
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf4f12b058c3a4df46679d1d4d5bf9bd56958deb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0fe892af66714c2ab9995dab6c5435ee52908c12
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="asymkeyid-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,16 +48,16 @@ ASYMKEY_ID ( 'Asym_Key_Name' )
   
 ## <a name="arguments"></a>Argomenti  
 *Asym_Key_Name*  
-Nome della chiave asimmetrica in un database.
+Nome della chiave asimmetrica nel database.
   
 ## <a name="return-types"></a>Tipi restituiti
  **int**  
   
-## <a name="permissions"></a>Permissions  
-Sono richieste le autorizzazioni relative alla chiave asimmetrica ed è necessario che al chiamante non sia stata negata l'autorizzazione VIEW per la chiave asimmetrica.
+## <a name="permissions"></a>Autorizzazioni  
+Sono richieste le autorizzazioni appropriate per la chiave asimmetrica ed è necessario che al chiamante non sia stata negata l'autorizzazione VIEW per la chiave asimmetrica. Per altre informazioni sulle autorizzazioni per le chiavi asimmetriche, vedere [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md).
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene restituito l'ID della chiave asimmetrica `ABerglundKey11`.
+L'esempio restituisce l'ID della chiave asimmetrica `ABerglundKey11`.
   
 ```sql
 SELECT ASYMKEY_ID('ABerglundKey11');  
@@ -69,14 +66,14 @@ GO
   
 ## <a name="see-also"></a>Vedere anche
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
-[ALTER ASYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
-[DROP ASYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
+[ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
+[DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
 [SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)  
-[VERIFYSIGNEDBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
+[VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
 [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[asymmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
+[sys.asymmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
 [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-[ASYMKEYPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
-[KEY_ID &#40; Transact-SQL &#41;](../../t-sql/functions/key-id-transact-sql.md)
+[ASYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+[KEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/key-id-transact-sql.md)
   
   

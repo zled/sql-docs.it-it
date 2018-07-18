@@ -1,16 +1,14 @@
 ---
-title: SET FIPS_FLAGGER (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: SET FIPS_FLAGGER (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FIPS_FLAGGER
@@ -24,21 +22,20 @@ helpviewer_keywords:
 - FIPS 127-2 standard
 - FIPS_FLAGGER option
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ece506e0c34f14d827e4562b8c2fcece5de1290d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8d52cc3059bd1c0497511b9b230c5f2d57eef8c3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Specifica il controllo della conformità con lo standard FIPS 127-2, basato sullo standard ISO. Per informazioni sulla conformità a FIPS per SQL Server, vedere [illustrato come utilizzare SQL Server 2016 in modalità FIPS 140-2-compatibile](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode). 
+  Specifica il controllo della conformità con lo standard FIPS 127-2, basato sullo standard ISO. Per informazioni sulla conformità FIPS in SQL Server, vedere [How to use SQL Server 2016 in FIPS 140-2-compliant mode](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode) (Come usare SQL Server 2016 in modalità di conformità con FIPS 140-2). 
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,24 +46,24 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **'** *livello* **'**  
+ **'** *level* **'**  
  Livello di conformità con lo standard FIPS 127-2 in base a cui vengono controllate tutte le operazioni del database. Se un'operazione di database è in conflitto con il livello degli standard ISO scelti, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un avviso.  
   
- *livello* deve essere uno dei valori seguenti.  
+ Il valore di *level* deve essere uno dei seguenti.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |ENTRY|Controllo degli standard per la conformità di base con ISO.|  
 |FULL|Controllo degli standard per la conformità totale con ISO.|  
 |INTERMEDIATE|Controllo degli standard per la conformità a livello intermedio con ISO.|  
 |OFF|Nessun controllo di conformità degli standard.|  
   
-## <a name="remarks"></a>Osservazioni  
- L'impostazione di `SET FIPS_FLAGGER` è impostata in fase di analisi e non in esecuzione o di esecuzione. Impostazione in fase di analisi significa che se l'istruzione SET è presente nel batch o stored procedure, viene attivata indipendentemente dal fatto che l'esecuzione del codice raggiunga effettivamente tale punto. e `SET` istruzione eseguita prima dell'esecuzione di tutte le istruzioni. Ad esempio, anche se il `SET` istruzione si trova in un `IF...ELSE` blocco di istruzioni che non viene mai raggiunto durante l'esecuzione, il `SET` istruzione viene comunque eseguita perché la `IF...ELSE` blocco viene analizzato.  
+## <a name="remarks"></a>Remarks  
+ L'opzione `SET FIPS_FLAGGER` viene impostata in fase di analisi e non in fase di esecuzione. L'impostazione in fase di analisi indica che, se l'istruzione SET è inclusa nel batch o nella stored procedure, l'istruzione viene attivata indipendentemente dal fatto che l'esecuzione del codice raggiunga effettivamente tale punto. L'istruzione `SET` diventa anche attiva prima dell'esecuzione di qualsiasi istruzione. Ad esempio, anche se l'istruzione `SET` è inclusa in un blocco di istruzione `IF...ELSE` che non viene mai raggiunto in fase di esecuzione, l'istruzione `SET` viene comunque eseguita perché il blocco `IF...ELSE` viene analizzato.  
   
- Se `SET FIPS_FLAGGER` è impostato in una stored procedure, il valore di `SET FIPS_FLAGGER` viene ripristinato dopo il controllo viene restituito dalla stored procedure. Pertanto, un `SET FIPS_FLAGGER` istruzione specificata nel linguaggio SQL dinamico non ha alcun effetto sulle istruzioni successive l'istruzione SQL dinamica.  
+ Se l'opzione `SET FIPS_FLAGGER` viene impostata in una stored procedure, il valore dell'opzione `SET FIPS_FLAGGER` viene ripristinato al termine della stored procedure. Un'istruzione `SET FIPS_FLAGGER` specificata nel codice SQL dinamico pertanto non ha alcun effetto sulle istruzioni successive.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="see-also"></a>Vedere anche  

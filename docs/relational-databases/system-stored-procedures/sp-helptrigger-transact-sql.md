@@ -1,32 +1,33 @@
 ---
 title: sp_helptrigger (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helptrigger
 - sp_helptrigger_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_helptrigger
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_helptrigger
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 568e8eadad6dd63a2b2980284ec56bff9bb0293e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 61c6c78c302266ce3a9e29c432e1a913c263d704
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,12 +46,12 @@ sp_helptrigger [ @tabname = ] 'table'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@tabname=** ] **'***tabella***'**  
- Nome della tabella del database corrente per cui si desidera ottenere informazioni sui trigger. *tabella* è **nvarchar(776)**, non prevede alcun valore predefinito.  
+ Nome della tabella del database corrente per cui si desidera ottenere informazioni sui trigger. *Nella tabella* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
  [  **@triggertype=** ] **'***tipo***'**  
- Tipo di trigger DML per cui restituire informazioni. *tipo* è **char(6)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+ Tipo di trigger DML per cui restituire informazioni. *tipo di* viene **char(6)**, con un valore predefinito è NULL, e può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**DELETE**|Restituisce informazioni sui trigger DELETE.|  
 |**INSERT**|Restituisce informazioni sui trigger INSERT.|  
@@ -73,7 +74,7 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsteadof**|**int**|1 = Trigger INSTEAD OF<br /><br /> 0 = Trigger diverso da INSTEAD OF|  
 |**trigger_schema**|**sysname**|Nome dello schema a cui appartiene il trigger.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) autorizzazione per la tabella.  
   
 ## <a name="examples"></a>Esempi  
@@ -86,7 +87,7 @@ EXEC sp_helptrigger 'Person.Person';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

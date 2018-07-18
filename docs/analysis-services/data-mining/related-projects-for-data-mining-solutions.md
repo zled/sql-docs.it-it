@@ -1,31 +1,23 @@
 ---
 title: Progetti correlati per soluzioni di Data Mining | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7eebc2ae561e47481734c80dbc8f77ad381f4193
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Progetti correlati per soluzioni di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Come minimo, per una soluzione di data mining è richiesto il progetto di data mining, in cui si definiscono origini dati, viste origine dati, strutture di data mining e modelli di data mining. Tuttavia, quando i modelli di data mining vengono utilizzati nei processi decisionali quotidiani, è importante che il data mining sia integrato con altre parti di una soluzione analitica predittiva, che può includere i seguenti processi e componenti:  
+  Come minimo, per una soluzione di data mining è richiesto il progetto di data mining, in cui si definiscono origini dati, viste origine dati, strutture di data mining e modelli di data mining. Tuttavia, quando i modelli di data mining vengono utilizzati nei processi decisionali quotidiani, è importante che il data mining sia integrato con altre parti di una soluzione analitica predittiva, che può includere i seguenti processi e componenti:  
   
 -   Preparazione e selezione di dati e variabili. Include pulizia dei dati, gestione di metadati e integrazione di più origini dati, nonché la conversione, l'unione e il caricamento di dati in un data warehouse.  
   
@@ -48,7 +40,7 @@ Come minimo, per una soluzione di data mining è richiesto il progetto di data m
  [Indicizzazione semantica](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono forniti componenti e funzionalità richiesti per le fasi di preparazione dei dati e di training di un progetto di data mining. Benché sia possibile eseguire molte attività di pulizia o preparazione dei dati tramite altri strumenti, ad esempio gli script, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre numerosi vantaggi per il data mining:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]vengono forniti componenti e le funzionalità necessarie per le fasi di training di un progetto di data mining e la preparazione dei dati. Benché sia possibile eseguire molte attività di pulizia o preparazione dei dati tramite altri strumenti, ad esempio gli script, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre numerosi vantaggi per il data mining:  
   
 -   Rappresenta le attività come parte di un flusso di lavoro che può essere ripetuto, automatizzato, ramificato ed esteso.  
   
@@ -109,11 +101,11 @@ Come minimo, per una soluzione di data mining è richiesto il progetto di data m
   
  Per ulteriori informazioni sull'utilizzo di Reporting Services con query DMX come origine dati, vedere i collegamenti seguenti:  
   
- [Recuperare dati da un modello di Data Mining &#40; DMX &#41; &#40; SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Recuperare dati da un modello di Data Mining & #40; DMX & #41; & #40; SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Interfaccia utente di progettazione di Query DMX di Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Tipo di connessione di Analysis Services per DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo di connessione di Analysis Services per DMX & #40; SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Tuttavia, non è necessario utilizzare DMX come origine dati. I componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per il data mining supportano inoltre il salvataggio dei risultati di una query di stima in un database relazionale. Se si dispone di un flusso di lavoro stabilito per l'aggiornamento di modelli tramite [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'impostazione della persistenza di stime e altri risultati di query di data mining in SQL Server consente di utilizzare [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] per la creazione di report, nonché altri strumenti non interfacciati con DMX.  
   
@@ -209,6 +201,6 @@ Come minimo, per una soluzione di data mining è richiesto il progetto di data m
   
 ## <a name="see-also"></a>Vedere anche  
  [Soluzioni di modelli multidimensionali ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Soluzioni di modelli tabulari](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Soluzioni di modelli tabulari](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

@@ -1,31 +1,31 @@
 ---
 title: Grafico di elaborazione con SQL Server e Database SQL di Azure | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: graphs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
-ms.author: shkale;barbkess
+ms.author: shkale
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 77a50d48ee5c6d5baa8b05b327146e74b5eff815
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 8c2ad7f5b31a97de5d0bfb22074b55bd61bb825b
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707049"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Grafico di elaborazione con SQL Server e Database SQL di Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

@@ -1,31 +1,28 @@
 ---
 title: Scrittura di un gestore personalizzato | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e311f541cbca186a18d19f3ec2f22ff547cf69a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b780e2027e64f7832fd622e66e1d908696d24b0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-your-own-customized-handler"></a>Scrittura di un gestore personalizzato
 Si consiglia di scrivere un gestore personalizzato se si è un amministratore di server IIS che richiede il supporto RDS predefinito, ma maggiore controllo sulle richieste degli utenti e diritti di accesso.  
@@ -50,7 +47,7 @@ Si consiglia di scrivere un gestore personalizzato se si è un amministratore di
   
  ***query*** il testo del comando per eseguire una query.  
   
- ***ppRS*** il puntatore in cui il **Recordset** deve essere restituito.  
+ ***ppRS*** l'indicatore di misura in cui la **Recordset** devono essere restituiti.  
   
 ## <a name="reconnect-method"></a>Riconnettersi (metodo)  
  Questo metodo aggiorna l'origine dati. Viene creato un nuovo [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto e associa il determinato **Recordset**.  

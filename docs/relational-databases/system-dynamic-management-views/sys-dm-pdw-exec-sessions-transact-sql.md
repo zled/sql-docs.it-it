@@ -1,30 +1,28 @@
 ---
 title: sys.dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 8
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 57fa5867f9fa62dd4a81426673339afcd615f140
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: ce411196b28f658789769cd53aa86693d747ef47
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -42,15 +40,15 @@ ms.lasthandoff: 02/03/2018
 |query_count|**int**|Acquisisce il numero di query/richiesteQuesta sessione è stata eseguita dal momento della creazione.|Maggiore o uguale a 0.|  
 |is_transactional|**bit**|Acquisisce se una sessione è attualmente in una transazione oppure No.|0 per la modalità di commit automatico, 1 per transazionale.|  
 |client_id|**nvarchar(255)**|Acquisisce informazioni client per la sessione.|Qualsiasi stringa valida.|  
-|app_name|**nvarchar(255)**|Acquisisce informazioni sul nome dell'applicazione, facoltativamente, impostare come parte del processo di connessione.|Qualsiasi stringa valida.|  
-|sql_spid|**int**|Il numero di id dello SPID. Utilizzare il `session_id` questa sessione. Utilizzare il `sql_spid` colonna di join per **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\*Avviso \* \***  questa colonna contiene SPID chiuso.||  
+|APP_NAME|**nvarchar(255)**|Acquisisce informazioni sul nome dell'applicazione, facoltativamente, impostare come parte del processo di connessione.|Qualsiasi stringa valida.|  
+|sql_spid|**int**|Il numero di id dello SPID. Utilizzare il `session_id` questa sessione. Utilizzare il `sql_spid` colonna di join per **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Avviso \* \***  questa colonna contiene SPID chiuso.||  
   
  Per informazioni sulle righe massimi mantenuto da questa vista, vedere la sezione valori massimi vista di sistema nel [valori minimo e massimo (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) argomento.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede il `VIEW SERVER STATE` autorizzazione.  
+ È necessaria l'autorizzazione `VIEW SERVER STATE`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e viste a gestione dinamica Parallel Data Warehouse &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse e Parallel Data Warehouse, viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

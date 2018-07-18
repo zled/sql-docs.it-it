@@ -1,34 +1,31 @@
 ---
-title: "Le proprietà di raccolta di utenti, metodi ed eventi | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Le proprietà di raccolta di utenti, metodi ed eventi | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Users collection [ADOX], members
 ms.assetid: 1b89a12f-96bc-48b3-a88d-4da74780ea40
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 522f96a20ded26c38b785b3aac1fc269ffd9184c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d8555884b3212d4c915294e1cbfbd880f672de82
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="users-collection-properties-methods-and-events"></a>Le proprietà di raccolta di utenti, metodi ed eventi
 ## <a name="properties"></a>Proprietà  
- [Proprietà di conteggio](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Proprietà Count](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Proprietà dell'elemento](../../../ado/reference/ado-api/item-property-ado.md)  
   

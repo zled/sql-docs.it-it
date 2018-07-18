@@ -1,37 +1,35 @@
 ---
 title: Abilitare e disabilitare Change Data Capture (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], enabling tables
 - change data capture [SQL Server], enabling databases
 - change data capture [SQL Server], disabling databases
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: c19f08347185ee6ea46977df74d0317041beb020
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9fd8c6016a58de25e0495d8195340e8d0f2f0732
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Abilitare e disabilitare Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-In questo argomento viene descritto come abilitare e disabilitare Change Data Capture per un database e una tabella.  
+  In questo argomento viene descritto come abilitare e disabilitare Change Data Capture per un database e una tabella.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Abilitazione di Change Data Capture per un database  
  Prima di creare un'istanza di acquisizione per le singole tabelle, è necessario che un membro del ruolo predefinito del server **sysadmin** abiliti il database per Change Data Capture. Questa operazione viene eseguita eseguendo la stored procedure [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) nel contesto del database. Per determinare se un database è già abilitato, eseguire una query sulla colonna **is_cdc_enabled** nella vista del catalogo **sys.databases**.  

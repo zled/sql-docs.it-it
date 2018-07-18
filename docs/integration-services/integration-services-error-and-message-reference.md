@@ -1,32 +1,30 @@
 ---
 title: Guida di riferimento ai messaggi e agli errori di Integration Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 16f1793a182cf762882a90889ec8576c9fc6d99e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 55b664bda08e6842333fed67dafeab6e58a605e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guida di riferimento ai messaggi e agli errori di Integration Services
   Nelle tabelle seguenti vengono riportati gli errori, gli avvisi e i messaggi informativi predefiniti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , elencati in ordine numerico crescente all'interno di ciascuna categoria. Vengono inoltre indicati i codici numerici e nomi simbolici corrispondenti. Ognuno degli errori è definito come campo nella classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> nello spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -236,8 +234,8 @@ ms.lasthandoff: 01/25/2018
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|Impossibile aprire il file "%1" per la scrittura. È possibile che il file sia di sola lettura o che non siano disponibili le autorizzazioni corrette.|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|Nessun set di righe di risultati associato all'esecuzione di questa query. Il risultato non è specificato in modo corretto.|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|File di dump del debug non generati correttamente. Hresult: 0x%1!8.8X!.|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|L'URL specificato non è valido. Questo errore può verificarsi quando l'URL del server o del proxy è Null oppure in formato non corretto. Esempi di formato URL valido sono http://ServerName:Port/ResourcePath e https://ServerName:Port/ResourcePath.|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|L'URL %1 non è valido. Questo errore può verificarsi se si specifica uno schema diverso da http o https oppure se il formato dell'URL non è corretto. Esempi di formato URL valido sono http://ServerName:Port/ResourcePath e https://ServerName:Port/ResourcePath.|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|L'URL specificato non è valido. Questo errore può verificarsi quando l'URL del server o del proxy è Null oppure in formato non corretto. Un formato URL valido è http://ServerName:Port/ResourcePath oppure https://ServerName:Port/ResourcePath.|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|L'URL %1 non è valido. Questo errore può verificarsi se si specifica uno schema diverso da http o https oppure se il formato dell'URL non è corretto. Un formato URL valido è http://ServerName:Port/ResourcePath oppure https://ServerName:Port/ResourcePath.|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|Impossibile stabilire la connessione al server %. Questo errore può verificarsi quando il server non esiste oppure le impostazioni del proxy non sono corrette.|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|Reimpostazione o interruzione della connessione al server. Riprovare più tardi.|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|Tentativo di accesso non riuscito per "%1". Questo errore si verifica quando le credenziali di accesso specificate non sono corrette. Verificare le credenziali di accesso.|  

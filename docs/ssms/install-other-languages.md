@@ -1,23 +1,22 @@
 ---
 title: Installare versioni in lingua non inglese di SQL Server Management Studio (SSMS) | Microsoft Docs
 description: Installare versioni in lingua non inglese di SQL Server Management Studio (SSMS)
-ms.custom: 
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: sql
+ms.reviewer: ''
+ms.suite: ''
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1ae38d56a3faee88fa688a0b027482713ac07b59
-ms.sourcegitcommit: f376e735c7315d6bdedb16244ad5f5f6428631d9
+ms.openlocfilehash: 74cda5bc234b468e89d70b5289a5a70478328b11
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Installare versioni in lingua non inglese di SQL Server Management Studio (SSMS) 
 
@@ -41,7 +40,7 @@ Le indicazioni seguenti variano a seconda della versione di Windows disponibile.
 2. Specificare ora le impostazioni locali del sistema per usare il Language Pack installato nel passaggio precedente facendo clic sulla lingua appena installata, quindi selezionare**Imposta come predefinito**. 
 3. Quando il sistema operativo è in esecuzione nella lingua desiderata, [installare la versione di SSMS nella stessa lingua](download-sql-server-management-studio-ssms.md#available-languages). Per la prima installazione di una lingua nuova di SSMS, usare il pacchetto completo. È possibile usare il pacchetto di aggiornamento per le installazioni successive.
 4. Per ogni lingua da installare che non corrisponde alla lingua della prima versione di SSMS installata, installare la versione corrispondente di Visual Studio 2015 Shell (Isolated) Language Pack:
-   - Passare a [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (potrebbe essere necessario accedere al sito e completare il processo di *registrazione a Connect*).
+   - Passare a [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (potrebbe essere necessario eseguire l'accesso e completare il processo di *registrazione a Connect*).
    - Scaricare il Visual Studio 2015 Shell (Isolated) Language Pack desiderato e installarlo.
 
    > [!IMPORTANT]

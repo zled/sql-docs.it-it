@@ -1,35 +1,19 @@
 ---
-title: "Compatibilità con le versioni precedenti di SQL Server 2016 Analysis Services | Documenti Microsoft"
-ms.custom: 
-ms.date: 07/11/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- installing Analysis Services, backward compatibility
-- backward compatibility [Analysis Services]
-- compatibility [Analysis Services]
-- Analysis Services, backward compatibility
-- upgrading Analysis Services
-- SSAS, backward compatibility
-- SQL Server Analysis Services, backward compatibility
-ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: "38"
-author: Minewiskan
+title: Compatibilità con le versioni precedenti di SQL Server 2016 Analysis Services | Documenti Microsoft
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dbefbaac019a9e7b4193162384469524336cb430
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5ab4f304d865992a3269b4ee83c9e25f61069e8c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilità con le versioni precedenti di Analysis Services (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -67,11 +51,11 @@ Le funzionalità seguenti sono state deprecate in una versione precedente e non 
 |||  
 |-|-|  
 |**Funzionalità**|**Sostituzione o soluzione alternativa**|  
-|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|nessuna. Questa funzionalità è stata deprecata in SQL Server 2005.|  
-|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|nessuna. Questa funzionalità è stata deprecata in SQL Server 2005.|  
-|Hint di Query Optimizer NON_EMPTY_BEHAVIOR|nessuna. Questa funzionalità è stata deprecata in SQL Server 2008.|  
-|Assembly COM|nessuna. Questa funzionalità è stata deprecata in SQL Server 2008.|  
-|Proprietà intrinseca di cella CELL_EVALUATION_LIST|nessuna. Questa funzionalità è stata deprecata in SQL Server 2005.|  
+|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Nessuno Questa funzionalità è stata deprecata in SQL Server 2005.|  
+|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Nessuno Questa funzionalità è stata deprecata in SQL Server 2005.|  
+|Hint di Query Optimizer NON_EMPTY_BEHAVIOR|Nessuno Questa funzionalità è stata deprecata in SQL Server 2008.|  
+|Assembly COM|Nessuno Questa funzionalità è stata deprecata in SQL Server 2008.|  
+|Proprietà intrinseca di cella CELL_EVALUATION_LIST|Nessuno Questa funzionalità è stata deprecata in SQL Server 2005.|  
   
 > [!NOTE]  
 >  Gli annunci di funzionalità precedentemente deprecate di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] rimangono validi. Considerato che il codice che supporta tali funzionalità non è ancora stato eliminato dal prodotto, molte di queste funzionalità sono ancora presenti in questa versione. Mentre le funzionalità precedentemente deprecate potrebbero essere accessibili, che sono ancora considerate deprecate e potrebbero essere fisicamente rimosse dal prodotto in qualsiasi momento.  
@@ -83,7 +67,7 @@ Una *modifica di rilievo* causa l'interruzione del funzionamento di un modello d
  Le librerie client Analysis Services Management Objects (AMO), ADOMD.NET e del modello a oggetti tabulare (TOM) è ora destinato al runtime di .NET 4.0. Questa modifica può essere di rilievo per le applicazioni destinate a .NET 3.5. Le applicazioni che usano versioni più recenti di questi assembly devono ora essere destinate a .NET 4.0 o versione successiva.  
   
 ### <a name="amo-version-upgrade"></a>Aggiornamento della versione AMO  
- Questa versione è un aggiornamento di versione per [Analysis Services Management Objects &#40; AMO &#41; ](https://msdn.microsoft.com/library/mt436122.aspx) e costituisce una modifica sostanziale in determinate circostanze.  L'esecuzione del codice e degli script esistenti che chiamano AMO continuerà proprio come prima dell'aggiornamento da una versione precedente. Tuttavia, se è necessario *ricompilare* l'applicazione e la destinazione un'istanza di SQL Server 2016 Analysis Services, è necessario aggiungere lo spazio dei nomi seguente per rendere operativo il codice o script:  
+ Questa versione è un aggiornamento di versione per [Analysis Services Management Objects &#40;AMO&#41; ](https://msdn.microsoft.com/library/mt436122.aspx) senza che sia una modifica sostanziale in determinate circostanze.  L'esecuzione del codice e degli script esistenti che chiamano AMO continuerà proprio come prima dell'aggiornamento da una versione precedente. Tuttavia, se è necessario *ricompilare* l'applicazione e la destinazione un'istanza di SQL Server 2016 Analysis Services, è necessario aggiungere lo spazio dei nomi seguente per rendere operativo il codice o script:  
   
 ```  
   

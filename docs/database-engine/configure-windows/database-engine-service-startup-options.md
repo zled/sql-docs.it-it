@@ -1,17 +1,14 @@
 ---
 title: Opzioni di avvio del servizio del motore di database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/23/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
 - overriding default startup options
@@ -28,19 +25,19 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2d73b39465c5f0f05244cd4d1d20b3e2fad6eac9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5cabb4763e85f8f1d052aa797ec6f868d9dac0aa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-engine-service-startup-options"></a>Opzioni di avvio del servizio del motore di database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le opzioni di avvio consentono di designare determinati percorsi di file necessari in fase di avvio e di specificare alcune condizioni a livello di server. Per la maggior parte degli utenti non è necessario specificare opzioni di avvio a meno che non si debbano risolvere problemi del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o si verifichi un problema insolito e si ricevano istruzioni dal servizio di supporto tecnico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di utilizzare l'opzione di avvio.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Le opzioni di avvio consentono di designare determinati percorsi di file necessari in fase di avvio e di specificare alcune condizioni a livello di server. Per la maggior parte degli utenti non è necessario specificare opzioni di avvio a meno che non si debbano risolvere problemi del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o si verifichi un problema insolito e si ricevano istruzioni dal servizio di supporto tecnico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di utilizzare l'opzione di avvio.  
   
 > [!WARNING]  
 >  L'utilizzo improprio di opzioni di avvio può influire sulle prestazioni del server e impedire l'esecuzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

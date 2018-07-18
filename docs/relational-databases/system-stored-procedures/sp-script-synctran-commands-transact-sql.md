@@ -1,32 +1,33 @@
 ---
 title: sp_script_synctran_commands (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sp_script_synctran_commands
 - sp_script_synctran_commands_TSQL
-helpviewer_keywords: sp_script_synctran_commands
+helpviewer_keywords:
+- sp_script_synctran_commands
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0897995f56614edcef86b9b7bb63c168d774108c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3705a28d85c7375aad701d77a517719778954c25
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,29 +45,29 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication**  =] **'***pubblicazione***'**  
- Nome della pubblicazione per cui si desidera creare lo script. *pubblicazione* è **sysname**, non prevede alcun valore predefinito.  
+ [ **@publication** =] **'***pubblicazione***'**  
+ Nome della pubblicazione per cui si desidera creare lo script. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article**  =] **'***articolo***'**  
- Nome dell'articolo per cui si desidera creare lo script. *articolo* è **sysname**, il valore predefinito è **tutti**, che specifica tutti gli articoli vengono inseriti nello script.  
+ [ **@article** =] **'***articolo***'**  
+ Nome dell'articolo per cui si desidera creare lo script. *articolo* viene **sysname**, il valore predefinito è **tutti**, che consente di specificare tutti gli articoli vengono inseriti nello script.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="results-set"></a>Set di risultati  
- **sp_script_synctran_commands** restituisce un set di risultati è costituito da un singolo **nvarchar (4000)** colonna. Il set di risultati forma gli script completi necessari per creare entrambe le **sp_addsynctrigger** e **sp_addqueued_artinfo** chiamate da applicare nei Sottoscrittori.  
+ **sp_script_synctran_commands** restituisce un set di risultati è costituito da una singola **nvarchar(4000** colonna. Il set di risultati forma gli script completi necessari per creare entrambe le **sp_addsynctrigger** e **sp_addqueued_artinfo** chiamate da applicare nei Sottoscrittori.  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_script_synctran_commands** viene utilizzata nella replica snapshot e transazionale.  
   
  **sp_addqueued_artinfo** viene utilizzato per le sottoscrizioni aggiornabili in coda.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_script_synctran_commands**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addsynctriggers &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
- [sp_addqueued_artinfo &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
+ [sp_addsynctriggers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
+ [sp_addqueued_artinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

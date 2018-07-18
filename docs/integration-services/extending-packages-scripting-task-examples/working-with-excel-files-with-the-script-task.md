@@ -1,15 +1,14 @@
 ---
-title: "Uso di file di Excel con l'attività Script | Microsoft Docs"
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: sql-non-specified
+title: Uso di file di Excel con l'attività Script | Microsoft Docs
+ms.custom: ''
+ms.date: 05/15/2018
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: extending-packages-scripting-task-examples
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,39 +19,29 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bfbe8efdeab1af1ba6c802d69abdce4b1b4696fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 90a2b35f3e47affb8fb7a305eb0d24e88c58af39
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Uso di file di Excel con l'attività Script
-  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili la gestione connessione, l'origine e la destinazione Excel per l'utilizzo di dati archiviati in fogli di calcolo nel formato di file di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Per le tecniche descritte in questo argomento si utilizza l'attività Script per ottenere informazioni sui database (file di cartelle di lavoro) e sulle tabelle (fogli di lavoro e intervalli denominati) di Excel disponibili. Questi esempi possono essere facilmente modificati per utilizzare una delle altre origini dati basate su file supportate dal provider OLE DB di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
+  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili la gestione connessione, l'origine e la destinazione Excel per l'utilizzo di dati archiviati in fogli di calcolo nel formato di file di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Per le tecniche descritte in questo argomento si utilizza l'attività Script per ottenere informazioni sui database (file di cartelle di lavoro) e sulle tabelle (fogli di lavoro e intervalli denominati) di Excel disponibili.
   
- [Configurazione di un pacchetto per testare gli esempi](#configuring)  
-  
- [Esempio 1: verificare l'esistenza di un file di Excel](#example1)  
-  
- [Esempio 2: verificare l'esistenza di una tabella di Excel](#example2)  
-  
- [Esempio 3: ottenere un elenco dei file di Excel in una cartella](#example3)  
-  
- [Esempio 4: ottenere un elenco di tabelle in un file di Excel](#example4)  
-  
- [Visualizzazione dei risultati degli esempi](#testing)  
-  
-> [!NOTE]  
->  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
-  
+> [!IMPORTANT]
+> Per informazioni dettagliate sulla connessione ai file di Excel e sulle limitazioni e i problemi noti per il caricamento di dati da o a file di Excel, vedere [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+ 
+> [!TIP]  
+>  Se si desidera creare un'attività da riusare con più pacchetti, è possibile usare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
+
 ##  <a name="configuring"></a> Configurazione di un pacchetto per testare gli esempi  
  È possibile configurare un singolo pacchetto per testare tutti gli esempi riportati in questo argomento. Negli esempi vengono utilizzate molte variabili del pacchetto e classi di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
-#### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>Per configurare un pacchetto per l'utilizzo con gli esempi di questo argomento  
+### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>Per configurare un pacchetto per l'utilizzo con gli esempi di questo argomento  
   
 1.  Creare un nuovo progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e aprire il pacchetto predefinito per la modifica.  
   
@@ -85,7 +74,7 @@ ms.lasthandoff: 01/25/2018
 ##  <a name="example1"></a> Descrizione dell'esempio 1: verificare l'esistenza di un file di Excel  
  In questo esempio viene determinato se il file della cartella di lavoro di Excel specificato nella variabile `ExcelFile` esiste, quindi il valore booleano della variabile `ExcelFileExists` viene impostato sul risultato. È possibile utilizzare questo valore booleano per la diramazione nel flusso di lavoro del pacchetto.  
   
-#### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
+### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
   
 1.  Aggiungere una nuova attività Script al pacchetto e impostarne il nome su **ExcelFileExists**.  
   
@@ -155,13 +144,13 @@ public class ScriptMain
 ##  <a name="example2"></a> Descrizione dell'esempio 2: verificare l'esistenza di una tabella di Excel  
  In questo esempio viene determinato se il foglio di lavoro o l'intervallo denominato di Excel specificato nella variabile `ExcelTable` esiste nel file della cartella di lavoro di Excel specificato nella variabile `ExcelFile`, quindi il valore booleano della variabile `ExcelTableExists` viene impostato sul risultato. È possibile utilizzare questo valore booleano per la diramazione nel flusso di lavoro del pacchetto.  
   
-#### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
+### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
   
 1.  Aggiungere una nuova attività Script al pacchetto e impostarne il nome su **ExcelTableExists**.  
   
 2.  Nella scheda **Script** di **Editor attività Script** fare clic su **ReadOnlyVariables** e immettere il valore della proprietà usando uno dei metodi seguenti:  
   
-    -   Digitare **ExcelTable** e **ExcelFile** separati da virgole**.**  
+    -   Digitare **ExcelTable** e **ExcelFile** separati da virgole **.**  
   
          oppure  
   
@@ -201,9 +190,9 @@ Public Class ScriptMain
   
     Dts.Variables("ExcelTableExists").Value = False  
     If File.Exists(fileToTest) Then  
-      connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" & _  
+      connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" & _  
         "Data Source=" & fileToTest & _  
-        ";Extended Properties=Excel 8.0"  
+        ";Extended Properties=Excel 12.0"  
       excelConnection = New OleDbConnection(connectionString)  
       excelConnection.Open()  
       excelTables = excelConnection.GetSchema("Tables")  
@@ -238,8 +227,8 @@ public class ScriptMain
             Dts.Variables["ExcelTableExists"].Value = false;  
             if (File.Exists(fileToTest))  
             {  
-                connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" +  
-                "Data Source=" + fileToTest + ";Extended Properties=Excel 8.0";  
+                connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" +  
+                "Data Source=" + fileToTest + ";Extended Properties=Excel 12.0";  
                 excelConnection = new OleDbConnection(connectionString);  
                 excelConnection.Open();  
                 excelTables = excelConnection.GetSchema("Tables");  
@@ -262,7 +251,7 @@ public class ScriptMain
 ##  <a name="example3"></a> Descrizione dell'esempio 3: ottenere un elenco dei file di Excel in una cartella  
  In questo esempio l'elenco dei file di Excel trovati nella cartella specificata nel valore della variabile `ExcelFolder` viene inserito in una matrice, che viene quindi copiata nella variabile `ExcelFiles`. È possibile utilizzare l'enumeratore Foreach From Variable per scorrere i file nella matrice.  
   
-#### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
+### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
   
 1.  Aggiungere una nuova attività Script al pacchetto e impostarne il nome su **GetExcelFiles**.  
   
@@ -293,7 +282,7 @@ public class ScriptMain
 ```vb  
 Public Class ScriptMain  
   Public Sub Main()  
-    Const FILE_PATTERN As String = "*.xls"  
+    Const FILE_PATTERN As String = "*.xlsx"  
   
     Dim excelFolder As String  
     Dim excelFiles As String()  
@@ -313,7 +302,7 @@ public class ScriptMain
 {  
   public void Main()  
   {  
-    const string FILE_PATTERN = "*.xls";  
+    const string FILE_PATTERN = "*.xlsx";  
   
     string excelFolder;  
     string[] excelFiles;  
@@ -337,7 +326,7 @@ public class ScriptMain
 > [!NOTE]  
 >  Nell'elenco di tabelle di una cartella di Excel sono inclusi sia i fogli di lavoro (con suffisso $) sia gli intervalli denominati. Se è necessario applicare un filtro all'elenco per individuare solo fogli di lavoro o solo intervalli denominati, può essere necessario scrivere codice aggiuntivo a tale scopo.  
   
-#### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
+### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
   
 1.  Aggiungere una nuova attività Script al pacchetto e impostarne il nome su **GetExcelTables**.  
   
@@ -382,9 +371,9 @@ Public Class ScriptMain
     Dim excelTables As String()  
   
     excelFile = Dts.Variables("ExcelFile").Value.ToString  
-    connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" & _  
+    connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" & _  
         "Data Source=" & excelFile & _  
-        ";Extended Properties=Excel 8.0"  
+        ";Extended Properties=Excel 12.0"  
     excelConnection = New OleDbConnection(connectionString)  
     excelConnection.Open()  
     tablesInFile = excelConnection.GetSchema("Tables")  
@@ -419,8 +408,8 @@ public class ScriptMain
             string[] excelTables = new string[5];  
   
             excelFile = Dts.Variables["ExcelFile"].Value.ToString();  
-            connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" +  
-                "Data Source=" + excelFile + ";Extended Properties=Excel 8.0";  
+            connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" +  
+                "Data Source=" + excelFile + ";Extended Properties=Excel 12.0";  
             excelConnection = new OleDbConnection(connectionString);  
             excelConnection.Open();  
             tablesInFile = excelConnection.GetSchema("Tables");  
@@ -446,7 +435,7 @@ public class ScriptMain
 ##  <a name="testing"></a> Visualizzazione dei risultati degli esempi  
  Se tutti gli esempi di questo argomento sono stati configurati nello stesso pacchetto, è possibile connettere tutte le attività Script a un'attività Script aggiuntiva che visualizza l'output di tutti gli esempi.  
   
-#### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Per configurare un'attività Script per visualizzare l'output degli esempi di questo argomento  
+### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Per configurare un'attività Script per visualizzare l'output degli esempi di questo argomento  
   
 1.  Aggiungere una nuova attività Script al pacchetto e impostarne il nome su **DisplayResults**.  
   
@@ -550,7 +539,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione connessione Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

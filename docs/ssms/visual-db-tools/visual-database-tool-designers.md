@@ -1,16 +1,15 @@
 ---
 title: Strumenti di progettazione di Visual Database Tools | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [SQL Server]
 - View Designer
@@ -22,19 +21,19 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], designers
 - Properties window [Visual Database Tools]
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6f9174882f49b0307617ddc0576c146cabe6d22d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0ce2c27eb14fdafe41d30792f1464e190b92ffdf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-database-tool-designers"></a>Strumenti di progettazione di Visual Database Tools
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Visual Database Tools è una combinazione di strumenti di progettazione che consentono di lavorare con un'origine dati creando query, progettando o modificando una struttura di database o aggiornando dati. Tali strumenti sono Progettazione diagrammi di database, Progettazione tabelle e Progettazione query e Progettazione viste.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Visual Database Tools è una combinazione di strumenti di progettazione che consentono di lavorare con un'origine dati creando query, progettando o modificando una struttura di database o aggiornando dati. Tali strumenti sono Progettazione diagrammi di database, Progettazione tabelle e Progettazione query e Progettazione viste.  
   
 ## <a name="properties-window"></a>Finestra Proprietà  
 La finestra delle proprietà non è specifica di Visual Database Tools, ma è l'area in cui è possibile eseguire gran parte delle modifiche. Visualizza le proprietà dell'elemento attualmente selezionato, ad esempio una tabella, e consente di eseguire numerose operazioni, dalla modifica del nome delle proprietà al confronto di una colonna. Alcune proprietà sono visibili nella finestra delle proprietà, ma possono essere modificate solo tramite un altro strumento.  

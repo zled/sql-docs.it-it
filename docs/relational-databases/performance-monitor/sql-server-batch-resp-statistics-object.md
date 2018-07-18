@@ -1,31 +1,32 @@
 ---
 title: Oggetto Batch Resp Statistics di SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: SQLServer:Batch Resp Statistics
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- SQLServer:Batch Resp Statistics
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95ca0cdfcfe13e5176e205b6168a6e5117b35c09
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9749469dcec6b15c25f8c517d27b0817ba21c893
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, Oggetto Batch Resp Statistics
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'oggetto prestazione **SQLServer:Batch Resp Statistics** fornisce i contatori per tenere traccia dei tempi di risposta dei batch di SQL Server.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+L'oggetto prestazioni **SQLServer:Batch Resp Statistics** fornisce i contatori per tenere traccia dei tempi di risposta dei batch di SQL Server.
 
 La tabella seguente descrive gli oggetti prestazioni **Batch Resp Statistics** di SQL Server.
 

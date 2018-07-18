@@ -1,28 +1,21 @@
 ---
-title: Stato servizi PDW (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 3fc9bee2-c372-4c4a-956c-fb54215d8918
-caps.latest.revision: "14"
-ms.openlocfilehash: 7a6b1a1f9a6ef922833930abf00ca10482648141
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: -Stato di servizi PDW Analitica Platform System | Documenti Microsoft
+description: Parallel Data Warehouse (PDW) dello stato dei servizi di sistema della piattaforma Analitica.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: e2252bb821f9522515f1625b0fc118323cb50d1f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-services-status"></a>Stato servizi PDW
+# <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Lo stato dei servizi Parallel Data Warehouse per Analitica Platform System
 Parallel Data Warehouse **stato del servizio** pagina nel gestore di configurazione sistema Microsoft Analitica piattaforma Mostra lo stato corrente di tutti i servizi di SQL Server PDW e offre la possibilità di arrestare e avviare i servizi PDW. Questo è l'unico metodo supportato per l'avvio e arresto dei servizi PDW. Si noti che i singoli componenti o servizi possono essere avviati in modo indipendente.  
   
 #### <a name="to-start-or-stop-the-appliance-services"></a>Per avviare o arrestare i servizi di dispositivo  
@@ -39,5 +32,5 @@ Non è necessario fare clic su **applica** durante l'avvio e arresto dei servizi
 > L'arresto dell'area PDW interrompe anche l'agente PDW (sqldwagent) nei nodi dell'area di HDInsight. L'area di HDInsight è funziona, tuttavia, il monitoraggio dello stato non sarà disponibile. Per l'agente PDW è necessario il nodo controllo PDW per segnalare il monitoraggio dello stato.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Accendere il dispositivo di punti di accesso o disattivare &#40; Sistema della piattaforma Analitica &#41;](power-the-aps-appliance-on-or-off.md)  
+[Risparmio energia accessorio APS o disattivare &#40;Analitica Platform System&#41;](power-the-aps-appliance-on-or-off.md)  
   

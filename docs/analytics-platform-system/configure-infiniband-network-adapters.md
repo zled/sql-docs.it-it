@@ -1,51 +1,45 @@
 ---
-title: Configurare le schede di rete InfiniBand per Analitica piattaforma di strumenti analitici
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: Viene descritto come configurare le schede di rete InfiniBand in un server non strumento client per connettersi al nodo di controllo in SQL Server Parallel Data Warehouse (PDW).
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: 
-ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+title: Configurare InfiniBand - Analitica Platform System | Documenti Microsoft
+description: Viene descritto come configurare le schede di rete InfiniBand in un server non strumento client per connettersi al nodo di controllo in Parallel Data Warehouse (PDW). Utilizzare queste istruzioni per la connettività di base e per la disponibilità elevata, in modo che il caricamento, i processi di backup e altri si connettono automaticamente alla rete InfiniBand attiva.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 8e67d63e7bb4bded0bd19e5db4a0b7faddb80977
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurare le schede di rete InfiniBand per Analitica Platform System
-Viene descritto come configurare le schede di rete InfiniBand in un server non strumento client per connettersi al nodo di controllo in SQL Server Parallel Data Warehouse (PDW). Utilizzare queste istruzioni per la connettività di base e per la disponibilità elevata, in modo che il caricamento, i processi di backup e di altri verranno automaticamente connesso alla rete InfiniBand attiva.  
+Viene descritto come configurare le schede di rete InfiniBand in un server non strumento client per connettersi al nodo di controllo in Parallel Data Warehouse (PDW). Utilizzare queste istruzioni per la connettività di base e per la disponibilità elevata, in modo che il caricamento, i processi di backup e altri si connettono automaticamente alla rete InfiniBand attiva.  
   
 ## <a name="Basics"></a>Descrizione  
-Queste istruzioni viene illustrato come trovare e impostare quindi InfiniBand IP corretti, indirizzi e subnet mask sul server collegato InfiniBand. Viene inoltre illustrato come impostare il server di utilizzare lo strumento di punti di accesso DNS in modo che la connessione verrà risolta in rete InfiniBand active.  
+Queste istruzioni viene illustrato come trovare e impostare quindi InfiniBand IP corretti, indirizzi e subnet mask sul server collegato InfiniBand. Viene inoltre illustrato come impostare il server da utilizzare lo strumento di APS DNS in modo che si risolve la connessione alla rete InfiniBand attiva.  
   
 Per la disponibilità elevata, punti di accesso dispone di due reti InfiniBand, uno attivo e uno passivo. Ogni rete InfiniBand dispone di un indirizzo IP diverso per il nodo di controllo. Se la rete InfiniBand active diventa inattiva, la rete InfiniBand passiva diventa rete attiva. Quando ciò si verifica uno script o un processo si connette automaticamente alla rete InfiniBand active senza modificare i parametri dello script.  
   
-In particolare, in questo argomento si apprenderà come:  
+In particolare, in questo articolo è:  
   
-1.  Trovare gli indirizzi IP InfiniBand del DNS APS server (appliance_domain AD01 e appliance_domain *-AD02). A tale scopo accedere ai server AD01 e AD02 e ottenere gli indirizzi IP per ogni rete InfiniBand. Gli indirizzi IP InfiniBand nel nodo Active Directory sono gli indirizzi IP del DNS.  
+1.  Trovare gli indirizzi IP InfiniBand del DNS APS server (appliance_domain AD01 e appliance_domain *-AD02). A tale scopo è possibile accedere con il server AD01 e AD02 e ottenere gli indirizzi IP per ogni rete InfiniBand. Gli indirizzi IP InfiniBand nel nodo Active Directory sono gli indirizzi IP del DNS.  
   
 2.  Configurare ogni scheda di rete per l'utilizzo di un indirizzo IP disponibile nelle reti InfiniBand punti di accesso.  
   
-    1.  Se si dispone di due schede di rete InfiniBand, si configurerà una scheda con un indirizzo IP disponibile nella rete InfiniBand primo che viene chiamato TeamIB1, mentre l'altra con un indirizzo IP disponibile nella rete InfiniBand secondo denominato TeamIB2. Indirizzo IP di utilizzare il TeamIB1 appliance_domain AD01 come server DNS preferito e TeamIB1 appliance_domain AD02 indirizzo IP del server DNS alternativo per la scheda di rete TeamIB1. Indirizzo IP di utilizzare il TeamIB2 appliance_domain AD01 come server DNS preferito e TeamIB2 appliance_domain AD02 indirizzo IP del server DNS alternativo per TeamIB2 scheda di rete.  
+    1.  Se si dispone di due schede di rete InfiniBand, si configura una scheda con un indirizzo IP disponibile nella rete InfiniBand primo che viene chiamato TeamIB1, mentre l'altra con un indirizzo IP disponibile nella rete InfiniBand secondo cui viene chiamata TeamIB2. Indirizzo IP di utilizzare il TeamIB1 appliance_domain AD01 come server DNS preferito e TeamIB1 appliance_domain AD02 indirizzo IP del server DNS alternativo per la scheda di rete TeamIB1. Indirizzo IP di utilizzare il TeamIB2 appliance_domain AD01 come server DNS preferito e TeamIB2 appliance_domain AD02 indirizzo IP del server DNS alternativo per TeamIB2 scheda di rete.  
   
-    2.  Se si dispone di una sola scheda di rete InfiniBand, configurare l'adapter con un indirizzo IP disponibile da una delle reti InfiniBand. Quindi si configureranno i Preferiti e i server DNS alternativi in questa scheda utilizzando appliance_domain AD01 TeamIB1 e appliance_domain AD02 TeamIB1 o appliance_domain AD01 TeamIB2 e TeamIB2 appliance_domain AD02 a seconda del valore è la stessa rete l'adapter configurato come il valore desiderato e i server DNS alternativi rispettivamente.  
+    2.  Se si dispone di una sola scheda di rete InfiniBand, configurare l'adapter con un indirizzo IP disponibile da una delle reti InfiniBand. Quindi configurare il valore desiderato e i server DNS alternativi in questa scheda utilizzando TeamIB1 appliance_domain AD01 e AD02 appliance_domain TeamIB1 o TeamIB2 appliance_domain AD01 e AD02 appliance_domain TeamIB2 a seconda del valore è nella stessa rete rispettivamente come l'adapter configurato come il valore desiderato e i server DNS alternativi.  
   
 3.  Configurare la scheda di rete InfiniBand per utilizzare i server DNS di APS per risolvere la connessione alla rete InfiniBand attiva.  
   
-    1.  Per configurare questo si utilizzerà le impostazioni TCP/IP avanzate per aggiungere il suffisso DNS del dominio accessorio all'inizio dell'elenco dei suffissi DNS sul server client. Questo deve essere configurato in una delle schede di rete; l'impostazione verrà applicata a entrambe le schede.  
+    1.  Per configurare questa opzione che è usare le impostazioni avanzate TCP/IP per aggiungere il suffisso DNS del dominio accessorio all'inizio dell'elenco dei suffissi DNS sul server client. Questo è solo necessario configurare su una delle schede di rete; l'impostazione si applica a entrambe le schede.  
   
-Dopo aver configurato le schede di rete InfiniBand, i processi client possono connettersi al nodo di controllo nella rete InfiniBand tramite `PDW_region-SQLCTL01` per l'indirizzo del server. Il server aggiungerà il suffisso DNS di sistema di piattaforma Analitica oppure è possibile immettere l'indirizzo completo, ovvero `PDW_region-SQLCTL01.appliance_domain.pdw.local`.  
+Dopo aver configurato le schede di rete InfiniBand, i processi client possono connettersi al nodo di controllo nella rete InfiniBand tramite `PDW_region-SQLCTL01` per l'indirizzo del server. Il server aggiunge il suffisso DNS di sistema della piattaforma Analitica, o è possibile immettere l'indirizzo completo, ovvero `PDW_region-SQLCTL01.appliance_domain.pdw.local`.  
   
-Ad esempio, se il nome dell'area PDW è MyPDW e il nome del dispositivo è MyAPS, la specifica del server dwloader per il caricamento dei dati verrà indicato di seguito:  
+Ad esempio, se il nome dell'area PDW è MyPDW e il nome del dispositivo è MyAPS, la specifica del server dwloader per il caricamento dei dati è uno dei valori seguenti:  
   
 -   `dwloader –S MYPDW-SQLCTL01.MyAPS.pdw.local`  
   
@@ -54,7 +48,7 @@ Ad esempio, se il nome dell'area PDW è MyPDW e il nome del dispositivo è MyAPS
 ## <a name="BeforeBegin"></a>Prima di iniziare  
   
 ### <a name="requirements"></a>Requisiti  
-È necessario un account di dominio accessorio punti di accesso all'account di accesso al nodo AD01. Ad esempio, F12345 * \administrator.  
+È necessario un account di dominio accessorio APS per accedere al nodo AD01. Ad esempio, F12345 * \administrator.  
   
 È necessario un account di Windows nel server che dispone dell'autorizzazione per configurare le schede di rete client.  
   
@@ -62,14 +56,14 @@ Ad esempio, se il nome dell'area PDW è MyPDW e il nome del dispositivo è MyAPS
 Queste istruzioni presuppongono il server di client è già stato centralizzato in remoto e connesso alla rete InfiniBand accessorio. Per su rack e i cavi di istruzioni, vedere [acquisire e configurare un Server durante il caricamento](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Osservazioni generali  
-Tramite SQLCTL01, Analitica piattaforma del sistema DNS verrà connettere il server client al nodo di controllo tramite la rete InfiniBand attive. Si applica solo alle connettere; Se la rete InfiniBand diventa inattiva durante un backup o di carico, è necessario riavviare il processo.  
+Tramite SQLCTL01, Analitica piattaforma del sistema DNS si connette server client al nodo di controllo utilizzando la rete InfiniBand attive. Questo vale solo per connettere; Se la rete InfiniBand diventa inattiva durante un backup o il carico, è necessario riavviare il processo.  
   
 Per soddisfare i requisiti aziendali specifici, è possibile aggiungere anche il server del client al gruppo di lavoro non accessorio o dominio Windows.  
   
 ## <a name="Sec1"></a>Passaggio 1: Ottenere il dispositivo le impostazioni di rete InfiniBand  
 *Per ottenere le impostazioni di rete InfiniBand di dispositivo*  
   
-1.  Account di accesso per il nodo accessorio AD01 utilizzando l'account appliance_domain\Administrator.  
+1.  Accedere al dispositivo AD01 nodo utilizzando l'account appliance_domain\Administrator.  
   
 2.  Nel nodo AD01 del dispositivo, aprire il pannello di controllo, selezionare rete, Internet, selezionare la rete e condivisione Center *, quindi Modifica impostazioni scheda.  
   
@@ -113,7 +107,7 @@ Per soddisfare i requisiti aziendali specifici, è possibile aggiungere anche il
   
 ### <a name="to-configure-the-infiniband-network-adapter-settings-on-your-client-server"></a>Per configurare le impostazioni della scheda di rete InfiniBand nel server client  
   
-1.  Account di accesso come amministratore di Windows per il caricamento, backup o altri server client nella rete InfiniBand accessorio.  
+1.  Accedere come amministratore di Windows per il caricamento, il backup o altri server client sul dispositivo rete InfiniBand.  
   
 2.  Aprire il riquadro controllo * selezionare centro rete e condivisione e quindi scegliere Modifica impostazioni scheda.  
   
@@ -125,7 +119,7 @@ Per soddisfare i requisiti aziendali specifici, è possibile aggiungere anche il
   
 2.  Nella finestra proprietà  
   
-    1.  Nella scheda Generale, impostare l'indirizzo IP per l'indirizzo IP è considerato disponibile nel test di ping per TeamIB1. Per i valori di esempio utilizzati in questo argomento, immettere 172.16.14.254.  
+    1.  Nella scheda Generale, impostare l'indirizzo IP per l'indirizzo IP è considerato disponibile nel test di ping per TeamIB1. Per i valori di esempio usati in questo articolo, immettere 172.16.14.254.  
   
     2.  Impostare la subnet mask per la subnet mask che si è preso nota per TeamIB1.  
   
@@ -147,7 +141,7 @@ Per soddisfare i requisiti aziendali specifici, è possibile aggiungere anche il
   
 3.  Nella finestra proprietà  
   
-    1.  Nella scheda Generale, impostare l'indirizzo IP per l'indirizzo IP è considerato disponibile nel test di ping per TeamIB2. Per i valori di esempio utilizzati in questo argomento, immettere 172.16.18.254.  
+    1.  Nella scheda Generale, impostare l'indirizzo IP per l'indirizzo IP è considerato disponibile nel test di ping per TeamIB2. Per i valori di esempio usati in questo articolo, immettere 172.16.18.254.  
   
     2.  Impostare la subnet mask per la subnet mask che si è preso nota per TeamIB2.  
   
@@ -168,7 +162,7 @@ Per soddisfare i requisiti aziendali specifici, è possibile aggiungere anche il
   
 2.  Fare clic su Avanzate... .  
   
-3.  Nella finestra Impostazioni TCP/IP avanzate, se l'operazione di Accodamento opzione questi suffissi DNS (in ordine) non è disattivata, chiamata la casella di controllo Aggiungi questi suffissi DNS (in ordine): selezionare il suffisso del dominio applicazione e fare clic su Aggiungi... Sarà il suffisso del dominio applicazione `appliance_domain.local`  
+3.  Nella finestra Impostazioni TCP/IP avanzate, se l'operazione di Accodamento opzione questi suffissi DNS (in ordine) non è disattivata, chiamata la casella di controllo Aggiungi questi suffissi DNS (in ordine): selezionare il suffisso del dominio applicazione e fare clic su Aggiungi... Il suffisso di dominio del dispositivo `appliance_domain.local`  
   
 4.  Se l'operazione di Accodamento questi DNS suffissi (in ordine): opzione è disattivata, è possibile aggiungere il dominio dei punti di accesso a questo server modificando la chiave del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient.  
   
@@ -180,7 +174,7 @@ Per soddisfare i requisiti aziendali specifici, è possibile aggiungere anche il
   
 7.  A questo punto, è possibile connettersi alla rete Infiniband accessorio utilizzando `PDW_region-SQLCTL01.appliance_domain.local`, o semplicemente `appliance_domain-SQLCTL01`. Se ci si connette con il nome completo e il suffisso DNS, è possibile stabilire la connessione più veloce.  
   
-    Esempi per un'applicazione denominata denominati MyAPS con un'area PDW MyPDW:  
+    Esempi per un'applicazione denominata MyAPS con un'area PDW MyPDW:  
   
     -   MyPDW-SQLCTL01.MyAPS.local  
   

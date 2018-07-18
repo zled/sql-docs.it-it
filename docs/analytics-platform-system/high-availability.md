@@ -1,28 +1,22 @@
 ---
-title: "Disponibilità elevata di sistema della piattaforma Analitica"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "Viene descritto come Analitica piattaforma di strumenti analitici è progettato per la disponibilità elevata."
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 5ab245e9-0316-4d25-a626-4745ce856925
-caps.latest.revision: "9"
-ms.openlocfilehash: 11733b45ba25f625ea2d3d601939973e9137b15d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: La disponibilità elevata nel sistema della piattaforma Analitica | Documenti Microsoft
+description: Informazioni su come Analitica piattaforma di strumenti è progettato per la disponibilità elevata.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5c8a562ab105e1bc40b590916d0881757036aeff
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="analytics-platform-system-high-availability"></a>Disponibilità elevata di sistema della piattaforma Analitica
-Viene descritto come Analitica piattaforma di strumenti analitici è progettato per la disponibilità elevata.  
+Informazioni su come Analitica piattaforma di strumenti è progettato per la disponibilità elevata.  
   
 ## <a name="high-availability-architecture"></a>Architettura a disponibilità elevata  
 ![Architettura dello strumento](media/appliance-architecture.png "architettura dello strumento")  

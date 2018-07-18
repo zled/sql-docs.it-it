@@ -1,25 +1,25 @@
 ---
 title: Sviluppare con le API REST per Reporting Services| Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-ms.date: 10/19/2017
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: developer
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 304d2e2c00703f98dd894e1a2d3e4688d87822f2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8f2f0959639736379bc28c6add71d09769352fed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34553832"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Sviluppare con le API REST per Reporting Services
 
@@ -28,6 +28,8 @@ ms.lasthandoff: 01/09/2018
 Microsoft SQL Server 2017 Reporting Services supporta le API REST (Representational State Transfer, trasferimento di stato rappresentativo). Le API REST sono endpoint di servizio che supportano un set di operazioni HTTP (metodi) che offrono l'accesso con diritti di creazione, recupero, aggiornamento o eliminazione per le risorse contenute in un server di report.
 
 L'API REST consente l'accesso programmatico agli oggetti contenuti nel catalogo di un server di report di SQL Server 2017 Reporting Services. Esempi di oggetti sono cartelle, report, indicatori KPI, origini dati, set di dati, piani di aggiornamento, sottoscrizioni e così via. Tramite l'API REST è ad esempio possibile esplorare la gerarchia di cartelle, individuare il contenuto di una cartella o scaricare la definizione di un report. È anche possibile creare, aggiornare ed eliminare oggetti. Esempi di attività che è possibile eseguire sugli oggetti includono il caricamento di un report, l'esecuzione di un piano di aggiornamento, l'eliminazione di una cartella e così via.
+
+[!INCLUDE [GDPR-related guidance](../../includes/gdpr-hybrid-note.md)]
 
 ## <a name="components-of-a-rest-api-requestresponse"></a>Componenti della richiesta-risposta di un'API REST
 

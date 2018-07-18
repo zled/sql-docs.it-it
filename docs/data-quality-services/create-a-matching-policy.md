@@ -1,33 +1,35 @@
 ---
 title: Creare criteri di corrispondenza | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.kbmatchingmap.f1
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0cffe1699c221e37e353cad1269f675aac89db15
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: 7abc199b280d4e7da2757631b529395035542237
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-matching-policy"></a>Creazione di criteri di corrispondenza
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In questo argomento viene descritto come creare dei criteri di corrispondenza in una Knowledge Base di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La preparazione del processo di corrispondenza in DQS si effettua eseguendo l'attività dei criteri di corrispondenza su dati di esempio. In tale attività vengono create e testate una o più regole di corrispondenza nei criteri, quindi viene pubblicata la Knowledge Base per rendere le regole di corrispondenza pubblicamente disponibili per l'uso. In una Knowledge Base può essere presente solo un set di criteri di corrispondenza, ma tali criteri possono contenere più regole di corrispondenza.  
   
  La creazione di criteri di corrispondenza viene eseguita in tre fasi: un processo di mapping nel quale si identifica l'origine dati e si esegue il mapping dei domini alle colonne; un processo per i criteri di corrispondenza nel quale si creano una o più regole di corrispondenza e si esegue separatamente il testing di ciascuna regola; un processo per i risultati di corrispondenza nel quale vengono eseguite tutte le regole insieme e, una volta confermate, si aggiungono i relativi criteri alla Knowledge Base. Ognuno di questi processi viene eseguito in una pagina separata della procedura guidata relativa all'attività dei criteri di corrispondenza, consentendo all'utente di spostarsi da una pagina a un'altra al fine di rieseguire il processo, di completare un processo specifico relativo ai criteri di corrispondenza e di tornare nuovamente alla stessa fase del processo. Dopo avere testato tutte le regole insieme, è possibile tornare alla pagina **Criteri di corrispondenza** , modificare una regola specifica, testarla di nuovo separatamente, quindi tornare alla pagina **Risultati corrispondenza** per eseguire nuovamente tutte le regole insieme. DQS fornisce statistiche relative ai dati di origine, alle regole e ai risultati di corrispondenza. Tali statistiche consentono di prendere decisioni informate sui criteri di corrispondenza, agevolandone la modifica.  

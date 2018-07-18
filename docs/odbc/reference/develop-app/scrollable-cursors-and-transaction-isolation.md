@@ -1,32 +1,29 @@
 ---
 title: I cursori scorrevoli e isolamento delle transazioni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - isolation levels [ODBC]
 - scrollable cursors [ODBC]
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: bbbcdf0c9ce2c7e37072502ae49b43dc20d15a9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>I cursori scorrevoli e isolamento delle transazioni
 Nella tabella seguente elenca i fattori che controllano la visibilità delle modifiche.  
@@ -46,17 +43,17 @@ Nella tabella seguente elenca i fattori che controllano la visibilità delle mod
 |Cursore type\action|Self|Proprietario<br /><br /> TXN|Othr<br /><br /> TXN<br /><br /> (RU[a])|Othr<br /><br /> TXN<br /><br /> (RC[a])|Othr<br /><br /> TXN<br /><br /> (RR[a])|Othr<br /><br /> TXN<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Statico|||||||  
-|Insert|Ad esempio [b]|no|no|no|no|no|  
-|Update|Ad esempio [b]|no|no|no|no|no|  
-|DELETE|Ad esempio [b]|no|no|no|no|no|  
+|Insert|Ad esempio [b]|no|No|No|No|no|  
+|Update|Ad esempio [b]|no|No|No|No|no|  
+|Delete|Ad esempio [b]|no|No|No|No|no|  
 |Gestito da keyset|||||||  
-|Insert|Ad esempio [b]|no|no|no|no|no|  
-|Update|Sì|Sì|Sì|Sì|no|no|  
-|DELETE|Ad esempio [b]|Sì|Sì|Sì|no|no|  
+|Insert|Ad esempio [b]|no|No|No|No|no|  
+|Update|Sì|Sì|Sì|Sì|No|no|  
+|Delete|Ad esempio [b]|Sì|Sì|Sì|No|no|  
 |Dynamic|||||||  
 |Insert|Sì|Sì|Sì|Sì|Sì|no|  
-|Update|Sì|Sì|Sì|Sì|no|no|  
-|DELETE|Sì|Sì|Sì|Sì|no|no|  
+|Update|Sì|Sì|Sì|Sì|No|no|  
+|Delete|Sì|Sì|Sì|Sì|No|no|  
   
  [a] le lettere tra parentesi indicano il livello di isolamento della transazione contenente il cursore. il livello di isolamento della transazione (in cui è stata effettuata la modifica) è irrilevante.  
   

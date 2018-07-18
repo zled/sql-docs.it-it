@@ -1,17 +1,16 @@
 ---
 title: Destinazione Excel | Microsoft Docs
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 04/02/2018
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.exceldest.f1
 - sql13.dts.designer.exceldestadapter.connection.f1
@@ -21,19 +20,21 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: 
+caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: be3ad15259560b7b69a9a375affab2940376a22e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c77f42be3a3d4d2ac1cf2e77ff0adab9d32e7f0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="excel-destination"></a>Destinazione Excel
   La destinazione Excel consente di caricare dati in fogli di lavoro o intervalli di una cartella di lavoro di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
+
+> [!IMPORTANT]
+> Per informazioni dettagliate sulla connessione ai file di Excel e sulle limitazioni e i problemi noti per il caricamento di dati da o a file di Excel, vedere [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
   
 ## <a name="access-modes"></a>Modalità di accesso  
  Sono disponibili tre diverse modalità di accesso ai dati per il caricamento dei dati:  
@@ -44,45 +45,7 @@ ms.lasthandoff: 01/25/2018
   
 -   Risultato di un'istruzione SQL. La query può essere con parametri.  
   
-> [!IMPORTANT]  
->  In Excel un intervallo o un foglio di lavoro equivale a una vista o tabella. Nell'elenco delle tabelle disponibili degli editor dell'origine e della destinazione Excel vengono visualizzati solo i fogli di lavoro (riconoscibili dalla presenza del simbolo $ in fondo al nome del foglio di lavoro, ad esempio Sheet1$) e gli intervalli denominati (riconoscibili dall'assenza del simbolo $, ad esempio MyRange) esistenti.  
-  
-## <a name="usage-considerations"></a>Considerazioni sull'utilizzo  
- La gestione connessione Excel usa il provider OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Jet 4.0 e il relativo driver ISAM (Indexed Sequential Access Method, metodo di accesso sequenziale indicizzato) di Excel di supporto per stabilire la connessione con le origini dati Excel, quindi leggere e scrivere informazioni.  
-  
- Il comportamento di questo provider e del relativo driver è documentato in molti articoli della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base e, sebbene tali articoli non siano specifici di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o del suo predecessore, Data Transformation Services, consentono di ottenere informazioni circa i comportamenti che possono produrre risultati imprevisti. Per informazioni generali sull'utilizzo e sul comportamento del driver per Excel, vedere [HOWTO: Utilizzare ADO con dati di Excel da Visual Basic o VBA](http://support.microsoft.com/kb/257819).  
-  
- I seguenti comportamenti del provider Jet incluso nel driver per Excel possono produrre risultati imprevisti durante il salvataggio di dati in una destinazione Excel.  
-  
--   **Salvataggio di dati di testo**. Quando salva dati di testo in una destinazione Excel, il driver per Excel antepone una virgoletta singola (') al testo in ogni cella, per garantire che i valori salvati verranno interpretati come testo. Se si usano o si sviluppano altre applicazioni che leggono o elaborano i dati salvati, può essere necessario includere istruzioni specifiche per la gestione della virgoletta singola (') che precede ogni valore di testo.  
-  
-     Per informazioni su come evitare di includere la virgoletta singola, vedere il post di blog seguente relativo all' [aggiunta della virgoletta singola a tutte le stringhe quando i dati sono trasformati in Excel tramite il componente per flusso di dati di destinazione di Excel in un pacchetto SSIS](http://go.microsoft.com/fwlink/?LinkId=400876), su msdn.com.  
-  
--   **Salvataggio di dati memo (ntext)**. Per poter salvare correttamente stringhe di oltre 255 caratteri in una colonna Excel, il driver deve riconoscere il tipo di dati della colonna di destinazione come **memo** invece di **string**. Se la tabella di destinazione contiene già righe di dati, le prime righe campionate dal driver devono contenere almeno un'istanza di un valore composto da più di 255 caratteri nella colonna con tipo di dati memo. Se la tabella di destinazione viene creata durante la progettazione del pacchetto o in fase di esecuzione, l'istruzione CREATE TABLE deve usare LONGTEXT (o uno dei sinonimi) come tipo di dati della colonna con tipo di dati memo.  
-  
--   **Tipi di dati**. Il driver per Excel riconosce solo un set limitato di tipi di dati. Tutte le colonne numeriche vengono interpretate come valori double (DT_R8) e tutte le colonne di tipo stringa (con tipo di dati diverso da memo) vengono interpretate come stringhe Unicode di 255 caratteri (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esegue il mapping dei tipi di dati di Excel nel modo seguente:  
-  
-    -   Numero    Numero a virgola mobile e precisione doppia (DT_R8)  
-  
-    -   Valuta     Valuta (DT_CY)  
-  
-    -   Valore booleano     Valore booleano (DT_BOOL)  
-  
-    -   Data/ora     **Data/ora** (DT_DATE)  
-  
-    -   Stringa     Stringa Unicode di 255 caratteri (DT_WSTR)  
-  
-    -   Memo     Flusso di testo Unicode (DT_NTEXT)  
-  
--   **Conversione di tipi di dati e lunghezze**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non viene eseguita la conversione implicita dei tipi di dati. Può essere pertanto necessario usare le trasformazioni Colonna derivata o Conversione dati per convertire i dati di Excel in modo esplicito prima di caricarli in una destinazione diversa da Excel oppure per convertire dati non di Excel prima di caricarli in una destinazione Excel. In questo caso può essere conveniente creare il pacchetto iniziale usando Importazione/Esportazione guidata SQL Server, che configura automaticamente le conversioni necessarie. Di seguito sono riportati alcuni esempi di tali conversioni:  
-  
-    -   Conversione tra colonne di Excel di tipo stringa Unicode e colonne di tipo stringa non Unicode con tabelle codici specifiche  
-  
-    -   Conversione tra colonne di Excel di tipo stringa di 255 caratteri e colonne di tipo stringa di lunghezze diverse  
-  
-    -   Conversione tra colonne di Excel di tipo numerico a precisione doppia e colonne numeriche di altro tipo  
-  
-## <a name="configuration-of-the-excel-destination"></a>Configurazione della destinazione Excel  
+## <a name="configure-the-excel-destination"></a>Configurare la destinazione Excel  
  Per connettersi a un'origine dei dati, la destinazione Excel usa una gestione connessione Excel che specifica il file di cartella di lavoro da usare. Per altre informazioni, vedere [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   
  La destinazione Excel include un input regolare e un output degli errori.  
@@ -96,22 +59,6 @@ ms.lasthandoff: 01/25/2018
 -   [Proprietà personalizzate di Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
-  
-## <a name="related-tasks"></a>Related Tasks  
-  
--   [Connettersi a una cartella di lavoro di Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
-  
--   [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
-  
--   [Impostazione delle proprietà di un componente del flusso di dati](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
-  
-## <a name="related-content"></a>Contenuto correlato  
-  
--   Intervento nel blog su [Excel in Integration Services, parte 1 di 3 relativa a connessioni e componenti](http://go.microsoft.com/fwlink/?LinkId=217674), su dougbert.com  
-  
--   Intervento nel blog su [Excel in Integration Services, parte 2 di 3 relativa a tabelle e tipi di dati](http://go.microsoft.com/fwlink/?LinkId=217675), su dougbert.com.  
-  
--   Intervento nel blog concernente [Excel in Integration Services, parte 3 di 3 relativa a problemi e alternative](http://go.microsoft.com/fwlink/?LinkId=217676)sul sito dougbert.com.  
   
 ## <a name="excel-destination-editor-connection-manager-page"></a>Editor destinazione Excel (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione Excel** per specificare le informazioni sull'origine dei dati e visualizzare un'anteprima dei risultati. La destinazione Excel carica i dati in un foglio di lavoro oppure in un intervallo denominato in una cartella di lavoro di [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] .  
@@ -143,9 +90,6 @@ ms.lasthandoff: 01/25/2018
   
  **Visualizza dati esistenti**  
  Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Anteprima risultati query** . L'anteprima supporta la visualizzazione di un massimo di 200 righe.  
-  
-> [!WARNING]  
->  Se la **gestione connessione Excel** selezionata fa riferimento a un file di Excel che non esiste, viene visualizzato un messaggio di errore quando si fa clic su questo pulsante.  
   
 ### <a name="data-access-mode-dynamic-options"></a>Opzioni dinamiche relative alla modalità di accesso ai dati  
   
@@ -214,9 +158,6 @@ ms.lasthandoff: 01/25/2018
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="see-also"></a>Vedere anche  
+ [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Origine Excel](../../integration-services/data-flow/excel-source.md)   
- [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
- [Flusso di dati](../../integration-services/data-flow/data-flow.md)   
- [Utilizzo di file di Excel con l'attività Script](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
-  
-  
+[Gestione connessione Excel](../connection-manager/excel-connection-manager.md)

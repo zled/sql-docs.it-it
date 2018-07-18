@@ -1,17 +1,15 @@
 ---
-title: "Esempio di proprietà di connessione (VB) | Documenti Microsoft"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Esempio di proprietà di connessione (VB) | Documenti Microsoft
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - ConnectionTimeout property [ADO], Visual Basic example
 - State property [ADO], Visual Basic example
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fa6edc93360752ae1bf65bb291ea2c87ba185e4f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 220f826cae321e928c9ebe6a807ed428c3beb133
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>Esempio ConnectionString, ConnectionTimeout e la proprietà State (VB)
 In questo esempio illustra diverse modalità di utilizzo di [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà per aprire un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Utilizza inoltre il [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) proprietà per impostare un periodo di timeout di connessione e [stato](../../../ado/reference/ado-api/state-property-ado.md) proprietà per controllare lo stato delle connessioni. La funzione GetState è necessaria per eseguire questa procedura.  

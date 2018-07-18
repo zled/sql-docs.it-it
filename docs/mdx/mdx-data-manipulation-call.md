@@ -1,33 +1,20 @@
 ---
 title: Istruzione CALL (MDX) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: CALL
-dev_langs: kbMDX
-helpviewer_keywords:
-- voids [MDX]
-- stored procedures [MDX]
-- CALL statement
-ms.assetid: b534a20b-924c-43b8-832d-24e57d50425c
-caps.latest.revision: "35"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6b3e7d095a7957c8d5af8dc497bb7a9d884005b8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b8610a0ed7fc0c90fb3e8c684b33b466eb3858f9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580103"
 ---
 # <a name="mdx-data-manipulation---call"></a>Manipolazione dei dati MDX - chiamata
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +51,7 @@ CALL SP_Name
 >  Se la stored procedure non è registrata nel client, il **CHIAMARE** istruzione tenta di chiamare la stored procedure da un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le istruzioni di manipolazione dei dati MDX &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Tramite le Stored procedure &#40; MDX &#41;](../mdx/using-stored-procedures-mdx.md)  
+ [Istruzioni MDX di manipolazione dei dati &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Uso di stored procedure &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
   
   

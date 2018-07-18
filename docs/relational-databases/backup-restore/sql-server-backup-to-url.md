@@ -1,27 +1,24 @@
 ---
 title: Backup di SQL Server nell'URL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 913ba155344eb6265789eb6947967eee42e34470
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9d688171b49697b785f571f7e08fee0bfe339858
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +89,7 @@ ms.lasthandoff: 01/18/2018
   
 -   Il backup in Archiviazione Premium non è supportato.  
   
--   Le dimensioni massime di backup supportate usando un BLOB di pagine sono limitate dalle dimensioni massime di un BLOB di pagina singolo, ossia 1 TB. Le dimensioni massime di backup supportate tramite i BLOB in blocchi non sono limitate dalle dimensioni massime di un BLOB in blocchi, pari a 200 GB, poiché questo tipo di backup supporta lo striping che consente backup di notevoli dimensioni.  
+-   SQL Server limita le dimensioni massime di backup supportate usando un BLOB di pagine di 1 TB. Le dimensioni massime di backup supportate tramite BLOB in blocchi sono limitate a circa 200 MB (50.000 blocchi * MAXTRANSFERSIZE a 4MB). I BLOB in blocchi supportano lo striping che consente backup di notevoli dimensioni.  
   
 -   È possibile eseguire istruzioni di backup o ripristino tramite TSQL, SMO, cmdlet PowerShell, SQL Server Management Studio Backup o Ripristino guidato.   
   
@@ -108,7 +105,7 @@ ms.lasthandoff: 01/18/2018
   
 -   La specifica delle opzioni del set di backup, **RETAINDAYS** ed **EXPIREDATE** , non è supportata.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è previsto un limite massimo di 259 caratteri per il nome di un dispositivo di backup. BACKUP TO URL usa 36 caratteri per gli elementi necessari usati per specificare l'URL 'https://.blob.core.windows.net//.bak', lasciando 223 caratteri per l'account, il contenitore e i nomi BLOB insieme.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è previsto un limite massimo di 259 caratteri per il nome di un dispositivo di backup. BACKUP TO URL usa 36 caratteri per gli elementi necessari usati per specificare l'URL - 'https://.blob.core.windows.net//.bak', lasciando 223 caratteri per l'account, il contenitore e i nomi BLOB insieme.  
   
 ###  <a name="Support"></a> Supporto per le istruzioni di backup/ripristino  
   

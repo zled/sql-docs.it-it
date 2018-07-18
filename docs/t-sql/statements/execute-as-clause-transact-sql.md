@@ -1,16 +1,14 @@
 ---
-title: EXECUTE AS clausola (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: Clausola EXECUTE AS (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AS
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - switching execution context
 - functions [SQL Server], execution context
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
-caps.latest.revision: 
+caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: baf3fdc592265f1c2117ef3358820ae94ce8536c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0b0c2c96ae026fcf875012dbd43d688c90cf854b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-as-clause-transact-sql"></a>Clausola EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ DDL Triggers with Database Scope
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **CHIAMANTE**  
+ **CALLER**  
  Specifica che le istruzioni all'interno del modulo vengono eseguite nel contesto del chiamante del modulo. L'utente che esegue il modulo deve disporre delle autorizzazioni appropriate non solo per il modulo stesso, ma anche per tutti gli oggetti di database a cui fa riferimento il modulo.  
   
  CALLER è il valore predefinito per tutti i moduli ad eccezione delle code e mantiene lo stesso funzionamento di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -87,12 +84,12 @@ DDL Triggers with Database Scope
  CALLER non può essere specificato in un'istruzione CREATE QUEUE o ALTER QUEUE.  
   
  **SELF**  
- EXECUTE AS SELF equivale a EXECUTE AS *nome_utente*, dove l'utente specificato è la persona che crea o modifica il modulo. L'ID effettivo dell'utente della persona che crea o modifica i moduli viene archiviato nel **execute_as_principal_id** colonna il **Sys. sql_modules** o **service_queues** vista del catalogo.  
+ EXECUTE AS SELF equivale a EXECUTE AS *user_name*, dove l'utente specificato è la persona che crea o modifica il modulo. L'ID utente effettivo della persona che crea o modifica i moduli viene archiviato nella colonna **execute_as_principal_id** della vista del catalogo **sys.sql_modules** o **sys.service_queues**.  
   
  SELF è il valore predefinito per le code.  
   
 > [!NOTE]  
->  Per modificare l'ID utente di **execute_as_principal_id** nel **service_queues** vista del catalogo è necessario specificare esplicitamente EXECUTE come impostazione dell'istruzione ALTER QUEUE.  
+>  Per modificare l'ID utente della colonna **execute_as_principal_id** nella vista del catalogo **sys.service_queues**, è necessario specificare in modo esplicito l'impostazione EXECUTE AS nell'istruzione ALTER QUEUE.  
   
  OWNER  
  Specifica che le istruzioni all'interno del modulo vengono eseguite nel contesto del proprietario corrente del modulo. Se per modulo non esiste un proprietario specificato, viene utilizzato il proprietario dello schema del modulo. Non è possibile specificare OWNER per i trigger DDL o LOGON.  
@@ -100,19 +97,19 @@ DDL Triggers with Database Scope
 > [!IMPORTANT]  
 >  Su OWNER deve essere eseguito il mapping a un account singleton e non può essere un ruolo o un gruppo.  
   
- **'** *nome_utente* **'**  
- Specifica le istruzioni all'interno del modulo vengono eseguite nel contesto dell'utente specificato *nome_utente*. Le autorizzazioni per tutti gli oggetti all'interno del modulo vengono verificate in base *nome_utente*. *USER_NAME* non può essere specificato per i trigger DDL con trigger logon o di ambito del server. Utilizzare *login_name* invece.  
+ **'** *user_name* **'**  
+ Specifica che le istruzioni all'interno del modulo vengono eseguite nel contesto dell'utente specificato in *user_name*. Le autorizzazioni per gli oggetti del modulo vengono verificate in base a *user_name*. Non è possibile specificare *user_name* per i trigger DDL con ambito server o i trigger LOGON. Usare invece *login_name*.  
   
- *USER_NAME* deve esistere nel database corrente e deve essere un account singleton. *USER_NAME* non può essere un gruppo, ruolo, certificato, chiave o un account predefinito, ad esempio NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem..  
+ *user_name* deve esistere nel database corrente e deve essere un account singleton. *user_name* non può essere un gruppo, un ruolo, un certificato, una chiave o un account predefinito, ad esempio NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem.  
   
- L'ID utente del contesto di esecuzione viene archiviato nei metadati e possono essere visualizzato nel **execute_as_principal_id** colonna il **Sys. sql_modules** o **assembly_modules** vista del catalogo.  
+ L'ID utente del contesto di esecuzione viene archiviato nei metadati e può essere visualizzato nella colonna **execute_as_principal_id** della vista del catalogo **sys.sql_modules** o **sys.assembly_modules**.  
   
  **'** *login_name* **'**  
- Specifica le istruzioni all'interno del modulo vengono eseguite nel contesto del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso specificato *login_name*. Le autorizzazioni per tutti gli oggetti all'interno del modulo vengono verificate in base *login_name*. *login_name* può essere specificata solo per i trigger DDL con trigger logon o di ambito del server.  
+ Specifica che le istruzioni all'interno del modulo vengono eseguite nel contesto dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificato in *login_name*. Le autorizzazioni per gli oggetti del modulo vengono verificate in base a *login_name*. È possibile specificare *login_name* solo per i trigger DDL con ambito server o i trigger LOGON.  
   
- *login_name* non può essere un gruppo, ruolo, certificato, chiave o un account predefinito, ad esempio NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem..  
+ *login_name* non può essere un gruppo, un ruolo, un certificato, una chiave o un account predefinito, ad esempio NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La modalità in cui [!INCLUDE[ssDE](../../includes/ssde-md.md)] valuta le autorizzazioni per gli oggetti cui viene fatto riferimento nel modulo dipende dalla catena di proprietà esistente tra gli oggetti chiamanti e gli oggetti cui viene fatto riferimento. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la concatenazione della proprietà rappresenta l'unico metodo disponibile per evitare di dover concedere all'utente chiamante l'accesso a tutti gli oggetti a cui viene fatto riferimento.  
   
  La concatenazione della proprietà presenta le limitazioni seguenti:  
@@ -136,11 +133,11 @@ DDL Triggers with Database Scope
 ## <a name="specifying-a-user-or-login-name"></a>Specifica di un nome utente o un nome account di accesso  
  Non è possibile rimuovere un account di accesso a un server o un nome utente di database specificato nella clausola EXECUTE AS di un modulo fino a quando il modulo non è stato modificato per consentire l'esecuzione in un altro contesto.  
   
- Il nome utente o account di accesso specificato nella clausola EXECUTE AS deve esistere come entità nel **Sys. database_principals** o **Sys. server_principals**, rispettivamente, oppure in caso contrario la creazione o modifica modulo operazione ha esito negativo . Inoltre, l'utente che crea o modifica il modulo deve disporre delle autorizzazioni IMPERSONATE per l'entità.  
+ Il nome utente o l'account di accesso specificato nella clausola EXECUTE AS deve esistere come entità in **sys.database_principals** o **sys.server_principals**, rispettivamente. In caso contrario, l'operazione di creazione o modifica del modulo non riesce. Inoltre, l'utente che crea o modifica il modulo deve disporre delle autorizzazioni IMPERSONATE per l'entità.  
   
  Se l'utente ha accesso implicito al database o all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'appartenenza a un gruppo di Windows, l'utente specificato nella clausola EXECUTE AS viene creato implicitamente al momento della creazione del modulo quando sussiste uno dei requisiti seguenti:  
   
--   L'utente specificato o un account di accesso è membro il **sysadmin** ruolo predefinito del server.  
+-   L'utente o l'account di accesso specificato è un membro del ruolo predefinito del server **sysadmin**.  
   
 -   L'utente che crea il modulo dispone dell'autorizzazione per creare entità.  
   
@@ -151,9 +148,9 @@ DDL Triggers with Database Scope
   
  Si suppongano ad esempio le condizioni seguenti:  
   
--   **CompanyDomain\SQLUsers** gruppo disponga dell'accesso per il **Sales** database.  
+-   Il gruppo **CompanyDomain\SQLUsers** ha accesso al database **Sales**.  
   
--   **CompanyDomain\SqlUser1** è un membro di **SQLUsers** e, di conseguenza, ha accesso al **Sales** database.  
+-   **CompanyDomain\SqlUser1** è un membro di **SQLUsers** e ha pertanto accesso al database **Sales**.  
   
 -   L'utente che crea o modifica il modulo possiede le autorizzazioni per creare entità.  
   
@@ -189,19 +186,19 @@ GO
 ## <a name="using-execute-as-to-define-custom-permission-sets"></a>Utilizzo di EXECUTE AS per definire i set di autorizzazioni personalizzati  
  La specifica di un contesto di esecuzione per un modulo può risultare molto utile quando si desidera definire set di autorizzazioni personalizzati. Per alcune azioni ad esempio, come TRUNCATE TABLE, non è possibile concedere le autorizzazioni. Incorporando l'istruzione TRUNCATE TABLE all'interno di un modulo e specificando che il modulo viene eseguito come utente che dispone delle autorizzazioni per modificare la tabella, è possibile estendere le autorizzazioni necessarie per troncare la tabella all'utente al quale vengono concesse le autorizzazioni EXECUTE per il modulo.  
   
- Per visualizzare la definizione del modulo con il contesto di esecuzione specificato, utilizzare il [Sys. sql_modules &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catalogo.  
+ Per visualizzare la definizione del modulo con il contesto di esecuzione specificato, usare la vista del catalogo [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
 ## <a name="best-practice"></a>Procedura consigliata  
  Specificare un account di accesso o un utente che dispone delle autorizzazioni minime necessarie per eseguire le operazioni definite nel modulo. Ad esempio, non specificare un account di un proprietario di database a meno che non siano necessarie tali autorizzazioni.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire un modulo specificato con EXECUTE AS, il chiamante deve disporre delle autorizzazioni EXECUTE per il modulo.  
   
  Per eseguire un modulo CLR specificato con EXECUTE AS che ha accesso alle risorse in un altro database o server, il database o server di destinazione deve considerare attendibile l'autenticatore del database nel quale ha origine il modulo (il database di origine).  
   
  Per specificare la clausola EXECUTE AS quando si crea o si modifica un modulo, è necessario disporre delle autorizzazioni IMPERSONATE per l'entità specificata, nonché delle autorizzazioni per creare il modulo. È sempre possibile rappresentare se stessi. Quando non è specificato alcun contesto di esecuzione o è specificato EXECUTE AS CALLER, le autorizzazioni IMPERSONATE non sono necessarie.  
   
- Per specificare un *login_name* o *nome_utente* che ha accesso implicito al database tramite l'appartenenza a un gruppo di Windows, è necessario disporre delle autorizzazioni di controllo nel database.  
+ Per specificare un *login_name* o *user_name* con accesso implicito al database tramite l'appartenenza a un gruppo di Windows, è necessario avere le autorizzazioni CONTROL per il database.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una stored procedure nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e viene assegnato il contesto di esecuzione a `OWNER`.  
@@ -231,8 +228,8 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [Sys. service_queues &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
- [Ripristina &#40; Transact-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
- [ESEGUIRE AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)  
+ [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

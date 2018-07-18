@@ -1,16 +1,15 @@
 ---
 title: Esplora soluzioni | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], solutions
 - projects [SQL Server Management Studio], about projects
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], items
 - items [SQL Server]
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f4d77dde666a8fb751e637265333a334075807af
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 02ac675f7dd209cb538e90142f6b9049068e2ad7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="solution-explorer"></a>Esplora soluzioni
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Nel riquadro Esplora soluzioni in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] sono presenti contenitori chiamati progetti per la gestione di elementi quali script di database, query, connessioni dati e file. Uno o più i progetti correlati l'uno all'altro possono essere combinati in un contenitore chiamato soluzione.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Nel riquadro Esplora soluzioni in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] sono presenti contenitori chiamati progetti per la gestione di elementi quali script di database, query, connessioni dati e file. Uno o più i progetti correlati l'uno all'altro possono essere combinati in un contenitore chiamato soluzione.  
   
 Una soluzione include uno o più progetti, oltre ai file e ai metadati che contribuiscono a definire la soluzione nel suo complesso. Un progetto è composto da un set di file e da metadati correlati, ad esempio le informazioni di connessione. Le soluzioni e i progetti contengono elementi che rappresentano gli script, le query, le informazioni di connessione e i file necessari per creare la soluzione di database.  
   

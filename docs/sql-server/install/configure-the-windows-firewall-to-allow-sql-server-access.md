@@ -1,17 +1,13 @@
 ---
 title: Configurare Windows Firewall per consentire l'accesso a SQL Server |Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
 - WMI firewall ports
@@ -26,16 +22,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 0827e7946df18bff42ad09285ad93c5c3a3b3996
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+caps.latest.revision: 48
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 100c84e221b7add9eab09cd7b2b0bf4c3ab0669b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772597"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +86,7 @@ Configurare le impostazioni di Windows Firewall con **Microsoft Management Conso
   
 -   **netsh**  
   
-     Lo strumento **netsh.exe** può essere usato da un amministratore per configurare e monitorare i computer basati su Windows in un prompt dei comandi o con un file batch**.** Usando lo strumento **netsh** è possibile indirizzare i comandi contestuali all'helper adatto per far sì che questo esegua il comando desiderato. Un helper è un file DLL (Dynamic Link Library, libreria di collegamento dinamico) che estende la funzionalità dello strumento **netsh** e fornisce configurazione, monitoraggio e supporto per uno o più servizi, utilità o protocolli. Tutti i sistemi operativi che supportano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispongono di un helper del firewall. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ha anche un helper del firewall avanzato denominato **advfirewall**. I dettagli sull'uso di **netsh** non vengono trattati in questo articolo. Tuttavia, molte delle opzioni di configurazione descritte possono essere configurate con **netsh**. Ad esempio, eseguire lo script seguente al prompt dei comandi per aprire la porta TCP 1433:  
+     Lo strumento **netsh.exe** può essere usato da un amministratore per configurare e monitorare i computer basati su Windows in un prompt dei comandi o con un file batch **.** Usando lo strumento **netsh** è possibile indirizzare i comandi contestuali all'helper adatto per far sì che questo esegua il comando desiderato. Un helper è un file DLL (Dynamic Link Library, libreria di collegamento dinamico) che estende la funzionalità dello strumento **netsh** e fornisce configurazione, monitoraggio e supporto per uno o più servizi, utilità o protocolli. Tutti i sistemi operativi che supportano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispongono di un helper del firewall. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ha anche un helper del firewall avanzato denominato **advfirewall**. I dettagli sull'uso di **netsh** non vengono trattati in questo articolo. Tuttavia, molte delle opzioni di configurazione descritte possono essere configurate con **netsh**. Ad esempio, eseguire lo script seguente al prompt dei comandi per aprire la porta TCP 1433:  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -314,7 +310,7 @@ Nella tabella riportata di seguito sono elencati i servizi e le porte da cui pot
   
     2.  Al prompt dei comandi digitare **netstat -n -a**.  
   
-         L'elemento **-n** indica a **netstat** di visualizzare in valori numerici l'indirizzo e il numero di porta delle connessioni TCP attive. L'opzione **-a** indica a **netstat** di visualizzare le porte TCP e UDP su cui è in attesa il computer.  
+         L'opzione **-n** indica a **netstat** di visualizzare in valori numerici l'indirizzo e il numero di porta delle connessioni TCP attive. L'opzione **-a** indica a **netstat** di visualizzare le porte TCP e UDP su cui è in attesa il computer.  
   
 -   L'utilità **PortQry** può essere usata per indicare lo stato delle porte TCP/IP come in attesa, non in attesa o filtrato. Uno stato filtrato non indica se la porta è o non è in attesa, bensì che l'utilità non ha ricevuto alcuna risposta dalla porta. È possibile scaricare l'utilità **PortQry** dalla pagina relativa nell' [area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=28590).  
   

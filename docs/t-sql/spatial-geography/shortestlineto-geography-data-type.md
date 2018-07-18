@@ -1,16 +1,14 @@
 ---
-title: ShortestLineTo (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: ShortestLineTo (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ShortestLineTo_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - ShortestLineTo method (geography)
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0b920113686547966cb67e31fc3f726ffbefba67
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 52bf28ab3e452907a37f4728d55457543b18fc80
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un **LineString** istanza con due punti che rappresentano la distanza più breve tra le due **geography** istanze. La lunghezza del **LineString** istanza restituita è la distanza tra i due **geography** istanze.  
+  Restituisce un'istanza **LineString** con due punti che rappresentano la distanza più breve tra le due istanze **geography**. La lunghezza dell'istanza **LineString** restituita è la distanza tra le due istanze **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *geography_other*  
- Specifica il secondo **geography** istanza chiamante **geography** istanza tenta di determinare la distanza più breve.  
+ Specifica la seconda istanza **geography** da cui l'istanza **geography** chiamante tenta di determinare la distanza più breve.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Il metodo restituisce un **LineString** istanza con endpoint che si trovano sui bordi delle due pianificazioni **geography** istanze da confrontare. La lunghezza del **LineString** restituiti corrisponde alla distanza minore tra i due **geography** istanze. Un oggetto vuoto **LineString** istanza viene restituita quando le due **geography** istanze si intersecano a vicenda.  
+## <a name="remarks"></a>Remarks  
+ Il metodo restituisce un'istanza **LineString** con endpoint che si trovano sui bordi delle due istanze **geography** non intersecate messe a confronto. La lunghezza dell'istanza **LineString** restituita corrisponde alla distanza minore tra le due istanze **geography**. Viene restituita un'istanza **LineString** vuota quando le due istanze **geography** si intersecano.  
   
 ## <a name="examples"></a>Esempi  
   

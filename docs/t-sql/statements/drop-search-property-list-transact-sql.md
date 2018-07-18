@@ -1,16 +1,14 @@
 ---
-title: DROP SEARCH PROPERTY LIST (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DROP SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_SEARCH_PROPERTY_LIST_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - search property lists [SQL Server], dropping
 - search property lists [SQL Server], deleting
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 94a86720e49809e56aefeef1b3264c511f30f6be
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 87dd1a8ed9bdcc6ba0dd76a6fd0f97352811d852
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,20 +48,20 @@ DROP SEARCH PROPERTY LIST property_list_name
  *property_list_name*  
  Nome dell'elenco delle proprietà di ricerca da eliminare. *property_list_name* è un identificatore.  
   
- Per visualizzare i nomi degli elenchi di proprietà esistenti, utilizzare il [registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) vista del catalogo come indicato di seguito:  
+ Per visualizzare i nomi degli elenchi delle proprietà esistenti, usare la vista del catalogo [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md), come illustrato di seguito:  
   
 ```  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Non è possibile eliminare un elenco di proprietà di ricerca da un database se l'elenco è associato a un indice full-text e i relativi tentativi avranno esito negativo. Per eliminare un elenco di proprietà di ricerca da un determinato indice full-text, utilizzare il [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) istruzione e specificare la clausola SET SEARCH PROPERTY LIST con off o il nome di un altro elenco di proprietà di ricerca.  
+## <a name="remarks"></a>Remarks  
+ Non è possibile eliminare un elenco di proprietà di ricerca da un database se l'elenco è associato a un indice full-text e i relativi tentativi avranno esito negativo. Per eliminare un elenco di proprietà di ricerca da un indice full-text specificato, usare l'istruzione [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) e specificare la clausola SET SEARCH PROPERTY LIST con OFF o il nome di un altro elenco di proprietà di ricerca.  
   
- **Per visualizzare le proprietà sono elencate in un'istanza del server**  
+ **Per visualizzare gli elenchi di proprietà in un'istanza del server**  
   
 -   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
- **Per visualizzare la proprietà elenchi associati agli indici full-text**  
+ **Per visualizzare gli elenchi di proprietà associati a indici full-text**  
   
 -   [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
   
@@ -72,11 +69,11 @@ SELECT name FROM sys.registered_search_property_lists;
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione CONTROL per l'elenco delle proprietà di ricerca.  
   
 > [!NOTE]  
->  Le autorizzazioni CONTROL possono essere concesse per l'elenco dal proprietario dell'elenco di proprietà. Per impostazione predefinita, l'utente che crea un elenco di proprietà di ricerca è il proprietario. Il proprietario può essere modificato utilizzando il [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione.  
+>  Le autorizzazioni CONTROL possono essere concesse per l'elenco dal proprietario dell'elenco di proprietà. Per impostazione predefinita, l'utente che crea un elenco di proprietà di ricerca è il proprietario. Il proprietario può essere modificato usando l'istruzione [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eliminato l'elenco di proprietà `JobCandidateProperties` dal database `AdventureWorks2012`.  
@@ -87,11 +84,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ALTER SEARCH PROPERTY LIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
- [CREATE SEARCH PROPERTY LIST &#40; Transact-SQL &#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
+ [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
+ [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [Sys. registered_search_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [registered_search_property_lists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
   

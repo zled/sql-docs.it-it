@@ -1,16 +1,14 @@
 ---
-title: ToString (motore di Database) | Documenti Microsoft
-ms.custom: 
+title: ToString (Motore di database) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ToString
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - ToString [Database Engine]
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0bee6e9a6e06cdab3bdd54cadda7a1a7d3f66a28
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e9f855f9ed950f67744b75caae6f40668dde4290
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tostring-database-engine"></a>ToString (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce una stringa con la rappresentazione logica di *questo*. ToString viene chiamato implicitamente quando una conversione da **hierarchyid** alla stringa di tipo si verifica. Funziona in modo opposto di [Parse &#40; motore di Database &#41;](../../t-sql/data-types/parse-database-engine.md).
+Restituisce una stringa con la rappresentazione logica di *this*. ToString viene chiamato implicitamente quando viene eseguita una conversione da **hierarchyid** a un tipo stringa. Funziona in modo opposto a [Parse &#40;Motore di database&#41;](../../t-sql/data-types/parse-database-engine.md).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,12 +49,12 @@ string ToString  ( )
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti
-**SQL Server restituito type:nvarchar(4000)**
+**Tipo SQL Server restituito: nvarchar(4000)**
   
-**Tipo CLR restituito: stringa**
+**Tipo CLR restituito: String**
   
-## <a name="remarks"></a>Osservazioni  
-Restituisce il percorso logico nella gerarchia. Ad esempio, `/2/1/` rappresenta la quarta riga ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) nella struttura gerarchica seguente di un file system:
+## <a name="remarks"></a>Remarks  
+Restituisce il percorso logico nella gerarchia. Ad esempio, `/2/1/` rappresenta la quarta riga ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) nella struttura gerarchica seguente di un file system:
   
 ```sql
 /        C:\  
@@ -71,7 +68,7 @@ Restituisce il percorso logico nella gerarchia. Ad esempio, `/2/1/` rappresenta 
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-transact-sql-example-in-a-table"></a>A. Esempio Transact-SQL in una tabella  
-Nell'esempio seguente restituisce sia il `OrgNode` colonna sia come il **hierarchyid** tipo di dati e nel formato di stringa più leggibile:
+Nell'esempio seguente viene restituita sia la colonna `OrgNode` sia il tipo di dati **hierarchyid**, in un formato stringa più leggibile:
   
 ```sql
 SELECT OrgNode,  
@@ -95,7 +92,7 @@ OrgNode   Node
 ```  
   
 ### <a name="b-converting-transact-sql-values-without-a-table"></a>B. Conversione di valori Transact-SQL senza una tabella  
-Nell'esempio di codice viene illustrato come utilizzare `ToString` per convertire un **hierarchyid** valore in una stringa e `Parse` per convertire un valore stringa in un **hierarchyid**.
+Nell'esempio di codice seguente viene usato `ToString` per convertire un valore **hierarchyid** in una stringa e `Parse` per convertire un valore stringa in un valore **hierarchyid**.
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -116,7 +113,7 @@ hierarchyidRepresentation    StringRepresentation
 ```
   
 ### <a name="c-clr-example"></a>C. Esempio CLR  
-Frammento di codice seguente chiama il metodo ToString ():
+Nel frammento di codice seguente viene chiamato il metodo ToString():
   
 ```sql
 this.ToString()  

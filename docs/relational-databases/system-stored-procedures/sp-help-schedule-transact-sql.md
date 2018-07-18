@@ -1,16 +1,14 @@
 ---
 title: sp_help_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_schedule
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_schedule
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 59223cb9ba6fd0a7129966fa49aef4d8e7e67eb3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1803a5a2842d40700cc4b0f82c800cfbb6cc2e05
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,19 +48,19 @@ sp_help_schedule
   
 ## <a name="arguments"></a>Argomenti  
  [ **@schedule_id =** ] *id*  
- Identificatore della pianificazione per cui restituire un elenco di informazioni. *schedule_name* è **int**, non prevede alcun valore predefinito. Entrambi *schedule_id* o *schedule_name* può essere specificato.  
+ Identificatore della pianificazione per cui restituire un elenco di informazioni. *schedule_name* viene **int**, non prevede alcun valore predefinito. Entrambi *schedule_id* o *schedule_name* può essere specificato.  
   
  [  **@schedule_name =** ] **'***schedule_name***'**  
- Nome della pianificazione per cui restituire un elenco di informazioni. *schedule_name* è **sysname**, non prevede alcun valore predefinito. Entrambi *schedule_id* o *schedule_name* può essere specificato.  
+ Nome della pianificazione per cui restituire un elenco di informazioni. *schedule_name* viene **sysname**, non prevede alcun valore predefinito. Entrambi *schedule_id* o *schedule_name* può essere specificato.  
   
- [  **@attached_schedules_only**  =] *attached_schedules_only* ]  
- Specifica se visualizzare solo le pianificazioni a cui è associato un processo. *attached_schedules_only* è **bit**, il valore predefinito è **0**. Quando *attached_schedules_only* è **0**, vengono visualizzate tutte le pianificazioni. Quando *attached_schedules_only* è **1**, il set di risultati contiene solo le pianificazioni associate a un processo.  
+ [ **@attached_schedules_only** =] *attached_schedules_only* ]  
+ Specifica se visualizzare solo le pianificazioni a cui è associato un processo. *attached_schedules_only* viene **bit**, il valore predefinito è **0**. Quando *attached_schedules_only* è **0**, vengono visualizzate tutte le pianificazioni. Quando *attached_schedules_only* è **1**, il set di risultati contiene solo le pianificazioni associate a un processo.  
   
- [ **@include_description** = ] *include_description*  
- Specifica se includere le descrizioni nel set dei risultati. *include_description* è **bit**, il valore predefinito è **0**. Quando *include_description* è **0**, *schedule_description* colonna del set di risultati contiene un segnaposto. Quando *include_description* è **1**, la descrizione della pianificazione è incluso nel set di risultati.  
+ [ **@include_description** =] *include_description*  
+ Specifica se includere le descrizioni nel set dei risultati. *include_description* viene **bit**, il valore predefinito è **0**. Quando *include_description* è **0**, *schedule_description* colonna del set di risultati contiene un segnaposto. Quando *include_description* è **1**, la descrizione della pianificazione è incluso nel set di risultati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Questa procedura restituisce il set di risultati seguente:  
@@ -74,11 +71,11 @@ sp_help_schedule
 |**schedule_uid**|**uniqueidentifier**|Identificatore della pianificazione.|  
 |**schedule_name**|**sysname**|Nome della pianificazione.|  
 |**enabled**|**int**|Se la pianificazione è abilitata (**1**) o non è abilitata (**0**).|  
-|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = una volta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa al **freq_interval**<br /><br /> **64** = all'avvio del servizio SQLServerAgent.|  
-|**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Il valore dipende dal valore di **freq_type**. Per ulteriori informazioni, vedere [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|Unità per **freq_subday_interval**. Per ulteriori informazioni, vedere [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|Numero di **freq_subday_type** periodi devono intercorrere tra ogni esecuzione del processo. Per ulteriori informazioni, vedere [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**int**|Istanza del processo pianificata del **freq_interval** in ogni mese. Per ulteriori informazioni, vedere [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = una volta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile, relativo al **freq_interval**<br /><br /> **64** = all'avvio del servizio SQLServerAgent.|  
+|**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Il valore dipende dal valore di **freq_type**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**int**|Unità per **freq_subday_interval**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**int**|Numero di **freq_subday_type** periodi devono intercorrere tra ogni esecuzione del processo. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**int**|Istanza del processo pianificata del **freq_interval** in ogni mese. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**int**|Numero di mesi tra l'esecuzione pianificata del processo.|  
 |**active_start_date**|**int**|Data di attivazione della pianificazione.|  
 |**active_end_date**|**int**|Data di fine della pianificazione.|  

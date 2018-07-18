@@ -1,20 +1,20 @@
 ---
 title: sp_refreshsqlmodule (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_refreshsqlmodule_TSQL
 - sp_refreshsqlmodule
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - metadata [SQL Server], stored procedures
 - metadata [SQL Server], triggers
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a95c2e905efa377edb83fd82a104758853b18271
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b54f1410be78cc1be6095a1870fc5b6b9e5b694f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +61,10 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@name=** ] **'***nome_modulo***'**  
- Nome della stored procedure, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *nome_modulo* non può essere un common language runtime (CLR) stored procedure o una funzione CLR. *nome_modulo* non può essere associata a schema. *nome_modulo* è **nvarchar**, non prevede alcun valore predefinito. *nome_modulo* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.  
+ Nome della stored procedure, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *nome_modulo* non può essere un common language runtime (CLR) stored procedure o una funzione CLR. *nome_modulo* non può essere associata a schema. *nome_modulo* viene **nvarchar**, non prevede alcun valore predefinito. *nome_modulo* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.  
   
  [ **,** @**dello spazio dei nomi** =] **'** \<classe > **'**  
- Classe del modulo specificato. Quando *nome_modulo* è un trigger DDL, \<classe > è obbligatorio. *\<classe >* è **nvarchar**(20). Gli input validi sono:  
+ Classe del modulo specificato. Quando *nome_modulo* è un trigger DDL, \<classe > è obbligatorio. *\<classe >* viene **nvarchar**(20). Gli input validi sono:  
   
 |||  
 |-|-|  
@@ -84,7 +84,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 > [!NOTE]  
 >  Le eventuali firme associate all'oggetto vengono eliminate quando si esegue **sp_refreshsqlmodule**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono necessarie l'autorizzazione ALTER per il modulo e l'autorizzazione REFERENCES per i tipi CLR definiti dall'utente e le raccolte di XML Schema a cui fa riferimento l'oggetto. È necessario disporre dell'autorizzazione ALTER ANY DATABASE DDL TRIGGER per il database corrente quando il modulo specificato è un trigger DDL a livello di database. Richiede l'autorizzazione CONTROL SERVER quando il modulo specificato è un trigger DDL a livello di server.  
   
  Per i moduli definiti nella clausola EXECUTE AS è inoltre richiesta l'autorizzazione IMPERSONATE per l'entità specificata. In genere, l'aggiornamento di un oggetto non comporta modifiche per l'entità EXECUTE AS corrispondente, a meno che il modulo non venga definito con EXECUTE AS USER e il nome utente dell'entità non venga risolto in seguito in un utente diverso da quello utilizzato al momento della creazione del modulo.  
@@ -175,7 +175,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_refreshview &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

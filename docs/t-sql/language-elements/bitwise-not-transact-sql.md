@@ -1,22 +1,20 @@
 ---
-title: ~ (NOT bit per bit) (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: ~ (NOT bit per bit) (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ~_TSQL
 - bitwise
 - NOT
-- ~
+- "~"
 - Bitwise NOT
 dev_langs:
 - TSQL
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
-caps.latest.revision: 
+caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bc129a0a62c393cb8aee03edca3e0c2b567f9488
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: be4b6053d95d5b6bda58249c006b8fc0aa9507de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (NOT bit per bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,11 +48,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) uno qualsiasi dei tipi di dati della categoria di tipi di dati integer, il **bit**, o **binario** o **varbinary** dati tipi. *espressione* viene considerato come un numero binario per l'operazione bit per bit.  
+ *expression*  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida di qualsiasi tipo di dati della categoria Integer o del tipo di dati **bit**, **binary** o **varbinary**. *expression* viene considerato un numero binario per l'operazione bit per bit.  
   
 > [!NOTE]  
->  Un solo *espressione* può essere del **binario** o **varbinary** il tipo di dati in un'operazione bit per bit.  
+>  In un'operazione bit per bit un solo valore *expression* può avere il tipo di dati **binary** o **varbinary**.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  **int** se i valori di input sono **int**.  
@@ -65,14 +63,14 @@ ms.lasthandoff: 01/25/2018
   
  **bit** se i valori di input sono **bit**.  
   
-## <a name="remarks"></a>Osservazioni  
- Il  **~**  operatore bit per bit esegue NOT logico bit per bit per il *espressione*, valutando ogni bit in serie. Se *espressione* ha un valore pari a 0, i bit nel set di risultati vengono impostati su 1; in caso contrario, il bit nel risultato viene cancellato su un valore pari a 0. In altre parole, i bit a uno vengono cambiati in zero e i bit a zero vengono modificati in uno.  
+## <a name="remarks"></a>Remarks  
+ L'operatore bit per bit **~** esegue un'operazione con NOT logico bit per bit per *expression*, valutando ogni bit in serie. Se *expression* ha un valore pari a 0, i bit nel set di risultati vengono impostati su 1; in caso contrario, i bit del risultato vengono impostati su 0. In altre parole, i bit a uno vengono cambiati in zero e i bit a zero vengono modificati in uno.  
   
 > [!IMPORTANT]  
->  Per l'esecuzione di qualsiasi operazione bit per bit, la lunghezza di archiviazione dell'espressione utilizzata nell'operazione è un fattore importante. È consigliabile utilizzare lo stesso numero di byte per l'archiviazione dei valori. Ad esempio, archiviare il valore decimale 5 come un **tinyint**, **smallint**, o **int** produce un valore archiviato con numeri diversi di byte: **tinyint** archivia i dati utilizzando 1 byte, **smallint** archivia i dati utilizzando 2 byte, e **int** archivia i dati utilizzando 4 byte. Pertanto, l'esecuzione di un'operazione bit per bit su un **int** valore decimale può produrre risultati diversi da quelli che utilizzano una conversione diretta binaria o esadecimale, soprattutto quando il  **~**  ( NOT bit per bit) viene utilizzato l'operatore. L'operazione con NOT bit per bit potrebbe essere eseguita su una variabile di lunghezza inferiore. In questo caso, quando la variabile di lunghezza inferiore viene convertita in una variabile con tipo di dati di lunghezza maggiore, i bit negli 8 bit superiori potrebbero non essere impostati sul valore previsto. È pertanto consigliabile convertire la variabile del tipo di dati di lunghezza minore nel tipo di dati di lunghezza maggiore ed eseguire quindi l'operazione NOT sul valore risultante.  
+>  Per l'esecuzione di qualsiasi operazione bit per bit, la lunghezza di archiviazione dell'espressione utilizzata nell'operazione è un fattore importante. È consigliabile utilizzare lo stesso numero di byte per l'archiviazione dei valori. Ad esempio, il numero di byte del valore archiviato corrispondente al valore decimale 5 risulta diverso a seconda che 5 venga archiviato come valore di tipo **tinyint**, **smallint** o **int**. Infatti **tinyint** archivia i dati usando 1 byte, **smallint** archivia i dati usando 2 byte e **int** archivia i dati usando 4 byte. Un'operazione bit per bit su un valore decimale di tipo **int**, pertanto, restituisce risultati diversi rispetto a quelli di una conversione diretta binaria o esadecimale, soprattutto nel caso dell'operatore **~** (NOT bit per bit). L'operazione con NOT bit per bit potrebbe essere eseguita su una variabile di lunghezza inferiore. In questo caso, quando la variabile di lunghezza inferiore viene convertita in una variabile con tipo di dati di lunghezza maggiore, i bit negli 8 bit superiori potrebbero non essere impostati sul valore previsto. È pertanto consigliabile convertire la variabile del tipo di dati di lunghezza minore nel tipo di dati di lunghezza maggiore ed eseguire quindi l'operazione NOT sul valore risultante.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata una tabella utilizzando il **int** digitare per archiviare i valori e inserisce i due valori in una riga di dati.  
+ Nell'esempio seguente viene creata una tabella con il tipo di dati **int** per l'archiviazione dei valori e i due valori vengono inseriti in un'unica riga.  
   
 ```  
 CREATE TABLE bitwise  
@@ -116,9 +114,9 @@ FROM bitwise;
   
  
 ## <a name="see-also"></a>Vedere anche  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Operatori bit per bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori bit per bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
 

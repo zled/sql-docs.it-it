@@ -1,36 +1,37 @@
 ---
-title: "Utilità sqlps | Documenti Microsoft"
-ms.custom: 
+title: Utilità sqlps | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: sqlps
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd4e67397b52b3e7248ce061312517841eef38e5
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3f6a9e7c98535e21057a3d1213c7572d8826d42b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlps-utility"></a>sqlps - utilità
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Il **sqlps** utilità avvia una sessione di Windows PowerShell con il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider PowerShell e i cmdlet caricati e registrati. È possibile immettere comandi o script di PowerShell che utilizzano componenti di PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per utilizzare istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e i relativi oggetti.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  L'utilità **sqlps** avvia una sessione di Windows PowerShell con il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell e i cmdlet caricati e registrati. È possibile immettere comandi o script di PowerShell che utilizzano componenti di PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per utilizzare istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e i relativi oggetti.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]Utilizzare il **sqlps** modulo PowerShell invece. Per altre informazioni sul modulo **sqlps** , vedere [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Usare invece il modulo di PowerShell **sqlps**. Per altre informazioni sul modulo **sqlps** , vedere [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -72,15 +73,15 @@ sqlps
  **-Command-** specifica che l'utilità **sqlps** deve leggere l'input dall'input standard.  
   
  *script_block* [ **-args***argument_array* ]  
- Specifica un blocco di comandi di PowerShell da eseguire. Il blocco deve essere incluso in parentesi graffe: {}. È possibile specificare*Script_block* solo quando l'utilità **sqlps** viene chiamata da **PowerShell** o da un'altra sessione dell'utilità **sqlps** . *argument_array* è una matrice di variabili PowerShell che contiene gli argomenti per i comandi di PowerShell in *script_block*.  
+ Specifica un blocco di comandi di PowerShell da eseguire. Il blocco deve essere incluso tra parentesi graffe: {}. È possibile specificare*Script_block* solo quando l'utilità **sqlps** viene chiamata da **PowerShell** o da un'altra sessione dell'utilità **sqlps** . *argument_array* è una matrice di variabili PowerShell che contiene gli argomenti per i comandi di PowerShell in *script_block*.  
   
  *string* [ *command_parameters* ]  
- Specifica una stringa che contiene i comandi di PowerShell da eseguire. Utilizzare il formato **"& {***comando***}"**. Le virgolette indicano una stringa e l'operatore invoke (&) determina l'esecuzione del comando da parte dell'utilità **sqlps**.  
+ Specifica una stringa che contiene i comandi di PowerShell da eseguire. Usare il formato **"&{***command***}"**. Le virgolette indicano una stringa e l'operatore invoke (&) determina l'esecuzione del comando da parte dell'utilità **sqlps**.  
   
  [ **-?** | **-Help** ]  
  Visualizza il riepilogo della sintassi delle opzioni dell'utilità **sqlps** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'utilità **sqlps** avvia l'ambiente PowerShell (PowerShell.exe) e carica il modulo di PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il modulo, denominato anche **sqlps**, carica e registra gli snap-in di PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] seguenti:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
@@ -106,7 +107,7 @@ sqlps
  La versione dell'utilità **sqlps** in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] viene implementata come minishell di Windows PowerShell 1.0. Alle minishell si applicano alcune restrizioni, ad esempio agli utenti non è consentito caricare snap-in diversi da quelli caricati dalla minishell. Queste restrizioni non si applicano a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e versioni successive dell'utilità, modificate per utilizzare il modulo **sqlps** .  
   
 ## <a name="examples"></a>Esempi  
- **A. Eseguire l'utilità sqlps in predefinito, la modalità interattiva, senza le informazioni sul copyright**  
+ **A. Eseguire l'utilità sqlps in modalità interattiva predefinita senza le informazioni sul copyright**  
   
 ```  
 sqlps -NoLogo  
@@ -118,7 +119,7 @@ sqlps -NoLogo
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **C. Eseguire uno script di PowerShell per SQL Server dal prompt dei comandi e proseguimento dell'esecuzione dopo il completamento dello script**  
+ **C. Eseguire uno script di PowerShell per SQL Server dal prompt dei comandi e proseguire l'esecuzione al termine dell'esecuzione dello script**  
   
 ```  
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  

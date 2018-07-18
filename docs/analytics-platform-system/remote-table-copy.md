@@ -1,26 +1,19 @@
 ---
-title: Tabella remota copia (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e00d948f-fede-4d41-a45d-67134770ce37
-caps.latest.revision: "23"
-ms.openlocfilehash: 3de6700957b48c5022c73c3d521bf6f6ed090553
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Copia della tabella remota - Parallel Data Warehouse | Documenti Microsoft
+description: Utilizzo di copia della tabella remota in Analitica piattaforma Parallel Data Warehouse di System.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5ed517a471368e4192ad7393a92274424d37f975
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="remote-table-copy"></a>Copia della tabella remota
 Viene descritto come utilizzare la funzionalità di copia della tabella remota per copiare le tabelle dal database di SQL Server PDW ai database remoti di SMP SQL Server (non accessorio). Utilizzare tabella remota copy rende possibili scenari di hub e spoke per SQL Server PDW.  
@@ -35,7 +28,7 @@ Copia della tabella remota è una funzionalità di SQL Server PDW che consente s
   
 -   I dati da copiare devono essere selezionabili utilizzando un singolo SQL Server PDW valido [selezionare](../t-sql/queries/select-transact-sql.md) istruzione.  
   
--   Il server di destinazione deve essere un server non strumento. Impossibile copiare i dati direttamente da un dispositivo a un altro utilizzando le istruzioni riportate in questo argomento.  
+-   Il server di destinazione deve essere un server non appliance. Impossibile copiare i dati direttamente da un dispositivo a un altro utilizzando le istruzioni riportate in questo argomento.  
   
 -   Il server di destinazione deve essere accessibile a tutti i nodi nella rete Infiniband del dispositivo.  
   

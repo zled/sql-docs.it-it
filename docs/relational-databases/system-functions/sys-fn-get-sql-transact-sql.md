@@ -1,16 +1,14 @@
 ---
 title: sys.fn_get_sql (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 941417a97ce739173e2aba195d51ec845848186f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5051b76490bc27a5e16aedf16be2bdff2dab8c95
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   Restituisce il testo dell'istruzione SQL per l'handle SQL specificato.  
   
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa a partire da una delle prossime versioni di Microsoft SQL Server. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare sys.dm_exec_sql_text. Per ulteriori informazioni, vedere [Sys.dm exec_sql_text &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  Questa funzionalità verrà rimossa a partire da una delle prossime versioni di Microsoft SQL Server. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare sys.dm_exec_sql_text. Per altre informazioni, vedere [DM exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
  
   
@@ -58,7 +55,7 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="arguments"></a>Argomenti  
  *SqlHandle*  
- Valore dell'handle. *SqlHandle* è **varbinary(64)** prevede alcun valore predefinito.  
+ Valore dell'handle. *SqlHandle* viene **varbinary(64)** non prevede alcun valore predefinito.  
   
 ## <a name="tables-returned"></a>Tabelle restituite  
   
@@ -71,7 +68,7 @@ sys.fn_get_sql ( SqlHandle )
 |text|**text**|Testo dell'istruzione SQL. Per gli oggetti crittografati viene restituito NULL.|  
   
 ## <a name="remarks"></a>Osservazioni  
- È possibile ottenere un handle SQL valido dalla colonna sql_handle del [Sys.dm exec_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) vista a gestione dinamica.  
+ È possibile ottenere un handle SQL valido dalla colonna sql_handle della [DM exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) vista a gestione dinamica.  
   
  Se non si passa un handle che non è più presente nella cache, fn_get_sq**l** restituisce un set di risultati vuoto. Se si passa un handle non valido, il batch viene arrestato e viene visualizzato un messaggio di errore.  
   

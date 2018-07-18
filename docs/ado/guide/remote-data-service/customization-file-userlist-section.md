@@ -1,31 +1,28 @@
 ---
 title: Sezione UserList del File di personalizzazione | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5f883b100d522f90ae802578256108ee9e658b71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2f27f83f6b3753ad5298a869e5d8891af089e4ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customization-file-userlist-section"></a>Sezione UserList File di personalizzazione
 Il **userlist** sezione riguarda il **connettersi** sezione con la stessa sezione *identificatore* parametro.  
@@ -44,7 +41,7 @@ Il **userlist** sezione riguarda il **connettersi** sezione con la stessa sezion
 |Parte|Description|  
 |----------|-----------------|  
 |*userName*|Il *nome utente* della persona che utilizza la connessione. Nomi utente validi sono definiti con IIS **Service Manager** finestra di dialogo.|  
-|***accessRights***|Uno dei diritti di accesso seguenti:<br /><br /> -   **NoAccess** : utente non è possibile accedere all'origine dati.<br />-   **ReadOnly** : l'utente può leggere l'origine dati.<br />-   **ReadWrite** , in grado di leggere o scrivere nell'origine dati utente.|  
+|***accessRights***|Uno dei diritti di accesso seguenti:<br /><br /> -   **NoAccess** : utente non è possibile accedere all'origine dati.<br />-   **ReadOnly** , ovvero l'utente può leggere l'origine dati.<br />-   **ReadWrite** : utente può leggere o scrivere all'origine dati.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Collegare il File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

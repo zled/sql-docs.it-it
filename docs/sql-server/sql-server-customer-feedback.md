@@ -1,25 +1,22 @@
 ---
 title: Configurare SQL Server per inviare commenti e suggerimenti a Microsoft | Microsoft Docs
-description: 
+description: ''
 author: annashres
 ms.author: anshrest
-manager: jhubbard
+manager: craigg
 ms.date: 07/12/2017
-ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.topic: conceptual
+ms.prod: sql
+ms.prod_service: sql
 ms.component: sql-non-specified
 ms.suite: sql
-ms.custom: 
-ms.technology: database-engine
-ms.assetid: 
-ms.workload: Inactive
-ms.openlocfilehash: c379c070e94a9bd54ed98c439c6185430ac4e2a5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.custom: ''
+ms.technology: configuration
+ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurare SQL Server per inviare commenti e suggerimenti a Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ Tenere presente che questo processo è incentrato sui meccanismi necessari per o
 - Uso dell'applicazione Segnalazione errori e utilizzo funzionalità
 - Impostazione di sottochiavi del Registro di sistema nel server
 
-Per SQL Server in Linux, fare riferimento a [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md) (Commenti e suggerimenti dei clienti per SQL Server in Linux)
+Per SQL Server in Linux, fare riferimento a [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback) (Commenti e suggerimenti dei clienti per SQL Server in Linux)
 
 > [!NOTE]
 > È possibile disabilitare l'invio di informazioni a Microsoft solo nelle versioni a pagamento di SQL Server.
@@ -109,15 +106,15 @@ I clienti aziendali possono configurare impostazioni di Criteri di gruppo per co
 
     Tipo voce DWORD: 0 rifiuto esplicito; 1 consenso esplicito
 
-Inoltre, per disattivare Segnalazione errori e utilizzo funzionalità a livello di Visual Studio, impostare la sottochiave del Registro di sistema e le impostazioni seguenti:
+    SSMS 17.x si basa inoltre sulla shell di Visual Studio 2015 e l'installazione di Visual Studio consente di abilitare i commenti e suggerimenti utenti per impostazione predefinita.  
 
--    Sottochiave = HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\Telemetry
+    Per configurare Visual Studio affinché i commenti e suggerimenti utenti siano disabilitati nei singoli computer, modificare il valore della sottochiave del Registro di sistema seguente in una stringa "0":  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
 
--    Nome RegEntry = TurnOffSwitch
+    Modificare ad esempio la sottochiave nella stringa seguente:  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
--    Tipo voce DWORD: 0 rifiuto esplicito; 1 consenso esplicito
- 
-I Criteri di gruppo basati sul Registro di sistema per queste sottochiavi del Registro di sistema vengono rispettati dalla raccolta di dati di utilizzo di SQL Server 2017.
+    I Criteri di gruppo basati sul Registro di sistema per queste sottochiavi del Registro di sistema vengono rispettati dalla raccolta di dati di utilizzo di SQL Server 2017.
 
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>Impostare le sottochiavi del Registro di sistema per la raccolta di dump di arresto anomalo del sistema
 

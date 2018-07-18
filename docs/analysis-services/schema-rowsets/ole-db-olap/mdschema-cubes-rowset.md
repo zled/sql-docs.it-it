@@ -1,34 +1,23 @@
 ---
 title: Set di righe MDSCHEMA_CUBES | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: MDSCHEMA_CUBES
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: MDSCHEMA_CUBES rowset
-ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
-caps.latest.revision: "32"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4b23f8bda8cc2aa410ddc04225420ff6372be3e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: da0fc34fedcd6980f8dd19e199314fc1295c78bb
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mdschemacubes-rowset"></a>Set di righe MDSCHEMA_CUBES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descrive la struttura dei cubi all'interno di un database.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Descrive la struttura dei cubi all'interno di un database.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **MDSCHEMA_CUBES** set di righe contiene le colonne seguenti.  
@@ -61,13 +50,13 @@ ms.lasthandoff: 01/08/2018
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Facoltativo) Restrizione predefinita è un valore pari a 1. Una bitmap con uno di questi valori validi:<br /><br /> 1 CUBO<br /><br /> 2 DIMENSIONE|  
-|**Base Cube_Name**|**DBTYPE_WSTR**|Facoltativo.|  
+|**Base Cube_Name**|**DBTYPE_WSTR**|Facoltativa.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di righe dello schema OLE DB per OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB per OLAP i rowset dello Schema](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

@@ -1,28 +1,28 @@
 ---
 title: MSSQL_ENG002601 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: MSSQL_ENG002601 error
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- MSSQL_ENG002601 error
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
-caps.latest.revision: "15"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 15
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6874d1d328234cb3c26a9e058497408d0639e6eb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 64e6968cb9cabe62a9b939b194f6f97b10110f2a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/18/2018
   
 -   L'errore si verifica durante un inserimento nella tabella di sistema **MSmerge_contents**.  
   
-     Tale errore può verificarsi a causa di un valore non corretto per la proprietà del filtro join **join_unique_key**. Tale proprietà deve essere impostata su TRUE solo se la colonna unita in join nella tabella padre è univoca. Se la proprietà è impostata su TRUE ma la colonna non è univoca, viene generato l'errore. Per ulteriori informazioni sull'impostazione di questa proprietà, vedere [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+     Tale errore può verificarsi a causa di un valore non corretto per la proprietà del filtro join **join_unique_key**. Tale proprietà deve essere impostata su TRUE solo se la colonna unita in join nella tabella padre è univoca. Se la proprietà è impostata su TRUE ma la colonna non è univoca, viene generato l'errore. Per ulteriori informazioni sull'impostazione di questa proprietà, vedere [Definizione e modifica di un filtro di join tra articoli di merge](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento a errori ed eventi &#40;replica&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

@@ -1,30 +1,28 @@
 ---
 title: I comandi di menu e altri tasti di scelta rapida (Sybase a SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bc86f038488652df0bee371d695f5b21ce105147
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b02ec727dabf9db7ce614ee804ca6df619bd01b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>I comandi di menu e altri tasti di scelta rapida (Sybase a SQL)
 Nelle sezioni seguenti vengono descritti i tasti di scelta rapida per accedere ai comandi di menu e altri tasti di scelta rapida utilizzati in varie finestre di dialogo di SSMA per Sybase applicazione.  
@@ -207,5 +205,5 @@ Per accedere ai menu di scelta rapida per l'oggetto selezionato in Esplora ogget
 |Vai a dichiarazione.|F12|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Tasti di scelta rapida &#40; Sybase a SQL &#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
+[Tasti di scelta rapida&#40;Sybase a SQL&#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
   

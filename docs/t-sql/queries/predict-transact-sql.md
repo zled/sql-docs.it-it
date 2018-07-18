@@ -1,34 +1,37 @@
 ---
-title: STIMA (Transact-SQL) | Documenti Microsoft
-ms.custom: 
-ms.date: 07/17/2017
-ms.prod: sql-non-specified
+title: PREDICT (Transact-SQL) | Microsoft Docs
+ms.custom: ''
+ms.date: 02/25/2018
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PREDICT
 - PREDICT_TSQL
-dev_langs: TSQL
-helpviewer_keywords: PREDICT clause
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- PREDICT clause
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: b027530565b9b138d5a8f9559e3e60e0331dd3af
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708889"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Genera un valore stimato o punteggi in base a un modello archiviato.  
+Genera un valore o punteggi stimati in base a un modello archiviato.  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -57,64 +60,67 @@ MODEL = @model | model_literal
 
 **model**
 
-Il `MODEL` parametro viene utilizzato per specificare il modello utilizzato per l'assegnazione dei punteggi o la stima. Il modello viene specificato come una variabile o un valore letterale o un'espressione scalare.
+Il parametro `MODEL` viene usato per specificare il modello usato per l'assegnazione dei punteggi o la stima. Il modello viene specificato come variabile, valore letterale o espressione scalare.
 
-L'oggetto modello può essere creato utilizzando R, Python o un altro strumento.
+L'oggetto modello può essere creato con R, Python o un altro strumento.
 
 **data**
 
-Il parametro di dati viene utilizzato per specificare i dati utilizzati per l'assegnazione dei punteggi o la stima. Dati vengono specificati sotto forma di un'origine della tabella nella query. Origine di tabella può essere una tabella, alias di tabella, alias CTE, vista o funzione con valori di tabella.
+Il parametro DATA viene usato per specificare i dati usati per l'assegnazione dei punteggi o la stima. I dati vengono specificati nella query sotto forma di un'origine di tabella. L'origine di tabella può essere una tabella, un alias di tabella, un alias di espressione di tabella comune, una vista o una funzione con valori di tabella.
 
-**parametri**
+**parameters**
 
-Il parametro di parametri viene utilizzato per specificare i parametri definiti dall'utente facoltativi utilizzati per il punteggio o la stima.
+Il parametro PARAMETERS viene usato per specificare parametri definiti dall'utente facoltativi usati per l'assegnazione dei punteggi o la stima.
 
-Il nome di ogni parametro è specifico per il tipo di modello. Ad esempio, la funzione rxPredict in RevoScaleR supporta il parametro  _@computeResiduals bit_ per supportare i calcoli di residui quando valutazione di un modello di regressione logistica. È possibile passare il nome di parametro e il valore per il `PREDICT` (funzione).
+Il nome di ogni parametro è specifico per il tipo di modello. La funzione [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) in RevoScaleR, ad esempio, supporta il parametro `@computeResiduals`, che indica se è necessario calcolare i residui quando si valuta un modello di regressione logistica. Se si chiama un modello compatibile, è possibile passare il nome del parametro e il valore TRUE o FALSE alla funzione `PREDICT`.
 
-> [NOTA] Questa opzione non è supportata nella versione precedente di SQL Server 2017 e viene inclusa solo a fini di compatibilità di inoltro.
+> [!NOTE]
+> Questa opzione non funziona nelle versioni non definitive di SQL Server 2017.
 
-**WITH ( \<result_set_definition> )**
+**WITH ( <result_set_definition> )**
 
-La clausola WITH viene utilizzata per specificare lo schema dell'output restituito dal `PREDICT` (funzione).
+La clausola WITH viene usata per specificare lo schema dell'output restituito dalla funzione `PREDICT`.
 
-Oltre alle colonne restituiti dal `PREDICT` funzione stessa, tutte le colonne che fanno parte dei dati di input sono disponibili per l'utilizzo nella query.
+Oltre alle colonne restituiti dalla funzione `PREDICT` stessa, tutte le colonne che fanno parte dell'input di dati sono disponibili per l'uso nella query.
 
 ### <a name="return-values"></a>Valori restituiti
 
-Nessuno schema predefinito è disponibile. SQL Server non convalida il contenuto del modello e non convalida i valori della colonna restituito.  
-- Il `PREDICT` funzione passa attraverso le colonne come input  
-- Il `PREDICT` funzione genera inoltre nuove colonne, ma il numero di colonne e i relativi tipi di dati dipende dal tipo di modello che è stato utilizzato per la stima.  
+Non è disponibile uno schema predefinito. SQL Server non convalida il contenuto del modello né i valori di colonna restituiti.
 
-Eventuali messaggi di errore correlati ai dati, il modello o il formato di colonna vengono restituiti dalla funzione di stima sottostante associata al modello.  
-- Per RevoScaleR, è la funzione equivalente [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict)  
-- Per MicrosoftML, la funzione equivalente è [rxPredict.mlModel](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxpredict)  
+- La funzione `PREDICT` interessa le colonne come input.
+- La funzione `PREDICT`, poi, genera nuove colonne. Il numero delle colonne e i tipi di dati corrispondenti dipendono dal tipo di modello usato per la stima.
 
-Non è possibile visualizzare la struttura di modello interno utilizzando `PREDICT`. Se si desidera conoscere il contenuto del modello stesso, è necessario caricare l'oggetto modello, deserializzarlo e utilizzare il codice R appropriato per analizzare il modello.
+Eventuali messaggi di errore correlati ai dati, al modello o al formato delle colonne vengono restituiti dalla funzione di stima sottostante associata al modello.
 
-## <a name="remarks"></a>Osservazioni
+- Per RevoScaleR, la funzione equivalente è [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)  
+- Per MicrosoftML, la funzione equivalente è [rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict)  
 
-Il `PREDICT` funzione è supportata in tutte le edizioni di SQL Server, tra cui Linux.
+Non è possibile visualizzare la struttura del modello interna tramite `PREDICT`. Se si vuole comprendere il contenuto del modello stesso, è necessario caricare l'oggetto modello, deserializzarlo e usare codice R appropriato per analizzare il modello.
 
-Non è necessario che sia installato R, Python o un altro computer, l'apprendimento di lingue nel server di utilizzare il `PREDICT` (funzione). È possibile eseguirne il training in un altro ambiente e salvarlo in una tabella di SQL Server per l'utilizzo con `PREDICT`, o chiamare il modello da un'altra istanza di SQL Server che contiene il modello salvato.
+## <a name="remarks"></a>Remarks
+
+La funzione `PREDICT` è supportata in tutte le edizioni di SQL Server, Linux incluso, e nel database SQL di Azure, indipendentemente dal fatto che siano abilitate o meno altre funzionalità di Machine Learning. È tuttavia necessario SQL Server 2017 o versione successiva. 
+
+Per usare la funzione `PREDICT` non è necessario che nel server sia installato R, Python o un altro linguaggio di Machine Learning. È possibile eseguire il training del modello in un altro ambiente e salvarlo in una tabella di SQL Server per usarlo con `PREDICT` o chiamare il modello da un'altra istanza di SQL Server contenente il modello salvato.
 
 ### <a name="supported-algorithms"></a>Algoritmi supportati
 
-Il modello in uso deve essere stato creato con uno degli algoritmi supportati dal pacchetto RevoScaleR. Per un elenco di modelli attualmente supportati, vedere [punteggi in tempo reale](../../advanced-analytics/real-time-scoring.md).
+Il modello da usare deve essere stato creato con uno degli algoritmi supportati del pacchetto RevoScaleR. Per l'elenco dei modelli attualmente supportati, vedere [Assegnazione dei punteggi in tempo reale](../../advanced-analytics/real-time-scoring.md).
 
 ### <a name="permissions"></a>Autorizzazioni
 
-Non sono necessarie per autorizzazioni `PREDICT`; tuttavia, è necessario che l'utente `EXECUTE` dell'autorizzazione per il database e dell'autorizzazione per eseguire una query tutti i dati che viene utilizzati come input. L'utente deve essere in grado di leggere il modello da una tabella, anche se il modello è stato archiviato in una tabella.
+Per `PREDICT` non sono necessarie autorizzazioni specifiche. L'utente, tuttavia, ha bisogno dell'autorizzazione `EXECUTE` per il database e dell'autorizzazione per eseguire query su tutti i dati usati come input. Se il modello è stato archiviato in una tabella, l'utente deve anche essere in grado di leggerlo dalla tabella.
 
 ## <a name="examples"></a>Esempi
 
-Gli esempi seguenti illustrano la sintassi per chiamare il metodo `PREDICT`.
+Gli esempi seguenti illustrano la sintassi per chiamare la funzione `PREDICT`.
 
-### <a name="call-a-stored-model-and-use-it-for-prediction"></a>Chiamare un modello archiviato e utilizzarlo per la stima
+### <a name="call-a-stored-model-and-use-it-for-prediction"></a>Chiamare un modello archiviato e usarlo per la stima
 
-Questo esempio viene chiamato un modello di regressione logistica esistente archiviato nella tabella [models_table]. Ottiene il versione più recente modello con training, utilizzando un'istruzione SELECT e quindi passa il modello binario per la funzione di stima. I valori di input rappresentano le funzionalità; l'output rappresenta la classificazione assegnata dal modello.
+Questo esempio chiama un modello di regressione logistica esistente archiviato nella tabella [models_table]. Ottiene il modello sottoposto a training più recente tramite un'istruzione SELECT e quindi passa il modello binario alla funzione PREDICT. I valori di input rappresentano le funzionalità; l'output rappresenta la classificazione assegnata dal modello.
 
 ```sql
-DECLARE @logit_model varbinary(max) = "SELECT TOP 1 @model from [models_table]";
+DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_table] ORDER BY [trained_date] DESC";
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
@@ -122,9 +128,9 @@ FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry
 WITH (class string);
 ```
 
-### <a name="using-predict-in-a-from-clause"></a>Utilizzo di stima in una clausola FROM
+### <a name="using-predict-in-a-from-clause"></a>Uso di PREDICT in una clausola FROM
 
-Questo esempio fa riferimento il `PREDICT` funzionare nel `FROM` clausola di un `SELECT` istruzione:
+Questo esempio fa riferimento alla funzione `PREDICT` nella clausola `FROM` di un'istruzione `SELECT`:
 
 ```sql
 SELECT d.*, p.Score
@@ -132,11 +138,11 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-L'alias **d** specificato per l'origine della tabella nel _dati_ parametro viene utilizzato per fare riferimento alle colonne appartenenti a dbo.mytable. L'alias **p** specificato per il **PREDICT** funzione viene utilizzata per fare riferimento alle colonne restituite dalla funzione di stima.
+L'alias **d** specificato per l'origine di tabella nel parametro `DATA` viene usato per fare riferimento alle colonne appartenenti a dbo.mytable. L'alias **p** specificato per la funzione **PREDICT** viene usato per fare riferimento alle colonne restituite dalla funzione PREDICT.
 
-### <a name="combining-predict-with-an-insert-statement"></a>La combinazione di stima con un'istruzione INSERT
+### <a name="combining-predict-with-an-insert-statement"></a>Combinazione di PREDICT con un'istruzione INSERT
 
-Uno dei casi di utilizzo comune per la stima consiste nel generare un punteggio per dati di input e quindi inserire i valori stimati in una tabella. Nell'esempio seguente si presuppone che l'applicazione chiamante utilizza una stored procedure per inserire una riga contenente il valore stimato in una tabella:
+Uno dei casi d'uso più comuni per la stima consiste nella generazione di un punteggio per dati di input e quindi nell'inserimento dei valori stimati in una tabella. L'esempio seguente presuppone che l'applicazione chiamante usi una stored procedure per inserire una riga contenente il valore stimato in una tabella:
 
 ```sql
 CREATE PROCEDURE InsertLoanApplication
@@ -154,7 +160,7 @@ BEGIN
 END;
 ```
 
-Se la procedura accetta più righe tramite un parametro con valori di tabella, quindi può essere scritta come indicato di seguito:
+Se la procedura accetta più righe tramite un parametro con valori di tabella, può essere scritta come segue:
 
 ```sql
 CREATE PROCEDURE InsertLoanApplications (@new_applications dbo.loan_application_type)
@@ -168,26 +174,26 @@ BEGIN
 END;
 ```
 
-### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>Creazione di un modello R e generazione di punteggi usando i parametri facoltativi del modello
+### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>Creazione di un modello R e generazione di punteggi tramite parametri facoltativi del modello
 
 > [!NOTE]
-> Utilizzo dell'argomento di parametri non è supportato nella versione finale candidata 1.
+> L'uso dell'argomento parameters non è supportato nella versione finale candidata 1.
 
-Questo esempio si presuppone che hanno creato un modello di regressione logistica dotato di una matrice di covarianza, tramite una chiamata a RevoScaleR simile al seguente:
+Questo esempio presuppone che sia stato creato un modello di regressione logistica dotato di una matrice di covarianza tramite una chiamata a RevoScaleR simile alla seguente:
 
 ```R
 logitObj <- rxLogit(Kyphosis ~ Age + Start + Number, data = kyphosis, covCoef = TRUE)
 ```
 
-Se si archivia il modello in SQL Server in formato binario, è possibile utilizzare la funzione di stima per generare non solo le stime, ma le informazioni aggiuntive supportate dal tipo di modello, ad esempio errore o intervalli di confidenza.
+Se si archivia il modello in SQL Server in formato binario, è possibile usare la funzione PREDICT per generare non solo stime, ma anche informazioni aggiuntive supportate dal tipo di modello, ad esempio gli intervalli di errore o di confidenza.
 
-Il codice seguente viene illustrata la chiamata equivalente da R a rxPredict:
+Il codice seguente illustra la chiamata R equivalente a [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict):
 
 ```R
 rxPredict(logitObj, data = new_kyphosis_data, computeStdErr = TRUE, interval = "confidence")
 ```
 
-La chiamata equivalente utilizzando il `PREDICT` funzione fornisce anche il punteggio (previsto valore), errore e intervalli di confidenza:
+La chiamata equivalente che usa la funzione `PREDICT` fornisce anche il punteggio (valore stimato), e gli intervalli di errore e di confidenza:
 
 ```sql
 SELECT d.Age, d.Start, d.Number, p.pred AS Kyphosis_Pred, p.stdErr, p.pred_lower, p.pred_higher
@@ -196,5 +202,3 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
-
-

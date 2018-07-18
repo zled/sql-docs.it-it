@@ -1,16 +1,14 @@
 ---
-title: DENSE_RANK (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DENSE_RANK (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DENSE_RANK_TSQL
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: fd11621293a410a4ac5adb71b0c1fd62f07e03a8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 54121ef549fb76639ec526b3128ffa8abfd7a849
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,16 +46,16 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- \<partition_by_clause >  
- Divide il set di risultati generato dal [FROM](../../t-sql/queries/from-transact-sql.md) clausola in partizioni alle quali viene applicata la funzione DENSE_RANK. Per la sintassi PARTITION BY, vedere [la clausola OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ Suddivide il set di risultati generato dalla clausola [FROM](../../t-sql/queries/from-transact-sql.md) in partizioni alle quali viene applicata la funzione DENSE_RANK. Per la sintassi PARTITION BY, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- \<order_by_clause >  
+ \<order_by_clause>  
  Determina l'ordine di applicazione della funzione DENSE_RANK alle righe in una partizione.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **bigint**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se due o più righe hanno un valore equivalente per un rango nella stessa partizione, alle righe con valori equivalenti viene assegnato lo stesso rango. Ad esempio, se due venditori principali hanno lo stesso valore SalesYTD, viene assegnato a entrambi il rango uno. Al venditore con il valore successivo SalesYTD più alto verrà assegnato il rango 2. Tale valore di rango corrisponde a 1 più il numero di righe distinte che precedono questa riga. I numeri restituiti dalla funzione DENSE_RANK sono pertanto sempre consecutivi e senza gap.  
   
  L'ordinamento utilizzato per l'intera query determina l'ordine di visualizzazione delle righe nel risultato. Ciò significa che una riga con numero di rango 1 non sarà necessariamente la prima riga nella partizione.  
@@ -131,7 +129,7 @@ BusinessEntityID Rate                  RankBySalary
 274              48.101                8  
 ```  
   
-## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. Quattro funzioni di rango utilizzate nella stessa query  
+## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. Quattro funzioni di rango usate nella stessa query  
  Nell'esempio seguente vengono illustrate le quattro funzioni di rango utilizzate nella stessa query. Per esempi specifici, vedere l'argomento relativo a ogni funzione di rango.  
   
 ```  
@@ -171,10 +169,10 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
 
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D: classificazione di righe all'interno di una partizione  
- Nell'esempio seguente classifica i venditori in ogni territorio di vendita in base alla loro vendite totali. Il set di righe viene partizionato in base a `SalesTerritoryGroup` e ordinato in base a `SalesAmountQuota`.  
+### <a name="d-ranking-rows-within-a-partition"></a>D: Classificazione di righe all'interno di una partizione  
+ Nell'esempio seguente gli addetti alle vendite in ogni territorio di vendita vengono classificati in base al totale delle vendite. Il set di righe viene partizionato in base a `SalesTerritoryGroup` e ordinato in base a `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -210,10 +208,10 @@ Tsoflias           1687000.0000  Pacific              1
 ```  
 
 ## <a name="see-also"></a>Vedere anche  
- [Numero di dimensioni &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [Rango funzioni &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [Funzioni di rango &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Funzioni](../../t-sql/functions/functions.md)  
   
   

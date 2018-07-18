@@ -1,22 +1,22 @@
 ---
 title: Validate SSIS packages deployed to Azure (Convalidare pacchetti SSIS distribuiti in Azure) | Microsoft Docs
 ms.date: 11/27/2017
-ms.topic: article
-ms.prod: sql-non-specified
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15f838e93a5473a2d2345ae8c297f9b92eb2a23e
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 09086d0f4ff9c5a3f69a922e0c17c046c84001fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="validate-ssis-packages-deployed-to-azure"></a>Convalidare pacchetti SSIS distribuiti in Azure
 Quando si distribuisce un progetto di SQL Server Integration Services (SSIS) al database di catalogo SSIS (SSISDB) in un server di Azure, la distribuzione guidata del pacchetto prevede un passaggio di convalida aggiuntivo dopo la pagina relativa alla **revisione**. Questo passaggio di convalida controlla che i pacchetti del progetto non contengano problemi noti che potrebbero impedire la corretta esecuzione Runtime di integrazione di Azure SSIS. Quindi la procedura guidata consente di visualizzare gli avvisi applicabili nella pagina relativa alla **convalida**.

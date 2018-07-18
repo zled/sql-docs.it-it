@@ -1,32 +1,24 @@
 ---
 title: Analysis Services PowerShell Reference | Documenti Microsoft
-ms.custom: 
-ms.date: 06/21/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
 ms.topic: reference
-ms.assetid: 6c435e40-bfaf-4073-8cef-bc3260602246
-caps.latest.revision: "9"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9fbe93dba70125f12d20ee6ae2227d477b08ef19
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 9632b9aaecfc6f6fa86684ac604706ecaac90071
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="analysis-services-powershell-reference"></a>Guida di riferimento a PowerShell per Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]I cmdlet di PowerShell sono inclusi nel [modulo SqlServer](https://www.powershellgallery.com/packages/SqlServer/21.0.17099). 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] I cmdlet di PowerShell sono inclusi nel [modulo SqlServer](https://www.powershellgallery.com/packages/SqlServer/21.0.17099). 
   
 >[!NOTE] 
 > Operazioni di database di Analysis Services Azure utilizzano il modulo SqlServer stesso come SQL Server Analysis Services. Tuttavia, non tutti i cmdlet sono supportati in Azure Analysis Services. Per ulteriori informazioni, vedere [gestire Azure Analysis Services con PowerShell](https://docs.microsoft.com/azure/analysis-services/analysis-services-powershell).

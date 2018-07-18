@@ -1,33 +1,33 @@
 ---
 title: Risoluzione dei problemi dei server di pubblicazione Oracle | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
-caps.latest.revision: "62"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 62
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 115bdbf97a35d4035c00a8e547a2c38125ce6970
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d849d3fdf5c0242c8d3b5f09af78d3649cb1d1f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Risoluzione dei problemi dei server di pubblicazione Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento elenca alcuni problemi che possono verificarsi durante la configurazione e l'uso di un server di pubblicazione Oracle.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questo argomento vengono elencati alcuni problemi che possono verificarsi durante la configurazione e l'uso di un server di pubblicazione Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Viene generato un errore relativo al software di rete e client Oracle  
  L'account con cui viene eseguito [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel server di distribuzione deve disporre di autorizzazioni di lettura ed esecuzione per la directory e tutte le sottodirectory in cui è installato il software di rete client Oracle. Se tali autorizzazioni non vengono concesse o i componenti client Oracle non sono installati correttamente, verrà visualizzato il messaggio di errore seguente:  
@@ -161,7 +161,7 @@ ms.lasthandoff: 01/18/2018
   
 2.  Nella finestra di dialogo **Esegui** digitare **regedit**e quindi fare clic su **OK**.  
   
-3.  Individuare HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<NomeIstanza>*\Providers.  
+3.  Individuare HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<NomeIstanza>* \Providers.  
   
      Nella cartella Providers dovrebbe essere presente una cartella denominata OraOLEDB.Oracle. In questa cartella dovrebbe essere incluso il nome valore DWORD **AllowInProcess**, con un valore pari a **1**.  
   
@@ -237,7 +237,7 @@ ms.lasthandoff: 01/18/2018
 ## <a name="changes-are-made-that-require-reconfiguration-of-the-publisher"></a>Le modifiche apportate richiedono la riconfigurazione del server di pubblicazione  
  Le modifiche apportate a procedure o tabelle di metadati della replica richiedono l'eliminazione e la riconfigurazione del server di pubblicazione. Per riconfigurare il server di pubblicazione, è necessario eliminarlo ed eseguirne nuovamente la configurazione mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], Transact-SQL o RMO. Per informazioni sulla configurazione del server di pubblicazione, vedere [Configurare un server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
- **Per eliminare un server di pubblicazione Oracle (**SQL Server Management Studio**)**  
+ **Per eliminare un server di pubblicazione Oracle (** SQL Server Management Studio **)**  
   
 1.  Connettersi al server di distribuzione per il server di pubblicazione Oracle in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ed espandere il nodo del server.  
   

@@ -1,44 +1,42 @@
 ---
 title: Supporto del tipo di dati in SQLXML 4.0 XML | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dfdb6b2fba95fc3e723122e9402e70caede522b1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 68cb00ced8f77b5921be07a3f6383d4436f0bade
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Supporto del tipo di dati xml in SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta XML tipizzati con dati di **xml** tipo di dati. In questo argomento fornisce informazioni su come SQLXML 4.0 riconosce istanze di **xml** tipo di dati e implementa il relativo supporto.  
+  A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta XML tipizzati con dati di **xml** tipo di dati. In questo argomento fornisce informazioni su come SQLXML 4.0 riconosce istanze di **xml** tipo di dati e implementa il relativo supporto.  
   
 ## <a name="working-with-xml-data-types"></a>Utilizzo dei tipi di dati xml  
  Per ulteriori informazioni sull'utilizzo di tabelle SQL che implementano **xml** colonne di tipo di dati vengono forniti gli esempi seguenti:  
   
 |Attività|Esempio|Argomento|  
 |----------|-------------|-----------|  
-|Come eseguire il mapping e includere un **xml** colonna in una vista XML|"Mapping di un elemento XML a una colonna con tipo di dati XML"|[Mapping predefinito di attributi ed elementi XSD a tabelle e colonne &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
-|Come inserire dati in un **xml** colonna con updategram|"Inserimento di dati in una colonna con tipo di dati XML"|[Inserimento di dati tramite Updategram XML &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
-|Il caricamento di dati XML in BULK un **xml** colonna|"Caricamento bulk in colonne con tipo di dati xml"|[Esempi di caricamento Bulk XML &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
+|Come eseguire il mapping e includere un **xml** colonna in una vista XML|"Mapping di un elemento XML a una colonna con tipo di dati XML"|[Mapping predefinito di attributi ed elementi XSD a tabelle e colonne &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
+|Come inserire dati in un **xml** colonna con updategram|"Inserimento di dati in una colonna con tipo di dati XML"|[Inserimento di dati mediante Updategram XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
+|Il caricamento di dati XML in BULK un **xml** colonna|"Caricamento bulk in colonne con tipo di dati xml"|[Esempi di caricamento Bulk XML & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
   
 ## <a name="guidelines-and-limitations"></a>Linee guida e limitazioni  
   

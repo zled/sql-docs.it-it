@@ -1,28 +1,22 @@
 ---
-title: Acquisire e configurare un Server di caricamento (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: Acquisire e configurare un server di caricamento come sistema di Windows non strumento per l'invio di caricamenti di dati per SQL Server Parallel Data Warehouse.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: a434b174-a818-4f73-b218-264619bab664
-caps.latest.revision: "19"
-ms.openlocfilehash: d4a91dc3216945b3f473e1b5b131333ad8d210d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Acquisire e configurare un server di caricamento - Parallel Data Warehouse | Documenti Microsoft
+description: In questo articolo viene descritto come acquisire e configurare un server durante il caricamento di un sistema di Windows non strumento per l'invio di caricamenti di dati per Parallel Data Warehouse (PDW).
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a796616ad76ba62ea4174cf22c1517c489305055
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-loading-server"></a>Acquisire e configurare un server di caricamento
-In questo argomento viene descritto come acquisire e configurare un server durante il caricamento di un sistema di Windows non strumento per l'invio di caricamenti di dati di SQL Server Parallel Data Warehouse (PDW).  
+# <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Acquisire e configurare un server di caricamento per Parallel Data Warehouse
+In questo articolo viene descritto come acquisire e configurare un server durante il caricamento di un sistema di Windows non strumento per l'invio di caricamenti di dati per Parallel Data Warehouse (PDW).  
   
 ## <a name="Basics"></a>Nozioni di base  
 Il server di caricamento:  
@@ -93,7 +87,7 @@ Se si prevede di utilizzare Integration Services per il caricamento, è necessar
 ## <a name="Step5"></a>Passaggio 5: Avviare il caricamento  
 A questo punto si è pronti avviare il caricamento dei dati. Per altre informazioni, vedere:  
   
-1.  [Strumento di caricamento della riga di comando dwloader](dwloader.md)  
+1.  [dwloader strumento durante il caricamento della riga di comando](dwloader.md)  
   
 2.  [Panoramica di carico](load-overview.md)  
   
@@ -112,7 +106,7 @@ Per ridurre i rischi di sicurezza con i dati, si consiglia quanto segue:
   
 -   Designare un utente PDW che dispone delle autorizzazioni per caricare i dati. A seconda dei requisiti di sicurezza, è possibile che un utente specifico per ogni database.  
   
--   Operazioni nel server durante il caricamento possono accettare un percorso UNC da cui consente di estrarre dati dall'esterno della rete interna attendibile. Un utente malintenzionato sulla rete o con possibilità di influire sulla risoluzione dei nomi può intercettare o modificare i dati inviati a SQL Server PDW. Ciò rappresenta un rischio di divulgazione manomissioni e informazioni. Manomissione deve essere risolti tramite la richiesta di firma per la connessione. Per limitare questo rischio, impostare l'opzione di criteri di gruppo seguenti in **protezione\Criteri Locali\opzioni di protezione** nel server di caricamento: **client di rete Microsoft: Aggiungi firma digitale alle comunicazioni (sempre): Abilitato**  
+-   Operazioni nel server durante il caricamento possono accettare un percorso UNC da cui consente di estrarre dati dall'esterno della rete interna attendibile. Un utente malintenzionato sulla rete o con possibilità di influire sulla risoluzione dei nomi può intercettare o modificare i dati inviati a SQL Server PDW. Ciò rappresenta un rischio di divulgazione manomissioni e informazioni. Manomissione deve essere risolti tramite la richiesta di firma per la connessione. Per limitare questo rischio, impostare l'opzione di criteri di gruppo seguenti nel **protezione\Criteri Locali\opzioni di protezione** nel server durante il caricamento: **client di rete Microsoft: Aggiungi firma digitale alle comunicazioni (sempre): Abilitato**  
   
 -   Disattivare l'inizializzazione immediata dei File in Windows Server 2012 e versioni successive. Si tratta di un compromesso tra prestazioni e sicurezza, come indicato nella sezione prestazioni. È necessario stabilire la soluzione migliore in base ai requisiti di sicurezza.  
   

@@ -1,32 +1,32 @@
 ---
 title: sp_helplogins (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helplogins_TSQL
 - sp_helplogins
-dev_langs: TSQL
-helpviewer_keywords: sp_helplogins
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 75e0521889f38db02bfdc9eabd3332d3fa76afb9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 40a25164c12e9a1c886a7cba6b8f9b0277daf0ed
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,8 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@LoginNamePattern =** ] **'***accesso***'**  
- Nome dell'account di accesso. *account di accesso* è **sysname**, con un valore predefinito è NULL. *account di accesso* deve esistere se specificato. Se *accesso* viene omesso, vengono restituite informazioni su tutti gli account di accesso.  
+ [ **@LoginNamePattern =** ] **'***login***'**  
+ Nome dell'account di accesso. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve esistere se specificato. Se *accesso* viene omesso, vengono restituite informazioni su tutti gli account di accesso.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -55,10 +55,10 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome dell'account di accesso.|  
-|**SID**|**varbinary (85)**|ID di sicurezza (SID) dell'account di accesso.|  
+|**SID**|**varbinary(85)**|ID di sicurezza (SID) dell'account di accesso.|  
 |**DefDBName**|**sysname**|Database predefinito che **LoginName** utilizza per la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**DefLangName**|**sysname**|Lingua predefinita utilizzata da **LoginName**.|  
-|**Auser**|**Char (5)**|Yes = **LoginName** ha un nome utente associato in un database.<br /><br /> No = **LoginName** non dispone di un nome utente associato.|  
+|**Auser**|**Char(5)**|Yes = **LoginName** ha un nome utente associato in un database.<br /><br /> No = **LoginName** non dispone di un nome utente associato.|  
 |**Associata**|**Char(7)**|Yes = **LoginName** ha un account di accesso remoto associato.<br /><br /> No = **LoginName** non dispone di un account di accesso associato.|  
   
  Il secondo report contiene informazioni sugli utenti sui quali viene eseguito il mapping a ogni account di accesso e le appartenenze al ruolo dell'account di acceso, come illustrato nella tabella seguente.  
@@ -73,7 +73,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="remarks"></a>Osservazioni  
  Prima di rimuovere un account di accesso, utilizzare **sp_helplogins** per identificare gli account utente che vengono eseguito il mapping all'account di accesso.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza di **securityadmin** ruolo predefinito del server.  
   
  Per identificare tutti gli account utente mappati a un determinato account di accesso, **sp_helplogins** deve controllare tutti i database all'interno del server. Pertanto, per ogni database nel server, è necessario che sia soddisfatta almeno una delle seguenti condizioni:  
@@ -105,9 +105,9 @@ John        pubs     John       User
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_helpdb &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

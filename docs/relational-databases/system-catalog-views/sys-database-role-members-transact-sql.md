@@ -1,34 +1,35 @@
 ---
 title: database_role_members (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_role_members_TSQL
 - sys.database_role_members
 - database_role_members_TSQL
 - database_role_members
-dev_langs: TSQL
-helpviewer_keywords: sys.database_role_members catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.database_role_members catalog view
 ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: abe12465ae80a9373475a0158cdacc663b8f00fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ac347dbb4748c575b8f4388952a45315f28a5b01
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysdatabaserolemembers-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |**role_principal_id**|**int**|ID dell'entità del ruolo del database.|  
 |**member_principal_id**|**int**|ID dell'entità di database del membro.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può visualizzare la propria appartenenza al ruolo. Per visualizzare gli altri ruoli appartenenza richiede l'appartenenza di `db_securityadmin` ruolo predefinito del database o `VIEW DEFINITION` nel database.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

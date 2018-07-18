@@ -1,28 +1,23 @@
 ---
 title: Disinstallare e rimuovere Master Data Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bf5fe32060d6026c6a62b589fbdd991ef561eda6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c210840b717f5cc13fac3fe0ca2e9c9e7f763952
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772557"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Disinstallare e rimuovere Master Data Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +26,7 @@ ms.lasthandoff: 02/09/2018
   
  Per impedire la perdita di dati ed evitare di influire su altri computer nel sistema, alcuni elementi non vengono rimossi o modificati dal processo di disinstallazione. Esaminare la tabella seguente per determinare se lasciare o rimuovere elementi.  
   
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |----------|-----------------|  
 |File e cartelle|Il processo di disinstallazione rimuove la maggior parte di file e cartelle dal percorso di installazione.<br /><br /> Il processo di disinstallazione non rimuove le cartelle Master Data Services e MDSTempDir dal percorso di installazione. Una volta completato il processo di disinstallazione, è possibile eliminare manualmente queste cartelle dal file system. Per altre informazioni, vedere [Autorizzazioni per file e cartelle &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] assembly|Il processo di disinstallazione rimuove gli assembly di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] dalla Global Assembly Cache (GAC).|  

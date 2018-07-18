@@ -1,30 +1,29 @@
 ---
 title: Metodo getVersionColumns (SQLServerDatabaseMetaData) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerDatabaseMetaData.getVersionColumns
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerDatabaseMetaData.getVersionColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6adf8973efd40728df1604dcef9b4a87736be72c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 722fd20c9210b14cb503ab3a0189815fa3cc83dd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>Metodo getVersionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *catalogo*  
+ *catalog*  
   
  Oggetto **stringa** che contiene il nome del catalogo.  
   
@@ -66,14 +65,14 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
   
 |Nome|Tipo|Description|  
 |----------|----------|-----------------|  
-|SCOPE|**breve**|Non supportato dal driver JDBC.|  
+|SCOPE|**short**|Non supportato dal driver JDBC.|  
 |COLUMN_NAME|**String**|Nome della colonna.|  
-|DATA_TYPE|**breve**|Tipo di dati SQL da java.sql.Types.|  
+|DATA_TYPE|**short**|Tipo di dati SQL da java.sql.Types.|  
 |TYPE_NAME|**String**|Nome del tipo di dati.|  
 |COLUMN_SIZE|**int**|Precisione della colonna.|  
 |BUFFER_LENGTH|**int**|Lunghezza della colonna in byte.|  
-|DECIMAL_DIGITS|**breve**|Scala della colonna.|  
-|PSEUDO_COLUMN|**breve**|Indica se la colonna è una pseudocolonna. Può essere uno dei valori seguenti:<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
+|DECIMAL_DIGITS|**short**|Scala della colonna.|  
+|PSEUDO_COLUMN|**short**|Indica se la colonna è una pseudocolonna. Può essere uno dei valori seguenti:<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
 > [!NOTE]  
 >  Per ulteriori informazioni sui dati restituiti dal metodo getVersionColumns, vedere "sp_datatype_info (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentazione in linea.  

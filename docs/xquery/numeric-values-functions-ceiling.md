@@ -1,16 +1,15 @@
 ---
 title: Funzione CEILING (XQuery) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - fn:ceiling function
 - ceiling function [XQuery]
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f50d1816ea6adb7e11bbf583f37ca8e8b9176223
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1399fd20bf4d7af3fed85730fc397e1400347ad2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funzioni a valori numeriche - ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +80,9 @@ WHERE ProductModelID=7
   
 -   Il prefisso AWMI è l'acronimo di Adventure Works Manufacturing Instructions e fa riferimento allo stesso spazio dei nomi utilizzato nel documento sul quale viene eseguita la query.  
   
--   **Istruzioni** è un **xml** colonna di tipo. Pertanto, il [metodo query () (tipo di dati XML)](../t-sql/xml/query-method-xml-data-type.md) viene utilizzato per specificare una query XQuery. L'istruzione XQuery viene specificata come argomento per il metodo di query.  
+-   **Le istruzioni** è un **xml** colonna di tipo. Pertanto, il [metodo query () (tipo di dati XML)](../t-sql/xml/query-method-xml-data-type.md) viene utilizzato per specificare una query XQuery. L'istruzione XQuery viene specificata come argomento per il metodo di query.  
   
--   **per … restituire** è un costrutto di ciclo. Nella query, il **per** ciclo identifica un elenco di \<percorso > elementi. Per ogni centro di lavorazione, la **restituire** istruzione il **per** ciclo descrive il codice XML generato:  
+-   **per... restituire** è un costrutto di ciclo. Nella query, il **per** ciclo identifica un elenco di \<percorso > elementi. Per ogni centro di lavorazione, la **restituire** istruzione il **per** ciclo descrive il codice XML generato:  
   
     -   Oggetto \<percorso > elemento con attributi LocationID e LaborHrs. L'espressione corrispondente racchiusa tra parentesi graffe ({ }) recupera i valori necessari dal documento.  
   
@@ -109,7 +107,7 @@ ProductModelID Result
 -   Il **Ceiling ()** funzione esegue il mapping di tutti i valori integer a xs: decimal.  
   
 ## <a name="see-also"></a>Vedere anche  
- [floor (funzione) &#40; XQuery &#41;](../xquery/numeric-values-functions-floor.md)   
- [arrotondare Function &#40; XQuery &#41;](../xquery/numeric-values-functions-round.md)  
+ [Funzione floor &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
+ [Funzione Round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   
   

@@ -1,16 +1,14 @@
 ---
-title: TEXTPTR (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: TEXTPTR (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTPTR_TSQL
@@ -23,21 +21,20 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 109f9bdd06bf27928450c89ad06dc6d93247b881
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 06a756411c7f1fba5899a83817d3b476013b56f2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="text-and-image-functions---textptr-transact-sql"></a>Testo e immagine funzioni - TEXTPTR (Transact-SQL)
+# <a name="text-and-image-functions---textptr-transact-sql"></a>Funzioni per i valori text e image - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il puntatore di testo restituisce un valore che corrisponde a un **testo**, **ntext**, o **immagine** colonna **varbinary** formato. È possibile utilizzare il valore del puntatore di testo recuperato nelle istruzioni READTEXT, WRITETEXT e UPDATETEXT.  
+  Restituisce il valore del puntatore di testo corrispondente a una colonna di tipo **text**, **ntext** o **image** in formato **varbinary**. È possibile utilizzare il valore del puntatore di testo recuperato nelle istruzioni READTEXT, WRITETEXT e UPDATETEXT.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Non è disponibile una funzionalità alternativa.  
@@ -52,35 +49,35 @@ TEXTPTR ( column )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *colonna*  
- È il **testo**, **ntext**, o **immagine** colonna che verrà utilizzato.  
+ *column*  
+ Colonna **text**, **ntext** o **image** che verrà usata.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **varbinary**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per le tabelle contenenti testo nelle righe, l'istruzione TEXTPTR restituisce un handle per il testo da elaborare. È possibile ottenere un puntatore di testo valido anche se il valore di testo è Null.  
   
- Non è possibile utilizzare la funzione TEXTPTR sulle colonne di viste, ma solo sulle colonne di tabelle. Per utilizzare la funzione TEXTPTR su una colonna di una vista, è necessario impostare il livello di compatibilità su 80 tramite [del livello di compatibilità di ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Se la tabella non contiene testo nelle righe e un **testo**, **ntext**, o **immagine** colonna non è stata inizializzata tramite un'istruzione UPDATETEXT, TEXTPTR restituisce un puntatore null.  
+ Non è possibile utilizzare la funzione TEXTPTR sulle colonne di viste, ma solo sulle colonne di tabelle. Per usare la funzione TEXTPTR su una colonna di una vista, è necessario impostare il livello di compatibilità su 80 tramite il [livello di compatibilità di ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Se una tabella non contiene testo all'interno di righe e se una colonna di tipo **text**, **ntext** o **image** non è stata inizializzata tramite un'istruzione UPDATETEXT, TEXTPTR restituisce un puntatore Null.  
   
  Utilizzare TEXTVALID per verificare la presenza di un puntatore di testo. Non è possibile utilizzare UPDATETEXT, WRITETEXT o READTEXT senza un puntatore di testo valido.  
   
- Queste funzioni e istruzioni sono utili anche quando si lavora con **testo**, **ntext**, e **immagine** dati.  
+ Queste funzioni e istruzioni sono utili anche quando si usano dati di tipo **text**, **ntext** e **image**.  
   
 |Funzione o istruzione|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**('***modello %***',** *espressione***)**|Restituisce la posizione di carattere della stringa di caratteri specificato in **testo** o **ntext** colonne.|  
-|DATALENGTH**(***espressione***)**|Restituisce la lunghezza dei dati in **testo**, **ntext**, e **immagine** colonne.|  
-|SET TEXTSIZE|Restituisce il limite, in byte, del **testo**, **ntext**, o **immagine** dati da restituire con un'istruzione SELECT.|  
-|SOTTOSTRINGA**(***text_column*, *avviare*, *lunghezza***)**|Restituisce un **varchar** stringa specificata dall'oggetto *avviare* offset e *lunghezza*. La lunghezza massima è di 8 KB.|  
+|PATINDEX **('***%pattern%***' ,** *expression***)**|Restituisce la posizione dei caratteri di una determinata stringa di caratteri nelle colonne di tipo **text** o **ntext**.|  
+|DATALENGTH **(***expression***)**|Restituisce la lunghezza dei dati nelle colonne **text**, **ntext** e **image**.|  
+|SET TEXTSIZE|Restituisce il limite in byte dei dati di tipo **text**, **ntext** o **image** da restituire con un'istruzione SELECT.|  
+|SUBSTRING**(***text_column*, *start*, *length***)**|Restituisce una stringa **varchar** determinata dall'offset *start* specificato e da *length*. La lunghezza massima è di 8 KB.|  
   
 ## <a name="examples"></a>Esempi  
   
 > [!NOTE]  
->  Per eseguire gli esempi seguenti, è necessario installare il **pubs** database.  
+>  Per eseguire gli esempi seguenti è necessario installare il database **pubs**.  
   
 ### <a name="a-using-textptr"></a>A. Utilizzo di TEXTPTR  
- L'esempio seguente usa il `TEXTPTR` funzione per individuare il **immagine** colonna `logo` associato `New Moon Books` nel `pub_info` tabella del `pubs` database. Il puntatore di testo è inserito in una variabile locale `@ptrval.`  
+ Nell'esempio seguente viene usata la funzione `TEXTPTR` per trovare la colonna **image** `logo` associata a `New Moon Books` nella tabella `pub_info` del database `pubs`. Il puntatore di testo è inserito in una variabile locale `@ptrval.`  
   
 ```  
 USE pubs;  
@@ -170,7 +167,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. Restituzione di dati specifici in formato testo  
- L'esempio seguente viene individuata la `text` colonna (`pr_info`) associata a `pub_id``0736` nel `pub_info` tabella del `pubs` database. Viene innanzitutto dichiarata la variabile locale `@val`. Il puntatore di testo, ovvero una stringa di dati binari di tipo Long, viene quindi inserito in `@val` e passato come parametro all'istruzione `READTEXT`, che restituisce 10 byte a partire dal quinto byte (offset pari a 4).  
+ Nell'esempio seguente viene trovata la colonna `text` (`pr_info`) associata a `pub_id``0736` nella tabella `pub_info` del database `pubs`. Viene innanzitutto dichiarata la variabile locale `@val`. Il puntatore di testo, ovvero una stringa di dati binari di tipo Long, viene quindi inserito in `@val` e passato come parametro all'istruzione `READTEXT`, che restituisce 10 byte a partire dal quinto byte (offset pari a 4).  
   
 ```  
 USE pubs;  
@@ -193,11 +190,11 @@ pr_info
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [SET TEXTSIZE &#40; Transact-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Testo e immagine funzioni &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
+ [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
+ [Funzioni per i valori text e image &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   

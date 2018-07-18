@@ -1,17 +1,15 @@
 ---
 title: Migliorare le prestazioni degli indici full-text | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.prod: sql
+ms.prod_service: search, sql-database
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: search
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [SQL Server], full-text search
 - full-text queries [SQL Server], performance
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: 
+caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d5c8427cc756a3aa4635e97288cec3aa2e6fb8e0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +88,7 @@ Il file del log di tipo ricerca per indicizzazione segue lo schema di denominazi
 Di seguito sono riportate le parti variabili del nome del file del log di ricerca per indicizzazione.
 -   <**IDDatabase**>: ID di un database. <**dbid**> è un numero a cinque cifre con zeri iniziali.  
 -   <**IDCatalogoFullText**>: ID del catalogo full-text. <**catid**> è un numero a cinque cifre con zeri iniziali.  
--   <**n**>: numero intero che indica l'esistenza di uno o più log di tipo ricerca per indicizzazione per lo stesso catalogo full-text.  
+-   <**n**>: numero intero che indica l'esistenza di uno o più log di ricerca per indicizzazione per lo stesso catalogo full-text.  
   
  Ad esempio, `SQLFT0000500008.2` è il file del log di ricerca per indicizzazione per un database con ID database = 5 e ID catalogo full-text = 8. Il 2 alla fine del nome file indica che sono disponibili due file del log di tipo ricerca per indicizzazione per questa coppia di database/catalogo.  
 
@@ -143,7 +141,7 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
 |x64|*F* = *Numero di intervalli di ricerca per indicizzazione* * 10 * 8|*M* = *T* – *F* – 500|  
 
 **Note sulle formule**
-1.  Se sono in corso più popolamenti completi, calcolare i requisiti di memoria di fdhost.exe per ciascuno separatamente, ad esempio *F1*, *F2* e così via. Calcolare quindi *M* come *T***–** sigma**(***F*i**)**.  
+1.  Se sono in corso più popolamenti completi, calcolare i requisiti di memoria di fdhost.exe per ciascuno separatamente, ad esempio *F1*, *F2* e così via. Calcolare quindi *M* come *T***–** sigma **(***F*i**)**.  
 2.  500 MB è una stima della memoria necessaria per gli altri processi del sistema. Se nel sistema sono in corso processi aggiuntivi, aumentare questo valore di conseguenza.  
 3.  .*ism_size* sia 8 MB per le piattaforme x64.  
   

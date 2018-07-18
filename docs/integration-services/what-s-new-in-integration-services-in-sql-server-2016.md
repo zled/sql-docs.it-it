@@ -1,37 +1,35 @@
 ---
-title: "Novità&#39 di Integration Services in SQL Server 2016 | Microsoft Docs"
+title: Novità&#39 di Integration Services in SQL Server 2016 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 09/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-caps.latest.revision: 
+caps.latest.revision: 183
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 0d684f94dcd18d45c1a8b860b80d20ab07f64529
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 31022138b7bab28bfd5774453282f87cf3a37b75
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-Questo argomento descrive le funzionalità che sono state aggiunte o aggiornate in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Contiene anche le funzionalità aggiunte o aggiornate nel [Feature Pack di Azure per Integration Services &#40; SSIS &#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) durante l'intervallo di tempo di SQL Server 2016.  
+Questo argomento descrive le funzionalità che sono state aggiunte o aggiornate in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Contiene anche le funzionalità aggiunte o aggiornate nel [Feature Pack di Azure per Integration Services & #40; SSIS & #41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) durante l'intervallo di tempo di SQL Server 2016.  
 
 ## <a name="new-for-ssis-in-azure-data-factory"></a>Novità di SSIS in Azure Data Factory
 

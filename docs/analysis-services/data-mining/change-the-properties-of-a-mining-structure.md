@@ -1,31 +1,23 @@
 ---
-title: "Modificare le proprietà di una struttura di Data Mining | Documenti Microsoft"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: mining structures [Analysis Services], properties
-ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
-caps.latest.revision: "28"
-author: Minewiskan
+title: Modificare le proprietà di una struttura di Data Mining | Documenti Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2f97c94a1c594a341c1e03326c975a080d9033cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8064fcc088c7ae9e7dd96c5c132b1246fe0ae2db
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>Modificare le proprietà di una struttura di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esistono due tipi di proprietà su una struttura di data mining, che può essere modificati:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Sono disponibili due tipi di proprietà su una struttura di data mining, entrambi modificabili:  
   
 -   Proprietà della struttura di data mining che influiscono sull'intera struttura  
   
@@ -46,6 +38,6 @@ ms.lasthandoff: 01/08/2018
      Il nuovo valore diventerà effettivo quando si seleziona un elemento diverso nella finestra di progettazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Data mining struttura attività e procedure](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

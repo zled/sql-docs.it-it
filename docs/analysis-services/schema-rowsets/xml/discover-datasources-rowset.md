@@ -1,34 +1,23 @@
 ---
 title: Set di righe DISCOVER_DATASOURCES | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: DISCOVER_DATASOURCES
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DISCOVER_DATASOURCES rowset
-ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
-caps.latest.revision: "39"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d52c95835c5583bd4b8a01a416131aaa7166f385
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9e316e1e8927acb5dcb99046a8d53034126052ce
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discoverdatasources-rowset"></a>Set di righe DISCOVER_DATASOURCES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restituisce un elenco di XML for Analysis (XMLA) provider le origini dati che sono disponibili nel server o nel servizio Web. Le origini dati pubblicate vengono restituite da un URL del server Web dell'applicazione. Il client può connettersi a una delle origini dati incluse in questo elenco.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Restituisce un elenco delle origini dati del provider XMLA (XML for Analysis) disponibili nel server o servizio Web. Le origini dati pubblicate vengono restituite da un URL del server Web dell'applicazione. Il client può connettersi a una delle origini dati incluse in questo elenco.  
   
  Se si chiama il [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo con il **DISCOVER_DATASOURCES** valore di enumerazione nel [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento, il **Discover** metodo restituisce il **DISCOVER_DATASOURCES** set di righe.  
   
@@ -47,7 +36,7 @@ ms.lasthandoff: 01/08/2018
 |**DataSourceInfo**|**DBTYPE_WSTR**||Una stringa che contiene eventuali informazioni aggiuntive necessarie per la connessione all'origine dati.<br /><br /> Può restituire **NULL**.|  
 |**ProviderName**|**DBTYPE_WSTR**|Sì|Nome del provider per l'origine dati.<br /><br /> Esempio: `"MSOLAP"`<br /><br /> Può restituire **NULL**.|  
 |**Tipoprovider**|**DBTYPE_WSTR**|Sì|Tipi di dati supportati dal provider. Questa matrice può includere uno o più dei tipi seguenti:<br /><br /> **Dati Multidimensionali**: provider di dati multidimensionali.<br /><br /> **Dominio di pubblicazione Trusted**: provider di dati tabulari.<br /><br /> **DMP**: provider di data mining (implementa OLE per il database per la specifica di Data Mining).|  
-|**AuthenticationMode**|**DBTYPE_WSTR**|Sì|Specifica relativa al tipo di modalità di sicurezza utilizzata dall'origine dati. I valori possibili sono i seguenti:<br /><br /> **Non autenticate**: non deve essere inviato alcun ID utente o password.<br /><br /> **Autenticazione**: ID utente e password devono essere incluse le informazioni necessarie per connettersi all'origine dati.<br /><br /> **Integrata**: l'origine dati utilizza la sicurezza sottostante per determinare l'autorizzazione, ad esempio la sicurezza integrata fornita da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS).|  
+|**AuthenticationMode**|**DBTYPE_WSTR**|Sì|Specifica relativa al tipo di modalità di sicurezza utilizzata dall'origine dati. I valori possibili sono i seguenti:<br /><br /> **Non autenticate**: non deve essere inviato alcun ID utente o password.<br /><br /> **Autenticato**: ID utente e password devono essere incluse le informazioni necessarie per connettersi all'origine dati.<br /><br /> **Modalità integrata**: l'origine dati utilizza la sicurezza sottostante per determinare l'autorizzazione, ad esempio la sicurezza integrata fornita da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS).|  
   
  Questo set di righe dello schema non è ordinato.  
   
@@ -59,12 +48,12 @@ ms.lasthandoff: 01/08/2018
   
  Nella tabella seguente vengono forniti i GUID e i valori stringa che identificano questo set di righe.  
   
-|Argomento|valore|  
+|Argomento|Valore|  
 |--------------|-----------|  
 |GUID|06c03d41-f66d-49f3-b1b8-987f7af4cf18|  
 |ADOMDNAME|DataSources|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML per set di righe dello schema di analisi](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis i rowset dello Schema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

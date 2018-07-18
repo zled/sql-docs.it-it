@@ -1,16 +1,16 @@
 ---
 title: Configurare la sincronizzazione Web | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1
 - SQL13.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1
@@ -34,16 +34,15 @@ helpviewer_keywords:
 - Web synchronization, security best practices
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-caps.latest.revision: "74"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 74
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1d8ae90df79860b503830c9881fecd5f26b252e3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e806f794a378672b28aa2334eda1afe076bd2ab9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +104,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>Per aumentare il valore di Numero massimo di processi di lavoro in IIS 7  
   
-1.  In **Gestione Internet Information Services (IIS)**espandere il nodo del server locale, quindi fare clic sul nodo **Pool di applicazioni** .  
+1.  In **Gestione Internet Information Services (IIS)** espandere il nodo del server locale, quindi fare clic sul nodo **Pool di applicazioni** .  
   
 2.  Selezionare il pool di applicazioni associato al sito di sincronizzazione Web, quindi fare clic su **Impostazioni avanzate** nel riquadro **Azioni** .  
   

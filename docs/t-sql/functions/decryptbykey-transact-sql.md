@@ -1,16 +1,14 @@
 ---
-title: DECRYPTBYKEY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: DECRYPTBYKEY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DecryptByKey_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - decryption [SQL Server], symmetric keys
 - DECRYPTBYKEY function
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a1275be81fdf2a8405d0f744da962c3cf874eea2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 57a2175b3c4096ab9af7203d7f7d3733947f8e78
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,31 +47,33 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *testo crittografato*  
- Dati crittografati con la chiave. *testo crittografato* è **varbinary**.  
+ *ciphertext*  
+ Dati crittografati con la chiave. *ciphertext* è di tipo **varbinary**.  
   
  **@ciphertext**  
- È una variabile di tipo **varbinary** che contiene dati che sono stati crittografati con la chiave.  
+ Variabile di tipo **varbinary** contenente dati crittografati con la chiave.  
   
  *add_authenticator*  
- Indica se un autenticatore è stato crittografato insieme al testo normale. Deve corrispondere al valore passato a EncryptByKey durante la crittografia dei dati. *add_authenticator* è **int**.  
+ Indica se un autenticatore è stato crittografato insieme al testo normale. Deve corrispondere al valore passato a EncryptByKey durante la crittografia dei dati. *add_authenticator* è di tipo **int**.  
   
- *autenticatore*  
- Dati da cui generare un autenticatore. Deve corrispondere al valore specificato per EncryptByKey. *autenticatore* è **sysname**.  
+ *authenticator*  
+ Dati da cui generare un autenticatore. Deve corrispondere al valore specificato per EncryptByKey. *authenticator* è di tipo **sysname**.  
   
  **@authenticator**  
  Variabile contenente i dati da cui generare un autenticatore. Deve corrispondere al valore specificato per EncryptByKey.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **varbinary** con una dimensione massima di 8.000 byte.  
+ **varbinary** con un valore massimo di 8.000 byte.
+ 
+Restituisce NULL se la chiave simmetrica usata per crittografare i dati non è aperta o *ciphertext* è NULL.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  DecryptByKey usa una chiave simmetrica. Tale chiave deve essere già aperta nel database. È possibile che siano presenti più chiavi aperte contemporaneamente. Non è necessario aprire la chiave prima di decrittografare il testo definito dall'argomento ciphertext.  
   
  La crittografia e decrittografia simmetriche sono operazioni relativamente veloci, ideali per operazioni basate su quantità elevate di dati.  
   
-## <a name="permissions"></a>Permissions  
- È necessario che la chiave simmetrica sia stata aperta durante la sessione corrente. Per ulteriori informazioni, vedere [OPEN SYMMETRIC KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+## <a name="permissions"></a>Autorizzazioni  
+ È necessario che la chiave simmetrica sia stata aperta durante la sessione corrente. Per altre informazioni, vedere [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
   
@@ -120,7 +119,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   

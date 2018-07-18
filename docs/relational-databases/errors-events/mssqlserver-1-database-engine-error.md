@@ -1,29 +1,27 @@
 ---
 title: MSSQLSERVER_-1 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: "-1"
-helpviewer_keywords: -1 (Database Engine error)
+f1_keywords:
+- "-1"
+helpviewer_keywords:
+- -1 (Database Engine error)
 ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
-caps.latest.revision: "12"
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 12
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 048db39c941cd54977c09450097724ebc7a2c584
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 44962af4f0d5ca3a508b0381e7c00e0515be9697
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver-1"></a>MSSQLSERVER_-1
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +60,10 @@ Per risolvere l'errore, eseguire una delle operazioni seguenti:
 -   Assicurarsi che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sia stato avviato nel server.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Configurare Windows Firewall per l'accesso al motore di database](~/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
-[Configurare i protocolli client](~/database-engine/configure-windows/configure-client-protocols.md)  
+[Configurazione di Windows Firewall per l'accesso al Motore di database](~/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+[Configurazione di protocolli client](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Protocolli e librerie di rete](~/sql-server/install/network-protocols-and-network-libraries.md)  
 [Configurazione di rete dei client](~/database-engine/configure-windows/client-network-configuration.md)  
-[Configurare i protocolli client](~/database-engine/configure-windows/configure-client-protocols.md)  
+[Configurazione di protocolli client](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Abilitare o disabilitare un protocollo di rete del server](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   

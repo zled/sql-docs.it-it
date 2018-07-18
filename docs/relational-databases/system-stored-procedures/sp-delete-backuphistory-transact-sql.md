@@ -1,16 +1,14 @@
 ---
-title: sp_delete_backuphistory (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_delete_backuphistory (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_backuphistory
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_backuphistory
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 23843bf7829491c13061b9f2ba6f4063a82d9f9b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 71328851b00cff137f909ae9eb7854f0762b8d19
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@oldest_date=** ] **'***oldest_date***'**  
- Data meno recente mantenuta nelle tabelle di cronologia di backup e ripristino. *oldest_date* è **datetime**, non prevede alcun valore predefinito.  
+ Data meno recente mantenuta nelle tabelle di cronologia di backup e ripristino. *oldest_date* viene **datetime**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

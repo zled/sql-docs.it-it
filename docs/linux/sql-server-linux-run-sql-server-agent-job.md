@@ -6,20 +6,17 @@ ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.workload: Inactive
-ms.openlocfilehash: 0788983d79392fbd39c87ce13aeb4c9439bffe33
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 162015772bb54023816fcc7d911ca34fbd4a3ac7
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Creare ed eseguire processi di SQL Server Agent in Linux
 
@@ -159,7 +156,7 @@ La procedura seguente crea un processo di SQL Server Agent in Linux con comandi 
 
 È anche possibile creare e gestire i processi in modalità remota tramite SQL Server Management Studio (SSMS) in Windows.
 
-1. Avviare SQL Server Management Studio in Windows e connettersi all'istanza del Server SQL di Linux. Per ulteriori informazioni, vedere [gestire SQL Server in Linux con SSMS](sql-server-linux-develop-use-ssms.md).
+1. Avviare SQL Server Management Studio in Windows e connettersi all'istanza del Server SQL di Linux. Per ulteriori informazioni, vedere [gestire SQL Server in Linux con SSMS](sql-server-linux-manage-ssms.md).
 
 1. Verificare che è stato creato un database di esempio denominato **SampleDB**.
 

@@ -1,16 +1,14 @@
 ---
 title: sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_xtp_bind_db_resource_pool_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8bcac671ebd335be8e6f22a1385d0c038e61e365
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4ce8af4df2491d6b80acf931ae769b1a0299504b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -72,15 +69,15 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
 ```  
   
 **Un database di sistema**  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] non è possibile creare tabelle nel database di sistema.  Pertanto, non è possibile creare un'associazione di memoria di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] per un database di questo tipo.  Viene restituito l'errore seguente:  
-*Database_name %s fa riferimento a un database di sistema.  Pool di risorse possono essere associati solo a un database utente.*  
+ Le tabelle di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] non possono essere create in database di sistema.  Pertanto, non è possibile creare un'associazione di memoria di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] per un database di questo tipo.  Viene restituito l'errore seguente:  
+*Database_name %s fa riferimento a un database di sistema.  I pool di risorse possono essere associati solo a un database utente.*  
   
 ```  
 Msg 41371, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
 Binding to a resource pool is not supported for system database 'master'. This operation can only be performed on a user database.  
 ```  
   
-**Pool di risorse non esiste.**  
+**Pool di risorse non esiste**  
  Il pool di risorse identificato da resource_pool_name deve essere disponibile prima di eseguire `sp_xtp_bind_db_resource_pool`.  Se non è disponibile alcun pool con l'ID specificato, viene restituito l'errore seguente:  
 *Il Pool di risorse %s non esiste.  Immettere un nome di pool di risorse valido.*  
   
@@ -91,7 +88,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
   
 **Pool_name fa riferimento a un pool di sistema riservato**  
  I nomi di pool "INTERNAL" e "DEFAULT" sono riservati ai pool di sistema.  Non è possibile associare in modo esplicito un database a uno di questi.  Se viene immesso un nome di pool di sistema, viene restituito l'errore seguente:  
-*Il Pool di risorse %s è un pool di risorse di sistema.  Il pool di risorse di sistema non può essere associato in modo esplicito a un database tramite questa procedura.*  
+*Il Pool di risorse %s è un pool di risorse di sistema.  I pool di risorse di sistema non possono essere associati in modo esplicito a un database tramite questa procedura.*  
   
 ```  
 Msg 41373, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -100,7 +97,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
   
 **Il database è già associato a un altro Pool di risorse**  
  Un database può essere associato a un solo pool di risorse in qualsiasi momento. Le associazioni di database ai pool di risorse devono essere rimosse in modo esplicito prima che possano essere associate a un altro pool. See [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
-*Database %s è già associato al pool di risorse %s.  È necessario annullare prima di poter creare una nuova associazione.*  
+*Database %s è già associato al pool di risorse %s.  È necessario rimuovere il binding prima di poter creare una nuova associazione.*  
   
 ```  
 Msg 41372, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 54  
@@ -122,7 +119,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  L'associazione viene applicata alla successiva connessione del database.  
  
- B. Esempio espanso di esempio che include alcuni controlli di base precedente.  Eseguire l'istruzione seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. Esempio espanso di esempio che include alcuni controlli di base precedente.  Eseguire l'istruzione seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -160,6 +157,6 @@ END
   
 ## <a name="see-also"></a>Vedere anche  
  [Associazione di un database con tabelle con ottimizzazione per la memoria a un pool di risorse](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Sys.sp_xtp_unbind_db_resource_pool &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [Sys.sp_xtp_unbind_db_resource_pool & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

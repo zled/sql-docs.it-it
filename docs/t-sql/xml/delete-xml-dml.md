@@ -1,16 +1,14 @@
 ---
-title: eliminare (XML DML) | Documenti Microsoft
-ms.custom: 
+title: delete (XML DML) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - delete statement [XML DML]
 - deleting nodes
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 620eed7dda3887d04cf0d88a01ee5b991025638b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1112428106ad3a4f7a9ceab2b1e7b2500f3a9a70
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-xml-dml"></a>delete (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,12 +42,12 @@ delete Expression
   
 ## <a name="arguments"></a>Argomenti  
  *Espressione*  
- È un'espressione XQuery che identifica i nodi da eliminare. Vengono eliminati tutti i nodi selezionati dall'espressione e i nodi e valori contenuti nei nodi selezionati. Come descritto in [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md), deve essere un riferimento a un nodo esistente nel documento. Non può trattarsi di un nodo costruito. L'espressione non può essere il nodo radice (/). Se l'espressione restituisce una sequenza vuota l'eliminazione non viene eseguita e non vengono restituiti errori.  
+ È un'espressione XQuery che identifica i nodi da eliminare. Vengono eliminati tutti i nodi selezionati dall'espressione e i nodi e valori contenuti nei nodi selezionati. Come descritto nell'argomento [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md), è necessario indicare un riferimento a un nodo esistente nel documento. Non può trattarsi di un nodo costruito. L'espressione non può essere il nodo radice (/). Se l'espressione restituisce una sequenza vuota l'eliminazione non viene eseguita e non vengono restituiti errori.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>A. Eliminazione di nodi da un documento archiviato in una variabile xml non tipizzata  
- Nell'esempio seguente viene illustrata l'eliminazione di vari nodi da un documento. In primo luogo, un'istanza XML viene assegnata alla variabile di **xml** tipo. Le istruzioni XML DML di eliminazione successive eliminano vari nodi dal documento.  
+ Nell'esempio seguente viene illustrata l'eliminazione di vari nodi da un documento. Un'istanza XML viene prima di tutto assegnata a una variabile di tipo **xml**. Le istruzioni XML DML di eliminazione successive eliminano vari nodi dal documento.  
   
 ```  
 DECLARE @myDoc xml  
@@ -92,7 +89,7 @@ SELECT @myDoc
 ```  
   
 ### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>B. Eliminazione di nodi da un documento archiviato in una colonna xml non tipizzata  
- Nell'esempio seguente, un **eliminare** istruzione XML DML rimuove il secondo elemento figlio di <`Features`> dal documento archiviato nella colonna.  
+ Nell'esempio seguente un'istruzione XML DML **delete** rimuove il secondo elemento figlio di <`Features`> dal documento archiviato nella colonna.  
   
 ```  
 CREATE TABLE T (i int, x xml)  
@@ -119,14 +116,14 @@ FROM T
   
  Dalla query precedente si noti quanto segue:  
   
--   Il [Modify () (metodo) (tipo di dati xml)](../../t-sql/xml/modify-method-xml-data-type.md) viene utilizzata per specificare il **eliminare** parola chiave XML DML.  
+-   Il [metodo modify() (tipo di dati xml)](../../t-sql/xml/modify-method-xml-data-type.md) viene usato per specificare la parola chiave XML DML **delete**.  
   
--   Il [query () (metodo) (tipo di dati xml)](../../t-sql/xml/query-method-xml-data-type.md) viene utilizzato per eseguire una query del documento.  
+-   Il [metodo query() (tipo di dati xml)](../../t-sql/xml/query-method-xml-data-type.md) viene usato per l'esecuzione della query sul documento.  
   
 ### <a name="c-deleting-nodes-from-a-typed-xml-column"></a>C. Eliminazione di nodi da una colonna xml tipizzata  
- In questo esempio elimina i nodi da un documento XML archiviato in istruzioni di produzione tipizzati **xml** colonna.  
+ Questo esempio elimina nodi da un documento XML con istruzioni per la produzione archiviato in una colonna **xml** tipizzata.  
   
- Nell'esempio, creare innanzitutto una tabella (T) con un oggetto tipizzato **xml** colonna nel database AdventureWorks. Un'istanza XML di istruzioni di produzione viene quindi copiata dalla colonna Instructions della tabella ProductModel alla tabella T e uno o più nodi vengono eliminati dal documento.  
+ Innanzitutto, viene creata una tabella (T) con una colonna **xml** tipizzata nel database AdventureWorks. Un'istanza XML di istruzioni di produzione viene quindi copiata dalla colonna Instructions della tabella ProductModel alla tabella T e uno o più nodi vengono eliminati dal documento.  
   
 ```  
 use AdventureWorks  
@@ -196,6 +193,6 @@ go
  [Confronto dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Creare istanze di dati XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md)   
- [Linguaggio di manipolazione dei dati XML &#40; Linguaggio XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Linguaggio XML di manipolazione dei dati &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

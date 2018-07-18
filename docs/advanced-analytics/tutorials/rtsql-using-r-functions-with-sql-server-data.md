@@ -1,29 +1,18 @@
 ---
 title: Utilizzo di funzioni R con i dati di SQL Server (R nella Guida rapida SQL) | Documenti Microsoft
-ms.custom: 
-ms.date: 07/26/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-dev_langs:
-- R
-- SQL
-ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 93fb7d90ab6d1f387fe50dd63a29eda7a2ecc764
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 52b03b16c55b4ae8a772c2c12861fcc4b184d1f4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585743"
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>Utilizzo di funzioni R con i dati di SQL Server (R nella Guida rapida SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,12 +72,6 @@ Dopo aver eseguito il wrapping della funzione R in una stored procedure, è poss
 ```sql
 EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
-
-## <a name="related-resources"></a>Risorse correlate
-
-+ Si desidera installare più pacchetti di R, per ottenere più funzioni statistiche avanzato? Vedere [installazione e la gestione dei pacchetti R](../r/installing-and-managing-r-packages.md).
-
-+ Che consentono di convertire il codice R autonomo in un formato che può essere parametrizzato facilmente stored procedure SQL Server, il team Microsoft R ha fornito un nuovo pacchetto R, **sqlrutils**. Per ulteriori informazioni, vedere [come creare una stored procedure utilizzando sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>Usare funzioni di utilità R per la risoluzione dei problemi
 

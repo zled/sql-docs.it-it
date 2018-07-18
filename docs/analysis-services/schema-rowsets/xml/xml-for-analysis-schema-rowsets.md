@@ -1,38 +1,23 @@
 ---
 title: XML for Analysis Schema Rowsets | Documenti Microsoft
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- rowsets [Analysis Services], XML for Analysis
-- XML for Analysis, schema rowsets
-- schema rowsets [Analysis Services], XML for Analysis
-- schema rowsets [XML for Analysis]
-ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f85f7f1a0daa81a549441bff6a386213916f57f1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Il provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) include set di righe dello schema che restituiscono metadati su stato del server, attività e oggetti. Il recupero dei metadati è necessario se si sviluppa un'applicazione client che si connette a un modello di Analysis Services con struttura e caratteristiche variabili.  
+  Il provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) include set di righe dello schema che restituiscono metadati su stato del server, attività e oggetti. Il recupero dei metadati è necessario se si sviluppa un'applicazione client che si connette a un modello di Analysis Services con struttura e caratteristiche variabili.  
   
  I set di righe dello schema forniscono inoltre l'analisi dei processi e delle operazioni interne che possono facilitare il monitoraggio del server e la risoluzione dei problemi. Per supportare meglio le attività amministrative ad hoc, è possibile eseguire una query Dynamic Management View (DMV) sulla maggior parte dei set di righe dello schema. Le query DMV restituiscono risultati in un formato tabulare leggibile che è possibile visualizzare in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
@@ -40,7 +25,7 @@ Il provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analy
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Rowset<sup>1</sup>|Description|  
+|Set di righe<sup>1</sup>|Description|  
 |------------------------|-----------------|  
 |[Set di righe DISCOVER_CALC_DEPENDENCY](../../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)|Restituisce informazioni sulle dipendenze fra tabelle, colonne, misure e formule delle colonne calcolate.<br /><br /> Si applica ai modelli tabulari distribuiti in un'istanza di Analysis Services e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelli nelle cartelle di lavoro di Excel in esecuzione in un ambiente SharePoint.|  
 |[Set di righe DISCOVER_CONNECTIONS](../../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|Fornisce informazioni sull'utilizzo delle risorse e sulle attività relative alle connessioni attualmente aperte nel server.|  
@@ -52,7 +37,7 @@ Il provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analy
 |[Set di righe DISCOVER_DIMENSION_STAT](../../../analysis-services/schema-rowsets/xml/discover-dimension-stat-rowset.md)|Restituisce statistiche sulla dimensione specificata.|  
 |[Set di righe DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|Restituisce un elenco di nomi, tipi di dati e valori di enumerazione di enumeratori supportati dal provider XMLA per un'origine dati specifica.|  
 |[Set di righe DISCOVER_JOBS](../../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|Fornisce informazioni sui processi attivi in esecuzione nel server.|  
-|[Set di righe DISCOVER_KEYWORDS &#40; XMLA &#41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Vengono restituite informazioni su parole chiave riservate dal provider XMLA.|  
+|[Set di righe DISCOVER_KEYWORDS & #40; XMLA & #41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Vengono restituite informazioni su parole chiave riservate dal provider XMLA.|  
 |[Set di righe DISCOVER_LITERALS](../../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|Restituisce informazioni sui valori letterali, inclusi tipi e valori di dati, supportati dal provider XMLA.|  
 |[Set di righe DISCOVER_LOCATIONS](../../../analysis-services/schema-rowsets/xml/discover-locations-rowset.md)|Restituisce informazioni sul contenuto di un file di backup.|  
 |[Set di righe DISCOVER_LOCKS](../../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|Fornisce informazioni sui blocchi correnti presenti nel server.|  
@@ -80,7 +65,7 @@ Il provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analy
   
 ## <a name="see-also"></a>Vedere anche  
  [Sviluppo con XMLA in Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [Usare dinamica viste a Gestione &#40; viste a gestione dinamica &#41; per monitorare Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [Utilizzare viste a gestione dinamica &#40;viste a gestione dinamica&#41; per monitorare Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [Recupero di metadati da un'origine dati analitici](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

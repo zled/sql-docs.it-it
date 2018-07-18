@@ -1,27 +1,24 @@
 ---
 title: I provider di archivio chiavi personalizzato | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-caps.latest.revision: "1"
+caps.latest.revision: 1
 ms.author: v-chojas
-manager: jhubbard
+manager: craigg
 author: MightyPen
-ms.workload: Inactive
-ms.openlocfilehash: 4c6f936ee92c23f38c78dc219be25ef051e02bb0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 0d3a3b25ca2ead96d23b0d367ab633d900951de8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-keystore-providers"></a>Provider di archivio chiavi personalizzato
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -176,7 +173,7 @@ void (*Free)();
 Nome di segnaposto per una funzione di terminazione definito dal provider. Il driver può chiamare questa funzione al momento della chiusura normale del processo.
 
 > [!NOTE]
-> *Stringhe di caratteri Wide sono caratteri a 2 byte (UTF-16) a causa di modalità di archiviazione in SQL Server.*
+> *Stringhe di caratteri "wide" sono caratteri a 2 byte (UTF-16) a causa di modalità di archiviazione in SQL Server.*
 
 
 ### <a name="error-handling"></a>Gestione degli errori

@@ -1,34 +1,32 @@
 ---
 title: Accedere alle tabelle FileTable con API di input/output dei file | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f482eb2ff361f6c923076093ceb22ab873f0ce8f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 9e222e28f0a669985185756bc5ef77bf1d127fa7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accedere alle tabelle FileTable con API di Input-Output dei file
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Viene descritto il funzionamento dell'I/O del file system in una tabella FileTable.  
+  Viene descritto il funzionamento dell'I/O del file system in una tabella FileTable.  
   
 ##  <a name="accessing"></a> Iniziare a utilizzare le API di I/O dei file con tabelle FileTable  
  L'utilizzo principale delle tabelle FileTable avviene tramite il file system di Windows e l'API di I/O dei file. Le tabelle FileTable supportano l'accesso non transazionale tramite la vasta gamma di API di I/O dei file disponibili.  

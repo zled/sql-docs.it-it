@@ -1,16 +1,14 @@
 ---
-title: MinDbCompatibilityLevel (tipo di dati geography) | Documenti Microsoft
-ms.custom: 
+title: MinDbCompatibilityLevel (tipo di dati geography) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MinDbCompatibilityLevel
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - MinDbCompatibilityLevel method (geography)
 ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 76ee741885646f8df0a84f93bb41f0de0f027e79
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9a8d406295fb205c3c076c8e84842df9aeff67db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce la compatibilità del database minima che riconosce il **geography** tipo di dati.  
+  Restituisce la compatibilità del database minima che riconosce il tipo di dati **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +41,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **int**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **int**  
   
  Tipo CLR restituito: **int**  
   
-## <a name="remarks"></a>Osservazioni  
- Utilizzare `MinDbCompatibilityLevel()` per verificare la compatibilità di un oggetto spaziale prima di modificare il livello di compatibilità in un database. Un valido **geography** digitare restituisce 110.  
+## <a name="remarks"></a>Remarks  
+ Utilizzare `MinDbCompatibilityLevel()` per verificare la compatibilità di un oggetto spaziale prima di modificare il livello di compatibilità in un database. Un tipo **geography** non valido restituisce 110.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -98,6 +95,6 @@ END
   
 ## <a name="see-also"></a>Vedere anche  
  [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [Compatibilità con le versioni precedenti di SQL Server Database Engine](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+ [Compatibilità con le versioni precedenti del motore di database di SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

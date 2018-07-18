@@ -1,32 +1,32 @@
 ---
 title: sp_adduser (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_adduser
 - sp_adduser_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_adduser
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_adduser
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d1a5e8a9041d32823a44f2f0329562741c2e253a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d4f7afe6646fd22ff24aa6aee4e5dcde416420e9
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/27/2017
   Aggiunge un nuovo utente al database corrente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilizzare [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Uso [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) invece.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,20 +48,20 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@loginame =** ] **'***accesso***'**  
+ [ **@loginame =** ] **'***login***'**  
  Nome dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dell'account di accesso di Windows. *account di accesso* è un **sysname**, non prevede alcun valore predefinito. *account di accesso* deve essere un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o account di accesso di Windows.  
   
  [  **@name_in_db =** ] **'***utente***'**  
  Nome del nuovo utente del database. *utente* è un **sysname**, con un valore predefinito è NULL. Se *utente* non viene specificato, il nome del nuovo utente del database predefinito per il *accesso* nome. Specifica di *utente* assegna il nuovo utente, un nome del database diverso dal nome dell'account di accesso a livello di server.  
   
  [  **@grpname =** ] **'***ruolo***'**  
- Ruolo del database di cui è membro il nuovo utente. *ruolo* è **sysname**, con un valore predefinito è NULL. *ruolo* deve essere un ruolo di database valido nel database corrente.  
+ Ruolo del database di cui è membro il nuovo utente. *ruolo* viene **sysname**, con un valore predefinito è NULL. *ruolo* deve essere un ruolo di database valido nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_adduser** verrà creato anche uno schema con il nome dell'utente.  
+ **sp_adduser** creerà inoltre uno schema con il nome dell'utente.  
   
  Dopo avere aggiunto un utente, utilizzare le istruzioni GRANT, DENY e REVOKE per definire le autorizzazioni per controllare le attività che l'utente può svolgere.  
   
@@ -80,7 +80,7 @@ GRANT CONNECT TO guest;
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario essere il proprietario del database.  
   
 ## <a name="examples"></a>Esempi  
@@ -107,7 +107,7 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   

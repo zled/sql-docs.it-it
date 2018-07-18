@@ -1,33 +1,35 @@
 ---
 title: MSsnapshot_history (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: replication
-ms.tgt_pltfrm: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - MSsnapshot_history
 - MSsnapshot_history_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MSsnapshot_history system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MSsnapshot_history system table
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dbbcdba6941fef9b1890b280f5e7a1efe44161ac
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6fc94c56dd1d0caa7972bda84ddd5f6ef14bcdd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mssnapshothistory-transact-sql"></a>MSsnapshot_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 |**start_time**|**datetime**|Ora di inizio dell'esecuzione del processo.|  
 |**time**|**datetime**|Ora di registrazione del messaggio.|  
 |**duration**|**int**|Durata espressa in secondi della sessione del messaggio.|  
-|**commenti**|**nvarchar(255)**|Testo del messaggio.|  
+|**Commenti**|**nvarchar(255)**|Testo del messaggio.|  
 |**delivered_transactions**|**int**|Numero totale di transazioni recapitate durante la sessione.|  
 |**delivered_commands**|**int**|Numero di comandi recapitati al secondo.|  
 |**delivery_rate**|**float(53)**|Numero medio dei comandi recapitati al secondo.|  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |**timestamp**|**timestamp**|Colonna timestamp della tabella.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

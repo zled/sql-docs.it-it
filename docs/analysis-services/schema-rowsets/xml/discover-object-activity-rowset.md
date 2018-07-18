@@ -1,37 +1,28 @@
 ---
 title: Set di righe DISCOVER_OBJECT_ACTIVITY | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DISCOVER_OBJECT_ACTIVITY rowset
-ms.assetid: 100f7de1-ad5c-4973-b863-3c10df1245c4
-caps.latest.revision: "14"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 573b41cb848ee7a8e93bfdc4625b8a05857f2d61
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ae63c9ebff71e124b5843873db380af3d2e6e660
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discoverobjectactivity-rowset"></a>Set di righe DISCOVER_OBJECT_ACTIVITY
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornisce l'utilizzo delle risorse per oggetto dopo l'avvio del servizio.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Fornisce l'utilizzo delle risorse per oggetto dopo l'avvio del servizio.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DISCOVER_OBJECT_ACTIVITY** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Length|Description|  
+|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**OBJECT_AGGREGATION_HIT**|**DBTYPE_I8**||Numero di volte in cui un'aggregazione dell'oggetto è stata raggiunta dopo l'avvio del servizio.|  
 |**OBJECT_AGGREGATION_MISS**|**DBTYPE_I8**||Numero di volte in cui un'aggregazione esistente dell'oggetto non è stata raggiunta, ovvero non è stata utilizzata, dopo l'avvio del servizio.|  
@@ -56,10 +47,10 @@ ms.lasthandoff: 01/08/2018
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|OBJECT_PARENT_PATH|DBTYPE_WSTR|Facoltativo.|  
-|OBJECT_ID|DBTYPE_WSTR|Facoltativo.|  
+|OBJECT_PARENT_PATH|DBTYPE_WSTR|Facoltativa.|  
+|OBJECT_ID|DBTYPE_WSTR|Facoltativa.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML per set di righe dello schema di analisi](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis i rowset dello Schema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

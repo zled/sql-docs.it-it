@@ -1,35 +1,34 @@
 ---
-title: 'Esercitazione: Scrittura di istruzioni Transact-SQL | Documenti Microsoft'
-ms.custom: 
+title: 'Esercitazione: Scrittura di istruzioni Transact-SQL | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
 - Transact-SQL tutorials
 - tutorials [Transact-SQL]
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 22ddf6026a91dbbc2f7f1919497fa796b76ecc34
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cad3535f4664ddf58be506d3af1ef9560a316dad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Esercitazione: Scrittura di istruzioni Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Per la scrittura [!INCLUDE[tsql](../includes/tsql-md.md)] esercitazione di istruzioni. è destinata agli utenti che non hanno familiarità con la scrittura delle istruzioni SQL e consentirà ai nuovi utenti di esaminare alcune istruzioni di base per creare tabelle e inserire i dati. Ai fini di questa esercitazione viene utilizzato [!INCLUDE[tsql](../includes/tsql-md.md)], l'implementazione [!INCLUDE[msCoName](../includes/msconame-md.md)] dello standard SQL. Questa esercitazione costituisce una breve introduzione al linguaggio [!INCLUDE[tsql](../includes/tsql-md.md)] e non rappresenta un'alternativa a un corso su [!INCLUDE[tsql](../includes/tsql-md.md)] . Le istruzioni incluse in questa esercitazione sono intenzionalmente semplici e non sono progettate per illustrare la complessità di un tipico database di produzione.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+L'esercitazione per la scrittura di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] è destinata agli utenti che non hanno familiarità con la scrittura delle istruzioni SQL e consentirà ai nuovi utenti di esaminare alcune istruzioni di base per creare tabelle e inserire i dati. Ai fini di questa esercitazione viene utilizzato [!INCLUDE[tsql](../includes/tsql-md.md)], l'implementazione [!INCLUDE[msCoName](../includes/msconame-md.md)] dello standard SQL. Questa esercitazione costituisce una breve introduzione al linguaggio [!INCLUDE[tsql](../includes/tsql-md.md)] e non rappresenta un'alternativa a un corso su [!INCLUDE[tsql](../includes/tsql-md.md)] . Le istruzioni incluse in questa esercitazione sono intenzionalmente semplici e non sono progettate per illustrare la complessità di un tipico database di produzione.  
   
 >**NOTA:** ai principianti è consigliabile usare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] invece di scrivere istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   

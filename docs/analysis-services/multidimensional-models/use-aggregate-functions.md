@@ -1,31 +1,23 @@
 ---
 title: Utilizzare le funzioni di aggregazione | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: aggregate functions [Analysis Services]
-ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: "28"
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d4e30b5670e7a9a02fdfa9f3bbfad6889e83b562
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="use-aggregate-functions"></a>Utilizzare le funzioni di aggregazione
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando una dimensione viene utilizzata per sezionare una misura, la misura viene riepilogata in base alle gerarchie contenute in tale dimensione. Il comportamento della somma dipende dalla funzione di aggregazione specificata per la misura. Per la maggior parte delle misure contenenti dati numerici, la funzione di aggregazione è **Sum**. Il valore della misura sarà la somma di quantità diverse a seconda di quale sarà il livello della gerarchia attivo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Quando una dimensione viene usata per sezionare una misura, la misura viene riepilogata in base alle gerarchie contenute in tale dimensione. Il comportamento della somma dipende dalla funzione di aggregazione specificata per la misura. Per la maggior parte delle misure contenenti dati numerici, la funzione di aggregazione è **Sum**. Il valore della misura sarà la somma di quantità diverse a seconda di quale sarà il livello della gerarchia attivo.  
   
  In Analysis Services, ogni misura creata è supportata da una funzione di aggregazione che determina l'operazione della misura. I tipi di aggregazione predefiniti sono **Sum**, **Min**, **Max**, **Count**, **Distinct Count**oltre a diverse altre funzioni più specialistiche. In alternativa, se sono necessarie aggregazioni basate su formule complesse o personalizzate, è possibile creare un calcolo MDX anziché una funzione di aggregazione predefinita. Se ad esempio si vuole definire una misura per un valore percentuale, si procede in MDX, usando una misura calcolata. Vedere [Istruzione CREATE MEMBER &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md).  
   
@@ -72,8 +64,8 @@ ms.lasthandoff: 01/08/2018
  Una misura Distinct Count con conteggio dei membri è basata su una colonna chiave esterna nella tabella dei fatti, identificata dalla proprietà **Colonna di origine** della misura. Questa colonna viene unita in join alla colonna della tabella della dimensione che identifica i membri conteggiati mediante la misura Distinct Count.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Misure e gruppi di misure](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [Riferimento alla funzione MDX &#40; MDX &#41;](../../mdx/mdx-function-reference-mdx.md)   
- [Definire una funzione semiadditiva](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+ [Le misure e gruppi di misure](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../../mdx/mdx-function-reference-mdx.md)   
+ [Definisci funzioni semiadditive](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

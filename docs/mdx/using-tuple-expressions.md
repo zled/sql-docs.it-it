@@ -1,34 +1,20 @@
 ---
 title: Utilizzo di espressioni di tupla | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords:
-- single-member tuples [MDX]
-- expressions [MDX], tuples
-- one-member tuples
-- tuples
-- implicit tuples
-ms.assetid: 0b802b76-9123-405e-ae43-d438754724ba
-caps.latest.revision: "27"
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 659b1047984e58395097a15446b2860ed37a7371
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: c53a3a80355fd33dc887b6a07991370838e97cf2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581623"
 ---
 # <a name="using-tuple-expressions"></a>Utilizzo delle espressioni di tupla
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +45,7 @@ ms.lasthandoff: 01/08/2018
  Se l'espressione di tupla ha un solo membro, per valutare l'espressione MDX convertirà il membro in una tupla con un solo membro. In altre parole, l'utilizzo dell'espressione di membro `[Measures].[TestMeasure]` al posto di un'espressione di tupla è equivalente, dal punto di vista funzionale, a utilizzare l'espressione di tupla `( [Measures].[TestMeasure] ).`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40; MDX &#41;](../mdx/expressions-mdx.md)   
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Le espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

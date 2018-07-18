@@ -1,16 +1,15 @@
 ---
 title: Definizione dell'asse in un passo dell'espressione di percorso | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -26,16 +25,15 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2acb1aa6b9eddd2cf30f97da0d594db56b94e456
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>Espressioni di percorso - definizione asse
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +42,11 @@ ms.lasthandoff: 02/09/2018
   
 -   Un asse  
   
--   A [test di nodo](../xquery/path-expressions-specifying-node-test.md)  
+-   Oggetto [test di nodo](../xquery/path-expressions-specifying-node-test.md)  
   
 -   [Zero o più predicati (facoltativo)](../xquery/path-expressions-specifying-predicates.md)  
   
- Per ulteriori informazioni, vedere [espressioni di percorso &#40; XQuery &#41; ](../xquery/path-expressions-xquery.md).  
+ Per altre informazioni, vedere [espressioni di percorso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
   
  L'implementazione di XQuery in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta i passi dell'asse seguenti:  
   
@@ -195,7 +193,7 @@ WHERE  ProductModelID=19
 </ProductDescription>  
 ```  
   
- La query imposta la variabile iteratore `$f` nell'istruzione FLWOR per restituire gli elementi figli dell'elemento `<Features>`. Per ulteriori informazioni, vedere [istruzione FLWOR e iterazione &#40; XQuery &#41; ](../xquery/flwor-statement-and-iteration-xquery.md). Per ogni caratteristica, la clausola `return` costruisce un'istanza XML nel formato seguente:  
+ La query imposta la variabile iteratore `$f` nell'istruzione FLWOR per restituire gli elementi figli dell'elemento `<Features>`. Per altre informazioni, vedere [istruzione e iterazione FLWOR &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md). Per ogni caratteristica, la clausola `return` costruisce un'istanza XML nel formato seguente:  
   
 ```  
 <Feature ProductModelID="...">...</Feature>  

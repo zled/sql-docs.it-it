@@ -1,27 +1,19 @@
 ---
 title: Analysis Services tutorial lezione 8 creare prospettive | Documenti Microsoft
-description: Viene descritto come creare prospettive del progetto di Analysis Services tutorial.
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: 
-author: Minewiskan
-manager: kfile
-editor: 
-tags: 
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
-ms.openlocfilehash: 3b28d60cd5e1fc4050e72cd4ac56b2db882cbafa
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 69511478e6580328776548d354e6801323a5f7e0
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-perspectives"></a>Creare prospettive
 
@@ -51,7 +43,7 @@ In questo articolo fa parte di un'esercitazione di modellazione tabulare, che de
   
 4.  Selezionare tutte le tabelle *tranne* **DimCustomer**.  
   
-    ![as-lesson8-perspectives](../tutorial-tabular-1400/media/as-lesson8-perspectives.png)
+    ![prospettive come lesson8](../tutorial-tabular-1400/media/as-lesson8-perspectives.png)
   
     In una lezione successiva, si usa analizza nella funzionalità di Excel per testare questa prospettiva. Nell'elenco campi tabella pivot di Excel include ogni tabella, tranne la tabella DimCustomer.  
 

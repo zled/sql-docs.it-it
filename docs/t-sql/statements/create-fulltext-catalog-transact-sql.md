@@ -1,16 +1,14 @@
 ---
-title: CREARE il catalogo full-text (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CATALOG_TSQL
@@ -29,23 +27,22 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - CREATE FULLTEXT CATALOG statement
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
-caps.latest.revision: 
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 65872ec24d605e61bf284446c976c51b053e999c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c7fdb32323a7bab65f518ad82b39b432c41d11f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea un catalogo full-text per un database. Un unico catalogo full-text può contenere numerosi indici full-text, ma un indice full-text può essere incluso in un solo catalogo full-text. Ogni database può contenere zero o più cataloghi full-text.  
   
- Non è possibile creare i cataloghi full-text di **master**, **modello**, o **tempdb** database.  
+ Non è consentita la creazione di cataloghi full-text nei database **master**, **model** o **tempdb**.  
   
 > [!IMPORTANT]  
 >  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] un catalogo full-text è un oggetto virtuale che non appartiene ad alcun filegroup. Un catalogo full-text è un concetto logico che fa riferimento a un gruppo di indici full-text.  
@@ -77,22 +74,22 @@ CREATE FULLTEXT CATALOG catalog_name
  ON FILEGROUP *filegroup*  
  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], questa clausola non ha alcun effetto.  
   
- NEL percorso **'***rootpath***'**  
+ IN PATH **'***rootpath***'**  
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], questa clausola non ha alcun effetto.  
   
  ACCENT_SENSITIVITY = {ON|OFF}  
- Specifica se per il catalogo viene applicata la distinzione tra caratteri accentati e non accentati per l'indicizzazione full-text. Se si modifica questa proprietà, l'indice deve essere ricompilato. Per impostazione predefinita, viene utilizzata l'impostazione per la distinzione tra caratteri accentati e non accentati specificata nelle regole di confronto del database. Per visualizzare le regole di confronto del database, utilizzare il **Sys. Databases** vista del catalogo.  
+ Specifica se per il catalogo viene applicata la distinzione tra caratteri accentati e non accentati per l'indicizzazione full-text. Se si modifica questa proprietà, l'indice deve essere ricompilato. Per impostazione predefinita, viene utilizzata l'impostazione per la distinzione tra caratteri accentati e non accentati specificata nelle regole di confronto del database. Per visualizzare le regole di confronto del database, usare la vista del catalogo **sys.databases**.  
   
- Per determinare l'impostazione della proprietà di lettura e non accentati di un catalogo full-text, utilizzare la funzione FULLTEXTCATALOGPROPERTY con il **accentsensitivity** valore di proprietà e *catalog_name*. Se il valore restituito è '1', il catalogo full-text supporta la distinzione tra caratteri accentati e non accentati. Se il valore è '0', per il catalogo non è attiva tale distinzione.  
+ Per determinare l'impostazione corrente della proprietà relativa alla distinzione tra caratteri accentati e non accentati di un catalogo full-text, eseguire la funzione FULLTEXTCATALOGPROPERTY con il valore della proprietà **accentsensitivity** su *catalog_name*. Se il valore restituito è '1', il catalogo full-text supporta la distinzione tra caratteri accentati e non accentati. Se il valore è '0', per il catalogo non è attiva tale distinzione.  
   
  AS DEFAULT  
  Specifica che il catalogo è il catalogo predefinito. Quando si creano indici full-text senza specificare un catalogo full-text in modo esplicito, viene utilizzato il catalogo predefinito. Se un catalogo full-text esistente è già contrassegnato AS DEFAULT, l'impostazione di AS DEFAULT per il nuovo catalogo renderà quest'ultimo il catalogo full-text predefinito.  
   
- AUTORIZZAZIONE *owner_name*  
- Imposta il proprietario del catalogo full-text sul nome di un utente o ruolo di database. Se *owner_name* è un ruolo, il ruolo deve essere il nome di un ruolo che l'utente corrente è un membro di o l'utente che esegue l'istruzione deve essere il proprietario del database o l'amministratore di sistema.  
+ AUTHORIZATION *owner_name*  
+ Imposta il proprietario del catalogo full-text sul nome di un utente o ruolo di database. Se *owner_name* è un ruolo, è necessario che l'utente corrente sia membro di tale ruolo oppure che l'utente che esegue l'istruzione sia il proprietario del database o un amministratore di sistema.  
   
  Se *owner_name* è un nome utente, il nome utente deve essere uno dei seguenti:  
   
@@ -102,13 +99,13 @@ CREATE FULLTEXT CATALOG catalog_name
   
 -   Oppure, l'utente che esegue il comando deve essere il proprietario del database o un amministratore di sistema.  
   
- *owner_name* deve inoltre disporre dell'autorizzazione TAKE OWNERSHIP nel catalogo full-text specificato.  
+ È anche necessario concedere a *owner_name* l'autorizzazione TAKE OWNERSHIP per il catalogo full-text specificato.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Gli ID dei cataloghi full-text iniziano da 00005 e vengono incrementati di un'unità per ogni catalogo creato.  
   
-## <a name="permissions"></a>Permissions  
- L'utente deve disporre dell'autorizzazione CREATE FULLTEXT CATALOG sul database oppure essere un membro del **db_owner**, o **db_ddladmin** ruoli predefiniti del database.  
+## <a name="permissions"></a>Autorizzazioni  
+ L'utente deve avere l'autorizzazione CREATE FULLTEXT CATALOG per il database oppure essere membro dei ruoli predefiniti del database **db_owner** o **db_ddladmin**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono creati un catalogo full-text e un indice full-text.  
@@ -123,9 +120,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys. fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [ELIMINARE il catalogo full-text &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+ [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [Ricerca full-text](../../relational-databases/search/full-text-search.md)   
  
   

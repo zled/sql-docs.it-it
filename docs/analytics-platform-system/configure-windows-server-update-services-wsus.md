@@ -1,31 +1,24 @@
 ---
-title: Configurare Windows Server Update Services (WSUS) (sistema di piattaforma Analitica)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 
-ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+title: Configurare WSUS - Analitica Platform System | Documenti Microsoft
+description: Queste istruzioni consentono di eseguire i passaggi per utilizzare la procedura guidata configurazione di Windows Server Update Services (WSUS) per configurare WSUS per il sistema di piattaforma Analitica.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: dfddc93672dfeb5840afe4cb97e668e3c12132c3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-windows-server-update-services-wsus"></a>Configurare Windows Server Update Services (WSUS)
+# <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurare Windows Server Update Services (WSUS) nel sistema della piattaforma Analitica
 Queste istruzioni consentono di eseguire i passaggi per utilizzare la procedura guidata configurazione di Windows Server Update Services (WSUS) per configurare WSUS per il sistema di piattaforma Analitica. È necessario configurare WSUS prima di poter applicare aggiornamenti software al dispositivo. WSUS è già installata nella macchina virtuale VMM del dispositivo.  
   
-Per ulteriori informazioni sulla configurazione di WSUS, vedere il [Guida all'installazione di WSUS dettagliata](http://go.microsoft.com/fwlink/?LinkId=202417) nel sito Web WSUS. Dopo la configurazione di WSUS, vedere [scaricare e applicare gli aggiornamenti di Microsoft &#40; Sistema della piattaforma Analitica &#41; ](download-and-apply-microsoft-updates.md) per avviare un aggiornamento.  
+Per ulteriori informazioni sulla configurazione di WSUS, vedere il [Guida all'installazione di WSUS dettagliata](http://go.microsoft.com/fwlink/?LinkId=202417) nel sito Web WSUS. Dopo la configurazione di WSUS, vedere [scaricare e applicare gli aggiornamenti di Microsoft &#40;Analitica Platform System&#41; ](download-and-apply-microsoft-updates.md) per avviare un aggiornamento.  
   
 > [!WARNING]  
 > Se si verificano errori durante questo processo di configurazione, arrestare e contattare il supporto tecnico per assistenza. Non ignorare gli errori o continuare il processo dopo gli errori sono stati ricevuti.  
@@ -41,7 +34,7 @@ Per configurare WSUS, è necessario:
   
 -   Conoscere l'indirizzo IP del server proxy se il dispositivo verrà utilizzato un server proxy per accedere al server upstream o Microsoft Update.  
   
--   Nella maggior parte dei casi, è necessario accedere ai server di fuori dell'accessorio WSUS. Per supportare questo scenario di utilizzo Analitica piattaforma del sistema DNS possono essere configurati per supportare un server d'inoltro nome esterno che consentirà di host Analitica Platform System e macchine virtuali (VM) utilizzare i server DNS esterni per la risoluzione dei nomi di fuori del dispositivo. Per ulteriori informazioni, vedere [utilizzare un server d'inoltro DNS per risolvere nomi DNS Non dispositivo &#40; Sistema della piattaforma Analitica &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   Nella maggior parte dei casi, è necessario accedere ai server di fuori dell'accessorio WSUS. Per supportare questo scenario di utilizzo Analitica piattaforma del sistema DNS possono essere configurati per supportare un server d'inoltro nome esterno che consentirà di host Analitica Platform System e macchine virtuali (VM) utilizzare i server DNS esterni per la risoluzione dei nomi di fuori del dispositivo. Per altre informazioni, vedere [utilizzare un server d'inoltro di DNS per risolvere nomi DNS Non accessorio &#40;Analitica Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>Per configurare Windows Server Update Services (WSUS)  
   
@@ -67,9 +60,9 @@ Per configurare WSUS, è necessario:
   
         ![Menu del Dashboard di Server Manager](./media/configure-windows-server-update-services-wsus/WSUS_Wiz0.png "WSUS_Wiz0")  
   
-    4.  Se questa è la prima volta hanno la procedura guidata WSUS, potrebbe essere necessario configurare una directory per archiviare gli aggiornamenti. `C:\wsus`è un percorso appropriato; è tuttavia possibile fornire un percorso diverso.  
+    4.  Se questa è la prima volta hanno la procedura guidata WSUS, potrebbe essere necessario configurare una directory per archiviare gli aggiornamenti. `C:\wsus` è un percorso appropriato; Tuttavia è possibile fornire un percorso diverso.  
   
-        ![WSUS-percorso](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
+        ![Percorso WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
     5.  Esaminare il **prima di iniziare** elenco di elementi da completare prima di completare la procedura guidata.  
   
@@ -77,11 +70,11 @@ Per configurare WSUS, è necessario:
   
     6.  Nel **partecipa al programma Analisi utilizzo software di Microsoft Update** selezionare **Sì, desidero partecipare al programma Analisi utilizzo software di Microsoft Update**, quindi fare clic su **successivo**.  
   
-        ![Programma Analisi utilizzo software Windows Server Update Services](./media/configure-windows-server-update-services-wsus/WSUS_Wiz3.png "WSUS_Wiz3")  
+        ![Programma Analisi utilizzo software WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz3.png "WSUS_Wiz3")  
   
     Verrà visualizzato il **scelta Server Upstream** pagina. Nella schermata seguente è il punto iniziale della configurazione guidata.  
   
-    ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+    ![WSUS-sincronizzazione Server Upstream](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
 4.  Scegliere il server upstream.  
   
@@ -91,7 +84,7 @@ Per configurare WSUS, è necessario:
   
     1.  Se si sceglie di eseguire la sincronizzazione con Microsoft Update, non è necessario apportare modifiche per il **scelta Server Upstream** pagina. Scegliere **Avanti**.  
   
-        ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+        ![WSUS-sincronizzazione Server Upstream](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
     #### <a name="to-update-from-another-wsus-server"></a>Per l'aggiornamento da un altro server WSUS  
   
@@ -159,13 +152,13 @@ Per configurare WSUS, è necessario:
   
     Selezionare **gli aggiornamenti critici** e **gli aggiornamenti della sicurezza** per gli aggiornamenti che verranno sincronizzati per il dispositivo di sistema della piattaforma Analitica e quindi fare clic su **Avanti**.  
   
-    ![Choose classifications](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Scegliere le classificazioni](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
 10. Configurare la pianificazione della sincronizzazione.  
   
     Selezionare **sincronizzare manualmente**, quindi fare clic su **Avanti**.  
   
-    ![Set sync schedule](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
+    ![Pianificazione della sincronizzazione set](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. Avvia sincronizzazione iniziale.  
   
@@ -179,7 +172,7 @@ Per configurare WSUS, è necessario:
 Dopo la configurazione di WSUS per il sistema di piattaforma Analitica, il passaggio successivo è per raggruppare i server dello strumento. Aggiungendo tutti i server di dispositivo a un gruppo, WSUS sarà in grado di applicare gli aggiornamenti software a tutti i server nel dispositivo.  
   
 > [!NOTE]  
-> Il sistema WSUS è progettato per eseguire in modo asincrono. Avvio di attività non restituisce sempre un aggiornamento immediatamente. Di conseguenza, potrebbe essere necessario attendere fino a quando i computer saranno visibili nelle finestre di dialogo WSUS. Esegue il `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` comando descritto alla fine dell'argomento [scaricare e applicare gli aggiornamenti di Microsoft &#40; Sistema della piattaforma Analitica &#41; ](download-and-apply-microsoft-updates.md) consente di aggiornare le finestre di dialogo.  
+> Il sistema WSUS è progettato per eseguire in modo asincrono. Avvio di attività non restituisce sempre un aggiornamento immediatamente. Di conseguenza, potrebbe essere necessario attendere fino a quando i computer saranno visibili nelle finestre di dialogo WSUS. In esecuzione la `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` comando descritto alla fine dell'argomento [scaricare e applicare gli aggiornamenti Microsoft &#40;Analitica Platform System&#41; ](download-and-apply-microsoft-updates.md) consentono di aggiornare le finestre di dialogo.  
   
 #### <a name="to-group-the-appliance-servers"></a>Per raggruppare i server di dispositivo  
   

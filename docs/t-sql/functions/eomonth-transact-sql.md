@@ -1,16 +1,14 @@
 ---
-title: EOMONTH (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: EOMONTH (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - EOMONTH
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - EOMONTH function
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: af048d17aadfece5e1deecf8a5aa4b008f1bd0fd
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f9ef67d87b628f53b9bb97d6cf32ecb79aa3befb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -49,14 +47,14 @@ EOMONTH ( start_date [, month_to_add ] )
  Espressione Date che specifica la data per cui restituire l'ultimo giorno del mese.  
   
  *month_to_add*  
- Espressione integer che specifica il numero di mesi da aggiungere a *start_date*.  
+ Espressione intera facoltativa che specifica il numero di mesi da aggiungere a *start_date*.  
   
- Se si specifica questo argomento, quindi **EOMONTH** aggiunge il numero specificato di mesi di *start_date*e quindi restituisce l'ultimo giorno del mese della data risultante. Se questa aggiunta supera l'intervallo valido di date, viene generato un errore.  
+ Se viene specificato questo argomento, **EOMONTH** aggiunge il numero di mesi specificato a *start_date*, quindi restituisce l'ultimo giorno del mese della data risultante. Se questa aggiunta supera l'intervallo valido di date, viene generato un errore.  
   
 ## <a name="return-type"></a>Tipo restituito  
  **data**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa funzione può essere eseguita in modalità remota in server [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Esempi  

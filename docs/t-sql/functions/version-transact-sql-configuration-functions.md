@@ -1,16 +1,14 @@
 ---
-title: '@@VERSION (Transact-SQL) | Documenti Microsoft'
-ms.custom: 
-ms.date: 09/18/2017
-ms.prod: sql-non-specified
+title: '@@VERSION (Transact-SQL) | Microsoft Docs'
+ms.custom: ''
+ms.date: 03/20/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@VERSION'
@@ -23,18 +21,18 @@ helpviewer_keywords:
 - versions [SQL Server], @@VERSION
 - processors [SQL Server], types
 ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 9f2a03af933d739760944f72aaea935e8bb3e682
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1d44d9755cca86af446449c14c90117be1e45043
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Versione - funzioni Transact SQL configurazione
+# <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Funzioni di configurazione di Transact SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce informazioni sul sistema e sulla build dell'installazione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -50,12 +48,12 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar**  
   
-## <a name="remarks"></a>Osservazioni  
- Il @@VERSION risultati vengono presentati come una stringa di tipo nvarchar. È possibile utilizzare il [SERVERPROPERTY &#40; Transact-SQL &#41; ](../../t-sql/functions/serverproperty-transact-sql.md) per recuperare i singoli valori delle proprietà.  
+## <a name="remarks"></a>Remarks  
+ I risultati di @@VERSION vengono presentati come una stringa di tipo nvarchar. Per recuperare i singoli valori delle proprietà, è possibile usare la funzione [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md).  
   
  Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituite le informazioni seguenti.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Versione  
+-   Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Architettura del processore  
   
@@ -69,28 +67,36 @@ ms.lasthandoff: 11/21/2017
   
  Per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] vengono restituite le informazioni seguenti.  
   
--   Edizione - "Database SQL di Windows Azure"  
+-   Edizione- "Microsoft SQL Azure"  
   
--   Livello di prodotto - "(CTP)" o "(RTM)"  
+-   Livello del prodotto- "(RTM)"  
   
 -   Versione del prodotto  
   
 -   Data di compilazione  
   
 -   Dichiarazione di copyright  
+
+> [!NOTE]  
+> Esiste un problema noto a causa del quale la versione del prodotto segnalata da @@VERSION non è corretta per il database SQL di Azure. La versione del motore di database di SQL Server eseguita dal database SQL di Azure è sempre più avanti rispetto alla versione locale di SQL Server e include le correzioni della sicurezza più recenti. Questo significa che il livello di patch è sempre corrispondente o posteriore a quello della versione locale di SQL Serve, e che le funzionalità più recenti disponibili in SQL Server sono disponibili nel database SQL di Azure.
+>
+> Per determinare a livello di codice l'edizione del motore, usare SELECT SERVERPROPERTY('EngineEdition'). Questa query restituirà '5' per i database autonomi e '8' per le istanze gestite nel database SQL di Azure. 
+>
+> La documentazione verrà aggiornato una volta risolto il problema.
+
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>R: restituire la versione corrente di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>A. Restituire la versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Nell'esempio seguente vengono restituite le informazioni sulla versione relative all'installazione corrente.  
   
 ```  
 SELECT @@VERSION AS 'SQL Server Version';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>B. Restituire la versione corrente di[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>B. Restituire la versione corrente di [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
   
 ```  
 SELECT @@VERSION AS 'SQL Server PDW Version';  

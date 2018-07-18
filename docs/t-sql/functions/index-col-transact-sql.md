@@ -1,16 +1,14 @@
 ---
-title: INDEX_COL (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: INDEX_COL (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - INDEX_COL_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - column names [SQL Server]
 - names [SQL Server], columns
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 23e6016fb918009652ec176ef9daa816736f0837
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d332ca7a2b23ecc582e6535e2b42967857ce13b2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indexcol-transact-sql"></a>INDEX_COL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,13 +55,13 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  Nome dello schema a cui appartiene l'indice.  
   
  *table_or_view_name*  
- Nome del proprietario della tabella o della vista indicizzata. *table_or_view_name* devono essere racchiusi tra virgolette singole e può essere qualificato dal nome del database e il nome dello schema.  
+ Nome del proprietario della tabella o della vista indicizzata. *table_or_view_name* deve essere racchiuso tra virgolette singole e può essere qualificato tramite il nome del database e il nome dello schema.  
   
  *index_id*  
- ID dell'indice. *index_id* è **int**.  
+ ID dell'indice. *index_ID* è di tipo **int**.  
   
- *key_ID*  
- Posizione della colonna chiave indice. *key_ID* è **int**.  
+ *key_id*  
+ Posizione della colonna chiave indice. *key_ID* è di tipo **int**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar (128** **)**  
@@ -100,8 +97,8 @@ SalesOrderID        SalesOrderDetailID
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

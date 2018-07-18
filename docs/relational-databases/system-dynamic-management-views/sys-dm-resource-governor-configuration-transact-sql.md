@@ -1,16 +1,12 @@
 ---
 title: sys.dm_resource_governor_configuration (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_resource_governor_configuration_TSQL
@@ -22,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_configuration dynamic management view
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4be75310d57b337788d3346488c931b395e6e2e9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: bccb033127cf295efc5f5980e37a6313e35fd6e0
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmresourcegovernorconfiguration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +36,7 @@ ms.lasthandoff: 02/03/2018
 
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|classifier_function_id|**int**|ID della funzione di classificazione attualmente utilizzata da Resource Governor. Restituisce un valore di 0 se non è utilizzata alcuna funzione. Non ammette i valori Null.<br /><br /> **Nota:** questa funzione viene utilizzata per classificare le nuove richieste e utilizza regole per indirizzare tali richieste al gruppo di carico di lavoro appropriato. Per ulteriori informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
+|classifier_function_id|**int**|ID della funzione di classificazione attualmente utilizzata da Resource Governor. Restituisce un valore di 0 se non è utilizzata alcuna funzione. Non ammette i valori Null.<br /><br /> **Nota:** questa funzione viene utilizzata per classificare le nuove richieste e utilizza regole per indirizzare tali richieste al gruppo di carico di lavoro appropriato. Per altre informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
 |is_reconfiguration_pending|**bit**|Indica se le modifiche a un gruppo o a un pool sono state realizzate o meno con l'istruzione ALTER RESOURCE GOVERNOR RECONFIGURE, senza che siano state applicate alla configurazione in memoria. Il valore restituito è uno dei seguenti:<br /><br /> 0 - Non è richiesta un'istruzione di riconfigurazione.<br /><br /> 1 - È richiesta un'istruzione di riconfigurazione o un riavvio del server per applicare le modifiche di configurazione in sospeso.<br /><br /> **Nota:** il valore restituito è sempre 0 quando Resource Governor è disabilitato.<br /><br /> Non ammette i valori Null.|  
 |max_outstanding_io_per_volume|**int**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero massimo di operazioni di I/O in sospeso per volume.|  
   

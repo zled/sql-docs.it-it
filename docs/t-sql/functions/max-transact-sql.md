@@ -1,16 +1,14 @@
 ---
-title: MAX (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: MAX (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MAX
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - values [SQL Server], maximum
 - maximum values [SQL Server]
 ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 2b6921ee07785edce7f1c19e2eb003bc30d489f6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: def08bb1b6089cd264014b2f9c39fabae6900ed7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="max-transact-sql"></a>MAX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,18 +52,18 @@ MAX ( [ ALL | DISTINCT ] expression )
  DISTINCT  
  Consente di considerare ogni valore univoco. DISTINCT non è significativo per la funzione MAX ed è disponibile solo per la compatibilità con ISO.  
   
- *espressione*  
- Costante, nome di colonna o funzione e qualsiasi combinazione di operatori aritmetici, bit per bit e stringa. MAX può essere usato con **numerico**, **carattere**, **uniqueidentifier**, e **datetime** colonne, ma non con **bit**  colonne. Non è possibile utilizzare funzioni di aggregazione e sottoquery.  
+ *expression*  
+ Costante, nome di colonna o funzione e qualsiasi combinazione di operatori aritmetici, bit per bit e stringa. MAX può essere usata con le colonne **numeric**, **character**, **uniqueidentifier** e **datetime**, ma non con le colonne **bit**. Non è possibile utilizzare funzioni di aggregazione e sottoquery.  
   
  Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- SU **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni a cui viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. Per ulteriori informazioni, vedere [la clausola OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
- Restituisce un valore uguale a *espressione*.  
+ Restituisce un valore uguale a *expression*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La funzione MAX ignora tutti i valori Null.  
   
  Con colonne di caratteri, la funzione MAX consente di individuare il valore massimo nella sequenza di confronto.  
@@ -94,7 +92,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. Utilizzo della clausola OVER  
- L'esempio seguente usa le funzioni MIN, MAX, AVG e COUNT con la clausola OVER per fornire valori aggregati per ogni reparto di `HumanResources.Department` tabella il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ Nell'esempio seguente vengono usate le funzioni MIN, MAX, AVG e COUNT con la clausola OVER per fornire valori aggregati per ogni reparto della tabella `HumanResources.Department` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 SELECT DISTINCT Name  
@@ -136,16 +134,16 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-### <a name="c-using-max-with-character-data"></a>C. Utilizzo MAX con dati di tipo carattere   
-L'esempio seguente restituisce il nome del database che dispone come il cognome in ordine alfabetico. Nell'esempio viene utilizzato `WHERE database_id < 5`, da prendere in considerazione solo i database di sistema.  
+### <a name="c-using-max-with-character-data"></a>C. Uso di MAX con dati di tipo carattere   
+L'esempio seguente restituisce il nome del database elencato per ultimo in ordine alfabetico. L'esempio usa `WHERE database_id < 5`, in modo da considerare solo i database di sistema.  
 ```sql   
 SELECT MAX(name) FROM sys.databases WHERE database_id < 5;
 ```
 L'ultimo database di sistema è `tempdb`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni di aggregazione &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [IN una clausola &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [Funzioni di aggregazione &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

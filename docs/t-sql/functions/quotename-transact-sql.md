@@ -1,16 +1,14 @@
 ---
 title: QUOTENAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - QUOTENAME_TSQL
@@ -24,16 +22,16 @@ helpviewer_keywords:
 - QUOTENAME function
 - valid identifiers [SQL Server]
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 701d229ae745cee4a237f35b69cd00e899d5c6a5
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 61a2da2f81701a32da0545a5b9b06b6e9ee8cd2c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,10 +48,10 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
   
 ## <a name="arguments"></a>Argomenti  
  '*character_string*'  
- Stringa di dati di tipo carattere Unicode. *character_string* è **sysname** ed è limitato a 128 caratteri. In caso di input maggiori di 128 caratteri, viene restituito NULL.  
+ Stringa di dati di tipo carattere Unicode. *character_string* è di tipo **sysname** e la lunghezza massima è di 128 caratteri. In caso di input maggiori di 128 caratteri, viene restituito NULL.  
   
  '*quote_character*'  
- Stringa di un solo carattere da utilizzare come delimitatore. Può essere una virgoletta singola ( **'** ), una parentesi quadra sinistra o destra ( **[]** ), o un segno di virgolette doppie ( **"** ). Se *le virgolette* viene omesso, vengono utilizzate le parentesi quadre.  
+ Stringa di un solo carattere da utilizzare come delimitatore. Può essere la virgoletta singola ( **'** ), la parentesi quadra aperta o chiusa ( **[]** ) oppure le virgolette doppie ( **"** ). Se *quote_character* viene omesso, vengono usate le parentesi quadre.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar(258)**  
@@ -75,7 +73,7 @@ SELECT QUOTENAME('abc[]def');
   
  Si noti che nella stringa `abc[]def` la parentesi quadra chiusa è doppia a indicare un carattere di escape.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente vengono utilizzati la stringa di caratteri `abc def` e i caratteri `[` e `]` per creare un identificatore delimitato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido.  
   
 ```  
@@ -101,7 +99,7 @@ SELECT QUOTENAME('abc def');
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

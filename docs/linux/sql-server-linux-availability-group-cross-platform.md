@@ -1,25 +1,23 @@
 ---
-title: "Configurare sempre SQL Server nel gruppo di disponibilità in Windows e Linux | Documenti Microsoft"
-description: "Configura gruppo disponibilità SQL Server con le repliche in Windows e Linux."
+title: Configurare sempre SQL Server nel gruppo di disponibilità in Windows e Linux | Documenti Microsoft
+description: Configura gruppo disponibilità SQL Server con le repliche in Windows e Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 01/31/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.assetid: 
-ms.workload: On Demand
-ms.openlocfilehash: 58eb51a5a3ad174e9cd785a7da3ecb482b2f9f28
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.technology: linux
+ms.assetid: ''
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9ccd5cb5fdc7d5c5bc6ff62b203bee0bbce6e5e8
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurare SQL Server gruppo di disponibilità AlwaysOn in Windows e Linux (multipiattaforma)
 
@@ -47,7 +45,7 @@ I passaggi per creare il gruppo di disponibilità sono come i passaggi per crear
    >[!TIP]
    >Se si convalida la soluzione in Azure, posizionare entrambi i server nello stesso set affinché che sono separati nel data center di disponibilità. 
 
-   Abilitare gruppi di disponibilità
+   **Abilitare gruppi di disponibilità**
 
    Per istruzioni, vedere [abilitare e disabilitare gruppi di disponibilità AlwaysOn (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 

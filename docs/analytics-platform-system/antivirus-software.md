@@ -1,28 +1,21 @@
 ---
-title: Software antivirus (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
-caps.latest.revision: "29"
-ms.openlocfilehash: 1733ec6be50d839284fa147eb1cf5c1660b77190
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Il software antivirus - Analitica Platform System | Documenti Microsoft
+description: Se il centro dati richiede un software antivirus, è possibile utilizzare queste linee guida per installare il software antivirus nel sistema di piattaforma Analitica. Si consiglia di non installare il software antivirus a meno che non è un requisito rigorosi a livello del data center.
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/24/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5d9ff6848d2df43408613d41dc7a0e6f8c1b0b8c
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="antivirus-software"></a>Software antivirus
+# <a name="antivirus-software-for-analytics-platform-system"></a>Software antivirus per Analitica Platform System
 Se il centro dati richiede un software antivirus, è possibile utilizzare queste linee guida per installare il software antivirus nel sistema di piattaforma Analitica. Si consiglia di non installare il software antivirus a meno che non è un requisito rigorosi a livello del data center.  
   
 > [!WARNING]  
@@ -58,7 +51,7 @@ Per installare il software antivirus in macchine virtuali, escludere il seguente
   
 -   G:\  
   
-***appliance_domain*-AD01** e  ***appliance_domain*-AD02**  
+***appliance_domain *-AD01** e ***appliance_domain *-AD02**  
   
 -   Nessuna restrizione  
   
@@ -68,11 +61,11 @@ Per installare il software antivirus in macchine virtuali, escludere il seguente
   
 -   G:\  
   
-***appliance_domain*- VMM**  
+***appliance_domain*-VMM**  
   
 -   Nessuna restrizione  
   
-***appliance_domain*- servizi di distribuzione Windows**  
+***appliance_domain*-WDS**  
   
 -   Nessuna restrizione  
   
@@ -81,5 +74,5 @@ Per installare il software antivirus in macchine virtuali, escludere il seguente
 -   C:\iscsitarget  
   
 ## <a name="see-also"></a>Vedere anche  
-[Attività di gestione dispositivo &#40; Sistema della piattaforma Analitica &#41;](appliance-management-tasks.md)  
+[Attività di gestione dello strumento &#40;Analitica Platform System&#41;](appliance-management-tasks.md)  
   

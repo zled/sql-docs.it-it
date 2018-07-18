@@ -1,29 +1,27 @@
 ---
 title: MSSQLSERVER_53 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: "53"
-helpviewer_keywords: 53 (Database Engine error)
+f1_keywords:
+- "53"
+helpviewer_keywords:
+- 53 (Database Engine error)
 ms.assetid: 1234f5a2-b3d1-425a-b29f-480fa792305f
-caps.latest.revision: "10"
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 10
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92e18d67d20b9333563f64db149355daeeb8feb9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5e364cad27ccd95b8ca44193a979a7f2964376a7
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver53"></a>MSSQLSERVER_53
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,6 +46,6 @@ Verificare di avere immesso il nome corretto del server sul client e che dal cli
 ## <a name="see-also"></a>Vedere anche  
 [Protocolli e librerie di rete](~/sql-server/install/network-protocols-and-network-libraries.md)  
 [Configurazione di rete dei client](~/database-engine/configure-windows/client-network-configuration.md)  
-[Configurare i protocolli client](~/database-engine/configure-windows/configure-client-protocols.md)  
+[Configurazione di protocolli client](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Abilitare o disabilitare un protocollo di rete del server](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   

@@ -1,15 +1,14 @@
 ---
-title: sys.external_libraries (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.external_libraries (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 10/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - external_libraries
@@ -23,11 +22,12 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: c1e65db4ccb43dde92188e462b6e99414ee05f52
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 110f514c4688536decfd29c412ce310746cd972e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/03/2018
 
 Supporta la gestione delle librerie di pacchetto correlati a runtime esterni, ad esempio R o Python.
 
-## <a name="sysexternallibraries"></a>sys.external_libraries
+## <a name="sysexternallibraries"></a>Sys.external_libraries
 
 Il sys.external_libraries di vista del catalogo elenca una riga per ogni libreria esterna che è stato caricato nel database.
 

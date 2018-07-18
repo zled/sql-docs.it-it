@@ -1,32 +1,30 @@
 ---
-title: "Finestra di dialogo Proprietà cartella | Microsoft Docs"
-ms.custom: 
+title: Finestra di dialogo Proprietà cartella | Microsoft Docs
+ms.custom: ''
 ms.date: 08/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.isfolderprop.permissions.f1
 - sql13.ssis.ssms.iscreatefolder.f1
 - sql13.ssis.ssms.isfolderprop.general.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ac2865b2fc4528785cbe8ebd89c0d2cedcacb3d4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7900eb74181b04de940793b2ae2d384a1a4e2e0c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="folder-properties-dialog-box"></a>Finestra di dialogo Proprietà cartella
   Nel catalogo di **SSISDB** della cartella sono contenuti pacchetti e ambienti. In ogni cartella vengono definite le autorizzazioni che si applicano al contenuto della cartella. Per altre informazioni sulle autorizzazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vedere [catalog.grant_permission &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  

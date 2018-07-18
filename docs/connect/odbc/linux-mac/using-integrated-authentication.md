@@ -1,28 +1,26 @@
 ---
 title: Tramite l'autenticazione integrata | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: integrated authentication
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- integrated authentication
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 162b94d551ea8625b6b22fafec61e19038dc2051
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: c70de16565cd90c3ca594fffcbbcc82bae89b90e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-integrated-authentication"></a>Uso dell'autenticazione integrata
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -87,7 +85,7 @@ Gli sviluppatori possono distribuire un'applicazione che usa un server collegato
   
 -   Il server applicazioni esegue l'autenticazione come un database diverso e si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]esegue l'autenticazione come utente del database a un altro database ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] esegue l'autenticazione come utente del database a un altro database ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 Dopo aver configurato l'autenticazione integrata, le credenziali vengono passate al server collegato.  
   
@@ -99,17 +97,17 @@ Per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] util
   
 È possibile utilizzare `-T` con il `-U` o `-P` opzione.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>Sintassi supportata per un nome SPN registrato da[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>Sintassi supportata per un nome SPN registrato da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
 
 La sintassi che utilizzano i nomi SPN nella stringa di connessione o negli attributi di connessione è come segue:  
 
-|Sintassi|Descrizione|  
+|Sintassi|Description|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|Nome SPN predefinito generato dal provider quando si usa il protocollo TCP. *port* è un numero di porta TCP. *fqdn* è un nome di dominio completo.|  
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>L'autenticazione di un Linux o macOS Computer con Active Directory
 
-Per configurare Kerberos, l'immissione di dati di `krb5.conf` file. `krb5.conf`è in `/etc/` ma è possibile fare riferimento a un altro file tramite la sintassi, ad esempio `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Di seguito è riportato un esempio `krb5.conf` file:  
+Per configurare Kerberos, l'immissione di dati di `krb5.conf` file. `krb5.conf` è in `/etc/` ma è possibile fare riferimento a un altro file tramite la sintassi, ad esempio `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Di seguito è riportato un esempio `krb5.conf` file:  
   
 ```  
 [libdefaults]  

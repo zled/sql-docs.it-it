@@ -1,16 +1,14 @@
 ---
 title: STR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STR
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - character data [SQL Server]
 - STR function
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 04386cd8dafb69d08c72b460f3794963c8b6da36
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7fbc48d8cdccfb7e24d70f2f9da718f782686fa5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,22 +47,22 @@ STR ( float_expression [ , length [ , decimal ] ] )
   
 ## <a name="arguments"></a>Argomenti  
  *float_expression*  
- È un'espressione di numerico approssimato (**float**) il tipo di dati con un separatore decimale.  
+ Espressione del tipo di dati numerico approssimato (**float**) con un separatore decimale.  
   
- *lunghezza*  
+ *length*  
  Lunghezza totale, che include il separatore decimale, il segno, le cifre e gli spazi. Il valore predefinito è 10.  
   
  *decimal*  
- Numero di posizioni a destra del separatore decimale. *decimale* deve essere minore o uguale a 16. Se *decimale* è maggiore di 16, il risultato viene troncato a sedici posizioni a destra del separatore decimale.  
+ Numero di posizioni a destra del separatore decimale. Il valore di *decimal* deve essere minore o uguale a 16. Se *decimal* è maggiore di 16, il risultato viene troncato in modo da includere sedici posizioni a destra del separatore decimale.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **varchar**  
   
-## <a name="remarks"></a>Osservazioni  
- Se fornito, i valori per *lunghezza* e *decimale* tali parametri devono essere positivi. Il numero viene arrotondato a un valore intero per impostazione predefinita o se il parametro decimal è 0. La lunghezza specificata deve essere maggiore o uguale alla parte intera del numero (a sinistra del separatore decimale) più il segno del numero, se disponibile. Un breve *argomento float_expression* viene allineato a destra, la lunghezza specificata e un valore long *argomento float_expression* viene troncato al numero specificato di posizioni decimali. Ad esempio, STR (12**,**10) restituisce il risultato 12. che viene allineato a destra nel set di risultati. Tuttavia, STR (1223**,**2) tronca il set di risultati a * *. Le funzioni stringa possono essere nidificate.  
+## <a name="remarks"></a>Remarks  
+ I valori dei parametri *length* e *decimal* della funzione STR devono essere positivi. Il numero viene arrotondato a un valore intero per impostazione predefinita o se il parametro decimal è 0. La lunghezza specificata deve essere maggiore o uguale alla parte intera del numero (a sinistra del separatore decimale) più il segno del numero, se disponibile. Un argomento di tipo *float_expression* breve viene allineato a destra in base alla lunghezza specificata, mentre un argomento di tipo *float_expression* lungo viene troncato al numero di cifre decimali specificato. Ad esempio, STR(12 **,** 10) restituisce il risultato 12, che viene allineato a destra nel set di risultati. STR(1223 **,** 2) tronca invece il set di risultati a **. Le funzioni stringa possono essere nidificate.  
   
 > [!NOTE]  
->  Per convertire i dati Unicode, utilizzare STR in una conversione o [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) funzione di conversione.  
+>  Per eseguire la conversione in dati Unicode, usare STR in una funzione di conversione CONVERT o [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente un'espressione composta da cinque cifre e un separatore decimale viene convertita in una stringa di caratteri con sei posizioni. La parte frazionaria del numero viene arrotondata a una cifra decimale.  
@@ -118,7 +116,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

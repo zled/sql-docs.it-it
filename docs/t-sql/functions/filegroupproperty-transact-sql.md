@@ -1,16 +1,14 @@
 ---
-title: FILEGROUPPROPERTY (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: FILEGROUPPROPERTY (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILEGROUPPROPERTY_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - viewing filegroup properties
 - displaying filegroup properties
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 06a63d753f2f38864889dc78b24e7ff47e78c331
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2c7e3b446216f521bbb0d885784db017edf2bcd5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +47,22 @@ FILEGROUPPROPERTY ( filegroup_name , property )
   
 ## <a name="arguments"></a>Argomenti  
  *filegroup_name*  
- È un'espressione di tipo **sysname** che rappresenta il nome del filegroup per il quale restituire le informazioni sulle proprietà denominate.  
+ Espressione di tipo **sysname** che rappresenta il nome del filegroup per il quale restituire le informazioni della proprietà specificata.  
   
- *proprietà*  
- È un'espressione di tipo **varchar (128)** contiene il nome della proprietà del filegroup da restituire. *proprietà* può essere uno dei valori seguenti.  
+ *property*  
+ Espressione di tipo **varchar(128)** contenente il nome della proprietà del filegroup da restituire. *property* può avere uno dei valori seguenti.  
   
-|Valore|Description|Valore restituito|  
+|valore|Description|Valore restituito|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|Filegroup di sola lettura.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input non valido.|  
 |**IsUserDefinedFG**|Filegroup definito dall'utente.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input non valido.|  
-|**La proprietà IsDefault**|Filegroup predefinito.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input non valido.|  
+|**IsDefault**|Filegroup predefinito.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input non valido.|  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
- *filegroup_name* corrisponde alla **nome** colonna il **Sys. FileGroups** vista del catalogo.  
+## <a name="remarks"></a>Remarks  
+ *filegroup_name* corrisponde alla colonna **name** nella vista del catalogo **sys.filegroups**.  
   
 ## <a name="examples"></a>Esempi  
  In questo esempio viene restituita l'impostazione della proprietà `IsDefault` per il filegroup primario nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -87,10 +84,10 @@ Default Filegroup
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filegroup_id &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
- [FILEGROUP_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
+ [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Sys. FileGroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

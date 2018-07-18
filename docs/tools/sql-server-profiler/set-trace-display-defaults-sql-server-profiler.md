@@ -1,31 +1,30 @@
 ---
-title: Impostare i valori predefiniti di visualizzazione traccia (SQL Server Profiler) | Documenti Microsoft
-ms.custom: 
+title: Impostare i valori predefiniti per la visualizzazione delle tracce (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: traces [SQL Server], defaults
+ms.technology: profiler
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea66415c239ddceeb7ee75997b3052a3f34a472f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 3f67ce7dafe849f82a964140ac1aa25ce220773f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Impostare i valori predefiniti per la visualizzazione delle tracce (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questo argomento viene descritto come impostare le opzioni dello strumento, che specificano i tipi di carattere, dimensioni e allo stile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] viene utilizzata per visualizzare le tracce nella finestra di traccia. È inoltre possibile specificare che in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] tutti i valori di data e ora vengano visualizzati in base alle impostazioni internazionali configurate per il sistema operativo in uso.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questo argomento viene descritta la procedura per l'impostazione delle opzioni relative al tipo, alla dimensione e allo stile del carattere utilizzato da [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per la visualizzazione delle tracce nella finestra di traccia. È inoltre possibile specificare che in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] tutti i valori di data e ora vengano visualizzati in base alle impostazioni internazionali configurate per il sistema operativo in uso.  
   
 ### <a name="to-set-trace-display-defaults"></a>Per impostare i valori predefiniti per la visualizzazione della traccia  
   

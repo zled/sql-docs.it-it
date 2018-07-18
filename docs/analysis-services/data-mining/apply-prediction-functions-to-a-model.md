@@ -1,31 +1,23 @@
 ---
 title: Applicare funzioni di stima a un modello | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Mining Model Prediction [Analysis Services], selecting mining models
-ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
-caps.latest.revision: "17"
-author: Minewiskan
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea29a1f9406014bf684d4c573ed2640bb7d0cf96
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7cd44eb2e5d5449283d1e222b854d065a72e15ca
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Applicare le funzioni di stima a un modello
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Per creare una query di stima in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, è innanzitutto necessario selezionare il modello di data mining su cui basare la query. È possibile selezionare qualsiasi modello di data mining esistente nel progetto corrente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Per creare una query di stima in Data mining di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario selezionare prima di tutto il modello di data mining su cui sarà basata la query. È possibile selezionare qualsiasi modello di data mining esistente nel progetto corrente.  
   
  Dopo avere selezionato un modello, aggiungere una *funzione di stima* alla query. Una funzione di stima può essere usata per ottenere una stima, ma è anche possibile aggiungere funzioni di stima che restituiscono le statistiche correlate, come la probabilità del valore stimato, o le informazioni usate per generare la stima.  
   
@@ -130,6 +122,6 @@ ms.lasthandoff: 01/08/2018
  Se si desidera aggiungere altre clausole nell'istruzione, ad esempio una clausola WHERE, non è possibile aggiungerle tramite la griglia, ma è necessario passare prima alla vista DMX.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

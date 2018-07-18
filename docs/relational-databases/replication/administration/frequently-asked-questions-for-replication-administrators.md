@@ -1,35 +1,33 @@
 ---
 title: Domande frequenti per gli amministratori di replica | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, frequently asked questions
 - replication [SQL Server], administering
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
-caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 59
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9c4514baae490912c82b2c8b8b34e7f5f780570a
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: fd85694c8b2678d85b66db6c84b89a409fa0fc4a
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Domande frequenti per gli amministratori di replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Le domande e risposte seguenti offrono indicazioni su una vasta gamma di attività svolte dagli amministratori dei database replicati.  
+  Le domande e risposte seguenti offrono indicazioni su una vasta gamma di attività svolte dagli amministratori dei database replicati.  
   
 ## <a name="configuring-replication"></a>Configurazione della replica  
   
@@ -166,7 +164,7 @@ Le domande e risposte seguenti offrono indicazioni su una vasta gamma di attivit
 ## <a name="database-maintenance"></a>Manutenzione database  
   
 ### <a name="why-cant-i-run-truncate-table-on-a-published-table"></a>Per quale motivo non è possibile eseguire TRUNCATE TABLE su una tabella pubblicata?  
- TRUNCATE TABLE è un'operazione non registrata che non attiva i trigger. Non è consentita perché la replica non può tener traccia delle modifiche provocate dall'operazione: la replica transazionale tiene traccia delle modifiche tramite il log delle transazioni, la replica di tipo merge tramite i trigger sulle tabelle pubblicate.  
+ TRUNCATE TABLE è un'istruzione DDL che non registra eliminazioni di singole righe e non attiva trigger DML. Non è consentita perché la replica non può tener traccia delle modifiche provocate dall'operazione: la replica transazionale tiene traccia delle modifiche tramite il log delle transazioni, la replica di tipo merge tramite i trigger DML sulle tabelle pubblicate.  
   
 ### <a name="what-is-the-effect-of-running-a-bulk-insert-command-on-a-replicated-database"></a>Quale è l'effetto dell'esecuzione di un comando BULK INSERT su un database replicato?  
  Per la replica transazionale, gli inserimenti bulk vengono rilevati e replicati come gli altri inserimenti. Per la replica di tipo merge, è necessario verificare che i metadati di rilevamento delle modifiche vengano aggiornati correttamente.  

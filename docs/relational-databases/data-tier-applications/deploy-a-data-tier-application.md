@@ -1,16 +1,16 @@
 ---
 title: Distribuire un'applicazione livello dati | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-data-tier-apps
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.deploydacwizard.introduction.f1
 - sql13.swb.deploydacwizard.deploydac.f1
@@ -24,19 +24,19 @@ helpviewer_keywords:
 - How to [DAC], deploy
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4fc9229e01d07d9932d0ae61ad60dc06d5855141
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: eaf008f10525d45c79345dbf9db5fd146097590a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-a-data-tier-application"></a>Distribuire un'applicazione livello dati
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile distribuire un'applicazione livello dati da un pacchetto di applicazione livello dati a un'istanza esistente del motore di database o del database SQL di Azure usando una procedura guidata o uno script di PowerShell. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  È possibile distribuire un'applicazione livello dati (DAC) da un pacchetto di applicazione livello dati a un'istanza esistente del motore di database o del database SQL di Azure usando una procedura guidata o uno script di PowerShell. 
   
  Il processo di distribuzione registra un'istanza di applicazione livello dati archiviando la definizione dell'applicazione livello dati nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crea un database e quindi lo popola con tutti gli oggetti di database definiti nell'applicazione livello dati.  
  

@@ -1,30 +1,26 @@
 ---
 title: Classe di evento Audit Broker Login | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e8329aa53d05239ad609a873de07d2ce09e4e31
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e1064f0902369f81cff96f94ee68520ded419d39
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.lasthandoff: 02/12/2018
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Broker Login  
   
-|Colonna di dati|Tipo|Description|Numero colonna|Filtrabile|  
+|Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Non utilizzata per questa classe di evento.|10|Sì|  
 |**ClientProcessID**|**int**|Non utilizzata per questa classe di evento.|9|Sì|  
@@ -59,7 +55,7 @@ ms.lasthandoff: 02/12/2018
   
  Nella tabella seguente sono elencati i valori di sottoclasse per questa classe di evento.  
   
-|ID|Sottoclasse|Description|  
+|ID|Sottoclasse|Descrizione|  
 |--------|--------------|-----------------|  
 |1|Login Success|L'evento Login Success indica che la procedura di accesso dell'istanza di Service Broker adiacente ha avuto esito positivo.|  
 |2|Login Protocol Error|L'evento Login Protocol Error indica che Service Broker riceve un messaggio in formato corretto, ma non valido per lo stato attuale della procedura di accesso. Questo messaggio potrebbe essere andato perduto o potrebbe essere stato inviato fuori sequenza.|  

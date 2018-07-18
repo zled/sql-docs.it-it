@@ -1,43 +1,40 @@
 ---
 title: Scorrimento e recupero di righe (ODBC) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - fetches [ODBC], scrollable cursors
 - cursors [ODBC], scrollable
 - scrolling rows [ODBC]
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 304baeafe4918433ab5c9495d54e4cd8970eb628
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 89a83550fa7114db564ef46b83b77892d04d0e07
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Scorrimento e recupero di righe (ODBC)
-Quando si utilizza un cursore scorrevole, le applicazioni chiamano **SQLFetchScroll** per posizionare il cursore e recuperare righe. **SQLFetchScroll** supporta lo scorrimento relativo (successivo, precedente e relativo  *n*  righe), lo scorrimento assoluto (primo, ultimo e di riga  *n* ), e posizionamento dal segnalibro. Il *FetchOrientation* e *FetchOffset* argomenti **SQLFetchScroll** specificare quale set di righe da recuperare, come illustrato nelle figure seguenti.  
+Quando si utilizza un cursore scorrevole, le applicazioni chiamano **SQLFetchScroll** per posizionare il cursore e recuperare righe. **SQLFetchScroll** supporta lo scorrimento relativo (successivo, precedente e relativo *n* righe), lo scorrimento assoluto (primo, ultimo e di riga *n*) e il posizionamento dal segnalibro. Il *FetchOrientation* e *FetchOffset* argomenti **SQLFetchScroll** specificare quale set di righe da recuperare, come illustrato nelle figure seguenti.  
   
  ![Recupero del successivo, precedente, primo e ultimo set di righe](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
   
  **Recupero del successivo, precedente, primo e ultimo set di righe**  
   
- ![Recupero del Rowset assoluto, relativo e con segnalibro](../../../odbc/reference/develop-app/media/pr20_1.gif "pr20_1")  
+ ![Recupero di massa di righe con segnalibro assoluto e relativo](../../../odbc/reference/develop-app/media/pr20_1.gif "pr20_1")  
   
- **Recupero del rowset assoluto, relativo e con segnalibro**  
+ **Recupero di massa rowset assoluto, relativo e con segnalibro**  
   
  **SQLFetchScroll** posiziona il cursore nella riga specificata e restituisce le righe nel set di righe a partire da tale riga. Se il set di righe specificato si sovrappone la fine del set di risultati, viene restituito un set di righe parziale. Se il set di righe specificato si sovrappone all'inizio del risultato è impostato, il primo set di righe nel risultato viene restituito in genere set; Per informazioni dettagliate, vedere il [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) descrizione della funzione.  
   

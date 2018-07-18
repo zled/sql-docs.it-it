@@ -1,29 +1,27 @@
 ---
-title: PHP Driver per SQL Server High Availability, Disaster Recovery | Documenti Microsoft
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Supporto per la disponibilità elevata, ripristino di emergenza per i driver Microsoft per PHP per SQL Server | Documenti Microsoft
+ms.custom: ''
+ms.date: 04/04/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a4777aa2ffac5b3932815dee65eb237337d95784
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 11352389bb76440bfec32eae185d64550c249fc8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>PHP Driver for SQL Server Support for High Availability, Disaster Recovery (Driver PHP per il supporto di SQL Server per il ripristino di emergenza a disponibilità elevata)
+# <a name="support-for-high-availability-disaster-recovery"></a>Supporto per il ripristino di emergenza a disponibilità elevata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In questo argomento viene [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] supporto (aggiunto nella versione 3.0) per il ripristino di emergenza a disponibilità elevata [!INCLUDE[ssHADR](../../includes/sshadr_md.md)].  Il supporto [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] è stato aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Per altre informazioni su [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vedere la documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
@@ -38,11 +36,11 @@ Se non ci si connette a un listener del gruppo di disponibilità e se più indir
 ## <a name="connecting-with-multisubnetfailover"></a>Connessione con MultiSubnetFailover  
 Il **MultiSubnetFailover** proprietà di connessione indica che l'applicazione viene distribuita in un gruppo di disponibilità o l'istanza del Cluster di Failover e che il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] tenterà di connettersi al database del server primario [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] istanza tentando di connettersi a tutti gli IP indirizzi. Quando **MultiSubnetFailover = true** specificato per una connessione, il client riesegue i tentativi di connessione TCP più velocemente rispetto a intervalli di ritrasmissione TCP predefinita del sistema operativo. In tal modo si abilita la riconnessione a seguito di failover di un gruppo di disponibilità AlwaysOn o un'istanza del cluster di failover AlwaysOn ed è applicabile a istanze del cluster di failover o a gruppi di disponibilità su una singola subnet o su più subnet.  
   
-Specificare sempre **MultiSubnetFailover = True** quando ci si connette a un listener del gruppo di disponibilità di SQL Server 2012 o di un Cluster di failover di SQL Server 2012. **MultiSubnetFailover** consente un failover più veloce per tutti i gruppi di disponibilità, permette di abilitare l'istanza del cluster di failover in SQL Server 2012, nonché di ridurre in modo significativo la durata del failover per le topologie AlwaysOn singole e su più subnet. Durante un failover su più subnet, verranno tentate connessioni in parallelo da parte del client. Durante un failover della subnet, il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] riproverà continuamente la connessione TCP.  
+Specificare sempre **MultiSubnetFailover = True** quando ci si connette a un listener del gruppo di disponibilità di SQL Server 2012 o di un Cluster di failover di SQL Server 2012. **MultiSubnetFailover** consente il failover più veloce per tutti i gruppi di disponibilità e istanza del cluster di failover di SQL Server 2012 e di ridurre significativamente il tempo di failover per le topologie AlwaysOn singole e su più subnet. Durante un failover su più subnet, verranno tentate connessioni in parallelo da parte del client. Durante un failover della subnet, il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] riproverà continuamente la connessione TCP.  
   
 Per ulteriori informazioni sulle parole chiave di stringa di connessione in [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], vedere [le opzioni di connessione](../../connect/php/connection-options.md).  
   
-Specifica di **MultiSubnetFailover = true** quando la connessione a un elemento diverso da un listener del gruppo di disponibilità o l'istanza del Cluster di Failover può comportare un impatto negativo sulle prestazioni e non è supportata.  
+Che specifica **MultiSubnetFailover = true** quando ci si connette a un elemento diverso da un listener del gruppo di disponibilità o l'istanza del Cluster di Failover può comportare un impatto negativo sulle prestazioni e non è supportata.  
   
 Utilizzare le linee guida seguenti per connettersi a un server in un gruppo di disponibilità:  
   
@@ -72,29 +70,11 @@ Si verificherà un errore di connessione se nella stringa di connessione sono pr
 Se si aggiorna un [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] applicazione che utilizza il mirroring del database a uno scenario su più subnet, è necessario rimuovere il **Failover_Partner** proprietà di connessione e sostituirla con **MultiSubnetFailover**  impostato su **Sì** e sostituire il nome del server nella stringa di connessione con un listener del gruppo di disponibilità. Se viene utilizzata una stringa di connessione **Failover_Partner** e **MultiSubnetFailover = true**, il driver genererà un errore. Tuttavia, se viene utilizzata una stringa di connessione **Failover_Partner** e **MultiSubnetFailover = false** (o **ApplicationIntent = ReadWrite**), l'applicazione utilizzerà database il mirroring.  
   
 Il driver restituirà un errore se il mirroring del database viene utilizzato nel database primario del gruppo di disponibilità e **MultiSubnetFailover = true** viene utilizzata nella stringa di connessione che si connette a un database primario anziché a un gruppo di disponibilità listener.  
-  
-## <a name="specifying-application-intent"></a>Specificazione della finalità dell'applicazione  
-Se **ApplicationIntent=ReadOnly**, il client richiede un carico di lavoro di lettura quando si connette a un database abilitato per AlwaysOn. Tramite il server, la finalità verrà applicata al momento della connessione e durante un'istruzione di database USE, ma solo a un database abilitato per Always On.  
-  
-La parola chiave **ApplicationIntent** non funziona con i database legacy di sola lettura.  
-  
-Un database può consentire o impedire carichi di lavoro di lettura nel database AlwaysOn di destinazione. Questa operazione viene eseguita con la clausola **ALLOW_CONNECTIONS** delle istruzioni [!INCLUDE[tsql](../../includes/tsql_md.md)] **PRIMARY_ROLE** e **SECONDARY_ROLE**.  
-  
-La parola chiave **ApplicationIntent** è usata per abilitare il routing di sola lettura.  
-  
-## <a name="read-only-routing"></a>Routing di sola lettura  
-Il routing di sola lettura è una funzionalità che può garantire la disponibilità di una replica di sola lettura di un database. Per abilitare il routing di sola lettura:  
-  
-1.  È necessario connettersi a un listener del gruppo di disponibilità Always On.  
-  
-2.  La parola chiave della stringa di connessione **ApplicationIntent** deve essere impostata su **ReadOnly**.  
-  
-3.  Il gruppo di disponibilità deve essere configurato dall'amministratore del database per abilitare il routing di sola lettura.  
-  
-È possibile che non tutte le connessioni in cui viene utilizzato il routing di sola lettura vengano stabilite alla stessa replica di sola lettura. Le modifiche nella sincronizzazione del database o nella configurazione di routing del server possono comportare connessioni client a repliche di sola lettura diverse. Per assicurare la connessione di tutte le richieste di sola lettura alla stessa replica di sola lettura, non passare un listener del gruppo di disponibilità alla parola chiave della stringa di connessione **Server**. Specificare invece il nome dell'istanza di sola lettura.  
-  
-Il routing di sola lettura potrebbe impiegare più tempo a connettersi rispetto alla replica primaria poiché innanzitutto viene eseguita la connessione del routing di sola lettura alla replica primaria e, successivamente, viene cercata la replica secondaria migliore dal punto di vista della lettura. Per questo motivo è necessario aumentare il timeout di accesso.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="see-also"></a>Vedere anche  
 [Connessione al server](../../connect/php/connecting-to-the-server.md)  
   

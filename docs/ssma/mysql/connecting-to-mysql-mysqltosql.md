@@ -1,16 +1,15 @@
 ---
 title: Connessione a MySQL (MySQLToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - Connecting to MySQL, MySQL permission
 - Connecting to MySQL,reconnecting
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 291f10d4f045747266297287903ba4cf900c09c5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 44874d6ddcb4482ecedea8e94dd7c4bac4a1c01d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Connessione a MySQL (MySQLToSQL)
 Per eseguire la migrazione di database MySQL a SQL Server o SQL Azure, è necessario connettersi al database di MySQL che si desidera eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti gli schemi di MySQL e successivamente visualizzata nel riquadro di esplorazione dei metadati di MySQL. SSMA archivia le informazioni relative al server di database, ma non archivia le password.  
@@ -71,7 +69,7 @@ Quando ci si connette a un database, SSMA legge i metadati del database e quindi
   
     3.  Nel **Password** immettere la password per il nome utente specificato.  
   
-5.  **SSL:** se si desidera stabilire una connessione sicura a MySQL, avvalersi di Secure Socket Layer (SSL) controllando il **SSL** casella di controllo.  
+5.  **SSL:** se si desidera connettersi in modo sicuro a MySQL, avvalersi di Secure Socket Layer (SSL) controllando il **SSL** casella di controllo.  
   
 6.  **Configurare:** fornisce un'opzione per configurare la connessione a MySQL tramite Secure Socket Layer (SSL).  
   
@@ -80,17 +78,17 @@ Quando ci si connette a un database, SSMA legge i metadati del database e quindi
   
     Se si sceglie il pulsante "Configura", viene visualizzata una finestra di dialogo. Utilizzare la crittografia durante la connessione al MySQL Database, percorso file tre certificato seguenti presente nella finestra di dialogo deve essere definito [Privacy avanzata posta certificati (PEM)]:  
   
-    -   **Autorità di certificazione SSL:** specifica il percorso di un file con un elenco di certificati Autorità di certificazione SSL.  
+    -   **Autorità di certificazione SSL:** specifica il percorso in un file con un elenco di attendibilità le autorità di certificazione SSL.  
   
     -   **Certificato SSL:** specifica il nome del file di certificato SSL da utilizzare per stabilire una connessione sicura.  
   
-    -   **La chiave SSL:** specifica il nome del file di chiave SSL da utilizzare per stabilire una connessione sicura.  
+    -   **CHIAVE di SSL:** specifica il nome del file di chiave SSL da utilizzare per stabilire una connessione sicura.  
   
     > [!NOTE]  
     > -   Il **OK** pulsante viene abilitato quando sono state fornite le informazioni necessarie. Se non sono validi tutti i percorsi di file, il pulsante "OK" rimarrà disabilitato.  
     > -   Il **Annulla** pulsante consente di chiudere la finestra di dialogo e **disattiva** all'opzione SSL dal modulo di connessione principale.  
   
-7.  Per ulteriori informazioni, vedere [connessione a MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+7.  Per altre informazioni, vedere [connessione a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
 ## <a name="reconnecting-to-mysql"></a>La riconnessione a MySQL  
 La connessione al server di database rimane attiva finché non si chiude il progetto. Quando si riapre il progetto, sarà necessario riconnettere se si desidera una connessione attiva al database. È possibile lavorare offline fino a quando non si desidera aggiornare i metadati vengono caricati gli oggetti di database SQL Server o SQL Azure e la migrazione dei dati.  
@@ -118,11 +116,11 @@ I metadati sul database MySQL non vengono aggiornati automaticamente. I metadati
   
     -   Per visualizzare le definizioni della codifica a colori, fare clic su di **legenda** pulsante.  
   
-5.  Fare clic su **OK**.  
+5.  Scegliere **OK**.  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo del processo di migrazione è [connessione a SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+Il passaggio successivo del processo di migrazione consiste [connessione a SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database MySQL a SQL Server: database SQL di Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Database MySQL la migrazione a SQL Server - SQL di Azure DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

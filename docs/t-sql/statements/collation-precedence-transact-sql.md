@@ -1,16 +1,14 @@
 ---
-title: Precedenza delle regole di confronto (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: Precedenza delle regole di confronto (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -28,16 +26,16 @@ helpviewer_keywords:
 - collation coercion rules
 - rules [SQL Server], collations
 ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d80966502f5538989f3615658e3766e8c3e718f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b390621447fbb75b570ea8955df654eb51c6065a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collation-precedence-transact-sql"></a>Precedenza delle regole di confronto (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Le regole di confronto utilizzate dagli operatori sensibili alle regole di confronto che utilizzano input di stringhe di caratteri ma non restituiscono stringhe di caratteri, ad esempio gli operatori LIKE e IN.  
   
- Le regole di precedenza delle regole di confronto si applicano solo ai tipi di dati stringa di caratteri: **char**, **varchar**, **testo**, **nchar**, **nvarchar**, e **ntext**. Gli oggetti con altri tipi di dati non vengono inclusi nelle valutazioni delle regole di confronto.  
+ Le regole sulla precedenza delle regole di confronto vengono applicate solo alle stringhe di caratteri di tipo **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**. Gli oggetti con altri tipi di dati non vengono inclusi nelle valutazioni delle regole di confronto.  
   
 ## <a name="collation-labels"></a>Etichette per le regole di confronto  
  Nella tabella seguente sono elencate e descritte le quattro categorie in base alle quali vengono classificate le regole di confronto di tutti gli oggetti. Il nome di ogni categoria corrisponde all'etichetta per le regole di confronto.  
@@ -93,7 +91,7 @@ ms.lasthandoff: 11/21/2017
 |----------------------------|----------------|----------------|------------------------|-------------------|  
 |**Explicit Y**|Genera un errore|Il risultato è Explicit Y|Il risultato è Explicit Y|Il risultato è Explicit Y|  
 |**Implicit Y**|Il risultato è Explicit X|Il risultato è No-collation|Il risultato è Implicit Y|Il risultato è No-collation|  
-|**Tipo Coercible-default**|Il risultato è Explicit X|Il risultato è Implicit X|Il risultato è Coercible-default|Il risultato è No-collation|  
+|**Coercible-default**|Il risultato è Explicit X|Il risultato è Implicit X|Il risultato è Coercible-default|Il risultato è No-collation|  
 |**No-collation**|Il risultato è Explicit X|Il risultato è No-collation|Il risultato è No-collation|Il risultato è No-collation|  
   
  Per la precedenza delle regole di confronto vengono applicate inoltre le regole aggiuntive seguenti:  
@@ -102,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
      `WHERE ColumnA = ( 'abc' COLLATE French_CI_AS) COLLATE French_CS_AS`  
   
--   Le conversioni di pagina per codice **testo** non sono consentiti i tipi di dati. Non è possibile convertire un **testo** espressione da regole di confronto a un'altra se dispongono di tabelle codici diverse. Tramite l'operatore di assegnazione non è possibile assegnare valori se alle regole di confronto dell'operando di testo a destra è associata una tabella codice diversa da quella dell'operando di testo a sinistra.  
+-   Le conversioni tra tabelle codici per il tipo di dati **text** non sono consentite. Non è possibile eseguire il cast di un'espressione di tipo **text** tra regole di confronto con tabelle codici diverse. Tramite l'operatore di assegnazione non è possibile assegnare valori se alle regole di confronto dell'operando di testo a destra è associata una tabella codice diversa da quella dell'operando di testo a sinistra.  
   
  La precedenza delle regole di confronto viene determinata dopo la conversione dei tipi di dati. L'operando da cui derivano le regole di confronto risultanti può essere diverso dall'operando il cui tipo di dati viene applicato al risultato finale. Si consideri, ad esempio, il batch seguente.  
   
@@ -228,7 +226,7 @@ a
  L'operatore di concatenazione delle stringhe è sensibile alle regole di confronto. Ai due operandi stringa e al risultato viene assegnata l'etichetta per le regole di confronto dell'operando le cui regole di confronto hanno priorità maggiore. Gli operatori UNION ALL e CASE non sono sensibili alle regole di confronto. A tutti gli operandi stringa e ai risultati finali viene assegnata l'etichetta per le regole di confronto dell'operando con priorità maggiore. La precedenza delle regole di confronto degli operandi UNION ALL e il risultato vengono valutati colonna per colonna.  
   
 ### <a name="functions-and-collation"></a>Funzioni e regole di confronto  
- LE funzioni CAST, CONVERT e COLLATE sono sensibili per le regole di confronto **char**, **varchar**, e **testo** tipi di dati. Se l'input e l'output delle funzioni CAST e CONVERT sono stringhe di caratteri, alla stringa di output è associata l'etichetta per le regole di confronto della stringa di input. Se l'input non è una stringa di caratteri, la stringa di output risulta di tipo Coercible-default e vi vengono assegnate le regole di confronto del database corrente per la connessione oppure quelle del database che include la funzione definita dall'utente, la stored procedure o il trigger in cui viene fatto riferimento alla funzione CAST o CONVERT.  
+ Le funzioni CAST, CONVERT e COLLATE sono sensibili alle regole di confronto per i tipi di dati **char**, **varchar** e **text**. Se l'input e l'output delle funzioni CAST e CONVERT sono stringhe di caratteri, alla stringa di output è associata l'etichetta per le regole di confronto della stringa di input. Se l'input non è una stringa di caratteri, la stringa di output risulta di tipo Coercible-default e vi vengono assegnate le regole di confronto del database corrente per la connessione oppure quelle del database che include la funzione definita dall'utente, la stored procedure o il trigger in cui viene fatto riferimento alla funzione CAST o CONVERT.  
   
  Per le funzioni predefinite che restituiscono una stringa ma non accettano una stringa come input, la stringa risultante risulta di tipo Coercible-default e vi vengono assegnate le regole di confronto del database corrente oppure quelle del database che include la funzione definita dall'utente, la stored procedure o il trigger in cui viene fatto riferimento alla funzione.  
   
@@ -246,8 +244,8 @@ a
   
 ## <a name="see-also"></a>Vedere anche  
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
- [Conversione tipo di dati &#40; motore di Database &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [Operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Conversione di tipi di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

@@ -1,35 +1,33 @@
 ---
 title: Transazioni posticipate (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - I/O [SQL Server], database recovery
 - restoring pages [SQL Server]
 - deferred transactions
 - modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 990768fa64b5da13d633c28ae64a0ab0c95e78b7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: dbfd471b4f6e5a7d7fa4f06ec317d8c2259e7928
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deferred-transactions-sql-server"></a>Transazioni posticipate (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise una transazione danneggiata può diventare posticipata se i dati necessari per il rollback (annullamento) sono offline durante l'avvio del database. Una *transazione posticipata* è una transazione di cui non è stato eseguito il commit al termine della fase di rollforward e per la quale si è verificato un errore che ne impedisce il rollback. Non essendo possibile eseguire il rollback, la transazione viene posticipata.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise una transazione danneggiata può diventare posticipata se i dati necessari per il rollback (annullamento) sono offline durante l'avvio del database. Una *transazione posticipata* è una transazione di cui non è stato eseguito il commit al termine della fase di rollforward e per la quale si è verificato un errore che ne impedisce il rollback. Non essendo possibile eseguire il rollback, la transazione viene posticipata.  
   
 > [!NOTE]  
 >  Le transazioni danneggiate vengono posticipate solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Nelle altre edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]una transazione danneggiata causa un errore di avvio.  

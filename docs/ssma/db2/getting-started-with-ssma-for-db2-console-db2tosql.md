@@ -1,30 +1,28 @@
 ---
 title: Guida introduttiva di SSMA per la Console di DB2 (DB2ToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: cfffdb6df256ed0ee591965b1d1ac98cf3c1d721
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: fd7e0f118854a6ba07988065d02aea6a2e7f6f0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Guida introduttiva di SSMA per la Console di DB2 (DB2ToSQL)
 In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console di DB2. Elencati, anche nel presente documento, vengono usate le convenzioni in una finestra di output della Console di SSMA tipico.  
@@ -41,19 +39,19 @@ Utilizzare la procedura seguente per avviare l'applicazione console SSMA:
 ## <a name="procedure-for-using-the-ssma-console"></a>Procedura per utilizzare la Console SSMA  
 Dopo la console viene avviata correttamente nel sistema Windows, è possibile utilizzare la procedura seguente per lavorare su di esso:  
   
-1.  Configurare la Console di SSMA tramite i file di script. Per ulteriori informazioni su questa sezione, vedere [DB2ToSQL creazione di file di Script &#40; &#41;](../../ssma/db2/creating-script-files-db2tosql.md) .  
+1.  Configurare la Console di SSMA tramite i file di script. Per ulteriori informazioni su questa sezione, vedere [creazione di file di Script &#40;DB2ToSQL&#41; ](../../ssma/db2/creating-script-files-db2tosql.md) .  
   
-2.  [Creazione di file di valore della variabile &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+2.  [Creazione di file di valore della variabile &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   
-3.  [Creazione di DB2ToSQL i file di connessione del Server &#40; &#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+3.  [La creazione dei file di connessione del Server &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
-4.  [L'esecuzione la Console SSMA &#40; DB2ToSQL &#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) in base alle esigenze del progetto  
+4.  [L'esecuzione la Console di SSMA &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) in base alle esigenze del progetto  
   
 Altre funzionalità:  
   
-1.  [La gestione delle password](http://msdn.microsoft.com/en-us/56d546e3-8747-4169-aace-693302667e94) e l'esportazione / importazione in altri computer della finestra  
+1.  [La gestione delle password](http://msdn.microsoft.com/en-us/56d546e3-8747-4169-aace-693302667e94) ed esportazione / importazione in altri computer di finestra  
   
-2.  [Generazione di report](http://msdn.microsoft.com/en-us/69ef5fd9-190d-4c58-8199-b3f77d5e1883) per visualizzare il codice xml dettagliate l'output di report per la migrazione di dati e /conversion di valutazione. I report di errore dettagliato possono essere generati anche per i comandi di aggiornamento e la sincronizzazione.  
+2.  [Generazione di report](http://msdn.microsoft.com/en-us/69ef5fd9-190d-4c58-8199-b3f77d5e1883) per visualizzare il codice xml dettagliate output report per la migrazione /conversion e i dati di valutazione. I report di errore dettagliato possono essere generati anche per i comandi di aggiornamento e la sincronizzazione.  
   
 ## <a name="ssma-console-output-conventions"></a>Convenzioni di Output di Console SSMA  
 Durante l'esecuzione di comandi script SSMA e le opzioni, il programma di console consente di visualizzare i risultati e messaggi (le informazioni, errore e così via) per l'utente nella console o se necessario, reindirizza a un file di output xml. Ogni tipo di messaggio nell'output è identificato da un colore univoco. Ad esempio, il messaggio di testo di colore bianco indica i comandi di file di script. quello di colore verde rappresenta un prompt dei comandi per l'input dell'utente e così via.  
@@ -72,5 +70,5 @@ Colore interpretazione dell'output di console nella tabella seguente:
 |azzurro|Inizio, fine e il risultato di un'operazione|  
   
 ## <a name="see-also"></a>Vedere anche  
-[L'installazione di SSMA per DB2](http://msdn.microsoft.com/en-us/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
+[Installazione di SSMA per DB2](http://msdn.microsoft.com/en-us/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
   

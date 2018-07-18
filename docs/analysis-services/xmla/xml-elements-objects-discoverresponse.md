@@ -1,39 +1,24 @@
 ---
 title: Elemento DiscoverResponse (XMLA) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: DiscoverResponse Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#DiscoverResponse
-- microsoft.xml.analysis.discoverresponse
-- urn:schemas-microsoft-com:xml-analysis#DiscoverResponse
-helpviewer_keywords: DiscoverResponse element
-ms.assetid: 20e10a82-dbd1-4ead-b92d-f84b4b2f10c6
-caps.latest.revision: "13"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 75ec613cd716e4d7d0b34c83ca8f9870321d0553
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b9ad13a08b6afa19b59dbdaf8d43686c13649a43
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574346"
 ---
 # <a name="xml-elements---objects---discoverresponse"></a>DiscoverResponse - oggetti - elementi XML
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Contiene le informazioni restituite da un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in risposta a un [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) chiamata al metodo.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene le informazioni restituite da un'istanza di Analysis Services in risposta a un [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) chiamata al metodo.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -61,11 +46,11 @@ ms.lasthandoff: 01/08/2018
 |Elementi padre|None|  
 |Elementi figlio|[restituire](../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **DiscoverResponse** è l'elemento in primo piano all'interno del corpo di una risposta SOAP per il **Discover** metodo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Elemento ExecuteResponse &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-objects-executeresponse.md)   
- [Oggetti &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-objects.md)  
+## <a name="see-also"></a>Vedere anche
+ [Elemento ExecuteResponse &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects-executeresponse.md)   
+ [Gli oggetti &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects.md)  
   
   

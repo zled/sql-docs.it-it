@@ -1,37 +1,36 @@
 ---
 title: sp_cdc_disable_table (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_disable_table
 - sp_cdc_disable_table
 - sys.sp_cdc_disable_table_TSQL
 - sp_cdc_disable_table_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_cdc_disable_table
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1909d0d284642166312fe4dde2f2eda4f4ebac09
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 16356cc8a5d427a9432ac8c753b1e51d915337d4
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,30 +51,30 @@ sys.sp_cdc_disable_table
   
 ## <a name="arguments"></a>Argomenti  
  [  **@source_schema=** ] **'***source_schema***'**  
- Nome dello schema in cui è contenuta la tabella di origine. *source_schema* è **sysname**, senza impostazione predefinita e non può essere NULL.  
+ Nome dello schema in cui è contenuta la tabella di origine. *source_schema* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
   
  *source_schema* deve esistere nel database corrente.  
   
  [  **@source_name=** ] **'***source_name***'**  
- Nome della tabella di origine da disabilitare la funzionalità di Change Data Capture. *source_name* è **sysname**, senza impostazione predefinita e non può essere NULL.  
+ Nome della tabella di origine da disabilitare la funzionalità di Change Data Capture. *source_name* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
   
  *source_name* deve esistere nel database corrente.  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'**tutti**'**  
- Nome dell'istanza di acquisizione da disabilitare per la tabella di origine specificata. *capture_instance* è **sysname** e non può essere NULL.  
+ [  **@capture_instance=** ] **'***capture_instance***'** | **'** tutti **'**  
+ Nome dell'istanza di acquisizione da disabilitare per la tabella di origine specificata. *capture_instance* viene **sysname** e non può essere NULL.  
   
  Se si specifica "all", tutte le istanze definite per di acquisizione *source_name* sono disabilitati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_cdc_disable_table** Elimina change data capture Modifica tabella e funzioni di sistema associate all'istanza di acquisizione e di tabella di origine specificato. Elimina tutte le righe associate a questa istanza di acquisizione specificata dal set di tabelle di sistema di change data capture di **is_tracked_by_cdc** colonna per la voce della tabella nel [Sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) vista del catalogo impostato su 0.  
+ **Sys. sp_cdc_disable_table** cadute change data capture Modifica tabella e funzioni di sistema associate con l'istanza di acquisizione e tabella di origine specificata. Elimina tutte le righe associate a questa istanza di acquisizione specificata dal set di tabelle di sistema di change data capture di **is_tracked_by_cdc** colonna per la voce della tabella nel [Sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) vista del catalogo impostato su 0.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza di **db_owner** ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
@@ -91,6 +90,6 @@ EXECUTE sys.sp_cdc_disable_table
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys. sp_cdc_enable_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+ [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   
