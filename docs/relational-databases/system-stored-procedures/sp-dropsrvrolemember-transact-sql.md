@@ -1,5 +1,5 @@
 ---
-title: sp_dropsrvrolemember (Transact-SQL) | Documenti Microsoft
+title: sp_dropsrvrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ff304ce765010d2097c76574b0186df43d8b9104
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242413"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049369"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @loginame **=** ] **'***accesso***'**  
+ [ @loginame **=** ] **'***login***'**  
  Nome di un account di accesso che si desidera rimuovere dal ruolo predefinito del server. *account di accesso* viene **sysname**, non prevede alcun valore predefinito. *account di accesso* deve esistere.  
   
  [ @rolename **=** ] **'***ruolo***'**  
@@ -72,15 +72,15 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- Per rimuovere un account di accesso da un ruolo predefinito del server, è possibile utilizzare solo sp_dropsrvrolemember. Utilizzare sp_droprolemember per rimuovere un membro da un ruolo del database.  
+## <a name="remarks"></a>Note  
+ È utilizzabile solo sp_dropsrvrolemember per rimuovere un account di accesso da un ruolo predefinito del server. Usare sp_droprolemember per rimuovere un membro da un ruolo del database.  
   
- L'account di accesso sa non può essere rimosso da qualsiasi ruolo predefinito del server.  
+ Impossibile rimuovere l'account di accesso dell'amministratore di sistema da qualsiasi ruolo predefinito del server.  
   
  sp_dropsrvrolemember non può essere eseguita all'interno di una transazione definita dall'utente.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza del sysadmin, ruolo del server o l'autorizzazione ALTER ANY LOGIN nel server e l'appartenenza al ruolo da cui si desidera rimuovere il membro.  
+ Richiede l'appartenenza di sysadmin e del ruolo del server o l'autorizzazione ALTER ANY LOGIN nel server e l'appartenenza al ruolo dal quale si desidera rimuovere il membro.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente l'account di accesso `JackO` viene rimosso dal ruolo predefinito del server `sysadmin`.  
@@ -94,7 +94,7 @@ EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Funzioni di sicurezza &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

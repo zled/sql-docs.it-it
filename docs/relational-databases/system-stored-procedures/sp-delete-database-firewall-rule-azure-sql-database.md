@@ -1,5 +1,5 @@
 ---
-title: sp_delete_database_firewall_rule (Database SQL di Azure) | Documenti Microsoft
+title: sp_delete_database_firewall_rule (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
 ms.prod: ''
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0178f70f2ea71af12f53109b4dbde0240977c9d9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241349"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049489"
 ---
 # <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Rimuove l'impostazione del firewall a livello di database dal [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Le regole firewall del database possono essere configurate e per il database master e per i database utente vengono eliminate in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].   
+  Rimuove l'impostazione del firewall a livello di database dal [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Regole firewall del database possono essere configurate ed eliminate in data per il database master e per i database utente [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].   
   
  
 ## <a name="syntax"></a>Sintassi  
@@ -49,13 +49,13 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
   
 ## <a name="arguments"></a>Argomenti  
  [ **@name =**] **'***nome***'**  
- Nome dell'impostazione del firewall a livello di database che verrà rimossa. *nome* viene **nvarchar (128)** non prevede alcun valore predefinito. L'identificatore Unicode `N` è facoltativo per [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+ Nome dell'impostazione del firewall a livello di database che verrà rimossa. *nome* viene **nvarchar (128)** non prevede alcun valore predefinito. L'identificatore di Unicode `N` è facoltativo per [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
 ## <a name="permissions"></a>Autorizzazioni  
- Solo a livello di server principale account di accesso creato dal processo di provisioning o un'entità di Azure Active Directory assegnato come amministratore è possibile eliminare le regole del firewall a livello di database.  
+ Solo a livello di server dell'entità account di accesso creato dal processo di provisioning o un'entità di Azure Active Directory assegnato come amministratore può eliminare le regole del firewall a livello di database.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente rimuove il database a livello di impostazione del firewall denominata `Example DB Setting 1`.
+ L'esempio seguente rimuove l'impostazione denominata del firewall a livello di database `Example DB Setting 1`.
   
 ```  
 -- Remove database-level firewall setting  

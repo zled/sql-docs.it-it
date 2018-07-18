@@ -1,5 +1,5 @@
 ---
-title: sp_denylogin (Transact-SQL) | Documenti Microsoft
+title: sp_denylogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ef296a57b8fec029695654e5e519b723b455b59f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241839"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049462"
 ---
 # <a name="spdenylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,8 @@ sp_denylogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_denylogin** Nega l'autorizzazione CONNECT SQL all'entità a livello di server mappato all'utente di Windows specificato o al gruppo di Windows. Se l'entità del server non esiste, verrà creata. Il nuovo database principale saranno visibile nel [Sys. server_principals &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista del catalogo.  
+## <a name="remarks"></a>Note  
+ **sp_denylogin** viene negata l'autorizzazione CONNECT SQL all'entità a livello di server mappato all'utente di Windows specificato o al gruppo di Windows. Se l'entità del server non esiste, verrà creata. La nuova entità sarà visibile nel [Sys. server_principals &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista del catalogo.  
   
  **sp_denylogin** non può essere eseguita all'interno di una transazione definita dall'utente.  
   
@@ -62,7 +62,7 @@ sp_denylogin [ @loginame = ] 'login'
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato come utilizzare **sp_denylogin** per impedire l'utente di Windows `CORPORATE\GeorgeV` di connettersi al server.  
+ Nell'esempio seguente viene illustrato come utilizzare **sp_denylogin** per impedire a Windows utente `CORPORATE\GeorgeV` di connettersi al server.  
   
 ```  
 EXEC sp_denylogin 'CORPORATE\GeorgeV';  

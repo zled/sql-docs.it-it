@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geometry_histogram (Transact-SQL) | Documenti Microsoft
+title: sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: d12665106633cbbdf46284089ef5f7eb79d7ccbf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251342"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049309"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  Proprietà del valore massimo di Y del rettangolo di selezione. *ymax* è un **float**, non prevede alcun valore predefinito.  
   
  [  **@sample =** ] **'***esempio***'**  
- Percentuale della tabella utilizzata. I valori validi sono compresi tra 0 e 100. *campione* è un **float**. Il valore predefinito è 100.  
+ Percentuale della tabella utilizzata. I valori validi sono da 0 a 100. *campione* è un **float**. Il valore predefinito è 100.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Viene restituito un valore di tabella. Nella griglia seguente viene descritto il contenuto delle colonne della tabella.  
@@ -81,19 +81,19 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Rappresenta l'ID univoco di ciascuna cella. Il conteggio inizia da 1.|  
-|**Cella**|**geometry**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
+|**cella**|**geometry**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
 |**row_count**|**bigint**|Indica il numero di oggetti spaziali che toccano o contengono la cella.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Utente deve essere un membro del **pubblica** ruolo. È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Nella scheda spaziale di SSMS viene illustrata una rappresentazione grafica dei risultati. È possibile eseguire una query sui risultati rispetto alla finestra spaziale per ottenere un numero approssimativo di risultati. Gli oggetti nella tabella potrebbero riguardare più di una cella, pertanto la somma delle celle potrebbe essere maggiore del numero di oggetti effettivi.  
   
- È possibile che una riga aggiuntiva venga aggiunta al set di risultati contenente il numero di oggetti esterni al rettangolo di selezione o che toccano il bordo dello stesso. Il **cellid** di questa riga è 0 e **cella** di questa riga contiene un **LineString** che rappresenta il rettangolo di selezione. Questa riga rappresenta l'intero spazio esterno al rettangolo di selezione.  
+ È possibile che una riga aggiuntiva venga aggiunta al set di risultati contenente il numero di oggetti esterni al rettangolo di selezione o che toccano il bordo dello stesso. Il **cellid** di questa riga è 0 e il **cella** di questa riga contiene una **LineString** che rappresenta il rettangolo di selezione. Questa riga rappresenta l'intero spazio esterno al rettangolo di selezione.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata una tabella di esempio e quindi chiama **sp_help_spatial_geometry_histogram** nella tabella.  
+ Nell'esempio seguente crea una tabella di esempio e quindi chiama **sp_help_spatial_geometry_histogram** sulla tabella.  
   
  `USE AdventureWorksDW2012`  
   

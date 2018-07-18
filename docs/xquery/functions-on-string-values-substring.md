@@ -1,5 +1,5 @@
 ---
-title: substring-funzione (XQuery) | Documenti Microsoft
+title: substring-funzione (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4bf01599d3144ca6eb3ebbfa74435ab16b25176a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077268"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995073"
 ---
-# <a name="functions-on-string-values---substring"></a>Funzioni su valori stringa: substring
+# <a name="functions-on-string-values---substring"></a>Funzioni su valori stringa - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce parte del valore di *$sourceString*, iniziando in corrispondenza della posizione indicata dal valore di *$startingLoc,* e continua per il numero di caratteri indicato dal valore di *$ lunghezza*.  
+  Restituisce parte del valore del *$sourceString*, iniziando in corrispondenza della posizione indicata dal valore di *$startingLoc,* e continua per il numero di caratteri indicato dal valore di *$ lunghezza*.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +57,7 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  Numero di caratteri da recuperare (facoltativo). Se non specificato, restituisce tutti i caratteri dalla posizione specificata *$startingLoc* fino alla fine della stringa.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  La versione della funzione con tre argomenti restituisce i caratteri di `$sourceString` il cui operatore di posizione `$p` è soggetto alla regola seguente:  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
@@ -66,18 +66,18 @@ fn:substring($sourceString as xs:string?,
   
  Il primo carattere di una stringa si trova nella posizione 1.  
   
- Se il valore di *$sourceString* è una sequenza vuota, viene gestita come stringa di lunghezza zero. In caso contrario, se il valore *$startingLoc* o *$length* è una sequenza vuota, viene restituita la sequenza vuota.  
+ Se il valore di *$sourceString* è una sequenza vuota, viene gestita come stringa di lunghezza zero. In caso contrario, se uno dei due *$startingLoc* oppure *$length* è una sequenza vuota, viene restituita la sequenza vuota.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
- Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per ulteriori informazioni, vedere la sezione "XQuery funzioni riconoscono i surrogati" nell'argomento [modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per altre informazioni, vedere la sezione "XQuery funzioni riconoscono i surrogati" nell'argomento [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="implementation-limitations"></a>Limitazioni di implementazione  
- SQL Server richiede il *$startingLoc* e *$length parametri* siano di tipo xs anziché xs: double di.  
+ SQL Server richiede la *$startingLoc* e *$length parametri* sia di tipo xs: decimal anziché di xs: Double.  
   
- SQL Server consente *$startingLoc* e *$length* di una sequenza vuota, perché la sequenza vuota è un possibile valore risultante di errori dinamici viene eseguito il mapping a ().  
+ SQL Server consente *$startingLoc* e *$length* rappresentino la sequenza vuota, perché la sequenza vuota è un possibile valore risultante di errori dinamici viene eseguito il mapping a ().  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo di [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo i [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Utilizzo della funzione XQuery substring() per recuperare le descrizioni parziali del modello del prodotto disponibili nell'elemento Summary  
  La query recupera i primi 50 caratteri del testo della descrizione del modello del prodotto, ovvero l'elemento <`Summary`> nel documento.  
@@ -95,7 +95,7 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
 -   Il **String ()** funzione restituisce il valore della stringa di <`Summary`> elemento. L'utilizzo di questa funzione è determinato dal fatto che l'elemento <`Summary`> contiene sia il testo che i sottoelementi (elementi di formattazione html) e che tali elementi verranno ignorati, mentre verrà recuperato tutto il testo.  
   
--   Il **substring** funzione recupera i primi 50 caratteri del valore di stringa recuperati tramite il **String ()**.  
+-   Il **substring** funzione recupera i primi 50 caratteri del valore stringa recuperato dalle **String ()**.  
   
  Risultato parziale:  
   

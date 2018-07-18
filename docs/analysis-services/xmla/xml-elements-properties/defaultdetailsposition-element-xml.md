@@ -1,5 +1,5 @@
 ---
-title: Elemento DefaultDetailsPosition (XML) | Documenti Microsoft
+title: Elemento DefaultDetailsPosition (XML) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae920ba37f210e4f9bbdf6305899eb79eac74167
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34573843"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994903"
 ---
 # <a name="defaultdetailsposition-element-xml"></a>Elemento DefaultDetailsPosition (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34573843"
 </RelationshipEndVisualizationProperties>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -39,14 +39,14 @@ ms.locfileid: "34573843"
 |Valore predefinito|-1|  
 |Cardinalità|0-1: elemento facoltativo che ricorre una sola volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Per **RelationshipEndVisualizationProperties** elementi, il **DefaultDetailsPosition** elemento contiene la posizione dell'elemento dettaglio predefinito in una raccolta di dettagli. Il valore predefinito di **false** non indica è presente alcun dettaglio predefinito da utilizzare.  
+## <a name="remarks"></a>Note  
+ Per la **RelationshipEndVisualizationProperties** gli elementi, il **DefaultDetailsPosition** elemento contiene la posizione dell'elemento dettaglio predefinito in una raccolta di dettagli. Il valore predefinito **false** non indica è presente alcun dettaglio predefinito da utilizzare.  
   
   

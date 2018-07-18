@@ -1,5 +1,5 @@
 ---
-title: Esempio di query XPath (SQLXML 4.0) | Documenti Microsoft
+title: Esempio di query XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 582dcc59060c2be97fb760c6367a4690981855b4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708439"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050039"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Query XPath di esempio (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "34708439"
  [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
  Utilizzare questo file con gli esempi di query XPath fornito in questa sezione.  
   
- [Definizione di assi nelle query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)  
+ [Definizione di assi in query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)  
  Viene illustrato come vengono specificati gli assi nelle query XPath.  
   
  [Specifica di predicati con valori booleani nelle query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
  Viene illustrato come vengono specificati i predicati con valori booleani nelle query XPath.  
   
- [Specifica gli operatori relazionali nelle query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)  
+ [Specifica di operatori relazionali nelle query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)  
  Viene illustrato come vengono specificati gli operatori relazionali nelle query XPath.  
   
- [Specifica gli operatori aritmetici nelle query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)  
+ [Specifica di operatori aritmetici nelle query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)  
  Viene illustrato come vengono specificati gli operatori aritmetici nelle query XPath.  
   
  [Specifica le funzioni di conversione esplicita nelle query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)  
@@ -58,10 +58,10 @@ ms.locfileid: "34708439"
  [Specifica di operatori booleani nelle query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)  
  Viene illustrato come vengono specificati gli operatori booleani nelle query XPath.  
   
- [Definizione delle funzioni booleane in query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)  
+ [Specifica le funzioni booleane in query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)  
  Viene illustrato come vengono specificate le funzioni booleane nelle query XPath.  
   
- [Specifica le variabili XPath nelle query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)  
+ [Specifica le variabili XPath in query XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)  
  Viene illustrato come vengono specificate le variabili XPath nelle query XPath.  
   
   

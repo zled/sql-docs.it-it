@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_ backup_master_switch (Transact-SQL) | Documenti Microsoft
+title: managed_backup.sp_ backup_master_switch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 64d6681203962b54f1f3daae2de26e695cec240c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237371"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995552"
 ---
 # <a name="managedbackupsp-backupmasterswitch-transact-sql"></a>managed_backup.sp_ backup_master_switch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ EXEC managed_backup.sp_backup_master_switch
   
 ##  <a name="Arguments"></a> Argomenti  
  @state  
- Imposta lo stato del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Il @state parametro **BIT**. Quando è impostato su un valore pari a 0, le operazioni vengono sospese e quando è impostato su un valore pari a 1, le operazioni riprendono.  
+ Imposta lo stato del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Il @state parametro è **BIT**. Quando è impostato su un valore pari a 0, le operazioni vengono sospese e quando è impostato su un valore pari a 1, le operazioni riprendono.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
  Vengono descritti i problemi di sicurezza relativi all'istruzione. Includere le autorizzazioni come sottosezione (titolo H3). Provare a includere altre sottosezioni per il concatenamento di proprietà e il controllo, se appropriate.  
   
 ### <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza **db_backupoperator** ruolo del database con **ALTER ANY CREDENTIAL** , autorizzazioni e **EXECUTE** le autorizzazioni per **sp_delete _ BackupHistory**stored procedure.  
+ Richiede l'appartenenza al **db_backupoperator** ruolo del database con **ALTER ANY CREDENTIAL** autorizzazioni, e **EXECUTE** autorizzazioni sul **sp_delete BackupHistory**stored procedure.  
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente può essere utilizzato per sospendere il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nell'istanza in cui viene eseguito:  

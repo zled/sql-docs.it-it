@@ -1,5 +1,5 @@
 ---
-title: sp_password (Transact-SQL) | Documenti Microsoft
+title: sp_password (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 186384ed3dc9ec22264c4cbb184f9369c3677af3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993703"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,18 +53,18 @@ sp_password [ [ @old = ] 'old_password' , ]
  Vecchia password. *old_password* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@new=** ] **'***new_password***'**  
- Nuova password. *new_password* viene **sysname**, non prevede alcun valore predefinito. *old_password* deve essere specificato se non si utilizzano parametri denominati.  
+ Nuova password. *nuova_password* viene **sysname**, non prevede alcun valore predefinito. *old_password* deve essere specificata se non si utilizzano parametri denominati.  
   
 > [!IMPORTANT]  
 >  Non utilizzare una password NULL. Usare una password complessa. Per altre informazioni, vedere [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
  [  **@loginame=** ] **'***account di accesso***'**  
- Nome dell'account di accesso interessato dalla modifica della password. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve esistere già e può essere specificato solo dai membri del **sysadmin** o **securityadmin** predefiniti del server.  
+ Nome dell'account di accesso interessato dalla modifica della password. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve esistere già e può essere specificato solo dai membri del **sysadmin** oppure **securityadmin** ruoli predefiniti del server.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_password** chiama ALTER LOGIN. che supporta opzioni aggiuntive. Per informazioni sulla modifica delle password, vedere [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
  **sp_password** non può essere eseguita all'interno di una transazione definita dall'utente.  

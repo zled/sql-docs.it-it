@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_catalog (Transact-SQL) | Documenti Microsoft
+title: sp_fulltext_catalog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fccb384317102ef2818a49ef09c5faeb0fc42eb1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261417"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047249"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,37 +54,37 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  Nome del catalogo full-text. I nomi dei cataloghi devono essere univoci per ogni database. *fulltext_catalog_name* viene **sysname**.  
   
  [  **@action=**] **'***azione***'**  
- Azione da eseguire. *azione* viene **varchar (20)**, e può essere uno dei valori seguenti.  
+ Azione da eseguire. *azione* viene **varchar (20)**, i possibili valori sono i seguenti.  
   
 > [!NOTE]  
->  I cataloghi full-text possono essere creati, eliminati e modificati in base alle necessità. Evitare tuttavia di modificare contemporaneamente più cataloghi a livello di schema. Queste azioni possono essere eseguite mediante il **sp_fulltext_table** stored procedure, che è il metodo consigliato.  
+>  I cataloghi full-text possono essere creati, eliminati e modificati in base alle necessità. Evitare tuttavia di modificare contemporaneamente più cataloghi a livello di schema. È possibile eseguire queste azioni usando il **sp_fulltext_table** stored procedure, che è il metodo consigliato.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
-|**Create**|Crea un catalogo full-text vuoto, una novità nel file system e aggiunge una riga associata in **sysfulltextcatalogs** con il *fulltext_catalog_name* e *root_directory*, Se presente, i valori. *fulltext_catalog_name* deve essere univoco all'interno del database.|  
-|**Drop**|Elimina *fulltext_catalog_name* rimuovendolo dal file system ed eliminando la riga corrispondente in **sysfulltextcatalogs**. Questa azione non viene completata se nel catalogo sono inclusi indici per una o più tabelle. **sp_fulltext_table** '*table_name*', 'drop' deve essere eseguita per eliminare le tabelle dal catalogo.<br /><br /> Se il catalogo non esiste, viene visualizzato un errore.|  
-|**start_incremental**|Avvia un popolamento incrementale per *fulltext_catalog_name*. Se il catalogo non esiste, viene visualizzato un errore. Se è già attivo il popolamento di un indice full-text, viene visualizzato un avviso e il popolamento non viene eseguito. Popolamento incrementale vengono recuperate solo le righe modificate per l'indicizzazione full-text, purché vi sia un **timestamp** full-text indicizzate le colonne presenti nella tabella.|  
+|**Creare**|Crea un catalogo full-text vuoto, una novità nel file system e aggiunge una riga corrispondente in **sysfulltextcatalogs** con il *fulltext_catalog_name* e *root_directory*, Se presente, i valori. *fulltext_catalog_name* deve essere univoco all'interno del database.|  
+|**Drop**|Eliminazioni *fulltext_catalog_name* rimuoverlo dal file system ed eliminando la riga associata nella **sysfulltextcatalogs**. Questa azione non viene completata se nel catalogo sono inclusi indici per una o più tabelle. **sp_fulltext_table** »*table_name*', 'drop' deve essere eseguita per eliminare le tabelle dal catalogo.<br /><br /> Se il catalogo non esiste, viene visualizzato un errore.|  
+|**start_incremental**|Avvia un popolamento incrementale per *fulltext_catalog_name*. Se il catalogo non esiste, viene visualizzato un errore. Se è già attivo il popolamento di un indice full-text, viene visualizzato un avviso e il popolamento non viene eseguito. Popolamento incrementale vengono recuperate solo le righe modificate per l'indicizzazione full-text, purché sia disponibile un' **timestamp** le colonne presenti nella tabella full-text indicizzate.|  
 |**start_full**|Avvia un popolamento completo per *fulltext_catalog_name*. Per l'indicizzazione full-text viene recuperata ogni riga di ogni tabella associata al catalogo, anche se è già stata indicizzata.|  
 |**Arresta**|Arresta un popolamento dell'indice per *fulltext_catalog_name*. Se il catalogo non esiste, viene visualizzato un errore. Se il popolamento è già stato arrestato, non viene visualizzato alcun avviso.|  
-|**Ricompila**|Ricompila *fulltext_catalog_name*. Quando viene ricompilato un catalogo, il catalogo esistente viene eliminato e al suo posto viene creato un nuovo catalogo. Tutte le tabelle con riferimenti di indicizzazione full-text vengono associate al nuovo catalogo. La ricompilazione reimposta i metadati full-text nelle tabelle di sistema del database.<br /><br /> Se il rilevamento delle modifiche è impostato su OFF, la ricompilazione non comporta il ripopolamento del catalogo full-text appena creato. In questo caso, per ripopolare, eseguire **sp_fulltext_catalog** con il **start_full** o **start_incremental** azione.|  
+|**Ricompilazione**|Consente di ricompilare *fulltext_catalog_name*. Quando viene ricompilato un catalogo, il catalogo esistente viene eliminato e al suo posto viene creato un nuovo catalogo. Tutte le tabelle con riferimenti di indicizzazione full-text vengono associate al nuovo catalogo. La ricompilazione reimposta i metadati full-text nelle tabelle di sistema del database.<br /><br /> Se il rilevamento delle modifiche è impostato su OFF, la ricompilazione non comporta il ripopolamento del catalogo full-text appena creato. In questo caso, per eseguire la ricompilazione, eseguire **sp_fulltext_catalog** con il **start_full** oppure **start_incremental** azione.|  
   
  [  **@path=**] **'***root_directory***'**  
- È la directory radice (non percorso fisico completo) per un **creare** azione. *root_directory* viene **nvarchar(100)** e ha un valore predefinito null, ovvero viene utilizzato il percorso predefinito specificato al momento dell'installazione. Si tratta della sottodirectory Ftdata della directory Mssql, ad esempio C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. La directory radice specificata deve trovarsi in un'unità dello stesso computer, non deve corrispondere alla sola lettera di unità e non può essere un percorso relativo. Le unità di rete, le unità rimovibili, i dischi floppy e i percorsi in formato UNC non sono supportati. È necessario creare i cataloghi full-text in un'unità disco rigido locale associata a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ È la directory radice (non percorso fisico completo) per un **creare** azione. *root_directory* viene **nvarchar(100)** e ha un valore predefinito null, ovvero viene utilizzato il percorso predefinito specificato al momento dell'installazione. Si tratta della sottodirectory Ftdata della directory Mssql, ad esempio, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. La directory radice specificata deve trovarsi in un'unità dello stesso computer, non deve corrispondere alla sola lettera di unità e non può essere un percorso relativo. Le unità di rete, le unità rimovibili, i dischi floppy e i percorsi in formato UNC non sono supportati. È necessario creare i cataloghi full-text in un'unità disco rigido locale associata a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **@path** è valido solo quando *azione* viene **creare**. Per azioni diverse da **creare** (**arrestare**, **ricompilare**e così via), **@path** deve essere NULL oppure omesso.  
+ **@path** è valido solo quando *azione* viene **creare**. Per le azioni diverse da **creare** (**arrestare**, **ricompilare**e così via), **@path** deve essere NULL o omesso.  
   
- Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un server virtuale in un cluster, la directory di catalogo specificata deve trovarsi in un'unità disco condivisa dalla quale dipende la risorsa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se @path viene omesso, il percorso della directory di catalogo predefinita è nell'unità disco condivisa nella directory specificata durante l'installazione del server virtuale.  
+ Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un server virtuale in un cluster, la directory di catalogo specificata deve trovarsi in un'unità disco condivisa dalla quale dipende la risorsa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se @path non viene specificato, il percorso della directory predefinita del catalogo è nell'unità disco condivisa nella directory specificata durante l'installazione del server virtuale.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
- Il **start_full** azione viene utilizzata per creare uno snapshot completo dei dati full-text in *fulltext_catalog_name*. Il **start_incremental** azione viene utilizzata per ripetere l'indicizzazione solo delle righe modificate nel database. Popolamento incrementale può essere applicato solo se la tabella contiene una colonna di tipo **timestamp**. Se una tabella nel catalogo full-text non contiene una colonna di tipo **timestamp**, la tabella viene eseguito un popolamento completo.  
+## <a name="remarks"></a>Note  
+ Il **start_full** azione viene usata per creare uno snapshot completo dei dati full-text nella *fulltext_catalog_name*. Il **start_incremental** azione viene utilizzata per ripetere l'indicizzazione solo delle righe modificate nel database. Popolamento incrementale può essere applicato solo se la tabella include una colonna di tipo **timestamp**. Se una tabella nel catalogo full-text non contiene una colonna di tipo **timestamp**, la tabella viene eseguito un popolamento completo.  
   
- I dati dell'indice e del catalogo full-text vengono archiviati in file creati in una directory di catalogo full-text. La directory di catalogo full-text viene creata come sottodirectory della directory specificata **@path** o nella directory di catalogo full-text predefinito del server se **@path** non specificato. Il nome della directory di catalogo full-text viene compilato in modo che sia univoco nel server. Le varie directory di catalogo full-text di un server pertanto possono condividere lo stesso percorso.  
+ I dati dell'indice e del catalogo full-text vengono archiviati in file creati in una directory di catalogo full-text. La directory di catalogo full-text viene creata come una sottodirectory della directory specificata **@path** o nella directory di catalogo full-text predefinito del server se **@path** non specificato. Il nome della directory di catalogo full-text viene compilato in modo che sia univoco nel server. Le varie directory di catalogo full-text di un server pertanto possono condividere lo stesso percorso.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Il chiamante deve essere membro del **db_owner** ruolo. A seconda dell'azione richiesta, il chiamante non deve essere negato le autorizzazioni ALTER o CONTROL (quale **db_owner** ha) sul catalogo full-text di destinazione.  
@@ -92,7 +92,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-create-a-full-text-catalog"></a>A. Creazione di un catalogo full-text  
- Questo esempio viene creato un catalogo full-text vuoto, **Cat_Desc**nella **AdventureWorks2012** database.  
+ In questo esempio viene creato un catalogo full-text vuoto **Cat_Desc**, nella **AdventureWorks2012** database.  
   
 ```  
 USE AdventureWorks2012;  
@@ -102,7 +102,7 @@ GO
 ```  
   
 ### <a name="b-to-rebuild-a-full-text-catalog"></a>B. Per ricompilare un catalogo full-text  
- In questo esempio viene ricompilato un catalogo full-text esistente **Cat_Desc**nella **AdventureWorks2012** database.  
+ Questo esempio viene ricompilato un catalogo full-text esistente, **Cat_Desc**, nella **AdventureWorks2012** database.  
   
 ```  
 USE AdventureWorks2012;  
@@ -122,7 +122,7 @@ GO
 ```  
   
 ### <a name="d-stop-the-population-of-a-full-text-catalog"></a>D. Arresto del popolamento di un catalogo full-text  
- In questo esempio viene arrestato il popolamento del **Cat_Desc** catalogo.  
+ Questo esempio mostra come arrestare il popolamento della **Cat_Desc** catalogo.  
   
 ```  
 USE AdventureWorks2012;  
@@ -132,7 +132,7 @@ GO
 ```  
   
 ### <a name="e-to-remove-a-full-text-catalog"></a>E. Rimozione di un catalogo full-text  
- Questo esempio viene rimossa la **Cat_Desc** catalogo.  
+ Questo esempio vengono rimossi i **Cat_Desc** catalogo.  
   
 ```  
 USE AdventureWorks2012;  
@@ -142,7 +142,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [FULLTEXTCATALOGPROPERTY & #40; Transact-SQL & #41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [sp_fulltext_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   

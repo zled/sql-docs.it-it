@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_incremental_stats_properties (Transact-SQL) | Documenti Microsoft
+title: DM db_incremental_stats_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6dd64a9c7b4171ad8024f2b86c07cb318fa81ad8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466237"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997873"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  Questo comportamento consente l'utilizzo sicuro di `sys.dm_db_incremental_stats_properties` in caso di applicazione incrociata in viste quali `sys.objects` e `sys.stats`. Questo metodo può restituire le proprietà per le statistiche che corrispondono a ogni partizione. Per visualizzare le proprietà per le statistiche unite combinate in tutte le partizioni, usare sys.dm_db_stats_properties. 
 
-La data di aggiornamento delle statistiche viene archiviata nell'[oggetto BLOB di statistiche](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) insieme all'[istogramma](../../relational-databases/statistics/statistics.md#histogram) e al [vettore di densità](../../relational-databases/statistics/statistics.md#density), non nei metadati. Quando viene letto alcun dato per generare i dati delle statistiche, non viene creato il blob di statistiche, la data non è disponibile e *last_updated* colonna è NULL. È il caso delle statistiche filtrate per le quali il predicato non restituisce alcuna riga o delle nuove tabelle vuote.
+La data di aggiornamento delle statistiche viene archiviata nell'[oggetto BLOB di statistiche](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) insieme all'[istogramma](../../relational-databases/statistics/statistics.md#histogram) e al [vettore di densità](../../relational-databases/statistics/statistics.md#density), non nei metadati. Quando viene letto alcun dato per generare i dati delle statistiche, il blob di statistiche non viene creato, non è disponibile, la data e il *last_updated* colonna è NULL. È il caso delle statistiche filtrate per le quali il predicato non restituisce alcuna riga o delle nuove tabelle vuote.
 
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve avere autorizzazioni di selezione per le colonne delle statistiche o essere proprietario della tabella o membro del ruolo predefinito del server `sysadmin`, del ruolo predefinito del database `db_owner` o del ruolo predefinito del database `db_ddladmin`.  

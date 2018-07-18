@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebfd66acdc93f1a5148981e06f8adf1c507e1705
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240511"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995631"
 ---
 # <a name="sysfnhadrisprimaryreplica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- '*dbname*'  
+ «*dbname*»  
  Nome del database. *dbname* è di tipo sysname.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  Restituisce 1 se il database nell'istanza corrente è la replica primaria. In caso contrario, restituisce 0.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Utilizzare questa funzione per determinare se l'istanza locale ospita la replica primaria del database di disponibilità specificato. Il codice di esempio avrà un aspetto analogo al seguente:  
   
 ```  
@@ -77,9 +77,9 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni dei gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [Gruppi di disponibilità AlwaysOn & #40; SQL Server & #41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [CREARE il gruppo di disponibilità & #40; Transact-SQL & #41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [Gruppi di disponibilità AlwaysOn viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
+ [Viste del catalogo dei gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
   
   

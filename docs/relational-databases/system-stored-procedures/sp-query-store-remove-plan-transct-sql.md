@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_remove_plan (Transct-SQL) | Documenti Microsoft
+title: sp_query_store_remove_plan (amp;#40;transct-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f3efe5d6bac67d639877a2434fd3b97bec84d5da
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250181"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993620"
 ---
-# <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transct-SQL)
+# <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (amp;#40;transct-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Rimuove un singolo piano dall'archivio query.  
+  Rimuove un singolo piano da query store.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,13 +54,13 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede il **EXECUTE** autorizzazione per il database, e **eliminare** autorizzazione sulle viste del catalogo di archivio query.  
+ Richiede la **EXECUTE** autorizzazione per il database, e **eliminare** l'autorizzazione per le viste del catalogo di archivio query.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce informazioni sulle query in archivio query.  
+ L'esempio seguente restituisce informazioni sulle query in query store.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -71,7 +71,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Dopo aver identificato plan_id che si desidera eliminare, utilizzare l'esempio seguente per eliminare un piano di query.  
+ Dopo aver identificato il plan_id che si desidera eliminare, usare l'esempio seguente per eliminare un piano di query.  
   
 ```  
 EXEC sp_query_store_remove_plan 3;  

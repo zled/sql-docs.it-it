@@ -1,5 +1,5 @@
 ---
-title: E (DMX) | Documenti Microsoft
+title: E (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a53a2e309d427ee3868478a17186cad1070d4f81
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841224"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047319"
 ---
 # <a name="and-dmx"></a>AND (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano che restituisce TRUE se entrambi i parametri restituiscono TRUE, FALSE in caso contrario.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per consentire all'operatore di eseguire la congiunzione logica, entrambi i parametri vengono gestiti come valori booleani, per cui 0 equivale a FALSE e tutti gli altri valori a TRUE. Nella tabella seguente sono elencati i valori restituiti per le varie combinazioni dei valori dei parametri.  
   
 |Valore di Expression1|Valore di Expression2|Valore restituito|  
@@ -49,8 +49,8 @@ Expression1 AND Expression2
 |FALSE|FALSE|FALSE|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operatori logici &#40;DMX&#41;](../dmx/operators-logical.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Gli operatori logici &#40;DMX&#41;](../dmx/operators-logical.md)   
  [Gli operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

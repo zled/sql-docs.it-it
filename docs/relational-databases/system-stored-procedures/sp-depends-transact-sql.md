@@ -1,5 +1,5 @@
 ---
-title: sp_depends (Transact-SQL) | Documenti Microsoft
+title: sp_depends (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: cc84911c1280ef3a4d82c8ba291073eca75d89a9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261287"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049449"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_depends [ @objname = ] '<object>'
  Nome dello schema a cui appartiene l'oggetto.  
   
  *object_name*  
- Oggetto di database di cui si desidera esaminare le dipendenze. L'oggetto può essere una tabella, una vista, una stored procedure, una funzione definita dall'utente o un trigger. o*bject_name* è **nvarchar(776)**, non prevede alcun valore predefinito.  
+ Oggetto di database di cui si desidera esaminare le dipendenze. L'oggetto può essere una tabella, una vista, una stored procedure, una funzione definita dall'utente o un trigger. o*bject_name* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -68,17 +68,17 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>Set di risultati  
  **sp_depends** Visualizza due set di risultati.  
   
- Il set di risultati seguente vengono indicati gli oggetti che  *\<oggetto >* a seconda dei casi.  
+ Il set di risultati seguente vengono indicati gli oggetti cui  *\<oggetto >* varia.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nome dell'elemento a cui è associata una dipendenza.|  
 |**type**|**nvarchar (16)**|Tipo di elemento.|  
-|**Aggiornato**|**nvarchar(7)**|Specifica se l'elemento è aggiornato.|  
-|**Selezionato**|**nvarchar(8)**|Specifica se l'elemento viene utilizzato in un'istruzione SELECT.|  
+|**aggiornato**|**nvarchar(7)**|Specifica se l'elemento è aggiornato.|  
+|**selezionato**|**nvarchar(8)**|Specifica se l'elemento viene utilizzato in un'istruzione SELECT.|  
 |**column**|**sysname**|Colonna o parametro in cui esiste la dipendenza.|  
   
- Il set di risultati seguente vengono indicati gli oggetti che dipendono da  *\<oggetto >*.  
+ Il set di risultati seguente vengono indicati gli oggetti che dipendono  *\<oggetto >*.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -107,7 +107,7 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

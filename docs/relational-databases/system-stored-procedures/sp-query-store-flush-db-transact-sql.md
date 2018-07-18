@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_flush_db (Transact-SQL) | Documenti Microsoft
+title: sp_query_store_flush_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0dca89f1d5876d437ccce2009db77614ba04ce4c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247037"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993631"
 ---
 # <a name="spquerystoreflushdb-transact-sql"></a>sp_query_store_flush_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  La parte in memoria dei dati di archivio Query si scarica su disco.  
+  Scarica la parte in memoria dei dati di Query Store su disco.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,13 +50,13 @@ sp_query_store_flush_db [;]
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede il **EXECUTE** autorizzazione per il database, e **eliminare** autorizzazione sulle viste del catalogo di archivio query.  
+ Richiede la **EXECUTE** autorizzazione per il database, e **eliminare** l'autorizzazione per le viste del catalogo di archivio query.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente la parte in memoria dei dati di archivio Query si scarica su disco.  
+ Nell'esempio seguente Scarica la parte in memoria dei dati di Query Store su disco.  
   
 ```  
 EXEC sp_query_store_flush_db;  

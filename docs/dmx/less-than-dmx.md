@@ -1,5 +1,5 @@
 ---
-title: '&lt; (Minore di) (DMX) | Documenti Microsoft'
+title: '&lt; (Minore di) (DMX) | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54983c849e88a71f7256fa864866c1e97fd6a646
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841254"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995789"
 ---
 # <a name="lt-less-than-dmx"></a>&lt; (Minore di) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ DMX_Expression < DMX_Expression
   
 ## <a name="see-also"></a>Vedere anche  
  [Gli operatori di confronto &#40;DMX&#41;](../dmx/operators-comparison.md)   
- [Estensioni Data Mining &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Gli operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

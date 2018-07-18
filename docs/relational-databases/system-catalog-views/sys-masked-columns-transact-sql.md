@@ -1,5 +1,5 @@
 ---
-title: masked_columns (Transact-SQL) | Documenti Microsoft
+title: masked_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -24,33 +24,33 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 432ea847081c8f0060954efdd6e7f2beea1a592d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179297"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998043"
 ---
 # <a name="sysmaskedcolumns-transact-sql"></a>masked_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Utilizzare il **masked_columns** vista per eseguire query per tabelle e colonne che dispongono di una funzione applicata di maschera dati dinamici. Questa vista viene ereditata dalla vista **sys.columns** , che restituisce tutte le colonne della vista **sys.columns** , in aggiunta alle colonne **is_masked** e **masking_function** , che indicano se la colonna è nascosta e, in tal caso, quale funzione di maschera viene definita. Questa vista mostra solo le colonne su cui è applicata una funzione di maschera.  
+  Usare la **masked_columns** vista alla query per tabelle e colonne che hanno una funzione applicata di maschera dati dinamici. Questa vista viene ereditata dalla vista **sys.columns** , che restituisce tutte le colonne della vista **sys.columns** , in aggiunta alle colonne **is_masked** e **masking_function** , che indicano se la colonna è nascosta e, in tal caso, quale funzione di maschera viene definita. Questa vista mostra solo le colonne su cui è applicata una funzione di maschera.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID dell'oggetto a cui appartiene la colonna.|  
-|name|**sysname**|Nome della colonna. Valore univoco all'interno dell'oggetto.|  
+|NAME|**sysname**|Nome della colonna. Valore univoco all'interno dell'oggetto.|  
 |column_id|**int**|ID della colonna. Valore univoco all'interno dell'oggetto.<br /><br /> È possibile che gli ID di colonna non siano sequenziali.|  
-|**Sys. masked_columns** restituisce molte altre colonne ereditate da **Sys. Columns**.|vari|Vedere [Sys. Columns &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) per altre definizioni di colonna.|  
+|**masked_columns** restituisce troppe colonne ereditate da **Sys. Columns**.|vari|Visualizzare [Sys. Columns &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) per altre definizioni di colonna.|  
 |is_masked|**bit**|Indica se la colonna è nascosta. 1 indica mascherato.|  
-|masking_function|**nvarchar(4000)**|Funzione di maschera per la colonna.|  
+|masking_function|**nvarchar(4000)**|La funzione di maschera della colonna.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Questa vista restituisce informazioni sulle tabelle in cui l'utente disponga di autorizzazioni per la tabella o se l'utente dispone dell'autorizzazione VIEW ANY DEFINITION.  
+ Questa vista restituisce informazioni sulle tabelle in cui l'utente ha una sorta di autorizzazione per la tabella o se l'utente ha l'autorizzazione VIEW ANY DEFINITION.  
   
 ## <a name="example"></a>Esempio  
- La query seguente join **masked_columns** a **Sys. Tables** per restituire informazioni su tutti i colonne mascherate.  
+ La query seguente join **masked_columns** al **Sys. Tables** per restituire le informazioni relative a tutte le colonne mascherate.  
   
 ```  
 SELECT tbl.name as table_name, c.name AS column_name, c.is_masked, c.masking_function  

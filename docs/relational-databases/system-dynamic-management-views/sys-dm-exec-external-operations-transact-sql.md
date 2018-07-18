@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_external_operations (Transact-SQL) | Documenti Microsoft
+title: Sys.dm_exec_external_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,10 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 75ea1d3250c88ae40abcf34280a68c7384f6557e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997963"
 ---
 # <a name="sysdmexecexternaloperations-transact-sql"></a>sys.dm_exec_external_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -39,14 +40,14 @@ ms.lasthandoff: 05/23/2018
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Identificatore univoco di query associata a una query di PolyBase|Vedere ID nel [DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|Indice dell'istruzione di query|Vedere step_index in [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
-|tipo operation_|**nvarchar(128)**|Descrive un'operazione di Hadoop o altri esterno|'Operazione esterna di Hadoop'|  
-|nome operation_|**nvarchar(4000)**|Indica come lo stato del processo, espresso in percentuale (la quantità che costituisce l'input utilizzato)|0-1 – moltiplicato per fattore 100 (completato)|  
-|stato di avanzamento map_|**float**|Indica come lo stato di una riduzione del processo, espresso in percentuale, se presente|0-1 – moltiplicato per fattore 100 (completato)|  
+|execution_id|**nvarchar(32)**|Identificatore univoco di query associati a query di PolyBase|Vedere ID nel [exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|Indice del passaggio della query|Vedere in step_index [DM exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
+|tipo operation_|**nvarchar(128)**|Descrive un'operazione di Hadoop o un'altra operazione esterna|'Operation Hadoop esterno'|  
+|nome operation_|**nvarchar(4000)**|Indica la modalità dello stato del processo espresso in percentuale (quantità che costituisce l'input utilizzato)|0-1: moltiplicato fattore 100 (completato)|  
+|stato di avanzamento map_|**float**|Indica il modo in cui lo stato di una riduzione del processo espresso in percentuale, se presente|0-1: moltiplicato fattore 100 (completato)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [PolyBase, risoluzione dei problemi con viste a gestione dinamica](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase con DMV di risoluzione dei problemi](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste a gestione dinamica relative ai database &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

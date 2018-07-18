@@ -1,5 +1,5 @@
 ---
-title: trace_categories (Transact-SQL) | Documenti Microsoft
+title: Sys. trace_categories (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -25,16 +25,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 85c5ad8a9cd6e901151797e763913713f2a228b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220422"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993763"
 ---
 # <a name="systracecategories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Classi di evento simili vengono raggruppate in base a una categoria specifica. Ogni riga di **trace_categories** vista del catalogo identifica una categoria che è univoca a livello di server. Queste categorie non cambiano per una versione specifica di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+  Classi di evento simili vengono raggruppate in base a una categoria specifica. Ogni riga i **Sys. trace_categories** vista del catalogo identifica una categoria che è univoca tra il server. Queste categorie non cambiano per una versione specifica di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
  Per un elenco completo degli eventi di traccia supportati, vedere [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   

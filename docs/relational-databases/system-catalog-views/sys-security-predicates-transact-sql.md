@@ -1,5 +1,5 @@
 ---
-title: Sys. security_predicates (Transact-SQL) | Documenti Microsoft
+title: Sys. security_predicates (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 539ca48e5c55485a5a4b3fdecb3044c1feae6826
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221392"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993853"
 ---
 # <a name="syssecuritypredicates-transact-sql"></a>Sys. security_predicates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ ms.locfileid: "33221392"
 |security_predicate_id|**int**|ID predicato all'interno del criterio di sicurezza.|  
 |target_object_id|**int**|ID dell'oggetto a cui è associato il predicato di sicurezza.|  
 |predicate_definition|**nvarchar(max)**|Nome completo della funzione che verrà usata come predicato di sicurezza, inclusi gli argomenti. Si noti che il `schema.function` nome può essere normalizzato (vale a dire con caratteri di escape) come qualsiasi altro elemento nel testo per la coerenza. Esempio:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
-|predicate_type|**int**|Tipo di predicato usato dai criteri di sicurezza:<br /><br /> 0 = PREDICATO DEL FILTRO<br /><br /> 1 = IL PREDICATO DI BLOCCO|  
+|predicate_type|**int**|Tipo di predicato usato dai criteri di sicurezza:<br /><br /> 0 = PREDICATO DEL FILTRO<br /><br /> 1 = PREDICATO DI BLOCCO|  
 |predicate_type_desc|**nvarchar(60)**|Tipo di predicato usato dai criteri di sicurezza:<br /><br /> FILTER<br /><br /> BLOCCO|  
-|operazione|**int**|Il tipo di operazione specificato per il predicato:<br /><br /> NULL = tutte le operazioni applicabili<br /><br /> 1 = DOPO L'INSERIMENTO<br /><br /> 2 = DOPO L'AGGIORNAMENTO<br /><br /> 3 = PRIMA DELL'AGGIORNAMENTO<br /><br /> 4 = PRIMA DELL'ELIMINAZIONE|  
+|operazione|**int**|Il tipo di operazione specificato per il predicato:<br /><br /> NULL = tutte le operazioni applicabili<br /><br /> 1 = AFTER INSERT<br /><br /> 2 = DOPO L'AGGIORNAMENTO<br /><br /> 3 = PRIMA DELL'AGGIORNAMENTO<br /><br /> 4 = PRIMA DELL'ELIMINAZIONE|  
 |operation_desc|**nvarchar(60)**|Il tipo di operazione specificato per il predicato:<br /><br /> NULL<br /><br /> DOPO L'INSERIMENTO<br /><br /> AFTER UPDATE<br /><br /> PRIMA DELL'AGGIORNAMENTO<br /><br /> PRIMA DELL'ELIMINAZIONE|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Entità che dispongono di **ALTER ANY SECURITY POLICY** autorizzazione hanno accesso a tutti gli oggetti in questa vista del catalogo, nonché tutti gli utenti con **VIEW DEFINITION** sull'oggetto.  
+ Le entità con la **ALTER ANY SECURITY POLICY** autorizzazione ha accesso a tutti gli oggetti in questa vista del catalogo, nonché tutti gli utenti con **VIEW DEFINITION** sull'oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md)   
@@ -61,6 +61,6 @@ ms.locfileid: "33221392"
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Entità &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

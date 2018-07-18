@@ -1,5 +1,5 @@
 ---
-title: Conversione di schemi XDR schemi XSD equivalenti (SQLXML 4.0) con annotazioni | Documenti Microsoft
+title: Conversione di schemi XDR a schemi XSD equivalenti (SQLXML 4.0) con annotazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a841cf9e5bcfe3c1de5c199fa29984c709631598
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969826"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047279"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>Conversione di schemi XDR con annotazioni in schemi XSD equivalenti (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  Dove:  
   
  XDRFileName  
- È il nome del file XDR  da convertire in XSD. Lo strumento legge il file XDR di input e crea un file di output XSD nella directory di lavoro corrente. Se l'estensione del file di input è .xdr o .xml, il file XSD di output viene creato con lo stesso nome ma con estensione .xsd. Se l'estensione del nome file di input è diverso da XML o XDR (o se l'estensione è mancante), il file di output viene creato con lo stesso nome e l'estensione XSD viene aggiunto al nome del file di input. Se ad esempio il nome del file XDR di input è SampleFile.abc, il file XSD risultante viene salvato come SampleFile.abc.xsd.  
+ È il nome del file XDR  da convertire in XSD. Lo strumento legge il file XDR di input e crea un file di output XSD nella directory di lavoro corrente. Se l'estensione del file di input è .xdr o .xml, il file XSD di output viene creato con lo stesso nome ma con estensione .xsd. Se l'estensione del nome file di input è diverso da XML o. XDR (o se l'estensione non è presente), il file di output viene creato con lo stesso nome e l'estensione XSD viene aggiunto al nome del file di input. Se ad esempio il nome del file XDR di input è SampleFile.abc, il file XSD risultante viene salvato come SampleFile.abc.xsd.  
   
  -y  
  (Facoltativo) Sovrascrive il file XSD esistente con il file XSD generato dal convertitore. Se non viene specificato il flag, il convertitore richiede di specificare se si desidera sovrascrivere il file XSD esistente e offre l'opportunità di modificare il nome del file di output.  

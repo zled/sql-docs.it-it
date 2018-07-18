@@ -1,5 +1,5 @@
 ---
-title: WideWorldImportersDW - flusso di lavoro ETL | Documenti Microsoft
+title: WideWorldImportersDW - flusso di lavoro ETL | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -13,59 +13,59 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36638c4cc2bda58ac277822d5c4a4ce5421ab8b4
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467687"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066529"
 ---
-# <a name="wideworldimportersdw-etl-workflow"></a>Flusso di lavoro WideWorldImportersDW ETL
+# <a name="wideworldimportersdw-etl-workflow"></a>Flusso di lavoro ETL WideWorldImportersDW
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Usare la *WWI_Integration* pacchetto ETL per la migrazione dei dati dal database WideWorldImporters al database WideWorldImportersDW le modifiche dei dati. Il pacchetto viene eseguito periodicamente (in genere ogni giorno).
+Usare la *WWI_Integration* pacchetto ETL semplice per eseguire la migrazione dei dati dal database WideWorldImporters al database WideWorldImportersDW le modifiche dei dati. Il pacchetto viene eseguito periodicamente (in genere giornaliera).
 
-Il pacchetto assicura prestazioni elevate utilizzando SQL Server Integration Services per orchestrare le operazioni bulk T-SQL (anziché separate trasformazioni in Integration Services).
+Il pacchetto garantisce prestazioni elevate usando SQL Server Integration Services per orchestrare le operazioni bulk T-SQL (anziché separate trasformazioni in Integration Services).
 
-Le quote vengano caricate per primi, e quindi vengono caricate le tabelle dei fatti. È possibile eseguire di nuovo il pacchetto in qualsiasi momento dopo un errore.
+Le dimensioni vengono caricate prima di tutto, e quindi vengono caricate le tabelle dei fatti. È possibile eseguire nuovamente il pacchetto in qualsiasi momento dopo un errore.
 
-Il flusso di lavoro è simile al seguente:
+Il flusso di lavoro è simile alla seguente:
 
- ![Flusso di lavoro WideWorldImporters ETL](media/wide-world-importers/wideworldimporters-etl-workflow.png)
+ ![Flusso di lavoro ETL WideWorldImporters](media/wide-world-importers/wideworldimporters-etl-workflow.png)
 
-Il flusso di lavoro inizia con un'attività di espressione che determina il tempo limito appropriato. Il tempo di cambio data è l'ora corrente meno qualche minuto. (Questo approccio è più affidabile rispetto alla richiesta di dati direttamente all'ora corrente). Dal momento in cui vengono troncati qualsiasi millisecondi.
+Il flusso di lavoro inizia con un'attività di espressione che determina il tempo di cambio data appropriato. Il tempo di cambio data è l'ora corrente meno qualche minuto. (Questo approccio è più affidabile rispetto alla richiesta di destra dei dati sull'ora corrente). Dal momento in cui vengono troncati qualsiasi millisecondi.
 
-L'elaborazione principale Avvia popolamento della tabella della dimensione Data. L'elaborazione assicura che siano state popolate tutte le date per l'anno corrente nella tabella.
+L'elaborazione principale avvia popolando la tabella della dimensione Date. L'elaborazione garantisce che siano state popolate tutte le date per l'anno corrente nella tabella.
 
-Successivamente, una serie di attività flusso di dati carica ogni dimensione. Quindi, devono essere caricati ogni fatto.
+Successivamente, una serie di attività flusso di dati carica ogni dimensione. Quindi, pagine corrispondenti vengano caricate ogni fatto.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- SQL Server 2016 (o versione successiva), con i database WideWorldImporters e WideWorldImportersDW (nello stesso o in istanze diverse di SQL Server)
+- SQL Server 2016 (o versione successiva) con i database WideWorldImporters e WideWorldImportersDW (nello stesso o in diverse istanze di SQL Server)
 - SQL Server Management Studio
 - SQL Server 2016 Integration Services
-  - Assicurarsi di creare un catalogo di Integration Services. Per creare un catalogo di Integration Services, in Esplora oggetti di SQL Server Management Studio, fare doppio clic su **Integration Services**, quindi selezionare **aggiungere catalogo**. Lasciare le opzioni predefinite. Viene chiesto di abilitare SQLCLR e fornire una password.
+  - Assicurarsi di creare un catalogo di Integration Services. Per creare un catalogo di Integration Services, in Esplora oggetti di SQL Server Management Studio, fare doppio clic su **Integration Services**, quindi selezionare **Aggiungi catalogo**. Lasciare le opzioni predefinite. Richiesto per attivare SQLCLR e fornire una password.
 
 
 ## <a name="download"></a>Scarica
 
-Per la versione più recente dell'esempio, vedere [world wide-rilascio importers](http://go.microsoft.com/fwlink/?LinkID=800630). Scaricare il *ETL.ispac giornaliero* file del pacchetto Integration Services.
+Per la versione più recente dell'esempio, vedere [wide-world-importers-rilascio](http://go.microsoft.com/fwlink/?LinkID=800630). Scaricare il *ETL.ispac giornaliero* file del pacchetto Integration Services.
 
-Per il codice sorgente ricreare il database di esempio, vedere [wide mondo](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl).
+Per il codice sorgente ricreare il database di esempio, vedere [wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl).
 
 ## <a name="install"></a>Install
 
 1. Distribuire il pacchetto di Integration Services:
-   1. In Esplora risorse, aprire il *ETL.ispac giornaliero* pacchetto. Verrà avviata la distribuzione guidata di SQL Server Integration Services.
+   1. In Windows Explorer, aprire il *ETL.ispac giornaliero* pacchetto. Verrà avviata la distribuzione guidata di SQL Server Integration Services.
    2. Sotto **Seleziona origine**, seguono le impostazioni predefinite per la distribuzione del progetto, con il percorso che punta al *ETL.ispac giornaliero* pacchetto.
-   3. Sotto **Seleziona destinazione**, immettere il nome del server che ospita il catalogo di Integration Services.
-   4. Selezionare un percorso del catalogo di Integration Services, ad esempio, in una nuova cartella denominata *WideWorldImporters*.
+   3. Sotto **selezionare la destinazione**, immettere il nome del server che ospita il catalogo di Integration Services.
+   4. Selezionare un percorso all'interno del catalogo di Integration Services, ad esempio, in una nuova cartella denominata *WideWorldImporters*.
    5. Selezionare **Distribuisci** per completare la procedura guidata.
 
 2. Creare un processo di SQL Server Agent per il processo ETL:
-   1. In Management Studio, fare doppio clic su **SQL Server Agent**, quindi selezionare **New** > **processo**.
-   2. Immettere un nome, ad esempio *WideWorldImporters ETL*.
+   1. In Management Studio, fare doppio clic **SQL Server Agent**, quindi selezionare **New** > **processo**.
+   2. Immettere un nome, ad esempio, *WideWorldImporters ETL*.
    3. Aggiungere un **passaggio processo** del tipo **pacchetto SQL Server Integration Services**.
    4. Selezionare il server contenente il catalogo di Integration Services e quindi selezionare il *ETL giornaliera* pacchetto.
-   5. Sotto **Configuration** > **Gestioni**, assicurarsi che le connessioni all'origine e destinazione siano configurate correttamente. Il valore predefinito è per la connessione all'istanza locale.
+   5. Sotto **Configuration** > **gestioni connessioni**, assicurarsi che le connessioni all'origine e destinazione siano configurate correttamente. Il valore predefinito è per la connessione all'istanza locale.
    6. Selezionare **OK** per creare il processo.
 
-3. Eseguire o pianificare il processo.
+3. Pianificare il processo di esecuzione.

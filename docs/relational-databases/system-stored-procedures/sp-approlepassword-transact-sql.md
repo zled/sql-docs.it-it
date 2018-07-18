@@ -1,5 +1,5 @@
 ---
-title: sp_approlepassword (Transact-SQL) | Documenti Microsoft
+title: sp_approlepassword (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 51ccbeb8487739d69e31c39d7bad9a0d8d11233d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237404"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049598"
 ---
 # <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
  Nome del ruolo applicazione. *ruolo* viene **sysname**, non prevede alcun valore predefinito. *ruolo* deve esistere nel database corrente.  
   
  [  **@newpwd =** ] **'***password***'**  
- Nuova password per il ruolo applicazione. *password* viene **sysname**, non prevede alcun valore predefinito. *password* non può essere NULL.  
+ Nuova password per il ruolo applicazione. *la password* viene **sysname**, non prevede alcun valore predefinito. *password* non può essere NULL.  
   
 > [!IMPORTANT]  
 >  Non utilizzare una password NULL. Usare una password complessa. Per altre informazioni, vedere [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
@@ -59,7 +59,7 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_approlepassword** non può essere eseguita all'interno di una transazione definita dall'utente.  
   
 ## <a name="permissions"></a>Autorizzazioni  

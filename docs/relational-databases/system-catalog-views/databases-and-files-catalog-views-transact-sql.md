@@ -1,5 +1,5 @@
 ---
-title: File e database (Transact-SQL) di viste del catalogo | Documenti Microsoft
+title: Database e file di catalogo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1f5c76077af1743e58e250f3bc57e20d86b573de
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177510"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049749"
 ---
 # <a name="databases-and-files-catalog-views-transact-sql"></a>Viste del catalogo di database e file (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

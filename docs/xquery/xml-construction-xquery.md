@@ -1,5 +1,5 @@
 ---
-title: Costruzione di strutture XML (XQuery) | Documenti Microsoft
+title: Costruzione di strutture XML (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -30,33 +30,33 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 66dc8917b0fa80c79d385dafb4bfb4c4c96c4127
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077725"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995143"
 ---
 # <a name="xml-construction-xquery"></a>Costruzione di strutture XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  In XQuery, è possibile utilizzare il **diretto** e **calcolata** costruttori per costruire strutture XML all'interno di una query.  
+  In XQuery, è possibile usare la **diretto** e **calcolata** costruttori per la costruzione di strutture XML all'interno di una query.  
   
 > [!NOTE]  
->  Non vi è alcuna differenza tra il **diretto** e **calcolata** costruttori.  
+>  Non c'è alcuna differenza tra il **diretto** e **calcolata** costruttori.  
   
 ## <a name="using-direct-constructors"></a>Utilizzo dei costruttori diretti  
  Quando si utilizzano i costruttori diretti, nella costruzione delle strutture XML si specifica una sintassi in stile XML. Negli esempi seguenti viene illustrata la costruzione delle strutture XML mediante i costruttori diretti.  
   
 ### <a name="constructing-elements"></a>Costruzione di elementi  
- Con le annotazioni XML è possibile costruire elementi. Nell'esempio seguente viene utilizzata l'espressione del costruttore diretto di elementi e crea un \<ProductModel > elemento. L'elemento costruito dispone di tre elementi figlio  
+ Con le annotazioni XML è possibile costruire elementi. Nell'esempio seguente usa l'espressione del costruttore diretto di elementi e crea un \<ProductModel > elemento. L'elemento costruito dispone di tre elementi figlio  
   
 -   Un nodo di testo.  
   
--   Due nodi elemento, \<riepilogo > e \<funzionalità >.  
+-   Due nodi elemento, \<Summary > e \<funzionalità >.  
   
-    -   Il \<riepilogo > elemento dispone di un nodo di testo figlio il cui valore è "Some description".  
+    -   Il \<Summary > elemento ha un nodo di testo figlio il cui valore è "Some description".  
   
-    -   Il \<funzionalità > elemento dispone di tre nodi elemento figlio, \<colore >, \<peso >, e \<garanzia >. Ognuno di questi nodi ha un nodo di testo figlio. I valori dei nodi sono rispettivamente "Red", "25" e "2 years parts and labor".  
+    -   Il \<funzionalità > elemento dispone di tre nodi elemento figlio, \<colore >, \<peso >, e \<Warranty >. Ognuno di questi nodi ha un nodo di testo figlio. I valori dei nodi sono rispettivamente "Red", "25" e "2 years parts and labor".  
   
 ```  
 declare @x xml;  
@@ -86,7 +86,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Anche se la costruzione di elementi da espressioni costanti, come illustrato in questo esempio, può risultare utile, il punto forte di questa caratteristica del linguaggio XQuery è costituito dalla possibilità di costruire strutture XML che estraggono i dati da un database in modo dinamico. È possibile utilizzare le parentesi graffe per specificare le espressioni di query. Nel codice XML risultante l'espressione viene sostituita dal relativo valore. Ad esempio, la query seguente crea un elemento <`NewRoot`> con un elemento figlio (<`e`>). Il valore dell'elemento <`e`> viene calcolato specificando un'espressione di percorso all'interno delle parentesi graffe ("{... }").  
+ Anche se la costruzione di elementi da espressioni costanti, come illustrato in questo esempio, può risultare utile, il punto forte di questa caratteristica del linguaggio XQuery è costituito dalla possibilità di costruire strutture XML che estraggono i dati da un database in modo dinamico. È possibile utilizzare le parentesi graffe per specificare le espressioni di query. Nel codice XML risultante l'espressione viene sostituita dal relativo valore. Ad esempio, la query seguente crea un elemento <`NewRoot`> con un elemento figlio (<`e`>). Il valore dell'elemento <`e`> viene calcolato specificando un'espressione di percorso fra parentesi graffe ({..." }").  
   
 ```  
 DECLARE @x xml;  
@@ -106,7 +106,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- La query successiva è simile alla precedente. Tuttavia, l'espressione fra parentesi graffe specifica il **data ()** funzione per recuperare il valore atomico del <`root`> elemento e lo assegna all'elemento costruito <`e`>.  
+ La query successiva è simile alla precedente. Tuttavia, l'espressione fra parentesi graffe specifica la **data ()** funzione per recuperare il valore atomico del <`root`> elemento e lo assegna all'elemento costruito, <`e`>.  
   
 ```  
 DECLARE @x xml;  
@@ -250,7 +250,7 @@ This is product model catalog description.
   
  Quando si costruisce un attributo è possibile specificarne il valore mediante un'espressione fra parentesi graffe. In questo caso, il valore dell'espressione viene restituito come valore dell'attributo.  
   
- Nell'esempio seguente, il **data ()** funzione non è strettamente necessaria. Poiché si sta assegnando il valore dell'espressione a un attributo, **data ()** viene applicata in modo implicito per recuperare il valore tipizzato dell'espressione specificata.  
+ Nell'esempio seguente, il **data ()** funzione non è strettamente necessaria. Poiché si sta assegnando il valore dell'espressione a un attributo **data ()** viene applicata in modo implicito per recuperare il valore tipizzato dell'espressione specificata.  
   
 ```  
 DECLARE @x xml;  
@@ -322,7 +322,7 @@ where ProductModelID=7;
         <a attr="Item 5" />  
         ```  
   
-    -   Utilizzare il [funzione concat](../xquery/functions-on-string-values-concat.md) per concatenare le due argomenti della stringa in valore di attributo risultante:  
+    -   Usare la [Concat-funzione](../xquery/functions-on-string-values-concat.md) per concatenare i due argomenti stringa in valore di attributo risultante:  
   
         ```  
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
@@ -352,7 +352,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     Se si applica il **data ()** funzione, la query funziona, poiché recupera il valore atomico dell'espressione, `/x`, che è concatenato alla stringa. Quella che segue è una sequenza di valori atomici:  
+     Se si applica il **data ()** funzione, la query funziona, poiché recupera il valore atomico dell'espressione, `/x`, che è concatenato la stringa. Quella che segue è una sequenza di valori atomici:  
   
     ```  
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
@@ -490,7 +490,7 @@ This is the result:
 ### <a name="xml-construction-and-white-space-handling"></a>Costruzione di strutture XML e gestione degli spazi vuoti  
  Il contenuto dell'elemento nella costruzione di strutture XML può includere spazi vuoti. Tali spazi vengono gestiti come descritto di seguito:  
   
--   I caratteri di spazio vuoto nello spazio dei nomi URI vengono trattati come il tipo XSD **anyURI**. Nello specifico:  
+-   I caratteri spazi vuoti nello spazio dei nomi URI vengono considerati come il tipo XSD **anyURI**. Nello specifico:  
   
     -   Gli spazi vuoti iniziali e finali vengono rimossi.  
   
@@ -552,7 +552,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>Altri costruttori XML diretti  
  I costruttori per le istruzioni di elaborazione e i commenti XML utilizzano la stessa sintassi del costrutto XML corrispondente. Sono inoltre supportati costruttori calcolati per i nodi di testo, ma vengono utilizzati principalmente nel linguaggio XML DML per la costruzione di nodi di testo.  
   
- **Nota** per un esempio dell'utilizzo di un costruttore di nodi di testo esplicito, vedere l'esempio specifico in [insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
+ **Nota** per un esempio dell'uso di un costruttore di nodi di testo esplicito, vedere l'esempio specifico in [insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
  Nella query seguente il costrutto XML include un elemento, due attributi, un commento e un'istruzione di elaborazione. Si noti che prima di <`FirstLocation`> viene utilizzata una virgola, perché si sta costruendo una sequenza.  
   
@@ -589,7 +589,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>Utilizzo dei costruttori calcolati  
- tramite tabelle annidate. In questo caso si specificano le parole chiave che identificano il tipo di nodo da costruire. Sono supportate solo le parole chiave seguenti:  
+ , In questo caso si specificano le parole chiave che identificano il tipo di nodo da costruire. Sono supportate solo le parole chiave seguenti:  
   
 -   element  
   
@@ -640,7 +640,7 @@ text{"Some text "},
   
  Si noti che i costruttori di nodi e attributi calcolati, come definiti nella specifica XQuery, consentono il calcolo dei nomi dei nodi. Quando si utilizzano i costruttori diretti in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è necessario specificare i nomi dei nodi, ad esempio elemento e attributo, come valori letterali costanti. Non esistono pertanto differenze fra costruttori di elementi e attributi diretti e calcolati.  
   
- Nell'esempio seguente, il contenuto dei nodi costruiti viene ottenuto da istruzioni di produzione XML archiviate nella colonna Instructions del **xml** il tipo di dati nella tabella ProductModel.  
+ Nell'esempio seguente, il contenuto dei nodi costruiti viene ottenuto da istruzioni di produzione XML archiviate nella colonna Instructions della **xml** tipo di dati della tabella ProductModel.  
   
 ```  
 SELECT Instructions.query('  

@@ -1,5 +1,5 @@
 ---
-title: Sequenza di espressioni (XQuery) | Documenti Microsoft
+title: Sequenza di espressioni (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 34c26b529aeaee5e9f80ecc0a1a07d3cb8cedbf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076998"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048739"
 ---
 # <a name="sequence-expressions-xquery"></a>Espressioni di sequenze (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Esempio C  
- La query seguente viene specificata sulla colonna AdditionalContactInfo del **xml** tipo della tabella Contact. In questa colonna sono archiviate le informazioni aggiuntive sul contatto, ad esempio numeri di telefono aggiuntivi, numeri di cercapersone e indirizzi. Il \<telephoneNumber >, \<cercapersone >, e gli altri nodi possono trovarsi in qualsiasi punto del documento. La query costruisce una sequenza che contiene tutti i \<telephoneNumber > figli del nodo di contesto, seguiti dal \<cercapersone > elementi figlio. Si noti che nell'espressione restituita, `($a//act:telephoneNumber, $a//act:pager)`, viene utilizzato l'operatore di sequenza virgola.  
+ La query seguente viene specificata sulla colonna AdditionalContactInfo del **xml** tipo della tabella Contact. In questa colonna sono archiviate le informazioni aggiuntive sul contatto, ad esempio numeri di telefono aggiuntivi, numeri di cercapersone e indirizzi. Il \<telephoneNumber >, \<pager >, e altri nodi possono essere visualizzati in qualsiasi punto del documento. La query costruisce una sequenza che contiene tutti i \<telephoneNumber > gli elementi figlio del nodo di contesto, seguita dal \<cercapersone > gli elementi figlio. Si noti che nell'espressione restituita, `($a//act:telephoneNumber, $a//act:pager)`, viene utilizzato l'operatore di sequenza virgola.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -175,7 +175,7 @@ SELECT @x.query('/root/a[@attrA]')
 <a attrA="1">111</a>  
 ```  
   
- Per ulteriori informazioni su come specificare predicati in un'espressione di percorso, vedere [specifica di predicati in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-predicates.md).  
+ Per altre informazioni su come specificare predicati in un'espressione di percorso, vedere [specifica di predicati in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-predicates.md).  
   
  Nell'esempio seguente viene compilata un'espressione di sequenza dei sottoalberi e quindi viene applicato un filtro alla sequenza.  
   

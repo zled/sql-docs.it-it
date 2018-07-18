@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247164"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049549"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,12 +62,12 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_delete_maintenance_plan_db** deve essere eseguita la **msdb** database.  
   
- Il **sp_delete_maintenance_plan_db** stored procedure rimuove l'associazione tra il piano di manutenzione e il database specificato; non rimuove né elimina il database.  
+ Il **sp_delete_maintenance_plan_db** stored procedure rimuove l'associazione tra il piano di manutenzione e il database specificato, ma non eliminare o Elimina il database.  
   
- Quando **sp_delete_maintenance_plan_db** rimuove l'ultimo database dal piano di manutenzione, la stored procedure elimina anche il piano di manutenzione.  
+ Quando **sp_delete_maintenance_plan_db** rimozione dell'ultimo database dal piano di manutenzione, la stored procedure elimina anche il piano di manutenzione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_delete_maintenance_plan_db**.  
