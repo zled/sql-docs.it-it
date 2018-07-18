@@ -44,7 +44,7 @@ ADO per Windows Foundation Classes (ADO/WFC) si basa sul modello di eventi ADO e
   
      Il primo argomento del **ConnectionEventHandler** costruttore è un riferimento alla classe che contiene il gestore dell'evento denominato nel secondo argomento.  
   
-3.  Aggiungere il gestore eventi per un elenco di gestori designati per l'elaborazione di un particolare tipo di evento. Utilizzare il metodo con un nome, ad esempio **addOn * * * EventName*(*gestore*).  
+3.  Aggiungere il gestore eventi per un elenco di gestori designati per l'elaborazione di un particolare tipo di evento. Utilizzare il metodo con un nome, ad esempio **addOn** *EventName*(*gestore*).  
   
 4.  Internamente, ADO/WFC implementa tutti i gestori di eventi di ADO. Pertanto, un evento è causato da un **connessione** o **Recordset** operazione viene intercettata da un gestore eventi ADO/WFC.  
   
@@ -62,7 +62,7 @@ ADO per Windows Foundation Classes (ADO/WFC) si basa sul modello di eventi ADO e
   
 6.  Restituito dal gestore eventi per il gestore di ADO/WFC per l'evento di ADO. ADO/WFC copia i membri di dati dell'evento ADO/WFC pertinenti ai parametri dell'evento ADO e restituisce quindi il gestore dell'evento ADO.  
   
-7.  Quando si è terminato l'elaborazione, rimuovere il gestore dall'elenco di gestori di eventi ADO/WFC. Utilizzare il metodo con un nome, ad esempio **removeOn * * * EventName*(*gestore*).  
+7.  Quando si è terminato l'elaborazione, rimuovere il gestore dall'elenco di gestori di eventi ADO/WFC. Utilizzare il metodo con un nome, ad esempio **removeOn** *EventName*(*gestore*).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riepilogo dei gestori di eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
