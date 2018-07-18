@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dei messaggi | Documenti Microsoft
+title: Mediante i messaggi | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,17 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6d1b0f54854c6eebcbdfdf28d93e7df700cf4eb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037849"
 ---
 # <a name="using-messages"></a>Utilizzo di messaggi
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In SMO i messaggi di sistema sono rappresentati dal <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> oggetto a cui appartiene il **Server** oggetto. Poiché i messaggi di sistema non possono essere modificati, **SystemMessage** proprietà dell'oggetto sono di sola lettura.  
+  In SMO i messaggi di sistema sono rappresentati dal <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> oggetto a cui appartiene la **Server** oggetto. Poiché i messaggi di sistema non possono essere modificati, **SystemMessage** proprietà dell'oggetto sono di sola lettura.  
   
- In SMO i messaggi definiti dall'utente sono rappresentati a livello di codice dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection>. È possibile individuare i messaggi definiti dall'utente esistenti scorrendo la raccolta. Nuovi messaggi definiti dall'utente possono essere creati creando un nuovo **UserDefinedMessage** oggetto e impostando le proprietà appropriate.  
+ In SMO i messaggi definiti dall'utente sono rappresentati a livello di codice dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection>. È possibile individuare i messaggi definiti dall'utente esistenti scorrendo la raccolta. I nuovi messaggi definiti dall'utente possono essere creati da un'istanza di un nuovo **UserDefinedMessage** oggetto e impostando le proprietà appropriate.  
   
 ## <a name="examples"></a>Esempi  
  Per gli esempi di codice seguenti, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

@@ -1,34 +1,23 @@
 ---
 title: Head (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- HEAD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Head function
-ms.assetid: 2a909bda-1366-4537-93b0-c089554fc11f
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b0e25718c55dbe433bd34438b459aed31b2097f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 05cfcb3c23a0369f010b8440d4a27e94ffacdb21
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740480"
 ---
 # <a name="head-mdx"></a>Head (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Restituisce il primo numero specificato di elementi in un set, mantenendo i duplicati.  
   
@@ -43,10 +32,10 @@ Head(Set_Expression [ ,Count ] )
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Count*  
+ *Conteggio*  
  Espressione numerica valida che specifica il numero di tuple che devono essere restituite.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **Head** funzione restituisce il numero di tuple specificato dall'inizio del set specificato. L'ordine degli elementi viene mantenuto. Il valore predefinito di Count è 1. Se il numero specificato di tuple è minore di 1, il **Head** funzione restituisce un set vuoto. Se il numero di tuple specificato supera il numero di tuple nel set, la funzione restituisce il set originale.  
   
 ## <a name="example"></a>Esempio  
@@ -71,6 +60,6 @@ FROM [Adventure Works]
  [Elemento &#40;tupla&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
  [Elemento &#40;membro&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
  [Numero di dimensioni &#40;MDX&#41;](../mdx/rank-mdx.md)   
- [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

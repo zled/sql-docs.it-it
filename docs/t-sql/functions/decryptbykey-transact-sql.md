@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,19 +21,20 @@ helpviewer_keywords:
 - DECRYPTBYKEY function
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 57a2175b3c4096ab9af7203d7f7d3733947f8e78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61e984a45f2f5a7b2d675ec574fda255c4747642
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783062"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Decrittografa i dati tramite una chiave simmetrica.  
+Questa funzione usa una chiave simmetrica per decrittografare i dati.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,38 +47,36 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *ciphertext*  
- Dati crittografati con la chiave. *ciphertext* è di tipo **varbinary**.  
+*ciphertext*  
+Variabile di tipo **varbinary** contenente dati crittografati con la chiave.  
   
- **@ciphertext**  
- Variabile di tipo **varbinary** contenente dati crittografati con la chiave.  
+**@ciphertext**  
+Variabile di tipo **varbinary** contenente dati crittografati con la chiave.  
   
  *add_authenticator*  
- Indica se un autenticatore è stato crittografato insieme al testo normale. Deve corrispondere al valore passato a EncryptByKey durante la crittografia dei dati. *add_authenticator* è di tipo **int**.  
+Indica se il processo di crittografia originale includeva e crittografava un autenticatore insieme al testo non crittografato. Deve corrispondere al valore passato a [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) durante il processo di crittografia dei dati. *add_authenticator* ha un tipo di dati **int**.  
   
  *authenticator*  
- Dati da cui generare un autenticatore. Deve corrispondere al valore specificato per EncryptByKey. *authenticator* è di tipo **sysname**.  
-  
- **@authenticator**  
- Variabile contenente i dati da cui generare un autenticatore. Deve corrispondere al valore specificato per EncryptByKey.  
-  
+Dati usati come base per la generazione dell'autenticatore. Deve corrispondere al valore specificato per [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* ha un tipo di dati **sysname**.  
+
+**@authenticator**  
+Variabile contenente i dati dai quali derivare un autenticatore. Deve corrispondere al valore specificato per [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* ha un tipo di dati **sysname**.  
+
 ## <a name="return-types"></a>Tipi restituiti  
- **varbinary** con un valore massimo di 8.000 byte.
- 
-Restituisce NULL se la chiave simmetrica usata per crittografare i dati non è aperta o *ciphertext* è NULL.
+**varbinary** con un valore massimo di 8.000 byte. `DECRYPTBYKEY` restituisce NULL se la chiave simmetrica usata per crittografare i dati non è aperta o se *ciphertext* è NULL.  
   
 ## <a name="remarks"></a>Remarks  
- DecryptByKey usa una chiave simmetrica. Tale chiave deve essere già aperta nel database. È possibile che siano presenti più chiavi aperte contemporaneamente. Non è necessario aprire la chiave prima di decrittografare il testo definito dall'argomento ciphertext.  
+`DECRYPTBYKEY` usa una chiave simmetrica. Il database deve avere la chiave simmetrica già aperta. `DECRYPTBYKEY` consente di avere più chiavi aperte contemporaneamente. Non è necessario aprire la chiave subito prima di decrittografare il testo crittografato.  
   
- La crittografia e decrittografia simmetriche sono operazioni relativamente veloci, ideali per operazioni basate su quantità elevate di dati.  
+La crittografia e la decrittografia simmetriche in genere operano in modo relativamente rapido e funzionano anche per le operazioni che includono volumi di dati di grandi dimensioni.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È necessario che la chiave simmetrica sia stata aperta durante la sessione corrente. Per altre informazioni, vedere [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+La chiave simmetrica deve essere già aperta nella sessione corrente. Per altre informazioni, vedere [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. Decrittografia di dati tramite una chiave simmetrica  
- Nell'esempio seguente il testo definito dall'argomento ciphertext viene decrittografato tramite una chiave simmetrica.  
+In questo esempio viene decrittografato il testo crittografato con una chiave simmetrica.  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data.  
@@ -98,7 +96,7 @@ GO
 ```  
   
 ### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>B. Decrittografia di dati tramite una chiave simmetrica e un hash di autenticazione  
- Nell'esempio seguente vengono decrittografati i dati crittografati insieme a un autenticatore.  
+In questo esempio vengono decrittografati i dati originariamente crittografati insieme a un autenticatore.  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data  

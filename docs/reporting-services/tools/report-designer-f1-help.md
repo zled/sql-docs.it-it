@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029268"
 ---
 # <a name="report-designer-f1-help"></a>Guida sensibile al contesto di Progettazione report
   In questa sezione è inclusa la Guida relativa alle procedure guidate, alle visualizzazioni e alle finestre di dialogo di Progettazione report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]. In alternativa, è possibile accedere alla Guida durante l'utilizzo della finestra di dialogo premendo F1 o facendo clic sul pulsante ? visualizzato nella finestra di dialogo.  

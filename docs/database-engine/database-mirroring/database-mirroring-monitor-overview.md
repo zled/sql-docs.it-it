@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -19,11 +18,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 613c588ff3807aa767b9702a56edabeb1001fa42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a8219948f4d1673d5e7b7b45882c89db0580609
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311950"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Panoramica di Monitoraggio mirroring del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  *\<Stato>*  
  Gli stati possibili e le relative icone sono indicati di seguito:  
   
-|Icona|Stato|Description|  
+|Icona|Stato|Descrizione|  
 |----------|------------|-----------------|  
 |Icona avviso|**Unknown**|Il monitoraggio non è connesso ad alcun partner. Le uniche informazioni disponibili sono relative agli elementi memorizzati nella cache dal monitoraggio.|  
 |Icona avviso|**Sincronizzazione in corso**|La posizione del contenuto del database mirror precede quella del database principale. L'istanza del server principale invia record di log all'istanza del server mirror, che applica le modifiche al database mirror per eseguirne il rollforward.<br /><br /> All'avvio della sessione di mirroring del database, i database mirror e principale sono in questo stato.|  
@@ -91,14 +91,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="action-menu"></a>Menu Azione  
  Il menu **Azione** include sempre i comandi seguenti:  
   
-|Comando|Description|  
+|Comando|Descrizione|  
 |-------------|-----------------|  
 |**Registra database con mirroring...**|Apre la finestra di dialogo **Registra database con mirroring** . Utilizzare questa finestra di dialogo per registrare uno o più database con mirroring su una determinata istanza del server aggiungendo il database o i database a Monitoraggio mirroring del database. Quando viene aggiunto un database, Monitoraggio mirroring del database memorizza nella cache le informazioni relative al database, ai suoi partner e alla modalità di connessione a questi ultimi.|  
 |**Gestione connessioni a istanze server…**|Selezionare questo comando per accedere alla finestra di dialogo **Gestione connessioni a istanze server** , nella quale è possibile scegliere un'istanza del server per la quale specificare le credenziali da utilizzare nel monitoraggio per la connessione a un determinato partner.<br /><br /> Per modificare le credenziali per un partner, trovare la relativa voce nella griglia **Istanze server** e fare clic su **Modifica** nella riga corrispondente. Verrà visualizzata la finestra di dialogo **Connetti al server** con il nome corretto dell'istanza del server e i controlli delle credenziali inizializzati sul valore attualmente memorizzato nella cache. Modificare le informazioni di autenticazione in base alle esigenze e fare clic su **Connetti**. Se le credenziali hanno privilegi sufficienti, la colonna **Connetti tramite** viene aggiornata con le nuove credenziali.|  
   
  Se si seleziona un database, il menu **Azione** include anche i comandi seguenti.  
   
-|Comando|Description|  
+|Comando|Descrizione|  
 |-------------|-----------------|  
 |**Annulla registrazione del database**|Consente di rimuovere il database selezionato da Monitoraggio mirroring del database.|  
 |**Imposta valori soglia avvisi…**|Aprire la finestra di dialogo **Imposta valori di soglia avvisi** , nella quale un amministratore di sistema può abilitare o disabilitare gli avvisi per il database su ogni partner e modificare la soglia di ogni avviso. È consigliabile impostare una soglia per un determinato avviso su entrambi i partner per assicurare che l'avviso venga mantenuto in caso di failover del database. La soglia appropriata per ogni partner dipende dalle capacità in termini di prestazioni del sistema di tale partner.<br /><br /> Un evento viene scritto nel log eventi per una prestazione solo se il relativo valore è uguale o superiore alla relativa soglia quando la tabella dello stato è in fase di aggiornamento. Se un valore di picco raggiunge la soglia solo temporaneamente tra gli aggiornamenti di stato, tale picco non viene segnalato.|  

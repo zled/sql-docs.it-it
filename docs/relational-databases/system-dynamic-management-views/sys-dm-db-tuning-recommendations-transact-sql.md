@@ -1,6 +1,6 @@
 ---
 title: sys.dm_db_tuning_recommendations (Transact-SQL) | Microsoft Docs
-description: Informazioni su come trovare i potenziali problemi di prestazioni e soluzioni consigliate in SQL Server e Database SQL di Azure
+description: Informazioni su come trovare potenziali problemi di prestazioni e consigliate le correzioni apportate in SQL Server e Database SQL di Azure
 ms.custom: ''
 ms.date: 07/20/2017
 ms.prod: sql
@@ -26,74 +26,75 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 148c1d6573b0731b0b3dc4361dfafb8d98de7048
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ff9639268b4b7db33cd36f0cb6dc9d0407379ade
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997903"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Restituisce informazioni dettagliate su indicazioni di ottimizzazione.  
+  Restituisce informazioni dettagliate sui suggerimenti di ottimizzazione.  
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene esclusa tramite filtro.
 
-| **Nome colonna** | **Tipo di dati** | **Description** |
+| **Nome colonna** | **Data type** | **Descrizione** |
 | --- | --- | --- |
 | **name** | **nvarchar(4000)** | Nome univoco della raccomandazione. |
-| **type** | **nvarchar(4000)** | Il nome dell'opzione di ottimizzazione automatica che ha generato la raccomandazione, ad esempio, `FORCE_LAST_GOOD_PLAN` |
-| **reason** | **nvarchar(4000)** | Motivo fornita perché questa raccomandazione. |
-| **valido\_poiché** | **datetime2** | Questa indicazione è stata generata la prima volta. |
-| **ultimo\_Aggiorna** | **datetime2** | Questa indicazione è stata generata l'ultima volta. |
-| **state** | **nvarchar(4000)** | Documento JSON che descrive lo stato dell'indicazione. Sono disponibili i seguenti campi:<br />-   `currentValue` -stato corrente dell'indicazione.<br />-   `reason` – Costante che descrive perché la raccomandazione è nello stato corrente.|
-| **viene\_eseguibile\_azione** | **bit** | 1 = l'indicazione possa essere eseguita sul database tramite [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = la raccomandazione non possa essere eseguita sul database (ad esempio: indicazione di informazioni solo o ripristinato) |
-| **viene\_revertable\_azione** | **bit** | 1 = le indicazioni possono essere monitorate e ripristinate dal motore di Database automaticamente.<br />0 = la raccomandazione non può essere monitorata e ripristinata automaticamente. La maggior parte delle &quot;eseguibile&quot; azioni saranno &quot;revertable&quot;. |
-| **eseguire\_azione\_avviare\_ora** | **datetime2** | Viene applicata l'indicazione di Data. |
+| **type** | **nvarchar(4000)** | Il nome dell'opzione ottimizzazione automatica che ha generato la raccomandazione, ad esempio, `FORCE_LAST_GOOD_PLAN` |
+| **reason** | **nvarchar(4000)** | Motivo per cui è stata fornita questa raccomandazione. |
+| **valido\_poiché** | **datetime2** | La prima volta che è stata generata da questa raccomandazione. |
+| **ultimo\_Aggiorna** | **datetime2** | L'ora dell'ultima è stata generata questa raccomandazione. |
+| **state** | **nvarchar(4000)** | Documento JSON che descrive lo stato della raccomandazione. Sono disponibili i seguenti campi:<br />-   `currentValue` -stato corrente della raccomandazione.<br />-   `reason` – Costante che descrive il motivo per cui la raccomandazione è nello stato corrente.|
+| **viene\_eseguibile\_azione** | **bit** | 1 = la raccomandazione possa essere eseguita sul database tramite [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = la raccomandazione non possa essere eseguita sul database (ad esempio: raccomandazione ripristinato o solo informazioni) |
+| **viene\_revertable\_azione** | **bit** | 1 = la raccomandazione può essere monitorata e ripristinata dal motore di Database automaticamente.<br />0 = la raccomandazione non può essere monitorata e ripristinata automaticamente. La maggior parte degli &quot;eseguibile&quot; azioni saranno &quot;revertable&quot;. |
+| **eseguire\_azione\_avviare\_ora** | **datetime2** | Data che la raccomandazione viene applicata. |
 | **eseguire\_azione\_durata** | **time** | Durata dell'azione di esecuzione. |
-| **eseguire\_azione\_avviata\_da** | **nvarchar(4000)** | `User` = Utente obbligato manualmente piano nell'indicazione. <br /> `System` = Sistema applicata automaticamente raccomandazione. |
-| **eseguire\_azione\_avviata\_ora** | **datetime2** | È stato applicato l'indicazione di Data. |
-| **REVERT\_azione\_avviare\_ora** | **datetime2** | Data che l'indicazione è stata annullata. |
+| **eseguire\_azione\_avviato\_da** | **nvarchar(4000)** | `User` = Utente forzati manualmente piano nell'indicazione. <br /> `System` = Raccomandazione viene applicata automaticamente sistema. |
+| **eseguire\_azione\_avviato\_ora** | **datetime2** | Data che la raccomandazione è stata applicata. |
+| **REVERT\_azione\_avviare\_ora** | **datetime2** | Data che la raccomandazione è stata ripristinata. |
 | **REVERT\_azione\_durata** | **time** | Durata dell'azione di annullamento. |
-| **REVERT\_azione\_avviata\_da** | **nvarchar(4000)** | `User` = Piano consigliato manualmente unforced utente. <br /> `System` = Sistema ripristinato automaticamente raccomandazione. |
-| **REVERT\_azione\_avviata\_ora** | **datetime2** | Data che l'indicazione è stata annullata. |
-| **Punteggio** | **int** | Previsto valore/impatto di questa raccomandazione su 0-100 scala (più grande è preferibile) |
-| **Dettagli** | **nvarchar(max)** | Documento JSON che contiene ulteriori dettagli sulla raccomandazione. Sono disponibili i seguenti campi:<br /><br />`planForceDetails`<br />-    `queryId` -query\_id della query regredite.<br />-    `regressedPlanId` -plan_id del piano regredito.<br />-   `regressedPlanExecutionCount` -Numero di esecuzioni della query regredite piano prima la regressione è stata rilevata.<br />-    `regressedPlanAbortedCount` -Numero di errori rilevati durante l'esecuzione del piano regredito.<br />-    `regressedPlanCpuTimeAverage` -Tempo CPU medio utilizzato dalla query regredite prima che venga rilevata la regressione.<br />-    `regressedPlanCpuTimeStddev` -Deviazione Standard tempo della CPU utilizzato dalla query regredite prima la regressione è stata rilevata.<br />-    `recommendedPlanId` -plan_id del piano a cui deve essere forzato.<br />-   `recommendedPlanExecutionCount`-Numero di esecuzioni della query con il piano deve essere forzato prima che venga rilevata la regressione.<br />-    `recommendedPlanAbortedCount` -Numero di errori rilevati durante l'esecuzione del piano a cui deve essere forzato.<br />-    `recommendedPlanCpuTimeAverage` -Tempo CPU medio utilizzato dalla query eseguita con il piano che è necessario forzare (calcolato prima che venga rilevata la regressione).<br />-    `recommendedPlanCpuTimeStddev` Deviazione standard tempo della CPU utilizzato dalla query regredite prima la regressione è stata rilevata.<br /><br />`implementationDetails`<br />-  `method` -Il metodo che deve essere utilizzato per correggere la regressione. Valore è sempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script da eseguire per forzare l'utilizzo consigliato. |
+| **REVERT\_azione\_avviato\_da** | **nvarchar(4000)** | `User` = Piano consigliato manualmente forzatura utente. <br /> `System` = Sistema annullato automaticamente raccomandazione. |
+| **REVERT\_azione\_avviato\_ora** | **datetime2** | Data che la raccomandazione è stata ripristinata. |
+| **punteggio** | **int** | Previsto valore/o l'impatto di questa raccomandazione su 0-100 la scala (più grande è preferibile) |
+| **Dettagli** | **nvarchar(max)** | Documento JSON che contiene altri dettagli sulla raccomandazione. Sono disponibili i seguenti campi:<br /><br />`planForceDetails`<br />-    `queryId` -query\_id della query regredite.<br />-    `regressedPlanId` -plan_id del piano regredito.<br />-   `regressedPlanExecutionCount` -Numero di esecuzioni della query con piano con regressione prima la regressione viene rilevato.<br />-    `regressedPlanAbortedCount` -Numero di errori rilevati durante l'esecuzione del piano regredito.<br />-    `regressedPlanCpuTimeAverage` -Tempo CPU medio utilizzato dalla query regredite prima che la regressione viene rilevata.<br />-    `regressedPlanCpuTimeStddev` -Deviazione Standard di tempo della CPU utilizzato dalla query regredite prima la regressione è stata rilevata.<br />-    `recommendedPlanId` -plan_id del piano che deve essere forzato.<br />-   `recommendedPlanExecutionCount`: Numero di esecuzioni della query con il piano che deve essere forzato prima che la regressione viene rilevata.<br />-    `recommendedPlanAbortedCount` : Numero di errori rilevati durante l'esecuzione del piano che deve essere forzato.<br />-    `recommendedPlanCpuTimeAverage` -Tempo CPU medio utilizzato dalla query eseguita con il piano che deve essere forzato (calcolato prima che la regressione viene rilevata).<br />-    `recommendedPlanCpuTimeStddev` Deviazione standard di tempo della CPU utilizzato dalla query regredite prima la regressione è stata rilevata.<br /><br />`implementationDetails`<br />-  `method` -Il metodo che deve essere usato per risolvere la regressione. Valore è sempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script da eseguire per forzare il piano consigliato. |
   
-## <a name="remarks"></a>Osservazioni  
- Le informazioni restituite da `sys.dm_db_tuning_recommendations` viene aggiornato quando identifica potenziali regressione delle prestazioni di query motore di database e non è persistente. Indicazioni vengono mantenute solo fino al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato. Gli amministratori di database devono periodicamente copie di backup l'indicazione di ottimizzazione se desiderano mantenere, dopo il riciclo del server. 
+## <a name="remarks"></a>Note  
+ Le informazioni restituite da `sys.dm_db_tuning_recommendations` viene aggiornato quando identifica potenziali regressione delle prestazioni di query motore di database e non è persistente. Le raccomandazioni vengono mantenute solo fino al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato. Gli amministratori di database devono eseguire periodicamente copie di backup di indicazione di ottimizzazione se desiderano mantenere dopo il riciclo del server. 
 
  `currentValue` campo di `state` colonna potrebbe disporre i valori seguenti:
  | Stato | Description |
  |--------|-------------|
- | `Active` | Raccomandazione è attivo e non ancora applicate. È possibile eseguire script delle indicazioni ed eseguirlo manualmente. |
- | `Verifying` | Indicazione viene applicato dal [!INCLUDE[ssde_md](../../includes/ssde_md.md)] e processo di verifica interna consente di confrontare le prestazioni del piano forzato con il piano regredito. |
- | `Success` | Indicazione viene applicato correttamente. |
- | `Reverted` | Raccomandazione è annullata perché non esistono alcun miglioramenti significativi delle prestazioni. |
- | `Expired` | Raccomandazione è scaduto e non può essere applicato più. |
+ | `Active` | Raccomandazione è attiva e non ancora applicato. Utente può eseguire script indicazioni ed eseguirlo manualmente. |
+ | `Verifying` | La raccomandazione viene applicata da [!INCLUDE[ssde_md](../../includes/ssde_md.md)] e processo di verifica interne vengono confrontate le prestazioni del piano forzato con il piano con regressione. |
+ | `Success` | Raccomandazione viene applicata correttamente. |
+ | `Reverted` | Raccomandazioni verranno annullate perché non esistono Nessun miglioramenti significativi delle prestazioni. |
+ | `Expired` | Raccomandazione è scaduto e non può essere applicata più. |
 
-Il documento JSON in `state` colonna contiene il motivo che descrive perché è l'indicazione dello stato corrente. I valori nel campo motivo potrebbero essere: 
+Documento JSON in `state` colonna contiene il motivo per cui viene descritto il motivo per cui è l'indicazione dello stato corrente. I valori del campo motivo potrebbero essere: 
 
 | Motivo | Description |
 |--------|-------------|
-| `SchemaChanged` | Raccomandazione è scaduta perché lo schema di una tabella di riferimento viene modificato. |
-| `StatisticsChanged`| Indicazione scaduto a causa della modifica di statistiche in una tabella di riferimento. |
-| `ForcingFailed` | È possibile forzare il piano consigliato su una query. Trovare il `last_force_failure_reason` nel [Sys. query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) vista per individuare il motivo dell'errore. |
-| `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` opzione è disabilitata dall'utente durante il processo di verifica. Abilitare `FORCE_LAST_GOOD_PLAN` tramite [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) istruzione o il piano manualmente tramite lo script in vigore `[details]` colonna. |
-| `UnsupportedStatementType` | È possibile forzare piano sulla query. Esempi di query non supportate sono i cursori e `INSERT BULK` istruzione. |
-| `LastGoodPlanForced` | Indicazione viene applicato correttamente. |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identificare potenziali regressione delle prestazioni, ma la `FORCE_LAST_GOOD_PLAN` opzione non è abilitata: consente di visualizzare [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Abilitare o applicare manualmente indicazione `FORCE_LAST_GOOD_PLAN` opzione. |
-| `VerificationAborted`| Processo di verifica è interrotto a causa del riavvio o di pulizia dell'archivio Query. |
-| `VerificationForcedQueryRecompile`| Query viene ricompilata perché non comporta miglioramenti significativi delle prestazioni. |
-| `PlanForcedByUser`| Utente forzata manualmente il piano usando [sp_query_store_force_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) stored procedure. |
-| `PlanUnforcedByUser` | Utente manualmente annullare la forzatura dei utilizzando il piano [sp_query_store_unforce_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) stored procedure. |
+| `SchemaChanged` | Raccomandazione è scaduta perché lo schema di una tabella cui viene fatto riferimento viene modificato. |
+| `StatisticsChanged`| Indicazione scaduto a causa della modifica di statistiche in una tabella cui viene fatto riferimento. |
+| `ForcingFailed` | Non è possibile forzare il piano consigliato su una query. Trovare il `last_force_failure_reason` nella [Sys. query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) vista per individuare il motivo dell'errore. |
+| `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` opzione è disabilitata dall'utente durante il processo di verifica. Abilitare `FORCE_LAST_GOOD_PLAN` opzione usando [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) istruzione o forzare il piano manualmente usando lo script nel `[details]` colonne. |
+| `UnsupportedStatementType` | Non è possibile forzare il piano della query. Esempi di query non supportati sono i cursori e `INSERT BULK` istruzione. |
+| `LastGoodPlanForced` | Raccomandazione viene applicata correttamente. |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identificare potenziali regressione delle prestazioni, ma il `FORCE_LAST_GOOD_PLAN` opzione non è abilitata: consente di visualizzare [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Raccomandazione applicata manualmente o abilitare `FORCE_LAST_GOOD_PLAN` opzione. |
+| `VerificationAborted`| Processo di verifica viene interrotta a causa del riavvio o pulizia di Query Store. |
+| `VerificationForcedQueryRecompile`| Query viene ricompilata in quanto non vi è alcun miglioramento significativo delle prestazioni. |
+| `PlanForcedByUser`| Utente forzati manualmente usando il piano [sp_query_store_force_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) routine. |
+| `PlanUnforcedByUser` | Utente manualmente annullare la forzatura del piano tramite [sp_query_store_unforce_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) routine. |
 
- Statistiche della colonna dettagli non vengono visualizzate le statistiche di runtime piano (ad esempio, tempo CPU corrente). I dettagli della raccomandazione vengono acquisiti al momento del rilevamento di regressione e descrivere il motivo [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identificato regressione delle prestazioni. Utilizzare `regressedPlanId` e `recommendedPlanId` query [viste del catalogo di archivio Query](../../relational-databases/performance/how-query-store-collects-data.md) per trovare le statistiche piano esatto di runtime.
+ Statistiche nella colonna dei dettagli non vengono visualizzate le statistiche di runtime piano (ad esempio, tempo CPU corrente). I dettagli delle raccomandazioni vengono eseguiti al momento del rilevamento di regressione e una descrizione per questo motivo [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identificato regressione delle prestazioni. Uso `regressedPlanId` e `recommendedPlanId` alla query [viste del catalogo di Query Store](../../relational-databases/performance/how-query-store-collects-data.md) per trovare le statistiche di runtime esatta piano.
 
-## <a name="using-tuning-recommendations-information"></a>Utilizzando le informazioni indicazioni di ottimizzazione  
- Per ottenere lo script T-SQL che può risolvere il problema, è possibile utilizzare la query seguente:  
+## <a name="using-tuning-recommendations-information"></a>Usando le informazioni relative indicazioni di ottimizzazione  
+È possibile usare la query seguente per ottenere il [!INCLUDE[tsql](../../includes/tsql-md.md)] script che corregge il problema:  
  
-```
+```sql
 SELECT name, reason, score,
         JSON_VALUE(details, '$.implementationDetails.script') as script,
         details.* 
@@ -105,12 +106,12 @@ FROM sys.dm_db_tuning_recommendations
 WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
 ```
   
- Per ulteriori informazioni sulle funzioni JSON che può essere utilizzato per i valori di query nella vista raccomandazione, vedere [supporto JSON](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
+ Per altre informazioni sulle funzioni JSON che può essere utilizzato per i valori di query nella visualizzazione di indicazioni, vedere [and JSON Support](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
   
 ## <a name="permissions"></a>Autorizzazioni  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
 
 ## <a name="see-also"></a>Vedere anche  
  [L'ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md)   

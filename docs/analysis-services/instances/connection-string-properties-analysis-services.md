@@ -1,5 +1,5 @@
 ---
-title: Proprietà della stringa di connessione (Analysis Services) | Documenti Microsoft
+title: Proprietà della stringa di connessione (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,15 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bca184686c34d204958cf44cb53289b7c07a4a9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 24f7302b94477b76b161be184cd27839f8516564
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994973"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Proprietà delle stringhe di connessione (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  In questo argomento vengono illustrate le proprietà delle stringhe di connessione che è possibile impostare in uno degli strumenti di progettazione o di amministrazione o trovare nelle stringhe di connessione create dalle applicazioni client che si connettono ai dati di Analysis Services ed eseguono query su di essi. Viene pertanto preso in considerazione solo un subset delle proprietà disponibili. L'elenco completo include numerose proprietà del server e del database attraverso cui è possibile personalizzare una connessione per un'applicazione specifica indipendentemente dal tipo di configurazione dell'istanza o del database nel server.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  Questo argomento descrive le proprietà di stringa di connessione potrebbe essere impostato in uno degli strumenti di progettazione o di amministrazione o trovare nelle stringhe di connessione create da query dei dati di Analysis Services e applicazioni client che si connettono a. Viene pertanto preso in considerazione solo un subset delle proprietà disponibili. L'elenco completo include numerose proprietà del server e del database attraverso cui è possibile personalizzare una connessione per un'applicazione specifica indipendentemente dal tipo di configurazione dell'istanza o del database nel server.  
   
  È consigliabile che gli sviluppatori responsabili della compilazione di stringhe di connessione nel codice delle applicazioni consultino la documentazione dell'API per client ADOMD.NET in cui è disponibile un elenco più dettagliato: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
@@ -33,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 |Proprietà|Description|Esempio|  
 |--------------|-----------------|-------------|  
-|**Data Source** o **DataSource**|Specifica l'istanza del server. Questa proprietà è obbligatoria per tutte le connessioni. I valori validi includono il nome di rete o l'indirizzo IP del server, local o localhost per le connessioni locali, l'URL se il server è configurato per l'accesso HTTP o HTTPS oppure il nome di un file di cubo locale (con estensione cub).|`Data source=AW-SRV01` per l'istanza e la porta predefinite (TCP 2383).<br /><br /> `Data source=AW-SRV01$Finance:8081` per un'istanza denominata ($Finance) e una porta fissa.<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` per un nome di dominio completo, presupponendo che si utilizzino l'istanza e la porta predefinite.<br /><br /> `Data source=172.16.254.1` per un indirizzo IP del server in modo da ignorare la ricerca nel server DNS, utile per la risoluzione dei problemi di connessione.|  
+|**Data Source** o **DataSource**|Specifica l'istanza del server. Questa proprietà è obbligatoria per tutte le connessioni. I valori validi includono il nome di rete o l'indirizzo IP del server, local o localhost per le connessioni locali, l'URL se il server è configurato per l'accesso HTTP o HTTPS oppure il nome di un file di cubo locale (con estensione cub). <br /><br /> Valore valido per Azure Analysis Services, `<protocol>://<region>/<servername>` dove protocol è stringa asazure, region è l'Uri in cui è stato creato il server (ad esempio westus.asazure.windows.net) e servername è il nome del server univoco all'interno dell'area. |`Data source=asazure://westus.asazure.windows.net/myasserver`<br /><br />`Data source=AW-SRV01` per l'istanza e la porta predefinite (TCP 2383).<br /><br /> `Data source=AW-SRV01$Finance:8081` per un'istanza denominata ($Finance) e una porta fissa.<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` per un nome di dominio completo, presupponendo che si utilizzino l'istanza e la porta predefinite.<br /><br /> `Data source=172.16.254.1` per un indirizzo IP del server in modo da ignorare la ricerca nel server DNS, utile per la risoluzione dei problemi di connessione.|  
 |**Initial Catalog** o **Catalog**|Specifica il nome del database di Analysis Services a cui connettersi. Il database deve essere distribuito in Analysis Services e l'utente deve disporre delle autorizzazioni necessarie per la connessione. Questa proprietà è facoltativa per le connessioni AMO, ma obbligatoria per ADOMD.NET.|`Initial catalog=AdventureWorks2016`|  
 |**Provider**|I valori validi includono MSOLAP. \<versione >, dove \<versione > è 4, 5, 6 o 7.<br /><br /> -   MSOLAP. 4 rilasciato in SQL Server 2008 e nuovamente in SQL Server 2008 R2. Il nome file è msolap100. dll per SQL Server 2008 e 2008 R2<br />-   MSOLAP.5 rilasciato in SQL Server 2012. Il nome file è msolap110.dll<br />-   MSOLAP.6 rilasciato in SQL Server 2014. Il nome file è msolap1200.dll<br />-   MSOLAP.7 rilasciato in SQL Server 2016. Il nome file è msolap130.dll<br /><br /> Questa proprietà è facoltativa. Per impostazione predefinita, le librerie client leggono la versione corrente del provider OLE DB dal Registro di sistema. È necessario impostare questa proprietà solo se occorre una versione specifica del provider di dati, ad esempio per la connessione a un'istanza di SQL Server 2012.<br /><br /> MSOLAP.4 è stato rilasciato sia in SQL Server 2008 sia in SQL Server 2008 R2. La versione 2008 R2 supporta le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ed è talvolta necessario installarla manualmente nei server di SharePoint. Per distinguere tra queste versioni, è necessario controllare il numero di build nelle proprietà del file del provider. A questo scopo, passare a Programmi\Microsoft Analysis Services\AS OLEDB\10. Fare clic con il pulsante destro del mouse sul file msolap110.dll e scegliere **Proprietà**. Scegliere **Dettagli**. Visualizzare le informazioni sulla versione del file. La versione deve includere 10.50. \<NumeroBuild > per SQL Server 2008 R2. Per altre informazioni, vedere [Installare il provider OLE DB di Analysis Services nei server di SharePointt](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) e [Provider di dati usati per le connessioni ad Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).|`Provider=MSOLAP.7` si usa per le connessioni che richiedono la versione di SQL Server 2016 del provider OLE DB per Analysis Services.|  
 |**Cube**|Nome del cubo o della prospettiva. Un database può contenere più cubi e prospettive. Se sono possibili più destinazioni, includere il nome del cubo o della prospettiva nella stringa di connessione.|`Cube=SalesPerspective` indica che è possibile usare la proprietà Cube della stringa di connessione per specificare il nome di un cubo o di una prospettiva.|  
@@ -72,6 +74,7 @@ ms.lasthandoff: 05/10/2018
 |**CompareCaseSensitiveStringFlags**|Controlla i confronti delle stringhe con distinzione tra maiuscole e minuscole per le impostazioni locali specificate. Per altre informazioni sull'impostazione di questa proprietà, vedere [Proprietà CompareCaseSensitiveStringFlags](http://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx).|  
 |**Compression Level**|Se **TransportCompression** è XPRESS, è possibile impostare e quindi controllare il livello di compressione usato. I valori validi sono compresi tra 0 e 9, dove 0 rappresenta la compressione minima e 9 quella massima. Maggiore è la compressione, minori risulteranno le prestazioni. Il valore predefinito è 0.|  
 |**Connect Timeout**|Determina la durata massima (in secondi) dei tentativi di connessione da parte del client prima che si verifichi il timeout. Se la connessione non riesce entro il tempo specificato, non vengono effettuati ulteriori tentativi e viene generato un errore.|  
+|**DbpropMsmdRequestMemoryLimit**|Questa proprietà esegue l'override di [Memory\QueryMemoryLimit](../server-properties/memory-properties.md) valore della proprietà server per una connessione. Espresso in kilobyte. |
 |**MDX Compatibility**|Lo scopo di questa proprietà consiste nell'assicurare un set coerente di comportamenti MDX per le applicazioni che eseguono query MDX. Tramite Excel, in cui si usano query MDX per popolare e calcolare una tabella pivot connessa ad Analysis Services, questa proprietà viene impostata su 1 per garantire che i membri segnaposto in gerarchie incomplete siano visibili nella tabella pivot. I valori validi includono 0,1 e 2.<br /><br /> Con 0 e 1 i membri segnaposto vengono esposti, con 2 no. Un valore vuoto equivale a 0.|  
 |**MDX Missing Member Mode=Error**|Indica se i membri mancanti vengono ignorati nelle istruzioni MDX. I valori validi sono Default, Error e Ignore. Per impostazione predefinita, viene usato un valore definito dal server. Con Error viene generato un errore se un membro non esiste. Con Ignore i valori mancanti vengono ignorati.|  
 |**Optimize Response**|Maschera di bit indicante quali delle seguenti ottimizzazioni della risposta alle query sono abilitate.<br /><br /> -   0x01 Usare NormalTupleSet (impostazione predefinita)<br />-   0x02 Usare se i filtri dei dati sono vuoti|  
@@ -104,7 +107,7 @@ ms.lasthandoff: 05/10/2018
   
 -   Debug Mode  
   
--   Elabora partizione/i  
+-   Mode  
   
 -   SQLCompatibility  
   

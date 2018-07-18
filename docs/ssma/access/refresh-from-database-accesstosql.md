@@ -1,8 +1,6 @@
 ---
 title: Aggiornamento dal Database (AccessToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3c99c6b9c35b65c93b5a23666cbe709d01cb19a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d38b1bdb437ed553648d9f93c0b09edfc7ca463
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774097"
 ---
 # <a name="refresh-from-database-accesstosql"></a>Aggiornamento dal Database (AccessToSQL)
 Il **aggiornamento dal Database** la finestra di dialogo consente di selezionare gli oggetti da aggiornare dal database di Access. Le righe nella finestra di dialogo sono codificate con colori in base allo stato dei metadati:  

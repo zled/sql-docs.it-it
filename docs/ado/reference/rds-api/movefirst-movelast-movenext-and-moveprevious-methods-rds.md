@@ -2,7 +2,6 @@
 title: MoveFirst, MoveLast, MoveNext e MovePrevious metodi (RDS) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 315ebd2a4de1a98634a5077096c0909550d979e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b57fef531fd66e9e649cba77b88d666281b273f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288316"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext e MovePrevious metodi (RDS)
 Sposta il primo, ultimo, successivo o precedente record in un oggetto specificato [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -44,7 +44,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  Una variabile oggetto che rappresenta un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile utilizzare il **spostare** metodi con il **RDS. DataControl** oggetto per spostarsi tra i record dei dati nei controlli con associazione a dati in una pagina Web. Ad esempio, si supponga di visualizzare un **Recordset** in una griglia utilizzando l'associazione a un **RDS. DataControl** oggetto. È quindi possibile includere i pulsanti First, Last, Avanti e indietro che consente agli utenti per spostarsi al primo, ultimo, successivo, o record precedente visualizzato **Recordset**. Tale scopo, chiamare il **MoveFirst**, **MoveLast**, **MoveNext**, e **MovePrevious** metodi il **RDS. DataControl** oggetto nelle procedure onClick per i pulsanti First, Last, Avanti e indietro, rispettivamente. Il [esempio Address Book](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) viene illustrato come eseguire questa operazione.  
   
 ## <a name="applies-to"></a>Si applica a  

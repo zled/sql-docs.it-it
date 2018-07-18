@@ -2,7 +2,6 @@
 title: Save (metodo) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a24e0be39417235e86a86e239b8f6918fadda5dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a92e053443dbb32aae83756a98facdc53fa74725
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281440"
 ---
 # <a name="save-method"></a>Save (metodo)
 Salva il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in un file o [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
@@ -39,12 +39,12 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parametri  
  *Destinazione*  
- Facoltativa. Oggetto **Variant** che rappresenta il nome di percorso completo del file in cui il **Recordset** deve essere salvato, o un riferimento a un **flusso** oggetto.  
+ Facoltativo. Oggetto **Variant** che rappresenta il nome di percorso completo del file in cui il **Recordset** deve essere salvato, o un riferimento a un **flusso** oggetto.  
   
  *PersistFormat*  
- Facoltativa. Oggetto [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valore che specifica il formato in cui il **Recordset** deve essere salvato (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
+ Facoltativo. Oggetto [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valore che specifica il formato in cui il **Recordset** deve essere salvato (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il [metodo Save](../../../ado/reference/ado-api/save-method.md) metodo può essere richiamato solo su un oggetto aperto **Recordset**. Utilizzare il [Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo di ripristino successive il **Recordset** da *destinazione*.  
   
  Se il [proprietà Filter](../../../ado/reference/ado-api/filter-property.md) è attiva per il **Recordset**, quindi vengono salvate solo le righe accessibili in base al filtro. Se il **Recordset** è di tipo gerarchico, quindi l'elemento figlio corrente **Recordset** e relativi elementi figlio viene salvati, incluso l'elemento padre **Recordset**. Se il metodo Save di un elemento figlio **Recordset** viene chiamato, l'elemento figlio e i relativi elementi figlio viene salvati, ma non è l'elemento padre.  

@@ -7,22 +7,22 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
-caps.latest.revision: 10
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aa8d0384eee7ab74c17797c9bd11ac65042d79c5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: c6a0658250a173615d52a7dceb56cb33a53c02f9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980625"
 ---
 # <a name="sysdmpdwsqlrequests-transact-sql"></a>sys.dm_pdw_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,22 +31,22 @@ ms.lasthandoff: 05/23/2018
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|Identificatore univoco della query a cui appartiene questa distribuzione di query SQL.<br /><br /> request_id step_index e distribution_id formano la chiave per la visualizzazione.|Vedere request_id in [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|step_index|**int**|Indice del passaggio query di che questa distribuzione è parte.<br /><br /> request_id step_index e distribution_id formano la chiave per la visualizzazione.|Vedere step_index in [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
-|pdw_node_id|**int**|Identificatore univoco del nodo in cui viene eseguita la distribuzione di query.|Vedere node_id in [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|distribution_id|**int**|Identificatore univoco della distribuzione in cui viene eseguita la distribuzione di query.<br /><br /> request_id step_index e distribution_id formano la chiave per la visualizzazione.|Vedere distribution_id in [sys.pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md). Impostare su -1 per le richieste eseguite nell'ambito del nodo, non l'ambito della distribuzione.|  
-|status|**nvarchar(32)**|Stato corrente della distribuzione di query.|In sospeso, in esecuzione, non riusciti, annullato, completato, interrotto, CancelSubmitted|  
-|error_id|**nvarchar(36)**|Identificatore univoco dell'errore associata a questa distribuzione delle query, se presente.|Vedere in error_id [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). Se si è verificato alcun errore, impostato su NULL.|  
-|start_time|**datetime**|Ora di query in cui distribuzione inizio esecuzione.|Minore o uguale all'ora corrente e maggiore o uguale a start_time dell'istruzione di query appartiene questa distribuzione delle query|  
-|end_time|**datetime**|Ora in cui questa distribuzione di query ha completato l'esecuzione, è stata annullata o non è riuscita.|Maggiore o uguale all'ora di inizio o impostato su NULL se la distribuzione di query è in corso o in coda.|  
-|total_elapsed_time|**int**|Rappresenta l'ora che di distribuzione delle query è in esecuzione, in millisecondi.|Maggiore o uguale a 0. Uguale a delta di start_time ed end_time che sono state completate, non è riuscita o annullata le distribuzioni di query.<br /><br /> Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione genera l'avviso "è stato superato il valore massimo."<br /><br /> Il valore massimo in millisecondi è equivalente a 24.8 giorni.|  
-|row_count|**bigint**|Numero di righe modificate o lette dalla distribuzione delle query.|-1 per le operazioni che modificano o non restituire dati, ad esempio CREATE TABLE e DROP TABLE.|  
+|request_id|**nvarchar(32)**|Identificatore univoco della query a cui appartiene questa distribuzione di query SQL.<br /><br /> request_id step_index e distribution_id formano la chiave per questa visualizzazione.|Vedere in request_id [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|step_index|**int**|Indice del passaggio della query di di che questo tipo di distribuzione fa parte.<br /><br /> request_id step_index e distribution_id formano la chiave per questa visualizzazione.|Vedere in step_index [DM pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|pdw_node_id|**int**|Identificatore univoco del nodo in cui viene eseguita la distribuzione di query.|Vedere node_id nelle [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
+|distribution_id|**int**|Identificatore univoco della distribuzione in cui viene eseguita la distribuzione di query.<br /><br /> request_id step_index e distribution_id formano la chiave per questa visualizzazione.|Vedere in distribution_id [sys.pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md). Impostare su -1 per le richieste eseguite nell'ambito del nodo, non nell'ambito della distribuzione.|  
+|status|**nvarchar(32)**|Stato corrente della distribuzione di query.|In sospeso, in esecuzione, non riusciti, annullati, completato, interrotto, CancelSubmitted|  
+|error_id|**nvarchar(36)**|Identificatore univoco dell'errore associato con la distribuzione di query, se presente.|Vedere in error_id [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). Se si è verificato alcun errore, impostato su NULL.|  
+|start_time|**datetime**|Ora in cui query distribuzione è iniziata l'esecuzione.|Minore o uguale all'ora corrente e maggiore o uguale a start_time del passaggio della query a cui appartiene questa distribuzione delle query|  
+|end_time|**datetime**|Ora in corrispondenza del quale questo tipo di distribuzione query completato l'esecuzione, è stata annullata o non è riuscita.|Maggiore o uguale all'ora di inizio o impostato su NULL se la distribuzione di query è in corso o in coda.|  
+|total_elapsed_time|**int**|Rappresenta il tempo che di distribuzione delle query è in esecuzione, in millisecondi.|Maggiore o uguale a 0. Uguale al delta di start_time ed end_time che sono state completate, non è riuscita o annullata distribuzioni di query.<br /><br /> Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione verrà generato l'avviso "il valore massimo è stato superato."<br /><br /> Il valore massimo in millisecondi è equivalente a 24,8 giorni.|  
+|row_count|**bigint**|Numero di righe modificate o lette dalla distribuzione query.|-1 per le operazioni che non cambiano o restituire dati, ad esempio CREATE TABLE e DROP TABLE.|  
 |spid|**int**|Id di sessione nell'istanza di SQL Server che esegue la distribuzione delle query.||  
 |comando|**nvarchar(4000)**|Testo completo del comando per la distribuzione di query.|Qualsiasi stringa di query o una richiesta valida.|  
   
- Per informazioni sulle righe massimi mantenuto da questa vista, vedere la sezione valori massimi vista di sistema nel [valori minimo e massimo (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) argomento.  
+ Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere la sezione i valori massimi vista di sistema nel [valori minimi e massimi (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) argomento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel Data Warehouse, viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse e Parallel Data Warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

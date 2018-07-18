@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911086"
 ---
 # <a name="environment-connection-and-statement-attributes"></a>Ambiente di connessione e gli attributi di istruzione
 ODBC definisce un numero di attributi che sono associati gli ambienti, le connessioni o istruzioni.  

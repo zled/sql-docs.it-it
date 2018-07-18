@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913986"
 ---
 # <a name="core-interface-conformance"></a>Conformità di interfaccia di base
 Tutti i driver ODBC devono presentare almeno a livello di base della conformità di interfaccia. Poiché le funzionalità del livello di base sono quelle richieste dalle applicazioni interoperabili più generiche, con tali applicazioni possa utilizzare il driver. Le funzionalità del livello di base corrispondono anche con le funzionalità definite nella specifica ISO CLI e con le funzionalità necessari definite nella specifica Open CLI di gruppo. Un driver ODBC a livello di base conforme allo standard dell'interfaccia consente all'applicazione di eseguire tutte le operazioni seguenti:  

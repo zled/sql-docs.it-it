@@ -1,5 +1,5 @@
 ---
-title: sp_dropextendedproc (Transact-SQL) | Documenti Microsoft
+title: sp_dropextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 23361e6f28bdb87ab35a39ec68b448a60ad677d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049389"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +48,16 @@ sp_dropextendedproc [ @functname = ] 'procedure'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@functname =**] **'***procedure***'**  
- Nome della stored procedure estesa da eliminare. *stored procedure* viene **nvarchar(517)**, non prevede alcun valore predefinito.  
+ Nome della stored procedure estesa da eliminare. *routine* viene **nvarchar(517)**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
- L'esecuzione di **sp_dropextendedproc** Elimina il nome la stored procedure estesa di definito dall'utente dal [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista del catalogo e rimuove la voce dal [extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) vista del catalogo. Questa stored procedure può essere eseguita solo nel **master** database.  
+## <a name="remarks"></a>Note  
+ L'esecuzione **sp_dropextendedproc** Elimina il nome di stored procedure estese definite dall'utente dalle [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista del catalogo e rimuove la voce dal [Sys. extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) vista del catalogo. Questa stored procedure può essere eseguita solo nel **master** database.  
   
 **sp_dropextendedproc** non elimina le stored procedure estese di sistema. Al contrario, l'amministratore di sistema può negare l'autorizzazione EXECUTE per la stored procedure estesa per il **pubblica** ruolo.  
   

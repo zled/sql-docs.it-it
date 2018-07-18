@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,16 @@ helpviewer_keywords:
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 caps.latest.revision: 84
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cb0ea7d3443e338190e9bc63c7132aa554aa843
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c59f13b67d8594610a8d7b764f5f42aed8733203
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790012"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ Espressione che specifica il nome della proprietà del database da restituire. *
 |IsTornPageDetectionEnabled|In [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vengono rilevate le operazioni di I/O non completate a causa di un'interruzione dell'alimentazione o di altri malfunzionamenti del sistema.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **int**| 
 |IsVerifiedClone|Il database è una copia di un database utente contenente solo schema e statistiche, creato con l'opzione WITH VERIFY_CLONEDB di DBCC CLONEDATABASE. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](http://support.microsoft.com/help/3177838).|**Si applica a**: a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **int**| 
 |IsXTPSupported|Indica se il database supporta OLTP in memoria, ovvero la creazione e l'uso di tabelle ottimizzate per la memoria e moduli compilati in modo nativo.<br /><br /> Specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported è indipendente dall'esistenza di qualsiasi filegroup MEMORY_OPTIMIZED_DATA, necessario per la creazione di oggetti OLTP In memoria.|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido, errore o non applicabile<br /><br /> Tipo di dati di base: **int**|  
-|LastGoodCheckDbTime|Data e ora dell'ultimo DBCC CHECKDB con esito positivo eseguito nel database specificato.|**Si applica a**: a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> Valore datetime<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **datetime**| 
+|LastGoodCheckDbTime|Data e ora dell'ultima esecuzione con esito positivo di DBCC CHECKDB nel database specificato.<sup>1</sup> Se il comando DBCC CHECKDB non è stato eseguito in un database, viene restituito 1900-01-01 00:00:00.000.|**Si applica a**: a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> Valore datetime<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **datetime**| 
 |LCID|Identificatore delle impostazioni locali (LCID) di Windows per le regole di confronto.|Valore LCID, in formato decimale.<br /><br /> Tipo di dati di base: **int**|  
 |MaxSizeInBytes|Dimensioni massime del database in byte.|**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: database non avviato<br /><br /> Tipo di dati di base: **bigint**|  
 |Recupero|Modello di recupero del database|FULL: modello di recupero con registrazione completa<br /><br /> BULK_LOGGED: modello di recupero con registrazione minima delle operazioni bulk<br /><br /> SIMPLE: modello di recupero con registrazione minima<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
@@ -99,8 +99,12 @@ Espressione che specifica il nome della proprietà del database da restituire. *
 |Stato|Stato del database.|ONLINE: il database è disponibile per le query.<br /><br /> **Nota:** lo stato ONLINE può essere restituito durante l'apertura del database e mentre questo non è ancora stato recuperato. Per sapere quando un database è in grado di accettare connessioni, eseguire una query sulla proprietà Collation di **DATABASEPROPERTYEX**. Nel database possono essere accettate connessioni quando tramite le regole di confronto del database viene restituito un valore non Null. Per i database Always On, eseguire una query sulle colonne database_state o database_state_desc di `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE: il database è stato portato offline in modo esplicito.<br /><br /> RESTORING: è stato avviato il ripristino del database.<br /><br /> RECOVERING: è stato avviato il recupero del database e questo non è ancora pronto per le query.<br /><br /> SUSPECT: il recupero del database non è riuscito.<br /><br /> EMERGENCY: il database è in modalità di emergenza con accesso in sola lettura. L'accesso è limitato ai membri del ruolo sysadmin.<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
 |Updateability|Indica se è possibile modificare i dati.|READ_ONLY: il database supporta la lettura ma non la modifica dei dati.<br /><br /> READ_WRITE: il database supporta la lettura e la modifica dei dati.<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
 |UserAccess|Specifica gli utenti autorizzati ad accedere al database.|SINGLE_USER: solo un utente db_owner, dbcreator o sysadmin alla volta<br /><br /> RESTRICTED_USER: solo i membri dei ruoli db_owner, dbcreator e sysadmin<br /><br /> MULTI_USER: tutti gli utenti<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
-|Versione|Numero di versione interno del codice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui è stato creato il database. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Numero di versione: database aperto.<br /><br /> NULL: database non in linea.<br /><br /> Tipo di dati di base: **int**|  
-  
+|Versione|Numero di versione interno del codice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui è stato creato il database. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Numero di versione: database aperto.<br /><br /> NULL: database non in linea.<br /><br /> Tipo di dati di base: **int**| 
+<br/>   
+
+> [!NOTE]  
+> <sup>1</sup> Per i database che fanno parte di un gruppo di disponibilità, `LastGoodCheckDbTime` restituisce la data e ora dell'ultima esecuzione con esito positivo di DBCC CHECKDB nella replica primaria, indipendentemente dalla replica da cui si esegue il comando. 
+
 ## <a name="return-types"></a>Tipi restituiti
 **sql_variant**
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908851"
 ---
 # <a name="identifier-case"></a>Identificatore Case
 In istruzioni SQL e gli argomenti di funzione di catalogo, identificatori e gli identificatori tra virgolette possono essere distinzione maiuscole/minuscole o non, che un'applicazione può determinare chiamando **SQLGetInfo** e SQL_IDENTIFIER_CASE SQL_QUOTED_ Opzioni IDENTIFIER_CASE.  

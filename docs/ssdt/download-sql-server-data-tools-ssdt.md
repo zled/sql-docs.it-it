@@ -1,7 +1,7 @@
----
+﻿---
 title: Scaricare SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/10/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -18,61 +18,75 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b654697ff5304440e8616c0f5cebdf45ac4c0847
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 6794784b2339fe9c246dc4aec017e4e7cbb93311
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773337"
 ---
-# <a name="download-sql-server-data-tools-ssdt"></a>Scaricare SQL Server Data Tools (SSDT)
+# <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Scaricare e installare SQL Server Data Tools (SSDT) per Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** è un moderno strumento di sviluppo scaricabile gratuitamente per creare database relazionali SQL Server, database Azure SQL, pacchetti di Integration Services, modelli di dati di Analysis Services e report di Reporting Services. Con SSDT è possibile progettare e distribuire qualsiasi tipo di contenuto SQL Server con la stessa facilità con la quale si sviluppa un'applicazione in Visual Studio. 
+**SQL Server Data Tools** è uno strumento di sviluppo moderno che consente di compilare database relazionali SQL Server, database SQL di Azure, modelli di dati di Analysis Services (AS), pacchetti di Integration Services (IS) e report di Reporting Services (RS). Con SSDT è possibile progettare e distribuire qualsiasi tipo di contenuto SQL Server con la stessa facilità con la quale si sviluppa un'applicazione in Visual Studio.
 
-SSDT 15.x offre un'esperienza di installazione Web autonoma per i progetti SQL Server Database, Analysis Services, Reporting Services e Integration Services in Visual Studio 2017 15.5 o versioni successive.
+*Per la maggior parte degli utenti, SQL Server Data Tools (SSDT) viene installato durante l'installazione di Visual Studio. Se si installa SSDT usando il programma di installazione di Visual Studio, vengono aggiunte le funzionalità SSDT di base. È pertanto necessario eseguire il [programma di installazione di SSDT autonomo](#ssdt-for-vs-2017-standalone-installer) per ottenere AS, IS ed RS.*
 
-| SQL Server Data Tools (SSDT) per Visual Studio 2017 | SSDT per Visual Studio 2015 | 
-|:--|:--|
-|[![download](../ssdt/media/download.png) Download di SSDT per Visual Studio 2017 (15.6.0) ](https://go.microsoft.com/fwlink/?linkid=871368) | [![download](../ssdt/media/download.png) Download di SSDT per Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)|
-|||
+## <a name="install-ssdt-with-visual-studio-2017"></a>Installare SSDT con Visual Studio 2017
+
+Per installare SSDT durante l'[installazione di Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio), selezionare il carico di lavoro **Elaborazione ed archiviazione dati** e quindi selezionare **SQL Server Data Tools**. Se Visual Studio è già installato, è possibile [modificare l'elenco dei carichi di lavoro](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) per includere SSDT: ![Carico di lavoro Elaborazione ed archiviazione dati](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
+
+
+
+## <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>Installare Analysis Services, Integration Services e Reporting Services
+Per installare AS, IS ed RS come supporto per i progetti, eseguire il [programma di installazione di SSDT autonomo](#ssdt-for-vs-2017-standalone-installer). 
+
+Il programma di installazione elenca le istanze di Visual Studio disponibili per l'aggiunta degli strumenti di SSDT. Se Visual Studio non è installato, selezionando **Install a new SQL Server Data Tools instance** (Installa una nuova istanza di SQL Server Data Tools) è possibile installare SSDT con una versione minima di Visual Studio. Per un'esperienza ottimale, tuttavia, è consigliabile usare SSDT con [la versione più recente di Visual Studio](https://www.visualstudio.com/downloads). 
+
+![Selezionare AS, IS, RS](../ssdt/media/download-sql-server-data-tools-ssdt/select-services.png)
+
+
+
+## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT per Visual Studio 2017 (programma di installazione autonomo)
+
+[![download](../ssdt/media/download.png) Download di SSDT per Visual Studio 2017 (15.7.0) ](https://go.microsoft.com/fwlink/?linkid=874716) 
 
 > [!IMPORTANT]
-> Prima di installare SSDT per Visual Studio 2017 (15.6.0), disinstallare le estensioni "Progetti di Microsoft Analysis Services" e "Progetti di Microsoft Reporting Services" se già installate in Visual Studio 2017 e chiudere tutte le istanze di Visual Studio. 
-> 
-> Le versioni non in lingua inglese di SSDT per Visual Studio 2017 15.6.x non supportano l'aggiornamento dalla versione di anteprima 15.4.0 in lingua inglese. Prima di installare la versione 15.6.x in altre lingue è necessario disinstallare la versione di anteprima 15.4.0 in lingua inglese. 
-
-
-SSDT per Visual Studio 2015 e SSDT per Visual Studio 2017 usano entrambi DacFx 17.4.1: [scaricare Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/en-us/download/details.aspx?id=56508)
+> Prima di installare SSDT per Visual Studio 2017 (15.7.0), disinstallare le estensioni "Progetti di Microsoft Analysis Services" e "Progetti di Microsoft Reporting Services", se già installate, e chiudere tutte le istanze di Visual Studio. 
 
 
 
-## <a name="ssdt-for-visual-studio-2017"></a>SQL Server Data Tools (SSDT) per Visual Studio 2017
 **Informazioni sulla versione**  
   
-Numero di versione: 15.6.0  
-Numero di build: 14.0.16162.0  
-Data di rilascio: 10 aprile 2018  
+Numero di versione: 15.7.0  
+Numero di build: 14.0.16165.0  
+Data di rilascio: 1 giugno 2018  
 
 Per un elenco completo delle modifiche, vedere il [log delle modifiche](changelog-for-sql-server-data-tools-ssdt.md).
 
-SSDT per Visual Studio 2017 ha gli stessi requisiti di sistema previsti per l'installazione di Visual Studio. I sistemi operativi supportati sono Windows 7 SP1, Windows 8.1 o Windows Server 2012 R2, Windows 10 o Windows Server 2016.  
+SSDT per Visual Studio 2017 ha gli stessi [requisiti di sistema](https://docs.microsoft.com/visualstudio/productinfo/vs2017-system-requirements-vs) di Visual Studio.  
 
 ### <a name="available-languages---ssdt-for-vs-2017"></a>Lingue disponibili - SSDT per VS 2017
-  
+
 Questa versione di **SSDT per VS 2017** può essere installata nelle lingue seguenti:  
 
-[Cinese (Repubblica popolare cinese)]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x804) | 
-[Cinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x404) | 
-[Inglese (Stati Uniti)]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x409) | 
-[Francese]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x40c)  
-[Tedesco]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x407) | 
-[Italiano]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x410) | 
-[Giapponese]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x411) | 
-[Coreano]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x412) | 
-[Portoghese (Brasile)]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x416) | 
-[Russo]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x419) | 
-[Spagnolo]( https://go.microsoft.com/fwlink/?linkid=871368&clcid=0x40a)  
+[Cinese (Repubblica popolare cinese)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x804) | 
+[Cinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x404) | 
+[Inglese (Stati Uniti)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x409) | 
+[Francese]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x40c)  
+[Tedesco]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x407) | 
+[Italiano]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x410) | 
+[Giapponese]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x411) | 
+[Coreano]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x412) | 
+[Portoghese (Brasile)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x416) | 
+[Russo]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x419) | 
+[Spagnolo]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x40a)  
 
-## <a name="ssdt-for-visual-studio-2015"></a>SSDT per Visual Studio 2015
+
+
+## <a name="ssdt-for-vs-2015-standalone-installer"></a>SSDT per Visual Studio 2015 (programma di installazione autonomo)
+
+[![download](../ssdt/media/download.png) Download di SSDT per Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)
+
 **Informazioni sulla versione**  
   
 Numero di versione: 17.4
@@ -117,16 +131,6 @@ Un'immagine ISO di SSDT può essere utilizzata come metodo alternativo per insta
 [Spagnolo]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40a)
 
 
-## <a name="download-visual-studio"></a>Scaricare Visual Studio
-
-* [**Scaricare Visual Studio**](https://www.visualstudio.com/downloads)
-
-## <a name="installing-ssdt-without-visual-studio-pre-installed"></a>Installazione di SSDT senza Visual Studio preinstallato
-
-Se Visual Studio non è installato nel computer, l'installazione di SSDT per Visual Studio includerà anche l'installazione di una versione minima di Visual Studio. Questa versione di Visual Studio può essere installata e usata liberamente in un numero qualunque di computer. Include tutti i tipi di progetto di SQL Server, oltre a *Esplora oggetti di SQL Server* e altri strumenti SQL.
-
-Se nel computer in uso è installato Visual Studio 2015 (o versioni successive), l'installazione di SSDT aggiunge il set completo di strumenti di SQL Server all'installazione di Visual Studio esistente. Visual Studio include molte funzionalità utili, come l'integrazione del controllo del codice sorgente e il supporto di linguaggi diversi da SQL. Per un'esperienza di sviluppo ottimale con T-SQL è consigliabile usare Visual Studio 2015 o versione successiva.
-
 
 ## <a name="supported-sql-versions"></a>Versioni di SQL supportate
   
@@ -136,17 +140,17 @@ Database relazionali|  SQL Server 2005* - SQL Server 2017<br> (usare SSDT 17.x o
   |Modelli di Analysis Services<br /><br />Report di Reporting Services | SQL Server 2008 - SQL Server 2017|
   |pacchetti di Integration Services| SQL Server 2012 - SQL Server 2017    |
   
+## <a name="dacfx"></a>DacFx
+SSDT per Visual Studio 2015 e SSDT per Visual Studio 2017 usano entrambi DacFx 17.4.1: [scaricare Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).
+
+
 ## <a name="next-steps"></a>Passaggi successivi  
 Dopo l'installazione di SSDT, consultare queste esercitazioni per imparare a creare database, pacchetti, modelli di dati e report mediante SSDT:  
-  
--   [Sviluppo di database offline orientato ai progetti](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
-  
--   [Esercitazione SSIS: Creare un pacchetto ETL semplice](../integration-services/ssis-how-to-create-an-etl-package.md)  
-  
--   [Esercitazioni su Analysis Services](../analysis-services/analysis-services-tutorials-ssas.md)  
-  
--   [Creare un report tabella semplice (esercitazione su SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
-  
+
+- [Sviluppo di database offline orientato ai progetti](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
+- [Esercitazione SSIS: Creare un pacchetto ETL semplice](../integration-services/ssis-how-to-create-an-etl-package.md)  
+- [Esercitazioni su Analysis Services](../analysis-services/analysis-services-tutorials-ssas.md)  
+- [Creare un report tabella semplice (esercitazione su SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Database di esempio OLAP WideWorldImporters - installare e configurare - SQL | Documenti Microsoft
+title: Database di esempio WideWorldImporters OLAP - installare e configurare - SQL | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -13,64 +13,65 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79df863a46adfd9bbdfd2a24b12a79592fdab6bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb74abac4f13f5841d6ae06dac7c1eb38de7bfd0
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023424"
 ---
-# <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW installazione e configurazione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="wideworldimportersdw-installation-and-configuration"></a>Configurazione e installazione WideWorldImportersDW
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 Istruzioni di installazione e configurazione per il database WideWorldImportersDW.
 
-- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (o versione successiva) o [Database SQL di Azure](https://azure.microsoft.com/services/sql-database/). Per utilizzare la versione completa dell'esempio, utilizzare SQL Server Evaluation o Developer o Enterprise Edition.
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per risultati ottimali utilizzano la versione di giugno 2016 o versione successiva.
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (o versione successiva) oppure [Database SQL di Azure](https://azure.microsoft.com/services/sql-database/). Per usare la versione completa dell'esempio, usare SQL Server Evaluation o Developer o Enterprise Edition.
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per ottenere risultati ottimali usano la versione di giugno 2016 o versione successiva.
 
 ## <a name="download"></a>Scarica
 
 La versione più recente dell'esempio:
 
-[Wide world-importers rilascio](http://go.microsoft.com/fwlink/?LinkID=800630)
+[Wide world-importers-delle versioni](http://go.microsoft.com/fwlink/?LinkID=800630)
 
-Scaricare l'esempio WideWorldImportersDW database backup/bacpac corrispondente per l'edizione di SQL Server o Database SQL di Azure.
+Scaricare l'esempio WideWorldImportersDW database backup/bacpac che corrisponde all'edizione di SQL Server o Database SQL di Azure.
 
-Il codice sorgente per ricreare il database di esempio è disponibile dal seguente percorso. Si noti che il popolamento di dati è basato su ETL del database OLTP (WideWorldImporters):
+Codice sorgente per ricreare il database di esempio è disponibile dal percorso seguente. Si noti che il popolamento dei dati si basa su ETL del database OLTP (WideWorldImporters):
 
-[Wide world-importers source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[Wide world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
 ## <a name="install"></a>Install
 
 
 ### <a name="sql-server"></a>SQL Server
 
-Per ripristinare un backup a un'istanza di SQL Server, è possibile utilizzare Management Studio.
+Per ripristinare un backup in un'istanza di SQL Server, è possibile utilizzare Management Studio.
 
 1. Aprire SQL Server Management Studio e connettersi all'istanza di SQL Server di destinazione.
-2. Fare clic su di **database** nodo e selezionare **Restore Database**.
-3. Selezionare **dispositivo** e fare clic sul pulsante **...**
-4. Nella finestra di dialogo **Seleziona dispositivi di backup**, fare clic su **Aggiungi**, passare al backup del database nel file System del server e selezionare il backup. Scegliere **OK**.
-5. Se necessario, modificare il percorso di destinazione per i dati e file di log, nel **file** riquadro. Si noti che è quindi consigliabile inserire i dati e file di registro in unità differenti.
-6. Scegliere **OK**. Verrà avviato il ripristino di database. Una volta completato, si disporrà del database WideWorldImporters installati nell'istanza del Server SQL.
+2. Fare clic sui **database** nodo e selezionare **Ripristina Database**.
+3. Selezionare **periferica** e fare clic sul pulsante **...**
+4. Nella finestra di dialogo **Seleziona dispositivi di backup**, fare clic su **Add**, passare al backup del database nel file System del server e selezionare il backup. Fare clic su **OK**.
+5. Se necessario, modificare il percorso di destinazione per i dati e file di log, nelle **file** riquadro. Si noti che è buona norma inserire i dati di file e di log su unità differenti.
+6. Fare clic su **OK**. Verrà avviata il ripristino di database. Al termine, si disporrà del database WideWorldImporters installato nell'istanza di SQL Server.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Database SQL di Azure
 
 Per importare un file bacpac in un nuovo Database SQL, è possibile utilizzare Management Studio.
 
-1. (facoltativo) Se si non dispone ancora di un Server SQL in Azure, passare al [portale di Azure](https://portal.azure.com/) e creare un nuovo Database SQL. Provvedendo creare un database, si creerà un server. Prendere nota del server.
-   - Vedere [questa esercitazione](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) per creare un database in minuti
+1. (facoltativo) Se non si dispone ancora un SQL Server in Azure, passare al [portale di Azure](https://portal.azure.com/) e creare un nuovo Database SQL. In quanto di creare un database, si creerà un server. Prendere nota del server.
+   - Visualizzare [in questa esercitazione](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) per creare un database in pochi minuti
 2. Aprire SQL Server Management Studio e connettersi al server in Azure.
-3. Fare clic su di **database** nodo e selezionare **Importa applicazione livello dati**.
-4. Nel **importare le impostazioni** selezionare **Importa da disco locale** e selezionare il file bacpac del database di esempio dal file system.
-5. In **le impostazioni del Database** modificare il nome del database per *WideWorldImportersDW* e selezionare l'obiettivo di edizione e il servizio di destinazione da utilizzare.
-6. Fare clic su **Avanti** e **fine** per avviare la distribuzione. Richiederà alcuni minuti. Quando si specifica un obiettivo di servizio inferiore S2 può richiedere più tempo.
+3. Fare clic sui **database** nodo e selezionare **Importa applicazione livello dati**.
+4. Nel **impostazioni di importazione** selezionate **Importa da disco locale** e selezionare il file bacpac del database di esempio dal file system.
+5. Sotto **le impostazioni del Database** cambiare il nome di database in *WideWorldImportersDW* e selezionare l'obiettivo di edizione e il servizio di destinazione da usare.
+6. Fare clic su **successivo** e **fine** per avviare la distribuzione. Richiederà alcuni minuti. Quando si specifica un obiettivo di servizio inferiore a S2 potrebbe richiedere più tempo.
 
 ## <a name="configuration"></a>Configurazione
 
-[Si applica a SQL Server 2016 (e versioni successive) Evaluation/Developer o Enterprise Edition]
+[Si applica a SQL Server 2016 (e versioni successive) Developer o Evaluation o Enterprise Edition]
 
-Il database di esempio può avvalersi di PolyBase per i file di query in Hadoop o Azure nell'archivio blob. Tuttavia, tale funzionalità non è installata per impostazione predefinita con SQL Server, è necessario selezionarla durante l'installazione di SQL Server. Pertanto, un passaggio di post-installazione è necessario.
+Il database di esempio può avvalersi di PolyBase per i file di query in Hadoop o Azure nell'archivio blob. Tuttavia, tale funzionalità non è installata per impostazione predefinita con SQL Server, è necessario selezionarla durante l'installazione di SQL Server. Pertanto, un passaggio di post-installazione è obbligatorio.
 
 1. In SQL Server Management Studio, connettersi al database WideWorldImportersDW e aprire una nuova finestra query.
-2. Eseguire il comando T-SQL seguente per abilitare l'utilizzo di PolyBase nel database:
+2. Eseguire il comando T-SQL seguente per abilitare l'uso di PolyBase nel database:
 
    ESEGUIRE [applicazioni]. [Configuration_ApplyPolyBase]

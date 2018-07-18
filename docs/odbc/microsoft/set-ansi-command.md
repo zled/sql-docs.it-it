@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904326"
 ---
 # <a name="set-ansi-command"></a>Comando ANSI SET
 Determina come i confronti tra stringhe di lunghezza diversa vengono apportati con l'operatore = nei comandi di Visual FoxPro SQL.  

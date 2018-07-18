@@ -2,7 +2,6 @@
 title: Risincronizzazione comando proprietà dinamica (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 240c4d6ce4aa392f01ebb27a4a52fd73c684b981
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37896464c8c9387cb0d68da8bf9bc561e29602d0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281372"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Risincronizzazione comando proprietà dinamica (ADO)
 Specifica una stringa di un comando fornito dall'utente di [Resync](../../../ado/reference/ado-api/resync-method.md) i problemi dei metodi di aggiornamento dei dati nella tabella denominata nel [tabella univoca](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) proprietà dinamiche.  
@@ -30,7 +30,7 @@ Specifica una stringa di un comando fornito dall'utente di [Resync](../../../ado
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **stringa** valore che è una stringa di comando.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto è il risultato di un'operazione di JOIN eseguita su più tabelle di base. Le righe interessate dipendono il *AffectRecords* parametro del [Resync](../../../ado/reference/ado-api/resync-method.md) metodo. Lo standard **Resync** metodo viene eseguito se il [tabella univoca](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) e **Resync Command** non sono impostate.  
   
  La stringa di comando del **Resync Command** proprietà è una stored procedure che identifica in modo univoco la riga da aggiornare o un comando con parametri e restituisce una singola riga con lo stesso numero e ordine delle colonne della riga da aggiornati. La stringa di comando contiene un parametro per ogni colonna chiave primaria di **tabella univoca**; in caso contrario, viene restituito un errore di run-time. I parametri vengono compilati automaticamente con i valori di chiave primaria della riga da aggiornare.  

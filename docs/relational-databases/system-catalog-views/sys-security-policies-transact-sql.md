@@ -1,5 +1,5 @@
 ---
-title: Sys. security_policies (Transact-SQL) | Documenti Microsoft
+title: Sys. security_policies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33221132"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993803"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>Sys. security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ ms.locfileid: "33221132"
 |is_enabled|**bit**|Stato della specifica del criterio di sicurezza:<br /><br /> 0 = disabilitato<br /><br /> 1 = abilitato|  
 |is_not_for_replication|**bit**|Il criterio è stato creato con l'opzione NOT FOR REPLICATION.|  
 |uses_database_collation|**bit**|Usa le stesse regole di confronto del database.|  
-|is_schemabinding_enabled|**bit**|SCHEMABINDING stato per i criteri di sicurezza:<br /><br /> 0 o NULL = abilitata<br /><br /> 1 = disabilitata|  
+|is_schemabinding_enabled|**bit**|SCHEMABINDING dello stato per i criteri di sicurezza:<br /><br /> 0 o NULL = abilitata<br /><br /> 1 = disabilitata|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Entità che dispongono di **ALTER ANY SECURITY POLICY** autorizzazione hanno accesso a tutti gli oggetti in questa vista del catalogo, nonché tutti gli utenti con **VIEW DEFINITION** sull'oggetto.  
+ Le entità con la **ALTER ANY SECURITY POLICY** autorizzazione ha accesso a tutti gli oggetti in questa vista del catalogo, nonché tutti gli utenti con **VIEW DEFINITION** sull'oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md)   

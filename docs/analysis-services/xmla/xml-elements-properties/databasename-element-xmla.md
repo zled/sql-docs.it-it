@@ -1,5 +1,5 @@
 ---
-title: Elemento DatabaseName (XMLA) | Documenti Microsoft
+title: Elemento DatabaseName (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: adc35002f6d5f7cb129131529359e667fb53fdb3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34573613"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007013"
 ---
 # <a name="databasename-element-xmla"></a>Elemento DatabaseName (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34573613"
 </Restore>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -39,17 +39,17 @@ ms.locfileid: "34573613"
 |Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Ripristina](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il **DatabaseName** elemento identifica il database in cui il **ripristinare** comando Ripristina un file di backup. Se questo elemento non è specificato o contiene una stringa vuota, viene utilizzato il nome del database contenuto nel file di backup.  
+## <a name="remarks"></a>Note  
+ Il **NomeDatabase** elemento identifica il database in cui le **ripristinare** comando Ripristina un file di backup. Se questo elemento non è specificato o contiene una stringa vuota, viene utilizzato il nome del database contenuto nel file di backup.  
   
- Se il database esiste già nell'istanza di destinazione, a meno che non si verifica un errore di **AllowOverwrite** elemento per l'elemento padre **ripristinare** comando è impostato su **True**.  
+ Se il database esiste già nell'istanza di destinazione, si verifica un errore, a meno che il **AllowOverwrite** (elemento) per l'elemento padre **ripristinare** command è impostato su **True**.  
   
 ## <a name="see-also"></a>Vedere anche
  [Elemento AllowOverwrite &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913846"
 ---
 # <a name="multiple-results"></a>Più risultati
 Oggetto *risultato* è un valore restituito dall'origine dati dopo l'esecuzione di un'istruzione. ODBC sono disponibili due tipi di risultati: set di risultati e conteggio delle righe. *Conteggio delle righe* sono il numero di righe interessate da un'istruzione update, delete o insert di istruzione. Batch, descritto in [batch di istruzioni SQL](../../../odbc/reference/develop-app/batches-of-sql-statements.md), è possibile generare più risultati.  

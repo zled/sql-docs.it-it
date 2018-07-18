@@ -2,7 +2,6 @@
 title: Ordinare l'esempio di proprietà (VB) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2ce33e051391f787ca26d4b46cfaeddbd8bc3ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29251f351302fc94c9f55c0ada9c4028408cbe44
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281886"
 ---
 # <a name="sort-property-example-vb"></a>Esempio di proprietà Sort (VB)
 Questo esempio viene utilizzato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [ordinamento](../../../ado/reference/ado-api/sort-property.md) proprietà per riordinare le righe di un **Recordset** derivato dal ***autori*** tabella di il ***Pubs*** database. Una routine dell'utilità secondaria stampa ogni riga.  

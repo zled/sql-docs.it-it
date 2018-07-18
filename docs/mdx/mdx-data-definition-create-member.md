@@ -1,6 +1,6 @@
 ---
 title: Istruzione CREATE MEMBER (MDX) | Documenti Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4458554d8b3aa6b0cb87d59629c70a18b609df44
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 432438fe9a6e1b39c849188050b67f816d895187
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579363"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742251"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definizione dei dati MDX - creare membro
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Crea un membro calcolato.  
   
@@ -106,14 +106,14 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>Proprietà standard  
- Ogni membro calcolato dispone di un set di proprietà predefinite. Quando un'applicazione client è connesso ad [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le proprietà predefinite sono supportate o disponibili per essere supportate, come l'amministratore sceglie.  
+ Ogni membro calcolato dispone di un set di proprietà predefinite. Quando un'applicazione client è connesso ad [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le proprietà predefinite sono supportate o disponibili per essere supportate, come l'amministratore sceglie.  
   
  Possono essere disponibili ulteriori proprietà dei membri, a seconda della definizione del cubo. Le proprietà seguenti rappresentano informazioni riguardanti il livello delle dimensioni del cubo.  
   
 |Identificatore proprietà|Significato|  
 |-------------------------|-------------|  
 |SOLVE_ORDER|L'ordine con cui deve essere risolto il membro calcolato nel caso in cui un membro calcolato faccia riferimento a un altro membro calcolato, ovvero, quando i membri calcolati si intersecano.|  
-|FORMAT_STRING|Una stringa di formato in stile [!INCLUDE[msCoName](../includes/msconame-md.md)] Office che può essere utilizzata dall'applicazione client per la visualizzazione dei valori delle celle.|  
+|FORMAT_STRING|Una stringa di formato stile Office che l'applicazione client può utilizzare quando si visualizzano i valori delle celle.|  
 |VISIBLE|Un valore che indica se il membro calcolato è visibile in un set di righe dello schema. Visible calcolati i membri possono essere aggiunti a un set con il [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) (funzione). Un valore diverso da zero indica che il membro calcolato è visibile. Il valore predefinito per questa proprietà è *Visible*.<br /><br /> I membri calcolati non visibili, per cui il valore è impostato su zero, vengono in genere utilizzati come passaggi intermedi in membri calcolati più complessi. A tali membri calcolati è possibile fare riferimento anche da altri tipi di membri, ad esempio le misure.|  
 |NON_EMPTY_BEHAVIOR|La misura o il set utilizzato per determinare il comportamento dei membri calcolati durante la risoluzione delle celle vuote.<br /><br /> **\*\* Avviso \* \***  questa proprietà è deprecata. Evitare di impostarla. Per informazioni dettagliate, vedere [Funzionalità di Analysis Services deprecate in SQL Server 2016](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md).|  
 |CAPTION|Una stringa che l'applicazione client utilizza come didascalia per il membro.|  

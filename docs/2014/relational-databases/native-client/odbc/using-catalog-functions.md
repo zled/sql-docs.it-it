@@ -1,0 +1,88 @@
+---
+title: Uso delle funzioni catalogo | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- ODBC, functions
+- SQLLinkedCatalogs function
+- SQL Server Native Client ODBC driver, catalog functions
+- SQLLinkedServers function
+- catalog functions [ODBC]
+- functions [ODBC]
+ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
+caps.latest.revision: 35
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fd1dfb0266a13b32d4dde81ee961621fc4ccdc24
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421360"
+---
+# <a name="using-catalog-functions"></a>Utilizzo delle funzioni di catalogo
+  Tutti i database presentano una struttura che contiene i dati archiviati nel database. Una definizione di tale struttura, insieme ad altre informazioni quali le autorizzazioni, è archiviata in un catalogo (implementato come un set di tabelle di sistema), noto anche come dizionario dei dati.  
+  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client consente a un'applicazione determinare la struttura del database tramite chiamate alle funzioni di catalogo ODBC. Le funzioni di catalogo restituiscono informazioni nei set di risultati e vengono implementate utilizzando stored procedure di catalogo per eseguire query sulle tabelle di sistema nel catalogo. Un'applicazione potrebbe ad esempio richiedere un set di risultati contenente informazioni su tutte le tabelle del sistema o tutte le colonne di una particolare tabella. Le funzioni di catalogo ODBC standard vengono utilizzate per ottenere informazioni di catalogo dal computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al quale è connessa l'applicazione.  
+  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta query distribuite grazie alle quali è possibile accedere con un'unica query ai dati provenienti da più origini dati OLE DB eterogenee. Uno dei metodi di accesso a un'origine dati OLE DB remota consiste nel definire l'origine dati come server collegato. Questa operazione può essere eseguita tramite [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql). Dopo che è stato definito il server collegato, è possibile fare riferimento agli a oggetti del server nelle istruzioni Transact-SQL utilizzando un nome costituito da quattro parti:  
+  
+ *linked_server_name.catalog.schema.object_name*.  
+  
+ Il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta due funzioni specifiche del driver per il recupero delle informazioni di catalogo dai server collegati:  
+  
+-   **SQLLinkedServers**  
+  
+     Restituisce un elenco dei server collegati definiti nel server locale.  
+  
+-   **SQLLinkedCatalogs**  
+  
+     Restituisce un elenco dei cataloghi presenti in un server collegato.  
+  
+ Dopo aver ottenuto un nome del server collegato e un nome di catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta recupero delle informazioni dal catalogo usando un nome composto due parti *linked_server_name ***.*** catalogo* per *CatalogName* funzioni di catalogo in ODBC seguenti:  
+  
+-   **SQLColumnPrivileges**  
+  
+-   **SQLColumns**  
+  
+-   **SQLPrimaryKeys**  
+  
+-   **SQLStatistics**  
+  
+-   **SQLTablePrivileges**  
+  
+-   **SQLTables**  
+  
+ Le due parti *linked_server_name ***.*** catalogo* è supportata anche per *FKCatalogName* e *PKCatalogName* sul [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+  
+ L'utilizzo di SQLLinkedServers e SQLLinkedCatalogs richiede i file seguenti:  
+  
+-   sqlncli.h  
+  
+     Include prototipi della funzione e definizioni costanti per le funzioni del catalogo del server collegato. sqlncli.h deve essere incluso nell'applicazione ODBC e deve trovarsi nel percorso di inclusione al momento della compilazione dell'applicazione.  
+  
+-   sqlncli11.lib  
+  
+     Deve trovarsi nel percorso della libreria del linker e deve essere specificato come un file da collegare. sqlncli11.lib è distribuito con il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+  
+-   sqlncli11.dll  
+  
+     Deve essere presente in fase di esecuzione. sqlncli11.dll è distribuito con il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
+ [SQLColumnPrivileges](../../native-client-odbc-api/sqlcolumnprivileges.md)   
+ [SQLColumns](../../native-client-odbc-api/sqlcolumns.md)   
+ [SQLPrimaryKeys](../../native-client-odbc-api/sqlprimarykeys.md)   
+ [SQLTablePrivileges](../../native-client-odbc-api/sqltableprivileges.md)   
+ [SQLTables](../../native-client-odbc-api/sqltables.md)   
+ [SQLStatistics](../../statistics/statistics.md)  
+  
+  

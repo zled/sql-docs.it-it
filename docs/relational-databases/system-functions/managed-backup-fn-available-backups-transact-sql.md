@@ -1,5 +1,5 @@
 ---
-title: fn_available_backups (Transact-SQL) | Documenti Microsoft
+title: fn_available_backups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7899bdcc0ef397534a723abae15d7263d371d5ee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040359"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
   
 ##  <a name="Arguments"></a> Argomenti  
  @database_name  
- Nome del database. Il @database_name è nvarchar (512).  
+ Nome del database. Il @database_name è NVARCHAR(512).  
   
 ## <a name="table-returned"></a>Tabella restituita  
  Alla tabella viene applicato un vincolo cluster univoco (database_guid, backup_start_date e first_lsn, backup_type).   
@@ -67,15 +68,15 @@ Se sono presenti gap in LSN significa che è presente un'interruzione nella cate
 |last_recovery_fork_id|UNIQUEIDENTIFIER|Numero di identificazione per il fork di recupero finale.|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|ID del fork di recupero iniziale. Per i backup di dati, first_recovery_fork_guid è uguale a last_recovery_fork_guid.|  
 |fork_point_lsn|NUMERIC(25, 0)|Se first_recovery_fork_id è diverso da last_recovery_fork_id, è il numero di sequenza del file di log (LSN) del punto di fork. Negli altri casi il valore è NULL.|  
-|availability_group_guid|UNIQUEIDENTIFIER|Se un database è un database AlwaysOn, questo è il GUID del gruppo di disponibilità. Negli altri casi il valore è NULL.|  
+|availability_group_guid|UNIQUEIDENTIFIER|Se un database è un database AlwaysOn, si tratta del GUID del gruppo di disponibilità. Negli altri casi il valore è NULL.|  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
- Richiede **selezionare** le autorizzazioni per questa funzione.  
+ È necessario **seleziona** le autorizzazioni per questa funzione.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono elencati tutti i backup disponibili eseguiti tramite il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per il database 'MyDB'.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905436"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>Vincoli del calendario gregoriano
 Tipi di dati date e datetime e i campi dei tipi di dati di intervallo finali devono essere conforme ai vincoli del calendario gregoriano. Questi vincoli sono i seguenti:  

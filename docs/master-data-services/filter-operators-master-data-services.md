@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f4d3785155a0027f374b25f22b9586a215fd4ae9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e14ee29906ca9773aa88e9d400f17416ee8cd0a1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402613"
 ---
 # <a name="filter-operators-master-data-services"></a>Operatori di filtro (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="filter-operators"></a>Operatori di filtro  
   
-|Nome del controllo|Description|  
+|Nome del controllo|Descrizione|  
 |------------------|-----------------|  
 |**È uguale a**|Restituisce i valori di attributo che corrispondono esattamente ai criteri specificati. Ad esempio, per filtrare in base a **Mountain-100**, è necessario digitare **Mountain-100**.|  
 |**È diverso da**|Restituisce i valori di attributo che non corrispondono esattamente ai criteri specificati. I criteri di filtro devono corrispondere esattamente al valore di attributo che si desidera omettere dai risultati. Ad esempio, per omettere i risultati che corrispondono a **Mountain-100**, è necessario digitare **Mountain-100**.<br /><br /> <br /><br /> Nota: quando si applica una condizione di filtro con una clausola "È diverso da" su un attributo, un membro per il quale l'attributo è NULL supererà la condizione di filtro e verrà restituito se SET ANSI_NULLS è impostato su ON nelle impostazioni del database. Per arrestare questo comportamento, disattivare SET ANSI_NULLS nelle impostazioni del database. Quando l'opzione SET ANSI_NULLS è impostata su OFF, dai confronti di tutti i dati con un valore Null verrà restituito TRUE, se il valore dei dati è NULL, con il risultato che il membro non supera la clausola "È diverso da". Per altre informazioni, vedere [SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  

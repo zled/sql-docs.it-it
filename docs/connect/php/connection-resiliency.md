@@ -3,7 +3,6 @@ title: Resilienza delle connessioni inattive
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: b2ffbf3ef57db31fcfd3a714fe9e2f6e0565237f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 250e4e6334a31d760c8fcb3e1e571ec1a726d020
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307260"
 ---
 # <a name="idle-connection-resiliency"></a>Resilienza delle connessioni inattive
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,14 +24,14 @@ ms.lasthandoff: 05/03/2018
 
 Resilienza di connessione viene implementata con due parole chiave di connessione che possono essere aggiunto a stringhe di connessione: **ConnectRetryCount** e **ConnectRetryInterval**.
 
-|Parola chiave|Valori|Valore predefinito|Description|
+|Parola chiave|Valori|Default|Description|
 |-|-|-|-|
 |**ConnectRetryCount**| Numero intero compreso tra 0 e 255 (inclusivo)|1|Il numero massimo di tentativi per ristabilire una connessione interrotta prima di rinunciare. Per impostazione predefinita, un singolo tenta di ristabilire una connessione quando vengono interrotti. Un valore pari a 0 indica che la riconnessione non verrà tentato di eseguire.|
 |**ConnectRetryInterval**| Numero intero compreso tra 1 e 60 (inclusi)|1| Tempo, in secondi, tra i tentativi per ristabilire una connessione. L'applicazione tenterà di riconnettersi immediatamente al rilevamento di una connessione interrotta e verrà quindi attendere **ConnectRetryInterval** secondi prima di riprovare. Questa parola chiave viene ignorata se **ConnectRetryCount** è uguale a 0.
 
 Se il prodotto di **ConnectRetryCount** moltiplicato per **ConnectRetryInterval** è maggiore di **LoginTimeout**, quindi il client viene interrotta sta tentando di connettersi una volta  **LoginTimeout** viene raggiunto; in caso contrario, continuerà a tentare di riconnettersi finché **ConnectRetryCount** viene raggiunto.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Remarks
 
 Resilienza di connessione si applica quando la connessione rimane inattiva. Gli errori che si verificano durante l'esecuzione di una transazione, ad esempio, non attiva i tentativi di riconnessione: hanno esito negativo come in caso contrario potrebbe essere previsto. Le situazioni seguenti, note come gli stati di sessione non recuperabili, non comporta tentativi di riconnessione:
 

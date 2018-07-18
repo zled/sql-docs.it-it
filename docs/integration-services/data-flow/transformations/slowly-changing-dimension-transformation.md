@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d19c71d2bc62499294e8ba7b16b3072bfb46df8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a8d50ca3c1b998bd564b4cdad967db3e28e3986
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329685"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensione a modifica lenta - trasformazione
   La trasformazione Dimensione a modifica lenta consente di coordinare l'aggiornamento e l'inserimento dei record nelle tabelle delle dimensioni dei data warehouse. È ad esempio possibile usare questa trasformazione per configurare gli output che inseriscono e aggiornano i record nella tabella DimProduct del database [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con i dati della tabella Production.Products del database OLTP AdventureWorks.  
@@ -69,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente vengono descritti gli output della trasformazione e i requisiti dei flussi di dati successivi. I requisiti descrivono il flusso di dati creato dalla Configurazione guidata dimensioni a modifica lenta.  
   
-|Output|Description|Requisiti del flusso di dati|  
+|Output|Descrizione|Requisiti del flusso di dati|  
 |------------|-----------------|----------------------------|  
 |**Output aggiornamenti attributi modificabili**|Il record nella tabella di ricerca è stato aggiornato. Questo output viene utilizzato per le righe con attributi modificabili.|Una trasformazione Comando OLE DB aggiorna il record utilizzando un'istruzione UPDATE.|  
 |**Output attributo fisso**|Per i valori nelle righe che non devono essere modificate non esiste alcuna corrispondenza con i valori nella tabella di ricerca. Questo output viene utilizzato per le righe con attributi fissi.|Non viene creato alcun flusso di dati predefinito. Se la trasformazione è configurata in modo da continuare anche in caso di rilevamento di modifiche alle colonne con attributi fissi, sarà necessario creare un flusso di dati che acquisisca tali righe.|  

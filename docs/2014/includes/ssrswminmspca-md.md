@@ -1,1 +1,1 @@
-**radice\\Microsoft\\SqlServer\\ReportServer\\\<*InstanceName*\>\\v12\\Admin**
+**radice\\Microsoft\\SqlServer\\ReportServer\\\<*NomeIstanza*\>\\v12\\Admin**

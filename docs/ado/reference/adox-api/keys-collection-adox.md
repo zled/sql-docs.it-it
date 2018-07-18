@@ -2,7 +2,6 @@
 title: Tasti di raccolta (ADOX) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f85bb15e6a8949299f0340530de6ffeb335389f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 613c1579c2aacd99ff1f7dabf92d11bd6585c9eb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286560"
 ---
 # <a name="keys-collection-adox"></a>Raccolta di chiavi (ADOX)
 Contiene tutti [chiave](../../../ado/reference/adox-api/key-object-adox.md) gli oggetti di un [tabella](../../../ado/reference/adox-api/table-object-adox.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) metodo per un [insieme Keys](../../../ado/reference/adox-api/keys-collection-adox.md) è univoco in ADOX. È possibile effettuare le operazioni seguenti:  
   
 -   Aggiungere una nuova chiave per la raccolta con il [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) metodo.  

@@ -1,5 +1,5 @@
 ---
-title: Altre annotazioni (SQLXML 4.0) | Documenti Microsoft
+title: Altre annotazioni (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,10 +28,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6f3941965ceadbc98f4215d646dda4e87fea752b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053972"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>Interpretazione delle annotazioni - altre annotazioni
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
  Il caricamento bulk XML non supporta questa annotazione. Non è possibile ad esempio specificare un URL nei dati XML di input e prevedere che il caricamento bulk XML legga i dati da tale posizione per archiviarli nel database.  
   
  **sql:is-mapping-schema**  
- Caricamento Bulk XML non supporta questa annotazione né supporta **ID**.  
+ Caricamento Bulk XML non supporta questa annotazione né supporta **SQL: ID**.  
   
 > [!NOTE]  
 >  Il caricamento bulk XML non supporta schemi di mapping inline.  
@@ -56,6 +57,6 @@ ms.lasthandoff: 05/03/2018
  Il caricamento bulk XML ignora sempre questa annotazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Interpretazione delle annotazioni & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+ [Interpretazione delle annotazioni &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

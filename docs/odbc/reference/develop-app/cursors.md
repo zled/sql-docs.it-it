@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910956"
 ---
 # <a name="cursors"></a>Cursori
 Un'applicazione recupera i dati con un *cursore*. Un cursore è diverso da un set di risultati: un set di risultati è il set di righe che soddisfa i criteri di ricerca particolare, mentre un cursore è il software che restituisce le righe per l'applicazione. Il nome *cursore,* applicato ai database, probabilmente ha avuto origine il cursore in un computer terminal lampeggiante. Come tale cursore indica la posizione sullo schermo e in cui le parole tipizzate apparirà successive, un cursore su un set di risultati indica la posizione corrente nel set di risultati e la riga verrà restituita accanto.  

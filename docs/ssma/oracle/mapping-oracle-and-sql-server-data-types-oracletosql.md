@@ -1,8 +1,6 @@
 ---
-title: Mapping di Oracle e tipi di dati SQL Server (OracleToSQL) | Documenti Microsoft
+title: Mapping dei tipi di dati SQL Server (OracleToSQL) e Oracle | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,55 +15,56 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4b17ff13e10f0ec77a8d35e1f051960d6d32a25c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54b67cbb38c9884afc19f6da6283bfda99f93e88
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979324"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mapping di Oracle e tipi di dati SQL Server (OracleToSQL)
-Diversi tipi di database Oracle da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di database. Quando si esegue la conversione di oggetti di database Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti, è necessario specificare come eseguire il mapping dei tipi di dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. È possibile accettare i mapping dei tipi di dati predefinito oppure è possibile personalizzare i mapping, come illustrato nelle sezioni seguenti.  
+Tipi di database Oracle sono diversi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di database. Quando si convertono oggetti di database Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti, è necessario specificare come eseguire il mapping di tipi di dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. È possibile accettare i mapping dei tipi di dati predefinito, oppure è possibile personalizzare i mapping come illustrato nelle sezioni seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
-SSMA è un set predefinito di mapping dei tipi di dati. Per l'elenco di mapping predefiniti, vedere [impostazioni del progetto di &#40;Mapping dei tipi&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
+SSMA è un set predefinito di mapping dei tipi di dati. Per l'elenco di mapping predefiniti, vedere [impostazioni del progetto &#40;Mapping dei tipi&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
   
-## <a name="type-mapping-inheritance"></a>Mapping di ereditarietà dei tipi  
-È possibile personalizzare i mapping dei tipi a livello di progetto, il livello di categoria oggetto (ad esempio, tutte le stored procedure) o livello di oggetto. Le impostazioni vengono ereditate da un livello più alto, a meno che vengano sostituiti con un livello inferiore. Ad esempio, se si esegue il mapping **smallmoney** a **money** a livello di progetto, tutti gli oggetti nel progetto utilizzerà questo mapping, a meno che per personalizzare il mapping a livello di oggetto o alla categoria.  
+## <a name="type-mapping-inheritance"></a>Tipo di Mapping dell'ereditarietà  
+È possibile personalizzare i mapping dei tipi a livello di progetto, a livello di categoria di oggetto (ad esempio, tutte le stored procedure) o a livello di oggetto. Le impostazioni vengono ereditate da un livello superiore, a meno che non vengano sostituiti a un livello inferiore. Ad esempio, se si esegue il mapping **smallmoney** al **denaro** a livello di progetto, tutti gli oggetti nel progetto userà questo mapping non è stato personalizzato il mapping a livello di oggetto o categoria.  
   
-Quando si visualizza il **del mapping dei tipi** scheda SSMA, lo sfondo è contraddistinte da colore per mostrare il mapping dei tipi vengono ereditati. Lo sfondo di un mapping dei tipi è giallo per il mapping dei tipi ereditati e bianco per qualsiasi mapping specificato al livello corrente.  
+Quando si visualizza il **Mapping dei tipi** scheda in SSMA, lo sfondo è contraddistinte da colorata per mostrare il mapping dei tipi vengono ereditati. Lo sfondo di un mapping dei tipi è di colore giallo per dei mapping dei tipi ereditati e bianco per qualsiasi mapping specificato al livello corrente.  
   
 ## <a name="customizing-data-type-mappings"></a>Personalizzazione dei mapping dei tipi di dati  
-La procedura seguente viene illustrato come eseguire il mapping di tipi di dati nel progetto, database o il livello di oggetto:  
+La procedura seguente illustra come eseguire il mapping di tipi di dati nel progetto, database o a livello di oggetto:  
   
 **Eseguire il mapping di tipi di dati**  
   
-1.  Per personalizzare i mapping dei tipi di dati per l'intero progetto, aprire il **impostazioni progetto** la finestra di dialogo:  
+1.  Per personalizzare i mapping dei tipi di dati per l'intero progetto, aprire il **impostazioni del progetto** nella finestra di dialogo:  
   
-    1.  Nel **strumenti** dal menu **impostazioni progetto**.  
+    1.  Nel **degli strumenti** dal menu **le impostazioni del progetto**.  
   
-    2.  Nel riquadro a sinistra, selezionare **del mapping dei tipi**.  
+    2.  Nel riquadro sinistro, selezionare **Mapping dei tipi**.  
   
         Il grafico di mapping di tipo e i pulsanti vengono visualizzati nel riquadro di destra.  
   
-    In alternativa, per personalizzare il tipo di dati mapping a livello di database, tabella, vista o stored procedure, selezionare il database, la categoria dell'oggetto oppure l'oggetto in Visualizzatore metadati Oracle:  
+    In alternativa, per personalizzare il tipo di dati mapping al database, tabella, vista o a livello di stored procedure, selezionare il database, una categoria dell'oggetto o un oggetto nel Visualizzatore metadati Oracle:  
   
-    1.  Nel Visualizzatore metadati Oracle, selezionare la cartella o oggetto da personalizzare.  
+    1.  Nel Visualizzatore metadati Oracle, selezionare la cartella o un oggetto da personalizzare.  
   
-    2.  Nel riquadro di destra, fare clic su di **del mapping dei tipi** scheda.  
+    2.  Nel riquadro di destra, scegliere il **Mapping dei tipi** scheda.  
   
-2.  Per aggiungere un nuovo mapping, eseguire le operazioni seguenti:  
+2.  Per aggiungere un nuovo mapping, procedere come segue:  
   
     1.  Scegliere **Aggiungi**.  
   
-    2.  In **tipo di origine**, selezionare il tipo di dati Oracle per eseguire il mapping.  
+    2.  Sotto **tipo di origine**, selezionare il tipo di dati Oracle per eseguire il mapping.  
   
-    3.  Se il tipo richiede una lunghezza, specificare la lunghezza minima di dati per il mapping nel **da** casella e la lunghezza massima dei dati nel **a** casella.  
+    3.  Se il tipo richiede una lunghezza, specificare la lunghezza minima dei dati per il mapping nel **dal** finestra e la lunghezza massima dei dati nel **a** casella.  
   
-        Ciò consente di personalizzare il mapping dei dati per i valori di dimensioni minori e più grandi dello stesso tipo di dati.  
+        Ciò consente di personalizzare il mapping dei dati per i valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati.  
+    4.  Sotto **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati.  
   
-        Alcuni tipi richiedono una lunghezza di tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire** casella.  
+        Alcuni tipi richiedono una lunghezza del tipo dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire con** casella.  
   
     5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
@@ -73,27 +72,27 @@ La procedura seguente viene illustrato come eseguire il mapping di tipi di dati 
   
     1.  Fare clic su **Modifica**.  
   
-    2.  In **tipo di origine**, selezionare il tipo di dati Oracle per eseguire il mapping.  
+    2.  Sotto **tipo di origine**, selezionare il tipo di dati Oracle per eseguire il mapping.  
   
-    3.  Se il tipo richiede una lunghezza, specificare la lunghezza minima di dati per il mapping nel **da** casella e la lunghezza massima dei dati nel **a** casella.  
+    3.  Se il tipo richiede una lunghezza, specificare la lunghezza minima dei dati per il mapping nel **dal** finestra e la lunghezza massima dei dati nel **a** casella.  
   
-        Ciò consente di personalizzare il mapping dei dati per i valori di dimensioni minori e più grandi dello stesso tipo di dati.  
+        Ciò consente di personalizzare il mapping dei dati per i valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati.  
+    4.  Sotto **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati.  
   
-        Alcuni tipi richiedono una lunghezza di tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire con** casella, quindi [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Alcuni tipi richiedono una lunghezza del tipo dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire con** casella e quindi [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
-4.  Per rimuovere un mapping dei tipi di dati personalizzati, effettuare le operazioni seguenti:  
+4.  Per rimuovere un mapping dei tipi di dati personalizzate, eseguire le operazioni seguenti:  
   
     1.  Selezionare la riga nell'elenco di mapping di tipo che contiene il mapping dei tipi di dati che si desidera rimuovere.  
   
     2.  Scegliere **Rimuovi**.  
   
-        È possibile rimuovere i mapping ereditati. Tuttavia, i mapping ereditati vengono sovrascritte dai mapping personalizzati in un oggetto specifico o una categoria dell'oggetto.  
+        Non è possibile rimuovere i mapping ereditati. Tuttavia, i mapping ereditati vengono sottoposte a override dai mapping personalizzati di un oggetto specifico o per categoria dell'oggetto.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
-Il passaggio successivo del processo di migrazione è su [creare una relazione di valutazione](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357) o [convertire gli oggetti di database Oracle in sintassi SQL Server](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272). Se si crea una relazione di valutazione, oggetti Oracle vengono convertiti automaticamente durante la valutazione.  
+Il passaggio successivo del processo di migrazione consiste nel [creare un report di valutazione](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357) oppure [convertire gli oggetti di database Oracle in sintassi SQL Server](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272). Se si crea un report di valutazione, gli oggetti Oracle vengono convertiti automaticamente durante la valutazione.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di Oracle database a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[La migrazione da Oracle database in SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

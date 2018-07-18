@@ -2,7 +2,6 @@
 title: Proprietà descrizione | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 070ad4fc974a0471703060a511b51253acbf346d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2aaa6bb9f548c4b5719e597d7e20f341b029d0ca
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277660"
 ---
 # <a name="description-property"></a>Proprietà Description
 Viene descritto un [errore](../../../ado/reference/ado-api/error-object.md) oggetto.  
@@ -34,7 +34,7 @@ Viene descritto un [errore](../../../ado/reference/ado-api/error-object.md) ogge
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un **stringa** valore che contiene una descrizione dell'errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **descrizione** proprietà per ottenere una breve descrizione dell'errore. Visualizzare questa proprietà per generare un avviso all'utente di un errore che non è possibile o non si desidera gestire. La stringa verrà derivare da ADO o un provider.  
   
  I provider sono responsabili per passare il testo di errore specifico in ADO. ADO aggiunge un [errore](../../../ado/reference/ado-api/error-object.md) dell'oggetto per il **errori** insieme per ogni provider di errore o avviso viene ricevuto. Enumerare i **errori** raccolta per gli errori che passa il provider di traccia.  

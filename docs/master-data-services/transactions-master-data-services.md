@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2ecedca3bec602e5f278fb689080ca1b58b0224e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 17d4db723ab0cfbb7a8974460e0385f7cbebcd3b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335355"
 ---
 # <a name="transactions-master-data-services"></a>Transazioni (Master Data Services)
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
  È anche possibile chiamare le stored procedure seguenti per pulire i log delle transazioni.  
   
-|Stored procedure|Description|  
+|Stored procedure|Descrizione|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|Pulisce la cronologia delle transazioni|  
 |mdm.udpValidationsCleanup|Pulisce la cronologia di convalida|  

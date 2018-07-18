@@ -1,8 +1,6 @@
 ---
 title: Impostazioni (Mapping dei tipi) del progetto (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1805c9536995ddbd3a661a50ef3c4804a720fd8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bf1d1c219b8673345d5f2074fe8885b5c58223f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776768"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Impostazioni (Mapping dei tipi) del progetto (MySQLToSQL)
 Le impostazioni di Mapping dei tipi del progetto consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA.  
@@ -59,8 +58,8 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |||  
 |-|-|  
 |**Tipo di dati di MySQL**|**Tipo di dati SQL Server**|  
-|bigint|bigint|  
-|bigint [*... 255]|bigint|  
+|BIGINT|BIGINT|  
+|bigint [*... 255]|BIGINT|  
 |BINARY|binario [1]|  
 |binario [0..1]|binario [1]|  
 |binario [2..255]|binario [*]|  
@@ -87,11 +86,11 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |Char [2..255]|nchar [*]|  
 |character|nchar [1]|  
 |caratteri diversi [0..1]|nvarchar [1]|  
-|caratteri diversi [2..255]|nvarchar|  
+|caratteri diversi [2..255]|NVARCHAR|  
 |caratteri [0..1]|nchar [1]|  
 |caratteri [2..255]|nchar [*]|  
-|data|data|  
-|datetime|datetime2 [0]|  
+|Data|Data|  
+|DATETIME|datetime2 [0]|  
 |dec|Decimal|  
 |DEC [*... 65]|decimal[*][0]|  
 |dec[*..65][\*..30]|decimal[*][\*]|  
@@ -102,20 +101,20 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |valore a precisione doppia|float [53]|  
 |valore a precisione doppia [*... 255][\*.. 30]|numerico [*] [\*]|  
 |double[*..255][\*..30]|numerico [*] [\*]|  
-|predefinito|numeric|  
+|predefinito|NUMERIC|  
 |fixed[*..65][\*..30]|numerico [*] [\*]|  
-|float|float [24]|  
+|FLOAT|float [24]|  
 |float [*... 255][\*.. 30]|numerico [*] [\*]|  
 |float [*... 53]|float [53]|  
-|int|int|  
-|int [*... 255]|int|  
-|integer|int|  
-|integer[*..255]|int|  
+|INT|INT|  
+|int [*... 255]|INT|  
+|integer|INT|  
+|integer[*..255]|INT|  
 |longblob|varbinary(max)|  
 |LONGTEXT|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|int|  
-|mediumint [*... 255]|int|  
+|mediumint|INT|  
+|mediumint [*... 255]|INT|  
 |mediumtext|nvarchar(max)|  
 |char nazionali|nchar [1]|  
 |National char [0..1]|nchar [1]|  
@@ -138,30 +137,30 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |nchar varchar [4001... *]|nvarchar(max)|  
 |nchar [0..1]|nchar [1]|  
 |nchar [2..255]|nchar [*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |numerico [*... 65]|numerico [*] [0]|  
 |numerico [*... 65][\*.. 30]|numerico [*] [\*]|  
-|nvarchar|nvarchar [1]|  
+|NVARCHAR|nvarchar [1]|  
 |nvarchar [0..1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
 |nvarchar [4001... *]|nvarchar(max)|  
-|real|float [53]|  
+|REAL|float [53]|  
 |real[*..255][\*..30]|numerico [*] [\*]|  
-|Seriale|bigint|  
-|smallint|smallint|  
-|smallint [*... 255]|smallint|  
+|Seriale|BIGINT|  
+|SMALLINT|SMALLINT|  
+|smallint [*... 255]|SMALLINT|  
 |text|nvarchar(max)|  
 |testo [0..1]|nvarchar [1]|  
 |text[2..4000]|nvarchar [*]|  
 |testo [4001... *]|nvarchar(max)|  
 |time|time|  
-|TIMESTAMP|datetime|  
+|TIMESTAMP|DATETIME|  
 |tinyblob|varbinary[255]|  
-|tinyint|smallint|  
-|tinyint[*..255]|smallint|  
+|TINYINT|SMALLINT|  
+|tinyint[*..255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
-|bigint senza segno|bigint|  
-|senza segno bigint [*... 255]|bigint|  
+|bigint senza segno|BIGINT|  
+|senza segno bigint [*... 255]|BIGINT|  
 |dec senza segno|Decimal|  
 |senza segno dec [*... 65]|decimal[*][0]|  
 |senza segno dec [*... 65][\*.. 30]|decimal[*][\*]|  
@@ -172,35 +171,35 @@ Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dat
 |senza segno a precisione doppia|float [53]|  
 |senza segno a precisione doppia [*... 255][\*.. 30]|numerico [*] [\*]|  
 |Unsigned double [*... 255][\*.. 30]|numerico [*] [\*]|  
-|Unsigned predefinito|numeric|  
+|Unsigned predefinito|NUMERIC|  
 |Unsigned fissa [*... 65][\*.. 30]|numerico [*] [\*]|  
 |float senza segno|float [24]|  
 |senza segno float [*... 255][\*.. 30]|numerico [*] [\*]|  
 |senza segno float [*... 53]|float [53]|  
-|int senza segno|bigint|  
-|int senza segno [*... 255]|bigint|  
-|intero senza segno|bigint|  
-|intero senza segno [*... 255]|bigint|  
-|mediumint senza segno|int|  
-|senza segno mediumint [*... 255]|int|  
-|numerico senza segno|numeric|  
+|int senza segno|BIGINT|  
+|int senza segno [*... 255]|BIGINT|  
+|intero senza segno|BIGINT|  
+|intero senza segno [*... 255]|BIGINT|  
+|mediumint senza segno|INT|  
+|senza segno mediumint [*... 255]|INT|  
+|numerico senza segno|NUMERIC|  
 |numerico senza segno [*... 65]|numerico [*] [0]|  
 |numerico senza segno [*... 65][\*.. 30]|numerico [*] [\*]|  
 |senza segno reale|float [53]|  
 |Unsigned reale [*... 255[[\*.. 30]|numerico [*] [\*]|  
-|smallint senza segno|int|  
-|smallint non firmati [*... 255]|int|  
-|tinyint senza segno|tinyint|  
-|senza segno tinyint [*... 255]|tinyint|  
+|smallint senza segno|INT|  
+|smallint non firmati [*... 255]|INT|  
+|tinyint senza segno|TINYINT|  
+|senza segno tinyint [*... 255]|TINYINT|  
 |varbinary [0..1]|varbinary [1]|  
 |varbinary [2..8000]|varbinary [*]|  
 |varbinary [8001... *]|varbinary(max)|  
 |varchar [0..1]|nvarchar [1]|  
 |varchar [2..4000]|nvarchar [*]|  
 |varchar [4001... *]|nvarchar(max)|  
-|year|smallint|  
-|anno [2..2]|smallint|  
-|anno [4..4]|smallint|  
+|year|SMALLINT|  
+|anno [2..2]|SMALLINT|  
+|anno [4..4]|SMALLINT|  
   
 ##### <a name="add"></a>Aggiungi  
 Fare clic per aggiungere un tipo di dati nell'elenco di mapping.  

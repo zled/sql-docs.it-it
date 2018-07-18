@@ -1,6 +1,6 @@
 ---
-title: Introduzione a caratteristiche di prestazioni di SQL Server in Linux | Documenti Microsoft
-description: In questo articolo viene fornita un'introduzione delle funzionalità di prestazioni di SQL Server per gli utenti di Linux che hanno familiarità con SQL Server. Molti di questi esempi funzionano in tutte le piattaforme, ma il contesto di questo articolo è Linux.
+title: Introduzione alle funzionalità delle prestazioni di SQL Server in Linux | Microsoft Docs
+description: Questo articolo fornisce un'introduzione delle funzionalità delle prestazioni di SQL Server per Linux gli utenti che hanno familiarità con SQL Server. Molti di questi esempi funzionano in tutte le piattaforme, ma il contesto di questo articolo è un sistema Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,22 +13,23 @@ ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: sql-linux
 ms.openlocfilehash: 91a83740d83cb6e121d8ea413cf6322f75b68dff
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001853"
 ---
-# <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Procedura dettagliata per le caratteristiche di prestazioni di SQL Server in Linux
+# <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Procedura dettagliata per le funzionalità delle prestazioni di SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Nel caso di un utente di Linux che è una novità di SQL Server, le attività seguenti illustrano alcune delle funzionalità di prestazioni. Queste non sono specifiche di Linux o univoco, ma consente di farsi un'idea delle aree per approfondire la verifica. In ogni esempio viene fornito un collegamento alla documentazione di profondità per tale area.
+Se sei un utente di Linux che è una novità di SQL Server, le attività seguenti illustrano alcune delle funzionalità delle prestazioni. Questi non sono specifiche di Linux o univoco, ma è utile per dare un'idea delle aree per analizzare ulteriormente il problema. In ogni esempio viene fornito un collegamento alla documentazione di profondità per quell'area.
 
 > [!NOTE]
 > Gli esempi seguenti usano il database di esempio AdventureWorks. Per istruzioni su come ottenere e installare il database di esempio, vedere [ripristinare un database di SQL Server da Windows a Linux](sql-server-linux-migrate-restore-database.md).
 
 ## <a name="create-a-columnstore-index"></a>Creare un indice Columnstore
-Un indice columnstore è una tecnologia per l'archiviazione e query su grandi archivi di dati in un formato a colonne di dati, detto columnstore.  
+Un indice columnstore è una tecnologia per l'archiviazione e query su grandi archivi di dati in un formato di dati in colonna, detto columnstore.  
 
 1. Aggiungere un indice Columnstore sulla tabella SalesOrderDetail eseguendo i comandi Transact-SQL seguenti:
 
@@ -39,7 +40,7 @@ Un indice columnstore è una tecnologia per l'archiviazione e query su grandi ar
    GO
    ```
 
-2. Eseguire la query seguente che utilizza l'indice Columnstore per l'analisi della tabella:
+2. Eseguire la query seguente che usa l'indice Columnstore per analizzare la tabella seguente:
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -49,7 +50,7 @@ Un indice columnstore è una tecnologia per l'archiviazione e query su grandi ar
       ORDER BY ProductID
    ```
 
-3. Verificare che l'indice Columnstore è stato usato da ricerca di object_id per l'indice Columnstore e confermare che venga visualizzato in statistiche di utilizzo per la tabella SalesOrderDetail:
+3. Verificare che l'indice Columnstore è stato usato da ricerca di object_id per l'indice Columnstore e per confermare che venga visualizzato in statistiche di utilizzo per la tabella SalesOrderDetail:
 
    ```sql
    SELECT * FROM sys.indexes WHERE name = 'IX_SalesOrderDetail_ColumnStore'
@@ -61,11 +62,11 @@ Un indice columnstore è una tecnologia per l'archiviazione e query su grandi ar
       AND object_id = OBJECT_ID('AdventureWorks.Sales.SalesOrderDetail');
    ```
    
-## <a name="use-in-memory-oltp"></a>Utilizzo di OLTP In memoria
-SQL Server fornisce funzionalità di OLTP In memoria che possono migliorare notevolmente le prestazioni dei sistemi di applicazione.  In questa sezione della Guida alla valutazione verrà illustrati i passaggi per creare una tabella con ottimizzazione per la memoria archiviata in memoria e una stored procedure compilata in modo nativo che può accedere alla tabella senza la necessità di essere compilate o interpretate.
+## <a name="use-in-memory-oltp"></a>Usare OLTP In memoria
+SQL Server fornisce le funzionalità di OLTP In memoria che possono migliorare notevolmente le prestazioni dei sistemi di applicazione.  In questa sezione della Guida alla valutazione illustrerà i passaggi per creare una tabella con ottimizzazione per la memoria archiviata in memoria e una stored procedure compilata in modo nativo che può accedere alla tabella senza la necessità di essere compilate o interpretate.
 
 ### <a name="configure-database-for-in-memory-oltp"></a>Configurare i Database per OLTP In memoria
-1. Si consiglia di impostare il database a un livello di compatibilità di almeno 130 all'utilizzo di OLTP In memoria.  Usare la query seguente per verificare il livello di compatibilità corrente di AdventureWorks:  
+1. È consigliabile impostare il database a un livello di compatibilità di almeno 130 per usare OLTP In memoria.  Usare la query seguente per verificare il livello di compatibilità corrente di AdventureWorks:  
 
    ```sql
    USE AdventureWorks
@@ -76,7 +77,7 @@ SQL Server fornisce funzionalità di OLTP In memoria che possono migliorare note
    GO
    ```
    
-   Se necessario, aggiornare il livello su 130:
+   Se necessario, aggiornare il livello 130:
 
    ```sql
    ALTER DATABASE CURRENT
@@ -84,14 +85,14 @@ SQL Server fornisce funzionalità di OLTP In memoria che possono migliorare note
    GO
    ```
 
-2. Quando una transazione include una tabella basata su disco e una tabella con ottimizzazione per la memoria, è essenziale che la parte con ottimizzazione per la memoria della transazione operano a livello di isolamento transazione denominato SNAPSHOT.  Per applicare in modo affidabile questo livello per le tabelle con ottimizzazione per la memoria in una transazione tra contenitori, eseguire le operazioni seguenti:
+2. Quando una transazione include una tabella basata su disco e una tabella con ottimizzazione per la memoria, è essenziale che la parte con ottimizzazione per la memoria della transazione operano a livello di isolamento transazione denominato SNAPSHOT.  Per applicare in modo affidabile questo livello per le tabelle ottimizzate per la memoria in una transazione tra contenitori, eseguire le operazioni seguenti:
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
    GO
    ```
 
-3. Prima di poter creare una tabella con ottimizzazione per la memoria, è innanzitutto necessario creare un FILEGROUP con ottimizzazione per la memoria e un contenitore per i file di dati:
+3. Prima di poter creare una tabella con ottimizzazione per la memoria è necessario innanzitutto creare un FILEGROUP con ottimizzazione per la memoria e un contenitore per i file di dati:
 
    ```sql
    ALTER DATABASE AdventureWorks ADD FILEGROUP AdventureWorks_mod CONTAINS memory_optimized_data
@@ -101,9 +102,9 @@ SQL Server fornisce funzionalità di OLTP In memoria che possono migliorare note
    ```
 
 ### <a name="create-a-memory-optimized-table"></a>Creare una tabella con ottimizzazione per la memoria
-L'archivio primario per le tabelle con ottimizzazione per la memoria è la memoria principale e pertanto a differenza delle tabelle basate su disco, i dati non dover essere letti da disco nei buffer di memoria.  Per creare una tabella con ottimizzazione per la memoria, utilizzare il MEMORY_OPTIMIZED = ON clausola.
+L'archivio primario per le tabelle ottimizzate per la memoria è la memoria principale e pertanto a differenza delle tabelle basate su disco, i dati non devono essere letta dal disco nei buffer di memoria.  Per creare una tabella con ottimizzazione per la memoria, usare il MEMORY_OPTIMIZED = ON clausola.
 
-1. Eseguire la query seguente per creare una tabella con ottimizzazione per la memoria dbo. ShoppingCart.  Per impostazione predefinita, i dati verranno resi persistenti su disco per motivi di durabilità (si noti che durabilità è anche possibile impostare in modo permanente solo lo schema). 
+1. Eseguire la query seguente per creare la tabella ottimizzata per la memoria dbo. ShoppingCart.  Per impostazione predefinita, i dati verranno resi persistenti su disco per motivi di durabilità (si noti che durabilità è anche possibile impostare in modo permanente solo lo schema). 
 
    ```sql
    CREATE TABLE dbo.ShoppingCart ( 
@@ -115,7 +116,7 @@ L'archivio primario per le tabelle con ottimizzazione per la memoria è la memor
    GO
    ```
 
-2. Inserimento di alcuni record nella tabella:
+2. Inserire alcuni record nella tabella:
 
    ```sql
    INSERT dbo.ShoppingCart VALUES (8798, SYSDATETIME(), NULL) 
@@ -125,7 +126,7 @@ L'archivio primario per le tabelle con ottimizzazione per la memoria è la memor
    ```
 
 ### <a name="natively-compiled-stored-procedure"></a>Stored Procedure compilate in modo nativo
-SQL Server supporta le stored procedure compilate in modo nativo che accedono alle tabelle con ottimizzazione per la memoria. Le istruzioni T-SQL vengono compilate nel codice macchina e archiviate come DLL native, abilitare l'accesso ai dati più veloce e più efficiente esecuzione della query di T-SQL tradizionale.   Le stored procedure che sono contrassegnate con NATIVE_COMPILATION vengono compilate in modo nativo. 
+SQL Server supporta le stored procedure compilate in modo nativo che accedono alle tabelle ottimizzate per la memoria. Le istruzioni T-SQL vengono compilate in codice macchina e archiviate come DLL native, consentendo l'accesso ai dati più veloce e l'esecuzione di query più efficiente rispetto alle tradizionali soluzioni T-SQL.   Le stored procedure che sono contrassegnate con NATIVE_COMPILATION vengono compilate in modo nativo. 
 
 1. Eseguire lo script seguente per creare una stored procedure compilata in modo nativo che inserisce un numero elevato di record nella tabella ShoppingCart:
 
@@ -166,10 +167,10 @@ Per ulteriori informazioni su OLTP In memoria, vedere gli argomenti seguenti:
 - [Monitorare e risolvere i problemi relativi all'utilizzo della memoria](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
 - [OLTP in memoria (ottimizzazione per la memoria)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
-## <a name="use-query-store"></a>Usare l'archivio Query
-Archivio query raccoglie informazioni dettagliate prestazioni query, piani di esecuzione e le statistiche di runtime.
+## <a name="use-query-store"></a>Usare Query Store
+Query Store raccoglie informazioni dettagliate sulle prestazioni relative query, piani di esecuzione e le statistiche di runtime.
 
-Archivio query non è attiva per impostazione predefinita e può essere abilitata con ALTER DATABASE:
+Query Store non è attiva per impostazione predefinita e può essere abilitata con ALTER DATABASE:
 
    ```sql
    ALTER DATABASE AdventureWorks SET QUERY_STORE = ON;
@@ -186,10 +187,10 @@ Eseguire la query seguente per restituire informazioni sulle query e piani in ar
          ON Qry.query_text_id = Txt.query_text_id ;
    ```
 
-## <a name="query-dynamic-management-views"></a>Viste a gestione dinamica query
+## <a name="query-dynamic-management-views"></a>Viste a gestione dinamica delle query
 Viste a gestione dinamica restituiscono informazioni sullo stato di server che possono essere utilizzate per monitorare l'integrità di un'istanza del server, diagnosticare i problemi e ottimizzare le prestazioni.
 
-Per eseguire query sulla vista a gestione dinamica dm_os_wait statistiche:
+Per eseguire query sulla vista a gestione dinamica delle statistiche dm_os_wait:
 
    ```sql
    SELECT wait_type, wait_time_ms

@@ -1,36 +1,46 @@
 ---
-title: Lezione 3 Esplora e visualizzare i dati | Documenti Microsoft
+title: Lezione 3 esplorare e visualizzare i dati usando R e T-SQL (SQL Server Machine Learning Services) | Microsoft Docs
+description: Esercitazione che illustra come incorporare R in SQL Server stored procedure e funzioni T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4be76ebbb8f082e84a00bfe93b36c9bd8c2c0a81
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 057d7d988fd6f7f5d490cbf30f06e83270438983
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042886"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lezione 3: Esplorare e visualizzare i dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo articolo fa parte di un'esercitazione per gli sviluppatori SQL su come usare il linguaggio R in SQL Server.
+Questo articolo fa parte di un'esercitazione per sviluppatori SQL su come usare R in SQL Server.
 
-In questa lezione verranno esaminare i dati di esempio e quindi generare alcuni grafici utilizzando funzioni R. Queste funzioni R sono già inclusi [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. È possibile chiamare le funzioni di R da [!INCLUDE[tsql](../../includes/tsql-md.md)].
+In questa lezione verrà esaminato i dati di esempio e quindi generati alcuni tracciati usando [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) dalla [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) e il tipo generico [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) funzione in r di base. Queste funzioni R sono già inclusi [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+
+Un obiettivo fondamentale è che mostra come chiamare funzioni R [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle stored procedure e salvare i risultati in formati di file dell'applicazione:
+
++ Creare una stored procedure usando **RxHistogram** per generare un tracciato R sotto forma di dati varbinary. Uso **bcp** per esportare il flusso binario in un file di immagine.
++ Creare una stored procedure usando **Hist** per generare un tracciato, salvataggio dei risultati come output JPG e PDF.
+
+> [!NOTE]
+> Poiché la visualizzazione è uno strumento efficace per comprendere la forma dei dati e la distribuzione, R fornisce una gamma di funzioni e i pacchetti per la generazione di istogrammi, grafici a dispersione, box plot e altri grafici di esplorazione dei dati. R crea in genere le immagini usando un dispositivo R per l'output grafico, che è possibile acquisire e archiviare come un **varbinary** tipo di dati per il rendering nell'applicazione. È inoltre possibile salvare le immagini per tutti i formati di file di supporto (. JPG. PDF e così via).
 
 ## <a name="review-the-data"></a>Esaminare i dati
 
-Lo sviluppo di una soluzione di analisi scientifica dei dati prevede in genere frequenti esplorazioni e visualizzazioni dei dati. Tale scopo, è opportuno esaminare i dati di esempio, se hai già fatto.
+Lo sviluppo di una soluzione di analisi scientifica dei dati prevede in genere frequenti esplorazioni e visualizzazioni dei dati. Quindi, innanzitutto è opportuno esaminare i dati di esempio, se non è già presente.
 
-Nel set di dati originale gli identificatori di taxi e i record delle corse si trovavano in file separati. Tuttavia, per rendere più facile da utilizzare i dati di esempio, due set di dati originale sono state unite nelle colonne di _medallion_, _hack\_licenza_, e _prelievo\_ DateTime_.  È stato eseguito anche un campionamento dei record in modo da ottenere solo l'1% del numero di record originale. Il set di dati ridotto risultante include 1.703.957 righe e 23 colonne.
+Nel set di dati originale gli identificatori di taxi e i record delle corse si trovavano in file separati. Tuttavia, per rendere più facile da usare i dati di esempio, due set di dati originale sono stati uniti nelle colonne _medallion_, _hack\_licenza_, e _pickup\_ Data/ora_.  È stato eseguito anche un campionamento dei record in modo da ottenere solo l'1% del numero di record originale. Il set di dati ridotto risultante include 1.703.957 righe e 23 colonne.
 
 **Identificatori di taxi**
   
 -   La colonna _medallion_ rappresenta l'ID univoco del taxi.
   
--   Il _hack\_licenza_ colonna contiene il numero di licenza del driver taxi (resi anonime).
+-   Il _hack\_licenza_ colonna contiene i taxi numero di patente (resi anonimizzato).
   
 **Record delle corse e delle tariffe**
   
@@ -38,41 +48,29 @@ Nel set di dati originale gli identificatori di taxi e i record delle corse si t
   
 -   Il record di ogni tariffa include i dati del pagamento, ad esempio il tipo di pagamento, l'importo totale e l'importo della mancia.
   
--   Le ultime tre colonne possono essere usate per diverse attività di apprendimento automatico.  Il _suggerimento\_quantità_ colonna contiene valori numerici continui e può essere utilizzato come il **etichetta** colonna per l'analisi di regressione. La colonna _tipped_ include solo valori sì/no e viene usata per la classificazione binaria. Il _suggerimento\_classe_ colonna ha più **classe etichette** e pertanto può essere utilizzato come etichetta per le attività di classificazione multiclasse.
+-   Le ultime tre colonne possono essere usate per diverse attività di apprendimento automatico. Il _suggerimento\_quantità_ colonna contiene valori numerici continui e può essere utilizzato come il **etichetta** colonna per l'analisi di regressione. La colonna _tipped_ include solo valori sì/no e viene usata per la classificazione binaria. Il _suggerimento\_classe_ colonna ha più **etichette di classe** e pertanto può essere utilizzato come etichetta per le attività di classificazione multiclasse.
   
     In questa procedura dettagliata è descritta soltanto l'attività di classificazione binaria. Si consiglia di provare a creare modelli per le altre due attività di apprendimento automatico, la regressione e la classificazione multiclasse.
   
--   I valori utilizzati per le colonne di etichetta sono tutti basati sul _suggerimento\_quantità_ colonna utilizzando le regole business:
+-   I valori utilizzati per le colonne etichetta sono tutti basati sul _suggerimento\_quantità_ colonna utilizzando le regole di business:
   
-    |Nome colonna derivata|Rule|
+    |Nome colonna derivata|Regola|
     |-|-|
      |tipped|Se tip_amount > 0, tipped = 1, altrimenti tipped = 0|
     |tip_class|Classe 0: tip_amount = $0<br /><br />Classe 1: tip_amount > $0 e tip_amount <= $5<br /><br />Classe 2: tip_amount > $5 e tip_amount <= $10<br /><br />Classe 3: tip_amount > $10 e tip_amount <= $20<br /><br />Classe 4: tip_amount > $20|
 
-## <a name="create-plots-using-r-in-t-sql"></a>Creare grafici usando R in T-SQL
+## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>Creare una stored procedure, l'uso di rxHistogram per tracciare i dati
 
-Poiché la visualizzazione è uno strumento efficace per comprendere distribuzione dei dati e outlier, R offre numerosi pacchetti per la visualizzazione dei dati. La distribuzione open source standard di R include anche numerose funzioni per la creazione di istogrammi, grafici a dispersione, box plot e altri grafici di esplorazione dei dati.
+Per creare il tracciato, utilizzare [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), una delle funzioni R avanzate disponibili nel [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Questo passaggio viene tracciata un istogramma basato sui dati da un [!INCLUDE[tsql](../../includes/tsql-md.md)] query. È possibile eseguire il wrapping di questa funzione in una stored procedure **PlotHistogram**.
 
-R crea in genere le immagini usando un dispositivo R per l'output grafico. È possibile acquisire l'output del dispositivo e archiviare l'immagine in un tipo di dati **varbinary** per il rendering nell'applicazione oppure salvare le immagini in uno dei formati di file supportati (JPG, PDF e così via).
+1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Esplora oggetti, fare doppio clic sui **TaxiNYC_Sample** del database, espandere **programmabilità**, quindi espandere **Stored procedure** per visualizzare il procedure create nella lezione 2.
 
-In questa sezione viene descritto come usare ogni tipo di output tramite le stored procedure. Il processo generale è il seguente:
+2. Fare doppio clic su **PlotHistogram** e selezionare **Modify** per visualizzare l'origine. È possibile eseguire questa procedura per chiamare **rxHistogram** sui dati contenuti nella colonna della tabella nyctaxi_sample indicata.
 
-- Creare una stored procedure per generare un tracciato di R come dati varbinary
-
-- Generare il tracciato e salvarlo in un file di immagine
-
-- Utilizzare una stored procedure per convertire i dati binari tracciato in un file JPG o PDF
-
-### <a name="create-the-stored-procedure-plothistogram"></a>Creare la stored procedure PlotHistogram
-
-1. Per creare il tracciato, utilizzare `rxHistogram`, una delle funzioni R avanzate disponibili in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], per tracciare un istogramma in base ai dati da un [!INCLUDE[tsql](../../includes/tsql-md.md)] query. Per semplificare la chiamata alla funzione R, racchiuderla nella stored procedure _PlotHistogram_.
-
-    In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aprire una nuova **Query** finestra.
-
-2. Nel database che contiene i dati dell'esercitazione, creare la procedura utilizza l'istruzione:
+3. Facoltativamente, di esercitazione, creare la propria copia di questa stored procedure usando l'esempio seguente. Aprire una nuova finestra query e incollare lo script seguente per creare una stored procedure che viene tracciata l'istogramma. Questo esempio è denominato **PlotHistogram2** per evitare conflitti di denominazione con la procedura pre-esistente.
 
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotHistogram]
+    CREATE PROCEDURE [dbo].[PlotHistogram2]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -94,19 +92,17 @@ In questa sezione viene descritto come usare ogni tipo di output tramite le stor
     GO
     ```
 
-    Se necessario, assicurarsi di modificare il codice per usare il nome di tabella corretto.
+La stored procedure **PlotHistogram2** è identica a una stored procedure preesistente **PlotHistogram** creando il `RunSQL_SQL_Walkthrough.ps1` script. 
   
-    -   La variabile `@query` definisce il testo della query (`'SELECT tipped FROM nyctaxi_sample'`) che viene passato allo script R come argomento alla variabile di input dello script `@input_data_1`.
++ La variabile `@query` definisce il testo della query (`'SELECT tipped FROM nyctaxi_sample'`) che viene passato allo script R come argomento alla variabile di input dello script `@input_data_1`.
   
-    -   Lo script R è semplice: viene definita una variabile R (`image_file`) per archiviare l'immagine e viene quindi chiamata la funzione `rxHistogram` per la creazione del grafico.
++ Lo script R è abbastanza semplice: una variabile R (`image_file`) è definito per archiviare l'immagine e quindi il **rxHistogram** funzione viene chiamata per generare il tracciato.
   
-    -   Il dispositivo R viene impostato su **off**.
++ Il dispositivo R viene impostato su **disattivata** perché si esegue questo comando come uno script esterno in SQL Server. In genere in R, quando si esegue un comando di tracciamento ad alto livello, R consente di aprire una finestra grafica, denominata un *dispositivo*. È possibile modificare le dimensioni, i colori e altre caratteristiche della finestra oppure spegnere il dispositivo se è in corso una scrittura su file o l'output viene gestito in altro modo.
   
-        In R, quando viene eseguito un comando di tracciamento di livello elevato, viene aperta una finestra grafica chiamata *dispositivo*. È possibile modificare le dimensioni, i colori e altre caratteristiche della finestra oppure spegnere il dispositivo se è in corso una scrittura su file o l'output viene gestito in altro modo.
-  
-    -   L'oggetto grafico R viene serializzato in un data.frame R per l'output.
++ L'oggetto grafico R viene serializzato in un data.frame R per l'output.
 
-### <a name="generate-the-graphics-data-and-save-to-file"></a>Generare i dati del grafico e salvare in file
+### <a name="execute-the-stored-procedure-and-use-bcp-to-export-binary-data-to-an-image-file"></a>Eseguire la stored procedure e uso di bcp per esportare i dati binari in un file di immagine
 
 La stored procedure restituisce l'immagine come un flusso di dati varbinary, che ovviamente non è possibile visualizzare direttamente. Tuttavia, è possibile usare l'utilità **bcp** utilità per ottenere i dati varbinary e salvarli come file di immagine in un computer client.
   
@@ -121,23 +117,23 @@ La stored procedure restituisce l'immagine come un flusso di dati varbinary, che
     *plot*
     *0xFFD8FFE000104A4649...*
   
-2.  Aprire un prompt dei comandi di PowerShell ed eseguire il comando seguente specificando il nome dell'istanza appropriata, il nome del database, il nome utente e le credenziali come argomenti:
+2.  Aprire un prompt dei comandi di PowerShell ed eseguire il comando seguente, fornendo il nome dell'istanza appropriata, nome del database, nome utente e le credenziali come argomenti. Per chi usa le identità di Windows, è possibile sostituire **- U** e **-P** con **-T**.
   
-     ```
-     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  <database name>  -U <user name> -P <password>
+     ```text
+     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  TaxiNYC_Sample  -U <user name> -P <password>
      ```
 
     > [!NOTE]
-    > Opzioni di comando per bcp maiuscole e minuscole.
+    > Opzioni di comando per bcp sono tra maiuscole e minuscole.
   
 3.  Se la connessione viene stabilita, verrà richiesto di immettere altre informazioni sul formato di file grafico. Premere INVIO a ogni richiesta per accettare le impostazioni predefinite, ad eccezione di quanto segue:
-  
+    
     -   Per **prefix-length of field plot**digitare 0
   
     -   Digitare **Y** per salvare i parametri di output e riutilizzarli in seguito.
   
     ```
-    Enter the file storage type of field plot [varbinary(max)]:
+    Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
     Enter field terminator [none]:
@@ -162,18 +158,18 @@ La stored procedure restituisce l'immagine come un flusso di dati varbinary, che
   
     ![Corse di taxi con e senza mancia](media/rsql-devtut-tippedornot.jpg "Corse di taxi con e senza mancia")  
   
-### <a name="export-the-plot-data-to-a-viewable-file"></a>Esportare i dati di traccia in un file visualizzabile
+## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Creare una stored procedure con più formati di output e Hist
 
-L'output di un tracciato di R a un dato binario tipo potrebbe essere utile per l'utilizzo dalle applicazioni, ma non è molto utile un esperto di dati che necessita il tracciato di rendering durante la fase di esplorazione dei dati. L'analista dei dati genera solitamente più visualizzazioni dei dati per ottenere informazioni dettagliate sui dati da prospettive diverse.
+In genere, i data Scientist possono generano più visualizzazioni dei dati per ottenere informazioni dettagliate sui dati da prospettive diverse. In questo esempio, la stored procedure viene utilizzata la funzione Hist per creare l'istogramma, esportando i dati binari in formati comuni, ad esempio. JPG. PDF, e. PNG. 
 
-Per generare grafici per gli utenti, è possibile utilizzare una stored procedure che crea l'output di R in formati più diffusi, ad esempio. JPG. PDF, e. PNG. Dopo che la stored procedure ha creato il grafico, è sufficiente aprire il file per visualizzare il grafico.
+1. Utilizzare la stored procedure esistente **PlotInOutputFiles**per creare istogrammi, grafici e altri elementi grafici R per. JPG e. Formato PDF. Il `RunSQL_SQL_Walkthrough.ps1` consente di creare **PlotInOutputFiles** e lo aggiunge il database. Usare i pulsante destro del mouse **Modify** per visualizzare l'origine.
 
-1. Creare una nuova stored procedure, _PlotInOutputFiles_, che viene illustrato come scrivere istogrammi, scatterplots e altri elementi grafici R a. JPG e. Formato PDF.
+2. Facoltativamente, di esercitazione, creare la propria copia della routine come **PlotInOutputFiles2**, con un nome univoco per evitare un conflitto di denominazione.
 
-    In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aprire una nuova **Query** finestra e incollare quanto segue [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione.
+    Nelle [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aprire una nuova **Query** finestra e incollare quanto segue [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotInOutputFiles]  
+    CREATE PROCEDURE [dbo].[PlotInOutputFiles2]  
     AS  
     BEGIN  
       SET NOCOUNT ON;  
@@ -236,49 +232,53 @@ Per generare grafici per gli utenti, è possibile utilizzare una stored procedur
      END
     ```
   
-    -   L'output della query SELECT all'interno della stored procedure viene archiviato nel frame di dati R predefinito `InputDataSet`. Sarà quindi possibile chiamare diverse funzioni di creazione dei grafici R per generare i file grafici.
++ L'output della query SELECT all'interno della stored procedure viene archiviato nel frame di dati R predefinito `InputDataSet`. Sarà quindi possibile chiamare diverse funzioni di creazione dei grafici R per generare i file grafici. La maggior parte degli script R incorporati rappresenta le opzioni di queste funzioni di grafici,  ad esempio `plot` o `hist`.
   
-        La maggior parte degli script R incorporati rappresenta le opzioni di queste funzioni di grafici,  ad esempio `plot` o `hist`.
-  
-    -   Tutti i file vengono salvati nella cartella locale _C:\temp\Plots\\_. La cartella di destinazione è definita dagli argomenti specificati nello script R come parte della stored procedure.  È possibile modificare la cartella di destinazione modificando il valore della variabile `mainDir`.
-  
-2.  Eseguire l'istruzione per creare la stored procedure.
++ Tutti i file vengono salvati nella cartella locale _C:\temp\Plots\\_. La cartella di destinazione è definita dagli argomenti specificati nello script R come parte della stored procedure.  È possibile modificare la cartella di destinazione modificando il valore della variabile `mainDir`.
 
-    ```SQL
-    EXEC PlotInOutputFiles
-    ```
++ Per inviare i file in una cartella diversa, modificare il valore della variabile `mainDir` nello script R incorporato nella stored procedure. È anche possibile modificare lo script per produrre l'output in formati diversi, in più file e così via.
 
-    **Risultati**
+### <a name="execute-the-stored-procedure"></a>Eseguire la stored procedure
+
+Eseguire l'istruzione seguente per esportare i dati binari tracciato in formati di file JPEG e PDF.
+
+```SQL
+EXEC PlotInOutputFiles
+```
+
+**Risultati**
     
-    ```
-    STDOUT message(s) from external script:
-    [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
+```
+STDOUT message(s) from external script:
+[1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
+
+C:\temp\plots\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]
+
+C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
+```
+
+I numeri nei nomi dei file vengono generati in modo casuale per garantire che non si ottiene un errore durante il tentativo di scrivere in un file esistente.
+
+### <a name="view-output"></a>Visualizzare l'output 
+
+Per visualizzare il grafico, aprire la cartella di destinazione ed esaminare i file che sono stati creati dal codice R nella stored procedure.
+
+1. Andare nella cartella indicata nel messaggio di STDOUT (nell'esempio, si tratta C:\temp\plots\)
+
+2. Apri `rHistogram_Tipped.jpg` per mostrare il numero di corse è stata ricevuta una Mancia e è stata ricevuta alcuna descrizione. (Questa istogramma è simile a quello generato nel passaggio precedente).
+
+3. Apri `rHistograms_Tip_and_Fare_Amount.pdf` per visualizzare la distribuzione dell'importo delle mance, eseguirne la tracciatura rispetto gli importi delle tariffe.
     
-    C:\temp\plots\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]
-    
-    C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
-    ```
+  ![istogramma che mostra tip_amount e fare_amount](media/rsql-devtut-tipamtfareamt.PNG "istogramma che mostra tip_amount e fare_amount")
 
-    I numeri nei nomi dei file vengono generati in modo casuale per garantire che non si ottiene un errore durante il tentativo di scrivere in un file esistente.
+4. Apri `rXYPlots_Tip_vs_Fare_Amount.pdf` per visualizzare un grafico a dispersione con l'importo della tariffa per l'asse x e l'importo della Mancia sull'asse y.
 
-3. Per visualizzare il tracciato, aprire la cartella di destinazione ed esaminare i file creati dal codice R nella stored procedure.
-
-    + Il file `rHistogram_Tipped.jpg` Mostra il numero di percorsi che ha ricevuto un suggerimento e trip che ha ricevuto alcuna descrizione. (Questo istogramma è molto simile a quello generato nel passaggio precedente).
-
-    + Il file `rHistograms_Tip_and_Fare_Amount.pdf` Mostra la distribuzione degli importi di suggerimento, tracciata rispetto alle quantità fare.
-    
-    ![istogramma che mostra tip_amount e fare_amount](media/rsql-devtut-tipamtfareamt.PNG "istogramma che mostra tip_amount e fare_amount")
-
-    + Il file `rXYPlots_Tip_vs_Fare_Amount.pdf` contiene un scatterplot con la quantità di tariffa sull'asse x e la quantità di suggerimento sull'asse y.
-
-    ![quantità di suggerimento tracciate nel quantità tariffa](media/rsql-devtut-tipamtbyfareamt.PNG "quantità suggerimento tracciate nel quantità tariffa")
-
-2.  Per inviare i file in una cartella diversa, modificare il valore della variabile `mainDir` nello script R incorporato nella stored procedure. È anche possibile modificare lo script per produrre l'output in formati diversi, in più file e così via.
+   ![importo della Mancia tracciate nel importo della tariffa](media/rsql-devtut-tipamtbyfareamt.PNG "importo della Mancia tracciate nel importo della tariffa in")
 
 ## <a name="next-lesson"></a>Lezione successiva
 
-[Lezione 4: Creare funzionalità di dati con T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
+[Lezione 4: Creare funzionalità di dati mediante T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Lezione precedente
 
-[Lezione 2: Importare dati in SQL Server tramite PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Lezione 2: Preparare l'ambiente esercitazione usando PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)

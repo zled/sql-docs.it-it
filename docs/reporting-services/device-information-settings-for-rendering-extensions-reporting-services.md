@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015978"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering (Reporting Services)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]le impostazioni relative alle informazioni sul dispositivo vengono usate per passare i parametri di rendering a un'estensione per il rendering. Ogni estensione per il rendering accetta un set specifico di impostazioni.  

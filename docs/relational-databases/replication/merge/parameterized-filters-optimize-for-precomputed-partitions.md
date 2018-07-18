@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +19,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f094b8701172ece034c53ebad5f07b45fa3c207c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bd89a336eb0797d67f22c5f534ce06bd96caf50
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359343"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtri con parametri - Ottimizzare per le partizioni pre-calcolate
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,6 +73,6 @@ ms.lasthandoff: 05/03/2018
  Il calo delle prestazioni delle partizioni pre-calcolate è ridotto quando le modifiche vengono caricate dal Sottoscrittore nel server di pubblicazione, ma il tempo per l'elaborazione dei processi merge viene impiegato per la valutazione delle partizioni e il download delle modifiche dal server di pubblicazione al Sottoscrittore e pertanto il guadagno netto può risultare ancora significativo. I vantaggi in termini di prestazioni varieranno a seconda del numero di Sottoscrittori che eseguono contemporaneamente la sincronizzazione e del numero di aggiornamenti per sincronizzazione che comportano lo spostamento delle righe da una partizione all'altra.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

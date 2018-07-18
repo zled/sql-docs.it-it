@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898926"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Grammatica SQL ODBC supportati aggiuntive
 Il driver ODBC supporta completamente la grammatica minimo ODBC versione 2.5 e le clausole seguenti nella grammatica Core ed estesa ODBC versione 2.5. Informazioni aggiuntive possono essere visualizzate da passare per il [istruzione ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [i nomi di correlazione](../../odbc/microsoft/correlation-names.md), e [chiamata della stored Procedure](../../odbc/microsoft/procedure-invocation.md) argomenti.  

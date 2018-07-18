@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018978"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Aggiungere griglie dati a report per dispositivi mobili | Reporting Services
 La visualizzazione migliore, talvolta, è proprio quella dei dati. Per visualizzare i dati in *sono disponibili tre*griglie dati [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], o tabelle:

@@ -2,7 +2,7 @@
 title: Note sulla versione di Microsoft SQL Operations Studio (anteprima) | Microsoft Docs
 description: Note sulla versione di Microsoft SQL Operations Studio (anteprima)
 ms.custom: tools|sos
-ms.date: 05/08/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,15 +13,43 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: 29ae09022c18e5c96ffe4db25f59e6bfd619f432
+ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271012"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Note sulla versione di SQL Operations Studio (anteprima)
 
-**[Scaricare l'anteprima pubblica di maggio](download.md)**
+**[Scaricare l'anteprima di giugno pubblico](download.md)**
+
+
+## <a name="june-2018-june-public-preview"></a>Giugno 2018 (anteprima pubblica di giugno)
+
+Data di rilascio: 20 giugno 2018  
+versione: 0.30.6
+
+Il *anteprima pubblica di giugno* contiene le caratteristiche principali seguenti:  
+
+- **SQL Server Profiler per le operazioni SQL Studio *anteprima***  versione iniziale di estensione.
+- Il nuovo **SQL Data Warehouse** estensione include widget del dashboard personalizzabile rich esporre informazioni dettagliate per il data warehouse. Ciò consente di sbloccare gli scenari principali per la gestione e ottimizzazione del data warehouse per verificare che è ottimizzato per assicurare prestazioni coerenti.
+- **Modificare "applicazione di filtri e l'ordinamento dei dati"** supportano.
+- **SQL Server Agent per operazioni SQL Studio *anteprima***  miglioramenti dell'estensione per i processi e nella cronologia processo viste.
+- Migliorate **guidata & finestra di dialogo dell'interfaccia utente generatore Framework** API di estensibilità.
+- Aggiornare l'integrazione di Visual Studio codice piattaforma origine codice [marzo 2018 (1.22)](https://code.visualstudio.com/updates/v1_22) e [aprile 2018 (1.23)](https://code.visualstudio.com/updates/v1_23) rilascia.
+- Risolvere i problemi di GitHub:
+  - Richiesta di funzionalità ([emettere 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): per rendere i risultati di larghezza di colonna di adattamento automatico della griglia ai dati e/o tenere presente che le modifiche manuali se la stessa query viene rieseguita.
+  - Correggere [emettere 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): necessario Mostra aggiungere dei messaggi e pulsante Aggiungi account account quando account collegato è vuoto.
+  - Correggere [emettere 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): scheda account collegato viene interrotta quando la visualizzazione è compressa.
+  - Correggere [emettere 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): arresto anomalo del servizio di strumenti di SQL durante l'apertura di file con estensione SQL dal disco.
+  - Correggere [emettere 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): parola chiave SQL mancanti "BETWEEN".
+  - Correggere [emettere 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): parola chiave 'MATCH' arresto anomalo del servizio di strumenti di SQL.
+  - Correggere [emettere 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): opzione di menu di scelta rapida "Nuovo Profiler" in Esplora oggetti non esegue alcuna operazione.
+  - Correggere [emettere 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): piano di query "Descrizione" editor di Query viene interrotta.
+
+
+Per altre informazioni, vedere la [registro delle modifiche](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), e [versioni](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 ## <a name="may-2018-may-public-preview"></a>2018 maggio (maggio anteprima pubblica)
@@ -46,8 +74,6 @@ Il *anteprima pubblica potrebbe* è incentrato sulla stabilizzazione e correzion
    - Correggere [emettere 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): estensione SQL Agent e la barra di stato
    - Correggere [emettere 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL Agent non ridimensionare dopo la modifica delle dimensioni di windows
 
-
-Per altre informazioni, vedere la [registro delle modifiche](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), e [versioni](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 
@@ -81,7 +107,7 @@ Il *anteprima pubblica di aprile* include miglioramenti e correzioni di bug.
    - Correggere [emettere 1104](https://github.com/Microsoft/sqlopsstudio/issues/1104): schede dell'estensione SQL ha smesso di funzionare.
 
 
-Un'evidenziazione significativa per l'anteprima pubblica di aprile è l'aggiornamento di codice sorgente della piattaforma Visual Studio codice 1.21. Verrà visualizzata in diversi aggiornamenti per l'editor dei componenti di base e workbench dal punto di 1.19 sincronizzazione precedente. Di seguito sono indicati alcuni esempi:
+Un'evidenziazione significativa per l'anteprima pubblica di aprile è l'aggiornamento di codice sorgente della piattaforma Visual Studio codice 1.21. Verrà visualizzata in diversi aggiornamenti per l'editor dei componenti di base e workbench dal punto di 1.19 sincronizzazione precedente. Alcuni esempi includono quanto segue:
 
 - [Nuova interfaccia utente delle notifiche](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) - facilmente gestire ed esaminare le notifiche di Studio operazioni SQL.
 - [Integrato suddivisione Terminal](https://code.visualstudio.com/updates/v1_21#_split-terminals) -lavorare con più terminali aperti contemporaneamente.
@@ -157,7 +183,7 @@ L'*anteprima pubblica di gennaio* include alcuni suggerimenti sulle funzionalit�
 - Aggiunta l'icona mancante dell'Account di Azure.
 
 
-## <a name="december-2017-december-public-preview"></a>Dicembre 2017 (anteprima pubblica di dicembre)
+## <a name="december-2017-december-public-preview"></a>Dicembre 2017 (dicembre in anteprima pubblica)
 
 Data di rilascio: 19 dicembre 2017  
 versione: 0.24.1

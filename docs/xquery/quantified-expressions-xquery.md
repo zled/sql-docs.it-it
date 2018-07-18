@@ -1,5 +1,5 @@
 ---
-title: Quantificato espressioni (XQuery) | Documenti Microsoft
+title: Quantificate (XQuery) di espressioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -31,10 +31,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9fa6c22aafdd0279c9205f36902bac1ef18c77df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004633"
 ---
 # <a name="quantified-expressions-xquery"></a>Espressioni quantificate (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +54,9 @@ ms.lasthandoff: 05/03/2018
 ( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
 ```  
   
- È possibile utilizzare queste espressioni in una query per applicare esplicitamente la quantificazione esistenziale o universale a un'espressione su una o più sequenze. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'espressione nella clausola `satisfies` deve generare una sequenza di nodi, una sequenza vuota oppure un valore booleano. Il valore booleano effettivo del risultato dell'espressione verrà utilizzato nella quantificazione. La quantificazione esistenziale che utilizza **alcuni** restituirà True se almeno uno dei valori associati dal quantificatore ha un risultato True nell'espressione satisfies. La quantificazione universale che utilizza **ogni** deve avere True per tutti i valori associati dal quantificatore.  
+ È possibile utilizzare queste espressioni in una query per applicare esplicitamente la quantificazione esistenziale o universale a un'espressione su una o più sequenze. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'espressione nella clausola `satisfies` deve generare una sequenza di nodi, una sequenza vuota oppure un valore booleano. Il valore booleano effettivo del risultato dell'espressione verrà utilizzato nella quantificazione. La quantificazione esistenziale che utilizza **alcuni** restituirà True se almeno uno dei valori associati dal quantificatore ha un risultato True nell'espressione satisfy. La quantificazione universale che usa **ogni** deve avere True per tutti i valori associati dal quantificatore.  
   
- Ad esempio, la query seguente controlla ogni \<percorso > elemento per verificare se dispone di un attributo LocationID.  
+ Ad esempio, la query seguente controlla ogni \<Location > elemento per verificare se dispone di un attributo LocationID.  
   
 ```  
 SELECT Instructions.query('  
@@ -71,13 +72,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Poiché LocationID è un attributo obbligatorio il \<percorso > elemento, viene visualizzato il risultato previsto:  
+ Poiché LocationID è un attributo obbligatorio del \<Location > elemento, viene visualizzato il risultato previsto:  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- Anziché utilizzare il [metodo query ()](../t-sql/xml/query-method-xml-data-type.md), è possibile utilizzare il [metodo Value ()](../t-sql/xml/value-method-xml-data-type.md) per restituire il risultato al mondo relazionale, come illustrato nella query seguente. La query restituisce True se tutti i centri di lavorazione includono attributi LocationID. In caso contrario, la funzione restituisce False.  
+ Invece di usare la [metodo query ()](../t-sql/xml/query-method-xml-data-type.md), è possibile utilizzare il [metodo Value ()](../t-sql/xml/value-method-xml-data-type.md) per restituire il risultato a un sistema relazionale, come illustrato nella query seguente. La query restituisce True se tutti i centri di lavorazione includono attributi LocationID. In caso contrario, la funzione restituisce False.  
   
 ```  
 SELECT Instructions.value('  

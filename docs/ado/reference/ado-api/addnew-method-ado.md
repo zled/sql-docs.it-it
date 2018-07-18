@@ -2,7 +2,6 @@
 title: AddNew (metodo) (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 315eec5a4cddccb55be1ad9b8bd9d8bc4ded99cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d21161d5755fc31be78aced4a7f4350dbf901fd4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275210"
 ---
 # <a name="addnew-method-ado"></a>AddNew (metodo) (ADO)
 Crea un nuovo record per un aggiornabile [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -42,12 +42,12 @@ recordset.AddNew FieldList, Values
  Oggetto **Recordset** oggetto.  
   
  *FieldList*  
- Facoltativa. Un singolo nome o una matrice di nomi o posizioni ordinali dei campi nel nuovo record.  
+ Facoltativo. Un singolo nome o una matrice di nomi o posizioni ordinali dei campi nel nuovo record.  
   
  *Valori*  
- Facoltativa. Un singolo valore o una matrice di valori per i campi nel nuovo record. Se *elenco campi* è una matrice, *valori* deve essere una matrice con lo stesso numero di membri in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice.  
+ Facoltativo. Un singolo valore o una matrice di valori per i campi nel nuovo record. Se *elenco campi* è una matrice, *valori* deve essere una matrice con lo stesso numero di membri in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **AddNew** per creare e inizializzare un nuovo record. Utilizzare il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo con **adAddNew** (un [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valore) per verificare se è possibile aggiungere record corrente **Recordset**oggetto.  
   
  Dopo aver chiamato il **AddNew** (metodo), il nuovo record diventa il record corrente e rimane tale dopo la chiamata di [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo. Poiché viene aggiunto il nuovo record per il **Recordset**, una chiamata a **MoveNext** dopo l'aggiornamento passerà oltre la fine del **Recordset**, rendendo **EOF**  True. Se il **Recordset** oggetto non supporta i segnalibri, potrebbe non essere in grado di accedere al nuovo record dopo il passaggio a un altro record. A seconda del tipo di cursore, è necessario chiamare il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per rendere accessibile il nuovo record.  

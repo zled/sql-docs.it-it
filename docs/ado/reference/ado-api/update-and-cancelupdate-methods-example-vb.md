@@ -2,7 +2,6 @@
 title: Aggiornamento e l'esempio di metodi CancelUpdate (VB) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04fdb58b71c2ba69eb8893ba8c3589b2b803b312
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb0ba0f097bb0885478360f4ea2cc34b2d829f54
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282750"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Esempio di metodi CancelUpdate (VB) e di aggiornamento
 Questo esempio viene illustrato il [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo in combinazione con il [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) metodo.  

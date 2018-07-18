@@ -1,8 +1,6 @@
 ---
 title: Mapping di caratteri SQL Server e MySQL impostare (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5c31cdc9bab3881452c3a03cc0a97cc382481587
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94764ed6777b4310ebc38bbf8375089a0ac00c92
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776417"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapping di caratteri SQL Server e MySQL impostare (MySQLToSQL)
 Per i tipi di dati carattere, espressioni e valori letterali di MySQL, è possibile specificare il set di caratteri (set di caratteri).  
@@ -61,7 +60,7 @@ Mapping di set di caratteri varia a livello di nodo diverso, vale a dire:
 > [!NOTE]  
 > La scheda selezionata per la modifica il Mapping di set di caratteri, contiene tre pulsanti, indipendentemente dal mapping ai livelli di nodo diverso.  
 >   
-> ovvero:  
+> Sono:  
 >   
 > 1.  **Si applicano:** applica le modifiche apportate dall'utente, abilitato solo quando il mapping di set di caratteri viene modificato e non ancora salvato.  
 > 2.  **Annulla:** Annulla le modifiche apportate dall'utente. Il pulsante ottiene attivato quando il mapping di set di caratteri è modificato ma non salvato.  

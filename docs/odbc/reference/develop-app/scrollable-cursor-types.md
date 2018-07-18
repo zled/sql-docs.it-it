@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912416"
 ---
 # <a name="scrollable-cursor-types"></a>Tipi di cursore scorrevole
 I quattro tipi di cursori scorrevoli sono statici, dinamici, basati su keyset e misto. I cursori statici rilevano poche o nessuna modifica, ma sono relativamente economici da implementare. I cursori dinamici rilevano tutte le modifiche, ma sono costosi da implementare. I cursori keyset e misti si trovano rilevano la maggior parte delle modifiche, ma meno spese rispetto ai cursori dinamici.  

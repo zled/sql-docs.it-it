@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906796"
 ---
 # <a name="pseudo-type-identifiers"></a>Identificatori di pseudo-tipo
 Per facilitare la programmazione dell'applicazione, ODBC definisce un numero di identificatori di pseudo tipo. Questi identificatori in realtà non corrispondono a tipi di dati effettivi, ma invece in base alla situazione, risolvano in tipi di dati esistenti.  

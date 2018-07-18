@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901276"
 ---
 # <a name="sorting-limitations"></a>Limitazioni di ordinamento
 La lunghezza massima di una chiave di ordinamento in una clausola GROUP BY, nella clausola ORDER BY, istruzione SELECT DISTINCT o outer join è di 255 byte. la lunghezza massima di tutte le chiavi di ordinamento in una riga di ordinamento è 65.500 byte.

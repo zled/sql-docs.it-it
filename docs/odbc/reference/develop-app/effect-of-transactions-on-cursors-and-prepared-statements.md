@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911796"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>Effetto delle transazioni su cursori e le istruzioni preparate
 Il commit o il rollback di una transazione ha l'effetto seguente su cursori e i piani di accesso:  

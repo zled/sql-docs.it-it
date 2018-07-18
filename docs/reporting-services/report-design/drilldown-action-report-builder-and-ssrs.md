@@ -1,7 +1,7 @@
 ---
 title: Azione di drill-down (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -45,14 +45,15 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: db793e5608aca874a98f6125136429244eb5ffff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1250e47366e8beab3cdee5f07e6d17e76827a597
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550712"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Azione di drill-down (Generatore report e SSRS)
-  Fornendo più o meno icone in una casella di testo, è possibile consentire agli utenti di nascondere e visualizzare gli elementi in modo interattivo. Questa azione viene chiamata *drill-down* . Per una tabella o una matrice, è possibile visualizzare o nascondere le righe e le colonne statiche o le righe e le colonne associate ai gruppi.  
+Le icone più e meno in una casella di testo consentono agli utenti di nascondere o visualizzare gli elementi in modo interattivo. Questa azione viene chiamata *drill-down* . Per una tabella o una matrice, è possibile visualizzare o nascondere le righe e le colonne statiche o le righe e le colonne associate ai gruppi.  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/03/2018
  In un report drill-down un utente fa clic su un pulsante più o meno per espandere o comprimere una sezione di un report per mostrare dati dettaglio. I un report drill-through l'utente fa clic su un collegamento relativo a un valore di riepilogo, aprendo in questo modo un report separato, correlato contenente dati dettaglio. I dati dettaglio vengono recuperati solo quando il report dettagli è in esecuzione. I report drill-through richiedono in genere un numero di risorse minore rispetto ai report drill-down. Per altre informazioni, vedere [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
 ## <a name="rendering-extension-support-for-hidden-report-items"></a>Supporto delle estensioni per il rendering per elementi del report nascosti  
- L'elemento Toggle per visualizzare e nascondere gli elementi del report è supportato solo dalle estensioni per il rendering che supportano funzioni di interattività con gli utenti, ad esempio l'estensione per il rendering HTML utilizzata durante l'esecuzione di un report in Generatore report e in Gestione report. Le altre estensioni per il rendering consentono di visualizzare gli elementi nascosti. Nell'elenco seguente viene descritto il supporto per gli elementi del report con visibilità condizionale:  
+ L'elemento per visualizzare e nascondere gli elementi del report è supportato solo dalle estensioni per il rendering che supportano l'interattività con gli utenti, ad esempio l'estensione per il rendering HTML usata durante l'esecuzione di un report in Generatore report e nel portale Web. Le altre estensioni per il rendering consentono di visualizzare gli elementi nascosti. Nell'elenco seguente viene descritto il supporto per gli elementi del report con visibilità condizionale:  
   
 -   In HTML, se gli elementi sono nascosti, non sono visibili nell'origine HTML.  
   

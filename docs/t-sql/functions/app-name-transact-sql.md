@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,22 +22,23 @@ helpviewer_keywords:
 - APP_NAME function
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d9652c25875fb1edb5d09e4e283fd7393b523a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46e34f32e26c847abb4ad30b1bc41aabd0c10f28
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785872"
 ---
 # <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Funzione che restituisce il nome dell'applicazione per la sessione corrente, se impostato dall'applicazione.
+Questa funzione restituisce il nome dell'applicazione per la sessione corrente, se impostato dall'applicazione.
   
 > [!IMPORTANT]  
->  Il client specifica il nome applicazione e il valore del nome applicazione non viene verificato in alcun modo. Non usare **APP_NAME** come parte di un controllo di sicurezza.  
+>  Il client specifica il nome dell'applicazione e `APP_NAME` non lo verifica in alcun modo. Non usare `APP_NAME` come parte di un controllo di sicurezza.  
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,12 +53,12 @@ APP_NAME  ( )
 **nvarchar(128)**
   
 ## <a name="remarks"></a>Remarks  
-Usare **APP_NAME** per distinguere le diverse applicazioni, in modo da eseguire azioni diverse per le applicazioni. Ad esempio, **APP_NAME** consente di distinguere diverse applicazioni in modo da applicare un formato data diverso per ogni applicazione. È anche possibile restituire un messaggio informativo in determinate applicazioni.
+Usare `APP_NAME` per distinguere le diverse applicazioni, in modo da eseguire azioni diverse per ognuna. Ad esempio, `APP_NAME` consente di distinguere diverse applicazioni e di applicare quindi un formato data diverso per ognuna. È anche possibile restituire un messaggio informativo in determinate applicazioni.
   
 Per impostare un nome applicazione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], fare clic su **Opzioni** nella finestra di dialogo **Connetti al motore di database**. Nella scheda **Parametri aggiuntivi per la connessione** fornire un attributo **app** nel formato `;app='application_name'`
   
 ## <a name="example"></a>Esempio  
-L'esempio consente di controllare se l'applicazione client che ha avviato il processo è una sessione di `SQL Server Management Studio` e specifica una data sia nel formato US che ANSI.
+Questo esempio controlla se l'applicazione client che ha avviato questo processo è una sessione di `SQL Server Management Studio` e specifica quindi un valore di data in formato US o ANSI.
   
 ```sql
 USE AdventureWorks2012;  

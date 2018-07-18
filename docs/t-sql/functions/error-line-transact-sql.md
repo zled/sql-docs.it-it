@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,52 +23,50 @@ helpviewer_keywords:
 - CATCH block
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44745c0f27527872abd1b63c3fa5b3954328c1be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e7426aa1665bd6e8c7d5c0c9c9978a040a8c5a6
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784842"
 ---
 # <a name="errorline-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il numero di riga in cui si è verificato un errore che ha causato l'esecuzione del blocco CATCH di un costrutto TRY…CATCH.  
+Questa funzione restituisce il numero di riga dell'occorrenza di un errore che ha causato l'esecuzione del blocco CATCH di un costrutto TRY…CATCH.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 ERROR_LINE ( )  
 ```  
   
 ## <a name="return-type"></a>Tipo restituito  
- **int**  
+**int**  
   
 ## <a name="return-value"></a>Valore restituito  
- Quando chiamata in un blocco CATCH:  
+Quando chiamata in un blocco CATCH, `ERROR_LINE` restituisce  
   
--   restituisce il numero della riga in cui si è verificato un errore  
-  
--   restituisce il numero della riga in una routine se l'errore si è verificato all'interno di una stored procedure o di un trigger.  
-  
- Restituisce NULL se chiamata all'esterno dell'ambito di un blocco CATCH.  
+-   Numero di riga in cui si è verificato l'errore    
+-   numero di riga in una routine, se l'errore si è verificato all'interno di una stored procedure o di un trigger  
+-   NULL, se chiamata all'esterno dell'ambito di un blocco CATCH.  
   
 ## <a name="remarks"></a>Remarks  
- Questa funzione può essere chiamata ovunque all'interno dell'ambito di un blocco CATCH.  
+Una chiamata a `ERROR_LINE` può verificarsi da un qualsiasi punto nell'ambito di un blocco CATCH.  
   
- ERROR_LINE restituisce il numero della riga in cui si è verificato l'errore a prescindere dal numero di chiamate o dalla posizione in cui viene chiamata all'interno dell'ambito del blocco CATCH. Questo tipo di comportamento è in contrasto con le funzioni, ad esempio @@ERROR, che restituiscono un numero di errore nell'istruzione immediatamente successiva a quella che ha provocato un errore o nella prima istruzione di un blocco CATCH.  
+`ERROR_LINE` restituisce il numero di riga in cui si è verificato un errore, indipendentemente dalla posizione della chiamata a `ERROR_LINE` nell'ambito del blocco CATCH e dal numero di chiamate a `ERROR_LINE`. Questo tipo di comportamento è in contrasto con funzioni come @@ERROR. @@ERROR restituisce un numero di errore nell'istruzione immediatamente successiva a quella che ha provocato un errore o nella prima istruzione di un blocco CATCH.  
   
- Nei blocchi CATCH nidificati, ERROR_LINE restituisce il numero della riga di errore specifico all'ambito del blocco CATCH che vi fa riferimento. Ad esempio, il blocco CATCH di un costrutto TRY…CATCH potrebbe contenere un costrutto TRY…CATCH nidificato. All'interno del blocco CATCH nidificato, ERROR_LINE restituisce il numero della riga per l'errore che ha richiamato il blocco CATCH nidificato. Se ERROR_LINE viene eseguita nel blocco CATCH esterno, restituisce il numero della riga per l'errore che ha richiamato il blocco CATCH.  
+Nei blocchi CATCH nidificati `ERROR_LINE` restituisce il numero di riga dell'errore specifico dell'ambito del blocco CATCH che vi fa riferimento. Ad esempio, il blocco CATCH di un costrutto TRY…CATCH potrebbe contenere un costrutto TRY…CATCH nidificato. All'interno del blocco CATCH nidificato `ERROR_LINE` restituisce il numero di riga per l'errore che ha richiamato il blocco CATCH nidificato. Se `ERROR_LINE` viene eseguita nel blocco CATCH esterno, restituisce il numero di riga per l'errore che ha richiamato il blocco CATCH specifico.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-errorline-in-a-catch-block"></a>A. Utilizzo di ERROR_LINE in un blocco CATCH  
- Nell'esempio seguente viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. Viene restituito il numero della riga in cui si è verificato l'errore.  
+In questo esempio viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. `ERROR_LINE` restituisce il numero di riga in cui si è verificato l'errore.  
   
 ```  
 BEGIN TRY  
@@ -81,9 +78,23 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+   
+```  
+Result 
+-----------
+
+(0 row(s) affected)
+
+ErrorLine
+-----------
+4
+
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-errorline-in-a-catch-block-with-a-stored-procedure"></a>B. Utilizzo di ERROR_LINE in un blocco CATCH con una stored procedure  
- Nell'esempio di codice seguente viene illustrata una stored procedure che genererà un errore di divisione per zero. `ERROR_LINE` restituisce il numero di riga nella stored procedure in cui si è verificato l'errore.  
+In questo esempio viene illustrata una stored procedure che genera un errore di divisione per zero. `ERROR_LINE` restituisce il numero di riga in cui si è verificato l'errore.  
   
 ```  
 -- Verify that the stored procedure does not already exist.  
@@ -91,7 +102,7 @@ IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL
     DROP PROCEDURE usp_ExampleProc;  
 GO  
   
--- Create a stored procedure that   
+-- Create a stored procedure that  
 -- generates a divide-by-zero error.  
 CREATE PROCEDURE usp_ExampleProc  
 AS  
@@ -106,10 +117,24 @@ BEGIN CATCH
     SELECT ERROR_LINE() AS ErrorLine;  
 END CATCH;  
 GO  
+``` 
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+   
 ```  
-  
+-----------
+
+(0 row(s) affected)
+
+ErrorLine
+-----------
+7
+
+(1 row(s) affected)  
+   
+```
+
 ### <a name="c-using-errorline-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilizzo di ERROR_LINE in un blocco CATCH con altri strumenti per la gestione degli errori  
- Nell'esempio seguente viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. Oltre al numero di riga in corrispondenza della quale si è verificato l'errore, vengono restituite le informazioni relative all'errore.  
+In questo esempio viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. `ERROR_LINE` restituisce il numero di riga in cui si è verificato l'errore e le informazioni relative all'errore stesso.  
   
 ```  
 BEGIN TRY  
@@ -126,7 +151,21 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
+``` 
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+   
 ```  
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState ErrorProcedure ErrorLine ErrorMessage
+----------- ------------- ---------- -------------- --------- ---------------------------------
+8134        16            1          NULL           3         Divide by zero error encountered.
+
+(1 row(s) affected)
+  
+```
   
 ## <a name="see-also"></a>Vedere anche  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   

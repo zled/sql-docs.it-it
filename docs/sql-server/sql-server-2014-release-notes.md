@@ -3,9 +3,7 @@ title: Note sulla versione di SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: install
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -16,11 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: f9a8d57f209e5c8c813fd08c8faff6ce5504c97b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68caa38874e4afb83f8babf5bc56737a6c8f4cc1
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926972"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ SQL Server 2014 SP2 contiene rollup di correzioni rilasciate per SQL Server 2014
 
 ### <a name="performance-and-scalability-improvements-in-sp2"></a>Miglioramenti delle prestazioni e della scalabilità in SP2
 
-|Funzionalità|Description|Per ulteriori informazioni|
+|Funzionalità|Descrizione|Per ulteriori informazioni|
 |---|---|---|
 |Partizionamento automatico di Soft-NUMA|È possibile configurare automaticamente Soft-NUMA sui sistemi che segnalano 8 o più CPU per ogni nodo NUMA.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |Estensione pool di buffer|Consente al pool di buffer di SQL Server di gestire una scalabilità superiore a 8 TB.|[Estensione pool di buffer](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
@@ -43,7 +42,7 @@ SQL Server 2014 SP2 contiene rollup di correzioni rilasciate per SQL Server 2014
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>Miglioramenti al supporto e alla diagnostica in SP2
 
-|Funzionalità|Description|Per ulteriori informazioni|
+|Funzionalità|Descrizione|Per ulteriori informazioni|
 |---|---|---|
 |Registrazione timeout di AlwaysON|Aggiunta una nuova funzionalità di registrazione per i messaggi di timeout del lease in modo che vengano registrate l'ora corrente e le ore previste per il rinnovo. |[Migliorata la diagnostica del timeout di lease per i gruppi di disponibilità AlwaysOn](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
 |Contatori di prestazioni e XEvent di AlwaysOn|Nuovi contatori di prestazioni ed eventi di AlwaysON per migliorare la diagnostica durante la risoluzione dei problemi di latenza con AlwaysON. |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) e [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)

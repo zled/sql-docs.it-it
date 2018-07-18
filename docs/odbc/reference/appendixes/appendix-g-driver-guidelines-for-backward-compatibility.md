@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906030"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>Appendice g: Driver le linee guida per la compatibilità con le versioni precedenti
 Questa appendice vengono fornite informazioni per gli sviluppatori di driver lavorando ODBC 3. *x* driver che necessitano di supporto ODBC 2. *x* applicazioni. Per ulteriori informazioni sulla compatibilità, vedere [compatibilità e conformità agli standard](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  

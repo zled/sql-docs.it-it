@@ -2,7 +2,7 @@
 title: Utilizzo di più set di risultati attivi (MARS) | Documenti Microsoft
 description: Utilizzo di MARS (Multiple Active Result Set)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c086df79bff70013540b8b3c0c31a1a6216972df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0254bfd632c9ae0d3145e745c932757fd6d808
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612086"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilizzo di MARS (Multiple Active Result Set)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] stato introdotto il supporto per multiple active result set (MARS) in applicazioni che accedono al [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le applicazioni di database non erano in grado di gestire più istruzioni attive in una connessione. Quando si utilizza il set di risultati predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'applicazione deve elaborare o annullare tutti i set di risultati da un batch prima che possa eseguire qualsiasi altro batch o connessione. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ha introdotto un nuovo attributo di connessione che consente alle applicazioni di avere più di una richiesta in sospeso per connessione e in particolare, per avere più di un set di risultati predefinito attivo per connessione.  
   
@@ -55,11 +58,11 @@ ms.lasthandoff: 05/03/2018
   
  Il Driver OLE DB per SQL Server non limita il numero di istruzioni attive su una connessione.  
   
- Le applicazioni tipiche che non devono eseguire contemporaneamente più stored procedure o più batch costituiti da più istruzioni trarranno vantaggio da MARS senza dovere comprendere il modo in cui MARS viene implementato, mentre le applicazioni con requisiti più complessi dovranno necessariamente comprenderne il funzionamento.  
+ Applicazioni tipiche che non sono necessario disporre di più di un singolo batch costituito da più istruzioni o stored procedure in esecuzione nello stesso momento trarranno vantaggio da MARS senza dovere comprendere il modo in cui MARS viene implementato. mentre le applicazioni con requisiti più complessi dovranno necessariamente comprenderne il funzionamento.  
   
  MARS consente l'esecuzione interleaved di più richieste all'interno di una sola connessione. Ovvero, consente di eseguire un batch e contestualmente di eseguire altre richieste. Notare, tuttavia, che MARS viene definito in termini di interleaving e non in termini di esecuzione parallela.  
   
- L'infrastruttura di MARS consente l'esecuzione di più batch in modo interleaved, sebbene sia possibile passare da un'esecuzione all'altra solo in specifici punti definiti. Inoltre, la maggior parte delle istruzioni deve essere eseguita automaticamente all'interno di un batch. Le istruzioni che restituiscono righe al client, che sono dette *punti specifici*, sono autorizzati a eseguire l'interfoliazione dell'esecuzione prima del completamento durante l'invio delle righe al client, ad esempio:  
+ L'infrastruttura di MARS consente più batch da eseguire in modo interleaved, sebbene l'esecuzione può essere cambiata solo in punti ben definiti. Inoltre, la maggior parte delle istruzioni deve essere eseguita automaticamente all'interno di un batch. Le istruzioni che restituiscono righe al client, che sono dette *punti specifici*, possono eseguire l'interleave di esecuzione prima del completamento durante l'invio delle righe al client, ad esempio:  
   
 -   SELECT  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 05/03/2018
  Per un esempio di utilizzo di MARS da ADO, vedere [utilizzo di ADO con il Driver OLE DB per SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
   
 ## <a name="in-memory-oltp"></a>OLTP in memoria  
- OLTP in memoria supporta MARS tramite query e stored procedure compilate in modo nativo. MARS consente di richiedere i dati da più query senza la necessità di recuperare completamente ogni set prima di inviare una richiesta di recuperare le righe da un nuovo set di risultati. Per una lettura corretta di risultati aperti più set, è necessario utilizzare un MARS abilitato connessione.  
+ OLTP in memoria supporta MARS tramite query e stored procedure compilate in modo nativo. MARS consente di richiedere i dati da più query senza la necessità di recuperare completamente ogni set prima di inviare una richiesta di recuperare le righe da un nuovo set di risultati. Per una lettura corretta da più set di risultati aperti, è necessario utilizzare una connessione MARS abilitato.  
   
  MARS è disabilitato per impostazione predefinita, pertanto è necessario abilitare in modo esplicito aggiungendo `MultipleActiveResultSets=True` in una stringa di connessione. Nell'esempio seguente viene illustrato come connettersi a un'istanza di SQL Server e specificare che MARS è abilitato:  
   
@@ -107,7 +110,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  Le modifiche apportate da istruzioni e i blocchi atomici vengono interfogliati sono isolate una da altra. Ad esempio, se un'istruzione o un blocco atomico apporta alcune modifiche e quindi restituisce l'esecuzione di un'altra istruzione, la nuova istruzione non visualizzeranno le modifiche apportate dalla prima istruzione. Inoltre, quando la prima istruzione riprende l'esecuzione, non rileverà le modifiche apportate da tutte le altre istruzioni. Istruzioni verranno visualizzate solo le modifiche sono completate e commit prima dell'avvio dell'istruzione.  
   
- Può essere avviata una nuova transazione utente all'interno della transazione utente corrente utilizzando l'istruzione BEGIN TRANSACTION: è supportata solo in modalità di interoperabilità, pertanto l'istruzione BEGIN TRANSACTION può essere chiamato solo da un'istruzione T-SQL e non all'interno di un compilate in modo nativo stored stored procedure. È possibile creare un salvataggio punto in una transazione utilizzando l'istruzione SAVE TRANSACTION o una chiamata API a transazione. Save(save_point_name) per eseguire il rollback del punto di salvataggio. Questa funzionalità è abilitata anche solo da istruzioni T-SQL e non dall'interno in modo nativo stored procedure compilate.  
+ Una nuova transazione utente può essere avviata all'interno della transazione utente corrente utilizzando l'istruzione BEGIN TRANSACTION: questo è supportato solo in modalità interop in modo che l'istruzione BEGIN TRANSACTION può essere chiamato solo da un'istruzione T-SQL e non all'interno di un compilate in modo nativo stored stored procedure. È possibile creare un salvataggio punto in una transazione che utilizza l'istruzione SAVE TRANSACTION o una chiamata API a transazione. Save(save_point_name) per eseguire il rollback del punto di salvataggio. Questa funzionalità è abilitata anche solo da istruzioni T-SQL e non dall'interno in modo nativo stored procedure compilate.  
   
  **Gli indici columnstore e MARS**  
   

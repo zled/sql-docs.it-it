@@ -1,5 +1,5 @@
 ---
-title: Distribuire soluzioni PowerPivot per SharePoint | Documenti Microsoft
+title: Distribuire soluzioni PowerPivot in SharePoint | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 51dffaf4569cf1aa0527ee0ba4d59379d4faab46
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984763"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Distribuire soluzioni PowerPivot in SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
  [Informazioni sulle soluzioni PowerPivot](#intro)  
   
 ##  <a name="bkmk_classic"></a> Prerequisito: verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint è supportato solo per le applicazioni Web che usano l'autenticazione in modalità classica di Windows. Per controllare se l'applicazione usa la modalità classica, eseguire il seguente cmdlet di PowerShell dal **Shell di gestione SharePoint 2010**, sostituendo **http://\<nome sito di livello superiore >** con il nome del sito di SharePoint:  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint è supportato solo per le applicazioni Web che usano l'autenticazione in modalità classica di Windows. Per controllare se l'applicazione usa la modalità di distribuzione classica, eseguire il cmdlet di PowerShell seguente dal **Shell di gestione SharePoint 2010**, sostituendo **http://\<nome sito di livello superiore >** con il nome del sito di SharePoint:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
@@ -47,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  Il valore restituito dovrebbe essere **false**. Se **true**, non è possibile accedere ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con questa applicazione Web.  
   
 ##  <a name="bkmk_farm"></a> Passaggio 1: distribuire la soluzione farm  
- Questa sezione illustra come distribuire le soluzioni usando PowerShell, ma è anche possibile usare lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per completare questa attività. Per altre informazioni, vedere [Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Questa sezione illustra come distribuire le soluzioni usando PowerShell, ma è anche possibile usare lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per completare questa attività. Per altre informazioni, vedere [Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  È necessario eseguire questa attività una sola volta dopo l'installazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.  
   
@@ -105,7 +106,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 4.  In **Destinazione distribuzione**selezionare l'applicazione Web di SharePoint per cui si desidera aggiungere supporto alle funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 6.  Ripetere l'operazione per le altre applicazioni Web SharePoint che supporteranno l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -118,7 +119,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Fare clic su **Ritira soluzione**.  
   
- Se si verificano problemi relativi alla distribuzione server che risalgono alla soluzione farm, è possibile ridistribuirla eseguendo l'opzione **Ripristina** nello strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le operazioni di ripristino tramite lo strumento sono preferibili perché richiedono meno passaggi da parte dell'utente. Per altre informazioni, vedere [Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Se si verificano problemi relativi alla distribuzione server che risalgono alla soluzione farm, è possibile ridistribuirla eseguendo l'opzione **Ripristina** nello strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le operazioni di ripristino tramite lo strumento sono preferibili perché richiedono meno passaggi da parte dell'utente. Per altre informazioni, vedere [Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Se si desidera ridistribuire ancora tutte le soluzioni, assicurarsi di effettuare le operazioni in questo ordine:  
   

@@ -15,17 +15,16 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 63f7f18921d856753162a22e8fbf079834105164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce0a1a62d294f510a9521ef38d178157244f1de2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703302"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendering in formato HTML (Generatore report e SSRS)
   L'estensione per il rendering HTML esegue il rendering di un report impaginato in formato HTML. Può inoltre generare pagine HTML complete o frammenti di HTML da incorporare in altre pagine HTML. Tutto il codice HTML viene generato con la codifica UTF-8.  
-  
- L'estensione per il rendering HTML è quella predefinita per i report visualizzati in un browser, anche se eseguiti nel portale Web di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
-  
+
  L'estensione per il rendering HTML è quella predefinita per i report visualizzati in un browser, anche se eseguiti nel portale Web di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . L'estensione per il rendering HTML può generare frammenti HTML o documenti HTML completi. Se viene generato un frammento HTML, i tag **HEAD**, **HTML**e **BODY** del documento HTML vengono rimossi. Viene eseguito il rendering solo del contenuto del tag **BODY** . Questa funzionalità è particolarmente utile se si desidera incorporare il frammento HTML nel codice HTML prodotto da un'altra applicazione.  
   
  In alcuni scenari i parametri del report possono essere utilizzati per avviare attacchi intrusivi negli script durante il rendering di report in HTML. Per altre informazioni sulla sicurezza dei report, vedere [Garantire la sicurezza di report e risorse](../../reporting-services/security/secure-reports-and-resources.md).  

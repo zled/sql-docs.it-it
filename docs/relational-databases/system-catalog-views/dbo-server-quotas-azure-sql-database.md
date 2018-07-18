@@ -1,5 +1,5 @@
 ---
-title: dbo. server_quotas (Database SQL di Azure) | Documenti Microsoft
+title: dbo. server_quotas (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: ''
@@ -26,16 +26,17 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ada6f943e451e6c468adaed27bfe4618407d2dc7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029669"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
-> **IMPORTANTE** Ciò si applica a  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11 solo!**  
+> **IMPORTANTE** Si applica a  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11 solo!**  
 >   
 >  Questa funzionalità si trova nello stato anteprima. Non specificare una dipendenza dall'implementazione specifica di questa funzionalità perché potrebbe essere modificata o rimossa in una versione successiva.  
   
@@ -43,13 +44,13 @@ ms.lasthandoff: 05/04/2018
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|quota_name|**nvarchar**|Tipo di quota per il server. Il tipo **Premium_database** è equivalente ai database con una prenotazione di risorse.|  
+|quota_name|**nvarchar**|Tipo di quota per il server. Il tipo **Premium_database** equivale ai database con una prenotazione delle risorse.|  
 |quota_value|**int**|Numero di tipo di quota consentito nel server.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Questa vista è disponibile per tutti i ruoli utente con autorizzazioni per connettersi al virtuale **master** database.  
+ Questa vista è disponibile per tutti i ruoli utente con autorizzazioni sufficienti per connettersi a virtual **master** database.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione di database Premium](http://go.microsoft.com/fwlink/?LinkID=311927)  
+ [La gestione di database Premium](http://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

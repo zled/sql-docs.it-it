@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917376"
 ---
 # <a name="when-to-use-procedures"></a>Quando utilizzare le procedure
 Esistono diversi vantaggi rispetto all'utilizzo delle procedure, tutte basata sul fatto che tramite le procedure Sposta istruzioni SQL dall'applicazione per l'origine dati. Ciò che resta nell'applicazione è una chiamata di procedura interoperativa. Tali vantaggi includono:  

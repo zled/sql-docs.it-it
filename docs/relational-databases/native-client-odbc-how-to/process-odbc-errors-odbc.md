@@ -1,28 +1,27 @@
 ---
-title: Elaborare errori ODBC (ODBC) | Documenti Microsoft
+title: Elaborare errori ODBC (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4979bd919a8083c200464a444f4223d4bad103f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e6c9c68180d39720449944afeaba191534bab21
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419650"
 ---
 # <a name="process-odbc-errors-odbc"></a>Elaborare errori ODBC (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
  Eseguire il terzo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per eliminare la stored procedure utilizzata dall'esempio.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 use AdventureWorks  
@@ -67,7 +66,7 @@ SELECT * FROM Purchasing.Vendor
 Go  
 ```  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 // compile with: odbc32.lib  
@@ -235,7 +234,7 @@ void ProcessLogMessages(SQLSMALLINT plm_handle_type, SQLHANDLE plm_handle, char 
 }  
 ```  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 use AdventureWorks  
@@ -244,6 +243,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+ [Procedure relative a ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

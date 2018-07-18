@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -31,14 +30,15 @@ helpviewer_keywords:
 - rules [SQL Server], creating
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c495cabda9c94fb5b0e32b7df0474501d2307353
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e0ef2de168411dbd4662a7fabd88ec0b6ad141f
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781712"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ AS condition_expression
 ## <a name="remarks"></a>Remarks  
  L'istruzione CREATE RULE non può essere utilizzata in combinazione con altre istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] all'interno di un singolo batch. Le regole non vengono applicate ai dati già esistenti nel database quando vengono create e non possono essere associate a tipi di dati di sistema.  
   
- È possibile creare una regola solo nel database corrente. Dopo avere creato una regola, eseguire **sp_bindrule** per associarla a una colonna o un tipo di dati alias. La regola deve essere compatibile con il tipo di dati della colonna. Ad esempio, non è possibile usare "@value LIKE A%" come regola per una colonna numerica. Una regola non può essere associata a una colonna **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, di tipo CLR definito dall'utente o **timestamp**, né a una colonna calcolata.  
+ È possibile creare una regola solo nel database corrente. Dopo avere creato una regola, eseguire **sp_bindrule** per associarla a una colonna o un tipo di dati alias. La regola deve essere compatibile con il tipo di dati della colonna. Ad esempio, non è possibile utilizzare "\@value LIKE A%" come regola per una colonna numerica. Una regola non può essere associata a una colonna **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, di tipo CLR definito dall'utente o **timestamp**, né a una colonna calcolata.  
   
  Delimitare le costanti per valori di carattere e di data con virgolette singole (') e anteporre 0x alle costanti binarie. Se la regola non è compatibile con la colonna a cui è associata, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] restituisce un messaggio di errore quando si immette un valore, non durante l'associazione della regola.  
   

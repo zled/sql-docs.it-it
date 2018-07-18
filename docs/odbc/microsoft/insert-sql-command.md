@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900691"
 ---
 # <a name="insert---sql-command"></a>INSERT - comando SQL
 Accoda un record alla fine di una tabella che contiene i valori di campo specificato.  

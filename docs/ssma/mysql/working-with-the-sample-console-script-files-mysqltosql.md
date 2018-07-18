@@ -1,8 +1,6 @@
 ---
 title: Utilizzo dei file di Script di esempio Console (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f683e6a1be376b63c5cf95f1e7535b686bc8321a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68d24dd530c6e987c26d3fecca6c0fd732cb9df0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776837"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Utilizzo dei file di Script di esempio Console (MySQLToSQL)
 Alcuni file di esempio sono stati forniti insieme al prodotto per l'utilizzo e un riferimento all'utente. Questa sezione descrive il modo per personalizzare facilmente questi script per soddisfare le esigenze dell'utente finale.  
@@ -87,7 +86,7 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
   
     Mapping dello schema del database di origine allo schema di destinazione.  
   
-    **Attributo**  
+    **Attribute**  
   
     -   `source-schema:` Specifica il database di origine che richiede da convertire.  
   
@@ -101,7 +100,7 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
   
     2.  Se l'utente deve valutare più oggetti / database è possibile specificare più `metabase-object` nodi, come illustrato nel `convert-schema` di esempio 4 del comando del file di script della console di esempio.  
   
-    **Attributo**  
+    **Attribute**  
   
     `object-name`: Specificare il database di origine / object name che richiede da convertire. Verificare che il corrispondente `object-type` viene modificato in base al tipo dell'oggetto specificato nella `object-name`  
   
@@ -113,7 +112,7 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
   
     2.  Se l'utente deve valutare più oggetti / database è possibile specificare più `metabase-object` nodi, come illustrato nel `synchronize-target` di esempio 3 del comando del file di script della console di esempio.  
   
-    **Attributo**  
+    **Attribute**  
   
     `object-name:` Specificare il database di sql server / nome che richiede la creazione dell'oggetto. Verificare che il corrispondente `object-type` viene modificato in base al tipo dell'oggetto specificato nella `object-name`  
   
@@ -125,7 +124,7 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
   
     2.  Se l'utente deve valutare più oggetti / database è possibile specificare più `metabase-object` nodi, come illustrato nel `migrate-data` di esempio 2 del comando del file di script della console di esempio.  
   
-    **Attributo**  
+    **Attribute**  
   
     `object-name:` Specifica il database di origine / nome che è necessario eseguire la migrazione di tabelle. Verificare che il corrispondente `object-type` viene modificato in base al tipo dell'oggetto specificato nella `object-name`  
   

@@ -2,7 +2,6 @@
 title: Proprietà CommandText (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aaad9ab5bc4def9975631a875071dc69a44b6028
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c333cd961ea8b4b3f37f78c682ebe65c7ac9001
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276860"
 ---
 # <a name="commandtext-property-ado"></a>Proprietà CommandText (ADO)
 Indica il testo di un comando per essere eseguito in base a un provider.  
@@ -32,7 +32,7 @@ Indica il testo di un comando per essere eseguito in base a un provider.
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Ottiene o imposta un **stringa** valore che contiene un comando del provider, ad esempio un'istruzione SQL, un nome di tabella, un URL relativo o chiamata di stored procedure. Il valore predefinito è una stringa vuota ("").  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **CommandText** proprietà per impostare o restituire il testo di un comando rappresentato da un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto. In genere questo sarà un'istruzione SQL, ma può anche essere di qualsiasi altro tipo di istruzione di comando riconosciuto dal provider, ad esempio una chiamata di stored procedure. Un'istruzione SQL deve essere del sottolinguaggio specifico o una versione supportata dal processore di query del provider.  
   
  Se il [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) proprietà del **comando** oggetto è impostato su **True** e **comando** oggetto è associato a una connessione aperta quando si imposta il **CommandText** proprietà ADO prepara la query (ovvero, un modulo compilato della query che vengono archiviati dal provider) quando si chiama il [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) o [aprire](../../../ado/reference/ado-api/open-method-ado-connection.md)metodi.  

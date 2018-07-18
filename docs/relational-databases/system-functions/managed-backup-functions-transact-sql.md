@@ -1,5 +1,5 @@
 ---
-title: Funzioni di Backup (Transact-SQL) gestite | Documenti Microsoft
+title: Managed Backup funzioni (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,15 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65007fac66e42b95c2f12dee82162cdf6486b4d5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969537"
 ---
-# <a name="managed-backup-functions-transact-sql"></a>Funzioni gestite Backup (Transact-SQL)
+# <a name="managed-backup-functions-transact-sql"></a>Funzioni di Backup gestite (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce le seguenti funzioni per [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce le funzioni seguenti per [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [managed_backup.fn_backup_db_config &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql.md)  

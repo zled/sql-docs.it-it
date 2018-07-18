@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +21,12 @@ caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a008570306da0413e4a71fbc5fc2576e66129b1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fde84d7da5df42bc2f9d5c37edc8f56935fd0a4
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355643"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Peer-to-peer - Replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Per poter creare sottoscrizioni, è necessario abilitare una pubblicazione per la replica peer-to-peer.  
   
--   Le sottoscrizioni devono essere inizializzate mediante una copia di backup o tramite l'opzione **'replication support only'** . Per altre informazioni, vedere [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+-   Le sottoscrizioni devono essere inizializzate mediante una copia di backup o tramite l'opzione **'replication support only'** . Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 -   L'utilizzo di colonne Identity non è consigliato. Quando si utilizzano valori Identity, è necessario unire manualmente gli intervalli assegnati alle tabelle in ogni database coinvolto. Per altre informazioni, vedere la sezione "Assegnazione di intervalli per la gestione manuale degli intervalli di valori Identity" nell'argomento [Replicare colonne Identity](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   

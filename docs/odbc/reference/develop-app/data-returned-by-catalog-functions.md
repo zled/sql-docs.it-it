@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910576"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Dati restituiti dalle funzioni di catalogo
 Ogni funzione di catalogo restituisce dati come set di risultati. Questo set di risultati non è diverso da qualsiasi altro set di risultati. In genere viene generato da un oggetto predefinito, con parametri **selezionare** istruzione che viene archiviato in una routine nell'origine dati o a livello di codice nel driver. Per informazioni su come recuperare dati da un set di risultati, vedere [è stato creato di impostare un risultato?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

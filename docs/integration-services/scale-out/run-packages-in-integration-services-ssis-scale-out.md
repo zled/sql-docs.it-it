@@ -1,15 +1,13 @@
 ---
 title: Eseguire pacchetti in SQL Server Integration Services Scale Out (SSIS) | Microsoft Docs
-ms.description: This article describes how to run SSIS packages in Scale Out
-ms.custom: ''
+description: Questo articolo descrive come eseguire pacchetti SSIS in Scale Out
+ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
@@ -18,11 +16,12 @@ ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 3566938f25a646206e203810a84451829b0206cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4179a458fd159248ffacb05feb60bc2834535e05
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400863"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Eseguire pacchetti nel servizio Integration Services (SSIS) Scale Out
 Dopo aver distribuito i pacchetti nel server Integration Services, è possibile eseguirli in Scale Out usando uno dei metodi seguenti:

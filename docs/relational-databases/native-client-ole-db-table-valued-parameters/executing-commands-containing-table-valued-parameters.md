@@ -1,13 +1,12 @@
 ---
-title: Esecuzione di comandi contenenti parametri con valori di tabella | Documenti Microsoft
+title: Esecuzione di comandi contenenti parametri con valori di tabella | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,11 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 169f87c122e1c432c0a008b4e2200d1e19d1f42d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 943dba9ff3fbd04e8344ac4d325114ee9f05a2e2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428350"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Esecuzione di comandi contenenti parametri con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,12 +37,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="table-valued-parameter-specification"></a>Specifica del parametro con valori di tabella  
  Il tipo del parametro con valori di tabella può essere specificato dal consumer. Le informazioni relative al tipo includono il nome del tipo e il nome dello schema, se il tipo di tabella definito dall'utente per il parametro con valori di tabella non è presente nello schema predefinito corrente per la connessione. In base al supporto server, il consumer può specificare anche informazioni facoltative sui metadati, ad esempio l'ordine delle colonne, e specificare che tutte le righe di determinate colonne includano i valori predefiniti.  
   
- Per specificare un parametro con valori di tabella, il consumer chiama ISSCommandWithParamter::SetParameterInfo e facoltativamente chiama isscommandwithparameters:: Setparameterproperties. Per un parametro con valori di tabella, la *pwszDataSourceType* campo nella struttura DBPARAMBINDINFO ha un valore pari a DBTYPE_TABLE. Il *ulParamSize* campo è impostato su ~ 0 per indicare che la lunghezza è sconosciuta. Proprietà specifiche per i parametri con valori di tabella, ad esempio nome dello schema, nome del tipo, ordine delle colonne e le colonne predefinite, può essere impostata tramite isscommandwithparameters:: Setparameterproperties.  
+ Per specificare un parametro con valori di tabella, il consumer chiama ISSCommandWithParamter::SetParameterInfo e, facoltativamente, chiama isscommandwithparameters:: Setparameterproperties. Per un parametro con valori di tabella, la *pwszDataSourceType* campo nella struttura DBPARAMBINDINFO presenta un valore pari a DBTYPE_TABLE. Il *ulParamSize* campo è impostato su ~ 0 per indicare che la lunghezza è sconosciuta. Proprietà specifica per i parametri con valori di tabella, ad esempio nome dello schema, nome del tipo, ordine delle colonne e colonne predefinite, possono essere impostate tramite isscommandwithparameters:: Setparameterproperties.  
   
 ## <a name="table-valued-parameter-binding"></a>Associazione del parametro con valori di tabella  
  Un parametro con valori di tabella può essere qualsiasi oggetto set di righe. Il provider legge da questo oggetto mentre invia parametri con valori di tabella al server durante l'esecuzione.  
   
- Per associare il parametro con valori di tabella, il consumer chiama IAccessor:: CreateAccessor. Il *wType* campo della struttura DBBINDING per il parametro con valori di tabella è impostato su DBTYPE_TABLE. Il *pObject* membro della struttura DBBINDING è non NULL e *pObject*del *iid* membro è impostato su IID_IRowset o qualsiasi altro oggetto set di righe di parametri con valori di tabella interfacce. I campi restanti nella struttura DBBINDING devono essere impostati con la stessa modalità con cui sono impostati per i BLOB di flusso.  
+ Per associare il parametro con valori di tabella, il consumer chiama IAccessor:: CreateAccessor. Il *wType* campo della struttura DBBINDING per il parametro con valori di tabella è impostato su DBTYPE_TABLE. Il *pObject* membro della struttura DBBINDING è non NULL e il *pObject*del *iid* membro è impostato su IID_IRowset o su qualsiasi altro oggetto set di righe di parametri con valori di tabella interfacce. I campi restanti nella struttura DBBINDING devono essere impostati con la stessa modalità con cui sono impostati per i BLOB di flusso.  
   
  Alle associazioni relative al parametro con valori di tabella e all'oggetto set di righe associato a un parametro con valori di tabella vengono applicate le restrizioni seguenti:  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 -   I dati saranno inviati al server per le colonne con DBPROP_COL_AUTOINCREMENT o SSPROP_COL_COMPUTED, a meno che non sia impostata anche la proprietà SSPROP_PARAM_TABLE_DEFAULT.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Utilizzare i valori di tabella parametri & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [I parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Usare parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

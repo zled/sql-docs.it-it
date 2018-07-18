@@ -1,5 +1,5 @@
 ---
-title: Atomizzazione (XQuery) | Documenti Microsoft
+title: Atomizzazione (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,17 +22,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a704ccc0b5be37a668984ce4d8d543984f360b54
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053975"
 ---
 # <a name="atomization-xquery"></a>Atomizzazione (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Per atomizzazione si intende il processo di estrazione del valore tipizzato di un elemento. In determinate circostanze, il processo è implicito. Alcuni operatori XQuery, ad esempio gli operatori aritmetici e di confronto, dipendono da tale processo. Ad esempio, quando si applicano operatori aritmetici direttamente ai nodi, il valore tipizzato di un nodo viene recuperato innanzitutto richiamando in modo implicito il [funzione dati](../xquery/data-accessor-functions-data-xquery.md). Tale funzione passa il valore atomico come operando all'operatore aritmetico.  
   
- Ad esempio, la query seguente restituisce il numero totale di attributi LaborHours. In questo caso, **data ()** viene applicata in modo implicito ai nodi attributo.  
+ Ad esempio, la query seguente restituisce il numero totale di attributi LaborHours. In questo caso **data ()** viene applicata in modo implicito ai nodi attributo.  
   
 ```  
 declare @x xml  
@@ -50,11 +51,11 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- Un altro esempio di atomizzazione implicita riguarda l'utilizzo di operatori aritmetici. Il **+** operatore richiede valori atomici e **data ()** viene applicata in modo implicito per recuperare il valore atomico dell'attributo LaborHours. La query viene specificata sulla colonna Instructions del **xml** tipo nella tabella ProductModel. La query seguente restituisce tre volte l'attributo LaborHours. Dalla query si noti quanto segue:  
+ Un altro esempio di atomizzazione implicita riguarda l'utilizzo di operatori aritmetici. Il **+** operatore richiede valori atomici, e **data ()** viene applicata in modo implicito per recuperare il valore atomico dell'attributo LaborHours. La query viene specificata sulla colonna Instructions del **xml** tipo della tabella ProductModel. La query seguente restituisce tre volte l'attributo LaborHours. Dalla query si noti quanto segue:  
   
 -   Nella costruzione dell'attributo OrignialLaborHours, l'atomizzazione viene applicata in modo implicito alla sequenza singleton restituita da (`$WC/@LaborHours`). Il valore tipizzato dell'attributo LaborHours viene assegnato a OrignialLaborHours.  
   
--   Nella costruzione dell'attributo UpdatedLaborHoursV1, l'operatore aritmetico richiede valori atomici. Pertanto, **data ()** viene applicata in modo implicito all'attributo LaborHours restituito da (`$WC/@LaborHours`). Successivamente, viene aggiunto il valore atomico 1. La costruzione dell'attributo UpdatedLaborHoursV2 viene illustrata l'applicazione esplicita della **data ()**, ma non è obbligatorio.  
+-   Nella costruzione dell'attributo UpdatedLaborHoursV1, l'operatore aritmetico richiede valori atomici. Pertanto **data ()** viene applicata in modo implicito all'attributo LaborHours restituito da (`$WC/@LaborHours`). Successivamente, viene aggiunto il valore atomico 1. La costruzione dell'attributo UpdatedLaborHoursV2 viene illustrata l'applicazione esplicita della **data ()**, ma non è obbligatorio.  
   
 ```  
 SELECT Instructions.query('  
@@ -79,7 +80,7 @@ where ProductModelID=7
   
  L'atomizzazione restituisce un'istanza di tipo semplice, un set vuoto o un errore di tipo statico.  
   
- Atomizzazione si verifica anche in parametri dell'espressione di confronto passati alle funzioni, valori restituiti dalle funzioni, **cast ()** espressioni ed espressioni di ordinamento passate nell'ordine in base alla clausola.  
+ Atomizzazione viene inoltre eseguita in passato alle funzioni, valori restituiti dalle funzioni, parametri dell'espressione di confronto **cast ()** espressioni ed espressioni di ordinamento passate nell'ordine dalla clausola.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su XQuery](../xquery/xquery-basics.md)   

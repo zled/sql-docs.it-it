@@ -1,5 +1,5 @@
 ---
-title: Diagramma del modello a oggetti SMO | Documenti Microsoft
+title: Diagramma del modello a oggetti SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,10 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7e23c88851afef3d990c3dcac8d83bd7091a72f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046219"
 ---
 # <a name="smo-object-model-diagram"></a>Diagramma del modello a oggetti SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,10 +32,10 @@ ms.lasthandoff: 05/03/2018
   
  ![Diagramma che mostra le relazioni gerarchiche](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "diagramma che mostra le relazioni gerarchiche")  
   
- ![Modello a oggetti, una visualizzazione albero che illustra la gerarchia](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "modello a oggetti, una visualizzazione albero che illustra la gerarchia")  
+ ![Modello a oggetti, visualizzazione della struttura della gerarchia](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "modello a oggetti, visualizzazione della struttura della gerarchia")  
   
- ![Modello a oggetti, una visualizzazione albero che illustra la gerarchia](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "modello a oggetti, una visualizzazione albero che illustra la gerarchia")  
+ ![Modello a oggetti, visualizzazione della struttura della gerarchia](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "modello a oggetti, visualizzazione della struttura della gerarchia")  
   
- ![Modello a oggetti, una visualizzazione albero che illustra la gerarchia](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "modello a oggetti, una visualizzazione albero che illustra la gerarchia")  
+ ![Modello a oggetti, visualizzazione della struttura della gerarchia](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "modello a oggetti, visualizzazione della struttura della gerarchia")  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Viste dell'agente di raccolta dati (Transact-SQL) | Documenti Microsoft
+title: Le viste dell'agente di raccolta dati (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -21,15 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e93651a43d703ff9d7452f776bec533735ecec62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003235"
 ---
 # <a name="data-collector-views-transact-sql"></a>Viste dell'agente di raccolta dati (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  L'agente di raccolta dati offre le viste seguenti per la visualizzazione di informazioni sulla propria configurazione, ad esempio le proprietà del tipo di agente di raccolta, i set di raccolta e gli elementi dei set di raccolta, nonché le statistiche di esecuzione ottenute quando un set di raccolta è in esecuzione. Queste visualizzazioni, che si trovano nel **msdb** del database, offrono un livello di astrazione per le tabelle sottostanti. Tale astrazione consente di migliorare la sicurezza, impedendo l'accesso diretto alle tabelle e consentendo le modifiche alle tabelle senza influire sulle applicazioni associate.  
+  L'agente di raccolta dati offre le viste seguenti per la visualizzazione di informazioni sulla propria configurazione, ad esempio le proprietà del tipo di agente di raccolta, i set di raccolta e gli elementi dei set di raccolta, nonché le statistiche di esecuzione ottenute quando un set di raccolta è in esecuzione. Queste visualizzazioni, che si trovano nel **msdb** del database, forniscono anche un livello di astrazione per le tabelle sottostanti. Tale astrazione consente di migliorare la sicurezza, impedendo l'accesso diretto alle tabelle e consentendo le modifiche alle tabelle senza influire sulle applicazioni associate.  
   
 |||  
 |-|-|  

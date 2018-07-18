@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912986"
 ---
 # <a name="pattern-value-arguments"></a>Argomenti di valore modello
 Alcuni argomenti nel catalogo di funzioni, ad esempio il *TableName* argomento **SQLTables**, accettare i criteri di ricerca. Questi argomenti accettano i criteri di ricerca se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_FALSE; sono gli argomenti di identificatore che non accettano un criterio di ricerca se questo attributo è impostato su SQL_TRUE.  

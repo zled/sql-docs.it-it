@@ -2,7 +2,6 @@
 title: Recupero di dati | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21a304c36b91e2de8c0e9967da9e76a908969baa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cd4b69d8a14a9b4dd55237c4bd4af38104aeafc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270510"
 ---
 # <a name="getting-data"></a>Recupero di dati
 [Nozioni fondamentali su ADO](../../../ado/guide/data/ado-fundamentals.md)e il [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) esempio introdotte in particolare, le quattro operazioni principali coinvolte nella creazione di un'applicazione ADO: recupero di dati, analisi dei dati, la modifica dei dati e l'aggiornamento dei dati. Questa sezione illustra recupero dei dati in modo più dettagliato.  

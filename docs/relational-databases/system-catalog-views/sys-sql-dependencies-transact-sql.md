@@ -1,5 +1,5 @@
 ---
-title: Sys. sql_dependencies (Transact-SQL) | Documenti Microsoft
+title: Sys. sql_dependencies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b458e22f8b0b803dcd359b870af6f14b85a95f48
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981392"
 ---
 # <a name="syssqldependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 |**object_id**|**int**|ID dell'oggetto di riferimento.|  
 |**column_id**|**int**|Se l'ID di riferimento è una colonna, il valore corrisponde all'ID della colonna di riferimento. In caso contrario il valore è 0.|  
 |**referenced_major_id**|**int**|ID dell'entità con riferimenti, interpretato in base al valore della classe come indicato di seguito:<br /><br /> 0, 1 = ID dell'oggetto o della colonna.<br /><br /> 2 = ID del tipo.<br /><br /> 3 = ID della raccolta di XML Schema.|  
-|**referenced_minor_id**|**int**|ID secondario dell'entità con riferimenti, interpretato in base al valore della classe, come indicato di seguito.<br /><br /> Se class =:<br /><br /> 0, **referenced_minor_id** è un ID di colonna o se non è una colonna, è 0.<br /><br /> 1, **referenced_minor_id** è un ID di colonna o se non è una colonna, è 0.<br /><br /> In caso contrario, **referenced_minor_id** = 0.|  
+|**referenced_minor_id**|**int**|ID secondario dell'entità con riferimenti, interpretato in base al valore della classe, come indicato di seguito.<br /><br /> Se class =:<br /><br /> 0, **referenced_minor_id** è un ID di colonna; o se non è una colonna, è 0.<br /><br /> 1, **referenced_minor_id** è un ID di colonna; o se non è una colonna, è 0.<br /><br /> In caso contrario, **referenced_minor_id** = 0.|  
 |**is_selected**|**bit**|Indica se la colonna o l'oggetto è selezionato.|  
 |**is_updated**|**bit**|Indica se la colonna o l'oggetto è aggiornato.|  
 |**is_select_all**|**bit**|Indica se l'oggetto è utilizzato nella clausola SELECT * (solo a livello di oggetto).|  

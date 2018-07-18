@@ -1,5 +1,5 @@
 ---
-title: Specifica di Test di nodo in un passo dell'espressione di percorso | Documenti Microsoft
+title: Definizione di Test di nodo in un passo dell'espressione di percorso | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,12 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3460ecf0a821d5c7ffa39f242650e06c0e8ddaf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058301"
 ---
-# <a name="path-expressions---specifying-node-test"></a>Espressioni di percorso - specifica di Test di nodo
+# <a name="path-expressions---specifying-node-test"></a>Espressioni di percorso - definizione Test di nodo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ogni passo dell'asse in un'espressione di percorso include i componenti seguenti:  
@@ -74,7 +75,7 @@ child::ProductDescription
   
  L'espressione di percorso `/child::PD:ProductDescription/child::PD:Features/descendant::*,` include tre passi. Tali passi specificano gli assi child e descendant. In ogni passo, il nome di nodo viene specificato come test di nodo. Il carattere jolly (`*`) nel terzo passo indica tutti i nodi del tipo di nodo principale per l'asse descendant. Il tipo di nodo principale dell'asse determina il tipo di nodi selezionati, che vengono filtrati in base al nome di nodo.  
   
- Di conseguenza, quando l'espressione viene eseguita sui documenti XML di catalogo prodotti nel **ProductModel** tabella, recupera tutti i nodi figlio dell'elemento di \<funzionalità > elemento figlio del nodo il \< ProductDescription > elemento.  
+ Di conseguenza, quando questa espressione viene eseguita su documenti XML del catalogo prodotti nel **ProductModel** tabella, recupera tutti i nodi figlio del \<funzionalità > elemento figlio del nodo di \< ProductDescription > elemento.  
   
  L'espressione di percorso `/child::PD:ProductDescription/attribute::ProductModelID`, è costituito da due passaggi. Entrambi i passi specificano un nome di nodo come test di nodo. Inoltre, il secondo passo utilizza l'asse attribute. Pertanto, ogni passo seleziona i nodi del tipo di nodo principale dell'asse corrispondente con il nome specificato come test di nodo. Di conseguenza, l'espressione restituisce **ProductModelID** nodo di attributo con il \<ProductDescription > nodo elemento.  
   
@@ -110,7 +111,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- Analogamente, `/child::ProductDescription/child::Features/child::comment()` recupera commento figlio del nodo di \<funzionalità > elemento figlio del nodo il \<ProductDescription > nodo elemento.  
+ In modo analogo, `/child::ProductDescription/child::Features/child::comment()` recupera commento figlio del nodo il \<funzionalità > elemento figlio del nodo di \<ProductDescription > nodo elemento.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti vengono confrontati il nome di nodo e il tipo di nodo.  
@@ -220,7 +221,7 @@ WHERE ProductModelID=19
   
  Dalla query precedente si noti quanto segue:  
   
--   La parola chiave `namespace` nel prologo XQuery definisce un prefisso utilizzato nel corpo della query. Per ulteriori informazioni sul prologo XQuery, vedere [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) .  
+-   La parola chiave `namespace` nel prologo XQuery definisce un prefisso utilizzato nel corpo della query. Per altre informazioni sul prologo XQuery, vedere [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) .  
   
 -   Tutti e tre i passi nell'espressione di percorso specificano l'asse child e un nome di nodo come test di nodo.  
   

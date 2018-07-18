@@ -2,7 +2,6 @@
 title: Metodo di aggiornamento | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c0a5cd4e12848ecdec7c3c5168b6106dd95215c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ae65fa263d672c80fb886c5e1f212a8a189bf38
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282760"
 ---
 # <a name="update-method"></a>Update (metodo)
 Salva le modifiche apportate alla riga corrente di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto.  
@@ -39,12 +39,12 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Parametri  
  *Fields*  
- Facoltativa. Oggetto **Variant** che rappresenta un singolo nome o un **Variant** matrice che rappresenta i nomi o posizione ordinale del campo o campi che si desidera modificare.  
+ Facoltativo. Oggetto **Variant** che rappresenta un singolo nome o un **Variant** matrice che rappresenta i nomi o posizione ordinale del campo o campi che si desidera modificare.  
   
  *Valori*  
- Facoltativa. Oggetto **Variant** che rappresenta un singolo valore o un **Variant** matrice che rappresenta i valori per i campi nel nuovo record.  
+ Facoltativo. Oggetto **Variant** che rappresenta un singolo valore o un **Variant** matrice che rappresenta i valori per i campi nel nuovo record.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>recordset  
  Utilizzare il **aggiornamento** per salvare le modifiche apportate al record corrente di un **Recordset** oggetto dopo la chiamata di [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) (metodo) o dopo la modifica dei valori di campo in un record esistente. Il **Recordset** oggetto deve supportare gli aggiornamenti.  

@@ -1,5 +1,5 @@
 ---
-title: sp_addapprole (Transact-SQL) | Documenti Microsoft
+title: sp_addapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 3de15b3d1f02f3acf8dd5809dce7ec01ad74e65f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035269"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,31 +50,31 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
  [  **@rolename =** ] **'***ruolo***'**  
  Nome del nuovo ruolo applicazione. *ruolo* viene **sysname**, non prevede alcun valore predefinito. *ruolo* deve essere un identificatore valido e non può già esistere nel database corrente.  
   
- I nomi dei ruoli applicazione possono includere da 1 a 128 caratteri, compresi lettere, simboli e numeri. I nomi dei ruoli non può contenere una barra rovesciata (\\) né essere NULL o una stringa vuota (").  
+ I nomi dei ruoli applicazione possono includere da 1 a 128 caratteri, compresi lettere, simboli e numeri. I nomi di ruolo non possono contenere una barra rovesciata (\\) né essere NULL o una stringa vuota (").  
   
  [  **@password =** ] **'***password***'**  
- Password richiesta per attivare il ruolo applicazione. *password* viene **sysname**, non prevede alcun valore predefinito. *password* non può essere NULL.  
+ Password richiesta per attivare il ruolo applicazione. *la password* viene **sysname**, non prevede alcun valore predefinito. *password* non può essere NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli utenti (e i ruoli) non si diversificano completamente dagli schemi. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], gli schemi sono completamente distinti dai ruoli. Questa nuova architettura si riflette nel funzionamento dell'istruzione CREATE APPLICATION ROLE. Questa istruzione sostituisce **sp_addapprole**.  
   
- Per mantenere la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_addapprole** verranno eseguite le operazioni seguenti:  
+ Per mantenere la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_addapprole** eseguirà le operazioni seguenti:  
   
 -   Se uno schema con lo stesso nome del ruolo applicazione non esiste, tale schema verrà creato. Il nuovo schema sarà di proprietà del ruolo applicazione e sarà lo schema predefinito del ruolo applicazione.  
   
 -   Se invece uno schema con lo stesso nome del ruolo applicazione esiste già, la procedura verrà interrotta.  
   
--   La complessità delle password non viene verificato **sp_addapprole**. ma viene controllata dall'istruzione CREATE APPLICATION ROLE.  
+-   La complessità delle password non viene controllata dal **sp_addapprole**. ma viene controllata dall'istruzione CREATE APPLICATION ROLE.  
   
  Il parametro *password* viene archiviato come hash unidirezionale.  
   
- Il **sp_addapprole** stored procedure non può essere eseguita all'interno di una transazione definita dall'utente.  
+ Il **sp_addapprole** stored procedure non può essere eseguita dall'interno di una transazione definita dall'utente.  
   
 > [!IMPORTANT]  
->  Microsoft ODBC **crittografare** opzione non è supportata da **SqlClient**. Se possibile, richiedere all'utente di immettere le credenziali del ruolo applicazione in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario disporre di credenziali persistenti, crittografarle tramite le funzioni CryptoAPI.  
+>  Microsoft ODBC **crittografare** opzione non è supportato da **SqlClient**. Se possibile, richiedere all'utente di immettere le credenziali del ruolo applicazione in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario disporre di credenziali persistenti, crittografarle tramite le funzioni CryptoAPI.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY APPLICATION ROLE nel database. Se uno schema con lo stesso nome e lo stesso proprietario del nuovo ruolo non esiste, è richiesta anche l'autorizzazione CREATE SCHEMA nel database.  

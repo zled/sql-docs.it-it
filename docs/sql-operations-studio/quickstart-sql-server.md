@@ -13,11 +13,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 94a760c815b9933ff4d8d7da3dd24c292fcdc641
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 7f8963de448c39709a4df102cdf764a361b7654c
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985073"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guida introduttiva: Connettersi ed eseguire query di SQL Server con[!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Con questa guida introduttiva viene illustrato come utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a SQL Server e quindi utilizzare istruzioni Transact-SQL (T-SQL) per creare il *TutorialDB* utilizzato [!INCLUDE[name-sos](../includes/name-sos-short.md)] esercitazioni.
@@ -30,8 +31,8 @@ Per completare questa guida rapida, è necessario [!INCLUDE[name-sos](../include
 
 Se non si dispone di alcun SQL Server, selezionare la piattaforma usata dai collegamenti seguenti (assicurarsi di usare l'account di accesso SQL e la password corretti):
 - [Windows - Scaricare SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS - Scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -è necessario seguire i passaggi fino a *Create e eseguire query sui dati*.
+- [macOS - Scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+- [Linux - scaricare SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -è sufficiente seguire i passaggi fino a *creare ed eseguire query sui dati*.
 
 
 ## <a name="connect-to-a-sql-server"></a>Connettersi a SQL Server
@@ -47,7 +48,7 @@ Se non si dispone di alcun SQL Server, selezionare la piattaforma usata dai coll
     - **Nome del server:** localhost
     - **Tipo di autenticazione:** account di accesso SQL  
     - **Nome utente:** nome utente per SQL Server  
-    - **Password:** Password per il Server SQL  
+    - **Password:** Password per SQL Server  
     - **Nome del database:** lasciare vuoto questo campo 
     - **Gruppo di server:** \<predefinito\>  
 
@@ -57,10 +58,10 @@ Se non si dispone di alcun SQL Server, selezionare la piattaforma usata dai coll
 
 ## <a name="create-a-database"></a>Creazione di un database
 
-La seguente procedura crea un database denominato **TutorialDB**:
+La procedura seguente crea un database denominato **TutorialDB**:
 
 1. Fare clic con il pulsante destro sul server, **localhost**e selezionare **nuova Query.**
-1. Nella finestra query, incollare il frammento di codice seguente: 
+1. Nella finestra query, incollare il frammento seguente: 
 
    ```sql
    USE master
@@ -143,7 +144,7 @@ Dopo il completamento della query, la nuova tabella **dbo.Customers** è visuali
 
 1. Vengono visualizzati i risultati della query:
 
-   ![Selezionare risultati](media/quickstart-sql-server/select-results.png)
+   ![Selezionare i risultati](media/quickstart-sql-server/select-results.png)
 
 
 ## <a name="next-steps"></a>Passaggi successivi

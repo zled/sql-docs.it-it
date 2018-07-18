@@ -2,7 +2,6 @@
 title: I record e i flussi | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d083594f9dd54cee0f1c9c70f6fdfe14d32e49a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62066ab92b6acaa393036a7b4be01499fa830dd3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272420"
 ---
 # <a name="records-and-streams"></a>I record e flussi
 ADO fornisce attualmente il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto come il mezzo principale per l'accesso alle informazioni nelle origini dati, ad esempio database relazionali. Tuttavia, alcuni provider supportano il [Record](../../../ado/reference/ado-api/record-object-ado.md) e [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetti come alternativi o complementari oggetti con cui i dati dai provider possono essere modificati. Per informazioni specifiche sulla **Record** comportamento, vedere la documentazione del provider.  

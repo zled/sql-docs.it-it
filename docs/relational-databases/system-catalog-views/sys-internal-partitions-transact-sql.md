@@ -1,5 +1,5 @@
 ---
-title: Sys.internal_partitions (Transact-SQL) | Documenti Microsoft
+title: Sys.internal_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,26 +22,27 @@ ms.author: rortloff
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9d0321089336774e4303418b776eec8a1608613b
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058251"
 ---
 # <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni set di righe che tiene traccia di dati interne per gli indici columnstore nelle tabelle basate su disco. Questi set di righe sono interni per gli indici columnstore e le righe di traccia eliminato, il mapping di gruppo di righe e delta archivio rowgroup. Consentono di tenere traccia dei dati per ciascuno di essi per ogni partizione della tabella; ogni tabella dispone di almeno una partizione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Consente di ricreare i set di righe ogni volta che viene ricompilato l'indice columnstore.   
+  Restituisce una riga per ogni set di righe che tiene traccia di dati interne per gli indici columnstore nelle tabelle basate su disco. Questi set di righe sono interni agli indici columnstore e track eliminato righe, i mapping di rowgroup e differenziali archiviano i rowgroup. Consentono di tenere traccia dei dati per ciascuno di essi per ogni partizione della tabella; ogni tabella contiene almeno una partizione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ricrea i set di righe ogni volta che viene ricompilato l'indice columnstore.   
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|partition_id|**bigint**|ID di partizione per la partizione. Valore univoco all'interno di un database.|  
-|object_id|**int**|ID di oggetto per la tabella contenente la partizione.|  
+|partition_id|**bigint**|ID di partizione per questa partizione. Valore univoco all'interno di un database.|  
+|object_id|**int**|ID oggetto per la tabella contenente la partizione.|  
 |index_id|**int**|ID dell'indice per l'indice columnstore definito nella tabella.<br /><br /> 1 = indice columnstore cluster<br /><br /> 2 = indice columnstore non cluster|  
 |partition_number|**int**|Il numero di partizione.<br /><br /> 1 = prima partizione di una tabella partizionata o la singola partizione di una tabella non partizionata.<br /><br /> 2 = seconda partizione e così via.|  
-|internal_object_type|**tinyint**|Oggetti set di righe che tengono traccia dei dati interni per l'indice columnstore.<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
-|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP: l'indice bitmap tiene traccia delle righe contrassegnate come eliminate dal columnstore. La bitmap è per ogni rowgroup, poiché le partizioni possono includere le righe in più rowgroup. Le righe sono che sono ancora fisicamente presente e occuperà spazio nel columnstore.<br /><br /> COLUMN_STORE_DELTA_STORE: gruppi di punti vendita di righe, dette rowgroup, che non sono state compresse nel formato di archiviazione. Ogni partizione della tabella può avere zero o più rowgroup di deltastore.<br /><br /> COLUMN_STORE_DELETE_BUFFER per la gestione delle eliminazioni per gli indici columnstore non cluster aggiornabili. Quando una query elimina una riga dalla tabella rowstore, del buffer di eliminazione rileva l'eliminazione dal columnstore. Quando il numero di righe eliminate supera 1048576, vengono uniti in delete bitmap da background thread dal motore di Tuple o da un comando di riorganizzazione esplicito.  A un certo punto nel tempo, l'unione della bitmap delete e buffer di eliminazione rappresenta eliminate tutte le righe.<br /><br /> COLUMN_STORE_MAPPING_INDEX – utilizzato solo quando l'indice columnstore cluster dispone di un indice non cluster secondario. Esegue il mapping delle chiavi di indice non cluster per il corretto rowgroup e l'ID di riga nel columnstore. Archivia solo le chiavi per le righe che passa a un gruppo di righe diverso; Questo errore si verifica quando un rowgroup delta viene compresso nel columnstore e quando un'operazione di unione unisce le righe da due diversi gruppi di righe.|  
-|Row_group_id|**int**|ID del rowgroup di deltastore. Ogni partizione della tabella può avere zero o più rowgroup di deltastore.|  
-|hobt_id|**bigint**|ID dell'oggetto set di righe interno. Si tratta di una chiave appropriata per l'unione con altre viste a gestione dinamica per ottenere ulteriori informazioni sulle caratteristiche fisiche del set di righe interno.|  
+|internal_object_type|**tinyint**|Oggetti set di righe che tengono traccia dei dati interne per l'indice columnstore.<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
+|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP – questo indice bitmap tiene traccia delle righe che sono contrassegnate come eliminate dal columnstore. La bitmap è per ogni rowgroup, poiché le partizioni possono avere le righe in più rowgroup. Le righe siano che siano ancora fisicamente presenti e occuperà spazio nel columnstore.<br /><br /> COLUMN_STORE_DELTA_STORE: gruppi di punti vendita di righe, dette rowgroup, che non sono state compresse nell'archiviazione a colonne. Ogni partizione della tabella può avere zero o più rowgroup deltastore.<br /><br /> COLUMN_STORE_DELETE_BUFFER – per la gestione delle eliminazioni per gli indici columnstore non cluster aggiornabili. Quando una query consente di eliminare una riga della tabella rowstore sottostante, del buffer di eliminazione rileva l'eliminazione dal columnstore. Quando il numero di righe eliminate supera 1048576, vengono uniti in delete bitmap con sfondo thread di processo Tuple-Mover o da un comando Reorganize esplicito.  In qualsiasi momento nel tempo, l'unione tra la bitmap di eliminazione e buffer di eliminazione rappresenta eliminate tutte le righe.<br /><br /> COLUMN_STORE_MAPPING_INDEX – usato solo quando l'indice columnstore cluster dispone di un indice non cluster secondario. Esegue il mapping delle chiavi di indice non cluster per il corretto rowgroup e l'ID di riga nel columnstore. Archivia solo le chiavi per le righe da spostare in un gruppo di righe diverso; Ciò si verifica quando un rowgroup differenziale viene compresso nel columnstore e quando un'operazione di unione unisce le righe da due diversi rowgroup.|  
+|Row_group_id|**int**|ID del rowgroup deltastore. Ogni partizione della tabella può avere zero o più rowgroup deltastore.|  
+|hobt_id|**bigint**|ID dell'oggetto set di righe interno. Si tratta di una chiave valida per l'unione con altre viste a gestione dinamica per ottenere altre informazioni sulle caratteristiche fisiche del set di righe interno.|  
 |rows|**bigint**|Numero approssimativo di righe nella partizione.|  
 |data_compression|**tinyint**|Lo stato di compressione per il set di righe:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|Lo stato di compressione per ogni partizione. I valori possibili per le tabelle rowstore sono NONE, ROW e PAGE. I valori possibili per le tabelle columnstore sono COLUMNSTORE e COLUMNSTORE_ARCHIVE.|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/07/2018
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>A. Visualizzare tutti i set di righe interno per una tabella  
- In questo esempio restituisce tutti i set di righe columnstore interno per una tabella. È anche possibile utilizzare hobt_id per ulteriori informazioni sul set di righe specifico.  
+ In questo esempio restituisce tutti i set di righe columnstore interno per una tabella. È anche possibile usare hobt_id per trovare altre informazioni sul set di righe specifico.  
   
 ```  
 SELECT i.object_id, i.index_id, i.name, p.hobt_id, p.internal_object_type_id, p.internal_object_type_desc  

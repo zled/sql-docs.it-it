@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916036"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Utilizzando SQLGetDiagRec e SQLGetDiagField
 Le applicazioni chiamano **SQLGetDiagRec** o **SQLGetDiagField** per recuperare le informazioni di diagnostica. Queste funzioni accettano un handle di ambiente, connessione, istruzione o descrittore e torna diagnostica dalla funzione l'handle dell'ultimo utilizzo. La diagnostica registrata su un handle specifico viene rimossi quando viene chiamata utilizzando l'handle di una nuova funzione. Se la funzione ha restituito più record di diagnostica, l'applicazione chiama queste funzioni più volte. il numero totale di record di stato viene recuperato chiamando **SQLGetDiagField** per il record di intestazione (record 0) con l'opzione SQL_DIAG_NUMBER.  

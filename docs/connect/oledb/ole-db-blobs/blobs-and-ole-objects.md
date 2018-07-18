@@ -2,10 +2,10 @@
 title: Oggetti BLOB e OLE | Documenti Microsoft
 description: Oggetti BLOB e OLE
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-blobs
+ms.component: oledb|ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,18 +20,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e78fe8db35684bb35e4111a38d3d0ba938891785
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cacbe007e9bf0187648ad1fd95c8b6616fb8a300
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666081"
 ---
 # <a name="blobs-and-ole-objects"></a>Oggetti BLOB e OLE
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Il Driver OLE DB per SQL Server espone il **ISequentialStream** interfaccia per supportare l'accesso consumer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **immagine** , **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, e oggetti come binari di grandi dimensioni (BLOB) i tipi di dati xml. Il **lettura** metodo **ISequentialStream** consente al consumer di recuperare una quantità di dati in blocchi gestibili.  
   
- Per un esempio che illustri questa caratteristica, vedere [impostare dati di grandi dimensioni & #40; OLE DB & #41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Per un esempio che illustri questa caratteristica, vedere [impostare dati di grandi dimensioni &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  Il Driver OLE DB per SQL Server è possibile utilizzare un consumer implementato **IStorage** interfaccia quando il consumer fornisce il puntatore di interfaccia in una funzione di accesso associata per la modifica dei dati.  
   
@@ -59,16 +62,16 @@ ms.lasthandoff: 05/03/2018
   
 -   Se una riga contiene più di un valore di dati di grandi dimensioni e DBPROP_ACCESSORDER non è DBPROPVAL_AO_RANDOM, il consumer deve utilizzare un Driver OLE DB per SQL Server supportato dal cursore set di righe per recuperare i dati di riga o elaborare tutti i valori di dati di grandi dimensioni prima di recuperare altri valori di riga. Se DBPROP_ACCESSORDER è DBPROPVAL_AO_RANDOM, il Driver OLE DB per SQL Server memorizza nella cache tutti i tipi di dati xml come oggetti binari di grandi dimensioni (BLOB) in modo che possano accedervi in qualsiasi ordine.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Recupero di dati di grandi dimensioni](../../oledb/ole-db-blobs/getting-large-data.md)  
   
--   [Impostazione dati di grandi dimensioni](../../oledb/ole-db-blobs/setting-large-data.md)  
+-   [Impostazione di dati di grandi dimensioni](../../oledb/ole-db-blobs/setting-large-data.md)  
   
--   [Supporto dello streaming per i parametri di Output BLOB](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
+-   [Supporto del flusso per parametri di output BLOB](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per la programmazione di SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
- [Utilizzo di tipi di valori di grandi dimensioni](../../oledb/features/using-large-value-types.md)  
+ [Uso di tipi valore di grandi dimensioni](../../oledb/features/using-large-value-types.md)  
   
   

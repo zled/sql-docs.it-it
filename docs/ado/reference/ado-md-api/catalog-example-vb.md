@@ -2,7 +2,6 @@
 title: Catalogo di esempio (VB) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58f73e76b0d26128a57fdf157e3a9f3f268ea0f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7edb3a1f3e2c0767dd320e36a18a69a6fb0f85dd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283290"
 ---
 # <a name="catalog-example-vb"></a>Esempio di catalogo (VB)
 Questo progetto di Visual Basic crea un nuovo cubo utilizzando MDX. Quindi, documenta la struttura di un cubo in un documento Microsoft Word.  

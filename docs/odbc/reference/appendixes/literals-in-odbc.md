@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905526"
 ---
 # <a name="literals-in-odbc"></a>Valori letterali di ODBC
 La sintassi nelle sezioni seguenti viene utilizzata per l'intervallo e valori letterali numerici in ODBC. Questa sintassi viene fornita come guida per gli sviluppatori di driver quando vengono eseguite le conversioni da un tipo di stringa di caratteri a un tipo numerico o di intervallo o da un tipo numerico o di intervallo in un tipo di stringa di caratteri. Per ulteriori informazioni, vedere [valori letterali intervallo](../../../odbc/reference/appendixes/interval-literals.md) e [valori letterali numerici](../../../odbc/reference/appendixes/numeric-literals.md) appendice d: tipo di dati.  

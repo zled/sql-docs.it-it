@@ -24,31 +24,32 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: fbfc968d9fb4620884f282121a820dad548405cc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060248"
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-Restituisce una tabella che visualizza lo spazio totale in tempdb utilizzati dai record di archivio versione per ogni database. **Sys.dm_tran_version_store_space_usage** è efficiente e non costose da eseguire, come non spostarsi record archivio versione singoli e restituisce aggregati spazio di archiviazione versione utilizzato in tempdb per ogni database.
+Restituisce una tabella che visualizza lo spazio totale in tempdb usato dai record dell'archivio versioni per ogni database. **DM tran_version_store_space_usage** è efficiente e non costosa da eseguire, poiché non Naviga attraverso i record dell'archivio versioni singoli e restituisce aggregate lo spazio dell'archivio versione usato in tempdb per ogni database.
   
 Ogni record con versione viene archiviato come dato binario, con alcune informazioni di rilevamento o stato. Analogamente ai record nelle tabelle di database, i record inclusi nell'archivio delle versioni vengono archiviati in pagine da 8192 byte. In caso di dimensioni superiori a 8192 byte, il record verrà suddiviso in due record distinti.  
   
-Poiché il record con versione viene archiviato come dato binario, non si verificheranno problemi in presenza di diverse regole di confronto di database diversi. Utilizzare **sys.dm_tran_version_store_space_usage** per monitorare e pianificare le dimensioni di tempdb in base all'utilizzo di spazio di archivio versione del database in un'istanza di SQL Server.
+Poiché il record con versione viene archiviato come dato binario, non si verificheranno problemi in presenza di diverse regole di confronto di database diversi. Uso **DM tran_version_store_space_usage** per monitorare e pianificare le dimensioni di tempdb basata all'utilizzo di spazio di archivio versione di database in un'istanza di SQL Server.
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID del database del database.|  
 |**reserved_page_count**|**bigint**|Conteggio totale delle pagine riservate nel database tempdb per la versione di archiviare i record del database.|  
-|**reserved_space_kb**|**bigint**|Spazio totale utilizzato in kilobyte nel database tempdb per versione archiviare i record del database.|  
+|**reserved_space_kb**|**bigint**|Spazio totale utilizzato nel kilobyte in tempdb per versione archiviare i record del database.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
 
 ## <a name="examples"></a>Esempi  
-La query seguente consente di determinare lo spazio utilizzato in tempdb, dall'archivio delle versioni di ogni database in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza. 
+La query seguente può essere utilizzata per determinare lo spazio usato in tempdb, dall'archivio delle versioni di ogni database in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza. 
   
 ```sql  
 SELECT 

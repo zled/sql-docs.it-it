@@ -2,7 +2,6 @@
 title: Le proprietà della raccolta CubeDefs, metodi ed eventi | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b19cbcfa3e3a027b1a8df5027dfb0a2223ecadb6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4af0560f8c8d6640981f31e9901a04f17176b4b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283570"
 ---
 # <a name="cubedefs-collection-properties-methods-and-events"></a>Le proprietà della raccolta CubeDefs, metodi ed eventi
 ## <a name="properties"></a>Proprietà  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
  [Metodo Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventi  
- Nessuno  
+ Nessuna.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

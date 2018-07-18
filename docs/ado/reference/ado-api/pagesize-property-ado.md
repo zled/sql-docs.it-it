@@ -2,7 +2,6 @@
 title: Proprietà PageSize (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cbd3b9e335d32cd1d93d8c079bca39b535096049
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aea2e9510f80f8cd0d15bfbc2f7f544055b65884
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280060"
 ---
 # <a name="pagesize-property-ado"></a>Proprietà PageSize (ADO)
 Indica il numero di record che costituisce una pagina di [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -32,7 +32,7 @@ Indica il numero di record che costituisce una pagina di [Recordset](../../../ad
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **lungo** valore che indica il numero di record si trova in una pagina. Il valore predefinito è **10**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **PageSize** proprietà per determinare il numero di record che costituiscono una pagina logica dei dati. La definizione di una dimensione di pagina consente di utilizzare il [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) proprietà per passare al primo record di una pagina specifica. Ciò è utile negli scenari di server Web quando si desidera consentire all'utente di spostarsi tra i dati, la visualizzazione di un determinato numero di record alla volta.  
   
  Questa proprietà può essere impostata in qualsiasi momento e il relativo valore verrà utilizzato per calcolare la posizione del primo record di una pagina specifica.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908936"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Compila un programma SQL incorporato
 Poiché un programma SQL incorporato contiene una combinazione di istruzioni SQL e host, non può essere inviato direttamente a un compilatore per il linguaggio host. Al contrario, viene compilato tramite un processo in più passaggi. Anche se questo processo è diverso da un prodotto per un prodotto, i passaggi sono quasi gli stessi per tutti i prodotti.  

@@ -2,7 +2,6 @@
 title: Tabelle insieme (ADOX) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80093f384c8b25f16b59b267429675566ff94ddf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6b97d189907d8f226867748e25e64972b8aba2b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287210"
 ---
 # <a name="tables-collection-adox"></a>Raccolta di tabelle (ADOX)
 Contiene tutti [tabella](../../../ado/reference/adox-api/table-object-adox.md) gli oggetti di un catalogo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) metodo per un **tabelle** insieme è univoco in ADOX. È possibile effettuare le operazioni seguenti:  
   
 -   Aggiungere una nuova tabella alla raccolta con il **Append** metodo.  

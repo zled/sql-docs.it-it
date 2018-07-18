@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 961a4d045bc2ff82271ae6793069dc81f64575b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e097e0ad00b0ee10799fb8194051ce51ec55935
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411833"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Azioni Regola business (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="default-value-actions"></a>Azioni Valori predefinito  
  Le azioni di tipo**Valore predefinito** determinano l'impostazione del valore predefinito di un attributo specificato. Gli utenti che dispongono delle autorizzazioni necessarie possono modificare questi valori predefiniti.  
   
-|Nome del valore|Description|  
+|Nome del valore|Descrizione|  
 |----------------|-----------------|  
 |**assume il valore**|L'attributo selezionato **assume il valore** di un attributo specifico o di un valore di attributo specifico oppure è vuoto.<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
 |**assume un valore generato**|L'attributo selezionato **assume un valore generato** determinato dall'immissione di un valore iniziale e incrementale.<br /><br /> Questa azione è valida per valori di testo e numerici.|  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="change-value-actions"></a>Azioni Modifica valore  
  Le azioni di tipo**Modifica valore** determinano l'aggiornamento del valore di un attributo o di un valore di attributo specificato. Gli utenti possono modificare questi valori solo se il nuovo valore rende vera l'azione.  
   
-|Nome del valore|Description|  
+|Nome del valore|Descrizione|  
 |----------------|-----------------|  
 |**Uguale a**|L'attributo selezionato viene modificato in un valore di attributo definito, in un altro attributo o in un valore vuoto.<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
 |**uguale a un valore concatenato**|L'attributo selezionato viene modificato in un valore concatenato determinato mediante la specifica di più attributi.<br /><br /> Questa azione è valida per valori di testo e di collegamento.|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  Le uniche eccezioni sono costituite dalle azioni **è obbligatorio** e **non è valido** . Queste azioni devono essere combinate con un'azione di modifica del valore, in modo che i dati possano essere convalidati e venga eseguito il commit della versione.  
   
-|Nome della convalida|Description|  
+|Nome della convalida|Descrizione|  
 |---------------------|-----------------|  
 |**è obbligatorio**|L'attributo selezionato **è obbligatorio**, ovvero non può essere null o vuoto.<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
 |**non è valido**|L'attributo selezionato **non è valido**.<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="external-action"></a>Azione esterna  
  Le**azioni esterne** interagiscono con le applicazioni al di fuori di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-|Nome dell'azione|Description|  
+|Nome dell'azione|Descrizione|  
 |-----------------|-----------------|  
 |**avvia il flusso di lavoro**|Avvia un flusso di lavoro esterno. I dati che hanno causato questa azione vengono passati al flusso di lavoro. Per ulteriori informazioni, vedere [Integrazione del flusso di lavoro SharePoint con Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900376"
 ---
 # <a name="set-exclusive-command"></a>Comando esclusivo SET
 Specifica se aprire o meno i file di tabella per l'utilizzo esclusiva o condivisa in rete.  

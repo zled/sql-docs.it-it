@@ -1,31 +1,20 @@
 ---
-title: TopPercent (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOPPERCENT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopPercent function
-ms.assetid: 0b407ab2-2a69-4cbd-ae13-bdd29654fa86
-caps.latest.revision: 37
-author: Minewiskan
+title: TopPercent (DMX) | Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: bccca2b1a3411b8c5ee36d6dbf7a972fd67a9e83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 781b5c660826ff963497a5b89b7bc01a16eeb265
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040399"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,18 +29,18 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="applies-to"></a>Si applica a  
- Un'espressione che restituisce una tabella, ad esempio un \<tabella di riferimento di colonna >, o una funzione che restituisce una tabella.  
+ Un'espressione che restituisce una tabella, ad esempio un \<riferimento a una colonna di tabella >, o una funzione che restituisce una tabella.  
   
 ## <a name="return-type"></a>Tipo restituito  
  \<espressione di tabella >  
   
-## <a name="remarks"></a>Osservazioni  
- Il **TopPercent** funzione restituisce le prime righe in ordine decrescente di rango sul valore valutato del \<rank expression > argomento per ogni riga, in modo che la somma del \<rank expression > valori corrisponde almeno alla percentuale specificata dal \<% > argomento. **TopPercent** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore percentuale specificato.  
+## <a name="remarks"></a>Note  
+ Il **TopPercent** funzione restituisce le prime righe in ordine decrescente di rango decrescente in base al valore valutato del \<rank expression > argomento per ogni riga, in modo che la somma del \<rank expression > i valori corrisponde almeno alla percentuale specificata dal \<percentuale > argomento. **TopPercent** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore percentuale specificato.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente crea una query di stima sul modello di associazione che si compila con il [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ L'esempio seguente crea una query di stima sul modello di associazione che si compila usando il [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
- Per comprendere il funzionamento TopPercent, potrebbe essere utile eseguire prima una query di stima che restituisce solo la tabella nidificata.  
+ Per comprendere il funzionamento di TopPercent, potrebbe essere utile eseguire prima una query di stima che restituisce solo la tabella nidificata.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -62,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In questo esempio il valore fornito come input contiene una virgoletta singola, e pertanto è necessario utilizzare il carattere di escape preceduto da un'altra virgoletta singola. Se non si è certi della sintassi per l'inserimento di un carattere di escape, è possibile utilizzare il generatore delle query di stima per creare la query. Quando si seleziona il valore dall'elenco a discesa, viene automaticamente inserito il carattere di escape necessario. Per ulteriori informazioni, vedere [creare una Query Singleton Progettazione modelli di Data Mining](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
+>  In questo esempio il valore fornito come input contiene una virgoletta singola, e pertanto è necessario utilizzare il carattere di escape preceduto da un'altra virgoletta singola. Se non si è certi della sintassi per l'inserimento di un carattere di escape, è possibile utilizzare il generatore delle query di stima per creare la query. Quando si seleziona il valore dall'elenco a discesa, viene automaticamente inserito il carattere di escape necessario. Per altre informazioni, vedere [creare una Query Singleton in Progettazione modelli di Data Mining Data](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
   
  Risultati dell'esempio:  
   
@@ -79,7 +68,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- La funzione TopPercent accetta i risultati della query e restituisce le righe con i valori più grandi che vengono sommate alla percentuale specificata.  
+ La funzione TopPercent utilizza i risultati della query e restituisce le righe con i valori più grandi che vengono sommate alla percentuale specificata.  
   
 ```  
 SELECT   
@@ -94,9 +83,9 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Il primo argomento alla funzione TopPercent è il nome di una colonna di tabella. In questo esempio, la tabella nidificata viene restituita chiamando la funzione di stima e utilizzando l'argomento INCLUDE_STATISTICS.  
+ Il primo argomento alla funzione TopPercent è il nome di una colonna di tabella. In questo esempio, la tabella nidificata viene restituita chiamando la funzione Predict e usando l'argomento INCLUDE_STATISTICS.  
   
- Il secondo argomento per la funzione TopPercent è la colonna nella tabella nidificata che consente di ordinare i risultati. In questo esempio l'opzione INCLUDE_STATISTICS restituisce le colonne $SUPPORT, $PROBABILTY e $ADJUSTED PROBABILITY. In questo esempio viene utilizzato $SUPPORT poiché i valori di supporto non sono frazionari e pertanto sono più facili da verificare.  
+ Il secondo argomento alla funzione TopPercent è la colonna nella tabella annidata che consente di ordinare i risultati. In questo esempio l'opzione INCLUDE_STATISTICS restituisce le colonne $SUPPORT, $PROBABILTY e $ADJUSTED PROBABILITY. In questo esempio viene utilizzato $SUPPORT poiché i valori di supporto non sono frazionari e pertanto sono più facili da verificare.  
   
  Il terzo argomento alla funzione TopPercent specifica la percentuale, come valore double. Per ottenere le righe dei primi prodotti che rappresentano il 50 percento del supporto totale, digitare 50.  
   
@@ -109,13 +98,13 @@ NATURAL PREDICTION JOIN
 |Patch kit|2113|0.14…|0.13…|  
 |Mountain Tire Tube|1992|0.133…|0.12…|  
   
- **Nota** questo esempio viene fornito solo per illustrare l'utilizzo di TopPercent. A seconda della dimensione del set di dati, questa query potrebbe impiegare molto tempo per l'esecuzione.  
+ **Nota** in questo esempio viene fornito solo per illustrare l'utilizzo di TopPercent. A seconda della dimensione del set di dati, questa query potrebbe impiegare molto tempo per l'esecuzione.  
   
 > [!WARNING]  
 >  Le funzioni MDX per TOPPERCENT e BOTTOMPERCENT possono generare risultati imprevisti quando i valori utilizzati per calcolare la percentuale includono numeri negativi. Questo comportamento non influisce sulle funzioni DMX. Per altre informazioni, vedere [BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

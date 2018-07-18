@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916406"
 ---
 # <a name="network-database-access"></a>Accesso alla rete del Database
 Accesso a un database in una rete richiede un numero di componenti, ognuno dei quali è indipendente e si trova di sotto, l'interfaccia di programmazione. Questi componenti sono illustrati nella figura seguente.  

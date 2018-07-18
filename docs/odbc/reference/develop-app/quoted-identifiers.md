@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911526"
 ---
 # <a name="quoted-identifiers"></a>Identificatori delimitati
 In un'istruzione SQL, gli identificatori che contengono caratteri speciali o parole chiave con corrispondenza devono essere racchiuso tra *virgolette identificatore*; gli identificatori racchiusi tra tali caratteri sono note come *identificatoritravirgolette*(noto anche come *identificatori delimitati* in SQL-92). Ad esempio, l'identificatore di contabilità fornitori è racchiuso tra virgolette nell'esempio seguente **selezionare** istruzione:  

@@ -1,5 +1,5 @@
 ---
-title: Creare un progetto Visual c# SMO in Visual Studio .NET | Documenti Microsoft
+title: Creare un progetto Visual c# SMO in Visual Studio .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 25e06aa3493b10e5a282fc5a709605eae18cb5fd
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708319"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974191"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Come creare un progetto Visual c# SMO in Visual Studio .NET
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   In questa sezione viene descritto come compilare un'applicazione console SMO semplice.  
   
- In questo esempio vengono importati spazi dei nomi affinché il programma faccia riferimento ai tipi SMO. L'importazione del **agente** dello spazio dei nomi è facoltativo. Utilizzarla quando si scrive un programma che utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il **comuni** dello spazio dei nomi è necessario per stabilire una connessione sicura per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il **SqlClient** dello spazio dei nomi viene utilizzato per elaborare gli errori di eccezione SQL.  
+ In questo esempio vengono importati spazi dei nomi affinché il programma faccia riferimento ai tipi SMO. L'importazione del **agente** dello spazio dei nomi è facoltativo. Utilizzarla quando si scrive un programma che utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il **comuni** dello spazio dei nomi è necessario per stabilire una connessione sicura all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il **SqlClient** dello spazio dei nomi viene usato per elaborare gli errori di eccezione SQL.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Creazione di un progetto Visual C# SMO in Visual Studio.NET  
   
@@ -38,17 +38,17 @@ ms.locfileid: "34708319"
   
 2. Nel **File** menu, fare clic su **New** e quindi **progetto**.  Verrà visualizzata la finestra di dialogo **Nuovo progetto** .   
   
-3. Nel [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **installato** riquadro, passare a **modelli**\\**Visual c#**\\**Windows** e selezionare **applicazione Console**.  
+3. Nel [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Installed** riquadro, passare alla **modelli**\\**Visual c#**\\**Windows** e selezionare **applicazione Console**.  
   
 4. (Facoltativo) Nel **nome** testo, digitare il nome della nuova applicazione.  
 
 5. Fare clic su **OK** per caricare il modello di applicazione console.  
 
-6. Seguire le istruzioni in [l'installazione di SMO](installing-smo.md) per installare il pacchetto per il progetto fare riferimento.
+6. Seguire le istruzioni sullo [installazione di SMO](installing-smo.md) per installare il pacchetto per il progetto a cui fare riferimento.
   
 7. Scegliere **Codice** dal menu **Visualizza**.
     
-8. Nel codice, prima dell'istruzione dello spazio dei nomi, digitare quanto segue **utilizzando** istruzioni per qualificare i tipi nello spazio dei nomi SMO:
+8. Nel codice, prima dell'istruzione dello spazio dei nomi, digitare quanto segue **usando** istruzioni per qualificare i tipi nello spazio dei nomi SMO:
   
     ```  
     using Microsoft.SqlServer.Management.Smo;  

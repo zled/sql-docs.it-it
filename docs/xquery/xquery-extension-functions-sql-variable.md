@@ -1,5 +1,5 @@
 ---
-title: 'SQL: variable (funzione) (XQuery) | Documenti Microsoft'
+title: 'SQL: variable (funzione) (XQuery) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 66e71e9748d143eb338d612046f97c50db014107
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018202"
 ---
-# <a name="xquery-extension-functions---sqlvariable"></a>Funzioni di estensione XQuery - SQL: variable
+# <a name="xquery-extension-functions---sqlvariable"></a>Funzioni delle estensioni XQuery - SQL: variable
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Espone in un'espressione XQuery una variabile che contiene un valore SQL relazionale.  
@@ -41,14 +42,14 @@ ms.lasthandoff: 05/03/2018
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Come descritto nell'argomento [associazione dati relazionali all'interno di codice XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), è possibile utilizzare questa funzione quando si utilizza [metodi con tipo di dati XML](../t-sql/xml/xml-data-type-methods.md) per esporre un valore relazionale in XQuery.  
+## <a name="remarks"></a>Note  
+ Come descritto nell'argomento [associazione di dati relazionali all'interno di codice XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), è possibile utilizzare questa funzione quando si usa [metodi con tipo di dati XML](../t-sql/xml/xml-data-type-methods.md) per esporre un valore relazionale in XQuery.  
   
- Ad esempio, il [metodo query ()](../t-sql/xml/query-method-xml-data-type.md) viene utilizzato per specificare una query su un'istanza XML archiviata in un **xml** variabile o una colonna del tipo di dati. A volte è necessario creare query in grado di utilizzare anche valori contenuti in un parametro o in una variabile [!INCLUDE[tsql](../includes/tsql-md.md)], per mettere insieme dati relazionali e XML. A tale scopo, utilizzare il **SQL: variable** (funzione).  
+ Ad esempio, il [metodo query ()](../t-sql/xml/query-method-xml-data-type.md) viene usato per specificare una query su un'istanza XML archiviata in un **xml** variabile o colonna di tipo di dati. A volte è necessario creare query in grado di utilizzare anche valori contenuti in un parametro o in una variabile [!INCLUDE[tsql](../includes/tsql-md.md)], per mettere insieme dati relazionali e XML. A tale scopo, si utilizza il **SQL: variable** (funzione).  
   
  Il valore SQL verrà mappato a un valore XQuery corrispondente e il relativo tipo sarà un tipo di base XQuery equivalente al tipo SQL corrispondente.  
   
- È possibile solo fare riferimento a un **xml** istanza nel contesto dell'espressione dell'origine di un XML DML insert-istruzione; in caso contrario è possibile fare riferimento ai valori di tipo **xml** o common language runtime (CLR) tipo definito dall'utente.  
+ È possibile solo fare riferimento a un **xml** istanza nel contesto dell'espressione dell'origine di un XML DML insert-istruzione; in caso contrario, è possibile fare riferimento ai valori di tipo **xml** o un common language runtime (CLR) tipo definito dall'utente.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -61,7 +62,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 -   Un valore (`DiscountPrice`) ottenuto da una variabile [!INCLUDE[tsql](../includes/tsql-md.md)]. Il metodo `sql:variable()` viene utilizzato per associare tale valore nell'istanza XML.  
   
--   Un valore (`ProductModelName`) da un **xml** colonna di tipo, per rendere più interessante la query.  
+-   Un valore (`ProductModelName`) da un' **xml** colonna del tipo, per rendere più interessante la query.  
   
  Query:  
   
@@ -89,7 +90,7 @@ WHERE ProductID=771
   
 -   Gli elementi XQuery utilizzati nel metodo `query()` costruiscono l'istanza XML.  
   
--   Il `namespace` parola chiave viene utilizzata per definire un prefisso dello spazio dei nomi nel [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md). Tale prefisso viene creato perché il valore dell'attributo `ProductModelName` viene recuperato dalla colonna di tipo xml `CatalogDescription xml`, a cui è associato uno schema.  
+-   Il `namespace` parola chiave viene usata per definire un prefisso dello spazio dei nomi nel [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md). Tale prefisso viene creato perché il valore dell'attributo `ProductModelName` viene recuperato dalla colonna di tipo xml `CatalogDescription xml`, a cui è associato uno schema.  
   
  Risultato:  
   
@@ -100,7 +101,7 @@ WHERE ProductID=771
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni per le estensioni XQuery SQL Server](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [Funzioni delle estensioni XQuery SQL Server](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Confronto dati XML tipizzati con dati XML non tipizzati](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Dati XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Creare istanze di dati XML](../relational-databases/xml/create-instances-of-xml-data.md)   

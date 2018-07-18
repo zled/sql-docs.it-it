@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916106"
 ---
 # <a name="standard-programming-interface"></a>Interfaccia di programmazione standard
 L'interfaccia di programmazione è ad esempio più evidente candidato per la standardizzazione. Infatti, quando viene sviluppato ODBC, ANSI e ISO già fornito standard per incorporati e SQL moduli. Anche se non esiste standard per un database CLI, il gruppo di accesso di SQL, ovvero un consorzio di settore di fornitori di database: stato si prende in considerazione per crearne uno; parti di ODBC in un secondo momento è diventata la base per il proprio lavoro.  

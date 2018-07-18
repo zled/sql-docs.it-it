@@ -2,7 +2,6 @@
 title: Esempio di asse (VBScript) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8770018201fb8cc76d39c58300ed1e51958e507f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 99bc75cb81454fac66dbc99ed7968c5f693d2f13
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283400"
 ---
 # <a name="axis-example-vbscript"></a>Esempio di asse (VBScript)
 Questa pagina ASP consente di visualizzare i dati OLAP da una stringa di Query MDX e scrive il set di celle risultante in una struttura di tabella HTML.  

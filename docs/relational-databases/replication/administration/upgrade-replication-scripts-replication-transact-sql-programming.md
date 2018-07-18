@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -25,11 +24,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19e2adba0742454e039f106f1ed5c3cd693384f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd96bf92b8e84185ceb7f85a442648c4726a5eee
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354043"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Aggiornamento di script di replica (programmazione Transact-SQL della replica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  Dopo avere eseguito la stored procedure di creazione della sottoscrizione, assicurarsi di eseguire la stored procedure di creazione di un processo dell'agente di distribuzione per sincronizzare la sottoscrizione. La stored procedure utilizzata varia in base al tipo di sottoscrizione.  
   
-    -   Nel caso di una sottoscrizione pull, aggiornare l'esecuzione di [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) in modo da specificare le credenziali di Windows usate per l'esecuzione dell'agente di distribuzione nel Sottoscrittore per **@job_name** e **@job_password**. Tale operazione viene effettuata dopo l'esecuzione di [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Per altre informazioni, vedere [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+    -   Nel caso di una sottoscrizione pull, aggiornare l'esecuzione di [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) in modo da specificare le credenziali di Windows usate per l'esecuzione dell'agente di distribuzione nel Sottoscrittore per **@job_name** e **@job_password**. Tale operazione viene effettuata dopo l'esecuzione di [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
     -   Per una sottoscrizione push, eseguire [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) nel server di pubblicazione. Specificare **@subscriber**, **@subscriber_db**, **@publication**, le credenziali di Windows utilizzate per l'esecuzione dell'agente di distribuzione nel server di distribuzione per **@job_name** e **@job_password**e una pianificazione per il processo dell'agente. Per altre informazioni, vedere [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Tale operazione viene effettuata dopo l'esecuzione di [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Per altre informazioni, vedere [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
   
@@ -111,9 +111,9 @@ ms.lasthandoff: 05/03/2018
   
 1.  Dopo avere eseguito la stored procedure di creazione della sottoscrizione, assicurarsi di eseguire la stored procedure di creazione di un processo dell'agente di merge per sincronizzare la sottoscrizione. La stored procedure utilizzata varia in base al tipo di sottoscrizione.  
   
-    -   Nel caso di una sottoscrizione pull, aggiornare l'esecuzione di [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) in modo da specificare le credenziali di Windows usate per l'esecuzione dell'agente di merge nel Sottoscrittore per **@job_name** e **@job_password**. Tale operazione viene effettuata dopo l'esecuzione di [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Per altre informazioni, vedere [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+    -   Nel caso di una sottoscrizione pull, aggiornare l'esecuzione di [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) in modo da specificare le credenziali di Windows usate per l'esecuzione dell'agente di merge nel Sottoscrittore per **@job_name** e **@job_password**. Tale operazione viene effettuata dopo l'esecuzione di [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
-    -   Per una sottoscrizione push, eseguire [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) nel server di pubblicazione. Specificare **@subscriber**, **@subscriber_db**, **@publication**, le credenziali di Windows utilizzate per l'esecuzione dell'agente di merge nel server di distribuzione per **@job_name** e **@job_password**e una pianificazione per il processo dell'agente. Per altre informazioni, vedere [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Tale operazione viene effettuata dopo l'esecuzione di [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Per altre informazioni, vedere [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
+    -   Per una sottoscrizione push, eseguire [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) nel server di pubblicazione. Specificare **@subscriber**, **@subscriber_db**, **@publication**, le credenziali di Windows utilizzate per l'esecuzione dell'agente di merge nel server di distribuzione per **@job_name** e **@job_password**e una pianificazione per il processo dell'agente. Per altre informazioni, vedere [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Tale operazione viene effettuata dopo l'esecuzione di [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Per altre informazioni, vedere [Creazione di una sottoscrizione push](../../../relational-databases/replication/create-a-push-subscription.md).  
   
 ## <a name="example"></a>Esempio  
  Di seguito è riportato un esempio di uno script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] per la creazione di una pubblicazione transazionale per la tabella Product. Questa pubblicazione supporta l'aggiornamento immediato sostituito dall'aggiornamento in coda come soluzione di failover. I parametri predefiniti sono stati rimossi per una maggiore leggibilità.  

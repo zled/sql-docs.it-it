@@ -2,7 +2,6 @@
 title: Forma clausola APPEND | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7c54daeed05260bd7e6abd804830ce8dac1807d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272580"
 ---
 # <a name="shape-append-clause"></a>Clausola APPEND forma
 La clausola APPEND del comando forma aggiunge una o più colonne per un **Recordset**. Spesso, queste colonne sono colonne a capitoli, che fanno riferimento a un elemento figlio **Recordset**.  
@@ -68,7 +68,7 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  *child-recordset*  
  -   Un comando del provider racchiuso tra parentesi graffe ("{}") che restituisce un **Recordset** oggetto. Il comando viene immesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Ciò corrisponderà in genere il linguaggio SQL, anche se ADO non richieda qualsiasi linguaggio di query specifico.  
   
@@ -99,7 +99,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  La clausola dopo la parola chiave APPEND è effettivamente un elenco, in cui ogni clausola è separato da una virgola e definisce un'altra colonna da aggiungere all'elemento padre.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando si creano i comandi provider dall'input dell'utente come parte di un comando SHAPE, forma verrà considerano fornito dall'utente un comando del provider come stringa opaca e passarli fedelmente al provider. Ad esempio, nel comando SHAPE seguente:  
   
 ```  

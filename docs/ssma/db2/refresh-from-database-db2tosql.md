@@ -1,8 +1,6 @@
 ---
 title: Aggiornamento dal Database (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 932314ef3325862746d2ce09ba0552ce4f4c7d2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f61bbf015c9c4a1dc0a650aa2299e763b00e7e62
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775327"
 ---
 # <a name="refresh-from-database-db2tosql"></a>Aggiornamento dal Database (DB2ToSQL)
 Il **aggiornamento dal Database** la finestra di dialogo consente di selezionare gli oggetti da aggiornare dal database di DB2. Le righe nella finestra di dialogo sono codificate con colori in base allo stato dei metadati:  

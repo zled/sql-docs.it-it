@@ -1,6 +1,6 @@
 ---
 title: Istruzione CREATE SET (MDX) | Documenti Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 999f62b3d43c48169eb0607c406bd7bdc12bee62
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4d1e58d016649c3c21a056a82315bd0d0fb3564f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579343"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741690"
 ---
 # <a name="mdx-data-definition---create-set"></a>Definizione dei dati MDX - creare impostato
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Crea un set denominato con ambito sessione per il cubo corrente.  
   
@@ -93,7 +93,7 @@ SELECT [Core Products] ON 0
  Specifica che il set non è visibile agli utenti che eseguono una query sul cubo.  
   
 ## <a name="standard-properties"></a>Proprietà standard  
- Ogni set presenta un set di proprietà predefinite. Quando un'applicazione client è connesso ad [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le proprietà predefinite sono supportate o disponibili per essere supportate, come l'amministratore sceglie.  
+ Ogni set presenta un set di proprietà predefinite. Quando un'applicazione client è connesso ad [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le proprietà predefinite sono supportate o disponibili per essere supportate, come l'amministratore sceglie.  
   
 |Identificatore proprietà|Significato|  
 |-------------------------|-------------|  

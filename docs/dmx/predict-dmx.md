@@ -1,36 +1,25 @@
 ---
-title: Stima (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PREDICT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Predict function
-ms.assetid: f02ff4b3-9bd7-409d-ad14-ead67b3206c4
-caps.latest.revision: 40
-author: Minewiskan
+title: Stima (DMX) | Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6f2aa8ba77b19aab0821777d669866409dbf01df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 733e3272bf67347f1e3459a0df5f13225488f677
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002103"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Il **Predict** funzione restituisce un valore stimato o set di valori, per una colonna specificata.  
+  Il **Predict** funzione restituisce un valore stimato, o set di valori, per una colonna specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,7 +35,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>Tipo restituito  
  \<riferimento a colonna scalare >  
   
- o  
+ o Gestione configurazione  
   
  \<riferimento a una colonna di tabella >  
   
@@ -55,17 +44,17 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  INCLUSIVE, EXCLUSIVE, INPUT_ONLY e INCLUDE_STATISTICS sono applicabili solo a riferimenti a colonne di tabella, mentre EXCLUDE_NULL e INCLUDE_NULL sono applicabili solo a riferimenti a colonne scalari.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Le opzioni disponibili includono EXCLUDE_NULL (predefinita), INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (predefinita), INPUT_ONLY e INCLUDE_STATISTICS.  
   
 > [!NOTE]  
->  Per i modelli time series, la funzione di stima non supporta INCLUDE_STATISTICS.  
+>  Per i modelli time series, la funzione Predict non supporta INCLUDE_STATISTICS.  
   
- Se è specificato il parametro INCLUDE_NODE_ID, nel risultato verrà restituita la colonna $NODEID. NODE_ID è il nodo di contenuto su cui viene eseguita la stima per un case specifico. Questo parametro è facoltativo quando si utilizza Predict sulle colonne della tabella.  
+ Se è specificato il parametro INCLUDE_NODE_ID, nel risultato verrà restituita la colonna $NODEID. NODE_ID è il nodo di contenuto su cui viene eseguita la stima per un case specifico. Questo parametro è facoltativo quando si usa Predict nelle colonne della tabella.  
   
- Il *n* parametro si applica alle colonne della tabella. Imposta il numero delle righe restituite in base al tipo di stima. Se la colonna sottostante è una sequenza, chiama il **PredictSequence** (funzione). Se la colonna sottostante contiene una serie temporale, chiama il **PredictTimeSeries** (funzione). Per i tipi di stima associativi viene chiamata la **PredictAssociation** (funzione).  
+ Il *n* parametro si applica alle colonne della tabella. Imposta il numero delle righe restituite in base al tipo di stima. Se la colonna sottostante contiene una sequenza, chiama il **PredictSequence** (funzione). Se la colonna sottostante contiene una serie temporale, chiama il **PredictTimeSeries** (funzione). Per i tipi associativi della stima, chiama il **PredictAssociation** (funzione).  
   
- Il **Predict** funzione supporta il polimorfismo.  
+ Il **Predict** (funzione) supporta il polimorfismo.  
   
  Vengono spesso utilizzate le seguenti forme abbreviate alternative:  
   
@@ -76,7 +65,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
     > [!NOTE]  
     >  Il tipo restituito da questa funzione viene a sua volta gestito come riferimento a colonna. Ciò significa che il **Predict** funzione può essere utilizzata come argomento in altre funzioni che accettano un riferimento a colonna come argomento (tranne che per il **Predict** funzione stessa).  
   
- Passando INCLUDE_STATISTICS a una stima per una colonna con valori di tabella aggiunge le colonne **$Probability** e **$Support** per la tabella risultante. che descrivono la probabilità dell'esistenza del record della tabella nidificata associato.  
+ Passando INCLUDE_STATISTICS a una stima per una colonna con valori di tabella vengono aggiunte le colonne **$Probability** e **$Support** per la tabella risultante. che descrivono la probabilità dell'esistenza del record della tabella nidificata associato.  
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente usa la funzione di stima per restituire i quattro prodotti nel database Adventure Works che più probabilmente verranno venduti insieme. Poiché la funzione è stima basata su un modello di data mining delle regole di associazione, viene automaticamente utilizzata la **PredictAssociation** funzionano come descritto in precedenza.  
@@ -99,7 +88,7 @@ FROM     [Association]
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

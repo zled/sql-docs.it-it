@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908116"
 ---
 # <a name="database-access-architecture"></a>Architettura di accesso database
 Una delle domande per lo sviluppo di ODBC è la parte dell'architettura di accesso di database per standardizzare. SQL descritte nella sezione precedente di interfacce di programmazione, embedded SQL, SQL CLI e i moduli, ovvero sono solo una parte di questa architettura. Infatti, poiché ODBC è destinato principalmente per connettere le applicazioni basati su PC minicomputer e mainframe DBMS, esistevano anche un numero di componenti di rete, alcune delle quali potrebbe essere standardizzato.  

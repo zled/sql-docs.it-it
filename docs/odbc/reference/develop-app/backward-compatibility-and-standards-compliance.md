@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908656"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Compatibilità e conformità agli standard
 Compatibilità con le versioni precedenti è la possibilità di componenti ODBC più recenti per lavorare con componenti ODBC precedenti. Le sezioni seguenti illustrano come questi componenti sono interessati dalle modifiche in ODBC 3*x*. Le informazioni in essi contenute principalmente risolve la scrittura di un'applicazione ODBC 3*x* applicazione e come indietro problemi di compatibilità vengono gestiti dal driver ODBC. Per indicazioni specifiche sulla modalità di compatibilità problemi riguardano la scrittura di un'applicazione ODBC 3*x* driver, vedere [appendice g: Driver le linee guida per la compatibilità](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  

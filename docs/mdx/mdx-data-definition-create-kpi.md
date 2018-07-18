@@ -1,6 +1,6 @@
 ---
 title: Istruzione CREATE KPI (MDX) | Documenti Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7c2322d30e4e42bebbe4537f687c349c5179d9f9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579323"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741530"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Definizione dei dati MDX - creare l'indicatore KPI
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Crea un indicatore di prestazioni chiave (KPI). Un indicatore KPI è costituito da una raccolta di calcoli associati a un gruppo di misure in un cubo e utilizzati per valutare il successo aziendale o dello scenario.  
   

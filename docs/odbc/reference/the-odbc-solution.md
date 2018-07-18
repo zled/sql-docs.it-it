@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918926"
 ---
 # <a name="the-odbc-solution"></a>La soluzione ODBC
 La domanda, quindi, è come ODBC standardizzare accesso al database? Esistono due requisiti di architettura:  

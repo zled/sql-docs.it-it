@@ -1,11 +1,11 @@
 ---
-title: L'aggiornamento dei dati nei cursori SQL Server | Documenti Microsoft
+title: L'aggiornamento dei dati nei cursori del Server SQL | Documenti Microsoft
 description: L'aggiornamento dei dati nei cursori di SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 06f02dbd2376ffcdb08f932245bb098ae64c53ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cece02b19e2334246dbddc096cafbeeae705684
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689504"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Aggiornamento dei dati nei cursori di SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Quando il recupero e l'aggiornamento dei dati tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i cursori, un Driver OLE DB per SQL Server applicazione consumer è associato mediante le stesse considerazioni e vincoli che si applicano a qualsiasi altra applicazione client.  
   
@@ -37,9 +40,9 @@ ms.lasthandoff: 05/03/2018
  I livelli di isolamento della transazione possono provocare ritardi significativi nel posizionamento delle righe se la progettazione delle applicazioni client lascia aperte le transazioni per lunghi periodi di tempo. Per impostazione predefinita, il Driver OLE DB per SQL Server utilizza il livello di isolamento read committed specificato da DBPROPVAL_TI_READCOMMITTED. Il Driver OLE DB per SQL Server supporta l'isolamento di lettura dirty quando la concorrenza del set di righe è di sola lettura. In un set di righe modificabile il consumer può pertanto richiedere un livello di isolamento superiore ma non inferiore.  
   
 ## <a name="immediate-and-delayed-update-modes"></a>Modalità di aggiornamento immediato e posticipato  
- In modalità di aggiornamento immediato ogni chiamata a **IRowsetChange:: SetData** provoca un round trip per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se il consumer apporta più modifiche a una singola riga, risulta più efficiente per inviare tutte le modifiche con una singola **SetData** chiamare.  
+ In modalità di aggiornamento immediato ogni chiamata a **IRowsetChange:: SetData** provoca un round trip al [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se il consumer apporta più modifiche a una singola riga, risulta più efficace inviare tutte le modifiche con una singola **SetData** chiamare.  
   
- In modalità di aggiornamento posticipato viene effettuato un round trip di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ogni riga indicata nel *cRows* e *rghRows* parametri di **IRowsetUpdate:: Update**.  
+ In modalità di aggiornamento posticipato viene eseguito un round trip il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ogni riga indicata nel *cRows* e *rghRows* parametri di **IRowsetUpdate:: Update**.  
   
  In entrambe le modalità un round trip rappresenta una transazione distinta quando per il set di righe non è aperto alcun oggetto transazione.  
   
@@ -48,6 +51,6 @@ ms.lasthandoff: 05/03/2018
  Un consumer non deve presupporre che le righe vengano elaborate in base a un ordine specifico. Se un consumer richiede un'elaborazione ordinata di modifica dei dati su più di una riga, deve stabilire l'ordine nella logica dell'applicazione e aprire una transazione per includere il processo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'aggiornamento dei dati nei set di righe](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
+ [Aggiornamento dei dati nei set di righe](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
   

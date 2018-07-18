@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900954"
 ---
 # <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>Connessione a un'origine dati (Driver ODBC per Oracle)
 > [!IMPORTANT]  

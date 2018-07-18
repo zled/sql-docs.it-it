@@ -1,5 +1,5 @@
 ---
-title: Sys. database_connection_stats (Database SQL di Azure) | Documenti Microsoft
+title: Sys. database_connection_stats (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: ''
@@ -28,15 +28,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 2de813bc474d59deb417b5aec1e1d02b5e9f5967
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029514"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contiene le statistiche per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database **connettività** eventi, che forniscono una panoramica di connessioni al database riuscite e non riuscite. Per ulteriori informazioni sugli eventi di connettività, vedere tipi di eventi in [Sys. event_log &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Contiene le statistiche relative [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database **connettività** eventi, che fornisce una panoramica delle connessioni al database riuscite e gli errori. Per altre informazioni sugli eventi di connettività, vedere tipi di eventi in [Sys. event_log &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 |Statistiche|Tipo|Description|  
 |---------------|----------|-----------------|  
@@ -44,12 +45,12 @@ ms.lasthandoff: 05/04/2018
 |**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Esempio:<br /><br /> 28/09/2011 16:00:00<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Data e ora UTC della fine dell'intervallo di aggregazione. **End_time** è sempre esattamente 5 minuti dopo rispetto al relativo **start_time** nella stessa riga.|  
 |**success_count**|**int**|Numero di connessioni riuscite.|  
-|**total_failure_count**|**int**|Numero totale di connessioni non riuscite. Questa è la somma di **connection_failure_count**, **terminated_connection_count**, e **throttled_connection_count**e non include gli eventi deadlock.|  
+|**total_failure_count**|**int**|Numero totale di connessioni non riuscite. Questa è la somma dei **connection_failure_count**, **terminated_connection_count**, e **throttled_connection_count**e non include gli eventi deadlock.|  
 |**connection_failure_count**|**int**|Numero di errori di accesso.|  
 |**terminated_connection_count**|**int**|***Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Numero di connessioni chiuse.|  
 |**throttled_connection_count**|**int**|***Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Numero di connessioni limitate.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 ### <a name="event-aggregation"></a>Aggregazione evento  
  Le informazioni sull'evento per questa vista vengono raccolte e aggregate in intervalli di 5 minuti. Le colonne del conteggio rappresentano il numero di volte in cui si è verificato un determinato evento di connettività per un database specifico in un intervallo di tempo specificato.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/04/2018
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>start_time e end_time dell'intervallo  
- Un evento è incluso in un intervallo di aggregazione quando si verifica l'evento *sul* o *dopo * * * start_time** e *prima * * * end_time** per tale intervallo. Ad esempio, un evento che si verifica esattamente il `2012-10-30 19:25:00.0000000` è incluso solo nel secondo intervallo indicato di seguito:  
+ Un evento è incluso in un intervallo di aggregazione quando si verifica l'evento *sul* oppure *dopo * * * start_time** e *prima di * * * end_time** per tale intervallo. Ad esempio, un evento che si verifica esattamente il `2012-10-30 19:25:00.0000000` è incluso solo nel secondo intervallo indicato di seguito:  
   
 ```  
   
@@ -79,17 +80,17 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>Errori non inclusi  
  In questa vista non possono essere incluse tutte le informazioni relative a connessioni ed errori:  
   
--   Questa vista non include tutti [!INCLUDE[ssSDS](../../includes/sssds-md.md)] gli errori che potrebbero verificarsi, bensì solo quelli specificati in tipi di eventi in database [Sys. event_log &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+-   In questa vista non include tutti [!INCLUDE[ssSDS](../../includes/sssds-md.md)] gli errori che possono verificarsi, solo quelli specificati in tipi di evento nel database [Sys. event_log &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 -   Se si verifica un errore del computer nel data center del [!INCLUDE[ssSDS](../../includes/sssds-md.md)], è possibile che dalla tabella eventi manchi una piccola quantità di dati per il server logico.  
   
 -   Se un indirizzo IP è stato bloccato tramite DoSGuard, gli eventi di tentativi di connessione dall'indirizzo IP in questione non possono essere raccolti, né verranno visualizzati in questa vista.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Gli utenti con autorizzazioni di accesso di **master** database hanno accesso in sola lettura a questa vista.  
+ Gli utenti che dispongono dell'autorizzazione di accesso di **master** database hanno accesso in lettura a questa visualizzazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una query di **Sys. database_connection_stats** per restituire un riepilogo delle connessioni di database che si sono verificate tra mezzogiorno del 9/25/2011 e mezzogiorno del 9/28/2011 (UTC). Per impostazione predefinita, i risultati della query vengono ordinati in base **start_time** (ordine crescente).  
+ Nell'esempio seguente viene illustrata una query del **Sys. database_connection_stats** per restituire un riepilogo delle connessioni al database che si sono verificate tra mezzogiorno del 9/25/2011 e mezzogiorno del 9/28 o 2011 (UTC). Per impostazione predefinita, i risultati della query vengono ordinati **start_time** (ordine crescente).  
   
 ```  
 SELECT *  

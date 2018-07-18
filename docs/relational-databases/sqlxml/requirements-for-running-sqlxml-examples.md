@@ -1,5 +1,5 @@
 ---
-title: Requisiti per l'esecuzione di esempi SQLXML | Documenti Microsoft
+title: Requisiti per l'esecuzione di esempi di SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9318904e6cf1509118711db228e30a7266647610
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708719"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049899"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Requisiti per l'esecuzione di esempi di SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34708719"
   
  Per creare esempi reali utilizzando gli esempi di SQLXML 4.0, è necessario che siano installati gli elementi seguenti.  
   
--   Database di esempio AdventureWorks. Per ulteriori informazioni, vedere [database di esempio AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
+-   Database di esempio AdventureWorks. Per altre informazioni, vedere [database di esempio AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per altre informazioni, vedere [Installazione di SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   

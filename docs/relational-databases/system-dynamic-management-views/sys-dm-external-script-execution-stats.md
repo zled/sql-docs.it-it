@@ -1,5 +1,5 @@
 ---
-title: Sys.dm external_script_execution_stats | Documenti Microsoft
+title: DM external_script_execution_stats | Microsoft Docs
 ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.openlocfilehash: 01380a29665d848fff1620787a97aabbcdac4033
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023815"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/23/2018
 > [!NOTE]  
 >  Gli utenti che eseguono script esterni devono avere l'autorizzazione aggiuntiva EXECUTE ANY EXTERNAL SCRIPT, tuttavia, questa DMV può essere usata dagli amministratori senza tale autorizzazione. 
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   Questa DMV viene fornita per la telemetria interna, per monitorare l'utilizzo complessivo della nuova funzionalità di esecuzione di script esterni disponibile in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Il servizio di telemetria viene avviato insieme al LaunchPad e viene incrementato di un contatore basato su disco ogni volta che viene chiamata una funzione di script esterni registrata.
 
 In generale, i contatori delle prestazioni sono validi solo se il processo che li ha generati è attivo. Quindi, una query su una DMV non può visualizzare i dati dettagliati per i servizi che non sono in esecuzione. Ad esempio, se un'utilità di avvio esegue script esterni e li completa molto rapidamente, una DMV convenzionale potrebbe non visualizzare alcun dato
@@ -64,7 +65,7 @@ Di conseguenza, i contatori rilevati da questa DMV restano in esecuzione e lo st
 ### <a name="r-counter-values"></a>Valori del contatore R
  Attualmente l'unico linguaggio di script esterni supportato in [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] è R. Le richieste di script esterni per il linguaggio R vengono gestite da [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]. 
 
-Per R, questa DMV tiene traccia del numero di chiamate di R che vengono apportate in un'istanza. Ad esempio, se `rxLinMod` viene chiamato ed eseguito in parallelo, il contatore viene incrementato di 1.
+Per R, questa DMV registra il numero di chiamate R che vengono apportate in un'istanza. Ad esempio, se `rxLinMod` viene chiamato ed eseguito in parallelo, il contatore viene incrementato di 1.
  
 Per il linguaggio R, i valori del contatore visualizzati nel campo *counter_name* rappresentano i nomi delle funzioni ScaleR registrate. I valori del campo *counter_value* rappresentano il numero complessivo di istanze per la funzione ScaleR specifica. 
 

@@ -1,5 +1,6 @@
 ---
-title: Le impostazioni di configurazione (SQL Server Data Migration Assistant) | Documenti Microsoft
+title: Configurare le impostazioni per Data Migration Assistant (SQL Server) | Microsoft Docs
+description: Informazioni su come configurare le impostazioni per Data Migration Assistant aggiornando i valori nel file di configurazione
 ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
@@ -17,17 +18,18 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 4b42f816755b312f95609bd25ac6122b8fbf321c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8ab80d5e83ef5f7650f87f8c4618466eb3dee74
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783992"
 ---
-# <a name="configuration-settings-for-data-migration-assistant"></a>Impostazioni di configurazione per dati Migration Assistant
+# <a name="configure-settings-for-data-migration-assistant"></a>Configurare le impostazioni per Data Migration Assistant
 
-È possibile ottimizzare determinati comportamenti di dati Migration Assistant utilizzando i valori di configurazione nel file dma.exe.config. Questo articolo descrive i valori di chiave di configurazione.
+È possibile ottimizzare determinati comportamenti di Data Migration Assistant impostando i valori di configurazione nel file dma.exe.config. Questo articolo descrive i valori di configurazione della chiave.
 
-È possibile trovare il file dma.exe.config per l'applicazione desktop di Assistente per la migrazione dei dati e l'utilità della riga di comando, nelle cartelle seguenti nel computer.
+È possibile trovare il file dma.exe.config per l'applicazione desktop Data Migration Assistant e l'utilità della riga di comando, nelle cartelle seguenti nel computer.
 
 - Applicazione desktop
 
@@ -37,13 +39,13 @@ ms.lasthandoff: 05/03/2018
 
   % ProgramFiles %\\Microsoft Data Migration Assistant\\dmacmd.exe.config 
 
-Assicurarsi di salvare una copia del file di configurazione originale prima di apportare qualsiasi modifica. Dopo aver apportato modifiche, riavviare dati Migration Assistant per i nuovi valori di configurazione per rendere effettive.
+Assicurarsi di salvare una copia del file di configurazione originale prima di apportare alcuna modifica. Dopo aver apportato modifiche, riavviare Data Migration Assistant per i nuovi valori di configurazione per rendere effettive.
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Numero di database per valutare in parallelo
 
-Dati della migrazione guidata consente di valutare più database in parallelo. Durante la valutazione dati Migration Assistant estrae applicazione livello dati (con estensione dacpac) per conoscere lo schema di database. Questa operazione può timeout se vengono valutati in parallelo in più database nello stesso server. 
+Data Migration Assistant valuta più database in parallelo. Durante la valutazione Data Migration Assistant estrae dell'applicazione livello dati (dacpac) per comprendere lo schema del database. Questa operazione possibile timeout se valutati in parallelo in più database nello stesso server. 
 
-A partire dalla versione 2.0 Data Migration Assistant, è possibile controllare questo impostando il parallelDatabases valore di configurazione. Valore predefinito è 8.
+A partire da v2.0 Data Migration Assistant, è possibile controllo questo impostando parallelDatabases il valore di configurazione. Valore predefinito è 8.
 
 ```
 <advisorGroup>
@@ -62,9 +64,9 @@ A partire dalla versione 2.0 Data Migration Assistant, è possibile controllare 
 
 ## <a name="number-of-databases-to-migrate-in-parallel"></a>Numero di database per eseguire la migrazione in parallelo
 
-Dati della migrazione guidata esegue la migrazione di più database in parallelo, prima che la migrazione degli account di accesso. Durante la migrazione, Data Migration Assistant verrà eseguire un backup del database di origine, se lo si desidera copiare il backup e quindi ripristinarlo nel server di destinazione. Quando sono selezionati più database per la migrazione, possono verificarsi errori di timeout. 
+Data Migration Assistant esegue la migrazione di più database in parallelo, in precedenza la migrazione di account di accesso. Durante la migrazione, Data Migration Assistant verrà eseguire un backup del database di origine, se lo si desidera copiare il backup e quindi ripristinarlo nel server di destinazione. È possibile riscontrare gli errori di timeout quando sono selezionati più database per la migrazione. 
 
-A partire dalla Data Migration Assistant v 2.0, se si verifica questo problema è possibile ridurre il valore di configurazione parallelDatabases. È possibile aumentare il valore per ridurre il tempo complessivo di migrazione.
+A partire dalla versione 2.0 Data Migration Assistant, se si verifica questo problema è possibile ridurre il valore di configurazione parallelDatabases. È possibile aumentare il valore per ridurre il tempo complessivo della migrazione.
 
 ```
 <advisorGroup>
@@ -81,22 +83,22 @@ A partire dalla Data Migration Assistant v 2.0, se si verifica questo problema �
 
 ## <a name="dacfx-settings"></a>Impostazioni di DacFX
 
-Durante la valutazione, dati Migration Assistant estrae applicazione livello dati (con estensione dacpac) per conoscere lo schema di database. Questa operazione può non riuscire con valori di timeout per il database molto grandi, o se il server è in condizioni di carico. A partire dalla versione 1.0 di migrazione dei dati, è possibile modificare i valori di configurazione seguente per evitare errori. 
+Durante la valutazione, Data Migration Assistant estrae dell'applicazione livello dati (dacpac) per comprendere lo schema del database. Questa operazione può non riuscire con i timeout per database molto grandi, o se il server è in condizioni di carico. Iniziare con la versione 1.0 di migrazione dei dati, è possibile modificare i valori di configurazione seguente per evitare errori. 
 
 > [!NOTE]
-> L'intero &lt;dacfx&gt; voce è impostata come commento per impostazione predefinita. Rimuovere i commenti e quindi modificare il valore in base alle esigenze.
+> L'intera &lt;dacfx&gt; voce è impostata come commento per impostazione predefinita. Rimuovere i commenti e quindi modificare il valore in base alle esigenze.
 
-- CommandTimeout
+- commandTimeout
 
-   Impostare la proprietà IDbCommand.CommandTimeout in *secondi*. (Predefinito = 60)
+   Questo imposta la proprietà IDbCommand.CommandTimeout *secondi*. (Predefinito = 60)
 
 - databaseLockTimeout
 
-   Ciò equivale a [impostare blocco\_TIMEOUT timeout\_periodo ](../t-sql/statements/set-lock-timeout-transact-sql.md) in *millisecondi*. (Predefinito = 5000)
+   Ciò equivale a [blocco impostato\_TIMEOUT timeout\_periodo ](../t-sql/statements/set-lock-timeout-transact-sql.md) nelle *millisecondi*. (Predefinito = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-   Numero di connessioni di pool di connessione SQL da utilizzare. (Predefinito = 8)
+   Numero di connessioni di pool di connessione SQL da usare. (Predefinito = 8)
 
 ```
 <advisorGroup>
@@ -112,11 +114,11 @@ maxDataReaderDegreeOfParallelism="8"/>
 ```
 
 
-## <a name="stretch-database-recommendation-threshold"></a>Estensione Database: Soglia di suggerimento
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Soglia di raccomandazione
 
-Con [estensione Database di SQL Server](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), consente di estendere in modo dinamico e sporadico dati transazionali da Microsoft SQL Server 2016 in Azure. Estensione Database destinazioni database transazionali che contengono grandi quantità di dati ad accesso sporadico. L'indicazione di estensione Database, nella raccomandazione di funzionalità di archiviazione, identifica innanzitutto le tabelle che ritiene che trarranno vantaggio da questa funzionalità, e quindi identifica le modifiche che devono essere apportate per abilitare la tabella per questa funzionalità.
+Con [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), puoi estendere dinamicamente dati usati raramente sia transazionali da Microsoft SQL Server 2016 in Azure. Stretch Database per i database transazionali con grandi quantità di dati ad accesso sporadico. L'indicazione di Stretch Database, nella raccomandazione per funzionalità di archiviazione, identifica innanzitutto le tabelle che ritiene che trarranno vantaggio da questa funzionalità, e quindi identifica le modifiche da apportare per abilitare la tabella per questa funzionalità.
 
-A partire dalla versione 2.0 Data Migration Assistant, è possibile controllare questa soglia per una tabella per qualificarsi per la funzionalità estensione Database utilizzando il valore di configurazione recommendedNumberOfRows. Valore predefinito è 100.000 righe. Se si desidera analizzare le funzionalità di estensione per le tabelle anche più piccole, minore del valore di conseguenza.
+A partire da v2.0 Data Migration Assistant, è possibile controllare questa soglia per una tabella per qualificarsi per la funzionalità di Stretch Database usando il valore di configurazione recommendedNumberOfRows. Valore predefinito è 100.000 righe. Se si desidera analizzare le funzionalità di estensione per le tabelle di dimensioni ancora inferiori, diminuire il valore di conseguenza.
 
 ```
 <advisorGroup>
@@ -133,7 +135,7 @@ A partire dalla versione 2.0 Data Migration Assistant, è possibile controllare 
 
 ## <a name="sql-connection-timeout"></a>Timeout della connessione SQL
 
-È possibile controllare il [il timeout della connessione SQL](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) per le istanze di origine e di destinazione durante l'esecuzione di una valutazione o la migrazione, impostando il valore di timeout di connessione a un numero specificato di secondi. Il valore predefinito è 15 secondi.
+È possibile controllare la [timeout della connessione SQL](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) per le istanze di origine e destinazione durante l'esecuzione di una valutazione o la migrazione, impostando il valore di timeout di connessione a un numero di secondi specificato. Il valore predefinito è 15 secondi.
 
 ```
 <appSettings>

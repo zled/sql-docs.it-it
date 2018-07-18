@@ -2,7 +2,6 @@
 title: Forma clausola COMPUTE | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 183d6536d5202c9795837a4e35f740753b77703f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272830"
 ---
 # <a name="shape-compute-clause"></a>Clausola COMPUTE forma
 Una clausola COMPUTE forma genera un elemento padre **Recordset**, le cui colonne sono costituiti da un riferimento al figlio **Recordset**; facoltativo colonne il cui contenuto è capitolo, nuovo, o le colonne calcolate, o risultato dell'esecuzione di funzioni di aggregazione sull'elemento figlio **Recordset** o una forma precedentemente **Recordset**; e tutte le colonne dal figlio **Recordset** elencate parametro facoltativo nella clausola.  
@@ -80,15 +80,15 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
   
  Si supponga, ad esempio, che si dispone di una tabella, denominata dati demografici, che include i campi di stato, città e popolamento. (Le cifre di popolamento della tabella vengono fornite esclusivamente come esempio).  
   
-|State|City|Popolazione|  
+|State|Città|Popolazione|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|OPPURE|Medford|200,000|  
-|OPPURE|Portland|400,000|  
+|o|Medford|200,000|  
+|o|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
 |WA|Tacoma|500,000|  
-|OPPURE|Corvallis|300,000|  
+|o|Corvallis|300,000|  
   
  A questo punto, eseguire questo comando forma:  
   
@@ -112,29 +112,29 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Riferimento a child1|CA|  
 |1,200,000|Riferimento a child2|WA|  
-|1,100,000|Riferimento a child3|OPPURE|  
+|1,100,000|Riferimento a child3|o|  
   
 ## <a name="child1"></a>Child1  
   
-|State|City|Popolazione|  
+|State|Città|Popolazione|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|City|Popolazione|  
+|State|Città|Popolazione|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|City|Popolazione|  
+|State|Città|Popolazione|  
 |-----------|----------|----------------|  
-|OPPURE|Medford|200,000|  
-|OPPURE|Portland|400,000|  
-|OPPURE|Corvallis|300,000|  
+|o|Medford|200,000|  
+|o|Portland|400,000|  
+|o|Corvallis|300,000|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso alle righe in un Recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

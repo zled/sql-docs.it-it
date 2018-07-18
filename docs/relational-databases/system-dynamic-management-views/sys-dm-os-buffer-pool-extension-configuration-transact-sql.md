@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ecc569a1f112bba0ec49c46da77c1dbc29fcddab
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020019"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/23/2018
 |-----------------|---------------|-----------------|  
 |percorso|**nvarchar**(256)|Percorso e nome del file della cache di estensione del pool di buffer. Ammette valori Null.|  
 |file_id|**int**|ID del file di estensione del pool di buffer. Non ammette i valori Null.|  
-|state|**int**|Stato della funzionalità di estensione del pool di buffer. Non ammette i valori Null.<br /><br /> 0 - Estensione pool di buffer disabilitata<br /><br /> 1 - Disabilitazione estensione pool di buffer<br /><br /> 2 - riservato per utilizzi futuri<br /><br /> 3 - Abilitazione estensione pool di buffer<br /><br /> 4 - Riservato per utilizzi futuri<br /><br /> 5 - Estensione pool di buffer abilitata|  
+|state|**int**|Stato della funzionalità di estensione del pool di buffer. Non ammette i valori Null.<br /><br /> 0 - Estensione pool di buffer disabilitata<br /><br /> 1 - Disabilitazione estensione pool di buffer<br /><br /> 2: riservato per utilizzi futuri<br /><br /> 3 - Abilitazione estensione pool di buffer<br /><br /> 4 - Riservato per utilizzi futuri<br /><br /> 5 - Estensione pool di buffer abilitata|  
 |state_description|**nvarchar**(60)|Descrive lo stato della funzionalità di estensione del pool di buffer. Ammette i valori Null.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 1 = BUFFER POOL EXTENSION ENABLED|  
 |current_size_in_kb|**bigint**|Dimensione corrente del file di estensione del pool di buffer. Non ammette i valori Null.|  
   
@@ -68,6 +69,6 @@ WHERE is_in_bpool_extension <> 0
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensione del Pool di buffer](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [Sys.dm os_buffer_descriptors & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
+ [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
   

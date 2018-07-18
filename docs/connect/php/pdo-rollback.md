@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18e2bce52e855c14c0113f37b15e5f81f957fe21
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d21e1d96c2b891ae02ca747b22f1a1a96066f385
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309020"
 ---
 # <a name="pdorollback"></a>PDO::rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ bool PDO::rollBack ();
 ## <a name="return-value"></a>Valore restituito  
 true se la chiamata al metodo ha avuto esito positivo; in caso contrario, false.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 PDO::rollback non è influenzato e non influisce sul valore di PDO::ATTR_AUTOCOMMIT.  
   
 Per un esempio d'uso di PDO::rollback, vedere [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) .  

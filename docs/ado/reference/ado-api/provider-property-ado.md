@@ -2,7 +2,6 @@
 title: Proprietà del provider (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc92c70e7f2e995bb828ec7f9b3fcdf1dd16daf3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3491d76d0ba032cc9a8887f146bf9605aaf98772
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280870"
 ---
 # <a name="provider-property-ado"></a>Proprietà del provider (ADO)
 Indica il nome del provider per un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
@@ -36,7 +36,7 @@ Indica il nome del provider per un [connessione](../../../ado/reference/ado-api/
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **stringa** valore che indica il nome del provider.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **Provider** proprietà per impostare o restituire il nome del provider per una connessione. Questa proprietà può anche essere impostata per il contenuto del [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà o *ConnectionString* argomento del [aprire](../../../ado/reference/ado-api/open-method-ado-connection.md) metodo; tuttavia, specificando un provider in più posizioni durante la chiamata di **aprire** metodo può produrre risultati imprevisti. Se viene specificato alcun provider, la proprietà utilizzerà MSDASQL ([il Provider Microsoft OLE DB per ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)).  
   
  Il **Provider** proprietà è di lettura/scrittura quando la connessione è chiusa e di sola lettura quando è aperto. L'impostazione non avrà effetto fino al è aprire il **connessione** oggetto o accesso di [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insieme del **connessione** oggetto. Se l'impostazione non è valido, si verifica un errore.  

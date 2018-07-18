@@ -1,6 +1,6 @@
 ---
 title: Istruzione CALL (MDX) | Documenti Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b8610a0ed7fc0c90fb3e8c684b33b466eb3858f9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4052134e9fd7d3c6877894c61480897e40982b59
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580103"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741960"
 ---
 # <a name="mdx-data-manipulation---call"></a>Manipolazione dei dati MDX - chiamata
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Esegue una stored procedure che restituisce un valore void nell'ambito corrente o facoltativamente in un cubo specificato.  
   
@@ -48,7 +48,7 @@ CALL SP_Name
  Se non viene specificato un cubo, l'istruzione esegue la stored procedure sul cubo corrente.  
   
 > [!NOTE]  
->  Se la stored procedure non è registrata nel client, il **CHIAMARE** istruzione tenta di chiamare la stored procedure da un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+>  Se la stored procedure non è registrata nel client, il **CHIAMARE** istruzione tenta di chiamare la stored procedure da un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni MDX di manipolazione dei dati &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   

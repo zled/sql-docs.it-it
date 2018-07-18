@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914016"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol e SQLColAttribute
 **SQLDescribeCol** e **SQLColAttribute** vengono utilizzati per recuperare i metadati dei set di risultati. La differenza tra queste due funzioni è che **SQLDescribeCol** restituisce sempre la stesse e cinque le informazioni (una colonna nome, tipo di dati, precisione, scala e supporto di valori null), mentre **SQLColAttribute** restituisce una singola informazione richiesto dall'applicazione. Tuttavia, **SQLColAttribute** può restituire una selezione molto più ricche di metadati, tra cui distinzione maiuscole/minuscole di una colonna, visualizzare la dimensione, aggiornamento e la ricerca.  

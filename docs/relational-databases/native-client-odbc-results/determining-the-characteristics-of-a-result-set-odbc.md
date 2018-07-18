@@ -1,13 +1,12 @@
 ---
-title: Determinazione delle caratteristiche di un risultato di impostare (ODBC) | Documenti Microsoft
+title: Determinazione delle caratteristiche di un risultato impostato (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - SQLColAttribute function
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fd97baf4642a4679da5c326d5f5a8150448fce28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 749b699f4d3230f65fc07d92203758ccc1fe39f4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431300"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Determinazione delle caratteristiche di un set di risultati (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 
   I metadati sono dati che descrivono altri dati. I metadati dei set di risultati, ad esempio, descrivono le caratteristiche di un set di risultati, ad esempio il numero di colonne nel set di risultati, i tipi di dati di tali colonne, i nomi, la precisione e il supporto di valori Null.  
   
- ODBC fornisce metadati alle applicazioni tramite le funzioni API di catalogo. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client implementa molte delle funzioni di catalogo dell'API ODBC come chiamate a un oggetto corrispondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedure del catalogo.  
+ ODBC fornisce metadati alle applicazioni tramite le funzioni API di catalogo. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client implementa molte delle funzioni di catalogo di API ODBC come chiamate a un oggetto corrispondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedure del catalogo.  
   
  Le applicazioni richiedono metadati per la maggior parte delle operazioni sui set di risultati. L'applicazione, ad esempio, utilizza il tipo di dati di una colonna per determinare il tipo di variabile da associare alla colonna. L'applicazione utilizza la lunghezza in byte di una colonna di tipo carattere per determinare lo spazio necessario per visualizzare dati dalla colonna. Il modo in cui un'applicazione determina i metadati per una colonna dipende dal tipo dell'applicazione.  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) oppure [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) per descrivere una colonna nel set di risultati.  
   
- Un'applicazione progettata correttamente viene scritta presupponendo che il set di risultati non sia noto e utilizza le informazioni restituite da tali funzioni per associare le colonne nel set di risultati. Un'applicazione può chiamare tali funzioni in qualsiasi momento in seguito alla preparazione o all'esecuzione di un'istruzione. Tuttavia, per ottenere prestazioni ottimali, un'applicazione deve chiamare **SQLColAttribute**, **SQLDescribeCol**, e **SQLNumResultCols** dopo l'esecuzione di un'istruzione.  
+ Un'applicazione progettata correttamente viene scritta presupponendo che il set di risultati non sia noto e utilizza le informazioni restituite da tali funzioni per associare le colonne nel set di risultati. Un'applicazione può chiamare tali funzioni in qualsiasi momento in seguito alla preparazione o all'esecuzione di un'istruzione. Tuttavia, per ottenere prestazioni ottimali, un'applicazione deve chiamare **SQLColAttribute**, **SQLDescribeCol**, e **SQLNumResultCols** dopo che viene eseguita un'istruzione.  
   
  È possibile disporre di più chiamate simultanee per i metadati. Le procedure di catalogo di sistema sottostanti alle implementazioni delle API di catalogo ODBC possono essere chiamate dal driver ODBC mentre utilizza cursori del server statici. In questo modo, le applicazioni possono elaborare simultaneamente più chiamate alle funzioni di catalogo ODBC.  
   

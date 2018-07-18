@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916196"
 ---
 # <a name="unicode-applications"></a>Applicazioni Unicode
 È possibile ricompilare un'applicazione come un'applicazione Unicode in uno dei due modi:  

@@ -1,5 +1,5 @@
 ---
-title: Le funzioni di accesso dati | Documenti Microsoft
+title: Funzioni di accesso dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6ffe984949061ac58b80e2ee82335927fdacc1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38026868"
 ---
 # <a name="data-accessor-functions"></a>Funzioni di accesso ai dati
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +35,13 @@ ms.lasthandoff: 05/03/2018
   Negli argomenti di questa sezione vengono descritte le funzioni di accesso ai dati e viene fornito codice di esempio.  
   
 ## <a name="understanding-fndata-fnstring-and-text"></a>Informazioni su fn:data(), fn:string() e text()  
- XQuery include una funzione **Fn** per estrarre valori scalari tipizzati dai nodi, un test di nodo **Text ()** per restituire i nodi di testo e la funzione **fn:string()** che restituisce il valore di stringa di un nodo. L'utilizzo di tali funzioni non è tuttavia intuitivo. Di seguito vengono riportate le linee guida da seguire per il corretto utilizzo di tali funzioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'istanza XML \<age > 12 \< /age > viene utilizzato a scopo illustrativo.  
+ XQuery include una funzione **fn:data()** per estrarre valori scalari tipizzati dai nodi, un test di nodo **Text ()** per restituire i nodi di testo e la funzione **fn:string()** che restituisce il valore di stringa di un nodo. L'utilizzo di tali funzioni non è tuttavia intuitivo. Di seguito vengono riportate le linee guida da seguire per il corretto utilizzo di tali funzioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'istanza XML \<età > 12 \< /age > viene usato a scopo illustrativo.  
   
 -   Dati XML non tipizzati: l'espressione di percorso /age/text() restituisce il nodo di testo "12". La funzione fn:data(/age) restituisce il valore stringa "12", così come la funzione fn:string(/age).  
   
--   Dati XML tipizzati: L'espressione /Age/Text () restituisce un errore statico per qualsiasi tipizzata semplice \<age > elemento. La funzione fn:data(/age) restituisce invece il valore intero 12, mentre fn:string(/age) restituisce la stringa "12".  
+-   Dati XML tipizzati: L'espressione /Age/Text () restituisce un errore statico per qualsiasi tipizzata semplice \<età > elemento. La funzione fn:data(/age) restituisce invece il valore intero 12, mentre fn:string(/age) restituisce la stringa "12".  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Funzione String &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)  
   

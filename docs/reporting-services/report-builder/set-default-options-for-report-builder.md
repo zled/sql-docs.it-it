@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018728"
 ---
 # <a name="set-default-options-for-report-builder"></a>Impostare le opzioni predefinite per Generatore Report
   In Generatore Report è possibile impostare alcuni valori predefiniti utili per semplificare e accelerare la creazione di report.  Ad esempio, se è si può impostare o modificare il server di report predefinito, Generatore Report salva i report nello stesso server di report automaticamente, se non diversamente specificato.  

@@ -1,8 +1,7 @@
 ---
-title: "ADO per l'indice di sintassi di Visual C++ con #import | Documenti Microsoft"
+title: 'ADO per indice sintassi di Visual C++ con #import | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,20 +21,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f841b7d15682d30062ae498dbfe692b7ee39432
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 88843691166fab6300f2a2f4a092b25ce9552ac3
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957704"
 ---
-# <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO per l'indice di sintassi di Visual C++ con #import
-Questo indice è un riferimento incrociato a riferimenti al linguaggio ADO basato su Microsoft Visual c++ e **#import** direttiva.  
+# <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO per indice sintassi di Visual C++ con #import
+Questo indice è un riferimento incrociato a riferimenti al linguaggio ADO basato su Microsoft Visual C++ e il **#import** direttiva.  
   
- Questo particolare indice è derivato dalla compilazione di un programma con il **#import** direttiva sulla DLL di ADO, quindi riformattazione del file che è stato generato. È state mantenute solo informazioni sui metodi, proprietà ed eventi. La sintassi alternativa dichiarata per ogni proprietà è indicata dal corrispondente "`__declspec(property...)`" direttiva.  
+ Questo indice particolare è stato derivato dalla compilazione di un programma con il **#import** direttiva sulla DLL di ADO, quindi riformattando il file con estensione \*tlh che è stato generato. È state mantenute solo informazioni sui metodi, proprietà ed eventi. La sintassi alternativa dichiarati per ogni proprietà sono elencata dal corrispondente "`__declspec(property...)`" direttiva.  
   
- Si consiglia di leggere [nella programmazione di Visual C++ ADO](../../../ado/guide/appendixes/visual-c-ado-programming.md) per ulteriori informazioni.  
+ , Si consiglia di leggere [programmazione ADO Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md) per altre informazioni.  
   
- Sintassi di metodi e proprietà in Visual C++ con il **#import** direttiva viene elencata per gli elementi seguenti:  
+ Sintassi di metodo e proprietà in Visual C++ con la **#import** direttiva è elencata per gli elementi seguenti:  
   
 -   [Raccolte di ADO](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -49,13 +49,13 @@ Questo indice è un riferimento incrociato a riferimenti al linguaggio ADO basat
   
 -   [Oggetto Parameter](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Oggetto di proprietà](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
+-   [Oggetto Property](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Oggetto record](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Oggetto Recordset](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Oggetto flusso](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
+-   [Oggetto Stream](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Eventi di connessione](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
   

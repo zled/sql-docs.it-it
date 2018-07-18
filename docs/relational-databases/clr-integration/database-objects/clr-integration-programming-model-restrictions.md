@@ -1,14 +1,11 @@
 ---
-title: Restrizioni del modello di programmazione dell'integrazione CLR | Documenti Microsoft
+title: Restrizioni relative al modello di programmazione dell'integrazione CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], programming model restrictions
@@ -20,34 +17,35 @@ caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6f8e62bc460062b96a43f09bf1296cf6acd8636f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 19e2b00494db69b51116e3a1ec1314d884b611e3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352263"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrizioni relative al modello di programmazione dell'integrazione con CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Quando si compila una stored procedure gestita o un altro oggetto di database gestito, esistono alcuni controlli di codice eseguiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che devono essere considerati. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue controlli sull'assembly del codice gestito quando viene innanzitutto registrata nel database, utilizzando il **CREATE ASSEMBLY** istruzione e anche in fase di esecuzione. Il controllo del codice gestito viene effettuato anche in fase di esecuzione in quanto è possibile che in un assembly siano presenti percorsi di codice mai raggiunti in questa fase.  Tale controllo offre quindi la flessibilità necessaria per registrare soprattutto assembly di terze parti, in modo da evitare che un assembly venga bloccato in presenza di codice considerato poco sicuro, progettato per essere eseguito in un ambiente client, ma mai nel CLR hosted. Il codice gestito deve soddisfare i requisiti dipendono se l'assembly viene registrato come **provvisoria**, **EXTERNAL_ACCESS**, o **UNSAFE**, **SAFE** il più rigoroso e sono elencati di seguito.  
+  Quando si compila una stored procedure gestita o un altro oggetto di database gestito, in alcuni controlli del codice eseguiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che devono essere presi in considerazione. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue controlli sull'assembly del codice gestito durante la registrazione prima di tutto nel database, usando il **CREATE ASSEMBLY** istruzione e anche in fase di esecuzione. Il controllo del codice gestito viene effettuato anche in fase di esecuzione in quanto è possibile che in un assembly siano presenti percorsi di codice mai raggiunti in questa fase.  Tale controllo offre quindi la flessibilità necessaria per registrare soprattutto assembly di terze parti, in modo da evitare che un assembly venga bloccato in presenza di codice considerato poco sicuro, progettato per essere eseguito in un ambiente client, ma mai nel CLR hosted. Il codice gestito deve soddisfare i requisiti dipendono dal fatto che l'assembly viene registrato come **sicura**, **EXTERNAL_ACCESS**, o **UNSAFE**, **SAFE** il più rigoroso e sono elencate di seguito.  
   
- Oltre alle restrizioni inserite negli assembly del codice gestito, vengono concesse anche delle autorizzazioni di sicurezza da accesso di codice. Common Language Runtime (CLR) supporta un modello di sicurezza definito sicurezza dall'accesso di codice per il codice gestito che prevede che le autorizzazioni vengano concesse agli assembly in base all'identità del codice. **-SAFE**, **EXTERNAL_ACCESS**, e **UNSAFE** assembly autorizzazioni diverse a seconda le autorità di certificazione. Per ulteriori informazioni, vedere [sicurezza dall'accesso di codice CLR Integration](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
+ Oltre alle restrizioni inserite negli assembly del codice gestito, vengono concesse anche delle autorizzazioni di sicurezza da accesso di codice. Common Language Runtime (CLR) supporta un modello di sicurezza definito sicurezza dall'accesso di codice per il codice gestito che prevede che le autorizzazioni vengano concesse agli assembly in base all'identità del codice. **-SAFE**, **EXTERNAL_ACCESS**, e **UNSAFE** assembly autorizzazioni diverse a seconda le autorità di certificazione. Per altre informazioni, vedere [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
 ## <a name="create-assembly-checks"></a>Controlli CREATE ASSEMBLY  
- Quando il **CREATE ASSEMBLY** viene eseguita l'istruzione, vengono eseguiti i controlli seguenti per ogni livello di sicurezza.  Se un controllo non riesce, **CREATE ASSEMBLY** avrà esito negativo con un messaggio di errore.  
+ Quando la **CREATE ASSEMBLY** istruzione viene eseguita, vengono eseguiti i controlli seguenti per ogni livello di sicurezza.  Se un controllo ha esito negativo **CREATE ASSEMBLY** avrà esito negativo con un messaggio di errore.  
   
 ### <a name="global-any-security-level"></a>Globale (qualsiasi livello di sicurezza)  
  Tutti gli assembly a cui si fa riferimento devono soddisfare uno o più dei criteri seguenti:  
   
 -   L'assembly è già registrato nel database.  
   
--   L'assembly è uno degli assembly supportati. Per ulteriori informazioni, vedere [librerie di .NET Framework supportata](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+-   L'assembly è uno degli assembly supportati. Per altre informazioni, vedere [librerie di .NET Framework supportate](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   Si utilizza **CREATE ASSEMBLY FROM * * *\<posizione >,* e tutti gli assembly di riferimento e le relative dipendenze sono disponibili in  *\<percorso >*.  
+-   Si usa **CREATE ASSEMBLY FROM * * *\<location >,* e tutti gli assembly di riferimento e le relative dipendenze sono disponibili in  *\<location >*.  
   
--   Si utilizza **CREATE ASSEMBLY FROM * * *\<byte... >,* e tutti i riferimenti vengono specificati tramite spazio separati byte.  
+-   Si usa **CREATE ASSEMBLY FROM * * *\<... Byte >,* e tutti i riferimenti vengono specificati tramite lo spazio separati byte.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
- Tutti **EXTERNAL_ACCESS** assembly devono soddisfare i criteri seguenti:  
+ Tutti i **EXTERNAL_ACCESS** gli assembly devono soddisfare i criteri seguenti:  
   
 -   I campi statici non vengono utilizzati per archiviare informazioni. Sono consentiti campi statici di sola lettura.  
   
@@ -85,16 +83,16 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="safe"></a>SAFE  
   
--   Tutti **EXTERNAL_ACCESS** vengono verificate le condizioni dell'assembly.  
+-   Tutti i **EXTERNAL_ACCESS** vengono verificate le condizioni dell'assembly.  
   
 ## <a name="runtime-checks"></a>Controlli runtime  
  In fase di esecuzione l'assembly del codice viene esaminato per verificare la presenza delle condizioni riportate di seguito. Se ne viene riscontrata una, non verrà consentita l'esecuzione del codice gestito e sarà generata un'eccezione.  
   
 ### <a name="unsafe"></a>UNSAFE  
- Caricamento di un assembly, in modo esplicito chiamando il **System.Reflection.Assembly.Load()** metodo da una matrice di byte o in modo implicito tramite l'utilizzo di **Emit** dello spazio dei nomi, non è consentito.  
+ Caricamento di un assembly, in modo esplicito chiamando il **System.Reflection.Assembly.Load()** metodo da una matrice di byte o in modo implicito tramite l'utilizzo di **Reflection. Emit** dello spazio dei nomi, non è consentito.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
- Tutti **UNSAFE** condizioni vengono verificate.  
+ Tutti i **UNSAFE** le condizioni vengono controllate.  
   
  Tutti i tipi e i metodi annotati con i valori dell'attributo di protezione host riportati di seguito dell'elenco supportato di assembly non sono consentiti.  
   
@@ -116,15 +114,15 @@ ms.lasthandoff: 05/03/2018
   
 -   UI  
   
- Per ulteriori informazioni su attributi di protezione host e un elenco di tipi non consentiti e membri nell'assembly supportati, vedere [attributi di protezione Host e programmazione CLR Integration](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
+ Per altre informazioni su attributi di protezione host e un elenco di tipi non consentiti e membri nell'assembly supportati, vedere [attributi di protezione Host e programmazione di integrazione CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   
 ### <a name="safe"></a>SAFE  
- Tutti **EXTERNAL_ACCESS** condizioni vengono verificate.  
+ Tutti i **EXTERNAL_ACCESS** le condizioni vengono controllate.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Librerie .NET Framework supportate](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
- [Sicurezza di accesso di codice dell'integrazione CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
+ [Sicurezza dall'accesso di codice integrazione CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Attributi di protezione host e programmazione dell'integrazione con CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Creazione di un Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [Creazione di un assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   
   

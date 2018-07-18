@@ -2,7 +2,6 @@
 title: Proprietà ActiveCommand (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8aa86180edc4117e89863bb232a2faa95d010272
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e85286a885ab8edcfb08b029f7a1fd77c8d3f4a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274962"
 ---
 # <a name="activecommand-property-ado"></a>Proprietà ActiveCommand (ADO)
 Indica il [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto che ha creato l'oggetto associato [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -32,7 +32,7 @@ Indica il [comando](../../../ado/reference/ado-api/command-object-ado.md) oggett
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un **Variant** che contiene un **comando** oggetto. Valore predefinito è un riferimento di oggetto null.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **ActiveCommand** proprietà è di sola lettura.  
   
  Se un **comando** oggetto non è stato utilizzato per creare l'oggetto corrente **Recordset**, quindi un **Null** riferimento a un oggetto viene restituito.  

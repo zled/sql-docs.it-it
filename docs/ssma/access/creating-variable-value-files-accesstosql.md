@@ -1,8 +1,6 @@
 ---
 title: Creazione di file di valore della variabile (AccessToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 44c317d773df9027f5c485f417941544ff17c6d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3865c268ef4da360b5e21cba96e88ddf6028ae6a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773807"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Creazione di file di valore della variabile (AccessToSQL)
 Un File di valore di variabile è un file XML che include i valori dei parametri dei comandi (ad esempio il nome di server di origine o di destinazione) che cambiano spesso tra le migrazioni a server. Quando si verifica un numero elevato di migrazioni di database, più file di variabile per archiviare il valore di ogni server di origine vengono creati e a cui fa riferimento in un file di script master con il **– v** passare alla riga di comando. Questo comportamento consente di mantenere i valori statici, in alcuni file di script con i valori delle variabili in più file di variabile.  

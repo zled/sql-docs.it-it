@@ -2,7 +2,6 @@
 title: Proprietà (Recordset ADO) dell'origine | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fff874c34b527adc976b608e6b1594427245de24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ee46e4f0af37fd28a6e45f48e31bab7e868821f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281872"
 ---
 # <a name="source-property-ado-recordset"></a>Proprietà Source (Recordset ADO)
 Indica l'origine dati per un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -38,7 +38,7 @@ Indica l'origine dati per un [Recordset](../../../ado/reference/ado-api/recordse
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Imposta un **stringa** valore o [comando](../../../ado/reference/ado-api/command-object-ado.md) riferimento; oggetto restituisce solo un **stringa** valore che indica l'origine il **Recordset**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **origine** proprietà per specificare un'origine dati per un **Recordset** utilizzando uno dei seguenti: un **comando** oggetto variabile, un'istruzione SQL, una stored procedure, o un nome di tabella.  
   
  Se si imposta la **origine** proprietà per un **comando** oggetto, il [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà del **Recordset** oggetto erediterà il valore di **ActiveConnection** proprietà per l'oggetto specificato **comando** oggetto. Tuttavia, durante la lettura di **origine** proprietà non restituisce un **comando** oggetto; al contrario, restituisce il [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) proprietà del **comando** dell'oggetto per cui impostare il **origine** proprietà.  

@@ -2,7 +2,6 @@
 title: Metodo Seek | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59dcdd3426c39449b3d2348218aa7794a75c0474
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcac398a9c45a43fd59dd29c7a41aeeb9545214c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281620"
 ---
 # <a name="seek-method"></a>Il metodo di ricerca
 Cerca l'indice di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per individuare rapidamente la riga che corrisponde ai valori specificati e modifica la posizione della riga corrente di tale riga.  
@@ -44,7 +44,7 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  Oggetto [SeekEnum](../../../ado/reference/ado-api/seekenum.md) valore che specifica il tipo di confronto da eseguire tra le colonne dell'indice e il corrispondente *KeyValues*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **Seek** metodo in combinazione con il [indice](../../../ado/reference/ado-api/index-property.md) proprietà se il provider sottostante supporta gli indici di **Recordset** oggetto. Utilizzare il [supporta](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** metodo per determinare se il provider sottostante supporta **Seek**e **Supports (adIndex)** metodo per determinare se il provider supporta gli indici. (Ad esempio, il [il Provider OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) supporta **Seek** e **indice**.)  
   
  Se **Seek** non trovare la riga desiderata, nessun errore si verifica e la riga è posizionato alla fine del **Recordset**. Impostare il **indice** proprietà per l'indice desiderato prima dell'esecuzione di questo metodo.  

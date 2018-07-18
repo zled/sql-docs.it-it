@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899766"
 ---
 # <a name="desktop-database-driver-compatibility"></a>Compatibilità del Driver di Database desktop
 Unicode è un metodo di codifica dei caratteri software considera tutti i caratteri con una larghezza fissa di due byte. Questo metodo viene utilizzato come alternativa alla codifica dei caratteri ANSI di Windows che, poiché rappresenta i caratteri in un byte, è limitata a 256 caratteri. Perché rappresenta oltre 65.000 caratteri Unicode, supporta molte lingue i cui caratteri non sono rappresentate nella codifica ANSI.  

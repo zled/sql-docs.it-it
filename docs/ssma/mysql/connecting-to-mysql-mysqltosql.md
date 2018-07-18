@@ -1,8 +1,6 @@
 ---
 title: Connessione a MySQL (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 44874d6ddcb4482ecedea8e94dd7c4bac4a1c01d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8784c672efc9a991d446a9b2016df8e943a05db7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775707"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Connessione a MySQL (MySQLToSQL)
 Per eseguire la migrazione di database MySQL a SQL Server o SQL Azure, è necessario connettersi al database di MySQL che si desidera eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti gli schemi di MySQL e successivamente visualizzata nel riquadro di esplorazione dei metadati di MySQL. SSMA archivia le informazioni relative al server di database, ma non archivia le password.  
@@ -116,7 +115,7 @@ I metadati sul database MySQL non vengono aggiornati automaticamente. I metadati
   
     -   Per visualizzare le definizioni della codifica a colori, fare clic su di **legenda** pulsante.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 ## <a name="next-step"></a>Passaggio successivo  
 Il passaggio successivo del processo di migrazione consiste [connessione a SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  

@@ -2,7 +2,6 @@
 title: Oggetto Error | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6911493ab691b2c5e40ff4fa7331261070d981be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77851eaeabd460db12938f6386708057e7faee0c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278420"
 ---
 # <a name="error-object"></a>Oggetto Error
 Contiene informazioni sugli errori di accesso ai dati relativi a una singola operazione che include il provider.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Qualsiasi operazione relativa agli oggetti ADO può generare una o più errori del provider. Quando si verifica ogni errore, uno o più **errore** gli oggetti vengono inseriti nel [errori](../../../ado/reference/ado-api/errors-collection-ado.md) insieme del [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Quando un'altra operazione ADO genera un errore, il **errori** insieme è deselezionata e il nuovo set di **errore** oggetti viene inserito nella **errori** insieme.  
   
 > [!NOTE]

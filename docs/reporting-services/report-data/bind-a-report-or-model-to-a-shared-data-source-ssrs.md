@@ -1,7 +1,7 @@
 ---
-title: Associare un report o un modello a un'origine dati condivisa (SSRS) | Microsoft Docs
+title: Associare un report a un'origine dati condivisa (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -18,39 +18,38 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 708cfa2d2a587ab9990f1b5a1c4a28691229fa88
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ded45a9be18b2e00c4b5fc497159ccb80e26bed0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550832"
 ---
-# <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Associare un report o un modello a un'origine dati condivisa (SSRS)
-  In alcune situazioni, ad esempio quando si sposta un report o un modello da un server di test a uno di produzione, potrebbe essere necessario salvare il file nel computer locale e quindi caricarlo in un altro server di report. Quando si carica il report o il modello nel nuovo server, è necessario riassociarlo a un'origine dei dati condivisa archiviata nel nuovo server di report. Se il report o il modello non viene riassociato, non funzionerà correttamente quando vi si accede dal nuovo server di report.  
+# <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Associare un report a un'origine dati condivisa (SSRS)
+  In alcune situazioni, ad esempio quando si sposta un report da un server di test a uno di produzione, può essere necessario salvare il file nel computer locale e quindi caricarlo in un altro server di report. Quando si carica il report nel nuovo server è necessario riassociarlo a un'origine dati condivisa archiviata nel nuovo server di report. Se il report non viene riassociato non funzionerà correttamente quando vi si accede dal nuovo server di report.  
   
 > [!IMPORTANT]  
->  Per poter riassociare un report o un modello a un'origine dei dati condivisa, quest'ultima deve esistere già nel server di report o nella raccolta di SharePoint. Per altre informazioni sulle origini dati, vedere [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+>  Per poter riassociare un report a un'origine dati condivisa, quest'ultima deve esistere già nel server di report o nella raccolta di SharePoint. Per altre informazioni sulle origini dati, vedere [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
-### <a name="to-bind-a-report-or-model-to-a-shared-data-source-on-a-report-server-running-in-native-mode"></a>Per associare un report o un modello a un'origine dei dati condivisa in un server di report in esecuzione in modalità nativa  
+## <a name="to-bind-a-report-to-a-shared-data-source-on-a-report-server-running-in-native-mode"></a>Per associare un report a un'origine dati condivisa in un server di report in esecuzione in modalità nativa  
   
-1.  In **Gestione report**fare clic sul nome del report o del modello caricato nel server.  
-  
-     Verrà aperta la scheda Proprietà.  
-  
+1.  Nel portale Web fare clic sui puntini di sospensione (...) nell'angolo superiore destro del riquadro di report > **Gestisci**.  
+
 2.  Fare clic su **Origini dati**.  
   
-3.  Fare clic su **Sfoglia**e quindi individuare l'origine dati a cui si vuole associare il report o il modello.  
+3.  Fare clic su **Origine dati condivisa** e trovare l'origine dati a cui si vuole associare il report.  
   
-4.  Selezionare l'origine dati e quindi fare clic su **OK**.  
+4.  Selezionare l'origine dati e fare clic su **Salva**.  
   
 5.  Fare clic su **Applica**.  
   
-     Il report o il modello verrà quindi associato all'origine dei dati selezionata.  
+     Il report viene associato all'origine dati selezionata.  
   
-### <a name="to-bind-a-report-or-model-to-a-shared-data-source-on-a-report-server-running-in-sharepoint-integrated-mode"></a>Per associare un report o un modello a un'origine dei dati condivisa in un server di report in esecuzione in modalità integrata SharePoint  
+## <a name="to-bind-a-report-to-a-shared-data-source-on-a-report-server-running-in-sharepoint-integrated-mode"></a>Per associare un report a un'origine dati condivisa in un server di report in esecuzione in modalità integrata SharePoint  
   
 1.  Se la raccolta non è già aperta, fare clic sul suo nome sulla barra di avvio veloce. Se il nome della raccolta non è visualizzato, fare clic su **Visualizza tutto il contenuto del sito**e quindi sul nome della raccolta desiderata.  
   
-2.  Selezionare il report o il modello e fare clic sulla freccia verso il basso.  
+2.  Selezionare il report e fare clic sulla freccia verso il basso.  
   
 3.  Fare clic su **Gestisci origini dati**.  
   
@@ -69,10 +68,8 @@ ms.lasthandoff: 05/03/2018
 10. Scegliere **Chiudi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Caricare un file o un report &#40;Gestione report&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)   
  [Caricare documenti in una raccolta di SharePoint &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
  [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
- [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   

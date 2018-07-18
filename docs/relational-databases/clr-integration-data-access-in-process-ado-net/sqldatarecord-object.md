@@ -1,13 +1,12 @@
 ---
-title: Oggetto SqlDataRecord | Documenti Microsoft
+title: Oggetto SqlDataRecord | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +17,20 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 414d1bfd7ac105c5c99bc7b6d1a64bbe40ca0f7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eed4ff836262fdf9a2a0cbb4d48e7b9fc7c4b94a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359923"
 ---
 # <a name="sqldatarecord-object"></a>Oggetto SqlDataRecord
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Il **SqlDataRecord** oggetto rappresenta una singola riga di dati, insieme ai relativi metadati.  
   
- Stored procedure gestite possono inviare al client set di risultati che non provengono da un **SqlDataReader**. Il **SqlDataRecord** class, insieme con **SendResultsStart**, **SendResultsRow**, e **SendResultsEnd** metodi di **SqlPipe** oggetto, che consente alle stored procedure di inviare set di risultati personalizzati al client.  
+ Le stored procedure gestite possono inviare al client set di risultati che non provengono da un **SqlDataReader**. Il **SqlDataRecord** classe, insieme con **SendResultsStart**, **SendResultsRow**, e **SendResultsEnd** metodi del **SqlPipe** oggetto, consente alle stored procedure per l'invio di set di risultati personalizzati al client.  
   
- Per ulteriori informazioni, vedere il **Microsoft.SqlServer.Server.SqlDataRecord** classe documentazione di riferimento nella documentazione di .NET Framework SDK.  
+ Per altre informazioni, vedere la **Microsoft.SqlServer.Server.SqlDataRecord** classe documentazione di riferimento nella documentazione di .NET Framework SDK.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene creato un nuovo record relativo a un dipendente, che viene successivamente restituito al chiamante.  

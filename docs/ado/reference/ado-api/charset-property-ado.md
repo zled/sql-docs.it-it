@@ -2,7 +2,6 @@
 title: Proprietà set di caratteri (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 972f090d648c94c3fab20f013eaa185fe3849f00
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9de51b96b78a7eccac34805ccc511754db3e393b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276300"
 ---
 # <a name="charset-property-ado"></a>Proprietà set di caratteri (ADO)
 Indica il set di caratteri in cui il contenuto di un testo [flusso](../../../ado/reference/ado-api/stream-object-ado.md) devono essere convertite per la memorizzazione nel buffer interno del **flusso** oggetto.  
@@ -32,7 +32,7 @@ Indica il set di caratteri in cui il contenuto di un testo [flusso](../../../ado
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **stringa** valore che specifica il carattere è impostato in cui il contenuto del **flusso** saranno convertiti. Il valore predefinito è **Unicode**. I valori consentiti sono stringhe tipiche passate attraverso l'interfaccia come nomi di set di caratteri di Internet (ad esempio, "iso-8859-1", "Windows-1252" e così via). Per un elenco di set di nomi di caratteri che sono noti a un sistema, vedere il sottochiavi HKEY_CLASSES_ROOT\MIME\Database\Charset del Registro di sistema.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  In un testo **flusso** dell'oggetto, dati di testo vengono archiviati nel set di caratteri specificato da di **Charset** proprietà. Il valore predefinito è Unicode. Il **Charset** proprietà viene utilizzata per la conversione dei dati verso il **flusso** o prossimi fuori il **flusso**. Ad esempio, se il **flusso** contiene dati ISO-8859-1 e che i dati vengono copiati in BSTR, il **flusso** oggetto convertirà i dati in formato Unicode. È anche vero il contrario.  
   
  Per un oggetto aperto **flusso**, corrente [posizione](../../../ado/reference/ado-api/position-property-ado.md) deve essere all'inizio del **flusso** (0) per essere in grado di impostare **Charset**.  

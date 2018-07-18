@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914806"
 ---
 # <a name="transaction-support-in-dbmss"></a>Supporto delle transazioni in DBMS
 Alcuni database, in particolare i database desktop, ad esempio dBASE, Paradox e Btrieve, non supportano le transazioni. Anche nei database che supportano le transazioni, sussiste variazione nei quali possono essere tipi di istruzioni SQL in una transazione. Per ulteriori informazioni, vedere l'opzione SQL_TXN_CAPABLE nel [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrizione della funzione.

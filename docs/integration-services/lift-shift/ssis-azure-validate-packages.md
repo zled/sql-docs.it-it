@@ -1,25 +1,27 @@
 ---
 title: Validate SSIS packages deployed to Azure (Convalidare pacchetti SSIS distribuiti in Azure) | Microsoft Docs
+description: Informazioni su come la procedura guidata Distribuzione pacchetto di SSIS controlla i pacchetti per individuare eventuali problemi noti che potrebbero impedire l'esecuzione dei pacchetti come previsto in Azure.
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 09086d0f4ff9c5a3f69a922e0c17c046c84001fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5dcdd0f396f0cb6a272af121fd03757dc8bb2b72
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262055"
 ---
-# <a name="validate-ssis-packages-deployed-to-azure"></a>Convalidare pacchetti SSIS distribuiti in Azure
-Quando si distribuisce un progetto di SQL Server Integration Services (SSIS) al database di catalogo SSIS (SSISDB) in un server di Azure, la distribuzione guidata del pacchetto prevede un passaggio di convalida aggiuntivo dopo la pagina relativa alla **revisione**. Questo passaggio di convalida controlla che i pacchetti del progetto non contengano problemi noti che potrebbero impedire la corretta esecuzione Runtime di integrazione di Azure SSIS. Quindi la procedura guidata consente di visualizzare gli avvisi applicabili nella pagina relativa alla **convalida**.
+# <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Convalidare i pacchetti SQL Server Integration Services (SSIS) distribuiti in Azure
+
+Quando si distribuisce un progetto di SQL Server Integration Services (SSIS) nel catalogo SSIS (SSISDB) in un server di Azure, la procedura guidata Distribuzione pacchetto prevede un passaggio di convalida aggiuntivo dopo la pagina **Verifica**. Questo passaggio di convalida controlla che i pacchetti del progetto non contengano problemi noti che potrebbero impedire la corretta esecuzione Runtime di integrazione di Azure SSIS. Quindi la procedura guidata consente di visualizzare gli avvisi applicabili nella pagina relativa alla **convalida**.
 
 > [!IMPORTANT]
 > La convalida descritta in questo articolo si verifica quando si distribuisce un progetto con una versione di SQL Server Data Tools (SSDT) 17.4 o successiva. Per scaricare la versione più recente di SSDT, vedere [Scaricare la versione più recente di SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
@@ -29,7 +31,7 @@ Per altre informazioni sulla distribuzione guidata dei pacchetti, vedere [Distri
 ## <a name="validate-connection-managers"></a>Convalidare le gestioni connessioni
 
 La procedura guidata controlla che in alcune gestioni connessioni non siano presenti i problemi seguenti che potrebbero causare un errore di connessione:
-- **Autenticazione di Windows**. Se una stringa di connessione usa l'autenticazione di Windows, la convalida genera un avviso. L'autenticazione di Windows richiede ulteriori passaggi di configurazione. Per altre informazioni, vedere [Connettersi a origini dati locali con Autenticazione Windows](ssis-azure-connect-with-windows-auth.md).
+- **Autenticazione di Windows**. Se una stringa di connessione usa l'autenticazione di Windows, la convalida genera un avviso. L'autenticazione di Windows richiede ulteriori passaggi di configurazione. Per altre informazioni, vedere [Connettersi a dati e condivisioni file con autenticazione di Windows](ssis-azure-connect-with-windows-auth.md).
 - **Percorso file**. Se una stringa di connessione contiene un percorso file locale hard-coded come `C:\\...`, la convalida genera un avviso. L'esecuzione di pacchetti che contengono un percorso assoluto potrebbe non riuscire.
 - **Percorso UNC**. Se una stringa di connessione contiene un percorso UNC, la convalida genera un avviso. L'esecuzione di pacchetti che contengono un percorso UNC potrebbe non riuscire, in genere ciò si verifica perché i pacchetti UNC richiedono l'autenticazione di Windows per effettuare l'accesso.
 - **Nome host**. Se una proprietà del server contiene il nome host anziché l'indirizzo IP, la convalida genera un avviso. L'esecuzione di pacchetti che contengono il nome host potrebbe non riuscire, in genere ciò si verifica perché la rete virtuale di Azure richiede la corretta configurazione di DNS per supportare la risoluzione dei nomi DNS.
@@ -80,4 +82,4 @@ La convalida genera un avviso se un pacchetto contiene un'attività script o un 
 Il formato Orc non è supportato nella destinazione HDFS e nella destinazione di Azure Data Lake Store.
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per informazioni su come pianificare l'esecuzione del pacchetto in Azure, vedere [Pianificare l'esecuzione di un pacchetto SSIS in Azure](ssis-azure-schedule-packages.md).
+Per informazioni su come pianificare l'esecuzione del pacchetto in Azure, vedere [Pianificare pacchetti SSIS in Azure](ssis-azure-schedule-packages.md).

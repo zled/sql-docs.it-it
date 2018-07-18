@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023998"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Inclusione di indicatori e misuratori in un pannello del misuratore (Generatore report e SSRS)
   Il pannello del misuratore è il contenitore di livello superiore in cui sono presenti uno o più misuratori e indicatori. Gli indicatori possono essere incorporati nei misuratori o posizionati accanto a essi nel pannello del misuratore.  

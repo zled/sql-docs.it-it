@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909646"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Associazione delle colonne per l'utilizzo con i cursori a blocchi
 Poiché i cursori a blocchi restituiscano più righe, le applicazioni che li utilizzano devono associare una matrice di variabili per ogni colonna anziché una singola variabile. Queste matrici sono noti come il *buffer rowset*. Di seguito sono due stili di associazione.  

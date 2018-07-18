@@ -1,5 +1,5 @@
 ---
-title: memory_optimized_tables_internal_attributes (Transact-SQL) | Documenti Microsoft
+title: Sys. memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: jodebrui
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ea18b7493e5a5ff35a50a63f9d8d57d22149838c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058213"
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -101,7 +102,7 @@ WHERE moa.type=5;
 
 ### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>C. Restituzione dell'utilizzo di memoria degli indici columnstore in tabelle ottimizzate per la memoria
 
-Utilizzare la query seguente per visualizzare il consumo di memoria degli indici columnstore nelle tabelle con ottimizzazione per la memoria:
+Usare la query seguente per visualizzare il consumo di memoria degli indici columnstore nelle tabelle ottimizzate per la memoria:
 
 ```Transact-SQL
 SELECT
@@ -117,7 +118,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-Utilizzare la seguente query suddivisa il consumo di memoria tra le strutture interne utilizzate per gli indici columnstore nelle tabelle con ottimizzazione per la memoria:
+Usare l'interruzione della query seguente verso il basso il consumo di memoria tra le strutture interne utilizzate per gli indici columnstore nelle tabelle ottimizzate per la memoria:
 
 ```Transact-SQL
 SELECT

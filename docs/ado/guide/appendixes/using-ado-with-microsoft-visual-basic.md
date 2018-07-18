@@ -2,7 +2,6 @@
 title: Utilizzo di ADO con Microsoft Visual Basic | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 842671f5859fc0522c30aec8a0d363d3f101473c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0250faf780229ec06c5fce38997bbf4eaf51cc43
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271300"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Utilizzo di ADO con Microsoft Visual Basic e Visual Basic Applications
 Impostazione di un progetto ADO e la scrittura di codice ADO è simile se si utilizza Visual Basic o Visual Basic per le applicazioni. In questo argomento risolve l'utilizzo di ADO con Visual Basic e Visual Basic per le applicazioni e rileva eventuali differenze.
@@ -46,7 +46,7 @@ Impostazione di un progetto ADO e la scrittura di codice ADO è simile se si uti
 
     -   automazione OLE
 
-3.  Scegliere **OK**.
+3.  Fare clic su **OK**.
 
  È possibile utilizzare ADO con la stessa facilità con Visual Basic per le applicazioni con Microsoft Access, ad esempio.
 
@@ -64,7 +64,7 @@ Impostazione di un progetto ADO e la scrittura di codice ADO è simile se si uti
 
     -   Libreria oggetti di Microsoft DAO 3.5 (o versioni successive)
 
-4.  Scegliere **OK**.
+4.  Fare clic su **OK**.
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Creazione di oggetti ADO in Visual Basic
  Per creare una variabile di automazione e un'istanza di un oggetto per tale variabile, è possibile utilizzare due metodi: **Dim** o **CreateObject**.

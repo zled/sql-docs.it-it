@@ -2,7 +2,6 @@
 title: La proprietà Count (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edda8415ad83ee3aa874ec1e3e6dd6f8e20b41b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bccb2760b124040973baa7ba889d2110ec5efe95
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277230"
 ---
 # <a name="count-property-ado"></a>Proprietà Count (ADO)
 Indica il numero di oggetti in una raccolta.  
@@ -32,7 +32,7 @@ Indica il numero di oggetti in una raccolta.
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un **lungo** valore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **conteggio** proprietà per determinare il numero di oggetti presenti in una raccolta specificata.  
   
  Poiché la numerazione dei membri di una raccolta inizia da zero, è consigliabile codificare sempre i cicli a partire dal membro zero e terminando con il valore di **conteggio** proprietà meno 1. Se si utilizza Microsoft Visual Basic e si desidera per scorrere in ciclo i membri di una raccolta senza il controllo il **conteggio** proprietà, utilizzare il **For Each... Avanti** comando.  

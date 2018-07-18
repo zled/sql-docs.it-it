@@ -22,20 +22,21 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a180e8b337ea984e320d41f77284ee9833b624
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 864072a00f2db088b03ce280bf0ad137627b6a7c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987273"
 ---
 # <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Restituisce una riga per ogni azione di controllo che può essere segnalata nel log di controllo e per ogni gruppo di azioni di controllo che possono essere configurate come parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Per ulteriori informazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit, vedere [SQL Server Audit &#40;motore di Database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Restituisce una riga per ogni azione di controllo che può essere segnalata nel log di controllo e per ogni gruppo di azioni di controllo che possono essere configurate come parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Per altre informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit, vedere [SQL Server Audit &#40;motore di Database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**varchar(4)**|ID dell'azione di controllo. Correlazione di **action_id** valore scritto in ogni record di controllo. Ammette i valori Null. Per i gruppi di controllo, il valore è Null.|  
+|**action_id**|**varchar(4)**|ID dell'azione di controllo. Correlato per il **action_id** valore scritto in ogni record di controllo. Ammette i valori Null. Per i gruppi di controllo, il valore è Null.|  
 |**action_in_log**|**bit**|Indica se un'azione può essere scritta in un log di controllo. Sono disponibili i valori seguenti:<br /><br /> 1 = Sì<br /><br /> 0 = No|  
 |**name**|**sysname**|Nome dell'azione di controllo o del gruppo di azioni. Non ammette i valori Null.|  
 |**class_desc**|**nvarchar(120)**|Nome della classe dell'oggetto al quale si applica l'azione di controllo. Tale oggetto può appartenere all'ambito del server, del database o dello schema, ma non un oggetto dello schema. Non ammette i valori Null.|  
@@ -45,9 +46,9 @@ ms.lasthandoff: 05/23/2018
 |**containing_group_name**|**nvarchar(120)**|Nome del gruppo di controllo contenente l'azione specificata. Se il valore in name è un gruppo, questo nome è Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Le entità devono disporre **selezionare** autorizzazione. Per impostazione predefinita, tale autorizzazione è concessa al ruolo public.  
+ Le entità devono disporre **seleziona** l'autorizzazione. Per impostazione predefinita, tale autorizzazione è concessa al ruolo public.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)](Indici per tabelle con ottimizzazione per la memoria). Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

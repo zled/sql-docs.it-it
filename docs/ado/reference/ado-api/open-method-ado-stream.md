@@ -2,7 +2,6 @@
 title: Open (metodo) (flusso ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44493854720564e241817c1b482339f9c5cbbd32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a2014c35383f1bc8dc30505cb26c602f7a22161
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280550"
 ---
 # <a name="open-method-ado-stream"></a>Open (metodo) (flusso ADO)
 Apre un [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto per gestire i flussi di dati binario o di testo.  
@@ -39,21 +39,21 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativa. Oggetto **Variant** valore che specifica l'origine dei dati per il **flusso**. *Origine* può contenere una stringa URL assoluto che punta a un nodo esistente in una struttura ad albero noto, ad esempio un sistema di posta elettronica o un file. È necessario specificare un URL utilizzando la parola chiave URL ("URL =*schema*://*server*/*cartella*"). In alternativa, *origine* può contenere un riferimento a un già aperto [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto, che consente di aprire il flusso predefinito associato con il **Record**. Se *origine* non è stato specificato un **flusso** creata e aperta, associata a Nessuna origine sottostante per impostazione predefinita. Per ulteriori informazioni sugli schemi URL e i provider associati, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
+ Facoltativo. Oggetto **Variant** valore che specifica l'origine dei dati per il **flusso**. *Origine* può contenere una stringa URL assoluto che punta a un nodo esistente in una struttura ad albero noto, ad esempio un sistema di posta elettronica o un file. È necessario specificare un URL utilizzando la parola chiave URL ("URL =*schema*://*server*/*cartella*"). In alternativa, *origine* può contenere un riferimento a un già aperto [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto, che consente di aprire il flusso predefinito associato con il **Record**. Se *origine* non è stato specificato un **flusso** creata e aperta, associata a Nessuna origine sottostante per impostazione predefinita. Per ulteriori informazioni sugli schemi URL e i provider associati, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
  *Mode*  
- Facoltativa. Oggetto [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valore che specifica la modalità di accesso per i risultanti **flusso** (ad esempio, di lettura/scrittura o sola lettura). Valore predefinito è **adModeUnknown**. Vedere il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà per ulteriori informazioni sulle modalità di accesso. Se *modalità* viene omesso, viene ereditato dall'oggetto di origine. Ad esempio, se l'origine **Record** viene aperto in modalità di sola lettura, la **flusso** verrà inoltre aperta in modalità di sola lettura per impostazione predefinita.  
+ Facoltativo. Oggetto [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valore che specifica la modalità di accesso per i risultanti **flusso** (ad esempio, di lettura/scrittura o sola lettura). Valore predefinito è **adModeUnknown**. Vedere il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà per ulteriori informazioni sulle modalità di accesso. Se *modalità* viene omesso, viene ereditato dall'oggetto di origine. Ad esempio, se l'origine **Record** viene aperto in modalità di sola lettura, la **flusso** verrà inoltre aperta in modalità di sola lettura per impostazione predefinita.  
   
  *OpenOptions*  
- Facoltativa. Oggetto [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) valore. Valore predefinito è **adOpenStreamUnspecified**.  
+ Facoltativo. Oggetto [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) valore. Valore predefinito è **adOpenStreamUnspecified**.  
   
  *UserName*  
- Facoltativa. Oggetto **stringa** valore che contiene l'ID utente che, se necessario, accede il **flusso** oggetto.  
+ Facoltativo. Oggetto **stringa** valore che contiene l'ID utente che, se necessario, accede il **flusso** oggetto.  
   
  *Password*  
- Facoltativa. Oggetto **stringa** valore contenente la password che, se necessario, accede il **flusso** oggetto.  
+ Facoltativo. Oggetto **stringa** valore contenente la password che, se necessario, accede il **flusso** oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando un **Record** oggetto viene passato come parametro di origine, il *UserID* e *Password* parametri non vengono utilizzati perché l'accesso al **Record** oggetto è già disponibile. Analogamente, il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) del **Record** oggetto viene trasferito al **flusso** oggetto. Quando *origine* non viene specificato, il **flusso** aperto non contiene dati ed è un [dimensioni](../../../ado/reference/ado-api/size-property-ado-stream.md) pari a zero (0). Per evitare la perdita di dati scritto in questo **flusso** quando il **flusso** è chiuso, salvare il **flusso** con il [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) o [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) metodi, o salvarlo in un'altra posizione di memoria.  
   
  Un *OpenOptions* valore **adOpenStreamFromRecord** identifica il contenuto di *origine* parametro sia un già aperto **Record**oggetto. Il comportamento predefinito consiste nel considerare *origine* come un URL che punta direttamente a un nodo in una struttura ad albero, ad esempio un file. Viene aperto il flusso predefinito associato a tale nodo.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911866"
 ---
 # <a name="like-predicate-escape-character"></a>COME carattere di Escape predicato
 In un **come** predicato, il segno di percentuale (%) corrispondenze zero o più di qualsiasi carattere e il carattere di sottolineatura (_) consente di ricercare qualsiasi carattere. In base a un segno di percentuale effettivo o un carattere di sottolineatura un **come** predicato, un carattere di escape deve precedere il segno di percentuale o un carattere di sottolineatura. La sequenza di escape che definisce il **come** carattere di escape del predicato è:  

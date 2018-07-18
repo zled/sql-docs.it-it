@@ -1,5 +1,5 @@
 ---
-title: Scenari di globalizzazione per Analysis Services | Documenti Microsoft
+title: Scenari di globalizzazione per Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031903"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Scenari di globalizzazione per Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -61,9 +62,9 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto delle traduzioni in Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
- [Internazionalizzazione delle applicazioni Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Vai Developer Center sulla globalizzazione](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Scrittura Windows di App Store con progettazione adattiva basata sulle impostazioni locali](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Lo sviluppo di applicazioni Windows universali con c# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Internazionalizzazione per le applicazioni di Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
+ [Developer Center sulla globalizzazione](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [App di scrittura Windows Store con progettazione adattiva basata sulle impostazioni locali](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Sviluppo di App Windows universali con c# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

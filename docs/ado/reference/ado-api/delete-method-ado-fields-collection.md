@@ -2,7 +2,6 @@
 title: Metodo Delete (insieme Fields ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07256948e8b83c6ddac5000bfb12cf590325fd5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 296364d3fafc4a67767699d55631209658657de1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277550"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Metodo Delete (insieme Fields ADO)
 Elimina un oggetto di [campi](../../../ado/reference/ado-api/fields-collection-ado.md) insieme.  
@@ -41,7 +41,7 @@ Fields.Delete Field
  *Campo*  
  Oggetto **Variant** che designa il [campo](../../../ado/reference/ado-api/field-object.md) oggetto da eliminare. Questo parametro può essere il nome del **campo** oggetto o la posizione ordinale del **campo** oggetto stesso.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La chiamata di **Fields. Delete** metodo open [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) provoca un errore di run-time.  
   
 ## <a name="applies-to"></a>Si applica a  

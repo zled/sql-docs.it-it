@@ -1,5 +1,5 @@
 ---
-title: sp_xtp_flush_temporal_history | Documenti Microsoft
+title: sp_xtp_flush_temporal_history | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql
@@ -26,15 +26,16 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1e4ea75e11840c91e6fcac81d43a33272d9882bf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045909"
 ---
 # <a name="spxtpflushtemporalhistory-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Richiama l'attività di scaricamento di dati per spostare i commit di tutte le righe dalla tabella di gestione temporanea in memoria per la tabella di cronologia basata su disco.  
+  Richiama l'attività di scaricamento dei dati per spostare tutti i commit di righe dalla tabella di staging in memoria per la tabella di cronologia basata su disco.  
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,10 +49,10 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
   
 ## <a name="arguments"></a>Argomenti  
  *@schema_name*  
- Il nome dello schema per la tabella corrente o temporale  
+ Il nome dello schema per la tabella temporale o corrente  
   
  *@object_name*  
- Il nome della tabella corrente o temporale  
+ Il nome della tabella temporale o corrente  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o >0 (esito negativo)  

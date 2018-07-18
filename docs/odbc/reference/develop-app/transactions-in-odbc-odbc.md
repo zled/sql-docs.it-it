@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915482"
 ---
 # <a name="transactions-in-odbc-odbc"></a>Transazioni in ODBC ODBC
 Al livello di connessione, vengono completate le transazioni in ODBC vale a dire quando un'applicazione completa una transazione, viene eseguito il commit o il rollback di tutte le operazioni effettuate tramite tutti gli handle di istruzione su tale connessione.  

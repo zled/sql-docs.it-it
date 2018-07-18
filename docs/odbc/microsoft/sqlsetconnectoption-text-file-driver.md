@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903076"
 ---
 # <a name="sqlsetconnectoption-text-file-driver"></a>SQLSetConnectOption (Driver di File di testo)
 > [!NOTE]  

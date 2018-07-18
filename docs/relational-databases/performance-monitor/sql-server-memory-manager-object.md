@@ -19,11 +19,12 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89b69f14e131453519bbaae77f16d629444eb169
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcd7a5a51aa9f7a3e4e2dfc84dd76e05a950e897
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473905"
 ---
 # <a name="sql-server-memory-manager-object"></a>Oggetto Memory Manager di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +37,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="memory-manager-counters"></a>Contatori Memory Manager  
  Nella tabella seguente vengono descritti i contatori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** .  
   
-|Contatori Memory Manager di SQL Server|Description|  
+|Contatori Memory Manager di SQL Server|Descrizione|  
 |----------------------------------------|-----------------|  
 |**Memoria connessioni (KB)**|Specifica la quantità totale di memoria dinamica utilizzata dal server per gestire le connessioni.|  
 |**Memoria cache di database (KB)**|Specifica la quantità totale di memoria attualmente utilizzata dal server per la cache delle pagine del database.|  
-|**Vantaggio esterno della memoria**|Valore esterno di memoria, in ms per pagina per ms, moltiplicato per 10 miliardi e troncato in un numero intero.| 
+|**Vantaggio esterno della memoria**| Stima interna del vantaggio per le prestazioni dall'aggiunta di memoria a una cache specifica. Usato dal motore per equilibrare l'utilizzo della memoria tra cache, è utile per i casi di risoluzione dei problemi con un aumento imprevisto delle dimensioni della cache. Il valore è visualizzato come numero intero basato su un calcolo interno. | 
 |**Memoria disponibile (KB)**|Specifica la quantità di memoria allocata attualmente non utilizzata dal server.|  
 |**Memoria area di lavoro concessa (KB)**|Specifica la quantità totale di memoria concessa per l'esecuzione di processi, quali operazioni di hashing, ordinamento, copia bulk e creazione di indici.|  
 |**Blocchi di blocco**|Specifica il numero corrente di blocchi di blocco in uso nel server (valore aggiornato periodicamente). Un blocco di blocco rappresenta una singola risorsa bloccata, ad esempio una tabella, una pagina o una riga.|  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916536"
 ---
 # <a name="processing-a-sql-statement"></a>L'elaborazione di un'istruzione SQL
 Prima di illustrare le tecniche per l'utilizzo a livello di codice SQL, è necessario illustrare la modalità di elaborazione di un'istruzione SQL. I passaggi sono comuni a tutti e tre le tecniche, anche se ogni tecnica vengano eseguite in momenti diversi. Nella figura seguente vengono illustrati i passaggi coinvolti nell'elaborazione di un'istruzione SQL, che vengono discussi in tutto il resto di questa sezione.  

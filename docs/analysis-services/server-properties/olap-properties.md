@@ -1,6 +1,6 @@
 ---
 title: Proprietà OLAP | Documenti Microsoft
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5739c93f7a3c20960f5470c3fd2cdb24c72cf09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239291"
 ---
 # <a name="olap-properties"></a>Proprietà OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server OLAP elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Si applica a:** solo in modalità server multidimensionale  
@@ -243,12 +245,13 @@ ms.lasthandoff: 05/10/2018
   
 -   Ha effetto su tutti i database del server. **DimensionPropertyCachesize** è una proprietà a livello di server. La modifica di questa proprietà influisce su tutti i database in esecuzione nell'istanza corrente.  
   
- Approccio per la stima dei requisiti della cache di dimensione:  
+Approccio per la stima dei requisiti della cache di dimensione:  
   
 1.  Iniziare aumentando di un valore elevato le dimensioni della cache di dimensione per determinare se tale approccio costituisce un vantaggio. È possibile ad esempio raddoppiare il valore predefinito come passaggio iniziale.  
   
 2.  Se risulta evidente un miglioramento delle prestazioni, ridurre il valore in modo incrementale fino a raggiungere un equilibrio tra prestazioni e utilizzo della memoria.  
-  
+
+
  **ExpressNonEmptyUseEnabled**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -345,7 +348,7 @@ ms.lasthandoff: 05/10/2018
  **DataCache\ MemoryModel\ Tax**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="jobs"></a>Processi  
+## <a name="jobs"></a>processi  
  **ProcessAggregation\ MemoryModel\ Income**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

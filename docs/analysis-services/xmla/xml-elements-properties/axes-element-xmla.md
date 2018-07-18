@@ -1,5 +1,5 @@
 ---
-title: Assi elemento (XMLA) | Documenti Microsoft
+title: Assi elemento (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34574913"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038019"
 ---
 # <a name="axes-element-xmla"></a>Elemento Axes (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene una raccolta di [asse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) elementi che rappresentano i dati dell'asse contenuti in un [radice](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento che utilizza il [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo di dati.  
+  Contiene una raccolta di [asse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) gli elementi che rappresentano i dati dell'asse contenuti in un [radice](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento che utilizza il [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo di dati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34574913"
 </root>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -41,15 +41,15 @@ ms.locfileid: "34574913"
 |Valore predefinito|None|  
 |Cardinalità|1-1: elemento obbligatorio visualizzato una sola volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |Elementi figlio|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- Sotto il **assi** elemento, il **asse** sono elencati gli elementi nell'ordine in cui sono presenti nel set di dati, a partire da zero. Il **AxisFormat** determina l'impostazione della proprietà XMLA come **asse** formattazione degli elementi. Per ulteriori informazioni sul **AxisFormat** proprietà, vedere [proprietà XMLA supportate &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+## <a name="remarks"></a>Note  
+ Sotto il **assi** elemento, il **asse** sono elencati gli elementi nell'ordine in cui sono presenti nel set di dati, iniziando in corrispondenza di zero. Il **AxisFormat** determina l'impostazione della proprietà XMLA come **asse** formattazione degli elementi. Per altre informazioni sul **AxisFormat** proprietà, vedere [proprietà XMLA supportate &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  Un asse rappresenta un set di tuple in cui tutte le tuple hanno la stessa dimensionalità. Un set può essere rappresentato in modi diversi per scopi diversi. Il set di quattro tuple seguente, ad esempio, può essere rappresentato come raccolta di tuple bidimensionali o come prodotto cartesiano di due set unidimensionali.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34574913"
 |Operazione|Description|  
 |---------------|-----------------|  
 |Membro|Unità minima di un asse che rappresenta il membro di una gerarchia di dimensione.|  
-|Membri|Una raccolta di **membro** gerarchia di oggetti della stessa dimensione.|  
+|Membri|Una raccolta di **membro** gli oggetti della stessa gerarchia di dimensione.|  
 |Tupla|Raccolta di membri da gerarchie di dimensione diverse.|  
 |Tuple|Una raccolta di **tupla** oggetti con la stessa dimensionalità.|  
 |Union|Unione di set.|  
@@ -102,7 +102,7 @@ CrossProduct (
    Members( Member(Actual), Member(Budget) )  
 ```  
   
- Un client può utilizzare il **AxisFormat** proprietà per richiedere una rappresentazione specifica.  
+ Un client può usare la **AxisFormat** proprietà per richiedere una rappresentazione specifica.  
   
 ## <a name="see-also"></a>Vedere anche
  [Tipo di dati MDDataSet &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   

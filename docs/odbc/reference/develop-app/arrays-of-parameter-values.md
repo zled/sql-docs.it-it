@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909337"
 ---
 # <a name="arrays-of-parameter-values"></a>Matrici di valori di parametro
 È spesso utile per le applicazioni passare matrici di parametri. Ad esempio, utilizzando le matrici di parametri e una con parametri **inserire** istruzione, un'applicazione è possibile inserire un numero di righe in una sola volta. Esistono diversi vantaggi rispetto all'utilizzo di matrici. In primo luogo, il traffico di rete è ridotto, perché i dati per numerose istruzioni vengono inviati in un singolo pacchetto (se l'origine dati supporta le matrici di parametri in modo nativo). In secondo luogo, alcune origini dati possono eseguire istruzioni SQL tramite matrici più velocemente rispetto all'esecuzione lo stesso numero di istruzioni SQL separate. Infine, quando i dati vengono archiviati in una matrice, come accade spesso per i dati della schermata, l'applicazione può associare tutte le righe in una particolare colonna con una singola chiamata a **SQLBindParameter** e aggiornarle tramite l'esecuzione di una singola istruzione.  

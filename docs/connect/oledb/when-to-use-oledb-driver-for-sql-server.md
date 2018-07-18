@@ -2,7 +2,7 @@
 title: Quando utilizzare OLE DB Driver per SQL Server | Documenti Microsoft
 description: Quando utilizzare Driver OLE DB per SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb
@@ -18,14 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b3fa8f071055f33bb256d3b28ed4aaa807f093a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1aaca043dc057f6f7cc07322e6bf75822a8ebe8b
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690104"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>Quando utilizzare OLE DB Driver per SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -45,6 +46,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per SQL Server](../oledb/oledb-driver-for-sql-server.md)     
- [Procedure per OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [Procedure relative a OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

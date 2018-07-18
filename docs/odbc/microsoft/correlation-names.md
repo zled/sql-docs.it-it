@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897676"
 ---
 # <a name="correlation-names"></a>Nomi di correlazione
 I nomi di correlazione sono completamente supportati, inclusi all'interno dell'elenco di tabella. Ad esempio, nella stringa seguente, E1 è il nome di correlazione per la tabella Emp denominato:  

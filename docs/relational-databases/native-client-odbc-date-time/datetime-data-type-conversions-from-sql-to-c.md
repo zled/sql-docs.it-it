@@ -1,13 +1,12 @@
 ---
-title: Le conversioni da SQL a C | Documenti Microsoft
+title: Le conversioni da SQL a C | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,13 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe025209a14da132e6f6e3e1efd55d2263bdf997
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0eb7cf6d146324ac5e472ea58fca5743683479e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425640"
 ---
-# <a name="datetime-data-type-conversions-from-sql-to-c"></a>Conversioni di tipi di dati da SQL a C DateTime
+# <a name="datetime-data-type-conversions-from-sql-to-c"></a>Data/ora conversioni di tipi di dati da SQL a C
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 |OK|Nessun problema di conversione.|  
 |1|Si applicano le regole precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |2|Gli spazi iniziali e finali vengono ignorati.|  
-|3|Il valore stringa viene analizzato in un tipo date, time, timezone o timezoneoffset e consente un massimo di 9 cifre per i secondi frazionari. Se viene analizzato un tipo di dati timezoneoffset, il tipo time viene convertito al tipo timezone del client. Se si verifica un errore durante la conversione, viene generato un record di diagnostica con SQLSTATE 22018 e il messaggio "Overflow del campo Datetime".|  
+|3|Il valore stringa viene analizzato in un tipo date, time, timezone o timezoneoffset e consente un massimo di 9 cifre per i secondi frazionari. Se viene analizzato un tipo di dati timezoneoffset, il tipo time viene convertito al tipo timezone del client. Se si verifica un errore durante questa conversione, viene generato un record di diagnostica con SQLSTATE 22018 e il messaggio "Overflow del campo Datetime".|  
 |4|Se il valore non è di un tipo date, timestamp o timestampoffset valido, viene generato un record di diagnostica con l'identificativo di errore SQLSTATE 22018 e il messaggio "Carattere non valido per la specifica del cast".|  
 |5|Se il valore time è diverso da zero, viene generato un record di diagnostica con l'identificativo di errore SQLSTATE 01S07 e il messaggio "Troncamento frazionario".|  
 |6|Se il valore non è un tipo time, timestamp o timestampoffset valido, viene generato un record di diagnostica con l'identificativo di errore SQLSTATE 22018 e il messaggio "Carattere non valido per la specifica del cast".|  
@@ -73,6 +73,6 @@ ms.lasthandoff: 05/03/2018
  Nella tabella riportata in questo argomento sono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se il tipo di server specificato in SQLBindParameter non corrisponde al tipo effettivo nel server, verrà eseguita una conversione implicita dal server e il tipo restituito al client corrisponderà al tipo specificato tramite la funzione SQLBindParameter. La conseguenza di ciò possono essere risultati di conversione imprevisti se le regole di conversione del server sono diverse da quelle elencate nella tabella precedente. Quando è ad esempio necessario specificare un valore date predefinito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza 1900-1-1, anziché il valore date corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e ora miglioramenti & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Data e miglioramenti per la fase &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

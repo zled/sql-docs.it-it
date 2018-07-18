@@ -1,8 +1,6 @@
 ---
-title: Le impostazioni di migrazione di dati (OracleToSQL) | Documenti Microsoft
+title: Impostazioni di migrazione dati (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,47 +13,48 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 0b86e2f40bd4cfb4734b4cc7167e16cf2fb350ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15a0727397346451e07f85556bd183df35d13796
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983333"
 ---
-# <a name="data-migration-settings-oracletosql"></a>Impostazioni di migrazione di dati (OracleToSQL)
+# <a name="data-migration-settings-oracletosql"></a>Impostazioni di migrazione dati (OracleToSQL)
   
-## <a name="data-migration-settings"></a>Impostazioni di migrazione di dati  
-**Le impostazioni di migrazione dei dati** consente all'utente di scrivere query personalizzate per la migrazione dei dati.  
+## <a name="data-migration-settings"></a>Impostazioni di migrazione dati  
+**Le impostazioni di migrazione dati** consente all'utente di scrivere query personalizzate per la migrazione dei dati.  
   
--   Questa scheda è disponibile quando **opzioni di migrazione di dati estesi** è impostato su **Mostra** e viene nascosto quando l'impostazione è impostata su **nascondere** nelle impostazioni del progetto. Per ulteriori informazioni sulle impostazioni di progetto di migrazione, vedere [le impostazioni del progetto (migrazione)](http://msdn.microsoft.com/en-us/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
+-   Questa scheda è disponibile quando **opzioni di migrazione dati estese** è impostata su **mostrano** e viene nascosto quando l'impostazione è impostata su **nascondere** nelle impostazioni del progetto. Per altre informazioni sulle impostazioni di progetto di migrazione, vedere [impostazioni progetto (migrazione)](http://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
   
--   L'analisi delle istruzioni SQL personalizzata verrà implementato in **le impostazioni di migrazione di dati** scheda del nodo di tabella.  
+-   L'analisi delle istruzioni SQL personalizzate verranno implementato in **le impostazioni di migrazione dati** scheda del nodo della tabella.  
   
--   Di seguito sono le due caselle di controllo disponibili nel **le impostazioni di migrazione di dati** dei quali.:  
+-   Di seguito sono le due caselle di controllo disponibili nel **le impostazioni di migrazione dati** una visualizzazione dei.:  
   
     1.  Troncare la tabella di SQL Server  
   
     2.  Selezionare utilizzo personalizzato  
   
 1.  **Troncare la tabella di SQL Server:**  
-     Questa opzione consente all'utente di avere una visione chiara dei dati migrati nel database di destinazione.  
+     Questa opzione consente all'utente di avere una visione chiara dei dati migrati a livello di database di destinazione.  
   
-    -   Per impostazione predefinita, questa casella di testo è selezionata.  
+    -   Per impostazione predefinita, viene selezionata questa casella di testo.  
   
-    -   Se questa casella di testo è deselezionata, verranno aggiunti i dati che viene eseguita la migrazione per i dati esistenti nel database di destinazione.  
+    -   Se questa casella è deselezionata, verranno aggiunti i dati che viene eseguita la migrazione a quelli esistenti nel database di destinazione.  
   
 2.  **Selezionare utilizzo personalizzato:**  
-     Questa opzione consente all'utente di modificare il **selezionare** istruzione presente (**selezionare** istruzione consente agli utenti di selezionare i dati da visualizzare nel database di destinazione).  
+     Questa opzione consente all'utente di modificare la **selezionate** istruzione presente (**seleziona** istruzione consente agli utenti di selezionare i dati da visualizzare a livello di database di destinazione).  
   
-    1.  Per impostazione predefinita, questa casella di testo è deselezionata.  
+    1.  Per impostazione predefinita, questa casella è deselezionata.  
   
-    2.  Se questa casella di testo è selezionata, quindi consente agli utenti di modificare il **selezionare** istruzione presente.  
+    2.  Se è selezionata questa casella di testo e quindi consente agli utenti di modificare la **seleziona** istruzione presente.  
   
-Esistono due pulsanti presenti dei quali.:  
+Esistono due pulsanti presenti una visualizzazione dei.:  
   
 -   **Applica:** fare clic su **applica** per applicare le impostazioni che sono state modificate.  
   
--   **Annulla:** fare clic su **Annulla** per ripristinare le impostazioni presenti prima di modifiche sono state apportate.  
+-   **Annulla:** fare clic su **annullare** per ripristinare le impostazioni presente prima che le modifiche sono state apportate.  
   
 ## <a name="see-also"></a>Vedere anche  
-[La migrazione di dati Oracle a SQL Server](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13)  
+[La migrazione dei dati di Oracle a SQL Server](http://msdn.microsoft.com/e23c5268-41ed-4e55-9fe7-a11376202a13)  
   

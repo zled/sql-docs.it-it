@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914916"
 ---
 # <a name="sample-odbc-program"></a>Programma di esempio ODBC
 Il [nell'esempio di codice ODBC](http://go.microsoft.com/fwlink/?LinkId=244831) chiesto di immettere un nome di origine dati ODBC.  Verrà quindi richiesto di immettere una query e l'esempio visualizzerà i risultati della query.

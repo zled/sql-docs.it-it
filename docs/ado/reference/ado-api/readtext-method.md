@@ -2,7 +2,6 @@
 title: Metodo ReadText | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26221c32339aab70311a6ca9254bb5d514724070
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7c3e2dcf695e9c6748881656d87e02404209dbf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280780"
 ---
 # <a name="readtext-method"></a>Metodo ReadText
 Legge un numero di caratteri da un testo specificato [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
@@ -39,12 +39,12 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>Parametri  
  *NumChars*  
- Facoltativa. Oggetto **lungo** valore che specifica il numero di caratteri da leggere dal file o un [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valore. Il valore predefinito è **adReadAll**.  
+ Facoltativo. Oggetto **lungo** valore che specifica il numero di caratteri da leggere dal file o un [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valore. Il valore predefinito è **adReadAll**.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il **ReadText** metodo legge un numero specificato di caratteri, un'intera riga o dell'intero flusso da un **flusso** dell'oggetto e restituisce la stringa risulta.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se *NumChar* è maggiore del numero di caratteri rimanenti nel flusso, vengono restituiti solo i caratteri rimanenti. La stringa letta non possono essere riempita per corrispondere alla lunghezza specificata da *NumChar*. Se non sono presenti caratteri rimanenti da leggere, viene restituito un variant il cui valore è null. **ReadText** non può essere usato per leggere le versioni precedenti.  
   
 > [!NOTE]

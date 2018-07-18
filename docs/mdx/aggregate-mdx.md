@@ -1,6 +1,6 @@
 ---
 title: Funzione di aggregazione (MDX) | Documenti Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 31fc7fe749d8e14f0e18ea88128d984875cdaa31
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578423"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740570"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Restituisce un numero che viene calcolato mediante aggregazione sulle celle restituite dall'espressione set. Se non si specifica un'espressione numerica, questa funzione consente di aggregare ogni misura nel contesto di query corrente utilizzando l'operatore di aggregazione predefinito specificato per ogni misura. Se viene specificata un'espressione numerica, questa funzione innanzitutto valuta e quindi somma l'espressione numerica per ogni cella nel set specificato.  
   

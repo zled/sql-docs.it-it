@@ -2,7 +2,6 @@
 title: Proprietà (flusso ADO) Size | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d60b4fbc39ebe5db98b2185b4d52d7c5c797133
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6d39bb563acfde83a08f08c00fee66cc9b81967
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281881"
 ---
 # <a name="size-property-ado-stream"></a>Proprietà Size (flusso ADO)
 Indica le dimensioni del flusso in numero di byte.  
@@ -32,7 +32,7 @@ Indica le dimensioni del flusso in numero di byte.
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un **lungo** valore che specifica le dimensioni del flusso in numero di byte. Il valore predefinito è la dimensione di flusso, oppure -1 se la dimensione del flusso non è noto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  **Dimensioni** può essere utilizzato solo con aperto [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetti.  
   
 > [!NOTE]

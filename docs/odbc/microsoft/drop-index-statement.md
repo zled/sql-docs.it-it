@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900247"
 ---
 # <a name="drop-index-statement"></a>DROP INDEX-istruzione
 Quando viene utilizzato il driver Microsoft Access, dBASE o Paradox, la sintassi dell'istruzione DROP INDEX è "DROP INDEX on b" in "a" è il nome dell'indice e "b" è il nome della tabella (DROP INDEX non *nome indice*).  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912896"
 ---
 # <a name="handles"></a>Selettori
 Gli handle sono opachi a 32 bit di valori che identificano un particolare elemento; in ODBC, questo elemento può essere un ambiente, connessione, l'istruzione o descrittore. Quando l'applicazione chiama **SQLAllocHandle**, il Driver Manager o il driver crea un nuovo elemento del tipo specificato e restituisce il relativo handle per l'applicazione. In un secondo momento l'applicazione utilizza l'handle per identificare l'elemento quando si chiamano funzioni ODBC. Il gestore dei Driver e il driver è possibile utilizzare l'handle per individuare le informazioni sull'elemento.  

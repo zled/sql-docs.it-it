@@ -1,5 +1,6 @@
 ---
-title: La migrazione di account di accesso di SQL Server (dati della migrazione guidata) | Documenti Microsoft
+title: Eseguire la migrazione di account di accesso di SQL Server con Data Migration Assistant | Microsoft Docs
+description: Informazioni su come eseguire la migrazione di account di accesso di SQL Server con Data Migration Assistant
 ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
@@ -17,41 +18,43 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 23da8fe364ffad914013719f54871e85213befc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb5dec6babc17ad8be5d0531b463f230e719c73d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783162"
 ---
-# <a name="migrating-sql-server-logins-using-data-migration-assistant"></a>Migrazione account di accesso di SQL Server utilizzando dati Migration Assistant
+# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Eseguire la migrazione di account di accesso di SQL Server con Data Migration Assistant
 
-In questo articolo viene fornita una panoramica degli account di accesso di SQL Server la migrazione utilizzando dati Migration Assistant. 
+Questo articolo offre una panoramica degli account di accesso di SQL Server la migrazione usando Data Migration Assistant. 
 
-## <a name="key-concepts"></a>Concetti chiave
-Di seguito vengono definiti i concetti fondamentali.
+## <a name="which-logins-are-migrated"></a>Gli account di accesso viene eseguita la migrazione
 
-- È possibile migrare gli account di accesso basato su un'entità di Windows (ad esempio, un utente di dominio o un gruppo di dominio di Windows). È anche possibile eseguire la migrazione di account di accesso creati in base sull'autenticazione, denominato anche gli account di accesso di SQL Server.
+- È possibile eseguire la migrazione degli account di accesso basato su un'entità di Windows (ad esempio, un utente di dominio o un gruppo di dominio di Windows). È anche possibile eseguire la migrazione di account di accesso creati in base sull'autenticazione di SQL, detto anche account di accesso di SQL Server.
 
-- Dati Migration Assistant attualmente non supporta gli account di accesso associato a un certificato di sicurezza autonomo (account di accesso mappato a certificato), una chiave asimmetrica autonoma (account di accesso mappato a una chiave asimmetrica) e gli account di accesso mappato alle credenziali.
+- Data Migration Assistant non supporta attualmente gli account di accesso associato a un certificato di sicurezza autonomo (account di accesso mappato a certificato), una chiave asimmetrica autonoma (account di accesso mappato alla chiave asimmetrica) e gli account di accesso mappato alle credenziali.
 
-- Dati della migrazione guidata non si sposta il **sa** principi di account di accesso e i server con nomi racchiusi tra due simboli di cancelletto (\#\#), che sono solo per uso interno.
+- Data Migration Assistant non si sposta il **sa** principi di account di accesso e il server con nomi racchiusi tra simboli di cancelletto doppio (\#\#), che sono solo per uso interno.
 
-- Per impostazione predefinita, Assistatn la migrazione di dati seleziona tutti gli account di accesso completo per eseguire la migrazione. Facoltativamente, è possibile selezionare un account di accesso specifici per eseguire la migrazione. Quando i dati della migrazione guidata esegue la migrazione di tutti gli account di accesso completo, il mapping di account di accesso utente rimane nel database che vengono eseguita la migrazione. 
+- Per impostazione predefinita, Data Migration Assistant Seleziona tutti gli account di accesso completo per eseguire la migrazione. Facoltativamente, è possibile selezionare un account di accesso specifici per eseguire la migrazione. Quando Data Migration Assistant esegue la migrazione di tutti gli account di accesso completo, il mapping di account di accesso utente rimane nel database che vengono eseguita la migrazione. 
 
   Se si prevede di eseguire la migrazione di account di accesso specifici, assicurarsi di selezionare gli account di accesso viene eseguito il mapping a uno o più utenti nei database selezionati per la migrazione.
 
-- Come parte della migrazione di account di accesso, Data Migration Assistant inoltre consente di spostare i ruoli del server definito dall'utente e aggiunge le autorizzazioni a livello di server per i ruoli del server definito dall'utente. Il proprietario del ruolo verrà automaticamente impostato **sa** principale.
+- Come parte della migrazione di account di accesso, Data Migration Assistant inoltre consente di spostare i ruoli server definiti dall'utente e aggiunge autorizzazioni a livello di server per i ruoli del server definito dall'utente. Il proprietario del ruolo verrà automaticamente impostato **sa** dell'entità.
 
-- Come parte della migrazione di account di accesso, Data Migration Assistant assegna le autorizzazioni per entità a protezione diretta sulla destinazione SQL Server in cui si trovano in SQL Server di origine. 
+## <a name="during-and-after-migration"></a>Durante e dopo la migrazione
 
-  Se l'account di accesso esiste già nella destinazione SQL Server, dati Migration Assistant viene eseguita la migrazione solo delle autorizzazioni assegnate all'entità a protezione diretta e non ricrea l'intero account di accesso.
+- Come parte della migrazione di account di accesso, Data Migration Assistant assegna le autorizzazioni per entità a protezione diretta nella destinazione di SQL Server in cui si trovano in SQL Server di origine. 
 
-- Dati Migration Assistant rende i tentativi di eseguire il mapping dell'account di accesso agli utenti del database se l'account di accesso esiste già nel server di destinazione.
+  Se l'account di accesso esiste già nella destinazione di SQL Server, Data Migration Assistant viene eseguita la migrazione solo le autorizzazioni assegnate a entità a protezione diretta e non crea nuovamente l'intero account di accesso.
 
-- È consigliabile esaminare i risultati di migrazione per comprendere lo stato complessivo della migrazione di account di accesso e le azioni consigliate di post-migrazione.
+- Data Migration Assistant rende il migliore sforzo per associare l'account di accesso agli utenti di database se l'account di accesso esiste già nel server di destinazione.
+
+- È consigliabile esaminare i risultati di migrazione per comprendere lo stato complessivo di tutte le azioni post-migrazione consigliate e la migrazione di account di accesso.
 
 ## <a name="resources"></a>Risorse
 
 [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 
-[Dati Migration Assistant: Le impostazioni di configurazione](../dma/dma-configurationsettings.md)
+[Data Migration Assistant: Le impostazioni di configurazione](../dma/dma-configurationsettings.md)

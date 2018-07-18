@@ -1,13 +1,12 @@
 ---
-title: Chiamare le Stored procedure (ODBC) | Documenti Microsoft
+title: Chiamare le Stored procedure (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,13 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 787eba6f732ef6796f46459e22d69171f050beec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b6f189ce8e2a118178c2da6c40a63cf5a8d1834
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431660"
 ---
-# <a name="running-stored-procedures---call-stored-procedures"></a>Esecuzione di Stored procedure, chiamare le Stored procedure
+# <a name="running-stored-procedures---call-stored-procedures"></a>Esecuzione di Stored procedure - chiamare le Stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
     {? = CALL procname (?,?)}  
     ```  
   
-2.  Chiamare [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) per ogni input, input/output, parametro di output e per la procedura di valore restituito (se presente).  
+2.  Chiamare [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) per ogni input, input/output, parametro di output e per la procedura di valore restituito (se disponibile).  
   
 3.  Eseguire l'istruzione con [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 05/03/2018
 >  Se un'applicazione invia una procedura utilizzando la sintassi Transact-SQL EXECUTE, invece della sequenza di escape ODBC CALL, il driver ODBC di SQL Server passa la chiamata di procedura a SQL Server come istruzione SQL anziché come chiamata RPC. Se viene utilizzata l'istruzione Transact-SQL EXECUTE, inoltre, i parametri di output non vengono restituiti.  
   
 ## <a name="see-also"></a>Vedere anche  
-  [Invio in batch chiamate a Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+  [Invio in batch chiamate alle Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [Esecuzione di Stored procedure](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Chiamare una Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
+ [Chiama una Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [Procedure](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
   
   

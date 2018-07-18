@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914736"
 ---
 # <a name="step-5-commit-the-transaction"></a>Passaggio 5: Eseguire il Commit della transazione
 Il passaggio successivo è il commit della transazione, come illustrato nella figura seguente.  

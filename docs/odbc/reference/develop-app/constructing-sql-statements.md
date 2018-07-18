@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908746"
 ---
 # <a name="constructing-sql-statements"></a>Creazione di istruzioni SQL
 È possono costruire istruzioni SQL in uno dei tre modi: hardcoded durante lo sviluppo, costruito in fase di esecuzione, o immesse direttamente dall'utente.  

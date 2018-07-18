@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909896"
 ---
 # <a name="executing-batches"></a>L'esecuzione di batch
 Prima di un'applicazione esegue un batch di istruzioni, deve verificare se sono supportate. A tale scopo, l'applicazione chiama **SQLGetInfo** con le opzioni SQL_BATCH_SUPPORT SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. La prima opzione restituisce se conteggio: generazione di riga e di creazione di set di istruzioni sono supportate in batch esplicita e procedure, mentre le due opzioni quest'ultime restituiscono informazioni sulla disponibilità del conteggio delle righe e risultato imposta nel risultato con parametri esecuzione.  

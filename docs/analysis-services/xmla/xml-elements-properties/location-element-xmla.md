@@ -1,5 +1,5 @@
 ---
-title: Elemento location (XMLA) | Documenti Microsoft
+title: Elemento location (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4953981e7657706a986e9a2407f6786ff676a854
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34575603"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004493"
 ---
 # <a name="location-element-xmla"></a>Elemento Location (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34575603"
 </Backup>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -53,27 +53,27 @@ ms.locfileid: "34575603"
 |Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[Backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [ripristinare](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), [sincronizzare](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)|  
+|Elementi padre|[Copia di backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [ripristinare](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), [sincronizzare](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)|  
 |Elementi figlio|Vedere la tabella riportata di seguito.|  
   
 |Predecessore o padre|Elemento figlio|  
 |------------------------|-------------------|  
-|[Copia di backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|[DataSourceID](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md), [File](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md)|  
+|[Copia di backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|[Elemento DataSourceID](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md), [File](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md)|  
 |[Ripristina](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)|[ConnectionString](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md), [DataSourceID](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md), [DataSourceType](../../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md), [File](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md), [cartelle](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)|  
 |[Sincronizza](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)|[ConnectionString](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md), [DataSourceID](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md), [DataSourceType](../../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md), [cartelle](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- Per **Backup** comandi, la **percorso** elemento vengono fornite informazioni sulla creazione di un file di backup remoto per un'istanza remota di Analysis Services.  
+## <a name="remarks"></a>Note  
+ Per la **Backup** comandi, il **posizione** elemento vengono fornite informazioni sulla creazione di un file di backup remoto per un'istanza remota di Analysis Services.  
   
- Per **ripristinare** comandi, il **percorso** elemento fornisce informazioni sull'identificazione e la connessione a un server remoto [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza, nonché il file di backup remoto utilizzato per ripristinare remoto partizioni su tale istanza remota.  
+ Per **ripristinare** comandi, il **posizione** elemento fornisce informazioni sull'identificazione e la connessione a un server remoto [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza, nonché il file di backup remoto utilizzato per il ripristino remoto partizioni in quell'istanza remota.  
   
- Per **Sincronizza** comandi, il **percorso** elemento descrive un'origine dati da utilizzare per l'istanza di destinazione o un'istanza remota definita nell'istanza di origine che deve essere sincronizzato con il istanza di destinazione, in base al valore di **DataSourceType** elemento per l'elemento padre **Sincronizza** comando.  
+ Per **Synchronize** comandi, il **posizione** elemento descrive un'origine dati da utilizzare dall'istanza di destinazione né un'istanza remota definita nell'istanza di origine che deve essere sincronizzato con il istanza di destinazione, in base al valore di **DataSourceType** (elemento) per l'elemento padre **Sincronizza** comando.  
   
- Per ulteriori informazioni sul backup e ripristino di istanze remote, vedere [backup e ripristino di oggetti (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Per altre informazioni sul backup e ripristino di istanze remote, vedere [backup e ripristino di oggetti (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche
  [Elemento BackupRemotePartitions &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md)   

@@ -2,7 +2,6 @@
 title: Indicizza le proprietà della raccolta, metodi ed eventi | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9580d3969010931bba79d672bf43cd2e593f408e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b992c214722826ce72c3cd1dd5bef70ed77cd502
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286050"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Proprietà di raccolta di indici, metodi ed eventi
 ## <a name="properties"></a>Proprietà  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
  [Metodo Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventi  
- Nessuno  
+ Nessuna.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta di oggetti Index (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

@@ -1,5 +1,5 @@
 ---
-title: Esegue una query di colonne di dati degli eventi | Documenti Microsoft
+title: Esegue una query Events Data Columns | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56a945a1130753fc2feb08a89bd4f6e2676f1bd0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042499"
 ---
 # <a name="queries-events-data-columns"></a>Colonne di dati degli eventi di query
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|Contiene l'ora corrente dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene l'ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene l'ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Durata|5|2|Contiene la quantità di tempo trascorso in millisecondi richiesta dall'evento.|  
+|Duration|5|2|Contiene la quantità di tempo trascorso in millisecondi richiesta dall'evento.|  
 |CPUTime|6|2|Contiene il tempo della CPU in millisecondi utilizzato dall'evento.|  
 |Severity|22|1|Contiene il livello di gravità di un'eccezione associata all'evento di query. I valori possibili sono:<br /><br /> 0 = Esito positivo<br /><br /> 1 = Messaggio informativo<br /><br /> 2 = Avviso<br /><br /> 3 = Errore|  
 |Operazione completata|23|1|Contiene informazioni sull'esito positivo o negativo dell'evento di query. I valori possibili sono:<br /><br /> 0 = esito negativo<br /><br /> 1 = esito positivo|  
@@ -75,6 +76,6 @@ ms.lasthandoff: 05/10/2018
 |ServerName|43|8|Contiene il nome dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento di query.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Categoria di eventi di query](../../analysis-services/trace-events/queries-events-category.md)  
+ [Categoria degli eventi di query](../../analysis-services/trace-events/queries-events-category.md)  
   
   

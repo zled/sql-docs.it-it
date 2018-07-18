@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904616"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>La finestra di dialogo programma di installazione di Visual FoxPro ODBC
 Il **installazione ODBC Visual FoxPro** la finestra di dialogo consente di aggiungere o modificare un'origine dati di Visual FoxPro.  

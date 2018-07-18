@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539051"
 ---
 # <a name="monitor-appliance-health-state"></a>Stato di integrità dello strumento di monitoraggio
 In questo articolo viene illustrato come monitorare lo stato di un dispositivo di sistema della piattaforma Analitica utilizzando la Console di amministrazione o direttamente tramite query le viste a gestione dinamica Parallel Data Warehouse. 

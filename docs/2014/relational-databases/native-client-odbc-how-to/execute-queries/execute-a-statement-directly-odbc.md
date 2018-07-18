@@ -1,0 +1,94 @@
+---
+title: Eseguire un'istruzione direttamente (ODBC) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology: native-client
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- statement execution
+ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
+caps.latest.revision: 11
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5dd4c28a6d1c025352db117d1aa163d3464989eb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421530"
+---
+# <a name="execute-a-statement-directly-odbc"></a>Eseguire un'istruzione direttamente (ODBC)
+    
+### <a name="to-execute-a-statement-directly-and-one-time-only"></a>Per eseguire un'istruzione direttamente e solo una volta  
+  
+1.  Se l'istruzione include marcatori di parametro, utilizzare [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) per associare ogni parametro a una variabile di programma. Inserire nelle variabili di programma i valori dei dati e quindi configurare tutti i parametri data-at-execution.  
+  
+2.  Chiamare [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) per eseguire l'istruzione.  
+  
+3.  Se si utilizzano parametri di input data-at-execution, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+  
+### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>Per eseguire un'istruzione più volte utilizzando l'associazione di parametri per colonna  
+  
+1.  Chiamare [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) per impostare gli attributi seguenti:  
+  
+     Impostare SQL_ATTR_PARAMSET_SIZE sul numero di set (S) di parametri.  
+  
+     Impostare SQL_ATTR_PARAM_BIND_TYPE su SQL_PARAMETER_BIND_BY_COLUMN.  
+  
+     Impostare l'attributo SQL_ATTR_PARAMS_PROCESSED_PTR in modo che punti a una variabile SQLUINTEGER che contenga il numero di parametri elaborati.  
+  
+     Impostare SQL_ATTR_PARAMS_STATUS_PTR in modo che punti a una matrice [S] di variabili SQLUSSMALLINT contenente gli indicatori di stato dei parametri.  
+  
+2.  Per ogni marcatore di parametro:  
+  
+     Allocare una matrice di buffer di S parametri per archiviare i valori dei dati.  
+  
+     Allocare una matrice di buffer di S parametri per archiviare le lunghezze dei dati.  
+  
+     Chiamare [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) per associare i dati valore e i dati lunghezza le matrici di parametri per il parametro dell'istruzione.  
+  
+     Configurare tutti i parametri data-at-execution di tipo text o image.  
+  
+     Inserire S valori dei dati e S lunghezze dei dati nella matrice di parametri associati.  
+  
+3.  Chiamare [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) per eseguire l'istruzione. Il driver esegue in modo efficace l'istruzione S volte, una volta per ogni set di parametri.  
+  
+4.  Se si utilizzano parametri di input data-at-execution, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+  
+### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>Per eseguire un'istruzione più volte utilizzando l'associazione di parametri per riga  
+  
+1.  Allocare una matrice [S] di strutture, dove S è il numero di set di parametri. Nella struttura è presente un elemento per ogni parametro e ogni elemento è costituito da due parti:  
+  
+     La prima parte è una variabile del tipo di dati appropriato che contiene i dati dei parametri.  
+  
+     La seconda parte è una variabile SQLINTEGER che deve contenere l'indicatore di stato.  
+  
+2.  Chiamare [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) per impostare gli attributi seguenti:  
+  
+     Impostare SQL_ATTR_PARAMSET_SIZE sul numero di set (S) di parametri.  
+  
+     Impostare SQL_ATTR_PARAM_BIND_TYPE sulla dimensione della struttura allocata nel Passaggio 1.  
+  
+     Impostare l'attributo SQL_ATTR_PARAMS_PROCESSED_PTR in modo che punti a una variabile SQLUINTEGER che contenga il numero di parametri elaborati.  
+  
+     Impostare SQL_ATTR_PARAMS_STATUS_PTR in modo che punti a una matrice [S] di variabili SQLUSSMALLINT contenente gli indicatori di stato dei parametri.  
+  
+3.  Per ogni marcatore di parametro, chiamare [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) in modo da puntare alle relative variabili nel primo elemento della matrice di strutture allocate nel passaggio 1 valore dei dati del parametro e il puntatore di lunghezza dei dati. Se il parametro è di tipo data-at-execution, configurarlo.  
+  
+4.  Inserire i valori dei dati nella matrice di buffer dei parametri associati.  
+  
+5.  Chiamare [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) per eseguire l'istruzione. Il driver esegue in modo efficace l'istruzione S volte, una volta per ogni set di parametri.  
+  
+6.  Se si utilizzano parametri di input data-at-execution, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+  
+ **Nota** associazione per colonna e per riga sono in genere utilizzato in combinazione con [funzione SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360) e [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) rispetto con [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [L'esecuzione di query procedure relative al &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+  
+  

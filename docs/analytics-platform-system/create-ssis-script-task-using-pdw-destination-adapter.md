@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538971"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Creare un'attività script che utilizza l'adattatore di destinazione SSIS Parallel Data Warehouse
 Questo codice di script del pacchetto SSIS è un esempio di codice per utilizzare l'adapter di destinazione PDW SSIS.  L'attività Script di Integration Services consente di eseguire qualsiasi operazione che può essere eseguita in un'applicazione .net all'interno del contesto di un flusso di controllo SSIS. 

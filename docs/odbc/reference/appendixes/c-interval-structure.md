@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906712"
 ---
 # <a name="c-interval-structure"></a>Struttura di intervallo C
 Ognuno dei tipi di dati di intervallo C elencati nel [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md) sezione Usa la stessa struttura per contenere i dati di intervallo. Quando **SQLFetch**, **SQLFetchScroll**, o **SQLGetData** viene chiamato, il driver restituisce i dati nella struttura SQL_INTERVAL_STRUCT, utilizza il valore specificato per il applicazione per i tipi di dati C (nella chiamata a **SQLBindCol**, **SQLGetData**, o **SQLBindParameter**) per interpretare il contenuto di SQL_INTERVAL_STRUCT e consente di popolare il *interval_type* campo struttura con il *enum* valore corrispondente al tipo di C. Si noti che i driver non leggono il *interval_type* campo per determinare il tipo dell'intervallo; cui recuperare il valore del campo SQL_DESC_CONCISE_TYPE descrittore. Quando la struttura viene utilizzata per i dati di parametro, il driver utilizza il valore specificato dall'applicazione nel campo SQL_DESC_CONCISE_TYPE di APD per interpretare il contenuto di SQL_INTERVAL_STRUCT, anche se l'applicazione imposta il valore della  *interval_type* campo su un valore diverso.  

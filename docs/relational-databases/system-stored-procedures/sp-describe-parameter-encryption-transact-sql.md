@@ -1,5 +1,5 @@
 ---
-title: sp_describe_parameter_encryption (Transact-SQL) | Documenti Microsoft
+title: sp_describe_parameter_encryption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
@@ -24,15 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 810f73e16599f153c604c605e33ad1b6f282811b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974496"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Analizza specificato [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione e i relativi parametri, per determinare i parametri che corrispondono alle colonne di database che sono protetti tramite la funzionalità sempre crittografato. Restituisce i metadati di crittografia per i parametri che corrispondono a colonne crittografate.  
+  Analizza l'oggetto specificato [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione e i relativi parametri, per determinare i parametri che corrispondono alle colonne del database che sono protetti tramite la funzionalità Always Encrypted. Restituisce i metadati di crittografia per i parametri che corrispondono alle colonne crittografate.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,23 +45,23 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @tsql =] 'SQL_batch Transact'  
- Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. SQL_batch Transact può essere nvarchar (n) o nvarchar (max).  
+ [ @tsql =] 'Transact-SQL_batch'  
+ Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transact-SQL_batch potrebbe essere nvarchar (n) o nvarchar (max).  
   
  [ @params =] 'N'parameters  
- *@params* Specifica una stringa di dichiarazione per i parametri per il batch Transact-SQL, che è simile a sp_executesql. I parametri possono essere nvarchar (n) o nvarchar (max).  
+ *@params* fornisce una stringa di dichiarazione per i parametri per il batch Transact-SQL, che è simile a sp_executesql. I parametri possono essere nvarchar (n) o nvarchar (max).  
   
- Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati nel [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato nell'istruzione deve essere definito *@params*. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch nell'istruzione o l'istruzione non contiene parametri, *@params* non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
+ Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati nel [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato nell'istruzione deve essere definito *@params*. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nell'istruzione non contiene parametri, *@params* non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
   
 ## <a name="return-value"></a>Valore restituito  
- 0 indica l'esito positivo. Qualsiasi altro indicano la mancata riuscita.  
+ 0 indica l'esito positivo. Qualsiasi altro elemento indicano un errore.  
   
 ## <a name="result-sets"></a>Set di risultati  
  **sp_describe_parameter_encryption** restituisce due set di risultati:  
   
--   Il set di risultati che descrivono le chiavi di crittografia configurate per le colonne di database, i parametri dell'oggetto specificato [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione corrispondano.  
+-   Il set di risultati che descrive le chiavi di crittografia configurate per le colonne di database, i parametri dell'oggetto specificato [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione corrispondono a.  
   
--   Descrizione particolari come parametri di set di risultati devono essere crittografati. Questo set di risultati riferimenti chiavi descritte nel primo set di risultati.  
+-   Il risultato impostato descrizione particolari come parametri deve essere crittografato. Questo set di risultati riferimenti chiavi descritte nel primo set di risultati.  
   
  Ogni riga del primo set di risultati descrive una coppia di chiavi; una chiave di crittografia di colonna crittografata e la chiave master della colonna corrispondente.  
   
@@ -68,9 +69,9 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|ID della riga nel set di risultati.|  
 |**database_id**|**int**|Id del database.|  
-|**column_encryption_key_id**|**int**|Id chiave di crittografia di colonna. Nota: questo id indica una riga nel [Sys. column_encryption_keys &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) vista del catalogo.|  
-|**column_encryption_key_version**|**int**|Riservato per utilizzi futuri. Attualmente, contiene sempre 1.|  
-|**column_encryption_key_metadata_version**|**binary(8)**|Timestamp che rappresenta l'ora di creazione della chiave di crittografia della colonna.|  
+|**column_encryption_key_id**|**int**|Id chiave di crittografia di colonna. Nota: questo id identifica una riga nel [Sys. column_encryption_keys &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) vista del catalogo.|  
+|**column_encryption_key_version**|**int**|Riservato per utilizzi futuri. Attualmente contiene sempre 1.|  
+|**column_encryption_key_metadata_version**|**binary(8)**|Un timestamp che rappresenta l'ora di creazione della chiave di crittografia della colonna.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|Il valore crittografato della chiave di crittografia della colonna.|  
 |**column_master_key_store_provider_name**|**sysname**|Il nome del provider per l'archivio chiavi contenente la chiave master della colonna, che è stata utilizzata per produrre il valore crittografato della chiave di crittografia della colonna.|  
 |**column_master_key_path**|**nvarchar(4000)**|Il percorso della chiave della chiave master della colonna, che è stata utilizzata per produrre il valore crittografato della chiave di crittografia della colonna.|  
@@ -82,16 +83,16 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|ID della riga nel set di risultati.|  
 |**parameter_name**|**sysname**|Nome di uno dei parametri specificati nel *@params* argomento.|  
-|**column_encryption_algorithm**|**tinyint**|Codice che indica l'algoritmo di crittografia configurato per la colonna, il parametro corrisponde a. I valori attualmente supportati sono: 2 per **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Codice che indica il tipo di crittografia configurato per la colonna, il parametro corrisponde a. I valori supportati sono:<br /><br /> 0 – testo normale (la colonna non crittografata)<br /><br /> 1 – casuale di crittografia<br /><br /> 2 – crittografia di deterministica.|  
-|**column_encryption_key_ordinal**|**int**|Set di codici di riga nel primo risultato. La riga di cui viene fatto riferimento descrive la chiave di crittografia della colonna configurata per la colonna, il parametro corrisponde al.|  
+|**column_encryption_algorithm**|**tinyint**|Il codice che indica l'algoritmo di crittografia configurato per la colonna, il parametro corrisponde al. I valori attualmente supportati sono: 2 per **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
+|**column_encryption_type**|**tinyint**|Codice che indica il tipo di crittografia configurato per la colonna, il parametro corrisponde alla. I valori supportati sono:<br /><br /> 0-testo normale (la colonna non è crittografata)<br /><br /> 1 – la crittografia casuale<br /><br /> 2: crittografia deterministica.|  
+|**column_encryption_key_ordinal**|**int**|Codice della riga nel risultato del primo set. La riga di cui viene fatto riferimento descrive la chiave di crittografia della colonna configurata per la colonna, il parametro corrisponde alla.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Numero di versione dell'algoritmo di normalizzazione di tipo.|  
   
-## <a name="remarks"></a>Osservazioni  
- Oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiama automaticamente i driver di client, che supporta crittografia sempre attiva, **sp_describe_parameter_encryption** per recuperare i metadati di crittografia per le query con parametri, emesso dall'applicazione. Successivamente, il driver utilizza i metadati di crittografia per crittografare i valori dei parametri che corrispondono alle colonne del database protette con crittografia sempre attiva e sostituisce i valori dei parametri in testo normale, inviati dall'applicazione, con crittografata valori di parametro, prima di inviare query al motore di database.  
+## <a name="remarks"></a>Note  
+ Oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver del client, che supporta Always Encrypted, chiama automaticamente **sp_describe_parameter_encryption** per recuperare i metadati di crittografia per le query con parametri, emessi dall'applicazione. Successivamente, il driver Usa i metadati di crittografia per crittografare i valori dei parametri che corrispondono alle colonne di database protette con Always Encrypted e sostituisce i valori dei parametri in testo normale, inviati dall'applicazione, con la crittografia valori dei parametri, prima di inviare la query al motore di database.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiedere il **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** e **VIEW ANY COLUMN MASTER KEY DEFINITION** autorizzazioni nel database.  
+ Richiede la **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** e **VIEW ANY COLUMN MASTER KEY DEFINITION** autorizzazioni nel database.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -143,7 +144,7 @@ c1 INT ENCRYPTED WITH (
 EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT';  
 ```  
   
- Di seguito è il primo set di risultati:  
+ Ecco il primo set di risultati:  
   
 |column_encryption_key_ordinal|database_id|column_encryption_key_id|column_encryption_key_version|column_encryption_key_metadata_version|column_encryption_key_encrypted_value|  
 |--------------------------------------|------------------|---------------------------------|--------------------------------------|------------------------------------------------|-----------------------------------------------|  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912062"
 ---
 # <a name="row-wise-binding"></a>L'associazione per riga
 Quando si utilizza l'associazione, un'applicazione definisce una struttura contenente uno o due, o in alcuni casi, tre gli elementi per ogni colonna per cui è possibile restituire dati. Il primo elemento contiene il valore dei dati e il secondo elemento contiene il buffer di lunghezza/indicatore. Gli indicatori e i valori di lunghezza da memorizzare nel buffer separato impostando i campi di descrizione SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR su valori diversi. In tal caso, la struttura contiene un terzo elemento. L'applicazione quindi alloca una matrice di strutture, che contiene tutti gli elementi sono presenti righe nel set di righe.  

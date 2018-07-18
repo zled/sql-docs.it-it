@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di query SQL (classi gestite SQLXML) | Documenti Microsoft
+title: Esecuzione di query SQL (classi gestite SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b5a15a164156fe897d8f648b80e408b075d4f470
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972277"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Esecuzione di query SQL (classi gestite SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 05/03/2018
   
 -   Creazione di parametri (oggetti SqlXmlParameter).  
   
--   L'assegnazione di valori alle proprietà degli oggetti SqlXmlParameter (nome e valore).  
+-   Assegnazione di valori alle proprietà degli oggetti SqlXmlParameter (nome e valore).  
   
- In questo esempio viene eseguita una query SQL semplice per recuperare il nome, il cognome e la data di nascita del dipendente il cui valore di cognome viene passato come parametro. Nello specificare il parametro (*LastName*), solo la proprietà Value è impostata. La proprietà nome non è impostata, perché in questa query il parametro è posizionale e nessun nome è obbligatorio.  
+ In questo esempio viene eseguita una query SQL semplice per recuperare il nome, il cognome e la data di nascita del dipendente il cui valore di cognome viene passato come parametro. Nello specificare il parametro (*LastName*), solo la proprietà Value viene impostata. La proprietà Name non è impostata, perché in questa query il parametro è posizionale ed è necessario alcun nome.  
   
  La proprietà CommandType dell'oggetto SqlXmlCommand per impostazione predefinita è **Sql**. La proprietà, pertanto, non viene impostata in modo esplicito.  
   
@@ -105,7 +106,7 @@ public static int Main(String[] args)
   
  Per testare questo esempio, è necessario che nel computer sia installato [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework.  
   
- Anziché specificare query SQL come testo del comando, è possibile specificare un modello, come illustrato nel frammento di codice seguente, che esegua un updategram (che è anche un modello) per inserire un record del consumer. È possibile specificare modelli e updategram in file e file di esecuzione. Per ulteriori informazioni, vedere [l'esecuzione di file di modello tramite la proprietà CommandText](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md).  
+ Anziché specificare query SQL come testo del comando, è possibile specificare un modello, come illustrato nel frammento di codice seguente, che esegua un updategram (che è anche un modello) per inserire un record del consumer. È possibile specificare modelli e updategram in file e file di esecuzione. Per altre informazioni, vedere [l'esecuzione di file di modello tramite la proprietà CommandText](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md).  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -126,7 +127,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>Utilizzo di ExecuteToStream  
- Se si dispone di un flusso esistente, è possibile utilizzare il metodo ExecuteToStream invece di creare un oggetto Stream e utilizzando il metodo Execute. Il codice dell'esempio precedente è stato modificato per utilizzare il metodo ExecuteToStream:  
+ Se si dispone di un flusso esistente, è possibile utilizzare il metodo ExecuteToStream invece di creare un oggetto Stream e utilizzando il metodo Execute. Il codice dell'esempio precedente è stato modificato per usare il metodo ExecuteToStream:  
   
 ```  
 using System;  
@@ -159,6 +160,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  È inoltre possibile utilizzare ExecuteXMLReadermethod che restituisce un oggetto XmlReader. Per ulteriori informazioni, vedere [l'esecuzione di query SQL tramite il metodo ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
+>  È anche possibile usare il ExecuteXMLReadermethod che restituisce un oggetto XmlReader. Per altre informazioni, vedere [l'esecuzione di query SQL usando il metodo ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
   

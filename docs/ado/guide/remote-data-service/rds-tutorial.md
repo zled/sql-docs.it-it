@@ -2,7 +2,6 @@
 title: Esercitazione su RDS | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40ab51d55e33549c2ecc5a615f00f396dd9bb6c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dca0329dc201d50335983c9078f85e31f8302d0d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274250"
 ---
 # <a name="rds-tutorial"></a>Esercitazione di servizi desktop remoto
 In questa esercitazione viene illustrato l'utilizzo del modello di programmazione di servizi desktop remoto per eseguire query e aggiornare un'origine dati. In primo luogo, descrive i passaggi necessari per completare questa attività. Nell'esercitazione viene quindi ripetuta in Microsoft® Visual Basic Scripting Edition (dotato di ADO per Windows Foundation Classes (ADO/WFC)).  

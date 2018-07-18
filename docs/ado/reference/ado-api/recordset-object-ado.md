@@ -2,7 +2,6 @@
 title: Oggetto Recordset (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4667e510edb12f0c916c6b2da7afd6cc73204c8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b150dc9d60620cc50a5560415e72f0197ae78d5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281242"
 ---
 # <a name="recordset-object-ado"></a>Oggetto Recordset ADO)
 Rappresenta l'intero set di record da una tabella di base o i risultati di un comando eseguito. In qualsiasi momento, il **Recordset** oggetto fa riferimento a un solo record all'interno del set di record corrente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare **Recordset** oggetti per modificare i dati da un provider. Quando si utilizza ADO, la modifica dei dati quasi esclusivamente tramite **Recordset** oggetti. Tutti **Recordset** oggetti è costituito da record (righe) e campi (colonne). A seconda della funzionalità supportata dal provider, alcuni **Recordset** metodi o proprietà potrebbe non essere disponibili.  
   
  OGGETTO ADODB. Recordset è il valore ProgID che deve essere utilizzato per creare un **Recordset** oggetto. Applicazioni esistenti che fanno riferimento a ADOR obsoleti. Recordset continueranno a funzionare senza ricompilare, ma nuove attività di sviluppo deve fare riferimento a ADODB. Recordset.  

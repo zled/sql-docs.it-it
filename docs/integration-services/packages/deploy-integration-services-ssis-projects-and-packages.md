@@ -1,14 +1,12 @@
 ---
 title: Distribuire progetti e pacchetti di Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a9dda229e7f5c99dbc97fa7d827df74d79649f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5efe57352b1c3ddbbdc1a4db0eb64ba8a27af65f
+ms.sourcegitcommit: 9e83f308008c9e0da505a6064f652c638b8dfe76
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35513016"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta due modelli di distribuzione, ovvero il modello di distribuzione del progetto e il modello di distribuzione del pacchetto legacy. Tramite il modello di distribuzione del progetto è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,8 +35,13 @@ ms.lasthandoff: 05/03/2018
 Per altre informazioni sul modello di distribuzione del pacchetto legacy, vedere [Distribuzione del pacchetto legacy &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  Il modello di distribuzione del progetto è stato introdotto in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Se è stato usato questo modello, non è stato possibile distribuire uno o più pacchetti senza distribuire l'intero progetto. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] è stata introdotta la funzionalità di distribuzione dei pacchetti incrementale che consente di distribuire uno o più pacchetti senza distribuire l'intero progetto.  
-  
+>  Il modello di distribuzione del progetto è stato introdotto in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Con questo modello di distribuzione non era possibile distribuire uno o più pacchetti senza distribuire l'intero progetto. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] è stato introdotto il modello di distribuzione del pacchetto che consente di distribuire uno o più pacchetti senza distribuire l'intero progetto.  
+
+> [!NOTE]
+> In questo articolo viene illustrato come distribuire i pacchetti SSIS a livello generale e come distribuire i pacchetti in locale. È possibile distribuire i pacchetti SSIS anche nelle piattaforme seguenti:
+> - **Cloud di Microsoft Azure**. Per altre informazioni, vedere [Spostare i carichi di lavoro di SQL Server Integration Services nel cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+> - **Linux**. Per altre informazioni, vedere [Estrarre, trasformare e caricare i dati in Linux con SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Confrontare il modello di distribuzione del progetto e il modello di distribuzione del pacchetto legacy  
  Il tipo di modello di distribuzione scelto determina le opzioni di sviluppo e amministrazione disponibili per il progetto. Nella tabella seguente vengono illustrate le differenze e le similitudini tra l'utilizzo del modello di distribuzione del progetto e quello del pacchetto.  
   
@@ -60,7 +64,7 @@ Per altre informazioni sul modello di distribuzione del pacchetto legacy, vedere
 ## <a name="features-of-project-deployment-model"></a>Funzionalità del modello di distribuzione del progetto  
  Nella tabella seguente sono elencate le funzionalità disponibili per i progetti sviluppati solo per il modello di distribuzione del progetto.  
   
-|Funzionalità|Description|  
+|Funzionalità|Descrizione|  
 |-------------|-----------------|  
 |Parametri|Un parametro specifica i dati che verranno utilizzati da un pacchetto. È possibile determinare l'ambito dei parametri a livello di pacchetto o di progetto, rispettivamente con i parametri di pacchetto e i parametri di progetto. I parametri possono essere utilizzati in espressioni o attività. Quando il progetto viene distribuito nel catalogo, è possibile assegnare un valore letterale a ogni parametro oppure utilizzare il valore predefinito assegnato in fase di progettazione. Al posto di un valore letterale, è anche possibile fare riferimento a una variabile di ambiente. I valori delle variabili di ambiente vengono risolti al momento dell'esecuzione del pacchetto.|  
 |Ambienti|Un ambiente è un contenitore di variabili a cui i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono fare riferimento. Ogni progetto può presentare più riferimenti all'ambiente, tuttavia una singola istanza di esecuzione del pacchetto può fare riferimento solo alle variabili di un ambiente. Gli ambienti consentono di organizzare i valori assegnati a un pacchetto. È ad esempio possibile disporre di ambienti denominati "Dev", "test" e "Produzione".|  
@@ -146,7 +150,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
      oppure  
   
-     Al prompt dei comandi eseguire **isdeploymentwizard.exe** da **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn**. Nei computer a 64 bit è presente anche una versione a 32 bit dello strumento in **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**.  
+     Al prompt dei comandi eseguire **isdeploymentwizard.exe** da **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. Nei computer a 64 bit è presente anche una versione a 32 bit dello strumento in **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  Nella pagina **Seleziona origine** fare clic su **File distribuzione progetto** per selezionare il file di distribuzione per il progetto.  
   

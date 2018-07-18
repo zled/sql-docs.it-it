@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900196"
 ---
 # <a name="drop-table-command"></a>TRASCINARE il comando di tabella
 Rimuove una tabella dal database specificato con l'origine dati e la elimina dal disco.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913886"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>La simulazione di istruzioni Delete e aggiornamento posizionato
 Se l'origine dati non supporta l'aggiornamento posizionato e istruzioni delete, il driver consente di simulare questi. Ad esempio, la libreria di cursori ODBC Simula aggiornamento posizionato e istruzioni delete. La strategia generale per la simulazione di aggiornamento posizionato e le istruzioni delete consiste nel convertire le istruzioni posizionate a quelli di ricerca. Questa operazione viene eseguita sostituendo il **WHERE CURRENT OF** clausola con una ricerca **dove** clausola che identifica la riga corrente.  

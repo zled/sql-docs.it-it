@@ -2,7 +2,6 @@
 title: Proprietà FetchOptions (RDS) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcbb951a5d17c7b7f0d8be540bef5c74e96b101d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b73931acd678871f05e5aa4022153ded86a830e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288130"
 ---
 # <a name="fetchoptions-property-rds"></a>Proprietà FetchOptions (RDS)
 Indica il tipo di recupero asincrono.  
@@ -42,7 +42,7 @@ Indica il tipo di recupero asincrono.
 > [!NOTE]
 >  Ogni file eseguibile sul lato client che utilizza queste costanti è necessario fornire le relative dichiarazioni. È possibile tagliare e incollare le dichiarazioni di costante desiderato dal file Adcvbs. Inc, che si trova nella cartella di installazione predefinito per la libreria di servizi desktop remoto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  In un'applicazione Web, è possibile utilizzare **adcFetchAsync** (valore predefinito), in quanto fornisce prestazioni migliori. In un'applicazione client compilata, è possibile utilizzare **il valore adcFetchBackground**.  
   
 ## <a name="applies-to"></a>Si applica a  

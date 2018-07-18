@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,27 +21,28 @@ helpviewer_keywords:
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 caps.latest.revision: 79
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a92f42a693c99c213815fdb1a14395becb3e9054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a0796d43bd0f17a65a0144591c7e2f27c0b22e8
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784174"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Funzioni e tipi di dati di data e ora (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-Le sezioni seguenti in questo argomento forniscono una panoramica di tutti i tipi di dati e funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Le sezioni in questo argomento trattano tutti i tipi di dati e le funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)].
 -   [Tipi di dati di data e ora](#DateandTimeDataTypes)  
 -   [Funzioni di data e ora](#DateandTimeFunctions)  
-    -   [Funzioni che ottengono i valori di data e ora di sistema](#GetSystemDateandTimeValues)  
-    -   [Funzioni che ottengono parti di data e ora](#GetDateandTimeParts)  
-    -   [Funzioni che ottengono i valori di data e ora dalle relative parti](#fromParts)  
-    -   [Funzioni che ottengono la differenza di data e ora](#GetDateandTimeDifference)  
+    -   [Funzioni che restituiscono i valori di data e ora di sistema](#GetSystemDateandTimeValues)  
+    -   [Funzioni che restituiscono parti di data e ora](#GetDateandTimeParts)  
+    -   [Funzioni che restituiscono i valori di data e ora dalle relative parti](#fromParts)  
+    -   [Funzioni che restituiscono valori di differenza di data e ora](#GetDateandTimeDifference)  
     -   [Funzioni che modificano i valori di data e ora](#ModifyDateandTimeValues)  
-    -   [Funzioni che impostano oppure ottengono il formato della sessione](#SetorGetSessionFormatFunctions)  
+    -   [Funzioni che impostano o restituiscono il formato della sessione](#SetorGetSessionFormatFunctions)  
     -   [Funzioni che convalidano i valori di data e ora](#ValidateDateandTimeValues)  
 -   [Argomenti correlati a data e ora](#DateandTimeRelatedTopics)  
   
@@ -62,73 +62,73 @@ I tipi di dati di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)] sono el
 >  Il tipo di dati [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] non è relativo a data e ora. **timestamp** è un sinonimo deprecato per **rowversion**.  
   
 ##  <a name="DateandTimeFunctions"></a> Funzioni di data e ora  
-Le funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)] sono elencate nelle seguenti tabelle. Per altre informazioni sul determinismo, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+Le seguenti tabelle elencano le funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per altre informazioni sul determinismo, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
-###  <a name="GetSystemDateandTimeValues"></a> Funzioni che ottengono i valori di data e ora di sistema 
-Tutti i valori di data e ora derivano dal sistema operativo del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+###  <a name="GetSystemDateandTimeValues"></a> Funzioni che restituiscono i valori di data e ora di sistema 
+[!INCLUDE[tsql](../../includes/tsql-md.md)] deriva tutti i valori di data e ora dal sistema operativo del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 #### <a name="higher-precision-system-date-and-time-functions"></a>Funzioni di data e ora di sistema con precisione superiore  
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ottiene i valori di data e ora tramite l'API Windows GetSystemTimeAsFileTime(). L'accuratezza dipende dall'hardware e dalla versione di Windows del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La precisione di tale API è fissata sul valore di 100 nanosecondi. L'accuratezza può essere determinata usando l'API Windows GetSystemTimeAdjustment().
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] deriva i valori di data e ora tramite l'API Windows GetSystemTimeAsFileTime(). L'accuratezza dipende dall'hardware e dalla versione di Windows del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa API ha una precisione fissata a 100 nanosecondi. Per determinare l'accuratezza, usare l'API Windows GetSystemTimeAdjustment().
   
 |Funzione|Sintassi|Valore restituito|Tipo di dati restituito|Determinismo|  
 |---|---|---|---|---|
-|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|Restituisce il valore **datetime2(7)** che contiene la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La differenza di fuso orario non è inclusa.|**datetime2(7)**|Non deterministica|  
-|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|Restituisce il valore **datetimeoffset(7)** che contiene la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La differenza di fuso orario è inclusa.|**datetimeoffset(7)**|Non deterministica|  
-|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|Restituisce il valore **datetime2(7)** che contiene la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La data e l'ora vengono restituite in formato ora UTC (Coordinated Universal Time).|**datetime2(7)**|Non deterministica|  
+|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|Restituisce un valore **datetime2(7)** contenente la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore restituito non include la differenza di fuso orario.|**datetime2(7)**|Non deterministica|  
+|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|Restituisce un valore **datetimeoffset(7)** contenente la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore restituito include la differenza di fuso orario.|**datetimeoffset(7)**|Non deterministica|  
+|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|Restituisce un valore **datetime2(7)** contenente la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La funzione restituisce i valori di data e ora in formato ora UTC (Coordinated Universal Time).|**datetime2(7)**|Non deterministica|  
   
-#### <a name="lower-precision--system-date-and-time-functions"></a>Funzioni di data e ora di sistema con precisione inferiore
+#### <a name="lower-precision-system-date-and-time-functions"></a>Funzioni di data e ora di sistema con precisione inferiore
   
 |Funzione|Sintassi|Valore restituito|Tipo di dati restituito|Determinismo|  
 |---|---|---|---|---|
-|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|Restituisce il valore **datetime** che contiene la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La differenza di fuso orario non è inclusa.|**datetime**|Non deterministica|  
-|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|Restituisce il valore **datetime** che contiene la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La differenza di fuso orario non è inclusa.|**datetime**|Non deterministica|  
-|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|Restituisce il valore **datetime** che contiene la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La data e l'ora vengono restituite in formato ora UTC (Coordinated Universal Time).|**datetime**|Non deterministica|  
+|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|Restituisce un valore **datetime** contenente la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore restituito non include la differenza di fuso orario.|**datetime**|Non deterministica|  
+|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|Restituisce un valore **datetime** contenente la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore restituito non include la differenza di fuso orario.|**datetime**|Non deterministica|  
+|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|Restituisce un valore **datetime** contenente la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La funzione restituisce i valori di data e ora in formato ora UTC (Coordinated Universal Time).|**datetime**|Non deterministica|  
   
-###  <a name="GetDateandTimeParts"></a> Funzioni che ottengono parti di data e ora
+###  <a name="GetDateandTimeParts"></a> Funzioni che restituiscono parti di data e ora
   
 |Funzione|Sintassi|Valore restituito|Tipo di dati restituito|Determinismo|  
 |--------------|------------|------------------|----------------------|-----------------|  
-|[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|Restituisce una stringa di caratteri che rappresenta la *datepart* specificata della data specificata.|**nvarchar**|Non deterministica|  
-|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|Restituisce un intero che rappresenta il valore *datepart* indicato della *data* specificata.|**int**|Non deterministica|  
-|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Restituisce un intero che rappresenta la parte relativa al giorno della *data* specificata.|**int**|Deterministico|  
-|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|Restituisce un intero che rappresenta la parte relativa al mese della *data* specificata.|**int**|Deterministico|  
-|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|Restituisce un intero che rappresenta la parte relativa all'anno della *data* specificata.|**int**|Deterministico|  
+|[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|Restituisce una stringa di caratteri che rappresenta l'elemento *datepart* specificato della data indicata.|**nvarchar**|Non deterministica|   
+|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|Restituisce un intero che rappresenta l'elemento *datepart* specificato dell'elemento *date* indicato.|**int**|Non deterministica|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Restituisce un intero che rappresenta la parte relativa al giorno dell'elemento *date* specificato.|**int**|Deterministico|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|Restituisce un intero che rappresenta la parte relativa al mese dell'elemento *date* specificato.|**int**|Deterministico|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|Restituisce un intero che rappresenta la parte relativa all'anno dell'elemento *date* specificato.|**int**|Deterministico|  
   
-###  <a name="fromParts"></a> Funzioni che ottengono i valori di data e ora dalle relative parti
+###  <a name="fromParts"></a> Funzioni che restituiscono i valori di data e ora dalle relative parti
   
 |Funzione|Sintassi|Valore restituito|Tipo di dati restituito|Determinismo|  
 |---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|Restituisce un valore di tipo **date** per l'anno, il mese e il giorno specificati.|**data**|Deterministico|  
-|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Restituisce un valore **datetime2** per la data e l'ora specificate e con la precisione indicata.|**datetime2(** *precision* **)**|Deterministico|  
+|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Restituisce un valore **datetime2** per la data e l'ora specificate, con la precisione indicata.|**datetime2(** *precision* **)**|Deterministico|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds*)|Restituisce un valore di tipo **datetime** per la data e l'ora specificate.|**datetime**|Deterministico|  
-|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Restituisce un valore **datetimeoffset** per la data e l'ora specificata e con gli offset e la precisione indicati.|**datetimeoffset(** *precision* **)**|Deterministico|  
+|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Restituisce un valore **datetimeoffset** per la data e l'ora specificate, con gli offset e la precisione indicati.|**datetimeoffset(** *precision* **)**|Deterministico|  
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute* )|Restituisce un valore di tipo **smalldatetime** per la data e l'ora specificate.|**smalldatetime**|Deterministico|  
-|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|Restituisce un valore **time** per l'ora specificata e con la precisione indicata.|**time(** *precision* **)**|Deterministico|  
+|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|Restituisce un valore **time** per l'ora specificata, con la precisione indicata.|**time(** *precision* **)**|Deterministico|  
   
-###  <a name="GetDateandTimeDifference"></a> Funzioni che ottengono la differenza di data e ora
+###  <a name="GetDateandTimeDifference"></a> Funzioni che restituiscono valori di differenza di data e ora
   
 |Funzione|Sintassi|Valore restituito|Tipo di dati restituito|Determinismo|  
 |---|---|---|---|---|
-|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Restituisce il numero di limiti della *datepart* di data o ora che si sovrappongono tra due date specificate.|**int**|Deterministico|  
-|[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|Restituisce il numero di limiti della *datepart* di data o ora che si sovrappongono tra due date specificate.|**bigint**|Deterministico|  
+|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Restituisce il numero di limiti degli elementi *datepart* di data o ora che si sovrappongono tra due date specificate.|**int**|Deterministico|  
+|[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|Restituisce il numero di limiti degli elementi *datepart* di data o ora che si sovrappongono tra due date specificate.|**bigint**|Deterministico|  
   
 ###  <a name="ModifyDateandTimeValues"></a> Funzioni che modificano i valori di data e ora
   
 |Funzione|Sintassi|Valore restituito|Tipo di dati restituito|Determinismo|  
 |---|---|---|---|---|
 |[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|Restituisce un nuovo valore **datetime** aggiungendo un intervallo alla *datepart* specificata della *data* specificata.|Tipo di dati dell'argomento *date*|Deterministico|  
-|[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH  ( *start_date* [, *month_to_add* ] )|Restituisce l'ultimo giorno del mese che contiene la data specificata, con un offset facoltativo.|Il tipo restituito è il tipo di *start_date* o **date**.|Deterministico|  
-|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCH*OFFSET* (*DATETIMEOFFSET* , *time_zone*)|SWITCH*OFFSET* modifica la differenza di fuso orario di un valore DATETIMEOFFSET e mantiene il valore UTC.|**datetimeoffset** con la precisione frazionaria di *DATETIMEOFFSET*|Deterministico|  
-|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET trasforma il valore datetime2 in un valore datetimeoffset. Il valore datetime2 viene interpretato come ora locale in base al valore time_zone specificato.|**datetimeoffset** con la precisione frazionaria dell'argomento *datetime*|Deterministico|  
+|[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH  ( *start_date* [, *month_to_add* ] )|Restituisce l'ultimo giorno del mese contenente la data specificata, con un offset facoltativo.|Il tipo restituito corrisponde al tipo dell'argomento *start_date* o, in alternativa, al tipo di dati **date**.|Deterministico|  
+|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCHOFFSET (*DATETIMEOFFSET* , *time_zone*)|SWITCHOFFSET modifica la differenza di fuso orario di un valore DATETIMEOFFSET e mantiene il valore UTC.|**datetimeoffset** con la precisione frazionaria di *DATETIMEOFFSET*|Deterministico|  
+|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET trasforma il valore datetime2 in un valore datetimeoffset. *TODATETIMEOFFSET* interpreta il valore datetime2 come ora locale in base al valore time_zone specificato.|**datetimeoffset** con la precisione frazionaria dell'argomento *datetime*|Deterministico|  
   
-###  <a name="SetorGetSessionFormatFunctions"></a> Funzioni che impostano oppure ottengono il formato della sessione
+###  <a name="SetorGetSessionFormatFunctions"></a> Funzioni che impostano o restituiscono il formato della sessione
   
 |Funzione|Sintassi|Valore restituito|Tipo di dati restituito|Determinismo|  
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Restituisce il valore corrente, per la sessione, di SET DATEFIRST.|**tinyint**|Non deterministica|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **@***number_var* }|Imposta il primo giorno della settimana su un numero compreso tra 1 e 7.|Non applicabile|Non applicabile|  
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@***format_var* }|Imposta l'ordine delle datepart (mese/giorno/anno) per l'immissione di dati **datetime** o **smalldatetime**.|Non applicabile|Non applicabile|  
-|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Restituisce il nome della lingua correntemente in uso. @@LANGUAGE non è una funzione di data o ora. Comunque, l'impostazione della lingua può influire sull'output di funzioni di data.|Non applicabile|Non applicabile|  
+|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Restituisce il nome della lingua attualmente in uso. @@LANGUAGE non è una funzione di data o ora. Comunque, l'impostazione della lingua può influire sull'output di funzioni di data.|Non applicabile|Non applicabile|  
 |[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'***language***'** &#124; **@***language_var* }|Imposta la lingua per la sessione e i messaggi di sistema. SET LANGUAGE non è una data o una funzione dell'ora. Comunque, l'impostazione della lingua influisce sull'output di funzioni di data.|Non applicabile|Non applicabile|  
 |[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'***language***'** ]|Restituisce informazioni su formati della data di tutte le lingue supportate. **sp_helplanguage** non è una stored procedure relativa a data o ora. Comunque, l'impostazione della lingua influisce sull'output di funzioni di data.|Non applicabile|Non applicabile|  
   
@@ -136,15 +136,15 @@ Tutti i valori di data e ora derivano dal sistema operativo del computer in cui 
   
 |Funzione|Sintassi|Valore restituito|Tipo di dati restituito|Determinismo|  
 |---|---|---|---|---|
-|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|Determina se un'espressione di input **datetime** o **smalldatetime** è un valore di data o ora valido.|**int**|La funzione ISDATE è deterministica solo se utilizzata con la funzione CONVERT, quando viene specificato il parametro di stile della funzione CONVERT e se lo stile è diverso da 0, 100, 9 o 109.|  
+|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|Determina se un'espressione di input **datetime** o **smalldatetime** ha un valore di data o ora valido.|**int**|La funzione ISDATE è deterministica solo se usata con la funzione CONVERT, quando viene specificato il parametro di stile della funzione CONVERT e se lo stile è diverso da 0, 100, 9 o 109.|  
   
 ##  <a name="DateandTimeRelatedTopics"></a> Argomenti correlati a data e ora 
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|Fornisce informazioni sulla conversione di valori della data e ora in e da valori letterali stringa e altri formati della data e ora.|  
+|[CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|Offre informazioni sulla conversione di valori data e ora in e da valori letterali stringa e altri formati di data e ora.|  
 |[Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md)|Offre linee guida per la portabilità di database e applicazioni database che usano istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] da una lingua all'altra o che supportano più lingue.|  
-|[Funzioni scalari ODBC &#40;Transact-SQL&#41;](../../t-sql/functions/odbc-scalar-functions-transact-sql.md)|Offre informazioni sulle funzioni scalari ODBC che è possibile usare nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], incluse le funzioni di data e ora ODBC.|  
+|[Funzioni scalari ODBC &#40;Transact-SQL&#41;](../../t-sql/functions/odbc-scalar-functions-transact-sql.md)|Offre informazioni sulle funzioni scalari ODBC disponibili per l'uso all'interno di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], incluse le funzioni di data e ora ODBC.|  
 |[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|Offre informazioni sulla conversione del fuso orario.|  
   
 ## <a name="see-also"></a>Vedere anche

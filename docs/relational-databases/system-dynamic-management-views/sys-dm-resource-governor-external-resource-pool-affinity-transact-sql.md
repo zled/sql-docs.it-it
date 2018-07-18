@@ -1,5 +1,5 @@
 ---
-title: Sys.dm resource_governor_external_resource_pool_affinity (Transact-SQL) | Documenti Microsoft
+title: Sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -24,26 +24,27 @@ author: jeannt
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: abee195d109b751df856c720264a42241bf861f9
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052299"
 ---
-# <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>Sys.dm resource_governor_external_resource_pool_affinity (Transact-SQL)
+# <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>Sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 **Si applica a:**  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] e [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-Restituisce informazioni di affinità della CPU sulla configurazione di pool di risorse esterne corrente.
+Restituisce informazioni di affinità della CPU relative alla configurazione di pool di risorse esterne corrente.
   
 |Nome colonna|Tipo di dati|Description|
 |----------------|---------------|-----------------|
-|pool_id|**int**|L'ID del pool di risorse esterne. Non ammette i valori Null.|
+|pool_id|**int**|ID del pool di risorse esterno. Non ammette i valori Null.|
 |processor_group|**smallint**|ID del gruppo di processori logici Windows. Non ammette i valori Null.|
-|cpu_mask|**bigint**|Maschera binaria che rappresenta le CPU associate a questo pool. Non ammette i valori Null.|
+|cpu_mask|**bigint**|Maschera binaria che rappresenta la CPU associate a questo pool. Non ammette i valori Null.|
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
-I pool creati con un'affinità di `AUTO` non vengono visualizzati in questa vista perché non presentano affinità. Per altre informazioni, vedere la [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md) e [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) istruzioni.
+I pool creati con affinità `AUTO` non vengono visualizzati in questa vista perché non presentano affinità. Per altre informazioni, vedere la [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md) e [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) istruzioni.
 
 ## <a name="permissions"></a>Autorizzazioni
 

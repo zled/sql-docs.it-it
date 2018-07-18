@@ -1,13 +1,12 @@
 ---
-title: Impostazione dati di grandi dimensioni | Documenti Microsoft
+title: Impostazione dati di grandi dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,26 +16,26 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e23fa666cda37c573d55071739ecfe3df7c7c6d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09c23da09502d9b5f9b1d91cdcdb06e9c09dabc8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421970"
 ---
 # <a name="setting-large-data"></a>Impostazione di dati di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Con il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, è possibile impostare dati BLOB passando un puntatore a un oggetto di archiviazione del consumer.  
+  Con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, è possibile impostare dati BLOB passando un puntatore a un oggetto di archiviazione del consumer.  
   
  Il consumer crea un oggetto di archiviazione che contiene i dati e passa un puntatore a tale oggetto di archiviazione al provider. Il provider legge quindi i dati dall'oggetto di archiviazione del consumer e li scrive nella colonna BLOB.  
   
- Per passare un puntatore al relativo oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB. Il consumer chiama quindi il **IRowsetChange:: SetData** o **IRowsetChange:: InsertRow** metodo con la funzione di accesso che associa la colonna BLOB. Passa quindi un puntatore a un'interfaccia di archiviazione nell'oggetto di archiviazione del consumer.  
+ Per passare un puntatore al relativo oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB. Il consumer chiama quindi il **IRowsetChange:: SetData** oppure **IRowsetChange:: InsertRow** metodo con la funzione di accesso che associa la colonna BLOB. Passa quindi un puntatore a un'interfaccia di archiviazione nell'oggetto di archiviazione del consumer.  
   
  In questo argomento vengono descritte le funzionalità disponibili con le funzioni seguenti:  
   
@@ -47,19 +46,19 @@ ms.lasthandoff: 05/03/2018
 -   IRowsetUpdate::Update  
   
 ## <a name="how-to-set-large-data"></a>Come impostare dati di grandi dimensioni  
- Per passare un puntatore al relativo oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama il **IRowsetChange:: SetData** o **IRowsetChange:: InsertRow** metodi. Per impostare dati BLOB  
+ Per passare un puntatore al relativo oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama il **IRowsetChange:: SetData** oppure **IRowsetChange:: InsertRow** metodi. Per impostare dati BLOB  
   
-1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare il *dwFlag* elemento della struttura DBOBJECT su STGM_READ e impostare il *iid* elemento su IID_ISequentialStream (interfaccia da esporre).  
+1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare il *dwFlag* elemento della struttura DBOBJECT su STGM_READ e impostare le *iid* elemento su IID_ISequentialStream (interfaccia da esporre).  
   
 2.  Impostare le proprietà nel gruppo di proprietà DBPROPSET_ROWSET in modo che il set di righe sia aggiornabile.  
   
-3.  Creare un set di associazioni, uno per ogni colonna, utilizzando una matrice di strutture DBBINDING. Impostare il *wType* elemento nella struttura DBBINDING su DBTYPE_IUNKNOWN e *pObject* elemento in modo che punti alla struttura DBOBJECT creata.  
+3.  Creare un set di associazioni, uno per ogni colonna, utilizzando una matrice di strutture DBBINDING. Impostare il *wType* elemento nella struttura DBBINDING su DBTYPE_IUNKNOWN e il *pObject* elemento in modo che punti alla struttura DBOBJECT creata.  
   
 4.  Creare una funzione di accesso utilizzando le informazioni di associazione nella matrice di strutture DBBINDINGS.  
   
 5.  Chiamare **GetNextRows** per recuperare le righe successive nel set di righe. Chiamare **GetData** per leggere i dati dal set di righe.  
   
-6.  Creare un oggetto di archiviazione contenente i dati (e anche l'indicatore di lunghezza) e quindi chiamare **IRowsetChange:: SetData** (o **IRowsetChange:: InsertRow**) con la funzione di accesso che associa la colonna BLOB per impostare i dati.  
+6.  Creare un oggetto di archiviazione che contiene i dati (e anche l'indicatore di lunghezza) e quindi chiamare **IRowsetChange:: SetData** (o **IRowsetChange:: InsertRow**) con la funzione di accesso che associa la colonna BLOB per impostare i dati.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come impostare dati BLOB. Nell'esempio viene creata una tabella, viene aggiunto un record di esempio, viene recuperato il record nel set di righe e viene quindi impostato il valore del campo BLOB.  
@@ -726,7 +725,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti BLOB e OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [Utilizzo di tipi di valori di grandi dimensioni](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [I BLOB e gli oggetti OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [Uso di tipi valore di grandi dimensioni](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

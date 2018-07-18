@@ -2,7 +2,6 @@
 title: InvokeService (RDS) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78c815f75b5e30713e0b7f9e5b7ec83c4c3eb6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92927a240c0501196c1b9bf0c1643f6cb0f708d4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288290"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Restituisce un puntatore all'interfaccia richiesta in una versione più in grado di oggetto.  
@@ -53,7 +53,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## <a name="return-value"></a>Valore restituito  
  Valore HRESULT che indica se la chiamata al **InvokeService** metodo ha avuto esito positivo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'implementazione di motore del cursore di servizi desktop remoto di **InvokeService** accetta il set di righe di input (o più oggetti risultati), consente di popolare il motore del cursore dal set di righe di input e quindi restituisce un puntatore in se stesso.  
   
 ## <a name="applies-to"></a>Si applica a  

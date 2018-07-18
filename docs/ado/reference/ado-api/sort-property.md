@@ -2,7 +2,6 @@
 title: Proprietà Sort | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 692a6a3e9ca2e65b031aebd8ed99c2719f0f0a69
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a42a5160c1e9e86f25c4547aef0e0ead5babe250
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281910"
 ---
 # <a name="sort-property"></a>Proprietà di ordinamento
 Indica uno o più nomi di campo in cui il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) è ordinato, e se ogni campo viene ordinato in ordine crescente o decrescente.  
@@ -38,7 +38,7 @@ Indica uno o più nomi di campo in cui il [Recordset](../../../ado/reference/ado
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **stringa** i nomi di valore che indica il campo nel **Recordset** di ordinamento. Ogni nome è separato da una virgola e, facoltativamente, è seguito da uno spazio vuoto e la parola chiave, **ASC**, che consente di ordinare il campo in ordine crescente o **DESC**, che consente di ordinare il campo in ordine decrescente. Per impostazione predefinita, se è specificata alcuna parola chiave, il campo viene ordinato in ordine crescente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa proprietà richiede la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà da impostare **adUseClient**. Verrà creato un indice temporaneo per ogni campo specificato nella **ordinamento** proprietà se non ne esiste già.  
   
  L'operazione di ordinamento è efficiente poiché i dati non è fisicamente ordinati, ma semplicemente avviene nell'ordine specificato dall'indice.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2135360e8289cd48e9a77dea289325791287db4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cd8bd35a642d72a0d3b1b934dbdc1587bd96996
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409653"
 ---
 # <a name="functions-ssis-expression"></a>Funzioni (espressione SSIS)
   Nel linguaggio delle espressioni è incluso un set di funzioni che è possibile utilizzare nelle espressioni. Un'espressione può contenere anche una sola funzione, ma in genere in un'espressione vengono utilizzate più funzioni, in combinazione con vari operatori.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  Il linguaggio delle espressioni include le funzioni matematiche seguenti.  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |[ABS &#40;espressione SSIS&#41;](../../integration-services/expressions/abs-ssis-expression.md)|Restituisce il valore positivo assoluto di un'espressione numerica.|  
 |[EXP &#40;espressione SSIS&#41;](../../integration-services/expressions/exp-ssis-expression.md)|Restituisce il valore della base e elevato all'espressione specificata.|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
  L'analizzatore di espressioni include le funzioni per i valori stringa seguenti.  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;espressione SSIS&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|Restituisce il codice Unicode corrispondente al primo carattere a sinistra in una stringa di caratteri.|  
 |[FINDSTRING &#40;espressione SSIS&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|Restituisce l'indice in base uno dell'occorrenza specificata di una determinata stringa di caratteri in un'espressione.|  
@@ -79,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
  L'analizzatore di espressioni fornisce le funzioni di data e ora seguenti.  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |[DATEADD &#40;espressione SSIS&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|Restituisce un nuovo valore DT_DBTIMESTAMP ottenuto aggiungendo una data o un intervallo di tempo a una data specificata.|  
 |[DATEDIFF &#40;espressione SSIS&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|Restituisce il numero di unità di data e ora trascorse tra due date specificate.|  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
  L'analizzatore di espressioni include le funzioni Null seguenti.  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |[ISNULL &#40;espressione SSIS&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|Restituisce un risultato booleano che varia a seconda che un'espressione abbia o meno un valore Null.|  
 |[NULL &#40;espressione SSIS&#41;](../../integration-services/expressions/null-ssis-expression.md)|Restituisce un valore Null di un tipo di dati richiesto.|  

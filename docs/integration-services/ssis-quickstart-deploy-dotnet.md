@@ -1,23 +1,21 @@
 ---
 title: Distribuire un progetto SSIS con codice .NET (C#) | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eaac43b601808460fad9714a98bb1f444df67546
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 7e1ef56dc0d535cde833f1267c681f9a33e14c98
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455405"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405503"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Distribuire un progetto SSIS con codice C# in un'app .NET
 Questa guida introduttiva illustra come scrivere codice C# per connettersi a un server di database e distribuire un progetto SSIS.
@@ -45,7 +43,7 @@ Non è possibile usare le informazioni di questa guida introduttiva per distribu
 Per distribuire il progetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
 
 1. Accedere al [portale di Azure](https://portal.azure.com/).
-2. Selezionare **Database SQL** nel menu a sinistra, quindi selezionare il database SSISDB nella pagina dei **database SQL**. 
+2. Selezionare **Database SQL** nel menu a sinistra e quindi il database SSISDB nella pagina **Database SQL**. 
 3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
 5. Fare clic su **Mostra stringhe di connessione del database**.

@@ -2,7 +2,6 @@
 title: Proprietà Description (ADO MD) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,11 +24,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62938b58b97abfb621cd4e9ea9f9c9e583c124e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b073b4719de6554159947502a525d242f37e6707
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284070"
 ---
 # <a name="description-property-ado-md"></a>Proprietà Description (ADO MD)
 Restituisce una descrizione di testo dell'oggetto corrente.  
@@ -37,7 +37,7 @@ Restituisce una descrizione di testo dell'oggetto corrente.
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un **stringa** ed è di sola lettura.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) oggetti, **descrizione** si applica solo ai membri di misure e formule. **Descrizione** restituisce una stringa vuota ("") per tutti gli altri tipi di membri. Per ulteriori informazioni sui vari tipi di membri, vedere il [tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md) proprietà.  
   
  Questa proprietà è supportata solo su **membro** gli oggetti che appartengono a un [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md) oggetto. Si verifica un errore quando questa proprietà viene fatto riferimento dal **membro** oggetti appartenenti a un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) oggetto.  

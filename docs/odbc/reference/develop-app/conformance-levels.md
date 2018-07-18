@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908126"
 ---
 # <a name="conformance-levels"></a>Livelli di conformità
 Driver ODBC consentono l'accesso all'applicazione alle origini dati diverse. Ogni driver consente all'applicazione di determinare in fase di esecuzione quali funzionalità di ODBC e la grammatica SQL quali il driver e supporta ogni origine dati. Questo non è un requisito di applicazioni progettate per funzionare con un singolo driver o un set di piccole dimensioni, noto di driver, perché queste applicazioni semplicemente possono essere scritte per le funzionalità di tale driver o driver. Per consentire applicazioni di individuare i driver e le funzionalità di origine dati, sono disponibili due aree di conformità: l'interfaccia ODBC e la grammatica SQL.  

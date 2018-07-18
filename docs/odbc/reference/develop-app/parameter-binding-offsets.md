@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913516"
 ---
 # <a name="parameter-binding-offsets"></a>Offset di associazione di parametri
 Un'applicazione può specificare che un offset viene aggiunto per associare gli indirizzi di buffer di parametro e l'indicatore di lunghezza corrispondente buffer indirizzi quando **SQLExecDirect** o **SQLExecute** viene chiamato. Il risultato di queste aggiunte determina gli indirizzi usati in queste operazioni.  

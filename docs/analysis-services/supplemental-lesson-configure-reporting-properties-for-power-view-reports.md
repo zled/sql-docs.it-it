@@ -1,5 +1,5 @@
 ---
-title: Configurare le proprietà di creazione di report per i report Power View | Documenti Microsoft
+title: Configurare le proprietà di creazione di report per i report Power View | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033430"
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Supplementare lezione - configurare le proprietà di creazione di report per i report Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -26,7 +27,7 @@ Tempo stimato per il completamento della lezione: **30 minuti**
 Questa lezione supplementare fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività di questa lezione supplementare, è necessario avere completato tutte le lezioni precedenti.  
 Per completare questa lezione supplementare specifica, è necessario disporre anche degli elementi seguenti:  
   
--   Il progetto AW Internet Sales (completato questa esercitazione) pronto per essere distribuito o già distribuito in un server Analysis Services.  
+-   Il progetto AW Internet Sales (completato con questa esercitazione) pronto per essere distribuito o già distribuito in un server Analysis Services.  
   
   
 ## <a name="model-properties-that-affect-reporting"></a>Proprietà del modello che influiscono sulla creazione di report  
@@ -68,7 +69,7 @@ Talvolta potrebbe essere necessario creare nuovi dati nel modello utilizzando le
     |Year Month|=[Calendar Year] & FORMAT([Month],"#00")|  
   
 ## <a name="default-field-set"></a>Set di campi predefiniti  
-Il Set di campi predefinito è un elenco predefinito di colonne e misure per una tabella che vengono aggiunte automaticamente a un'area di disegno report quando si fa clic su un tabella nell'elenco di campi del report. Essenzialmente, è possibile specificare le colonne, le misure e l'ordinamento dei campi predefiniti che gli utenti desiderano visualizzare quando questa tabella viene mostrata nei report Power View.  Per il modello Internet Sales verranno definiti un set di campi predefiniti e l'ordine delle tabelle Customer, Geography e Product. Sono incluse solo le colonne più comuni che gli utenti desiderano visualizzare durante l'analisi dei dati del modello Adventure Works Internet Sales utilizzando i report Power View.  
+Set di campi predefiniti è un elenco predefinito di colonne e misure per una tabella che vengono aggiunti automaticamente a un'area di disegno report quando la tabella viene fatto clic su nell'elenco di campi del report. Essenzialmente, è possibile specificare le colonne, le misure e l'ordinamento dei campi predefiniti che gli utenti desiderano visualizzare quando questa tabella viene mostrata nei report Power View.  Per il modello Internet Sales verranno definiti un set di campi predefiniti e l'ordine delle tabelle Customer, Geography e Product. Sono incluse solo le colonne più comuni che gli utenti desiderano visualizzare durante l'analisi dei dati del modello Adventure Works Internet Sales utilizzando i report Power View.  
   
 Per informazioni dettagliate sui Set di campi predefiniti, vedere [configurare Set di campi predefiniti per i report Power View](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) nella documentazione Online di SQL Server.  
   
@@ -105,7 +106,7 @@ Per informazioni dettagliate sui Set di campi predefiniti, vedere [configurare S
 ## <a name="table-behavior"></a>Comportamento tabella  
 Utilizzando le proprietà Comportamento tabella è possibile modificare il comportamento della tabella per diversi tipi di visualizzazioni e comportamenti di raggruppamento per le tabelle utilizzate nei report Power View. In questo modo viene fornita una posizione predefinita migliore per le informazioni di identificazione quali nomi, immagini o titoli nei layout di sezioni, schede e grafici.  
   
-Per informazioni dettagliate sulle proprietà comportamento tabella, vedere [configurare le proprietà del comportamento tabella per i report Power View](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) nella documentazione Online di SQL Server.  
+Per informazioni dettagliate sulle proprietà comportamento tabella, vedere [configurare le proprietà di comportamento tabella per i report Power View](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) nella documentazione Online di SQL Server.  
   
 #### <a name="to-set-table-behavior"></a>Per impostare il comportamento delle tabelle 
   
@@ -130,7 +131,7 @@ Per informazioni dettagliate sulle proprietà comportamento tabella, vedere [con
 ## <a name="reporting-properties-for-columns"></a>Proprietà report per le colonne  
 Per migliorare la creazione di report del modello è possibile impostare diverse proprietà relative alle colonne di base e alla creazione di report specifici. Ad esempio, gli utenti potrebbero non voler visualizzare tutte le colonne in ogni tabella. Nello stesso modo in cui sono state precedentemente nascoste le tabelle Product Category e Product Subcategory, è possibile nascondere colonne particolari di una tabella che, normalmente, sono visualizzate, utilizzando la proprietà Nascosta di una colonna. Altre proprietà, ad esempio Formato dati e Ordina per colonna, possono influire anche sulla modalità di visualizzazione dei dati delle colonne nei report. Nell'esempio, alcune di esse vengono impostate in colonne particolari. Le altre colonne per cui non è richiesta alcuna azione non vengono mostrate di seguito.  
   
-In questo esempio vengono impostate solo alcune delle diverse proprietà di colonne. Per ulteriori informazioni sulla colonna, le proprietà dei report, vedere [proprietà colonna](../analysis-services/tabular-models/column-properties-ssas-tabular.md) nella documentazione Online di SQL Server.  
+In questo esempio vengono impostate solo alcune delle diverse proprietà di colonne. Per altre informazioni sulla colonna proprietà report, vedere [le proprietà delle colonne](../analysis-services/tabular-models/column-properties-ssas-tabular.md) nella documentazione Online di SQL Server.  
   
 #### <a name="to-set-properties-for-columns"></a>Per impostare le proprietà per le colonne  
   
@@ -146,7 +147,7 @@ In questo esempio vengono impostate solo alcune delle diverse proprietà di colo
   
     **Customer**  
   
-    |Colonna|Proprietà|Value|  
+    |colonna|Proprietà|valore|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Birth Date|Formato dati|Short Date|  
@@ -154,11 +155,11 @@ In questo esempio vengono impostate solo alcune delle diverse proprietà di colo
     **Date**  
   
     > [!NOTE]  
-    > Poiché la tabella Date è stata selezionata come tabella data dei modelli utilizzando l'impostazione Contrassegna come tabella data, illustrata nella Lezione 7: Contrassegna come tabella data, e la colonna Date dell'omonima tabella come colonna da utilizzare come identificatore univoco, la proprietà Row Identifier per la colonna Date sarà impostata automaticamente su True e non potrà essere modificata. Quando si utilizzano funzioni di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data. In questo modello sono state create diverse misure utilizzando funzioni di Business Intelligence per le gerarchie temporali per calcolare i dati di vendita per diversi periodi, ad esempio i trimestri precedente e corrente, nonché per essere utilizzati negli indicatori KPI. Per ulteriori informazioni sulla specifica di una tabella data, vedere [specificare contrassegna come tabella data per l'utilizzo con tempo Intelligence](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) nella documentazione Online di SQL Server.  
+    > Poiché la tabella Date è stata selezionata come tabella data dei modelli utilizzando l'impostazione Contrassegna come tabella data, illustrata nella Lezione 7: Contrassegna come tabella data, e la colonna Date dell'omonima tabella come colonna da utilizzare come identificatore univoco, la proprietà Row Identifier per la colonna Date sarà impostata automaticamente su True e non potrà essere modificata. Quando si utilizzano funzioni di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data. In questo modello sono state create diverse misure utilizzando funzioni di Business Intelligence per le gerarchie temporali per calcolare i dati di vendita per diversi periodi, ad esempio i trimestri precedente e corrente, nonché per essere utilizzati negli indicatori KPI. Per altre informazioni su come specificare una tabella data, vedere [specificare contrassegna come tabella data per l'uso con Intelligence tempo](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) nella documentazione Online di SQL Server.  
   
-    |Colonna|Proprietà|Value|  
+    |colonna|Proprietà|valore|  
     |----------|------------|---------|  
-    |Data|Formato dati|Short Date|  
+    |date|Formato dati|Short Date|  
     |Day Number of Week|Hidden|True|  
     |Day Name|Sort By Column|Day Number of Week|  
     |Day of Week|Hidden|True|  
@@ -173,14 +174,14 @@ In questo esempio vengono impostate solo alcune delle diverse proprietà di colo
   
     **Geography**  
   
-    |Colonna|Proprietà|Value|  
+    |colonna|Proprietà|valore|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |ID territorio vendita|Hidden|True|  
   
     **Product**  
   
-    |Colonna|Proprietà|Value|  
+    |colonna|Proprietà|valore|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|Etichetta predefinita|True|  
@@ -190,7 +191,7 @@ In questo esempio vengono impostate solo alcune delle diverse proprietà di colo
   
     **Internet Sales**  
   
-    |Colonna|Proprietà|Value|  
+    |colonna|Proprietà|valore|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  
@@ -207,7 +208,7 @@ Poiché il modello è stato modificato, è necessario ridistribuirlo.
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Per ridistribuire il modello tabulare Adventure Works Internet Sales  
   
--   In SSDT, fare clic su di **compilare** menu e quindi fare clic su **Distribuisci Adventure Works Internet Sales Model**.  
+-   In SSDT scegliere il **compilare** menu e quindi fare clic su **Distribuisci Adventure Works Internet Sales Model**.  
   
     Si aprirà la finestra di dialogo **Distribuisci** in cui sono indicati lo stato della distribuzione dei metadati e ogni tabella inclusa nel modello.  
   

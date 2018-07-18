@@ -1,14 +1,12 @@
 ---
-title: 'Ibcpsession:: BCPColFmt (OLE DB) | Documenti Microsoft'
+title: 'Ibcpsession:: BCPColFmt (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 47b274e26b3a0331dbe31464380b28cf814b382a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e11dc5983421ce89cf29131212c2d193fda20326
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432540"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,14 +47,14 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Il **BCPColFmt** metodo viene utilizzato per creare un'associazione tra campi del file di dati BCP e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonne. Accetta come parametri la lunghezza, il tipo, il carattere di terminazione e la lunghezza del prefisso di una colonna e imposta ciascuna di queste proprietà per i singoli campi.  
   
  Se l'utente sceglie la modalità interattiva, questo metodo viene chiamato due volte, una volta per impostare il formato della colonna in base ai valori predefiniti (che dipendono dal tipo di colonna del server) e una volta per impostare il formato in base al tipo di client selezionato durante la modalità interattiva, per ogni colonna.  
   
  Nelle modalità non interattive, viene chiamato una sola volta per colonna per impostare il tipo di ogni colonna sul carattere o sul tipo nativo e impostare i caratteri di terminazione di colonna e riga.  
   
- Il **BCPColFmt** metodo consente di specificare il formato di file utente per le copie bulk. Per la copia bulk, un formato contiene le parti seguenti:  
+ Il **BCPColFmt** metodo consente di specificare il formato del file utente per le copie bulk. Per la copia bulk, un formato contiene le parti seguenti:  
   
 -   Un mapping dai campi del file utente alle colonne del database.  
   
@@ -69,10 +68,10 @@ HRESULT BCPColFmt(
   
 -   La lunghezza della sequenza di byte di terminazione facoltativa.  
   
- Ogni chiamata a **BCPColFmt** specifica il formato per un campo del file utente. Ad esempio, per modificare le impostazioni predefinite per tre campi in un file di dati utente cinque campi, chiamare innanzitutto `BCPColumns(5)`e quindi chiamare **BCPColFmt** cinque volte, con tre di queste chiamate impostano il formato personalizzato. Per le due chiamate rimanenti, impostare *eUserDataType* su BCP_TYPE_DEFAULT e *cbIndicator*, *cbUserData*, e *cbUserDataTerm*su 0, BCP_VARIABLE_LENGTH e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
+ Ogni chiamata a **BCPColFmt** specifica il formato per un campo del file utente. Ad esempio, per modificare le impostazioni predefinite per tre campi in un file di dati utente cinque campi, chiamare innanzitutto `BCPColumns(5)`, quindi chiamare **BCPColFmt** cinque volte, con tre di queste chiamate impostano il formato personalizzato. Per le due chiamate rimanenti, impostare *eUserDataType* su BCP_TYPE_DEFAULT e impostiamo *cbIndicator*, *cbUserData*, e *cbUserDataTerm*su 0, BCP_VARIABLE_LENGTH e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
   
 > [!NOTE]  
->  Il [ibcpsession:: BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) metodo deve essere chiamato prima delle chiamate a **BCPColFmt**. È necessario chiamare **BCPColFmt** una volta per ogni colonna nel file utente. La chiamata **BCPColFmt** più di una volta per qualsiasi file utente colonna, viene generato un errore.  
+>  Il [ibcpsession:: BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) metodo deve essere chiamato prima di qualsiasi chiamata **BCPColFmt**. È necessario chiamare **BCPColFmt** una volta per ogni colonna nel file utente. La chiamata **BCPColFmt** più di una volta per qualsiasi file utente colonna, viene generato un errore.  
   
  Non è necessario copiare tutti i dati di un file utente in una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ignorare una colonna, specificare il formato dei dati per la colonna impostando il parametro idxServerCol su 0. Per ignorare un campo, è necessario comunque disporre di tutte le informazioni affinché il metodo possa funzionare correttamente.  
   
@@ -83,7 +82,7 @@ HRESULT BCPColFmt(
  Indice del campo nel file di dati dell'utente.  
   
  *eUserDataType*[in]  
- Il tipo di dati del campo nel file di dati dell'utente. I tipi di dati disponibili sono elencati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] formato di file di intestazione di Native Client (SQLNCLI. h) con BCP_TYPE_XXX, ad esempio, BCP_TYPE_SQLINT4. Se viene specificato il valore BCP_TYPE_DEFAULT, il provider tenta di utilizzare lo stesso tipo della colonna della tabella o della vista. Per le operazioni di copia bulk di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e in un file quando il **eUserDataType** argomento è BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
+ Il tipo di dati del campo nel file di dati dell'utente. I tipi di dati disponibili sono elencati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] formato di file di intestazione di Native Client (SQLNCLI. h) con BCP_TYPE_XXX, ad esempio, BCP_TYPE_SQLINT4. Se viene specificato il valore BCP_TYPE_DEFAULT, il provider tenta di utilizzare lo stesso tipo della colonna della tabella o della vista. Per le operazioni di copia bulk fuori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e in un file quando il **eUserDataType** argomento è BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
   
 -   Se la colonna di origine non è decimal o numeric, vengono utilizzate la precisione e la scala predefinite.  
   
@@ -95,13 +94,13 @@ HRESULT BCPColFmt(
  *cbUserData*[in]  
  Lunghezza massima, espressa in byte, dei dati del campo nel file utente, senza includere la lunghezza di un carattere di terminazione o di un indicatore di lunghezza.  
   
- Impostazione **cbUserData** su BCP_LENGTH_NULL indica che tutti i valori nei dati di file i campi sono o dovrebbero essere impostati su NULL. Impostazione **cbUserData** su BCP_LENGTH_VARIABLE indica che il sistema deve determinare la lunghezza dei dati per ogni campo. Per alcuni campi, questo potrebbe indicare che viene generato un indicatore di lunghezza o Null da anteporre ai dati in una copia da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o che l'indicatore è previsto nei dati copiati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ L'impostazione **cbUserData** su BCP_LENGTH_NULL indica che tutti i valori nei dati di file i campi sono o dovrebbero essere impostati su NULL. L'impostazione **cbUserData** su BCP_LENGTH_VARIABLE indica che il sistema deve determinare la lunghezza dei dati per ogni campo. Per alcuni campi, questo potrebbe indicare che viene generato un indicatore di lunghezza o Null da anteporre ai dati in una copia da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o che l'indicatore è previsto nei dati copiati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caratteri e i tipi di dati binari, **cbUserData** può essere BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 o un valore positivo. Se **cbUserData** è BCP_LENGTH_VARIABLE, il sistema utilizza l'indicatore di lunghezza, se presente, o una sequenza di caratteri di terminazione per determinare la lunghezza dei dati. Se vengono specificati sia un indicatore di lunghezza che una sequenza di caratteri di terminazione, la copia bulk utilizza la modalità che comporta la copia del minor numero di dati. Se **cbUserData** è BCP_LENGTH_VARIABLE, i dati di tipo è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo carattere o binario, e se viene specificata né un indicatore di lunghezza né una sequenza di caratteri di terminazione, il sistema restituisce un messaggio di errore.  
+ Per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caratteri e tipi di dati binari **cbUserData** può essere BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 o un valore positivo. Se **cbUserData** è BCP_LENGTH_VARIABLE, il sistema utilizza l'indicatore di lunghezza, se presente, o una sequenza di caratteri di terminazione per determinare la lunghezza dei dati. Se vengono specificati sia un indicatore di lunghezza che una sequenza di caratteri di terminazione, la copia bulk utilizza la modalità che comporta la copia del minor numero di dati. Se **cbUserData** è BCP_LENGTH_VARIABLE, i dati di tipo è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo carattere o binario, e se viene specificata né un indicatore di lunghezza né una sequenza di caratteri di terminazione, il sistema restituisce un messaggio di errore.  
   
- Se **cbUserData** è 0 o un valore positivo, il sistema utilizza **cbUserData** come lunghezza massima dei dati. Tuttavia, se, oltre a un valore positivo **cbUserData**, viene specificato un carattere di terminazione o di un indicatore di lunghezza sequenza, il sistema determina la lunghezza dei dati tramite il metodo che comporta la quantità minima di dati da copiare.  
+ Se **cbUserData** è 0 o un valore positivo, il sistema Usa **cbUserData** come lunghezza massima dei dati. Tuttavia, se, oltre a un numero positivo **cbUserData**, una sequenza di carattere di terminazione o di un indicatore di lunghezza viene specificata, il sistema determina la lunghezza dei dati tramite il metodo che restituisce la quantità minima di dati da copiare.  
   
- Il **cbUserData** valore rappresenta il numero di byte di dati. Se i dati di tipo carattere vengono rappresentati come caratteri wide Unicode, un numero positivo **cbUserData** valore del parametro rappresenta il numero di caratteri moltiplicato per la dimensione, in byte, di ogni carattere.  
+ Il **cbUserData** valore rappresenta il numero di byte di dati. Se i dati di tipo carattere vengono rappresentati come caratteri wide Unicode, un numero positivo **cbUserData** parametro value rappresenta il numero di caratteri moltiplicato per la dimensione, espressa in byte, di ogni carattere.  
   
  *pbUserDataTerm*[size_is][in]  
  Sequenza di caratteri di terminazione da utilizzare per il campo. Questo parametro risulta particolarmente utile per i dati di tipo carattere, in quanto tutti gli altri tipi hanno una lunghezza fissa o, nel caso dei dati binari, richiedono un indicatore di lunghezza per registrare in modo accurato il numero di byte presenti.  
@@ -116,7 +115,7 @@ HRESULT BCPColFmt(
  Lunghezza, espressa in byte, della sequenza di caratteri di terminazione da utilizzare per la colonna. Se non sono presenti caratteri di terminazione nei dati o non si desidera includerli, impostare questo valore su 0.  
   
  *idxServerCol*[in]  
- Posizione ordinale della colonna nella tabella del database. Il numero della prima colonna è 1. La posizione ordinale di una colonna è indicata da **IColumnsInfo:: GetColumnInfo** o metodi simili. Se questo valore è 0, la copia bulk ignora il campo nel file di dati.  
+ Posizione ordinale della colonna nella tabella del database. Il numero della prima colonna è 1. La posizione ordinale di una colonna viene indicata da **IColumnsInfo:: GetColumnInfo** o metodi simili. Se questo valore è 0, la copia bulk ignora il campo nel file di dati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  S_OK  

@@ -1,5 +1,5 @@
 ---
-title: Expanded-QName (XQuery) | Documenti Microsoft
+title: Expanded-QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b76f85fae2f01322838c40b79227da896fabd01c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039622"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funzioni correlate a elementi QName - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce un valore di tipo xs: QName con lo spazio dei nomi specificato nell'URI di *$paramURI* e il nome locale specificato nella *$paramLocal*. Se *$paramURI* è una stringa vuota o una sequenza vuota, che rappresenta nessuno spazio dei nomi.  
+  Restituisce un valore del tipo xs: QName con lo spazio dei nomi specificato nell'URI le *$paramURI* e il nome locale specificato nella *$paramLocal*. Se *$paramURI* è una stringa vuota o una sequenza vuota, rappresenta nessuno spazio dei nomi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,24 +48,24 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  Parte dell'elemento QName che rappresenta il nome locale.  
   
-## <a name="remarks"></a>Osservazioni  
- Nell'esempio si applica al **expanded-QName()** funzione:  
+## <a name="remarks"></a>Note  
+ Si applica quanto segue per il **expanded-QName()** funzione:  
   
--   Se il *$paramLocal* valore specificato non è nella forma lessicale corretta per il tipo xs: NCName, la sequenza vuota, viene restituita e rappresenta un errore dinamico.  
+-   Se il *$paramLocal* valore specificato non è presente nella forma lessicale corretta per il tipo xs: NCName, la sequenza vuota, viene restituita e rappresenta un errore dinamico.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta la conversione dal tipo xs:QName a un tipo diverso. Per questo motivo, il **expanded-QName()** funzione non può essere utilizzata nella costruzione di strutture XML. Ad esempio, quando si costruisce un nodo come `<e> expanded-QName(…) </e>`, il valore deve essere non tipizzato. A questo scopo è necessario convertire il valore del tipo xs:QName restituito da `expanded-QName()` in xdt:untypedAtomic. La funzionalità non è tuttavia supportata. Una soluzione a questo problema è illustrata in un esempio di seguito in questo argomento.  
   
--   È possibile modificare o confrontare i valori di tipo QName esistenti. Ad esempio, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` confronta il valore dell'elemento, <`e`>, con l'elemento QName restituito dal **expanded-QName()** (funzione).  
+-   È possibile modificare o confrontare i valori di tipo QName esistenti. Ad esempio, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` confronta il valore dell'elemento <`e`>, con l'elemento QName restituito dalle **expanded-QName()** (funzione).  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo di [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo i [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. Sostituzione di un valore di nodo di tipo QName  
  Nell'esempio seguente viene illustrata la procedura per modificare il valore di un nodo elemento di tipo QName. Nell'esempio vengono eseguite le operazioni seguenti:  
   
 -   Crea una raccolta di XML Schema che definisce un elemento di tipo QName.  
   
--   Crea una tabella con un **xml** colonna di tipo mediante la raccolta di XML schema.  
+-   Crea una tabella con un **xml** colonna del tipo tramite la raccolta di XML schema.  
   
 -   Salva un'istanza XML nella tabella.  
   
@@ -105,7 +106,7 @@ go
 </Root>   
 ```  
   
- Nella query seguente, il <`ElemQN`> valore dell'elemento viene sostituito con il **Modify ()** metodo del tipo di dati xml e il valore di sostituzione dell'istruzione DML XML, come illustrato.  
+ Nella query seguente, la <`ElemQN`> valore dell'elemento viene sostituito con il **Modify ()** metodo il tipo di dati xml e il valore di sostituzione dell'istruzione XML DML, come illustrato.  
   
 ```  
 -- the value.  
@@ -193,7 +194,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- È possibile confrontare il valore dell'elemento QName, come illustrato nella query seguente. La query restituisce solo il <`root`> gli elementi i cui valori corrispondono il nome completo del tipo valore restituito dal **expanded-QName()** (funzione).  
+ È possibile confrontare il valore dell'elemento QName, come illustrato nella query seguente. La query restituisce solo il <`root`> gli elementi i cui valori corrispondono il nome completo del tipo valore restituito per il **expanded-QName()** (funzione).  
   
 ```  
 SELECT xmlCol.query('  
@@ -207,7 +208,7 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
- Un limite: il **expanded-QName()** funzione accetta la sequenza vuota come secondo argomento e restituisce un valore vuoto invece di generare un errore di run-time quando il secondo argomento non è corretto.  
+ È una limitazione: la **expanded-QName()** funzione accetta la sequenza vuota come secondo argomento e restituisce un valore vuoto anziché generare un errore di run-time quando il secondo argomento non è corretto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Le funzioni correlate a elementi QName &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  

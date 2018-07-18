@@ -1,5 +1,5 @@
 ---
-title: Query XQuery che implicano gerarchia | Documenti Microsoft
+title: Query XQuery relative alle gerarchia | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,20 +24,21 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dd9e93969bd8677311edc22ae61f314c8b89c5d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048291"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Esecuzione di query XQuery che coinvolgono gerarchie
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  La maggior parte delle **xml** colonne di tipo di **AdventureWorks** database sono documenti semistrutturati. I documenti archiviati nelle diverse righe possono pertanto avere aspetti diversi. Le query di esempio contenute in questo argomento illustrano come estrarre informazioni dai vari documenti.  
+  La maggior parte degli **xml** colonne di tipo i **AdventureWorks** database sono documenti semistrutturati. I documenti archiviati nelle diverse righe possono pertanto avere aspetti diversi. Le query di esempio contenute in questo argomento illustrano come estrarre informazioni dai vari documenti.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Recupero delle posizioni dei centri di lavorazione, insieme al primo passaggio di produzione eseguito in tali centri, dai documenti contenenti le istruzioni per la produzione  
- Per il modello di prodotto 7, la query costruisce codice XML che include il <`ManuInstr`> elemento, con **ProductModelID** e **ProductModelName** gli attributi e uno o più <`Location`> elementi figlio.  
+ Per il modello di prodotto 7, la query costruisce codice XML che include il <`ManuInstr`> elemento, con **ProductModelID** e **ProductModelName** attributi e uno o più <`Location`> elementi figlio.  
   
  Ogni elemento <`Location`> ha un proprio set di attributi e un elemento figlio <`step`>. L'elemento figlio <`step`>; corrisponde al primo passaggio di produzione eseguito nel centro di lavorazione.  
   
@@ -66,7 +67,7 @@ WHERE ProductModelID=7
   
 -   I token per lo scambio di contesto, {) e (}, vengono utilizzati nella query per passare dalla costruzione delle informazioni XML alla valutazione della query.  
   
--   Il **SQL: Column** viene utilizzata per includere un valore relazionale nel codice XML che viene costruito.  
+-   Il **Column** viene usato per includere un valore relazionale nel codice XML che viene costruito.  
   
 -   Nella creazione dell'elemento <`Location`> $wc/@* recupera tutti gli attributi dei centri di lavorazione.  
   
@@ -120,7 +121,7 @@ WHERE ContactID = 1
   
  Per recuperare solo i numeri di telefono di livello principale, in particolare gli elementi figlio <`telephoneNumber`> di <`AdditionalContactInfo`>, l'espressione FOR utilizzata nella query viene modificata come segue:  
   
- `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
+ `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`(Indici per tabelle con ottimizzazione per la memoria).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su XQuery](../xquery/xquery-basics.md)   

@@ -1,0 +1,52 @@
+---
+title: Esecuzione preparata | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology: native-client
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- deferred statement preparation
+- prepared execution [ODBC]
+- SQLPrepare function
+- ODBC applications, statements
+- SQLExecute function
+- statements [ODBC], prepared execution
+ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
+caps.latest.revision: 34
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cb164a8aef2cba749d4b9b22ee873a1638ea9108
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428130"
+---
+# <a name="prepared-execution"></a>Esecuzione preparata
+  L'API ODBC definisce l'esecuzione preparata per ridurre l'overhead dell'analisi e della compilazione associato all'esecuzione ripetuta di un'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Nell'applicazione viene compilata una stringa di caratteri contenente un'istruzione SQL che viene eseguita in due fasi. Viene chiamato [funzione SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360) una volta per l'istruzione analizzata e compilata in un piano di esecuzione mediante il [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Chiama poi **SQLExecute** per ogni esecuzione del piano di esecuzione preparata. con conseguente risparmio dell'overhead correlato all'analisi e alla compilazione in ogni esecuzione. L'esecuzione preparata viene generalmente utilizzata dalle applicazioni per eseguire ripetutamente la stessa istruzione SQL con parametri.  
+  
+ Per la maggior parte dei database, l'esecuzione preparata è più veloce dell'esecuzione diretta per le istruzioni eseguite più di tre o quattro volte, sopratutto perché l'istruzione viene compilata una sola volta, mentre le istruzioni eseguite direttamente vengono compilate ogni volta che vengono eseguite. L'esecuzione preparata può inoltre offrire una riduzione del traffico di rete perché il driver può inviare all'origine dati un identificatore del piano di esecuzione e i valori dei parametri, anziché un'intera istruzione SQL, ogni volta che viene eseguita l'istruzione.  
+  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Consente di ridurre la differenza nelle prestazioni tra l'esecuzione diretta e preparata tramite algoritmi migliorati per il rilevamento e il riutilizzo dei piani di esecuzione dal **SQLExecDirect**. offrendo alle istruzioni eseguite direttamente alcuni dei vantaggi di prestazioni associati all'esecuzione preparata. Per altre informazioni, vedere [esecuzione diretta](direct-execution.md).  
+  
+ In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è inoltre disponibile il supporto nativo per l'esecuzione preparata. Un piano di esecuzione si basa **SQLPrepare** ed eseguito in un secondo momento quando **SQLExecute** viene chiamato. In quanto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non è necessario per compilare stored procedure temporanee **SQLPrepare**, non vi è alcun overhead aggiuntivo nelle tabelle di sistema nella **tempdb**.  
+  
+ Per motivi di prestazioni, la preparazione dell'istruzione viene posticipata fino alla **SQLExecute** viene chiamato o un'operazione della metaproprietà (ad esempio [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md) o [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)in ODBC) viene eseguita. Questo è il comportamento predefinito. Eventuali errori nell'istruzione da preparare saranno noti solo dopo l'esecuzione dell'istruzione o dell'operazione di metaproprietà. È possibile disattivare questo comportamento predefinito impostando l'attributo SQL_SOPT_SS_DEFER_PREPARE dell'istruzione specifica del driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client su SQL_DP_OFF.  
+  
+ In caso di posticipata preparare, se si chiama **SQLDescribeCol** oppure **SQLDescribeParam** prima di chiamare **SQLExecute** genera un round trip aggiuntivo al server. Sul **SQLDescribeCol**, il driver rimuove la clausola WHERE della query e lo invia al server con SET FMTONLY ON per ottenere la descrizione delle colonne nel primo set di risultati restituiti dalla query. Sul **SQLDescribeParam**, il driver chiama il server per ottenere una descrizione delle espressioni o delle colonne a cui fanno riferimento i marcatori di parametro nella query. Questo metodo presenta inoltre alcune restrizioni, ad esempio non è in grado di risolvere i parametri nelle sottoquery.  
+  
+ Utilizzo di eccessivo **SQLPrepare** con il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client comporta una riduzione delle prestazioni, soprattutto quando connesso a versioni precedenti di SQL Server. L'esecuzione preparata non deve essere utilizzata per le istruzioni eseguite una sola volta. L'esecuzione preparata è più lenta dell'esecuzione diretta per una singola esecuzione di un'istruzione perché richiede un round trip in rete aggiuntivo dal client al server. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene inoltre generata una stored procedure temporanea.  
+  
+ Le istruzioni preparate non possono essere utilizzate per creare oggetti temporanei in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  
+ Alcune applicazioni ODBC precedenti utilizzati **SQLPrepare** ogniqualvolta [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) è stato usato. **SQLBindParameter** non richiede l'uso di **SQLPrepare**, può essere utilizzato con **SQLExecDirect**. Ad esempio, usare **SQLExecDirect** con **SQLBindParameter** per recuperare il codice restituito o di output da una stored procedure che viene eseguita una sola volta. Non utilizzare **SQLPrepare** con **SQLBindParameter** , a meno che la stessa istruzione viene eseguita più volte.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [L'esecuzione di istruzioni &#40;ODBC&#41;](executing-statements-odbc.md)  
+  
+  

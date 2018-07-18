@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -40,15 +38,16 @@ helpviewer_keywords:
 - groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b1a99af7b5758f77883da3f2a755aaa4bdfdd1a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41bd67d9005d5862bdb24d8112b2a04d023f4141
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943157"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +73,7 @@ Per un elenco di tutte le autorizzazioni, vedere il poster [Autorizzazioni del m
   
  La tabella seguente contiene i ruoli predefiniti del database e le rispettive caratteristiche. Questi ruoli esistono in tutti i database. Fatta eccezione per il ruolo del database **pubblico**, non è possibile modificare le autorizzazioni concesse ai ruoli predefiniti del database.   
   
-|Nome del ruolo predefinito del database|Description|  
+|Nome del ruolo predefinito del database|Descrizione|  
 |-------------------------------|-----------------|  
 |**db_owner**|I membri del ruolo predefinito del database **db_owner** possono eseguire tutte le attività di configurazione e di manutenzione sul database e anche eliminare il database in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]alcune attività di manutenzione richiedono autorizzazioni a livello di server e non possono essere eseguite da ruoli **db_owner**.|  
 |**db_securityadmin**|I membri del ruolo predefinito del database **db_securityadmin** possono modificare le appartenenze al ruolo e gestire le autorizzazioni. L'aggiunta di entità a questo ruolo potrebbe provocare un'imprevista intensificazione dei privilegi.|  
@@ -94,7 +93,7 @@ Non è possibile modificare le autorizzazioni concesse ai ruoli predefiniti del 
 
 Questi ruoli del database si trovano solo nel database master virtuale. Le autorizzazioni di questi ruoli sono limitate alle azioni eseguite nel database master. Solo gli utenti di database nel database master possono essere aggiunti a questi ruoli. Gli account di accesso non possono essere aggiunti a questi ruoli, ma è possibile creare utenti in base agli account di accesso e quindi aggiungere questi utenti ai ruoli. Anche gli utenti di database indipendenti nel database master possono essere aggiunti a questi ruoli.
 
-|Nome ruolo|Description|  
+|Nome ruolo|Descrizione|  
 |--------------------|-----------------|
 **dbmanager** | Può creare ed eliminare database. Un membro del ruolo dbmanager che crea un database diventa il proprietario del database e questo permette all'utente di connettersi al database come utente dbo. L'utente dbo ha tutte le autorizzazioni database nel database. I membri del ruolo dbmanager non hanno necessariamente l'autorizzazione necessaria per accedere ai database di cui non sono proprietari.
 **loginmanager** | Può creare ed eliminare account di accesso nel database master virtuale.  
@@ -105,7 +104,7 @@ Questi ruoli del database si trovano solo nel database master virtuale. Le autor
 ## <a name="msdb-roles"></a>Ruoli msdb  
  Il database msdb contiene ruoli specifici per uno scopo illustrati nella tabella seguente.  
   
-|Nome del ruolo in msdb|Description|  
+|Nome del ruolo in msdb|Descrizione|  
 |--------------------|-----------------|  
 |**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|I membri di tali ruoli del database possono amministrare e utilizzare [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aggiornate da una versione precedente potrebbero contenere una versione precedente del ruolo che era stata denominata usando Data Transformation Services (DTS) anziché [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Per altre informazioni, vedere [Ruoli Integration Services &#40;servizio SSIS&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|I membri di tali ruoli del database possono amministrare e utilizzare l'agente di raccolta dati. Per altre informazioni, vedere [Data Collection](../../../relational-databases/data-collection/data-collection.md).|  
@@ -122,7 +121,7 @@ Questi ruoli del database si trovano solo nel database master virtuale. Le autor
 
 Quando R Services è installato, i ruoli di database aggiuntivi sono disponibili per la gestione dei pacchetti. Per altre informazioni, vedere [R Package management for SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)(Gestione dei pacchetti R per SQL Server).
 
-|Nome ruolo |Description|  
+|Nome ruolo |Descrizione|  
 |-------------|-----------------|
 |**rpkgs-users** |Consente agli utenti di usare i pacchetti condivisi installati dai membri del ruolo condiviso rpkgs.|
 |**rpkgs-private** |Fornisce accesso ai pacchetti condivisi con le stesse autorizzazioni del ruolo rpkgs-users. I membri di questo ruolo possono inoltre installare, rimuovere e usare pacchetti con ambito privato.|
@@ -131,7 +130,7 @@ Quando R Services è installato, i ruoli di database aggiuntivi sono disponibili
 ## <a name="working-with-database-level-roles"></a>Utilizzo di ruoli a livello di database  
  Nella tabella seguente vengono spiegati i comandi, le viste e le funzioni necessari per l'utilizzo dei ruoli a livello di database.  
   
-|Funzionalità|Tipo|Description|  
+|Funzionalità|Tipo|Descrizione|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|Metadati|Restituisce un elenco dei ruoli predefiniti del database.|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|Metadati|Visualizza le autorizzazioni di un ruolo predefinito del database.|  

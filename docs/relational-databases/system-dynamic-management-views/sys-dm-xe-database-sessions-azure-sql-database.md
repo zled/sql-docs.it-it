@@ -1,5 +1,5 @@
 ---
-title: Sys.dm xe_database_sessions (Database SQL di Azure) | Documenti Microsoft
+title: Sys.dm_xe_database_sessions (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
@@ -17,12 +17,13 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 28759d7101a8a798223a92b9201e0e9aa930a4fa
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984200"
 ---
-# <a name="sysdmxedatabasesessions-azure-sql-database"></a>Sys.dm xe_database_sessions (Database SQL di Azure)
+# <a name="sysdmxedatabasesessions-azure-sql-database"></a>Sys.dm_xe_database_sessions (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Restituisce informazioni sugli eventi di sessione. Gli eventi sono punti di esecuzione discreti. I predicati possono essere applicati agli eventi per arrestarne la generazione se l'evento non contiene le informazioni necessarie.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/23/2018
  È richiesta l'autorizzazione VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
-A partire da 2015-07-13, xe_objects' fa parte di queste DMV XEvent che non contengono nel nome "database". Non è un errore di digitazione o un errore nella colonna a destra della tabella seguente. Il nome è lo stesso in Microsoft SQL Server e Database SQL di Azure. GeneMi.  
+A partire da 2015-07-13, '. dm xe_objects' è una di queste DMV XEvent che non contengono database' nel nome. Non è un errore di digitazione o un errore nella colonna a destra della tabella seguente. Il nome è lo stesso in Microsoft SQL Server e Database SQL di Azure. GeneMi.  
   
 |From|Per|Relazione|  
 |--------|------|----------------|  

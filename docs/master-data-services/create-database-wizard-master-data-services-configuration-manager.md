@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f29c8f95b93fc45f853294b5fdcb82a0119c92cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a309694db3d06deae0892e9b2c59ad82752bda3
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329585"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Procedura guidata Crea database (Gestione configurazione Master Data Services)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database-server"></a>Server di database  
  Specificare le informazioni per connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] locale o remota per l'hosting del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Per connettersi a un'istanza remota, è necessario che questa sia abilitata per le connessioni remote.  
   
-|Nome del controllo|Description|  
+|Nome del controllo|Descrizione|  
 |------------------|-----------------|  
 |**Istanza di SQL Server**|Specificare il nome dell'istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in cui si vuole ospitare il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Può corrispondere a un'istanza predefinita o denominata in un computer locale o remoto. Specificare le informazioni digitando quanto segue:<br /><br /> Un punto (.) per connettersi all'istanza predefinita nel computer locale.<br /><br /> Il nome server o l'indirizzo IP per connettersi all'istanza predefinita nel computer locale o remoto specificato.<br /><br /> Il nome server o l'indirizzo IP, nonché il nome dell'istanza per la connessione all'istanza denominata nel computer locale o remoto specificato. Specificare le informazioni nel formato *nome_server*\\*nome_istanza*.|  
 |**Tipo di autenticazione**|Selezionare il tipo di autenticazione da utilizzare per la connessione all'istanza di SQL Server specificata. Le credenziali usate per connettersi devono far parte del ruolo del server **sysadmin** per l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata. Per altre informazioni sul ruolo sysadmin, vedere [Ruoli a livello di server](../relational-databases/security/authentication-access/server-level-roles.md).<br /><br /> Nei tipi di autenticazione sono inclusi:<br /><br /> **Utente corrente - Sicurezza integrata**: usa l'autenticazione integrata di Windows per connettersi tramite le credenziali dell'account utente di Windows corrente. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] usa le credenziali di Windows dell'utente che ha eseguito l'accesso al computer e ha aperto l'applicazione. Non è possibile specificare credenziali di Windows diverse nell'applicazione. Se si desidera connettersi con credenziali di Windows diverse, sarà necessario accedere al computer con il nome utente desiderato, quindi aprire [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].<br /><br /> **Account di SQL Server**: usa un account di SQL Server per la connessione. Quando si seleziona questa opzione, i campi **Nome utente** e **Password** sono abilitati ed è necessario specificare le credenziali per un account di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata.|  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database"></a>Database  
  Specificare un nome di database e le opzioni delle regole di confronto per il nuovo database. Le regole di confronto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] forniscono regole di ordinamento e proprietà di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati per i dati. Le regole di confronto utilizzate con dati di tipo carattere, quali char e varchar, definiscono la tabella codici e i caratteri corrispondenti che possono essere rappresentati per quel tipo di dati. Per altre informazioni sulle regole di confronto del database, vedere [Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
-|Nome del controllo|Description|  
+|Nome del controllo|Descrizione|  
 |------------------|-----------------|  
 |**Nome database**|Specificare un nome per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
 |**Regole di confronto predefinite di SQL Server**|Selezionare questa opzione per usare l'impostazione delle regole di confronto del database corrente dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata per il nuovo database.|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="administrator-account"></a>Account amministratore  
   
-|Nome del controllo|Description|  
+|Nome del controllo|Descrizione|  
 |------------------|-----------------|  
 |**User name**|Specificare l'utente con privilegi avanzati predefinito per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. L'utente con privilegi avanzati ha accesso a tutte le aree funzionali e può aggiungere, eliminare e aggiornare tutti i modelli. Per informazioni sull'autorizzazione dell'utente con privilegi avanzati e sugli altri tipi di amministratori in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
   

@@ -2,7 +2,6 @@
 title: Proprietà ParentCatalog (ADOX) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -45,11 +44,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45548fec3e60a12cf2c74218ed8ab5603fa26899
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2dd0c1e0ccc1751e79d6ccfdafe89523ae8e8e00
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286670"
 ---
 # <a name="parentcatalog-property-adox"></a>Proprietà ParentCatalog (ADOX)
 Specifica il catalogo padre di un oggetto tabella, un utente o colonna per fornire accesso a proprietà specifiche del provider.  
@@ -57,7 +57,7 @@ Specifica il catalogo padre di un oggetto tabella, un utente o colonna per forni
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Imposta e restituisce un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) oggetto. Impostazione **ParentCatalog** per open **catalogo** consente l'accesso a proprietà specifiche del provider prima di aggiungere una tabella o colonna per un **catalogo** insieme.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Alcuni provider di dati consentono i valori delle proprietà specifiche del provider deve essere scritto solo al momento della creazione: ovvero, quando una tabella o colonna viene aggiunto al relativo **catalogo** insieme. Per accedere a queste proprietà prima di accodare gli oggetti per un **catalogo**, specificare il **catalogo** nel **ParentCatalog** proprietà prima.  
   
  Si verifica un errore quando la tabella o la colonna viene aggiunta a un altro **catalogo** più il **ParentCatalog**.  

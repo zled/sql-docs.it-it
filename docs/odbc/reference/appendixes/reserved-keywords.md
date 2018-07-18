@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912821"
 ---
 # <a name="reserved-keywords"></a>Parole chiave riservate
 Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzioni di ODBC. Queste parole non limitano la grammatica SQL minima; Tuttavia, per garantire la compatibilità con driver che supportano la grammatica SQL di base, le applicazioni evitare di utilizzare uno qualsiasi di queste parole chiave. Il simbolo #**definire** valore SQL_ODBC_KEYWORDS contiene un elenco delimitato da virgole di queste parole chiave.  

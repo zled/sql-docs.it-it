@@ -1,5 +1,5 @@
 ---
-title: xp_logevent (Transact-SQL) | Documenti Microsoft
+title: xp_logevent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 251dfca05a27d78618a4f3dbff5cbecd02ee5813
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ce0b2c462148cfb75da52897f2b453158284fea3
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582033"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854263"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Registra un messaggio definito dall'utente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di log e nel Visualizzatore eventi di Windows. xp_logevent può essere utilizzato per inviare un avviso senza inviare un messaggio al client.  
+  Registra un messaggio definito dall'utente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di log e nel Visualizzatore eventi di Windows. xp_logevent può essere utilizzato per inviare un avviso senza messaggio al client.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,10 +47,10 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  *error_number*  
  Numero di errore definito dall'utente maggiore di 50.000. Il valore massimo è 2147483647 (2^31 - 1).  
   
- **'** *messaggio* **'**  
+ **«** *messaggio* **»**  
  Stringa di caratteri con lunghezza massima di 2048 caratteri.  
   
- **'** *gravità* **'**  
+ **«** *gravità* **»**  
  Una delle tre stringhe di caratteri seguenti: INFORMATIONAL, WARNING o ERROR. *gravità* è facoltativo e il valore predefinito è INFORMATIONAL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -61,7 +61,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
   
  `The command(s) completed successfully.`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Quando si inviano messaggi da [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure, trigger, batch e così via, utilizzare l'istruzione RAISERROR anziché xp_logevent. xp_logevent non richiama un gestore di messaggi di un client né imposta@ERROR. Per scrivere messaggi nel Visualizzatore eventi di Windows e nel file di log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eseguire l'istruzione RAISERROR.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -71,7 +71,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  Nell'esempio seguente il messaggio viene registrato, insieme alle variabili passate, nel Visualizzatore eventi di Windows.  
   
 ```  
-DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30),DECLARE @@MESSAGE varchar(255);  
+DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30), @@MESSAGE varchar(255);  
 SET @@TABNAME = 'customers';  
 SET @@USERNAME = USER_NAME();  
 SELECT @@MESSAGE = 'The table ' + @@TABNAME + ' is not owned by the user   

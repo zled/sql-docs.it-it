@@ -1,5 +1,5 @@
 ---
-title: Profilatura delle prestazioni del Driver ODBC | Documenti Microsoft
+title: Profilatura delle prestazioni del Driver ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 337209ac91faecab319f66bcb9b61252e3444f5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 526e25bcfebad13868d41a23bcee50caea23bda6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422810"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profiling delle prestazioni del driver ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
  Se un'applicazione avvia il profiling in un file di log e una seconda applicazione tenta di avviare il profiling nello stesso file di log, la seconda applicazione non potrà eseguire la registrazione dei dati del profiling. Se la seconda applicazione avvia il profiling dopo che la prima applicazione ha scaricato il driver, la seconda applicazione sovrascriverà il file di log della prima applicazione.  
   
- Se un'applicazione si connette a un'origine dati con il profiling abilitato, il driver restituisce SQL_ERROR se l'applicazione chiama **SQLSetConnectOption** per avviare la registrazione. Una chiamata a **SQLGetDiagRec** restituisce quindi le operazioni seguenti:  
+ Se un'applicazione si connette a un'origine dati con il profiling abilitato, il driver restituisce SQL_ERROR se l'applicazione chiama **SQLSetConnectOption** per avviare la registrazione. Una chiamata a **SQLGetDiagRec** restituisce quindi le informazioni seguenti:  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -90,9 +91,9 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Numero di istruzioni SELECT elaborate dopo SQL_PERF_START.|  
 |SQLSelectRows|Numero di righe selezionate dopo SQL_PERF_START.|  
 |Transazioni|Numero di transazioni utente dopo SQL_PERF_START, inclusi i rollback. Quando un'applicazione ODBC è in esecuzione con SQL_AUTOCOMMIT_ON, ogni comando viene considerato una transazione.|  
-|SQLPrepares|Numero di [funzione SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360) chiamate dopo SQL_PERF_START.|  
-|ExecDirects|Numero di **SQLExecDirect** chiamate dopo SQL_PERF_START.|  
-|SQLExecutes|Numero di **SQLExecute** chiamate dopo SQL_PERF_START.|  
+|SQLPrepares|Numerosi [funzione SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360) chiamate dopo SQL_PERF_START.|  
+|ExecDirects|Numerosi **SQLExecDirect** chiamate dopo SQL_PERF_START.|  
+|SQLExecutes|Numerosi **SQLExecute** chiamate dopo SQL_PERF_START.|  
 |CursorOpens|Numero di volte in cui il driver ha aperto un cursore server dopo SQL_PERF_START.|  
 |CursorSize|Numero di righe nei set di risultati aperti dai cursori dopo SQL_PERF_START.|  
 |CursorUsed|Numero di righe effettivamente recuperate tramite il driver dai cursori dopo SQL_PERF_START.|  
@@ -105,13 +106,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|Numero di handle di istruzione attualmente aperti in tutte le connessioni aperte nel driver.|  
 |MaxOpenStmt|Numero massimo di handle di istruzione aperti contemporaneamente dopo SQL_PERF_START.|  
 |SumOpenStmt|Numero di handle di istruzione aperti dopo SQL_PERF_START.|  
-|**Statistiche sulla connessione:**||  
+|**Statistiche di connessione:**||  
 |CurrentConnectionCount|Numero corrente di handle di connessione attivi aperti dall'applicazione nel server.|  
 |MaxConnectionsOpened|Numero massimo di handle di connessione aperti contemporaneamente dopo SQL_PERF_START.|  
 |SumConnectionsOpened|Somma del numero di handle di connessione aperti dopo SQL_PERF_START.|  
 |SumConnectionTime|Somma del periodo di tempo in cui tutte le connessioni sono state aperte dopo SQL_PERF_START. Se ad esempio un'applicazione ha aperto 10 connessioni e ha mantenuto ogni connessione per 5 secondi, SumConnectionTime sarà uguale a 50 secondi.|  
 |AvgTimeOpened|È uguale a SumConnectionsOpened/SumConnectionTime.|  
-|**Statistiche della rete:**||  
+|**Statistiche di rete:**||  
 |ServerRndTrips|Numero di volte in cui il driver ha inviato comandi al server e ottenuto una risposta.|  
 |BuffersSent|Numero di pacchetti di flussi TDS (Tabular Data Stream) inviati a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dal driver dopo SQL_PERF_START. I comandi di grandi dimensioni possono accettare più buffer, pertanto se un comando di grandi dimensioni viene inviato al server e riempie sei pacchetti, ServerRndTrips viene incrementato di uno e BuffersSent viene incrementato di sei.|  
 |BuffersRec|Numero di pacchetti TDS ricevuti dal driver da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dopo l'avvio dell'applicazione mediante il driver.|  
@@ -127,6 +128,6 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Profilatura procedure relative alle prestazioni del Driver ODBC & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Procedure relative alle prestazioni del Driver ODBC di profilatura &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

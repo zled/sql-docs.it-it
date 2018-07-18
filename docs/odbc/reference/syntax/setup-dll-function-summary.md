@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915936"
 ---
 # <a name="setup-dll-function-summary"></a>Riepilogo delle funzioni DLL del programma di installazione
 La tabella seguente descrive le funzioni DLL di installazione. Per ulteriori informazioni sulla sintassi e semantica per ogni funzione, vedere [riferimento API per l'installazione DLL](../../../odbc/reference/syntax/setup-dll-api-reference.md).  

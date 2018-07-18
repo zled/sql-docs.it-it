@@ -2,7 +2,6 @@
 title: Tabella oggetti (ADOX) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33f2838b292817ca788fbd23d2da53752bdb4ce8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 17a34c8e53bba7cdb67024b83a8758900d8f6183
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286827"
 ---
 # <a name="table-object-adox"></a>Oggetto Table (ADOX)
 Rappresenta una tabella di database, incluse le colonne, indici e chiavi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il codice seguente crea un nuovo **tabella**:  
   
 ```  

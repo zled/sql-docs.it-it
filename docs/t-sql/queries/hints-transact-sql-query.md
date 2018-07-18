@@ -59,11 +59,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470292"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -276,12 +277,15 @@ ms.lasthandoff: 05/14/2018
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  Abilita le statistiche rapide generate automaticamente (modifica istogramma) per qualsiasi colonna di indice iniziale per cui è necessaria la stima della cardinalità. L'istogramma usato per la stima della cardinalità viene modificato durante la compilazione della query per tenere conto del valore massimo o minimo effettivo di questa colonna. Equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
- Fa in modo che SQL Server generi un piano che usa l'assunzione di indipendenza semplice anziché l'assunzione predefinita di indipendenza di base per i join, nel modello di [stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md) di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versione successiva. Equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
+ Fa in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generi un piano di query che usi il presupposto di indipendenza semplice anziché il presupposto predefinito di indipendenza di base per i join, nel modello di [stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md) di Query Optimizer in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versione successiva. Equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  Forza in Query Optimizer l'utilizzo del modello di [stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md) che corrisponde al livello di compatibilità del database corrente. Usare questo hint per eseguire l'override dell'impostazione [Configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON o il [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
-* "DISABLE_INTERLEAVED_EXECUTION_TVF": disabilita l'esecuzione interleaved per funzioni composte da più istruzioni con valori di tabella.
-* "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK": disabilita il feedback delle concessioni di memoria in modalità batch.
-* "'DISABLE_BATCH_MODE_ADAPTIVE_JOINS": disabilita i join adattivi in modalità batch.
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
+ Disabilita l'esecuzione interleaved per funzioni con valori di tabella a più istruzioni. Per altre informazioni, vedere [Esecuzione interleaved per funzioni con valori di tabella a più istruzioni](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
+ Disabilita il feedback delle concessioni di memoria in modalità batch. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
+*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
+ Disabilita i join adattivi in modalità batch. Per altre informazioni, vedere [Join adattivi in modalità batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
  
 > [!TIP]
 > Per i nomi degli hint non viene fatta distinzione tra maiuscole e minuscole.
@@ -328,7 +332,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 -   DMV  
 -   Sottoquery denominate  
   
- Gli hint di tabella INDEX, FORCESCAN e FORCESEEK possono essere specificati come hint per la query senza hint di tabella esistenti oppure possono essere utilizzati per sostituire uno o più hint INDEX, FORCESCAN o FORCESEEK esistenti nella query. Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. In questo caso è necessario specificare inoltre un hint corrispondente come un hint per la query utilizzando TABLE HINT nella clausola OPTION per mantenere la semantica della query. Ad esempio, se la query contiene l'hint di tabella NOLOCK, la clausola OPTION nel parametro **@hints** della guida di piano deve contenere anch'essa l'hint NOLOCK. Vedere l'esempio K. Quando un hint di tabella diverso da INDEX, FORCESCAN o FORCESEEK viene specificato utilizzando TABLE HINT nella clausola OPTION senza un hint per la query corrispondente, o viceversa, viene generato l'errore 8702, che indica che la clausola OPTION può comportare la modifica della semantica della query, e la query ha esito negativo.  
+Gli hint di tabella INDEX, FORCESCAN e FORCESEEK possono essere specificati come hint per la query senza hint di tabella esistenti oppure possono essere utilizzati per sostituire uno o più hint INDEX, FORCESCAN o FORCESEEK esistenti nella query. Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. In questo caso è necessario specificare inoltre un hint corrispondente come un hint per la query utilizzando TABLE HINT nella clausola OPTION per mantenere la semantica della query. Ad esempio, se la query contiene l'hint di tabella NOLOCK, la clausola OPTION nel parametro **@hints** della guida di piano deve contenere anch'essa l'hint NOLOCK. Vedere l'esempio K. Quando un hint di tabella diverso da INDEX, FORCESCAN o FORCESEEK viene specificato utilizzando TABLE HINT nella clausola OPTION senza un hint per la query corrispondente, o viceversa, viene generato l'errore 8702, che indica che la clausola OPTION può comportare la modifica della semantica della query, e la query ha esito negativo.  
   
 ## <a name="examples"></a>Esempi  
   

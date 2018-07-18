@@ -18,10 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2955570ee99eaa05d9a689ccbe62973af3208d80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054448"
 ---
 # <a name="spdeletebackup-transact-sql"></a>sp_delete_backup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ sys.sp_delete_backup
   
 ## <a name="arguments"></a>Argomenti  
  *[ @backup_url = ] backup_meta_file_url*  
- L'URL del backup da eliminare, che elimina tutti gli snapshot che include il set incluso il file di backup di backup specificato.  
+ L'URL del backup da eliminare, che elimina tutti gli snapshot che comprende il set tra cui il file di backup di backup specificato.  
   
  *[ @db_name =] database_name*  
- Il nome del database contenente lo snapshot da eliminare. Quando un nome di database è fornito, il sistema verifica che l'URL di backup specificato è un URL di backup per il database specificato e Usa [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) eliminare ogni snapshot. Se non viene specificato alcun nome di database, è possibile che questo controllo database non viene eseguito.  
+ Nome del database che contiene lo snapshot da eliminare. Quando un nome di database è specificato, il sistema verifica che l'URL di backup fornito è un URL di backup per il database specificato e Usa [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) per eliminare ogni snapshot. Se non viene specificato alcun nome di database, questo controllo del database non viene eseguito.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede autorizzazione ALTER ANY DATABASE o l'autorizzazione ALTER per il database specificato.  
+ Richiede l'autorizzazione ALTER ANY DATABASE o l'autorizzazione ALTER per il database specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   

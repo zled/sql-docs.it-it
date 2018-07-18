@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901716"
 ---
 # <a name="managing-data-sources"></a>Gestione delle origini dati
 Dopo aver installato un driver ODBC dal programma di installazione del driver, è possibile definire una o più origini dati per tale. Il nome di origine dati (DSN) deve fornire una descrizione univoca dei dati. ad esempio, *retribuzioni* o *contabilità fornitori*. Le origini dati utente e di sistema definiti per tutti i driver attualmente installati sono elencate nel **DSN utente** o **DSN di sistema** schede del **amministratore di origine dati ODBC**la finestra di dialogo. Sono elencate le origini dati di file in una directory specificata nel **DSN su File** scheda; la directory da visualizzare viene immesso nel **Cerca in** casella il **DSN su File** scheda.  

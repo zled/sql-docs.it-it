@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912266"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Recupero di righe con SQLBulkOperations
 I dati possono essere refetched in un set di righe mediante segnalibri da una chiamata a **SQLBulkOperations.** Recuperare le righe sono identificate mediante i segnalibri in una colonna del segnalibro associato. Le colonne con un valore di SQL_COLUMN_IGNORE non vengono recuperate.  

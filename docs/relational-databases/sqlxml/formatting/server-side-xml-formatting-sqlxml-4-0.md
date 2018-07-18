@@ -1,5 +1,5 @@
 ---
-title: Formattazione di XML sul lato server (SQLXML 4.0) | Documenti Microsoft
+title: Programma di formattazione XML sul lato server (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd37f50bb838717d9a245b038f624dee57bbf7d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003409"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>Formattazione XML sul lato server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile archiviare e recuperare documenti XML da e verso tabelle di database. Per recuperare un documento XML, utilizzare l'estensione della query FOR XML in una query SELECT.  
   
- Si supponga ad esempio un'applicazione client esegue un comando su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che costituito dai seguenti [!INCLUDE[tsql](../../../includes/tsql-md.md)] query:  
+ Si supponga ad esempio un'applicazione client esegue un comando sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] costituito da quanto segue [!INCLUDE[tsql](../../../includes/tsql-md.md)] query:  
   
 ```  
 SELECT FirstName, LastName  
@@ -56,7 +57,7 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- Per ulteriori informazioni sulla clausola FOR XML, vedere [costruzione XML tramite FOR XML](../../../relational-databases/xml/for-xml-sql-server.md).  
+ Per altre informazioni sulla clausola FOR XML, vedere [costruzione XML utilizzando FOR XML](../../../relational-databases/xml/for-xml-sql-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Architettura della formattazione XML sul lato Client e lato Server &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   

@@ -2,7 +2,6 @@
 title: Provider Microsoft OLE DB per Microsoft Active Directory Service | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c38caaead8d2eb1fa24a4b7a38aebfdc19cbcec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f26d8a9aa58c45ddb5ac58a6415776a60ed5b80
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270650"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provider Microsoft OLE DB per Microsoft Active Directory Service
 Il Provider di Active Directory Service Interfaces (ADSI) consente di ADO per connettersi a servizi di directory eterogenei tramite ADSI. In questo modo le applicazioni ADO accesso in sola lettura per i servizi directory Microsoft Windows NT 4.0 e Microsoft Windows 2000, oltre a qualsiasi servizio di directory compatibile con LDAP e Novell Directory Services. ADSI è basato su un modello di provider, in modo che se è presente un nuovo provider che fornisce l'accesso a un'altra directory, l'applicazione ADO sarà in grado di accedervi. Il provider ADSI è a thread libero e abilitato per Unicode.  
@@ -63,12 +63,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |*Root*|Indica il **ADsPath** oggetto da cui iniziare la ricerca (ovvero, la radice della ricerca).|  
-|*Filtra*|Indica il filtro di ricerca nel formato RFC 1960.|  
+|*Filter*|Indica il filtro di ricerca nel formato RFC 1960.|  
 |*Attributi*|Indica un elenco delimitato da virgole di attributi da restituire.|  
-|*Ambito*|Facoltativa. Oggetto **stringa** che specifica l'ambito della ricerca. I possibili valori sono i seguenti:<br /><br /> -Base, Eseguire la ricerca solo l'oggetto di base (radice della ricerca).<br />-OneLevel: La ricerca solo un livello.<br />-Sottoalbero, Eseguire la ricerca del sottoalbero intero.|  
+|*Ambito*|Facoltativo. Oggetto **stringa** che specifica l'ambito della ricerca. I possibili valori sono i seguenti:<br /><br /> -Base, Eseguire la ricerca solo l'oggetto di base (radice della ricerca).<br />-OneLevel: La ricerca solo un livello.<br />-Sottoalbero, Eseguire la ricerca del sottoalbero intero.|  
   
  Esempio:  
   
@@ -83,7 +83,7 @@ ADSDSOObject
 objectClass='user' AND objectCategory='Person'"  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il provider non accetta chiamate di stored procedure o i nomi di tabella semplice (ad esempio, il [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) proprietà sarà sempre **adCmdText**). Vedere la documentazione di Active Directory Service Interfaces per una descrizione più completa degli elementi di testo di comando.  
   
 ## <a name="recordset-behavior"></a>Comportamento di recordset  
@@ -105,7 +105,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|sempre **adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|sempre **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|  
-|[Filtra](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|  
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lettura/scrittura|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|non disponibile|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lettura/scrittura|  
@@ -134,10 +134,10 @@ objectClass='user' AND objectCategory='Person'"
 |[Metodo MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|  
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sì|  
-|[Apertura](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|  
+|[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sì|  
 |[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|Sì|  
-|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Sì|  
+|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Sì|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|no|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|no|  
   

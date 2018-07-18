@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907456"
 ---
 # <a name="asynchronous-execution"></a>Esecuzione asincrona
 ODBC supporta le operazioni asincrone per le operazioni di istruzione e di connessione. Esistono due modi per determinare quando un'operazione asincrona è completa:  

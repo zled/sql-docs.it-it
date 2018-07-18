@@ -1,5 +1,5 @@
 ---
-title: Concedere i diritti di amministrazione di server a un'istanza di Analysis Services | Documenti Microsoft
+title: Concedere i diritti di amministratore di server a un'istanza di Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dac4df875c8a620f735822e73215f86f17a88c3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ad46e78f5accb54a3870f0c12a8442dc76201b9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36760096"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>Concedere i diritti di amministratore del server a un'istanza di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/10/2018
  Dopo l'installazione è possibile modificare l'appartenenza ai ruoli per aggiungere eventuali altri utenti che necessitano di diritti completi per il servizio. È anche possibile gestire i ruoli del server tramite la libreria AMO (Analysis Management Objects). Per altre informazioni, vedere [Sviluppo con AMO &#40;Analysis Management Objects&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce una progressione di ruoli sempre più granulari per l'elaborazione e l'esecuzione di query a livello di server, database e oggetto. Per istruzioni su come usare questi ruoli, vedere [Ruoli e autorizzazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md).  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce una progressione di ruoli sempre più granulari per l'elaborazione e l'esecuzione di query a livello di server, database e oggetti. Per istruzioni su come usare questi ruoli, vedere [Ruoli e autorizzazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md).  
   
 ## <a name="modify-server-role-membership"></a>Modificare l'appartenenze al ruolo del server  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  Fare clic sulla scheda **Sicurezza** nel riquadro **Selezione pagina** , quindi selezionare **Aggiungi** nella parte inferiore della pagina per aggiungere uno o più utenti o gruppi di Windows al ruolo del server.  
   
-     ![Finestra di dialogo utenti Aggiungi management Studio](../../analysis-services/instances/media/ssas-serveradminadd.png "Aggiungi utenti dialogo management studio")  
+     ![Finestra di dialogo Aggiungi utenti management Studio](../../analysis-services/instances/media/ssas-serveradminadd.png "finestra di dialogo Aggiungi utenti management Studio")  
   
 ### <a name="add-computer-accounts"></a>Aggiungere account computer  
  È anche possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per fare in modo che un account computer sia membro del gruppo Administrators di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -47,15 +48,15 @@ ms.lasthandoff: 05/10/2018
   
 4.  Fare clic su **Computer** , quindi fare clic su **Ok**.  
   
-     ![aggiungere l'account computer come amministratori ssas](../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "aggiungere account computer come amministratori di ssas")  
+     ![aggiungere account computer come amministratori ssas](../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "aggiungere account computer come amministratori ssas")  
   
 5.  Nella casella di testo **Immettere i nomi degli oggetti da selezionare** digitare il nome del computer e fare clic su **Controlla nomi** per verificare che l'account del computer sia presente nelle posizioni correnti. Se l'account del computer non viene trovato, verificare il nome del computer e il dominio corretto di cui fa parte il computer.  
   
 ## <a name="nt-servicessastelemetry-account"></a>Account NT Service\SSASTelemetry  
- **NT Service/SSASTelemetry** è un account computer con privilegi limitati creato durante l'installazione e usato esclusivamente per eseguire l'implementazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del servizio Analisi utilizzo software. Questo servizio richiede i diritti di amministratore nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per eseguire vari comandi di individuazione. Per ulteriori informazioni, vedere [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) e [Microsoft SQL Server Privacy Statement](http://msdn.microsoft.com/library/57769f4a-5689-49a1-8298-e3c0db5106f8) .  
+ **NT Service/SSASTelemetry** è un account computer con privilegi limitati creato durante l'installazione e usato esclusivamente per eseguire l'implementazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del servizio Analisi utilizzo software. Questo servizio richiede i diritti di amministratore nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per eseguire vari comandi di individuazione. Per ulteriori informazioni, vedere [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) e [Microsoft SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444) .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [Ruoli di sicurezza & #40; Analysis Services - dati multidimensionali & #41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [Ruoli di sicurezza &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

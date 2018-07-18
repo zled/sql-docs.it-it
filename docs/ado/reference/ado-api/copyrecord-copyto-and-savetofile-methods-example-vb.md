@@ -2,7 +2,6 @@
 title: CopyRecord, CopyTo e SaveToFile metodi esempio (VB) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1bc60c7059534f7e6e4bfda3c6433c845ef9f296
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64a1367298c3d5c78e95112802732aa10ef75141
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277130"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo e SaveToFile metodi esempio (VB)
 In questo esempio viene illustrato come creare copie di un file utilizzando [flusso](../../../ado/reference/ado-api/stream-object-ado.md) o [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetti. Una copia viene eseguita in una cartella Web per la pubblicazione su Internet. Altre proprietà e metodi illustrati includono [tipo di flusso](../../../ado/reference/ado-api/type-property-ado-stream.md), **aprire**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), e [Record Open](../../../ado/reference/ado-api/open-method-ado-record.md).  

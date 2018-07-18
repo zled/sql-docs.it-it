@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018798"
 ---
 # <a name="define-query-parameters-dialog-box"></a>Finestra di dialogo Definisci parametri query
   Utilizzare la finestra di dialogo **Definisci parametri query** per specificare i valori dei parametri quando si esegue una query in Progettazione query in fase di progettazione per visualizzare dati di esempio. I parametri di query consentono di filtrare i dati nell'origine dati e di limitare la quantità di dati elaborati da un report. Questi valori non vengono salvati nella definizione del report.  

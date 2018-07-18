@@ -2,7 +2,6 @@
 title: Proprietà ActiveConnection (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b37e3e062bcc8239b2231db66052e9cdaf9e812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6988f743abe5a6a0bf875da0b7e52bed23f7500
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275160"
 ---
 # <a name="activeconnection-property-ado"></a>Proprietà ActiveConnection (ADO)
 Indica a cui [connessione](../../../ado/reference/ado-api/connection-object-ado.md) dell'oggetto specificato [comando](../../../ado/reference/ado-api/command-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), o [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto attualmente appartiene.  
@@ -34,7 +34,7 @@ Indica a cui [connessione](../../../ado/reference/ado-api/connection-object-ado.
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **stringa** valore che contiene una definizione per una connessione se la connessione viene chiusa, o un **Variant** contenente corrente **connessione** oggetto se la connessione è aperta. Valore predefinito è un riferimento di oggetto null. Vedere il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **ActiveConnection** proprietà per determinare il **connessione** oggetto su cui specificato **comando** verrà eseguito l'oggetto o specificato  **Recordset** verrà aperto.  
   
 ## <a name="command"></a>Comando  

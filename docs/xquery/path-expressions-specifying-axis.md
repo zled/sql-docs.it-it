@@ -1,5 +1,5 @@
 ---
-title: Definizione dell'asse in un passo dell'espressione di percorso | Documenti Microsoft
+title: Definizione dell'asse in un passo dell'espressione di percorso | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -30,10 +30,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2acb1aa6b9eddd2cf30f97da0d594db56b94e456
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046879"
 ---
 # <a name="path-expressions---specifying-axis"></a>Espressioni di percorso - definizione asse
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,15 +60,15 @@ ms.lasthandoff: 05/03/2018
 |**self**|Restituisce il nodo di contesto stesso.|  
 |**descendant-or-self**|Restituisce il nodo di contesto e tutti i relativi discendenti.|  
   
- Tutti questi assi, ad eccezione di **padre** asse, sono assi in avanti. Il **padre** asse è un asse inverso, poiché esegue una ricerca all'indietro nella gerarchia del documento. Ad esempio, l'espressione di percorso relativo `child::ProductDescription/child::Summary` include due passi, ognuno dei quali specifica un asse `child`. Il primo passo recupera i \<ProductDescription > gli elementi figlio del nodo di contesto. Per ogni \<ProductDescription > nodo elemento, il secondo passo recupera i \<riepilogo > nodi elemento figlio.  
+ Tutti questi assi, ad eccezione di **padre** asse, sono assi. Il **padre** asse è un inverso, quanto esegue la ricerca all'indietro nella gerarchia del documento. Ad esempio, l'espressione di percorso relativo `child::ProductDescription/child::Summary` include due passi, ognuno dei quali specifica un asse `child`. Il primo passo recupera i \<ProductDescription > gli elementi figlio del nodo di contesto. Per ognuno \<ProductDescription > nodo elemento, il secondo passo recupera i \<riepilogo > nodi figlio dell'elemento.  
   
- L'espressione di percorso relativo `child::root/child::Location/attribute::LocationID` include tre passi. I primi due passi specificano ognuno un asse `child`, mentre il terzo passo specifica l'asse `attribute`. Quando eseguite le istruzioni di produzione di documenti XML nel **Production. ProductModel** tabella, l'espressione restituisce il `LocationID` attributo del \<percorso > nodo elemento figlio del \<radice > elemento.  
+ L'espressione di percorso relativo `child::root/child::Location/attribute::LocationID` include tre passi. I primi due passi specificano ognuno un asse `child`, mentre il terzo passo specifica l'asse `attribute`. Eseguite le istruzioni di produzione di documenti XML nel **Production. ProductModel** di tabella, l'espressione restituisce il `LocationID` attributo del \<percorso > nodo figlio di \<radice > elemento.  
   
 ## <a name="examples"></a>Esempi  
- Gli esempi di query in questo argomento vengono specificati sui **xml** colonne di tipo di **AdventureWorks** database.  
+ Gli esempi di query in questo argomento vengono specificati con **xml** colonne di tipo i **AdventureWorks** database.  
   
 ### <a name="a-specifying-a-child-axis"></a>A. Definizione di un asse child  
- Per un modello di prodotto specifico, la query seguente recupera il \<funzionalità > elemento figlio del nodo il \<ProductDescription > dalla descrizione del catalogo prodotti archiviata nel nodo di elemento di `Production.ProductModel` tabella.  
+ Per un modello di prodotto specifico, la query seguente recupera le \<funzionalità > elemento figlio del nodo il \<ProductDescription > nodo dell'elemento dalla descrizione del catalogo prodotti archiviata nella `Production.ProductModel` tabella.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -79,7 +80,7 @@ WHERE ProductModelID=19
   
  Dalla query precedente si noti quanto segue:  
   
--   Il `query()` metodo il **xml** tipo di dati specifica l'espressione di percorso.  
+-   Il `query()` metodo per il **xml** tipo di dati specifica l'espressione di percorso.  
   
 -   Entrambi i passi dell'espressione di percorso specificano un asse `child` e i nomi dei nodi, `ProductDescription` e `Features`, come test di nodo. Per informazioni sui test di nodo, vedere [specificando i Test di nodo in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-node-test.md).  
   
@@ -117,7 +118,7 @@ select @y
   
  `/child::a/child::b/descendant::*`, si richiedono tutti i discendenti del nodo elemento <`b`>.  
   
- L'asterisco (*) nel test di nodo rappresenta il nome del nodo come test di nodo. Pertanto, il tipo di nodo primario dell'asse descendant, il nodo elemento, determina i tipi di nodi restituiti. L'espressione restituisce quindi tutti i nodi elemento. I nodi di testo non vengono restituiti. Per ulteriori informazioni sul tipo di nodo primario e la relativa relazione con il test di nodo, vedere [specifica di Test di nodo in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-node-test.md) argomento.  
+ L'asterisco (*) nel test di nodo rappresenta il nome del nodo come test di nodo. Pertanto, il tipo di nodo primario dell'asse descendant, il nodo elemento, determina i tipi di nodi restituiti. L'espressione restituisce quindi tutti i nodi elemento. I nodi di testo non vengono restituiti. Per altre informazioni sul tipo di nodo primario e la relativa relazione con il test di nodo, vedere [specifica di Test di nodo in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-node-test.md) argomento.  
   
  I nodi elemento <`c`> e <`d`> vengono restituiti come illustrato nel risultato seguente:  
   
@@ -146,7 +147,7 @@ select @y
 <d>text3</d>   
 ```  
   
- La seguente query di esempio sul **AdventureWorks** database recupera tutti i nodi elemento discendenti di <`Features`> figlio dell'elemento di <`ProductDescription`> elemento:  
+ La query di esempio seguente nel **AdventureWorks** database recupera tutti i nodi elemento discendenti del <`Features`> figlio dell'elemento di <`ProductDescription`> elemento:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -181,7 +182,7 @@ WHERE  ProductModelID=19
   
  Un esempio più dettagliato dell'asse parent è il seguente.  
   
- Ogni descrizione del catalogo prodotti archiviati nel **CatalogDescription** colonna del **ProductModel** tabella include un `<ProductDescription>` elemento con la `ProductModelID` attributo e `<Features>`elemento figlio, come illustrato nel frammento seguente:  
+ Ogni descrizione del catalogo prodotti archiviato nella **CatalogDescription** della colonna della **ProductModel** tabella dispone di un `<ProductDescription>` elemento con la `ProductModelID` attributo e `<Features>`elemento figlio, come illustrato nel frammento seguente:  
   
 ```  
 <ProductDescription ProductModelID="..." >  

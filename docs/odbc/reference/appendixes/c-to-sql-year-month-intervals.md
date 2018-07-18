@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906316"
 ---
 # <a name="c-to-sql-year-month-intervals"></a>C a SQL: intervalli anno-mese
 Gli identificatori per i tipi di dati ODBC C intervallo anno-mese sono:  

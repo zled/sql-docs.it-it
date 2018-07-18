@@ -1,8 +1,7 @@
 ---
-title: I provider e i componenti del servizio | Documenti Microsoft
+title: Provider di servizi e componenti | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,17 +18,18 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a49731edea9e0aa59977eec3aa73cac32b372b4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 085e0caa494baf624468ccb4f4c4bd99020c588b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984313"
 ---
 # <a name="service-providers-and-components"></a>Provider di servizi e componenti
 I provider di servizi sono componenti che estendono la funzionalità del provider di dati mediante l'implementazione di interfacce estese che non sono supportate in modo nativo dall'archivio dati.  
   
- Accesso universale ai dati fornisce un *architettura dei componenti* che consente di singoli componenti specializzati implementare un set discreto di funzionalità del database o i "servizi" in archivi meno avanzati. Pertanto, anziché forzare ogni archivio dati per fornire la propria implementazione di funzionalità estese oppure impostare applicazioni generiche per implementare la funzionalità di database internamente, componenti del servizio forniscono un'implementazione comune che può essere di qualsiasi applicazione utilizzare quando si accede a qualsiasi archivio dati. Il fatto che alcune funzionalità viene implementata in modo nativo dall'archivio dati e altre tramite componenti generici è trasparente all'applicazione.  
+ Fornisce l'accesso ai dati universale una *architettura dei componenti* che consente ai componenti singoli, specializzati implementare un set discreto di funzionalità del database o i "servizi" in archivi meno avanzati. Quindi, anziché forzare ogni archivio dati per fornire la propria implementazione di estendere le funzionalità o imporre applicazioni generiche per implementare la funzionalità database internamente, i componenti del servizio di fornire un'implementazione comune che può essere di qualsiasi applicazione Utilizzare l'accesso a qualsiasi archivio dati. Il fatto che alcune funzionalità viene implementata in modo nativo dall'archivio dati e alcune attraverso componenti generici è trasparente per l'applicazione.  
   
- Ad esempio, un cursore del motore, ad esempio [il servizio di cursore per OLE DB](http://msdn.microsoft.com/en-us/57638feb-4ecd-4051-becb-8f828d21cf44), è un componente del servizio che può utilizzare dati da un archivio dati sequenziali e forward-only per produrre dati scorrevoli. Altri provider di servizi comunemente utilizzate da ADO includono il [Microsoft OLE DB Provider di persistenza (Provider di servizi ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (per il salvataggio dei dati in un file), il [Microsoft Data shaping per OLE DB (ADO Service Provider) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (per gerarchica **recordset**) e [Provider Microsoft OLE DB remota (Provider di servizi ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (per richiamare i provider di dati in un computer remoto).  
+ Ad esempio, un cursore del motore, ad esempio [The Cursor Service per OLE DB](http://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44), è un componente del servizio che può usare dati da un archivio dati sequenziali e forward-only per generare i dati scorrevoli. Altri provider di servizi usati comunemente dagli ADO includono la [Provider Microsoft OLE DB Persistence (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (per il salvataggio dei dati in un file), il [Microsoft Data shaping per OLE DB (ADO Service Provider) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (per gerarchici **recordset**) e il [Provider Microsoft OLE DB remota (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (per il richiamo di provider di dati in un computer remoto).  
   
- Per ulteriori informazioni sui provider di servizi e dati, vedere [appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md).
+ Per altre informazioni sui provider di servizi e dati, vedere [appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md).

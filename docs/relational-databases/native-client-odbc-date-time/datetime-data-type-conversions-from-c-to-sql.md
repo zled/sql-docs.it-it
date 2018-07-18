@@ -1,13 +1,12 @@
 ---
-title: Le conversioni da C a SQL | Documenti Microsoft
+title: Le conversioni da C a SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +17,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e307f12de6f298381e1e314a343eaece6353ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c222ed8aedbb4e84014119c896d59786a1db866a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431770"
 ---
-# <a name="datetime-data-type-conversions-from-c-to-sql"></a>le conversioni di tipo di dati da C a SQL DateTime
+# <a name="datetime-data-type-conversions-from-c-to-sql"></a>Data/ora conversioni di tipi di dati da C a SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In questo argomento elenca i problemi da prendere in considerazione quando esegue la conversione dai tipi C per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi data/ora.  
+  In questo argomento elenca i problemi da prendere in considerazione durante le conversioni dai tipi C a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi data/ora.  
   
- Le conversioni descritte nella tabella seguente sono valide se effettuate sul client. Nei casi in cui il client specifica la precisione in secondi frazionari per un parametro che differisce da definito nel server, la conversione client potrebbe avere esito positivo, ma il server restituirà un errore quando **SQLExecute** o  **SQLExecuteDirect** viene chiamato. In particolare, ODBC considera qualsiasi troncamento dei secondi frazionari come un errore, mentre il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento prevede l'arrotondamento; ad esempio, arrotondamento si verifica quando si passa da **datetime2(6)** a **datetime2(2)**. I valori della colonna di tipo datetime vengono arrotondati a 1/300° di un secondo e le colonne smalldatetime contengono secondi impostati su zero dal server.  
+ Le conversioni descritte nella tabella seguente sono valide se effettuate sul client. Nei casi in cui il client specifica la precisione in secondi frazionari per un parametro che differisce da definiti nel server, la conversione client potrebbe riuscire ma il server restituirà un errore quando si **SQLExecute** o  **SQLExecuteDirect** viene chiamato. In particolare, ODBC considera qualsiasi troncamento dei secondi frazionari come un errore, mentre il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento prevede l'arrotondamento; ad esempio arrotondamento si verifica quando si passa da **datetime2(6)** a **datetime2(2)**. I valori della colonna di tipo datetime vengono arrotondati a 1/300° di un secondo e le colonne smalldatetime contengono secondi impostati su zero dal server.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -62,21 +62,21 @@ ms.lasthandoff: 05/03/2018
   
 -   **4**: il componente relativo alla data viene ignorato.  
   
--   **5**: il fuso orario è impostato su impostazioni di fuso orario del client.  
+-   **5**: il fuso orario è impostato per l'impostazione del client sul fuso orario.  
   
--   **6**: l'ora è impostata su zero.  
+-   **6**: il tempo è impostato su zero.  
   
 -   **7**: la data viene impostata sulla data corrente.  
   
 -   **8**: l'ora viene convertita dal fuso orario del client in formato UTC. Se si verifica un errore durante questa conversione, viene generato un record di diagnostica con l'identificativo SQLSTATE 22008 e il messaggio "Overflow del campo Datetime".  
   
--   **9**: la stringa viene analizzata e convertita in una data, datetime, datetimeoffset o valore di ora, in base al primo carattere di punteggiatura rilevato e la presenza di altri componenti. La stringa viene quindi convertita nel tipo di destinazione, seguendo le regole nella tabella precedente per il tipo di origine individuato da questo processo. Se durante l'analisi dei dati viene rilevato un errore, viene generato un record di diagnostica con SQLSTATE 22018 e il messaggio "Carattere non valido per la specifica del cast". Per i parametri datetime e smalldatetime, se l'anno non è compreso nell'intervallo supportato da questi tipi, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "Formato di datetime non valido".  
+-   **9**: la stringa viene analizzata e convertita in una data, datetime, datetimeoffset o valore di ora, in base al primo carattere di punteggiatura rilevato e la presenza di componenti rimanenti. La stringa viene quindi convertita nel tipo di destinazione, seguendo le regole nella tabella precedente per il tipo di origine individuato da questo processo. Se durante l'analisi dei dati viene rilevato un errore, viene generato un record di diagnostica con SQLSTATE 22018 e il messaggio "Carattere non valido per la specifica del cast". Per i parametri datetime e smalldatetime, se l'anno non è compreso nell'intervallo supportato da questi tipi, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "Formato di datetime non valido".  
   
      Per datetimeoffset, il valore deve essere compreso nell'intervallo supportato in seguito alla conversione in UTC, anche se non è necessaria alcuna conversione in UTC. Ciò è dovuto al fatto che TDS e il server normalizzano sempre l'ora in valori datetimeoffset per UTC. Il client deve pertanto verificare che i componenti relativi all'ora siano compresi nell'intervallo supportato in seguito alla conversione in UTC. Se il valore non è compreso nell'intervallo UTC supportato, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "Formato di datetime non valido".  
   
 -   **10**: se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22008 e il messaggio "formato di ora non valida". Questo errore si verifica anche se il valore non è incluso nell'intervallo che può essere rappresentato dall'intervallo UTC utilizzato dal server.  
   
--   **11**: se la lunghezza in byte dei dati non equivale alla dimensione della struttura richiesta dal tipo SQL, viene generato un record di diagnostica con SQLSTATE 22003 e il messaggio "Valore numerico compreso nell'intervallo".  
+-   **11**: se la lunghezza in byte dei dati sono uguali alle dimensioni della struttura richiesta dal tipo SQL, viene generato un record di diagnostica con SQLSTATE 22003 e il messaggio "Valore numerico non compreso nell'intervallo".  
   
 -   **12**: se la lunghezza in byte dei dati è 4 o 8, i dati vengono inviati al server in formato di smalldatetime o datetime TDS non elaborato. Se la lunghezza in byte dei dati corrisponde esattamente alla dimensione di SQL_TIMESTAMP_STRUCT, i dati vengono convertiti nel formato TDS per datetime2.  
   
@@ -98,6 +98,6 @@ ms.lasthandoff: 05/03/2018
 -   **N/d**: esistente [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e viene mantenuto il comportamento precedente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e ora miglioramenti & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Data e miglioramenti per la fase &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

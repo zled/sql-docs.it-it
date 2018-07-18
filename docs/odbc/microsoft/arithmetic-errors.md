@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899496"
 ---
 # <a name="arithmetic-errors"></a>Errori aritmetici
 Il driver ODBC restituisce la clausola WHERE in un'istruzione SELECT come il recupero di ogni riga. Se una riga contiene un valore che provoca un errore aritmetico, ad esempio overflow numerico o di divisione per zero, il driver restituisce tutte le righe, ma restituisce errori per le colonne con gli errori aritmetici. Durante l'inserimento o aggiornamento, tuttavia, il driver ODBC arresta inserimento o aggiornamento dei dati quando viene rilevato il primo errore aritmetico.

@@ -1,6 +1,6 @@
 ---
 title: Riferimento alla funzione MDX (MultiDimensional Expression) | Documenti Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fd5b9ee4a70ac58ab44a056f0abfb1086d24b76
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9137655ce59efbfa13466fe50f8142987b0ec81a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580033"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742010"
 ---
 # <a name="mdx-function-reference-mdx"></a>Guida di riferimento alle funzioni MDX (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Consente l'utilizzo delle funzioni nella sintassi MDX (Multidimensional Expressions). È possibile utilizzare le funzioni in qualsiasi istruzione MDX valida e all'interno di query, definizioni di rollup personalizzate e altri calcoli. In questa sezione vengono fornite informazioni sulle funzioni MDX incluse in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+
+  Analysis Services fornisce per l'utilizzo delle funzioni nella sintassi MDX (Multidimensional Expressions). È possibile utilizzare le funzioni in qualsiasi istruzione MDX valida e all'interno di query, definizioni di rollup personalizzate e altri calcoli. In questa sezione vengono fornite informazioni sulle funzioni MDX.  
   
  È possibile utilizzare le tabelle seguenti per la ricerca delle funzioni in base alla categoria del valore restituito oppure selezionare una funzione in base al nome dall'elenco alfabetico nel sommario.  
   

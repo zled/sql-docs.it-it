@@ -5,8 +5,6 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.prod_service: drivers
-ms.component: php
 ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
@@ -15,11 +13,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92be589df4038d152f07445d7cd5fa4ffafc935b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308750"
 ---
 # <a name="support-for-localdb"></a>Supporto per LocalDB
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 05/03/2018
 
 LocalDB è una versione leggera di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] cui è stato reso disponibile dal [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. In questo argomento viene discussa la modalità di connessione a un database in un'istanza del database locale.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Remarks
 
 Per ulteriori informazioni su LocalDB, ad esempio come installarlo e configurare l'istanza di LocalDB, vedere il [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] argomento della documentazione Online in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
 

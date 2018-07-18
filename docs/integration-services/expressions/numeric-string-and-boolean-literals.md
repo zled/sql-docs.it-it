@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34382ce333db1d7dda8e72b4a7eeb6a2b8196e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c70f744427da1b6e7d10ce061bcd3640ca86cfa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408913"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Valori letterali numerici, stringa e booleani
  Le espressioni possono includere valori letterali numerici, stringa e booleani. L'analizzatore di espressioni supporta un'ampia gamma di valori letterali numerici, quali costanti intere, decimali e a virgola mobile. Supporta inoltre i suffissi per valori di tipo long e float, che specificano come gestire tali valori, e la notazione scientifica nei valori letterali numerici.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  I suffissi per i valori letterali numerici sono elencati nella tabella seguente.  
   
-|Suffisso|Description|  
+|Suffisso|Descrizione|  
 |------------|-----------------|  
 |L o l|Valore letterale numerico long.|  
 |U o u|Valore letterale numerico senza segno.|  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente sono elencati gli elementi delle espressioni numeriche e le rispettive espressioni regolari.  
   
-|Elemento dell'espressione|Espressione regolare‏|Description|  
+|Elemento dell'espressione|Espressione regolare‏|Descrizione|  
 |------------------------|------------------------|-----------------|  
 |Cifra espressa come D.|[0-9]|Qualsiasi cifra.|  
 |Notazione scientifica espressa come E.|[Ee][+-]?{D}+|E maiuscola o minuscola, + o - facoltativo e una o più cifre come definito in D.|  
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente vengono descritti i valori letterali numerici validi nel linguaggio delle espressioni regolari.  
   
-|Espressione regolare‏|Description|  
+|Espressione regolare‏|Descrizione|  
 |------------------------|-----------------|  
 |{D}+{IS}|Valore letterale numerico integrale con almeno una cifra (D) e, facoltativamente, suffisso per valori di tipo long e/o per valori senza segno (IS).  Esempi: 457, 785u, 986L e 7945ul.|  
 |{D}+{E}{FS}|Valore letterale numerico non integrale con almeno una cifra (D), notazione scientifica e suffisso per valori di tipo long o float.  Esempi: 4E8l, 13e-2f e 5E+L.|  
@@ -101,7 +100,7 @@ ms.lasthandoff: 05/03/2018
   
  Le stringhe possono includere altri caratteri che richiedono una sequenza di escape. Le sequenze di escape per i valori letterali stringa sono elencate nella tabella seguente.  
   
-|Sequenza di escape|Description|  
+|Sequenza di escape|Descrizione|  
 |---------------------|-----------------|  
 |\a|Avviso|  
 |\b|Backspace|  

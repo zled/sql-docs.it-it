@@ -1,30 +1,30 @@
 ---
-title: Condivisa di SQL Server Management Objects (SMO) - condizioni di licenza | Documenti Microsoft
+title: SQL Server Shared Management Objects (SMO) - condizioni di licenza | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd92f1a4d3dd24e4eab1c4f886b28dad158d9fd1
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040429"
 ---
-# <a name="sql-server-shared-management-objects-smo-license-terms"></a>Condivisa di SQL Server Management Objects (SMO) condizioni di licenza
+# <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server Shared Management Objects (SMO) License termini
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ## <a name="microsoft-software-license-terms"></a>CONDIZIONI DI LICENZA PER IL SOFTWARE MICROSOFT.
-**MICROSOFT SQL SERVER 2017 SHARED MANAGEMENT OBJECTS**
+**OGGETTI DI GESTIONE CONDIVISA DI MICROSOFT SQL SERVER 2017**
 
 ---
 Le presenti condizioni di licenza costituiscono il contratto tra Microsoft Corporation (o, in base al luogo di residenza del licenziatario, una delle sue consociate) e il licenziatario. Leggere le condizioni di licenza. Le condizioni si applicano al software indicato sopra, che include il supporto con cui è stato fornito (se presente). Le condizioni si applicano anche a qualsiasi
@@ -42,7 +42,7 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
 
 **1. DIRITTI DI INSTALLAZIONE E DI UTILIZZO.**
 
-&nbsp;&nbsp;È possibile installare e utilizzare un numero qualsiasi di copie del software nei dispositivi per progettare, sviluppare e testare i programmi.
+&nbsp;&nbsp;È possibile installare e usare un numero qualsiasi di copie del software nei dispositivi per progettare, sviluppare e testare i programmi.
 
 **2.    ULTERIORI REQUISITI DI LICENZA E/O DIRITTI DI UTILIZZO.**
 
@@ -54,7 +54,7 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii.   Requisiti per la distribuzione. Per distribuire il Codice distribuibile, il licenziatario deve**
 * aggiungere rilevanti e significative funzionalità al Codice distribuibile nei programmi del licenziatario;
-* per qualsiasi codice distribuibile con un'estensione di file della DLL, distribuire solo i risultati dell'esecuzione di tale codice distribuibile attraverso un linker al programma;
+* per qualsiasi codice distribuibile con estensione dll, distribuire solo i risultati dell'esecuzione di tale codice distribuibile attraverso un linker al programma;
 * far accettare ai distributori e agli utenti finali esterni un contratto con condizioni che garantiscano almeno lo stesso livello di tutela definito nel presente contratto; 
 * visualizzare una valida comunicazione di copyright del licenziatario stesso nei suoi programmi;
 * indennizzare, manlevare e difendere Microsoft da ogni e qualsiasi domanda o azione giudiziaria, ivi incluse le spese legali, relative all'utilizzo o alla distribuzione dei programmi del licenziatario.

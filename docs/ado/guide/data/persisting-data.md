@@ -2,7 +2,6 @@
 title: Rendere persistenti i dati | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f4fed35b629f8dd1eae89c42895fb8a780c4cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 438a09dd8f835653f9b2c76d73b7ce7f4583c1a5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272200"
 ---
 # <a name="persisting-data"></a>Rendere persistenti i dati
 Computer portatili (ad esempio, usando i computer portatili) ha generato la necessità per le applicazioni che possono essere eseguiti in uno stato connesso e disconnesso. ADO ha aggiunto il supporto per questo offrendo agli sviluppatori la possibilità di salvare un cursore client **Recordset** su disco e ricaricare il file in un secondo momento.  
@@ -116,7 +116,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  In questa sezione vengono trattati gli argomenti seguenti.  
   
 -   [Altre informazioni sulla persistenza dei recordset](../../../ado/guide/data/more-about-recordset-persistence.md)  

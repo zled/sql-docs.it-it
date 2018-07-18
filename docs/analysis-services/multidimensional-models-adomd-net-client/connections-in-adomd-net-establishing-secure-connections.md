@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020688"
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connessioni in ADOMD.NET - stabilire connessioni protette
   Quando si utilizza una connessione in ADOMD.NET, il metodo di sicurezza utilizzato per la connessione dipende dal valore del **ProtectionLevel** proprietà della stringa di connessione utilizzata quando si chiama il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> metodo il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  

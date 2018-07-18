@@ -2,7 +2,6 @@
 title: Lo stato delle proprietà (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4e254a4d13f4a210c174e3ef5b8181dd24cefd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7224efc2976873ff0326aa23a18df1cccbce230
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282030"
 ---
 # <a name="state-property-ado"></a>Proprietà state (ADO)
 Indica per tutti gli oggetti applicabili se lo stato dell'oggetto è aperto o chiuso. Se l'oggetto è in esecuzione un metodo asincrono, indica se lo stato corrente dell'oggetto connessione, l'esecuzione o il recupero.  
@@ -32,7 +32,7 @@ Indica per tutti gli oggetti applicabili se lo stato dell'oggetto è aperto o ch
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un **lungo** valore che può essere un [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) valore. Il valore predefinito è **adStateClosed**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile utilizzare il **stato** proprietà per determinare lo stato corrente di un oggetto specifico in qualsiasi momento.  
   
  L'oggetto **stato** proprietà può avere una combinazione di valori. Ad esempio, se viene eseguita un'istruzione, questa proprietà sarà assegnato un valore combinato di **adStateOpen** e **adStateExecuting**.  

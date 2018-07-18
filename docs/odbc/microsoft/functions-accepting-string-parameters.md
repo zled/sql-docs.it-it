@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900456"
 ---
 # <a name="functions-accepting-string-parameters"></a>Funzioni che accetta i parametri della stringa
 Tutte le funzioni che accettano parametri di stringa verranno convertite in Unicode. (Verrà esportata la forma di "W" della funzione). Il numero di byte viene convertito nel numero di caratteri per le API ODBC applicabile. Ciò vale per le funzioni seguenti:  

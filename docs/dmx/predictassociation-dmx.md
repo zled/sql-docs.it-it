@@ -1,38 +1,27 @@
 ---
-title: PredictAssociation (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 09/14/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictAssociation
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictAssociation function
-ms.assetid: 33eb66b5-84c6-449f-aaae-316345bc4ad5
-caps.latest.revision: 33
-author: Minewiskan
+title: PredictAssociation (DMX) | Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: e1d65c529dd268560b34d25a1cb767aefe4575db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7a23407b546bcde2dd1fde81654da4fe861e0719
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989543"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Consente di stimare l'appartenenza associativa.  
   
-Ad esempio, è possibile utilizzare la funzione PredictAssociation per ottenere il set dei consigli forniti lo stato corrente del carrello per un cliente. 
+Ad esempio, è possibile usare la funzione PredictAssociation per ottenere il set di raccomandazioni ha lo stato corrente del carrello acquisti per cliente. 
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,13 +31,13 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ```  
   
 ## <a name="applies-to"></a>Si applica a  
- Algoritmi che contengono tabelle nidificate stimabili, tra cui l'associazione e alcuni algoritmi di classificazione. Gli algoritmi di classificazione che supportano le tabelle nidificate includono il [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees, [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes, e [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi Neural Network.  
+ Algoritmi che contengono tabelle nidificate stimabili, tra cui alcuni algoritmi di classificazione e associazione. Gli algoritmi di classificazione che supportano le tabelle nidificate includono la [!INCLUDE[msCoName](../includes/msconame-md.md)] alberi delle decisioni [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes, e [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi Neural Network.  
   
 ## <a name="return-type"></a>Tipo restituito  
  \<espressione di tabella >  
   
-## <a name="remarks"></a>Osservazioni  
- Le opzioni per il **PredictAssociation** funzione includono EXCLUDE_NULL, INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (predefinita), INPUT_ONLY, INCLUDE_STATISTICS e INCLUDE_NODE_ID.  
+## <a name="remarks"></a>Note  
+ Le opzioni per la **PredictAssociation** funzione includono EXCLUDE_NULL, INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (predefinita), INPUT_ONLY, INCLUDE_STATISTICS e INCLUDE_NODE_ID.  
   
 > [!NOTE]  
 >  INCLUSIVE, EXCLUSIVE, INPUT_ONLY e INCLUDE_STATISTICS sono applicabili solo a riferimenti a colonne di tabella, mentre EXCLUDE_NULL e INCLUDE_NULL sono applicabili solo a riferimenti a colonne scalari.  
@@ -61,10 +50,10 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- Se si includono **$AdjustedProbability**, l'istruzione restituisce le prime *n* valori basati sul **$AdjustedProbability**.  
+ Se si include **$AdjustedProbability**, l'istruzione restituisce le prime *n* valori in base il **$AdjustedProbability**.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa il **PredictAssociation** funzione per restituire i quattro prodotti Adventure Works di database che sono più probabilmente verranno venduti insieme.  
+ L'esempio seguente usa il **PredictAssociation** funzione per restituire i quattro prodotti Adventure Works di database che sono probabilmente verranno venduti insieme.  
   
 ```  
 SELECT  
@@ -72,7 +61,7 @@ SELECT
 From  
   [Association]  
 ```  
-Nell'esempio seguente viene illustrato come è possibile utilizzare una tabella nidificata come input per la funzione di stima utilizzando la clausola SHAPE. Query SHAPE crea un set di righe con customerId come una colonna e una tabella nidificata come una seconda colonna che contiene l'elenco dei prodotti che un cliente ha già evidenziato. 
+Nell'esempio seguente viene illustrato come è possibile usare una tabella nidificata come input per la funzione di stima utilizzando la clausola SHAPE. Query SHAPE crea un set di righe con customerId come una sola colonna e una tabella nidificata come una seconda colonna, che contiene l'elenco dei prodotti di che un cliente ha già evidenziato. 
 
 ~~~~
 SELECT T.[CustomerId], PredictAssociation(MyNestedTable, 5) // returns top 5 associated items
@@ -89,7 +78,7 @@ SHAPE {
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

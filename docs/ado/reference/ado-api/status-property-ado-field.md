@@ -2,7 +2,6 @@
 title: Proprietà Status (campo ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1514ffc90b09c35df70a6bf32ee55b47dae3a71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70baf781839fe9a606f1aed2c26676dffe102d69
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282010"
 ---
 # <a name="status-property-ado-field"></a>Proprietà Status (campo ADO)
 Indica lo stato di un [campo](../../../ado/reference/ado-api/field-object.md) oggetto.  
@@ -34,7 +34,7 @@ Indica lo stato di un [campo](../../../ado/reference/ado-api/field-object.md) og
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) valore. Il valore predefinito è **adFieldOK**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="record-field-status"></a>Stato dei campi di record  
  Imposta sul valore di un **campo** oggetto nella raccolta di campi di un [Record](../../../ado/reference/ado-api/record-object-ado.md) vengono memorizzate nella cache fino a quando l'oggetto [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo viene chiamato. A questo punto, la modifica il valore del campo ha causato un errore, OLE DB genera l'errore **DB_E_ERRORSOCCURRED** (2147749409). La proprietà di stato di uno qualsiasi del **campo** gli oggetti di **campi** insieme che ha causato l'errore sarà presente un valore dal [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) che descrive la causa del il problema.  

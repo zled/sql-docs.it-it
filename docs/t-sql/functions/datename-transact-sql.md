@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,22 +25,23 @@ helpviewer_keywords:
 - dates [SQL Server], dateparts
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 caps.latest.revision: 59
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8cf093318d49fcf6d28777cf4381dead7110bcab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f056d9326a1323fea83e470abfb0d1d1ee662050
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791462"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Restituisce una stringa di caratteri che rappresenta il valore *datepart* indicato del valore *date* specificato.
-  
-Per una panoramica di tutti i tipi di dati e delle funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Questa funzione restituisce una stringa di caratteri che rappresenta l'elemento *datepart* specificato dell'argomento *date* indicato.
+
+Vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) per una panoramica di tutti i tipi di dati e delle funzioni di data e ora di [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,7 +53,10 @@ DATENAME ( datepart , date )
   
 ## <a name="arguments"></a>Argomenti  
 *datepart*  
-Parte dell'argomento *date* da restituire. Nella tabella seguente sono elencati tutti gli argomenti *datepart* validi. Variabili definite dall'utente equivalenti non sono valide.
+Parte specifica dell'argomento *date* che verrà restituito da `DATENAME`. Questa tabella elenca tutti gli argomenti validi per *datepart*.
+
+> [!NOTE]
+> `DATENAME` non accetta equivalenti di variabili definite dall'utente come argomenti di *datepart*.
   
 |*datepart*|Abbreviazioni|  
 |---|---|
@@ -74,8 +77,17 @@ Parte dell'argomento *date* da restituire. Nella tabella seguente sono elencati 
 |**ISO_WEEK**|**ISOWK, ISOWW**|  
   
 *data*  
-Espressione che può essere risolta in un valore **time**, **date**, **smalldatetime**, **datetime**, **datetime2** o **datetimeoffset**. *date* può essere costituito da un'espressione, un'espressione di colonna, una variabile definita dall'utente o un valore letterale stringa.  
-Per evitare ambiguità, esprimere gli anni nel formato a quattro cifre. Per altre informazioni sugli anni a due cifre, vedere [Configurare l'opzione di configurazione del server Cambio data per anno a due cifre](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+
+Espressione che può risolversi in uno dei tipi di dati seguenti: 
+
++ **data**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
+
+Per *date*, `DATENAME` accetta un'espressione di colonna, un'espressione, un valore letterale stringa o una variabile definita dall'utente. Per evitare problemi di ambiguità, esprimere gli anni nel formato a quattro cifre. Per informazioni sugli anni a due cifre, vedere [Configurare l'opzione di configurazione del server Cambio data per anno a due cifre](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 ## <a name="return-type"></a>Tipo restituito  
 **nvarchar**
@@ -84,20 +96,20 @@ Per evitare ambiguità, esprimere gli anni nel formato a quattro cifre. Per altr
   
 -   Ogni elemento *datepart* e le relative abbreviazioni restituiscono lo stesso valore.  
   
-Il valore restituito dipende dalla lingua impostata tramite [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e in [Configurare l'opzione di configurazione del server default language](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) dell'account di accesso. Il valore restituito dipende da [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) se *date* è un valore letterale stringa di alcuni formati. SET DATEFORMAT non influisce sul valore restituito quando la data è un'espressione della colonna di un tipo di dati ora e data.
+Il valore restituito dipende dalla lingua impostata tramite [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e in [Configurare l'opzione di configurazione del server default language](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) dell'account di accesso. Il valore restituito dipende da [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) se *date* è un valore letterale stringa di alcuni formati. SET DATEFORMAT non modifica il valore restituito quando la data è un'espressione della colonna di un tipo di dati ora e data.
   
-Quando il parametro *date* ha un argomento del tipo di dati **date**, il valore restituito dipende dall'impostazione specificata tramite [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
+Quando il parametro *date* ha un argomento del tipo di dati **date**, il valore restituito dipende dall'impostazione specificata da [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
 ## <a name="tzoffset-datepart-argument"></a>Argomento datepart TZoffset  
-Se l'argomento *datepart* è **TZoffset** (**tz**) e l'argomento *date* non prevede una differenza di fuso orario, viene restituito il valore 0.
+Se l'argomento *datepart* è **TZoffset** (**tz**) e l'argomento *date* non prevede una differenza di fuso orario, `DATEADD` restituisce 0.
   
 ## <a name="smalldatetime-date-argument"></a>Argomento date smalldatetime  
-Quando *date* è [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), i secondi vengono restituiti come 00.
+Quando *date* è [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), `DATENAME` restituisce i secondi come 00.
   
 ## <a name="default-returned-for-a-datepart-that-is-not-in-the-date-argument"></a>Valore predefinito restituito per un argomento datepart non incluso nell'argomento date  
-Se per il tipo di dati dell'argomento *date* non viene specificato *datepart*, il valore predefinito per *datepart* verrà restituito solo se è stato specificato un valore letterale per *date*.
+Se per il tipo di dati dell'argomento *date* non viene specificato *datepart*, `DATENAME` restituirà il valore predefinito per *datepart* solo se l'argomento *date* ha un valore letterale.
   
-Ad esempio, l'anno-mese-giorno predefinito per qualsiasi tipo di dati **date** è 1900-01-01. L'istruzione seguente include gli argomenti datepart per *datepart*, un argomento time per *date* e restituisce `1900, January, 1, 1, Monday`.
+Ad esempio, l'anno-mese-giorno predefinito per qualsiasi tipo di dati **date** è 1900-01-01. Questa istruzione include gli argomenti datepart per *datepart*, un argomento time per *date* e `DATENAME` restituisce `1900, January, 1, 1, Monday`.
   
 ```sql
 SELECT DATENAME(year, '12:10:30.123')  
@@ -107,7 +119,7 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-Se *date* viene specificato come variabile o colonna di tabella e per il tipo di dati della variabile o della colonna *datepart* non viene specificato, verrà restituito l'errore 9810. L'esempio di codice riportato di seguito ha esito negativo perché la parte di data anno non è valida per il tipo di dati **time** dichiarato per la variabile *@t*.
+Se *date* viene specificato come variabile o colonna di tabella e per il tipo di dati della variabile o della colonna *datepart* non viene specificato, `DATENAME` restituirà l'errore 9810. In questo esempio la variabile *@t* ha un tipo di dati **time**. L'esempio ha esito negativo perché la parte della data year non è valida per il tipo di dati **time**:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
@@ -115,12 +127,19 @@ SELECT DATENAME(year, @t);
 ```  
   
 ## <a name="remarks"></a>Remarks  
-È possibile utilizzare DATENAME nell'elenco di selezione e nelle clausole WHERE, HAVING, GROUP BY e ORDER BY.
+
+Usare `DATENAME` nelle clausole seguenti:
+
++ GROUP BY
++ HAVING
++ ORDER BY
++ SELECT \<list>
++ WHERE
   
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] DATENAME consente di eseguire in modo implicito il cast di valori letterali stringa in un tipo **datetime2**. Pertanto, DATENAME non supporta il formato AGM se la data viene passata come stringa. Per usare il formato AGM è necessario eseguire il cast della stringa in modo esplicito in un tipo **datetime** o **smalldatetime**.
+In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] DATENAME consente di eseguire in modo implicito il cast di valori letterali stringa in un tipo **datetime2**. `DATENAME` non supporta quindi il formato AGM se la data viene passata come stringa. Per usare il formato AGM è necessario eseguire il cast della stringa in modo esplicito in un tipo **datetime** o **smalldatetime**.
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente vengono restituite le parti della data specificata.
+In questo esempio vengono restituite le parti della data specificata. Sostituire un valore *datepart* della tabella per l'argomento `datepart` nell'istruzione SELECT:
   
 `SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');`
   
@@ -146,7 +165,7 @@ Nell'esempio seguente vengono restituite le parti della data specificata.
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Nell'esempio seguente vengono restituite le parti della data specificata.
+In questo esempio vengono restituite le parti della data specificata. Sostituire un valore *datepart* della tabella per l'argomento `datepart` nell'istruzione SELECT:
   
 ```sql
 SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');  

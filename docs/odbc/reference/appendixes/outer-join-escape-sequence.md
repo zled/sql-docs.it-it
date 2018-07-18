@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907526"
 ---
 # <a name="outer-join-escape-sequence"></a>Sequenza di Escape di outer Join
 ODBC utilizza le sequenze di escape per gli outer join. La sintassi di questa sequenza di escape è come segue:  

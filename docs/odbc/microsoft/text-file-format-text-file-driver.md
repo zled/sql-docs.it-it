@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911076"
 ---
 # <a name="text-file-format-text-file-driver"></a>Formato di File di testo (Driver di File di testo)
 Il driver ODBC testo supporta entrambi i file di testo delimitati e a larghezza fissa. Un file di testo è costituito da una riga di intestazione facoltativa e zero o più righe di testo.  

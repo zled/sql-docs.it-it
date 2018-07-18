@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904586"
 ---
 # <a name="schemaini-file-text-file-driver"></a>File INI (Driver di File di testo)
 Quando viene utilizzato il driver di testo, il formato del file di testo è determinato mediante un file di informazioni dello schema. Il file di informazioni dello schema è sempre denominato Schema.ini e mantenuto sempre nella stessa directory dell'origine dati di testo. Il file di informazioni dello schema fornisce il IISAM con informazioni sul formato generale del file, il nome della colonna e informazioni sul tipo di dati e diverse altre caratteristiche di dati. Un file Schema.ini è sempre necessario per l'accesso ai dati a lunghezza fissa. Quando la tabella di testo contiene DateTime, Currency, o dati Decimal o ogni volta che si desidera maggiore controllo sulla gestione dei dati nella tabella, è necessario utilizzare un file ini.  

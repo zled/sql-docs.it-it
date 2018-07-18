@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_force_plan (Transact-SQL) | Documenti Microsoft
+title: sp_query_store_force_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,17 +27,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f479710b8916fae3b315981663f97bac8488fb19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036119"
 ---
 # <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Consente di forzare un piano specifico per una determinata query.  
   
- Quando un piano forzato per una determinata query, ogni volta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rileva la query, il tentativo di utilizzo forzato del piano in query optimizer. Se l'utilizzo forzato del piano ha esito negativo, viene generato un XEvent e query optimizer viene richiesto di ottimizzare in modo normale.  
+ Quando si forza un piano per una determinata query, ogni volta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rileva la query, prova a forzare il piano in query optimizer. Se uso forzato del piano ha esito negativo, viene generato un XEvent e query optimizer viene richiesto di ottimizzare in modo normale.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,18 +54,18 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
  È l'id della query. *query_id* è un **bigint**, non prevede alcun valore predefinito.  
   
  [  **@plan_id =** ] *plan_id*  
- È l'id del piano di query essere forzato. *plan_id* è un **bigint**, non prevede alcun valore predefinito.  
+ È l'id del piano di query per essere forzato. *plan_id* è un **bigint**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede il **EXECUTE** autorizzazione per il database, e **inserire**, **aggiornamento**, e **eliminare** autorizzazione per il catalogo di archivio query Visualizzazioni.  
+ Richiede la **EXECUTE** autorizzazione per il database, e **Inserisci**, **UPDATE**, e **Elimina** l'autorizzazione per il catalogo di archivio query Visualizzazioni.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce informazioni sulle query in archivio query.  
+ L'esempio seguente restituisce informazioni sulle query in query store.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -75,7 +76,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Dopo aver identificato il query_id e plan_id che si desidera forzare, usare l'esempio seguente per forzare la query per utilizzare un piano.  
+ Dopo aver identificato il query_id e plan_id che si desidera forzare, usare l'esempio seguente per forzare la query da usare un piano.  
   
 ```  
 EXEC sp_query_store_force_plan 3, 3;  

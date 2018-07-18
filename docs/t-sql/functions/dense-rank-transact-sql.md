@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,22 +21,23 @@ helpviewer_keywords:
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 caps.latest.revision: 47
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54121ef549fb76639ec526b3128ffa8abfd7a849
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b23535671b4f438a979a93eef12b2a6e9856fdd
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789152"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce il rango delle righe nella partizione di un set dei risultati, senza vuoti tra i ranghi. Il rango di una riga corrisponde a 1 più il numero di ranghi distinti che precedono la riga in questione.  
+Questa funzione restituisce il rango di ogni riga all'interno della partizione di un set di risultati, senza gap nei valori di rango. Il rango di una riga specifica corrisponde a 1 più il numero di valori di rango distinti che precedono tale riga specifica.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,25 +47,25 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>Argomenti  
  \<partition_by_clause>  
- Suddivide il set di risultati generato dalla clausola [FROM](../../t-sql/queries/from-transact-sql.md) in partizioni alle quali viene applicata la funzione DENSE_RANK. Per la sintassi PARTITION BY, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+Prima suddivide il set di risultati generato dalla clausola [FROM](../../t-sql/queries/from-transact-sql.md) in partizioni e quindi la funzione `DENSE_RANK` viene applicata a ogni partizione. Vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) per la sintassi di `PARTITION BY`.  
   
  \<order_by_clause>  
- Determina l'ordine di applicazione della funzione DENSE_RANK alle righe in una partizione.  
+Determina l'ordine in cui la funzione `DENSE_RANK` viene applicata alle righe in una partizione.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **bigint**  
   
 ## <a name="remarks"></a>Remarks  
- Se due o più righe hanno un valore equivalente per un rango nella stessa partizione, alle righe con valori equivalenti viene assegnato lo stesso rango. Ad esempio, se due venditori principali hanno lo stesso valore SalesYTD, viene assegnato a entrambi il rango uno. Al venditore con il valore successivo SalesYTD più alto verrà assegnato il rango 2. Tale valore di rango corrisponde a 1 più il numero di righe distinte che precedono questa riga. I numeri restituiti dalla funzione DENSE_RANK sono pertanto sempre consecutivi e senza gap.  
+Se due o più righe hanno lo stesso valore di rango nella stessa partizione, ognuna di tali righe riceverà lo stesso rango. Se ad esempio due venditori principali hanno lo stesso valore SalesYTD, avranno entrambi il valore di rango 1. Il venditore con il valore successivo SalesYTD più alto avrà il valore di rango 2, che supera di uno il numero di righe distinte che precedono la riga in questione. I numeri restituiti dalla funzione `DENSE_RANK` sono quindi sempre valori consecutivi e senza gap.  
   
- L'ordinamento utilizzato per l'intera query determina l'ordine di visualizzazione delle righe nel risultato. Ciò significa che una riga con numero di rango 1 non sarà necessariamente la prima riga nella partizione.  
+L'ordinamento usato per l'intera query determina l'ordine delle righe nel set di risultati. Ciò significa che una riga con numero di rango 1 non sarà necessariamente la prima riga nella partizione.  
   
- DENSE_RANK è non deterministico. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+`DENSE_RANK` è non deterministico. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-ranking-rows-within-a-partition"></a>A. Classificazione di righe all'interno di una partizione  
- Nell'esempio seguente vengono assegnati i ranghi per i prodotti nelle ubicazioni di inventario specificate in base alle quantità. Il set di risultati viene partizionato da `LocationID` e ordinato logicamente in base al valore di `Quantity`. Si noti che la quantità dei prodotti 494 e 495 è la stessa. Poiché tali prodotti sono collegati, vengono entrambi classificati con uno.  
+Questo esempio assegna i ranghi per i prodotti nell'inventario, in base alle ubicazioni di inventario specificate, a seconda delle quantità. `DENSE_RANK` partiziona il set di risultati per `LocationID` e ordina in modo logico il set di risultati per `Quantity`. Si noti che la quantità dei prodotti 494 e 495 è la stessa. Poiché hanno entrambi lo stesso valore relativo alla quantità, hanno entrambi il valore di rango 1.  
   
 ```  
 USE AdventureWorks2012;  
@@ -102,7 +102,7 @@ ProductID   Name                               LocationID Quantity Rank
 ```  
   
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Classificazione di tutte le righe in un set di risultati  
- Nell'esempio seguente vengono restituiti i primi dieci dipendenti classificati in base allo stipendio. Poiché non è specificata alcuna clausola PARTITION BY, la funzione DENSE_RANK è stata applicata a tutte le righe nel set di risultati.  
+Questo esempio restituisce i primi dieci dipendenti classificati in base allo stipendio. Poiché l'istruzione `SELECT` non ha specificato una clausola `PARTITION BY`, la funzione `DENSE_RANK` è stata applicata a tutte le righe del set di risultati.  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,7 +130,14 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. Quattro funzioni di rango usate nella stessa query  
- Nell'esempio seguente vengono illustrate le quattro funzioni di rango utilizzate nella stessa query. Per esempi specifici, vedere l'argomento relativo a ogni funzione di rango.  
+Questo esempio illustra le quattro funzioni di rango
+
++ [DENSE_RANK()](./dense-rank-transact-sql.md)
++ [NTILE()](./ntile-transact-sql.md)
++ [RANK()](./rank-transact-sql.md)
++ [ROW_NUMBER()](./row-number-transact-sql.md)
+
+usate nella stessa query. Per esempi specifici, vedere l'argomento relativo a ogni funzione di rango.  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +179,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-ranking-rows-within-a-partition"></a>D: Classificazione di righe all'interno di una partizione  
- Nell'esempio seguente gli addetti alle vendite in ogni territorio di vendita vengono classificati in base al totale delle vendite. Il set di righe viene partizionato in base a `SalesTerritoryGroup` e ordinato in base a `SalesAmountQuota`.  
+Questo esempio classifica gli addetti alle vendite in ogni territorio di vendita in base al totale delle vendite. `DENSE_RANK` partiziona il set di righe per `SalesTerritoryGroup` e ordina il set di risultati per `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -183,7 +190,7 @@ FROM dbo.DimEmployee AS e
 INNER JOIN dbo.FactSalesQuota AS sq ON e.EmployeeKey = sq.EmployeeKey  
 INNER JOIN dbo.DimSalesTerritory AS st ON e.SalesTerritoryKey = st.SalesTerritoryKey  
 WHERE SalesPersonFlag = 1 AND SalesTerritoryGroup != N'NA'  
-GROUP BY LastName,SalesTerritoryGroup;  
+GROUP BY LastName, SalesTerritoryGroup;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

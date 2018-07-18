@@ -1,5 +1,5 @@
 ---
-title: database_scoped_credentials (Transact-SQL) | Documenti Microsoft
+title: database_scoped_credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: sql
@@ -24,25 +24,26 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a559b19863da9e6cc2a1ee3ccf8323d4a245af10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989383"
 ---
 # <a name="sysdatabasescopedcredentials-transact-sql"></a>database_scoped_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Restituisce una riga per ogni database con l'ambito delle credenziali nel database.  
+  Restituisce una riga per ogni database scoped credential nel database.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|credential_id|**int**|ID delle credenziali con ambito database. È univoco nel database.|  
-|name|**sysname**|Nome del database di credenziali con ambito. È univoco nel database.|  
+|credential_id|**int**|ID della credenziale con ambito database. È univoco nel database.|  
+|NAME|**sysname**|Nome del database-credenziali con ambito. È univoco nel database.|  
 |credential_identity|**nvarchar(4000)**|Nome dell'identità da utilizzare, in genere corrispondente a un utente di Windows. Non è necessario che sia univoco.|  
 |create_date|**datetime**|Ora in cui è stata creata la credenziale con ambito database.|  
-|modify_date|**datetime**|Ora ultima modifica in cui le credenziali con ambito database.|  
-|target_type|**Nvarchar (100)**|Tipo di database di credenziali con ambito. Restituisce `NULL` per database credenziali con ambito.|  
-|target_id|**int**|ID dell'oggetto cui viene eseguito il mapping di credenziali con ambito database per. Restituisce 0 per il database di credenziali con ambito|  
+|modify_date|**datetime**|Ora ultima modifica in corrispondenza del quale la credenziale con ambito database.|  
+|target_type|**Nvarchar(100)**|Tipo di database-credenziali con ambito. Restituisce `NULL` le credenziali per il database con ambito.|  
+|target_id|**int**|ID dell'oggetto mappato per la credenziale con ambito database. Le credenziali con ambito restituisce 0 per il database|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `CONTROL` per il database.  

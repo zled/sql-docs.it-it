@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910626"
 ---
 # <a name="state-transition-checks"></a>Controlli delle transizioni di stato
 Gestione Driver controlla che lo stato dell'ambiente, connessione o istruzione sia appropriato per la funzione chiamata. Ad esempio, una connessione deve essere un allocato stato quando **SQLConnect** viene chiamato deve essere un'istruzione in una stato quando **SQLExecute** viene chiamato. Gestione Driver restituisce SQL_ERROR per gli errori di transizione di stato.

@@ -17,11 +17,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2fc52c7bd989884b80c489801e76b51981270c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41e5c18119e8ec3482e6cddbdaee26bf10d6b1d0
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619518"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Associazione dei parametri in base al nome (parametri denominati)
 Alcuni DBMS consente di specificare i parametri da una stored procedure in base al nome anziché in base alla posizione nella chiamata di procedura. Tali parametri vengono chiamati *parametri denominati*. ODBC supporta l'utilizzo di parametri denominati. In ODBC i parametri denominati sono utilizzati solo nelle chiamate alle stored procedure e non possono essere utilizzati in altre istruzioni SQL.  
@@ -41,7 +42,7 @@ Alcuni DBMS consente di specificare i parametri da una stored procedure in base 
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- In questa procedura, il primo parametro, @title_id, ha un valore predefinito di 1. Un'applicazione può utilizzare il codice seguente per richiamare questa procedura in modo che specifichi un solo parametro dinamico. Questo parametro è un parametro denominato con il nome "@quote".  
+ In questa procedura, il primo parametro, @title_id, ha un valore predefinito di 1. Un'applicazione può utilizzare il codice seguente per richiamare questa procedura in modo che specifichi un solo parametro dinamico. Questo parametro è un parametro denominato con il nome "\@offerta".  
   
 ```  
 // Prepare the procedure invocation statement.  

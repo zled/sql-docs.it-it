@@ -2,10 +2,10 @@
 title: La creazione dei set di righe di parametri con valori di tabella | Documenti Microsoft
 description: Creazione di set di righe di parametro con valori di tabella statica e dinamica
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-table-valued-parameters
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0bfd6f54e374c77268641e151f738efa8a2385b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8879c56eae2f5691a27a6261cc12ca3ad9c4cebc
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690254"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Creazione di un set di righe di parametri con valori di tabella
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Sebbene i consumer siano in grado di fornire qualsiasi oggetto set di righe per i parametri con valori di tabella, vengono implementati gli oggetti set di righe tipici rispetto agli archivi dati di back-end, con conseguente limitazione delle prestazioni. Per questo motivo, il Driver OLE DB per SQL Server consente agli utenti di creare un oggetto set di righe specifico nella parte superiore di dati in memoria. Questo oggetto set di righe speciale in memoria rappresenta un nuovo oggetto COM definito set di righe di parametri con valori di tabella. Tale oggetto fornisce funzionalità simili ai set di parametri.  
   
@@ -32,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="static-scenario"></a>Scenario statico  
  Quando le informazioni sul tipo è noto, il consumer utilizza ITableDefinitionWithConstraints::CreateTableWithConstraints per creare un'istanza di un oggetto set di righe di parametri con valori di tabella che corrisponde a un parametro con valori di tabella.  
   
- Il *guid* campo (*pTableID* parametro) contiene il GUID speciale (CLSID_ROWSET_TVP). Il *pwszName* membro contiene il nome del tipo di parametro con valori di tabella che l'utente desidera creare un'istanza. Il *eKind* campo verrà impostato su DBKIND_GUID_NAME. Questo nome è obbligatorio quando l'istruzione SQL ad hoc; il nome è facoltativo se si tratta di una chiamata di routine.  
+ Il *guid* campo (*pTableID* parametro) contiene il GUID speciale (CLSID_ROWSET_TVP). Il *pwszName* membro contiene il nome del tipo di parametro con valori di tabella che il consumer desidera creare un'istanza. Il *eKind* campo verrà impostato su DBKIND_GUID_NAME. Questo nome è obbligatorio quando l'istruzione SQL ad hoc; il nome è facoltativo se si tratta di una chiamata di routine.  
   
  Per l'aggregazione, il consumer passa il *pUnkOuter* parametro con l'interfaccia IUnknown di controllo.  
   
@@ -55,6 +58,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Utilizzare i valori di tabella parametri & #40; OLE DB & #41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [Utilizzare parametri con valori di tabella &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

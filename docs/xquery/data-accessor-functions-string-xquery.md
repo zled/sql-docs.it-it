@@ -1,5 +1,5 @@
 ---
-title: Funzione String (XQuery) | Documenti Microsoft
+title: Funzione String (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c20973cdaa3b3d80124a9713a104d7294d6c20f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968873"
 ---
-# <a name="data-accessor-functions---string-xquery"></a>Funzioni di accesso dati - stringa (XQuery)
+# <a name="data-accessor-functions---string-xquery"></a>Funzioni di accesso dati - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce il valore di *$arg* rappresentato come stringa.  
+  Restituisce il valore del *$arg* rappresentato sotto forma di stringa.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,15 +47,15 @@ fn:string($arg as item()?) as xs:string
  *$arg*  
  È un nodo o un valore atomico.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 -   Se *$arg* è una sequenza vuota, viene restituita la stringa di lunghezza zero.  
   
--   Se *$arg* è un nodo, la funzione restituisce il valore di stringa del nodo ottenuto utilizzando la funzione di accesso del valore di stringa. definita nella specifica W3C "XQuery 1.0 and XPath 2.0 Data Model".  
+-   Se *$arg* è un nodo, la funzione restituisce il valore di stringa del nodo in cui verrà ottenuto tramite la funzione di accesso di valore di stringa. definita nella specifica W3C "XQuery 1.0 and XPath 2.0 Data Model".  
   
 -   Se *$arg* è un valore atomico, la funzione restituisce la stessa stringa restituita dal cast dell'espressione come **xs: String**, *$arg*, tranne quando diversamente.  
   
--   Se il tipo di *$arg* è **xs: anyURI**, l'URI viene convertito in una stringa senza caratteri speciali di escape.  
+-   Se il tipo della *$arg* viene **xs: anyURI**, l'URI viene convertito in una stringa senza caratteri speciali di escape.  
   
 -   In questa implementazione **fn:string()** senza un argomento può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]).  
   
@@ -86,7 +87,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- Se si specifica il **String ()** funzione, viene visualizzato il valore di stringa del nodo specificato.  
+ Se si specifica la **String ()** funzione, viene visualizzato il valore di stringa del nodo specificato.  
   
 ```  
 SELECT CatalogDescription.query('  

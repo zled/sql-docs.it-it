@@ -1,5 +1,5 @@
 ---
-title: Le regole del firewall Stored procedure (Database SQL di Azure) | Documenti Microsoft
+title: Le regole del firewall Stored procedure (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: ''
@@ -25,15 +25,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 6de7f6cc9166b63cf53b7cae71b172b43651e09e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023793"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>Le regole del firewall Stored procedure (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  In questa sezione sono contenute le stored procedure che impostano o eliminano le regole firewall. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] le regole del firewall possono essere utilizzate con [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. Per ulteriori informazioni, vedere [le regole firewall di configurare il Database SQL Azure - Panoramica](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
+  In questa sezione sono contenute le stored procedure che impostano o eliminano le regole firewall. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] le regole del firewall possono essere utilizzate con [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. Per altre informazioni, vedere [regole del firewall Configura Database SQL di Azure - Panoramica](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
   
  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/04/2018
 |[sp_set_firewall_rule &#40;Database di SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|[sp_delete_firewall_rule &#40;Database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)|  
 |[sp_set_database_firewall_rule &#40;Database di SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)|[sp_delete_database_firewall_rule &#40;Database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)|  
   
-Per [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], utilizzare le regole firewall di finestra. Per altre informazioni, vedere [Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).   
+Per [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], usare le regole firewall di finestra. Per altre informazioni, vedere [Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).   
   
 
 

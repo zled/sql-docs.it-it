@@ -1,5 +1,5 @@
 ---
-title: Elemento Members (XMLA) | Documenti Microsoft
+title: Elemento Members (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ae4326e00ba98075a86079157484c5963d0147d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579103"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994713"
 ---
 # <a name="members-element-xmla"></a>Elemento Members (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene una raccolta di [membro](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) elementi contenuti dall'elemento padre [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) elemento.  
+  Contiene una raccolta di [membro](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) gli elementi contenuti dall'elemento padre [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34579103"
 </CrossProduct>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "34579103"
 |Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
@@ -51,10 +51,10 @@ ms.locfileid: "34579103"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|Gerarchia|Richiesto **stringa** attributo. Il nome della gerarchia a cui i membri contenuti di **membri** l'elemento appartiene.|  
+|Gerarchia|Obbligatorio **stringa** attributo. Il nome della gerarchia al quale i membri contenuti per i **membri** l'elemento appartiene.|  
   
-## <a name="remarks"></a>Remarks  
- Quando un'applicazione client imposta il **AxisFormat** proprietà *ClusterFormat*, i membri su ogni asse sono divisi in cluster in cui ogni cluster rappresenta un prodotto incrociato tra set ordinati di membri di ogni gerarchia. Ogni **asse** elemento è costituito da uno o più **CrossProduct** elementi. Ogni **CrossProduct** elemento contiene un **membri** elemento per ogni gerarchia sull'asse. Il **membri** a sua volta, contiene un elemento, **membro** elemento per ogni membro della gerarchia specificata incluso il prodotto incrociato.  
+## <a name="remarks"></a>Note  
+ Quando un'applicazione client imposta la **AxisFormat** proprietà *ClusterFormat*, i membri su ogni asse sono divisi in cluster in cui ogni cluster rappresenta un prodotto incrociato tra set ordinati di membri di ogni gerarchia. Ciascuna **asse** elemento è costituito da uno o più **CrossProduct** elementi. Ogni **CrossProduct** elemento contiene un **membri** (elemento) per ogni gerarchia sull'asse. Il **membri** elemento, a sua volta, contiene uno **membro** (elemento) per ogni membro della gerarchia specificata incluso nel prodotto incrociato.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrata la struttura del **membri** elemento quando un client specifica *ClusterFormat* per il **AxisFormat** proprietà XMLA, dato il membri seguenti per l'asse:  

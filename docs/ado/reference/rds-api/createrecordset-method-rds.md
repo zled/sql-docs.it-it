@@ -2,7 +2,6 @@
 title: Metodo CreateRecordset (RDS) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ddc77ab08c04495cd269d4c602e33adcf0eec16f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61f918c7a7530ae504825182a1d6a1c4ced1d84c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287620"
 ---
 # <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (RDS)
 Crea un oggetto vuoto, disconnesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -50,9 +50,9 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  A **Variant** matrice di attributi che definisce ogni colonna di **Recordset** creato. Ogni definizione di colonna contiene una matrice di quattro attributi obbligatori e un attributo facoltativo.  
   
-|Attribute|Descrizione|  
+|attribute|Description|  
 |---------------|-----------------|  
-|Nome|Nome dell'intestazione di colonna.|  
+|nome|Nome dell'intestazione di colonna.|  
 |Tipo|Intero del tipo di dati.|  
 |Dimensione|Numero intero di larghezza in caratteri, indipendentemente dal tipo di dati.|  
 |Supporto di valori Null|Valore booleano.|  
@@ -60,7 +60,7 @@ object.CreateRecordset(ColumnInfos)
   
  Il set di matrici di colonna verrà quindi raggruppato in una matrice, che definisce il **Recordset**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'oggetto business sul lato server è possibile popolare il valore risultante **Recordset** con dati da un provider di dati non OLE DB, ad esempio un sistema operativo file contenente le quotazioni di borsa.  
   
  La tabella seguente elenca i [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valori supportati dal **CreateRecordset** metodo. Il numero indicato è il numero di riferimento utilizzato per definire i campi.  
@@ -69,7 +69,7 @@ object.CreateRecordset(ColumnInfos)
   
  Per alcuni dei tipi di dati della variabile, il tipo può essere assegnato al tipo indicato nella colonna di sostituzione. Non si vedranno le sostituzioni fino a dopo il **Recordset** creata e compilata. È quindi possibile controllare per il tipo di dati effettivi, se necessario.  
   
-|Lunghezza|Costante|Number|Sostituzione|  
+|Length|Costante|Number|Sostituzione|  
 |------------|--------------|------------|------------------|  
 |Fisso|**adTinyInt**|16||  
 |Fisso|**adSmallInt**|2||  

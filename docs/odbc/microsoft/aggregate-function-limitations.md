@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897296"
 ---
 # <a name="aggregate-function-limitations"></a>Limitazioni di funzione di aggregazione
 Una funzione di aggregazione e un riferimento a colonna non di aggregazione non può essere utilizzati come argomenti a una singola istruzione SQL.

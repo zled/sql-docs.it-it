@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geography_histogram (Transact-SQL) | Documenti Microsoft
+title: sp_help_spatial_geography_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a2eadfd9864c3d595d9d93078cd028a66b5d22ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019789"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +51,13 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  Le virgolette sono necessarie solo se viene specificata una tabella qualificata. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *TabName* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@colname =** ] **'***columnname***'**  
- Nome della colonna spaziale specificata. *Nome colonna* è un **sysname**, non prevede alcun valore predefinito.  
+ Nome della colonna spaziale specificata. *ColumnName* è un **sysname**, non prevede alcun valore predefinito.  
   
  [  **@resolution =** ] **'***risoluzione***'**  
  Risoluzione del rettangolo di selezione. I valori validi sono compresi tra 10 e 5000. *risoluzione* è un **tinyint**, non prevede alcun valore predefinito.  
   
  [  **@sample =** ] **'***esempio***'**  
- Percentuale della tabella utilizzata. I valori validi sono compresi tra 0 e 100. *TABLESAMPLE* è un **float**. Il valore predefinito è 100.  
+ Percentuale della tabella utilizzata. I valori validi sono da 0 a 100. *TABLESAMPLE* è un **float**. Il valore predefinito è 100.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Viene restituito un valore di tabella. Nella griglia seguente viene descritto il contenuto delle colonne della tabella.  
@@ -64,22 +65,22 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Rappresenta l'ID univoco di ciascuna cella, con un conteggio iniziale di 1.|  
-|**Cella**|**geography**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
+|**cella**|**geography**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
 |**row_count**|**bigint**|Indica il numero di oggetti spaziali che toccano o contengono la cella.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Utente deve essere un membro del **pubblica** ruolo. È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Nella scheda spaziale di SSMS viene illustrata una rappresentazione grafica dei risultati. È possibile eseguire una query sui risultati rispetto alla finestra spaziale per ottenere un numero approssimativo di risultati.  
   
 > [!NOTE]  
 >  Gli oggetti nella tabella potrebbero interessare più di una cella, pertanto la somma delle celle nella tabella potrebbe essere maggiore del numero di oggetti effettivi.  
   
- Il rettangolo di selezione per il **geography** tipo è l'intero globo.  
+ Il riquadro delimitatore per i **geografia** tipo è l'intero globo.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente chiama **sp_help_spatial_geography_histogram** sul `Person.Address` tabella il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ Nell'esempio seguente viene chiamato **sp_help_spatial_geography_histogram** nel `Person.Address` nella tabella di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

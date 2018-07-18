@@ -1,5 +1,5 @@
 ---
-title: Funzioni costruttore (XQuery) | Documenti Microsoft
+title: Funzioni costruttore (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6db36cc2dbd664869633d1d2f198684098ba29b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059734"
 ---
 # <a name="constructor-functions-xquery"></a>Funzioni costruttore (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +51,8 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *TYP*  
  Qualsiasi tipo XSD predefinito.  
   
-## <a name="remarks"></a>Osservazioni  
- Le funzioni costruttore sono supportate per i tipi atomici XSD di base e derivati. Tuttavia, i sottotipi di **xs: Duration**, che include **xdt: yearmonthduration e xdt: daytimeduration**, e **xs: QName**, **xs: NMTOKEN**, e **xs: NOTATION** non sono supportati. Sono inoltre disponibili i tipi atomici definiti dall'utente contenuti nelle raccolte di schemi associate, a condizione che siano derivati direttamente o indirettamente dai tipi seguenti.  
+## <a name="remarks"></a>Note  
+ Le funzioni costruttore sono supportate per i tipi atomici XSD di base e derivati. Tuttavia, i sottotipi dei **xs: Duration**, che comprende **xdt: yearmonthduration e xdt: daytimeduration**, e **xs: QName**, **xs: NMTOKEN**, e **xs: NOTATION** non sono supportati. Sono inoltre disponibili i tipi atomici definiti dall'utente contenuti nelle raccolte di schemi associate, a condizione che siano derivati direttamente o indirettamente dai tipi seguenti.  
   
 #### <a name="supported-base-types"></a>Tipi di base supportati  
  Di seguito sono elencati i tipi di base supportati:  
@@ -147,7 +148,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Utilizzo della funzione XQuery dateTime() per recuperare descrizioni di prodotto non recenti  
  In questo esempio, un documento XML di esempio viene innanzitutto assegnato a un **xml** variabile di tipo. Il documento contiene tre elementi <`ProductDescription`> di esempio, ognuno dei quali contiene un elemento figlio <`DateCreated`>.  
   
- Viene quindi eseguita una query sulla variabile per recuperare le descrizioni di prodotto create prima di una data specifica. Ai fini del confronto, la query utilizza la **xs:dateTime()** funzione del costruttore al tipo date.  
+ Viene quindi eseguita una query sulla variabile per recuperare le descrizioni di prodotto create prima di una data specifica. Ai fini del confronto, la query Usa la **tipizzare** funzione del costruttore al tipo date.  
   
 ```  
 declare @x xml  
@@ -180,9 +181,9 @@ select @x.query('
   
  Dalla query precedente si noti quanto segue:  
   
--   La struttura del ciclo FOR ... Struttura di ciclo in cui viene utilizzato per recuperare il \<ProductDescription > elemento che soddisfa la condizione specificata nella clausola WHERE.  
+-   La struttura del ciclo FOR ... Struttura ciclica in cui viene usato per recuperare il \<ProductDescription > elemento che soddisfa la condizione specificata nella clausola WHERE.  
   
--   Il **DateTime ()** funzione costruttore viene utilizzato per costruire **dateTime** digitare valori in modo da poter essere confrontate in modo appropriato.  
+-   Il **DateTime ()** funzione del costruttore viene utilizzato per costruire **dateTime** digitare i valori in modo che possono essere confrontati in modo appropriato.  
   
 -   La query genera quindi il codice XML risultante. Poiché si sta creando una sequenza di attributi, nella costruzione di strutture XML vengono utilizzate virgole e parentesi.  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914656"
 ---
 # <a name="tracing"></a>Traccia
 Gestione Driver ODBC è una funzionalità di traccia che consente la sequenza di chiamate di funzione effettuate da un'applicazione ODBC per eseguire la registrazione e trascritta in un file di log. Questa operazione viene eseguita da una DLL che acquisisce le chiamate tra l'applicazione e di gestione Driver e tra gestione Driver e il driver di traccia. Questo metodo di traccia sostituisce la traccia eseguita da ODBC 2*x* gestione Driver e le analisi eseguite in ODBC 2*x* da ODBC Spy.  

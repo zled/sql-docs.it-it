@@ -3,8 +3,6 @@ title: Connettersi a Sybase (SybaseToSQL) | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2152c6a02a7c02d7aea5fb5ab01c2aa5b74dfad4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1302d7e57d7ef2559d107039648e813e1292efa
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778401"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Connettersi a Sybase (SybaseToSQL)
 Utilizzare il **Connetti Sybase** finestra di dialogo per connettersi all'istanza di Sybase Adaptive Server Enterprise (ASE) che si desidera eseguire la migrazione.  
@@ -59,8 +58,8 @@ Le stringhe di connessione è costituito da coppie nome / valore di parametro. I
   
     |Impostazione|Parametro Sybase 12,5|Parametro Sybase 15|  
     |-----------|-------------------------|-----------------------|  
-    |Nome server|Nome server|Server|  
-    |Porta|Indirizzo di porta del server|Porta|  
+    |Nome server|Server Name|Server|  
+    |Port|Indirizzo di porta del server|Port|  
     |Nome utente|ID utente|ID utente|  
     |Password|Password|Password|  
     |Provider|Provider|Provider|  
@@ -78,10 +77,10 @@ Le stringhe di connessione è costituito da coppie nome / valore di parametro. I
     |Impostazione|Parametro Sybase 12,5/15|  
     |-----------|-----------------------------|  
     |Nome del driver|Driver|  
-    |Nome server|Server|  
+    |Server Name|Server|  
     |Nome utente|Uid|  
     |Password|Pwd|  
-    |Numero di porta|Porta|  
+    |Numero di porta|Port|  
   
     Per Sybase ASE 12,5 o 15, una stringa di connessione di esempio è la seguente:  
   
@@ -91,10 +90,10 @@ Le stringhe di connessione è costituito da coppie nome / valore di parametro. I
   
     |Impostazione|Parametro Sybase 12,5/15|  
     |-----------|-----------------------------|  
-    |Nome server|Server|  
+    |Server Name|Server|  
     |Nome utente|Uid|  
     |Password|Pwd|  
-    |Numero di porta|Porta|  
+    |Numero di porta|Port|  
   
     Un esempio di stringa di connessione per il Provider ADO.NET è come segue:  
   

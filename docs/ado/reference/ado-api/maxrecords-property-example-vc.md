@@ -2,7 +2,6 @@
 title: Esempio di proprietà MaxRecords (VC + +) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fc309cebef284d20dd738c3ba5ed39c5997f3f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91c3a9d2016b0ec99ee4deee8ebcac16c9befa83
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279330"
 ---
 # <a name="maxrecords-property-example-vc"></a>Esempio di proprietà MaxRecords (VC + +)
 Questo esempio viene utilizzato il [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) proprietà per aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente i titoli più costosi 10 il ***titoli*** tabella.  

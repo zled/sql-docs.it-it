@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912396"
 ---
 # <a name="header-files"></a>File di intestazione
 Il file di intestazione SQL contiene prototipi per le funzioni e funzionalità del livello di conformità interfaccia ODBC Core. Il file di intestazione Sqlext. h contiene prototipi per le funzioni e le funzionalità del livello 1 e i livelli di conformità di API di livello 2. Il file di intestazione Sqlext contiene le definizioni di tipo e gli indicatori per i tipi di dati SQL.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017358"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>Lezione 1: Creare un nuovo sito Web
 In questa lezione viene illustrato come creare un nuovo progetto di sito Web utilizzando il modello di sito Web ASP.NET per Visual C#.  

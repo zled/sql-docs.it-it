@@ -2,7 +2,6 @@
 title: Errori del provider | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 551c3a7e7f90f69601ff84449d60fc79c1375ece
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a4f551876f97f04f99bd8f2e722cd9e8a89f264
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272340"
 ---
 # <a name="provider-errors"></a>Errori del provider
 Quando si verifica un errore del provider, viene restituito un errore di run-time di -2147467259. Quando si riceve questo errore, controllare il **errori** insieme attivo **connessione** oggetto, che contiene uno o più errori che descrivono cosa è accaduto.  
@@ -70,7 +70,7 @@ End Function
   
 |Nome proprietà|Description|  
 |-------------------|-----------------|  
-|**Description**|Descrizione di testo dell'errore che si è verificato.|  
+|**Descrizione**|Descrizione di testo dell'errore che si è verificato.|  
 |**HelpContext, HelpFile**|Fa riferimento al file di argomento della Guida e Guida che contengono una descrizione dell'errore che si è verificato.|  
 |**NativeError**|Il numero di errore specifico del provider.|  
 |**Numero**|Un valore Long Integer che rappresenta il numero (elencati nel **ErrorValueEnum**) dell'errore che si è verificato.|  

@@ -1,5 +1,5 @@
 ---
-title: numbered_procedures (Transact-SQL) | Documenti Microsoft
+title: numbered_procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d16757a007b423ab6c4ed8ff8a002a73c9c583dd
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33178757"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987443"
 ---
 # <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Contiene una riga per ogni stored procedure di SQL Server creata come procedura numerata. Non viene visualizzata alcuna riga per la stored procedure di base (numero = 1). Le voci per le stored procedure di base sono reperibile nelle viste, ad esempio **Sys. Objects** e **Procedures**.  
+  Contiene una riga per ogni stored procedure di SQL Server creata come procedura numerata. Non viene visualizzata alcuna riga per la stored procedure di base (numero = 1). Le voci per le stored procedure di base sono disponibili nelle viste, ad esempio **Sys. Objects** e **Procedures**.  
   
 > [!IMPORTANT]  
 >  Le stored procedure numerate sono deprecate. pertanto non è consigliabile utilizzarle. Un evento DEPRECATION_ANNOUNCEMENT viene generato quando viene compilata una query che utilizza questa vista del catalogo.  

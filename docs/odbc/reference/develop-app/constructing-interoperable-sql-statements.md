@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909956"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Creazione di istruzioni SQL interoperabili
 Come indicato nelle sezioni precedenti, le applicazioni interoperabili devono utilizzare la grammatica SQL ODBC. Oltre a utilizzare questa grammatica, tuttavia, un numero di ulteriori problemi è riscontrato da applicazioni interoperative. Ad esempio, come un'applicazione vengono se desidera utilizzare una funzionalità, ad esempio gli outer join, che non è supportata da tutte le origini dati?  

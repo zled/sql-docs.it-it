@@ -1,32 +1,23 @@
 ---
 title: Operatori bit per bit | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- bitwise operators
-ms.assetid: 7349167b-f4b3-4344-bd01-b8f5fee4a509
-caps.latest.revision: 24
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2d28555db8a175cc7b131cab7ab75a0bca135f7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1d82ab7eb58b9c7aa76683e09b8017fb21799eef
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739420"
 ---
 # <a name="bitwise-operators"></a>Operatori bit per bit
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Gli operatori logici valutano valori e restituiscono valori booleani. Gli operatori logici disponibili nel linguaggio MDX (Multidimensional Expressions) non eseguono operazioni bit per bit.  
   
@@ -35,9 +26,9 @@ ms.lasthandoff: 05/03/2018
 |Operatore|Description|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|Esegue la congiunzione logica di due espressioni numeriche.|  
-|[È](../mdx/is-mdx.md)|Esegue un confronto logico tra due espressioni di oggetto.|  
+|[IS](../mdx/is-mdx.md)|Esegue un confronto logico tra due espressioni di oggetto.|  
 |[NOT](../mdx/not-mdx.md)|Esegue la negazione logica di un'espressione numerica.|  
-|[OPPURE](../mdx/or-mdx.md)|Esegue la disgiunzione logica di due espressioni numeriche.|  
+|[O](../mdx/or-mdx.md)|Esegue la disgiunzione logica di due espressioni numeriche.|  
 |[XOR](../mdx/xor-mdx.md)|Esegue un'operazione di esclusione logica tra due espressioni numeriche.|  
   
 ## <a name="see-also"></a>Vedere anche  

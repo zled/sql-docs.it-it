@@ -2,7 +2,6 @@
 title: Proprietà Filter | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9dc176d7c64d1845ddb863cd58fd41313967ccce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72efa7b9a70bdfdf141c32d5487cc2a5b9776d16
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278760"
 ---
 # <a name="filter-property"></a>Proprietà filtro
 Indica un filtro per i dati in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -39,7 +39,7 @@ Imposta o restituisce un **Variant** valore, che può contenere uno dei seguenti
   
 -   Oggetto [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) valore.  
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Remarks
 
 Utilizzare il **filtro** proprietà selettivo i record in un **Recordset** oggetto. Filtrati **Recordset** diventa il cursore corrente. Altre proprietà che restituiscono valori basati sull'oggetto corrente **cursore** interessati, ad esempio [proprietà AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [proprietà AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [ Proprietà RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), e [proprietà PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Impostazione di **filtro** proprietà su un valore specifico di nuovo il record corrente è passata al primo record che soddisfa il nuovo valore.
   

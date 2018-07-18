@@ -1,5 +1,5 @@
 ---
-title: Elemento member (XMLA) | Documenti Microsoft
+title: Elemento member (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1c962452675a0c1c91a3573546f0763060dfb44e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34575653"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994643"
 ---
 # <a name="member-element-xmla"></a>Elemento Member (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Rappresenta un singolo membro in un elemento padre [membri](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) o [tupla](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) elemento.  
+  Rappresenta un singolo membro in un elemento padre [membri](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) oppure [tupla](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34575653"
 </Tuple>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -57,7 +57,7 @@ ms.locfileid: "34575653"
 |Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
@@ -68,10 +68,10 @@ ms.locfileid: "34575653"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|Gerarchia|Richiesto **stringa** attributo (padre **tupla** solo elementi). Il nome della gerarchia a cui il membro rappresentato dal **membro** elemento appartiene.|  
+|Gerarchia|Obbligatorio **stringa** attributo (padre **tupla** solo elementi). Il nome della gerarchia a cui il membro rappresentato dal **membro** elemento appartiene.|  
   
-## <a name="remarks"></a>Remarks  
- Il **membro** elemento contiene le informazioni necessarie per identificare e visualizzare un membro all'interno di una gerarchia specificata. Per padre **membri** elementi, la gerarchia è già specificata il **gerarchia** attributo dell'elemento padre. Per padre **tupla** elementi, la gerarchia viene specificata utilizzando il **gerarchia** attributo del **membro** elemento.  
+## <a name="remarks"></a>Note  
+ Il **membro** elemento contiene le informazioni necessarie per identificare e visualizzare un membro all'interno di una gerarchia specificata. Per l'elemento padre **membri** gli elementi, la gerarchia è già specificata il **gerarchia** attributo dell'elemento padre. Per padre **tupla** gli elementi, la gerarchia viene specificata tramite il **gerarchia** attributo del **membro** elemento.  
   
 ## <a name="see-also"></a>Vedere anche
  [Proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

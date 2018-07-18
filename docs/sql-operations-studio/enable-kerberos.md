@@ -13,11 +13,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: 847638bc0693d83ba38dec6c8fec5e4ca030e01f
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 30ca6a2286102933243542b5bebcbd82030b952c
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981369"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Connettersi a SQL Server utilizzando l'autenticazione di Windows - Kerberos in [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
 
@@ -28,7 +29,7 @@ Per utilizzare l'autenticazione integrata (autenticazione di Windows) in macOS o
 ## <a name="prerequisites"></a>Prerequisiti
 
 - Accedere a un computer nel dominio di Windows per eseguire query verso il controller di dominio Kerberos.
-- SQL Server deve essere configurato per consentire l'autenticazione Kerberos. Per il driver client in esecuzione su Unix, l'autenticazione integrata è supportata solo con Kerberos. Sono disponibili ulteriori informazioni sulla configurazione di Sql Server per l'autenticazione tramite Kerberos [qui](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Devono esistere SPN registrati per ogni istanza di Sql Server a cui si sta tentando di connettersi. I dettagli sul formato dei nomi SPN di SQL Server sono elencati [qui](https://technet.microsoft.com/en-us/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server deve essere configurato per consentire l'autenticazione Kerberos. Per il driver client in esecuzione su Unix, l'autenticazione integrata è supportata solo con Kerberos. Sono disponibili ulteriori informazioni sulla configurazione di Sql Server per l'autenticazione tramite Kerberos [qui](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Devono esistere SPN registrati per ogni istanza di Sql Server a cui si sta tentando di connettersi. I dettagli sul formato dei nomi SPN di SQL Server sono elencati [qui](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Verifica della presenza del setup di Kerberos su Sql Server
@@ -131,7 +132,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 
 
-## <a name="configure-kdc-in-krb5conf"></a>Configurazione KDC in krb5
+## <a name="configure-kdc-in-krb5conf"></a>Configurazione KDC in krb5.conf
 
 Modificare il file `/etc/krb5.conf` in un editor di propria scelta. Configurare le chiavi seguenti:
 
@@ -151,7 +152,7 @@ DOMAIN.COMPANY.COM = {
 Quindi salvare il file "krb5.conf" e uscire
 
 > [!NOTE]
-> Il dominio deve essere in lettere maiuscole
+> Dominio deve essere in lettere maiuscole
 
 
 ## <a name="test-the-ticket-granting-ticket-retrieval"></a>Testare il recupero di Ticket Granting Ticket
@@ -176,6 +177,6 @@ krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 * Scegliere **Autenticazione di Windows** come tipo di autenticazione
 
-* Completare il profilo di connessione, fare clic su **Connetti**
+* Completare il profilo di connessione, fare clic su **Connect**
 
 Dopo avere stabilito la connessione, il server viene visualizzato nella barra laterale *server*.

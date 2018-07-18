@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911396"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Istruzioni SQL immesse dall'utente
 Applicazioni che eseguono analisi ad hoc anche comunemente consentono all'utente di immettere istruzioni SQL direttamente. Esempio:  

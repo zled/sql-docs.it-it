@@ -1,5 +1,5 @@
 ---
-title: trace_events (Transact-SQL) | Documenti Microsoft
+title: trace_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2d564d08dce5dbc89c0071625aefc2cfef80ec36
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969623"
 ---
 # <a name="systraceevents-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +38,13 @@ ms.lasthandoff: 05/04/2018
   
 > **IMPORTANTE** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, utilizzare le viste del catalogo di Eventi estesi.  
   
- Per ulteriori informazioni su questi eventi di traccia, vedere [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Per altre informazioni su questi eventi di traccia, vedere [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|ID univoco dell'evento. Questa colonna è disponibile anche nella **Sys. trace_event_bindings** e **Sys. trace_subclass_values** viste del catalogo.|  
-|**category_id**|**smallint**|ID della categoria dell'evento. Questa colonna è disponibile anche nella **trace_categories** vista del catalogo.|  
+|**category_id**|**smallint**|ID della categoria dell'evento. Questa colonna è disponibile anche nella **Sys. trace_categories** vista del catalogo.|  
 |**name**|**nvarchar(128)**|Nome univoco dell'evento. Questo parametro non è localizzato.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

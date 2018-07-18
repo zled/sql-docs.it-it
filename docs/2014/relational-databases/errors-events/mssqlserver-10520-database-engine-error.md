@@ -1,0 +1,48 @@
+---
+title: MSSQLSERVER_10520 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- 10520 (Database Engine error)
+ms.assetid: cc8799f1-5b90-4248-b209-e1d5087f9529
+caps.latest.revision: 9
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 353f4bc91c35b5000ab6a02f3b24a11225bc3014
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416600"
+---
+# <a name="mssqlserver10520"></a>MSSQLSERVER_10520
+    
+## <a name="details"></a>Dettagli  
+  
+|||  
+|-|-|  
+|Nome prodotto|SQL Server|  
+|ID evento|10520|  
+|Origine evento|MSSQLSERVER|  
+|Componente|SQLEngine|  
+|Nome simbolico|PG_PARAM_NOT_ALLOWED|  
+|Testo del messaggio|Impossibile creare la guida di piano '%.*ls' perché @type è stato specificato come '%ls' ed è stato specificato un valore non NULL per il parametro '%ls'. Questo tipo richiede un valore NULL per il parametro. Specificare NULL per il parametro oppure impostare un tipo che consenta un valore non NULL per il parametro.|  
+  
+## <a name="explanation"></a>Spiegazione  
+ Il tipo indicato in @type richiede un valore NULL per il parametro specificato, ma è stato fornito un valore non NULL.  
+  
+## <a name="user-action"></a>Azione dell'utente  
+ Specificare NULL per il parametro oppure impostare un tipo che consenta un valore non NULL per il parametro.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [Guide di piano](../performance/plan-guides.md)  
+  
+  

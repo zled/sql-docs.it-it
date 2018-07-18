@@ -1,0 +1,7 @@
+# [Strumenti per la risoluzione dei problemi relativi allo sviluppo dei pacchetti](troubleshooting-tools-for-package-development.md)
+## [Debug del flusso di controllo](debugging-control-flow.md)
+## [Debug degli script](debugging-script.md)
+## [Debug di un flusso di dati](debugging-data-flow.md)
+## [Debug di un pacchetto impostando punti di interruzione in un'attività o in un contenitore](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)
+## [Aggiunta di un visualizzatore dati a un flusso di dati](../add-a-data-viewer-to-a-data-flow.md)
+## [Configurazione di un output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md)

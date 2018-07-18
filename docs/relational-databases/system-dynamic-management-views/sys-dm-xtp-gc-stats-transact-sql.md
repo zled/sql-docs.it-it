@@ -23,17 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a66e199d232ed96fd194d42e340f3468fee51b6b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005653"
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Fornisce informazioni (statistiche generali) sul comportamento corrente del processo di Garbage Collection [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
- Le righe vengono sottoposte al Garbage Collection durante l'elaborazione delle transazioni regolare o dal thread principale di Garbage Collection a cui si fa riferimento come thread di lavoro inattivo. Quando il commit di una transazione utente, viene rimosso un elemento di lavoro dalla coda di garbage collection ([sys.dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Le righe che sono state sottoposte a Garbage Collection ma senza accesso da parte della transazione principale dell'utente vengono sottoposte al Garbage Collection dal thread di lavoro inattivo, come parte dell'analisi di elementi nascosti (analisi per le aree dell'indice a cui si accede di meno).  
+ Le righe vengono sottoposte al Garbage Collection durante l'elaborazione delle transazioni regolare o dal thread principale di Garbage Collection a cui si fa riferimento come thread di lavoro inattivo. Quando si esegue il commit di una transazione utente, lo rimuove dalla coda un elemento di lavoro dalla coda di garbage collection ([sys.dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Le righe che sono state sottoposte a Garbage Collection ma senza accesso da parte della transazione principale dell'utente vengono sottoposte al Garbage Collection dal thread di lavoro inattivo, come parte dell'analisi di elementi nascosti (analisi per le aree dell'indice a cui si accede di meno).  
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
@@ -73,6 +74,6 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica tabella ottimizzazione della memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913786"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>I driver e applicazioni conformi agli standard
 Un driver o un'applicazione conforme agli standard è conforme a Open Specification CAE gruppo "Data Management: SQL chiamata a livello di interfaccia (CLI)" e ISO/IEC 9075-3:1995 interfaccia a livello di chiamata (E) (SQL/CLI).  

@@ -2,7 +2,6 @@
 title: Metodo CancelUpdate (RDS) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 209d0c496f3c9467acb947e44165b91a6619af7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8769760499f89af5bfca07daaca03969667677fc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287420"
 ---
 # <a name="cancelupdate-method-rds"></a>Metodo CancelUpdate (RDS)
 Annulla le modifiche apportate alla riga corrente o nuova di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -41,7 +41,7 @@ DataControl.CancelUpdate
  *DataControl*  
  Una variabile oggetto che rappresenta un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il servizio di cursore per OLE DB mantiene una copia dei valori originali e una cache delle modifiche. Quando si chiama **CancelUpdate**, la cache delle modifiche viene reimpostata e tutti i controlli associati vengono aggiornati i dati originali.  
   
 ## <a name="applies-to"></a>Si applica a  

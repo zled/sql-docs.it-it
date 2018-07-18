@@ -2,7 +2,6 @@
 title: Eventi WillChangeRecord e RecordChangeComplete (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77d02d1a5b5d643c49fcbbd33057d6c709f1949a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: baef6471c753f7a85590a6dd46efb59657fbe9dd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282840"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>Eventi WillChangeRecord e RecordChangeComplete (ADO)
 Il **WillChangeRecord** eventi viene chiamato prima che uno o più record (righe) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) modificare. Il **RecordChangeComplete** eventi viene chiamato dopo che uno o più record di modifica.  
@@ -64,7 +64,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  Oggetto **Recordset** oggetto. Il **Recordset** per cui si è verificato l'evento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Oggetto **WillChangeRecord** o **RecordChangeComplete** evento può verificarsi per il primo campo modificato in una riga a causa dei seguenti **Recordset** operations: [ Aggiornamento](../../../ado/reference/ado-api/update-method.md), [eliminare](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), e [ CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). Il valore di **Recordset** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) determina quali operazioni determinano il verificarsi degli eventi.  
   
  Durante il **WillChangeRecord** evento, il **Recordset** [filtro](../../../ado/reference/ado-api/filter-property.md) è impostata su **adFilterAffectedRecords**. È possibile modificare questa proprietà durante l'elaborazione dell'evento.  

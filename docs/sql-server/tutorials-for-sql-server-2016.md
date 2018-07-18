@@ -3,8 +3,6 @@ title: Esercitazioni di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2017
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: performance
@@ -15,11 +13,12 @@ caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 954ab1ff985054fa0aebaa3aba0711cacd5b4a35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce093e33e944e84b3985bbf79e0e3c895aa3ebdc
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36925962"
 ---
 # <a name="tutorials-for-sql-server"></a>Esercitazioni di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 05/03/2018
  
 ## <a name="current-tutorials"></a>Esercitazioni correnti  
   
-|Technology|Description|  
+|Technology|Descrizione|  
 |--------------|---------------|  
 |[Esercitazioni su Analysis Services &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Viene illustrato come sviluppare e distribuire modelli tabulari o multidimensionali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Viene inoltre illustrato come usare strumenti quali PowerPivot per analizzare i dati nei modelli.|  
 |[Esercitazioni del motore di database](../relational-databases/database-engine-tutorials.md)|Viene illustrato come connettersi a un'istanza del motore di database e, successivamente, compilare ed eseguire istruzioni Transact-SQL.|  

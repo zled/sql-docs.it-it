@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura di elaborazione delle query | Microsoft Docs
 ms.custom: ''
-ms.date: 02/16/2018
+ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -14,27 +14,51 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
+- row mode execution
+- batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15fd6269a2e879eba086af8d1d143cc0e0cffc1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842904"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] consente di elaborare le query su diverse architetture di archiviazione dei dati, come tabelle locali, tabelle partizionate e tabelle distribuite su più server. Negli argomenti seguenti viene descritta l'elaborazione delle query e l'ottimizzazione del riutilizzo delle query in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite la memorizzazione nella cache dei piani di esecuzione.
 
+## <a name="execution-modes"></a>Modalità di esecuzione
+Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] può elaborare istruzioni SQL usando due modalità di elaborazione distinte:
+- Esecuzione in modalità riga
+- Esecuzione in modalità batch
+
+### <a name="row-mode-execution"></a>Esecuzione in modalità riga
+L'*esecuzione in modalità riga* è un metodo di elaborazione delle query utilizzato con le tabelle RDMBS tradizionali in cui i dati vengono archiviati in formato riga. Quando una query viene eseguita e accede ai dati in tabelle rowstore, gli operatori dell'albero di esecuzione e gli operatori figlio leggono ogni riga necessaria in tutte le colonne specificate nello schema della tabella. Da ogni riga letta, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recupera le colonne richieste per il set di risultati, come indicato dall'istruzione SELECT, dal predicato di JOIN o dal predicato di filtro.
+
+> [!NOTE]
+> L'esecuzione in modalità riga è molto efficiente per gli scenari OLTP, ma può rivelarsi meno efficiente nell'analisi di grandi quantità di dati, ad esempio in scenari che coinvolgono data warehouse.
+
+### <a name="batch-mode-execution"></a>Esecuzione in modalità batch  
+L'*esecuzione in modalità batch* è un metodo di elaborazione delle query con cui le query elaborano più righe contemporaneamente. Ogni colonna all'interno di un batch viene archiviata come vettore in un'area separata della memoria, pertanto l'elaborazione in modalità batch è basata su vettore. L'elaborazione in modalità batch usa inoltre algoritmi ottimizzati per le CPU multicore e la maggiore velocità effettiva di memoria dell'hardware moderno.      
+
+L'esecuzione in modalità batch è strettamente integrata nel formato di archiviazione columnstore, per il quale è ottimizzata. L'elaborazione in modalità batch funziona sui dati compressi, quando disponibili, ed elimina gli [operatori di scambio](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange) utilizzati dall'esecuzione in modalità riga. Ne derivano un migliore parallelismo e prestazioni più veloci.    
+
+Quando una query viene eseguita in modalità batch e accede ai dati negli indici columnstore, gli operatori dell'albero di esecuzione e gli operatori figlio leggono più righe insieme in segmenti di colonna. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] legge solo le colonne necessarie per il risultato, come indicato dall'istruzione SELECT, dal predicato di JOIN o dal predicato di filtro.    
+Per altre informazioni sugli indici columnstore, vedere [Architettura degli indici columnstore](../relational-databases/sql-server-index-design-guide.md#columnstore_index).  
+
+> [!NOTE]
+> L'esecuzione in modalità batch è molto efficiente negli scenari che coinvolgono data warehouse in cui vengono lette e aggregate grandi quantità di dati.
+
 ## <a name="sql-statement-processing"></a>Elaborazione di istruzioni SQL
+L'elaborazione di una singola istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] rappresenta la modalità più semplice di esecuzione delle istruzioni SQL in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per illustrare il processo di base, viene usata la procedura di elaborazione di una singola istruzione `SELECT` che fa riferimento esclusivamente a tabelle di base locali, non a viste o tabelle remote.
 
-L'elaborazione di una singola istruzione SQL rappresenta la modalità più semplice di esecuzione delle istruzioni SQL in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per illustrare il processo di base, viene usata la procedura di elaborazione di una singola istruzione `SELECT` che fa riferimento esclusivamente a tabelle di base locali, non a viste o tabelle remote.
-
-#### <a name="logical-operator-precedence"></a>Ordine di precedenza degli operatori logici
+### <a name="logical-operator-precedence"></a>Ordine di precedenza degli operatori logici
 
 Se in un'istruzione vengono usati più operatori logici, viene valutato prima `NOT`, quindi `AND` e infine `OR`. Gli operatori aritmetici (e bit per bit) vengono valutati prima degli operatori logici. Per altre informazioni, vedere [Precedenza degli operatori](../t-sql/language-elements/operator-precedence-transact-sql.md).
 
@@ -68,7 +92,7 @@ WHERE ProductModelID = 20 OR (ProductModelID = 21
 GO
 ```
 
-#### <a name="optimizing-select-statements"></a>Ottimizzazione delle istruzioni SELECT
+### <a name="optimizing-select-statements"></a>Ottimizzazione delle istruzioni SELECT
 
 Un'istruzione `SELECT` non definisce esattamente la procedura che il server di database deve eseguire per recuperare i dati richiesti. Il server di database deve pertanto analizzare l'istruzione per determinare il metodo più efficace per l'estrazione dei dati. Tale procedura, denominata ottimizzazione dell'istruzione `SELECT` , viene eseguita dal componente Query Optimizer. I dati di input per Query Optimizer sono costituiti dalla query, dallo schema del database (definizioni di tabella e indice) e dalle statistiche del database. L'output di Query Optimizer è un piano di esecuzione della query, talvolta definito piano di query o semplicemente piano. La descrizione dettagliata del contenuto di un piano di query è riportata più avanti in questo argomento.
 
@@ -104,7 +128,7 @@ Per la stima dei costi in termini di risorse relativi ai diversi metodi di estra
 
 Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un componente importante perché consente al server di database di adattarsi in modo dinamico alle condizioni variabili del database senza fare ricorso all'intervento di un programmatore o di un amministratore di database. In questo modo i programmatori possono concentrarsi sulla descrizione del risultato finale della query. A ogni esecuzione dell'istruzione, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila un piano di esecuzione efficace per lo stato corrente del database.
 
-#### <a name="processing-a-select-statement"></a>Elaborazione di un'istruzione SELECT
+### <a name="processing-a-select-statement"></a>Elaborazione di un'istruzione SELECT
 
 Di seguito viene illustrata la procedura di base necessaria per elaborare una singola istruzione SELECT in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: 
 
@@ -114,7 +138,7 @@ Di seguito viene illustrata la procedura di base necessaria per elaborare una si
 4. Il motore relazionale avvia l'esecuzione del piano di esecuzione. Man mano che vengono elaborati i passaggi che richiedono i dati delle tabelle di base, il motore relazionale richiede al motore di archiviazione di passare i dati dei set di righe richiesti dal motore relazionale stesso.
 5. Il motore relazionale elabora i dati restituiti dal motore di archiviazione nel formato definito per il set di risultati e restituisce il set di risultati al client.
 
-#### <a name="processing-other-statements"></a>Elaborazione di altre istruzioni
+### <a name="processing-other-statements"></a>Elaborazione di altre istruzioni
 
 La procedura di base descritta per l'elaborazione di un'istruzione `SELECT` è valida anche per altre istruzioni SQL, ad esempio `INSERT`, `UPDATE`e `DELETE`. Entrambe le istruzioni`UPDATE` e `DELETE` devono definire il set di righe da modificare o eliminare. usando un processo di identificazione delle righe corrispondente a quello che consente di identificare le righe di origine che formano il set di risultati di un'istruzione `SELECT` . Le istruzioni `UPDATE` e `INSERT` possono includere istruzioni SELECT incorporate che forniscono i valori dei dati da aggiornare o da inserire.
 
@@ -170,7 +194,7 @@ WHERE OrderDate > '20020531';
 
 La funzionalità Showplan di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio indica che il motore relazionale compila lo stesso piano di esecuzione per entrambe le istruzioni `SELECT`.
 
-#### <a name="using-hints-with-views"></a>Utilizzo di hint con le viste
+### <a name="using-hints-with-views"></a>Utilizzo di hint con le viste
 
 Gli hint inseriti nelle viste di una query possono entrare in conflitto con altri hint individuati quando la vista viene espansa in modo da accedere alle relative tabelle di base. In questo caso, la query restituisce un errore. Si consideri, ad esempio, la vista seguente nella cui definizione è contenuto un hint di tabella:
 

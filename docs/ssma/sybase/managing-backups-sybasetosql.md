@@ -3,8 +3,6 @@ title: La gestione dei backup (SybaseToSQL) | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 85ccefaddf6e8f0bad35d3a01d1b355f0482db9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ca7901e604bfce6649211e87cc7909730640842
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778953"
 ---
 # <a name="managing-backups-sybasetosql"></a>La gestione dei backup (SybaseToSQL)
 Gestione dei Backup Sybase consente di backup e ripristino dati di tabelle, prima o dopo l'esecuzione di un test. È inoltre possibile gestire il contenuto di backup con la finestra di gestione contenuto di Backup.  
@@ -42,7 +41,7 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo:
   
 -   Fare clic su di **Annulla** per chiudere la finestra di dialogo.  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Ripristina  
 Per aprire la finestra di dialogo di ripristino, scegliere il menu di Tester per la gestione del Backup Sybase, quindi fare clic su Ripristina... Sarà possibile trovare una struttura ad albero contenente le tabelle disponibili nel backup. Selezionare uno o più tabelle per ripristinare i dati.  
   
 I pulsanti seguenti sono disponibili nella finestra di dialogo:  
@@ -78,7 +77,7 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo:
   
 -   Fare clic su di **Annulla** per chiudere la finestra di dialogo.  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Ripristina  
 Per aprire la finestra di dialogo di ripristino, il Tester scegliere dal menu Gestione Backup di SQL Server, fare clic su Ripristina... Sarà possibile trovare una struttura ad albero contenente le tabelle disponibili nel backup. Selezionare almeno una tabella per ripristinare i dati.  
   
 I pulsanti seguenti sono disponibili nella finestra di dialogo:  

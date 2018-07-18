@@ -1,31 +1,20 @@
 ---
-title: PredictHistogram (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictHistogram
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictHistogram function
-ms.assetid: 85ffc542-96e7-4f58-aaa3-34d76befcedf
-caps.latest.revision: 34
-author: Minewiskan
+title: PredictHistogram (DMX) | Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a7b6c9df43d66d69b9dea1e06bea646a6a31d4dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985360"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,11 +34,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>Tipo restituito  
  Tabella.  
   
-## <a name="remarks"></a>Osservazioni  
- Un istogramma genera colonne di statistiche. La struttura della colonna dell'istogramma restituito dipende dal tipo di riferimento di colonna che viene utilizzato con il **PredictHistogram** (funzione).  
+## <a name="remarks"></a>Note  
+ Un istogramma genera colonne di statistiche. La struttura della colonna dell'istogramma restituito dipende dal tipo di riferimento di colonna che viene usato con il **PredictHistogram** (funzione).  
   
 ## <a name="scalar-columns"></a>Colonne scalari  
- Per un \<riferimento alla colonna scalare >, l'istogramma che il **PredictHistogram** funzione restituisce costituito dalle colonne seguenti:  
+ Per un \<riferimento a colonna scalare >, l'istogramma che il **PredictHistogram** restituito dalla funzione le colonne seguenti:  
   
 -   Valore stimato.  
   
@@ -67,10 +56,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$AdjustedProbability**  
   
-     Il **$AdjustedProbability** colonna è un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] estensione per il [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB per Data Mining specifica.  
+     Il **$AdjustedProbability** colonna è un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] estensione per il [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB specifiche di Data Mining.  
   
 ## <a name="cluster-columns"></a>Colonne cluster  
- L'istogramma che il **PredictHistogram** funzione restituisce per un \<cluster riferimento di colonna > include le colonne seguenti:  
+ L'istogramma che il **PredictHistogram** funzione restituisce per una \<riferimento alla colonna del cluster > è costituito da colonne seguenti:  
   
 -   **$Cluster** (rappresenta il nome del cluster)  
   
@@ -79,7 +68,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 -   **$Probability**  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene restituito lo stato stimato della colonna Bike Buyer in una query singleton. La query restituisce anche gli stati probabilmente prime due dell'attributo Bike Buyer, in base alla probabilità adattata ottenuta mediante il **PredictHistogram** (funzione).  
+ Nell'esempio seguente viene restituito lo stato stimato della colonna Bike Buyer in una query singleton. La query restituisce anche gli stati più probabili prime due dell'attributo Bike Buyer, in base alla probabilità adattata ottenuta mediante il **PredictHistogram** (funzione).  
   
 ```  
 SELECT  
@@ -103,8 +92,8 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

@@ -2,7 +2,6 @@
 title: Utilizzo di servizi desktop remoto e di sicurezza | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e149ec41722f22ce5b9c57592df39dd0d22b1fe9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc65be00af43f9ad891d01ad00e506fcd178872d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274240"
 ---
 # <a name="rds-usage-and-security"></a>Sicurezza e l'utilizzo di servizi desktop remoto
 Utilizzare le informazioni in questa sezione per configurare il server e utilizzare Servizi Desktop remoto rapidamente. In questa sezione include i passaggi di configurazione specifici che potrebbe essere necessario intraprendere quando l'implementazione di servizi desktop remoto, vengono descritte alcune delle principali relazioni tra servizi desktop remoto e altre tecnologie, e consentono di identificare le soluzioni ai problemi che potrebbero verificarsi quando si configura un Soluzione di servizi desktop remoto.  

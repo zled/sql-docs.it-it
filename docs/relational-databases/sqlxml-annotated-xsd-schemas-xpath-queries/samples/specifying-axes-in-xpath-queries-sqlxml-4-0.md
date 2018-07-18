@@ -1,5 +1,5 @@
 ---
-title: Definizione di assi in query XPath (SQLXML 4.0) | Documenti Microsoft
+title: Definizione di assi in query XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -25,16 +25,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8e4f7d99951749a147db2e0432bb74ce61113335
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053769"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Definizione di assi in query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Negli esempi seguenti viene illustrato il modo in cui specificare assi in query XPath.  
   
- Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+ Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Esempi  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 /child::Contact  
 ```  
   
- Nella query, `child` è l'asse e `Contact` è il test di nodo (TRUE se `Contact` è un  **\<elemento >** nodo perché \<elemento > è il tipo di nodo primario associato il `child` asse).  
+ Nella query `child` è l'asse e `Contact` è il test di nodo (TRUE se `Contact` è un  **\<elemento >** nodo, perché \<elemento > è il tipo di nodo primario associato con il `child` asse).  
   
  L'asse `child` è l'asse predefinito. È pertanto possibile scrivere la query nel modo seguente:  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (XPathAxesSampleA.xml) e salvarlo nella directory in cui è stato salvato il file SampleSchema1.xml.  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzando ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito viene indicato il set di risultati parziale dell'esecuzione del modello:  
   
@@ -90,13 +91,13 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Recuperare nipoti del nodo di contesto  
- La query XPath seguente seleziona tutti i  **\<ordine >** figlio dell'elemento il  **\<cliente >** gli elementi figlio del nodo di contesto:  
+ La query XPath seguente seleziona tutti i  **\<ordine >** figli del  **\<cliente >** gli elementi figlio del nodo di contesto:  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- Nella query, `child` è l'asse e `Customer` e `Order` sono i test di nodo (questi test di nodo sono TRUE se Customer e Order sono  **\<elemento >** nodi, in quanto il  **\<elemento >** nodo è il nodo primario per il **figlio** asse). Per ogni nodo corrispondente  **\<cliente >** nodi corrispondenti,  **\<ordini >** vengono aggiunti al risultato. Solo  **\<ordine >** viene restituito nel set di risultati.  
+ Nella query `child` è l'asse e `Customer` e `Order` sono i test di nodo (questi test di nodo sono TRUE se Customer e Order sono  **\<elemento >** nodi, in quanto il  **\<elemento >** nodo è il nodo primario per il **figlio** asse). Per ogni nodo che corrisponde  **\<cliente >**, i nodi corrispondenti  **\<ordini >** vengono aggiunti al risultato. Solo  **\<ordine >** viene restituita nel set di risultati.  
   
  Il **figlio** è l'asse predefinito. È pertanto possibile specificare la query nel modo seguente:  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/03/2018
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (XPathAxesSampleB.xml) e salvarlo nella directory in cui:  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzando ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito viene indicato il set di risultati parziale dell'esecuzione del modello:  
   
@@ -165,10 +166,10 @@ ms.lasthandoff: 05/03/2018
 </ROOT>  
 ```  
   
- Se la query XPath viene specificata come `Customer/Order/OrderDetail`, da ogni nodo che corrisponde  **\<cliente >** la query passa ai relativi  **\<ordine >** elementi. E per ogni nodo corrispondente  **\<ordine >**, la query aggiunge i nodi  **\<OrderDetail >** al risultato. Solo  **\<OrderDetail >** viene restituito nel set di risultati.  
+ Se la query XPath viene specificata come `Customer/Order/OrderDetail`, da ogni nodo che corrisponde  **\<cliente >** la query passa ai relativi  **\<ordine >** elementi. E per ogni nodo che corrisponde  **\<ordine >**, la query aggiunge i nodi  **\<OrderDetail >** al risultato. Solo  **\<OrderDetail >** viene restituita nel set di risultati.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Utilizzare . per specificare l'asse padre  
- La query seguente recupera tutti i  **\<ordine >** gli elementi con un elemento padre  **\<cliente >** elemento con un **CustomerID** attributo valore di 1. La query utilizza la **figlio** asse nel predicato per trovare il padre del  **\<ordine >** elemento.  
+ La query seguente recupera tutte le  **\<ordine >** elementi con un elemento padre  **\<cliente >** elemento con un **CustomerID** attributo valore di 1. La query Usa la **figlio** asse nel predicato per trovare il padre delle  **\<ordine >** elemento.  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -187,11 +188,11 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 > [!NOTE]  
->  La query XPath `/Order[../@CustomerID="1"]` restituirà un errore perché è presente alcun padre di  **\<ordine >**. Anche se possono essere presenti elementi nello schema di mapping che contengono  **\<ordine >**, l'espressione XPath non è stato avviato in uno di essi; di conseguenza,  **\<ordine >** viene considerato il tipo di elemento di livello principale nel documento.  
+>  La query XPath `/Order[../@CustomerID="1"]` restituirà un errore perché non è presente alcun padre di  **\<ordine >**. Sebbene possano essere presenti elementi nello schema di mapping che contengono  **\<ordine >**, l'espressione XPath non è iniziato in corrispondenza di uno di essi; di conseguenza,  **\<ordine >** viene considerato il tipo di elemento di primo livello nel documento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (XPathAxesSampleC.xml) e salvarlo nella directory in cui:  
   
@@ -211,7 +212,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzando ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito viene indicato il set di risultati parziale dell'esecuzione del modello:  
   
@@ -252,13 +253,13 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Specificare l'asse attribute  
- La query XPath seguente seleziona tutti i  **\<cliente >** gli elementi figlio del nodo di contesto con un **CustomerID** valore di 1 attributo:  
+ La query XPath seguente seleziona tutti i  **\<cliente >** elementi figlio del nodo di contesto con un **CustomerID** attributo il valore 1:  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- Nel predicato `attribute::CustomerID`, `attribute` è l'asse e `CustomerID` è il test di nodo (se `CustomerID` è un attributo il test di nodo è TRUE, in quanto il  **\<attributo >** nodo è il nodo primario per il `attribute` asse).  
+ Nel predicato `attribute::CustomerID`, `attribute` è l'asse e `CustomerID` è il test di nodo (se `CustomerID` è un attributo di test di nodo è TRUE, perché il  **\<attributo >** nodo è il nodo primario per il `attribute` asse).  
   
  È possibile specificare un collegamento all'asse `attribute` (@) e, poiché l'asse `child` è l'asse predefinito, può essere omesso dalla query:  
   
@@ -268,7 +269,7 @@ ms.lasthandoff: 05/03/2018
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (XPathAxesSampleD.xml) e salvarlo nella directory in cui è stato salvato il file SampleSchema1.xml.  
   
@@ -288,7 +289,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzando ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito viene indicato il set di risultati parziale dell'esecuzione del modello:  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -53,15 +52,16 @@ helpviewer_keywords:
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b17a85709bbb7a60badadabc1f18ff5fd688188d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc12292f373e1028e37050020dfcccff74e90ade
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783963"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funzioni scalari ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="string-functions"></a>Funzioni per i valori stringa  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |BIT_LENGTH(string_exp) (ODBC 3.0)|Restituisce la lunghezza in bit dell'espressione stringa.<br /><br /> Non funziona solo per i dati di tipo stringa. Pertanto, non converte implicitamente string_exp in una stringa ma restituisce le dimensioni interne del tipo di dati fornito.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|Restituisce la stringa di caratteri che risulta dalla concatenazione di string_exp2 e string_exp1. La stringa risultante dipende da DBMS. Ad esempio, se la colonna rappresentata string_exp1 contiene un valore NULL, DB2 restituisce NULL ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce una stringa non Null.|  
@@ -84,13 +84,13 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="numeric-function"></a>Funzione numerica  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Restituisce numeric_exp troncato in corrispondenza di un numero di posizioni pari a integer_exp a destra del separatore decimale. Se integer_exp è negativo, numeric_exp viene troncato in corrispondenza di un numero di posizioni pari a &#124;integer_exp&#124; a sinistra del separatore decimale.|  
   
 ### <a name="time-date-and-interval-functions"></a>Funzioni di data, ora e intervallo  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|Restituisce la data corrente.|  
 |CURDATE( ) (ODBC 3.0)|Restituisce la data corrente.|  

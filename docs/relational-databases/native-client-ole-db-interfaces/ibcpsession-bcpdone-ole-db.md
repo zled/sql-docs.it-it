@@ -1,14 +1,12 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Documenti Microsoft
+title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 74efcf16e4844b5ee70f6d3ed8226682057969ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d57e507beb03a28f9e0f7e0b676b8393ace4a125
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421500"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,8 +40,8 @@ ms.lasthandoff: 05/03/2018
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Nessuna operazione può essere chiamata sul [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) interfaccia dopo la chiamata di **Ibcpsession** metodo. L'unica possibilità consiste nel chiamare il [ibcpsession:: BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) per avviare una nuova operazione di copia bulk. Questa operazione è simile alla chiamata di [IRowsetFastLoad:: commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) metodo.  
+## <a name="remarks"></a>Note  
+ Nessun altra operazione può essere chiamata sul [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) interfaccia dopo la chiamata il **Ibcpsession** (metodo). L'unica possibilità consiste nel chiamare il [ibcpsession:: BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) metodo per avviare una nuova operazione di copia bulk. Ciò è simile alla chiamata di [IRowsetFastLoad:: commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) (metodo).  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  S_OK  

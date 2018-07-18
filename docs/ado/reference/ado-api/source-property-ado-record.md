@@ -2,7 +2,6 @@
 title: Proprietà (Record ADO) dell'origine | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,11 +24,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bff992c2c2406c7ea6df95ca92f67da3bf52e3fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d7ac5eb7a467109af4b1a8d3665436159f3f609
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281980"
 ---
 # <a name="source-property-ado-record"></a>Proprietà Source (Record ADO)
 Indica l'origine dati o l'oggetto rappresentato dal [Record](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -37,7 +37,7 @@ Indica l'origine dati o l'oggetto rappresentato dal [Record](../../../ado/refere
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **Variant** valore che indica l'entità rappresentata dal **Record**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **origine** proprietà restituisce il *origine* argomento del **Record** oggetto [aprire](../../../ado/reference/ado-api/open-method-ado-record.md) metodo. Può contenere una stringa URL assoluta o relativa. È possibile usare un URL assoluto senza impostare il [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà per aprire direttamente il **Record** oggetto. Implicita **connessione** viene creato in questo caso l'oggetto.  
   
  Il **origine** proprietà può inoltre contenere un riferimento a un già aperto **Recordset**, che consente di aprire un **Record** oggetto che rappresenta la riga corrente nella  **Recordset**.  

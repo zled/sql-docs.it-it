@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899156"
 ---
 # <a name="date-arithmetic"></a>Operazione aritmetica di data
 Il driver supporta l'aggiunta e sottrazione di un numero intero compreso tra una colonna di data, ora o TIMESTAMP. Per una colonna di data, l'integer che specifica il numero di giorni da aggiungere o sottrarre. Per una colonna TIMESTAMP o di ora, il numero intero specifica il numero di secondi per aggiungere o sottrarre.

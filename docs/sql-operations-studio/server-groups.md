@@ -18,6 +18,7 @@ ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34306490"
 ---
 # <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>Gruppi di server in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

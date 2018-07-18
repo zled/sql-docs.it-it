@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029718"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Impostare le proprietà di un server di report (Management Studio)
   È possibile impostare le proprietà del sistema di un server di report in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per attivare caratteristiche o specificare i valori predefiniti del server.  

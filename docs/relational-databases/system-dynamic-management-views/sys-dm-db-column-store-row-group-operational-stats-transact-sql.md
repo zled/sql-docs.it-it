@@ -18,38 +18,39 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 655f5838456fd72566405c453cecfd8858d7d6dd
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048829"
 ---
 # <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  I/o, blocco, a livello di riga corrente restituisce e del metodo di accesso per gruppi di righe compressi in un indice columnstore. Utilizzare **sys.dm_db_column_store_row_group_operational_stats** per tenere traccia della quantità di tempo una query dell'utente deve attendere prima di leggere o scrivere in un gruppo di righe compresso o una partizione di un indice columnstore e identificare i gruppi di righe che sono stati significativa attività dei / o o aree critiche.  
+  I/o, blocco, a livello di riga corrente restituisce e metodo di accesso per i rowgroup compressi in un indice columnstore. Uso **sys.dm_db_column_store_row_group_operational_stats** per tenere traccia della quantità di tempo una query dell'utente deve attendere prima di leggere o scrivere in un rowgroup compresso o una partizione di un indice columnstore e identificare i rowgroup che riscontrano attività dei / o significativa o aree critiche.  
   
  Gli indici columnstore in memoria non vengono visualizzati in questa DMV.  
  
  
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID della tabella con l'indice columnstore.|  
+|**object_id**|**int**|ID della tabella contenente l'indice columnstore.|  
 |**index_id**|**int**|ID dell'indice columnstore.|  
 |**partition_number**|**int**|Numero di partizione in base 1 all'interno dell'indice o heap.|  
-|**row_group_id**|**int**|ID del gruppo di righe nell'indice columnstore. È univoco all'interno di una partizione.|  
-|**scan_count**|**int**|Numero di analisi attraverso il gruppo di righe dall'ultimo riavvio SQL.|  
-|**delete_buffer_scan_count**|**int**|Numero di volte in cui che il buffer di eliminazione è stato utilizzato per determinare le righe eliminate in questo gruppo di righe. Ciò include l'accesso alla tabella hash in memoria e l'albero b sottostante.|  
-|**index_scan_count**|**int**|Numero di volte in cui che la partizione dell'indice columnstore è stata analizzata. Questo è lo stesso per tutti i gruppi di righe nella partizione.|  
+|**row_group_id**|**int**|ID del gruppo di righe nell'indice columnstore. Questo è univoco all'interno di una partizione.|  
+|**scan_count**|**int**|Numero di analisi tramite il gruppo di righe dall'ultimo riavvio SQL.|  
+|**delete_buffer_scan_count**|**int**|Numero di volte in cui che il buffer di eliminazione è stato utilizzato per determinare le righe eliminate in questo rowgroup. Ciò include l'accesso alla tabella hash in memoria e l'albero b sottostante.|  
+|**index_scan_count**|**int**|Numero di volte in cui che la partizione dell'indice columnstore è stata analizzata. Questo è lo stesso per tutti i rowgroup nella partizione.|  
 |**rowgroup_lock_count**|**bigint**|Conteggio cumulativo delle richieste di blocco per questo gruppo di righe dall'ultimo riavvio SQL.|  
-|**rowgroup_lock_wait_count**|**bigint**|Numero cumulativo di volte in cui il motore di database ha atteso il blocco del gruppo di righe dall'ultimo riavvio SQL.|  
-|**rowgroup_lock_wait_in_ms**|**bigint**|Numero cumulativo di millisecondi il motore di database ha atteso il blocco del gruppo di righe dall'ultimo riavvio SQL.|  
+|**rowgroup_lock_wait_count**|**bigint**|Numero cumulativo di volte in cui il motore di database ha atteso il rowgroup blocco dopo l'ultimo riavvio SQL.|  
+|**rowgroup_lock_wait_in_ms**|**bigint**|Numero cumulativo di millisecondi il motore di database ha atteso il rowgroup blocco dopo l'ultimo riavvio SQL.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Sono richieste le autorizzazioni seguenti:  
   
 -   Autorizzazione CONTROL per la tabella specificata da object_id.  
   
--   Autorizzazione VIEW DATABASE STATE per restituire informazioni su tutti gli oggetti all'interno del database, utilizzando il carattere jolly di oggetto @*object_id* = NULL  
+-   L'autorizzazione VIEW DATABASE STATE per restituire informazioni su tutti gli oggetti all'interno del database, utilizzando il carattere jolly di oggetto @*object_id* = NULL  
   
  La concessione di VIEW DATABASE STATE consente la restituzione di tutti gli oggetti nel database, indipendentemente dalle eventuali autorizzazioni CONTROL negate per oggetti specifici.  
   

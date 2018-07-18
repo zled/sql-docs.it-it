@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916376"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>Riferimento all'interfaccia di Provider del servizio ODBC
 In genere, ODBC definita un'interfaccia di programmazione di applicazioni (API). Le funzioni dell'API possono essere chiamate dalle applicazioni e che devono essere implementate all'interno di gestione Driver sia il driver.  

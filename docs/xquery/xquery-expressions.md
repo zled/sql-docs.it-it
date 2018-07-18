@@ -1,5 +1,5 @@
 ---
-title: Le espressioni XQuery | Documenti Microsoft
+title: Le espressioni XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3858da8849775173d77bdb6db0aa5ac3cbd183e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030359"
 ---
 # <a name="xquery-expressions"></a>Espressioni XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
  Descrive la modalità di ordinamento per le operazioni XQuery. Per impostazione predefinita, la modalità di ordinamento è impostata su **ordinati**.  
   
  [Espressioni condizionali &#40;XQuery&#41;](../xquery/conditional-expressions-xquery.md)  
- Viene descritto il supporto XQuery condizionale **if-then-else** istruzione.  
+ Viene descritto il supporto XQuery per il parametro condizionale **if-then-else** istruzione.  
   
  [Espressioni quantificate &#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
  Descrive i quantificatori esistenziali e universali in XQuery.  

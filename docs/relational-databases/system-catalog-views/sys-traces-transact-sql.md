@@ -1,5 +1,5 @@
 ---
-title: TRACES (Transact-SQL) | Documenti Microsoft
+title: TRACES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,15 +25,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8cabef6e979c613c977d7e5636f46a10b447fbbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981527"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **TRACES** vista del catalogo contiene le tracce correnti in esecuzione nel sistema. Questa vista è da intendersi come una sostituzione per il **fn_trace_getinfo** (funzione).  
+  Il **TRACES** vista del catalogo contiene le tracce correnti in esecuzione nel sistema. In questa vista è da intendersi come una sostituzione per il **fn_trace_getinfo** (funzione).  
   
  Per un elenco completo degli eventi di traccia supportati, vedere [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   

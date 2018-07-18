@@ -1,6 +1,6 @@
 ---
-title: Posta elettronica database e gli avvisi di posta elettronica con SQL Agent in Linux | Documenti Microsoft
-description: In questo articolo viene descritto come utilizzare posta elettronica database e gli avvisi di posta elettronica con SQL Server in Linux
+title: Posta elettronica database e gli avvisi di posta elettronica con SQL Agent in Linux | Microsoft Docs
+description: Questo articolo descrive come usare posta elettronica database e gli avvisi di posta elettronica con SQL Server in Linux
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
@@ -13,17 +13,17 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: f9ce71d799414171019143912bde19330742ec27
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34585193"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984263"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Posta elettronica database e gli avvisi di posta elettronica con SQL Agent in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-La procedura seguente mostra come impostare posta elettronica database e usarlo con SQL Server Agent (**mssql-server agent**) in Linux. 
+I passaggi seguenti mostrano come configurare posta elettronica database e usarlo con SQL Server Agent (**mssql-server-agent**) in Linux. 
 
 ## <a name="1-enable-db-mail"></a>1. Abilitare posta elettronica database
 
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
  
 ## <a name="6-send-test-email"></a>6. Invio di posta elettronica di test
 > [!NOTE]
-> Potrebbe essere necessario passare al client di posta elettronica e abilitare "Consenti client meno sicuri inviare posta elettronica." Non tutti i client riconoscono posta elettronica database come un daemon di posta elettronica.
+> Potrebbe essere necessario passare al client di posta elettronica e abilitare il "client meno sicuri inviare posta elettronica Consenti". Non tutti i client riconoscono posta elettronica database come un daemon di posta elettronica.
 
 ```
 EXECUTE msdb.dbo.sp_send_dbmail 
@@ -94,8 +94,8 @@ EXECUTE msdb.dbo.sp_send_dbmail
 GO
 ```
 
-## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Impostare il profilo di posta elettronica database utilizzando mssql conf o variabile di ambiente
-È possibile utilizzare l'utilità mssql conf o variabili di ambiente per registrare il profilo di posta elettronica database. In questo caso, si parlerà predefinito il profilo.
+## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Impostare il profilo di posta elettronica database utilizzando mssql-conf o variabile di ambiente
+È possibile utilizzare l'utilità mssql-conf o variabili di ambiente per registrare il profilo di posta elettronica database. In questo caso, è possibile chiamare predefinito del profilo.
 
 ```bash
 # via mssql-conf
@@ -104,7 +104,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```
 
-## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. Impostare un operatore per le notifiche di processo SQLAgent 
+## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. Configurare un operatore per le notifiche dei processi SQLAgent 
 
 ```sql
 EXEC msdb.dbo.sp_add_operator 
@@ -115,7 +115,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Invia messaggio di posta elettronica al completamento 'Agente di Test del processo' 
+## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Invia messaggio di posta elettronica quando ha esito positivo 'Agente processo di Test' 
 
 ```
 EXEC msdb.dbo.sp_update_job 
@@ -126,4 +126,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per ulteriori informazioni sull'utilizzo di SQL Server Agent per creare, pianificare ed eseguire processi, vedere [eseguire un processo di agente SQL Server in Linux](sql-server-linux-run-sql-server-agent-job.md).
+Per altre informazioni su come usare SQL Server Agent per creare, pianificare ed eseguire i processi, vedere [eseguire un processo di SQL Server Agent in Linux](sql-server-linux-run-sql-server-agent-job.md).

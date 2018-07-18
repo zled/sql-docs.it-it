@@ -2,7 +2,6 @@
 title: L'aggiornamento dei dati | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9979faafbccf87f2e410da7708b67d841fbf347
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ed34a235a489feb13d31ef38e84e821cce961dc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273127"
 ---
 # <a name="updating-data"></a>Aggiornamento dei dati
 Comportamento di aggiornamento e le funzionalità non dipendono in gran parte di aggiornamento modalità (tipo di blocco), tipo di cursore e posizione del cursore.  

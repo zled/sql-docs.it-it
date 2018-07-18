@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029458"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Guida sensibile al contesto del server di report in Management Studio
   In questa sezione sono inclusi gli argomenti relativi alle finestre di dialogo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che è possibile utilizzare per gestire i server di report.  

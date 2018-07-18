@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|xml
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,11 +23,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db924e662687ab79d207fe3e1e33ccc75aecd059
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33205d34eda268facd953aa749461b15c494e7b7
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36244243"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Associazione di dati relazionali all'interno di dati XML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
  Non è possibile usare queste funzioni per fare riferimento a dati di colonne o variabili di tipo **xml**, CLR definito dall'utente, datetime, smalldatetime, **text**, **ntext**, **sql_variant** e **image**.  
   
- Inoltre, questo tipo di associazione è destinata a scopi di sola lettura, ovvero non è possibile scrivere dati nelle colonne che utilizzano queste funzioni. Ad esempio, sql:variable("@x")="*some expression"* non è consentita.  
+ Inoltre, questo tipo di associazione è destinata a scopi di sola lettura, ovvero non è possibile scrivere dati nelle colonne che utilizzano queste funzioni. Ad esempio, sql:variable("\@x")="*some expression"* non è consentita.  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>Esempio: query tra domini tramite sql:variable()  
  Questo esempio illustra come **sql:variable()** può consentire a un'applicazione di impostare i parametri di una query. Il codice ISBN viene passato usando una variabile SQL @isbn. Sostituendo la costante con **sql:variable()** è possibile usare la query per cercare qualsiasi codice ISBN, non solo gli elementi con codice ISBN uguale a 0-7356-1588-2.  

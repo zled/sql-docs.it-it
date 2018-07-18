@@ -20,17 +20,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0cd40177729800f0fc307f0e9ebce99a64efbee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970513"
 ---
-# <a name="system-functions-for-transact-sql"></a>Funzioni di sistema Transact-SQL
+# <a name="system-functions-for-transact-sql"></a>Funzioni di sistema per Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fornisce i seguenti gruppi di funzioni di sistema.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Funzioni dei gruppi di disponibilità Always On](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
  [Funzioni Change Data Capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
  [Funzioni di rilevamento delle modifiche](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  

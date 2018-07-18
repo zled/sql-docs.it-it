@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898936"
 ---
 # <a name="create-index-statement-limitations"></a>CREARE l'indice istruzione limitazioni
 L'istruzione CREATE INDEX non è supportata per i driver Microsoft Excel o testo.  

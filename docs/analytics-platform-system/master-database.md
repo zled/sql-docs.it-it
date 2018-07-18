@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538541"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Database master - Parallel Data Warehouse
 Il database master di SQL Server PDW archivia informazioni di accesso a livello di dispositivo e il catalogo del database. È un database master di SQL Server che si trova nel nodo di controllo. Di conseguenza, fornisce una funzionalità simile a SQL Server PDW come master consente a SQL Server.  

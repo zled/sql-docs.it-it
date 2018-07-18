@@ -1,5 +1,6 @@
 ---
-title: Eseguire dalla riga di comando (SQL Server Data Migration Assistant) | Documenti Microsoft
+title: Eseguire Data Migration Assistant dalla riga di comando (SQL Server) | Microsoft Docs
+description: Informazioni su come eseguire Data Migration Assistant dalla riga di comando per valutare i database di SQL Server per la migrazione
 ms.custom: ''
 ms.date: 09/01/2017
 ms.prod: sql
@@ -17,14 +18,15 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: df58c273c67868e894b7cba38344dc43628962ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b364dc03d48cbc1c0487362712e10f7ab0b782e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785462"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Eseguire Data Migration Assistant dalla riga di comando
-La versione 2.1 e versioni successive, quando si installa Data Migration Assistant, verranno installati anche dmacmd.exe in *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Utilizzare dmacmd.exe per valutare i database in modalità automatica e il risultato JSON o CSV file di output. Ciò è particolarmente utile quando si verifica più database o i database di grandi dimensioni. 
+La versione 2.1 e versioni successive, quando si installa Data Migration Assistant, viene installato anche in dmacmd.exe *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Usare dmacmd.exe per valutare i database in modalità automatica e restituire il risultato al file JSON o CSV. Questo metodo è particolarmente utile quando si valuta più database o database di grandi dimensioni. 
 
 > [!NOTE]
 > Dmacmd.exe supporta solo le valutazioni in esecuzione. In questo momento non sono supportate le migrazioni.
@@ -48,9 +50,9 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentName`     |   Nome del progetto di valutazione   | S
 |`/AssessmentDatabases`     | Elenco delimitato da spazi delle stringhe di connessione. Nome del database (catalogo iniziale) è tra maiuscole e minuscole. | S
 |`/AssessmentTargetPlatform`     | Piattaforma di destinazione per la valutazione, i valori supportati: SqlServer2012, SqlServer2014, SqlServer2016 e AzureSqlDatabaseV12. Il valore predefinito è SqlServer2016   | N
-|`/AssessmentEvaluateFeatureParity`  | Eseguire le regole di parità di funzionalità  | N
-|`/AssessmentEvaluateCompatibilityIssues`     | Eseguire le regole di compatibilità  | S <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations è obbligatorio).
-|`/AssessmentEvaluateRecommendations`     | Eseguire i suggerimenti di funzionalità        | S <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendationsis richiesto)
+|`/AssessmentEvaluateFeatureParity`  | Eseguire le regole di parità delle funzionalità  | N
+|`/AssessmentEvaluateCompatibilityIssues`     | Eseguire le regole di compatibilità  | S <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations è obbligatorio.)
+|`/AssessmentEvaluateRecommendations`     | Eseguire funzionalità consigliate        | S <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendationsis obbligati)
 |`/AssessmentOverwriteResult`     | Sovrascrivere il file dei risultati    | N
 |`/AssessmentResultJson`     | Percorso completo del file di risultati JSON     | S <br> (È necessario AssessmentResultJson o AssessmentResultCsv)
 |`/AssessmentResultCsv`    | Percorso completo del file di risultati CSV   | S <br>(È necessario AssessmentResultJson o AssessmentResultCsv)
@@ -64,7 +66,7 @@ DmaCmd.exe /AssessmentName="string"
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Valutazione di singolo database utilizzando le regole di compatibilità in esecuzione e l'autenticazione di Windows**
+**Valutazione di un singolo database usando regole di compatibilità in esecuzione e l'autenticazione di Windows**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -76,7 +78,7 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 
 
 
-**Valutazione database singolo con suggerimento funzionalità di autenticazione e l'esecuzione di SQL Server**
+**Valutazione di un singolo database usando suggerimento di funzionalità di autenticazione e in esecuzione SQL Server**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -87,7 +89,7 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 ```
 
 
-**Valutazione di singolo database per la piattaforma di destinazione SQL Server 2012 e salvare i risultati in un file con estensione JSON e CSV**
+**Valutazione di un singolo database per la piattaforma di destinazione SQL Server 2012, salvare i risultati nel file con estensione JSON e CSV**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -100,7 +102,7 @@ Catalog=DatabaseName;Integrated Security=true"
 ```
 
 
-**Valutazione di singolo database per la piattaforma di destinazione Database di SQL Azure salvare i risultati in file con estensione JSON e CSV**
+**Valutazione di un singolo database per la piattaforma di destinazione Database di SQL Azure, salvare i risultati nel file con estensione JSON e CSV**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 

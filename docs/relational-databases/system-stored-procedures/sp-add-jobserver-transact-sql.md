@@ -22,11 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e89ba03a88db9dd5977ace92cc498726da6b3e45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262315"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +52,18 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Nome del processo. *job_name* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [ **@server_name =** ] **'***server***'**  
- Nome del server a cui indirizzare il processo. *server* viene **nvarchar(30)**, con un valore predefinito di N' (Local) '. *server*può essere **(LOCAL)** per un server locale o il nome di un server di destinazione esistente.  
+ Nome del server a cui indirizzare il processo. *server* viene **nvarchar(30)**, con un valore predefinito di N' (Local) '. *server* può essere **(LOCAL)** per un server locale o il nome di un server di destinazione esistente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  **@automatic_post** esiste **sp_add_jobserver**, ma non è elencato nella sezione argomenti. **@automatic_post** è riservato per uso interno.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  

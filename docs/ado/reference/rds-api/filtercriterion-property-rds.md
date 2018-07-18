@@ -2,7 +2,6 @@
 title: Proprietà FilterCriterion (RDS) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: adc1d9d22b94ab3b6e03bddf37fa6058f4ccaca3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 015cf292a4b9cd0720e379b83d5fcf254c841c8f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288252"
 ---
 # <a name="filtercriterion-property-rds"></a>Proprietà FilterCriterion (RDS)
 Indica l'operatore di valutazione da utilizzare nel valore di filtro.  
@@ -44,7 +44,7 @@ DataControl.FilterCriterion = String
  *String*  
  Oggetto **stringa** valore che specifica l'operatore di valutazione del [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) ai record. Può essere una qualsiasi delle operazioni seguenti: <, \<=, >, > =, =, o <>.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), **FilterCriterion**, e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)proprietà forniscono l'ordinamento e filtrare le funzionalità della cache sul lato client. La funzionalità di ordinamento Ordina i record per i valori da una colonna. La funzionalità di filtro consente di visualizzare un subset di record in base a criteri di ricerca, mentre la versione completa [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene mantenuto nella cache. Il [reimpostare](../../../ado/reference/rds-api/reset-method-rds.md) metodo i criteri e sostituire corrente **Recordset** con un aggiornabile **Recordset**.  
   
  Il "! =" operatore non è valido per **FilterCriterion**; in alternativa, utilizzare "<>".  

@@ -1,5 +1,5 @@
 ---
-title: Funzione AVG (XQuery) | Documenti Microsoft
+title: Funzione AVG (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6c347eb78dd3ac8e58075cc91edeee87b3a4418d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983460"
 ---
-# <a name="aggregate-functions---avg"></a>Funzioni di aggregazione: avg
+# <a name="aggregate-functions---avg"></a>Funzioni di aggregazione - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce la media di una sequenza di numeri.  
@@ -43,8 +44,8 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Sequenza di valori atomici per la quale viene calcolata la media.  
   
-## <a name="remarks"></a>Osservazioni  
- Tutti i tipi di valori atomizzati passati a **AVG ()** deve essere un sottotipo di esattamente uno dei tre tipi di base numerici predefiniti o xdt: untypedAtomic. e non possono essere una combinazione di tipi. I valori del tipo xdt:untypedAtomic vengono considerati come xs:double. Il risultato di **AVG ()** riceve il tipo di base dei tipi passati, ad esempio xs: double nel caso di xdt: untypedAtomic.  
+## <a name="remarks"></a>Note  
+ Tutti i tipi di valori atomizzati passati a **AVG ()** deve essere un sottotipo di esattamente uno dei tre tipi di base numerici predefiniti o xdt: untypedAtomic. e non possono essere una combinazione di tipi. I valori del tipo xdt:untypedAtomic vengono considerati come xs:double. Il risultato del **AVG ()** riceve il tipo di base dei tipi passati, ad esempio xs: double nel caso di xdt: untypedAtomic.  
   
  Se l'input è costituito da dati statici vuoti, viene generato un errore statico.  
   
@@ -54,7 +55,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  Se *$arg* è una sequenza vuota, viene restituita la sequenza vuota.  
   
- Se non è possibile eseguire il cast di un valore xdt: untypedAtomic a xs: Double, tale valore viene ignorato nella sequenza di input, *$arg*.  
+ Se non è possibile eseguire il cast di un valore xdt: untypedAtomic a xs: Double, tale valore viene ignorato nella sequenza di input *$arg*.  
   
  In tutti gli altri casi, la funzione restituisce un errore statico.  
   
@@ -62,7 +63,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
 ### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Utilizzo della funzione XQuery avg() per trovare i centri di lavorazione del processo di produzione con ore di manodopera superiori alla media di tutti i centri.  
- È possibile riscrivere la query fornita [funzione min (XQuery)](../xquery/aggregate-functions-min.md) per utilizzare il **AVG ()** (funzione).  
+ È possibile riscrivere la query illustrata nel [funzione min (XQuery)](../xquery/aggregate-functions-min.md) da utilizzare il **AVG ()** (funzione).  
   
 ## <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  

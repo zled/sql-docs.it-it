@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_unforce_plan (Transact-SQL) | Documenti Microsoft
+title: sp_query_store_unforce_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,10 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 13525b0f1c77a3c570f35f1a745b4402f6ef9cbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036159"
 ---
 # <a name="spquerystoreunforceplan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,18 +52,18 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
  È l'id della query. *query_id* è un **bigint**, non prevede alcun valore predefinito.  
   
  [  **@plan_id =** ] *plan_id*  
- È l'id del piano di query che non verrà applicato. *plan_id* è un **bigint**, non prevede alcun valore predefinito.  
+ È l'id del piano di query che non verrà più applicato. *plan_id* è un **bigint**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede il **EXECUTE** autorizzazione per il database, e **inserire**, **aggiornamento**, e **eliminare** autorizzazione per il catalogo di archivio query Visualizzazioni.  
+ Richiede la **EXECUTE** autorizzazione per il database, e **Inserisci**, **UPDATE**, e **Elimina** l'autorizzazione per il catalogo di archivio query Visualizzazioni.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce informazioni sulle query in archivio query.  
+ L'esempio seguente restituisce informazioni sulle query in query store.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -73,7 +74,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Dopo aver identificato il query_id e plan_id che si desidera annullare, usare l'esempio seguente, annullare la forzatura del piano.  
+ Dopo aver identificato il query_id e plan_id che si desidera annullare la forzatura, usare l'esempio seguente, annullare la forzatura del piano.  
   
 ```  
 EXEC sp_query_store_unforce_plan 3, 3;  

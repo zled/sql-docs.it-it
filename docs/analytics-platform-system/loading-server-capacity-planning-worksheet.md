@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539441"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Caricamento dei server capacità pianificazione foglio di lavoro per Analitica Platform System
 Questo foglio di lavoro Pianificazione della capacità consente di determinare i requisiti per un server di caricamento per il caricamento dei dati in SQL Server PDW. Consente di creare il piano per l'acquisto o provisioning esistente durante il caricamento di server.  

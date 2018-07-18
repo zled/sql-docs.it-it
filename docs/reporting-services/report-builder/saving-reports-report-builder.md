@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020808"
 ---
 # <a name="saving-reports-report-builder"></a>Salvataggio di report (Generatore report)
   In Generatore report è possibile salvare un report impaginato in un server di report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , in una raccolta di SharePoint, in una condivisione file per la quale si dispone di autorizzazioni di scrittura o nel computer in uso. 

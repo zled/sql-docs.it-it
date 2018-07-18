@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912736"
 ---
 # <a name="c-data-types"></a>Tipi di dati C
 Tipi di dati C ODBC indicano il tipo di dati di buffer C utilizzato per archiviare i dati nell'applicazione.  

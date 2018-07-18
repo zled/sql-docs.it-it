@@ -25,11 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 769bb9418b3d631648f6f493aeb084b5fea0a619
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324435"
 ---
 # <a name="logging-in-to-sql-server"></a>Accesso a SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 |Connessione a un'istanza predefinita che non è in ascolto sulla porta TCP predefinita, specificando la porta utilizzata, in questo caso 2828. (Questo non è necessario se [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in ascolto sulla porta predefinita (1433)).|APPHOST,2828|  
 |Connessione a un'istanza denominata su una porta TCP designata, in questo caso 2828. (Questo è spesso necessario se il servizio Browser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in esecuzione sul computer host).|APPHOST,2828|  
 |Connessione a un'istanza predefinita che non è in ascolto sulla porta TCP predefinita, specificando sia l'indirizzo IP che la porta TCP utilizzata, in questo caso 2828.|192.168.17.28,2828|  
-|Connessione a un'istanza denominata specificando sia l'indirizzo IP che la porta TCP utilizzata, in questo caso 2828.|192.168.17.28,2828|  
+|Connessione a un'istanza denominata specificando sia l'indirizzo IP che la porta TCP utilizzata, in questo caso 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Connessione a un'stanza predefinita per nome, forzando una connessione TCP.|tcp:APPHOST|  
 |Connessione a un'stanza denominata per nome, forzando una connessione TCP.|tcp:APPHOST\SQLEXPRESS|  
 |Connessione a un'istanza predefinita specificando un nome di named pipe.|\\\APPHOST\pipe\unit\app|  

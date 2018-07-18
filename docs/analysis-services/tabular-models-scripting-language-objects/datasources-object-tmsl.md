@@ -1,5 +1,5 @@
 ---
-title: Oggetto di origini dati (TMSL) | Documenti Microsoft
+title: Oggetto DataSources (TMSL) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,72 +9,73 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1dd73918ca2d52cf38dba74455cf225a8c15ac3e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7beabaaf63194cc699c3711a87dd1e59d244c068
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981333"
 ---
-# <a name="datasources-object-tmsl"></a>Oggetto di origini dati (TMSL)
+# <a name="datasources-object-tmsl"></a>Oggetto DataSources (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Definisce una connessione a un'origine dati utilizzata dal modello durante l'importazione per aggiungere dati al modello o in pass-through query tramite la modalità DirectQuery.  I modelli in modalità DirectQuery possono avere solo uno **DataSource** oggetto.  
+  Definisce una connessione a un'origine dati utilizzata dal modello sia durante l'importazione per aggiungere dati al modello o in pass-through query tramite la modalità DirectQuery.  I modelli in modalità DirectQuery possono avere solo un **DataSource** oggetto.  
   
- A meno che non si sta creando, sostituendo, o modificare l'oggetto di origine dati stessa, qualsiasi origine dati a cui fa riferimento nello script (ad esempio script partizione) deve essere un oggetto esistente **DataSource** oggetto nel modello.  
+ A meno che non si sta creando, sostituzione, oppure modificare l'oggetto di origine dati stesso, qualsiasi origine dati cui viene fatto riferimento nello script (ad esempio script di partizione) deve essere un oggetto esistente **DataSource** oggetto nel modello.  
   
 ## <a name="object-definition"></a>Definizione dell'oggetto  
- Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Origine dati** gli oggetti dispongono anche le proprietà seguenti.  
+ Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **DataSource** oggetti contengono anche le proprietà seguenti.  
   
  Tipo  
- Tipo di origine dati. Attualmente, l'unico valore valido è Provider (1) - stringa di connessione normale.  
+ Tipo di origine dati. Al momento, l'unico valore valido è Provider (1) - stringa di connessione normale.  
   
  connectionString  
- La stringa di connessione che specifica il server e database minima, ma può includere anche altre proprietà supportate dal sistema RDBMS esterno, ad esempio un account utente o i provider di dati. Questo valore è obbligatorio. Vedere [classe SqlConnectionStringBuilder](https://msdn.microsoft.com/en-us/library/ms254500\(v=vs.110\).aspx) proprietà della stringa di connessione del database per informazioni dettagliate su SQL Server.  
+ La stringa di connessione che specifica il database e server minima, ma può anche includere altre proprietà supportate dal sistema RDBMS esterno, ad esempio un account utente o del provider di dati. Questo valore è obbligatorio. Visualizzare [classe SqlConnectionStringBuilder](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx) per informazioni dettagliate su SQL Server database di proprietà della stringa di connessione.  
   
  valore di impersonationMode  
  Specifica se Analysis Services deve rappresentare l'identità dell'utente che richiede la query. Questa proprietà è un valore numerico che specifica le credenziali da utilizzare per la rappresentazione. I valori di enumerazione sono i seguenti:  
   
--   Predefinito (1) - il server utilizza il metodo di rappresentazione che ritiene appropriata per il contesto in cui viene utilizzata la rappresentazione.  
+-   Default (1): il server usa il metodo di rappresentazione che ritiene appropriata per il contesto in cui viene utilizzata la rappresentazione.  
   
--   ImpersonateAccount (2) - il server utilizza l'account utente specificato.  
+-   ImpersonateAccount (2): il server utilizza l'account utente specificato.  
   
--   ImpersonateAnonymous (3) - il server utilizza l'account utente anonimo.  Questa opzione non è consigliata, ma a volte viene utilizzata da applicazioni personalizzate che gestiscono l'autenticazione in scenari di accesso HTTP.  
+-   ImpersonateAnonymous (3): il server utilizza l'account utente anonimo.  Questa opzione non è consigliata, ma viene a volte usata in scenari di accesso HTTP per le applicazioni personalizzate che gestiscono l'autenticazione.  
   
 -   ImpersonateCurrentUser (4): il server utilizza l'account utente che il client si connette come.  
   
--   ImpersonateServiceAccount (5): il server utilizza l'account utente che esegue il server.  
+-   ImpersonateServiceAccount (5): il server utilizza l'account utente che il server è in esecuzione come.  
   
--   ImpersonateUnattendedAccount (6): il server utilizza un account utente. Viene utilizzato per i modelli Power Pivot o tabulare in esecuzione in un ambiente SharePoint.  
+-   ImpersonateUnattendedAccount (6): il server utilizza un account di esecuzione automatica. Viene utilizzato per i modelli tabulari o Power Pivot che vengono eseguiti in un ambiente SharePoint.  
   
- La modalità DirectQuery è possibile utilizzare impersonateCurrentuser se Analysis Services è configurato per la delega trusted, o  
-                      impersonateServiceAccount se viene effettuata la richiesta di query nel contesto di sicurezza dell'account del servizio Analysis Services. Vedere [configurare Analysis Services for Kerberos per la delega vincolata](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md).  
+ La modalità DirectQuery possa usare impersonateCurrentuser se Analysis Services è configurato per la delega trusted, o  
+                      impersonateServiceAccount se la richiesta di query viene eseguita nel contesto di sicurezza dell'account del servizio Analysis Services. Visualizzare [Configure Analysis Services for Kerberos per la delega vincolata](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md).  
   
  account  
- Utilizzato per la rappresentazione. Un account di Windows o un database che dispone di un account di accesso valido con autorizzazioni di lettura per il database esterno.  
+ Utilizzato per la rappresentazione. Un account di Windows o un database con un account di accesso valido con autorizzazioni di lettura per il database esterno.  
   
  password  
- Una stringa crittografata, fornire la password dell'account.  
+ Una stringa crittografata specificando la password dell'account.  
   
  maxConnections  
  Numero massimo di connessioni da aprire simultaneamente all'origine dati.  
   
  isolation  
- Il tipo di isolamento utilizzato durante l'esecuzione di comandi sull'origine dati. I valori validi sono ReadCommitted (1) o Snapshot (2).  
+ Il tipo di isolamento utilizzato durante l'esecuzione di comandi sull'origine dati. I valori validi sono ReadCommitted (1) o uno Snapshot (2).  
   
  timeout  
  Valore intero che specifica il timeout in secondi per i comandi eseguiti sull'origine dati.  
   
  provider  
- Stringa facoltativa che identifica il nome del provider di dati gestito utilizzato per la connessione al database relazionale, se non diversamente specificato nella stringa di connessione.  
+ Stringa facoltativa che identifica il nome del provider di dati gestiti utilizzato per la connessione al database relazionale, se non diversamente specificato nella stringa di connessione.  
   
 ## <a name="usage"></a>Utilizzo  
- **DataSource** gli oggetti vengono usati [Alter-comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [creare un comando di &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [comando CreateOrReplace &#40; TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [comando Delete &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [comando Refresh &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), e [comando MergePartitions &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ **DataSource** gli oggetti vengono usati [Alter-comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [creare comandi &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [comando CreateOrReplace &#40; TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [comando Delete &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [comando Refresh &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), e [comando MergePartitions &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
- Oggetto **DataSource** oggetto è una proprietà di un modello, ma può anche essere specificato come una proprietà di un oggetto di Database dato il mapping uno a uno tra modello e il Database.  Le partizioni basate su query SQL consente di specificare anche un **DataSource**, solo con un set ridotto di proprietà.  
+ Oggetto **DataSource** oggetto è una proprietà di un modello, ma può anche essere specificato come una proprietà di un oggetto di Database ha il mapping uno a uno tra modello e il Database.  Partizioni basate su query SQL specificare anche un **DataSource**, solo con un set ridotto di proprietà.  
   
- Durante la creazione, la sostituzione o modifica di un oggetto origine dati, specificare tutte le proprietà di sola lettura della definizione dell'oggetto. Omissione di una proprietà di lettura / scrittura è considerata un'operazione di eliminazione.  
+ Durante la creazione, sostituzione o modifica di un oggetto origine dati, specificare tutte le proprietà di lettura / scrittura della definizione dell'oggetto. Omissione di una proprietà di lettura e scrittura viene considerata un'operazione di eliminazione.  
   
 ## <a name="examples"></a>Esempi  
- **Esempio 1** -una connessione a un *FoodMart* database su un'istanza denominata di remota *Sales* in un server di rete denominato *Server01*.  
+ **Esempio 1** -una connessione a un *FoodMart* database in un server remoto un'istanza denominato di *Sales* in un server di rete denominato *Server01*.  
   
 ```  
 "dataSources": [  
@@ -181,6 +182,6 @@ ms.lasthandoff: 05/10/2018
 ## <a name="see-also"></a>Vedere anche  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Riferimento a Tabular Model Scripting Language &#40;TMSL&#41;)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Modalità DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services & #40; IIS & #41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

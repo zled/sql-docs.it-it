@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -17,11 +16,12 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 969c505870bf0354f9b183d940643c641453946f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 39057237b4b62248cb3af260d0b4bb2cee1dff15
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322710"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintassi delle prenotazioni URL (Gestione configurazione SSRS)
   In questo argomento vengono descritte le parti della stringa URL per il servizio Web ReportServer e per Gestione report. La stringa URL archiviata internamente ha una struttura diversa da un URL digitato nella barra degli indirizzi di una finestra del browser. La stringa della prenotazione URL viene visualizzata nella finestra Risultati dello strumento di configurazione di Reporting Services quando si configura un URL e nel file RSReportServer.config. Conoscere il modo in cui è definita la stringa URL può risultare utile ai fini della risoluzione dei problemi relativi alle prenotazioni URL o per eseguire una query su HTTP.SYS per visualizzare le prenotazioni URL interne definite nel server.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente vengono descritte tutte le proprietà e i valori validi per ciascuna.  
   
-|Proprietà|Valori validi|Description|  
+|Proprietà|Valori validi|Descrizione|  
 |--------------|------------------|-----------------|  
 |schema|http o https|Prefissi per connessioni SSL e non SSL.|  
 |nomehost|Carattere jolly complesso (+), che equivale al valore **Tutti assegnati** per l'indirizzo IP.<br /><br /> Carattere jolly vulnerabile (\*), che equivale a un indirizzo IP di **Tutti non assegnati**.<br /><br /> Nome di dominio completo<br /><br /> Nome computer<br /><br /> Indirizzo IP (IPv4)<br /><br /> Indirizzo IP (IPv6)|Identifica il server in rete.<br /><br /> Il carattere jolly complesso (+) rappresenta l'impostazione predefinita. HTTP.SYS accetterà tutte le richieste su tutte le schede di rete per una combinazione specifica di porta e directory virtuale. Il server di report accetterà qualsiasi richiesta sulla porta.<br /><br /> Carattere jolly vulnerabile (\*). HTTP.SYS accetta tutte le richieste non gestite da altre prenotazioni URL su tutte le schede di rete per una combinazione specifica di porta e directory virtuale.<br /><br /> Il nome del computer è il nome NETBIOS del computer in rete.<br /><br /> Il nome di dominio completo include indirizzo del dominio e il nome del server, registrato con un controller di dominio o un DNS pubblico.<br /><br /> L'indirizzo IP (IPv4) è l'indirizzo IP di una scheda di rete nel computer in formato IPv4: *nnn.nnn.nnn.nnn*.<br /><br /> L'indirizzo IP (IPv6) è l'indirizzo IP di una scheda di rete nel computer in formato IPv6: \<intestazione>:\<intestazione>:*nnn.nnn.nnn.nnn*.|  

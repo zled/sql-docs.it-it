@@ -1,5 +1,5 @@
 ---
-title: Distribuire soluzioni di modelli con l'utilità di distribuzione | Documenti Microsoft
+title: Distribuire soluzioni di modelli con l'utilità di distribuzione | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975162"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Distribuire soluzioni di modelli con l'utilità di distribuzione
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -21,7 +22,7 @@ ms.lasthandoff: 05/10/2018
   L'utilità **Microsoft.AnalysisServices.Deployment** consente di avviare il motore di distribuzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dal prompt dei comandi. Come file di input vengono usati i file di output XML generati dalla compilazione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. I file di input sono facilmente modificabili in modo da personalizzare la distribuzione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Lo script di distribuzione generato può quindi essere eseguito subito oppure salvato per essere distribuito in una fase successiva.  
   
 > [!NOTE]
-> Il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] guidata/Utilità di distribuzione viene installato con [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). Verificare se che si sta utilizzando la versione più recente. Per impostazione predefinita, la versione più recente della procedura guidata distribuzione è installata in C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio. 
+> Il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] guidata/Utilità di distribuzione viene installato con [SQL Server Managment Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). Assicurarsi che si usa la versione più recente. Per impostazione predefinita, la versione più recente della procedura guidata distribuzione è installata per \Microsoft SQL Server\140\Tools\Binn\ManagementStudio C:\Program Files (x86). 
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,7 +59,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  L'argomento **/d** viene usato solo nella modalità di output. Questo argomento viene ignorato se specificato in modalità di risposta o automatica. Per altre informazioni sulle modalità, vedere la sezione [Modalità](#Modes)di seguito in questo argomento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  L'utilità **Microsoft.AnalysisServices.Deployment** usa un set di file che includono le definizioni degli oggetti, le destinazioni di distribuzione, le opzioni di distribuzione e le impostazioni di configurazione e cerca di distribuire le definizioni degli oggetti alle destinazioni di distribuzione specificate usando le opzioni di distribuzione e le impostazioni di configurazione impostate. Questa utilità può implementare un'interfaccia utente se richiamata in modalità file di risposte o output. Per altre informazioni sull'uso dell'interfaccia utente implementata da questa utilità per creare i file di risposte, vedere [Distribuire soluzioni di modelli tramite la Distribuzione guidata](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
  L'utilità si trova nella cartella \Programmi file (x86) \Microsoft SQL Server\140\Binn\ManagementStudio.  
@@ -84,6 +85,6 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Guida di riferimento alle utilità del prompt dei comandi &#40;motore di database&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Creazione, modifica e rimozione di regole | Documenti Microsoft
+title: Creazione, modifica e rimozione di regole | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,10 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2e46039c71863f6cfb60f63c8e1e926f8f68231d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046179"
 ---
 # <a name="creating-altering-and-removing-rules"></a>Creazione, modifica e rimozione di regole
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>Creazione, modifica e rimozione di una regola in Visual Basic  
  In questo esempio di codice viene illustrato come creare una regola, collegarla a una colonna, modificare le proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Rule>, scollegarla dalla colonna e infine eliminarla.  
   
- Il **Dim** istruzione per il <xref:Microsoft.SqlServer.Management.Smo.Rule> oggetto è specificato con il percorso completo dell'assembly per evitare ambiguità con un <xref:Microsoft.SqlServer.Management.Smo.Rule> oggetto nell'assembly System. Data.  
+ Il **Dim** istruzione per il <xref:Microsoft.SqlServer.Management.Smo.Rule> viene specificato l'oggetto con il percorso completo dell'assembly per evitare ambiguità con un <xref:Microsoft.SqlServer.Management.Smo.Rule> oggetto nell'assembly System. Data.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -69,7 +70,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>Creazione, modifica e rimozione di una regola in Visual C#  
  In questo esempio di codice viene illustrato come creare una regola, collegarla a una colonna, modificare le proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Rule>, scollegarla dalla colonna e infine eliminarla.  
   
- Il **Dim** istruzione per il <xref:Microsoft.SqlServer.Management.Smo.Rule> oggetto è specificato con il percorso completo dell'assembly per evitare ambiguità con un <xref:Microsoft.SqlServer.Management.Smo.Rule> oggetto nell'assembly System. Data.  
+ Il **Dim** istruzione per il <xref:Microsoft.SqlServer.Management.Smo.Rule> viene specificato l'oggetto con il percorso completo dell'assembly per evitare ambiguità con un <xref:Microsoft.SqlServer.Management.Smo.Rule> oggetto nell'assembly System. Data.  
   
 ```csharp  
 {  
@@ -102,7 +103,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>Creazione, modifica e rimozione di una regola in PowerShell  
  In questo esempio di codice viene illustrato come creare una regola, collegarla a una colonna, modificare le proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Rule>, scollegarla dalla colonna e infine eliminarla.  
   
- Il **Dim** istruzione per il <xref:Microsoft.SqlServer.Management.Smo.Rule> oggetto è specificato con il percorso completo dell'assembly per evitare ambiguità con un <xref:Microsoft.SqlServer.Management.Smo.Rule> oggetto nell'assembly System. Data.  
+ Il **Dim** istruzione per il <xref:Microsoft.SqlServer.Management.Smo.Rule> viene specificato l'oggetto con il percorso completo dell'assembly per evitare ambiguità con un <xref:Microsoft.SqlServer.Management.Smo.Rule> oggetto nell'assembly System. Data.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

@@ -2,10 +2,10 @@
 title: Oggetti origine dati persistenti | Documenti Microsoft
 description: Oggetti origine dati persistenti
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-source-objects
+ms.component: oledb|ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b67e2f2f4e588fabfe5f901e20401316081d3c18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665611"
 ---
 # <a name="persisted-data-source-objects"></a>Oggetti origine dati persistenti
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Il Driver OLE DB per SQL Server supporta gli oggetti origine dati persistenti con la **IPersistFile** interfaccia.  
   
@@ -142,7 +145,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Utilizzare l'inizializzazione dell'origine dati persistente:**  
+ **B. Usare l'inizializzazione dell'origine dati persistente:**  
   
  In questo esempio viene utilizzato un oggetto origine dati persistente con proprietà di inizializzazione aggiuntive che forniscono un account di accesso e una password di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -233,6 +236,6 @@ HRESULT InitFromPersistedDS
  Il **IPersistFile:: Save** metodo può essere chiamato prima o dopo la chiamata **IDBInitialize:: Initialize**. La chiamata al metodo dopo una corretta restituzione da **IDBInitialize:: Initialize** assicura una specifica origine dati valido è persistente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli oggetti origine dati & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Oggetti origine dati &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

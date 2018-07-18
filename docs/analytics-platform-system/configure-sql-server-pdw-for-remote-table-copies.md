@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539531"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Configurare Parallel Data Warehouse per le copie di tabella remota
 Viene descritto come configurare SQL Server PDW per utilizzare la funzionalità di copia della tabella remota per copiare le tabelle per database SMP SQL Server nel server non strumento.  

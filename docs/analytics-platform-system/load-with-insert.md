@@ -13,7 +13,7 @@ ms.openlocfilehash: b7a05e5381c2ad687c37926ad449cd6765403ceb
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585783"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Caricare i dati con l'istruzione INSERT in Parallel Data Warehouse

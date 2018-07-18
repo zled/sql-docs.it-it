@@ -1,31 +1,20 @@
 ---
-title: TopCount (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOPCOUNT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopCount function
-ms.assetid: cbe031c9-4ff0-45df-9810-ebaebacf161d
-caps.latest.revision: 40
-author: Minewiskan
+title: TopCount (DMX) | Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 48a53d01219290dd50bd192a6ee2adf5b51ad7b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989852"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,20 +29,20 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Si applica a  
- Un'espressione che restituisce una tabella, ad esempio un \<tabella di riferimento di colonna >, o una funzione che restituisce una tabella.  
+ Un'espressione che restituisce una tabella, ad esempio un \<riferimento a una colonna di tabella >, o una funzione che restituisce una tabella.  
   
 ## <a name="return-type"></a>Tipo restituito  
  \<espressione di tabella >  
   
-## <a name="remarks"></a>Osservazioni  
- Il valore fornito dal \<rank expression > argomento determina l'ordine di rango decrescente per le righe che non vengano specificati nel \<espressione di tabella > argomento e il numero di righe superiore specificato nella \<count > viene restituito l'argomento.  
+## <a name="remarks"></a>Note  
+ Il valore fornito dal \<rank expression > argomento determina l'ordine di rango decrescente per le righe che vengono forniti nel \<espressione di tabella > argomento e il numero di righe di livello superiore specificato nella \<conteggio > viene restituito l'argomento.  
   
- La funzione TopCount è stata introdotta originalmente per consentire le stime associative e in generale, produce gli stessi risultati di un'istruzione che include **seleziona le prime** e **ORDER BY** clausole. È possibile ottenere prestazioni migliori per le stime associative se si utilizza il **stima (DMX)** (funzione), che supporta la specifica di un numero di stime da restituire.  
+ La funzione TopCount è stata introdotta originalmente per consentire le stime associative e in generale, produce gli stessi risultati di un'istruzione che include **seleziona le prime** e **ORDER BY** clausole. È possibile ottenere prestazioni migliori per le stime associative se si usa la **stima (DMX)** (funzione), che supporta la specifica di un numero di stime da restituire.  
   
- Tuttavia, esistono casi in cui si potrebbe essere ancora necessario utilizzare TopCount. Ad esempio, DMX non supporta il **TOP** qualificatore in un'istruzione Sub-select. Il [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) funzione inoltre non supporta l'aggiunta di **superiore**.  
+ Tuttavia, esistono situazioni in cui potrebbe essere ancora necessario usare TopCount. Ad esempio, DMX non supporta il **TOP** qualificatore in un'istruzione Sub-select. Il [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) funzione inoltre non supporta l'aggiunta di **superiore**.  
   
 ## <a name="examples"></a>Esempi  
- Negli esempi seguenti sono le query di stima sul modello di associazione che si compila con il [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Le query restituiscono gli stessi risultati, ma il primo esempio Usa TopCount e nel secondo esempio viene utilizzata la funzione di stima.  
+ Negli esempi seguenti costituiscono query di stima sul modello di associazione che si compila usando il [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Le query restituiscono gli stessi risultati, ma il primo esempio Usa TopCount e nel secondo esempio viene utilizzata la funzione Predict.  
   
  Per comprendere il funzionamento TopCount, potrebbe essere utile eseguire prima una query di stima che restituisce solo la tabella nidificata.  
   
@@ -66,7 +55,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In questo esempio il valore fornito come input contiene una virgoletta singola, e pertanto è necessario utilizzare il carattere di escape preceduto da un'altra virgoletta singola. Se non si è certi della sintassi per l'inserimento di un carattere di escape, è possibile utilizzare il generatore delle query di stima per creare la query. Quando si seleziona il valore dall'elenco a discesa, viene automaticamente inserito il carattere di escape necessario. Per ulteriori informazioni, vedere [creare una Query Singleton Progettazione modelli di Data Mining](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
+>  In questo esempio il valore fornito come input contiene una virgoletta singola, e pertanto è necessario utilizzare il carattere di escape preceduto da un'altra virgoletta singola. Se non si è certi della sintassi per l'inserimento di un carattere di escape, è possibile utilizzare il generatore delle query di stima per creare la query. Quando si seleziona il valore dall'elenco a discesa, viene automaticamente inserito il carattere di escape necessario. Per altre informazioni, vedere [creare una Query Singleton in Progettazione modelli di Data Mining Data](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
   
  Risultati dell'esempio:  
   
@@ -98,11 +87,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Il primo argomento alla funzione TopCount è il nome di una colonna di tabella. In questo esempio, la tabella nidificata viene restituita chiamando la funzione di stima e utilizzando l'argomento INCLUDE_STATISTICS.  
+ Il primo argomento alla funzione TopCount è il nome di una colonna di tabella. In questo esempio, la tabella nidificata viene restituita chiamando la funzione Predict e usando l'argomento INCLUDE_STATISTICS.  
   
- Il secondo argomento per la funzione TopCount è la colonna nella tabella nidificata che consente di ordinare i risultati. In questo esempio l'opzione INCLUDE_STATISTICS restituisce le colonne $SUPPORT, $PROBABILTY e $ADJUSTED PROBABILITY. In questo esempio viene utilizzato $ SUPPORT per classificare i risultati.  
+ Il secondo argomento alla funzione TopCount è la colonna nella tabella annidata che consente di ordinare i risultati. In questo esempio l'opzione INCLUDE_STATISTICS restituisce le colonne $SUPPORT, $PROBABILTY e $ADJUSTED PROBABILITY. In questo esempio viene utilizzato $ SUPPORT per classificare i risultati.  
   
- Il terzo argomento per la funzione TopCount specifica il numero di righe da restituire, come numero intero. Per ottenere i primi tre prodotti, come ordinato da $SUPPORT, digitare 3.  
+ Il terzo argomento alla funzione TopCount specifica il numero di righe da restituire, come integer. Per ottenere i primi tre prodotti, come ordinato da $SUPPORT, digitare 3.  
   
  Risultati dell'esempio:  
   
@@ -114,13 +103,13 @@ NATURAL PREDICTION JOIN
   
  Tuttavia, questo tipo di query può influire sulle prestazioni nell'impostazione di un ambiente di produzione perché restituisce un set di tutte le stime dall'algoritmo, ordina queste stime e restituisce le prime tre.  
   
- Nell'esempio seguente viene fornita un'istruzione alternativa che restituisce gli stessi risultati ma in modo significativamente più veloce. In questo esempio sostituisce TopCount con la funzione di stima, che accetta un numero di stime come argomento. Questo esempio Usa anche il **$SUPPORT** (parola chiave) per recuperare direttamente la colonna della tabella nidificata.  
+ Nell'esempio seguente viene fornita un'istruzione alternativa che restituisce gli stessi risultati ma in modo significativamente più veloce. In questo esempio sostituisce TopCount con la funzione di stima, che accetta un numero di stime come argomento. Questo esempio Usa anche il **$SUPPORT** parola chiave per recuperare direttamente la colonna della tabella nidificata.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
 ```  
   
- I risultati contengono le prime tre stime ordinate in base al valore di supporto. È possibile sostituire $SUPPORT con $PROBABILITY o $ADJUSTED_PROBABILITY per restituire stime classificate in base alla probabilità o alla probabilità adattata. Per ulteriori informazioni, vedere **stima (DMX)**.  
+ I risultati contengono le prime tre stime ordinate in base al valore di supporto. È possibile sostituire $SUPPORT con $PROBABILITY o $ADJUSTED_PROBABILITY per restituire stime classificate in base alla probabilità o alla probabilità adattata. Per altre informazioni, vedere **stima (DMX)**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   

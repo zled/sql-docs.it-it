@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914096"
 ---
 # <a name="what-the-driver-does"></a>Cosa il Driver
 Nella tabella seguente sono riepilogate le funzioni e gli attributi delle istruzioni un'applicazione ODBC 3*x* driver devono implementare per il blocco e i cursori scorrevoli.  

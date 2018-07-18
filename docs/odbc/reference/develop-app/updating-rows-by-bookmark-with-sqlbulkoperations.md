@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915481"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>L'aggiornamento delle righe dal segnalibro con SQLBulkOperations
 Quando si aggiorna una riga dal segnalibro, **SQLBulkOperations** consente all'origine dati di aggiornare una o più righe della tabella. Le righe sono identificate mediante il segnalibro in una colonna del segnalibro associato. La riga viene aggiornata utilizzando i dati nei buffer di applicazione per ogni colonna associata (tranne quando il valore nel buffer di lunghezza/indicatore per una colonna è SQL_COLUMN_IGNORE). Le colonne non associate non verranno aggiornate.  

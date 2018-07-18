@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024668"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Programmazione di oggetti di base OLAP in AMO
   La creazione di oggetti di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] complessi è un'operazione estremamente semplice per cui è necessario tuttavia prestare attenzione ai dettagli. In questo argomento vengono descritti i dettagli relativi alla programmazione di oggetti di base OLAP. In questo argomento sono incluse le sezioni seguenti:  

@@ -1,5 +1,5 @@
 ---
-title: Utilizzare i modelli di Analysis Services in SQL Server Management Studio | Documenti Microsoft
+title: Usare modelli di Analysis Services in SQL Server Management Studio | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ebed4cb2e230e3d3367131a8caca63544cf78b8f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 17ba8e06b0344ffa9aa24c9506eb52ad7e954e2b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981184"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usare i modelli di Analysis Services in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
  In questo esempio viene illustrato come creare una query MDX in SQL Server Management Studio utilizzando un database modello tabulare come origine dati. Per ripetere questo esempio nel computer, è possibile [scaricare il progetto di esempio di modello tabulare AdventureWorks](http://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
->  Non è possibile utilizzare query MDX su modelli tabulari distribuiti in modalità DirectQuery. È tuttavia possibile inviare query equivalenti utilizzando query di tabella DAX con il comando EVALUATE. Per altre informazioni, vedere [Parametri per query DAX](http://msdn.microsoft.com/en-us/c5841b4e-3395-4237-815b-9822a691e544).  
+>  Non è possibile utilizzare query MDX su modelli tabulari distribuiti in modalità DirectQuery. È tuttavia possibile inviare query equivalenti utilizzando query di tabella DAX con il comando EVALUATE. Per altre informazioni, vedere [Parametri per query DAX](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544).  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>Creare una query MDX da un modello  
   
@@ -131,7 +132,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  Aprire **Esplora modelli**e trascinare il modello **Discover Schema Rowsets**nella finestra Query vuota.  
   
-3.  Nel modello, sostituire i [elemento RequestType &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento con il testo seguente: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  Nel modello sostituire il [elemento RequestType &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento con il testo seguente: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Fare clic su **Esegui**.  
   
@@ -156,11 +157,11 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |Category|Modello di elementi|Description|  
 |--------------|-------------------|-----------------|  
 |DMX\Model Content|Content Query|Viene illustrato come utilizzare l'istruzione DMX SELECT FROM  *\<modello >*. CONTENUTO istruzione per recuperare il contenuto del set di righe dello schema per un modello di data mining specificato.|  
-||Continuous Column Values|Viene illustrato come utilizzare DMX SELECT DISTINCT FROM  *\<modello >* dell'istruzione DMX **RangeMin** e **RangeMax** funzioni per recuperare un set di valori in un intervallo specificato da colonne continue in un modello di data mining specificato.|  
+||Continuous Column Values|Viene illustrato come utilizzare DMX SELECT DISTINCT FROM  *\<modello >* dell'istruzione DMX **RangeMin** e **RangeMax** per recuperare un set di funzioni valori in un intervallo specifico da colonne continue in un modello di data mining specificato.|  
 ||Discrete Column Values|Viene illustrato come utilizzare DMX SELECT DISTINCT FROM  *\<modello >* istruzione recuperare un set completo di valori da colonne discrete di un modello di data mining specificato.|  
 ||Drillthrough Query|Illustra l'utilizzo dell'istruzione DMX SELECT * FROM Model.CASES con la funzione DMX IsInNode per l'esecuzione di una query drill-through.|  
 ||Attributi di modellazione|Illustra l'utilizzo della funzione DMX System.GetModelAttributes per restituire un elenco degli attributi utilizzati da un modello.|  
-||PMML Content|Viene illustrato come utilizzare l'istruzione DMX SELECT \* FROM  *\<modello >*. Istruzione PMML per recuperare la rappresentazione PMML Predictive Model Markup Language () del modello di data mining, per gli algoritmi che supportano questa funzionalità.|  
+||PMML Content|Viene illustrato come utilizzare DMX SELECT \* FROM  *\<modello >*. Istruzione PMML per recuperare la rappresentazione PMML Predictive Model Markup Language () del modello di data mining, per gli algoritmi che supportano questa funzionalità.|  
 |DMX\Model Management|Add Model|Illustra l'utilizzo dell'istruzione DMX ALTER MINING MODEL STRUCTURE per l'aggiunta di un modello di data mining.|  
 ||Clear Model|Illustra l'utilizzo dell'istruzione DMX DELETE * FROM MINING MODEL per l'eliminazione del contenuto di un modello di data mining specificato.|  
 ||Clear Structure Cases|Illustra l'utilizzo dell'istruzione DMX DELETE FROM MINING STRUCTURE per la cancellazione dei case delle strutture dei modelli di data mining.|  
@@ -178,10 +179,10 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Train Model|Illustra l'utilizzo dell'istruzione DMX INSERT INTO MINING MODEL per eseguire il training di un modello di data mining all'interno di una struttura di cui è stato precedentemente eseguito il training.|  
 ||Train Nested Structure|Illustra la combinazione dell'istruzione DMX INSERT INTO MINING STRUCTURE con la query dei dati di origine SHAPE per eseguire il training di un modello di data mining contenente colonne nidificate con dati che includono tabelle nidificate recuperati tramite query da un'origine dei dati esistente.|  
 ||Train Structure|Illustra la combinazione dell'istruzione DMX INSERT INTO MINING STRUCTURE con la query dei dati di origine OPENQUERY per il training di una struttura di data mining.|  
-|DMX\Prediction Queries|Base Prediction|Viene illustrato come combinare DMX SELECT FROM  *\<modello >* istruzione PREDICTION JOIN insieme alla query di dati di origine OPENQUERY per eseguire una query di stima su un modello di data mining utilizzando i dati, recuperati tramite una query, di un origine dati esistente.|  
-||Nested Prediction|Viene illustrato come combinare DMX SELECT FROM  *\<modello >* istruzione PREDICTION JOIN con le query di dati origine SHAPE e OPENQUERY per eseguire una query di stima su un modello di data mining utilizzando i dati che contiene annidati tabelle, recuperate tramite una query, di un'origine dati esistente.|  
-||Nested Singleton Prediction|Viene illustrato come utilizzare un'istruzione DMX SELECT FROM  *\<modello >* clausola NATURAL PREDICTION JOIN per eseguire una query di stima su un modello di data mining utilizzando un singolo valore, specificato in modo esplicito nella query di stima, in una colonna il cui nome corrisponde a una colonna nel modello di data mining e che include un set di valori in una tabella nidificata creata tramite un'istruzione di unione i cui nomi corrispondono anche a colonne nidificate del modello di data mining.|  
-||Singleton Prediction|Viene illustrato come utilizzare un'istruzione DMX SELECT FROM \<model > NATURAL PREDICTION JOIN istruzione da eseguire una query di stima su un modello di data mining utilizzando un singolo valore, specificato in modo esplicito nella query di stima, in una colonna il cui nome corrisponde a una colonna modello di data mining.|  
+|DMX\Prediction Queries|Base Prediction|Illustra come combinare un'istruzione DMX SELECT FROM  *\<modello >* istruzione PREDICTION JOIN insieme alla query di dati di origine OPENQUERY per eseguire una query di stima su un modello di data mining utilizzando i dati, recuperati tramite query, di un origine dati esistente.|  
+||Nested Prediction|Illustra come combinare un'istruzione DMX SELECT FROM  *\<modello >* istruzione PREDICTION JOIN con le query di dati origine SHAPE e OPENQUERY per eseguire una query di stima su un modello di data mining utilizzando i dati contenenti annidati le tabelle, recuperati tramite query, da un'origine dati esistente.|  
+||Nested Singleton Prediction|Viene illustrato come utilizzare un'istruzione DMX SELECT FROM  *\<modello >* clausola NATURAL PREDICTION JOIN per eseguire una query di stima su un modello di data mining utilizzando un singolo valore, specificato in modo esplicito nella query di stima, in una colonna il cui nome corrisponde a una colonna nel modello di data mining e che contiene un set di valori in una tabella nidificata creata tramite un'istruzione UNION i cui nomi corrispondono anche a colonne nidificate del modello di data mining.|  
+||Singleton Prediction|Viene illustrato come utilizzare un'istruzione DMX SELECT FROM \<model > NATURAL PREDICTION JOIN istruzione da eseguire una query di stima su un modello di data mining utilizzando un singolo valore, specificato in modo esplicito nella query di stima, in una colonna il cui nome corrisponde a una colonna il modello di data mining.|  
 ||Stored Procedure Call|Illustra l'utilizzo dell'istruzione DMX CALL per la chiamata di una stored procedure.|  
 |MDX\Expressions|Moving Average-Fixed|Illustra l'uso delle funzioni MDX **ParallelPeriod** e **CurrentMember** con un set ordinato per creare una misura calcolata che restituisce la media mobile di una misura in relazione a un numero fisso di periodi di tempo inclusi nella gerarchia di una dimensione temporale.|  
 ||Moving Average-Variable|Illustra l'uso dell'istruzione MDX **CASE** in una funzione **Avg** per creare una misura calcolata che restituisce la media mobile di una misura in relazione a un numero variabile di periodi di tempo inclusi nella gerarchia di una dimensione temporale.|  
@@ -196,14 +197,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\Management|Backup|Illustra l'uso del comando XMLA **Backup** per eseguire il backup di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un file.|  
 ||Annulla|Illustra l'uso del comando XMLA **Cancel** per annullare tutte le operazioni in corso nella sessione corrente (nel caso di utenti diversi da amministratori e amministratori del server), nel database corrente (nel caso di amministratori) o nell'istanza corrente (nel caso di amministratori del server).|  
 ||Create Remote Partition Database|Illustra l'uso del comando XMLA **Create** con l'elemento Database del linguaggio di scripting di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL) per creare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e un'origine dei dati per l'archiviazione di partizioni remote.|  
-||Delete|Illustra l'uso del comando XMLA **Delete** per eliminare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente.|  
+||DELETE|Illustra l'uso del comando XMLA **Delete** per eliminare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente.|  
 ||Process Dimension|Illustra l'uso del comando XMLA **Batch** insieme all'elemento **Parallel** e al comando **Process** per aggiornare gli attributi di una dimensione tramite un'operazione batch parallela.|  
 ||Process Partition|Illustra l'uso del comando XMLA **Batch** insieme all'elemento **Parallel** e al comando **Process** per l'elaborazione completa di una partizione tramite un'operazione batch parallela.|  
-||Restore|Illustra l'uso del comando XMLA **Restore** per ripristinare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da un file di backup.|  
+||Ripristina|Illustra l'uso del comando XMLA **Restore** per ripristinare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da un file di backup.|  
 ||Sincronizza|Illustra l'uso del comando XMLA **Synchronize** per la sincronizzazione di un altro database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con il database corrente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con l'opzione SkipMembership per il tag SynchronizeSecurity.|  
 |XMLA\Schema Rowsets|Individuazione dei set di righe dello schema|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_SCHEMA_ROWSETS.|  
 |XMLA\Server Status|Connessioni|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_CONNECTIONS.|  
-||Processi|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_JOBS.|  
+||processi|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_JOBS.|  
 ||Percorsi|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_LOCATIONS, specificando il percorso dei file di backup.|  
 ||Locks|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_LOCKS.|  
 ||Memory Grant|Illustra l'uso del metodo XMLA **Discover** per recuperare il contenuto del set di righe dello schema DISCOVER_MEMORYGRANT.|  
@@ -214,7 +215,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento a MDX &#40;Multidimensional Expressions&#41;](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services Scripting Language &#40;ASSL per XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Analysis Services Scripting Language &#40;ASSL per XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   

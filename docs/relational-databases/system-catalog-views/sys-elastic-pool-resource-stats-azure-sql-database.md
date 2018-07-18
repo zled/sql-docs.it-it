@@ -1,5 +1,5 @@
 ---
-title: Sys.elastic_pool_resource_stats (Database SQL di Azure) | Documenti Microsoft
+title: Sys. elastic_pool_resource_stats (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2018
 ms.prod: ''
@@ -27,49 +27,50 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: a04b60738a48ddbe09db3eb8d7032d2f08b4ba9c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997983"
 ---
-# <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys.elastic_pool_resource_stats (Database SQL di Azure)
+# <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys. elastic_pool_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Restituisce statistiche di utilizzo delle risorse per tutti i pool di database elastico in un server logico. Per ogni pool di database elastico è disponibile una riga per ogni 15 secondi reporting finestra (quattro righe al minuto). Sono inclusi CPU, IO, Log, il consumo di archiviazione e utilizzo/sessione di richieste simultanee da tutti i database nel pool. Questi dati vengono mantenuti per 14 giorni. 
+  Restituisce le statistiche di utilizzo di risorse per tutti i pool di database elastici in un server logico. Per ogni pool di database elastici, è disponibile una riga per ogni 15 secondi (quattro righe per ogni minuto) finestra di report. Inclusi CPU, IO, Log, il consumo di archiviazione e l'utilizzo di richieste/sessioni simultanee da tutti i database nel pool. Questi dati vengono conservati per 14 giorni. 
   
 ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (V12).|  
+|**Si applica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.|  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**start_time**|**datetime2**|Ora UTC indicante l'inizio dell'intervallo di reporting di 15 secondi.|  
-|**end_time**|**datetime2**|Ora UTC che indica la fine del 15 secondo intervallo di reporting.|  
-|**elastic_pool_name**|**nvarchar(128)**|Nome del pool di database elastico.|  
-|**avg_cpu_percent**|**decimal(5,2)**|Utilizzo di calcolo Media in percentuale del limite del pool.|  
-|**avg_data_io_percent**|**decimal(5,2)**|Utilizzo dei / o medio espresso come percentuale del limite del pool.|  
-|**avg_log_write_percent**|**decimal(5,2)**|Medio di scrittura in percentuale del limite del pool di utilizzo delle risorse.|  
-|**avg_storage_percent**|**decimal(5,2)**|Utilizzo di archiviazione medio, espresso in percentuale del limite di archiviazione del pool.|  
-|**max_worker_percent**|**decimal(5,2)**|Massimi simultanee processi di lavoro (richieste) espresso come percentuale del limite del pool.|  
-|**max_session_percent**|**decimal(5,2)**|Numero massimo di sessioni simultaneo espresso come percentuale del limite del pool.|  
-|**elastic_pool_dtu_limit**|**int**|Max pool elastico DTU impostazione corrente per questo pool elastico durante questo intervallo.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|L'impostazione per questo pool elastico in megabyte durante questo intervallo corrente limite di archiviazione massima del pool elastico.|  
+|**start_time**|**datetime2**|Ora UTC che indica l'inizio dei periodo di 15 secondi.|  
+|**end_time**|**datetime2**|Ora UTC che indica la fine del secondo intervallo di reporting 15.|  
+|**nome_pool_elastico**|**nvarchar(128)**|Nome del pool di database elastici.|  
+|**avg_cpu_percent**|**decimal(5,2)**|Utilizzo di calcolo medio in percentuale del limite del pool.|  
+|**avg_data_io_percent**|**decimal(5,2)**|Utilizzo dei / o medio espresso in percentuale sulla base del limite del pool.|  
+|**avg_log_write_percent**|**decimal(5,2)**|Medio scrittura utilizzo delle risorse in percentuale del limite del pool.|  
+|**avg_storage_percent**|**decimal(5,2)**|Utilizzo di spazio di archiviazione medio espresso in percentuale del limite di archiviazione del pool.|  
+|**max_worker_percent**|**decimal(5,2)**|Massimi ruoli di lavoro simultanei (richieste) espresso in percentuale sulla base del limite del pool.|  
+|**max_session_percent**|**decimal(5,2)**|Numero massimo di sessioni simultaneo espresso in percentuale sulla base del limite del pool.|  
+|**elastic_pool_dtu_limit**|**int**|Pool elastico max DTU impostazione corrente per questo pool elastico durante questo intervallo.|  
+|**elastic_pool_storage_limit_mb**|**bigint**|Limite di archiviazione massima del pool elastico corrente l'impostazione per questo pool elastico in megabyte durante questo intervallo.|  
   
-## <a name="remarks"></a>Osservazioni  
- Questa vista è presente nel database master del server logico. È necessario essere connessi al database master per query **sys.elastic_pool_resource_stats**.  
+## <a name="remarks"></a>Note  
+ In questa vista esiste nel database master del server logico. È necessario essere connessi al database master per eseguire query **Sys. elastic_pool_resource_stats**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **dbmanager** ruolo.  
+ Richiede l'appartenenza al **dbmanager** ruolo.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce i dati di utilizzo delle risorse ordinati in base l'ora più recente per tutti i pool di database elastico nel server logico corrente.  
+ L'esempio seguente restituisce i dati di utilizzo delle risorse ordinati in base l'ora più recente per tutti i pool di database elastici nel server logico corrente.  
   
 ```  
 SELECT * FROM sys.elastic_pool_resource_stats   
 ORDER BY end_time DESC;  
 ```  
   
- L'esempio seguente calcola la media DTU percentuale di utilizzo per un pool specificato.  
+ L'esempio seguente calcola il consumo percentuale medio di DTU per un pool specifico.  
   
 ```  
 SELECT start_time, end_time,      
@@ -81,9 +82,9 @@ ORDER BY end_time DESC;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [AppSense rapida crescita delle con i database elastici](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [Creare e gestire un pool di database elastico del Database SQL (anteprima)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [Gestire una crescita straordinaria con database elastici](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
+ [Creare e gestire un pool di database elastici di Database SQL (anteprima)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
  [Sys. resource_stats &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [db_resource_stats &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
+ [DM db_resource_stats &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   
   

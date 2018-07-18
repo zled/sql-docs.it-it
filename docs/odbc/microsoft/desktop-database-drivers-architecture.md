@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904976"
 ---
 # <a name="desktop-database-drivers-architecture"></a>Architettura di driver di Database desktop
 Questi driver sono progettati per l'uso in Microsoft Windows 95 o versioni successive o Windows NT 4.0 e Windows 2000. Sono supportate sole applicazioni a 32 bit in Windows 95 o versione successiva. applicazioni a 16 bit e a 32 bit sono supportate in Windows NT 4.0 e Windows 2000.  

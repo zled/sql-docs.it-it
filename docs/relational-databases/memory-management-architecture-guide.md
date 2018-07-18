@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura di gestione della memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -20,11 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d01610b3ac4d87b747398bd71bdd63f1842a3ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 048a6b5a2a704a353fddce56a9d565e8f3792b92
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239371"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,8 +76,7 @@ Usando AWE e il privilegio Blocco di pagine in memoria, è possibile fornire al 
 > Le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbero essere eseguite in un sistema operativo a 32 bit. L'accesso a più di 4 gigabyte (GB) di memoria in un sistema operativo a 32 bit richiede estensioni AWE (Address Windowing Extensions) per la gestione della memoria. Queste estensioni non sono necessarie quando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione su sistemi operativi a 64 bit. Per altre informazioni su AWE, vedere [Spazio degli indirizzi di processo](http://msdn.microsoft.com/library/ms189334.aspx) e [Gestione della memoria per database di grandi dimensioni](http://msdn.microsoft.com/library/ms191481.aspx) nella documentazione di [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Modifiche apportate alla gestione della memoria a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-
-Nelle versioni precedenti di SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), l'allocazione di memoria veniva gestita con cinque meccanismi diversi:
+Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), l'allocazione di memoria veniva gestita con cinque meccanismi diversi:
 -  **Allocatore di pagine singole**, che include solo le allocazioni di memoria minori o uguali a 8 KB nel processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le opzioni di configurazione *max server memory (MB)* e *min server memory (MB)* che determinano i limiti di memoria fisica usata dall'allocatore di pagine singole. Il pool di buffer è contemporaneamente il meccanismo per l'allocazione di pagine singole e il maggiore consumer di allocazioni di pagine singole.
 -  **Allocatore di più pagine**, per le allocazioni di memoria che richiedono più di 8 KB.
 -  **Allocatore CLR**, che include gli heap CLR SQL e le relative allocazioni globali create durante l'inizializzazione di CLR.
@@ -109,7 +109,6 @@ Questo comportamento viene in genere osservato durante le operazioni seguenti:
 -  Operazioni di traccia che devono archiviare parametri di input di grandi dimensioni.
 
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Modifiche apportate a "memory_to_reserve" a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-
 Nelle versioni precedenti di SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), lo strumento di gestione della memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] riserva parte dello spazio indirizzi virtuali dl processo per l'**allocatore di più pagine**, l'**allocatore CLR**, le allocazioni di memoria per gli **stack di thread** nel processo di SQL Server e le **allocazioni di Windows dirette**. Questa parte dello spazio indirizzi virtuali è nota anche come area MemToLeave o "pool non di buffer".
 
 Lo spazio indirizzi virtuali riservato per queste allocazioni varia a seconda dell'opzione di configurazione ***memory_to_reserve***. Il valore predefinito usato da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è 256 MB. Per sostituire il valore predefinito, usare il parametro di avvio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Fare riferimento alla pagina della documentazione [Opzioni di avvio del servizio del motore di database](../database-engine/configure-windows/database-engine-service-startup-options.md) per informazioni sul parametro di avvio *-g*.
@@ -127,12 +126,11 @@ La tabella seguente indica se un tipo specifico di allocazione di memoria rientr
 |Allocazioni dirette da Windows|Sì|Sì|
 
 ## <a name="dynamic-memory-management"></a> Gestione della memoria dinamica
-
-Il comportamento predefinito per la gestione della memoria del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consiste nell'acquisire la quantità di memoria necessaria senza causare insufficienza di memoria nel sistema. In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] questo comportamento è reso possibile tramite l'utilizzo delle API di notifica della memoria di Microsoft Windows.
+Il comportamento predefinito per la gestione della memoria del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] consiste nell'acquisire la quantità di memoria necessaria senza causare insufficienza di memoria nel sistema. In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] questo comportamento è reso possibile tramite l'utilizzo delle API di notifica della memoria di Microsoft Windows.
 
 Quando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza la memoria in modo dinamico, esegue query periodiche sul sistema per determinare la quantità di memoria libera disponibile. Il mantenimento di tale memoria libera impedisce il paging del sistema operativo. Se è disponibile una quantità minore di memoria libera, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rilascia memoria al sistema operativo. Se è disponibile una quantità maggiore di memoria libera, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può essere allocata più memoria. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aggiunge memoria solo se richiesto dal relativo carico di lavoro. In un server non operativo non vengono aumentate le dimensioni del proprio spazio degli indirizzi virtuali.  
   
-**[Max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** controlla l'allocazione di memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la memoria per la compilazione, tutte le cache (incluso il pool di buffer), le concessioni di memoria per l'esecuzione di query, la memoria per la gestione blocchi e la memoria CLR<sup>1</sup> (in particolare i clerk di memoria presenti in **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
+**[Max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** controlla l'allocazione di memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la memoria per la compilazione, tutte le cache (incluso il pool di buffer), le [concessioni di memoria per l'esecuzione di query](#effects-of-min-memory-per-query), la [memoria per la gestione blocchi](#memory-used-by-sql-server-objects-specifications) e la memoria CLR<sup>1</sup> (in particolare i clerk di memoria presenti in **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
 
 <sup>1</sup> La memoria CLR viene gestita nelle allocazioni max_server_memory a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
@@ -170,13 +168,12 @@ FROM sys.dm_os_process_memory;
 
 All'avvio di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , viene calcolata la dimensione dello spazio degli indirizzi virtuali per il pool di buffer in base a parametri come la quantità di memoria fisica nel sistema, il numero di thread del server e vari parametri di avvio. In[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene riservata la quantità calcolata di spazio degli indirizzi virtuali del processo per il pool di buffer, ma viene acquisita solo la quantità di memoria fisica necessaria (ovvero ne viene eseguito il commit) per il carico corrente.
 
-L'istanza continua quindi ad acquisire la memoria necessaria per supportare il carico di lavoro. Man mano che altri utenti si connettono ed eseguono query, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene acquisita ulteriore memoria fisica su richiesta. La memoria fisica continua a essere acquisita da un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fino a quando viene raggiunto il limite di allocazione definito dall'opzione Memoria massima del server o fino a quando in Windows viene indicato che non è più disponibile memoria in eccesso. La memoria viene liberata quando viene superato il valore dell'impostazione Memoria minima del server e in Windows viene indicata un'insufficienza di memoria disponibile.
+L'istanza continua quindi ad acquisire la memoria necessaria per supportare il carico di lavoro. Man mano che altri utenti si connettono ed eseguono query, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene acquisita ulteriore memoria fisica su richiesta. La memoria fisica continua a essere acquisita da un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fino a quando viene raggiunto il limite di allocazione definito dall'opzione Memoria massima del server o fino a quando il sistema operativo indica che non è più disponibile memoria in eccesso. La memoria viene liberata quando viene superato il valore dell'impostazione Memoria minima del server e il sistema operativo indica un'insufficienza di memoria disponibile. 
 
 L'avvio di altre applicazioni in un computer in cui viene eseguita un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]comporta l'utilizzo di ulteriore memoria e la quantità di memoria fisica disponibile scende al di sotto del valore di destinazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l'utilizzo della memoria viene regolato automaticamente. Se un'altra applicazione viene arrestata e viene resa disponibile altra memoria, l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aumenta le dimensioni della propria allocazione di memoria. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può liberare e acquisire diversi megabyte di memoria al secondo, in modo che possa adattarsi rapidamente alle modifiche dell'allocazione della memoria.
 
 ## <a name="effects-of-min-and-max-server-memory"></a>Effetti delle opzioni min server memory e max server memory
-
-Le opzioni di configurazione min server memory e max server memory stabiliscono il limite massimo e minimo della quantità di memoria usata dal pool di buffer e in altre cache del motore di database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il pool di buffer non acquisisce immediatamente la quantità di memoria specificata in Memoria minima del server. ma solo la memoria necessaria per l'inizializzazione. Con l'aumentare del carico di lavoro da gestire, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] continua ad acquisire la memoria necessaria per supportare il carico di lavoro Il pool di buffer non libera la memoria acquisita fino a quando non viene raggiunta la quantità specificata in Memoria minima del server. Quando viene raggiunto il limite impostato in Memoria minima del server, il pool di buffer usa quindi l'algoritmo standard per acquisire e liberare memoria nella misura necessaria. L'unica differenza è rappresentata dal fatto che nel pool di buffer la quantità di memoria allocata non scende mai al di sotto del livello specificato in Memoria minima del server, né viene mai acquisita una quantità di memoria superiore al livello specificato Memoria massima del server.
+Le opzioni di configurazione *min server memory* e *max server memory* stabiliscono il limite massimo e minimo della quantità di memoria usata dal pool di buffer e in altre cache del motore di database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il pool di buffer non acquisisce immediatamente la quantità di memoria specificata in Memoria minima del server. ma solo la memoria necessaria per l'inizializzazione. Con l'aumentare del carico di lavoro da gestire, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] continua ad acquisire la memoria necessaria per supportare il carico di lavoro Il pool di buffer non libera la memoria acquisita fino a quando non viene raggiunta la quantità specificata in Memoria minima del server. Quando viene raggiunto il limite impostato in Memoria minima del server, il pool di buffer usa quindi l'algoritmo standard per acquisire e liberare memoria nella misura necessaria. L'unica differenza è rappresentata dal fatto che nel pool di buffer la quantità di memoria allocata non scende mai al di sotto del livello specificato in Memoria minima del server, né viene mai acquisita una quantità di memoria superiore al livello specificato Memoria massima del server.
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come processo acquisisce più memoria rispetto a quella specificata dall'opzione Memoria massima del server. I componenti interni ed esterni possono allocare memoria al di fuori del pool di buffer, richiedendo ulteriore memoria, ma la memoria allocata al pool di buffer in genere rappresenta ancora la parte di memoria maggiore usata da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -187,8 +184,7 @@ Se si specifica lo stesso valore per min server memory e max server memory, quan
 
 Se un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione in un computer in cui viene spesso avviata o arrestata l'esecuzione di altre applicazioni, è possibile che l'allocazione e la deallocazione della memoria da parte dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rallenti l'avvio delle altre applicazioni. Se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è solo una delle numerose applicazioni server in esecuzione in un singolo computer, può inoltre essere necessario che l'amministratore di sistema controlli la quantità di memoria allocata a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In questi casi, è possibile usare le opzioni Memoria minima del server e Memoria massima del server per controllare la quantità di memoria che può essere impiegata da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . I valori delle opzioni **min server memory** e **max server memory** vengono specificati in megabyte. Per altre informazioni, vedere [Opzioni di configurazione del server Server Memory](../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
-## <a name="memory-used-by-includessnoversionincludesssnoversion-mdmd-objects-specifications"></a>Memoria usata dalle specifiche degli oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-
+## <a name="memory-used-by-sql-server-objects-specifications"></a>Memoria usata dalle specifiche degli oggetti di SQL Server
 Nella seguente tabella sono indicate le quantità di memoria approssimative usate da diversi oggetti in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. I valori riportati sono stimati e possono variare a seconda dell'ambiente e delle modalità di creazione degli oggetti:
 
 * Blocco (gestito da Gestione blocchi): 64 byte + 32 byte per proprietario   
@@ -198,12 +194,33 @@ Nella seguente tabella sono indicate le quantità di memoria approssimative usat
 
 Quando è abilitato MARS (Multiple Active Result Set), la connessione utente corrisponde a circa (3 + 3 \* num_logical_connections) \* network_packet_size + 94 KB.
 
-## <a name="buffer-management"></a>Gestione del buffer
+## <a name="effects-of-min-memory-per-query"></a>Effetti dell'opzione min memory per query
+L'opzione di configurazione *min memory per query* consente di specificare la quantità minima di memoria, in kilobyte, che verrà allocata per l'esecuzione di una query. Questa operazione è nota anche come concessione di memoria minima. Tutte le query devono attendere che la memoria minima richiesta venga assegnata, prima che possa iniziare l'esecuzione, o fino a quando non viene superato il valore specificato nell'opzione di configurazione query wait server. Il tipo di attesa accumulato in questo scenario è RESOURCE_SEMAPHORE.
 
+> [!IMPORTANT]
+> Non impostare l'opzione di configurazione del server min memory per query su un valore troppo elevato, in particolare nei sistemi molto occupati, perché ciò potrebbe causare:         
+> - Una maggiore contesa per le risorse di memoria.         
+> - Una riduzione della concorrenza aumentando la quantità di memoria per ogni singola query, anche se la memoria necessaria in fase di esecuzione è inferiore rispetto a questa configurazione.    
+>    
+> Per consigli sull'uso di questa configurazione, vedere [Configurare l'opzione di configurazione del server min memory per query](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
+
+### <a name="memory-grant-considerations"></a>Considerazioni sulla concessione di memoria
+Per l'**esecuzione in modalità riga** la concessione di memoria iniziale non può essere superata in qualsiasi condizione. Se è necessaria più memoria della concessione iniziale per l'esecuzione di operazioni di **hash** o **ordinamento**, verrà eseguito lo spill su disco. Un'operazione di hash con spill è supportata da un file di lavoro in TempDB, mentre un'operazione di ordinamento con spill è supportata da una [tabella di lavoro](../relational-databases/query-processing-architecture-guide.md#worktables).   
+
+Un evento spill che si verifica durante un'operazione di ordinamento è noto come [avviso di ordinamento](../relational-databases/event-classes/sort-warnings-event-class.md). Gli avvisi di ordinamento indicano operazioni di ordinamento per cui la memoria disponibile risulta insufficiente. Ciò vale soltanto per le operazioni di ordinamento eseguite in una query, ad esempio una clausola `ORDER BY` in un'istruzione `SELECT`, e non per le operazioni di ordinamento che implicano la creazione di indici.
+
+Un evento spill che si verifica durante un'operazione di hash è noto come [avviso di hash](../relational-databases/event-classes/hash-warning-event-class.md). Questo tipo di avviso viene generato quando si verifica una ricorsione di hash o l'interruzione dell'hashing (bailout hash) durante un'operazione di hash.
+-  La ricorsione di hash si verifica quando la memoria disponibile non è sufficiente per l'input di compilazione, che viene quindi suddiviso in più partizioni elaborate separatamente. Se la memoria disponibile non è sufficiente per una delle partizioni, la partizione viene suddivisa ulteriormente in sottopartizioni che vengono elaborate separatamente. Il processo di suddivisione continua fino a quando non vengono inserite nella memoria disponibile tutte le partizioni o non viene raggiunto il livello massimo di ricorsione.
+-  L'evento hash bailout si verifica quando un'operazione di hashing raggiunge il livello massimo di ricorsione e ricorre a un piano alternativo per l'elaborazione dei dati partizionati rimanenti. Questi eventi possono causare una riduzione delle prestazioni nel server.
+
+Per l'**esecuzione in modalità batch**, la concessione di memoria iniziale può aumentare in modo dinamico fino a una determinata soglia interna per impostazione predefinita. Questo meccanismo di concessione di memoria dinamica è progettato per consentire l'esecuzione residente in memoria di operazioni di **hash** oppure **ordinamento** in modalità batch. Se la memoria risulta ancora insufficiente per queste operazioni, ne verrà eseguito lo spill su disco.
+
+Per altre informazioni sulle modalità di esecuzione, vedere la [Guida sull'architettura di elaborazione delle query](../relational-databases/query-processing-architecture-guide.md#execution-modes).
+
+## <a name="buffer-management"></a>Gestione del buffer
 Lo scopo principale di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è l'archiviazione e il recupero dei dati. L'esecuzione di una quantità elevata di operazioni di I/O su disco è pertanto una caratteristica fondamentale del motore di database. Poiché le operazioni di I/O nel disco possono utilizzare molte risorse e richiedere un tempo relativamente lungo per il completamento, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene data grande importanza all'efficienza dell'I/O. La gestione del buffer è un elemento chiave per il raggiungimento di tale efficienza. Il componente di gestione del buffer è costituito da due meccanismi, ovvero **Gestione buffer** che consente di accedere alle pagine del database e aggiornarle, e la **cache del buffer**, detta anche **pool di buffer**, che consente di ridurre le operazioni di I/O del file di database. 
 
 ### <a name="how-buffer-management-works"></a>Funzionamento di Gestione buffer
-
 Un buffer è una pagina da 8 KB in memoria, ovvero delle stesse dimensioni di una pagina di dati o di indice. La cache del buffer è quindi suddivisa in pagine da 8 KB. Gestione buffer consente di gestire le funzioni per la lettura delle pagine di dati o di indice dai file su disco del database nella cache buffer e la riscrittura sul disco delle pagine modificate. Una pagina rimane nella cache del buffer fino a quando per Gestione buffer non è necessaria l'area del buffer per leggere un maggior numero di dati. I dati vengono riscritti sul disco solo se vengono modificati. I dati nella cache del buffer possono essere modificati più volte prima di venire riscritti sul disco. Per altre informazioni, vedere [Lettura di pagine](../relational-databases/reading-pages.md) e [Scrittura di pagine](../relational-databases/writing-pages.md).
 
 All'avvio di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , viene calcolata la dimensione dello spazio degli indirizzi virtuali per la cache del buffer in base a parametri come la quantità di memoria fisica nel sistema, il numero massimo di thread del server configurati e vari parametri di avvio. In[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene riservata la quantità calcolata di spazio degli indirizzi virtuali del processo per la cache del buffer (chiamata destinazione di memoria), ma viene acquisita solo la quantità di memoria fisica necessaria (ovvero ne viene eseguito il commit) per il carico corrente. È possibile eseguire query sulle colonne **bpool_commit_target** e **bpool_committed columns** nella vista del catalogo [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) per restituire il numero di pagine riservate come destinazione di memoria e il numero di pagine su cui attualmente viene eseguito il commit nella cache del buffer, rispettivamente.
@@ -217,7 +234,6 @@ Gestione buffer utilizza la maggior parte della memoria nel processo di [!INCLUD
 * Strumento di gestione dei log per la registrazione write-ahead.  
 
 ### <a name="supported-features"></a>Funzionalità supportate
-
 Gestione buffer supporta le caratteristiche seguenti:
 
 * Gestione buffer supporta **NUMA (Non-Uniform Memory Access)**. Le pagine della cache buffer vengono distribuite tra i nodi hardware NUMA, consentendo a un thread di accedere a una pagina del buffer allocata nel nodo NUMA locale anziché dalla memoria esterna. 
@@ -257,6 +273,30 @@ Gli I/O lunghi possono inoltre essere causati da un componente nel percorso di I
 
 Gli I/O lunghi isolati apparentemente non correlati a una delle condizioni precedenti possono essere causati da un problema hardware o di driver. Il log eventi di sistema può contenere un evento correlato che consente di individuare il problema.
 
+### <a name="memory-pressure-detection"></a>Rilevamento dell'utilizzo elevato della memoria
+L'utilizzo elevato della memoria è una condizione risultante dall'insufficienza della memoria e può comportare:
+- I/O aggiuntivo (ad esempio thread in background del Lazywriter molto attivo)
+- Frequenza di ricompilazione maggiore
+- Query con esecuzione più prolungata (in presenza di attese di concessione di memoria)
+- Cicli di CPU aggiuntivi
+
+Questa situazione può avere cause esterne o interne. Le cause esterne includono:
+- La quantità di memoria fisica (RAM) disponibile è bassa. Il sistema deve ricorrere al trimming dei working set dei processi in esecuzione, con un possibile rallentamento generale. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe ridurre la destinazione di commit del pool di buffer e avviare trimming più frequenti delle cache interne. 
+- La memoria di sistema disponibile complessiva (incluso il file di paging del sistema) è bassa. Ciò può causare errori di allocazione della memoria del sistema, perché non è in grado di eliminare tramite paging la memoria attualmente allocata.
+Le cause interne includono:
+- Risposta una condizione di utilizzo elevato della memoria esterna, quando [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] imposta soglie massime di utilizzo della memoria inferiori.
+- Riduzione manuale delle impostazioni della memoria riducendo l'opzione di configurazione *max server memory*. 
+- Modifiche nella distribuzione di memoria dei componenti interni tra le varie cache.
+
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] implementa un framework dedicato al rilevamento e alla gestione delle condizioni di utilizzo elevato della memoria, come parte della gestione della memoria dinamica. Questo framework include l'attività in background nota come **Monitoraggio risorse**. L'attività Monitoraggio risorse controlla lo stato degli indicatori di memoria esterna e interna. Quando uno di questi indicatori cambia stato, viene calcolata e trasmessa la notifica corrispondente. Queste notifiche sono messaggi interni da ognuno dei componenti del motore, archiviati nel buffer circolare. 
+
+Due buffer circolari contengono le informazioni rilevanti per la gestione della memoria dinamica: 
+- Il buffer circolare di Monitoraggio risorse, che tiene traccia delle attività di Monitoraggio risorse, ad esempio se è stata segnalata o meno una condizione di utilizzo elevato della memoria. Questo buffer circolare contiene informazioni sullo stato dipendenti dalla condizione corrente di *RESOURCE_MEMPHYSICAL_HIGH*, *RESOURCE_MEMPHYSICAL_LOW*, *RESOURCE_MEMPHYSICAL_STEADY* o *RESOURCE_MEMVIRTUAL_LOW*.
+- Il buffer circolare del broker di memoria, che contiene i record delle notifiche relative alla memoria per ogni pool di risorse di Resource Governor. Quando viene rilevata una condizione di utilizzo elevato della memoria interna, vengono attivate le notifiche per memoria insufficiente per i componenti che allocano memoria, in modo da attivare azioni appropriate per bilanciare la memoria tra le cache. 
+
+I broker di memoria mantengono monitorato l'utilizzo della memoria da parte di ogni componente e quindi, in base alle informazioni raccolte, viene calcolato il valore ottimale di memoria per ognuno di questi componenti. È presente un set di broker per ogni pool di risorse di Resource Governor. Queste informazioni vengono quindi trasmesse a ognuno dei componenti, che procederanno ad aumentare o ridurre l'utilizzo come richiesto.
+Per altre informazioni sui broker di memoria, vedere [sys.dm_os_memory_brokers](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-brokers-transact-sql.md). 
+
 ### <a name="error-detection"></a>Rilevamento degli errori  
 Per le pagine di database sono disponibili due meccanismi facoltativi, ovvero la protezione delle pagine incomplete e la protezione dei checksum, che consentono di assicurare l'integrità della pagina dal momento in cui viene scritta sul disco fino a quando viene letta di nuovo. Questi meccanismi offrono una modalità indipendente di verifica della correttezza non solo dell'archiviazione dei dati, ma anche di componenti hardware quali controller, driver, cavi e perfino del sistema operativo. La protezione viene aggiunta alla pagina immediatamente prima della scrittura sul disco e viene verificata dopo la lettura della pagina dal disco.
 
@@ -278,7 +318,6 @@ La protezione dei checksum, introdotta in [!INCLUDE[ssVersion2005](../includes/s
 > TORN_PAGE_DETECTION può consentire l'utilizzo di un numero più limitato di risorse, ma offre una protezione minore rispetto all'opzione CHECKSUM.
 
 ## <a name="understanding-non-uniform-memory-access"></a>Informazioni sull'architettura NUMA (Non-Uniform Memory Access)
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'architettura NUMA (Non-Uniform Memory Access) e offre buone prestazioni su hardware NUMA senza alcuna configurazione specifica. Con l'aumentare della velocità del clock e del numero di processori, diventa sempre più difficile ridurre la latenza di memoria necessaria per utilizzare questa ulteriore capacità di elaborazione. Per ovviare a questo problema, i fornitori di hardware offrono cache L3 di grandi dimensioni. Si tratta, tuttavia, di una soluzione soggetta a limiti. L'architettura NUMA offre una soluzione scalabile per questo problema. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è stato progettato per l'uso ottimale in computer basati su NUMA senza che sia necessario apportare alcuna modifica alle applicazioni. Per altre informazioni, vedere [Procedura: Configurazione di SQL Server per l'uso di Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
 ## <a name="see-also"></a>Vedere anche

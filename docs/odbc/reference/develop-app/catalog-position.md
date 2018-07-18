@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910006"
 ---
 # <a name="catalog-position"></a>Posizione del catalogo
 La posizione di un nome di catalogo in un identificatore e la modalità è separata dal resto dell'identificatore varia da origine dati all'origine dati. Ad esempio, in un'origine dati Xbase, il nome del catalogo è una directory e, in Microsoft® Windows® è separato dal nome della tabella (che è un nome di file) da una barra rovesciata (\\). Nella figura seguente viene illustrata questa condizione.  

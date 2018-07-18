@@ -1,5 +1,5 @@
 ---
-title: Creare e configurare l'applicazione del servizio PowerPivot in Autorità di certificazione | Documenti Microsoft
+title: Creare e configurare l'applicazione del servizio PowerPivot in Autorità di certificazione | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 581bcc4777121d42b8f7e6b629d98e26b49b425d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982603"
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Creare e configurare l'applicazione del servizio PowerPivot nella CA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/10/2018
   
 6.  In **Server di database**il valore predefinito è l'istanza del Motore di database di SQL Server che esegue l'hosting dei database di configurazione della farm. È possibile utilizzare questo server o sceglierne uno diverso.  
   
-7.  In **nome del Database**, il valore predefinito è PowerPivotServiceApplication1_\<guid >. È necessario creare un database univoco per ciascuna applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del database predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
+7.  Nelle **sicurissimo**, il valore predefinito è PowerPivotServiceApplication1_\<guid >. È necessario creare un database univoco per ciascuna applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del database predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
   
 8.  In **Autenticazione database**l'impostazione predefinita è Autenticazione di Windows. Se si sceglie **Autenticazione di SQL Server**, fare riferimento alla guida dell'amministratore di SharePoint per le procedure consigliate sull'utilizzo di questo tipo di autenticazione in una distribuzione di SharePoint.  
   
@@ -105,9 +106,9 @@ ms.lasthandoff: 05/10/2018
   
 9. In **Orario di ufficio**di Aggiornamento dati è possibile specificare un intervallo di ore che consente di definire un giorno lavorativo. Le pianificazioni dell'aggiornamento dati possono essere eseguite al termine di un giorno lavorativo per selezionare i dati transazionali generati durante il normale orario di ufficio.  
   
-10. In **Account di aggiornamento dati automatico [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** è possibile specificare un'applicazione di destinazione del servizio di archiviazione sicura predefinita che consente di archiviare un account predefinito per l'esecuzione di processi di aggiornamento dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Assicurarsi di specificare il nome dell'applicazione di destinazione e non l'ID. L'applicazione di destinazione per l'aggiornamento dati automatico viene creata automaticamente tramite il programma di installazione di SQL Server se [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint è stato installato con l'opzione Nuovo server. In caso contrario, è necessario creare manualmente l'applicazione di destinazione. Per le istruzioni su come configurare l'account, vedere [Configurare l'account di aggiornamento dati automatico di PowerPivot (PowerPivot per SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).  
+10. In **Account di aggiornamento dati automatico [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** è possibile specificare un'applicazione di destinazione del servizio di archiviazione sicura predefinita che consente di archiviare un account predefinito per l'esecuzione di processi di aggiornamento dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Assicurarsi di specificare il nome dell'applicazione di destinazione e non l'ID. L'applicazione di destinazione per l'aggiornamento dati automatico viene creata automaticamente tramite il programma di installazione di SQL Server se [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint è stato installato con l'opzione Nuovo server. In caso contrario, è necessario creare manualmente l'applicazione di destinazione. Per le istruzioni su come configurare l'account, vedere [Configurare l'account di aggiornamento dati automatico di PowerPivot (PowerPivot per SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).  
   
-11. In **Consenti agli utenti di immettere credenziali di Windows personalizzate**è possibile selezionare o deselezionare la casella di controllo per specificare se i proprietari delle pianificazioni possono immettere credenziali di Windows arbitrarie per eseguire una pianificazione dell'aggiornamento dati. Se si seleziona questa casella di controllo, l'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] consentirà di creare e gestire un'applicazione di destinazione per ciascun set di credenziali archiviate. Per altre informazioni, vedere [Configurare le credenziali archiviate per l'aggiornamento dati PowerPivot (PowerPivot per SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
+11. In **Consenti agli utenti di immettere credenziali di Windows personalizzate**è possibile selezionare o deselezionare la casella di controllo per specificare se i proprietari delle pianificazioni possono immettere credenziali di Windows arbitrarie per eseguire una pianificazione dell'aggiornamento dati. Se si seleziona questa casella di controllo, l'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] consentirà di creare e gestire un'applicazione di destinazione per ciascun set di credenziali archiviate. Per altre informazioni, vedere [Configurare le credenziali archiviate per l'aggiornamento dati PowerPivot (PowerPivot per SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
   
 12. In **Lunghezza massima cronologia di elaborazione**è possibile specificare per quanto tempo mantenere un record cronologico dell'aggiornamento dati. Queste informazioni vengono visualizzate nelle pagine della cronologia dell'aggiornamento dati mantenute per ogni cartella di lavoro per cui viene utilizzato l'aggiornamento dati. Sono visualizzate anche nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -140,7 +141,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  Per **[custom]**, selezionare la casella di controllo accanto a ogni connessione all'applicazione di servizio che si desidera usare. Se sono presenti più applicazioni di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , indicato dal tipo impostato su **Power Pivot Service Application Proxy**(Proxy dell'applicazione di servizio PowerPivot), assicurarsi di sceglierne una sola.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 ##  <a name="EditGSA"></a> Modificare le proprietà dell'applicazione di servizio  
  Utilizzare le istruzioni seguenti per aprire nuovamente la pagina delle proprietà contenente il nome dell'applicazione di servizio, il pool di applicazioni, le impostazioni del database e le associazioni del servizio.  

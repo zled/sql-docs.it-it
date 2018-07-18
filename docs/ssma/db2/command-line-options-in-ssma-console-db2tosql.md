@@ -1,8 +1,6 @@
 ---
-title: Opzioni della riga di comando nella Console SSMA (DB2ToSQL) | Documenti Microsoft
+title: Opzioni della riga di comando nella Console SSMA (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,25 +16,26 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a3c09bc2341a5dd5933badc711c1d34137477df6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 172b0f927f7ca25173b86c3b0efb87cef6bcc271
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980333"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Opzioni della riga di comando nella Console SSMA (DB2ToSQL)
-Microsoft offre un set affidabile opzioni riga di comando per eseguire e controllare le attività SSMA. In dettaglio le sezioni che seguono lo stesso.  
+Microsoft offre un solido set opzioni riga di comando per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  
   
 ## <a name="command-line-options-in-ssma-console"></a>Opzioni della riga di comando nella Console SSMA  
-Descritti nel presente documento è la console di opzioni di comando.  
+È qui descritti la console di opzioni del comando.  
   
-In questa sezione, il termine 'option' è detta anche 'switch'.  
+Ai fini di questa sezione, il termine 'option' è detta anche 'switch'.  
   
-Opzioni non sono tra maiuscole e minuscole e può iniziare con '**-**'o',**/**' caratteri.  
+Opzioni non sono tra maiuscole e minuscole e può iniziare con '**-**'or,'**/**' caratteri.  
   
-Se sono state specificate, diventa obbligatorio per specificare i parametri di opzione corrispondente.  
+Se si specificano opzioni, diventa obbligatorio specificare i parametri di opzione corrispondenti.  
   
-I parametri di opzione devono essere separati dal carattere opzione da uno spazio vuoto.  
+I parametri di opzione devono essere separati dal carattere opzione da spazi vuoti.  
   
 **Esempi di sintassi:**  
   
@@ -44,23 +43,23 @@ I parametri di opzione devono essere separati dal carattere opzione da uno spazi
   
 `C:\> SSMAforDB2Console.EXE -s “C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \AssessmentReportGenerationSample.xml” –v “C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \VariableValueFileSample.xml” –c “C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ServersConnectionFileSample.xml”`  
   
-I nomi di cartella o file contenenti spazi devono essere specificati tra virgolette doppie.  
+Devono specificare i nomi di cartella o file contenenti spazi tra virgolette doppie.  
   
 L'output di voci di riga di comando e i messaggi di errore vengono archiviati in STDOUT o in un file specificato.  
   
-### <a name="script-file-option-sscript"></a>Opzione di File di script: – s/script  
-Un parametro obbligatorio, il percorso/nome del file script specifica lo script di sequenze di comando da eseguire tramite SSMA.  
+### <a name="script-file-option-sscript"></a>Opzione del File script: – s o script  
+Un parametro obbligatorio, il percorso/nome del file script specifica lo script di sequenze di comandi deve essere eseguito da SSMA.  
   
 **Esempi di sintassi:**  
   
 `C:\>SSMAforDB2Console.EXE –s “C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”`  
   
 ### <a name="variable-value-file-option-vvariable"></a>Opzione File valore variabile: variabile o – v  
-Questo file include le variabili utilizzate nel file di script. Questo è un parametro facoltativo. Se le variabili non dichiarate nel file variabile e usate nel file di script, l'applicazione genera un errore e termina l'esecuzione della console.  
+Questo file è costituito da variabili utilizzate nel file di script. Si tratta di un'opzione facoltativa. Se le variabili non dichiarate nel file delle variabili e usate nel file di script, l'applicazione genera un errore e termina l'esecuzione della console.  
   
 **Esempi di sintassi:**  
   
--   Variabili definite in più file di valore della variabile, ad esempio uno con un valore predefinito e un altro con un valore specifico dell'istanza quando applicabile. L'ultimo file di variabile specificato negli argomenti della riga di comando accetta la preferenza, in caso di una duplicazione delle variabili:  
+-   Variabili definite in più file di valore della variabile, ad esempio uno con un valore predefinito e l'altra con un valore specifico dell'istanza quando applicabile. L'ultimo file di variabile specificato negli argomenti della riga di comando consideri le preferenze, nel caso in cui è presente una duplicazione delle variabili:  
   
     `C:\>SSMAforDB2Console.EXE -s`  
   
@@ -69,13 +68,13 @@ Questo file include le variabili utilizzate nel file di script. Questo è un par
     `projects\global_variablevaluefile.xml –v “c:\migrationprojects\instance_variablevaluefile.xml”`  
   
 ### <a name="server-connection-file-option-cserverconnection"></a>Opzione di File di connessione server: c: / serverconnection  
-Questo file contiene informazioni sulla connessione di server per ogni server. Ogni definizione di server è identificato da un ID Server univoco. Gli ID del Server viene fatto riferimento nel file di script per la connessione comandi correlati.  
+Questo file contiene informazioni di connessione server per ogni server. Ogni definizione del server è identificato da un ID Server univoco. Gli ID Server viene fatto riferimento nel file di script per connessione correlati ai comandi.  
   
-Definizione di server può essere una parte del file di connessione del server e/o file di script. Id del server nel file di script ha la precedenza sul file di connessione del server, in caso di una ripetizione dell'id del server.  
+Definizione di server può essere una parte del file di connessione di server e/o file di script. Id del server nel file di script ha la precedenza sul file di connessione del server, nel caso in cui è presente una duplicazione dell'id del server.  
   
 **Esempi di sintassi:**  
   
--   Gli ID dei server vengono utilizzati nel file di script e sono definiti in un file di connessione server separato, file di connessione del server utilizza le variabili definite nel file del valore della variabile:  
+-   Gli ID del server vengono usati nel file di script e vengono definite in un file di connessione server separato, file di connessione server usa le variabili definite nel file di valore della variabile:  
   
     `C:\>SSMAforDB2Console.EXE –s “C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”  –v`  
   
@@ -83,16 +82,16 @@ Definizione di server può essere una parte del file di connessione del server e
   
     `c:\SsmaProjects\myserverconnectionsfile1.xml`  
   
--   Definizione del server è incorporata nel file di script:  
+-   Definizione del server è incorporato nel file di script:  
   
     `C:\>SSMAforDB2Console.EXE –s “C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”`  
   
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>Opzione di Output XML: - x / xmloutput [xmloutputfile]  
-Questo comando viene utilizzato per i messaggi di output del comando in formato xml alla console o in un file xml di output.  
+Questo comando viene utilizzato per l'output i messaggi di output del comando in formato xml alla console o in un file xml.  
   
-Sono disponibili due opzioni per xmloutput, dei quali..,:  
+Sono disponibili due opzioni per xmloutput, una visualizzazione dei..,:  
   
--   Se è specificato alcun percorso dopo il cambio di xmloutput l'output viene reindirizzato al file.  
+-   Se il percorso file non viene fornito dopo il cambio di xmloutput l'output viene reindirizzato al file.  
   
     **Esempio di sintassi:**  
   
@@ -100,14 +99,14 @@ Sono disponibili due opzioni per xmloutput, dei quali..,:
   
     `“C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”  –x d:\xmloutput\project1output.xml`  
   
--   Se non viene fornito alcun filepath dopo il cambio di xmloutput il xmlout viene visualizzato nella console di se stesso.  
+-   Se non viene specificato alcun percorso di file dopo il cambio di xmloutput il xmlout viene visualizzato nella console di se stesso.  
   
     **Esempio di sintassi:**  
   
     `C:\>SSMAforDB2Console.EXE –s “C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”  –xmloutput`  
   
-### <a name="log-file-option-llog"></a>Opzione del File di log: – l o di log  
-Tutte le operazioni di SSMA nell'applicazione Console ottengano registrate in un file di log. Questo è un parametro facoltativo. Se un file di log e il relativo percorso vengono specificati nella riga di comando, viene generato il log nel percorso specificato. In caso contrario, è generato dal percorso predefinito.  
+### <a name="log-file-option-llog"></a>Opzione del File di log: – l/log  
+Tutte le operazioni di SSMA nell'applicazione Console ottengano registrate in un file di log. Si tratta di un'opzione facoltativa. Se un file di log e il relativo percorso vengono specificati nella riga di comando, viene generato il log nel percorso specificato. In caso contrario, viene generato nella posizione predefinita.  
   
 **Esempio di sintassi:**  
   
@@ -115,8 +114,8 @@ Tutte le operazioni di SSMA nell'applicazione Console ottengano registrate in un
   
 `“C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”  –l c:\SsmaProjects\migration1.log`  
   
-### <a name="project-environment-folder-option-eprojectenvironment"></a>Opzione di cartella di progetto ambiente: e: / projectenvironment  
-Questo indica la cartella di impostazioni di ambiente di progetto per il progetto SSMA corrente. Questo parametro è facoltativo.  
+### <a name="project-environment-folder-option-eprojectenvironment"></a>Opzione di cartella di progetto ambiente:. e – / projectenvironment  
+Ciò indica la cartella Impostazioni ambiente di progetto SSMA corrente. Questa opzione è facoltativa.  
   
 **Esempio di sintassi:**  
   
@@ -125,13 +124,13 @@ Questo indica la cartella di impostazioni di ambiente di progetto per il progett
 `“C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”  –e c:\SsmaProjects\CommonEnvironment`  
   
 ### <a name="secure-password-option-psecurepassword"></a>Opzione Password sicura: – p/securepassword  
-Questa opzione indica la password crittografata per le connessioni al server. Differisce da tutte le altre opzioni: l'opzione di qualsiasi script eseguito né consente di qualsiasi attività relative alla migrazione, ma consente di gestire la crittografia di password per le connessioni del server utilizzato nel progetto di migrazione.  
+Questa opzione indica la password crittografata per le connessioni al server. Differisce da tutte le altre opzioni: l'opzione non viene eseguito qualsiasi script né consente in qualsiasi attività relative alla migrazione, ma consente di gestire la crittografia della password per le connessioni del server usato nel progetto di migrazione.  
   
-È possibile immettere qualsiasi altra opzione o la password come il parametro della riga di comando. In caso contrario, generato un errore. Per ulteriori informazioni, vedere il [la gestione delle password](http://msdn.microsoft.com/en-us/56d546e3-8747-4169-aace-693302667e94) sezione.  
+È possibile immettere qualsiasi altra opzione o la password come parametro della riga di comando. In caso contrario, viene generato un errore. Per altre informazioni, vedere la [la gestione delle password](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) sezione.  
   
-Sono supportate le seguenti opzioni secondarie per `–p/securepassword`:  
+Le seguenti opzioni secondarie sono supportate per `–p/securepassword`:  
   
--   Per aggiungere password protetta archiviazione per un ID di Server specificato o per tutti gli ID di Server definiti nel file di connessione del server. -Opzione per sovrascriverlo, seguito, gli aggiornamenti della password se esiste già:  
+-   Per aggiungere password protette archiviazione per un ID del Server specificato o per tutti gli ID del Server definito nel file di connessione del server. -L'opzione di sovrascrittura, di seguito, gli aggiornamenti della password se esiste già:  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}` `-c|-serverconnection <server-connection-file> [-v|variable <variable-value-file>]``[-o|overwrite]`  
   
@@ -141,40 +140,40 @@ Sono supportate le seguenti opzioni secondarie per `–p/securepassword`:
   
     `–p/securepassword –r/remove {<server_id> [, …n] | all}`  
   
--   Per visualizzare un elenco di ID di Server per cui la password viene crittografata:  
+-   Per visualizzare un elenco di ID Server per cui la password viene crittografata:  
   
     `–p/securepassword –l/list`  
   
--   Per esportare le password archiviate in un archivio protetto a un file crittografato. Questo file è crittografato con la frase di sessione specificato dall'utente.  
+-   Per esportare le password archiviate in un archivio protetto a un file crittografato. Questo file è crittografato con la frase di pass specificato dall'utente.  
   
     `–p/securepassword –e/export {<server-id> [, …n] | all} <encrypted-password -file>`  
   
--   Il encrypted file esportato in precedenza viene importato in un percorso locale protetto utilizzando specificato dall'utente-passphrase. Una volta che il file viene decrittografato, archiviato in un nuovo file, a sua volta, verrà crittografato nel computer locale.  
+-   Crittografati-che è stato esportato in precedenza viene importato il file nell'archivio locale protetto utilizzando specificato dall'utente-passphrase. Una volta che il file viene decrittografato, questo viene archiviato in un nuovo file, che a sua volta, viene crittografato nel computer locale.  
   
     `–p/securepassword –i/import {<server-id> [, …n] | all} <encrypted-password -file>`  
   
-    È possibile specificare più ID Server utilizzando separatori delle migliaia.  
+    È possibile specificare più ID Server usando i separatori virgola.  
   
-### <a name="help-option-help"></a>Opzione della Guida:-? /help  
-Visualizza il riepilogo della sintassi delle opzioni di SSMA Console:  
+### <a name="help-option-help"></a>Opzione della Guida::? / della Guida  
+Visualizza il riepilogo di sintassi delle opzioni della Console SSMA:  
   
 `C:\>SSMAforDB2Console.EXE -?`  
   
-Per una visualizzazione tabulare delle opzioni della riga di comando della Console di SSMA, consultare [appendice - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md).  
+Per una visualizzazione tabulare di opzioni della riga di comando di Console SSMA, consultare [appendice - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md).  
   
-### <a name="securepassword-help-option-securepassword--help"></a>Opzione SecurePassword Help:: securepassword-? /Help  
-Visualizza il riepilogo della sintassi delle opzioni di SSMA Console:  
+### <a name="securepassword-help-option-securepassword--help"></a>Opzione SecurePassword Help: – securepassword-? /Help  
+Visualizza il riepilogo di sintassi delle opzioni della Console SSMA:  
   
 `C:\>SSMAforDB2Console.EXE -securepassword -?`  
   
-Per una visualizzazione tabulare delle opzioni della riga di comando della Console di SSMA, consultare [appendice - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
+Per una visualizzazione tabulare di opzioni della riga di comando di Console SSMA, consultare [appendice - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
   
 ### <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo dipende dai requisiti del progetto:  
+Il passaggio successivo dipende dai requisiti progetto:  
   
-1.  Consente di specificare una password o l'esportazione / importazione per le password, vedere [la gestione delle password &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md).  
+1.  Per specificare una password o l'esportazione / importazione per le password, vedere [la gestione delle password &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md).  
   
-2.  Per la generazione di report, vedere [la generazione di report &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
+2.  Per la generazione di report, vedere [generazione di report &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
   
-3.  Per la risoluzione dei problemi nella console, vedere [Troubleshooting &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
+3.  Per risolvere i problemi nella console, vedere [Troubleshooting &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
   

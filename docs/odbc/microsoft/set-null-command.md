@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901236"
 ---
 # <a name="set-null-command"></a>Comando NULL SET
 Determina come valori null sono supportati da SQL ALTER TABLE - SQL, CREATE TABLE - e INSERT - comandi SQL.  

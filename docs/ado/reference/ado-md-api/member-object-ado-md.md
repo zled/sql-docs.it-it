@@ -2,7 +2,6 @@
 title: Oggetto membro (ADO MD) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6629f860fb8043387526019ec17c0e1775915a66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee79dc5a17ebbce35a8543a0ed2351ca65f03374
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284040"
 ---
 # <a name="member-object-ado-md"></a>Oggetto membro (ADO MD)
 Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro di un livello o un membro di una posizione lungo un asse di un set di celle.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Le proprietà di un **membro** differiscono a seconda del contesto in cui viene utilizzato. A **membro** di un [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md) in un [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) ha un [figli](../../../ado/reference/ado-md-api/children-property-ado-md.md) proprietà che restituisce il **membri** in il livello inferiore successivo della gerarchia dal corrente **membro**. Per un **membro** di un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md), **figli** raccolta è sempre vuota. Inoltre, il [tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md) proprietà si applica solo a **membri** di un **livello**.  
   
  A **membro** di **posizione** ha due proprietà che sono utili quando si visualizzano i [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) e [ ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Si verifica un errore se si accede a queste proprietà su un **membro** di un **livello**.  
@@ -72,7 +72,7 @@ Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro
   
  Il **proprietà** insieme contiene le proprietà specifiche del provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione del provider per un elenco completo delle proprietà disponibili.  
   
-|Nome|Description|  
+|nome|Description|  
 |----------|-----------------|  
 |CatalogName|Il nome del catalogo a cui appartiene il cubo.|  
 |ChildrenCardinality|Numero di elementi figlio del membro.|  

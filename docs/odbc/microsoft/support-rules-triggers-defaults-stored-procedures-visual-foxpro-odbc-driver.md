@@ -37,6 +37,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904676"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Supporto per le regole, valori predefiniti, trigger e Stored procedure, Driver ODBC di Visual FoxPro,
 È possibile creare regole di Visual FoxPro, trigger, i valori predefiniti o stored procedure utilizzando il Driver ODBC di Visual FoxPro. Tuttavia, l'applicazione potrebbe interagire con le regole esistenti, trigger, i valori predefiniti o stored procedure come inserisce, aggiorna o Elimina Visual FoxPro i dati archiviati in un database.  

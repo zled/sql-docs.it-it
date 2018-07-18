@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917387"
 ---
 # <a name="installer-dll-function-summary"></a>Riepilogo delle funzioni DLL programma di installazione
 Nella tabella seguente vengono descritte le funzioni nel programma di installazione DLL. Per ulteriori informazioni sulla sintassi e semantica per ogni funzione, vedere [Installer DLL API Reference](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  

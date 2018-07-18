@@ -1,46 +1,44 @@
 ---
 title: Pianificare i pacchetti SSIS in Azure | Microsoft Docs
-ms.date: 05/09/2018
+description: Panoramica dei metodi disponibili per la pianificazione dell'esecuzione di pacchetti SSIS distribuiti nel database SQL di Azure.
+ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 62367e0ece20f56b6447a23b78b03b8799eef119
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262175"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Pianificare l'esecuzione di un pacchetto SSIS in Azure
-È possibile pianificare l'esecuzione dei pacchetti archiviati nel database del catalogo SSISDB in un server di database SQL di Azure scegliendo una delle opzioni di pianificazione seguenti:
--   [Opzione di pianificazione in SQL Server Management Studio (SSMS)](#ssms)
--   [Attività Esegui pacchetto SSIS di Azure Data Factory](#execute)
--   [Attività stored procedure di SQL Server di Azure Data Factory](#storedproc)
--   [Processi elastici del database SQL](#elastic)
--   [SQL Server Agent](#agent)
+# <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Pianificare l'esecuzione dei pacchetti di SQL Server Integration Services (SSIS) distribuiti in Azure
+
+È possibile pianificare l'esecuzione di pacchetti SSIS distribuiti nel catalogo SSISDB in un server di database SQL di Azure scegliendo uno dei metodi descritti in questo articolo. Un pacchetto può essere pianificato direttamente oppure indirettamente nell'ambito di una pipeline di Azure Data Factory. Per una panoramica di SSIS in Azure, vedere [Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud](ssis-azure-lift-shift-ssis-packages-overview.md).
+
+- Pianificare un pacchetto direttamente
+
+  - [Pianificare con l'opzione di pianificazione in SQL Server Management Studio (SSMS)](#ssms)
+
+  - [Processi elastici del database SQL](#elastic)
+
+  - [SQL Server Agent](#agent)
+
+- [Pianificare un pacchetto indirettamente nell'ambito di una pipeline di Azure Data Factory](#activity)
+
 
 ## <a name="ssms"></a> Pianificare un pacchetto con SSMS
 
-In SQL Server Management Studio (SSMS) è possibile fare clic con il pulsante destro del mouse su un pacchetto distribuito nel database del catalogo SSIS, SSISDB, e scegliere **Pianifica** per aprire la finestra di dialogo **Nuova pianificazione**. Per altre informazioni, vedere [Pianificare l'esecuzione di un pacchetto SSIS in Azure con SQL Server Management Studio (SSMS)](ssis-azure-schedule-packages-ssms.md).
+In SQL Server Management Studio (SSMS) è possibile fare clic con il pulsante destro del mouse su un pacchetto distribuito nel database del catalogo SSIS, SSISDB, e scegliere **Pianifica** per aprire la finestra di dialogo **Nuova pianificazione**. Per altre informazioni, vedere [Pianificare pacchetti SSIS in Azure con SQL Server Management Studio](ssis-azure-schedule-packages-ssms.md).
 
 Questa funzionalità richiede SQL Server Management Studio 17.7 o versione successiva. Per ottenere la versione più recente di SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
-
-## <a name="execute"></a> Pianificare un pacchetto con l'attività di esecuzione pacchetto SSIS
-
-Per informazioni su come pianificare un pacchetto SSIS usando l'attività di esecuzione pacchetto SSIS in Azure Data Factory, vedere [Eseguire un pacchetto SSIS tramite l'attività SSIS in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
-
-## <a name="storedproc"></a> Pianificare un pacchetto con l'attività stored procedure
-
-Per informazioni su come pianificare un pacchetto SSIS usando l'attività stored procedure in Azure Data Factory, vedere [Eseguire un pacchetto SSIS usando l'attività stored procedure in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
-
-Per Data Factory versione 1, vedere [Eseguire un pacchetto SSIS usando l'attività stored procedure in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="elastic"></a> Pianificare un pacchetto con i processi elastici del database SQL
 
@@ -88,7 +86,9 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="agent"></a> Pianificare un pacchetto con SQL Server Agent
+## <a name="agent"></a> Pianificare un pacchetto con SQL Server Agent in locale
+
+Per altre informazioni su SQL Server Agent, vedere [Processi di SQL Server Agent per i pacchetti](../packages/sql-server-agent-jobs-for-packages.md).
 
 ### <a name="prerequisite---create-a-linked-server"></a>Prerequisito: creare un server collegato
 
@@ -158,7 +158,24 @@ Per pianificare un pacchetto con SQL Server Agent in locale, creare un processo 
 
 6.  Completare la configurazione e la pianificazione del processo.
 
-## <a name="next-steps"></a>Passaggi successivi
-Per altre informazioni su SQL Server Agent, vedere [Processi di SQL Server Agent per i pacchetti](../packages/sql-server-agent-jobs-for-packages.md).
+## <a name="activity"></a> Pianificare un pacchetto nell'ambito di una pipeline di Azure Data Factory
 
-Per altre informazioni sui processi elastici del database SQL, vedere [Gestione dei database cloud con scalabilità orizzontale](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+È possibile pianificare un pacchetto indirettamente tramite un trigger per l'esecuzione di una pipeline di Azure Data Factory in cui viene eseguito un pacchetto SSIS.
+
+Per pianificare una pipeline di Data Factory, usare uno dei trigger seguenti:
+
+- [Trigger di pianificazione](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+
+- [Trigger di finestra a cascata](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+
+- [Trigger basato su eventi](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+
+Per eseguire un pacchetto SSIS nell'ambito di una pipeline di Data Factory, usare una delle attività seguenti:
+
+- [Attività Esegui pacchetto SSIS](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+
+- [Attività stored procedure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Esaminare le opzioni per l'esecuzione dei pacchetti SSIS distribuiti in Azure. Per altre informazioni, vedere [Eseguire pacchetti SSIS in Azure](ssis-azure-run-packages.md).

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905266"
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>Utilizzo dell'attributo di stringa di connessione ExtendedAnsiSQL (Driver di accesso)
 Jet 4.0 presenta numerose nuove funzionalità che non sono abilitate per impostazione predefinita dei driver di Database Desktop ODBC versione 4.0. Per sfruttare i vantaggi delle nuove funzionalità, un'applicazione deve impostare un nuovo attributo di connessione, aggiungere un nuovo attributo per la stringa di connessione o impostare l'attributo in un DSN. L'attributo viene chiamato ExtendedAnsiSQL e si riferisce solo a Microsoft ODBC Desktop Database driver 4.0 e versioni successive.  

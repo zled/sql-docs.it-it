@@ -22,11 +22,12 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 185096f5e4d9a2722d720fe37549f22cd5e608e7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 29c01064646de4f80bd11f6a7536d895368b6e52
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34811965"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +42,8 @@ ms.lasthandoff: 05/19/2018
 |[Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|Monitor di sistema tiene traccia principalmente dell'utilizzo delle risorse, ad esempio il numero corrente di richieste di pagine a Gestione buffer, consentendo di monitorare le prestazioni e l'attività del server tramite oggetti e contatori predefiniti o contatori definiti dall'utente per il monitoraggio degli eventi. Monitoraggio di sistema, Performance Monitor in Microsoft Windows NT 4.0, raccoglie misurazioni e valori piuttosto che dati sugli eventi, ad esempio l'utilizzo della memoria, il numero di transazioni attive, il numero di blocchi bloccati o l'attività della CPU. È possibile impostare le soglie per contatori specifici allo scopo di generare avvisi per la notifica agli operatori.<br /><br /> Monitoraggio di sistema funziona con Microsoft Windows Server e i sistemi operativi Windows. Questo strumento consente di monitorare, in remoto o in locale, un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Windows NT 4.0 o versioni successive.<br /><br /> La principale differenza tra [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e Monitoraggio di sistema consiste nel fatto che [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] esegue il monitoraggio degli eventi del Motore di database, mentre Monitoraggio di sistema esegue il monitoraggio dell'utilizzo delle risorse associate ai processi del server.|  
 |[Aprire Monitoraggio attività &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)|Monitoraggio attività di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è utile per le viste ad hoc dell'attività corrente e consente di visualizzare in formato grafico informazioni relative a:<br /><br /> Processi in esecuzione in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Processi bloccati.<br /><br /> Blocchi.<br /><br /> Attività degli utenti.|  
 |[Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)|Visualizza statistiche in tempo reale relative ai passaggi per l'esecuzione di query. Dal momento che i dati sono disponibili durante l'esecuzione della query, queste statistiche di esecuzione sono estremamente utili per il debug di problemi relativi alle prestazioni delle query.|  
+|[Eventi estesi](../../relational-databases/extended-events/extended-events.md)|Si tratta di un sistema di monitoraggio delle prestazioni leggero in cui vengono utilizzate poche risorse per le prestazioni. Per gli eventi estesi sono disponibili due interfacce utente grafiche, ovvero Creazione guidata nuova sessione e Nuova sessione, per creare, modificare, visualizzare e analizzare i dati della sessione.|  
+|[Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)|LE DMV consentono di controllare informazioni relative all'esecuzione.|
 |[Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] Stored procedure che consentono di creare, filtrare e definire la creazione della traccia:<br /><br /> [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)<br /><br /> [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)<br /><br /> [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)<br /><br /> [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)<br /><br /> [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)|  
 |Log degli errori|Il registro eventi applicazioni di Windows offre una panoramica complessiva degli eventi generati in Windows Server e nei sistemi operativi Windows, nonché degli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e di ricerca full-text. Questo registro contiene informazioni sugli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non disponibili in altro modo. Tali informazioni possono essere utilizzate per risolvere i problemi relativi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)|Le stored procedure di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguenti offrono una potente alternativa per molte attività di monitoraggio:<br /><br /> [sp_who & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md):<br />                    Visualizza informazioni snapshot sugli utenti e i processi correnti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluse indicazioni sull'istruzione in esecuzione e sull'eventuale blocco dell'istruzione.<br /><br /> [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md):<br />                    Restituisce informazioni snapshot sui blocchi, inclusi ID oggetto, ID indice, tipo di blocco e tipo di risorsa a cui è applicato il blocco.<br /><br /> [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md): <br />                    Visualizza una stima della quantità corrente di spazio su disco utilizzato da una tabella o da un intero database.<br /><br /> [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md):<br />                    Visualizza statistiche, tra cui utilizzo della CPU, utilizzo delle risorse di I/O e quantità di tempo inattivo dopo l'ultima esecuzione di **sp_monitor** .|  
@@ -52,14 +55,14 @@ ms.lasthandoff: 05/19/2018
 ## <a name="choosing-a-monitoring-tool"></a>Scelta di uno strumento di monitoraggio  
  La scelta dello strumento di monitoraggio dipende dall'evento o dall'attività che si desidera monitorare.  
   
-|Evento o attività|SQL Server Profiler|Distributed Replay|Monitor di sistema|Monitoraggio attività|Transact-SQL|Log degli errori|  
-|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
-|Analisi delle tendenze|Sì||Sì||||  
-|Riproduzione di eventi acquisiti|Sì (da un singolo computer)|Sì (da più computer)|||||  
-|Monitoraggio ad hoc|Sì|||Sì|Sì|Sì|  
-|Generazione di avvisi|||Sì||||  
-|Interfaccia grafica|Sì||Sì|Sì||Sì|  
-|Utilizzo con applicazioni personalizzate|Sì*||||Sì||  
+|Evento o attività|Eventi estesi|SQL Server Profiler|Distributed Replay|Monitor di sistema|Monitoraggio attività|Transact-SQL|Log degli errori|  
+|-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
+|Analisi delle tendenze|Sì|Sì||Sì||||  
+|Riproduzione di eventi acquisiti||Sì (da un singolo computer)|Sì (da più computer)|||||  
+|Monitoraggio ad hoc||Sì|||Sì|Sì|Sì|  
+|Generazione di avvisi||||Sì||||  
+|Interfaccia grafica|Sì|Sì||Sì|Sì||Sì|  
+|Utilizzo con applicazioni personalizzate|Sì|Sì*||||Sì||  
   
  *Utilizzo di stored procedure di sistema di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   

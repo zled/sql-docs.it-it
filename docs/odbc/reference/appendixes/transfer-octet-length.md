@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909758"
 ---
 # <a name="transfer-octet-length"></a>Lunghezza dell'ottetto trasferimento
 La lunghezza di ottetti di trasferimento di una colonna è il numero massimo di byte restituiti all'applicazione quando i dati vengono trasferiti al relativo tipo di dati C predefinito. Dati di tipo carattere, la lunghezza di ottetti di trasferimento non include lo spazio per il carattere di terminazione null. La lunghezza di ottetti di trasferimento di una colonna può essere diversa dal numero di byte necessari per archiviare i dati nell'origine dati.  

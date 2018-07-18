@@ -1,5 +1,5 @@
 ---
-title: Introduzione all'utilizzo di query XPath (SQLXML 4.0) | Documenti Microsoft
+title: Introduzione all'uso di query XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e620b704f7678a9af8510e7b1d81321aec6ba061
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982553"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduzione all'utilizzo di query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,15 +52,15 @@ ms.lasthandoff: 05/03/2018
 </root>  
 ```  
   
- In questo documento,  **\<cliente >** è un nodo element, **cid** è un nodo di attributo e **"Importante"** è un nodo di testo.  
+ In questo documento  **\<cliente >** è un nodo element, **cid** è un nodo di attributo e **"Important"** è un nodo di testo.  
   
- XPath è un linguaggio di navigazione grafica utilizzato per selezionare un set di nodi da un documento XML. Ogni operatore XPath consente di selezionare un set di nodi in base a un set di nodi selezionato da un operatore XPath precedente. Ad esempio, dato un set di  **\<cliente >** consente di selezionare tutti i nodi, XPath  **\<ordine >** nodi con il **data** valore di dell'attributo **"7/14/1999"**. Il set di nodi risultante contiene tutti gli ordini con data 7/14/1999.  
+ XPath è un linguaggio di navigazione grafica utilizzato per selezionare un set di nodi da un documento XML. Ogni operatore XPath consente di selezionare un set di nodi in base a un set di nodi selezionato da un operatore XPath precedente. Ad esempio, dato un set di  **\<cliente >** consente di selezionare tutti i nodi, XPath  **\<ordine >** nodi con il **data** attributo valore **"7/14/1999"**. Il set di nodi risultante contiene tutti gli ordini con data 7/14/1999.  
   
- Il linguaggio XPath è definito dal World Wide Web Consortium (W3C) come linguaggio di navigazione standard. SQLXML 4.0 implementa un subset della specifica del W3C XPath, che si trova in http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Il linguaggio XPath è definito dal World Wide Web Consortium (W3C) come linguaggio di navigazione standard. SQLXML 4.0 implementa un subset della specifica XPath W3C, che si trova in http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Di seguito vengono elencate alcune delle differenze principali tra l'implementazione di XPath del W3C e l'implementazione di SQLXML 4.0.  
   
--   **Query di livello principale**  
+-   **Query radice**  
   
      SQLXML 4.0 non supporta la query radice (/). Ogni query XPath deve iniziare con un livello superiore  **\<ElementType >** nello schema.  
   
@@ -69,18 +70,18 @@ ms.lasthandoff: 05/03/2018
   
 -   **Ordine del documento**  
   
-     In SQLXML 4.0 l'ordine dei documenti non è sempre definito. Pertanto e i predicati numerici assi tale ordine del documento utilizzare (ad esempio **seguenti**) non sono implementate.  
+     In SQLXML 4.0 l'ordine dei documenti non è sempre definito. Pertanto e i predicati numerici degli assi tale ordine del documento uso (ad esempio **seguente**) non sono implementate.  
   
      La mancanza di un ordine dei documenti indica inoltre che il valore di stringa di un nodo può essere valutato solo se il nodo in questione è mappato a una singola colonna in una singola riga. Non è possibile convertire in stringa un elemento con elementi figlio o un nodo IDREFS o NMTOKENS.  
   
     > [!NOTE]  
-    >  In alcuni casi, il **i campi chiave** annotazione o le chiavi di **relazione** annotazione può comportare un ordine deterministico dei documenti. Tuttavia, non si tratta l'utilizzo principale di queste annotazioni per altre informazioni, vedere [identificazione delle colonne chiave mediante SQL: Key-campi &#40;SQLXML 4.0&#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) e [specificando le relazioni tramite sql: relazione &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
+    >  In alcuni casi, il **key-fields** annotazione o chiavi dalle **relazione** annotazione può comportare un ordine deterministico dei documenti. Tuttavia, non si tratta l'uso primario di queste annotazioni per altre informazioni, vedere [identificazione delle colonne chiave mediante SQL: Key-campi &#40;SQLXML 4.0&#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) e [specificando le relazioni tramite sql: relazione &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
   
 -   **Tipi di dati**  
   
-     SQLXML 4.0 presenta limitazioni nell'implementazione di XPath **stringa**, **numero**, e **booleano** tipi di dati. Per altre informazioni, vedere [tipi di dati XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+     SQLXML 4.0 presenta limitazioni nell'implementazione di XPath **stringa**, **numero**, e **booleano** i tipi di dati. Per altre informazioni, vedere [tipi di dati XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
   
--   **Query di prodotto incrociato**  
+-   **Query su prodotto incrociato**  
   
      SQLXML 4.0 non supporta query XPath di prodotto incrociato, quale `Customers[Order/@OrderDate=Order/@ShipDate]`. In questa query vengono selezionati tutti gli elementi Customer con un elemento Order per il quale OrderDate è uguale a ShipDate di un elemento Order qualsiasi.  
   
@@ -97,27 +98,27 @@ ms.lasthandoff: 05/03/2018
   
 |Funzionalità|Elemento|Collegamento a query di esempio|  
 |-------------|----------|----------------------------|  
-|Assi|**attributo**, **figlio**, **padre**, e **self** assi|[Definizione di assi nelle query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
-|Predicati con valori booleani, tra i quali sono inclusi predicati successivi e nidificati||[Specifica gli operatori aritmetici nelle query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Tutti gli operatori relazionali|=, !=, <, \<=, >, >=|[Specifica gli operatori relazionali nelle query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Operatori aritmetici|+, -, *, div|[Specifica gli operatori aritmetici nelle query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Assi|**attributo**, **figlio**, **padre**, e **self** assi|[Definizione di assi in query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
+|Predicati con valori booleani, tra i quali sono inclusi predicati successivi e nidificati||[Specifica di operatori aritmetici nelle query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Tutti gli operatori relazionali|=, !=, <, \<=, >, >=|[Specifica di operatori relazionali nelle query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Operatori aritmetici|+, -, *, div|[Specifica di operatori aritmetici nelle query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Funzioni di conversione esplicita|**number()**, **string()**, **Boolean()**|[Specifica le funzioni di conversione esplicita nelle query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |operatori booleani|AND, OR|[Specifica di operatori booleani nelle query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|funzioni booleane|**true()**, **false()**, **not()**|[Definizione delle funzioni booleane in query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
-|variabili XPath||[Specifica le variabili XPath nelle query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
+|funzioni booleane|**true()**, **false()**, **not()**|[Specifica le funzioni booleane in query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|variabili XPath||[Specifica le variabili XPath in query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>Funzionalità non supportata  
  Nella tabella seguente vengono mostrate le caratteristiche del linguaggio XPath non implementate in SQLXML 4.0.  
   
 |Funzionalità|Elemento|  
 |-------------|----------|  
-|Assi|**predecessore**, **ancestor-or-self**, **discendente**, **descendant-or-self (//)**, **seguente**, **successivi**, **dello spazio dei nomi**, **precedente**, **pari livello precedente**|  
+|Assi|**predecessore**, **ancestor-or-self**, **discendenti**, **descendant-or-self (/ /)**, **seguenti**,  **successivi**, **dello spazio dei nomi**, **precedente**, **pari livello precedenti**|  
 |Predicati con valori numerici||  
 |Operatori aritmetici|mod|  
-|Funzioni nodo|**predecessore**, **ancestor-or-self**, **discendente**, **descendant-or-self (//)**, **seguente**, **successivi**, **dello spazio dei nomi**, **precedente**, **pari livello precedente**|  
-|Funzioni per i valori stringa|**String()**, **Concat()**, **starts-with**, **Contains**, **substring-before()**, **substring-after()**, **substring**, **String-Length**, **normalize()**, **Translate)**|  
-|funzioni booleane|**lang()**|  
-|Funzioni numeriche|**sum()**, **floor()**, **ceiling()**, **round()**|  
+|Funzioni nodo|**predecessore**, **ancestor-or-self**, **discendenti**, **descendant-or-self (/ /)**, **seguenti**,  **successivi**, **dello spazio dei nomi**, **precedente**, **pari livello precedenti**|  
+|Funzioni per i valori stringa|**String ()**, **Concat ()**, **starts-with**, **Contains**, **substring-before()**,  **substring-after()**, **substring**, **string-length()**, **normalize()**, **Translate)**|  
+|funzioni booleane|**lang)**|  
+|Funzioni numeriche|**SUM ()**, **floor ()**, **Ceiling ()**, **Round)**|  
 |Operatore Union|&#124;|  
   
  Quando si specificano query XPath in un modello, si noti il comportamento seguente:  

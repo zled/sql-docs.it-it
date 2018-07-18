@@ -1,6 +1,6 @@
 ---
 title: Unorder-(MDX) | Documenti Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9fe8d86b322aaf753f1ce45be2332095e2b85af9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3b5e360c8f15eafba2b4565ca41a557c9e1ceda9
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581333"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743450"
 ---
 # <a name="unorder-mdx"></a>Unorder (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Rimuove l'ordinamento imposto da un set specificato.  
   
@@ -35,7 +35,7 @@ Unorder(Set_Expression)
 ## <a name="remarks"></a>Remarks  
  Il **Unorder** funzione rimuove qualsiasi ordinamento imposto sulle tuple contenute nel set da qualsiasi altra funzione o istruzione, ad esempio il [ordine](../mdx/order-mdx.md) (funzione). L'ordine delle tuple nel set restituito dal **Unorder** funzione è indeterminato.  
   
- Il **Unorder** funzione viene utilizzata come hint per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per l'ottimizzazione di query per l'elaborazione dei set. Se l'ordine delle tuple all'interno di un set è importante per una query o un calcolo, utilizzando il **Unorder** funzione può fornire un miglioramento delle prestazioni in tali casi. Ad esempio, il [NonEmpty (MDX)](../mdx/nonempty-mdx.md) funzione possibile ottenere prestazioni migliori quando il set specificato a questa funzione è ordinato rispetto ai casi [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] deve mantenere l'ordine, anche se con [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], query processor tenta di eseguire automaticamente questa funzione per molte funzioni, ad esempio **somma** e **aggregazione**. Il miglioramento delle prestazioni dell'utilizzo di **Unorder** è apprezzabile in set molto grandi, costituiti da milioni di tuple.  
+ Il **Unorder** funzione viene utilizzata come un hint di ottimizzazione delle query per l'elaborazione dei set. Se l'ordine delle tuple all'interno di un set è importante per una query o un calcolo, utilizzando il **Unorder** funzione può fornire un miglioramento delle prestazioni in tali casi. Ad esempio, il [NonEmpty (MDX)](../mdx/nonempty-mdx.md) funzione possibile ottenere prestazioni migliori quando il set specificato a questa funzione è ordinato rispetto ai casi [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] deve mantenere l'ordine, anche se con [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], query processor tenta di eseguire automaticamente questa funzione per molte funzioni, ad esempio **somma** e **aggregazione**. Il miglioramento delle prestazioni dell'utilizzo di **Unorder** è apprezzabile in set molto grandi, costituiti da milioni di tuple.  
   
 ## <a name="example"></a>Esempio  
  Nello pseudocodice seguente viene illustrata la sintassi per questa funzione.  

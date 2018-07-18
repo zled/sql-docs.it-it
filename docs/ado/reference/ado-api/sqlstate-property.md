@@ -2,7 +2,6 @@
 title: Proprietà SQLState | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ddc3d1e21bd4ba860dbb00e814518b658a9aa11e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97aa3d77696162e99f94876a19083ce96d5773e5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281930"
 ---
 # <a name="sqlstate-property"></a>Proprietà SQLState
 Indica lo stato SQL per un determinato [errore](../../../ado/reference/ado-api/error-object.md) oggetto.  
@@ -34,7 +34,7 @@ Indica lo stato SQL per un determinato [errore](../../../ado/reference/ado-api/e
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un carattere di cinque **stringa** valore conforme allo standard ANSI SQL e indica il codice di errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **SQLState** proprietà per leggere il codice di errore di cinque caratteri che il provider restituisce quando si verifica un errore durante l'elaborazione di un'istruzione SQL. Ad esempio, quando si utilizza il Provider Microsoft OLE DB per ODBC con un database di Microsoft SQL Server, i codici di errore di stato SQL provengono da ODBC, in base agli errori specifici di ODBC o sugli errori che derivano da Microsoft SQL Server e quindi vengono eseguito il mapping a ODBC errori. Questi codici di errore sono documentati in standard ANSI SQL, ma possono essere implementati in modo diverso da origini dati diverse.  
   
 ## <a name="applies-to"></a>Si applica a  

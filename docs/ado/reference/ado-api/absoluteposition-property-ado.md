@@ -2,7 +2,6 @@
 title: Proprietà AbsolutePosition (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc46a659ea191e6bb1437cb16b0e7704cf8e5ba0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 615bbf4f771d6d3b12edfec3184ef0ee091fbe08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274990"
 ---
 # <a name="absoluteposition-property-ado"></a>Proprietà AbsolutePosition (ADO)
 Indica la posizione ordinale di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) record corrente dell'oggetto.  
@@ -34,7 +34,7 @@ Indica la posizione ordinale di un [Recordset](../../../ado/reference/ado-api/re
   
  Per il codice a 64 bit, utilizzare un tipo di dati che fornisce per l'archiviazione di un valore a 64 bit. Ad esempio, è possibile utilizzare Long o un altro valore che è a 64 bit di lunghezza, ad esempio DBORDINAL. Non utilizzare **PositionEnum** valori poiché sono limitati alla lunghezza di 32 bit.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per impostare il **AbsolutePosition** proprietà ADO richiede che il provider OLE DB in uso è stato implementato il [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) interfaccia.  
   
  L'accesso di **AbsolutePosition** proprietà di un **Recordset** che è stato aperto con forward-only o dinamici del cursore genera l'errore **adErrFeatureNotAvailable**. Gli altri tipi di cursore, verrà restituita nella posizione corretta fino a quando il provider OLE DB supporta il **IRowsetScroll:IRowsetLocate** interfaccia. Se il provider non supporta il **IRowsetScroll** interfaccia, la proprietà è impostata su **adPosUnknown**. Vedere la documentazione relativa al provider per determinare se supporta **IRowsetScroll**.  

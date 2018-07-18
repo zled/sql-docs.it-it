@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903586"
 ---
 # <a name="set-reprocess-command"></a>Comando RIELABORAZIONE SET
 Specifica quante volte o per informazioni su come long per bloccare un file o un record dopo un tentativo di blocco non riuscito.  

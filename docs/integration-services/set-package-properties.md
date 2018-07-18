@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,11 +29,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 841f4d7bf5b77ccc91731276510b1b3186c1bb90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f3b42dd7df892f2e6c281ae5fec651823e99d4c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406003"
 ---
 # <a name="set-package-properties"></a>Impostazione delle proprietà di un pacchetto
   Quando viene creato un pacchetto in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] utilizzando l'interfaccia grafica offerta da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è possibile impostare le proprietà dell'oggetto pacchetto nella finestra Proprietà.  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Checkpoints"></a> Checkpoint  
  È possibile utilizzare le proprietà in questa categoria per riavviare il pacchetto da un punto problematico nel flusso di controllo, anziché rieseguire il pacchetto dall'inizio del flusso di controllo. Per ulteriori informazioni, vedere [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**CheckpointFileName**|Nome del file in cui vengono acquisite le informazioni di checkpoint che consentono il riavvio del pacchetto. Se l'esecuzione del pacchetto viene completata correttamente, questo file verrà eliminato.|  
 |**CheckpointUsage**|Specifica quando è possibile riavviare il pacchetto. I possibili valori sono **Never**, **IfExists**e **Always**. Il valore predefinito della proprietà è **Never**, che indica che il pacchetto non può essere riavviato. Per ulteriori informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>.|  
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Execution"></a> Esecuzione  
  Le proprietà di questa categoria consentono di configurare il comportamento in fase di esecuzione dell'oggetto di pacchetto.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**DelayValidation**|Indica se la convalida del pacchetto viene posticipata fino all'esecuzione del pacchetto. Il valore predefinito di questa proprietà è **False**.|  
 |**Disable**|Indica se il pacchetto è disabilitato. Il valore predefinito di questa proprietà è **False**.|  
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="ForcedExecutionValue"></a> Valore esecuzione forzato  
  Le proprietà di questa categoria consentono di configurare un valore di esecuzione facoltativo per il pacchetto.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**ForcedExecutionValue**|Se la proprietà ForceExecutionValue è impostata su **True**, rappresenta il valore che specifica il valore di esecuzione facoltativo restituito dal pacchetto. Il valore predefinito di questa proprietà è **0**.|  
 |**ForcedExecutionValueType**|Il tipo di dati di ForcedExecutionValue. Il valore predefinito di questa proprietà è **Int32**.|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Identification"></a> Identificazione  
  Le proprietà di questa categoria forniscono informazioni quali l'identificatore univoco e il nome del pacchetto.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**CreationDate**|Data di creazione del pacchetto.|  
 |**CreatorComputerName**|Nome del computer in cui è stato creato il pacchetto.|  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Misc"></a> Varie  
  Le proprietà di questa categoria vengono utilizzate per l'accesso alle configurazioni e alle espressioni utilizzate dal pacchetto e per fornire informazioni sulle impostazioni locali e sulla modalità di registrazione del pacchetto. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../integration-services/expressions/use-property-expressions-in-packages.md).  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Configurazioni**|Raccolta delle configurazioni utilizzate dal pacchetto. Per visualizzare e configurare le configurazioni del pacchetto, fare clic sul pulsante Sfoglia **(…)** .|  
 |**Espressioni**|Per creare espressioni per le proprietà del pacchetto, fare clic sul pulsante Sfoglia **(…)** .<br /><br /> È possibile creare espressioni di proprietà per tutte le proprietà del pacchetto incluse nel modello a oggetti, non solo per quelle elencate nella finestra Proprietà.<br /><br /> Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Per visualizzare le espressioni di proprietà esistenti, espandere **Expressions**. Per modificare e valutare un'espressione, fare clic sul pulsante Sfoglia **(…)** nella casella di testo dell'espressione.|  
@@ -134,7 +133,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Security"></a> Sicurezza  
  Le proprietà di questa categoria consentono di impostare il livello di protezione del pacchetto. Per altre informazioni, vedere [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**PackagePassword**|Password per i livelli di protezione del pacchetto che richiedono una password (**EncryptSensitiveWithPassword** e **EncryptAllWithPassword**).|  
 |**ProtectionLevel**|Livello di protezione del pacchetto. I possibili valori sono **DontSaveSensitive**, **EncryptSensitiveWithUserKey**, **EncryptSensitiveWithPassword**, **EncryptAllWithPassword**e **ServerStorage**. Il valore predefinito di questa proprietà è **EncryptSensitiveWithUserKey**. Per ulteriori informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  
@@ -142,7 +141,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Transactions"></a> Transazioni  
  Le proprietà di questa categoria consentono di configurare il livello di isolamento e l'opzione relativa alle transazioni per il pacchetto. Per altre informazioni, vedere [Transazioni di Integration Services](../integration-services/integration-services-transactions.md).  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**IsolationLevel**|Livello di isolamento della transazione del pacchetto. I valori sono **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable** e **Snapshot**. Il valore predefinito di questa proprietà è **Serializable**.<br /><br /> Nota: il valore **Snapshot** della proprietà **IsolationLevel** non è compatibile con le transazioni del pacchetto e quindi non è possibile utilizzare la proprietà **IsolationLevel** per impostare il livello di isolamento delle transazioni del pacchetto su **Shapshot**. È necessario invece eseguire una query SQL per impostare le transazioni del pacchetto su **Snapshot**. Per altre informazioni, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).<br /><br /> La proprietà **IsolationLevel** viene applicata automaticamente alle transazioni del pacchetto solo quando il valore della proprietà **TransactionOption** è **Required**.<br /><br /> Il valore della proprietà **IsolationLevel** richiesta da un contenitore figlio viene ignorato quando le condizioni seguenti sono vere:<br />Il valore della proprietà **TransactionOption** del contenitore figlio è **Supported**.<br />Il contenitore figlio partecipa alla transazione di un contenitore padre.<br /><br /> Il valore della proprietà **IsolationLevel** richiesta dal contenitore viene rispettato solo quando il contenitore avvia una nuova transazione. Un contenitore avvia una nuova transazione quando le condizioni seguenti sono vere:<br />Il valore della proprietà **TransactionOption** del contenitore è **Required**.<br />Non è stata ancora avviata alcuna transazione da parte del padre.<br /><br /> <br /><br /> Per ulteriori informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |**TransactionOption**|Supporto delle transazioni da parte del pacchetto. I possibili valori sono **NotSupported**, **Supported**e **Required**. Il valore predefinito di questa proprietà è **Supported**. Per ulteriori informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
@@ -150,7 +149,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Version"></a> Version  
  Le proprietà di questa categoria forniscono informazioni sulla versione dell'oggetto di pacchetto.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**VersionBuild**|Numero di build del pacchetto.|  
 |**VersionComments**|Commenti sulla versione del pacchetto.|  

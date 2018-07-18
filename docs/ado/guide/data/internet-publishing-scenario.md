@@ -2,7 +2,6 @@
 title: Scenario di pubblicazione Internet | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a596bd0aa66f79bc45e7e6a51fe1251b42bd1f58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4fa78abc00e38c03b0d951e0b837bd4761c8edda
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271720"
 ---
 # <a name="internet-publishing-scenario"></a>Scenario di pubblicazione su Internet
 Questo esempio di codice viene illustrato come utilizzare ADO con il Provider Microsoft OLE DB per Internet Publishing. In questo scenario, si creerà un'applicazione Visual Basic che utilizza **Recordset**, **Record**, e **flusso** pubblicati gli oggetti per visualizzare il contenuto delle risorse con Internet Publishing Provider.  

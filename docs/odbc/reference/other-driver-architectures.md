@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916876"
 ---
 # <a name="other-driver-architectures"></a>Altre architetture di Driver
 Alcuni driver ODBC è strettamente conforme all'architettura descritto in precedenza. È possibile che i driver di svolgere i compiti diversi da quelli di un driver ODBC tradizionale, o non sono driver in senso normale.  

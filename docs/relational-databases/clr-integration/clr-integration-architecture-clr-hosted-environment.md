@@ -1,14 +1,11 @@
 ---
-title: Ambiente di hosting CLR | Documenti Microsoft
+title: Ambiente ospitato da Common Language Runtime | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -32,13 +29,14 @@ caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 603b0d66a4a8b7f406708442f18e9c98c4414b26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50343b871322c373b297e5b1a062df844621ba2d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352813"
 ---
-# <a name="clr-integration-architecture---clr-hosted-environment"></a>Architettura dell'integrazione CLR - ambiente di hosting CLR
+# <a name="clr-integration-architecture---clr-hosted-environment"></a>Architettura di integrazione CLR - ambiente ospitato in CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di .NET Framework consente ai programmatori di database di utilizzare linguaggi come Visual C#, Visual Basic .NET e Visual C++. Tra i tipi di logica di business che i programmatori possono scrivere con tali linguaggi figurano le funzioni, le stored procedure, i trigger, i tipi di dati e le aggregazioni.  
   
@@ -69,11 +67,11 @@ ms.lasthandoff: 05/03/2018
   
  I modelli diversi per threading, pianificazione e gestione della memoria presentano una sfida di integrazione per un sistema di gestione di database relazionali (RDBMS) con scalabilità in grado di supportare migliaia di sessioni utente simultanee. L'architettura deve garantire che la scalabilità del sistema non venga danneggiata dal codice utente che chiama direttamente le API per le primitive di threading, memoria e sincronizzazione.  
   
-###### <a name="security"></a>Sicurezza  
+###### <a name="security"></a>Security  
  Il codice utente in esecuzione nel database deve essere conforme alle regole di autenticazione e autorizzazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in caso di accesso a oggetti di database, quali tabelle e colonne. Gli amministratori del database, inoltre, devono essere in grado di controllare l'accesso alle risorse del sistema operativo, ad esempio file e accesso di rete, dal codice utente in esecuzione nel database. Questo aspetto è importante in quanto i linguaggi di programmazione gestita, diversamente dai linguaggi non gestiti come Transact-SQL, forniscono API per accedere a tali risorse. Il sistema deve fornire un metodo protetto che consenta al codice utente di accedere alle risorse del computer al di fuori dell'elaborazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per altre informazioni, vedere [Sicurezza per l'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
 ###### <a name="performance"></a>restazioni  
- Il codice utente gestito in esecuzione nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve offrire prestazioni computazionali analoghe allo stesso codice eseguito al di fuori del server. L'accesso ai database dal codice utente gestito non è rapido quanto [!INCLUDE[tsql](../../includes/tsql-md.md)] nativo. Per ulteriori informazioni, vedere [le prestazioni dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
+ Il codice utente gestito in esecuzione nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve offrire prestazioni computazionali analoghe allo stesso codice eseguito al di fuori del server. L'accesso ai database dal codice utente gestito non è rapido quanto [!INCLUDE[tsql](../../includes/tsql-md.md)] nativo. Per altre informazioni, vedere [sulle prestazioni dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="clr-services"></a>CLR Services  
  CLR fornisce un numero di servizi che semplificano la realizzazione degli obiettivi di progettazione dell'integrazione CLR con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -82,7 +80,7 @@ ms.lasthandoff: 05/03/2018
  Il codice indipendente dai tipi è un codice che accede alle strutture di memoria solo in modalità ben definite. Dato un riferimento a un oggetto valido, ad esempio, il codice indipendente dai tipi può accedere alla memoria solo a offset fissi corrispondenti ai membri di campo effettivi. Se, tuttavia, il codice accede alla memoria a offset arbitrari interni o esterni all'intervallo di memoria dell'oggetto, non si tratta di codice indipendente dai tipi. Quando gli assembly vengono caricati in CLR, prima che MSIL venga compilato tramite compilazione JIT (Just-In-Time), il runtime esegue una fase di verifica che esamina il codice per determinarne l'indipendenza dai tipi. Il codice che supera correttamente questa verifica viene denominato codice effettivamente indipendente dai tipi.  
   
 ###### <a name="application-domains"></a>Domini applicazione  
- CLR supporta il concetto di domini applicazione come aree di esecuzione all'interno di un processo host in cui è possibile caricare ed eseguire assembly di codice gestito. Il confine del dominio applicazione fornisce isolamento tra assembly. Gli assembly sono isolati in termini di visibilità di variabili statiche e membri di dati e di possibilità di chiamare codice dinamicamente. I domini applicazione costituiscono inoltre il meccanismo per caricare e scaricare codice. Il codice può essere scaricato dalla memoria solo scaricando il dominio applicazione. Per ulteriori informazioni, vedere [domini applicazione e sicurezza dell'integrazione con CLR](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
+ CLR supporta il concetto di domini applicazione come aree di esecuzione all'interno di un processo host in cui è possibile caricare ed eseguire assembly di codice gestito. Il confine del dominio applicazione fornisce isolamento tra assembly. Gli assembly sono isolati in termini di visibilità di variabili statiche e membri di dati e di possibilità di chiamare codice dinamicamente. I domini applicazione costituiscono inoltre il meccanismo per caricare e scaricare codice. Il codice può essere scaricato dalla memoria solo scaricando il dominio applicazione. Per altre informazioni, vedere [domini applicazione e sicurezza dell'integrazione CLR](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
   
 ###### <a name="code-access-security-cas"></a>Sicurezza dall'accesso di codice (CAS, Code Access Security)  
  Il sistema di sicurezza CLR fornisce un metodo per determinare i possibili tipi di operazioni eseguite dal codice gestito tramite l'assegnazione di autorizzazioni al codice. Le autorizzazioni di accesso per il codice vengono assegnate in base all'identità del codice, ad esempio la firma dell'assembly o l'origine del codice.  
@@ -91,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
  Se un'API gestita in .NET Framework espone operazioni in risorse protette da un'autorizzazione di accesso per il codice, l'API richiederà tale autorizzazione prima di accedere alla risorsa. Questa richiesta fa in modo che il sistema di sicurezza CLR attivi un controllo completo di ogni unità di codice (assembly) nello stack di chiamate. Verrà concesso l'accesso alla risorsa solo se l'intera sequenza delle chiamate dispone dell'autorizzazione.  
   
- Si noti che la possibilità di generare dinamicamente codice gestito tramite l'API Reflection.Emit non è supportata all'interno dell'ambiente CLR in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tale codice non disporrebbe delle autorizzazioni di protezione dall'accesso di codice per l'esecuzione e avrebbe quindi esito negativo in fase di esecuzione. Per ulteriori informazioni, vedere [sicurezza dall'accesso di codice CLR Integration](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
+ Si noti che la possibilità di generare dinamicamente codice gestito tramite l'API Reflection.Emit non è supportata all'interno dell'ambiente CLR in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tale codice non disporrebbe delle autorizzazioni di protezione dall'accesso di codice per l'esecuzione e avrebbe quindi esito negativo in fase di esecuzione. Per altre informazioni, vedere [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
 ###### <a name="host-protection-attributes-hpas"></a>Attributi di protezione host  
  CLR fornisce un meccanismo per annotare API gestite che fanno parte di .NET Framework con determinati attributi che possono interessare un host di CLR. Tra gli esempi di tali attributi sono inclusi i seguenti:  
@@ -102,7 +100,7 @@ ms.lasthandoff: 05/03/2018
   
 -   ExternalProcessMgmt, che indica se l'API espone una modalità per controllare il processo host.  
   
- Tramite questi attributi l'host può specificare un elenco di attributi di protezione host, ad esempio l'attributo SharedState, che non devono essere consentiti nell'ambiente host. In tal caso, CLR rifiuta i tentativi da parte del codice utente di chiamare API annotate tramite attributi di protezione host inclusi nell'elenco degli attributi non consentiti. Per ulteriori informazioni, vedere [attributi di protezione Host e programmazione CLR Integration](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
+ Tramite questi attributi l'host può specificare un elenco di attributi di protezione host, ad esempio l'attributo SharedState, che non devono essere consentiti nell'ambiente host. In tal caso, CLR rifiuta i tentativi da parte del codice utente di chiamare API annotate tramite attributi di protezione host inclusi nell'elenco degli attributi non consentiti. Per altre informazioni, vedere [attributi di protezione Host e programmazione di integrazione CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Funzionamento dell'integrazione tra SQL Server e CLR  
  In questa sezione viene illustrata l'integrazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei modelli di threading, di pianificazione, di sincronizzazione e di gestione della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e CLR. In particolare, in questa sezione viene esaminata l'integrazione alla luce di obiettivi di scalabilità, affidabilità e sicurezza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essenzialmente è utilizzato come sistema operativo per CLR quando è ospitato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CLR chiama routine di basso livello implementate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il threading, la pianificazione, la sincronizzazione e la gestione della memoria. Si tratta delle stesse primitive utilizzate dal resto del motore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo approccio offre diversi vantaggi correlati a scalabilità, affidabilità e sicurezza.  
@@ -132,7 +130,7 @@ ms.lasthandoff: 05/03/2018
 |Sicurezza dall'accesso di codice|Sola esecuzione|Esecuzione più accesso a risorse esterne|Senza restrizioni|  
 |Restrizioni del modello di programmazione|Sì|Sì|Nessuna restrizione|  
 |Requisito di verificabilità|Sì|Sì|no|  
-|Possibilità di chiamare il codice nativo|no|No|Sì|  
+|Possibilità di chiamare il codice nativo|no|no|Sì|  
   
  Grazie alle restrizioni associate in termini di modello di programmazione consentito, SAFE rappresenta la modalità più affidabile e protetta. Gli assembly SAFE dispongono di autorizzazioni sufficienti per l'esecuzione, l'elaborazione di calcoli e l'accesso al database locale. Gli assembly SAFE devono essere effettivamente indipendenti dai tipi e non possono chiamare codice non gestito.  
   
@@ -147,10 +145,10 @@ ms.lasthandoff: 05/03/2018
   
  Considerati questi aspetti, non è consigliabile utilizzare variabili statiche e membri di dati statici di classi utilizzate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per gli assembly SAFE ed EXTERNAL_ACCESS, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esamina i metadati dell'assembly durante la fase CREATE ASSEMBLY e, se rileva l'utilizzo di variabili e membri di dati statici, impedisce la creazione di tali assembly.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impedisce inoltre le chiamate alle API di .NET Framework annotate con il **SharedState**, **sincronizzazione** e **ExternalProcessMgmt** attributi di protezione host. In questo modo, viene impedito agli assembly SAFE ed EXTERNAL_ACCESS di chiamare qualsiasi API che consente la condivisione dello stato, di eseguire la sincronizzazione e di influire sull'integrità del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [restrizioni del modello di programmazione integrazione CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impedisce inoltre le chiamate API di .NET Framework annotate con il **SharedState**, **sincronizzazione** e **ExternalProcessMgmt** attributi di protezione host. In questo modo, viene impedito agli assembly SAFE ed EXTERNAL_ACCESS di chiamare qualsiasi API che consente la condivisione dello stato, di eseguire la sincronizzazione e di influire sull'integrità del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [restrizioni del modello di programmazione integrazione CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza dell'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
+ [Sicurezza dell'integrazione CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Prestazioni dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

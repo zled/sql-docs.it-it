@@ -1,5 +1,5 @@
 ---
-title: Funzione Count (XQuery) | Documenti Microsoft
+title: Funzione Count (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: fc9e161196787413b6c4fe3a3943ff197f0b5d79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987483"
 ---
-# <a name="aggregate-functions---count"></a>Funzioni di aggregazione - conteggio
+# <a name="aggregate-functions---count"></a>Funzioni di aggregazione - count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Restituisce il numero di elementi contenuti nella sequenza specificata da *$arg*.  
@@ -45,7 +46,7 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  Elementi da contare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Restituisce 0 se *$arg* è una sequenza vuota.  
   
 ## <a name="examples"></a>Esempi  
@@ -69,11 +70,11 @@ WHERE Production.ProductModel.ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   Il **dello spazio dei nomi** parola chiave in [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) definisce un prefisso dello spazio dei nomi. Il prefisso viene quindi utilizzato nel corpo della query XQuery.  
+-   Il **dello spazio dei nomi** parola chiave nella [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) definisce un prefisso dello spazio dei nomi. Il prefisso viene quindi utilizzato nel corpo della query XQuery.  
   
 -   La query costruisce codice XML che include l'elemento <`NoOfWorkStations`>.  
   
--   Il **Count ()** funzionare nei conteggi di corpo XQuery il numero di <`Location`> elementi.  
+-   Il **Count ()** funzionare nei conteggi di corpo della query XQuery il numero di <`Location`> elementi.  
   
  Risultato:  
   
@@ -105,7 +106,7 @@ WHERE Production.ProductModel.ProductModelID= 7
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- È possibile ottenere la restituzione dei valori in un tipo non xml, come illustrato nella query seguente. La query utilizza la [metodo Value () (tipo di dati xml)](../t-sql/xml/value-method-xml-data-type.md) per recuperare il conteggio dei centri di lavoro.  
+ È possibile ottenere la restituzione dei valori in un tipo non xml, come illustrato nella query seguente. La query Usa la [metodo Value () (tipo di dati xml)](../t-sql/xml/value-method-xml-data-type.md) per recuperare il numero di località di lavoro center.  
   
 ```  
 SELECT  ProductModelID,   

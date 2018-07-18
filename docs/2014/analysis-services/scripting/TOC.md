@@ -1,0 +1,8 @@
+# [Guida di riferimento a ASSL](analysis-services-scripting-language-assl-for-xmla.md)
+# [Gerarchia di elementi XML ASSL (Analysis Services Scripting Language)](analysis-services-scripting-language-xml-element-hierarchy-assl.md)
+# [Gerarchia dei tipi di dati XML ASSL (Analysis Services Scripting Language)](analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)
+# [Elementi XML di Analysis Services Scripting Language (ASSL)](analysis-services-scripting-language-xml-elements-assl.md)
+## [Oggetti +](objects/objects-assl.md)
+## [Raccolte +](collections/collections-assl.md)
+## [Proprietà +](properties/properties-assl.md)
+# [Tipi di dati XML di Analysis Services Scripting Language (ASSL) +](data-type/analysis-services-scripting-language-xml-data-types-assl.md)

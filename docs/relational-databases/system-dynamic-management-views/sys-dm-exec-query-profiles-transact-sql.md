@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b3acec798d858f31aac79231060d0533a3499b3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046139"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/23/2018
 |segment_read_count|**int**|Numero di letture anticipate di segmenti.|  
 |segment_skip_count|**int**|Numero di segmenti ignorati finora.| 
 |actual_read_row_count|**bigint**|Numero di righe lette da un operatore, prima è stato applicato il predicato residuo.| 
-|estimated_read_row_count|**bigint**|**Si applica a:** iniziano con [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero di righe stimate da leggere da un operatore prima che il predicato residuo è stato applicato.|  
+|estimated_read_row_count|**bigint**|**Si applica a:** partire [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero stimato di righe da leggere da un operatore prima che è stato applicato il predicato residuo.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Se il nodo del piano di query non contiene I/O, tutti i contatori correlati alle operazioni di I/O vengono impostati su NULL.  
@@ -86,20 +87,20 @@ ms.lasthandoff: 05/23/2018
   
 -   In caso di analisi parallela, questa DMV restituisce i contatori per ogni thread parallelo usato nell'analisi.
  
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, le statistiche di esecuzione di query standard infrastruttura di analisi esiste side-by-side con un'infrastruttura di analisi le statistiche di esecuzione query lightweight. Nuova query esecuzione infrastruttura delle statistiche profilatura riduce notevolmente l'overhead delle prestazioni di raccolta delle statistiche di esecuzione query per ogni operatore, ad esempio il numero effettivo di righe. Questa funzionalità può essere abilitata tramite globale avvio [flag di traccia 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), o viene attivato automaticamente quando viene utilizzato l'evento esteso query_thread_profile.
+ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, le statistiche di esecuzione di query standard dell'infrastruttura di profilatura è presente side-by-side con un'infrastruttura di analisi le statistiche di esecuzione query lightweight. Nuova query esecuzione infrastruttura delle statistiche profilatura riduce l'overhead delle prestazioni di raccolta delle statistiche di esecuzione query per ogni operatore, ad esempio il numero effettivo di righe. Questa funzionalità può essere abilitata tramite globale avvio [flag di traccia 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), o viene attivata automaticamente quando l'evento esteso query_thread_profile viene utilizzato.
 
 >[!NOTE]
-> CPU e le ore trascorso non sono supportate in infrastruttura profilatura delle statistiche esecuzione query lightweight per ridurre l'impatto sulle prestazioni.
+> CPU e il tempo trascorso non sono supportati in infrastruttura profilatura delle statistiche esecuzione query lightweight per ridurre l'impatto sulle prestazioni.
 
  SET STATISTICS XML ON e SET STATISTICS PROFILE ON utilizzare sempre le statistiche di esecuzione di query legacy infrastruttura di analisi.
   
 ## <a name="permissions"></a>Autorizzazioni  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
    
 ## <a name="examples"></a>Esempi  
- Passaggio 1: Account di accesso a una sessione in cui si intende eseguire la query da che analizzare con Sys.dm exec_query_profiles. Per configurare la query per la profilatura utilizzare SET STATISTICS PROFILE in. Eseguire la query in questa stessa sessione.  
+ Passaggio 1: Accedere a una sessione in cui si prevede di eseguire la query da che analizzare con DM exec_query_profiles. Per configurare la query per la profilatura utilizzare SET STATISTICS PROFILE in. Eseguire la query in questa stessa sessione.  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -113,7 +114,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- Passaggio 2: Account di accesso a una seconda sessione diversa dalla sessione in cui viene eseguita la query.  
+ Passaggio 2: Accedere a una seconda sessione diversa dalla sessione in cui viene eseguita la query.  
   
  L'istruzione seguente riepiloga lo stato di avanzamento della query attualmente in esecuzione nella sessione 54. A tale scopo, viene calcolato il numero totale di righe di output restituite da tutti i thread per ogni nodo e confrontato con il numero stimato di righe di output per tale nodo.  
   

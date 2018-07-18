@@ -1,24 +1,26 @@
 ---
-title: Lezione 6 rendere operativo il modello R | Documenti Microsoft
+title: Lezione 6 risultati potenziali di stima mediante modelli R (SQL Server Machine Learning) | Documenti Microsoft
+description: Esercitazione che illustra come incorporare R in SQL Server funzioni e stored procedure T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/08/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1503467f1979e2e123f12227cc92ea975b6cd6a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32984626dfac11bd2465cb783c583f6b210f6b68
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249854"
 ---
-# <a name="lesson-6-operationalize-the-r-model"></a>Lezione 6: Rendere operativo il modello R
+# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lezione 6: Stima dei potenziali risultati utilizzando un modello R in una stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo fa parte di un'esercitazione per gli sviluppatori SQL su come usare il linguaggio R in SQL Server.
 
-In questo passaggio descritto come *rendere operative le* del modello tramite una stored procedure. La stored procedure può essere chiamata direttamente da altre applicazioni, per l'esecuzione di stime relative a nuove osservazioni. La procedura dettagliata illustra due modi per eseguire l'assegnazione dei punteggi usando un modello R in una stored procedure:
+In questo passaggio, in grado di utilizzare il modello rispetto a nuove osservazioni per una stima dei possibili risultati. Il modello viene eseguito il wrapping in una stored procedure che può essere chiamata direttamente da altre applicazioni. La procedura dettagliata illustra diversi modi per eseguire l'assegnazione dei punteggi:
 
 - **Modalità di punteggio batch**: utilizzare una query di selezione come input per la stored procedure. La stored procedure restituisce una tabella di osservazioni corrispondenti ai casi di input.
 
@@ -28,7 +30,7 @@ In primo luogo si prenderà in analisi il funzionamento generale della valutazio
 
 ## <a name="basic-scoring"></a>Il punteggio di base
 
-La stored procedure _PredictTip_ illustra la sintassi di base per il wrapping di una chiamata di stima in una stored procedure.
+La stored procedure **PredictTip** illustra la sintassi di base per il wrapping di una chiamata di stima in una stored procedure.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
@@ -54,7 +56,7 @@ GO
 
 + Ottiene il modello serializzato dal database, l'istruzione SELECT e il modello viene archiviato nella variabile R `mod` per un'ulteriore elaborazione tramite R.
 
-+ I nuovi case per l'assegnazione dei punteggi ottenuti dal [!INCLUDE[tsql](../../includes/tsql-md.md)] query specificata in `@inquery`, il primo parametro della stored procedure. Man mano che vengono letti i dati della query, le righe vengono salvate nel frame di dati predefinito `InputDataSet`. Tale frame di dati viene passato alla funzione `rxPredict` di R, che genera le valutazioni.
++ I nuovi case per l'assegnazione dei punteggi ottenuti dal [!INCLUDE[tsql](../../includes/tsql-md.md)] query specificata in `@inquery`, il primo parametro della stored procedure. Man mano che vengono letti i dati della query, le righe vengono salvate nel frame di dati predefinito `InputDataSet`. Questo frame di dati viene passato per il [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) funzionare in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), che genera i punteggi.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -91,13 +93,13 @@ Ora si procede ad analizzare il funzionamento della valutazione batch.
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    Questa query può essere utilizzata come input per la stored procedure, _PredictTipBatchMode_, fornito come parte del download.
+    Questa query può essere utilizzata come input per la stored procedure **PredictTipMode**, fornito come parte del download.
 
-2. È opportuno esaminare il codice della stored procedure _PredictTipBatchMode_ in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. È opportuno esaminare il codice della stored procedure **PredictTipMode** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
+    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -141,7 +143,7 @@ A volte risulta utile passare valori singoli da un'applicazione e ottenere un ri
 
 In questa sezione imparare a creare singole stime utilizzando una stored procedure.
 
-1. Esaminare in dettaglio il codice della stored procedure _PredictTipSingleMode_inclusa nel download.
+1. È opportuno esaminare il codice della stored procedure **PredictTipSingleMode**, incluso come parte del download.
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0

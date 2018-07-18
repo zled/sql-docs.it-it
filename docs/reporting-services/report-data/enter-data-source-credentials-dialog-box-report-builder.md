@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018678"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Finestra di dialogo Immetti credenziali origine dei dati (Generatore report)
   La finestra di dialogo **Immetti credenziali origine dei dati** consente di specificare le credenziali necessarie per il recupero di dati dall'origine dati.  

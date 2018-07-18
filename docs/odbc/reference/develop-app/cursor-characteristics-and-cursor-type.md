@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912289"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Caratteristiche del cursore e tipo di cursore
 Un'applicazione può specificare le caratteristiche di un cursore anziché specificare il tipo di cursore (forward-only, statico, basati su keyset o dinamico). A tale scopo, l'applicazione seleziona scorrimento del cursore (impostando l'attributo di istruzione SQL_ATTR_CURSOR_SCROLLABLE) e sensibilità (impostando l'attributo di istruzione SQL_ATTR_CURSOR_SENSITIVITY) prima di aprire il cursore sull'istruzione handle. Il driver quindi sceglie il tipo di cursore che fornisce in modo più efficiente le caratteristiche che l'applicazione richiesta.  

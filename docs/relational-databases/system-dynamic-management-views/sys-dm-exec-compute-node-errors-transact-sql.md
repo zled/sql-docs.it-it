@@ -27,10 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4038eed706e25ae779d6f0a2fd16babb5a951fac
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048759"
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -39,18 +40,18 @@ ms.lasthandoff: 05/23/2018
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar(36)**|Id numerico univoco associato all'errore.|Univoco tra tutti gli errori di query nel sistema|  
+|error_id|**nvarchar(36)**|Id numerico univoco associato all'errore.|Univoco in tutti gli errori di query nel sistema|  
 |origine|**nvarchar(255)**|Descrizione di processo o thread di origine||  
 |Tipo|**nvarchar(255)**|Tipo di errore.||  
-|create_time|**datetime**|L'ora dell'occorrenza di errore||  
-|compute_node_id|**int**|Identificatore del nodo di calcolo specifico|Vedere compute_node_id della [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|create_time|**datetime**|L'ora dell'occorrenza errore||  
+|compute_node_id|**int**|Identificatore del nodo di calcolo specifico|Vedere di compute_node_id [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|**nvarchar(36)**|Identificatore della query PolyBase, se presente.||  
-|spid|**int**|Identificatore della sessione di SQL Server||  
-|thread_id|**int**|Identificatore numerico del thread in cui si è verificato l'errore.||  
+|spid|**int**|Identificatore della sessione SQL Server||  
+|thread_id|**int**|Identificatore numerico del thread su cui si è verificato l'errore.||  
 |dettagli|nvarchar(4000)|Descrizione completa dei dettagli dell'errore.||  
   
 ## <a name="see-also"></a>Vedere anche  
- [PolyBase, risoluzione dei problemi con viste a gestione dinamica](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase con DMV di risoluzione dei problemi](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste a gestione dinamica relative ai database &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

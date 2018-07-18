@@ -5,18 +5,18 @@ author: MightyPen
 ms.date: 04/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: connect
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.openlocfilehash: f281fff6085048bb5918901a9e12af702b71b3e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfb1ac82894ef8fed001077d54665c9f89239787
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306220"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Home page per client di programmazione per Microsoft SQL Server
 
@@ -29,7 +29,7 @@ Benvenuti nella homepage sul client per interagire con Microsoft SQL Server e Da
 - Consente di visualizzare le aree e le sottoaree della documentazione gerarchica per determinate lingue, laddove appropriato.
 
 
-#### <a name="azure-sql-database"></a>Azure SQL Database
+#### <a name="azure-sql-database"></a>Database SQL di Azure
 
 In qualsiasi lingua, il codice che si connette a SQL Server è quasi identico al codice per la connessione al Database SQL di Azure.
 

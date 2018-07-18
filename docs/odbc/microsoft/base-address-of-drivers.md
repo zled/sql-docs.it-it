@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897056"
 ---
 # <a name="base-address-of-drivers"></a>Indirizzo di base del driver
 Ognuno dei driver ODBC Desktop Database è stato collegato con un indirizzo di base di 0x04c0000.

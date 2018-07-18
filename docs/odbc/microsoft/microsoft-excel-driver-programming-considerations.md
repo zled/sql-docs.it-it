@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899966"
 ---
 # <a name="microsoft-excel-driver-programming-considerations"></a>Considerazioni sulla programmazione di Driver di Microsoft Excel
 In questa sezione vengono trattati gli argomenti seguenti.  

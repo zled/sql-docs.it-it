@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,15 +23,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a86b7102b60c5485afe849f32d32cf8f369f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45246cc4a9a09c45ffb4762d6eda2464aeb82f3f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421450"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ Definisce una data in combinazione con un'ora del giorno con considerazione del 
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>Formati di valore letterale stringa supportati per datetimeoffset
 Nella tabella seguente vengono elencati i formati di valore letterale stringa ISO 8601 supportati per **datetimeoffset**. Per informazioni sui formati alfabetico, numerico, non separato e ora per le parti della data e dell'ora di **datetimeoffset**, vedere [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) e [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).
   
-|ISO 8601|Description|  
+|ISO 8601|Descrizione|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|Su questi due formati non influiscono le impostazioni locali delle sessioni SET LANGUAGE e SET DATEFORMAT. Non sono consentiti spazi tra le parti **datetimeoffset** e **datetime**.|  
 |AAAA-MM-GGThh:mm:ss[.nnnnnnn]Z (UTC)|In base alla definizione ISO questo formato indica che la parte **datetime** deve essere espressa in formato UTC (Coordinated Universal Time). Ad esempio, 1999-12-12 12:30:30.12345 -07: 00 deve essere rappresentata come 1999-12-12 19:30:30.12345Z.|  
@@ -134,7 +134,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-Se la conversione viene eseguita in **time (n)**, vengono copiati ore, minuti, secondi e secondi frazionari. Il valore del fuso orario viene troncato. Quando la precisione del valore **datetimeoffset(n)** è maggiore di quella del valore **time(n)**, la prima precisione viene arrotondata. Nel codice seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(4)` in un valore `time(3)`.
+Se viene eseguita la conversione in **time(n)**, vengono copiati ora, minuti, secondi e secondi frazionari. Il valore del fuso orario viene troncato. Quando la precisione del valore **datetimeoffset(n)** è maggiore di quella del valore **time(n)**, la prima precisione viene arrotondata. Nel codice seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(4)` in un valore `time(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  

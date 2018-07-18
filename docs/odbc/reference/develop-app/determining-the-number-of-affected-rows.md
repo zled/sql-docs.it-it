@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908996"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>Determinazione del numero di righe interessate
 Dopo che un'applicazione aggiorna, Elimina o inserisce righe, è possibile chiamare **SQLRowCount** per determinare il numero di righe interessato. **SQLRowCount** restituisce questo valore se non le righe sono state aggiornate, eliminate o inserite eseguendo un **aggiornamento**, **eliminare**, o **inserire** istruzione, tramite l'esecuzione di un oggetto posizionato aggiornare o istruzione delete o chiamando **SQLSetPos**.  

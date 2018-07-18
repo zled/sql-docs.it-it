@@ -2,7 +2,6 @@
 title: Write, metodo | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77b4da5ba900cdd3456bbfe611ea0fe1021e23d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62ab48632de559f56f034ca0db10a968a43be32a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283230"
 ---
 # <a name="write-method"></a>Write, metodo
 Scrive dati binari in un [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
@@ -41,7 +41,7 @@ Stream.Write Buffer
  *Buffer*  
  Oggetto **Variant** che contiene una matrice di byte da scrivere.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Byte specificati vengono scritti i **flusso** oggetto senza spazi intermedi tra ogni byte.  
   
  Corrente [posizione](../../../ado/reference/ado-api/position-property-ado.md) è impostato sul byte successivo i dati scritti. Il **scrivere** metodo tronca il resto dei dati in un flusso. Se si desidera troncare tali byte, chiamare [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911046"
 ---
 # <a name="mixed-cursors"></a>Cursori misti
 Un cursore misto è una combinazione di un cursore gestito da keyset e un cursore dinamico. Viene utilizzato quando il set di risultati è troppo grande per ragionevolmente Salva le chiavi per l'intero set di risultati. Mista i cursori vengono implementati mediante la creazione di un keyset minore l'intero set di risultati ma maggiore di set di righe.  

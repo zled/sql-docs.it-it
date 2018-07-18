@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8ae48b672aa4817f8451eeee788985b4b90694f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307700"
 ---
 # <a name="default-php-data-types"></a>Tipi di dati PHP predefiniti
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,37 +37,37 @@ Nella tabella seguente sono elencati i tipi di dati di SQL Server (recuperati da
   
 |Tipo di SQL Server|Tipo PHP predefinito|Codifica predefinita|  
 |-------------------|--------------------|--------------------|  
-|bigint|String|caratteri a 8 bit<sup>1</sup>|  
+|BIGINT|String|caratteri a 8 bit<sup>1</sup>|  
 |BINARY|Stream<sup>2</sup>|Binario<sup>3</sup>|  
-|bit|Integer|caratteri a 8 bit<sup>1</sup>|  
+|bit|Valore intero|caratteri a 8 bit<sup>1</sup>|  
 |char|String|caratteri a 8 bit<sup>1</sup>|  
-|date<sup>4</sup>|DateTime|Non applicabile|  
-|Data/ora<sup>4</sup>|DateTime|Non applicabile|  
-|datetime2<sup>4</sup>|DateTime|Non applicabile|  
-|datetimeoffset<sup>4</sup>|DateTime|Non applicabile|  
+|date<sup>4</sup>|DATETIME|Non applicabile|  
+|Data/ora<sup>4</sup>|DATETIME|Non applicabile|  
+|datetime2<sup>4</sup>|DATETIME|Non applicabile|  
+|datetimeoffset<sup>4</sup>|DATETIME|Non applicabile|  
 |Decimal|String|caratteri a 8 bit<sup>1</sup>|  
-|float|Float|caratteri a 8 bit<sup>1</sup>|  
+|FLOAT|float|caratteri a 8 bit<sup>1</sup>|  
 |geography|Stream|Binario<sup>3</sup>|  
 |geometry|Stream|Binario<sup>3</sup>|  
 |immagine<sup>5</sup>|Stream<sup>2</sup>|Binario<sup>3</sup>|  
-|int|Integer|caratteri a 8 bit<sup>1</sup>|  
+|INT|Valore intero|caratteri a 8 bit<sup>1</sup>|  
 |money|String|caratteri a 8 bit<sup>1</sup>|  
 |NCHAR|String|caratteri a 8 bit<sup>1</sup>|  
-|numeric|String|caratteri a 8 bit<sup>1</sup>|  
-|nvarchar|String|caratteri a 8 bit<sup>1</sup>|  
+|NUMERIC|String|caratteri a 8 bit<sup>1</sup>|  
+|NVARCHAR|String|caratteri a 8 bit<sup>1</sup>|  
 |nvarchar(MAX)|Stream<sup>2</sup>|caratteri a 8 bit<sup>1</sup>|  
 |ntext<sup>6</sup>|Stream<sup>2</sup>|caratteri a 8 bit<sup>1</sup>|  
-|real|Float|caratteri a 8 bit<sup>1</sup>|  
-|smalldatetime|DateTime|caratteri a 8 bit<sup>1</sup>|  
-|smallint|Integer|caratteri a 8 bit<sup>1</sup>|  
-|smallmoney|String|caratteri a 8 bit<sup>1</sup>|  
+|REAL|float|caratteri a 8 bit<sup>1</sup>|  
+|smalldatetime|DATETIME|caratteri a 8 bit<sup>1</sup>|  
+|SMALLINT|Valore intero|caratteri a 8 bit<sup>1</sup>|  
+|SMALLMONEY|String|caratteri a 8 bit<sup>1</sup>|  
 |sql_variant<sup>7</sup>|String|caratteri a 8 bit<sup>1</sup>|  
 |testo<sup>8</sup>|Stream<sup>2</sup>|caratteri a 8 bit<sup>1</sup>|  
-|time<sup>4</sup>|DateTime|Non applicabile|  
+|time<sup>4</sup>|DATETIME|Non applicabile|  
 |TIMESTAMP|String|caratteri a 8 bit<sup>1</sup>|  
-|tinyint|Integer|caratteri a 8 bit<sup>1</sup>|  
+|TINYINT|Valore intero|caratteri a 8 bit<sup>1</sup>|  
 |UDT (tipo definito dall'utente)|Stream<sup>2</sup>|Binario<sup>3</sup>|  
-|uniqueidentifier|Stringa<sup>9</sup>|caratteri a 8 bit<sup>1</sup>|  
+|UNIQUEIDENTIFIER|Stringa<sup>9</sup>|caratteri a 8 bit<sup>1</sup>|  
 |varbinary|Stream<sup>2</sup>|Binario<sup>3</sup>|  
 |varbinary(MAX)|Stream<sup>2</sup>|Binario<sup>3</sup>|  
 |varchar|String|caratteri a 8 bit<sup>1</sup>|  

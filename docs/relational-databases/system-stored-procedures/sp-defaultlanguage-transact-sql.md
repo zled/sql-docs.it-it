@@ -1,5 +1,5 @@
 ---
-title: sp_defaultlanguage (Transact-SQL) | Documenti Microsoft
+title: sp_defaultlanguage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a382ceab3491cfbcd1b8d6dad564f6d8826c2d13
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049499"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,20 +51,20 @@ sp_defaultlanguage [ @loginame = ] 'login'
  [ **@loginame =** ] **'***login***'**  
  Nome dell'account di accesso. *account di accesso* viene **sysname**, non prevede alcun valore predefinito. *account di accesso* può essere un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows o un gruppo.  
   
- [  **@language =** ] **'***language***'**  
+ [  **@language =** ] **'***linguaggio***'**  
  Lingua predefinita dell'account di accesso. *linguaggio* viene **sysname**, con un valore predefinito è NULL. *linguaggio* deve essere una lingua valida nel server. Se *language* non viene specificato, *language* è impostato per la lingua predefinita del server lingua predefinita è definita dal **sp_configure** variabile di configurazione **lingua predefinita**. Se si modifica la lingua predefinita del server non viene modificata la lingua predefinita degli account di accesso esistenti.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_defaultlanguage** chiama ALTER LOGIN, che supporta opzioni aggiuntive. Per informazioni su come modificare altre impostazioni predefinite dell'account di accesso, vedere [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
+## <a name="remarks"></a>Note  
+ **sp_defaultlanguage** chiama ALTER LOGIN, che supporta opzioni aggiuntive. Per informazioni su come modificare altre impostazioni predefinite di account di accesso, vedere [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
- Per modificare la lingua della sessione corrente, eseguire l'istruzione SET LANGUAGE. Utilizzo di @@LANGUAGE funzione per visualizzare l'impostazione della lingua corrente.  
+ Per modificare la lingua della sessione corrente, eseguire l'istruzione SET LANGUAGE. Uso di @@LANGUAGE funzione per visualizzare l'impostazione della lingua corrente.  
   
  Se la lingua predefinita di un account di accesso viene eliminata dal server, l'account di accesso acquisisce la lingua predefinita del server. **sp_defaultlanguage** non può essere eseguita all'interno di una transazione definita dall'utente.  
   
- Informazioni sulle lingue installate nel server sono visibili nella **Sys. syslanguages** vista del catalogo.  
+ Le informazioni sulle lingue installate nel server sono visibili nel **Sys. syslanguages** vista del catalogo.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY LOGIN.  

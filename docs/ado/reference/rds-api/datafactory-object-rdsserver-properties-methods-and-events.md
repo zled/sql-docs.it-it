@@ -2,7 +2,6 @@
 title: Le proprietà dell'oggetto DataFactory (RDSServer), metodi ed eventi | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,18 +16,19 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 245ef7fbc16964abc574ce2fa4d612352cca9b90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75cc13fab6e2edf38cf037a343538b7993ff7c76
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288143"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Le proprietà dell'oggetto DataFactory (RDSServer), metodi ed eventi
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="properties"></a>Proprietà  
- Nessuno  
+ Nessuna.  
   
 ## <a name="methods"></a>Metodi  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 |[Metodo Synchronize21 (Servizi Desktop remoto)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione (per l'utilizzo con ADO 2.1).|  
   
 ## <a name="events"></a>Eventi  
- Nessuno  
+ Nessuna.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

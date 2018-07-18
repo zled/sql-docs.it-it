@@ -1,5 +1,5 @@
 ---
-title: Funzione String-length (XQuery) | Documenti Microsoft
+title: Funzione String-length (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 229aaf528780001001b9319ae352913f35d067fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059775"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funzioni su valori stringa - stringa di lunghezza
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +47,14 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  Stringa di origine di cui calcolare la lunghezza.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se il valore di *$arg* è una sequenza vuota, un **xs: integer** viene restituito il valore 0.  
   
  Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database. Se il livello di compatibilità è 110 o maggiore, ogni coppia di surrogati viene conteggiata come singolo carattere. Per i livelli di compatibilità inferiori, ogni coppia viene conteggiata come due caratteri. Per altre informazioni, vedere [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
  Se nel valore è contenuto un carattere Unicode a 4 byte rappresentato da due caratteri surrogati, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consentirà di calcolare i caratteri surrogati singolarmente.  
   
- Il **string-length()** senza un parametro può essere utilizzato solo all'interno di un predicato. Ad esempio, la query seguente restituisce l'elemento <`ROOT`>:  
+ Il **string-length()** senza un parametro può essere usato solo all'interno di un predicato. Ad esempio, la query seguente restituisce l'elemento <`ROOT`>:  
   
 ```  
 DECLARE @x xml;  
@@ -62,7 +63,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
- Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per ulteriori informazioni, vedere la sezione "XQuery funzioni riconoscono i surrogati" nell'argomento [modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per altre informazioni, vedere la sezione "XQuery funzioni riconoscono i surrogati" nell'argomento [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
@@ -136,7 +137,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
 -   **pD** e **wm** sono i prefissi dello spazio dei nomi utilizzati in questa query. Identificano gli stessi spazi dei nomi utilizzati nel documento su cui viene eseguita la query.  
   
--   L'espressione XQuery specifica un ciclo FOR nidificato. Il ciclo FOR esterno è necessario perché si desidera recuperare il **ProductModelID** gli attributi di <`ProductDescription`> elemento. Il ciclo FOR interno è necessario, poiché si desiderano solo i prodotti con descrizioni della caratteristica di garanzia di lunghezza inferiore a 20 caratteri.  
+-   L'espressione XQuery specifica un ciclo FOR nidificato. Il ciclo FOR esterno è obbligatorio, poiché si desidera recuperare le **ProductModelID** attributi del <`ProductDescription`> elemento. Il ciclo FOR interno è necessario, poiché si desiderano solo i prodotti con descrizioni della caratteristica di garanzia di lunghezza inferiore a 20 caratteri.  
   
  Risultato parziale:  
   

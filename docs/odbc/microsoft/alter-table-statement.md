@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903146"
 ---
 # <a name="alter-table-statement"></a>Istruzione ALTER TABLE
 Quando viene utilizzato il Microsoft Access, un file dBASE o Paradoxdriver, l'istruzione ALTER TABLE è supportata con add e drop clausole di definizione di vincolo di tabella. (Le istruzioni ALTER TABLE non sono supportate per i driver Microsoft Excel o testo.)  

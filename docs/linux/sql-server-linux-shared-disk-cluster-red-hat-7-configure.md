@@ -1,6 +1,6 @@
 ---
-title: Configurazione di cluster condiviso Red Hat Enterprise Linux per SQL Server | Documenti Microsoft
-description: Implementare la disponibilità elevata mediante la configurazione cluster disco condiviso Red Hat Enterprise Linux per SQL Server.
+title: Configurare cluster condiviso di Red Hat Enterprise Linux per SQL Server | Microsoft Docs
+description: Implementare la disponibilità elevata tramite la configurazione del cluster di dischi condivisi di Red Hat Enterprise Linux per SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -13,48 +13,49 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.openlocfilehash: 7ddd34e56d8f8499715c535de21ae6f23bd282b1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001633"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi Red Hat Enterprise Linux per SQL Server
+# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi di Red Hat Enterprise Linux per SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questa guida fornisce istruzioni su come creare un cluster di dischi condivisi a due nodi per SQL Server su Red Hat Enterprise Linux. Il livello di clustering si basa su Red Hat Enterprise Linux (RHEL) [componente aggiuntivo a disponibilità elevata](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) compilato in cima [Pacemaker](http://clusterlabs.org/). L'istanza di SQL Server è attivo in un nodo o l'altro.
+Questa guida fornisce istruzioni per creare un cluster di dischi condiviso a due nodi per SQL Server su Red Hat Enterprise Linux. Il livello di clustering si basa su Red Hat Enterprise Linux (RHEL) [componente aggiuntivo a disponibilità elevata](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) costruita basandosi su [Pacemaker](http://clusterlabs.org/). L'istanza di SQL Server è attivo in un nodo o l'altro.
 
 > [!NOTE] 
-> Accesso alla documentazione e componente aggiuntivo Red Hat a disponibilità elevata richiede una sottoscrizione. 
+> L'accesso al componente aggiuntivo Red Hat a disponibilità elevata e alla documentazione richiede una sottoscrizione. 
 
-Come illustrato nella figura seguente, l'archiviazione è presentata a due server. I componenti di clustering - Corosync e Pacemaker - coordinano le comunicazioni e gestione delle risorse. Uno dei server con la connessione attiva per le risorse di archiviazione e SQL Server. Quando il Pacemaker rileva un errore i componenti di clustering gestiscono lo spostamento di risorse a altro nodo.  
+Come illustrato nella figura seguente, archiviazione viene presentata a due server. Componenti di clustering - Corosync e Pacemaker - coordinano le comunicazioni e gestione delle risorse. Uno dei server con connessione attiva per le risorse di archiviazione e SQL Server. Quando Pacemaker rileva un errore i componenti di clustering gestiscono lo spostamento avvenga a altro nodo.  
 
-![Red Hat Enterprise Linux 7 condiviso del Cluster SQL disco](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
+![Red Hat Enterprise Linux 7 condiviso del disco Cluster SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Per ulteriori informazioni sulla configurazione del cluster, le opzioni di agenti di risorse e gestione, visitare [la documentazione di riferimento RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Per altre informazioni su configurazione del cluster, le opzioni degli agenti delle risorse e gestione, visitare [documentazione di riferimento RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
-> Integrazione di SQL Server con Pacemaker a questo punto, non è accoppiata come con WSFC in Windows. All'interno di SQL, non è possibile sapere sulla presenza del cluster, tutte le orchestrazioni non rientra e il servizio viene controllato come istanza autonoma da Pacemaker. Inoltre, ad esempio, sys.dm os_cluster_properties e Sys.dm os_cluster_nodes DMV cluster non sarà alcun record.
-Per utilizzare una stringa di connessione che punta al nome di un server di stringa e non usa l'indirizzo IP, sarà necessario registrare i server DNS l'indirizzo IP utilizzato per creare la risorsa IP virtuale (come descritto nelle sezioni seguenti) con il nome di server selezionato.
+> A questo punto, l'integrazione con Pacemaker di SQL Server non è accoppiato come con WSFC per Windows. All'interno di SQL, non è possibile sapere sulla presenza del cluster, tutte le orchestrazioni non rientra e il servizio viene controllato in base a un'istanza autonoma per Pacemaker. Inoltre, ad esempio, DM os_cluster_properties e DM os_cluster_nodes viste a gestione dinamica cluster non sarà alcun record.
+Per usare una stringa di connessione che punta al nome di un server di stringa e non usare l'indirizzo IP, dovranno registrare i server DNS dell'indirizzo IP usato per creare la risorsa IP virtuale (come illustrato nelle sezioni seguenti) con il nome del server scelto.
 
-Nelle sezioni seguenti viene illustrata la procedura per configurare una soluzione di cluster di failover. 
+Le sezioni seguenti illustrano i passaggi per configurare una soluzione di cluster di failover. 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per completare lo scenario end-to-end seguente devono essere presenti due macchine per distribuire il cluster a due nodi e un altro server per configurare il server NFS. Passaggi seguenti viene descritto come questi server verranno configurati.
+Per completare lo scenario end-to-end seguente, è necessario due macchine virtuali da distribuire il cluster a due nodi e un altro server per configurare il server NFS. I passaggi seguenti illustrano la configurazione di questi server.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Installare e configurare il sistema operativo in ogni nodo del cluster
 
-Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cluster. Per questa procedura dettagliata, è possibile utilizzare RHEL con una sottoscrizione valida per il componente aggiuntivo a disponibilità elevata. 
+Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cluster. Per questa procedura dettagliata, usare RHEL con una sottoscrizione valida per il componente aggiuntivo a disponibilità elevata. 
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Installare e configurare SQL Server in ogni nodo del cluster
 
-1. Installare e configurare SQL Server in entrambi i nodi.  Per istruzioni dettagliate, vedere [installazione di SQL Server in Linux](sql-server-linux-setup.md).
+1. Installare e configurare SQL Server su entrambi i nodi.  Per istruzioni dettagliate, vedere [installare SQL Server in Linux](sql-server-linux-setup.md).
 
-1. Specificare un nodo primario e l'altro come secondario, ai fini di configurazione. Utilizzare questi termini per le operazioni seguenti in questa Guida.  
+1. Designare un nodo primario e l'altro come secondario, ai fini della configurazione. Usare questi termini per gli elementi seguenti in questa Guida.  
 
-1. Nel nodo secondario, arrestare e disabilitare il Server SQL.
+1. Nel nodo secondario, arrestare e disabilitare SQL Server.
 
    Nell'esempio seguente arresta e disattiva SQL Server: 
 
@@ -63,15 +64,15 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> In fase di installazione, viene generato per l'istanza di SQL Server e inserito in una chiave Master del Server `/var/opt/mssql/secrets/machine-key`. In Linux, SQL Server viene sempre eseguito come un account locale denominato mssql. Poiché si tratta di un account locale, l'identità non è condivise tra i nodi. Pertanto, è necessario copiare la chiave di crittografia dal nodo primario a ogni nodo secondario in modo che ogni account locale mssql possono accedervi per decrittografare la chiave Master del Server. 
+> In fase di installazione, viene generato per l'istanza di SQL Server e inserito in una chiave Master del Server `/var/opt/mssql/secrets/machine-key`. In Linux, SQL Server viene sempre eseguito come un account locale denominato mssql. Poiché si tratta di un account locale, la propria identità non è condiviso tra i nodi. Pertanto, è necessario copiare la chiave di crittografia dal nodo primario in ogni nodo secondario in modo che ogni account mssql locale possono accedervi per decrittografare la chiave Master del Server. 
 
-1. Nel nodo primario, creare un account di accesso SQL server per Pacemaker e concedere l'autorizzazione di accesso per l'esecuzione `sp_server_diagnostics`. Pacemaker utilizza questo account per verificare quale sia il nodo è in esecuzione SQL Server. 
+1. Nel nodo primario, creare un account di accesso SQL server per Pacemaker e concedere l'autorizzazione di accesso per l'esecuzione `sp_server_diagnostics`. Pacemaker Usa questo account per verificare quale nodo è in esecuzione SQL Server. 
 
    ```bash
    sudo systemctl start mssql-server
    ```
 
-   Connettersi a SQL Server `master` con l'account sa di database ed eseguire le operazioni seguenti:
+   Connettersi a SQL Server `master` database con l'account sa e di eseguire il comando seguente:
 
    ```bashsql
    USE [master]
@@ -80,13 +81,13 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
 
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
-   In alternativa, è possibile impostare le autorizzazioni a un livello più granulare. Richiede l'account di accesso Pacemaker `VIEW SERVER STATE` per query sullo stato di integrità con sp_server_diagnostics, `setupadmin` e `ALTER ANY LINKED SERVER` per aggiornare il nome dell'istanza FCI con il nome della risorsa eseguendo sp_dropserver e sp_addserver. 
+   In alternativa, è possibile impostare le autorizzazioni a un livello più granulare. Richiede l'accesso a Pacemaker `VIEW SERVER STATE` allo stato di integrità query con, sp_server_diagnostics `setupadmin` e `ALTER ANY LINKED SERVER` per aggiornare il nome dell'istanza FCI con il nome della risorsa tramite l'esecuzione sp_dropserver e sp_addserver. 
 
-1. Nel nodo primario, arrestare e disabilitare il Server SQL. 
+1. Nel nodo primario, arrestare e disabilitare SQL Server. 
 
-1. Configurare il file hosts per ogni nodo del cluster. Il file di host deve includere l'indirizzo IP e nome di ogni nodo del cluster. 
+1. Configurare il file hosts per ogni nodo del cluster. Il file host deve includere l'indirizzo IP e nome di ogni nodo del cluster. 
 
-    Controllare l'indirizzo IP per ogni nodo. Lo script seguente viene illustrato l'indirizzo IP del nodo corrente. 
+    Controllare l'indirizzo IP per ogni nodo. Lo script seguente mostra l'indirizzo IP del nodo corrente. 
 
    ```bash
    sudo ip addr show
@@ -97,7 +98,7 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
    ```bash
    sudo vi /etc/hosts
    ```
-   Nell'esempio seguente `/etc/hosts` aggiunte due nodi denominati `sqlfcivm1` e `sqlfcivm2`.
+   L'esempio seguente illustra `/etc/hosts` con le aggiunte di due nodi denominati `sqlfcivm1` e `sqlfcivm2`.
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -106,19 +107,19 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
    10.128.16.77 sqlfcivm2
    ```
 
-Nella sezione successiva verrà configurare l'archiviazione condivisa e spostare i file di database che l'archiviazione. 
+Nella sezione successiva si configurerà l'archiviazione condivisa e spostare i file di database in tale archivio. 
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>Configurare l'archiviazione condivisa e spostare i file di database 
 
-Sono disponibili un'ampia gamma di soluzioni per fornire l'archiviazione condivisa. Questa procedura dettagliata viene illustrata la configurazione di archiviazione condivisa con NFS. Si consiglia di seguire le procedure consigliate e utilizzare Kerberos per proteggere NFS (è possibile trovare un esempio di seguito: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
+Esistono numerose soluzioni per fornire spazio di archiviazione condiviso. Questa procedura dettagliata viene illustrata la configurazione di archiviazione condivisa con NFS. È consigliabile seguire le procedure consigliate e usare Kerberos per la protezione di NFS (è possibile trovare un esempio di seguito: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
 
 >[!Warning]
->Se non si protegge NFS, chiunque può accedere alla rete e lo spoofing l'indirizzo IP di un nodo SQL sarà in grado di accedere ai file di dati. Come sempre, assicurarsi di minaccia del modello del sistema prima di utilizzarlo nell'ambiente di produzione. Un'altra opzione di archiviazione consiste nell'utilizzare una condivisione file SMB.
+>Se non si protegge NFS, quindi chiunque può accedere alla rete ed effettuare lo spoofing l'indirizzo IP di un nodo SQL sarà in grado di accedere ai file di dati. Come sempre, assicurarsi che il sistema una modellazione delle minacce è prima di utilizzarlo nell'ambiente di produzione. Un'altra opzione di archiviazione consiste nell'usare condivisione file SMB.
 
 ### <a name="configure-shared-storage-with-nfs"></a>Configurare l'archiviazione condivisa con NFS
 
 > [!IMPORTANT] 
-> Hosting dei file di database in un server NFS con versione < 4 non è supportata in questa versione. Include l'utilizzo di NFS per disco condiviso clustering di failover e database nelle istanze non cluster. Stiamo lavorando sull'abilitazione di altre versioni del server NFS nelle prossime versioni. 
+> Che ospitano i file di database in un server NFS con la versione < 4 non è supportata in questa versione. Ciò include l'uso di NFS per disco condiviso clustering di failover, nonché i database nelle istanze non cluster. Stiamo lavorando sull'abilitazione di altre versioni di server NFS nelle prossime versioni. 
 
 Il Server NFS eseguire le operazioni seguenti:
 
@@ -140,19 +141,19 @@ Il Server NFS eseguire le operazioni seguenti:
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Modifica `/etc/exports` per esportare la directory in cui si desidera condividere. È necessario 1 riga per ogni condivisione desiderata. Esempio: 
+1.  Modifica `/etc/exports` per esportare la directory in cui si vuole condividere. È necessario 1 riga per ogni condivisione desiderata. Esempio: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
    ```
 
-1. Esportare le condivisioni
+1. Esporta le condivisioni
 
    ```bash
    sudo exportfs -rav
    ```
 
-1. Verificare che i percorsi sono condivisi/esportato, eseguiti dal server NFS
+1. Verificare che i percorsi siano condivisi/esportato, eseguire dal server NFS
 
    ```bash
    sudo showmount -e
@@ -200,15 +201,15 @@ Eseguire i passaggi seguenti in tutti i nodi del cluster.
 
 1. Ripetere questi passaggi in tutti i nodi del cluster.
 
-Per ulteriori informazioni sull'utilizzo di NFS, vedere le risorse seguenti:
+Per altre informazioni sull'uso di NFS, vedere le risorse seguenti:
 
-* [NFS Server e firewalld | Scambio dello stack](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [NFS Server e firewalld | Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Montare un Volume NFS | Manuale dell'amministratore di rete Linux](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [Configurazione del server NFS](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
 
-### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montare directory dei file di database in modo da puntare all'archiviazione condivisa
+### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montare directory dei file di database in modo che punti all'archiviazione condivisa
 
-1.  **Nel nodo primario**, salvare i file di database in un percorso temporaneo. Lo script seguente, crea una nuova directory temporanea, copia i file di database nella nuova directory e rimuove i file di database precedente. Come SQL Server viene eseguito come utente locale mssql, è necessario assicurarsi che dopo il trasferimento di dati per la condivisione montata, utente locale ha accesso in lettura-scrittura alla condivisione. 
+1.  **Nel nodo primario solo**, salvare i file di database in un percorso temporaneo. Lo script seguente, crea una nuova directory temporanee, copia i file di database nella nuova directory e consente di rimuovere i vecchi file di database. Come SQL Server viene eseguito come utente locale mssql, è necessario assicurarsi che dopo il trasferimento dei dati per la condivisione montata, utente locale abbia accesso in lettura-scrittura alla condivisione. 
 
    ``` 
    $ sudo su mssql
@@ -224,17 +225,17 @@ Per ulteriori informazioni sull'utilizzo di NFS, vedere le risorse seguenti:
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr 
    ```
    
-   Lo script seguente viene illustrato un esempio della modifica.  
+   Lo script seguente illustra un esempio di modifica.  
 
    ``` 
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->Se si utilizza una risorsa del File System (FS) come consigliato in questo caso, non è necessario per mantenere il comando di montaggio in /etc/fstab. Pacemaker si occuperà di montare la cartella quando avvia la risorsa di ADFS in cluster. Con l'aiuto di geofencing, garantisce che l'ADFS non è montato due volte. 
+>Se si usa una risorsa di File System (FS) come consigliato in questo caso, non è necessario mantenere il comando di montaggio in /etc/fstab. Pacemaker si occuperà di montaggio nella cartella quando avvia la risorsa di ADFS in cluster. Con l'aiuto di fencing, garantirà che il FS mai è montata due volte. 
 
-1.  Eseguire `mount -a` comando per il sistema aggiornare i percorsi montati.  
+1.  Eseguire `mount -a` comando dal sistema aggiornare i percorsi montati.  
 
-1.  Copiare i file di database e di log che è stato salvato in `/var/opt/mssql/tmp` alla condivisione appena montata `/var/opt/mssql/data`. Questo deve essere eseguita solo **nel nodo primario**. Assicurarsi che si assegnano autorizzazioni di lettura/scrittura all'utente locale 'mssql'.
+1.  Copiare i file di database e di log salvato `/var/opt/mssql/tmp` per la condivisione montata appena `/var/opt/mssql/data`. Questo deve essere svolto **nel nodo primario**. Accertarsi di assegnare le autorizzazioni di lettura / scrittura all'utente locale 'mssql'.
 
    ``` 
    $ sudo chown mssql /var/opt/mssql/data
@@ -245,7 +246,7 @@ Per ulteriori informazioni sull'utilizzo di NFS, vedere le risorse seguenti:
    $ exit
    ``` 
  
-1.  Verificare che SQL Server venga avviato correttamente con il nuovo percorso del file. Eseguire questa operazione in ogni nodo. A questo punto, solo un nodo deve eseguire SQL Server alla volta. Non possono entrambi eseguiti nello stesso momento poiché entrambe tenteranno di accedere ai file di dati contemporaneamente (per evitare accidentalmente l'avvio di SQL Server in entrambi i nodi, utilizzare una risorsa cluster di File System per assicurarsi che la condivisione non è montata due volte per i diversi nodi). I seguenti comandi di avvio di SQL Server, controllano lo stato e quindi arrestare SQL Server.
+1.  Verificare che SQL Server viene avviato correttamente con il nuovo percorso del file. Eseguire questa operazione in ogni nodo. A questo punto un solo nodo deve eseguire SQL Server alla volta. Non possono entrambi eseguono contemporaneamente perché sono entrambi tenterà di accedere ai file di dati contemporaneamente (per evitare accidentalmente l'avvio di SQL Server su entrambi i nodi, usare una risorsa cluster di File System per assicurarsi che la condivisione non è montata due volte per i vari nodi). I seguenti comandi avviare SQL Server, controllare lo stato e quindi arrestare SQL Server.
  
    ```bash
    sudo systemctl start mssql-server
@@ -253,9 +254,9 @@ Per ulteriori informazioni sull'utilizzo di NFS, vedere le risorse seguenti:
    sudo systemctl stop mssql-server
    ```
  
-A questo punto, entrambe le istanze di SQL Server sono configurate per eseguire con i file di database all'archiviazione condivisa. Il passaggio successivo consiste nel configurare SQL Server per Pacemaker. 
+A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i file di database nello spazio di archiviazione condiviso. Il passaggio successivo consiste nel configurare SQL Server per Pacemaker. 
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installare e configurare Pacemaker su ogni nodo del cluster
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installare e configurare Pacemaker in ogni nodo del cluster
 
 
 2. In entrambi i nodi del cluster creare un file per archiviare nome utente e password di SQL Server per l'accesso a Pacemaker. Il comando seguente crea e popola questo file:
@@ -320,24 +321,24 @@ A questo punto, entrambe le istanze di SQL Server sono configurate per eseguire 
    sudo pcs cluster start --all
    ```
 
-   > RHEL a disponibilità elevata include conflitti agenti per KVM e VMWare. Fencing deve essere disabilitata in tutti gli altri hypervisor. Non è consigliabile disabilitare gli agenti fencing negli ambienti di produzione. A partire da intervallo di tempo, non sono agenti fencing per gli ambienti Hyper-v o il cloud. Se si esegue una di queste configurazioni, è necessario disabilitare fencing. \**Questa operazione è sconsigliata in un sistema di produzione.**
+   > Componente aggiuntivo RHEL a disponibilità elevata include conflitti degli agenti per KVM e VMWare. Fencing deve essere disabilitato in tutti gli altri hypervisor. La disabilitazione degli agenti di fencing è sconsigliata negli ambienti di produzione. A partire da periodo di tempo, esistono agenti fencing per gli ambienti Hyper-v o il cloud. Se si esegue una di queste configurazioni, è necessario disabilitare l'isolamento. \**NON è consigliato in un sistema di produzione.**
 
-   Il comando seguente disabilita gli agenti di geofencing.
+   Questo comando disabilita gli agenti di fencing.
 
    ```bash
    sudo pcs property set stonith-enabled=false
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. Configurare le risorse del cluster per SQL Server, File System e le risorse IP virtuali e il push della configurazione per il cluster. Sono necessarie le seguenti informazioni:
+2. Configurare le risorse del cluster di SQL Server, File System e le risorse IP virtuali ed eseguire il push della configurazione del cluster. Sono necessarie le informazioni seguenti:
 
-   - **Nome di risorsa di SQL Server**: un nome per la risorsa cluster di SQL Server. 
-   - **Nome risorsa IP mobile**: un nome per la risorsa di indirizzo IP virtuale.
-   - **Indirizzo IP**: l'indirizzo IP che i client utilizzeranno per connettersi all'istanza del cluster di SQL Server. 
-   - **Il nome di risorsa sistema**: un nome per la risorsa del File System.
-   - **dispositivo**: NFS il percorso di condivisione.
-   - **dispositivo**: il percorso locale che è attivato per la condivisione
-   - **fsType**: il tipo di condivisione File (ad esempio nfs)
+   - **Nome risorsa SQL Server**: un nome per la risorsa cluster di SQL Server. 
+   - **Nome della risorsa IP mobile**: un nome per la risorsa indirizzo IP virtuale.
+   - **Indirizzo IP**: l'indirizzo IP che i client useranno per connettersi all'istanza del cluster di SQL Server. 
+   - **Nome di risorsa sistema file**: un nome per la risorsa File System.
+   - **dispositivo**: percorso condivisione NFS The
+   - **dispositivo**: il percorso locale che viene montata la condivisione
+   - **fsType**: tipo di condivisione File (ad esempio nfs)
 
    Aggiornare i valori dallo script seguente per l'ambiente. Eseguire in un nodo per configurare e avviare il servizio cluster.  
 
@@ -351,7 +352,7 @@ A questo punto, entrambe le istanze di SQL Server sono configurate per eseguire 
    sudo pcs cluster cib-push cfg
    ```
 
-   Ad esempio, lo script seguente crea una risorsa cluster di SQL Server denominata `mssqlha`e una risorsa IP mobile con l'indirizzo IP `10.0.0.99`. Inoltre, crea una risorsa del file System e aggiunge i vincoli in modo che tutte le risorse sono installate nello stesso nodo come risorsa SQL. 
+   Ad esempio, lo script seguente crea una risorsa cluster di SQL Server denominata `mssqlha`e una risorsa IP mobile con l'indirizzo IP `10.0.0.99`. Inoltre crea una risorsa del file System e aggiunge i vincoli in modo che tutte le risorse condivideranno il percorso sul nodo stesso come risorsa di SQL. 
 
    ```bash
    sudo pcs cluster cib cfg
@@ -363,15 +364,15 @@ A questo punto, entrambe le istanze di SQL Server sono configurate per eseguire 
    sudo pcs cluster cib-push cfg
    ```
 
-   Dopo la configurazione viene inserita, SQL Server viene avviato in un nodo. 
+   Dopo la configurazione viene eseguito il push, SQL Server viene avviato in un nodo. 
 
-3. Verificare che SQL Server sia avviato. 
+3. Verificare che SQL Server è stato avviato. 
 
    ```bash
    sudo pcs status 
    ```
 
-   L'esempi seguenti viene mostrato i risultati ottenuti quando Pacemaker è stato avviato un'istanza cluster di SQL Server. 
+   Il seguente mostra esempi i risultati ottenuti quando Pacemaker è stato avviato un'istanza cluster di SQL Server. 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1
@@ -390,8 +391,8 @@ A questo punto, entrambe le istanze di SQL Server sono configurate per eseguire 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-* [Cluster da zero](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Guida Pacemaker
+* [Cluster da zero](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Guida da Pacemaker
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Funzionamento di SQL Server in cluster dei dischi condivisi Red Hat Enterprise Linux](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+[Funzionamento di SQL Server in cluster di dischi condivisi di Red Hat Enterprise Linux](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

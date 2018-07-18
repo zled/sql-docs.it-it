@@ -18,16 +18,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085bf32115bfe84b00471de27e1fd9c11b3a1ab9
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33231350"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023869"
 ---
 # <a name="sysfndbbackupfilesnapshots-transact-sql"></a>sys.fn_db_backup_file_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce gli snapshot di Azure associati ai file di database. Se il database specificato non è stato trovato o se non sono archiviati i file di database nel servizio di archiviazione Blob di Microsoft Azure, viene restituita alcuna riga. Utilizzare questa funzione di sistema in combinazione con il **sp_delete_backup_file_snapshot** stored procedure per identificare ed eliminare gli snapshot di backup orfani di sistema. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+  Restituisce gli snapshot di Azure associati con i file di database. Se il database specificato non viene trovato o se i file di database non sono archiviati nel servizio di archiviazione Blob di Microsoft Azure, viene restituita alcuna riga. Utilizzare questa funzione di sistema in combinazione con il **sp_delete_backup_file_snapshot** stored procedure per identificare ed eliminare snapshot di backup orfani di sistema. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +40,7 @@ sys.fn_db_backup_file_snapshots
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *database_name*  
+ *Database_name*  
  Il nome del database sottoposto a query. Se NULL, questa funzione viene eseguita nell'ambito del database corrente.  
   
 ## <a name="table-returned"></a>Tabella restituita  
@@ -48,8 +48,8 @@ sys.fn_db_backup_file_snapshots
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |file_id|**int**|ID File per il database. Non ammette i valori Null.|  
-|snapshot_time|**nvarchar(260)**|Il timestamp dello snapshot, perché viene restituito dall'API REST. Restituisce NULL se non esiste alcuno snapshot.|  
-|snapshot_url|**nvarchar(360)**|L'URL completo per lo snapshot di file. Restituisce NULL se nessun snapshot esistono.|  
+|snapshot_time|**nvarchar(260)**|Il timestamp dello snapshot perché viene restituito dall'API REST. Restituisce NULL se non esiste alcuno snapshot.|  
+|snapshot_url|**nvarchar(360)**|L'URL completo per lo snapshot di file. Restituisce NULL se nessuno snapshot esiste.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il database.  

@@ -1,7 +1,7 @@
 ---
-title: Ripristino di emergenza di SQL Server in Linux | Documenti Microsoft
+title: Ripristino di emergenza per SQL Server in Linux | Microsoft Docs
 description: ''
-author: allanhirt
+author: MikeRayMSFT
 ms.author: mihaelab
 ms.reviewer: mikeray
 manager: craigg
@@ -14,13 +14,14 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 16e1e72175db963452d1dc53b704a15602821905
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.openlocfilehash: 24db7c4b1b1e76d9f16b8d33203fe8556d3dba96
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057299"
 ---
-# <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>Continuità aziendale e database di ripristino, SQL Server in Linux
+# <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>Business continuità e ripristino del database - SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

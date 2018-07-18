@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905566"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Date, Time e Timestamp sequenze di Escape
 ODBC definisce sequenze di escape per date, time e timestamp letterali. La sintassi delle sequenze di escape è come segue:  

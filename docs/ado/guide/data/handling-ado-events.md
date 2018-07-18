@@ -2,7 +2,6 @@
 title: Gestione degli eventi ADO | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c8c1bf091c6c41b8700679cce7b696da89e9eff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6203797b27f8cd093e41b34b5507e1dcdba94039
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271430"
 ---
 # <a name="handling-ado-events"></a>Gestione degli eventi ADO
 Il modello di eventi ADO supporta determinate operazioni ADO sincrone e asincrone che rilasciano *eventi*, o notifiche, prima dell'inizio dell'operazione o quando è stata completata. Un evento è effettivamente una chiamata a una routine del gestore eventi definiti nell'applicazione.  

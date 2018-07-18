@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908546"
 ---
 # <a name="binding-columns"></a>Associazione delle colonne
 Dati recuperati dall'origine dati viene restituiti all'applicazione in variabili che l'applicazione è allocato per questo scopo. Prima di questa operazione può essere eseguita, è necessario associare l'applicazione, o *associare*, impostare queste variabili alle colonne del risultato; concettualmente, questo processo è lo stesso come variabili di applicazione di associazione di parametri dell'istruzione. Quando l'applicazione associa una variabile per un set di risultati colonna, descrive tale variabile, indirizzo, tipo di dati e così via, per il driver. Il driver, queste informazioni vengono memorizzate nella struttura mantenuta per l'istruzione e utilizza le informazioni per restituire il valore della colonna quando viene recuperata la riga.  

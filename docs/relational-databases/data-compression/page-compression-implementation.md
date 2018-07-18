@@ -17,11 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a66084e2020225bc54a2b5b4419d6221db9c5814
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2e66e391c5d30097f714962d1f114fa2b324a5c0
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999897"
 ---
 # <a name="page-compression-implementation"></a>Implementazione della compressione di pagina
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,18 +52,18 @@ ms.lasthandoff: 05/19/2018
   
  Nell'illustrazione seguente viene mostrata una pagina di esempio di una tabella prima della compressione basata su prefisso.  
   
- ![Pagina prima della compressione basata su prefisso](../../relational-databases/data-compression/media/skt-tblcompression1c.gif "Pagina prima della compressione basata su prefisso")  
+ ![Pagina prima della compressione basata su prefisso](media/skt-tblcompression1c.gif "Pagina prima della compressione basata su prefisso")  
   
  Nell'illustrazione seguente viene mostrata la stessa pagina di esempio dopo la compressione basata su prefisso. Il prefisso viene spostato nell'intestazione e i valori della colonna vengono impostati sui riferimenti al prefisso.  
   
- ![Pagina dopo la compressione basata su prefisso](../../relational-databases/data-compression/media/tblcompression2.gif "Pagina dopo la compressione basata su prefisso")  
+ ![Pagina dopo la compressione basata su prefisso](media/tblcompression2.gif "Pagina dopo la compressione basata su prefisso")  
   
  Nella prima colonna della prima riga, il valore 4b indica che i primi quattro caratteri del prefisso (aaab) sono presenti per tale riga, così come il carattere b. Il valore risultante è aaabb, ovvero il valore originale.  
   
 ## <a name="dictionary-compression"></a>Compressione basata su dizionario  
  Dopo che la compressione basata su prefisso è stata completata, viene applicata quella basata su dizionario. In base a tale compressione, viene eseguita la ricerca di valori ripetuti in qualsiasi punto della pagina che successivamente vengono archiviati nell'area relativa alla struttura delle informazioni di compressione. A differenza di quella basata su prefisso, la compressione basata su dizionario non è limitata a una colonna e può sostituire valori ripetuti presenti in qualsiasi punto di una pagina. Nell'illustrazione seguente viene mostrata la stessa pagina di esempio dopo la compressione basata su dizionario.  
   
- ![Pagina dopo la compressione basata su dizionario](../../relational-databases/data-compression/media/tblcompression3.gif "Pagina dopo la compressione basata su dizionario")  
+ ![Pagina dopo la compressione basata su dizionario](media/tblcompression3.gif "Pagina dopo la compressione basata su dizionario")  
   
  Notare che al valore 4b viene fatto riferimento da colonne diverse della pagina.  
   

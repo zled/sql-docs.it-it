@@ -25,21 +25,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: fb0db9ea7c4d58fdecf8ef4973e4d8f971ebb3d3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34553802"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998071"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  Restituisce i/o di basso livello corrente, blocco, latch e attività del metodo di accesso per ogni partizione di una tabella o indice nel database.    
+  Restituisce i/o di basso livello corrente, blocco, latch e attività di metodo di accesso per ogni partizione di una tabella o indice nel database.    
     
  Gli indici con ottimizzazione per la memoria non vengono visualizzati in questa DMV.    
     
 > [!NOTE]    
->  **DM db_index_operational_stats** non restituisce informazioni sugli indici con ottimizzazione per la memoria. Per informazioni sull'uso degli indici con ottimizzazione per la memoria, vedere [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
+>  **DM db_index_operational_stats** non restituisce informazioni sugli indici con ottimizzazione per la memoria. Per informazioni sull'uso di indici con ottimizzazione per la memoria, vedere [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
         
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -56,31 +56,31 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>Argomenti    
- *database_id* | NULL | 0 | VALORE PREDEFINITO    
+ *database_id* | NULL | 0 | IMPOSTAZIONE PREDEFINITA    
  ID del database. *database_id* viene **smallint**. Gli input validi sono il numero di ID di un database, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
     
- Specificare NULL per restituire informazioni per tutti i database presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si specifica NULL per *database_id*, è necessario specificare NULL anche per *object_id*, *index_id*, e *numero_partizione*.    
+ Specificare NULL per restituire informazioni per tutti i database presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si specifica NULL per *database_id*, è necessario specificare NULL anche per *object_id*, *index_id*, e *partition_number*.    
     
  La funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md) può essere specificato.    
     
- *object_id* | NULL | 0 | VALORE PREDEFINITO    
+ *object_id* | NULL | 0 | IMPOSTAZIONE PREDEFINITA    
  ID oggetto della tabella o vista in cui si trova l'indice. *object_id* è di tipo **int**.    
     
  Gli input validi sono il numero di ID di una tabella o vista, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
     
- Specificare NULL per restituire le informazioni memorizzate nella cache per tutte le tabelle e le viste nel database specificato. Se si specifica NULL per *object_id*, è necessario specificare NULL anche per *index_id* e *numero_partizione*.    
+ Specificare NULL per restituire le informazioni memorizzate nella cache per tutte le tabelle e le viste nel database specificato. Se si specifica NULL per *object_id*, è necessario specificare NULL anche per *index_id* e *partition_number*.    
     
- *index_id* | 0 | NULL | -1 | VALORE PREDEFINITO    
+ *index_id* | 0 | NULL | -1 | IMPOSTAZIONE PREDEFINITA    
  ID dell'indice. *index_id* viene **int**. Gli input validi sono il numero di ID di un indice, 0 se *object_id* è un heap, NULL, -1 o DEFAULT. Il valore predefinito è -1. NULL, -1 e DEFAULT sono valori equivalenti in questo contesto.    
     
- Specificare NULL per restituire le informazioni memorizzate nella cache per tutti gli indici per una vista o tabella di base. Se si specifica NULL per *index_id*, è necessario specificare NULL anche per *numero_partizione*.    
+ Specificare NULL per restituire le informazioni memorizzate nella cache per tutti gli indici per una vista o tabella di base. Se si specifica NULL per *index_id*, è necessario specificare NULL anche per *partition_number*.    
     
- *partition_number* | NULL | 0 | VALORE PREDEFINITO    
+ *partition_number* | NULL | 0 | IMPOSTAZIONE PREDEFINITA    
  Numero di partizione nell'oggetto. *partition_number* viene **int**. Gli input validi sono il *partion_number* di un indice o heap, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
     
  Specificare NULL per restituire informazioni memorizzate nella cache per tutte le partizioni dell'indice o dell'heap.    
     
- *partition_number* è basato su 1. Un indice non partizionato o l'heap contiene *numero_partizione* impostato su 1.    
+ *partition_number* è basato su 1. Dispone di un indice non partizionato o un heap *partition_number* impostato su 1.    
     
 ## <a name="table-returned"></a>Tabella restituita    
     
@@ -89,12 +89,12 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**smallint**|ID del database.|    
 |**object_id**|**int**|ID della tabella o vista.|    
 |**index_id**|**int**|ID dell'indice o dell'heap.<br /><br /> 0 = heap|    
-|**hobt_id**|**bigint**|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID dell'heap di dati o set di righe dell'albero B che tiene traccia dei dati interni per un indice columnstore.<br /><br /> NULL: non si tratta di un set di righe columnstore interno.<br /><br /> Per informazioni dettagliate, vedere [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID dell'heap di dati o set di righe dell'albero B che tiene traccia di dati interne per un indice columnstore.<br /><br /> NULL: non si tratta di un set di righe columnstore interno.<br /><br /> Per altre informazioni, vedere [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|Numero di partizione in base 1 all'interno dell'indice o heap.|    
 |**leaf_insert_count**|**bigint**|Conteggio cumulativo degli inserimenti al livello foglia.|    
-|**leaf_delete_count**|**bigint**|Conteggio cumulativo delle eliminazioni al livello foglia. leaf_delete_count viene incrementato solo per i record eliminati non contrassegnati come ghost prima. Per i record eliminati vengono innanzitutto fantasma **leaf_ghost_count** viene incrementato invece.|    
+|**leaf_delete_count**|**bigint**|Conteggio cumulativo delle eliminazioni al livello foglia. leaf_delete_count viene incrementato solo per i record eliminati non contrassegnati come fantasma prima di tutto. Per i record eliminati vengono in primo luogo, fantasma **leaf_ghost_count** viene incrementato invece.|    
 |**leaf_update_count**|**bigint**|Conteggio cumulativo degli aggiornamenti al livello foglia.|    
-|**leaf_ghost_count**|**bigint**|Conteggio cumulativo delle righe al livello foglia contrassegnate come eliminate ma non ancora rimosse. Questo conteggio non include i record vengono eliminati immediatamente senza essere contrassegnati come ghost. Queste righe vengono rimosse da un thread di pulizia a intervalli impostati. Questo valore non include righe memorizzate a causa di una transazione di isolamento dello snapshot in sospeso.|    
+|**leaf_ghost_count**|**bigint**|Conteggio cumulativo delle righe al livello foglia contrassegnate come eliminate ma non ancora rimosse. Questo numero non include i record che vengono eliminati immediatamente senza essere contrassegnati come ghost. Queste righe vengono rimosse da un thread di pulizia a intervalli impostati. Questo valore non include righe memorizzate a causa di una transazione di isolamento dello snapshot in sospeso.|    
 |**nonleaf_insert_count**|**bigint**|Conteggio cumulativo degli inserimenti sopra il livello foglia.<br /><br /> 0 = heap o columnstore|    
 |**nonleaf_delete_count**|**bigint**|Conteggio cumulativo delle eliminazioni sopra il livello foglia.<br /><br /> 0 = heap o columnstore|    
 |**nonleaf_update_count**|**bigint**|Conteggio cumulativo degli aggiornamenti sopra il livello foglia.<br /><br /> 0 = heap o columnstore|    
@@ -105,11 +105,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|Conteggio cumulativo delle analisi di intervallo e tabella avviate nell'indice o nell'heap.|    
 |**singleton_lookup_count**|**bigint**|Conteggio cumulativo dei recuperi di singole righe dall'indice o heap.|    
 |**forwarded_fetch_count**|**bigint**|Conteggio delle righe recuperate tramite un record di inoltro.<br /><br /> 0 = Indici|    
-|**lob_fetch_in_pages**|**bigint**|Conteggio cumulativo delle pagine LOB recuperate dall'unità di allocazione LOB_DATA. Queste pagine contengono dati archiviati nelle colonne di tipo **testo**, **ntext**, **immagine**, **varchar (max)**, **(nvarchar max)**, **varbinary (max)**, e **xml**. Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_pages**|**bigint**|Conteggio cumulativo delle pagine LOB recuperate dall'unità di allocazione LOB_DATA. Queste pagine contengono dati archiviati in colonne di tipo **testo**, **ntext**, **immagine**, **varchar (max)**, **(nvarchar max)**, **varbinary (max)**, e **xml**. Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
 |**lob_fetch_in_bytes**|**bigint**|Conteggio cumulativo dei byte di dati LOB recuperati.|    
 |**lob_orphan_create_count**|**bigint**|Conteggio cumulativo dei valori LOB isolati (orfani) creati per le operazioni bulk.<br /><br /> 0 = Indice non cluster|    
 |**lob_orphan_insert_count**|**bigint**|Conteggio cumulativo dei valori LOB isolati (orfani) inseriti durante le operazioni bulk.<br /><br /> 0 = Indice non cluster|    
-|**row_overflow_fetch_in_pages**|**bigint**|Conteggio cumulativo delle pagine di dati di overflow della riga recuperate dall'unità di allocazione ROW_OVERFLOW_DATA.<br /><br /> Queste pagine contengono dati archiviati nelle colonne di tipo **varchar (n)**, **nvarchar (n)**, **varbinary**, e **sql_variant** che è stato inserito all'esterno di righe.|    
+|**row_overflow_fetch_in_pages**|**bigint**|Conteggio cumulativo delle pagine di dati di overflow della riga recuperate dall'unità di allocazione ROW_OVERFLOW_DATA.<br /><br /> Queste pagine contengono dati archiviati nelle colonne di tipo **varchar (n)**, **nvarchar (n)**, **varbinary**, e **sql_variant** sia stato il push all'esterno di righe.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|Conteggio cumulativo dei byte di dati di overflow della riga recuperati.|    
 |**column_value_push_off_row_count**|**bigint**|Conteggio cumulativo dei valori di colonna per i dati LOB e di overflow della riga spostati all'esterno di righe per adattare una riga inserita o aggiornata all'interno di una pagina.|    
 |**column_value_pull_in_row_count**|**bigint**|Conteggio cumulativo dei valori di colonna per i dati LOB e di overflow della riga esclusi dalla riga. Ciò si verifica quando un'operazione di aggiornamento libera spazio in un record e offre l'opportunità di includere uno o più valori all'esterno di righe dall'unità di allocazione LOB_DATA o ROW_OVERFLOW_DATA nell'unità di allocazione IN_ROW_DATA.|    
@@ -132,14 +132,14 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|Numero di pagine valutate per la compressione di tipo PAGE per partizioni specifiche di una tabella, un indice o una vista indicizzata. Sono incluse le pagine che non sono state compresse perché la compressione non avrebbe comportato risparmi significativi. Sempre 0 per un indice columnstore.|    
 |**page_compression_success_count**|**bigint**|Numero di pagine di dati valutate compresse utilizzando la compressione di tipo PAGE per partizioni specifiche di una tabella, un indice o una vista indicizzata. Sempre 0 per un indice columnstore.|    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Note    
  Questo oggetto a gestione dinamica non accetta parametri correlati da CROSS APPLY e OUTER APPLY.    
     
- È possibile utilizzare **Sys.dm db_index_operational_stats** per tenere traccia della quantità di tempo in cui gli utenti devono attendere per leggere o scrivere in una tabella, un indice o una partizione e identificare le tabelle o indici che vengono rilevata una significativa attività dei / o o a caldo aree sensibili.    
+ È possibile usare **DM db_index_operational_stats** per tenere traccia della quantità di tempo in cui gli utenti devono attendere per leggere o scrivere in una tabella, indice o partizione e identificare le tabelle o indici che riscontrano significativa attività dei / o o frequente aree problematiche.    
     
  Utilizzare le colonne seguenti per identificare le aree di contesa.    
     
- **Per analizzare un comune modello di accesso alla partizione di tabella o indice**, utilizzare le colonne:    
+ **Per analizzare un modello di accesso comune per la partizione di tabella o indice**, utilizzare queste colonne:    
     
 -   **leaf_insert_count**    
     
@@ -174,26 +174,26 @@ sys.dm_db_index_operational_stats (
      Queste colonne indicano se gli I/O fisici sono stati eseguiti per inserire le pagine di indice o heap in memoria e il numero di I/O eseguiti.    
     
 ## <a name="column-remarks"></a>Osservazioni relative alle colonne    
- I valori in **lob_orphan_create_count** e **lob_orphan_insert_count** devono essere sempre uguali.    
+ I valori nelle **lob_orphan_create_count** e **lob_orphan_insert_count** devono essere sempre uguali.    
     
- Il valore nelle colonne **lob_fetch_in_pages** e **lob_fetch_in_bytes** può essere maggiore di zero per indici non cluster contenenti una o più colonne LOB come colonne incluse. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md). Analogamente, il valore nelle colonne **row_overflow_fetch_in_pages** e **row_overflow_fetch_in_bytes** può essere maggiore di 0 per indici non cluster se l'indice include colonne che possono essere distribuite all'esterno di righe.    
+ Il valore nelle colonne **lob_fetch_in_pages** e **lob_fetch_in_bytes** può essere maggiore di zero per indici non cluster che contengono uno o più colonne LOB come colonne incluse. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md). Analogamente, il valore nelle colonne **row_overflow_fetch_in_pages** e **row_overflow_fetch_in_bytes** può essere maggiore di 0 per gli indici non cluster se l'indice contiene colonne che possono essere distribuite all'esterno di righe.    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>Procedura di ripristino dei contatori nella cache dei metadati    
- I dati restituiti da **Sys.dm db_index_operational_stats** esiste solo finché è disponibile l'oggetto cache dei metadati che rappresenta l'indice o heap. Questi dati non sono persistenti, né consistenti dal punto di vista transazionale. Ciò significa che non è possibile utilizzare questi contatori per determinare se un indice è stato utilizzato o meno oppure quando l'indice è stato utilizzato per l'ultima volta. Per ulteriori informazioni, vedere [db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
+ I dati restituiti da **DM db_index_operational_stats** esiste solo finché l'oggetto cache di metadati che rappresenta l'indice o heap è disponibile. Questi dati non sono persistenti, né consistenti dal punto di vista transazionale. Ciò significa che non è possibile utilizzare questi contatori per determinare se un indice è stato utilizzato o meno oppure quando l'indice è stato utilizzato per l'ultima volta. Per ulteriori informazioni, vedere [db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
     
  I valori di ogni colonna vengono impostati su zero ogni volta che i metadati per l'heap o l'indice vengono inseriti nella cache dei metadati e le statistiche vengono accumulate finché l'oggetto cache non viene rimosso dalla cache dei metadati. È pertanto possibile che un heap o un indice attivo disponga sempre dei relativi metadati nella cache e che il conteggio cumulativo rifletta l'attività dall'ultimo avvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I metadati di un heap o un indice meno attivo verranno inseriti nella e rimossi dalla cache in base al loro utilizzo. Ne consegue che i valori potrebbero non essere disponibili. L'eliminazione di un indice comporterà la rimozione delle statistiche corrispondenti dalla memoria e tali dati non verranno più rilevati dalla funzione. Altre operazioni DDL nell'indice potrebbero provocare l'azzeramento del valore delle statistiche.    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Utilizzo di funzioni di sistema per specificare i valori dei parametri    
- È possibile utilizzare il [!INCLUDE[tsql](../../includes/tsql-md.md)] funzioni [DB_ID](../../t-sql/functions/db-id-transact-sql.md) e [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) per specificare un valore per il *database_id* e *object_id* parametri. Se si passano valori non validi a queste funzioni, tuttavia, si potrebbero provocare risultati imprevisti. Quando si usa DB_ID o OBJECT_ID, verificare sempre che venga restituito un ID valido. Per altre informazioni, vedere la sezione Osservazioni in [DM db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
+ È possibile usare la [!INCLUDE[tsql](../../includes/tsql-md.md)] funzioni [DB_ID](../../t-sql/functions/db-id-transact-sql.md) e [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) per specificare un valore per i *database_id* e *object_id* parametri. Se si passano valori non validi a queste funzioni, tuttavia, si potrebbero provocare risultati imprevisti. Quando si usa DB_ID o OBJECT_ID, verificare sempre che venga restituito un ID valido. Per altre informazioni, vedere la sezione Osservazioni in [db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
     
 ## <a name="permissions"></a>Autorizzazioni    
  Sono richieste le autorizzazioni seguenti:    
     
 -   Autorizzazione CONTROL per l'oggetto specificato nel database    
     
--   Autorizzazione VIEW DATABASE STATE per restituire informazioni su tutti gli oggetti all'interno del database specificato, utilizzando il carattere jolly di oggetto @*object_id* = NULL    
+-   L'autorizzazione VIEW DATABASE STATE per restituire informazioni su tutti gli oggetti all'interno del database specificato, utilizzando il carattere jolly di oggetto @*object_id* = NULL    
     
--   Autorizzazione VIEW SERVER STATE per restituire informazioni su tutti i database, utilizzando il carattere jolly di database @*database_id* = NULL    
+-   L'autorizzazione VIEW SERVER STATE per restituire informazioni su tutti i database, utilizzando il carattere jolly di database @*database_id* = NULL    
     
  La concessione di VIEW DATABASE STATE consente la restituzione di tutti gli oggetti nel database, indipendentemente dalle eventuali autorizzazioni CONTROL negate per oggetti specifici.    
     

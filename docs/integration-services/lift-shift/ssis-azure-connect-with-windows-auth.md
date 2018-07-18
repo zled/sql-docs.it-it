@@ -1,25 +1,26 @@
 ---
-title: Connettersi a origini dati e condivisioni file con autenticazione di Windows | Microsoft Docs
+title: Connettersi a dati e condivisioni file con autenticazione di Windows | Microsoft Docs
+description: Informazioni su come configurare il catalogo SSIS nel database SQL di Azure per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati e condivisioni file.
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a0f1b6936644f2cae9cee469cb763696786a628
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: cca5deecf90fbbe28399d33ac2038bc2264b1ae6
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332685"
 ---
-# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication-in-ssis"></a>Connettersi a origini dati locali e condivisioni file di Azure con l'autenticazione di Windows in SSIS
-In questo articolo viene descritto come configurare il catalogo SSIS nel database SQL di Azure per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati locali e condivisioni file di Azure. È possibile usare l'autenticazione di Windows per connettersi alle origini dati nella stessa rete virtuale del runtime di integrazione SSIS di Azure, sia in locale che nelle macchine virtuali di Azure e in File di Azure.
+# <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-in-ssis-packages-in-azure"></a>Connettersi a origini dati e condivisioni file con l'autenticazione di Windows in pacchetti SSIS in Azure
+
+Questo articolo descrive come configurare il catalogo SSIS nel database SQL di Azure per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati e condivisioni file. È possibile usare l'autenticazione di Windows per connettersi alle origini dati nella stessa rete virtuale del runtime di integrazione SSIS di Azure, sia in locale che nelle macchine virtuali di Azure e in File di Azure.
 
 > [!WARNING]
 > Se non si specificano credenziali di dominio valide per l'autenticazione di Windows eseguendo `catalog`.`set_execution_credential` come descritto in questo articolo, i pacchetti che dipendono dall'autenticazione di Windows non possono connettersi alle origini dati e restituiscono errori in fase di esecuzione.
@@ -33,7 +34,7 @@ Se una delle origini dati è File di Azure, è possibile aggirare questa limitaz
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Fornire le credenziali di dominio per l'autenticazione di Windows
 Per specificare le credenziali del dominio che consentono ai pacchetti che usano l'autenticazione di Windows di connettersi alle origini dati locali, eseguire le operazioni seguenti:
 
-1.  Con SQL Server Management Studio (SSMS) o un altro strumento connettersi al database SQL che ospita il database del catalogo SSIS (SSISDB). Per altre informazioni, vedere [Connettersi al database del catalogo SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
+1.  Con SQL Server Management Studio (SSMS) o un altro strumento connettersi al database SQL che ospita il database del catalogo SSIS (SSISDB). Per altre informazioni, vedere [Connettersi al database del catalogo SSIS (SSISDB) in Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  Con SSISDB come database corrente, aprire una finestra di query.
 
@@ -91,7 +92,7 @@ Per connettersi a SQL Server locale da un pacchetto in esecuzione in Azure, è n
 
 1.  In Gestione configurazione SQL Server abilitare il protocollo TCP/IP.
 2.  Consentire l'accesso a un programma attraverso Windows Firewall. Per altre informazioni, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access).
-3.  Per connettersi con l'autenticazione di Windows, verificare che il runtime di integrazione SSIS di Azure appartenga a una rete virtuale che include anche SQL Server locale.  Per altre informazioni, vedere [Aggiungere un runtime di integrazione SSIS di Azure a una rete virtuale](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Usare quindi `catalog.set_execution_credential` per fornire le credenziali, come illustrato in questo articolo.
+3.  Per connettersi con l'autenticazione di Windows, verificare che il runtime di integrazione Azure-SSIS appartenga a una rete virtuale che include anche SQL Server locale.  Per altre informazioni, vedere [Aggiungere un runtime di integrazione SSIS di Azure a una rete virtuale](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Usare quindi `catalog.set_execution_credential` per fornire le credenziali, come illustrato in questo articolo.
 
 ## <a name="connect-to-an-on-premises-file-share"></a>Connettersi a una condivisione file locale
 Per verificare se è possibile connettersi a una condivisione file locale, eseguire le operazioni seguenti:
@@ -138,4 +139,4 @@ Per connettersi a una condivisione file in una condivisione file di Azure, segui
 ## <a name="next-steps"></a>Passaggi successivi
 - Distribuire un pacchetto. Per altre informazioni, vedere [Distribuire un progetto SSIS con SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
 - Eseguire un pacchetto. Per altre informazioni, vedere [Eseguire un pacchetto SSIS con SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
-- Pianificare un pacchetto. Per altre informazioni, vedere [Pianificare l'esecuzione del pacchetto SSIS in Azure](ssis-azure-schedule-packages.md).
+- Pianificare un pacchetto. Per altre informazioni, vedere [Pianificare i pacchetti SSIS in Azure](ssis-azure-schedule-packages.md).

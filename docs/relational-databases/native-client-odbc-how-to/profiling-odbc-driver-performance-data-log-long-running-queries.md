@@ -1,13 +1,12 @@
 ---
-title: Log di query con esecuzione prolungata (ODBC) | Documenti Microsoft
+title: Registrare query con esecuzione prolungata (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,11 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 93ddcef7631a18528ada3a0dda1eedec52e9a15f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79bfcc0eb68dd60752078e001c805083d111181f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431810"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Dati di profilatura delle prestazioni ODBC Driver - Log query con esecuzione prolungata
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,19 +35,19 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Per registrare query con esecuzione prolungata tramite Amministratore ODBC  
   
-1.  In **Pannello di controllo**, fare doppio clic su **strumenti di amministrazione** e quindi fare doppio clic su **origini dati (ODBC)**. In alternativa, è possibile eseguire odbcad32.exe dal prompt dei comandi.  
+1.  Nelle **Pannello di controllo**, fare doppio clic su **strumenti di amministrazione** e quindi fare doppio clic su **origine dati (ODBC)**. In alternativa, è possibile eseguire odbcad32.exe dal prompt dei comandi.  
   
-2.  Fare clic su di **DSN utente**, **DSN di sistema**, o **DSN su File** scheda.  
+2.  Scegliere il **DSN utente**, **DSN di sistema**, o **DSN su File** scheda.  
   
 3.  Fare clic sull'origine dati per cui si desidera registrare le query con esecuzione prolungata.  
   
 4.  Fare clic su **configurare**.  
   
-5.  In guidata di Microsoft SQL Server configura DSN, passare alla pagina con **salvare il file di log di query con esecuzione prolungata**.  
+5.  In Microsoft SQL Server di configurazione DSN guidata passare alla pagina contenente **Salva query con esecuzione prolungata nel file di log**.  
   
-6.  Selezionare **salvare il file di log di query con esecuzione prolungata**. Nella casella immettere il nome del file in cui si desidera registrare le query con esecuzione prolungata. Facoltativamente, fare clic su **Sfoglia** per sfogliare il file system per il log di query.  
+6.  Selezionare **Salva query con esecuzione prolungata nel file di log**. Nella casella immettere il nome del file in cui si desidera registrare le query con esecuzione prolungata. Facoltativamente, fare clic su **esplorare** sfogliare il file system per il log di query.  
   
-7.  Impostare in un intervallo di timeout di query, in millisecondi, di **query lunghe (in millisecondi)** casella.  
+7.  Impostare in un intervallo di timeout di query, in millisecondi, il **durata query lunghe (millisecondi)** casella.  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Per registrare dati di query con esecuzione prolungata a livello di programmazione  
   
@@ -224,6 +224,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Profilatura procedure relative alle prestazioni del Driver ODBC & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Procedure relative alle prestazioni del Driver ODBC di profilatura &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

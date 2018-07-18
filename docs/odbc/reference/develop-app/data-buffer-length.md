@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910206"
 ---
 # <a name="data-buffer-length"></a>Lunghezza del Buffer di dati
 L'applicazione passa la lunghezza in byte del buffer di dati per il driver in un argomento, denominato *BufferLength* o un nome simile. Ad esempio, nella chiamata seguente a **SQLBindCol**, l'applicazione specifica la lunghezza del *ValuePtr* buffer (**sizeof (***ValuePtr***)**):  

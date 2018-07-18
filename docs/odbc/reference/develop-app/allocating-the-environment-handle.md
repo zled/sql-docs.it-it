@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912146"
 ---
 # <a name="allocating-the-environment-handle"></a>Allocare l'Handle di ambiente
 La prima attività per qualsiasi applicazione ODBC consiste nel caricare il Driver Manager; Questa procedura è dipendente dal sistema operativo. Ad esempio, in un computer che esegue Microsoft Windows® 95/98, Windows NT Workstation/Windows 2000 Professional o Microsoft® Windows NT® Server e Windows 2000 Server, l'applicazione sia collegata alla libreria di gestione Driver o chiamate  **LoadLibrary** per caricare la DLL di gestione Driver.  

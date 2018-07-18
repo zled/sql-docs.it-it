@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di modelli che contengono query XPath (Provider SQLXMLOLEDB) | Documenti Microsoft
+title: Esecuzione di modelli che contengono query XPath (Provider SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 005df507a2c48356ee72506530fb7c552fa43b97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032379"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Esecuzione di modelli che contengono query XPath (provider SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,16 +41,16 @@ ms.lasthandoff: 05/03/2018
   
 -   Schema di mapping  
   
- In questa applicazione ADO di esempio, viene specificato un modello XML costituito da una query XPath (radice) sullo schema di mapping XSD (MySchema. XML) che è descritto nell'argomento [l'esecuzione di query XPath &#40;Provider SQLXMLOLEDB&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
+ In questa applicazione ADO di esempio, viene specificato un modello XML costituito da una query XPath (radice) sullo schema di mapping XSD (MySchema. XML) descritto nel [l'esecuzione di query XPath &#40;Provider SQLXMLOLEDB&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
   
- La proprietà dello Schema di Mapping fornisce lo schema di mapping XSD sul quale viene eseguita la query XPath. La proprietà percorso di Base fornisce il percorso del file per lo schema di mapping.  
+ La proprietà dello Schema di Mapping fornisce lo schema di mapping XSD sul quale viene eseguita la query XPath. La proprietà Path di Base fornisce il percorso del file per lo schema di mapping.  
   
- La proprietà ClientSideXML è impostata su True. pertanto il documento XML viene generato sul client.  
+ Proprietà ClientSideXML è impostata su True. pertanto il documento XML viene generato sul client.  
   
  Nell'applicazione viene specificata direttamente una query XPath È pertanto necessario includere il sottolinguaggio {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   
 > [!NOTE]  
->  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione. In questo esempio viene inoltre specificato l'utilizzo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) per il provider di dati che richiede l'installazione di un software client di rete aggiuntivo. Per ulteriori informazioni, vedere [requisiti di sistema per SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione. In questo esempio viene inoltre specificato l'utilizzo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) per il provider di dati che richiede l'installazione di un software client di rete aggiuntivo. Per altre informazioni, vedere [requisiti di sistema per SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

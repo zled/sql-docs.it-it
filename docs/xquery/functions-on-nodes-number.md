@@ -1,5 +1,5 @@
 ---
-title: numero di funzione (XQuery) | Documenti Microsoft
+title: numero di funzione (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 65faec31c6e89421ce05bab28dae97e18195bdde
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031519"
 ---
-# <a name="functions-on-nodes---number"></a>Funzioni sui nodi - numero
+# <a name="functions-on-nodes---number"></a>Funzioni sui nodi - number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce il valore numerico del nodo indicato dalla *$arg*.  
+  Restituisce il valore numerico del nodo in cui è indicato da *$arg*.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,8 +47,8 @@ fn:number($arg as node()?) as xs:double?
  *$arg*  
  Nodo per il quale verrà restituito un valore numerico.  
   
-## <a name="remarks"></a>Osservazioni  
- Se *$arg* viene omesso, il valore numerico del nodo di contesto, convertito in double, viene restituito. In SQL Server, **fn:number()** senza un argomento può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]). Ad esempio, l'espressione seguente restituisce l'elemento <`ROOT`>.  
+## <a name="remarks"></a>Note  
+ Se *$arg* viene omesso, viene restituito il valore numerico del nodo di contesto, convertito in valore double. In SQL Server **fn:number()** senza un argomento può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]). Ad esempio, l'espressione seguente restituisce l'elemento <`ROOT`>.  
   
 ```  
 declare @x xml  
@@ -83,7 +84,7 @@ WHERE ProductModelID=7
   
 -   Il **Number ()** funzione non è necessaria, come illustrato dalla query per il **LotSizeA** attributo. Si tratta infatti di una funzione XPath della versione 1.0 ed è stata inclusa principalmente per motivi di compatibilità con le versioni precedenti.  
   
--   L'espressione XQuery per **LotSizeB** specifica la funzione number ed è ridondante.  
+-   La query XQuery per **LotSizeB** specifica la funzione number ed è ridondante.  
   
 -   La query per **LotSizeD** viene illustrato l'utilizzo di un valore numerico in un'operazione aritmetica.  
   
@@ -103,7 +104,7 @@ ProductModelID   Result
   
 -   Il **Number ()** funzione accetta solo nodi. Non accetta valori atomici.  
   
--   Quando i valori non possono essere restituiti come un numero, il **Number ()** funzione restituisce una sequenza vuota anziché NaN.  
+-   Quando non possono essere restituiti valori sotto forma di numero, il **Number ()** funzione restituisce una sequenza vuota anziché NaN.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni XQuery per il tipo di dati XML](../xquery/xquery-functions-against-the-xml-data-type.md)  

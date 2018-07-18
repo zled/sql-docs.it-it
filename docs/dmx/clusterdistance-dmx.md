@@ -1,36 +1,25 @@
 ---
-title: ClusterDistance (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ClusterDistance
-dev_langs:
-- DMX
-helpviewer_keywords:
-- ClusterDistance function
-ms.assetid: a13152b3-4cd1-4c79-8a3e-207624198330
-caps.latest.revision: 11
-author: Minewiskan
+title: ClusterDistance (DMX) | Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 03e85862a5fc8a1a9daae56282294d9addad53f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2d8eb879d23a344e5de6bad3c9fb6042fdadb3e7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985397"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Il **ClusterDistance** funzione restituisce la distanza del case di input dal cluster specificato, o se viene specificato alcun cluster, la distanza del case di input dal cluster più probabile.  
+  Il **ClusterDistance** funzione restituisce la distanza del case di input dal cluster specificato, o se non viene specificato alcun cluster, la distanza del case di input dal cluster più probabile.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,12 +34,12 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="return-type"></a>Tipo restituito  
  Valore scalare.  
   
-## <a name="remarks"></a>Osservazioni  
- Il **ClusterDistance** funzione restituisce la distanza tra il case di input e il cluster con la probabilità più elevata per case di input.  
+## <a name="remarks"></a>Note  
+ Il **ClusterDistance** funzione restituisce la distanza tra il case di input e il cluster con la probabilità più alta di case di input.  
   
  Poiché con il clustering K-medie un case può appartenere solo a un cluster, la distanza del cluster è sempre 0 con un peso di appartenenza di 1.0. Tuttavia, in K-medie si presuppone che per ogni cluster sia presente un centro. È possibile ottenere il valore del centro esplorando o eseguendo una query sulla tabella nidificata NODE_DISTRIBUTION nel contenuto del modello di data mining. Per altre informazioni, vedere [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
- Con il metodo di clustering predefinito EM tutti i punti nel cluster presentano la stessa probabilità; pertanto, per motivi strutturali non è previsto un centro per il cluster. Il valore di **ClusterDistance** tra un case specifico e un determinato cluster *N* viene calcolata come segue:  
+ Con il metodo di clustering predefinito EM tutti i punti nel cluster presentano la stessa probabilità; pertanto, per motivi strutturali non è previsto un centro per il cluster. Il valore di **ClusterDistance** tra un determinato cluster e un particolare case *N* viene calcolata come segue:  
   
  ClusterDistance(N) =1–(membershipWeight(N))  
   
@@ -65,9 +54,9 @@ ClusterDistance([<ClusterID expression>])
   
 -   Usare la [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md) funzione per ottenere la probabilità che un case appartenga a un cluster specifico. Questo valore viene utilizzato come valore inverso della distanza del cluster.  
   
--   Usare la [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) funzione per restituire un istogramma della probabilità del case di input in ognuno dei cluster del modello.  
+-   Usare la [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) funzione per restituire un istogramma che mostra la probabilità che il case di input esistente in ognuno dei cluster del modello.  
   
--   Usare la [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) funzione per restituire una misura da 0 a 1 che indica la probabilità un case di input è presente prendendo in considerazione il modello appreso dall'algoritmo.  
+-   Usare la [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) funzione per restituire una misura da 0 a 1 che indica quale probabilità un case di input è presente prendendo in considerazione il modello appreso dall'algoritmo.  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Esempio 1: Acquisizione della distanza del cluster rispetto al cluster più probabile  
  Nell'esempio seguente viene restituita la distanza dal case specificato al cluster a cui appartiene il case più probabile.  
@@ -138,8 +127,8 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Vedere anche  
  [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Contenuto del modello di data mining per il Clustering modelli & #40; Analysis Services - Data Mining & #41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Contenuto dei modelli di data mining per i modelli di Clustering &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

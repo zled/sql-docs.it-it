@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911676"
 ---
 # <a name="is-odbc-the-answer"></a>La risposta è ODBC?
 Prima di affrontare il problema di interoperabilità, prendere in considerazione i seguenti aspetti: l'applicazione utilizzare ODBC affatto? Ciò potrebbe sembrare una domanda strano per porre in una Guida per ODBC, ma è, in realtà, una legittima. ODBC non è stato progettato per sostituire completamente l'API di database native, né è stato progettato per fornire l'accesso al database in tutte le circostanze. È stato progettato per fornire un'interfaccia comune per i database e può essere disponibile ai programmatori di dover conoscere e gestire i collegamenti a più database.  

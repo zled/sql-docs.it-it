@@ -1,14 +1,11 @@
 ---
-title: Rappresentazione e credenziali per le connessioni | Documenti Microsoft
+title: Rappresentazione e credenziali per le connessioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -24,11 +21,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 09e9a65b9a6be2e1dc9de9153054f9b024818d0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 828357e883ddcf1b1aa1792878d1aedc52105f99
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358893"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Rappresentazione e credenziali per le connessioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +34,11 @@ ms.lasthandoff: 05/03/2018
   
  Per impostazione predefinita, un processo di SQL Server che si connette a Windows acquisisce il contesto di sicurezza dell'account di servizio Windows di SQL Server. È tuttavia possibile eseguire il mapping di una funzione CLR a un'identità del proxy, in modo che le connessioni in uscita dispongano di un contesto di sicurezza diverso da quello dell'account di servizio Windows.  
   
- In alcuni casi, si desidera rappresentare il chiamante utilizzando il **SqlContext.WindowsIdentity** proprietà anziché in esecuzione come account del servizio. Il **WindowsIdentity** istanza rappresenta l'identità del client che ha richiamato il codice chiamante ed è disponibile solo quando il client utilizza l'autenticazione di Windows. Dopo aver ottenuto il **WindowsIdentity** istanza, è possibile chiamare **Impersonate** per modificare il token di sicurezza del thread, quindi aprire connessioni ADO.NET per conto del client.  
+ In alcuni casi, è possibile rappresentare il chiamante usando il **SqlContext.WindowsIdentity** proprietà anziché in esecuzione come account del servizio. Il **WindowsIdentity** istanza rappresenta l'identità del client che viene richiamato il codice chiamante ed è disponibile solo quando l'autenticazione di Windows usato dal client. Dopo aver ottenuto il **WindowsIdentity** istanza, è possibile chiamare **Impersonate** per modificare il token di sicurezza del thread, quindi aprire le connessioni ADO.NET per conto del client.  
   
- Dopo aver chiamato SQLContext.WindowsIdentity.Impersonate, non è possibile accedere a dati locali e non è possibile accedere ai dati di sistema. Per accedere ai dati, è necessario chiamare WindowsImpersonationContext.  
+ Dopo aver chiamato SQLContext.WindowsIdentity.Impersonate, è possibile accedere ai dati locali e non può accedere ai dati di sistema. Per accedere ai dati anche in questo caso, è necessario chiamare WindowsImpersonationContext.  
   
- Nell'esempio seguente viene illustrato come rappresentare il chiamante utilizzando il **SqlContext.WindowsIdentity** proprietà.  
+ Nell'esempio seguente viene illustrato come rappresentare il chiamante usando il **SqlContext.WindowsIdentity** proprietà.  
   
  Visual C#  
   
@@ -76,9 +74,9 @@ catch
 ```  
   
 > [!NOTE]  
->  Per informazioni sulle modifiche al comportamento della rappresentazione, vedere [modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Per informazioni sulle modifiche del comportamento della rappresentazione, vedere [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
- Inoltre, se è stata ottenuta l'istanza dell'identità di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, per impostazione predefinita non è possibile propagarla in un altro computer, in quanto la propagazione è limitata dall'infrastruttura di sicurezza di Windows. Esiste tuttavia un meccanismo noto come "delega" che abilita la propagazione delle identità di Windows in più computer attendibili. Altre informazioni sulla delega nell'articolo di TechNet, "[transizione del protocollo Kerberos e delega vincolata](http://go.microsoft.com/fwlink/?LinkId=50419)".  
+ Inoltre, se è stata ottenuta l'istanza dell'identità di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, per impostazione predefinita non è possibile propagarla in un altro computer, in quanto la propagazione è limitata dall'infrastruttura di sicurezza di Windows. Esiste tuttavia un meccanismo noto come "delega" che abilita la propagazione delle identità di Windows in più computer attendibili. Altre informazioni sulla delega nell'articolo di TechNet, "[Kerberos Protocol Transition and Constrained Delegation](http://go.microsoft.com/fwlink/?LinkId=50419)".  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto SqlContext](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

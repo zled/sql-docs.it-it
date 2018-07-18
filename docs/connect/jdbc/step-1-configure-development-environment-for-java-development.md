@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32848786"
 ---
 # <a name="step-1-configure-development-environment-for-java-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Java
   

@@ -2,7 +2,7 @@
 title: Driver OLE DB per la funzionalità di SQL Server | Documenti Microsoft
 description: Driver OLE DB per le funzionalità di SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,20 +18,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3f1cc26981dae02bd76133c204c5eff142db76c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbc52f29aa0bfc6c60d9f8b7cb47b138c11b561
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612356"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Driver OLE DB per la funzionalità di SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Oltre a esporre le funzionalità di Windows (in precedenza Microsoft) Data Access Components (WDAC), il Driver OLE DB per SQL Server implementa anche molte altre funzionalità per esporre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funzionalità.  
   
-## <a name="in-this-section"></a>Contenuto della sezione    
+## <a name="in-this-section"></a>Argomenti della sezione    
  [Uso del mirroring del database](../../oledb/features/using-database-mirroring.md)  
  Viene illustrato come il Driver OLE DB per SQL Server supporta l'utilizzo di database con mirroring, ovvero la possibilità di mantenere una copia, o mirror, di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database in un server di standby.  
   
@@ -44,16 +45,16 @@ ms.lasthandoff: 05/03/2018
  [Uso di tipi di dati XML](../../oledb/features/using-xml-data-types.md)  
  Viene descritto come il Driver OLE DB per SQL Server supporta il tipo di dati XML, ovvero un tipo di dati basato su XML che può essere usato come tipo di colonna, tipo di variabile, tipo di parametro o tipo restituito della funzione.  
   
- [Utilizzo di tipi definiti dall'utente](../../oledb/features/using-user-defined-types.md)  
+ [Uso dei tipi definiti dall'utente](../../oledb/features/using-user-defined-types.md)  
  Viene illustrato come il Driver OLE DB per SQL Server supporta User-Defined tipi (UDT), che estende il sistema di tipi SQL consentendo di archiviare oggetti e strutture di dati personalizzate in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.  
   
- [Utilizzo di tipi di valori di grandi dimensioni](../../oledb/features/using-large-value-types.md)  
+ [Uso di tipi valore di grandi dimensioni](../../oledb/features/using-large-value-types.md)  
  Viene descritto come il Driver OLE DB per SQL Server supporta i tipi di dati valori di grandi dimensioni, ovvero sono tipi di dati large object (LOB).  
   
  [Modifica delle password a livello di codice](../../oledb/features/changing-passwords-programmatically.md)  
  Viene descritto come il Driver OLE DB per SQL Server supporta la gestione delle password scadute in modo che le password possono ora essere modificate sul client senza il coinvolgimento dell'amministratore.  
   
- [Utilizzo dell'isolamento dello Snapshot](../../oledb/features/working-with-snapshot-isolation.md)  
+ [Uso dell'isolamento dello snapshot](../../oledb/features/working-with-snapshot-isolation.md)  
  Viene descritto come il Driver OLE DB per SQL Server supporta la funzionalità avanzata al controllo delle versioni di riga che consente di migliorare le prestazioni del database, evitando scenari di blocco di lettura / scrittura.  
   
  [Uso delle notifiche delle query](../../oledb/features/working-with-query-notifications.md)  

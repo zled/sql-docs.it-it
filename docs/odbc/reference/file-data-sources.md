@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915586"
 ---
 # <a name="file-data-sources"></a>Origini dati dei file
 *Origini dati del file* vengono archiviati in un file e consentire le informazioni di connessione da usare più volte da un singolo utente o condiviso da più utenti. Quando si utilizza un'origine dati file, Driver Manager esegue la connessione all'origine dati utilizzando le informazioni in un file DSN. Questo file può essere gestito come qualsiasi altro file. Un'origine dati file non dispone di un nome dell'origine dati, come non a un'origine dati macchina e non è registrato a un utente o computer.  

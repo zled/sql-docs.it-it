@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899186"
 ---
 # <a name="column-name-limitations"></a>Limitazioni di nomi di colonna
 I nomi di colonna possono contenere qualsiasi carattere validi (ad esempio, spazi). Se i nomi di colonna contengono caratteri tranne lettere, numeri e caratteri di sottolineatura, il nome deve essere delimitato racchiudendolo tra virgolette indietro (').  

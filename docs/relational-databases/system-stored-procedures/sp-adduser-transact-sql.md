@@ -1,5 +1,5 @@
 ---
-title: sp_adduser (Transact-SQL) | Documenti Microsoft
+title: sp_adduser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: d4f7afe6646fd22ff24aa6aee4e5dcde416420e9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036099"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +50,10 @@ sp_adduser [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Argomenti  
  [ **@loginame =** ] **'***login***'**  
- Nome dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dell'account di accesso di Windows. *account di accesso* è un **sysname**, non prevede alcun valore predefinito. *account di accesso* deve essere un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o account di accesso di Windows.  
+ Nome dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dell'account di accesso di Windows. *account di accesso* è un **sysname**, non prevede alcun valore predefinito. *account di accesso* deve essere un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o Windows.  
   
  [  **@name_in_db =** ] **'***utente***'**  
- Nome del nuovo utente del database. *utente* è un **sysname**, con un valore predefinito è NULL. Se *utente* non viene specificato, il nome del nuovo utente del database predefinito per il *accesso* nome. Specifica di *utente* assegna il nuovo utente, un nome del database diverso dal nome dell'account di accesso a livello di server.  
+ Nome del nuovo utente del database. *utente* è un **sysname**, con un valore predefinito è NULL. Se *utente* non viene specificato, per impostazione predefinita il nome del nuovo utente del database di *login* nome. Che specifica *utente* assegna a un nome al nuovo utente del database diverso dal nome dell'account di accesso a livello di server.  
   
  [  **@grpname =** ] **'***ruolo***'**  
  Ruolo del database di cui è membro il nuovo utente. *ruolo* viene **sysname**, con un valore predefinito è NULL. *ruolo* deve essere un ruolo di database valido nel database corrente.  
@@ -60,20 +61,20 @@ sp_adduser [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_adduser** creerà inoltre uno schema con il nome dell'utente.  
   
  Dopo avere aggiunto un utente, utilizzare le istruzioni GRANT, DENY e REVOKE per definire le autorizzazioni per controllare le attività che l'utente può svolgere.  
   
- Utilizzare **Sys. server_principals** per visualizzare un elenco di nomi di account di accesso valido.  
+ Uso **Sys. server_principals** per visualizzare un elenco di nomi di account di accesso valido.  
   
- Utilizzare **sp_helprole** per visualizzare un elenco di nomi di ruolo validi. Se si specifica un ruolo, l'utente ottiene automaticamente le autorizzazioni definite per tale ruolo. Se non viene specificato un ruolo, l'utente ottiene le autorizzazioni concesse per impostazione predefinita **pubblica** ruolo. Per aggiungere un utente a un ruolo, un valore per il *nome utente* devono essere specificati. (*username* può essere identico *login_id*.)  
+ Uso **sp_helprole** per visualizzare un elenco di nomi di ruolo validi. Se si specifica un ruolo, l'utente ottiene automaticamente le autorizzazioni definite per tale ruolo. Se non viene specificato un ruolo, l'utente ha le autorizzazioni concesse per impostazione predefinita **pubblica** ruolo. Per aggiungere un utente a un ruolo, un valore per il *nome utente* devono essere specificati. (*nomeutente* può essere identico *login_id*.)  
   
- Utente **guest** esiste già in ogni database. Aggiunta dell'utente **guest** abiliterà questo utente, se era disabilitata. Per impostazione predefinita, utente **guest** è disabilitato nei nuovi database.  
+ Utente **guest** già esiste in ogni database. Aggiunta dell'utente **guest** abiliterà questo utente, se è stata precedentemente disabilitata. Per impostazione predefinita, utente **guest** è disabilitato nei nuovi database.  
   
  **sp_adduser** non può essere eseguita all'interno di una transazione definita dall'utente.  
   
- Non è possibile aggiungere un **guest** utente perché un **guest** utente esiste già all'interno di ogni database. Per abilitare il **guest** utente, concedere **guest** dell'autorizzazione CONNECT, come illustrato:  
+ Non è possibile aggiungere un **guest** utente perché un **guest** utente esiste già all'interno di ogni database. Per abilitare la **guest** utente, concedere **guest** dell'autorizzazione CONNECT come illustrato:  
   
 ```  
 GRANT CONNECT TO guest;  
@@ -93,7 +94,7 @@ EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';
 ```  
   
 ### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Aggiunta di un utente del database con lo stesso ID di accesso  
- Nell'esempio seguente l'utente `Arvind` viene aggiunto al database corrente per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Arvind`. Il valore predefinito di cui appartiene l'utente **pubblica** ruolo.  
+ Nell'esempio seguente l'utente `Arvind` viene aggiunto al database corrente per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Arvind`. L'utente a cui appartiene il valore predefinito **pubblica** ruolo.  
   
 ```  
 EXEC sp_adduser 'Arvind';  

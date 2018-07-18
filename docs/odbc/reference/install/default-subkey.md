@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917512"
 ---
 # <a name="default-subkey"></a>Sottochiave predefinita
 Il Registro di sistema può specificare un'origine dati predefinita con la sottochiave predefinito. Questa sottochiave è un caso speciale della sottochiave specifica origine dati e ha gli stessi valori di qualsiasi altra sottochiave specifica origine dati. L'unica differenza è che non è elencato come valore della sottochiave origini dati ODBC.

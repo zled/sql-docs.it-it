@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911506"
 ---
 # <a name="hard-coded-sql-statements"></a>Istruzioni SQL hard-Coded
 Applicazioni che eseguono attività fissa in genere contengono le istruzioni SQL hard-coded. Ad esempio, un sistema di immissione degli ordini è possibile utilizzare la chiamata seguente a ordini di vendita Apri elenco:  

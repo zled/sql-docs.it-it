@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,14 +26,15 @@ helpviewer_keywords:
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 caps.latest.revision: 67
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 23def6b6c02b49ae953c68a9e927de516582a605
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 50df822ad62216897cbcf13526646782938dc71f
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790822"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ CREATE QUEUE <object>
   
  Nella tabella seguente vengono elencate le colonne di una coda.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |status|**tinyint**|Stato del messaggio. L'istruzione RECEIVE restituisce i messaggi con stato **1**. Se la memorizzazione dei messaggi è attiva, lo stato viene quindi impostato su 0. Se la memorizzazione dei messaggi è disattivata, il messaggio viene eliminato dalla coda. I messaggi nella coda possono contenere uno dei valori seguenti:<br /><br /> **0** = Messaggio ricevuto memorizzato<br /><br /> **1** = Pronto per la ricezione<br /><br /> **2** = Non ancora completo<br /><br /> **3** = Messaggio inviato memorizzato|  
 |priority|**tinyint**|Livello di priorità assegnato al messaggio.|  

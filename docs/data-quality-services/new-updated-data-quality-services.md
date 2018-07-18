@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32514759"
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Articoli nuovi e aggiornati di recente: Data Quality Services per SQL Server
 

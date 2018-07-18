@@ -1,31 +1,20 @@
 ---
-title: PredictSequence (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictSequence
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictSequence function
-ms.assetid: c2992dfc-b99d-4430-8dcd-21ad3ffd4590
-caps.latest.revision: 34
-author: Minewiskan
+title: PredictSequence (DMX) | Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 57085d5459855afbe39db3e3b6af836ad8c8aaeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 813641b7fa72405a0ba5a026e255f03feb94bd05
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992473"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,12 +33,12 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ## <a name="return-type"></a>Tipo restituito  
  Oggetto \<espressione di tabella >.  
   
-## <a name="remarks"></a>Osservazioni  
- Se il *n* parametro viene specificato, restituisce i valori seguenti:  
+## <a name="remarks"></a>Note  
+ Se il *n* parametro è specificato, restituisce i valori seguenti:  
   
--   Se *n* è maggiore di zero, i valori di sequenza più probabili nella prossima *n* passaggi.  
+-   Se *n* è maggiore di zero, i valori di sequenza più probabili entro i prossimi *n* passaggi.  
   
--   Se entrambi *n-inizio* e *n-end* vengono specificati, la sequenza di valori da *n-inizio* a *n-end*.  
+-   Se entrambe *n-start* e *n-end* vengono specificati, la sequenza di valori da *n-start* al *n-end*.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituita una sequenza dei cinque prodotti che più probabilmente verranno acquistati da un cliente nel database [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] in base al modello di data mining Sequence Clustering.  
@@ -62,7 +51,7 @@ From
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

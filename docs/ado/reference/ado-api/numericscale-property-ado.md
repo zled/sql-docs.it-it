@@ -2,7 +2,6 @@
 title: Proprietà NumericScale (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 575618ad1760cdca6c32e1b8e2797070583506de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ad1cceb73749530faf08e96eecef235905971e5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279930"
 ---
 # <a name="numericscale-property-ado"></a>Proprietà NumericScale (ADO)
 Indica la scala di valori numerici in un [parametro](../../../ado/reference/ado-api/parameter-object.md) o [campo](../../../ado/reference/ado-api/field-object.md) oggetto.  
@@ -33,7 +33,7 @@ Indica la scala di valori numerici in un [parametro](../../../ado/reference/ado-
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **Byte** valore che indica il numero di posizioni decimali in cui i valori numerici verranno risolte.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **NumericScale** proprietà per determinare il numero di cifre a destra del separatore decimale da utilizzare per rappresentare i valori per un valore numerico **parametro** o **campo** oggetto.  
   
  Per **parametro** oggetti, il **NumericScale** proprietà è di lettura/scrittura.  

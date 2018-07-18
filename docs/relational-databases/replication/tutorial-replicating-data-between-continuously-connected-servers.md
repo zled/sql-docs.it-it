@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -22,12 +21,12 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d8c3441f219017125b755b498a534317a1fca01
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: fcb6a4d0468dc74bbc937a11fd60783897e402cf
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550482"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350033"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Esercitazione: Configurare la replica tra due server sempre connessi (replica transazionale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +141,8 @@ Se al momento della creazione della pubblicazione SQL Server Agent non era in es
 
 ![Pulsante "Avvia" e modifica nel messaggio di stato che indica che l'agente di snapshot è stato eseguito](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-Se a questo punto viene visualizzato un errore, vedere [Risolvere gli errori dell'agente di snapshot](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent). 
+Se a questo punto viene visualizzato un errore, vedere [Troubleshooting Snapshot Agent error](troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent) (Risoluzione dei problemi dell'agente di snapshot).
+
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>Aggiungere l'account di accesso dell'agente di distribuzione all'elenco di accesso alla pubblicazione  
@@ -239,7 +239,7 @@ In questa sezione vengono usati token di traccia per verificare che le modifiche
 
 Per altre informazioni, vedere: 
 - [Misurare la latenza e convalidare le connessioni per la replica transazionale](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-- [Risoluzione degli errori di sincronizzazione della replica transazionale](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+- [Trovare gli errori con la replica transazionale di SQL Server](troubleshoot-tran-repl-errors.md)
 
 
 ## <a name="next-steps"></a>Passaggi successivi
@@ -249,5 +249,3 @@ Il prossimo articolo illustrerà come configurare la replica di tipo merge:
 
 > [!div class="nextstepaction"]
 > [Esercitazione: Configurare la replica tra un server e più client per dispositivi mobili (replica di tipo merge)](tutorial-replicating-data-with-mobile-clients.md)
-
-  

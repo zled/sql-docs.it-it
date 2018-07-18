@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911906"
 ---
 # <a name="considering-database-features-to-use"></a>Prendere in considerazione le funzionalità di Database da utilizzare
 Una volta noto il livello di base di interoperabilità, è necessario considerare le funzionalità del database utilizzate dall'applicazione. Ad esempio, le istruzioni SQL l'applicazione eseguirà? L'applicazione utilizzerà i cursori scorrevoli? Transazioni? Procedure? Dati di tipo Long? Per informazioni su quali funzionalità potrebbero non essere supportati da tutti i DBMS, vedere il [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), e [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) le descrizioni delle funzioni e [ Appendice c: la grammatica SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Le funzionalità richieste da un'applicazione potrebbero eliminare alcuni DBMS dall'elenco di DBMS di destinazione. Si potrebbe anche essere indicato che l'applicazione può utilizzare facilmente DBMS più.  

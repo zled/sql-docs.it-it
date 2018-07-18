@@ -2,10 +2,10 @@
 title: Utilizzo dell'interfaccia IMultipleResults per elaborare più set di risultati | Documenti Microsoft
 description: Utilizzo dell'interfaccia IMultipleResults per elaborare i risultati più imposta
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-commands
+ms.component: oledb|ole-db-commands
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 162b706391e2128cb715396fd836bf446a625b17
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 59e39d472be21161d27b0449c1f2e81d31a09c4d
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666281"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>Utilizzo dell'interfaccia IMultipleResults per elaborare più set di risultati
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   I consumer utilizzano le **IMultipleResults** interfaccia per elaborare i risultati restituiti dal Driver OLE DB per l'esecuzione di comandi di SQL Server. Quando il Driver OLE DB per SQL Server invia un comando per l'esecuzione, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue le istruzioni e restituisce i risultati.  
   

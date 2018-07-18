@@ -3,12 +3,9 @@ title: sys.sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,20 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b387bbd432eb01df84661a61b1f9528857cd74c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9991ad7e43ffa367387392b40a22a1bea9aed37c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407510"
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Ripristina la connessione autenticata tra un database locale abilitato per l'estensione e il database remoto.  
+  Consente di ripristinare la connessione autenticata tra un database locale abilitato per Stretch e il database remoto.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,10 +42,10 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
   
 ## <a name="arguments"></a>Argomenti  
  @credential = *@credential*  
- Sia le credenziali con ambito database associate al database locale abilitata per l'estensione.  
+ È la credenziale con ambito database associata al database locale abilitato per l'estensione.  
   
  @with_copy = *@with_copy*  
- Specifica se eseguire una copia dei dati remoti e connettersi alla copia (scelta consigliata). *@with_copy* è di tipo bit.  
+ Specifica se creare una copia dei dati remoti e connettersi alla copia (scelta consigliata). *@with_copy* è di tipo bit.  
   
  @azure_servername = *@azure_servername*  
  Specifica il nome del server Azure che contiene i dati remoti. *@azure_servername* è di tipo sysname.  
@@ -62,11 +59,11 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede autorizzazioni db_owner.  
   
-## <a name="remarks"></a>Osservazioni  
- Quando si esegue [sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) per riconnettersi al database Azure remoto, questa operazione reimposta automaticamente la modalità query LOCAL_AND_REMOTE, ovvero il comportamento predefinito per l'estensione Database. Ovvero, le query restituiscono risultati dai dati locali e remoti.  
+## <a name="remarks"></a>Note  
+ Quando si esegue [Sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) per ristabilire la connessione al database di Azure remoto, questa operazione automaticamente Reimposta la modalità query LOCAL_AND_REMOTE, ovvero il comportamento predefinito per Stretch Database. Vale a dire, le query restituiscono risultati dai dati locali e remoti.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente consente di ripristinare la connessione autenticata tra un database locale abilitato per l'estensione e il database remoto. Effettua una copia dei dati remoti (scelta consigliati) e si connette alla nuova copia.  
+ L'esempio seguente ripristina la connessione autenticata tra un database locale abilitato per Stretch e il database remoto. Crea una copia dei dati remoti (scelta consigliati) e si connette alla nuova copia.  
   
 ```sql  
 DECLARE @credentialName nvarchar(128);   

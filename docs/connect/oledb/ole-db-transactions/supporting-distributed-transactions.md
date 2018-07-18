@@ -2,10 +2,10 @@
 title: Supporto delle transazioni distribuite | Documenti Microsoft
 description: Transazioni distribuite nel Driver OLE DB per SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-transactions
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,20 +22,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e6593d0153f66e6899b5d180fb8194a970d7caa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 469f72b416e1e262d2a775b1b49e14723a44b171
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690304"
 ---
 # <a name="supporting-distributed-transactions"></a>Supporto di transazioni distribuite
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Il Driver OLE DB per i consumer di SQL Server può utilizzare il **ITransactionJoin:: Jointransaction** (metodo) deve far parte di una transazione distribuita coordinata da Microsoft Distributed Transaction Coordinator (MS DTC).  
   
- MS DTC espone oggetti COM che consentono ai client di avviare e partecipare a transazioni coordinate tra più connessioni a un'ampia gamma di archivi dati. Per avviare una transazione, il Driver OLE DB per il consumer di SQL Server utilizza MS DTC **ITransactionDispenser** interfaccia. Il **BeginTransaction** membro di **ITransactionDispenser** restituisce un riferimento in un oggetto di transazione distribuita. Questo riferimento viene passato per il Driver OLE DB per SQL Server utilizzando **JoinTransaction**.  
+ MS DTC espone oggetti COM che consentono ai client di avviare e partecipare a transazioni coordinate tra più connessioni a un'ampia gamma di archivi dati. Per avviare una transazione, il Driver OLE DB per il consumer di SQL Server utilizza MS DTC **ITransactionDispenser** interfaccia. Il **BeginTransaction** appartenente **ITransactionDispenser** restituisce un riferimento in un oggetto di transazione distribuita. Questo riferimento viene passato per il Driver OLE DB per SQL Server utilizzando **JoinTransaction**.  
   
- MS DTC supporta il commit asincrono e l'interruzione nelle transazioni distribuite. Per la notifica sullo stato di transazione asincrona, il consumer implementa il **ITransactionOutcomeEvents** l'interfaccia e si connette l'interfaccia a un oggetto transazione MS DTC.  
+ MS DTC supporta il commit asincrono e l'interruzione nelle transazioni distribuite. Come notifica sullo stato della transazione asincrona, il consumer implementa il **ITransactionOutcomeEvents** l'interfaccia e l'interfaccia si connette a un oggetto di transazione MS DTC.  
   
  Per le transazioni distribuite, il Driver OLE DB per SQL Server implementa **ITransactionJoin:: Jointransaction** parametri come indicato di seguito.  
   

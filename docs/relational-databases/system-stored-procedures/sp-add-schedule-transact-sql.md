@@ -22,11 +22,12 @@ caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95723f90b248d214638a4bfcd38b1fc40bcfb121
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3f1ce62c23519f44e9673e425662bd0e24dc80da
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262235"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,15 +60,15 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@schedule_name =** ] **'***schedule_name***'**  
- Nome della pianificazione. *schedule_name*viene **sysname**, non prevede alcun valore predefinito.  
+ Nome della pianificazione. *schedule_name* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@enabled =** ] *abilitato*  
- Indica lo stato corrente della pianificazione. *abilitata*viene **tinyint**, il valore predefinito è **1** (abilitato). Se **0**, la pianificazione non è abilitata. Quando la pianificazione non è abilitata, non viene eseguito alcun processo su questa pianificazione.  
+ Indica lo stato corrente della pianificazione. *abilitata* viene **tinyint**, il valore predefinito è **1** (abilitato). Se **0**, la pianificazione non è abilitata. Quando la pianificazione non è abilitata, non viene eseguito alcun processo su questa pianificazione.  
   
  [ **@freq_type =** ] *freq_type*  
- Valore che indica la frequenza di esecuzione di un processo *freq_type*viene **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti.  
+ Valore che indica la frequenza di esecuzione di un processo *freq_type* viene **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**4**|Ogni giorno|  
@@ -91,9 +92,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**128**|*freq_interval* è inutilizzato.|  
   
  [ **@freq_subday_type =** ] *freq_subday_type*  
- Specifica le unità per *freq_subday_interval*. *freq_subday_type*viene **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti.  
+ Specifica l'unità di misura *freq_subday_interval*. *freq_subday_type* viene **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti.  
   
-|Value|Descrizione (unità)|  
+|valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x2**|Secondi|  
@@ -101,12 +102,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x8**|Ore|  
   
  [ **@freq_subday_interval =** ] *freq_subday_interval*  
- Il numero di *freq_subday_type* periodi devono intercorrere tra ogni esecuzione di un processo. *freq_subday_interval*viene **int**, il valore predefinito è **0**. Nota: l'intervallo dovrebbe superare i 10 secondi. *freq_subday_interval* viene ignorato nei casi in cui *freq_subday_type* è uguale a **1**.  
+ Quante *freq_subday_type* periodi intercorrere tra ogni esecuzione di un processo. *freq_subday_interval* viene **int**, il valore predefinito è **0**. Nota: l'intervallo dovrebbe superare i 10 secondi. *freq_subday_interval* viene ignorato nei casi in cui *freq_subday_type* è uguale a **1**.  
   
  [  **@freq_relative_interval =** ] *freq_relative_interval*  
- Occorrenza di un processo di *freq_interval* ogni mese, se *freq_interval* è 32 (mensile relativa). *freq_relative_interval*viene **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti. *freq_relative_interval* viene ignorato nei casi in cui *freq_type* non è uguale a 32 caratteri.  
+ Occorrenza di un processo di *freq_interval* in ogni mese, se *freq_interval* è 32 (mensile relativa). *freq_relative_interval* viene **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti. *freq_relative_interval* viene ignorato nei casi in cui *freq_type* non è uguale a 32 caratteri.  
   
-|Value|Descrizione (unità)|  
+|valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -115,23 +116,23 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|Ultimo|  
   
  [  **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
- Numero di settimane o mesi tra le esecuzioni pianificate di un processo. *freq_recurrence_factor* viene utilizzata solo se *freq_type* viene **8**, **16**, o **32**. *freq_recurrence_factor*viene **int**, il valore predefinito è **0**.  
+ Numero di settimane o mesi tra le esecuzioni pianificate di un processo. *freq_recurrence_factor* viene utilizzata solo se *freq_type* viene **8**, **16**, o **32**. *freq_recurrence_factor* viene **int**, il valore predefinito è **0**.  
   
  [ **@active_start_date =** ] *active_start_date*  
- Data dalla quale è possibile avviare l'esecuzione del processo. *active_start_date*viene **int**, un valore predefinito è NULL, che indica la data odierna. La data è nel formato AAAAMMGG. Se *active_start_date* non è NULL, la data deve essere maggiore o uguale a 19900101.  
+ Data dalla quale è possibile avviare l'esecuzione del processo. *active_start_date* viene **int**, un valore predefinito è NULL, che indica la data odierna. La data è nel formato AAAAMMGG. Se *active_start_date* non è NULL, la data deve essere maggiore o uguale a 19900101.  
   
- Al termine della creazione della pianificazione, esaminare la data di inizio per verificare che corrisponda alla data corretta. Per ulteriori informazioni, vedere la sezione "Pianificazione data di inizio" in [creare e collegare le pianificazioni ai processi](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
+ Al termine della creazione della pianificazione, esaminare la data di inizio per verificare che corrisponda alla data corretta. Per altre informazioni, vedere la sezione "Pianificazione data di inizio" in [creare e collegare le pianificazioni ai processi](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
   
  Per le pianificazioni settimanali o mensili, tramite Agent viene ignorato se la data di active_start_date è già passata e viene invece utilizzata la data corrente. Quando una pianificazione di SQL Agent viene creata utilizzando sp_add_schedule è possibile specificare il parametro active_start_date che rappresenta la data di avvio dell'esecuzione del processo. Se il tipo di pianificazione è settimanale o mensile e il parametro active_start_date è impostato su una data già trascorsa, il parametro active_start_date viene ignorato e la data corrente verrà utilizzata per active_start_date.  
   
  [ **@active_end_date =** ] *active_end_date*  
- Data dalla quale è possibile arrestare l'esecuzione del processo. *active_end_date*viene **int**, il valore predefinito è **99991231**, che indica il 31 dicembre 9999. La data è nel formato AAAAMMGG.  
+ Data dalla quale è possibile arrestare l'esecuzione del processo. *active_end_date* viene **int**, il valore predefinito è **99991231**, che indica il 31 dicembre 9999. La data è nel formato AAAAMMGG.  
   
  [  **@active_start_time =** ] *active_start_time*  
- L'ora compresa tra *active_start_date* e *active_end_date* per avviare l'esecuzione di un processo. *active_start_time*viene **int**, il valore predefinito è **000000**, a indicare 12:00:00 A.M. nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
+ La data compresa tra *active_start_date* e *active_end_date* per avviare l'esecuzione di un processo. *active_start_time* viene **int**, il valore predefinito è **000000**, a indicare 12:00:00 A.M. nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
  [  **@active_end_time =** ] *active_end_time*  
- L'ora compresa tra *active_start_date* e *active_end_date* per terminare l'esecuzione di un processo. *active_end_time*viene **int**, il valore predefinito è **235959**, a indicare 11:59: le ore 23.59.59 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
+ La data compresa tra *active_start_date* e *active_end_date* per terminare l'esecuzione di un processo. *active_end_time* viene **int**, il valore predefinito è **235959**, a indicare 11:59: le ore 23.59.59 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
  [ **@owner_login_name**=] **'***owner_login_name***'**  
  Nome dell'entità server proprietaria della pianificazione. *owner_login_name* viene **sysname**, con un valore predefinito è NULL, a indicare che la pianificazione è di proprietà dell'autore.  
@@ -149,9 +150,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
 ## <a name="permissions"></a>Autorizzazioni  

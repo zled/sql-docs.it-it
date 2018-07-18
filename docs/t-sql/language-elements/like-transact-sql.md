@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -36,11 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f97c3e301814d73ece3703a5bd32c55a7b8ab8a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d230ee2c430d753573687502175f0fbc711f0e83
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36252913"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +70,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  Stringa specifica di caratteri da cercare in *match_expression*. Può includere i caratteri jolly validi riportati di seguito. *pattern* può essere composto da un massimo di 8.000 byte.  
   
-|Carattere jolly|Description|Esempio|  
+|Carattere jolly|Descrizione|Esempio|  
 |------------------------|-----------------|-------------|  
 |%|Stringa composta da zero o più caratteri.|WHERE title LIKE '%computer%' consente di individuare tutti i titoli di libri che contengono la parola "computer".|  
 |_ (carattere di sottolineatura)|Carattere singolo.|WHERE au_fname LIKE '_ean' consente di individuare tutti i nomi di persona composti da quattro lettere che terminano in "ean" (Dean, Sean e così via).|  

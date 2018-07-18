@@ -1,14 +1,12 @@
 ---
-title: bcp_gettypename | Documenti Microsoft
+title: bcp_gettypename | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,11 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a7f4e8a8b6813eecf74fbc4e932296d3eff4631
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426223"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +54,7 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>Valori di codice restituiti  
  Una stringa che contiene il nome del tipo SQL che corrisponde al tipo BCP. Se viene specificato un tipo BCP non valido, viene restituita una stringa vuota.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  I token del tipo BCP vengono definiti nel file di intestazione sqlncli.h e nella libreria sqlncli11.lib.  
   
  Nella tabella seguente viene specificato quali sono i possibili tipi BCP, se si tratta di tipi max e l'output previsto.  
@@ -92,12 +91,12 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|Prima o dopo|**Min**|  
 |**SQLAOPMAX**|Prima o dopo|**Max**|  
 |**SQLDATETIM4**|Prima o dopo|**smalldatetime**|  
-|**SQLMONEY4**|Prima o dopo|**smallmoney**|  
-|**SQLFLT4**|Prima o dopo|**reale**|  
+|**SQLMONEY4**|Prima o dopo|**Smallmoney**|  
+|**SQLFLT4**|Prima o dopo|**Real**|  
 |**SQLUNIQUEID**|Prima o dopo|**uniqueidentifier**|  
-|**SQLNCHAR**|no|**nchar**|  
+|**SQLNCHAR**|no|**Nchar**|  
 |**SQLNVARCHAR**|no|**Nvarchar**|  
-|**SQLNTEXT**|Prima o dopo|**ntext**|  
+|**SQLNTEXT**|Prima o dopo|**Ntext**|  
 |**SQLVARIANT**|Prima o dopo|**sql_variant**|  
 |**SQLINT8**|Prima o dopo|**Bigint**|  
 |**SQLCHARACTER**|Sì|**ntext**|  
@@ -111,12 +110,12 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|Sì|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Sì|**nvarchar(max)**|  
 |**SQLXML**|Sì|**Xml**|  
-|**SQLUDT**|Prima o dopo|**tipo definito dall'utente**|  
+|**SQLUDT**|Prima o dopo|**Tipo definito dall'utente**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_gettypename per le caratteristiche avanzate di data e ora  
- I valori di parametro del token per i tipi di data/ora sono illustrati nella colonna "Tipo in SQLNCLI. h" della tabella [modifiche di copia Bulk per avanzate di data e ora tipi &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Il valore restituito si trova nella riga corrispondente della colonna "Tipo di archiviazione di file".  
+ I valori di parametro del token per i tipi di data/ora sono descritti nella colonna della tabella in "Tipo in SQLNCLI. h" [modifiche apportate alla copia Bulk per avanzate di data e ora i tipi &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Il valore restituito si trova nella riga corrispondente della colonna "Tipo di archiviazione di file".  
   
- Per ulteriori informazioni, vedere [data e ora miglioramenti & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per altre informazioni, vedere [data e miglioramenti per la fase &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

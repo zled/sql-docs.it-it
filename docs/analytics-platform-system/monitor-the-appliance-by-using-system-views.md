@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539061"
 ---
 # <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>Monitorare l'accessorio con viste di sistema - Analitica Platform System
 In questo articolo sono elencate le viste di sistema che è possibile utilizzare per il monitoraggio di SQL Server PDW.  

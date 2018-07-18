@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: troubleshooting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e156eea066ba43e6debc63be47b45fd18dcd9a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b117289c9877835d6c74d48497152021b47dc5ad
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405303"
 ---
 # <a name="debugging-control-flow"></a>Debug del flusso di controllo
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi del flusso di controllo in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre dieci condizioni di interruzione che è possibile abilitare su tutte le attività e i contenitori. Nella finestra di dialogo **Imposta punti di interruzione** è possibile abilitare punti di interruzione per le condizioni seguenti:  
   
-|Condizione di interruzione|Description|  
+|Condizione di interruzione|Descrizione|  
 |---------------------|-----------------|  
 |Quando l'evento **OnPreExecute** viene ricevuto dall'attività o dal contenitore.|Viene chiamata quando l'attività sta per essere eseguita. Questo evento viene generato da un'attività o da un contenitore immediatamente prima della sua esecuzione.|  
 |Quando l'evento **OnPostExecute** viene ricevuto dall'attività o dal contenitore.|Viene chiamata immediatamente dopo il termine della logica di esecuzione dell'attività. Questo evento viene generato da un'attività o da un contenitore immediatamente dopo la sua esecuzione.|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente vengono descritti i tipi di passaggi disponibili.  
   
-|Tipo di passaggi|Description|  
+|Tipo di passaggi|Descrizione|  
 |--------------------|-----------------|  
 |Always|L'esecuzione viene sempre sospesa al rilevamento di un punto di interruzione.|  
 |Numero di passaggi uguale a|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte uguale al numero di passaggi specificato.|  
@@ -113,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente vengono descritte le finestre disponibili.  
   
-|Finestra|Description|  
+|Finestra|Descrizione|  
 |------------|-----------------|  
 |Punti di interruzione|Elenca i punti di interruzione presenti in un pacchetto e include opzioni che consentono di abilitarli ed eliminarli.|  
 |Output|Visualizza messaggi di stato per le funzionalità di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
@@ -155,7 +154,7 @@ ms.lasthandoff: 05/03/2018
  **Tipo passaggi**  
  Consente di specificare quando il punto di interruzione diventa effettivo.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Always**|L'esecuzione viene sempre sospesa al rilevamento di un punto di interruzione.|  
 |**Numero di passaggi uguale a**|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte uguale al numero di passaggi specificato.|  
