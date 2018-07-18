@@ -1,5 +1,5 @@
 ---
-title: Backup e ripristino di database di SQL Server in Linux | Documenti Microsoft
+title: Eseguire il backup e ripristino dei database di SQL Server in Linux | Microsoft Docs
 description: Informazioni su come eseguire il backup e ripristino dei database di SQL Server in Linux.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,27 +13,27 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.openlocfilehash: 6e4699fb2ffadc3aaad73c4032073ff8567c856c
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322612"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006093"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Backup e ripristino di database di SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-È possibile eseguire i backup dei database SQL Server 2017 in Linux con gli stessi strumenti come altre piattaforme. In un server Linux, è possibile utilizzare **sqlcmd** per connettersi a SQL Server ed eseguire il backup. Da Windows, è possibile connettersi a SQL Server in Linux ed eseguire i backup con l'interfaccia utente. La funzionalità di backup è lo stesso tra le piattaforme. Ad esempio, è possibile eseguire il backup database in locale, in unità remote o a [servizio di archiviazione Blob di Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+È possibile eseguire i backup dei database di SQL Server 2017 in Linux con gli stessi strumenti come altre piattaforme. In un server Linux, è possibile usare **sqlcmd** per connettersi a SQL Server ed eseguire i backup. Da Windows, è possibile connettersi a SQL Server in Linux e vengono eseguiti backup con l'interfaccia utente. La funzionalità di backup è lo stesso più piattaforme. Ad esempio, è possibile eseguire il backup database in locale, in unità remote o a [servizio di archiviazione Blob di Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ## <a name="backup-a-database"></a>Effettuare il backup di un database 
 
-Nell'esempio seguente **sqlcmd** si connette all'istanza locale di SQL Server e richiede una procedura completa di backup di un database utente denominato `demodb`.
+Nell'esempio seguente **sqlcmd** si connette all'istanza di SQL Server locale e richiede una procedura completa di backup di un database utente denominato `demodb`.
 
 ```bash
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
-Quando si esegue il comando, verrà richiesta una password SQL Server. Dopo avere immesso la password, la shell verrà restituiti i risultati dello stato di avanzamento di backup. Esempio:
+Quando si esegue il comando, SQL Server verrà richiesto di immettere una password. Dopo avere immesso la password, la shell verrà restituiti i risultati dello stato di avanzamento backup. Esempio:
 
 ```
 Password:
@@ -54,7 +54,7 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 
 ### <a name="backup-the-transaction-log"></a>Eseguire il backup del log delle transazioni
 
-Se il database nel modello di recupero con registrazione completa, è anche possibile rendere i backup del log delle transazioni per le opzioni di ripristino più granulari. Nell'esempio seguente, **sqlcmd** si connette all'istanza locale di SQL Server ed esegue il backup un log delle transazioni.
+Se il database nel modello di recupero con registrazione completa, è possibile inoltre rendere i backup del log delle transazioni per le opzioni di ripristino più granulare. Nell'esempio riportato di seguito **sqlcmd** si connette all'istanza di SQL Server locale ed esegue il backup un log delle transazioni.
 
 ```bash
 sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT, NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
@@ -62,16 +62,16 @@ sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/dat
 
 ## <a name="restore-a-database"></a>Ripristinare un database
 
-Nell'esempio seguente **sqlcmd** si connette all'istanza locale di SQL Server e ripristina il database demodb. Si noti che il `NORECOVERY` opzione viene utilizzata per consentire ulteriori ripristini di file di backup del log. Se non si intende ripristinare i file di log aggiuntivi, rimuovere il `NORECOVERY` opzione.
+Nell'esempio seguente **sqlcmd** si connette all'istanza locale di SQL Server e ripristina il database demodb. Si noti che il `NORECOVERY` opzione viene usata per consentire altri ripristini di file di backup del log. Se non si prevede di ripristinare i file di log aggiuntivi, rimuovere il `NORECOVERY` opzione.
 
 ```bash
 sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/mssql/data/demodb.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
 ```
 
 > [!TIP]
-> Se accidentalmente, utilizzare l'opzione NORECOVERY ma non dispone di backup di file di log aggiuntivi, eseguire il comando `RESTORE DATABASE demodb` senza parametri aggiuntivi. Questo termine del ripristino e lascia il database operativo.
+> Se accidentalmente, utilizzare l'opzione NORECOVERY ma non dispongono di backup di file di log aggiuntivi, eseguire il comando `RESTORE DATABASE demodb` senza parametri aggiuntivi. Questo termine del ripristino e lascia il database operativo.
 
-### <a name="restore-the-transaction-log"></a>Ripristino del log delle transazioni
+### <a name="restore-the-transaction-log"></a>Ripristinare il log delle transazioni
 
 Il comando seguente ripristina il backup del log delle transazioni precedenti.
 
@@ -81,32 +81,32 @@ sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/da
 
 ## <a name="backup-and-restore-with-sql-server-management-studio-ssms"></a>Backup e ripristino con SQL Server Management Studio (SSMS)
 
-È possibile utilizzare SSMS da un computer Windows per connettersi a un database di Linux e creare un backup tramite l'interfaccia utente.
+È possibile utilizzare SQL Server Management Studio da un computer Windows per connettersi a un database di Linux ed eseguire un backup tramite l'interfaccia utente.
 
 >[!NOTE] 
-> Utilizzare la versione più recente di SSMS per connettersi a SQL Server. Per scaricare e installare la versione più recente, vedere [scaricare SSMS](../ssms/download-sql-server-management-studio-ssms.md). Per ulteriori informazioni sull'utilizzo di SQL Server Management Studio, vedere [utilizzare SSMS per gestire SQL Server in Linux](sql-server-linux-manage-ssms.md).
+> Usare la versione più recente di SSMS per connettersi a SQL Server. Per scaricare e installare la versione più recente, vedere [scaricare SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per altre informazioni su come usare SQL Server Management Studio, vedere [usare SSMS per gestire SQL Server in Linux](sql-server-linux-manage-ssms.md).
 
-I passaggi seguenti eseguendo un backup con SQL Server Management Studio. 
+La procedura seguente illustra un backup con SQL Server Management Studio. 
 
-1. Avviare SQL Server Management Studio e connettersi al server in SQL Server 2017 in Linux.
+1. Avviare SSMS e connettersi al server in SQL Server 2017 in Linux.
 
-1. In Esplora oggetti fare clic sul database, fare clic su **attività**, quindi fare clic su **eseguire il backup...** .
+1. In Esplora oggetti fare doppio clic sul database, fare clic su **attività**, quindi fare clic su **eseguire il backup...** .
 
-1. Nel **Backup dei Database** finestra di dialogo, verificare i parametri e le opzioni e fare clic su **OK**.
+1. Nel **Backup di Database** finestra di dialogo, verificare i parametri e opzioni, quindi scegliere **OK**.
  
-SQL Server consente di completare il backup del database.
+SQL Server viene completato il backup del database.
 
 ### <a name="restore-with-sql-server-management-studio-ssms"></a>Ripristino con SQL Server Management Studio (SSMS) 
 
-I passaggi seguenti consentono di eseguire il ripristino di un database con SQL Server Management Studio.
+I passaggi seguenti consentono di eseguire il ripristino di un database con SSMS.
 
-1. In SQL Server Management Studio fare clic sul **database** e fare clic su **ripristino di database...** . 
+1. In SSMS fare clic sul **database** e fare clic su **ripristino di database...** . 
 
-1. In **origine** fare clic su **dispositivo:** e quindi fare clic sui puntini di sospensione (...).
+1. Sotto **origine** fare clic su **dispositivo:** e quindi fare clic sui puntini di sospensione (...).
 
-1. Individuare il file di backup del database e fare clic su **OK**. 
+1. Individuare il file di backup di database e fare clic su **OK**. 
 
-1. In **piano di ripristino**, verificare le impostazioni e i file di backup. Scegliere **OK**. 
+1. Sotto **piano di ripristino**, verificare le impostazioni e file di backup. Fare clic su **OK**. 
 
 1. SQL Server Ripristina il database. 
 

@@ -1,5 +1,5 @@
 ---
-title: Panoramica (SMO) | Documenti Microsoft
+title: Panoramica (SMO) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 21d71757b4f8520e2ec2b3b7c2d1cb3c1407b420
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708009"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006014"
 ---
 # <a name="overview-smo"></a>Panoramica (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34708009"
   
  Poiché SMO è compatibile con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, è possibile gestire facilmente un ambiente in cui sono presenti più versioni.  
   
- Di seguito sono elencate le funzionalità SMO:  
+ Le funzionalità in SMO includono quanto segue:  
   
 -   Modello a oggetti memorizzato nella cache e creazione ottimizzata delle istanze degli oggetti. Gli oggetti vengono caricati solo quando viene fatto loro riferimento in modo specifico. Le proprietà degli oggetti vengono caricate solo parzialmente quando si creano gli oggetti. Gli oggetti e le proprietà rimanenti vengono caricati quando viene fatto loro riferimento in modo diretto.  
   
@@ -50,29 +50,29 @@ ms.locfileid: "34708009"
   
 -   Partizionamento di tabelle e indici per l'archiviazione di dati in uno schema di partizione. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
--   Endpoint HTTP per la gestione di richieste SOAP. Per ulteriori informazioni, vedere [implementazione endpoint](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
+-   Endpoint HTTP per la gestione di richieste SOAP. Per altre informazioni, vedere [implementazione di endpoint](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
   
--   Isolamento dello snapshot e controllo delle versioni a livello di riga per maggiore concorrenza. Per ulteriori informazioni, vedere [utilizzo dell'isolamento dello Snapshot](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
+-   Isolamento dello snapshot e controllo delle versioni a livello di riga per maggiore concorrenza. Per altre informazioni, vedere [utilizzo dell'isolamento dello Snapshot](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
--   La raccolta di XML Schema, gli indici XML e il tipo di dati XML garantiscono la convalida e l'archiviazione di dati XML. Per altre informazioni, vedere [raccolte di XML Schema &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) e [tramite schemi XML](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
+-   La raccolta di XML Schema, gli indici XML e il tipo di dati XML garantiscono la convalida e l'archiviazione di dati XML. Per altre informazioni, vedere [raccolte di XML Schema &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) e [utilizzando gli schemi XML](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   Database di snapshot per la creazione di copie di database in sola lettura.  
   
--   Supporto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] per la comunicazione basata su messaggi. Per ulteriori informazioni, vedere [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
+-   Supporto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] per la comunicazione basata su messaggi. Per altre informazioni, vedere [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
 -   Supporto di sinonimi per più nomi di oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [sinonimi &#40;motore di Database&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
 -   Gestione di Posta elettronica database consente di creare server, profili e account di posta elettronica in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Posta elettronica database](../../relational-databases/database-mail/database-mail.md).  
   
--   Supporto di Server registrati per la registrazione di informazioni di connessione. Per ulteriori informazioni, vedere [Registra server](../../tools/sql-server-management-studio/register-servers.md).  
+-   Supporto di Server registrati per la registrazione di informazioni di connessione. Per altre informazioni, vedere [Registra server](../../tools/sql-server-management-studio/register-servers.md).  
   
--   Traccia e riproduzione di eventi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [traccia SQL](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), e [degli eventi estesi](../../relational-databases/extended-events/extended-events.md).  
+-   Traccia e riproduzione di eventi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [traccia SQL](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), e [degli eventi estesi](../../relational-databases/extended-events/extended-events.md).  
   
--   Supporto di certificati e chiavi per il controllo di sicurezza. Per ulteriori informazioni, vedere [gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md).  
+-   Supporto di certificati e chiavi per il controllo di sicurezza. Per altre informazioni, vedere [gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
 -   Trigger DDL per l'aggiunta di funzionalità quando si verificano eventi DDL. Per altre informazioni, vedere [Trigger DDL](../../relational-databases/triggers/ddl-triggers.md).  
   
- Lo spazio dei nomi SMO è <xref:Microsoft.SqlServer.Management.Smo>. SMO viene implementato come un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Ciò significa che common language runtime dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0 deve essere installata prima di utilizzare gli oggetti SMO. Gli assembly SMO vengono installati per impostazione predefinita nel Global Assembly Cache (GAC) con l'opzione SDK di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli assembly si trovano in C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Per ulteriori informazioni, vedere il [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentazione.  
+ Lo spazio dei nomi SMO è <xref:Microsoft.SqlServer.Management.Smo>. SMO viene implementato come un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Ciò significa che common language runtime dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0 deve essere installata prima di usare gli oggetti SMO. Gli assembly SMO vengono installati per impostazione predefinita nel Global Assembly Cache (GAC) con l'opzione SDK di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli assembly si trovano in C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Per altre informazioni, vedere la [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentazione.  
   
 ## <a name="smo-classes"></a>Classi SMO  
  Le classi SMO includono due categorie: classi di istanze e classi di utilità.  
@@ -96,7 +96,7 @@ ms.locfileid: "34708009"
 ## <a name="smo-features"></a>Funzionalità SMO  
  **Prestazioni ottimizzate**  
   
- L'architettura SMO è efficiente in termini di memoria perché vengono create istanze degli oggetti solo parzialmente inizialmente e informazioni minime sulle proprietà è richiesta dal server. La creazione di un'istanza completa degli oggetti viene posticipata fino a quando non viene fatto riferimento all'oggetto in modo esplicito. L'istanza completa di un oggetto viene creata un'istanza quando viene richiesta una proprietà che non fa parte del set di proprietà recuperate inizialmente o quando viene chiamato un metodo che richiede tale proprietà. La transizione tra la creazione di un'istanza parziale e un'istanza completa degli oggetti è visibile all'utente. Inoltre, alcune proprietà che utilizzano molta memoria non vengono mai recuperate, a meno che non venga fatto riferimento alla proprietà in modo esplicito. Un esempio è la proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> della proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database>. Tuttavia, la creazione di un'istanza parziale richiede più tempo di round trip in rete e potrebbe non essere la migliore opzione per le prestazioni ottimizzate dell'applicazione.  
+ L'architettura SMO è efficiente in termini di memoria perché vengono create istanze degli oggetti solo parzialmente all'inizio e informazioni sulle proprietà minima è richiesta dal server. La creazione di un'istanza completa degli oggetti viene posticipata fino a quando non viene fatto riferimento all'oggetto in modo esplicito. L'istanza completa di un oggetto viene creata un'istanza quando viene richiesta una proprietà che non fa parte del set di proprietà recuperate inizialmente o quando viene chiamato un metodo che richiede tale proprietà. La transizione tra la creazione di un'istanza parziale e un'istanza completa degli oggetti è visibile all'utente. Inoltre, alcune proprietà che utilizzano molta memoria non vengono mai recuperate, a meno che non venga fatto riferimento alla proprietà in modo esplicito. Un esempio è la proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> della proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database>. Tuttavia, la creazione di un'istanza parziale richiede più tempo di round trip in rete e potrebbe non essere la migliore opzione per le prestazioni ottimizzate dell'applicazione.  
   
  È possibile controllare la creazione di un'istanza in base all'ambiente di sistema. La creazione di un'istanza posticipata riduce la quantità di memoria richiesta dall'applicazione, sebbene possa generare molte richieste del server quando viene fatto riferimento alle proprietà.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34708009"
   
  L'esecuzione diretta è il metodo di esecuzione standard. Le istruzioni vengono inviate direttamente a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appena vengono generate. L'esecuzione dell'acquisizione rappresenta il metodo alternativo.  
   
- L'esecuzione dell'acquisizione consente di acquisire i batch [!INCLUDE[tsql](../../includes/tsql-md.md)] generalmente eseguiti, consentendo così al programmatore SMO di posticipare lo script, archiviarlo per un'esecuzione successiva o fornire un'anteprima per l'utente finale. Ad esempio, un **creare database**, **Crea tabella**e un **Crea indice** istruzione può essere inviata in un unico batch e quindi eseguire come tre passaggi sequenziali. Questa funzionalità viene controllata dall'utente tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
+ L'esecuzione dell'acquisizione consente di acquisire i batch [!INCLUDE[tsql](../../includes/tsql-md.md)] generalmente eseguiti, consentendo così al programmatore SMO di posticipare lo script, archiviarlo per un'esecuzione successiva o fornire un'anteprima per l'utente finale. Ad esempio, un **create database**, un **Crea tabella**e un **Crea indice** istruzione può essere inviata in un unico batch e quindi eseguire come tre passaggi sequenziali. Questa funzionalità viene controllata dall'utente tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
   
  **Provider WMI**  
   
@@ -114,13 +114,13 @@ ms.locfileid: "34708009"
   
  **Scripting**  
   
- In SMO script è stato migliorato e spostati nel **Scripter** classe. Il **Scripter** classe può individuare dipendenze, comprendere le relazioni tra oggetti e consentire la modifica della gerarchia delle dipendenze. L'oggetto scripting principale è il **Scripter** oggetto. Sono inoltre disponibili diversi oggetti di supporto che gestiscono le dipendenze e rispondono agli eventi di stato e di errore.  
+ In SMO la creazione di script è stato migliorato e spostati nel **Scripter** classe. Il **Scripter** classe può individuare dipendenze, comprendere le relazioni tra oggetti e consentire la modifica della gerarchia di dipendenze. L'oggetto scripting principale è il **Scripter** oggetto. Sono inoltre disponibili diversi oggetti di supporto che gestiscono le dipendenze e rispondono agli eventi di stato e di errore.  
   
  Il **Scripter** oggetto supporta le seguenti opzioni di scripting avanzate:  
   
 -   Scripting semplice in una fase (crea lo script in un unico passaggio)  
   
--   Fase 3 di scripting avanzate (Crea lo script in tre passaggi, l'individuazione delle dipendenze, la generazione dell'elenco, la generazione dello script)  
+-   Fase 3 di scripting avanzate (Crea lo script in tre passaggi; individuazione delle dipendenze, la generazione dell'elenco, la generazione di script)  
   
 -   Individuazione dipendenze in due modi (consente l'individuazione di dipendenze o di dipendenti)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "34708009"
   
 -   Risposta agli eventi di errore  
   
- **Unique Resource Name**  
+ **Nomi di risorse univoci**  
   
  Un concetto chiave nell'utilizzo della libreria di oggetti SMO è rappresentato dai nomi di risorse univoci (URN, Unique Resource Name). L'URN utilizza una sintassi simile a XPath. XPath è un percorso della gerarchia utilizzato per specificare un oggetto nel quale ogni livello dispone di qualificatori e funzioni. In SMO l'URN dispone di due elementi: percorso e denominazione degli attributi con funzionalità limitata. Il percorso viene utilizzato per specificare il percorso dell'oggetto mentre la denominazione degli attributi consente un grado di filtraggio.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "34708009"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- L'URN di un oggetto può essere recuperato facendo riferimento alla proprietà dell'URN. L'oggetto Scripter utilizza inoltre gli URN come parametri passati al metodo di riferimenti a oggetti di **Scripter** oggetto. Inoltre, è possibile specificare un URN per il **GetSmoObject** metodo il **Server** oggetto. utilizzato per creare un'istanza dell'oggetto SMO.  
+ L'URN di un oggetto può essere recuperato facendo riferimento alla proprietà dell'URN. L'oggetto Scripter utilizza inoltre gli URN come parametri che passano riferimenti a oggetti per il metodo di **Scripter** oggetto. Inoltre, è possibile specificare un URN per il **GetSmoObject** metodo per il **Server** oggetto. utilizzato per creare un'istanza dell'oggetto SMO.  
   
 ## <a name="sql-server-features-represented-in-smo"></a>Funzionalità di SQL Server rappresentate in SMO  
  **Partizionamento di tabelle e indici**  
@@ -149,7 +149,7 @@ ms.locfileid: "34708009"
   
  Le richieste di mirroring del database e SOAP vengono gestite dagli endpoint mediante l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   
- **Controllo delle versioni a livello di isolamento o la riga dello snapshot**  
+ **Controllo delle versioni a livello di riga/isolamento dello snapshot**  
   
  L'isolamento dello snapshot (controllo delle versioni a livello di riga) è rappresentato da nuove proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   

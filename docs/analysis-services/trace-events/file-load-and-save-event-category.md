@@ -1,5 +1,5 @@
 ---
-title: Caricamento e salvataggio dei file categoria di eventi | Documenti Microsoft
+title: Caricamento e salvataggio dei file categoria di eventi | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6a432d196d950c3d21c255a019dd773ef957d8c0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041183"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007213"
 ---
 # <a name="file-load-and-save-event-category"></a>Categoria di eventi relativa al caricamento e salvataggio dei file
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -25,27 +25,27 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: bc43a4088f2186b316616578bb71c0f31f32836a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467027"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005701"
 ---
 # <a name="sysdmosmemorynodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Le allocazioni interne a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano il gestore della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Registrazione della differenza tra i contatori di memoria del processo da **Sys.dm os_process_memory** e i contatori interni possono indicare l'utilizzo di memoria da componenti esterni nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spazio di memoria.  
+  Le allocazioni interne a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano il gestore della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La differenza tra i contatori di memoria del processo di rilevamento **sys.dm_os_process_memory** e i contatori interni possono indicare l'utilizzo di memoria da componenti esterni nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spazio di memoria.  
   
- I nodi vengono creati per nodi di memoria NUMA fisici. Questi potrebbero essere diversi dai nodi CPU in **Sys.dm os_nodes**.  
+ I nodi vengono creati per nodi di memoria NUMA fisici. Questi potrebbero essere diversi dai nodi CPU in **DM os_nodes**.  
   
  Nessuna delle allocazioni eseguite direttamente tramite le routine di allocazione di memoria di Windows viene registrata. Nella tabella seguente sono fornite informazioni sulle allocazioni di memoria eseguite solo utilizzando interfacce dello strumento di gestione della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Per chiamare questo metodo dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_os_memory_nodes**.  
+>  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_memory_nodes**.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**memory_node_id**|**smallint**|Specifica l'ID del nodo di memoria. Correlate a **memory_node_id** di **Sys.dm os_memory_clerks**. Non ammette i valori NULL.|  
+|**memory_node_id**|**smallint**|Specifica l'ID del nodo di memoria. Correlati a **memory_node_id** dei **DM os_memory_clerks**. Non ammette i valori NULL.|  
 |**virtual_address_space_reserved_kb**|**bigint**|Indica il numero di indirizzi virtuali riservati, in kilobyte (KB), di cui non è stato eseguito il commit né il mapping a pagine fisiche. Non ammette i valori NULL.|  
 |**virtual_address_space_committed_kb**|**bigint**|Specifica la quantità di indirizzo virtuale, in KB, di cui è stato eseguito il commit o il mapping a pagine fisiche. Non ammette i valori NULL.|  
 |**locked_page_allocations_kb**|**bigint**|Specifica la quantità di memoria fisica, in KB, bloccata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non ammette i valori NULL.|  
@@ -59,12 +59,12 @@ ms.locfileid: "34467027"
 |**processor_group**|**smallint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Solo per uso interno. Non ammette i valori NULL.|  
 |**foreign_committed_kb**|**bigint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Viene specificata la quantità totale di memoria di cui è stato eseguito il commit, in KB, da altri nodi di memoria. Non ammette i valori NULL.|  
 |**target_kb** |**bigint** |**Si applica a**: da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Specifica l'obiettivo di memoria per il nodo di memoria, in KB. |   
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
 
 ## <a name="see-also"></a>Vedere anche  
   [Viste a gestione dinamica relative al sistema di operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  

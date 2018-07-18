@@ -1,5 +1,5 @@
 ---
-title: 'SQL: overflow-field (SQLXML 4.0) | Documenti Microsoft'
+title: 'SQL: overflow-field (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,21 +22,21 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5f4527068d0fd0f83987f5e145226c091a7913c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970226"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005814"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretazione delle annotazioni - SQL: overflow-campo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In uno schema è possibile identificare una colonna come colonna di overflow per ricevere tutti i dati non utilizzati dal documento XML. Questa colonna viene specificata nello schema utilizzando il **SQL: overflow-campo** annotazione. È possibile avere più colonne di overflow.  
   
- Ogni volta che un nodo XML (elemento o attributo) per cui è disponibile un **SQL: overflow-campo** annotazione definita entra nell'ambito, la colonna di overflow viene attivata e riceve i dati non utilizzati. Quando il nodo non è più in ambito, la colonna di overflow non è più attiva e il caricamento bulk XML rende attivo il campo di overflow precedente, se presente.  
+ Ogni volta che un nodo XML (elemento o attributo) per cui è disponibile un' **SQL: overflow-campo** annotazione definita entra nell'ambito, la colonna di overflow viene attivata e riceve dati non utilizzati. Quando il nodo non è più in ambito, la colonna di overflow non è più attiva e il caricamento bulk XML rende attivo il campo di overflow precedente, se presente.  
   
- Dopo l'archiviazione dei dati nella colonna di overflow, il caricamento Bulk XML archivia anche i tag di apertura e chiusura dell'elemento padre per il quale **SQL: overflow-campo** è definito.  
+ Archiviazione dei dati nella colonna di overflow, il caricamento Bulk XML archivia anche i tag di apertura e chiusura dell'elemento padre per il quale **SQL: overflow-campo** è definito.  
   
- Ad esempio, lo schema seguente descrive il  **\<clienti >** e  **\<CustOrder >** elementi. Ognuno di questi elementi identifica una colonna di overflow:  
+ Ad esempio, lo schema seguente descrive la  **\<Customers >** e  **\<CustOrder >** elementi. Ognuno di questi elementi identifica una colonna di overflow:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -80,9 +80,9 @@ ms.locfileid: "32970226"
 </xsd:schema>  
 ```  
   
- Nello schema, il  **\<cliente >** elemento viene mappato alla tabella Cust e  **\<ordine >** elemento viene mappato alla tabella CustOrder.  
+ Nello schema, il  **\<cliente >** elemento viene mappato alla tabella Cust e il  **\<ordine >** elemento viene mappato alla tabella CustOrder.  
   
- Entrambi i  **\<cliente >** e  **\<ordine >** elementi identificano una colonna di overflow. Di conseguenza, il caricamento Bulk XML Salva tutti gli elementi figlio non utilizzati elementi e gli attributi di  **\<cliente >** elemento nella colonna di overflow della tabella Cust e tutti gli elementi figlio non utilizzati e attributi del  **\<Ordine >** elemento nella colonna di overflow della tabella CustOrder.  
+ Entrambi i  **\<cliente >** e  **\<ordine >** elementi identificano una colonna di overflow. Di conseguenza, il caricamento Bulk XML Salva tutti gli elementi figlio non utilizzati elementi e attributi con il  **\<cliente >** elemento nella colonna di overflow della tabella Cust e tutti gli elementi figlio non utilizzati attributi e del  **\<Ordine >** elemento nella colonna di overflow della tabella CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Per testare un esempio reale  
   
