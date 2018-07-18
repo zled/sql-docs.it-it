@@ -1,5 +1,5 @@
 ---
-title: Funzione UPPER-case (XQuery) | Documenti Microsoft
+title: Funzione UPPER-case (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 177659d16f1fda6e0d6dd45430949baf6331eefe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076214"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981899"
 ---
-# <a name="functions-on-string-values---upper-case"></a>Funzioni su valori stringa - lettere maiuscole
+# <a name="functions-on-string-values---upper-case"></a>Funzioni su valori stringa - upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Questa funzione converte ogni carattere di *$arg* equivalente maiuscolo. La modalità di conversione dei caratteri nell'equivalente maiuscolo viene specificata dalla conversione binaria di maiuscole e minuscole di Microsoft Windows per i punti di codice Unicode. Questo standard è diverso dal mapping per lo standard dei punti di codice Unicode.  
+  Questa funzione converte ogni carattere *$arg* equivalente maiuscolo. La modalità di conversione dei caratteri nell'equivalente maiuscolo viene specificata dalla conversione binaria di maiuscole e minuscole di Microsoft Windows per i punti di codice Unicode. Questo standard è diverso dal mapping per lo standard dei punti di codice Unicode.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,13 +49,13 @@ fn:upper-case($arg as xs:string?) as xs:string
 |Nome|Definizione|  
 |*$arg*|Valore della stringa da convertire in lettere maiuscole.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se il valore di *$arg* è vuoto, viene restituita una stringa di lunghezza zero.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. Conversione di una stringa in lettere maiuscole  
- L'esempio seguente modifica la stringa di input ' abcDEF! @4' in lettere maiuscole.  
+ L'esempio seguente modifica la stringa di input ' abcDEF! @4"in lettere maiuscole.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

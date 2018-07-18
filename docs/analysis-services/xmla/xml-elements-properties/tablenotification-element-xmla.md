@@ -1,5 +1,5 @@
 ---
-title: Elemento TableNotification (XMLA) | Documenti Microsoft
+title: Elemento TableNotification (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3936105d9097099a824510bdbd809c5083fb6cf2
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576533"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047013"
 ---
 # <a name="tablenotification-element-xmla"></a>Elemento TableNotification (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34576533"
 </TableNotifications>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -42,14 +42,14 @@ ms.locfileid: "34576533"
 |Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[TableNotifications](../../../analysis-services/xmla/xml-elements-properties/tablenotifications-element-xmla.md)|  
 |Elementi figlio|[DbSchemaName](../../../analysis-services/xmla/xml-elements-properties/dbschemaname-element-xmla.md), [DbTableName](../../../analysis-services/xmla/xml-elements-properties/dbtablename-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche
  [Proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: Espressioni primarie (XQuery) | Documenti Microsoft
+title: Espressioni primarie (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7f9fdcd3eaa54b74366f90891893c88cbf1aa32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078118"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031439"
 ---
 # <a name="primary-expressions-xquery"></a>Espressioni primarie (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "33078118"
 |&quot;|"|  
 |&apos;|'|  
   
- Un valore letterale stringa può contenere inoltre un riferimento a carattere, un riferimento in stile XML a un carattere Unicode, identificato dal relativo punto di codice decimale o esadecimale. Ad esempio, il simbolo dell'Euro può essere rappresentato da, il riferimento al carattere "&\#8364;".  
+ Un valore letterale stringa può contenere inoltre un riferimento a carattere, un riferimento in stile XML a un carattere Unicode, identificato dal relativo punto di codice decimale o esadecimale. Ad esempio, può essere rappresentato il simbolo dell'Euro dal riferimento al carattere, "&\#8364;".  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza XML versione 1.0 come base per l'analisi.  
@@ -138,7 +138,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- È possibile utilizzare la funzione di estensione SQL: variable per fare riferimento alle variabili SQL, come illustrato nella query seguente.  
+ È possibile usare la funzione di estensione di SQL: variable per fare riferimento alle variabili SQL, come illustrato nella query seguente.  
   
 ```  
 DECLARE @price money  
@@ -159,10 +159,10 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   Non è supportata l'importazione di moduli.  
   
--   Non sono supportate dichiarazioni di variabili esterne. Una soluzione consiste nell'usare il [funzione SQL: variable](../xquery/xquery-extension-functions-sql-variable.md).  
+-   Non sono supportate dichiarazioni di variabili esterne. Risolvere questo problema consiste nell'usare la [funzione SQL: variable](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="context-item-expressions"></a>Espressioni per elementi di contesto  
- Per elemento di contesto si intende l'elemento corrente elaborato nel contesto di un'espressione di percorso. Viene inizializzato in un'istanza con tipo di dati XML non NULL tramite il nodo di documento. Inoltre, può essere modificato dal metodo Nodes (), nell'ambito di espressioni XPath o di predicati [].  
+ Per elemento di contesto si intende l'elemento corrente elaborato nel contesto di un'espressione di percorso. Viene inizializzato in un'istanza con tipo di dati XML non NULL tramite il nodo di documento. Può anche essere modificato dal metodo Nodes (), nell'ambito di espressioni XPath o di predicati [].  
   
  L'elemento di contesto viene restituito da un'espressione che contiene un punto (.). Ad esempio, la query seguente valuta ogni elemento <`a`> per verificare la presenza dell'attributo `attr`. Se l'attributo è presente, viene restituito l'elemento. Si noti che la condizione del predicato specifica che il nodo di contesto è specificato da un solo punto.  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento Error (XMLA) | Documenti Microsoft
+title: Elemento Error (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f223bff2dced01c2b3f954ca14242b1a35c93813
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576553"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036649"
 ---
 # <a name="error-element-xmla"></a>Elemento Error (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34576553"
 </Cell>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "34576553"
 |Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
@@ -70,13 +70,13 @@ ms.locfileid: "34576553"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|ErrorCode|Richiesto **UnsignedInt** attributo (solo quando **messaggio** è l'elemento padre.) Contiene il codice restituito numerico dell'errore.|  
-|Severity|Parametro facoltativo **stringa** attributo (solo quando **messaggio** è l'elemento padre.) Contiene la gravità dell’errore.|  
-|Description|Parametro facoltativo **stringa** attributo (solo quando **messaggio** è l'elemento padre.) Contiene il testo descrittivo dell'errore.|  
-|Origine|Parametro facoltativo **stringa** attributo (solo quando **messaggio** è l'elemento padre.) Contiene il nome del componente che ha generato l’errore.|  
-|FileGuida|Parametro facoltativo **stringa** attributo (solo quando **messaggio** è l'elemento padre.) Contiene il percorso o URL al file Guida o all’argomento che descrive l'errore.|  
+|ErrorCode|Obbligatorio **UnsignedInt** attributo (solo quando **messaggio** corrisponde all'elemento padre.) Contiene il codice restituito numerico dell'errore.|  
+|Severity|Facoltativo **stringa** attributo (solo quando **messaggio** corrisponde all'elemento padre.) Contiene la gravità dell’errore.|  
+|Description|Facoltativo **stringa** attributo (solo quando **messaggio** corrisponde all'elemento padre.) Contiene il testo descrittivo dell'errore.|  
+|Origine|Facoltativo **stringa** attributo (solo quando **messaggio** corrisponde all'elemento padre.) Contiene il nome del componente che ha generato l’errore.|  
+|FileGuida|Facoltativo **stringa** attributo (solo quando **messaggio** corrisponde all'elemento padre.) Contiene il percorso o URL al file Guida o all’argomento che descrive l'errore.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche
  [Elemento warning &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md)   

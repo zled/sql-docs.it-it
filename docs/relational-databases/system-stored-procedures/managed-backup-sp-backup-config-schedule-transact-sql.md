@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8ebeca4b0a1c9079f8786303207bcbae4dfe74c3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238831"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035279"
 ---
 # <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,25 +54,25 @@ EXEC managed_backup.sp_backup_config_schedule
   
 ##  <a name="Arguments"></a> Argomenti  
  @database_name  
- Il nome del database per l'attivazione di backup gestito in un database specifico. Se è NULL o *, il backup gestito si applicano a tutti i database nel server.  
+ Il nome del database per l'abilitazione del backup gestito in un database specifico. Se è NULL o *, il backup gestito verrà applicata a tutti i database nel server.  
   
  @scheduling_option  
  Specificare 'System' per la pianificazione del backup e controllato dal sistema. Specificare 'Custom' per una pianificazione personalizzata definita per i parametri di altro.  
   
  @full_backup_freq_type  
- Il tipo di frequenza per l'operazione di backup gestito, che può essere impostata su 'Weekly' o 'Daily'.  
+ Il tipo di frequenza per l'operazione di backup gestito, che può essere impostata su 'Daily' o 'Weekly'.  
   
  @days_of_week  
- I giorni della settimana per i backup quando @full_backup_freq_type è impostata su settimanale. Specificare nomi di stringa completa come "Lunedì".  È inoltre possibile specificare più di nome di un giorno, separati da Pipe. Ad esempio N'Monday | Mercoledì | Venerdì '.  
+ I giorni della settimana per i backup quando @full_backup_freq_type è impostata su settimanale. Specificare i nomi di stringa completo, ad esempio "Monday".  È inoltre possibile specificare più di nome di un giorno, separati da una barra verticale. Ad esempio N'Monday | Mercoledì | Venerdì '.  
   
  @backup_begin_time  
- L'ora di inizio della finestra di backup. I backup non verranno avviati all'esterno dell'intervallo di tempo, definito da una combinazione di @backup_begin_time e @backup_duration.  
+ L'ora di inizio della finestra di backup. I backup non verranno più avviati all'esterno dell'intervallo di tempo, definito da una combinazione di @backup_begin_time e @backup_duration.  
   
  @backup_duration  
- La durata dell'intervallo di tempo di backup. Si noti che non c'è garanzia che i backup verranno completati durante il periodo di tempo definito da @backup_begin_time e @backup_duration. Operazioni di backup che vengono avviate nell'intervallo di tempo ma superano la durata della finestra non verranno annullate.  
+ La durata del periodo di tempo di backup. Si noti che non c'è garanzia che i backup verranno completati durante l'intervallo di tempo definito da @backup_begin_time e @backup_duration. Operazioni di backup che vengono avviate nell'intervallo di tempo ma che superano la durata della finestra non verranno annullate.  
   
  @log_backup_freq  
- Questa impostazione determina la frequenza di backup del log delle transazioni. Questi backup eseguito a intervalli regolari anziché in base alla pianificazione specificata per il backup del database. @log_backup_freq può essere espresso in minuti o ore e 0 è valida, a non indicare alcun backup del log. La disabilitazione di backup del log solo sarebbe ideale per i database con un modello di recupero con registrazione minima.  
+ Questa impostazione determina la frequenza dei backup del log delle transazioni. Questi backup si verificano a intervalli regolari anziché in base alla pianificazione specificata per i backup del database. @log_backup_freq può essere in minuti o ore e 0 è valido, che non indica nessun backup del log. La disabilitazione dei backup del log solo sarebbe ideale per i database con un modello di recupero con registrazione minima.  
   
 > [!NOTE]  
 >  Se il modello di recupero viene modificato da simple a full, è necessario riconfigurare il log_backup_freq da 0 a un valore diverso da zero.  
@@ -80,10 +80,10 @@ EXEC managed_backup.sp_backup_config_schedule
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza **db_backupoperator** ruolo del database con **ALTER ANY CREDENTIAL** , autorizzazioni e **EXECUTE** le autorizzazioni per **sp_delete _ BackupHistory** stored procedure.  
+ Richiede l'appartenenza al **db_backupoperator** ruolo del database con **ALTER ANY CREDENTIAL** autorizzazioni, e **EXECUTE** autorizzazioni sul **sp_delete BackupHistory** stored procedure.  
   
 ## <a name="see-also"></a>Vedere anche  
  [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sys. query_store_plan (Transact-SQL) | Documenti Microsoft
+title: Sys. query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
@@ -27,42 +27,42 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8883fb4fd7f70712f8e71ca9015380fd5c81ca93
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182027"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032319"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>Sys. query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Contiene informazioni su ogni piano di esecuzione associata a una query.  
+  Contiene informazioni su ogni piano di esecuzione associato a una query.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**bigint**|Chiave primaria.|  
-|**query_id**|**bigint**|Chiave esterna. Unisce in join alla [Sys. query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
-|**plan_group_id**|**bigint**|ID del gruppo di piano. Query basate su cursori richiedono in genere più (compilare e recuperare) piani. Compilare e si applica ai piani di recupero vengono compilati insieme nello stesso gruppo.<br /><br /> 0 significa piano non è presente in un gruppo.|  
-|**engine_version**|**nvarchar(32)**|Versione del motore utilizzata per compilare il piano in **'revisione'** formato.|  
-|**compatibility_level**|**smallint**|Livello di compatibilità del database del database a cui fa riferimento nella query.|  
-|**query_plan_hash**|**binary(8)**|Hash MD5 del piano individuale.|  
+|**query_id**|**bigint**|Chiave esterna. Crea un join al [Sys. query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
+|**plan_group_id**|**bigint**|ID del gruppo del piano. Query basate su cursori richiedono in genere più (popolare e recuperare) piani. Popolare e si applica ai piani di recupero vengono compilati insieme nello stesso gruppo.<br /><br /> 0 indica che piano non è presente in un gruppo.|  
+|**engine_version**|**nvarchar(32)**|Versione del modulo di gestione usato per compilare il piano nella **'revisione'** formato.|  
+|**compatibility_level**|**smallint**|Livello di compatibilità del database del database di cui viene fatto riferimento nella query.|  
+|**query_plan_hash**|**binary(8)**|Hash MD5 del singolo piano.|  
 |**query_plan**|**nvarchar(max)**|Showplan XML per il piano di query.|  
-|**is_online_index_plan**|**bit**|Piano è stato utilizzato durante la compilazione di un indice online.|  
-|**is_trivial_plan**|**bit**|Piano è un semplice piano (output in fase di query Optimizer è 0).|  
+|**is_online_index_plan**|**bit**|Piano è stato usato durante la compilazione di un indice online.|  
+|**is_trivial_plan**|**bit**|Piano è un semplice (output nella fase 0 di query optimizer).|  
 |**is_parallel_plan**|**bit**|Piano è parallelo.|  
-|**is_forced_plan**|**bit**|Piano viene contrassegnato come forzata quando l'utente esegue una stored procedure **sys.sp_query_store_force_plan**. Meccanismo di utilizzo forzato *non garantisce* esattamente questo piano verrà utilizzato per la query a cui fa riferimento **query_id**. Utilizzo forzato del piano fa sì che una query da compilare nuovamente e in genere produce esattamente il piano identici o simile per il piano a cui fa riferimento **plan_id**. Se l'utilizzo forzato del piano non riesce, **force_failure_count** viene incrementato e **last_force_failure_reason** viene popolato con il motivo dell'errore.|  
-|**is_natively_compiled**|**bit**|Piano include le procedure di ottimizzazione per la memoria compilate in modo nativo. (0 = FALSE, 1 = TRUE).|  
-|**force_failure_count**|**bigint**|Numero di volte in cui è Impossibile forzare l'utilizzo di questo piano. Può essere incrementato solo quando la query viene ricompilata (*non a ogni esecuzione*). Viene reimpostato su 0 ogni volta **is_plan_forced** viene modificato da **FALSE** a **TRUE**.|  
-|**last_force_failure_reason**|**int**|Motivo di utilizzo forzato del piano perché non è riuscita.<br /><br /> 0: nessun errore, il numero di errore in caso contrario dell'errore che ha causato l'imposizione esito negativo<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<altro valore >: GENERAL_FAILURE|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Descrizione testuale last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: query tenta di modificare i dati mentre la tabella di destinazione dispone di un indice viene compilato online<br /><br /> INVALID_STARJOIN: piano contiene specifica StarJoin non valida<br /><br /> TIME_OUT: Numero di Query Optimizer ha superato di operazioni consentite durante la ricerca del piano specificato dal piano forzato<br /><br /> NO_DB: Un database specificato nel piano non esiste.<br /><br /> HINT_CONFLICT: Impossibile compilare la Query perché il piano è in conflitto con un hint di query<br /><br /> DQ_NO_FORCING_SUPPORTED: Impossibile eseguire query piano è in conflitto con l'utilizzo di query distribuite o operazioni full-text.<br /><br /> NO_PLAN: Query processor Impossibile generare il piano di query perché non è stato possibile verificare il piano forzato risulti valida per la query<br /><br /> NO_INDEX: L'indice specificato nel piano non esiste<br /><br /> VIEW_COMPILE_FAILED: Impossibile forzare il piano di query a causa di un problema in una vista indicizzata a cui fa riferimento nel piano<br /><br /> GENERAL_FAILURE: errore generale di forzatura (non descritte con motivi sopra)|  
+|**is_forced_plan**|**bit**|Piano viene contrassegnato come forzata quando l'utente esegue stored procedure **sys.sp_query_store_force_plan**. Meccanismo di utilizzo forzato *non garantisce* verrà utilizzato per la query fa riferimento esattamente questo piano **query_id**. Uso forzato del piano fa in modo che query da compilare nuovamente e in genere produce esattamente il piano identici o simile al piano di cui fa riferimento **plan_id**. Se uso forzato del piano non riesce, **force_failure_count** viene incrementato e **last_force_failure_reason** viene popolato con il motivo dell'errore.|  
+|**is_natively_compiled**|**bit**|Piano include procedure ottimizzate per la memoria compilate in modo nativo. (0 = FALSE, 1 = TRUE).|  
+|**force_failure_count**|**bigint**|Numero di volte in cui è Impossibile forzare l'utilizzo di questo piano. Può essere incrementato solo quando la query viene ricompilata (*non a ogni esecuzione*). Viene reimpostato su 0 ogni volta **is_plan_forced** viene modificato da **FALSE** al **TRUE**.|  
+|**last_force_failure_reason**|**int**|Motivo di uso forzato del piano perché non è riuscito.<br /><br /> 0: nessun errore, in caso contrario, numero di errore dell'errore che ha causato l'utilizzo forzato esito negativo<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<altro valore >: GENERAL_FAILURE|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Descrizione testuale del last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: query tenta di modificare i dati mentre la tabella di destinazione ha un indice che viene compilato online<br /><br /> INVALID_STARJOIN: piano contiene specifica StarJoin non valida<br /><br /> TIME_OUT: Numero di Query Optimizer ha superato di operazioni consentite durante la ricerca del piano specificato dal piano forzato<br /><br /> NO_DB: Un database specificato nel piano non esiste<br /><br /> HINT_CONFLICT: Non è possibile compilare la Query. piano in conflitto con un hint di query<br /><br /> DQ_NO_FORCING_SUPPORTED: Impossibile eseguire query piano è in conflitto con l'uso di query distribuita o operazioni full-text.<br /><br /> NO_PLAN: Query processor Impossibile generare il piano di query perché il piano forzato non è stato possibile verificare la validità per la query<br /><br /> NO_INDEX: Indice specificato nel piano non è più presente<br /><br /> VIEW_COMPILE_FAILED: Non è stato possibile forzare il piano di query a causa di un problema in una vista indicizzata a cui fa riferimento il piano<br /><br /> GENERAL_FAILURE: errore generale di forzatura (non coperte da motivi sopra)|  
 |**count_compiles**|**bigint**|Pianificare le statistiche di compilazione.|  
 |**initial_compile_start_time**|**datetimeoffset**|Pianificare le statistiche di compilazione.|  
 |**last_compile_start_time**|**datetimeoffset**|Pianificare le statistiche di compilazione.|  
-|**last_execution_time**|**datetimeoffset**|Ora dell'ultima esecuzione fa riferimento all'ultima ora di fine del piano di query /.|  
+|**last_execution_time**|**datetimeoffset**|Ora dell'ultima esecuzione si riferisce all'ultima ora di fine del piano di query /.|  
 |**avg_compile_duration**|**float**|Pianificare le statistiche di compilazione.|  
 |**last_compile_duration**|**bigint**|Pianificare le statistiche di compilazione.|  
   
-## <a name="plan-forcing-limitations"></a>Limitazioni di utilizzo forzato del piano
+## <a name="plan-forcing-limitations"></a>Limitazioni di uso forzato del piano
 Query Store è dotato di un meccanismo per imporre a Query Optimizer l'uso di determinati piani di esecuzione. Esistono tuttavia alcune limitazioni che possono impedire l'imposizione di un piano. 
 
 In primo luogo, se il piano contiene i costrutti seguenti:
@@ -84,7 +84,7 @@ Infine, problemi del piano stesso:
 * XML del piano formato in modo non corretto
 
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede il **VIEW DATABASE STATE** autorizzazione.  
+ Richiede la **VIEW DATABASE STATE** l'autorizzazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
@@ -96,6 +96,6 @@ Infine, problemi del piano stesso:
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Stored procedure di archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [Query Store Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

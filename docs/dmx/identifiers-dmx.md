@@ -1,5 +1,5 @@
 ---
-title: Identificatori (DMX) | Documenti Microsoft
+title: Identificatori (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca1a3bd1754659548f6d1bc23764fd167006974a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842414"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978605"
 ---
 # <a name="identifiers-dmx"></a>Identificatori (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Tutti gli oggetti [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] deve avere un identificatore. Il nome di un oggetto ne costituisce l'identificatore. Sono dotati di identificatori anche i server, i database e gli oggetti di database quali origini dei dati, viste origine dati, cubi, dimensioni, modelli di data mining e così via.  
+  Tutti gli oggetti nel [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] deve avere un identificatore. Il nome di un oggetto ne costituisce l'identificatore. Sono dotati di identificatori anche i server, i database e gli oggetti di database quali origini dei dati, viste origine dati, cubi, dimensioni, modelli di data mining e così via.  
   
  In DMX (Data Mining Extensions) esistono due classi di identificatori:  
   
@@ -53,7 +53,7 @@ SELECT * FROM Clustering.CONTENT;
   
     -   Un carattere di sottolineatura (_).  
   
-3.  L'identificatore non deve coincidere con una parola riservata DMX. In DMX per le parole riservate non viene fatta distinzione tra maiuscole e minuscole. Per altre informazioni, vedere [le parole chiave riservate &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md).  
+3.  L'identificatore non deve coincidere con una parola riservata DMX. In DMX per le parole riservate non viene fatta distinzione tra maiuscole e minuscole. Per altre informazioni, vedere [parole chiave riservate &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md).  
   
 4.  Gli identificatori non possono contenere spazi o caratteri speciali incorporati.  
   
@@ -76,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Quando si utilizzano parole riservate come nomi di oggetti o parti di nomi di oggetti.  
   
-     È consigliabile evitare di utilizzare parole chiave riservate come nomi di oggetti. I database aggiornati da versioni precedenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono contenere identificatori che includono parole che non erano riservate nelle versioni precedenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ma che sono parole riservate per[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per fare riferimento a oggetti di questo tipo, è possibile utilizzare un identificatore delimitato finché non sarà possibile modificare il nome dell'oggetto.  
+     È consigliabile evitare di utilizzare parole chiave riservate come nomi di oggetti. I database aggiornati da versioni precedenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono contenere identificatori che includono parole che non erano riservate nelle versioni precedenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ma che sono parole riservate[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per fare riferimento a oggetti di questo tipo, è possibile utilizzare un identificatore delimitato finché non sarà possibile modificare il nome dell'oggetto.  
   
 -   Quando si utilizzano caratteri non elencati come identificatori qualificati.  
   
@@ -97,12 +97,12 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  Quando si utilizzano nomi di oggetti qualificati può essere necessario delimitare più identificatori che compongono il nome dell'oggetto. Tali identificatori devono essere delimitati singolarmente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
- [Estensioni Data Mining &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Estensioni Data Mining &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Estensioni Data Mining &#40;DMX&#41; riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
- [Estensioni Data Mining &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle istruzioni](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struttura e l'utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  

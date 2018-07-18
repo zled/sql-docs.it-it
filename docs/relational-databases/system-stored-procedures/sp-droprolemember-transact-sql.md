@@ -1,5 +1,5 @@
 ---
-title: sp_droprolemember (Transact-SQL) | Documenti Microsoft
+title: sp_droprolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9bb4bf48955c2b8c2f3039aa9e8e0f68e097f516
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258553"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974171"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,18 +60,18 @@ sp_droprolemember 'role' ,
  [  **@rolename =** ] **'***ruolo***'**  
  Nome del ruolo dal quale si desidera rimuovere il membro. *ruolo* viene **sysname**, non prevede alcun valore predefinito. *ruolo* deve esistere nel database corrente.  
   
- [  **@membername =** ] **'***security_account***'**  
- Nome dell'account di sicurezza che si desidera rimuovere dal ruolo. *security_account* viene **sysname**, non prevede alcun valore predefinito. *security_account* può essere un utente del database, un altro ruolo del database, un account di accesso di Windows o un gruppo di Windows. *security_account* deve esistere nel database corrente.  
+ [  **@membername =** ] **'***account_protezione***'**  
+ Nome dell'account di sicurezza che si desidera rimuovere dal ruolo. *account_protezione* viene **sysname**, non prevede alcun valore predefinito. *account_protezione* può essere un utente del database, un altro ruolo del database, un account di accesso di Windows o un gruppo di Windows. *account_protezione* deve esistere nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  sp_droprolemember rimuove un membro da un ruolo del database eliminando una riga dalla tabella sysmembers. Quando un membro viene rimosso da un ruolo il membro perde ogni autorizzazione di cui dispone tramite l'appartenenza a quel ruolo.  
   
- Per rimuovere un utente da un ruolo predefinito del server, utilizzare sp_dropsrvrolemember. Non è possibile rimuovere gli utenti al ruolo public e non può essere rimosso da alcun ruolo dbo.  
+ Per rimuovere un utente da un ruolo predefinito del server, usare sp_dropsrvrolemember. Gli utenti non possono essere rimossi dal ruolo public e non può essere rimosso da alcun ruolo dbo.  
   
- Utilizzare sp_helpuser per visualizzare i membri di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo e utilizzare ALTER ROLE per aggiungere un membro a un ruolo.  
+ Usare sp_helpuser per visualizzare i membri di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo e usare ALTER ROLE per aggiungere un membro a un ruolo.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il ruolo.  

@@ -1,5 +1,5 @@
 ---
-title: Sys.database_event_session_fields (Database SQL di Azure) | Documenti Microsoft
+title: Sys. database_event_session_fields (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0a7c7ee610ae5eb3a56a46c5b8c7ba1645b64532
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179657"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981853"
 ---
-# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>Sys.database_event_session_fields (Database SQL di Azure)
+# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>Sys. database_event_session_fields (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni colonna personalizzabile che è impostata in modo esplicito su eventi e destinazioni.  
@@ -38,13 +38,13 @@ ms.locfileid: "33179657"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|ID della sessione dell'evento. Non ammette i valori Null.|  
 |object_id|**int**|ID dell'oggetto a cui è associato il campo. Non ammette i valori Null.|  
-|name|**sysname**|Nome del campo. Non ammette i valori Null.|  
+|NAME|**sysname**|Nome del campo. Non ammette i valori Null.|  
 |Valore|**sql_variant**|Valore del campo. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Questa vista ha le cardinalità della relazione seguenti.  
   
 ||||  

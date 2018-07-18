@@ -23,22 +23,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae97ca9a273b7467bd5ec6e35f68602ec1c7c101
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238801"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981873"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Collega al server corrente un database che include solo un file di dati. **sp_attach_single_file_db** non può essere utilizzato con più file di dati.  
+  Collega al server corrente un database che include solo un file di dati. **sp_attach_single_file_db** non può essere usato con più file di dati.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È consigliabile utilizzare CREATE DATABASE *database_name* FOR ATTACH invece. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). Non utilizzare questa procedura per database replicati.  
   
 > [!IMPORTANT]  
->  È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di usare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare anche il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
+>  È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di utilizzare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,12 +66,12 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
- Utilizzare **sp_attach_single_file_db** solo nei database che sono stati precedentemente scollegati dal server tramite l'impostazione esplicita **sp_detach_db** operazione o in database copiati.  
+## <a name="remarks"></a>Note  
+ Uso **sp_attach_single_file_db** solo sui database che sono stati precedentemente scollegati dal server tramite l'impostazione esplicita **sp_detach_db** operazione o in database copiati.  
   
- **sp_attach_single_file_db** funziona solo su database che dispone di un singolo file di log. Quando **sp_attach_single_file_db** collega il database al server, viene compilato un nuovo file di log. Se il database è di sola lettura, il file di log verrà creato nella relativa posizione precedente.  
+ **sp_attach_single_file_db** funziona solo con i database con un singolo file di log. Quando **sp_attach_single_file_db** collega il database nel server, compila un nuovo file di log. Se il database è di sola lettura, il file di log verrà creato nella relativa posizione precedente.  
   
 > [!NOTE]  
 >  Non è possibile scollegare o collegare uno snapshot del database.  
@@ -79,7 +79,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  Non utilizzare questa procedura per database replicati.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per informazioni sulla modalità di gestione delle autorizzazioni quando un database viene collegato, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Per informazioni su come gestire le autorizzazioni quando un database viene collegato, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene scollegato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], quindi uno dei file inclusi nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] viene collegato al server corrente.  

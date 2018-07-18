@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_parallel_workers (Transact-SQL) | Documenti Microsoft
+title: Sys.dm_exec_query_parallel_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
@@ -25,34 +25,34 @@ ms.author: pelopes
 manager: ajayj
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f2bc4634a5e2fddb4a3c8eda009eb28019089596
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463967"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036309"
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Restituisce informazioni sulla disponibilità di lavoro per ogni nodo.  
   
-|Nome|Tipo di dati|Description|  
+|nome|Tipo di dati|Description|  
 |----------|---------------|-----------------|  
 |**node_id**|**int**|ID del nodo NUMA.|  
-|**scheduler_count**|**int**|Numero di utilità di pianificazione nel nodo.|  
-|**max_worker_count**|**int**|Numero massimo di thread di lavoro per query parallele.|  
-|**reserved_worker_count**|**int**|Numero di processi di lavoro riservati da query parallele, più il numero di lavori principali utilizzato da tutte le richieste.| 
-|**free_worker_count**|**int**|Numero di processi di lavoro disponibili per le attività.<br /><br />**Nota:** tutte le richieste in ingresso utilizza almeno 1 thread di lavoro, viene sottratto il conteggio di lavoro disponibile.  È possibile che il numero di lavoro può essere un numero negativo su un server con carico elevato.| 
+|**scheduler_count**|**int**|Numero di utilità di pianificazione nel nodo corrente.|  
+|**max_worker_count**|**int**|Numero massimo di ruoli di lavoro per le query parallele.|  
+|**reserved_worker_count**|**int**|Numero di thread di lavoro riservati per le query parallele, più il numero di lavori principali utilizzato da tutte le richieste.| 
+|**free_worker_count**|**int**|Numero di ruoli di lavoro per le attività.<br /><br />**Nota:** ogni richiesta in ingresso utilizza almeno 1 thread di lavoro, che viene sottratto il conteggio di lavoro gratuita.  È possibile che il numero di lavoro gratuita può essere un numero negativo in un server con carico elevato.| 
 |**used_worker_count**|**int**|Numero di lavori utilizzati da query parallele.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
  
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-viewing-current-parallel-worker-availability"></a>A. Visualizzazione corrente della disponibilità di un lavoro parallelo  
+### <a name="a-viewing-current-parallel-worker-availability"></a>A. Visualizzazione corrente della disponibilità di lavoro paralleli  
 
 ```sql 
 SELECT * FROM sys.dm_exec_query_parallel_workers;  

@@ -1,5 +1,5 @@
 ---
-title: Sequenza e QName (XQuery) | Documenti Microsoft
+title: Sequenza e QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30d463050f129bbc232c0261f1d6af481744ef93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077998"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990010"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Sequenza e QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  Ogni identificatore di una query XQuery è un QName, che è composto da un prefisso dello spazio dei nomi e da un nome locale. In questa implementazione, i nomi delle variabili in XQuery sono rappresentati da QName e non possono avere un prefisso.  
   
- Si consideri l'esempio seguente, in cui viene eseguita una query in un dataset non **xml** variabile:  
+ Si consideri l'esempio seguente in cui viene specificata una query su una non tipizzati **xml** variabile:  
   
 ```  
 DECLARE @x xml;  
@@ -119,7 +119,7 @@ SELECT @x.query('/Root/a');
   
  Nell'espressione (`/Root/a`), `Root` e `a` sono QName.  
   
- Nell'esempio seguente, una query viene eseguita su un oggetto tipizzato **xml** colonna. La query esegue l'iterazione su tutti \<passaggio > elementi nel primo percorso di area di produzione.  
+ Nell'esempio seguente viene specificata una query su un oggetto tipizzato **xml** colonna. La query esegue l'iterazione su tutti \<passaggio > elementi nel primo percorso area di produzione.  
   
 ```  
 SELECT Instructions.query('  
@@ -154,7 +154,7 @@ WHERE ProductModelID=7;
  Ogni database creato è il **sys** raccolta di XML schema. Questi schemi sono riservati e pertanto è possibile accedervi da qualsiasi altra raccolta di XML Schema creata dall'utente.  
   
 > [!NOTE]  
->  Questa implementazione non supporta il `local` prefisso come descritto nella specifica XQuery http://www.w3.org/2004/07/xquery-local-functions.  
+>  Questa implementazione non supporta il `local` prefisso come descritto nella specifica XQuery in http://www.w3.org/2004/07/xquery-local-functions.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su XQuery](../xquery/xquery-basics.md)  

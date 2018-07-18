@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_distributed_requests (Transact-SQL) | Documenti Microsoft
+title: Sys.dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,30 +27,31 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 7d61b26c1af6a588140cdf47308ee8f69ecd42b2
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982543"
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Contiene informazioni su tutte le richieste attualmente o recentemente active nelle query di PolyBase. Contiene una riga per ogni richiesta o alla query.  
+  Contiene informazioni su tutte le richieste attualmente o recentemente active nelle query di PolyBase. Elenca una riga per ogni richiesta o alla query.  
   
- In base a una sessione e un utente può, ID richiesta quindi recuperare le richieste distribuite effettive generate per l'esecuzione: tramite sys.dm_exec_distributed_requests. Ad esempio, una query che includono SQL regolari e le tabelle esterne SQL verrà scomposte in varie istruzioni/richieste eseguite in tutti i nodi di calcolo diversi. Per registrare i passaggi distribuiti in tutti i nodi di calcolo, si introduce un ID esecuzione 'global' può essere usato per tenere traccia di tutte le operazioni sui nodi di calcolo associati con una particolare richiesta e l'operatore, rispettivamente.  
+ Basato su sessione e un utente può richiedere ID, quindi recuperare le richieste distribuite effettive generate in modo da essere eseguito – tramite sys.dm_exec_distributed_requests. Ad esempio, una query che interessano SQL normali e le tabelle esterne SQL verrà scomposizione in varie istruzioni/richieste eseguite nei nodi di calcolo diversi. Per monitorare i passaggi distribuiti in tutti i nodi di calcolo, si introduce un ID esecuzione 'global' che può essere utilizzato per tenere traccia di tutte le operazioni sui nodi di calcolo associati a una determinata richiesta e un operatore, rispettivamente.  
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|sql_handle|**varbinary(64)**|Chiave per la visualizzazione. Id numerico univoco associato alla richiesta.|Valore univoco in tutte le richieste nel sistema.|  
+|sql_handle|**varbinary(64)**|Chiave per questa visualizzazione. Id numerico univoco associato alla richiesta.|Deve essere univoco tra tutte le richieste nel sistema.|  
 |execution_id|**nvarchar(32**|Id numerico univoco associato alla sessione in cui è stata eseguita la query.||  
 |status|**nvarchar(32**|Stato corrente della richiesta.|'Pending', 'Authorizing', 'AcquireSystemResources', 'Initializing', 'Plan', 'Parsing', 'AquireResources', 'Running', 'Cancelling', 'Complete', 'Failed', 'Cancelled'.|  
 |error_id|**nvarchar(36)**|Id univoco dell'errore associato alla richiesta, se presente.|Se si è verificato alcun errore, impostato su NULL.|  
 |start_time|**datetime**|Ora di inizio dell'esecuzione della richiesta.|0 per le richieste in coda. in caso contrario, valido datetime minore o uguale all'ora corrente.|  
-|end_time|**datetime**|Ora in cui il motore, è stata completata la richiesta di compilazione.|Null per le richieste in coda o attive. in caso contrario, un valore datetime valido minore o uguale all'ora corrente.|  
-|total_elapsed_time|**int**|Tempo trascorso nell'esecuzione, poiché la richiesta è stata avviata, in millisecondi.|Compreso tra 0 e la differenza tra start_time ed end_time. Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione genera l'avviso "è stato superato il valore massimo." Il valore massimo in millisecondi è equivalente a 24.8 giorni.|  
+|end_time|**datetime**|Ora in cui il motore completato la compilazione della richiesta.|Null per le richieste in coda o attive. in caso contrario, un oggetto datetime valido inferiore o uguale all'ora corrente.|  
+|total_elapsed_time|**int**|Tempo trascorso nell'esecuzione poiché è stata avviata la richiesta, in millisecondi.|Compreso tra 0 e la differenza tra start_time ed end_time. Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione verrà generato l'avviso "il valore massimo è stato superato." Il valore massimo in millisecondi è equivalente a 24,8 giorni.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [PolyBase, risoluzione dei problemi con viste a gestione dinamica](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase con DMV di risoluzione dei problemi](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste a gestione dinamica relative ai database &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

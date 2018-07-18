@@ -1,5 +1,5 @@
 ---
-title: Sys. partition_parameters (Transact-SQL) | Documenti Microsoft
+title: Sys. partition_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e0287d1c3a88281bb1b56a6d632e77beeeb7791f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181388"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036384"
 ---
 # <a name="syspartitionparameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "33181388"
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|ID della funzione di partizione a cui appartiene il parametro.|  
 |**parameter_id**|**int**|ID del parametro. Valore univoco all'interno della funzione di partizione, a partire da 1.|  
-|**system_type_id**|**tinyint**|ID del tipo di sistema del parametro. Corrisponde al **system_type_id** colonna il **Sys. Types** vista del catalogo.|  
+|**system_type_id**|**tinyint**|ID del tipo di sistema del parametro. Corrisponde alla **system_type_id** della colonna della **Sys. Types** vista del catalogo.|  
 |**max_length**|**smallint**|Lunghezza massima del parametro in byte.|  
 |**precisione**|**tinyint**|Precisione del parametro se numerica. In caso contrario 0.|  
-|**scala**|**tinyint**|Scala del parametro se numerica. In caso contrario 0.|  
+|**scalabilità**|**tinyint**|Scala del parametro se numerica. In caso contrario 0.|  
 |**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto del parametro, se di tipo carattere. In caso contrario, NULL.|  
-|**user_type_id**|**int**|ID del tipo. Valore univoco all'interno del database. Per i tipi di dati di sistema, **user_type_id** = **system_type_id**.|  
+|**user_type_id**|**int**|ID del tipo. Valore univoco all'interno del database. Per tipi di dati di sistema **user_type_id** = **system_type_id**.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

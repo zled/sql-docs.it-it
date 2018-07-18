@@ -1,5 +1,5 @@
 ---
-title: Funzione Concat (XQuery) | Documenti Microsoft
+title: Funzione Concat (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8be65777bb65ad54735ad6bdf43ea88608355c5b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077258"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981933"
 ---
 # <a name="functions-on-string-values---concat"></a>Funzioni su valori stringa - concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ fn:concat ($string as xs:string?
  *$string*  
  Stringa facoltativa per la concatenazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  La funzione richiede almeno due argomenti. Se un argomento è costituito da una sequenza vuota, viene considerato come stringa di lunghezza zero.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
- Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per ulteriori informazioni, vedere la sezione "XQuery funzioni riconoscono i surrogati" nell'argomento [modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per altre informazioni, vedere la sezione "XQuery funzioni riconoscono i surrogati" nell'argomento [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database di esempio AdventureWorks.  
@@ -81,9 +81,9 @@ WHERE  PD.ProductModelID=28
   
  Dalla query precedente si noti quanto segue:  
   
--   Nella clausola SELECT, CatalogDescription è una **xml** colonna di tipo. Pertanto, il [metodo query () (tipo di dati XML)](../t-sql/xml/query-method-xml-data-type.md), ovvero Instructions, viene utilizzato. L'istruzione XQuery viene specificata come argomento per il metodo di query.  
+-   Nella clausola SELECT, CatalogDescription è una **xml** colonna di tipo. Pertanto, il [metodo query () (tipo di dati XML)](../t-sql/xml/query-method-xml-data-type.md), ovvero Instructions, viene usato. L'istruzione XQuery viene specificata come argomento per il metodo di query.  
   
--   Nel documento sul quale viene eseguita la query vengono utilizzati spazi dei nomi. Pertanto, il **dello spazio dei nomi** parola chiave viene utilizzata per definire il prefisso dello spazio dei nomi. Per ulteriori informazioni, vedere [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md).  
+-   Nel documento sul quale viene eseguita la query vengono utilizzati spazi dei nomi. Pertanto, il **dello spazio dei nomi** parola chiave viene usata per definire il prefisso dello spazio dei nomi. Per altre informazioni, vedere [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md).  
   
  Risultato:  
   
@@ -91,7 +91,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- La query precedente recupera le informazioni relative a un prodotto specifico. La query seguente recupera le stesse informazioni per tutti i prodotti per i quali vengono archiviate descrizioni di catalogo XML. Il **exist ()** metodo il **xml** tipo di dati nella clausola WHERE restituisce True se il documento XML nelle righe ha un <`ProductDescription`> elemento.  
+ La query precedente recupera le informazioni relative a un prodotto specifico. La query seguente recupera le stesse informazioni per tutti i prodotti per i quali vengono archiviate descrizioni di catalogo XML. Il **exist ()** metodo per il **xml** tipo di dati nella clausola WHERE restituisce True se il documento XML nelle righe ha una <`ProductDescription`> elemento.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -113,7 +113,7 @@ WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1
   
 ```  
   
- Si noti che il valore booleano restituito dal **exist ()** metodo il **xml** tipo viene confrontato con 1.  
+ Si noti che il valore booleano restituito dal **exist ()** metodo per il **xml** tipo viene confrontato con 1.  
   
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  

@@ -1,5 +1,5 @@
 ---
-title: Colonne di dati di eventi individuazione | Documenti Microsoft
+title: Colonne di dati degli eventi di individuazione | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 064bfcc90845082ad47caea23fa671152af486a2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044956"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042549"
 ---
 # <a name="discover-events-data-columns"></a>Colonne di dati degli eventi di individuazione
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34044956"
 |CurrentTime|2|5|Contiene l'ora corrente dell'evento di individuazione, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene l'ora, se disponibile, in cui è iniziato l'evento di fine individuazione. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene l'ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Durata|5|2|Contiene la durata dell'evento di individuazione in millisecondi.|  
+|Duration|5|2|Contiene la durata dell'evento di individuazione in millisecondi.|  
 |CPUTime|6|2|Contiene il tempo della CPU in millisecondi utilizzato dall'evento.|  
 |Severity|22|1|Contiene il livello di gravità di un'eccezione.|  
 |Esito positivo|23|1|Contiene informazioni sull'esito positivo o negativo dell'evento di individuazione. I valori possibili sono:<br /><br /> 0 = esito negativo<br /><br /> 1 = esito positivo|  
@@ -77,6 +77,6 @@ ms.locfileid: "34044956"
 |RequestProperties|45|9|Contiene le proprietà nella richiesta XMLA.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Categoria di eventi eventi di individuazione](../../analysis-services/trace-events/discover-events-event-category.md)  
+ [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

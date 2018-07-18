@@ -1,5 +1,5 @@
 ---
-title: Sys. sql_logins (Transact-SQL) | Documenti Microsoft
+title: Sys. sql_logins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: cdf6447b7673606224852078f80306c4b7fb4632
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220742"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985164"
 ---
 # <a name="syssqllogins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -46,10 +46,10 @@ ms.locfileid: "33220742"
   
  Per un elenco delle colonne ereditate da questa vista, vedere [Sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Per visualizzare entrambi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso di autenticazione e accesso con autenticazione di Windows, vedere [Sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Quando i contenuti vengono abilitati gli utenti del database, le connessioni possono essere eseguite senza account di accesso. Per identificare questi account, vedere [Sys. database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+ Quando contenuto agli utenti di database sono abilitati, le connessioni possono essere eseguite senza account di accesso. Per identificare questi account, vedere [Sys. database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Con qualsiasi account di accesso con autenticazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile visualizzare il relativo nome di account di accesso e l'account di accesso sa. Per visualizzare altri account di accesso, è richiesta l'autorizzazione ALTER ANY LOGIN o un'autorizzazione per l'account di accesso.  
@@ -60,6 +60,6 @@ ms.locfileid: "33220742"
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Criteri password](../../relational-databases/security/password-policy.md)   
- [Entità &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

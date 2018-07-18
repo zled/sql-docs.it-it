@@ -1,5 +1,5 @@
 ---
-title: sp_help_maintenance_plan (Transact-SQL) | Documenti Microsoft
+title: sp_help_maintenance_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c144581e7d1ed73da251d13419d5ec04a7fd687
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260627"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979053"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
  Viene specificato l'ID del piano di manutenzione. *plan_id* viene **UNIQUEIDENTIFIER**. Il valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Nessuno  
+ None  
   
 ## <a name="result-sets"></a>Set di risultati  
- Se *plan_id* è specificato, **sp_help_maintenance_plan** restituirà tre tabelle: piano, il Database e processi.  
+ Se *plan_id* omette **sp_help_maintenance_plan** restituirà tre tabelle: piano, il Database e processi.  
   
 ### <a name="plan-table"></a>Tabella relativa al piano  
   
@@ -70,7 +70,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**remote_history_server**|**int**|Nome del server remoto in cui è possibile scrivere il report della cronologia.|  
 |**max_remote_history_rows**|**int**|Numero massimo di righe assegnate nella tabella di sistema di un server remoto in cui è possibile scrivere il report della cronologia.|  
 |**user_defined_1**|**int**|Il valore predefinito è NULL.|  
-|**user_defined_2**|**Nvarchar (100)**|Il valore predefinito è NULL.|  
+|**user_defined_2**|**Nvarchar(100)**|Il valore predefinito è NULL.|  
 |**user_defined_3**|**datetime**|Il valore predefinito è NULL.|  
 |**user_defined_4**|**uniqueidentifier**|Il valore predefinito è NULL.|  
   
@@ -86,7 +86,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|ID di tutti i processi associati al piano di manutenzione. *job_id* viene **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_help_maintenance_plan** è il **msdb** database.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -1,5 +1,5 @@
 ---
-title: Esercitazioni su Analysis Services di Adventure Works (1400) | Documenti Microsoft
+title: Esercitazioni su Analysis Services Adventure Works (1400) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,47 +10,47 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28aa401eb037fecadca17ededf041ab82a4bc498
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044575"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042449"
 ---
 # <a name="tabular-modeling-1400-compatibility-level"></a>Modellazione tabulare (livello di compatibilità 1400)
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-Questa esercitazione sono incluse lezioni su come creare e distribuire un modello tabulare con la [il livello di compatibilità 1400](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md). Se si ha familiarità con Analysis Services e la modellazione tabulare, completato questa esercitazione è il modo più rapido per informazioni su come creare e distribuire un modello tabulare di base tramite Visual Studio. Dopo avere i prerequisiti sul posto, sono necessarie due a tre ore per completare.  
+Questa esercitazione è incluse lezioni su come creare e distribuire un modello tabulare al [livello di compatibilità 1400](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md). Se si ha familiarità con Analysis Services e la modellazione tabulare, completare questa esercitazione è il modo più rapido per imparare a creare e distribuire un modello tabulare di base usando Visual Studio. Dopo aver ottenuto i prerequisiti sul posto, sono necessarie due o tre ore per il completamento.  
   
-## <a name="what-you-learn"></a>Informazioni   
+## <a name="what-you-learn"></a>Tutto ciò che Apprendi   
   
--   Come creare un nuovo progetto di modello tabulare nel **il livello di compatibilità 1400** in Visual Studio con SSDT.
+-   Come creare un nuovo progetto di modello tabulare al **livello di compatibilità 1400** in Visual Studio con SSDT.
   
--   Come importare dati da un database relazionale in un database dell'area di lavoro progetto di modello tabulare.  
+-   Come importare dati da un database relazionale in un database modello tabulare dell'area di lavoro di progetto.  
   
 -   Modalità di creazione e gestione delle relazioni tra tabelle nel modello.  
   
--   Come creare colonne calcolate, misure e indicatori di prestazioni chiave che consentono agli utenti di analizzare le metriche aziendali critici.  
+-   Come creare colonne calcolate, misure e indicatori di prestazioni chiave che consentono agli utenti di analizzare le metriche aziendali critiche.  
   
--   Come creare e gestire prospettive e gerarchie che semplificano l'esplorazione dei dati del modello fornendo punti di vista specifici dell'applicazione e di business.  
+-   Come creare e gestire prospettive e gerarchie che consentono a più utenti di esplorare con facilità i dati del modello fornendo punti di vista specifici dell'applicazione e aziendali.  
   
 -   Modalità di creazione di partizioni che consentono di dividere i dati della tabella in parti logiche più piccole che possono essere elaborate indipendentemente dalle altre partizioni.  
   
 -   Modalità di protezione degli oggetti e dei dati del modello tramite la creazione di ruoli con membri utente.  
   
--   Come distribuire un modello tabulare per un **Azure Analysis Services** server o **2017 Analysis Services di SQL Server** server mediante SSDT.  
+-   Come distribuire un modello tabulare da un **Azure Analysis Services** server oppure **SQL Server 2017 Analysis Services** server mediante SSDT.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
 
 Per completare questa esercitazione, è necessario:  
   
--   Un server Azure Analysis Services o un server di SQL Server 2017 Analysis Services in modalità tabulare. Iscriversi per una liberazione [versione di valutazione di Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) e [creare un server](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server) o il download gratuito [2017 Developer Edition di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
+-   Un server Azure Analysis Services o un server di SQL Server 2017 Analysis Services in modalità tabulare. Iscriversi per ottenere una [versione di valutazione di Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) e [creare un server](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server) o il download gratuito [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
--   Un [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) con il **database di esempio AdventureWorksDW**, o un Data Warehouse di on-premise SQL Server con un [database di esempio AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Quando si installa un database AdventureWorksDW a un Data Warehouse di on-premise SQL Server, utilizzare la versione di datbase esempio corrispondente con la versione del server. 
+-   Un' [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) con il **database AdventureWorksDW di esempio**, o un Data Warehouse di on-premise SQL Server con un [database di esempio AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Durante l'installazione di un database AdventureWorksDW in un'istanza locale SQL Server Data Warehouse, usare la versione del database di esempio corrispondente con la versione di server. 
 
-    **Importante:** se si installa il database di esempio per on-premise SQL Server Data Warehouse e distribuire il modello a un server di Azure Analysis Services, un [gateway dati locale](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway) è obbligatorio.
+    **Importante:** se si installa il database di esempio in locale SQL Server Data Warehouse e distribuire il modello a un server Azure Analysis Services, un' [gateway dati locale](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway) è obbligatorio.
 
--   La versione più recente di [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx). O, se si dispone già di Visual Studio 2017, è possibile scaricare e installare [progetti di Microsoft Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) pacchetto (VSIX). Per questa esercitazione, i riferimenti a Visual Studio e SSDT sono sinonimi. 
+-   La versione più recente di [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx). Oppure, se si dispone già di Visual Studio 2017, è possibile scaricare e installare [progetti di Microsoft Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) pacchetto (VSIX). Per questa esercitazione, i riferimenti a Visual Studio e SSDT sono sinonimi. 
 
 -   La versione più recente di [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).    
 
@@ -58,13 +58,13 @@ Per completare questa esercitazione, è necessario:
 
 ## <a name="scenario"></a>Scenario  
 
-Questa esercitazione è basata su Adventure Works Cycles, una società fittizia. Adventure Works è un'azienda manifatturiera multinazionale che produce e commercializza biciclette, parti e accessori sui mercati dell'America del Nord, Europa e Asia. È stata lavorano 500 dipendenti. Inoltre, Adventure Works utilizza diversi team delle vendite regionali di mercato. Il progetto consiste nel creare un modello tabulare agli utenti di vendita e marketing di analizzare i dati delle vendite Internet nel database AdventureWorksDW.  
+Questa esercitazione è basata su Adventure Works Cycles, una società fittizia. Adventure Works è una grande società multinazionale che produce e commercializza biciclette, componenti e accessori per mercati commerciali di America del Nord, Europa e Asia. L'azienda ha un organico 500 dipendenti. Inoltre, Adventure Works ha diversi team di vendita regionali di mercato. Il progetto consiste nel creare un modello tabulare agli utenti di vendite e marketing di analizzare i dati di vendite Internet nel database AdventureWorksDW.  
   
-Per completare l'esercitazione, è necessario completare diverse lezioni. In ogni lezione, vi sono attività. Completamento di ogni attività nell'ordine è necessario per completare la lezione. Mentre in una lezione specifica potrebbero essere diverse attività che eseguono un risultato simile, ma il completamento di ogni attività è leggermente diversa. Questo metodo viene illustrato come è spesso più di un modo per completare un'attività e per incentivare l'utilizzo delle conoscenze acquisite in attività e lezioni precedenti.  
+Per completare l'esercitazione, è necessario completare diverse lezioni. In ogni lezione, esistono attività. Completare ogni attività nell'ordine è necessario per il completamento della lezione. Mentre in una lezione specifica potrebbero esserci diverse attività che portano un risultato simile, ma come si completano ogni attività è leggermente diversa. Questa metodologia è spesso più di un modo per completare un'attività e che l'utente usando le competenze che apprese nelle lezioni precedenti e nelle attività.  
   
-Lo scopo delle lezioni è illustrata la creazione di un modello tabulare di base tramite molte delle funzionalità incluse in SSDT. Poiché ogni lezione è basata su quella precedente, è necessario completare le lezioni in ordine.
+Lo scopo delle lezioni è guidare è durante la creazione di un modello tabulare di base usando alcune delle funzionalità incluse in SSDT. Poiché ogni lezione è basata su quella precedente, è necessario completare le lezioni in ordine.
   
-In questa esercitazione non fornisce lezioni sulla gestione di un server nel portale di Azure, la gestione di un server o un database utilizzando SQL Server Management Studio o utilizzando un'applicazione client di esplorare i dati del modello. 
+Questa esercitazione non fornisce lezioni sulla gestione di un server nel portale di Azure, la gestione di un server o un database usando SQL Server Management Studio, o un'applicazione client di esplorare i dati del modello. 
 
 
 ## <a name="lessons"></a>Lezioni  
@@ -79,7 +79,7 @@ L'esercitazione include le lezioni seguenti:
 |[4 - Creare relazioni](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)|10 minuti|  
 |[5 - Creare colonne calcolate](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)|15 minuti|
 |[6 - Creare misure](../tutorial-tabular-1400/as-lesson-6-create-measures.md)|30 minuti|  
-|[7 - creare indicatori di prestazioni chiave (KPI)](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)|15 minuti|  
+|[7: creare indicatori di prestazioni chiave (KPI)](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)|15 minuti|  
 |[8 - Creare prospettive](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)|5 minuti|  
 |[9 - Creare gerarchie](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)|20 minuti|  
 |[10 - Creare partizioni](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)|15 minuti|  

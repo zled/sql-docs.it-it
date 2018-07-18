@@ -1,5 +1,5 @@
 ---
-title: Tipo di elemento (Dimension) (ASSL) | Documenti Microsoft
+title: Tipo di elemento (Dimension) (ASSL) | Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3af3168c39f685702154bb7c76435bd1d241a642
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039365"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990313"
 ---
 # <a name="type-element-dimension-assl"></a>Elemento Type (Dimension) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,47 +33,47 @@ ms.locfileid: "34039365"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
-|Valore predefinito|*Regular*|  
+|Valore predefinito|*Regolare*|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elemento padre|[Dimensione](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elemento padre|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
+|Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
- Per alcuni valori **tipo**, ad esempio *account*, determinare un comportamento specifico.  
+## <a name="remarks"></a>Note  
+ Alcuni valori per **tipo**, ad esempio *account*, determinano comportamenti specifici.  
   
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
-|*Regular*|La dimensione è una dimensione regolare.|  
-|*Time*|La dimensione è una dimensione temporale.<br /><br /> Nota: Questo valore indica che la dimensione supporta le funzionalità specifiche di dimensioni temporali.|  
+|*Regolare*|La dimensione è una dimensione regolare.|  
+|*Time*|La dimensione è una dimensione temporale.<br /><br /> Nota: Questo valore indica che la dimensione supporta le funzionalità specifiche delle dimensioni temporali.|  
 |*Geography*|La dimensione contiene attributi geografici.|  
 |*Organizzazione*|La dimensione contiene attributi organizzativi.|  
 |*BillOfMaterials*|La dimensione contiene attributi della distinta base.|  
-|*Accounts*|La dimensione contiene attributi relativi ai conti.<br /><br /> Nota: Questo valore indica che la dimensione supporta le funzionalità specifiche per le dimensioni dell'account.|  
-|*Customers*|La dimensione contiene attributi relativi ai clienti.|  
+|*Accounts*|La dimensione contiene attributi relativi ai conti.<br /><br /> Nota: Questo valore indica che la dimensione supporta le funzionalità specifiche delle dimensioni di tipo conti.|  
+|*Clienti*|La dimensione contiene attributi relativi ai clienti.|  
 |*Prodotti*|La dimensione contiene attributi relativi ai prodotti.|  
 |*Scenario*|La dimensione contiene attributi relativi agli scenari.|  
 |*Quantitative*|La dimensione contiene attributi quantitativi.|  
 |*Utilità*|La dimensione contiene attributi di utilità.|  
-|*Currency*|La dimensione contiene attributi di valuta.|  
-|*Velocità*|La dimensione contiene attributi relativi al tasso di cambio.|  
+|*Valuta*|La dimensione contiene attributi di valuta.|  
+|*Tariffe*|La dimensione contiene attributi relativi al tasso di cambio.|  
 |*Channel*|La dimensione contiene attributi relativi ai canali.|  
-|*Promotion*|La dimensione contiene attributi relativi alle promozioni.|  
+|*Innalzamento di livello*|La dimensione contiene attributi relativi alle promozioni.|  
   
- L'enumerazione che corrisponde ai valori consentiti per **tipo** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionType>.  
+ L'enumerazione che corrisponde ai valori consentiti per **tipo** nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionType>.  
   
- L'elemento che corrisponde all'elemento padre **tipo** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
+ L'elemento che corrisponde al padre di **tipo** nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Proprietà &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

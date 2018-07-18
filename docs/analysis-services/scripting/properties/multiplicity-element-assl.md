@@ -1,5 +1,5 @@
 ---
-title: Elemento multiplicity (ASSL) | Documenti Microsoft
+title: Elemento multiplicity (ASSL) | Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2740e920332d55fd2826b8d91d6f7434d2f59e91
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042425"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045839"
 ---
 # <a name="multiplicity-element-assl"></a>Elemento Multiplicity (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34042425"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito||  
@@ -44,16 +44,16 @@ ms.locfileid: "34042425"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
-|*uno*|Estremità chiave primaria.|  
+|*Uno*|Estremità chiave primaria.|  
 |*Molti*|Estremità chiave esterna.|  
   
- L'enumerazione che corrisponde ai valori consentiti per **ruolo** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Multiplicity>.  
+ L'enumerazione che corrisponde ai valori consentiti per **ruolo** nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Multiplicity>.  
   
   

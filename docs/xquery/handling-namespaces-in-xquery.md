@@ -1,5 +1,5 @@
 ---
-title: Gestione degli spazi dei nomi in XQuery | Documenti Microsoft
+title: Gestione degli spazi dei nomi in XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4602c1234c00b15191ca616ed56352f0eb784d9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077918"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031389"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Gestione degli spazi dei nomi in XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ WHERE ProductModelID=7
 …  
 ```  
   
- Si noti che il **dello spazio dei nomi** parola chiave viene utilizzata per definire un nuovo prefisso dello spazio dei nomi, "AWMI:". Questo prefisso dovrà pertanto essere utilizzato nella query per tutti gli elementi che rientrano nell'ambito dello spazio dei nomi specifico.  
+ Si noti che il **dello spazio dei nomi** parola chiave viene usata per definire un nuovo prefisso dello spazio dei nomi, "AWMI:". Questo prefisso dovrà pertanto essere utilizzato nella query per tutti gli elementi che rientrano nell'ambito dello spazio dei nomi specifico.  
   
 ### <a name="b-declaring-a-default-namespace"></a>B. Dichiarazione di uno spazio dei nomi predefinito  
  Nella query precedente è stato definito un nuovo prefisso dello spazio dei nomi. È stato quindi necessario utilizzare tale prefisso nella query per selezionare le strutture XML desiderate. In alternativa, è possibile dichiarare uno spazio dei nomi predefinito, come illustrato nella query modificata seguente:  
@@ -123,7 +123,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. Costruzione tramite gli spazi dei nomi predefiniti  
- È inoltre possibile definire uno spazio dei nomi predefinito da utilizzare nel codice XML costruito. Ad esempio, la query seguente viene illustrato come è possibile specificare uno spazio dei nomi predefinito, "SomeNamespace"\\, da utilizzare come valore predefinito per gli elementi denominati a livello locale costruiti, ad esempio il `<Result>` elemento.  
+ È inoltre possibile definire uno spazio dei nomi predefinito da utilizzare nel codice XML costruito. Ad esempio, la query seguente viene illustrato come è possibile specificare uno spazio dei nomi predefinito, "SomeNamespace"\\, da usare come valore predefinito per gli elementi denominati a livello locale costruiti, ad esempio il `<Result>` elemento.  
   
 ```  
 SELECT CatalogDescription.query('  

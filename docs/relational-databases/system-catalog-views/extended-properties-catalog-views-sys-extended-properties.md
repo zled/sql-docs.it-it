@@ -1,5 +1,5 @@
 ---
-title: Sys. extended_properties (Transact-SQL) | Documenti Microsoft
+title: Sys. extended_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: fb0a4c9692b88ccc895d9aa97f4520cc2d5aea4a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181787"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031469"
 ---
-# <a name="extended-properties-catalog-views---sysextendedproperties"></a>Viste del catalogo delle proprietà - estesi Sys. extended_properties
+# <a name="extended-properties-catalog-views---sysextendedproperties"></a>Estesi viste del catalogo delle proprietà - Sys. extended_properties
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Restituisce una riga per ogni proprietà estesa nel database corrente.  
@@ -43,7 +43,7 @@ ms.locfileid: "33181787"
 |class_desc|**nvarchar(60)**|Descrizione della classe in cui è inclusa la proprietà estesa. I possibili valori sono i seguenti:<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> Parametro<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
 |major_id|**int**|ID dell'elemento in cui è inclusa la proprietà estesa, interpretato in base alla classe di appartenenza. Per la maggior parte degli elementi, questo ID si applica a ciò che rappresenta la classe. L'interpretazione per gli ID principali non standard è la seguente:<br /><br /> Se la classe è 0, major_id è sempre 0.<br /><br /> Se la classe è 1, 2 o 7, major_id è object_id.|  
 |minor_id|**int**|ID secondario dell'elemento in cui è inclusa la proprietà estesa, interpretato in base alla classe di appartenenza. Per la maggior parte degli elementi corrisponde a 0. Negli altri casi i possibili valori sono i seguenti:<br /><br /> Se la classe è 1, minor_id è column_id se colonna, altrimenti 0 se oggetto.<br /><br /> Se la classe è 2, minor_id è parameter_id.<br /><br /> Se la classe è 7, minor _id è index_id.|  
-|name|**sysname**|Nome della proprietà, univoco con class, major_id e minor_id.|  
+|NAME|**sysname**|Nome della proprietà, univoco con class, major_id e minor_id.|  
 |Valore|**sql_variant**|Valore della proprietà estesa.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

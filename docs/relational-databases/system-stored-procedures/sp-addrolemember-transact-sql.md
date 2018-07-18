@@ -1,5 +1,5 @@
 ---
-title: sp_addrolemember (Transact-SQL) | Documenti Microsoft
+title: sp_addrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 147547c7392acaf528b7aef98c88affb8487fe99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239821"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032339"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,13 +59,13 @@ sp_addrolemember 'role', 'security_account'
  [ @rolename=] '*ruolo*'  
  Nome del ruolo del database nel database corrente. *ruolo* è un **sysname**, non prevede alcun valore predefinito.  
   
- [ @membername=] '*security_account*'  
- Account di sicurezza aggiunto al ruolo. *security_account* è un **sysname**, non prevede alcun valore predefinito. *security_account* può essere un utente del database, ruolo del database, account di accesso di Windows o gruppo di Windows.  
+ [ @membername=] '*account_protezione*'  
+ Account di sicurezza aggiunto al ruolo. *account_protezione* è un **sysname**, non prevede alcun valore predefinito. *account_protezione* può essere un utente del database, ruolo predefinito del database, account di accesso di Windows o il gruppo di Windows.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Un membro aggiunto al ruolo tramite la stored procedure sp_addrolemember eredita le autorizzazioni del ruolo. Se il nuovo membro è un'entità a livello di Windows senza un corrispondente utente del database, verrà creato un utente del database, di cui tuttavia potrebbe non essere eseguito completamente il mapping all'account di accesso. Verificare sempre che l'account di accesso esista e che sia in grado di accedere al database.  
   
  Un ruolo non può includere sé stesso come membro. Tali definizioni "circolari" non sono valide anche quando l'appartenenza è indirettamente sottintesa da una o più appartenenze intermedie.  
@@ -77,11 +77,11 @@ sp_addrolemember 'role', 'security_account'
 ## <a name="permissions"></a>Autorizzazioni  
  Per l'aggiunta di membri ai ruoli del database flessibili è necessario uno degli elementi seguenti:  
   
--   Appartenenza al ruolo predefinito del database db_securityadmin o db_owner.  
+-   Appartenenza al ruolo predefinito del database db_owner o db_securityadmin.  
   
 -   Appartenenza al ruolo proprietario del ruolo.  
   
--   **Autorizzazione ALTER ANY ROLE** autorizzazione o **ALTER** autorizzazione per il ruolo.  
+-   **ALTER ANY ROLE** autorizzazione oppure **ALTER** autorizzazione per il ruolo.  
   
  Per l'aggiunta di membri ai ruoli predefiniti del database è necessaria l'appartenenza al ruolo predefinito del database db_owner.  
   
@@ -113,7 +113,7 @@ EXEC sp_addrolemember 'Production', 'Mary5';
  L'esempio seguente aggiunge l'account di accesso `LoginMary` per il `AdventureWorks2008R2` database come utente `UserMary`. L'utente `UserMary` viene quindi aggiunto al ruolo `Production`.  
   
 > [!NOTE]  
->  Poiché l'account di accesso `LoginMary` è noto come utente del database `UserMary` nel [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, il nome utente `UserMary` deve essere specificato. L'istruzione non verrà eseguita correttamente se non esiste un account di accesso `Mary5`. Gli account di accesso e utenti in genere hanno lo stesso nome. In questo esempio Usa nomi diversi per distinguere le azioni che interessano l'account di accesso e l'utente.  
+>  Poiché l'account di accesso `LoginMary` è noto come utente del database `UserMary` nel [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] del database, il nome utente `UserMary` deve essere specificato. L'istruzione non verrà eseguita correttamente se non esiste un account di accesso `Mary5`. Gli account di accesso e utenti in genere hanno lo stesso nome. In questo esempio Usa nomi diversi per differenziare le azioni che interessano l'account di accesso e l'utente.  
   
 ```  
 -- Uses AdventureWorks  
@@ -133,7 +133,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md)  

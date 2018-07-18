@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 6: Creare colonne calcolate | Documenti Microsoft'
+title: 'Lezione 6: Creare colonne calcolate | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c3b86f84567e85fb604883e7cd7f8de83feb252e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017788"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031589"
 ---
 # <a name="lesson-5-create-calculated-columns"></a>Lezione 5: Creare colonne calcolate
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-In questa lezione verranno creati nuovi dati nel modello aggiungendo colonne calcolate. Una colonna calcolata è basata sui dati già presenti nel modello. Per ulteriori informazioni, vedere [colonne calcolate](../analysis-services/tabular-models/ssas-calculated-columns.md).  
+In questa lezione verranno creati nuovi dati nel modello aggiungendo colonne calcolate. Una colonna calcolata è basata sui dati già presenti nel modello. Per altre informazioni, vedere [Calculated Columns](../analysis-services/tabular-models/ssas-calculated-columns.md).  
   
 Verranno create cinque nuove colonne calcolate in tre tabelle diverse. I passaggi sono leggermente diversi per ogni attività. L'obiettivo è quello di mostrare che vi sono diversi metodi per creare nuove colonne, rinominarle e collocarle in diverse posizioni in una tabella.  
   
@@ -30,15 +30,15 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 ## <a name="create-calculated-columns"></a>Creare colonne calcolate  
   
-#### <a name="create-a-monthcalendar-calculated-column-in-the-dimdate-table"></a>Creare una colonna calcolata di MonthCalendar della tabella DimDate  
+#### <a name="create-a-monthcalendar-calculated-column-in-the-dimdate-table"></a>Creare una colonna calcolata MonthCalendar nella tabella DimDate  
   
-1.  Fare clic su di **modello** menu > **vista modello** > **vista dati**.  
+1.  Fare clic sui **Model** menu > **visualizzazione modello** > **vista dati**.  
   
     Le colonne calcolate possono essere create solo tramite Progettazione modelli in Vista dati.  
   
-2.  In Progettazione modelli fare clic su di **DimDate** tabella (scheda).  
+2.  In Progettazione modelli, scegliere il **DimDate** tabella (scheda).  
   
-3.  Fare doppio clic su di **CalendarQuarter** intestazione di colonna e quindi fare clic su **Inserisci colonna**.  
+3.  Fare doppio clic il **CalendarQuarter** intestazione di colonna e quindi fare clic su **Inserisci colonna**.  
   
     Una nuova colonna denominata **CalculatedColumn1** verrà inserita a sinistra della colonna **Calendar Quarter** .  
   
@@ -50,15 +50,15 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
     I valori vengono quindi popolati per tutte le righe nella colonna calcolata. Scorrendo la tabella verso il basso, si vedrà che le righe possono avere valori diversi per questa colonna, in base ai dati presenti in ogni riga.    
   
-5.  Rinominare questa colonna come **MonthCalendar**. 
+5.  Rinominare la colonna **MonthCalendar**. 
 
     ![come-tabulare-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
   
-MonthCalendar calcolato colonna fornisce un nome ordinabile per mese.  
+La colonna calcolata MonthCalendar fornisce un nome ordinabile per il mese.  
   
-#### <a name="create-a-dayofweek-calculated-column-in-the-dimdate-table"></a>Creare una colonna calcolata DayOfWeek della tabella DimDate  
+#### <a name="create-a-dayofweek-calculated-column-in-the-dimdate-table"></a>Creare una colonna calcolata DayOfWeek nella tabella DimDate  
   
-1.  Con il **DimDate** ancora attiva, fare clic su di **colonna** menu e quindi fare clic su **Aggiungi colonna**.  
+1.  Con il **DimDate** ancora attiva, fare clic sul **colonna** dal menu e quindi fare clic su **Aggiungi colonna**.  
   
 2.  Sulla barra della formula digitare la formula seguente:  
     
@@ -68,19 +68,19 @@ MonthCalendar calcolato colonna fornisce un nome ordinabile per mese.
     
     Al termine della compilazione della formula, premere INVIO. La nuova colonna verrà aggiunta all'estremità destra della tabella.  
   
-3.  Rinominare la colonna in **DayOfWeek**.  
+3.  Rinominare la colonna **DayOfWeek**.  
   
-4.  Fare clic sull'intestazione di colonna e quindi trascinare la colonna tra la **EnglishDayNameOfWeek** colonna e **DayNumberOfMonth** colonna.  
+4.  Fare clic sull'intestazione di colonna e quindi trascinare la colonna tra le **EnglishDayNameOfWeek** colonna e il **DayNumberOfMonth** colonna.  
   
     > [!TIP]  
     > Lo spostamento delle colonne nella tabella semplifica l'esplorazione.  
   
-L'enumerazione DayOfWeek calcolato colonna fornisce un nome ordinabile per il giorno della settimana.  
+La colonna calcolata DayOfWeek fornisce un nome ordinabile per il giorno della settimana.  
   
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>Creare una colonna calcolata ProductSubcategoryName nella tabella DimProduct  
   
   
-1.  Nel **DimProduct** tabella, scorrimento all'estrema destra della tabella. Si noti che la colonna all'estrema destra è denominata **Aggiungi colonna** (in corsivo). Fare clic sull'intestazione di colonna.  
+1.  Nel **DimProduct** tabella, scorrere fino all'estrema destra della tabella. Si noti che la colonna all'estrema destra è denominata **Aggiungi colonna** (in corsivo). Fare clic sull'intestazione di colonna.  
   
 2.  Sulla barra della formula digitare la formula seguente.  
     
@@ -88,13 +88,13 @@ L'enumerazione DayOfWeek calcolato colonna fornisce un nome ordinabile per il gi
     =RELATED('DimProductSubcategory'[EnglishProductSubcategoryName])  
     ```
   
-3.  Rinominare la colonna in **ProductSubcategoryName**.  
+3.  Rinominare la colonna **ProductSubcategoryName**.  
   
-La colonna calcolata ProductSubcategoryName viene utilizzata per creare una gerarchia nella tabella DimProduct che includono i dati dalla colonna EnglishProductSubcategoryName nella tabella DimProductSubcategory. Le gerarchie non possono estendersi in più di una tabella. Si creerà le gerarchie in un secondo momento nella lezione 9.  
+La colonna calcolata ProductSubcategoryName viene usata per creare una gerarchia nella tabella DimProduct che include i dati dalla colonna EnglishProductSubcategoryName nella tabella DimProductSubcategory. Le gerarchie non possono estendersi in più di una tabella. Si creerà le gerarchie in un secondo momento nella lezione 9.  
   
 #### <a name="create-a-productcategoryname-calculated-column-in-the-dimproduct-table"></a>Creare una colonna calcolata ProductCategoryName nella tabella DimProduct  
   
-1.  Con il **DimProduct** ancora attiva, fare clic di tabella il **colonna** menu e quindi fare clic su **Aggiungi colonna**.  
+1.  Con il **DimProduct** ancora attiva, fare clic sul tabella le **colonna** dal menu e quindi fare clic su **Aggiungi colonna**.  
   
 2.  Sulla barra della formula digitare la formula seguente:  
   
@@ -102,13 +102,13 @@ La colonna calcolata ProductSubcategoryName viene utilizzata per creare una gera
     =RELATED('DimProductCategory'[EnglishProductCategoryName]) 
     ```
     
-3.  Rinominare la colonna in **ProductCategoryName**.  
+3.  Rinominare la colonna **ProductCategoryName**.  
   
-La colonna calcolata di ProductCategoryName viene utilizzata per creare una gerarchia nella tabella DimProduct che includono i dati dalla colonna EnglishProductCategoryName nella tabella DimProductCategory. Le gerarchie non possono estendersi in più di una tabella.  
+La colonna calcolata ProductCategoryName viene usata per creare una gerarchia nella tabella DimProduct che include i dati dalla colonna EnglishProductCategoryName nella tabella DimProductCategory. Le gerarchie non possono estendersi in più di una tabella.  
   
 #### <a name="create-a-margin-calculated-column-in-the-factinternetsales-table"></a>Creare una colonna calcolata Margin nella tabella FactInternetSales  
   
-1.  In Progettazione modelli selezionare la **FactInternetSales** tabella.  
+1.  Nella finestra di progettazione modelli selezionare la **FactInternetSales** tabella.  
   
 2.  Aggiungere una nuova colonna.  
   
@@ -120,11 +120,11 @@ La colonna calcolata di ProductCategoryName viene utilizzata per creare una gera
 
 4.  Rinominare la colonna in **Margin**.  
   
-5.  Trascinare la colonna tra la **SalesAmount** colonna e **TaxAmt** colonna. 
+5.  Trascinare la colonna tra le **SalesAmount** colonna e il **TaxAmt** colonna. 
  
       ![come-tabulare-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
       
-    La colonna calcolata Margin viene utilizzata per analizzare i margini di profitto per ogni vendita.  
+    La colonna calcolata Margin viene usata per analizzare i margini di profitto per ogni vendita.  
   
 ## <a name="whats-next"></a>Quali sono le operazioni successive?
 Passare alla lezione successiva: [lezione 6: creare misure](../analysis-services/lesson-6-create-measures.md).

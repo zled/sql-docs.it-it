@@ -1,5 +1,5 @@
 ---
-title: Dimensioni elemento (XMLA) | Documenti Microsoft
+title: Dimensione elemento (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 63b9043b3ba88200a060a8b333ff53cf95340df3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34578343"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036579"
 ---
 # <a name="dimension-element-xmla"></a>Elemento Dimension (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34578343"
 </Object>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -39,15 +39,15 @@ ms.locfileid: "34578343"
 |Valore predefinito|None|  
 |Cardinalità|1-1: elemento obbligatorio visualizzato una sola volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Oggetto](../../../analysis-services/xmla/xml-elements-properties/object-element-dimension-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il **dimensione** elemento è un identificatore di oggetto che contiene il nome della dimensione del cubo rappresentato dal **oggetto** elemento.  
+## <a name="remarks"></a>Note  
+ Il **dimensione** elemento è un identificatore di oggetto che contiene il nome della dimensione del cubo rappresentato dalle **oggetto** elemento.  
   
 ## <a name="see-also"></a>Vedere anche
  [Elemento database &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)   

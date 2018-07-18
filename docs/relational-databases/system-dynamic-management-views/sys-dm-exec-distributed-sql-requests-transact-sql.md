@@ -27,34 +27,34 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8c1a818498ba0527511d82f1df31003a03e394ff
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465867"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982573"
 ---
 # <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Contiene informazioni su tutte le distribuzioni di query SQL come parte di un passaggio SQL nella query.  Questa vista mostra i dati per le richieste ultimi 1.000; richieste attive dispongano sempre dei dati presenti in questa vista.  
+  Contiene informazioni su tutte le distribuzioni di query SQL come parte di un passaggio SQL nella query.  In questa vista mostra i dati per le ultime 1000 richieste; richieste attive dispongano sempre dei dati presenti in questa vista.  
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|valore di execution_id e step_index costituiscono la chiave per la visualizzazione. Id numerico univoco associato alla richiesta.|Vedere ID nel [DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|Indice del passaggio query di che questa distribuzione è parte.|Vedere step_index in [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|compute_node_id|**int**|Tipo di operazione rappresentato da questo passaggio.|Vedere compute_node_id in [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|execution_id|**nvarchar(32)**|valore di execution_id e step_index costituiscono la chiave per questa visualizzazione. Id numerico univoco associato alla richiesta.|Vedere ID nel [exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|Indice del passaggio della query di di che questo tipo di distribuzione fa parte.|Vedere in step_index [DM exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|compute_node_id|**int**|Tipo dell'operazione rappresentata da questo passaggio.|Vedere in compute_node_id [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|**int**|In cui è in esecuzione il passaggio.|Impostare su -1 per le richieste eseguite nell'ambito del nodo non nell'ambito della distribuzione.|  
-|status|**nvarchar(32)**|Stato del passaggio|Active, annullato, completato, non riusciti, in coda|  
-|error_id|**nvarchar(36)**|Id univoco dell'errore associato con questo passaggio, se presente|Vedere id [sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md), NULL se si è verificato alcun errore.|  
-|start_time|**datetime**|Ora di inizio esecuzione il passaggio|Minore o uguale all'ora corrente e maggiori o uguali a end_compile_time della query a cui appartiene questo passaggio.|  
-|end_time|**datetime**|Ora in cui questo passaggio ha completato l'esecuzione, è stato annullato o non è riuscito.|Minore o uguale all'ora corrente e maggiore o uguale a start_time, impostato su NULL per i passaggi attualmente in esecuzione o in coda.|  
-|total_elapsed_time|**int**|Quantità totale di tempo, che il passaggio della query è stato in esecuzione, in millisecondi|Compreso tra 0 e la differenza tra start_time ed end_time. 0 per i passaggi in coda.|  
-|row_count|**bigint**|Numero totale di righe modificate o restituita da questa richiesta|0 per i passaggi che non modificare o restituire dati, numero di righe interessate in caso contrario. Impostare su -1 per i passaggi DMS.|  
-|spid|**int**|Id di sessione nell'istanza di SQL Server in esecuzione la distribuzione delle query||  
+|status|**nvarchar(32)**|Stato di questo passaggio|Active, annullati, completato, non riusciti, in coda|  
+|error_id|**nvarchar(36)**|Id univoco dell'errore associato con questo passaggio, se presente|Vedere id del [sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)il valore è null, se si è verificato alcun errore.|  
+|start_time|**datetime**|Tempo in cui è iniziato il passaggio di esecuzione|Minore o uguale all'ora corrente e maggiore o uguale a end_compile_time della query a cui appartiene questo passaggio.|  
+|end_time|**datetime**|Ora in cui questo passaggio completato l'esecuzione, è stato annullato o non è riuscito.|Minore o uguale all'ora corrente e maggiore o uguale a start_time, impostato su NULL per la procedura attualmente in esecuzione o in coda.|  
+|total_elapsed_time|**int**|Quantità totale di tempo in esecuzione il passaggio della query, in millisecondi|Compreso tra 0 e la differenza tra start_time ed end_time. 0 per i passaggi in coda.|  
+|row_count|**bigint**|Numero totale di righe modificate o restituito da questa richiesta|0 per i passaggi che non sono stati modificare o restituiscono dati, numero di righe interessate in caso contrario. Impostare su -1 per i passaggi di migrazione del database.|  
+|spid|**int**|Id di sessione nell'istanza di SQL Server esegue la distribuzione delle query||  
 |comando|nvarchar(4000)|Contiene il testo completo del comando di questo passaggio.|Qualsiasi stringa di richiesta valido per un passaggio. Troncata se supera i 4000 caratteri.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [PolyBase, risoluzione dei problemi con viste a gestione dinamica](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase con DMV di risoluzione dei problemi](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste a gestione dinamica relative ai database &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

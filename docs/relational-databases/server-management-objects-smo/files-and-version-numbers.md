@@ -1,5 +1,5 @@
 ---
-title: I file e numeri di versione | Documenti Microsoft
+title: I file e numeri di versione | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -23,21 +23,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 10e11076ce023a3d969b4ba95a30c15de43eafa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966516"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046229"
 ---
 # <a name="files-and-version-numbers"></a>File e numeri di versione
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Tutti i necessari componenti di SQL Server Management oggetto (SMO) sono inclusi nel pacchetto Microsoft.SqlServer.SqlManagementObjects NuGet. SMO viene implementato in diversi assembly gestiti. È possibile sviluppare applicazioni SMO in un client o in un server.  
+  Tutti i necessari i componenti di SQL Server Management oggetto (SMO) sono inclusi nel pacchetto Microsoft.SqlServer.SqlManagementObjects NuGet. SMO viene implementato in diversi assembly gestiti. È possibile sviluppare applicazioni SMO in un client o in un server.  
 
 >>[!Important]
-La versione del file degli assembly SMO viene visualizzata come principale. **0**. Build.Revision. Ma la versione di assembly incorporato è principale. **100**. Build.Revision. Questa operazione viene eseguita per mantenere la versione di SMO in ogni applicazione separata in modo non influenza gli aggiornamenti a uno degli altri.
+La versione del file degli assembly SMO viene visualizzata come principale. **0**. Build.Revision. Ma la versione dell'assembly incorporati è principale. **100**. Build.Revision. Questa operazione viene eseguita per mantenere la versione di SMO utilizzato in ogni applicazione separata in modo che gli aggiornamenti a uno non influiscono su tutti gli altri.
 >>
->>Per questo motivo è consigliabile **non** installano queste versioni degli assembly in Global Assembly Cache (GAC). Ciò potrebbe causare altre applicazioni, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, l'interruzione. 
+>>Per questo motivo dovrebbe **non** installare queste versioni degli assembly alla Global Assembly Cache (GAC). Ciò potrebbe causare altre applicazioni, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, l'interruzione. 
   
 |File|Description|  
 |-----------|-----------------|  

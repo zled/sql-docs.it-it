@@ -1,5 +1,5 @@
 ---
-title: Oggetto SqlXmlAdapter (classi gestite SQLXML) | Documenti Microsoft
+title: Oggetto SqlXmlAdapter (classi gestite SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,17 +23,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f797a5d869416fc0b9619e2f8256026690516cb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968906"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046129"
 ---
-# <a name="sqlxml-managed-classes---sqlxmladapter-object"></a>-Classi gestite SQLXML oggetto SqlXmlAdapter
+# <a name="sqlxml-managed-classes---sqlxmladapter-object"></a>Classi gestite SQLXML - oggetto SqlXmlAdapter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Questo oggetto fornisce metodi che facilitano l'interazione con il set di dati in [!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework. Per un esempio funzionante, vedere [l'accesso a funzionalità SQLXML nell'ambiente .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
- Oggetto SqlXmlAdapter supporta questi metodi:  
+ L'oggetto SqlXmlAdapter supporta questi metodi:  
   
  void Fill (DataSet ds)  
  Inserisce nel set di dati di .NET Framework i dati XML recuperati da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "32968906"
  void Update (DataSet ds)  
  Applica aggiornamenti ai record in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dai dati del set di dati.  
   
- Oggetto SqlXmlAdapter supporta questi costruttori:  
+ L'oggetto SqlXmlAdapter supporta questi costruttori:  
   
 ```  
 public SqlXmlAdapter(SqlXmlCommand  cmd)   
@@ -60,7 +60,7 @@ public SqlXmlAdapter(
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto SqlXmlCommand & #40; Gestite SQLXML classi & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [Oggetto SqlXmlParameter & #40; Gestite SQLXML classi & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)  
+ [Oggetto SqlXmlCommand &#40;classi gestite SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [Oggetto SqlXmlParameter &#40;classi gestite SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm operation_status (Database SQL di Azure) | Documenti Microsoft
+title: DM operation_status (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.prod: ''
@@ -27,11 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 6d1df62f4ac877ed82ba1d7b555f8fd9ef759362
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464908"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979453"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -47,20 +47,20 @@ ms.locfileid: "34464908"
 |minor_resource_id|**sql_variant**|Solo per uso interno. Non Null.|  
 |operazione|**nvarchar(60)**|Operazione eseguita su un [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ad esempio CREATE o ALTER.|  
 |state|**tinyint**|Stato dell'operazione.<br /><br /> 0 = In sospeso<br />1 = In corso<br />2 = Completato<br />3 = Non completato<br />4 = Annullato|  
-|state_desc|**nvarchar(120)**|PENDING = l'operazione è in attesa della disponibilità della quota o delle risorse.<br /><br /> IN_PROGRESS = l'operazione è stata avviata ed è in esecuzione.<br /><br /> COMPLETED = operazione completata.<br /><br /> FAILED = operazione non riuscita. Vedere il **error_desc** colonna per i dettagli.<br /><br /> CANCELLED = l'operazione è stata arrestata su richiesta dell'utente.|  
+|state_desc|**nvarchar(120)**|PENDING = l'operazione è in attesa della disponibilità della quota o delle risorse.<br /><br /> IN_PROGRESS = l'operazione è stata avviata ed è in esecuzione.<br /><br /> COMPLETED = operazione completata.<br /><br /> FAILED = operazione non riuscita. Vedere le **error_desc** colonna per i dettagli.<br /><br /> CANCELLED = l'operazione è stata arrestata su richiesta dell'utente.|  
 |percent_complete|**int**|Percentuale dell'operazione completata. I valori non sono continui e i valori validi sono elencati di seguito. Non è NULL.<br/><br/>0 = operazione non è stato avviato<br/>50 = operazione in corso<br/>100 = operazione completata|  
 |error_code|**int**|Codice che indica l'errore che si è verificato durante un'operazione non riuscita. Se il valore è 0, indica che l'operazione è stata completata correttamente.|  
 |error_desc|**nvarchar(2048)**|Descrizione dell'errore che si è verificato durante un'operazione non riuscita.|  
-|error_severity|**int**|Livello di gravità dell'errore che si è verificato durante un'operazione non riuscita. Per ulteriori informazioni sui livelli di gravità di errore, vedere [gravità degli errori del motore di Database](http://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_severity|**int**|Livello di gravità dell'errore che si è verificato durante un'operazione non riuscita. Per altre informazioni sui livelli di gravità errore, vedere [gravità degli errori del motore di Database](http://go.microsoft.com/fwlink/?LinkId=251052).|  
 |error_state|**int**|Riservato per utilizzi futuri. Non è garantita la compatibilità con le versioni future.|  
 |start_time|**datetime**|Timestamp dell'inizio dell'operazione.|  
 |last_modify_time|**datetime**|Timestamp dell'ultima modifica del record per un'operazione a esecuzione prolungata. In caso di operazioni completate correttamente, in questo campo viene visualizzato il timestamp del completamento dell'operazione.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Questa vista è disponibile solo nel **master** database all'account di accesso dell'entità a livello di server.  
+ In questa vista è disponibile solo nel **master** database all'account di accesso dell'entità a livello di server.  
   
-## <a name="remarks"></a>Osservazioni  
- Per utilizzare questa visualizzazione, è necessario essere connessi al **master** database. Utilizzare il `sys.dm_operation_status` visualizzare il **master** database del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server per tenere traccia dello stato delle operazioni seguenti eseguite su un [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
+## <a name="remarks"></a>Note  
+ Per utilizzare questa vista, è necessario essere connessi per il **master** database. Usare la `sys.dm_operation_status` consente di visualizzare nel **master** database del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server per tenere traccia dello stato delle operazioni seguenti eseguite su un [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
   
 -   Create database  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34464908"
 -   Elimina database  
   
 ## <a name="example"></a>Esempio  
- Mostra operazioni di replica geografica più recenti associate al database 'mydb'.  
+ Mostrano le operazioni di replica geografica più recenti associate al database 'mydb'.  
   
 ```  
 SELECT * FROM sys.dm_ operation_status   
@@ -90,9 +90,9 @@ SELECT * FROM sys.dm_ operation_status
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica replica geografica &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [Sys.dm_geo_replication_link_status &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [Sys.geo_replication_links &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [Funzioni e viste a gestione dinamica la replica geografica &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+ [DM geo_replication_link_status &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [Sys. geo_replication_links &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [ALTER DATABASE &#40;Database SQL di Azure&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
   
   

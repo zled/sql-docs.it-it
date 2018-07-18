@@ -1,5 +1,5 @@
 ---
-title: Nei modelli tabulari filtri incrociati bidirezionali | Documenti Microsoft
+title: Nei modelli tabulari filtri incrociati bidirezionali | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033309"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>I filtri incrociati bidirezionali nei modelli tabulari
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34044875"
   
  ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
- Esistono due tipi di filtri incrociati: applicazione di filtri unidirezionali e bidirezionali. Il filtro unidirezionale è la direzione tradizionale del filtro molti-a-uno tra le tabelle dei fatti e le tabelle delle dimensioni in tale relazione. Il filtro bidirezionale è un filtro incrociato che abilita il contesto di filtro di una relazione in modo che sia usato come contesto di filtro per un'altra relazione di tabella, con una tabella comune a entrambe le relazioni.  
+ Esistono due tipi di filtri incrociati: unidirezionale e bidirezionale il filtro. Il filtro unidirezionale è la direzione tradizionale del filtro molti-a-uno tra le tabelle dei fatti e le tabelle delle dimensioni in tale relazione. Il filtro bidirezionale è un filtro incrociato che abilita il contesto di filtro di una relazione in modo che sia usato come contesto di filtro per un'altra relazione di tabella, con una tabella comune a entrambe le relazioni.  
   
  Dati **DimDate** e **DimProduct** con relazioni di chiave esterna con **FactOnlineSales**, un filtro incrociato bidirezionale è equivalente a **FactOnlineSales-to-DimDate** più **FactOnlineSales-to-DimProduct** usati contemporaneamente.  
   
@@ -198,8 +198,8 @@ ms.locfileid: "34044875"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire le relazioni in Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
- [Un esempio pratico di come gestire le semplici relazioni molti-a-molti nei modelli tabulari e Power Pivot](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
- [Risolvere le relazioni molti-a-molti sfruttando DAX tra tabelle filtro](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
- [Molti-a-molti revolution (blog di SQLBI)](http://www.sqlbi.com/articles/many2many/)  
+ [Un esempio pratico di gestione di semplici relazioni molti-a-molti nei modelli tabulari e Power Pivot](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
+ [Risoluzione delle relazioni molti-a-molti sfruttando DAX filtri incrociati tra tabelle](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
+ [Molti-a-rivoluzione molti (blog di SQLBI)](http://www.sqlbi.com/articles/many2many/)  
   
   

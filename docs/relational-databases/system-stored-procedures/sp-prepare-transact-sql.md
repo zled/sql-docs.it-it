@@ -1,5 +1,5 @@
 ---
-title: sp_prepare (Transact SQL) | Documenti Microsoft
+title: sp_prepare (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 08e1c0f988d480e7c0c98d0818591734574ece87
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254365"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036299"
 ---
 # <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Prepara una parametri [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione e restituisce un'istruzione *gestire* per l'esecuzione. è possibile richiamare sp_prepare specificando ID = 11 in un pacchetto del flusso TDS.  
+  Prepara una con parametri [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione e restituisce un'istruzione *gestire* per l'esecuzione. è possibile richiamare sp_prepare specificando ID = 11 in un pacchetto del flusso TDS.  
   
  ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,19 +45,19 @@ sp_prepare handle OUTPUT, params, stmt, options
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Handle*  
+ *handle*  
  SQL Server generato da *handle preparato* identificatore. *gestire* è un parametro obbligatorio con un **int** valore restituito.  
   
- *Params*  
- Identifica le istruzioni con parametri. Il *params* definizione delle variabili viene sostituita per i marcatori di parametro nell'istruzione. *params* è un parametro obbligatorio che richiede un **ntext**, **nchar**, o **nvarchar** valore di input. Immettere un valore NULL se l'istruzione non è con parametri.  
+ *params*  
+ Identifica le istruzioni con parametri. Il *params* definizione delle variabili viene sostituita per i marcatori di parametro nell'istruzione. *params* è un parametro obbligatorio che richiede un **ntext**, **nchar**, oppure **nvarchar** valore di input. Immettere un valore NULL se l'istruzione non è con parametri.  
   
  *stmt*  
- Definisce il set di risultati del cursore. Il *stmt* parametro è obbligatorio e richiede un **ntext**, **nchar**, o **nvarchar** valore di input.  
+ Definisce il set di risultati del cursore. Il *stmt* parametro è obbligatorio e richiede un' **ntext**, **nchar**, oppure **nvarchar** valore di input.  
   
  *options*  
  Parametro facoltativo tramite cui viene restituita una descrizione delle colonne dei set di risultati del cursore. *opzioni* richiede il valore di input int seguenti:  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

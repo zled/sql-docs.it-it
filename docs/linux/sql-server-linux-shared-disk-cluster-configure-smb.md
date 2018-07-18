@@ -1,5 +1,5 @@
 ---
-title: Configurare il failover del cluster istanza archiviazione SMB - SQL Server in Linux | Documenti Microsoft
+title: Configura archivio cluster di failover istanza SMB - SQL Server in Linux | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,34 +12,34 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: b762740be742aa2d716b9d354c26fe87bb170732
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322972"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981799"
 ---
-# <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurazione di cluster di failover - SMB - SQL Server in Linux
+# <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurare cluster di failover - SMB - SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In questo articolo viene illustrato come configurare l'archiviazione SMB per un'istanza cluster di failover (FCI) in Linux. 
+Questo articolo illustra come configurare l'archiviazione SMB per un'istanza cluster di failover (FCI) in Linux. 
  
-Nel mondo non Windows, SMB è spesso definita per la condivisione come Common Internet File System (CIFS) e implementata tramite Samba. Nel mondo Windows, l'accesso a una condivisione SMB viene eseguita in questo modo: \\nomeserver\nomecondivisione. Per le installazioni di SQL Server basati su Linux, la condivisione SMB deve essere montata come cartella.
+Nel mondo non Windows, SMB è spesso definita per la condivisione come Common Internet File System (CIFS) e implementata tramite Samba. Nell'ambiente Windows, l'accesso a una condivisione SMB viene eseguita in questo modo: \\nomeserver\nomecondivisione. Per le installazioni di SQL Server basata su Linux, è necessario montare la condivisione SMB come cartella.
 
 ## <a name="important-source-and-server-information"></a>Importanti informazioni di origine e di server
 
-Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
-- La condivisione SMB può essere in Windows, Linux, o anche da un dispositivo come fino a quando utilizza SMB 3.0 o versione successiva. Per ulteriori informazioni su Samba e SMB 3.0, vedere [SMB 3.0](https://wiki.samba.org/index.php/Samba3/SMB2#SMB_3.0) per verificare se l'implementazione Samba è compatibile con SMB 3.0.
+Ecco alcuni suggerimenti e le note per correttamente usando SMB:
+- La condivisione SMB può essere in Windows, Linux, o anche da un dispositivo come fino a quando Usa SMB 3.0 o versione successiva. Per altre informazioni su Samba e SMB 3.0, vedere [SMB 3.0](https://wiki.samba.org/index.php/Samba3/SMB2#SMB_3.0) per verificare se l'implementazione Samba è compatibile con SMB 3.0.
 - La condivisione SMB deve essere a disponibilità elevata.
-- Protezione deve essere impostata in modo corretto nella condivisione SMB. Di seguito è riportato un esempio da /etc/samba/smb.conf, dove SQLData1 è il nome della condivisione.
+- Sicurezza deve essere impostata in modo corretto nella condivisione SMB. Di seguito è riportato un esempio da /etc/samba/smb.conf, dove SQLData1 è il nome della condivisione.
 
 ![05 smbsource][1]
 
 ## <a name="instructions"></a>Istruzioni
 
-1.  Scegliere uno dei server che farà parte della configurazione di FCI. Non è importante quale.
+1.  Scegliere uno dei server che verranno incluse nella configurazione di FCI. Non importa quale di essi.
 
-2.  Ottenere informazioni sull'utente mssql.
+2.  Ottenere informazioni relative all'utente mssql.
 
     ```bash
     sudo id mssql
@@ -49,43 +49,43 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
 
 3. Eseguire `sudo smbclient -L //NameOrIP/ShareName -U User`.
 
-    \<NameOrIP > è il nome DNS o l'indirizzo IP del server che ospita la condivisione SMB.
+    \<NameOrIP > è il nome DNS o indirizzo IP del server che ospita la condivisione SMB.
 
-    \<Nomecondivisione > è il nome della condivisione SMB. 
+    \<ShareName > è il nome della condivisione SMB. 
 
-4. Per sistema database o qualsiasi elemento archiviato nel percorso dati predefinito seguire questi passaggi. In caso contrario, andare al passaggio 5. 
+4. Sistema database o tutti gli elementi archiviati nel percorso dati predefinito seguire questi passaggi. In caso contrario, andare al passaggio 5. 
 
-   *    Verificare che SQL Server è stato arrestato nel server che si sta lavorando.
+   *    Verificare che SQL Server è arrestato nel server che si sta lavorando.
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-   *    Opzione completamente all'utente avanzato. Non riceverà un acknowledgement se ha esito positivo.
+   *    Opzione completamente da essere l'utente con privilegi avanzati. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     sudo -i
     ```
 
-   *    Opzione per l'utente mssql. Non riceverà un acknowledgement se ha esito positivo.
+   *    Passa a corrispondere all'utente mssql. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     su mssql
     ```
 
-   *    Creare una directory temporanea per archiviare i dati di SQL Server e i file di log. Non riceverà un acknowledgement se ha esito positivo.
+   *    Creare una directory temporanea per archiviare i dati di SQL Server e i file di log. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     mkdir <TempDir>
     ```
 
-    <TempDir> è il nome della cartella. Nell'esempio seguente viene creata una cartella denominata /var/opt/mssql/tmp.
+    <TempDir> è il nome della cartella. L'esempio seguente crea una cartella denominata /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
     ```
 
-   *    Copiare i file di dati e di log di SQL Server per la directory temporanea. Non riceverà un acknowledgement se ha esito positivo.
+   *    Copiare i file di dati e di log di SQL Server per la directory temporanea. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
@@ -93,7 +93,7 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
 
     \<TempDir > è il nome della cartella nel passaggio precedente.
     
-   *    Verificare che i file nella directory.
+   *    Verificare che i file sono nella directory.
 
     ```bash
     ls <TempDir>
@@ -101,29 +101,29 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
 
     \<TempDir > è il nome della cartella dal passaggio d.
     
-   *    Eliminare i file dalla directory dei dati di SQL Server esistente. Non riceverà un acknowledgement se ha esito positivo.
+   *    Eliminare i file dalla directory di dati di SQL Server esistente. Non riceverà alcun acknowledgement se ha esito positivo.
  
     ```bash
     rm – f /var/opt/mssql/data/*
     ```
 
-   *    Verificare che i file sono stati eliminati. 
+   *    Verificare che i file siano stati eliminati. 
 
     ```bash
     ls /var/opt/mssql/data
     ```
  
-   *    Digitare exit per tornare all'utente root.
+   *    Tipo di uscita per tornare all'utente radice.
 
-   *    Montare la condivisione SMB nella cartella dati SQL Server. Non riceverà un acknowledgement se ha esito positivo. In questo esempio viene illustrata la sintassi per la connessione a una condivisione SMB 3.0 basato su Windows Server.
+   *    Montare la condivisione SMB nella cartella dati SQL Server. Non riceverà alcun acknowledgement se ha esito positivo. In questo esempio viene illustrata la sintassi per la connessione a una condivisione SMB 3.0 basato su Windows Server.
 
     ```bash
     Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
     ```
 
-    \<NomeServer > è il nome del server con la condivisione SMB
+    \<ServerName > è il nome del server con la condivisione SMB
     
-    \<Nomecondivisione > è il nome della condivisione
+    \<ShareName > è il nome della condivisione
 
     \<Nome utente > è il nome dell'utente per accedere alla condivisione
 
@@ -133,7 +133,7 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
 
     \<mssqlUID > è l'UID dell'utente mssql 
  
-    \<mssqlGID > è GID dell'utente mssql
+    \<mssqlGID > è il GID dell'utente mssql
  
    *    Verificare che il montaggio ha esito negativo generando montaggio senza opzioni.
 
@@ -141,47 +141,47 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
     mount
     ```
  
-   *    Passare all'utente mssql. Non riceverà un acknowledgement se ha esito positivo.
+   *    Passare all'utente mssql. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     su mssql
     ```
 
-   *    Copiare i file da /var/opt/mssql/data la directory temporanea. Non riceverà un acknowledgement se ha esito positivo.
+   *    Copiare i file da /var/opt/mssql/data la directory temporanea. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     cp /var/opt/mssql/tmp/* /var/opt/mssql/data
     ```
 
-   *    Verificare che i file sono presenti.
+   *    Verificare che i file siano presenti.
 
     ```bash
     ls /var/opt/mssql/data
     ```
 
-   *    Immettere l'uscita da non mssql 
+   *    Immettere l'uscita per non essere mssql 
 
-   *    Immettere l'uscita da non radice
+   *    Immettere l'uscita per non essere radice
 
-   *    Avviare SQL Server. Se tutto ciò che è stata copiata correttamente e sicurezza applicata correttamente, SQL Server dovrebbe essere mostrato come avviato.
+   *    Avviare SQL Server. Se tutto ciò che è stato copiato correttamente e sicurezza applicata correttamente, SQL Server dovrebbe risultare avviato.
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ```
  
-   *    Per testare ulteriormente, creare un database per verificare che le autorizzazioni sono supportate. L'esempio seguente Usa codice Transact-SQL è possibile utilizzare SQL Server Management Studio.
+   *    Per testare ulteriormente, creare un database per garantire che le autorizzazioni sono corrette. L'esempio seguente Usa codice Transact-SQL è possibile usare SQL Server Management Studio.
 
     ![10_testcreatedb][2] 
   
-   *    Arrestare SQL Server e verificare che viene chiuso. Se si desidera aggiungere o test altri dischi, non arrestare SQL Server fino a quando non quelli vengono aggiunti e testati.
+   *    Arresto di SQL Server e verificare che sia arrestato. Se si intende aggiungere o test di altri dischi, non arrestare SQL Server fino a quando questi vengono aggiunti e testati.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-   *    Solo se completato, disinstallare la condivisione. In caso contrario, disinstallare dopo aver completato i test o aggiunta di dischi aggiuntivi.
+   *    Solo se è stato completato, smontare la condivisione. In caso contrario, smontare dopo il completamento della verifica/aggiunta di eventuali altri dischi.
 
     ```bash
     sudo umount //<IPAddressorServerName>/<ShareName /<FolderMountedIn>
@@ -189,41 +189,41 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
 
     \<IPAddressOrServerName > è l'indirizzo IP o nome dell'host SMB
 
-    \<Nomecondivisione > è il nome della condivisione
+    \<ShareName > è il nome della condivisione
     
-    \<FolderMountedIn > è il nome della cartella in cui viene montata SMB
+    \<FolderMountedIn > è il nome della cartella in cui è montato SMB
 
-5.  Per scopi diversi da database di sistema, ad esempio i database utente o di backup, seguire questi passaggi. Se solo utilizzando il percorso predefinito, andare al passaggio 14.
+5.  Per scopi diversi da database di sistema, ad esempio i database utente o i backup, seguire questa procedura. Se solo utilizzando il percorso predefinito, andare al passaggio 14.
     
-   *    Opzione per l'utente avanzato. Non riceverà un acknowledgement se ha esito positivo.
+   *    Commutatore sia l'utente con privilegi avanzati. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     sudo -i
     ```
     
-   *    Creare una cartella che verrà utilizzata da SQL Server. 
+   *    Creare una cartella che verrà usata da SQL Server. 
 
     ```bash
     mkdir <FolderName>
     ```
 
-    \<Nome cartella > è il nome della cartella. Percorso completo della cartella deve essere specificato ma non nella posizione corretta. Nell'esempio seguente viene creata una cartella denominata /var/opt/mssql/userdata.
+    \<Nomecartella > è il nome della cartella. Percorso completo della cartella deve essere specificata se non sono in posizione corretta. L'esempio seguente crea una cartella denominata /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
     ```
 
-   *    Montare la condivisione SMB nella cartella dati SQL Server. Non riceverà un acknowledgement se ha esito positivo. In questo esempio viene illustrata la sintassi per la connessione a una condivisione Samba basato su SMB 3.0.
+   *    Montare la condivisione SMB nella cartella dati SQL Server. Non riceverà alcun acknowledgement se ha esito positivo. In questo esempio viene illustrata la sintassi per la connessione a una condivisione Samba basato su SMB 3.0.
 
     ```bash
     Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
     ```
 
-    \<NomeServer > è il nome del server con la condivisione SMB
+    \<ServerName > è il nome del server con la condivisione SMB
 
-    \<Nomecondivisione > è il nome della condivisione
+    \<ShareName > è il nome della condivisione
 
-    \<Nome cartella > è il nome della cartella creata nel passaggio precedente  
+    \<Nomecartella > è il nome della cartella creata nel passaggio precedente  
 
     \<Nome utente > è il nome dell'utente per accedere alla condivisione
 
@@ -231,15 +231,15 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
 
     \<mssqlUID > è l'UID dell'utente mssql
 
-    \<mssqlGID > è GID dell'utente mssql.
+    \<mssqlGID > è il GID dell'utente mssql.
  
    * Verificare che il montaggio ha esito negativo generando montaggio senza opzioni.
  
-   * Digitare exit per non essere più l'utente avanzato.
+   * Uscita di tipo che non rappresenta più l'utente con privilegi avanzati.
 
-   * Per eseguire il test, creare un database in tale cartella. L'esempio seguente usa sqlcmd per creare un database, passare il contesto, verificare i file presenti nel livello del sistema operativo e quindi Elimina il percorso temporaneo. È possibile utilizzare SQL Server Management Studio.
+   * Per eseguire il test, creare un database in tale cartella. L'esempio seguente usa sqlcmd per creare un database, passare a esso, verificare i file esistono a livello di sistema operativo e quindi Elimina il percorso temporaneo. È possibile usare SQL Server Management Studio.
  
-   * Disinstallare la condivisione 
+   * Smontare la condivisione 
 
     ```bash
     sudo umount //<IPAddressorServerName>/<ShareName> /<FolderMountedIn>
@@ -247,17 +247,17 @@ Ecco alcuni suggerimenti e le note per l'utilizzo di SMB correttamente:
     
     \<IPAddressOrServerName > è l'indirizzo IP o nome dell'host SMB
  
-    \<Nomecondivisione > è il nome della condivisione
+    \<ShareName > è il nome della condivisione
  
-    \<FolderMountedIn > è il nome della cartella in cui viene montata SMB.
+    \<FolderMountedIn > è il nome della cartella in cui è montato SMB.
  
 6.  Ripetere i passaggi in altri nodi.
 
-A questo punto si è pronti configurare l'istanza FCI.
+A questo punto si è pronti configurare l'infrastruttura di classificazione file.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Configurare l'istanza del cluster di failover, SQL Server in Linux](sql-server-linux-shared-disk-cluster-configure.md)
+[Configurare l'istanza del cluster di failover: SQL Server in Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-smb/05-smbsource.png 

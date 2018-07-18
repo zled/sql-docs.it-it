@@ -25,27 +25,27 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 7f3af00bccbef87dd6390c5421b8d625e4b6ed42
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221352"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981601"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Contiene una riga per ogni endpoint nel server con payload di tipo SOAP. Per ogni riga in questa vista è disponibile una riga corrispondente con lo stesso **endpoint_id** nel **http_endpoints** vista del catalogo che contiene i metadati di configurazione HTTP.  
+ Contiene una riga per ogni endpoint nel server con payload di tipo SOAP. Per ogni riga in questa vista è presente una riga corrispondente con lo stesso **endpoint_id** nel **http_endpoints** vista del catalogo che contiene i metadati di configurazione HTTP.  
   
  
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**< colonne ereditate >**||Per un elenco delle colonne ereditate da questa vista, vedere [Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**< colonne ereditate >**||Per un elenco delle colonne ereditate da questa vista, vedere [Sys. Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**is_sql_language_enabled**|**bit**|1 = BATCHES = è stata specificata l'opzione ENABLED, ovvero sono consentiti batch SQL ad hoc sull'endpoint.|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|Nome in tre parti della stored procedure che implementa questo metodo.<br /><br /> I nomi dei metodi richiedono strettamente una sintassi in tre parti. Nomi in una, due e quattro parti non sono consentiti.|  
 |**default_database**|**sysname**|Nome del database predefinito indicato nell'opzione DATABASE =.<br /><br /> NULL = è specificato DEFAULT.|  
-|**default_namespace**|**nvarchar(384)**|Spazio dei nomi predefinito specificato nello spazio dei nomi = opzione, o 'http://tempuri.org' se è specificato DEFAULT.|  
+|**default_namespace**|**nvarchar(384)**|Lo spazio dei nomi predefinito specificato nello spazio dei nomi = opzione, o 'http://tempuri.org' se è specificato DEFAULT.|  
 |**default_result_schema**|**tinyint**|Valore predefinito dell'opzione SCHEMA =.<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
 |**default_result_schema_desc**|**nvarchar(60)**|Descrizione del valore predefinito dell'opzione SCHEMA =.<br /><br /> Nessuno<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = è specificata l'opzione CHARACTER_SET = SQL.<br /><br /> 1 = è specificata l'opzione CHARACTER_SET = XML.|  

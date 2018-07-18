@@ -1,5 +1,5 @@
 ---
-title: sp_dropapprole (Transact-SQL) | Documenti Microsoft
+title: sp_dropapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 56752702ef62ad4afae65bf2a935757e72c189d8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244887"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047206"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,8 @@ sp_dropapprole [@rolename = ] 'role'
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_dropapprole** può essere utilizzato solo per rimuovere i ruoli applicazione. Se un ruolo possiede un'entità a protezione diretta, il ruolo non può essere rimosso. Prima di rimuovere un ruolo applicazione proprietario di entità a protezione diretta, è necessario innanzitutto trasferire la proprietà delle entità a protezione diretta oppure rimuoverle.  
+## <a name="remarks"></a>Note  
+ **sp_dropapprole** utilizzabile solo per rimuovere i ruoli applicazione. Se un ruolo possiede un'entità a protezione diretta, il ruolo non può essere rimosso. Prima di rimuovere un ruolo applicazione proprietario di entità a protezione diretta, è necessario innanzitutto trasferire la proprietà delle entità a protezione diretta oppure rimuoverle.  
   
  **sp_dropapprole** non può essere eseguita all'interno di una transazione definita dall'utente.  
   

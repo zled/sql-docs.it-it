@@ -1,5 +1,5 @@
 ---
-title: StructureColumn (DMX) | Documenti Microsoft
+title: StructureColumn (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842624"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992411"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,18 +33,18 @@ StructureColumn('structure column name')
  Nome della colonna della struttura di data mining di un case o di una tabella nidificata.  
   
 ## <a name="result-type"></a>Tipo di risultato  
- Il tipo restituito dipende dal tipo della colonna a cui fa riferimento il \<nome colonna della struttura > parametro. Ad esempio, se la colonna della struttura di data mining a cui viene fatto riferimento contiene un valore scalare, la funzione restituisce un valore scalare.  
+ Il tipo restituito dipende dal tipo della colonna a cui fa riferimento il \<nome colonna di struttura > parametro. Ad esempio, se la colonna della struttura di data mining a cui viene fatto riferimento contiene un valore scalare, la funzione restituisce un valore scalare.  
   
  Se la colonna della struttura di data mining alla quale viene fatto riferimento è una tabella nidificata, la funzione restituisce un valore di tabella. Il valore di tabella restituito può essere utilizzato nella clausola FROM di un'istruzione sub-SELECT.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Questa funzione è polimorfica e può essere utilizzata in qualunque posizione in un'istruzione che consente espressioni, comprese un elenco di espressioni SELECT, un'espressione di condizione WHERE e un'espressione ORDER BY.  
   
  Il nome della colonna nella struttura di data mining è un valore stringa e di conseguenza deve essere racchiuso tra virgolette singole: ad esempio, `StructureColumn('` **colonna 1**`')`. Nel caso in cui siano presenti più colonne con lo stesso nome, il nome è risolto nel contesto dell'istruzione SELECT che lo racchiude.  
   
  I risultati restituiti da una query tramite il **StructureColumn** funzione sono interessate dalla presenza di eventuali filtri nel modello. ovvero il filtro del modello controlla i case inclusi nel modello di data mining. Una query nella colonna della struttura può pertanto restituire solo i case utilizzati nel modello di data mining. Per un esempio di codice che illustra l'effetto dei filtri del modello di data mining sia in tabelle del case che in tabelle nidificate, vedere la sezione Esempi di questo argomento.  
   
- Per ulteriori informazioni su come usare questa funzione in un'istruzione DMX SELECT, vedere [SELECT FROM &#60;modello&#62;. CASI &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) oppure [SELECT FROM &#60;struttura&#62;. CASI](../dmx/select-from-structure-cases.md).  
+ Per altre informazioni su come usare questa funzione in un'istruzione DMX SELECT, vedere [SELECT FROM &#60;modello&#62;. I casi &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) oppure [SELECT FROM &#60;struttura&#62;. CASI](../dmx/select-from-structure-cases.md).  
   
 ## <a name="error-messages"></a>messaggi di errore  
  Se l'utente non dispone di autorizzazioni drill-through sulla struttura di data mining padre, viene generato l'errore di sicurezza seguente:  
@@ -116,7 +116,7 @@ WHERE StructureColumn(‘Occupation’) = ‘Architect’
  Si noti che, in questo esempio viene applicato un filtro alla colonna della struttura per limitare i case ai clienti con occupazione 'Architect' (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). Poiché la condizione di filtro del modello viene sempre applicata ai case al momento della creazione del modello, vengono inclusi nei case del modello solo i case con almeno una riga risultante nella tabella `Products`. Vengono pertanto applicati sia il filtro sulla tabella nidificata `Products` che il filtro sul case `(‘Occupation’)`.  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Esempio di query 3: Selezione di colonne da una tabella nidificata  
- Nella query di esempio seguente vengono restituiti i nomi dei clienti che sono stati utilizzati come case di training dal modello. Per ogni cliente, la query restituisce anche una tabella nidificata contenente i dettagli dell'acquisto. Sebbene il modello include il `ProductName` colonna, il modello non utilizza il valore di `ProductName` colonna. Il modello controlla solo se il prodotto è stato acquistato al normale (`NOT``OnSale`) prezzo. Questa query non solo restituisce il nome del prodotto, ma anche la quantità acquistata che non è inclusa nel modello.  
+ Nella query di esempio seguente vengono restituiti i nomi dei clienti che sono stati utilizzati come case di training dal modello. Per ogni cliente, la query restituisce anche una tabella nidificata contenente i dettagli dell'acquisto. Anche se il modello include il `ProductName` colonna, il modello non utilizza il valore della `ProductName` colonna. Il modello di verifica solo se è stato acquistato il prodotto alle normali (`NOT``OnSale`) prezzo. Questa query non solo restituisce il nome del prodotto, ma anche la quantità acquistata che non è inclusa nel modello.  
   
 ```  
 SELECT CustomerName,    
@@ -137,7 +137,7 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

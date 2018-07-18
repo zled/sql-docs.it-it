@@ -25,23 +25,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5732a15fe8fe2d30f6f9c693e66258c0de4b44d3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467797"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980770"
 ---
 # <a name="sysdmosprocessmemory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  La maggior parte delle allocazioni di memoria attribuite allo spazio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono controllati tramite interfacce che consentono la registrazione e la contabilità delle allocazioni. Tuttavia, le allocazioni di memoria possono essere eseguite nello spazio degli indirizzi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ignora le routine interne di gestione memoria. I valori sono ottenuti tramite chiamate al sistema operativo di base. Non sono modificati dai metodi interni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tranne quando si regola per bloccare o allocazioni di pagine di grandi dimensioni.  
+  La maggior parte delle allocazioni di memoria attribuite allo spazio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono controllati tramite interfacce che consentono la registrazione e la contabilità delle allocazioni. Tuttavia, le allocazioni di memoria possono essere eseguite nello spazio degli indirizzi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ignora le routine interne di gestione memoria. I valori sono ottenuti tramite chiamate al sistema operativo di base. Non sono modificati dai metodi interni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tranne quando si regola per bloccato o allocazioni di pagine di grandi dimensioni.  
   
- Tutti i valori restituiti che indicano dimensioni della memoria sono espressi in kilobyte (KB). La colonna **total_virtual_address_space_reserved_kb** è un duplicato di **virtual_memory_in_bytes** da **Sys.dm os_sys_info**.  
+ Tutti i valori restituiti che indicano dimensioni della memoria sono espressi in kilobyte (KB). La colonna **total_virtual_address_space_reserved_kb** è un duplicato del **virtual_memory_in_bytes from sys** dalla **DM os_sys_info**.  
   
  Nella tabella seguente è inclusa un'immagine completa dello spazio degli indirizzi di processo.  
   
 > [!NOTE]  
->  Per chiamare questo metodo dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_os_process_memory**.  
+>  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_process_memory**.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -51,19 +51,19 @@ ms.locfileid: "34467797"
 |**total_virtual_address_space_kb**|**bigint**|Indica le dimensioni totali della parte della modalità utente dello spazio degli indirizzi virtuali. Non ammette i valori NULL.|  
 |**virtual_address_space_reserved_kb**|**bigint**|Indica la quantità totale di spazio degli indirizzi virtuali riservato dal processo. Non ammette i valori NULL.|  
 |**virtual_address_space_committed_kb**|**bigint**|Indica la quantità di spazio degli indirizzi virtuali riservato di cui è stato eseguito il commit o il mapping a pagine fisiche. Non ammette i valori NULL.|  
-|**virtual_address_space_available_kb**|**bigint**|Indica la quantità di spazio degli indirizzi virtuali attualmente libera. Non ammette i valori NULL.<br /><br /> **Nota:** liberare aree che sono minori della granularità di allocazione può essere presente. Tali aree non sono disponibili per le allocazioni.|  
+|**virtual_address_space_available_kb**|**bigint**|Indica la quantità di spazio degli indirizzi virtuali attualmente libera. Non ammette i valori NULL.<br /><br /> **Nota:** libero aree che sono minori della granularità di allocazione può essere presente. Tali aree non sono disponibili per le allocazioni.|  
 |**page_fault_count**|**bigint**|Indica il numero di errori di pagina causati dal processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non ammette i valori NULL.|  
 |**memory_utilization_percentage**|**int**|Specifica la percentuale di memoria di cui è stato eseguito il commit nel working set. Non ammette i valori NULL.|  
 |**available_commit_limit_kb**|**bigint**|Indica la quantità di memoria disponibile per il commit da parte del processo. Non ammette i valori NULL.|  
 |**process_physical_memory_low**|**bit**|Indica che il processo risponde a una notifica di memoria fisica insufficiente. Non ammette i valori NULL.|  
 |**process_virtual_memory_low**|**bit**|Indica che è stata rilevata una condizione di memoria virtuale insufficiente. Non ammette i valori NULL.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessaria l'autorizzazione VIEW SERVER STATE nel server.  
+ Su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è richiesta l'autorizzazione VIEW SERVER STATE nel server.  
   
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

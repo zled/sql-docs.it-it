@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 10: Creare gerarchie | Documenti Microsoft'
+title: 'Lezione 10: Creare gerarchie | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4c1fc4905c52351b61a4e79b2ff21f47501f337
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016328"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033372"
 ---
 # <a name="lesson-9-create-hierarchies"></a>Lezione 9: Creare gerarchie
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-In questa lezione si procederà alla creazione di gerarchie. Le gerarchie sono gruppi di colonne disposti in livelli. Una gerarchia Geografia potrebbe ad esempio includere i sottolivelli Paese, Stato, Regione e Città. Le gerarchie possono essere visualizzate separatamente rispetto alle altre colonne in un elenco di campi di un'applicazione client di creazione di report, per semplificarne l'esplorazione e l'inserimento in un report da parte degli utenti client. Per ulteriori informazioni, vedere [gerarchie](../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
+In questa lezione si procederà alla creazione di gerarchie. Le gerarchie sono gruppi di colonne disposti in livelli. Una gerarchia Geografia potrebbe ad esempio includere i sottolivelli Paese, Stato, Regione e Città. Le gerarchie possono essere visualizzate separatamente rispetto alle altre colonne in un elenco di campi di un'applicazione client di creazione di report, per semplificarne l'esplorazione e l'inserimento in un report da parte degli utenti client. Per altre informazioni, vedere [gerarchie](../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
-Per creare gerarchie, si utilizzerà Progettazione modelli in *vista diagramma*. Creazione e la gestione di gerarchie non è supportata in vista dati.  
+Per creare gerarchie, si userà Progettazione modelli in *vista diagramma*. Creazione e la gestione delle gerarchie non è supportata in vista dati.  
   
 Tempo stimato per il completamento della lezione: **20 minuti**  
   
@@ -30,22 +30,22 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 ## <a name="create-hierarchies"></a>Creare gerarchie  
   
-#### <a name="to-create-a-category-hierarchy-in-the-dimproduct-table"></a>Per creare una gerarchia di categorie della tabella DimProduct  
+#### <a name="to-create-a-category-hierarchy-in-the-dimproduct-table"></a>Per creare una gerarchia Category nella tabella DimProduct  
   
-1.  In Progettazione modelli (vista diagramma) fare doppio clic su di **DimProduct** tabella > **crea gerarchia**. Verrà visualizzata una nuova gerarchia nella parte inferiore della finestra della tabella. Rinominare la gerarchia **categoria**.  
+1.  In Progettazione modelli (vista diagramma) fare doppio clic il **DimProduct** tabella > **crea gerarchia**. Verrà visualizzata una nuova gerarchia nella parte inferiore della finestra della tabella. Rinominare la gerarchia **categoria**.  
   
-2.  Fare clic e trascinare il **ProductCategoryName** la nuova colonna **categoria** gerarchia.  
+2.  Fare clic e trascinare il **ProductCategoryName** nella nuova colonna **categoria** gerarchia.  
   
-3.  Nel **categoria** gerarchia, fare doppio clic su di **ProductCategoryName** > **rinominare**, quindi digitare **categoria**.  
+3.  Nel **categoria** gerarchia, fare doppio clic sui **ProductCategoryName** > **rinominare**, quindi digitare **categoria**.  
   
     > [!NOTE]  
     > La ridenominazione di una colonna in una gerarchia non comporta la ridenominazione della colonna nella tabella. Una colonna in una gerarchia è solo una rappresentazione della colonna nella tabella.  
   
-4.  Fare clic e trascinare il **ProductSubcategoryName** colonna per il **categoria** gerarchia. Rinominare la cartella **Subcategory**. 
+4.  Fare clic e trascinare il **ProductSubcategoryName** colonna il **categoria** gerarchia. Rinominarlo **Subcategory**. 
   
-5.  Fare doppio clic su di **ModelName** colonna > **aggiungere alla gerarchia**, quindi selezionare **categoria**. Eseguire la stessa operazione **EnglishProductName**. Rinominare queste colonne nella gerarchia di **modello** e **prodotto**.  
+5.  Fare doppio clic il **ModelName** colonna > **Aggiungi a gerarchia**, quindi selezionare **categoria**. Eseguire la stessa operazione per **EnglishProductName**. Rinominare queste colonne nella gerarchia **Model** e **prodotto**.  
 
-    ![come tabulare-lesson9-categorie](../analysis-services/media/as-tabular-lesson9-category.png)
+    ![come in formato tabulare-lesson9-categoria](../analysis-services/media/as-tabular-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>Per creare gerarchie nella tabella DimDate  
   
@@ -67,7 +67,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
     *  MonthCalendar
     *  DayNumberOfMonth
   
-5.  Infine, nel **DimDate** tabella, creare un **ProductionCalendar** gerarchia. Includere le colonne seguenti:  
+5.  Infine, nella **DimDate** tabella, creare un **ProductionCalendar** gerarchia. Includere le colonne seguenti:  
     *  CalendarYear
     *  WeekNumberOfYear
     *  DayNumberOfWeek

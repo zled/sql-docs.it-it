@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di query XPath in SQLXML 4.0 | Documenti Microsoft
+title: Uso di query XPath in SQLXML 4.0 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,24 +22,24 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d6101bbe97a4ca329aba1e455fbaa234bdd5a32d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708689"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046119"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Utilizzo di query XPath in SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Il supporto in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] degli schemi XSD con annotazioni consente di creare viste XML dei dati relazionali archiviati nel database. È possibile utilizzare un subset del linguaggio XPath per eseguire una query sulle viste XML create da uno schema XSD con annotazioni.  
   
 > [!NOTE]  
->  Per comprendere le query XPath in SQLXML 4.0, è necessario avere familiarità con le viste XML e con concetti correlati quali i modelli e lo schema di mapping. Per altre informazioni, vedere [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Per ulteriori informazioni su XPath, vedere lo standard XPath definito dal World Wide Web Consortium (W3C) all'indirizzo http://www.w3.org/TR/xpath.  
+>  Per comprendere le query XPath in SQLXML 4.0, è necessario avere familiarità con le viste XML e con concetti correlati quali i modelli e lo schema di mapping. Per altre informazioni, vedere [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Per altre informazioni su XPath, vedere lo standard XPath definito dal World Wide Web Consortium (W3C) all'indirizzo http://www.w3.org/TR/xpath.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
- [Introduzione all'utilizzo di query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)  
+ [Introduzione all'uso di query XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)  
  Vengono fornite informazioni introduttive sulle query XPath in SQLXML 4.0, incluse le funzionalità supportate e non supportate dalla specifica XPath di W3C.  
   
- [Specificare un percorso della posizione &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-location-path-sqlxml-4-0.md)  
+ [Specifica di un Location Path &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-location-path-sqlxml-4-0.md)  
  Viene descritto come specificare i percorsi nelle query XPath.  
   
  [Query XPath di esempio &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-xpath-queries-sqlxml-4-0.md)  

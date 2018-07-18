@@ -1,5 +1,5 @@
 ---
-title: Espressioni di confronto (XQuery) | Documenti Microsoft
+title: Espressioni di confronto (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f80838771b36f59f58203dfc687957ea2f208522
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077448"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984353"
 ---
 # <a name="comparison-expressions-xquery"></a>Espressioni di confronto (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- La query seguente restituisce foto di piccole dimensioni di un modello di prodotto derivato dal catalogo prodotti disponibile nel database di esempio AdventureWorks. La query confronta una sequenza di valori atomici restituiti da `PD:ProductDescription/PD:Picture/PD:Size` con la sequenza singleton "small". Se il confronto è True, viene restituito il < immagine\> elemento.  
+ La query seguente restituisce foto di piccole dimensioni di un modello di prodotto derivato dal catalogo prodotti disponibile nel database di esempio AdventureWorks. La query confronta una sequenza di valori atomici restituiti da `PD:ProductDescription/PD:Picture/PD:Size` con la sequenza singleton "small". Se il confronto è True, restituisce il < Picture\> elemento.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -158,7 +158,7 @@ WHERE ContactID=1
   
  È possibile utilizzare questi operatori solo su valori atomici singleton. Pertanto, non è possibile specificare una sequenza come uno degli operandi.  
   
- Ad esempio, la query seguente recupera \<immagine > gli elementi di un modello di prodotto in cui la dimensione dell'immagine è "piccola:  
+ Ad esempio, la query seguente recupera \<Picture > elementi di un modello di prodotto in cui la dimensione dell'immagine è "piccolo:  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -177,7 +177,7 @@ WHERE ProductModelID=19
   
 -   Il \<dimensioni > valore dell'elemento viene confrontato con il valore atomico specificato, "small".  
   
--   Si noti che, in quanto gli operatori di valore funzionano solo su valori atomici, la **data ()** funzione viene utilizzata in modo implicito per recuperare il valore del nodo. Pertanto, `data($P/PD:Size) eq "small"` restituisce lo stesso risultato.  
+-   Si noti che poiché gli operatori funzionano solo su valori atomici, la **data ()** funzione viene utilizzata in modo implicito per recuperare il valore del nodo. Pertanto, `data($P/PD:Size) eq "small"` restituisce lo stesso risultato.  
   
  Risultato:  
   
@@ -193,7 +193,7 @@ WHERE ProductModelID=19
  Si noti che le regole per la promozione dei tipi sono identiche a quelle utilizzate per i confronti generali. Durante i confronti tra valori, inoltre, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza le stesse regole di cast per i valori non tipizzati utilizzate durante i confronti generali. Le regole delle specifiche XQuery, invece, prevedono sempre l'esecuzione del cast del valore non tipizzato a xs:string durante i confronti tra valori.  
   
 ## <a name="node-comparison-operator"></a>Operatore di confronto dei nodi  
- L'operatore di confronto del nodo, **è**, si applica solo ai tipi di nodo. Il risultato restituito indica se due nodi passati come operandi rappresentano lo stesso nodo nel documento di origine. Questo operatore restituisce True se i due operandi rappresentano lo stesso nodo. In caso contrario, restituisce False.  
+ L'operatore di confronto, nodo **è**, si applica solo ai tipi di nodo. Il risultato restituito indica se due nodi passati come operandi rappresentano lo stesso nodo nel documento di origine. Questo operatore restituisce True se i due operandi rappresentano lo stesso nodo. In caso contrario, restituisce False.  
   
  La query seguente controlla se il centro di lavorazione 10 è il primo nell'ambito del processo di produzione di un modello di prodotto specifico.  
   
@@ -226,11 +226,11 @@ ProductModelID       Result
   
  I confronti eseguiti, basati sull'ordine dei nodi all'interno del documento, sono i seguenti:  
   
--   `<<` : Non **operando 1** precedere **operando 2** nell'ordine del documento.  
+-   `<<` : Viene **operando 1** far precedere **operando 2** nell'ordine del documento.  
   
--   `>>` : Non **operando 1** seguire **operando 2** nell'ordine del documento.  
+-   `>>` : Viene **operando 1** seguono **operando 2** nell'ordine del documento.  
   
- La query seguente restituisce True se la descrizione del catalogo prodotti di \<garanzia > elemento visualizzato prima di \<manutenzione > elemento nell'ordine del documento di un prodotto specifico.  
+ La query seguente restituisce True se la descrizione del catalogo prodotti ha il \<garanzia > elemento precede il \<manutenzione > elemento nell'ordine del documento per un determinato prodotto.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -246,9 +246,9 @@ where ProductModelID=19
   
  Dalla query precedente si noti quanto segue:  
   
--   Il **Value ()** metodo il **xml**tipo di dati viene utilizzato nella query.  
+-   Il **Value ()** metodo per il **xml**tipo di dati viene usato nella query.  
   
--   Il risultato booleano della query viene convertito in **nvarchar (10)** e restituiti.  
+-   Il valore booleano della query viene convertito in **nvarchar(10)** e restituiti.  
   
 -   La query restituisce True.  
   

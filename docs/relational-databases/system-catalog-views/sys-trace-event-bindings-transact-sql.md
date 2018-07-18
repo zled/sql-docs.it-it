@@ -1,5 +1,5 @@
 ---
-title: Sys. trace_event_bindings (Transact-SQL) | Documenti Microsoft
+title: Sys. trace_event_bindings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,16 +25,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 287f5cb11acb3ddf23b0a1f77f4039a97b9da9ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220782"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981433"
 ---
 # <a name="systraceeventbindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **Sys. trace_event_bindings** vista del catalogo contiene un elenco di tutte le possibili combinazioni di utilizzo di eventi e colonne. Per ogni evento elencato nel **trace_event_id** colonna, in cui sono elencate tutte le colonne disponibili di **trace_column_id** colonna. Quando si verifica un evento specifico, non tutte le colonne disponibili vengono popolate. Questi valori non cambiano per una versione specifica di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+  Il **Sys. trace_event_bindings** vista del catalogo contiene un elenco di tutte le possibili combinazioni di utilizzo di eventi e colonne. Per ogni evento elencato nel **trace_event_id** colonna, in cui sono elencate tutte le colonne disponibili il **trace_column_id** colonna. Quando si verifica un evento specifico, non tutte le colonne disponibili vengono popolate. Questi valori non cambiano per una versione specifica di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
  Per un elenco completo degli eventi di traccia supportati, vedere [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   

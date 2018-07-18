@@ -1,5 +1,5 @@
 ---
-title: Stored procedure (Transact-SQL) di sistema | Documenti Microsoft
+title: Sistema Stored procedure (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 481b0c451f5161231cf64402c5c758870a07be62
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708639"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979463"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Stored procedure di sistema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,40 +45,40 @@ ms.locfileid: "34708639"
   
 |Category|Description|  
 |--------------|-----------------|  
-|[Stored procedure di replica geografica attiva](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Utilizzato per gestire le configurazioni di replica geografica attiva nel Database di SQL Azure|  
+|[Stored procedure di replica geografica attiva](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Consente di gestire per gestire le configurazioni di replica geografica attiva nel Database SQL di Azure|  
 |[Stored procedure di catalogo](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Consentono di implementare le funzioni del dizionario dei dati ODBC e di isolare le applicazioni ODBC in caso di modifiche alle tabelle di sistema sottostanti.|  
 |[Stored procedure Change Data Capture](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Consentono di abilitare, disabilitare o creare report relativi a oggetti Change Data Capture.|  
 |[Stored procedure per cursori](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Consentono di implementare la funzionalità per le variabili di cursore.|  
 |[Stored procedure di agente di raccolta dati](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)|Consentono di lavorare con l'agente di raccolta dati e i componenti seguenti: set di raccolta, elementi delle raccolte e tipi di raccolta.|  
-|[Stored procedure del motore di database](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|Consentono di eseguire le operazioni di manutenzione generale del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
+|[Motore di database le Stored procedure](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|Consentono di eseguire le operazioni di manutenzione generale del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Stored procedure di posta elettronica database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Consentono di eseguire le operazioni di posta elettronica da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Piano di manutenzione database Stored procedure](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Consentono di impostare le attività di manutenzione principali necessarie per gestire le prestazioni dei database.|  
-|[Stored procedure per query distribuite](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Consentono di implementare e gestire le query distribuite.|  
+|[Stored procedure di query distribuite](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Consentono di implementare e gestire le query distribuite.|  
 |[FileStream e FileTable Stored procedure &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Utilizzato per configurare e gestire le caratteristiche FILESTREAM e FileTable.|  
 |[Le regole del firewall Stored procedure &#40;Database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Consente di configurare il firewall di Database SQL di Azure.|  
 |[Stored procedure per ricerche Full-Text](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Consentono di implementare ed eseguire query su indici full-text.|  
 |[Stored procedure estese generali](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|Consentono di utilizzare un'interfaccia tra un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e programmi esterni per varie attività di manutenzione.|  
 |[Il log Shipping Stored procedure](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)|Consentono di configurare, modificare e monitorare le configurazioni per il log shipping.|  
-|[Data Warehouse gestione le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Consente di configurare il data warehouse di gestione.|  
+|[Data Warehouse di gestione le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Utilizzato per configurare il data warehouse di gestione.|  
 |[Automazione OLE Stored procedure](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Consentono di abilitare gli oggetti di automazione standard per l'utilizzo all'interno di un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] standard.|  
 |[Stored procedure della gestione basata su criteri](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Consentono di implementare la gestione basata su criteri.|  
 |[Stored procedure di PolyBase](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Aggiungere o rimuovere un computer da un gruppo con scalabilità orizzontale PolyBase.|  
-|[Stored procedure di archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Utilizzato per ottimizzare le prestazioni.|  
+|[Query Store Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Consente di ottimizzare le prestazioni.|  
 |[Stored procedure di replica](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Consentono di gestire le operazioni di replica.|  
 |[Stored procedure di sicurezza](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Consentono di gestire la sicurezza.|  
-|[Stored procedure di Backup snapshot](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Utilizzato per eliminare i backup FILE_SNAPSHOT insieme a tutti i relativi snapshot o per eliminare un singolo file di backup di snapshot.|  
-|[Indice spaziale Stored procedure](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Utilizzato per analizzare e migliorare le prestazioni di indicizzazione degli indici spaziali.|  
+|[Le Stored procedure di Backup di snapshot](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Usato per eliminare i backup FILE_SNAPSHOT insieme a tutti i relativi snapshot o eliminare uno snapshot di file di backup individuali.|  
+|[Stored procedure di indice spaziale](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Utilizzato per analizzare e migliorare le prestazioni di indicizzazione degli indici spaziali.|  
 |[Stored procedure SQL Server Agent](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Consentono a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] di monitorare prestazione e attività.|  
 |[Stored procedure di SQL Server Profiler](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Consentono a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di gestire attività pianificate e guidate dagli eventi.|  
-|[Estensione Database Stored procedure](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Consente di gestire i database di estensione.|  
-|[Le tabelle temporali Stored procedure](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Utilizzare per le tabelle temporali|  
+|[Stretch Database Stored procedure](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Usato per gestire l'istanza di stretch database.|  
+|[Le tabelle temporali Stored procedure](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Utilizzo per le tabelle temporali|  
 |[Stored procedure per XML](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|Consentono di gestire il testo XML.|  
   
 > [!NOTE]  
 >  Se non specificato diversamente, tutte le stored procedure di sistema restituiscono il valore 0 per indicare esito positivo. Per indicare esito negativo, viene restituito un valore diverso da zero.  
   
 ## <a name="api-system-stored-procedures"></a>Stored procedure di sistema (API)  
- Gli utenti che eseguono [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per applicazioni ADO, OLE DB e ODBC possono notare che queste applicazioni utilizzano stored procedure di sistema che non vengono trattate nella Guida di riferimento a [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste stored procedure vengono utilizzate per la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provider Native Client OLE DB e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il driver ODBC Native Client per implementare la funzionalità di un'API di database. Rappresentano il meccanismo con cui il provider o il driver comunica le richieste degli utenti a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Devono essere utilizzate solo internamente dal provider o dal driver. Chiamarle esplicitamente da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-applicazione di base non è supportata.  
+ Gli utenti che eseguono [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per applicazioni ADO, OLE DB e ODBC possono notare che queste applicazioni utilizzano stored procedure di sistema che non vengono trattate nella Guida di riferimento a [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste stored procedure vengono utilizzate per la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Provider OLE DB Native e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client per implementare la funzionalità di un'API di database. Rappresentano il meccanismo con cui il provider o il driver comunica le richieste degli utenti a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Devono essere utilizzate solo internamente dal provider o dal driver. Chiamarle esplicitamente da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-applicazione basata su non è supportato.  
   
  Il sp_createorphan e sp_droporphans stored procedure vengono utilizzate per ODBC **ntext**, **testo**, e **immagine** l'elaborazione.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "34708639"
  [Stored procedure &#40;Motore di database&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [Esecuzione di Stored procedure &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
  [Esecuzione di Stored procedure](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Esecuzione delle stored procedure](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

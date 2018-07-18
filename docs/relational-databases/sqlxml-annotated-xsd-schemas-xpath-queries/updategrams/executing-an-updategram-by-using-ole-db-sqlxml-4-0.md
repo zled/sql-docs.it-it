@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di un Updategram mediante OLE DB (SQLXML 4.0) | Documenti Microsoft
+title: Esecuzione di un Updategram mediante OLE DB (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1c80025b375cfa017d92a6ae1602c78ddc57d9f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973196"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032269"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Esecuzione di un updategram mediante OLE DB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questo argomento fornisce un esempio reale di usingOLE DB per eseguire un updategram.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>Utilizzo di ICommandStream per l'impostazione di un comando XML  
- L'interfaccia ICommandStream OLE DB (versione 2.6 o versione successiva) passa un comando come un oggetto flusso, anziché come una stringa.  
+ L'interfaccia ICommandStream OLE DB (versione 2.6 o versione successiva) passa un comando come oggetto flusso, anziché come stringa.  
   
- Questa interfaccia consente l'inserimento di un comando in qualsiasi codifica interpretabile dal parser XML. Quando viene chiamato ICommand:: Execute, il testo del comando viene letto dal flusso direttamente e non è necessaria alcuna conversione. Pertanto, l'esecuzione di comandi XML tramite ICommandStream interfaccia è più efficiente.  
+ Questa interfaccia consente l'inserimento di un comando in qualsiasi codifica interpretabile dal parser XML. Quando viene chiamato ICommand:: Execute, il testo del comando viene letto dal flusso direttamente e non è necessaria alcuna conversione. Pertanto, l'esecuzione di comandi XML utilizzo di ICommandStream interfaccia è più efficiente.  
   
 ### <a name="setting-xml-as-a-command-using-icommandstream-and-retrieving-the-results-as-an-xml-document"></a>Impostazione di XML come comando mediante l'utilizzo di ICommandStream e il recupero dei risultati come documento XML  
  L'interfaccia ICommandStream consente di impostare i documenti XML come comando e i risultati possono essere recuperati come documento XML.  
   
 #### <a name="executing-templates-with-xpath-queries"></a>Esecuzione di modelli con query XPath  
- Il seguente modello XML costituito da una query XPath viene specificato come un comando di utilizzo di ICommandStream:  
+ Il seguente modello XML costituito da una query XPath viene specificato come comando di utilizzo di ICommandStream:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -65,19 +65,19 @@ ms.locfileid: "32973196"
 </Schema>  
 ```  
   
- La query restituisce tutti gli elementi relativi ai dipendenti. Mapping predefinito di  **\<Person. Contact >** elemento viene mappato alla tabella Person. Contact nel database AdventureWorks.  
+ La query restituisce tutti gli elementi relativi ai dipendenti. Mapping predefinito, il  **\<Person. Contact >** elemento viene mappato alla tabella Person. Contact nel database AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Per impostare XML come comando recuperando il risultato come documento XML  
   
 1.  Inizializzare e stabilire una connessione al database.  
   
-2.  Ottenere l'interfaccia ICommandStream su ICommand.  
+2.  Ottenere l'interfaccia ICommandStream di ICommand.  
   
 3.  Impostare le proprietà necessarie per il comando. In questo esempio la proprietà SSPROP_STREAM_BASEPATH specifica del provider viene impostata sulla directory in cui sono archiviati i file dello schema di mapping e i file modello.  
   
 4.  Utilizzo di ICommandStream:: SetCommandStream per specificare il flusso del comando. In questo esempio il modello XML eseguito viene letto da un file. Ciò si rivela utile quando si desidera eseguire modelli XML di grandi dimensioni.  
   
-5.  Eseguire il comando XML utilizzando ICommand:: Execute, richiede l'ID dell'interfaccia IID_ISequentialStream.  
+5.  Eseguire il comando XML utilizzando ICommand:: Execute, che richiede l'ID di interfaccia IID_ISequentialStream.  
   
 6.  Elaborare il risultato. In questo esempio l'XML letto dal flusso viene visualizzato sullo schermo.  
   

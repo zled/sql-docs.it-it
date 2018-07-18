@@ -1,5 +1,5 @@
 ---
-title: Espressioni condizionali (XQuery) | Documenti Microsoft
+title: Espressioni condizionali (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,16 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3634414fb0353c9152d317c718707c3ce26ec812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076160"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979013"
 ---
 # <a name="conditional-expressions-xquery"></a>Espressioni condizionali (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery supporta condizionale seguente **if-then-else** istruzione:  
+  XQuery supporta il seguente parametro condizionale **if-then-else** istruzione:  
   
 ```  
 if (<expression1>)  
@@ -59,9 +59,9 @@ else
   
 -   L'espressione di test deve essere racchiusa tra parentesi.  
   
--   Il **else** espressione è obbligatorio. Se non è necessaria, è possibile restituire " ( ) ", come illustrato negli esempi disponibili in questa sezione.  
+-   Il **else** è necessaria l'espressione. Se non è necessaria, è possibile restituire " ( ) ", come illustrato negli esempi disponibili in questa sezione.  
   
- Ad esempio, la query seguente viene eseguita la **xml** variabile di tipo. Il **se** condizione testa il valore della variabile SQL (@v) all'interno dell'espressione XQuery utilizzando il [funzione SQL: variable](../xquery/xquery-extension-functions-sql-variable.md) funzione di estensione. Se il valore della variabile è "FirstName", restituisce l'elemento <`FirstName`>. In caso contrario, restituisce l'elemento <`LastName`>.  
+ Ad esempio, la query seguente viene specificata con il **xml** variabile di tipo. Il **se** condizione testa il valore della variabile SQL (@v) all'interno dell'espressione XQuery utilizzando la [funzione SQL: variable](../xquery/xquery-extension-functions-sql-variable.md) funzione dell'estensione. Se il valore della variabile è "FirstName", restituisce l'elemento <`FirstName`>. In caso contrario, restituisce l'elemento <`LastName`>.  
   
 ```  
 declare @x xml  
@@ -110,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Nella query precedente, la condizione di **se** espressione controlla se sono presenti più di due elementi figlio <`Features`>. In caso affermativo, restituisce l'elemento `\<there-is-more/>` nel risultato.  
+ Nella query precedente, la condizione nel **se** espressione controlla se sono presenti più di due elementi figlio <`Features`>. In caso affermativo, restituisce l'elemento `\<there-is-more/>` nel risultato.  
   
  Risultato:  
   
@@ -155,7 +155,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- Questa query può essere scritta senza la **se** clausola, come illustrato nell'esempio seguente:  
+ Questa query può essere scritta senza i **se** clausola, come illustrato nell'esempio seguente:  
   
 ```  
 SELECT Instructions.query('  

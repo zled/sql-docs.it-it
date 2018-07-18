@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_dms_workers (Transact-SQL) | Documenti Microsoft
+title: Sys.dm_exec_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,33 +27,34 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 940857ee9b723eed5adf1626d8db8c7868d30e7c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982613"
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Contiene informazioni su tutti i ruoli worker procedura DMS.  
+  Contiene informazioni su tutti i ruoli di lavoro completato i passaggi di migrazione del database.  
   
- Questa vista mostra i dati per l'ultima 1000 richieste e richieste attive; richieste attive dispongano sempre dei dati presenti in questa vista.  
+ In questa vista mostra i dati per le ultime 1000 richieste e le richieste attive; richieste attive dispongano sempre dei dati presenti in questa vista.  
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Eseguire una query che il thread di lavoro DMS sia parte of.request_id, step_index, dms_step_index formano la chiave per la visualizzazione.||  
-|step_index|**int**|Passaggio di di che thread di lavoro DMS fa parte una query.|Vedere l'indice passaggio nella [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|**int**|Passaggio nel piano di DMS che il thread di lavoro è in esecuzione.|See [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|**int**|Nodo in cui è in esecuzione il processo di lavoro.|Vedere [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|execution_id|**nvarchar(32)**|Eseguire una query che il thread di lavoro del servizio migrazione del database è parte of.request_id, step_index, dms_step_index formano la chiave per questa visualizzazione.||  
+|step_index|**int**|Questo ruolo di lavoro DMS fa parte del passaggio di query.|Vedere l'indice dei passaggi nel [DM exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|dms_step_index|**int**|Passaggio nel piano di servizio migrazione del database che è in esecuzione il thread di lavoro.|See [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|**int**|Nodo su cui è in esecuzione il ruolo di lavoro.|Visualizzare [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|**int**|||  
 |Tipo|**nvarcha(32)**|||  
-|status|**nvarchar(32)**|Stato del passaggio|'Sospeso', 'Running', 'Completato', 'Non riuscita', 'UndoFailed', 'PendingCancel', 'annullato', 'Annullate', 'Interrotta'|  
+|status|**nvarchar(32)**|Stato di questo passaggio|'Sospeso', 'Running', 'Complete', 'Non riuscito', 'UndoFailed', 'PendingCancel', 'annullato', 'Annullate', 'Interrotta'|  
 |bytes_per_sec|**bigint**|||  
 |bytes_processed|**bigint**|||  
 |rows_processed|**bigint**|||  
-|start_time|**datetime**|Ora di inizio esecuzione il passaggio|Minore o uguale all'ora corrente e maggiori o uguali a end_compile_time della query a cui appartiene questo passaggio.|  
-|end_time|**datetime**|Ora in cui questo passaggio ha completato l'esecuzione, è stato annullato o non è riuscito.|Minore o uguale all'ora corrente e maggiore o uguale a start_time, impostato su NULL per i passaggi attualmente in esecuzione o in coda.|  
-|total_elapsed_time|**int**|Quantità totale di tempo, che il passaggio della query è stato in esecuzione, in millisecondi|Compreso tra 0 e la differenza tra start_time ed end_time. 0 per i passaggi in coda.|  
+|start_time|**datetime**|Tempo in cui è iniziato il passaggio di esecuzione|Minore o uguale all'ora corrente e maggiore o uguale a end_compile_time della query a cui appartiene questo passaggio.|  
+|end_time|**datetime**|Ora in cui questo passaggio completato l'esecuzione, è stato annullato o non è riuscito.|Minore o uguale all'ora corrente e maggiore o uguale a start_time, impostato su NULL per la procedura attualmente in esecuzione o in coda.|  
+|total_elapsed_time|**int**|Quantità totale di tempo in esecuzione il passaggio della query, in millisecondi|Compreso tra 0 e la differenza tra start_time ed end_time. 0 per i passaggi in coda.|  
 |cpu_time|**bigint**|||  
 |query_time|**int**|||  
 |buffers_available|**int**|||  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/23/2018
 |comando|**nvarchar(4000)**|||  
   
 ## <a name="see-also"></a>Vedere anche  
- [PolyBase, risoluzione dei problemi con viste a gestione dinamica](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase con DMV di risoluzione dei problemi](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste a gestione dinamica relative ai database &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

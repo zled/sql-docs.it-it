@@ -1,5 +1,5 @@
 ---
-title: Corrispondenza del tipo di sequenza | Documenti Microsoft
+title: La corrispondenza dei tipi di sequenza | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ce01e8b2f587527b264a3ea11021257375fb842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078028"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980023"
 ---
-# <a name="type-system---sequence-type-matching"></a>Tipo di sistema - corrispondenza del tipo di sequenza
+# <a name="type-system---sequence-type-matching"></a>Sistema di tipi - corrispondenza del tipo di sequenza
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Il valore di un'espressione XQuery è sempre rappresentato da una sequenza di zero o più elementi, che possono essere valori atomici o nodi. Il tipo di sequenza fa riferimento alla capacità di stabilire una corrispondenza tra il tipo di sequenza restituito da un'espressione di query e un tipo specifico. Esempio:  
@@ -41,13 +41,13 @@ ms.locfileid: "33078028"
   
 -   È possibile stabilire se l'espressione restituisce un elemento XML o un nodo di attributo con un nome e un tipo specifico.  
   
- Per individuare una corrispondenza per il tipo di sequenza, è possibile utilizzare l'operatore booleano `instance of`. Per ulteriori informazioni sul `instance of` espressione, vedere [sequencetype-espressioni &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
+ Per individuare una corrispondenza per il tipo di sequenza, è possibile utilizzare l'operatore booleano `instance of`. Per altre informazioni sul `instance of` espressione, vedere [espressioni SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Confronto del tipo del valore atomico restituito da un'espressione  
  Se un'espressione restituisce una sequenza di valori atomici, potrebbe essere necessario trovare il tipo del valore nella sequenza. Negli esempi seguenti viene illustrato l'utilizzo della sintassi del tipo di sequenza per valutare il tipo di valore atomico restituito da un'espressione.  
   
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>Esempio: determinazione di una sequenza vuota  
- Il **Empty ()** tipo di sequenza può essere utilizzato in un'espressione di tipo di sequenza per determinare se la sequenza restituita dall'espressione specificata è una sequenza vuota.  
+ Il **della Empty ()** tipo di sequenza utilizzabile in un'espressione sequencetype per determinare se la sequenza restituita dall'espressione specificata è una sequenza vuota.  
   
  Nell'esempio seguente, l'XML Schema consente che l'elemento <`root`> supporti i valori Null:  
   
@@ -168,7 +168,7 @@ GO
  Se entrambe le condizioni sono vere, l'espressione `instance of` restituisce True.  
   
 ### <a name="example-querying-against-an-xml-type-column"></a>Esempio: esecuzione di una query su una colonna di tipo xml  
- Nell'esempio seguente viene eseguita una query su una colonna Instructions di **xml** digitare il [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. Si tratta di una colonna XML tipizzata, perché è associata a uno schema. Tramite XML Schema viene definito l'attributo `LocationID` di tipo integer. Pertanto, nell'espressione di sequenza, il `instance of xs:integer?` restituisce True.  
+ Nell'esempio seguente, una query viene eseguita su una colonna Instructions della **xml** digitare il [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. Si tratta di una colonna XML tipizzata, perché è associata a uno schema. Tramite XML Schema viene definito l'attributo `LocationID` di tipo integer. Pertanto, nell'espressione di sequenza, il `instance of xs:integer?` restituisce True.  
   
 ```  
 SELECT Instructions.query('   
@@ -236,7 +236,7 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Sono valide le limitazioni seguenti:  
   
--   **document-node()** con tipo di contenuto sintassi non è supportata.  
+-   **document-node()** con tipo di contenuto non è supportata la sintassi.  
   
 -   **Processing-Instruction(Name)** sintassi non è supportata.  
   
@@ -314,7 +314,7 @@ GO
     ```  
   
 ### <a name="example-b"></a>Esempio B  
- Nell'esempio seguente viene illustrato come determinare se il nodo restituito da un'espressione è un nodo elemento con un nome specifico, Usa il **element()** test.  
+ Nell'esempio seguente viene illustrato come determinare se il nodo restituito da un'espressione è un nodo elemento con un nome specifico, Usa il **Element ()** di test.  
   
  Nell'esempio seguente, i due elementi <`Customer`> dell'istanza XML sui quali viene eseguita la query sono di due tipi diversi, `CustomerType` e `SpecialCustomerType`. Si supponga di voler conoscere il tipo dell'elemento <`Customer`> restituito dall'espressione. La raccolta di XML Schema seguente definisce i tipi `CustomerType` e `SpecialCustomerType`.  
   
@@ -343,7 +343,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Questa raccolta di XML schema viene utilizzato per creare un oggetto tipizzato **xml** variabile. L'istanza XML assegnata alla variabile include due elementi <`customer`> di tipo diverso. Il primo elemento è di tipo `CustomerType` e il secondo elemento è di tipo `SpecialCustomerType`.  
+ Questa raccolta di XML schema consente di creare un oggetto tipizzato **xml** variabile. L'istanza XML assegnata alla variabile include due elementi <`customer`> di tipo diverso. Il primo elemento è di tipo `CustomerType` e il secondo elemento è di tipo `SpecialCustomerType`.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -430,15 +430,15 @@ RETURN
   
 -   Nel test dell'elemento, il nome del tipo deve essere seguito dall'indicatore di occorrenza (**?**).  
   
--   **Element (ElementName, TypeName)** non è supportata.  
+-   **Element (ElementName, TypeName)** non è supportato.  
   
--   **elemento (\*, TypeName)** non è supportata.  
+-   **elemento (\*, TypeName)** non è supportato.  
   
--   **schema-Element()** non è supportata.  
+-   **schema-Element()** non è supportato.  
   
--   **schema-Attribute(AttributeName)** non è supportata.  
+-   **schema-Attribute(AttributeName)** non è supportato.  
   
--   Esecuzione di query in modo esplicito per **xsi: Type** o **xsi: nil** non è supportata.  
+-   In modo esplicito l'esecuzione di query per **xsi: Type** oppure **xsi: nil** non è supportato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sistema di tipi &#40;XQuery&#41;](../xquery/type-system-xquery.md)  

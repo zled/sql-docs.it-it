@@ -1,5 +1,5 @@
 ---
-title: la procedura sp_addextendedproc (Transact-SQL) | Documenti Microsoft
+title: sp_addextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 2083d370479fa19049a083ef401574f21740929c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239791"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046089"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Registra il nome di una nuova stored procedure estesa in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Registra il nome di una nuova stored procedure estesa alla [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Usare invece la funzionalità [Integrazione CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
@@ -49,7 +49,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
   
 ## <a name="arguments"></a>Argomenti  
  [  **@functname =** ] **'***procedure***'**  
- Nome della funzione da chiamare all'interno della libreria di collegamento dinamico (DDL, Dynamic-Link Library). *stored procedure* viene **nvarchar(517)**, non prevede alcun valore predefinito. *stored procedure* può includere facoltativamente il nome del proprietario nel formato *proprietario*.  
+ Nome della funzione da chiamare all'interno della libreria di collegamento dinamico (DDL, Dynamic-Link Library). *routine* viene **nvarchar(517)**, non prevede alcun valore predefinito. *routine* può includere facoltativamente il nome del proprietario nel formato *proprietario*.  
   
  [  **@dllname =** ] **'***dll***'**  
  Nome della DLL che contiene la funzione. *DLL* viene **nvarchar (255)**, non prevede alcun valore predefinito. È consigliabile specificare il percorso completo della DLL.  
@@ -58,17 +58,17 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
- Dopo la creazione di una stored procedure estesa, è necessario aggiungerlo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando **sp_addextendedproc**. Per ulteriori informazioni, vedere [aggiunta di una Stored Procedure estesa a SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
+## <a name="remarks"></a>Note  
+ Dopo la creazione di una stored procedure estesa, deve essere aggiunto al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **sp_addextendedproc**. Per altre informazioni, vedere [aggiunta di una Stored Procedure estesa a SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
   
  Questa procedura può essere eseguita solo nel **master** database. Per eseguire una stored procedure estesa da un database diverso da **master**, qualificare il nome della stored procedure estesa con **master**.  
   
- **la procedura sp_addextendedproc** aggiunge voci per il [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista del catalogo, la registrazione del nome della nuova stored procedure estesa in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aggiunge inoltre una voce di [extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) vista del catalogo.  
+ **sp_addextendedproc** aggiunge voci per il [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista del catalogo, la registrazione del nome della nuova stored procedure estesa in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Viene inoltre aggiunta una voce nel [Sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) vista del catalogo.  
   
 > [!IMPORTANT]  
->  Le DLL esistenti non registrate con un percorso completo non funzionano dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per risolvere il problema, utilizzare **sp_dropextendedproc** per annullare la registrazione della DLL e quindi registrarla **sp_addextendedproc**, specificando il percorso completo.  
+>  Le DLL esistenti non registrate con un percorso completo non funzionano dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per correggere il problema, utilizzare **sp_dropextendedproc** per annullare la registrazione della DLL e quindi registrarla di nuovo **sp_addextendedproc**, specificando il percorso completo.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_addextendedproc**.  

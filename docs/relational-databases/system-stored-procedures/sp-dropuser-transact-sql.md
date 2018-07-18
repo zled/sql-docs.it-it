@@ -1,5 +1,5 @@
 ---
-title: sp_dropuser (Transact-SQL) | Documenti Microsoft
+title: sp_dropuser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 9af8a740ae349f748acc6c8385d95b97a0e2490d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243198"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036989"
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +53,14 @@ sp_dropuser [ @name_in_db = ] 'user'
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_dropuser** viene eseguito **sp_revokedbaccess** per rimuovere l'utente dal database corrente.  
   
- Utilizzare **sp_helpuser** per visualizzare un elenco dei nomi utente che può essere rimosso dal database corrente.  
+ Uso **sp_helpuser** per visualizzare un elenco dei nomi utente che possono essere rimossi dal database corrente.  
   
  Quando si rimuove un utente di database, vengono rimossi anche tutti gli alias di tale utente. Se l'utente è proprietario di uno schema vuoto che ha lo stesso suo nome, lo schema verrà rimosso. Se l'utente è proprietario di altre entità a protezione diretta nel database, l'utente non verrà rimosso. La proprietà degli oggetti deve prima essere trasferita ad un'altra entità. Per altre informazioni, vedere [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md). Se si rimuove un utente di database, vengono rimosse automaticamente anche le autorizzazioni corrispondenti e l'utente viene rimosso dai ruoli di database di cui è membro.  
   
- **sp_dropuser** non può essere utilizzato per rimuovere il proprietario del database (**dbo**) **INFORMATION_SCHEMA** gli utenti, o il **guest** utente dal **master**  oppure **tempdb** database. Nei database non di sistema, `EXEC sp_dropuser 'guest'` revocare l'autorizzazione CONNECT all'utente **guest**. ma l'utente stesso non verrà rimosso.  
+ **sp_dropuser** non può essere usato per rimuovere il proprietario del database (**dbo**) **INFORMATION_SCHEMA** gli utenti, o il **guest** utente dal **master**  oppure **tempdb** i database. Nei database non di sistema `EXEC sp_dropuser 'guest'` l'autorizzazione CONNECT all'utente **guest**. ma l'utente stesso non verrà rimosso.  
   
  **sp_dropuser** non può essere eseguita all'interno di una transazione definita dall'utente.  
   
@@ -78,7 +78,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [DROP USER & #40; Transact-SQL & #41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [sp_revokedbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

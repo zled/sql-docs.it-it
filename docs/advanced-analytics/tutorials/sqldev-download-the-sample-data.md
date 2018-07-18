@@ -1,6 +1,6 @@
 ---
-title: Lezione 1 Download dati di esempio e gli script per incorporati R (SQL Server Machine Learning) | Documenti Microsoft
-description: Esercitazione che illustra come incorporare R in SQL Server funzioni e stored procedure T-SQL
+title: Lezione 1 i dati di esempio di Download e script per embedded R (SQL Server Machine Learning Services) | Microsoft Docs
+description: Esercitazione che illustra come incorporare R in SQL Server stored procedure e funzioni T-SQL
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/07/2018
@@ -9,20 +9,20 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249834"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030379"
 ---
-# <a name="lesson-1-download-data-and-scripts"></a>Lezione 1: Scaricare dati e gli script
+# <a name="lesson-1-download-data-and-scripts"></a>Lezione 1: Scaricare i dati e gli script
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo articolo fa parte di un'esercitazione per gli sviluppatori SQL su come usare il linguaggio R in SQL Server.
+Questo articolo fa parte di un'esercitazione per sviluppatori SQL su come usare R in SQL Server.
 
-In questo passaggio, verrà scaricato il set di dati di esempio e [!INCLUDE[tsql](../../includes/tsql-md.md)] dello script di file che vengono utilizzati in questa esercitazione. I dati e i file di script vengono condivisi su GitHub, ma lo script di PowerShell scaricherà i file di dati e script in una directory locale di propria scelta.
+In questo passaggio, verrà scaricato il set di dati di esempio e [!INCLUDE[tsql](../../includes/tsql-md.md)] file che vengono usati in questa esercitazione di script. Sia i dati e i file di script sono condivisi in GitHub, ma lo script di PowerShell scaricherà i file di dati e script in una directory locale di propria scelta.
 
-## <a name="download-tutorial-files-from-github"></a>Scaricare i file delle esercitazioni da Github
+## <a name="download-tutorial-files-from-github"></a>Scaricare i file dell'esercitazione da Github
 
 1.  Aprire una console dei comandi di Windows PowerShell.
   
@@ -62,8 +62,8 @@ In questo passaggio, verrà scaricato il set di dati di esempio e [!INCLUDE[tsql
   
 ## <a name="next-lesson"></a>Lezione successiva
 
-[Lezione 2: Importare dati in SQL Server tramite PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Lezione 2: Importare i dati in SQL Server usando PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
 
 ## <a name="previous-lesson"></a>Lezione precedente
 
-[Analitica R incorporato per gli sviluppatori SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+[Analitica incorporata di R per sviluppatori SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)

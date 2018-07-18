@@ -1,5 +1,5 @@
 ---
-title: Esecuzione del caricamento Bulk dei dati XML (SQLXML 4.0) | Documenti Microsoft
+title: Caricamento Bulk di dati XML (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c4087c97debb92415c9a4e72a4fc29ffeaf81713
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708179"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032489"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Esecuzione del caricamento bulk di dati XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ ms.locfileid: "34708179"
  [Esempi di caricamento Bulk XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
  Viene fornito il codice di esempio che utilizza il caricamento bulk XML.  
   
- [Comportamento di caricamento Bulk di tipi di dati e XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
+ [Comportamento di caricamento in blocco XML e i tipi di dati &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
  Viene illustrato il comportamento del caricamento bulk XML con i diversi tipi in XSD e XDR.  
   
- [Linee guida e limitazioni del codice XML eseguire il caricamento Bulk &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
+ [Linee guida e limitazioni del codice XML di caricamento Bulk &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
  Vengono elencati alcuni problemi da tener presente quando si utilizza il caricamento bulk XML.  
   
   

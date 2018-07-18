@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b5509b126a88ab2500fca0509789b61182af2ad2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256649"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979383"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Chiamate di **sqlmaint** utilità con una stringa che contiene **sqlmaint**commutatori. Il **sqlmaint** utilità esegue una serie di operazioni di manutenzione su uno o più database.  
+  Chiama il **sqlmaint** utilità con una stringa che contiene **sqlmaint**commutatori. Il **sqlmaint** utilità esegue una serie di operazioni di manutenzione su uno o più database.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -50,13 +50,13 @@ xp_sqlmaint 'switch_string'
  **'** *switch_string* **'**  
  È una stringa contenente il **sqlmaint** opzioni dell'utilità. Le opzioni e i relativi valori devono essere separati da uno spazio.  
   
- Il **-?** opzione non è valida per **xp_sqlmaint**.  
+ Il **-?** non è valida per **xp_sqlmaint**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Nessuno Restituisce un errore se il **sqlmaint** ha esito negativo di utilità.  
+ Nessuna. Restituisce un errore se il **sqlmaint** utilità ha esito negativo.  
   
-## <a name="remarks"></a>Osservazioni  
- Se questa procedura viene chiamata da un utente l'accesso con autenticazione di SQL Server, il **- U "***login_id***"** e **-P "***password***"** switch vengono anteposti *switch_string* prima dell'esecuzione. Se l'utente è connesso con l'autenticazione di Windows, *switch_string* viene passato senza apportare modifiche **sqlmaint**.  
+## <a name="remarks"></a>Note  
+ Se questa procedura viene chiamata da un utente l'accesso con autenticazione di SQL Server, il **- U "***login_id***"** e **-P "***password***"** commutatori vengono aggiunti all'inizio *switch_string* prima dell'esecuzione. Se l'utente è connesso con l'autenticazione di Windows *switch_string* viene passato senza apportare modifiche **sqlmaint**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  

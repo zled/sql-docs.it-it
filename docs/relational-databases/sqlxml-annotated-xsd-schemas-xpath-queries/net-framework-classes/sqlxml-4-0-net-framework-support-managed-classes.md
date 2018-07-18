@@ -1,5 +1,5 @@
 ---
-title: Classi gestite SQLXML | Documenti Microsoft
+title: Classi gestite SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,13 +29,13 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 13212c73e4f12ed83e6677a8c819b3306eab3118
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708499"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046159"
 ---
-# <a name="sqlxml-40-net-framework-support---managed-classes"></a>Supporto per SQLXML 4.0 di .NET Framework, le classi gestite
+# <a name="sqlxml-40-net-framework-support---managed-classes"></a>Supporto SQLXML 4.0 per .NET Framework - classi gestite
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 supporta caratteristiche che consentono di scrivere applicazioni per accedere a dati XML da un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], trasferire i dati nell'ambiente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, elaborare i dati e inviare gli aggiornamenti a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
   
@@ -46,12 +46,12 @@ ms.locfileid: "34708499"
 > [!NOTE]  
 >  .NET Framework include il provider di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET. Tale provider può essere utilizzato per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dall'ambiente .NET. È tuttavia in grado di gestire solo query SQL tradizionali (ovvero query del database relazionale ad eccezione delle query FOR XML). Non è possibile eseguire modelli XML o query XPath sul lato server in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
- Per informazioni sull'accesso e modifica dei dati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] all'interno di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework e sull'utilizzo di DiffGram per aggiornare dati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelle, vedere [l'accesso a funzionalità SQLXML nell'ambiente .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
+ Per informazioni sull'accesso e modifica dei dati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] all'interno di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework e sull'utilizzo di DiffGram per aggiornare i dati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelle, vedere [l'accesso a funzionalità SQLXML nell'ambiente .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
 > [!NOTE]  
->  È anche possibile scrivere applicazioni [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio per eseguire il caricamento bulk di documenti XML utilizzando il caricamento bulk XML. Per altre informazioni, vedere [l'esecuzione di caricamento Bulk di dati di XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md). È necessario aggiungere all'applicazione un riferimento alla DLL del caricamento bulk XML (Xblkld4.dll). Si tratta di una DLL COM per la quale in Visual Studio .NET viene creata automaticamente la libreria di wrapper.  
+>  È anche possibile scrivere applicazioni [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio per eseguire il caricamento bulk di documenti XML utilizzando il caricamento bulk XML. Per altre informazioni, vedere [esecuzione di caricamento Bulk di dati di XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md). È necessario aggiungere all'applicazione un riferimento alla DLL del caricamento bulk XML (Xblkld4.dll). Si tratta di una DLL COM per la quale in Visual Studio .NET viene creata automaticamente la libreria di wrapper.  
   
-  Questa sezione vengono fornite applicazioni di esempio che illustrano come utilizzare il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] classi gestite SQLXML:  
+  Questa sezione vengono fornite applicazioni di esempio che illustrano come usare il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] classi gestite SQLXML:  
  [Esecuzione di query SQL &#40;classi gestite SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)  
   [Esecuzione di query SQL tramite il metodo ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)  
   [L'elaborazione di XML sul lato Client &#40;classi gestite SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  

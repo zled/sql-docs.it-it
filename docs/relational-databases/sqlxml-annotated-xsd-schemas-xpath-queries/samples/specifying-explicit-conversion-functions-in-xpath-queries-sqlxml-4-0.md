@@ -1,5 +1,5 @@
 ---
-title: Specifica di funzioni di conversione esplicita nelle query XPath (SQLXML 4.0) | Documenti Microsoft
+title: Specifica le funzioni di conversione esplicita nelle query XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,21 +22,22 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 623f2814322a6a57e6845a8d3d8d734b1b7c68f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032349"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Specifica di funzioni di conversione esplicita in query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Negli esempi seguenti viene illustrato come specificare le funzioni di conversione esplicita nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Negli esempi seguenti viene illustrato come specificare le funzioni di conversione esplicita nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. Utilizzo della funzione di conversione esplicita number ()  
- Il **Number()** funzione converte un argomento a un numero.  
+ Il **Number ()** funzione converte un argomento in un numero.  
   
- Supponendo che il valore di **ContactID** è un valore numerico, la query seguente converte **ContactID** a un numero e lo confronta con il valore 4. La query restituisce quindi tutti  **\<dipendente >** gli elementi figlio del nodo di contesto con il **ContactID** attributo con un valore numerico 4:  
+ Supponendo che il valore di **ContactID** è un valore numerico, la query seguente converte **ContactID** su un numero e lo confronta con il valore 4. La query restituisce quindi tutti  **\<Employee >** figli del nodo di contesto con il **ContactID** attributo che ha un valore numerico 4:  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -48,11 +49,11 @@ ms.lasthandoff: 05/03/2018
 /Contact[number(@ContactID) = 4]  
 ```  
   
- In termini relazionali, la query restituisce un dipendente con un **ContactID** di 4.  
+ In termini relazionali, la query restituisce un dipendente con una **ContactID** pari a 4.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (ExplicitConversionA.xml) e salvarlo nella directory in cui è stato salvato il file SampleSchema1.xml.  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzando ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato il set di risultati relativo all'esecuzione di questo modello:  
   
@@ -83,9 +84,9 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. Utilizzo della funzione di conversione esplicita string ()  
- Il **String()** funzione converte un argomento in una stringa.  
+ Il **String ()** funzione converte un argomento in una stringa.  
   
- La query seguente converte **ContactID** in una stringa e viene confrontato con la stringa di valore "4". La query restituisce tutti  **\<dipendente >** gli elementi figlio del nodo di contesto con un **ContactID** con un valore stringa "4":  
+ La query seguente converte **ContactID** in una stringa e la confronta con la stringa di valore "4". La query restituisce tutti  **\<Employee >** figli del nodo di contesto con un **ContactID** con un valore stringa "4":  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  
@@ -101,7 +102,7 @@ ms.lasthandoff: 05/03/2018
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (ExplicitConversionB.xml) e salvarlo nella directory in cui è stato salvato il file SampleSchema1.xml.  
   
@@ -121,7 +122,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzando ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato il set di risultati relativo all'esecuzione del modello:  
   
