@@ -1,6 +1,6 @@
 ---
-title: Topologia dello strumento - Analitica Platform System | Documenti Microsoft
-description: Visualizza le informazioni di riepilogo nell'intero sistema piattaforma Analitica.
+title: Topologia delle Appliance - sistema di piattaforma Analitica | Microsoft Docs
+description: Visualizza le informazioni di riepilogo sull'intero sistema di piattaforma Analitica.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9691da25c866e51e901aad1960b712b59fbd522b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: fac27805730a7afa9541ed835f7900acf6e309d2
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538601"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909761"
 ---
-# <a name="appliance-topology---analytics-platform-system"></a>Topologia dello strumento - Analitica Platform System
-Visualizza le informazioni di riepilogo nell'intero sistema piattaforma Analitica.  
+# <a name="appliance-topology---analytics-platform-system"></a>Topologia delle Appliance - sistema di piattaforma Analitica
+Visualizza le informazioni di riepilogo sull'intero sistema di piattaforma Analitica.  
   
-Espandere gli elementi di questa sezione per configurare le informazioni che si applica all'intera accessorio. Selezionare le sezioni Parallel Data Warehouse topologia o la topologia di HDInsight per configurare le informazioni che si applica solo a tale area del dispositivo.  
+La pagina riporta una versione di sola lettura di tutti gli host e i nodi di infrastruttura nell'appliance corrente incluso l'indirizzo Ethernet e Infiniband IP.  
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>Vedere anche  
-[Avviare Gestione configurazione &#40;Analitica Platform System&#41;](launch-the-configuration-manager.md)  
+[Avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Determinare il nodo di cluster non riuscita - Analitica Platform System | Documenti Microsoft
-description: In questo articolo viene descritto come determinare il nome del nodo Analitica piattaforma di strumenti che non è riuscita dopo un failover del cluster si è verificato ed è stato generato un avviso di failover del cluster. Come parte della risoluzione dei problemi relativi a un cluster di failover, è necessario determinare il nome del nodo che non è riuscito prima di contattare Microsoft per risolvere il problema.
+title: Determinare il nodo di cluster non riuscita - sistema di piattaforma Analitica | Microsoft Docs
+description: Questo articolo descrive come determinare il nome del nodo Analitica Platform System (APS) che non è riuscita dopo un failover del cluster si è verificato e ha generato un avviso di failover cluster. Come parte della risoluzione dei problemi relativi a un cluster di failover, è necessario determinare il nome del nodo che non è riuscito prima di contattare Microsoft per contribuire a risolvere il problema.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,29 +9,29 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 031c8033e91d7a7f74ca8c4409bc02296a22ebcf
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 4fd739e55725a3138a22539ef837088f86c8d8b9
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31544743"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909501"
 ---
-# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Determinare quale cluster nodo non è riuscita per Analitica Platform System
-In questo argomento viene descritto come determinare il nome del nodo Analitica piattaforma di strumenti che non è riuscita dopo un failover del cluster si è verificato ed è stato generato un avviso di failover del cluster. Come parte della risoluzione dei problemi relativi a un cluster di failover, è necessario determinare il nome del nodo che non è riuscito prima di contattare Microsoft per risolvere il problema.  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Determinare quale cluster nodo non è riuscita per il sistema di piattaforma Analitica
+Questo argomento descrive come determinare il nome del nodo Analitica Platform System (APS) che non è riuscita dopo un failover del cluster si è verificato e ha generato un avviso di failover cluster. Come parte della risoluzione dei problemi relativi a un cluster di failover, è necessario determinare il nome del nodo che non è riuscito prima di contattare Microsoft per contribuire a risolvere il problema.  
   
-## <a name="Background"></a>Sfondo  
-Per la disponibilità elevata in SQL Server PDW, il nodo di controllo e i nodi di calcolo sono configurati come componenti attivi o passivi del cluster di failover di Windows. Quando un server attivo non riesce a rispondere alle richieste di sistema critiche, il server passivo viene eseguito il failover ed esegue le funzioni del server che non è riuscita.  
+## <a name="Background"></a>In background  
+Per la disponibilità elevata in SQL Server PDW il nodo di controllo e i nodi di calcolo vengono configurati come attivi o passivi componenti del cluster di failover di Windows. Quando un server attivo non riesce a rispondere alle richieste di sistema critiche, il server passivo viene eseguito il failover ed esegue le funzioni del server che non è riuscita.  
   
-Dopo un failover del cluster, quando SQL Server PDW segnala lo stato del nodo, il server passivo è non riuscito su stato. Tuttavia, non è ovvio quale server o il nodo non è riuscita, soprattutto se il server che non è ancora online. Per risolvere l'errore del cluster, è necessario determinare il nome del nodo in cui è stato eseguito il failover.  
+Dopo il failover del cluster, quando SQL Server PDW segnala lo stato del nodo, nel server passivo è un'operazione tramite lo stato. Tuttavia, non è ovvio quale server o un nodo non è riuscita, soprattutto se il server non è ancora online. Per risolvere l'errore del cluster, è necessario determinare il nome del nodo in cui è stato eseguito il failover.  
   
 ## <a name="AdminConsoleSolution"></a>Soluzione di Console di amministrazione  
   
 #### <a name="to-find-the-name-of-the-node-that-failed"></a>Per trovare il nome del nodo che non è riuscita  
   
-1.  Aprire la Console di amministrazione. Per ulteriori informazioni sulla Console di amministrazione, vedere [monitorare il dispositivo tramite la Console di amministrazione &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). Dopo che si verifica il failover, l'evento di failover è incluso nel numero di avvisi sul **integrità** pagina. È presente un **integrità** pagina per l'area PDW, l'area HDI e per l'area dell'infrastruttura del dispositivo. Ogni pagina di stato ha un **avvisi** scheda. Per ulteriori informazioni su un avviso, fare clic sulla pagina integrità, scheda Avvisi e quindi fare clic su un avviso.  
+1.  Aprire la Console di amministrazione. Per altre informazioni sulla Console di amministrazione, vedere [monitorare l'Appliance usando la Console di amministrazione &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-the-admin-console.md). Dopo il failover, l'evento di failover è incluso nel numero di avvisi sul **integrità** pagina. È presente un' **integrità** pagina per l'area PDW e per l'area di fabric dell'appliance. Ogni pagina di integrità contiene un **avvisi** scheda. Per altre informazioni su un avviso, fare clic sulla pagina di integrità, scheda Avvisi e quindi fare clic su un avviso.  
   
-## <a name="SystemView"></a>Soluzione di visualizzazione del sistema  
-L'istruzione SQL seguente viene illustrato come utilizzare il [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md) vista di sistema per individuare il nome del server che non è riuscita.  
+## <a name="SystemView"></a>Soluzione di vista di sistema  
+L'istruzione SQL seguente viene illustrato come utilizzare il [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md) vista di sistema per trovare il nome del server che non è riuscita.  
   
 ```sql  
 SELECT  

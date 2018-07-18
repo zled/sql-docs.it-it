@@ -1,6 +1,6 @@
 ---
-title: Topologia PDW - Analitica Platform System | Documenti Microsoft
-description: Topologia PDW per Analitica Platform System.
+title: Topologia PDW - sistema di piattaforma Analitica | Microsoft Docs
+description: Topologia PDW per il sistema di piattaforma Analitica.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,20 +9,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b68a0bfefab0cd299ec93722857a65caf8525393
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 0c0c16f331c81dd34fc5b7256805efc231a1c97c
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538711"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909701"
 ---
 # <a name="pdw-topology"></a>Topologia PDW
-Visualizza nome e la rete di informazioni sui componenti di SQL Server PDW. Utilizzare il **dello strumento Configurazione di rete topologia** pagina per modificare gli indirizzi IP della rete.  
-  
-Espandere gli elementi di questa sezione per configurare le informazioni che si applica all'intera accessorio. Selezionare le sezioni Parallel Data Warehouse topologia o la topologia di HDInsight per configurare le informazioni che si applica solo a tale area del dispositivo.  
+Visualizza le informazioni di nome e la rete di componenti di SQL Server PDW. Usare la **Appliance topologia di rete configurazione** pagina per modificare gli indirizzi IP della rete.  
   
 ![Menu principale PDW DWConfig](./media/pdw-topology/SQL_Server_PDW_DWConfig_PDWTop.png "SQL_Server_PDW_DWConfig_PDWTop")  
   
 ## <a name="see-also"></a>Vedere anche  
-[Avviare Gestione configurazione &#40;Analitica Platform System&#41;](launch-the-configuration-manager.md)  
+[Avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md)  
   
