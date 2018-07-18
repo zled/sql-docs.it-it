@@ -1,4 +1,4 @@
----
+﻿---
 title: Scaricare SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/04/2018
@@ -113,7 +113,7 @@ Questa versione di **SSDT per VS 2015** può essere installata nelle lingue segu
 
 ### <a name="iso-images---ssdt-for-vs-2015"></a>Immagini ISO - SSDT per VS 2015
 
-Un'immagine ISO di SSDT può essere utilizzata come metodo alternativo per installare SSDT o configurare un punto di installazione amministrativa. L'immagine ISO è un file autonomo che contiene tutti i componenti richiesti da SSDT e può essere scaricata mediante un gestore download riavviabile, utile nei casi di larghezza di banda della rete limitata o meno affidabile. Una volta scaricata, l'immagine ISO può essere montata come unità o masterizzata su un DVD.
+Un'immagine ISO di SSDT può essere utilizzata come metodo alternativo per installare SSDT o configurare un punto di installazione amministrativa. L'immagine ISO è un file autonomo che contiene tutti i componenti richiesti da SSDT e può essere scaricata mediante un gestore download ripristinabile, utile nei casi di larghezza di banda della rete limitata o meno affidabile. Una volta scaricata, l'immagine ISO può essere montata come unità o masterizzata su un DVD.
 
 > [!NOTE]
 > Le immagini ISO di SSDT per VS 2015 17.4 sono ora disponibili.
