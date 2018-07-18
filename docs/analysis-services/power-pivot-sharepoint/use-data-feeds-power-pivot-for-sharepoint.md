@@ -1,5 +1,5 @@
 ---
-title: Utilizzare i feed di dati (PowerPivot per SharePoint) | Documenti Microsoft
+title: Usare feed di dati (Power Pivot per SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac7d32ccb99776a85d82c3bc310bc29cdd82954b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027751"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979865"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Usare feed di dati (PowerPivot per SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34027751"
   
  È necessario disporre di un servizio Web o di un servizio dati che consenta di fornire dati tabulari XML in formato Atom 1.0. I dati in questo formato possono essere forniti sia da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia da SharePoint 2010.  
   
- Prima di poter esportare un elenco SharePoint come un feed di dati, è necessario installare ADO.NET Data Services nel server SharePoint. Per altre informazioni, vedere [Installare ADO.NET Data Services per supportare esportazioni di feed di dati di elenchi SharePoint](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Prima di poter esportare un elenco SharePoint come un feed di dati, è necessario installare ADO.NET Data Services nel server SharePoint. Per altre informazioni, vedere [Installare ADO.NET Data Services per supportare esportazioni di feed di dati di elenchi SharePoint](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="sharepointlist"></a> Creare un feed di dati da un elenco SharePoint  
  In una farm di SharePoint 2010 un elenco SharePoint dispone di un pulsante Esporta come feed di dati nella barra multifunzione dell'elenco. È possibile fare clic su questo pulsante per esportare l'elenco come feed. Per risultati ottimali, è necessario che nella workstation sia disponibile Excel 2010 con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'applicazione client [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] verrà avviata in risposta all'esportazione dei feed di dati, creando una nuova tabella di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contenente l'elenco.  
@@ -57,7 +57,7 @@ ms.locfileid: "34027751"
   
 5.  Se si sceglie **Apri**, utilizzare l'Importazione guidata tabella per importare il feed di dati in un foglio di lavoro. Il feed di dati verrà aggiunto come nuova tabella nella finestra di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
- Si verificherà un errore se ADO.NET Data Services 3.5.1 non è installato nel server SharePoint. Per altre informazioni sull'errore e su come risolverlo, vedere [Installare ADO.NET Data Services per supportare esportazioni di feed di dati di elenchi SharePoint](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Si verificherà un errore se ADO.NET Data Services 3.5.1 non è installato nel server SharePoint. Per altre informazioni sull'errore e su come risolverlo, vedere [Installare ADO.NET Data Services per supportare esportazioni di feed di dati di elenchi SharePoint](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="rsreport"></a> Creare un feed di dati da un report di Reporting Services  
  Se si dispone di una distribuzione di SQL Server 2008 R2 Reporting Services, è possibile utilizzare la nuova estensione per il rendering Atom per generare un feed di dati da un report esistente. Per risultati ottimali, è necessario che nella workstation sia disponibile Excel 2010 con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel. L'applicazione client [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] verrà avviata in risposta all'esportazione dei feed di dati, aggiungendo e facendo riferimento automaticamente alle tabelle e alle colonne come sono state trasmesse.  

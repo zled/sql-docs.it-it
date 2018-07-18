@@ -1,6 +1,6 @@
 ---
-title: Introduzione a SQL Server 2017 su Red Hat Enterprise Linux | Documenti Microsoft
-description: Questa Guida introduttiva viene illustrato come installare SQL Server 2017 in Red Hat Enterprise Linux e quindi creare query in un database con sqlcmd.
+title: Introduzione a SQL Server 2017 in Red Hat Enterprise Linux | Microsoft Docs
+description: Questa Guida introduttiva illustra come installare SQL Server 2017 in Red Hat Enterprise Linux e quindi creare ed eseguire query di un database con sqlcmd.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,43 +13,44 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.openlocfilehash: de149b0a75a550101e761baa109bc07dac062fcd
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020418"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Guida introduttiva: Installare SQL Server e creare un database in Red Hat
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In questa Guida rapida, installare innanzitutto 2017 di SQL Server su Red Hat Enterprise Linux (RHEL) 7.3 +. Ci si connette quindi con **sqlcmd** per creare il primo database ed eseguire query.
+In questa Guida introduttiva, è prima di tutto installare SQL Server 2017 su Red Hat Enterprise Linux (RHEL) 7.3 +. Ci si connette quindi con **sqlcmd** per creare il primo database ed eseguire query.
 
 > [!TIP]
-> Questa esercitazione richiede input dell'utente e una connessione internet. Se si è interessati di [automatica](sql-server-linux-setup.md#unattended) o [offline](sql-server-linux-setup.md#offline) procedure di installazione, vedere [Guida all'installazione per SQL Server in Linux](sql-server-linux-setup.md).
+> Questa esercitazione richiede l'input dell'utente e una connessione a internet. Se è interessati al [automatica](sql-server-linux-setup.md#unattended) oppure [offline](sql-server-linux-setup.md#offline) procedure di installazione, vedere [informazioni aggiuntive sull'installazione per SQL Server in Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-È necessario avere un 7.3 RHEL o 7.4 macchina con **almeno 2 GB** di memoria.
+È necessario disporre una RHEL 7.3 o 7.4 macchina con **almeno 2 GB** di memoria.
 
-Per installare Red Hat Enterprise Linux nel proprio computer, visitare [ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). È anche possibile creare macchine virtuali RHEL in Azure. Vedere [creare e gestire le macchine virtuali Linux con l'interfaccia CLI di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)e utilizzare `--image RHEL` nella chiamata a `az vm create`.
+Per installare Red Hat Enterprise Linux nel proprio computer, visitare [ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). È anche possibile creare macchine virtuali RHEL in Azure. Visualizzare [creare e gestire VM Linux con Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)e usare `--image RHEL` nella chiamata a `az vm create`.
 
 Per altri requisiti di sistema, vedere [requisiti di sistema per SQL Server in Linux](sql-server-linux-setup.md#system).
 
-## <a id="install"></a>Installazione di SQL Server
+## <a id="install"></a>Installare SQL Server
 
-Per configurare SQL Server su RHEL, eseguire i comandi seguenti in un terminal per installare il **mssql server** pacchetto:
+Per configurare SQL Server in RHEL, eseguire i comandi seguenti in un terminale per installare il **mssql-server** pacchetto:
 
 > [!IMPORTANT]
-> Se si è precedentemente installato una versione CTP o candidata di SQL Server 2017, è innanzitutto necessario rimuovere il repository precedente prima di registrare uno degli archivi di GA. Per ulteriori informazioni, vedere [modificare repository dal repository di anteprima per il repository GA](sql-server-linux-change-repo.md).
+> Se è stato precedentemente installato una versione CTP o RC di SQL Server 2017, è necessario rimuovere prima il repository precedente prima di registrare uno dei repository GA. Per altre informazioni, vedere [modificare i repository dal repository di anteprima per il repository GA](sql-server-linux-change-repo.md).
 
-1. Scaricare il file di configurazione di Microsoft SQL Server Red Hat repository:
+1. Scaricare il file di configurazione del repository di Microsoft SQL Server Red Hat:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
 
    > [!NOTE]
-   > Questo è il repository di aggiornamento cumulativo (CU). Per ulteriori informazioni sulle opzioni di repository e le differenze, vedere [configurare repository per SQL Server in Linux](sql-server-linux-change-repo.md).
+   > Questo è il repository di aggiornamenti cumulativi (CU). Per altre informazioni sulle opzioni di repository e le relative differenze, vedere [configurare i repository per SQL Server in Linux](sql-server-linux-change-repo.md).
 
 1. Eseguire i comandi seguenti per installare SQL Server:
 
@@ -57,13 +58,13 @@ Per configurare SQL Server su RHEL, eseguire i comandi seguenti in un terminal p
    sudo yum install -y mssql-server
    ```
 
-1. Dopo il completamento dell'installazione del pacchetto, eseguire **installazione mssql conf** e seguire le istruzioni per impostare la password dell'account SA e scegliere l'edizione.
+1. Dopo il completamento dell'installazione del pacchetto, eseguire **mssql-conf setup** e seguire le istruzioni per impostare la password account SA e scegliere l'edizione.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
    > [!TIP]
-   > Se si sta tentando 2017 di SQL Server in questa esercitazione, sono liberamente concessi in licenza le seguenti edizioni: Evaluation, Developer ed Express.
+   > Se si tenta di SQL Server 2017 in questa esercitazione, sono liberamente concessi in licenza seguenti edizioni: Evaluation, Developer ed Express.
 
    > [!NOTE]
    > Assicurarsi di specificare una password complessa per l'account SA (caratteri di lunghezza 8 minimo, incluse le lettere maiuscole e lettere minuscole, cifre in base 10 e/o i simboli non alfanumerici).
@@ -74,7 +75,7 @@ Per configurare SQL Server su RHEL, eseguire i comandi seguenti in un terminal p
    systemctl status mssql-server
    ```
    
-1. Per consentire le connessioni remote, aprire la porta di SQL Server nel firewall su RHEL. La porta di SQL Server predefinita è TCP 1433. Se si utilizza **FirewallD** per il firewall, è possibile utilizzare i comandi seguenti:
+1. Per consentire le connessioni remote, aprire la porta di SQL Server nel firewall in RHEL. La porta di SQL Server predefinita è TCP 1433. Se si usa **FirewallD** per firewall, è possibile usare i comandi seguenti:
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
@@ -85,27 +86,27 @@ A questo punto, SQL Server è in esecuzione nel computer RHEL ed è pronto per l
 
 ## <a id="tools"></a>Installare gli strumenti da riga di comando di SQL Server
 
-Per creare un database, è necessario connettersi con uno strumento che è possibile eseguire istruzioni Transact-SQL in SQL Server. I passaggi seguenti installare gli strumenti da riga di comando di SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) e [bcp](../tools/bcp-utility.md).
+Per creare un database, è necessario connettersi con uno strumento che è possibile eseguire istruzioni Transact-SQL in SQL Server. La procedura seguente installa gli strumenti da riga di comando di SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) e [bcp](../tools/bcp-utility.md).
 
-1. Scaricare il file di configurazione di repository Microsoft Red Hat.
+1. Scaricare il file di configurazione del repository Microsoft Red Hat.
 
    ```bash
    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
 
-1. Se si dispone di una versione precedente di **mssql strumenti** installato, rimuovere tutti i pacchetti meno recenti di unixODBC.
+1. Se si dispone di una versione precedente di **mssql-tools** installato, rimuovere eventuali pacchetti unixODBC meno recenti.
 
    ```bash
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
-1. Eseguire i comandi seguenti per installare **mssql strumenti** con il pacchetto di sviluppo unixODBC.
+1. Eseguire i comandi seguenti per installare **mssql-tools** con il pacchetto di sviluppo unixODBC.
 
    ```bash
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 
-1. Per praticità, aggiungere `/opt/mssql-tools/bin/` per il **percorso** variabile di ambiente. Ciò consente di eseguire gli strumenti senza specificare il percorso completo. Eseguire i comandi seguenti per modificare il **percorso** per entrambe le sessioni di accesso e/non-accesso interattivo:
+1. Per praticità, aggiungere `/opt/mssql-tools/bin/` per il **percorso** variabile di ambiente. Ciò consente di eseguire gli strumenti senza specificare il percorso completo. Eseguire i comandi seguenti per modificare la **percorso** per sessioni di accesso e le sessioni interattive/senza accesso:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -114,11 +115,11 @@ Per creare un database, è necessario connettersi con uno strumento che è possi
    ```
 
 > [!TIP]
-> **SQLCMD** è solo uno strumento per la connessione a SQL Server per eseguire query ed eseguire attività di gestione e sviluppo. Altri strumenti includono:
+> **SQLCMD** è solo uno strumento per la connessione a SQL Server per eseguire query ed eseguire attività di gestione e sviluppo. Altri strumenti comprendono:
 >
 > * [SQL Server Operations Studio (Preview)](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
-> * [Codice di Visual Studio](sql-server-linux-develop-use-vscode.md).
+> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 > * [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

@@ -1,5 +1,5 @@
 ---
-title: sp_renamedb (Transact-SQL) | Documenti Microsoft
+title: sp_renamedb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 3e1763b46d3d98616685878b27f60d76b398ab49
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256937"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984188"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +50,14 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
  [  **@dbname=**] **'***vecchio_nome***'**  
  Nome corrente del database. *vecchio_nome* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@newname=**] **'***nuovo_nome***'**  
- Nuovo nome del database. *nuovo_nome* devono rispettare le regole per gli identificatori. *nuovo_nome* viene **sysname**, non prevede alcun valore predefinito.  
+ [  **@newname=**] **'***new_name***'**  
+ Nuovo nome del database. *new_name* devono rispettare le regole per gli identificatori. *new_name* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **sysadmin** o **dbcreator** ruoli predefiniti del server.  
+ Richiede l'appartenenza al **sysadmin** oppure **dbcreator** ruoli predefiniti del server.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creato il database `Accounting` e quindi il nome viene modificato in `Financial`. Viene quindi eseguita una query sulla vista del catalogo `sys.databases` per verificare il nuovo nome del database.  
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   

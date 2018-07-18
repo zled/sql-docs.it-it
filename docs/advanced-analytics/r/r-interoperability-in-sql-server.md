@@ -7,23 +7,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59196e0569ac9cc683b3affa68fc17f068e74994
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: da739700cabb6a9d691d5f284cd6f0532898393f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203173"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979023"
 ---
 # <a name="r-interoperability-in-sql-server"></a>Interoperabilità di R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo argomento descrive il meccanismo per l'esecuzione di R in SQL Server e vengono descritte le differenze tra Microsoft R e open source R.
+In questo argomento illustra il meccanismo per l'esecuzione di R in SQL Server e vengono descritte le differenze tra Microsoft R e r open source.
 
-Si applica a: R Services SQL Server 2016, SQL Server 2017 di Machine Learning Services
+Si applica a: SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 
 Per informazioni sui componenti aggiuntivi, vedere [nuovi componenti di SQL Server](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md).
 
-### <a name="open-source-r-components"></a>Componenti di R open source
+### <a name="open-source-r-components"></a>Componenti R open source
 
 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] include una distribuzione completa degli strumenti e dei pacchetti R di base. Per altre informazioni sui componenti inclusi nella distribuzione base, vedere la documentazione installata durante l'installazione nel percorso predefinito seguente: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
@@ -31,19 +31,19 @@ Nell'ambito dell'installazione di [!INCLUDE[rsql_productname_md](../../includes/
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] non modifica in alcun modo il runtime di R. Il runtime di R viene eseguito all'esterno del processo di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e può essere eseguito in modo indipendente da [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Tuttavia, è consigliabile non eseguire questi strumenti mentre [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] usa R, per evitare conflitti di risorse.
 
-La distribuzione base dei pacchetti R associata a una specifica istanza di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] è disponibile nella cartella associata all'istanza. Ad esempio, se è installato R Services nell'istanza predefinita, le librerie R si trovano in questa cartella per impostazione predefinita:
+La distribuzione base dei pacchetti R associata a una specifica istanza di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] è disponibile nella cartella associata all'istanza. Ad esempio, se è installato R Services sull'istanza predefinita, le librerie R si trovano in questa cartella per impostazione predefinita:
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
 
-Analogamente, gli strumenti di R associati con l'istanza predefinita sono posizionati nella cartella parola per impostazione predefinita:
+Analogamente, gli strumenti R associati all'istanza predefinita sono posizionati nella cartella corrente per impostazione predefinita:
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
 
-Per ulteriori informazioni sul modo in cui Microsoft R è diverso da una distribuzione di basa di R che si potrebbero ottenere da cran r, vedere [interoperabilità con prodotti di Microsoft R e linguaggio R e funzionalità](https://docs.microsoft.com/en-us/r-server/what-is-r-server-interoperability)
+Per altre informazioni sul modo in cui Microsoft R è diverso da una distribuzione di base di R che si potrebbero ottenere da CRAN, vedere [l'interoperabilità con linguaggio R e i prodotti Microsoft R e funzionalità](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)
 
-### <a name="additional-r-packages-from-microsoft-r"></a>Pacchetti R aggiuntivi da Microsoft R
+### <a name="additional-r-packages-from-microsoft-r"></a>Altri pacchetti R da R Microsoft
 
-Oltre alla distribuzione di base R, [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] include alcuni pacchetti R proprietarie, nonché un framework per l'esecuzione parallela di R che supporta inoltre l'esecuzione di R in contesti di calcolo remoto.
+Oltre alla distribuzione base di R, [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] include alcuni pacchetti R proprietari, nonché un framework per l'esecuzione parallela di R che supporta anche l'esecuzione di R in contesti di calcolo remoti.
 
 Questo set combinato di funzionalità R (distribuzione base di R e funzionalità e pacchetti avanzati di R) è denominato **Microsoft R**. Se si installa Microsoft R Server (Standalone), si ottiene esattamente lo stesso set di pacchetti che viene installato con SQL Server R Services (In-Database) ma in una cartella diversa.
 
@@ -62,7 +62,7 @@ Tra le aggiunte più importanti a Microsoft R rientrano i pacchetti **RevoScaleR
 
 + **RevoPemaR.** PEMA è l'acronimo di Parallel External Memory Algorithm (algoritmo di memoria esterna parallelo). Il pacchetto **RevoPemaR** fornisce API utilizzabili per sviluppare algoritmi paralleli personalizzati. Per altre informazioni, vedere [RevoPemaR Getting Started Guide](https://docs.microsoft.com/r-server/r/how-to-developer-pemar) (Guida introduttiva a RevoPemaR).
 
-Inoltre, è consigliabile provare [MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package), un nuovo pacchetto da Microsoft R che supporta l'esecuzione remota di codice R e scalabile, elaborazione, distribuita mediante migliorati algoritmi di machine learning sviluppato da Microsoft Research.
+È consigliabile anche provare [MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package), un nuovo pacchetto di Microsoft R che supporta l'esecuzione remota del codice R, scalabile e di elaborazione, distribuita usando algoritmi di apprendimento migliorato sviluppato da Microsoft Research.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

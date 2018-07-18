@@ -1,5 +1,5 @@
 ---
-title: Configurare PowerPivot e distribuire soluzioni (SharePoint 2016) | Documenti Microsoft
+title: Configurare PowerPivot e distribuire soluzioni (SharePoint 2016) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58315c0a956a4d9ecadfdfee8e9c1a0adbbc2c22
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e464a6863a45bc654b3874a5ea86945b9041c7aa
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018168"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984063"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Configurare PowerPivot e distribuire soluzioni (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34018168"
   
 -   Per informazioni sui servizi back-end e sull'installazione di un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , vedere [Installazione di Analisi Services in modalità Power Pivot](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
- Per informazioni sull'installazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per lo strumento di configurazione di SharePoint 2016, vedere [installare o disinstallare Power Pivot per Add-in SharePoint (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
+ Per informazioni sull'installazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per lo strumento di configurazione di SharePoint 2016, vedere [installare o disinstallare Power Pivot per SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Eseguire la configurazione di PowerPivot per SharePoint 2016  
  **Nota:** per completare i passaggi seguenti, è necessario essere un amministratore di farm. Se viene visualizzato un messaggio di errore simile al seguente,  
@@ -37,7 +37,7 @@ ms.locfileid: "34018168"
   
 1.  Nel menu **Start** selezionare **Tutti i programmi**, quindi [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e infine selezionare **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2016**. Gli strumenti sono elencati solo quando [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint è installato nel server locale.  
   
-2.  Selezionare **Configura o Ripristina [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint** e quindi selezionare **OK**.  
+2.  Selezionare **configurare o ripristinare [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint** e quindi selezionare **OK**.  
   
 3.  Lo strumento esegue una convalida per verificare lo stato corrente di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e identificare i passaggi necessari per completare la configurazione. Espandere completamente la finestra. Nella parte inferiore della finestra dovrebbe essere disponibile una barra contenente i comandi **Convalida**, **Esegui**ed **Esci** .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "34018168"
   
     4.  Fare clic su **Creare raccolta siti** nella finestra a sinistra. Annotarsi l' **URL sito** in modo che sia possibile utilizzarlo come riferimento nei passaggi successivi. Se il server SharePoint non è ancora configurato, tramite la Configurazione guidata l'applicazione Web e gli URL della raccolta siti vengono impostati in modo predefinito sulla radice di `http://[ServerName]`. Per modificare le impostazioni predefinite, rivedere le seguenti pagine della finestra a sinistra: **Creare applicazione Web predefinita** e **Distribuire la soluzione applicazione Web**  
   
-5.  Facoltativamente, rivedere i valori di input rimanenti usati per completare ogni azione. Fare clic su ogni azione nella finestra a sinistra per visualizzare e verificare i dettagli dell'azione. Per altre informazioni su ogni azione, vedere la sezione "Valori di input usati per configurare il server" in [Configurare o ripristinare Power Pivot per SharePoint 2010 (strumento di configurazione Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) .  
+5.  Facoltativamente, rivedere i valori di input rimanenti usati per completare ogni azione. Fare clic su ogni azione nella finestra a sinistra per visualizzare e verificare i dettagli dell'azione. Per altre informazioni su ogni azione, vedere la sezione "Valori di input usati per configurare il server" in [Configurare o ripristinare Power Pivot per SharePoint 2010 (strumento di configurazione Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) in questo argomento.  
   
 6.  Facoltativamente, rimuovere eventuali azioni che non si desidera elaborare in questo momento. Ad esempio, se si vuole configurare il servizio di archiviazione sicura in un secondo momento, selezionare **Configurare il servizio di archiviazione sicura**e quindi deselezionare la casella di controllo **Includere l'azione nell'elenco attività**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34018168"
   
 8.  Selezionare **Esegui** per elaborare tutte le azioni nell'elenco attività. Si noti che dopo aver convalidato le azioni, il comando **Esegui** diventa disponibile. Se **Esegui** non è abilitato, selezionare **Convalida** .  
   
- Per altre informazioni, vedere [Configurare o ripristinare Power Pivot per SharePoint 2010 (strumento di configurazione Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)  
+ Per altre informazioni, vedere [Configurare o ripristinare Power Pivot per SharePoint 2010 (strumento di configurazione Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Verificare la configurazione di Power Pivot  
  **Servizi:**  
@@ -78,7 +78,7 @@ ms.locfileid: "34018168"
   
 1.  Selezionare l'URL del sito creato tramite lo strumento di configurazione.  
   
-     Selezionare **impostazioni**![impostazioni SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "le impostazioni di SharePoint"), quindi fare clic su **Impostazioni sito**.  
+     Selezionare **le impostazioni**![impostazioni di SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni di SharePoint"), quindi fare clic su **Impostazioni sito**.  
   
      Selezionare **Caratteristiche raccolta siti**.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "34018168"
   
 5.  Fare clic su **OK**.  
   
- Per ulteriori informazioni sulla risoluzione dei problemi dei dati aggiornamento, vedere [risoluzione dei problemi di aggiornamento dati Power Pivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
+ Per altre informazioni sull'aggiornamento dei dati di risoluzione dei problemi, vedere [risoluzione dei problemi di aggiornamento dati Power Pivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
  Per altre informazioni sullo strumento di configurazione, vedere [Strumenti di configurazione di Power Pivot](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

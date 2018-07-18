@@ -1,5 +1,5 @@
 ---
-title: Impossibile aggiornare i dati per una connessione dati nella cartella di lavoro | Documenti Microsoft
+title: Impossibile aggiornare i dati per una connessione dati nella cartella di lavoro | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d1fabd45d3b9858114e48e3bdde258ed6ccc8362
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 211aecdb0158cff593c7f3f9ef241244db6ca051
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037425"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981713"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Impossibile aggiornare i dati per una connessione dati della cartella di lavoro
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,17 +40,17 @@ ms.locfileid: "34037425"
   
  La cartella di lavoro che si sta provando ad aprire potrebbe essere stata creata con la versione SQL Server 2008 R2 di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel. Molto probabilmente, il provider di dati di Analysis Services specificato nella stringa di connessione dati non è presente sul computer che sta gestendo la richiesta.  
   
- In questo caso, sarà possibile trovare questo messaggio nel log ULS: "aggiornamento non riuscito per '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t dati" nella cartella di lavoro '\<URL cartella di lavoro >'", seguito da"Impossibile stabilire una connessione".  
+ In questo caso, si noterà il messaggio nel log ULS: "aggiornamento non riuscito per '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t dati ' nella cartella di lavoro '\<URL cartella di lavoro >'", seguito da "Impossibile stabilire una connessione".  
   
  Per determinare la versione della cartella di lavoro, aprirla in Excel e controllare il provider di dati specificato nella stringa di connessione. In una cartella di lavoro SQL Server 2008 R2 viene utilizzato MSOLAP.4 come provider di dati.  
   
- Una soluzione alternativa al problema è l'aggiornamento della cartella di lavoro. In alternativa, è possibile installare librerie client della versione SQL Server 2008 R2 di Analysis Services nei computer fisici che eseguono [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint o Excel Services, [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Una soluzione alternativa al problema è l'aggiornamento della cartella di lavoro. In alternativa, è possibile installare librerie client della versione SQL Server 2008 R2 di Analysis Services nei computer fisici che eseguono [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint o Excel Services, [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
  **Scenario 2b: Excel Services è in esecuzione su un server applicazioni che dispone della versione errata delle librerie client**  
   
  Per impostazione predefinita, SharePoint Server 2010 installa la versione SQL Server 2008 del provider OLE DB per Analysis Services nei server applicazioni su cui è in esecuzione Excel Services. In una farm che supporta l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , tutti i server fisici che eseguono applicazioni che richiedono dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ad esempio Excel Services e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, devono usare una versione successiva del provider di dati.  
   
- Server che eseguono [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint ottengono automaticamente il provider di dati OLE DB aggiornato. Ad altri server, quali quelli che eseguono un'istanza autonoma di Excel Services senza [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint sullo stesso computer, è necessario applicare una patch perché usino le librerie client più recenti. Per altre informazioni, vedere [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Server che eseguono [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint ottengono automaticamente il provider di dati OLE DB aggiornato. Ad altri server, quali quelli che eseguono un'istanza autonoma di Excel Services senza [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint sullo stesso computer, è necessario applicare una patch perché usino le librerie client più recenti. Per altre informazioni, vedere [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
  **Scenario 3: il controller di dominio non è disponibile**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34037425"
   
  Per risolvere questo problema, aggiungere il computer allo stesso dominio del server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o installare un controller di dominio nel computer locale. La seconda soluzione, cioè l'installazione del controller di dominio, richiederà la creazione di account di dominio locali per tutti i servizi e gli utenti. Sarà necessario configurare gli account di servizio e le autorizzazioni di SharePoint per gli account definiti.  
   
- L'installazione di un controller di dominio nel computer è utile se si intende usare [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint in uno stato offline. Per istruzioni dettagliate su come usare [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] offline, vedere il post di blog per "accettando il [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server fuori rete" nella [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ L'installazione di un controller di dominio nel computer è utile se si intende usare [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint in uno stato offline. Per istruzioni dettagliate su come usare [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] offline, vedere la voce del blog "accettando il [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server connessi alla rete" nella [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Scenario 4: server instabile**  
   

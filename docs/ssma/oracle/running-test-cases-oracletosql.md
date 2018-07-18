@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di Test case (OracleToSQL) | Documenti Microsoft
+title: Esecuzione di Test case (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,78 +13,78 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 283dac366a8cfdf7e6fba39037a7c728945e0f67
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5368db04a4f5442620a8f347608bf5aded86703b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777907"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982373"
 ---
 # <a name="running-test-cases-oracletosql"></a>Esecuzione di Test case (OracleToSQL)
-Quando SSMA Tester esegue un Test Case, esegue gli oggetti selezionati per il test e crea un report sui risultati della verifica. Se i risultati sono identici in entrambe le piattaforme, il test completata. La corrispondenza degli oggetti tra Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] viene determinato in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
+Quando si SSMA Tester esegue un Test Case, esegue gli oggetti selezionati per il test e viene creato un report sui risultati della verifica. Se i risultati sono identici in entrambe le piattaforme, il test ha esito positivo. La corrispondenza degli oggetti tra Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] viene determinato in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
   
-Un requisito necessario per un test riuscito è che tutti gli oggetti Oracle vengono convertiti e caricati nel database di destinazione. Inoltre, i dati della tabella devono essere migrati in modo che il contenuto delle tabelle in entrambe le piattaforme è sincronizzato.  
+Un requisito necessario per un test ha esito positivo è che tutti gli oggetti Oracle vengono convertiti e caricati nel database di destinazione. Inoltre, i dati della tabella devono essere migrati in modo che il contenuto delle tabelle su entrambe le piattaforme siano sincronizzato.  
   
 ## <a name="run-test-case"></a>Eseguire Test Case  
-Per eseguire i Test Case preparata:  
+Per l'esecuzione preparata Test Case:  
   
-1.  Fare clic su di **eseguire** pulsante.  
+1.  Scegliere il **eseguire** pulsante.  
   
-2.  Nel **Connect to Oracle** nella finestra di dialogo immettere le informazioni di connessione e quindi fare clic su **Connetti**.  
+2.  Nel **Connetti a Oracle** della finestra di dialogo immettere le informazioni di connessione e quindi fare clic su **Connect**.  
   
-Una volta completato il test, viene creato il Report di Test Case. Fare clic su di **Report** pulsante per visualizzare il [Report di Test Case](http://msdn.microsoft.com/en-us/8da14323-9dd6-4019-bf79-3e8b972a9bc0). Il risultato del test (rapporto Test Case) viene automaticamente archiviato nel [Repository dei risultati Test](http://msdn.microsoft.com/en-us/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4) per un uso successivo.  
+Una volta completato il test, viene creato il Report di Test Case. Fare clic sui **Report** pulsante per visualizzare i [Report di Test Case](http://msdn.microsoft.com/8da14323-9dd6-4019-bf79-3e8b972a9bc0). Il risultato del test (Report del Test Case) viene automaticamente archiviato nel [Repository dei risultati del Test](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4) per un uso successivo.  
   
 ## <a name="test-case-execution-steps"></a>Passaggi per l'esecuzione dei test Case  
   
 ### <a name="prerequisites"></a>Prerequisiti  
-SSMA Tester controlla se vengono soddisfatti tutti i prerequisiti per l'esecuzione di test prima dell'inizio del test. Se alcune condizioni non vengono soddisfatti, viene visualizzato un messaggio di errore.  
+SSMA Tester controlla se vengono soddisfatti tutti i prerequisiti per l'esecuzione di test prima dell'inizio del test. Se non vengono soddisfatte determinate condizioni, viene visualizzato un messaggio di errore.  
   
 ### <a name="initialization"></a>Inizializzazione  
-In questo passaggio, il Tester di SSMA crea oggetti ausiliari (tabelle, trigger e viste) nello schema SSMATESTER_ORACLE del server Oracle. Consentono apportate alla traccia degli oggetti interessati scelto per la verifica.  
+In questa fase, Tester di SSMA crea oggetti ausiliari (tabelle, trigger e viste) nello schema SSMATESTER_ORACLE del server Oracle. Consentono di tracciamento delle modifiche apportate in oggetti interessati scelti per la verifica.  
   
-Si supponga che la tabella verificata viene denominata USER_TABLE. Per una tabella, vengono creati i seguenti oggetti ausiliari in Oracle.  
+Si supponga che la tabella verificata è denominata USER_TABLE. Per una tabella, vengono creati i seguenti oggetti ausiliari in Oracle.  
   
 ||||  
 |-|-|-|  
 |nome|Tipo|Description|  
-|USER_TABLE$Trg|trigger|Controllo delle modifiche nella tabella verificata di trigger.|  
-|USER_TABLE$ AUD|table|Tabella in cui vengono salvate le righe eliminate o sovrascritte.|  
-|USER_TABLE$ AUDID|table|Tabella in cui vengono salvate le righe nuove e modificate.|  
+|USER_TABLE$Trg|trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
+|USER_TABLE$ AUD|table|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
+|USER_TABLE$ AUDID|table|Tabella in cui vengono salvate righe nuove e modificate.|  
 |USER_TABLE|vista|Rappresentazione semplificata delle modifiche nella tabella.|  
-|$ USER_TABLE NEW|vista|Rappresentazione semplificata di righe inserite e sovrascritte.|  
+|USER_TABLE$ NEW|vista|Rappresentazione semplificata di righe inserite e sovrascritte.|  
 |USER_TABLE$ NEW_ID|vista|Identificazione di righe inserite e modificate.|  
-|$ USER_TABLE PRECEDENTE|vista|Rappresentazione semplificata di righe eliminate o sovrascritte.|  
+|USER_TABLE$ PRECEDENTE|vista|Rappresentazione semplificata di righe eliminate e sovrascritte.|  
   
-L'oggetto seguente viene creato nello schema della tabella verificato [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
-  
-||||  
-|-|-|-|  
-|nome|Tipo|Description|  
-|USER_TABLE$Trg|trigger|Controllo delle modifiche nella tabella verificata di trigger.|  
-  
-E vengono creati gli oggetti seguenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]nel database ssmatesterdb.  
+L'oggetto seguente viene creato nello schema di tabella verificata nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ||||  
 |-|-|-|  
 |nome|Tipo|Description|  
-|USER_TABLE$Aud|table|Tabella in cui vengono salvate le righe eliminate o sovrascritte.|  
-|USER_TABLE$AudID|table|Tabella in cui vengono salvate le righe nuove e modificate.|  
+|USER_TABLE$Trg|trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
+  
+E gli oggetti seguenti vengono creati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]nel database ssmatesterdb.  
+  
+||||  
+|-|-|-|  
+|nome|Tipo|Description|  
+|USER_TABLE$Aud|table|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
+|USER_TABLE$AudID|table|Tabella in cui vengono salvate righe nuove e modificate.|  
 |USER_TABLE|vista|Rappresentazione semplificata delle modifiche nella tabella.|  
 |USER_TABLE$new|vista|Rappresentazione semplificata di righe inserite e sovrascritte.|  
 |USER_TABLE$new_id|vista|Identificazione di righe inserite e modificate.|  
-|USER_TABLE$old|vista|Rappresentazione semplificata di righe eliminate o sovrascritte.|  
+|USER_TABLE$old|vista|Rappresentazione semplificata di righe eliminate e sovrascritte.|  
   
-### <a name="test-object-calls"></a>Chiamate di oggetti di test  
-In questo passaggio, il Tester di SSMA richiama ogni oggetto selezionato per il test, vengono confrontati i risultati e viene mostrato il report.  
+### <a name="test-object-calls"></a>Chiamate a oggetti di test  
+In questa fase, Tester di SSMA richiama ogni oggetto selezionato per la sperimentazione, vengono confrontati i risultati e Mostra il report.  
   
 ### <a name="finalization"></a>Finalizzazione  
-Durante la finalizzazione SSMA Tester pulisce gli oggetti ausiliari, creati nel **inizializzazione** passaggio.  
+Durante la finalizzazione SSMA Tester pulisce gli oggetti ausiliari creati nel **inizializzazione** passaggio.  
   
 ## <a name="next-step"></a>Passaggio successivo  
 [Visualizzazione dei report di Test Case &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[La selezione e configurazione di oggetti di Test &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
-[La selezione e la configurazione di oggetti interessati &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
-[Test di eseguire la migrazione di oggetti di Database &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Selezione e configurazione degli oggetti da testare &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[Selezione e configurazione degli oggetti interessati &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[Test di oggetti di Database migrati &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

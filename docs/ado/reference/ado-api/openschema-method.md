@@ -1,5 +1,5 @@
 ---
-title: Metodo OpenSchema | Documenti Microsoft
+title: Esempio di metodo OpenSchema | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,15 +20,15 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 780e708d5e852601333fb319291e1e9db9450c39
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eec10015d25cb1840dfd7aa88a07ed3219fd4436
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280530"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982733"
 ---
-# <a name="openschema-method"></a>Metodo OpenSchema
-Ottiene informazioni sullo schema di database dal provider.  
+# <a name="openschema-method"></a>Esempio di metodo OpenSchema
+Ottiene le informazioni sullo schema di database dal provider.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,37 +38,37 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto che contiene informazioni sullo schema. Il **Recordset** verrà aperto un cursore statico di sola lettura. Il *QueryType* determina le colonne visualizzate nel **Recordset**.  
+ Restituisce un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto che contiene le informazioni sullo schema. Il **Recordset** verrà aperto un cursore statico di sola lettura. Il *QueryType* determina le colonne visualizzate nel **Recordset**.  
   
 #### <a name="parameters"></a>Parametri  
  *QueryType*  
- Qualsiasi [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) valore che rappresenta il tipo di query di schema per l'esecuzione.  
+ Eventuali [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) valore che rappresenta il tipo di query di schema per l'esecuzione.  
   
  *Criteri*  
- Facoltativo. Una matrice dei vincoli di query per ogni *QueryType* opzione, come indicato nella [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Facoltativo. Una matrice dei vincoli di query per ognuno *QueryType* opzione, come elencato nella [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *SchemaID*  
- GUID per una query di schema provider non è definito dalla specifica OLE DB. Questo parametro è obbligatorio se *QueryType* è impostato su **adSchemaProviderSpecific**; in caso contrario, non viene utilizzato.  
+ Il GUID per una query dello schema di provider non è definito dalla specifica OLE DB. Questo parametro è obbligatorio se *QueryType* è impostata su **adSchemaProviderSpecific**; in caso contrario, non viene utilizzato.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il **OpenSchema** metodo restituisce autodescrittivo informazioni sull'origine dati, ad esempio quali sono le tabelle nell'origine dati, le colonne nelle tabelle e i tipi di dati supportati.  
   
- Il *QueryType* argomento è un GUID che indica le colonne (schemi) restituite. La specifica OLE DB include un elenco completo degli schemi.  
+ Il *QueryType* argomento è un GUID che indica le colonne (schemi) restituiti. La specifica OLE DB include un elenco completo degli schemi.  
   
- Il *criteri* argomento limita i risultati di una query di schema. *Criteri* specifica una matrice di valori che deve verificarsi in un subset di colonne, denominate colonne di vincolo, nella finestra di corrispondente **Recordset**.  
+ Il *criteri* argomento limita i risultati di una query di schema. *I criteri* specifica una matrice di valori che devono verificarsi in un subset di colonne, denominate colonne di vincolo, nella finestra di corrispondente **Recordset**.  
   
- La costante **adSchemaProviderSpecific** viene utilizzato per il *QueryType* argomento se il provider definisce il proprio query dello schema non standard, oltre a quelle elencate in precedenza. Quando questa costante viene utilizzata, il *SchemaID* argomento è necessario passare il GUID della query dello schema da eseguire. Se *QueryType* è impostato su **adSchemaProviderSpecific** ma *SchemaID* non viene fornito, verrà generato un errore.  
+ La costante **adSchemaProviderSpecific** viene usato per il *QueryType* argomento se il provider definisce la propria query di schema conforme allo standard oltre a quelle elencate in precedenza. Quando questa costante viene utilizzata, il *SchemaID* argomento è necessario passare il GUID della query dello schema per l'esecuzione. Se *QueryType* è impostata su **adSchemaProviderSpecific** ma *SchemaID* non viene specificato, verrà generato un errore.  
   
- Provider non sono necessari per supportare tutte le query di schema standard OLE DB. In particolare, solo **adSchemaTables**, **adSchemaColumns**, e **adSchemaProviderTypes** sono necessari per la specifica OLE DB. Tuttavia, il provider non è necessario per supportare il *criteri* vincoli indicati in precedenza per tali query dello schema.  
-  
-> [!NOTE]
->  **Utilizzo del servizio dati remoti** il **OpenSchema** metodo non è disponibile in un client-side [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
+ I provider non sono necessari per supportare tutte le query di schema standard OLE DB. In particolare, solo **adSchemaTables**, **adSchemaColumns**, e **adSchemaProviderTypes** necessari per la specifica OLE DB. Tuttavia, il provider non è necessario per supportare le *criteri* vincoli indicati in precedenza per le query di schema.  
   
 > [!NOTE]
->  In Visual Basic, le colonne che dispongono di un intero senza segno a 4 byte (DBTYPE UI4) nel **Recordset** restituito dal **OpenSchema** metodo il **connessione** oggetto non è possibile da confrontare con le altre variabili. Per ulteriori informazioni sui tipi di dati OLE DB, vedere [tipi di dati in OLE DB (OLE DB)](http://msdn.microsoft.com/en-us/6039292f-74e0-49b2-b133-17bc117ebf6a) e [appendice a: tipi di dati](http://msdn.microsoft.com/en-us/e3a0533a-2196-4eb0-a31e-92fe9556ada6) in riferimento Microsoft OLE DB Programmer.  
+>  **Utilizzo del servizio dati remoto** il **OpenSchema** metodo non è disponibile sul lato client [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
   
 > [!NOTE]
->  **Gli utenti di Visual C/C++** quando non si utilizzano cursori sul lato client, il recupero "ORDINAL_POSITION" di uno schema di colonna in ADO restituisce un valore variant di tipo VT_R8 in MDAC 2.7, MDAC 2.8 e Windows Data Access Components (Windows DAC) 6.0, mentre il tipo utilizzato in MDAC 2.6 è VT_I4. Programmi scritti per MDAC 2.6 che cerca solo una variante restituito di tipo che VT_I4 potrebbe ottenere il valore zero per ogni numero ordinale se eseguiti con MDAC 2.7, MDAC 2.8 e Windows DAC 6.0 senza modifiche. Sono state modificate perché il tipo di dati OLE DB restituisce DBTYPE_UI4 e il tipo VT_I4 con segno non c'è spazio sufficiente per contenere tutti i possibili valori senza troncamento eventualmente in corso e causando una perdita di dati.  
+>  In Visual Basic, le colonne che dispongono di un intero senza segno a quattro byte (UI4 DBTYPE) nel **Recordset** restituiti dal **OpenSchema** metodo sul **connessione** oggetto non è possibile da confrontare con le altre variabili. Per altre informazioni sui tipi di dati OLE DB, vedere [tipi di dati in OLE DB (OLE DB)](http://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) e [appendice a: tipi di dati](http://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) nel riferimento di Microsoft per programmatori OLE DB.  
+  
+> [!NOTE]
+>  **Gli utenti di Visual C/C++** quando non si utilizzano cursori sul lato client, il recupero "ORDINAL_POSITION" di uno schema di colonna in ADO restituisce una variante di tipo VT_R8 in MDAC 2.7, MDAC 2.8 e Windows Data Access Components (Windows DAC) 6.0, mentre il tipo usato in MDAC 2.6 è VT_I4. I programmi scritti per MDAC 2.6 che rappresentano solo per una variabile variant restituito di tipo che VT_I4 otterrebbe pari a zero per ogni numero ordinale se vengono eseguiti con MDAC 2.7, MDAC 2.8 e 6.0 di Windows dell'applicazione livello dati senza alcuna modifica. Questa modifica è stata apportata perché il tipo di dati OLE DB restituisce DBTYPE_UI4 e il tipo VT_I4 firmato non c'è spazio sufficiente per contenere tutti i valori possibili senza troncamenti eventualmente in corso e causando una perdita di dati.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -76,8 +76,8 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di metodo OpenSchema (VB)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
  [Esempio di metodo OpenSchema (VC + +)](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
- [Open (metodo) (connessione ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open (metodo) (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open (metodo) (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Metodo Open (connessione ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Metodo Open (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
+ [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Metodo Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)

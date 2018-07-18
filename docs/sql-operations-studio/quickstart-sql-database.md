@@ -13,14 +13,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: c72e6d5b8e3e2770300e6b890b076bf77617849b
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 5470e19da9d8641a1337f0f8162fe0a1789820dd
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235775"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982263"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Guida introduttiva: Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi ed eseguire query di database SQL di Azure
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Guida introduttiva: Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] connettersi ed eseguire query di database SQL di Azure
 
 In questa guida introduttiva viene illustrato come utilizzare *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* per connettersi a un database SQL di Azure e quindi utilizzare istruzioni Transact-SQL (T-SQL) per creare il *TutorialDB* utilizzato [!INCLUDE[name-sos](../includes/name-sos-short.md)] esercitazioni.
 
@@ -32,14 +32,14 @@ Per completare questa guida rapida, è necessario [!INCLUDE[name-sos](../include
 
 Se non si dispone già di un server SQL Azure, completare una delle seguenti guide rapide al database SQL di Azure (ricordare che il nome del server e le credenziali di accesso):
 
-- [Creare DB - portale](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [Creare DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [Creare DB - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [Creare un database - portale](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+- [Creare un database - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
+- [Creare un database: PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Connettersi al server di Database SQL di Azure
 
-Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una connessione al server di Database SQL di Azure.
+Usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una connessione al server di Database SQL di Azure.
 
 1. Alla prima esecuzione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] viene mostrata la pagina **connessione**. Se essa non appare, fare clic sull'icona **Nuova connessione** nella barra laterale **SERVER**: 
    
@@ -49,11 +49,11 @@ Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una
 
    | Impostazione       | Valore suggerito | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Nome server** | Nome completo del server | Il nome deve essere simile al seguente: **servername.database.windows.net** |
+   | **Nome server** | Nome completo del server | Il nome deve essere simile al seguente: **nomeserver.database.Windows.NET** |
    | **Autenticazione** | Account di accesso SQL| In questa esercitazione viene utilizzata l'autenticazione di SQL. |
    | **Nome utente** | Account amministratore del server | Si tratta dell'account specificato al momento della creazione del server. |
    | **Password (account di accesso SQL)** | Password per l'account amministratore del server | Si tratta della password specificata al momento della creazione del server. |
-   | **Salvare la password?** | Sì o No | Selezionare Sì se non si desidera immettere la password ogni volta. |
+   | **Salvare la password?** | Sì o No | Selezionare Sì se non si vuole immettere la password ogni volta. |
    | **Nome database** | *Lasciare vuoto* | Il nome del database a cui si desidera connettersi. |
    | **Gruppo di server** | Selezionare <Default> | Se è stato creato un gruppo di server, è possibile impostare per un gruppo di server specifico. | 
 
@@ -148,13 +148,13 @@ L'editor di query è ancora connesso al *master* database, ma si vuole creare un
 
 1. Vengono visualizzati i risultati della query:
 
-   ![Selezionare risultati](media/quickstart-sql-database/select-results.png)
+   ![Selezionare i risultati](media/quickstart-sql-database/select-results.png)
 
 
 ## <a name="clean-up-resources"></a>Pulire le risorse
 
 Altri articoli in questa raccolta si basano su questa guida rapida. Se si prevede di continuare con le esercitazioni successive, non pulire le risorse create in questa guida rapida. Se non si prevede di continuare, utilizzare la procedura seguente per eliminare le risorse create nel portale di Azure.
-Pulire le risorse eliminando i gruppi di risorse che non sono più necessari. Per informazioni dettagliate, vedere [Pulire le risorse](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Pulire le risorse eliminando i gruppi di risorse che non sono più necessari. Per informazioni dettagliate, vedere [Pulire le risorse](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

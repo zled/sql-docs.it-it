@@ -1,5 +1,5 @@
 ---
-title: "Lezione dell'esercitazione di Analysis Services 10: creare partizioni | Documenti Microsoft"
+title: 'Analysis Services tutorial-lezione 10: creare partizioni | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 ms.openlocfilehash: 4bfa52e31f2e2fb46acf10bf6f6e02e7a15a3c15
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043915"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017884"
 ---
 # <a name="create-partitions"></a>Creare partizioni
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-In questa lezione è creare partizioni per dividere la tabella FactInternetSales in parti logiche più piccole che possono essere elaborate (aggiornate) indipendentemente dalle altre. Per impostazione predefinita, ogni tabella che inclusa nel modello dispone di una partizione, che include colonne e righe della tabella. Per la tabella FactInternetSales, di voler dividere i dati per anno. una partizione per ognuno dei cinque anni della tabella. Ogni partizione può quindi essere elaborata in modo indipendente. Per ulteriori informazioni, vedere [partizioni](../tabular-models/partitions-ssas-tabular.md). 
+In questa lezione è creare partizioni per dividere la tabella FactInternetSales in parti logiche più piccole che possono essere elaborate (aggiornate) indipendentemente dalle altre. Per impostazione predefinita, ogni tabella a che inclusa nel modello dispone di una partizione, che include le colonne e righe della tabella. Per la tabella FactInternetSales, si desidera dividere i dati per anno. una partizione per ognuno dei cinque anni della tabella. Ogni partizione può quindi essere elaborata in modo indipendente. Per altre informazioni, vedere [partizioni](../tabular-models/partitions-ssas-tabular.md). 
   
 Tempo stimato per il completamento della lezione: **15 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
 
-In questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 9: creare gerarchie](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).  
+Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 9: creare gerarchie](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Creare partizioni  
   
@@ -34,38 +34,38 @@ In questo articolo fa parte di un'esercitazione di modellazione tabulare, che de
   
 1.  In Esplora modelli tabulari, espandere **tabelle**e quindi fare doppio clic su **FactInternetSales** > **partizioni**.  
   
-2.  In Gestione partizioni, fare clic su **copia**e quindi modificare il nome in **FactInternetSales2010**.
+2.  Fare clic in Gestione partizioni **copia**e quindi denominarlo **FactInternetSales2010**.
   
-    Dal momento che la partizione includa solo le righe all'interno di un determinato periodo, per l'anno 2010, è necessario modificare l'espressione di query.
+    Poiché si vuole che la partizione includa solo le righe all'interno di un determinato periodo, per l'anno 2010, è necessario modificare l'espressione di query.
   
-4.  Fare clic su **progettazione** per aprire l'Editor di Query e quindi fare clic su di **FactInternetSales2010** query.
+4.  Fare clic su **Design** per aprire l'Editor di Query e quindi fare clic sui **FactInternetSales2010** query.
 
-5.  Nell'anteprima, fare clic sulla freccia rivolta verso il basso il **OrderDate** intestazione di colonna e quindi fare clic su **filtri data/ora** > **tra**.
+5.  In fase di anteprima, fare clic sulla freccia verso il basso nel **OrderDate** sull'intestazione di colonna e quindi fare clic su **filtri data/ora** > **tra**.
 
     ![as-lesson10-query-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
-6.  Nella finestra di dialogo Filtra righe in **Mostra righe in cui: OrderDate**, lasciare **è dopo o uguale a**, quindi immettere nel campo Data **1/1/2010**. Lasciare il **e** operatore selezionato, quindi selezionare **prima**, quindi immettere nel campo Data, **1/1/2011**e quindi fare clic su **OK**.
+6.  Nella finestra di dialogo Filtra righe in **Mostra righe in cui: OrderDate**, lasciare **è dopo o uguale a**, quindi nel campo della data, immettere **1/1/2010**. Lasciare il **e** operatore selezionato, quindi selezionare **prima**, immettere nel campo della data **1/1/2011**, quindi fare clic su **OK**.
 
     ![come-lesson10-filtro-righe](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
-    Si noti nell'Editor di Query in passaggi applicati, viene visualizzato un altro passaggio denominato righe filtrate. Questo filtro consiste nel selezionare solo le date degli ordini da 2010.
+    Si noti che nell'Editor di Query, in passaggi applicati, viene visualizzato un altro passaggio denominato filtrate righe. Questo filtro consiste nel selezionare solo le date degli ordini dal 2010.
 
 8.  Fare clic su **Importa**.
 
-    In Gestione partizioni, rilevare l'espressione di query ora una clausola di filtrare le righe aggiuntiva.
+    In Gestione partizioni si noti che l'espressione di query a questo punto ha una clausola filtrate righe aggiuntiva.
 
-    ![come query lesson10](../tutorial-tabular-1400/media/as-lesson10-query.png)
+    ![come-lesson10-query](../tutorial-tabular-1400/media/as-lesson10-query.png)
   
-    Questa istruzione consente di specificare che la partizione deve includere solo i dati delle righe in cui OrderDate si nell'anno di calendario 2010 come specificato nella clausola righe filtrate.  
+    Questa istruzione specifica che la partizione deve includere solo i dati delle righe in cui OrderDate rientra nell'anno di calendario 2010 come specificato nella clausola filtrate righe.  
   
   
 #### <a name="to-create-a-partition-for-the-2011-year"></a>Per creare una partizione per l'anno 2011  
   
-1.  Nell'elenco delle partizioni, fare clic su di **FactInternetSales2010** partizione creata e quindi fare clic su **copia**.  Modificare il nome di partizione in **FactInternetSales2011**. 
+1.  Nell'elenco delle partizioni, scegliere il **FactInternetSales2010** partizionare creato e quindi fare clic su **copia**.  Modificare il nome della partizione per **FactInternetSales2011**. 
 
-    Non è necessario utilizzare l'Editor di Query per creare una nuova clausola di righe filtrate. Poiché una copia della query è stato creato per 2010, è sufficiente è rendere una lieve modifica nella query per 2011.
+    Non devi usare l'Editor di Query per creare una nuova clausola righe filtrate. Poiché una copia della query è stato creato per 2010, è sufficiente eseguire è apportare una piccola modifica nella query per 2011.
   
-2.  In **espressione di Query**, in ordine per la partizione includere solo le righe per l'anno 2011, sostituire gli anni nella clausola filtrate le righe con **2011** e **2012**, rispettivamente, ad esempio:  
+2.  Nelle **espressione di Query**in modo che per questa partizione includa solo le righe per l'anno 2011, sostituire gli anni nella clausola filtrate righe con **2011** e **2012**, rispettivamente come:  
   
     ```  
     let
@@ -80,34 +80,34 @@ In questo articolo fa parte di un'esercitazione di modellazione tabulare, che de
   
 #### <a name="to-create-partitions-for-2012-2013-and-2014"></a>Per creare partizioni per 2012, 2013 e 2014.  
   
-- Seguire i passaggi precedenti, la creazione di partizioni per 2012, 2013 e 2014, la modifica di anni nella clausola filtrate le righe da includere solo le righe per tale anno. 
+- Seguire i passaggi precedenti, la creazione di partizioni per 2012, 2013 e 2014, modificando gli anni nella clausola filtrate righe siano incluse solo le righe per tale anno. 
   
 
 ## <a name="delete-the-factinternetsales-partition"></a>Eliminare la partizione FactInternetSales
 
-Dopo aver creato le partizioni per ogni anno, è possibile eliminare la partizione FactInternetSales; Quando si sceglie elabora tutte durante l'elaborazione di partizioni, impedendo si sovrappongono.
+Dopo aver creato le partizioni per ogni anno, è possibile eliminare la partizione FactInternetSales; evitare sovrapposizioni quando si sceglie elabora tutti gli quando si elaborano partizioni.
 
 #### <a name="to-delete-the-factinternetsales-partition"></a>Per eliminare la partizione FactInternetSales
 
--  Fare clic su di **FactInternetSales** di partizione e quindi fare clic su **eliminare**.
+-  Scegliere il **FactInternetSales** partizionare e quindi fare clic su **eliminare**.
 
 
 
 ## <a name="process-partitions"></a>Elaborare le partizioni  
 
-In Gestione partizioni, si noti il **elaborati ultimo** colonna per ogni della nuova partizione creata mostra queste partizioni non sono mai state elaborate. Quando si creano partizioni, è consigliabile eseguire un'operazione di elaborazione delle partizioni o tabella di processo per aggiornare i dati nelle partizioni.  
+Si noti che in Gestione partizioni, il **ultima elaborazione** colonna per ogni nuova partizione creata mostra queste partizioni non sono mai state elaborate. Quando si creano partizioni, è consigliabile eseguire un'operazione elabora partizioni o elabora tabella per aggiornare i dati in tali partizioni.  
   
 #### <a name="to-process-the-factinternetsales-partitions"></a>Per elaborare le partizioni FactInternetSales  
   
 1.  Fare clic su **OK** per chiudere Gestione partizioni.  
   
-2.  Fare clic sul **FactInternetSales** tabella, quindi scegliere il **modello** menu > **processo** > **elabora partizioni**.  
+2.  Fare clic sul **FactInternetSales** , quindi scegliere il **modello** menu > **processo** > **elabora partizioni**.  
   
-3.  Nella finestra di dialogo Elabora partizioni verificare **modalità** è impostato su **elaborazione predefinita**.  
+3.  Nella finestra di dialogo Elabora partizioni verificare **modalità** è impostata su **elaborazione predefinita**.  
   
 4.  Selezionare la casella di controllo **Elabora** per ognuna delle cinque partizioni create, quindi fare clic su **OK**.  
 
-    ![come-lesson10-elabora-partizioni](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
+    ![come-lesson10-processo-partizioni](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     Se viene chiesto di immettere le credenziali di rappresentazione, immettere il nome utente di Windows e la password specificati nella lezione 2.  
   

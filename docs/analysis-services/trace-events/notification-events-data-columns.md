@@ -1,5 +1,5 @@
 ---
-title: Colonne di dati degli eventi di notifica | Documenti Microsoft
+title: Colonne di dati degli eventi di notifica | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bf7695ec7dbbe7361641fb939718724f611e6c1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045715"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017764"
 ---
 # <a name="notification-events-data-columns"></a>Colonne di dati degli eventi di notifica
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34045715"
 |CurrentTime|2|5|Contiene l'ora corrente dell'evento di notifica, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene l'ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene l'ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Durata|5|2|Contiene la durata dell'evento in millisecondi.|  
+|Duration|5|2|Contiene la durata dell'evento in millisecondi.|  
 |IntegerData|10|1|Contiene i dati integer associati all'evento di notifica. Quando la colonna EventSubclass è 8, i valori sono i seguenti:<br /><br /> 1 = Creato<br /><br /> 2 = Eliminato<br /><br /> 3 = Proprietà dell'oggetto modificate<br /><br /> 4 = Proprietà degli elementi figlio dell'oggetto modificate<br /><br /> 6 = Elementi figlio aggiunti<br /><br /> 7 = Elementi figlio eliminati<br /><br /> 8 = Oggetto elaborato completamente<br /><br /> 9 = Oggetto elaborato parzialmente<br /><br /> 10 = Oggetto non elaborato<br /><br /> 11 = Oggetto ottimizzato completamente<br /><br /> 12 = Oggetto ottimizzato parzialmente<br /><br /> 13 = Oggetto non ottimizzato|  
 |ObjectID|11|8|Contiene l'ID dell'oggetto per il quale questa notifica è pubblicata; si tratta di un valore stringa.|  
 |ObjectType|12|1|Contiene il tipo di oggetto associato all'evento di notifica.|  
@@ -75,6 +75,6 @@ ms.locfileid: "34045715"
 |ServerName|43|8|Contiene il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento di notifica.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Categoria di eventi eventi di notifica](../../analysis-services/trace-events/notification-events-event-category.md)  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

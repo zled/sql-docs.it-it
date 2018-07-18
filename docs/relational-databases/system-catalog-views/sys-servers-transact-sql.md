@@ -26,32 +26,32 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 17a270028d94974643c1993730e353cea30dd897
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221792"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969793"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni server collegato o remoto registrato e una riga per il server locale con **server_id** = 0.  
+  Contiene una riga per ogni server collegato o remoto registrato e una riga per il server locale che dispone **server_id** = 0.  
 
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID locale del server collegato.|  
-|**name**|**sysname**|Quando **server_id** = 0, questo è il nome del server.<br /><br /> Quando **server_id** > 0, questo è il nome locale del server collegato.|  
+|**name**|**sysname**|Quando **server_id** = 0, questo è il nome del server.<br /><br /> Quando **server_id** > 0, si tratta del nome locale del server collegato.|  
 |**product**|**sysname**|Nome del prodotto del server collegato. "SQL Server" indica che si tratta di un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**provider**|**sysname**|Nome del provider OLE DB per la connessione al server collegato.|  
 |**data_source**|**nvarchar(4000)**|Proprietà di connessione dell'origine dei dati OLE DB.|  
-|**Percorso**|**nvarchar(4000)**|Proprietà di connessione della posizione OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
+|**Posizione**|**nvarchar(4000)**|Proprietà di connessione della posizione OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
 |**provider_string**|**nvarchar(4000)**|Proprietà di connessione della stringa del provider OLE DB.<br /><br /> È NULL tranne nei casi in cui il chiamante dispone dell'autorizzazione ALTER ANY LINKED SERVER.|  
 |**catalog**|**sysname**|Proprietà di connessione del catalogo OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
 |**connect_timeout**|**int**|Timeout della connessione espresso in secondi. Restituisce 0 se non si specifica alcun valore.|  
 |**query_timeout**|**int**|Timeout della query espresso in secondi. Restituisce 0 se non si specifica alcun valore.|  
-|**is_linked**|**bit**|0 = è un server di tipo obsoleto aggiunto tramite **sp_addserver**, con diverse RPC e transazioni distribuite.<br /><br /> 1 = Server collegato standard.|  
+|**is_linked**|**bit**|0 = è un server di tipo obsoleto aggiunto tramite **sp_addserver**, con diversi RPC e transazioni distribuite.<br /><br /> 1 = Server collegato standard.|  
 |**is_remote_login_enabled**|**bit**|L'opzione RPC è impostata per consentire gli accessi remoti in entrata per questo server.|  
 |**is_rpc_out_enabled**|**bit**|Sono abilitate le chiamate RPC in uscita (da questo server).|  
 |**is_data_access_enabled**|**bit**|Il server è abilitato per le query distribuite.|  
@@ -70,19 +70,19 @@ ms.locfileid: "33221792"
 ## <a name="permissions"></a>Autorizzazioni  
  Il valore in **provider_string** è sempre NULL a meno che il chiamante dispone dell'autorizzazione ALTER ANY LINKED SERVER.  
   
- Non sono richieste autorizzazioni per visualizzare il server locale (**server_id** = 0).  
+ Non sono necessarie autorizzazioni per visualizzare il server locale (**server_id** = 0).  
   
- Quando si crea un server collegato o remoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un mapping di account di accesso predefinito per il **pubblica** ruolo del server. Di conseguenza, per impostazione predefinita tutti gli account di accesso possono visualizzare tutti i server collegati e remoti. Per limitare la visibilità a questi server, rimuovere il mapping di account di accesso predefinito eseguendo [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) e specificando NULL per il *locallogin* parametro.  
+ Quando si crea un server collegato o remoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un mapping di account di accesso predefinito per il **pubblico** ruolo del server. Di conseguenza, per impostazione predefinita tutti gli account di accesso possono visualizzare tutti i server collegati e remoti. Per limitare la visibilità per questi server, rimuovere il mapping di account di accesso predefinito eseguendo [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) e specificando NULL per il *locallogin* parametro.  
   
  Se il mapping predefinito degli account di accesso viene eliminato, solo gli utenti aggiunti esplicitamente come account di accesso collegato o remoto possono visualizzare i server collegati o remoti per cui dispongono di un account di accesso. Per visualizzare tutti i server collegati e remoti in seguito all'eliminazione del mapping predefinito degli account di accesso, sono richieste le autorizzazioni seguenti:  
   
 -   ALTER ANY LINKED SERVER o ALTER ANY LOGIN ON SERVER  
   
--   L'appartenenza di **setupadmin** o **sysadmin** ruoli predefiniti del server  
+-   Appartenenza al gruppo il **setupadmin** oppure **sysadmin** ruoli predefiniti del server  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Server collegati viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [Viste del catalogo di server collegati &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   

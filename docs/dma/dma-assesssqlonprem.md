@@ -2,7 +2,7 @@
 title: Eseguire una valutazione della migrazione di SQL Server (Data Migration Assistant) | Microsoft Docs
 description: Informazioni su come usare Data Migration Assistant per valutare un SQL Server in locale prima della migrazione a un altro SQL Server o Database SQL di Azure
 ms.custom: ''
-ms.date: 10/04/2017
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: bfb92c1217fe95687bdef5203189315b965b7446
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9a1e02c2db8f750b8beac70caf59cd7a0c509a25
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782222"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934953"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server con Data Migration Assistant
 
@@ -86,7 +86,7 @@ La durata della valutazione dipende dal numero di database aggiunti e le dimensi
 
 2.  Esaminare i problemi di compatibilità per tutti i livelli di compatibilità supportati dalla versione di SQL Server di destinazione selezionato nella **opzioni** pagina.
 
-È possibile esaminare i problemi di compatibilità grazie all'analisi di oggetto interessato e i relativi dettagli per ogni problema identificato sotto **modifiche di rilievo**, **modifiche del comportamento**, e **funzionalità deprecate** .
+È possibile esaminare i problemi di compatibilità grazie all'analisi di oggetto interessato, i dettagli e potenzialmente una correzione per ogni problema individuato in **modifiche di rilievo**, **modifiche del comportamento**, e  **Funzionalità deprecate**.
 
 ![Visualizzare i risultati della valutazione](../dma/media/ReviewResults.png)
 

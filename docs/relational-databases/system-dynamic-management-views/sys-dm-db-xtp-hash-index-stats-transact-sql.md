@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fdb15a0c64b11eb0fc57772ccaf37adcc1cc599e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969773"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,9 +45,9 @@ ms.lasthandoff: 05/23/2018
 Le catene molto lunghe possono influire significativamente sulle prestazioni delle operazioni DML sulle singole righe, incluse SELECT e INSERT. Le catene corte associate a un numero di bucket vuoto elevato indicano un valore bucket_count troppo elevato. Ne consegue un calo delle prestazioni delle analisi degli indici.  
   
 > [!WARNING]
-> **DM db_xtp_hash_index_stats** analizza l'intera tabella. Pertanto, se sono presenti tabelle di grandi dimensioni nel database, **Sys.dm db_xtp_hash_index_stats** potrebbe richiedere molto tempo esecuzione.  
+> **DM db_xtp_hash_index_stats** analizza l'intera tabella. Pertanto, se sono presenti tabelle di grandi dimensioni nel database **DM db_xtp_hash_index_stats** potrebbe richiedere molto tempo esecuzione.  
   
-Per ulteriori informazioni, vedere [gli indici Hash per le tabelle con ottimizzazione](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+Per altre informazioni, vedere [Hash Indexes for Memory-Optimized Tables indici](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
 |Nome colonna|Tipo|Description|  
 |-----------------|----------|-----------------|  
@@ -57,7 +58,7 @@ Per ulteriori informazioni, vedere [gli indici Hash per le tabelle con ottimizza
 |empty_bucket_count|**bigint**|Numero totale di bucket di hash vuoti nell'indice.|  
 |avg_chain_length|**bigint**|La lunghezza media della riga concatena tutti i bucket di hash nell'indice.|  
 |max_chain_length|**bigint**|Lunghezza massima delle catene di righe nel bucket di hash.|  
-|xtp_object_id|**bigint**|L'ID di oggetto OLTP in memoria che corrisponde alla tabella con ottimizzazione per la memoria.|  
+|xtp_object_id|**bigint**|L'ID di oggetto OLTP in memoria corrispondente alla tabella con ottimizzazione per la memoria.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il server.  
@@ -66,7 +67,7 @@ Per ulteriori informazioni, vedere [gli indici Hash per le tabelle con ottimizza
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. Risoluzione dei problemi relativi al numero di bucket dell'indice hash
 
-La query seguente può essere utilizzata per risolvere il numero di bucket dell'indice hash di una tabella esistente. La query restituisce statistiche sulla percentuale di bucket vuoti e la lunghezza della catena per tutti gli indici hash nelle tabelle utente.
+La query seguente può essere utilizzata per risolvere il numero di bucket dell'indice hash di una tabella esistente. La query restituisce statistiche sulla percentuale di bucket vuoti e lunghezza della catena per tutti gli indici hash nelle tabelle utente.
 
 ```sql
   SELECT  
@@ -90,11 +91,11 @@ La query seguente può essere utilizzata per risolvere il numero di bucket dell'
   ORDER BY [table], [index];  
 ``` 
 
-Per informazioni dettagliate su come interpretare i risultati della query, vedere [risoluzione dei problemi di indici Hash per le tabelle con ottimizzazione](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Per informazioni dettagliate su come interpretare i risultati della query, vedere [risoluzione dei problemi di indici Hash per tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Statistiche dell'indice hash per le tabelle interne
 
-Alcune funzionalità di utilizzare le tabelle interne che consentono di sfruttare gli indici hash, ad esempio gli indici columnstore nelle tabelle con ottimizzazione per la memoria. La query seguente restituisce statistiche per gli indici hash in tabelle interne in cui sono collegate alle tabelle utente.
+Alcune funzionalità di usare le tabelle interne che consentono di sfruttare gli indici hash, ad esempio gli indici columnstore nelle tabelle ottimizzate per la memoria. La query seguente restituisce statistiche per gli indici hash in tabelle interne in cui sono collegate alle tabelle utente.
 
 ```sql
   SELECT  
@@ -117,7 +118,7 @@ Alcune funzionalità di utilizzare le tabelle interne che consentono di sfruttar
 
 Si noti che non è possibile modificare il valore di BUCKET_COUNT dell'indice per le tabelle interne, pertanto l'output di questa query deve essere considerata informativo solo. Non è richiesta alcuna azione.  
 
-Questa query non è previsto per restituire tutte le righe, a meno che non si utilizza una funzionalità che si avvale di indici hash in tabelle interne. Nella tabella con ottimizzazione per la memoria seguente contiene un indice columnstore. Dopo la creazione di questa tabella, verranno visualizzati gli indici hash per le tabelle interne.
+Questa query non è previsto per restituire tutte le righe, a meno che non si usa una funzionalità che sfrutta gli indici hash nelle tabelle interne. La tabella con ottimizzazione per la memoria seguente contiene un indice columnstore. Dopo la creazione di questa tabella, si vedrà gli indici hash per le tabelle interne.
 
 ```sql
   CREATE TABLE dbo.table_columnstore
@@ -128,6 +129,6 @@ Questa query non è previsto per restituire tutte le righe, a meno che non si ut
 ```
 
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica tabella ottimizzazione della memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

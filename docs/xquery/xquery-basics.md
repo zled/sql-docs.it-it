@@ -1,5 +1,5 @@
 ---
-title: Nozioni fondamentali su XQuery | Documenti Microsoft
+title: Nozioni fondamentali su XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,22 +23,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 726bf0f34e8fe8d8b5d0713ca74b8f07f9e94483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077618"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970623"
 ---
 # <a name="xquery-basics"></a>Nozioni fondamentali su XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In questa sezione vengono illustrate le nozioni fondamentali su XQuery.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Sequenza e QName &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
  Descrive sequenze, elementi QName e spazi dei nomi predefiniti.  
   
- [Contesto di espressione e valutazione delle Query &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
+ [Contesto delle espressioni e valutazione delle Query &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
  Descrive i due contesti nei quali viene valutata un'espressione XQuery, ovvero statico e dinamico.  
   
  [Atomizzazione &#40;XQuery&#41;](../xquery/atomization-xquery.md)  

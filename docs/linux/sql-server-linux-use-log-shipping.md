@@ -1,6 +1,6 @@
 ---
-title: Configurare il log shipping per SQL Server in Linux | Documenti Microsoft
-description: Questa esercitazione viene illustrato un esempio di base della modalità di replica di un'istanza di SQL Server in Linux a un'istanza secondaria utilizzando la distribuzione dei log.
+title: Configurare il log shipping per SQL Server in Linux | Microsoft Docs
+description: Questa esercitazione illustra un esempio di base di come eseguire la replica di un'istanza di SQL Server in Linux in un'istanza secondaria di utilizzata il log shipping.
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
@@ -12,44 +12,44 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2d2057779b13141c6b1fee49fa1b3d299a660862
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.openlocfilehash: 8371660357848226ef00a9c843177ebae38c8790
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323652"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982033"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introduzione a Log Shipping in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-La distribuzione dei Log di SQL Server è una configurazione a disponibilità elevata in un database da un server primario verrà replicato in uno o più server secondari. In breve, un backup del database di origine viene ripristinato nel server secondario. Il server primario crea quindi i backup del log delle transazioni periodicamente e i server secondari ripristino, aggiornare la copia del database secondaria. 
+Distribuzione dei Log di SQL Server è una configurazione a disponibilità elevata in un database da un server primario verrà replicato in uno o più server secondari. In breve, viene ripristinato un backup del database di origine nel server secondario. Il server primario crea quindi i backup del log delle transazioni periodicamente e i server secondari ripristino, aggiornare la copia secondaria del database. 
 
   ![Log Shipping](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
 Come descritto in questa immagine, una sessione di log shipping prevede i passaggi seguenti:
 
-- Backup del file di log delle transazioni nell'istanza primaria di SQL Server
+- Backup del file di log delle transazioni nell'istanza di SQL Server primaria
 - Copia il file di backup del log delle transazioni attraverso la rete a uno o più istanze di SQL Server secondarie
-- Ripristino di file di backup del log delle transazioni in istanze di SQL Server secondarie
+- Il ripristino di file di backup del log delle transazioni nelle istanze del Server SQL secondarie
 
 ## <a name="prerequisites"></a>Prerequisiti
-- [Installare SQL Server Agent su Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
+- [Installare SQL Server Agent in Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
-## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Programma di installazione di una condivisione di rete per il Log Shipping tramite CIFS 
+## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Configurare una condivisione di rete per il Log Shipping tramite CIFS 
 
 > [!NOTE] 
-> Questa esercitazione Usa CIFS + Samba per configurare la condivisione di rete. Se si desidera utilizzare NFS, lasciare un commento e verranno aggiunte per il documento.       
+> Questa esercitazione Usa CIFS + Samba per configurare la condivisione di rete. Se si desidera usare NFS, lasciare un commento e verrà aggiunta per il documento.       
 
-### <a name="configure-primary-server"></a>Configurare il Server primario
+### <a name="configure-primary-server"></a>Configurare Server primario
 -   Eseguire il comando seguente per installare Samba
 
     ```bash
     sudo apt-get install samba #For Ubuntu
     sudo yum -y install samba #For RHEL/CentOS
     ```
--   Creare una directory per archiviare i log per il Log Shipping e assegnare mssql delle autorizzazioni necessarie
+-   Creare una directory per archiviare i log per il Log Shipping e come assegnare le autorizzazioni necessarie mssql
 
     ```bash
     mkdir /var/opt/mssql/tlogs
@@ -57,7 +57,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     chmod 0700 /var/opt/mssql/tlogs
     ```
 
--   Modificare il file /etc/samba/smb.conf (è necessario disporre delle autorizzazioni radice per tale) e aggiungere la sezione seguente:
+-   Modificare il file /etc/samba/smb.conf (sono necessarie autorizzazioni di radice adatto) e aggiungere la sezione seguente:
 
     ```bash
     [tlogs]
@@ -69,7 +69,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     writable=no
     ```
 
--   Creare un utente mssql per Samba
+-   Creare un utente di mssql per Samba
 
     ```bash
     sudo smbpasswd -a mssql
@@ -80,7 +80,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     sudo systemctl restart smbd.service nmbd.service
     ```
  
-### <a name="configure-secondary-server"></a>Configurare il Server secondario
+### <a name="configure-secondary-server"></a>Configurare Server secondario
 
 -   Eseguire il comando seguente per installare il client CIFS
     ```bash   
@@ -88,7 +88,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     sudo yum -y install cifs-utils #For RHEL/CentOS
     ```
 
--   Creare un file per archiviare le credenziali. Utilizzare la password impostata per l'account Samba mssql recente 
+-   Creare un file per archiviare le credenziali. Usare la password che recentemente impostato per l'account Samba mssql 
 
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
@@ -96,7 +96,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
         domain=<domain>
         password=<password>
 
--   Eseguire i comandi seguenti per creare una directory vuota per il montaggio e impostare autorizzazioni e proprietà correttamente
+-   Eseguire i comandi seguenti per creare una directory vuota per il montaggio e impostare l'autorizzazione e la proprietà correttamente
     ```bash   
     mkdir /var/opt/mssql/tlogs
     sudo chown root:root /var/opt/mssql/tlogs
@@ -105,18 +105,18 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     sudo chmod 0660 /var/opt/mssql/.tlogcreds
     ```
 
--   Aggiungere la riga e così via/fstab per mantenere la condivisione 
+-   Aggiungere la riga e così via/fstab per rendere persistente la condivisione 
 
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
         
--   Le condivisioni di montaggio
+-   Montare le condivisioni
     ```bash   
     sudo mount -a
     ```
        
-## <a name="setup-log-shipping-via-t-sql"></a>Programma di installazione per il Log Shipping tramite Transact-SQL
+## <a name="setup-log-shipping-via-t-sql"></a>Configurare il Log Shipping tramite T-SQL
 
-- Eseguire lo script dal server primario
+- Eseguire questo script dal server primario
 
     ```tsql
     BACKUP DATABASE SampleDB
@@ -182,7 +182,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     ```
 
 
-- Eseguire lo script dal server secondario
+- Eseguire questo script dal server secondario
 
     ```tsql
     RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
@@ -288,9 +288,9 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     END 
     ```
 
-## <a name="verify-log-shipping-works"></a>Verificare il funzionamento di Log Shipping
+## <a name="verify-log-shipping-works"></a>Verificare che funzioni per il Log Shipping
 
-- Verificare che il Log Shipping funzioni avviando il processo seguente nel server primario
+- Verificare che la distribuzione dei Log funziona avviando il processo seguente nel server primario
 
     ```tsql
     USE msdb ;  
@@ -300,7 +300,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     GO  
     ```
 
-- Verificare che il Log Shipping funzioni avviando il processo seguente nel server secondario
+- Verificare che la distribuzione dei Log funziona avviando il processo seguente nel server secondario
  
     ```tsql
     USE msdb ;  

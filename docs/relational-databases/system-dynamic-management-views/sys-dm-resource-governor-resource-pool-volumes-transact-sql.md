@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_resource_governor_resource_pool_volumes (Transact-SQL) | Documenti Microsoft
+title: Sys.dm_resource_governor_resource_pool_volumes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,15 +24,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 49c3cc7312978f313ed55147530c371bdde69675
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969223"
 ---
 # <a name="sysdmresourcegovernorresourcepoolvolumes-transact-sql"></a>sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce informazioni sulle statistiche di I/O del pool di risorse corrente per ogni volume del disco. Queste informazioni sono disponibili anche a livello di pool di risorse in [DM resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+  Restituisce informazioni sulle statistiche di I/O del pool di risorse corrente per ogni volume del disco. Queste informazioni sono anche disponibili a livello di pool di risorse in [DM resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
   
 |Nome colonna|Tipo di dati|Description|  

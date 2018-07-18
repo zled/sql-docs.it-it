@@ -1,5 +1,5 @@
 ---
-title: Elemento AssociationSet (CSDLBI) | Documenti Microsoft
+title: Elemento AssociationSet (CSDLBI) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2ae4f565a2383284421bb433ed5cc98371196d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039215"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968981"
 ---
 # <a name="associationset-element-csdlbi"></a>Elemento AssociationSet (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,10 +25,10 @@ ms.locfileid: "34039215"
 ## <a name="applicable-attributes"></a>Attributi applicabili  
  Nella tabella seguente vengono elencati gli attributi e gli elementi che definiscono l'elemento **AssociationSet**.  
   
-|Nome|Obbligatorio|Description|  
+|nome|Obbligatorio|Description|  
 |----------|-----------------|-----------------|  
 |State|Sì|Stringa che indica se l'associazione è attiva o meno. Il valore è definito dall'elemento State.|  
-|Hidden|No|Valore booleano che indica se la relazione è visibile. Per impostazione predefinita, il valore di Hidden è **false**, ovvero tutte le relazioni sono visibili nel modello.|  
+|Hidden|no|Valore booleano che indica se la relazione è visibile. Per impostazione predefinita, il valore di Hidden è **false**, ovvero tutte le relazioni sono visibili nel modello.|  
   
 ## <a name="state-element"></a>Elemento State  
  L'elemento **State** è un tipo semplice che descrive se un'associazione è attiva e deve essere utilizzata nei calcoli o se invece è inattiva e vi si deve far riferimento in modo esplicito nei calcoli.  
@@ -37,13 +37,13 @@ ms.locfileid: "34039215"
   
  Nella tabella seguente vengono elencati i valori dell'elemento **State**.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Attiva|L'associazione è attiva.|  
 |Inactive|L'associazione è attiva.|  
   
 ## <a name="example"></a>Esempio  
- **Tabulare**  
+ **Tabella**  
   
  Nell'esempio seguente viene illustrata una relazione del modello tabulare AdventureWorks, in CSDLBI versione 1.1. L'associazione viene contrassegnata come Inactive in quanto esiste una relazione tra OrderKey e Date.  
   

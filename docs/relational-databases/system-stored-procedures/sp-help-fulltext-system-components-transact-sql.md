@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_system_components (Transact-SQL) | Documenti Microsoft
+title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 849f2bbd004c47992c6b6faecf06b5abe5bcc9ea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260617"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019989"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_help_fulltext_system_components
   
 -   **fullpath**  
   
- Se viene specificato un percorso completo, *param* deve essere specificato anche con il percorso completo per il componente DLL, altrimenti viene restituito un messaggio di errore.  
+ Se viene specificato un percorso completo, *param* deve essere specificata anche con il percorso completo della DLL, del componente o un messaggio di errore viene restituito.  
   
  [  **@param=** ] *param*  
  In base al tipo di componente, i possibili valori sono i seguenti: identificatore delle impostazioni locali (LCID), estensione di file con prefisso ".", nome completo del componente del gestore di protocollo o percorso completo della DLL del componente.  
@@ -77,11 +77,11 @@ sp_help_fulltext_system_components
 |**componenttype**|**sysname**|Tipo di componente. I tipi validi sono:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|Nome del componente.|  
 |**clsid**|**uniqueidentifier**|Identificatore della classe del componente.|  
-|**fullpath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è un membro di **serveradmin** ruolo predefinito del server.|  
+|**fullpath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è membro del **serveradmin** ruolo predefinito del server.|  
 |**version**|**nvarchar(30)**|Versione del componente.|  
-|**produttore**|**sysname**|Nome del produttore del componente.|  
+|**Produttore**|**sysname**|Nome del produttore del componente.|  
   
- Il set di risultati seguente viene restituito solo se uno o più di un catalogo full-text esistente che utilizza *component_type*.  
+ Il set di risultati seguente viene restituito solo se uno o più di un catalogo full-text esistente che usa *component_type*.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -89,9 +89,9 @@ sp_help_fulltext_system_components
 |**ftcatid**|**int**|ID del catalogo full-text.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **pubblica** ruolo; tuttavia, gli utenti possono solo visualizzare o meno informazioni sui cataloghi full-text per cui dispongono dell'autorizzazione VIEW DEFINITION. Solo i membri del **serveradmin** ruolo predefinito del server è possibile visualizzare valori di **fullpath** colonna.  
+ Richiede l'appartenenza al **pubblica** ruolo; tuttavia, gli utenti possono solo visualizzare informazioni sui cataloghi full-text per cui dispongono dell'autorizzazione VIEW DEFINITION. Solo i membri del **serveradmin** ruolo predefinito del server è possibile visualizzare i valori nel **fullpath** colonna.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Questo metodo è di particolare importanza durante la preparazione per un aggiornamento. Eseguire la stored procedure all'interno di un particolare database e utilizzare l'output per determinare se l'aggiornamento avrà effetti su un particolare catalogo.  
   
 ## <a name="examples"></a>Esempi  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Determinazione della registrazione di un word breaker specifico  
- Nell'esempio seguente viene elencato il word breaker per la lingua turca (LCID = 1055) se è stato installato nel sistema e registrato sull'istanza del servizio. Questo esempio vengono specificati i nomi di parametro, **@component_type** e **@param**.  
+ Nell'esempio seguente viene elencato il word breaker per la lingua turca (LCID = 1055) se è stato installato nel sistema e registrato sull'istanza del servizio. Questo esempio i nomi dei parametri, si specifica **@component_type** e **@param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

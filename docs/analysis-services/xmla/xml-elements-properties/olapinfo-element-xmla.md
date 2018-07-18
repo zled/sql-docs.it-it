@@ -1,5 +1,5 @@
 ---
-title: Elemento OlapInfo (XMLA) | Documenti Microsoft
+title: Elemento OlapInfo (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e8c0cc23eb76d3da97aadbb9a1738580ebdbc62f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576783"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968373"
 ---
 # <a name="olapinfo-element-xmla"></a>Elemento OlapInfo (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene i metadati di asse e cella contenuti un [radice](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento che utilizza il [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo di dati.  
+  Contiene i metadati di asse e cella contenuti in un [radice](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento che utilizza il [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo di dati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34576783"
 </root>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -43,15 +43,15 @@ ms.locfileid: "34576783"
 |Valore predefinito|None|  
 |Cardinalità|1-1: elemento obbligatorio visualizzato una sola volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |Elementi figlio|[AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md), [CellInfo](../../../analysis-services/xmla/xml-elements-properties/cellinfo-element-xmla.md), [CubeInfo](../../../analysis-services/xmla/xml-elements-properties/cubeinfo-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- Il **OLAPInfo** sezione di un **radice** elemento utilizzando il **MDDataSet** tipo di dati fornisce i metadati relativi al cubo, gli assi del risultato multidimensionale e le proprietà le celle incluso il risultato.  
+## <a name="remarks"></a>Note  
+ Il **OLAPInfo** sezione di un **radice** elemento utilizzando il **MDDataSet** tipo di dati fornisce i metadati relativi al cubo, gli assi del risultato multidimensionale e di proprietà le celle incluso il risultato.  
   
 ## <a name="see-also"></a>Vedere anche
  [Proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

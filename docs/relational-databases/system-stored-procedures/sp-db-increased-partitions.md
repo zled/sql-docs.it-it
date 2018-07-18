@@ -1,5 +1,5 @@
 ---
-title: sp_db_increased_partitions | Documenti Microsoft
+title: sp_db_increased_partitions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b63255e4f15505dc75dfdf92f550a1d6d4149028
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237689"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970413"
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ sp_dp_increased_partitions
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @dbname=] '*database_name*'  
- Nome del database. *dbname* viene **sysname** con valore predefinito è NULL. Se *dbname* viene omesso, viene utilizzato il database corrente.  
+ [ @dbname=] '*nome_database*'  
+ Nome del database. *dbname* viene **sysname** con un valore predefinito NULL. Se *dbname* viene omesso, viene utilizzato il database corrente.  
   
  [ @increased_partitions=] '*increased_partitions*'  
- Consente di abilitare e disabilitare il supporto per partizioni fino a 15.000 sul database specificato. *increased_partitions* viene **varchar(6)** con un valore predefinito è NULL. I valori accettati per abilitare il supporto sono 'ON' o 'TRUE' e 'OFF' o 'FALSE' per disabilitarlo. Se *increased_partitions* non è specificato, la procedura restituisce 1 per indicare che è abilitato il supporto per il database specificato o 0 per indicare il supporto è disabilitato.  
+ Consente di abilitare e disabilitare il supporto per partizioni fino a 15.000 sul database specificato. *increased_partitions* viene **varchar(6)** con valore predefinito è NULL. I valori accettati per abilitare il supporto sono 'ON' o 'TRUE' e 'OFF' o 'FALSE' per disabilitarlo. Se *increased_partitions* non viene specificato, la procedura restituisce 1 per indicare il supporto è abilitato per il database specificato o 0 per indicare il supporto è disabilitato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

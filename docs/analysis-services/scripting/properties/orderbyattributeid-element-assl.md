@@ -1,5 +1,5 @@
 ---
-title: Elemento OrderByAttributeID (ASSL) | Documenti Microsoft
+title: Elemento OrderByAttributeID (ASSL) | Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,15 +10,15 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e6ab7a00961d4e5b925556d107eec32b7ddb9c9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34038045"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018215"
 ---
 # <a name="orderbyattributeid-element-assl"></a>Elemento OrderByAttributeID (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Identifica l'attributo in base al quale ordinare i membri di un altro il [dimensione](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) attributo.  
+  Identifica un altro attributo in base al quale ordinare i membri del [dimensione](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) attributo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,10 +33,10 @@ ms.locfileid: "34038045"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String|  
-|Valore predefinito|Nessuno|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -44,14 +44,14 @@ ms.locfileid: "34038045"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
- Il **OrderByAttributeID** elemento viene utilizzato solo quando il valore della [OrderBy](../../../analysis-services/scripting/properties/orderby-element-assl.md) elemento per il **DimensionAttribute** è impostato su *AttributeKey* o *AttributeName*.  
+## <a name="remarks"></a>Note  
+ Il **OrderByAttributeID** elemento viene usato solo quando il valore della [OrderBy](../../../analysis-services/scripting/properties/orderby-element-assl.md) (elemento) per il **DimensionAttribute** è impostata su *AttributeKey* oppure *AttributeName*.  
   
- L'elemento che corrisponde all'elemento padre **OrderByAttributeID** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L'elemento che corrisponde al padre di **OrderByAttributeID** nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Proprietà &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
