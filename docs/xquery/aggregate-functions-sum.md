@@ -1,5 +1,5 @@
 ---
-title: Funzione SUM (XQuery) | Documenti Microsoft
+title: Funzione SUM (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 071394e1c2889c94c65a8e42179fd1bdbf5cf383
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076823"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38022629"
 ---
-# <a name="aggregate-functions---sum"></a>Funzioni di aggregazione - Somma
+# <a name="aggregate-functions---sum"></a>Funzioni di aggregazione - sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Restituisce la somma di una sequenza di numeri.  
@@ -46,17 +46,17 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  Sequenza di valori atomici per i quali deve essere calcolata la somma.  
   
-## <a name="remarks"></a>Osservazioni  
- Tutti i tipi di valori atomizzati passati a **SUM ()** devono essere sottotipi dello stesso tipo di base. I tipi di base accettati sono i tre tipi numerici di base predefiniti o xdt:untypedAtomic. Per i valori di tipo xdt:untypedAtomic viene eseguito il cast a xs:double. Se è presente una combinazione di questi tipi, o se vengono passati altri valori di altri tipi, viene generato un errore statico.  
+## <a name="remarks"></a>Note  
+ Tutti i tipi di valori atomizzati passati a **SUM ()** devono essere sottotipi dello stesso tipo di base. I tipi di base accettati sono i tre tipi numerici di base predefiniti o xdt:untypedAtomic. Per i valori di tipo xdt:untypedAtomic viene eseguito il cast a xs:double. Se c'è una combinazione di questi tipi, o se vengono passati altri valori di altri tipi, viene generato un errore statico.  
   
- Il risultato di **SUM ()** riceve il tipo di base dei tipi passati, ad esempio xs: double nel caso di xdt: untypedAtomic, anche se l'input è facoltativamente la sequenza vuota. Se l'input è costituito da dati statici vuoti, il risultato sarà 0 con il tipo statico e dinamico di xs:integer.  
+ Il risultato del **SUM ()** riceve il tipo di base dei tipi passati, ad esempio xs: double nel caso di xdt: untypedAtomic, anche se l'input è facoltativamente la sequenza vuota. Se l'input è costituito da dati statici vuoti, il risultato sarà 0 con il tipo statico e dinamico di xs:integer.  
   
- Il **SUM ()** funzione restituisce la somma dei valori numerici. Se non è possibile eseguire il cast di un valore xdt: untypedAtomic a xs: Double, il valore viene ignorato nella sequenza di input, *$arg*. Se l'input è una sequenza vuota calcolata in modo dinamico, viene restituito il valore 0 del tipo di base utilizzato.  
+ Il **SUM ()** funzione restituisce la somma dei valori numerici. Se non è possibile eseguire il cast di un valore xdt: untypedAtomic a xs: Double, il valore viene ignorato nella sequenza di input *$arg*. Se l'input è una sequenza vuota calcolata in modo dinamico, viene restituito il valore 0 del tipo di base utilizzato.  
   
  Se si verifica un overflow o un'eccezione di valori non compresi nell'intervallo, la funzione restituisce un errore di run-time.  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo di [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo i [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. Utilizzo della funzione XQuery sum() per trovare il numero totale combinato delle ore di manodopera relativo a tutti i centri di lavorazione del processo di produzione  
  La query seguente trova il numero totale delle ore di manodopera relativo a tutti i centri di lavorazione del processo di produzione per tutti i modelli di prodotto per i quali sono state archiviate istruzioni di produzione.  
@@ -113,7 +113,7 @@ ProductModelID Name                 TotalLaborHours
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  
   
--   Solo la versione singolo argomento di **SUM ()** è supportato.  
+-   Solo la versione singolo argomento del **SUM ()** è supportata.  
   
 -   Se l'input è una sequenza vuota calcolata in modo dinamico, viene restituito il valore 0 del tipo di base utilizzato anziché il tipo xs:integer.  
   

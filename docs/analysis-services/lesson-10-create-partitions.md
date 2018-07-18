@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 11: Creare partizioni | Documenti Microsoft'
+title: 'Lezione 11: Creare partizioni | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d738649ea357b172975505ff7993b56181ce0b4f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018758"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985892"
 ---
 # <a name="lesson-10-create-partitions"></a>Lezione 10: Creare partizioni
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-In questa lezione si creerà le partizioni per dividere la tabella FactInternetSales in parti logiche più piccole che possono essere elaborate (aggiornate) indipendentemente dalle altre. Per impostazione predefinita, ogni tabella inclusa nel modello dispone di una partizione, che comprende tutte le colonne e le righe della tabella. Per la tabella FactInternetSales, di voler dividere i dati per anno. una partizione per ognuno dei cinque anni della tabella. Ogni partizione può quindi essere elaborata in modo indipendente. Per altre informazioni, vedere [Tabella](../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+In questa lezione si creerà le partizioni per dividere la tabella FactInternetSales in parti logiche più piccole che possono essere elaborate (aggiornate) indipendentemente dalle altre. Per impostazione predefinita, ogni tabella inclusa nel modello dispone di una partizione, che comprende tutte le colonne e le righe della tabella. Per la tabella FactInternetSales, si desidera dividere i dati per anno. una partizione per ognuno dei cinque anni della tabella. Ogni partizione può quindi essere elaborata in modo indipendente. Per altre informazioni, vedere [Tabella](../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 Tempo stimato per il completamento della lezione: **15 minuti**  
   
@@ -34,12 +34,12 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 2.  Nella finestra di dialogo Gestione partizioni, fare clic su **copia**.  
   
-3.  In **nome partizione**, modificare il nome in **FactInternetSales2010**.  
+3.  Nelle **nome partizione**, denominarlo **FactInternetSales2010**.  
   
     > [!TIP]  
-    > Nota: i nomi delle colonne nella finestra Anteprima tabella visualizzate le colonne incluse nella tabella del modello (selezionata) con i nomi di colonna dall'origine. Questo si verifica in quanto nella finestra Anteprima tabella vengono visualizzate le colonne della tabella di origine, non quelle della tabella del modello.  
+    > Si noti che i nomi delle colonne nella finestra Anteprima tabella visualizzate le colonne incluse nella tabella del modello (selezionata) con i nomi delle colonne dall'origine. Questo si verifica in quanto nella finestra Anteprima tabella vengono visualizzate le colonne della tabella di origine, non quelle della tabella del modello.  
   
-4.  Selezionare il **SQL** pulsante sopra il lato destro della finestra di anteprima per aprire l'editor di istruzione SQL.  
+4.  Selezionare il **SQL** pulsante appena sopra il lato destro della finestra di anteprima per aprire l'editor di istruzione SQL.  
   
     Poiché si desidera che la partizione includa solo le righe comprese in un determinato periodo, è necessario includere una clausola WHERE. È possibile creare una clausola WHERE solo tramite un'istruzione SQL.  
   
@@ -81,9 +81,9 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 #### <a name="to-create-a-partition-for-the-2011-year"></a>Per creare una partizione per l'anno 2011  
   
-1.  Nell'elenco delle partizioni, fare clic su di **FactInternetSales2010** partizione appena creato e quindi fare clic su **copia**.  
+1.  Nell'elenco delle partizioni, scegliere il **FactInternetSales2010** partizioni appena creato e quindi fare clic su **copia**.  
   
-2.  In **nome partizione**, tipo **FactInternetSales2011**.  
+2.  Nelle **nome partizione**, digitare **FactInternetSales2011**.  
   
 3.  Nell'istruzione SQL, affinché nella partizione siano incluse solo le righe per l'anno 2011, sostituire la clausola WHERE con la seguente:  
   
@@ -116,32 +116,32 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
     ```  
 
 ## <a name="delete-the-factinternetsales-partition"></a>Eliminare la partizione FactInternetSales
-Dopo aver creato le partizioni per ogni anno, è possibile eliminare la partizione di FactInternetSales. In questo modo si sovrappongono quando si sceglie elabora tutte quando si elaborano partizioni.
+Dopo aver creato le partizioni per ogni anno, è possibile eliminare la partizione FactInternetSales. Ciò impedisce che si sovrappongono, quando si sceglie elabora tutti gli quando si elaborano partizioni.
 #### <a name="to-delete-the-factinternetsales-partition"></a>Per eliminare la partizione FactInternetSales
--  Fare clic sulla partizione FactInternetSales e quindi fare clic su **eliminare**.
+-  Selezionare la partizione FactInternetSales e quindi fare clic su **Elimina**.
 
 
 
 ## <a name="process-partitions"></a>Elaborare le partizioni  
-In Gestione partizioni, si noti il **elaborati ultimo** colonna per ogni nuova partizione appena creato mostra queste partizioni non sono mai state elaborate. Quando si creano nuove partizioni, è necessario eseguire un'operazione di elaborazione delle partizioni o della tabella per aggiornare i dati nelle partizioni.  
+Si noti che in Gestione partizioni, il **ultima elaborazione** colonna per ogni nuova partizione creata mostra queste partizioni non sono mai state elaborate. Quando si creano nuove partizioni, è necessario eseguire un'operazione di elaborazione delle partizioni o della tabella per aggiornare i dati nelle partizioni.  
   
 #### <a name="to-process-the-factinternetsales-partitions"></a>Per elaborare le partizioni FactInternetSales  
   
 1.  Fare clic su **OK** per chiudere la finestra di dialogo Gestione partizioni.  
   
-2.  Fare clic sul **FactInternetSales** tabella, quindi scegliere il **modello** menu > **processo** > **elabora partizioni**.  
+2.  Fare clic sul **FactInternetSales** , quindi scegliere il **modello** menu > **processo** > **elabora partizioni**.  
   
-3.  Nella finestra di dialogo Elabora partizioni verificare **modalità** è impostato su **elaborazione predefinita**.  
+3.  Nella finestra di dialogo Elabora partizioni verificare **modalità** è impostata su **elaborazione predefinita**.  
   
 4.  Selezionare la casella di controllo **Elabora** per ognuna delle cinque partizioni create, quindi fare clic su **OK**.  
 
-    ![come-tabulare-lesson10-processo-partizioni](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
+    ![come in formato tabulare-lesson10-processo-partizioni](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
   
     Se viene chiesto di immettere le credenziali di rappresentazione, immettere il nome utente di Windows e la password specificati nella lezione 2.  
   
     Viene visualizzata la finestra di dialogo **Processo dati** , con informazioni dettagliate sul processo per ogni partizione. Si noti che per ogni partizione viene trasferito un numero diverso di righe. Questo avviene in quanto ogni partizione include solo le righe per l'anno specificato nella clausola WHERE dell'istruzione SQL. Al termine dell'elaborazione, proseguire e chiudere la finestra di dialogo Processo dati.  
   
-    ![come tabulare-lesson10-processo-completamento](../analysis-services/media/as-tabular-lesson10-process-complete.png)
+    ![come-tabulare-lesson10-processo-completato](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>Quali sono le operazioni successive?
 Passare alla lezione successiva: [lezione 11: creare ruoli](../analysis-services/lesson-11-create-roles.md). 

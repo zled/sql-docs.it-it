@@ -1,5 +1,5 @@
 ---
-title: ClusterProbability (DMX) | Documenti Microsoft
+title: ClusterProbability (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4d8ce16bb07af07bd2bfd651cf5fc1ae15b7e08
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841684"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030277"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,16 +34,16 @@ ClusterProbability([<Node_Caption>])
 ## <a name="return-type"></a>Tipo restituito  
  Valore scalare.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  La sintassi seguente utilizza il set di righe dello schema relativo al contenuto del modello di data mining per restituire le didascalie dei nodi esistenti nel modello di data mining.  
   
 ```  
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Per ulteriori informazioni sull'utilizzo di questa sintassi, vedere [SELECT FROM &#60;modello&#62;. CONTENUTO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). Per ulteriori informazioni sul set di righe dello schema del contenuto del modello data mining, vedere [set di righe DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ Per altre informazioni sull'uso di questa sintassi, vedere [SELECT FROM &#60;modello&#62;. CONTENUTO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). Per altre informazioni sul set di righe dello schema del contenuto del modello data mining, vedere [set di righe DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
   
- Se un \<didascalia del nodo > non è specificato, la funzione restituisce la probabilità che i case di input appartengano al cluster più probabile. Utilizzare il **Cluster** funzione per restituire il cluster più probabile.  
+ Se un \<didascalia del nodo > non è specificato, la funzione restituisce la probabilità che i case di input appartengano al cluster più probabile. Usare la **Cluster** funzione per restituire il cluster più probabile.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituita la probabilità che il case specificato esista nel cluster con etichetta Cluster 2.  
@@ -63,7 +63,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Vedere anche  
  [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

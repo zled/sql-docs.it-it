@@ -1,5 +1,5 @@
 ---
-title: RangeMid (DMX) | Documenti Microsoft
+title: RangeMid (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e7daff41d09f1468f3819af5a8d2020719aebe9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841724"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037319"
 ---
 # <a name="rangemid-dmx"></a>RangeMid (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,8 +34,8 @@ RangeMid(<scalar column reference>)
 ## <a name="return-type"></a>Tipo restituito  
  Valore scalare.  
   
-## <a name="remarks"></a>Remarks  
- Se usato con [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), il **RangeMin**, **RangeMid**, e **RangeMax**  funzioni restituiscono i valori limite effettivi del bucket specificato. Se ad esempio si esegue una stima su una colonna discretizzata, la query restituirà il numero del bucket stimato nella colonna discretizzata. Il **RangeMin**, **RangeMid**, e **RangeMax** il bucket specificato dalla stima è descritto dalle funzioni. Quando il **RangeMid** funzione viene utilizzata con un'istruzione PREDICTION JOIN, il riferimento alla colonna scalare può contenere solo colonne discrete e stimabili.  
+## <a name="remarks"></a>Note  
+ Quando abbinata [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), il **RangeMin**, **RangeMid**, e **RangeMax**  funzioni restituiscono i valori limite effettivi del bucket specificato. Se ad esempio si esegue una stima su una colonna discretizzata, la query restituirà il numero del bucket stimato nella colonna discretizzata. Il **RangeMin**, **RangeMid**, e **RangeMax** il bucket specificato dalla stima è descritto dalle funzioni. Quando la **RangeMid** funzione viene usata con un'istruzione PREDICTION JOIN, il riferimento alla colonna scalare può contenere solo colonne discrete e stimabili.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti i valori minimi, massimi e medi della colonna continua Yearly Income in un modello di data mining TM Decision Tree.  
@@ -49,7 +49,7 @@ FROM [TM Decision Tree]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)   

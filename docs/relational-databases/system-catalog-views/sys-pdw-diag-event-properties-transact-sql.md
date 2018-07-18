@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_diag_event_properties (Transact-SQL) | Documenti Microsoft
+title: Sys.pdw_diag_event_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: a8219d8a60a08815ee11a8e80015956007f0638f
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33698904"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987324"
 ---
 # <a name="syspdwdiageventproperties-transact-sql"></a>sys.pdw_diag_event_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "33698904"
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|**event_name**|**nvarchar(255)**|Nome dell'evento di diagnostica specifici.||  
+|**event_name**|**nvarchar(255)**|Nome dell'evento di diagnostica specifico.||  
 |**property_name**|**nvarchar(255)**|Nome di una proprietà dell'evento.||  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e viste del catalogo Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse e Parallel Data Warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

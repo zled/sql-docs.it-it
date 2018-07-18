@@ -1,5 +1,5 @@
 ---
-title: "Lezione dell'esercitazione di Analysis Services 3: contrassegna come tabella data | Documenti Microsoft"
+title: 'Analysis Services tutorial-lezione 3: contrassegna come tabella data | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,35 +10,35 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 82b4093aa1a46cf1a7bb14b4c689ba6ba09e4d2b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045355"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973168"
 ---
 # <a name="mark-as-date-table"></a>Contrassegna come tabella data
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-Nella lezione 2: Recuperare i dati, è stato importato una tabella delle dimensioni denominata **DimDate**. Mentre nel modello questa tabella è denominata DimDate, è possibile anche noto come un *tabella data*, in quanto contiene data e ora.  
+Nella lezione 2: Ottenere i dati, è importata una tabella delle dimensioni denominata **DimDate**. Mentre nel modello questa tabella è denominata DimDate, può anche essere nota come un *tabella data*, perché contiene dati di data e ora.  
   
-Ogni volta che si utilizzano funzioni di business intelligence DAX, ad esempio quando si creano misure in un secondo momento, è necessario specificare le proprietà che includono un *tabella data* e un identificatore univoco *colonna Data* in tale tabella.
+Quando si usano funzioni di business intelligence DAX, ad esempio quando si crea le misure in un secondo momento, è necessario specificare le proprietà che includono un *tabella data* e un identificatore univoco *colonna Data* in tale tabella.
   
-In questa lezione si contrassegna il **DimDate** tabella come il *tabella data* e **data** colonna (nella tabella Date) come il *colonna Data* (univoco identificatore).  
+In questa lezione, si contrassegna il **DimDate** tabella come i *tabella data* e il **data** colonna (nella tabella Date) come il *colonna delle Date* (univoco identificatore).  
 
-Prima di contrassegnare la tabella relativa alla data e la colonna di data, è consigliabile eseguire una piccola manutenzione per rendere più facile comprendere il modello. Si noti che nella tabella DimDate una colonna denominata **FullDateAlternateKey**. Questa colonna contiene una riga per ogni giorno in ogni anno di calendario incluso nella tabella. Utilizzare questa colonna molto nelle formule di misure e nei report. Tuttavia, FullDateAlternateKey non è realmente un identificatore valido per questa colonna. Il nome **data**, rendendo più semplice identificare e includere nelle formule. Quando possibile, è consigliabile rinominare gli oggetti come tabelle e colonne per renderne più semplice identificare in SSDT e applicazioni di reporting client. 
+Prima di contrassegnare la tabella relativa alla data e la colonna di date, è il momento giusto per eseguire alcune attività di manutenzione per rendere più facile da comprendere il modello. Si noti che nella tabella DimDate una colonna denominata **FullDateAlternateKey**. Questa colonna contiene una riga per ogni giorno dell'anno di calendario incluso nella tabella. Questo articolo è usare molto nelle formule per le misure e nei report. Tuttavia, FullDateAlternateKey non è davvero un buon identificatore per questa colonna. Rinominarlo **data**, rendendo più semplice identificare e includere nelle formule. Quando possibile, è consigliabile rinominare gli oggetti, ad esempio tabelle e colonne per renderle più facilmente identificabili in SSDT e reporting delle applicazioni client. 
   
-Tempo stimato per completare questa lezione: **tre minuti**  
+Tempo stimato per il completamento della lezione: **tre minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
 
-In questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 2: ottenere dati](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
+Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 2: ottenere i dati](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>Per rinominare la colonna FullDateAlternateKey
 
-1.  In Progettazione modelli fare clic su di **DimDate** tabella.
+1.  In Progettazione modelli, scegliere il **DimDate** tabella.
 
-2.  Fare doppio clic su intestazione per il **FullDateAlternateKey** colonna e quindi rinominarlo **data**.
+2.  Fare doppio clic su intestazione per il **FullDateAlternateKey** colonna e quindi rinominarla **data**.
 
   
 ### <a name="to-set-mark-as-date-table"></a>Per impostare Contrassegna come tabella data  
@@ -47,7 +47,7 @@ In questo articolo fa parte di un'esercitazione di modellazione tabulare, che de
   
 2.  Fare clic sul menu **Tabella** , selezionare **Data**, quindi scegliere **Contrassegna come tabella data**.  
   
-3.  Nella casella di riepilogo **Data** della finestra di dialogo **Contrassegna come tabella data** selezionare la colonna **Data** come identificatore univoco. In genere viene selezionato per impostazione predefinita. Scegliere **OK**. 
+3.  Nella casella di riepilogo **Data** della finestra di dialogo **Contrassegna come tabella data** selezionare la colonna **Data** come identificatore univoco. È in genere selezionata per impostazione predefinita. Fare clic su **OK**. 
 
     ![as-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
   

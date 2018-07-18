@@ -1,5 +1,5 @@
 ---
-title: SELECT DISTINCT FROM &lt;modello &gt; (DMX) | Documenti Microsoft
+title: SELECT DISTINCT FROM &lt;modello &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842714"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985326"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modello &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,14 +39,14 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *model*  
  Identificatore del modello.  
   
- *elenco delle condizioni*  
+ *Elenco condizioni*  
  Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
  Facoltativo. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Remarks  
- Il **SELECT DISTINCT FROM** istruzione funziona solo con una singola colonna o con un set di colonne correlate. Non è possibile utilizzare questa clausola con un set di colonne non correlate.  
+## <a name="remarks"></a>Note  
+ Il **SELECT DISTINCT FROM** istruzione funziona solo con una singola colonna o un set di colonne correlate. Non è possibile utilizzare questa clausola con un set di colonne non correlate.  
   
  Il **SELECT DISTINCT FROM** istruzione consente di fare riferimento direttamente a una colonna all'interno di una tabella nidificata. Esempio:  
   
@@ -54,7 +54,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- Il risultato di **SELECT DISTINCT FROM \<modello >** istruzione variano a seconda del tipo di colonna. Nella tabella seguente sono descritti i tipi di colonna supportati e l'output dell'istruzione.  
+ I risultati del **SELECT DISTINCT FROM \<modello >** istruzione variano a seconda del tipo di colonna. Nella tabella seguente sono descritti i tipi di colonna supportati e l'output dell'istruzione.  
   
 |Tipo di colonna|Output|  
 |-----------------|------------|  
@@ -100,7 +100,7 @@ FROM [TM Decision Tree]
  La query restituisce inoltre una singola riga di valori null per rappresentare valori mancanti.  
   
 ## <a name="discretized-column-example"></a>Esempio con una colonna discretizzata  
- L'esempio di codice seguente restituisce i valori medio, massimo e minimo per ogni bucket creato dall'algoritmo per la colonna [`Yearly Income]`. Per riprodurre i risultati per questo esempio è necessario creare una nuova struttura di data mining che corrisponde a `[Targeted Mailing]`. Nella procedura guidata, modificare il tipo di contenuto di `Yearly Income` colonna **continuo** per **Discretized**.  
+ L'esempio di codice seguente restituisce i valori medio, massimo e minimo per ogni bucket creato dall'algoritmo per la colonna [`Yearly Income]`. Per riprodurre i risultati per questo esempio è necessario creare una nuova struttura di data mining che corrisponde a `[Targeted Mailing]`. Nella procedura guidata, modificare il tipo di contenuto del `Yearly Income` colonna restituita da **continuo** al **Discretized**.  
   
 > [!NOTE]  
 >  È inoltre possibile modificare anche il modello di data mining creato nell'esercitazione di base sul data mining per discretizzare la colonna della struttura di data mining [`Yearly Income]`. Per informazioni su come eseguire questa operazione, vedere [modificare la discretizzazione di una colonna in un modello di Data Mining](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md). Tuttavia, quando si modifica la discretizzazione della colonna, viene forzata la rielaborazione della struttura di data mining modificando i risultati degli altri modelli compilati utilizzando tale struttura.  
@@ -136,7 +136,7 @@ FROM [TM Decision Tree]
   
 ## <a name="see-also"></a>Vedere anche  
  [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

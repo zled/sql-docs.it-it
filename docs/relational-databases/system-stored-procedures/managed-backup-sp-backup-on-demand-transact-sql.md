@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d95bdd7fa337598c289aaa7a958c33513eec12d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239341"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058039"
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,18 +55,18 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> Argomenti  
  @database_name  
- Nome del database in cui deve essere eseguito il backup. Il @database_name è **SYSNAME**.  
+ Nome del database in cui deve essere eseguito il backup. Il @database_name viene **SYSNAME**.  
   
  @type  
- Tipo di backup da eseguire: database o log. Il @type parametro **NVARCHAR(32)**.  
+ Tipo di backup da eseguire: database o log. Il @type parametro è **NVARCHAR(32)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza **db_backupoperator** ruolo del database con **ALTER ANY CREDENTIAL** , autorizzazioni e **EXECUTE** le autorizzazioni per **sp_delete _ BackupHistory**stored procedure.  
+ Richiede l'appartenenza al **db_backupoperator** ruolo del database con **ALTER ANY CREDENTIAL** autorizzazioni, e **EXECUTE** autorizzazioni sul **sp_delete BackupHistory**stored procedure.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una richiesta di backup per il database 'TestDB'. Per questo database è stato abilitato il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  

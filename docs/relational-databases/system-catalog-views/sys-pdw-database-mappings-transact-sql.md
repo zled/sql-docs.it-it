@@ -19,24 +19,24 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f1455d25c0a3ea344c5104053358b2d4fed0c65b
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33699414"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058069"
 ---
 # <a name="syspdwdatabasemappings-transact-sql"></a>sys.pdw_database_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Mappe di **database_id**dei database per il nome fisico usato in nodi di calcolo e fornisce il **id entità** del proprietario del database nel sistema. Creare un join **sys.pdw_database_mappings** a **Sys. Databases** e **sys.pdw_nodes_pdw_physical_databases**.  
+  Le mappe il **database_id**dei database per il nome fisico usato sui nodi di calcolo e fornisce il **id dell'entità** del proprietario del database nel sistema. Partecipa **sys.pdw_database_mappings** al **Sys. Databases** e **sys.pdw_nodes_pdw_physical_databases**.  
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|physical_name|**nvarchar(36)**|Il nome fisico per il database nei nodi di calcolo.<br /><br /> **physical_name** e **database_id** formano la chiave per la visualizzazione.||  
-|database_id|**int**|L'ID di oggetto per il database. Vedere [Sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **physical_name** e **database_id** formano la chiave per la visualizzazione.||  
+|physical_name|**nvarchar(36)**|Il nome fisico per il database nei nodi di calcolo.<br /><br /> **physical_name** e **database_id** formano la chiave per questa visualizzazione.||  
+|database_id|**int**|L'ID di oggetto per il database. Visualizzare [Sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **physical_name** e **database_id** formano la chiave per questa visualizzazione.||  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente unisce sys.pdw_database_mappings alle altre tabelle di sistema per visualizzare la modalità con cui vengono eseguito il mapping di database.  
+ Nell'esempio seguente crea un join sys.pdw_database_mappings ad altre tabelle di sistema per mostrare il modo in cui vengono mappati i database.  
   
 ```  
 SELECT DB.database_id, DB.name, Map.*, Phys.*   
@@ -49,7 +49,7 @@ ORDER BY DB.database_id, Phys.pdw_node_id;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e viste del catalogo Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL Data Warehouse e Parallel Data Warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.pdw_index_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
  [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
  [sys.pdw_nodes_pdw_physical_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  

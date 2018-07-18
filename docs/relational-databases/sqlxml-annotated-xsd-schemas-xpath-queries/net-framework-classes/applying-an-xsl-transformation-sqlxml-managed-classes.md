@@ -1,5 +1,5 @@
 ---
-title: Applicare una trasformazione XSL (classi gestite SQLXML) | Documenti Microsoft
+title: Applicare una trasformazione XSL (classi gestite SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 951c8d315fa4ff72d16acb0873117af4b7857196
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968836"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972133"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Applicazione di una trasformazione XSL (classi gestite SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questo esempio viene eseguita una query SQL sul database AdventureWorks. La trasformazione XSL viene applicata al risultato della query per generare una tabella a due colonne con i nomi e i cognomi dei dipendenti.  
   
- Xslpath-proprietà dell'oggetto SqlXmlCommand viene utilizzata per specificare il file XSL e il relativo percorso di directory.  
+ Xslpath-proprietà dell'oggetto SqlXmlCommand consente di specificare il file XSL e il relativo percorso di directory.  
   
 > [!NOTE]  
 >  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione.  

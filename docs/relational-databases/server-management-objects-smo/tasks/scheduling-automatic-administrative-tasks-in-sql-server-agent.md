@@ -1,5 +1,5 @@
 ---
-title: Pianificazione delle attività amministrative automatiche in SQL Server Agent | Documenti Microsoft
+title: Pianificazione delle attività amministrative automatiche in SQL Server Agent | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e03ca384c3e425eead6663537031411ca8583af9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970899"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029839"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Pianificazione delle attività amministrative automatiche in SQL Server Agent
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "32970899"
 ## <a name="examples"></a>Esempi  
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-Per programmi che utilizzano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agente, è necessario includere il **utilizzando** istruzione per qualificare lo spazio dei nomi dell'agente. Inserire l'istruzione dopo l'altro **utilizzando** istruzioni, prima di qualsiasi dichiarazione nell'applicazione, ad esempio:
+Per i programmi che usano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, è necessario includere il **usando** istruzione per qualificare lo spazio dei nomi dell'agente. Inserire l'istruzione dopo l'altra **usando** istruzioni, prima di qualsiasi dichiarazione nell'applicazione, ad esempio:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -171,9 +171,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Creazione di un avviso in Visual C#  
  In questo esempio di codice viene creato un avviso attivato da una condizione delle prestazioni. La condizione deve essere fornita in un formato specifico:  
   
- **NomeOggetto | CounterName | Istanza | ComparisionOp | CompValue**  
+ **ObjectName | CounterName | Istanza | ComparisionOp | CompValue**  
   
- Per la notifica dell'avviso è necessario un operatore. Il <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo richiede le parentesi quadre perché **operatore** è un [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] (parola chiave).  
+ Per la notifica dell'avviso è necessario un operatore. Il <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo richiede le parentesi quadre in quanto **operator** è un [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] (parola chiave).  
   
 ```csharp  
 {  
@@ -204,9 +204,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>Creazione di un avviso in PowerShell  
  In questo esempio di codice viene creato un avviso attivato da una condizione delle prestazioni. La condizione deve essere fornita in un formato specifico:  
   
- **NomeOggetto | CounterName | Istanza | ComparisionOp | CompValue**  
+ **ObjectName | CounterName | Istanza | ComparisionOp | CompValue**  
   
- Per la notifica dell'avviso è necessario un operatore. Il <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo richiede le parentesi quadre perché **operatore** è un [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] (parola chiave).  
+ Per la notifica dell'avviso è necessario un operatore. Il <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo richiede le parentesi quadre in quanto **operator** è un [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] (parola chiave).  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

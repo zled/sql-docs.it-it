@@ -1,5 +1,5 @@
 ---
-title: Numero di proprietà (ADO) | Documenti Microsoft
+title: Numero di proprietà (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -21,30 +21,30 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3fca9c0eb3adf908b65c16e54ffb21e9d0ae49e0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2547f22251d9137dc8ca57e8ed29f7aa36251267
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279943"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985343"
 ---
 # <a name="number-property-ado"></a>Proprietà Number (ADO)
-Indica il numero che identifica in modo univoco un [errore](../../../ado/reference/ado-api/error-object.md) oggetto.  
+Indica il numero che identifica in modo univoco un' [errore](../../../ado/reference/ado-api/error-object.md) oggetto.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un **lungo** valore che può corrispondere a uno del [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md) costanti.  
+ Restituisce un **lungo** valore che può corrispondere a uno delle [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md) costanti.  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare il **numero** proprietà per determinare l'errore verificatosi. Il valore della proprietà è un numero univoco che corrisponde alla condizione di errore.  
+## <a name="remarks"></a>Note  
+ Usare la **numero** proprietà per determinare l'errore verificatosi. Il valore della proprietà è un numero univoco che corrisponde alla condizione di errore.  
   
- Il [errori](../../../ado/reference/ado-api/errors-collection-ado.md) raccolta restituisce un valore HRESULT in formato esadecimale (ad esempio, 0x80004005) o come valore long (ad esempio, 2147467259). Tali valori HRESULT possono essere generati da componenti sottostanti, ad esempio OLE DB o OLE stesso. Per ulteriori informazioni su questi numeri, vedere [errori (OLE DB)](http://msdn.microsoft.com/en-us/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) nel [riferimento per programmatori OLE DB](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  
+ Il [errori](../../../ado/reference/ado-api/errors-collection-ado.md) raccolta restituisce un valore HRESULT in formato esadecimale (ad esempio, 0x80004005) o come valore long (ad esempio, 2147467259). Questi valori HRESULT possono essere generati da componenti sottostanti, ad esempio OLE DB o OLE stesso. Per altre informazioni su questi valori, vedere [errori (OLE DB)](http://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) nel [riferimento per programmatori OLE DB](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Error](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà SQLState (VB), HelpContext, HelpFile, NativeError, numero, origine e descrizione](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Esempio di proprietà SQLState (VC + +), HelpContext, HelpFile, NativeError, numero, origine e descrizione](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description, HelpContext, HelpFile, NativeError, numero, origine e SQLState proprietà esempio (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description, HelpContext, HelpFile, NativeError, numero, origine e SQLState esempio di proprietà (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Proprietà Description](../../../ado/reference/ado-api/description-property.md)   
  [Proprietà HelpContext, HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Proprietà Source (errore ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)

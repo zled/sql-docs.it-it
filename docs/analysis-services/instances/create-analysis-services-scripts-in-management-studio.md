@@ -1,5 +1,5 @@
 ---
-title: Creare script per Analysis Services in Management Studio | Documenti Microsoft
+title: Creare script per Analysis Services in Management Studio | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28b1b0068f9ddd9bf47bc2fe93177db469c8b4f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016818"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057819"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Creare script per Analysis Services in Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono incluse funzionalità di generazione di script, modelli ed editor che è possibile utilizzare per generare script per oggetti e attività di Analysis Services.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include funzionalità di generazione di script, modelli ed editor che è possibile usare per generare script per oggetti e attività di Analysis Services.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Generare script per attività di Analysis Services in Management Studio  
  La generazione di script per attività in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] viene effettuata facendo clic su una delle opzioni Script in una finestra di dialogo orientata all'attività. Tutte le finestre di dialogo utilizzate per eseguire attività quali backup o ripristino del database, elaborazione di un oggetto o progettazione di un'aggregazione includono un'opzione Script nella parte superiore. La selezione di una di queste opzioni consente di generare uno script XMLA basato sulle informazioni e le impostazioni nella finestra di dialogo.  
@@ -62,6 +62,6 @@ ms.locfileid: "34016818"
     >  In genere, è consigliabile selezionare **File** per creare più versioni diverse del file.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor di Query XMLA & #40; Analysis Services - dati multidimensionali & #41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
+ [Editor di Query XMLA &#40;Analysis Services - dati multidimensionali&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

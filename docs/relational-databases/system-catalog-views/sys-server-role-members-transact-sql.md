@@ -1,5 +1,5 @@
 ---
-title: Sys. server_role_members (Transact-SQL) | Documenti Microsoft
+title: Sys. server_role_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 83d2548be09bc19a664dab70f18da8611bc31bc5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221082"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039016"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "33221082"
 |**role_principal_id**|**int**|ID dell'entità server del ruolo.|  
 |**member_principal_id**|**int**|ID dell'entità server del membro.|  
   
- Per aggiungere o rimuovere l'appartenenza al ruolo di server, utilizzare il [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)istruzione.  
+ Per aggiungere o rimuovere l'appartenenza al ruolo di server, usare il [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)istruzione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Gli account di accesso possono visualizzare la propria appartenenza al ruolo del server e visualizzare gli oggetti principal_id dei membri dei ruoli predefiniti del server. Per visualizzare tutte le appartenenze al ruolo del server richiede il **VIEW DEFINITION ON SERVER ROLE** autorizzazione o l'appartenenza di **securityadmin** ruolo predefinito del server.  
+ Gli account di accesso possono visualizzare la propria appartenenza al ruolo del server e visualizzare gli oggetti principal_id dei membri dei ruoli predefiniti del server. Per visualizzare tutte le appartenenze al ruolo del server, è necessario il **VIEW DEFINITION ON SERVER ROLE** autorizzazioni o appartenenza al gruppo il **securityadmin** ruolo predefinito del server.  
   
  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -66,6 +66,6 @@ JOIN sys.server_principals AS member
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Ruoli a livello di server](../../relational-databases/security/authentication-access/server-level-roles.md)   
- [Entità &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

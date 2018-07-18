@@ -1,5 +1,5 @@
 ---
-title: FORMA (DMX) | Documenti Microsoft
+title: FORMA (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e5c86484252d45c8c7edbd79690159e116d9b3a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841674"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985294"
 ---
-# <a name="ltsource-data-querygt---shape"></a>&lt;query di dati di origine&gt; -forma
+# <a name="ltsource-data-querygt---shape"></a>&lt;query sull'origine dati&gt; -forma
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Consente di combinare query da più origini dei dati in una singola tabella gerarchica, ovvero una tabella con tabelle nidificate, che diventa la tabella dei case per il modello di data mining.  
   
- La sintassi completa del **forma** comando è documentato nel [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) Software Development Kit (SDK).  
+ La sintassi completa del **SHAPE** comando è documentato nel [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) Software Development Kit (SDK).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,14 +52,14 @@ APPEND ({ <child table query> }
  *colonna figlio*  
  Colonna della tabella figlio utilizzata per identificare le righe padre tra i risultati di una query che restituisce la tabella padre.  
   
- *nome della colonna tabella*  
+ *nome della colonna nella tabella*  
  Nome della colonna appena aggiunta nella tabella padre per creare la tabella figlio.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Le query devono essere ordinate in base alla colonna che definisce la correlazione tra la tabella padre e la tabella figlio.  
   
 ## <a name="examples"></a>Esempi  
- È possibile utilizzare l'esempio seguente all'interno di un' [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) istruzione per il training di un modello contenente una tabella nidificata. Le due tabelle all'interno di **forma** istruzione sono correlate tramite il **OrderNumber** colonna.  
+ È possibile usare l'esempio seguente all'interno di un' [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) istruzione per addestrare un modello contenente una tabella nidificata. Le due tabelle all'interno di **forma** istruzione sono correlati tramite il **OrderNumber** colonna.  
   
 ```  
 SHAPE {  
@@ -72,9 +72,9 @@ SHAPE {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#60;query di origine dati&#62;](../dmx/source-data-query.md)   
- [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
+ [&#60;query sull'origine dati&#62;](../dmx/source-data-query.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

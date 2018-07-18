@@ -1,5 +1,5 @@
 ---
-title: ultima funzione (XQuery) | Documenti Microsoft
+title: Funzione (XQuery) Last | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 33b7afe5bdef612fe48938d8118c17d5d6e7a512
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076695"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038439"
 ---
 # <a name="context-functions---last-xquery"></a>Funzioni di contesto - last (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "33076695"
 fn:last() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- In SQL Server, **fn:last()** può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi (`[ ]`).  
+## <a name="remarks"></a>Note  
+ In SQL Server **fn:last()** può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi (`[ ]`).  
   
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. Utilizzo della funzione XQuery last() per recuperare le ultime due fasi di produzione  
- La query seguente recupera le ultime due fasi di produzione relative a un modello di prodotto specifico. Il valore, il numero di fasi di produzione, come risultato il **Last** funzione viene utilizzata in questa query per recuperare le ultime due fasi di produzione.  
+ La query seguente recupera le ultime due fasi di produzione relative a un modello di prodotto specifico. Il valore, il numero di fasi di produzione, restituiti dai **Last** funzione viene utilizzata nella query seguente per recuperare le ultime due fasi di produzione.  
   
 ```  
 SELECT ProductModelID, Instructions.query('   

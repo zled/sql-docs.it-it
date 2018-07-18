@@ -1,5 +1,5 @@
 ---
-title: sp_addsrvrolemember (Transact-SQL) | Documenti Microsoft
+title: sp_addsrvrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 8d718d3cb44a4a1f148cd92df72dde7465b61762
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238881"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056099"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @loginame **=** ] **'***accesso***'**  
+ [ @loginame **=** ] **'***login***'**  
  Nome dell'account di accesso aggiunto al ruolo predefinito del server. *account di accesso* viene **sysname**, non prevede alcun valore predefinito. *account di accesso* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un account di accesso di Windows. Gli account di Windows che non dispongono ancora dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricevono automaticamente l'autorizzazione di accesso.  
   
  [ @rolename **=** ] **'***ruolo***'**  
@@ -73,10 +73,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se si aggiunge un account di accesso a un ruolo predefinito del server, tale account eredita le autorizzazioni associate al ruolo.  
   
- Impossibile modificare l'appartenenza al ruolo dell'account di accesso sa e pubblici.  
+ Impossibile modificare l'appartenenza al ruolo dell'account di accesso dell'amministratore di sistema e pubblici.  
   
  Utilizzare sp_addrolemember per aggiungere un membro a un database predefinito o un ruolo definito dall'utente.  
   

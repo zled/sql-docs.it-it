@@ -1,5 +1,5 @@
 ---
-title: Gestione degli eventi SMO | Documenti Microsoft
+title: Gestione degli eventi SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6ce6066af6508215ebe84fc3e8f5680c06a246ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967606"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988213"
 ---
 # <a name="handling-smo-events"></a>Gestione degli eventi SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "32967606"
 ## <a name="event-subscription"></a>Sottoscrizione di eventi  
  Per gestire gli eventi è necessario scrivere una classe del gestore evento, crearne un'istanza, assegnare il gestore evento all'oggetto padre e infine effettuare la sottoscrizione all'evento.  
   
- Per gestire gli eventi, è necessario scrivere una classe del gestore evento. La classe del gestore evento può contenere più di una funzione del gestore evento e deve essere installata per poter gestire gli eventi. Le funzioni del gestore evento ricevono informazioni sull'evento dal *ServerEventNotificatificationArgs* parametro che può essere utilizzato per segnalare informazioni sull'evento.  
+ Per gestire gli eventi, è necessario scrivere una classe del gestore evento. La classe del gestore evento può contenere più di una funzione del gestore evento e deve essere installata per poter gestire gli eventi. Le funzioni del gestore evento ricevono informazioni sull'evento dal *ServerEventNotificatificationArgs* parametro che può essere usato per segnalare informazioni sull'evento.  
   
- Cui sono elencati i tipi di eventi di database e server che possono essere gestiti i <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> classe e <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>classe.  
+ Sono elencati i tipi di eventi di database e server che possono essere gestiti nel <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> classi e <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>classe.  
   
 ## <a name="example"></a>Esempio  
 Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

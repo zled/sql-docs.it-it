@@ -1,5 +1,5 @@
 ---
-title: database_scoped_configurations (Transact-SQL) | Documenti Microsoft
+title: Sys. database_scoped_configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 373d2933d362f565799518bfe1af516ad1943276
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172990"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989245"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,17 +38,17 @@ ms.locfileid: "34172990"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|ID dell'opzione di configurazione.|  
-|**name**|**nvarchar(60)**|Il nome dell'opzione di configurazione. Per informazioni sulle possibili configurazioni, vedere [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
+|**name**|**nvarchar(60)**|Il nome dell'opzione di configurazione. Per informazioni sulle configurazioni possibili, vedere [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
 |**Valore**|**sqlvariant**|Il valore impostato per questa opzione di configurazione per la replica primaria.|  
 |**value_for_secondary**|**sqlvariant**|Il valore impostato per questa opzione di configurazione per le repliche secondarie.|  
-|**elevate_online**|**nvarchar(60)** |Il database con ambito di set predefiniti per l'opzione per le operazioni sugli indici online |
-|**elevate_resumable**|nvarchar(60)|Il database con ambito di set predefinito per l'opzione può essere ripristinato per operazioni sugli indici| 
+|**elevate_online**|**nvarchar(60)** |Il database con ambito di set predefinito per l'opzione per operazioni sugli indici online |
+|**elevate_resumable**|nvarchar(60)|Il database con ambito di set predefinito per l'opzione resumable per operazioni sugli indici| 
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="Permissions"></a> Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
-## <a name="remarks"></a>Osservazioni  
- Quando viene restituito NULL come valore per **value_for_secondary**, ciò significa che il database secondario è impostato su primario.  
+## <a name="remarks"></a>Note  
+ Quando viene restituito NULL come valore per **value_for_secondary**, ciò significa che il database secondario viene impostato alla replica primaria.  
  
  Le impostazioni di configurazione con ambito database saranno trasferite insieme al database. Ciò significa che quando un database viene ripristinato o collegato, le impostazioni di configurazione esistenti non vengono modificate.
   

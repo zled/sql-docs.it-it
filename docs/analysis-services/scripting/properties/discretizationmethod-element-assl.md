@@ -1,5 +1,5 @@
 ---
-title: Elemento DiscretizationMethod (ASSL) | Documenti Microsoft
+title: Elemento DiscretizationMethod (ASSL) | Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 81064689788574061f103b973a5435beb3e83893
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34036412"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002203"
 ---
 # <a name="discretizationmethod-element-assl"></a>Elemento DiscretizationMethod (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34036412"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|*Nessuno*|  
@@ -44,24 +44,24 @@ ms.locfileid: "34036412"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md), [ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
- Il valore della **DiscretizationMethod** elemento determina come i valori per il **DimensionAttribute** o **ScalarMiningStructureColumn** vengono discretizzati o organizzati in un set di gruppi specifico. Per ulteriori informazioni sui metodi di discretizzazione, vedere [metodi di discretizzazione &#40;Data Mining&#41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md).  
+## <a name="remarks"></a>Note  
+ Il valore dei **DiscretizationMethod** elemento determina come i valori per il **DimensionAttribute** oppure **ScalarMiningStructureColumn** vengono discretizzati o organizzati in un set di gruppi specifico. Per altre informazioni sui metodi di discretizzazione, vedere [metodi di discretizzazione &#40;Data Mining&#41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md).  
   
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |*Automatico*|Equivale al metodo di discretizzazione AUTOMATIC per le colonne della struttura di data mining.|  
 |*EqualAreas*|Equivale al metodo di discretizzazione EQUAL_AREAS per le colonne della struttura di data mining.|  
-|*Clusters*|Equivale al metodo di discretizzazione CLUSTERS per le colonne della struttura di data mining.|  
+|*Cluster*|Equivale al metodo di discretizzazione CLUSTERS per le colonne della struttura di data mining.|  
 |*Thresholds*|Equivale al metodo di discretizzazione THRESHOLDS per le colonne della struttura di data mining.|  
 |*EqualRanges*|Equivale al metodo di discretizzazione EQUAL_RANGES per le colonne della struttura di data mining.|  
   
- L'enumerazione che corrisponde ai valori consentiti per **DiscretizationMethod** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DiscretizationMethod>.  
+ L'enumerazione che corrisponde ai valori consentiti per **DiscretizationMethod** nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DiscretizationMethod>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Proprietà &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

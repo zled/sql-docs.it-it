@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 concetti relativi alla programmazione | Documenti Microsoft
+title: SQLXML 4.0 concetti di programmazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0071c9f56d118c3d80a92d556c29b813a25cdee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970506"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003393"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Concetti relativi alla programmazione SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,19 +58,19 @@ ms.locfileid: "32970506"
  [Uso di query XPath in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  Viene descritto come utilizzare un subset del linguaggio XPath per eseguire query sulle viste XML create da uno schema XSD con annotazioni, con l'ausilio di alcuni esempi.  
   
- [Utilizzo di updategram per modificare i dati in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [Uso di updategram per modificare dati in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Vengono fornite informazioni sugli updategram che consentono di modificare i dati in un database agendo sulle viste XML fornite dagli schemi XSD o XDR con annotazioni.  
   
- [Esecuzione del caricamento Bulk di dati XML & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Caricamento Bulk di dati XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  Viene descritto come eseguire il caricamento bulk dei dati XML in SQLXML 4.0.  
   
- [SQLXML 4.0 Data Access Components](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
+ [Componenti per l'accesso ai dati SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  Viene descritto il provider SQLXMLOLEDB e vengono forniti collegamenti ad altri componenti per l'accesso ai dati SQLXML 4.0.  
   
- [Supporto per SQLXML 4.0 di .NET Framework](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
+ [Supporto XQLXML 4.0 per Microsoft .NET Framework](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
  Viene descritto il supporto SQLXML 4.0 per .NET Framework.  
   
- [La memorizzazione nella cache i modelli, XSL e schemi &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
+ [La memorizzazione nella cache i modelli, file XSL e schemi di &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
  Viene descritta la funzionalità di memorizzazione nella cache disponibile in SQLXML per il miglioramento delle prestazioni.  
   
  [Considerazioni sulla sicurezza per SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  

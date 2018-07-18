@@ -17,31 +17,31 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6f8281d520f64580af8432dbf2004227ce628d41
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180627"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987193"
 ---
 # <a name="syspdwhealthalerts-transact-sql"></a>sys.pdw_health_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Consente di archiviare proprietà per gli avvisi diversi che possono verificarsi nel sistema. si tratta di una tabella del catalogo per gli avvisi.  
+  Archivia le proprietà per i diversi avvisi che possono verificarsi nel sistema. si tratta di una tabella del catalogo per gli avvisi.  
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|alert_id|**int**|Identificatore univoco dell'avviso.<br /><br /> Chiave per la visualizzazione.|NOT NULL|  
-|component_id|**int**|ID del componente di a che questo avviso si applica. Il componente è un identificatore del componente generale, ad esempio "Alimentatore," e non è specifico di un'installazione. Vedere [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
+|alert_id|**int**|Identificatore univoco dell'avviso.<br /><br /> Chiave per questa visualizzazione.|NOT NULL|  
+|component_id|**int**|ID del componente di a che questo avviso si applica. Il componente è un identificatore del componente generali, ad esempio "Stato dell'alimentatore," e non è specifico di un'installazione. Visualizzare [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
 |alert_name|**nvarchar(255)**|Nome dell'avviso.|NOT NULL|  
-|state|**nvarchar(32)**|Stato dell'avviso.|NOT NULL<br /><br /> I valori possibili sono:<br /><br /> 'Operational'<br /><br /> "Non operativo"<br /><br /> 'Danneggiato'<br /><br /> "Non riuscito"|  
-|severity|**nvarchar(32)**|Gravità dell'avviso.|NOT NULL<br /><br /> I valori possibili sono:<br /><br /> 'Informativo'<br /><br /> 'Avviso'<br /><br /> 'Error'|  
+|state|**nvarchar(32)**|Stato dell'avviso.|NOT NULL<br /><br /> I valori possibili sono:<br /><br /> 'Operational'<br /><br /> "Non operativo"<br /><br /> "Degradato"<br /><br /> "Non riuscito"|  
+|severity|**nvarchar(32)**|Gravità dell'avviso.|NOT NULL<br /><br /> I valori possibili sono:<br /><br /> 'Informational'<br /><br /> "Avviso"<br /><br /> 'Error'|  
 |Tipo|**nvarchar(32)**|Tipo di avviso.|NOT NULL<br /><br /> I valori possibili sono:<br /><br /> StatusChange - è stato modificato lo stato del dispositivo.<br /><br /> Soglia - valore ha superato il valore di soglia.|  
 |description|**nvarchar(4000)**|Descrizione dell'avviso.|NOT NULL|  
-|condizione|**nvarchar(255)**|Tipo utilizzato quando = soglia. Definisce la modalità di calcolo della soglia di avviso.|NULL|  
+|condizione|**nvarchar(255)**|Utilizzato quando tipo uguale a soglia. Definisce come viene calcolata la soglia di avviso.|NULL|  
 |status|**nvarchar(32)**|Stato dell'avviso|NULL|  
-|condition_value|**bit**|Indica se l'avviso è consentito durante il funzionamento del sistema.|NULL<br /><br /> Valori possibili<br /><br /> 0 - avviso non viene generato.<br /><br /> 1 - l'avviso viene generato.|  
+|condition_value|**bit**|Indica se l'avviso può verificarsi durante il funzionamento del sistema.|NULL<br /><br /> Valori possibili<br /><br /> 0 - avviso non viene generato.<br /><br /> 1 - avviso viene generato.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e viste del catalogo Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse e Parallel Data Warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

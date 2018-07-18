@@ -1,5 +1,5 @@
 ---
-title: Funzione namespace-uri (XQuery) | Documenti Microsoft
+title: Funzione namespace-uri (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0107819414ce52418b369401feecff73441b63bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077248"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039633"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funzioni sui nodi - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce l'URI spazio dei nomi del QName specificato *$arg* come xs: String.  
+  Restituisce lo spazio dei nomi dell'elemento QName specificato nell'URI *$arg* come xs: String.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,15 +46,15 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Nome del nodo di cui verrà recuperata la parte relativa all'URI dello spazio dei nomi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 -   Se l'argomento viene omesso, l'impostazione predefinita è il nodo di contesto.  
   
--   In SQL Server, **fn:namespace-uri()** senza un argomento può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]).  
+-   In SQL Server **fn:namespace-uri()** senza un argomento può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]).  
   
 -   Se *$arg* è una sequenza vuota, viene restituita la stringa di lunghezza zero.  
   
--   Se *$arg* è un elemento o nodo di attributo il cui expanded-QName non è in uno spazio dei nomi, la funzione restituisce la stringa di lunghezza zero  
+-   Se *$arg* è un elemento o nodo di attributo cui QName esteso non è in uno spazio dei nomi, la funzione restituisce la stringa di lunghezza zero  
   
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
@@ -69,7 +69,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  Poiché l'elemento QName specificato non contiene l'URI dello spazio dei nomi, ma solo il nome locale, il risultato è una stringa di lunghezza zero.  
   
- La query seguente viene eseguita Instructions di tipo **xml** colonna. L'espressione `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` restituisce l'URI dello spazio dei nomi del primo elemento figlio <`Location`> dell'elemento <`root`>.  
+ La query seguente viene specificata sulla Instructions di tipo **xml** colonna. L'espressione `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` restituisce l'URI dello spazio dei nomi del primo elemento figlio <`Location`> dell'elemento <`root`>.  
   
 ```  
 SELECT Instructions.query('  
@@ -86,7 +86,7 @@ http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuI
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. Utilizzo di namespace-uri() senza argomento in un predicato  
- La query seguente viene specificata sulla colonna XML tipizzata CatalogDescription. L'espressione restituisce tutti i nodi elemento il cui URI dello spazio dei nomi è `http://www.adventure-works.com/schemas/OtherFeatures`. Spazio dei nomi -**URI ()** viene specificata senza un argomento di funzione e viene utilizzato il nodo di contesto.  
+ La query seguente viene specificata sulla colonna XML tipizzata CatalogDescription. L'espressione restituisce tutti i nodi elemento il cui URI dello spazio dei nomi è `http://www.adventure-works.com/schemas/OtherFeatures`. Spazio dei nomi -**URI ()** funzione viene specificata senza un argomento e utilizza il nodo di contesto.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -111,7 +111,7 @@ WHERE ProductModelID=19
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  
   
--   Il **namespace-uri()** funzione restituisce istanze di tipo xs: String anziché di xs: anyURI.  
+-   Il **namespace-uri()** funzione restituisce le istanze di tipo xs: String anziché di xs: anyURI.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni sui nodi](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

@@ -1,5 +1,5 @@
 ---
-title: Metodo SetNumValue (classe SqlServiceAdvancedProperty) | Documenti Microsoft
+title: Metodo SetNumValue (classe SqlServiceAdvancedProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 5ce24abdeacdc228f61376ce8cb7c6adcd325b3e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33009698"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987983"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>Metodo SetNumValue (classe SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ object.SetNumValue(NumValue)
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) che rappresenta una proprietà avanzata.  
   
 #### <a name="parameters"></a>Parametri  
@@ -54,7 +54,7 @@ object.SetNumValue(NumValue)
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore **uint32** che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Il tipo di valore della proprietà deve essere numerico per potere impostare la proprietà su un valore numerico.  
   
 ## <a name="see-also"></a>Vedere anche  

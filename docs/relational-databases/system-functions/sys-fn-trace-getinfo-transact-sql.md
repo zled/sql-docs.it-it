@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f709ba43a3dda3b219c083449869a6963da003f5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235795"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056195"
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +50,22 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
   
 ## <a name="arguments"></a>Argomenti  
  *trace_id*  
- ID della traccia. *trace_id* è **int**.  Gli input validi sono il numero di ID di una traccia, NULL, 0 o DEFAULT. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto. Specificare NULL, 0 o DEFAULT per restituire informazioni per tutte le tracce presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ ID della traccia. *trace_id* viene **int**.  Gli input validi sono il numero di ID di una traccia, NULL, 0 o DEFAULT. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto. Specificare NULL, 0 o DEFAULT per restituire informazioni per tutte le tracce presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="tables-returned"></a>Tabelle restituite  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |traceId|**int**|ID della traccia.|  
-|proprietà|**int**|Proprietà della traccia:<br /><br /> 1= Opzioni della traccia. Per ulteriori informazioni, vedere @options in [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = Nome del file<br /><br /> 3 = Dimensioni massime<br /><br /> 4 = Ora di arresto<br /><br /> 5 = Stato corrente della traccia. 0 = arrestato. 1 = in esecuzione.|  
+|proprietà|**int**|Proprietà della traccia:<br /><br /> 1= Opzioni della traccia. Per altre informazioni, vedere @options nelle [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = Nome del file<br /><br /> 3 = Dimensioni massime<br /><br /> 4 = Ora di arresto<br /><br /> 5 = Stato corrente della traccia. 0 = arrestato. 1 = in esecuzione.|  
 |Valore|**sql_variant**|Informazioni sulla proprietà della traccia specificata.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se viene passato l'ID di una traccia specifica, fn_trace_getinfo restituisce le informazioni su tale traccia. Se viene passato un ID non valido, questa funzione restituisce un set di righe vuoto.  
   
  fn_trace_getinfo aggiunge un'estensione trc al nome di qualsiasi file di traccia incluso nel relativo set di risultati. Per informazioni sulla definizione di una traccia, vedere [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Per informazioni analoghe sui filtri di traccia, vedere [Sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  
   
- Per un esempio completo dell'utilizzo di traccia di stored procedure, vedere [creare una traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
+ Per un esempio completo dell'utilizzo delle procedure di traccia archiviato, vedere [creare una traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER TRACE nel server.  

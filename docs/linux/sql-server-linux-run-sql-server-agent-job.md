@@ -1,6 +1,6 @@
 ---
-title: Creare ed eseguire processi di SQL Server in Linux | Documenti Microsoft
-description: In questa esercitazione viene illustrato come eseguire il processo di agente SQL Server in Linux.
+title: Creare ed eseguire i processi di SQL Server in Linux | Microsoft Docs
+description: Questa esercitazione illustra come eseguire il processo di SQL Server Agent in Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,29 +13,29 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.openlocfilehash: 162015772bb54023816fcc7d911ca34fbd4a3ac7
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455114"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001803"
 ---
-# <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Creare ed eseguire processi di SQL Server Agent in Linux
+# <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Creare ed eseguire i processi di SQL Server Agent in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Processi di SQL Server vengono utilizzati per eseguire regolarmente la stessa sequenza di comandi nel database di SQL Server. In questa esercitazione fornisce un esempio di come creare un processo di agente SQL Server in Linux tramite Transact-SQL e SQL Server Management Studio (SSMS).
+Processi di SQL Server vengono usati per eseguire regolarmente la stessa sequenza di comandi nel database di SQL Server. Questa esercitazione offre un esempio di come creare un processo di SQL Server Agent in Linux tramite Transact-SQL e SQL Server Management Studio (SSMS).
 
 > [!div class="checklist"]
-> * Installare SQL Server Agent su Linux
+> * Installare SQL Server Agent in Linux
 > * Creare un nuovo processo per eseguire i backup giornalieri di database
 > * Pianificare ed eseguire il processo
 > * Eseguire gli stessi passaggi in SQL Server Management Studio (facoltativo)
 
-Per i problemi noti con SQL Server Agent in Linux, vedere il [note sulla versione](sql-server-linux-release-notes.md).
+Per problemi noti relativi a SQL Server Agent in Linux, vedere la [note sulla versione](sql-server-linux-release-notes.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per completare questa esercitazione, sono necessari i seguenti prerequisiti:
+Per completare questa esercitazione sono necessari i prerequisiti seguenti:
 
 * Computer Linux con i seguenti prerequisiti:
   * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), o [Ubuntu](quickstart-install-connect-ubuntu.md)) con gli strumenti da riga di comando.
@@ -47,9 +47,9 @@ I prerequisiti seguenti sono facoltativi:
 
 ## <a name="enable-sql-server-agent"></a>Abilitare SQL Server Agent
 
-Per utilizzare SQL Server Agent in Linux, è prima necessario abilitare SQL Server Agent in un computer che dispone già di SQL Server 2017 installato.
+Per usare SQL Server Agent in Linux, è innanzitutto necessario abilitare SQL Server Agent in un computer che dispone già di SQL Server 2017 installato.
 
-1. Per abilitare SQL Server Agent, seguire la procedura riportata di seguito.
+1. Per abilitare SQL Server Agent, attenersi alla procedura seguente.
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   ```
@@ -60,15 +60,15 @@ Per utilizzare SQL Server Agent in Linux, è prima necessario abilitare SQL Serv
   ```
 
 > [!NOTE]
-> A partire da SQL Server 2017 CU4, SQL Server Agent è incluso il **mssql server** pacchetto e viene disabilitata per impostazione predefinita. Per l'agente viene impostato prima della visita CU4, [installare SQL Server Agent in Linux](sql-server-linux-setup-sql-agent.md).
+> A partire da SQL Server 2017 CU4, SQL Server Agent è incluso con il **mssql-server** pacchetto ed è disabilitata per impostazione predefinita. Per configurare l'agente prima della visita, CU4 [installare SQL Server Agent in Linux](sql-server-linux-setup-sql-agent.md).
 
 ## <a name="create-a-sample-database"></a>Creare un database di esempio
 
-Utilizzare la procedura seguente per creare un database di esempio denominato **SampleDB**. Questo database viene utilizzato per il processo di backup giornaliero.
+Usare la procedura seguente per creare un database di esempio denominato **SampleDB**. Questo database viene utilizzato per il processo di backup giornaliero.
 
-1. Nel computer Linux, aprire una sessione terminal bash.
+1. Nel computer Linux, aprire una finestra del terminale bash.
 
-1. Utilizzare **sqlcmd** per l'esecuzione di Transact-SQL **CREATE DATABASE** comando.
+1. Uso **sqlcmd** per eseguire t-SQL **CREATE DATABASE** comando.
 
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -Q 'CREATE DATABASE SampleDB'
@@ -82,12 +82,12 @@ Utilizzare la procedura seguente per creare un database di esempio denominato **
 
 ## <a name="create-a-job-with-transact-sql"></a>Creare un processo con Transact-SQL
 
-La procedura seguente crea un processo di SQL Server Agent in Linux con comandi Transact-SQL. Il processo viene eseguito un backup del database di esempio, giornaliero **SampleDB**.
+La procedura seguente crea un processo di SQL Server Agent in Linux con i comandi Transact-SQL. Il processo viene eseguito un backup del database di esempio, giornaliero **SampleDB**.
 
 > [!TIP]
-> È possibile utilizzare qualsiasi client di T-SQL per eseguire questi comandi. In Linux, ad esempio, è possibile utilizzare [sqlcmd](sql-server-linux-setup-tools.md) o [codice di Visual Studio](sql-server-linux-develop-use-vscode.md). Da un Server remoto di Windows, è anche possibile eseguire query in SQL Server Management Studio (SSMS) o usare l'interfaccia dell'interfaccia utente per la gestione dei processi, descritto nella sezione successiva.
+> È possibile utilizzare qualsiasi client di T-SQL per eseguire questi comandi. In Linux, ad esempio, è possibile usare [sqlcmd](sql-server-linux-setup-tools.md) oppure [Visual Studio Code](sql-server-linux-develop-use-vscode.md). Da un Server remoto di Windows, è anche possibile eseguire query in SQL Server Management Studio (SSMS) o usare l'interfaccia dell'interfaccia utente per la gestione dei processi, che è descritti nella sezione successiva.
 
-1. Utilizzare [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) per creare un processo denominato `Daily SampleDB Backup`.
+1. Uso [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) per creare un processo denominato `Daily SampleDB Backup`.
 
    ```sql
    -- Adds a new job executed by the SQLServerAgent service
@@ -99,7 +99,7 @@ La procedura seguente crea un processo di SQL Server Agent in Linux con comandi 
    GO
    ```
 
-1. Chiamare [sp_add_jobstep](../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md) per creare un passaggio di processo che consente di creare un backup del `SampleDB` database.
+1. Chiamare [sp_add_jobstep](../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md) per creare un passaggio di processo che crea un backup del `SampleDB` database.
 
    ```sql
    -- Adds a step (operation) to the job
@@ -128,7 +128,7 @@ La procedura seguente crea un processo di SQL Server Agent in Linux con comandi 
    GO
    ```
 
-1. Collegare la pianificazione del processo per il processo con [sp_attach_schedule](../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md).
+1. Collegare la pianificazione del processo al processo con [sp_attach_schedule](../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md).
 
    ```sql
    -- Sets the 'Daily' schedule to the 'Daily SampleDB Backup' Job
@@ -138,7 +138,7 @@ La procedura seguente crea un processo di SQL Server Agent in Linux con comandi 
    GO
    ```
 
-1. Utilizzare [sp_add_jobserver](../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md) per assegnare il processo a un server di destinazione. In questo esempio, la destinazione è il server locale.
+1. Uso [sp_add_jobserver](../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md) per assegnare il processo a un server di destinazione. In questo esempio, la destinazione è il server locale.
 
    ```sql
    EXEC dbo.sp_add_jobserver
@@ -155,15 +155,15 @@ La procedura seguente crea un processo di SQL Server Agent in Linux con comandi 
 
 ## <a name="create-a-job-with-ssms"></a>Creare un processo con SQL Server Management Studio
 
-È anche possibile creare e gestire i processi in modalità remota tramite SQL Server Management Studio (SSMS) in Windows.
+È anche possibile creare e gestire i processi in remoto con SQL Server Management Studio (SSMS) in Windows.
 
-1. Avviare SQL Server Management Studio in Windows e connettersi all'istanza del Server SQL di Linux. Per ulteriori informazioni, vedere [gestire SQL Server in Linux con SSMS](sql-server-linux-manage-ssms.md).
+1. Avviare SQL Server Management Studio in Windows e connettersi all'istanza di Linux di SQL Server. Per altre informazioni, vedere [gestire SQL Server in Linux con SQL Server Management Studio](sql-server-linux-manage-ssms.md).
 
 1. Verificare che è stato creato un database di esempio denominato **SampleDB**.
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
 
-1. Verificare che SQL Agent sia stata [installato](sql-server-linux-setup-sql-agent.md) e configurato correttamente. Cercare sul segno più accanto a SQL Server Agent in Esplora oggetti. Se SQL Server Agent non è abilitato, provare a riavviare il **mssql server** servizio su Linux.
+1. Verificare che SQL Agent sia stata [installato](sql-server-linux-setup-sql-agent.md) e configurato correttamente. Cercare il segno più accanto a SQL Server Agent in Esplora oggetti. Se SQL Server Agent non è abilitata, provare a riavviare la **mssql-server** service in Linux.
 
    ![Verificare che sia stato installato SQL Server Agent](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-1.png)
 
@@ -171,11 +171,11 @@ La procedura seguente crea un processo di SQL Server Agent in Linux con comandi 
 
    ![Creare un nuovo processo](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-2.png)
 
-1. Assegnare il processo di un nome e il passaggio di processo di creazione.
+1. Assegnare un nome di processo e crea il passaggio di processo.
 
    ![Creare un passaggio di processo](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-3.png)
 
-1. Specificare il sottosistema che si desidera utilizzare e che il passaggio del processo deve essere eseguita.
+1. Specificare quale sottosistema da usare e ciò che dovrebbe eseguire il passaggio del processo.
 
    ![Sottosistema di processo](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-4.png)
 
@@ -193,15 +193,15 @@ La procedura seguente crea un processo di SQL Server Agent in Linux con comandi 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa esercitazione, si è appreso come:
+In questa esercitazione si è appreso come:
 
 > [!div class="checklist"]
-> * Installare SQL Server Agent su Linux
-> * Stored procedure per creare processi di utilizzare Transact-SQL e sistema
+> * Installare SQL Server Agent in Linux
+> * Uso di Transact-SQL e di sistema stored procedure per creare i processi
 > * Creare un processo che esegue i backup giornalieri di database
-> * Utilizzare SSMS UI per creare e gestire i processi
+> * Usare SSMS UI per creare e gestire i processi
 
-Successivamente, è possibile esaminare altre funzionalità per la creazione e la gestione dei processi:
+Successivamente, esplorare altre funzionalità per la creazione e la gestione dei processi:
 
 > [!div class="nextstepaction"]
 >[Documentazione di SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)

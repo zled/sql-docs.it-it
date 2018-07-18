@@ -1,5 +1,5 @@
 ---
-title: Compatibilità delle formule DAX in modalità DirectQuery | Documenti Microsoft
+title: Compatibilità delle formule DAX in modalità DirectQuery | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2005742b524db0ec5587ad3f8d959b03dec6965b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4bcebbcf8702c2605d36df844f5db7c7b5699a22
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045645"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985383"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilità delle formule DAX in modalità DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Per 1200 e versioni successive i modelli tabulari in modalità DirectQuery, molte limitazioni di funzionalità nelle versioni precedenti non sono più valide. In particolare, per quanto riguarda le formule DAX:
+Per i modelli 1200 e versioni successive in modalità DirectQuery, molte limitazioni funzionale nelle versioni precedenti non sono più valide. In particolare, per quanto riguarda le formule DAX:
 
 - DirectQuery genera ora query più semplici, con un significativo miglioramento delle prestazioni.
-- Sicurezza a livello di riga (riga) è ora supportato in modalità DirectQuery.
+- Sicurezza a livello di riga (RLS) è ora supportata in modalità DirectQuery.
 - Le colonne calcolate sono ora supportate per i modelli tabulari in modalità DirectQuery.
 
 ## <a name="dax-functions-in-directquery-mode"></a>Funzioni DAX in modalità DirectQuery
 
-In breve, tutte le funzioni DAX sono supportate per i modelli DirectQuery. Tuttavia, non tutte le funzioni sono supportate per tutti i tipi di formule, e non tutte le funzioni sono state ottimizzate per i modelli DirectQuery. A livello base, è possibile dividere le funzioni DAX in due categorie: ottimizzate e non ottimizzate. Di seguito vengono descritte le funzioni ottimizzate.
+In breve, tutte le funzioni DAX sono supportate per i modelli DirectQuery. Tuttavia, non tutte le funzioni sono supportate per tutti i tipi di formula e non tutte le funzioni sono state ottimizzate per i modelli DirectQuery. A livello base, è possibile dividere le funzioni DAX in due categorie: ottimizzate e non ottimizzate. Di seguito vengono descritte le funzioni ottimizzate.
 
 
 ### <a name="optimized-for-directquery"></a>Funzioni ottimizzate per DirectQuery
@@ -34,21 +34,21 @@ Si tratta di funzioni che restituiscono principalmente risultati scalari o aggre
 
 | Supportate in tutte le formule DAX                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Supportate soltanto nelle formule di misura e query                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ABS</br>  ACOS</br>  ACOT</br>  AND</br>  ASIN</br>  ATAN</br>  BLANK</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  CURRENCY</br>  DATE</br>  DATEDIFF</br>  DATEVALUE</br>  DAY</br>  DEGREES</br>  Divisione</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  FIND</br>  HOUR</br>  IF</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  LEFT</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  LOWER</br>  MAX</br>  MID</br>  MIN</br>  MINUTE</br>  MOD</br>  MONTH</br>  MROUND</br>  NOT</br>  NOW</br>  OPPURE</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  RIGHT</br>  ROUND</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  SECOND</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  SWITCH</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  TODAY</br>  TRIM</br>  TRUE</br>  TRUNC</br>  UNICODE</br>  UPPER</br>  USERNAME</br>  USERELATIONSHIP</br>  VALUE</br>  WEEKDAY</br>  WEEKNUM</br>  YEAR</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> AVERAGE</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> SUM</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
+| ABS</br>  ACOS</br>  ACOT</br>  AND</br>  ASIN</br>  ATAN</br>  BLANK</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  CURRENCY</br>  DATE</br>  DATEDIFF</br>  DATEVALUE</br>  DAY</br>  DEGREES</br>  Divisione</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  FIND</br>  HOUR</br>  IF</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  LEFT</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  LOWER</br>  MAX</br>  MID</br>  MIN</br>  MINUTE</br>  MOD</br>  MONTH</br>  MROUND</br>  NOT</br>  NOW</br>  o</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  RIGHT</br>  ROUND</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  SECOND</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  SWITCH</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  TODAY</br>  TRIM</br>  TRUE</br>  TRUNC</br>  UNICODE</br>  UPPER</br>  USERNAME</br>  USERELATIONSHIP</br>  Value</br>  WEEKDAY</br>  WEEKNUM</br>  YEAR</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> AVERAGE</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> SUM</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
 
 
 
 ### <a name="non-optimized-for-directquery"></a>Funzioni non ottimizzate per DirectQuery
-Queste funzioni non sono state ottimizzate per l'utilizzo di DirectQuery. Queste funzioni *non* sono supportate nelle formule di colonna calcolata e sicurezza a livello di riga. Queste funzioni, tuttavia, *sono supportate* nelle formule di misura e query, anche se con prestazioni incerte.
+Queste funzioni non sono state ottimizzate per l'uso con DirectQuery. Queste funzioni *non* sono supportate nelle formule di colonna calcolata e sicurezza a livello di riga. Queste funzioni, tuttavia, *sono supportate* nelle formule di misura e query, anche se con prestazioni incerte.
 
  In questo articolo non viene fornito l'elenco di tutte queste funzioni. In sostanza, se una funzione non è inclusa nell'elenco delle funzioni ottimizzate riportato sopra, significa che si tratta di una funzione non ottimizzata per DirectQuery.
 
 Il motivo per cui è possibile che una particolare funzione non sia ottimizzata per DirectQuery risiede nel fatto che il motore relazionale sottostante non è in grado di eseguire calcoli equivalenti a quelli eseguiti dal motore xVelocity oppure che la formula non può essere convertita in un'espressione SQL equivalente. In altri casi, le prestazioni dell'espressione convertita e i calcoli risultanti potrebbero essere inaccettabili.
 
-Per ulteriori informazioni su tutte le funzioni DAX, vedere il [riferimento alle funzioni DAX]. (https://msdn.microsoft.com/en-us/library/ee634396.aspx)
+Per informazioni su tutte le funzioni DAX, vedere il [riferimento alle funzioni DAX]. (https://msdn.microsoft.com/library/ee634396.aspx)
 
 ## <a name="dax-operators-in-directquery-mode"></a>Operatori DAX in modalità DirectQuery
-Tutti gli operatori di confronto e aritmetici DAX sono completamente supportati in modalità DirectQuery. Per altre informazioni, vedere [Guida di riferimento agli operatori DAX](https://msdn.microsoft.com/library/ee634237.aspx).
+Tutti gli operatori di confronto e aritmetici DAX sono completamente supportati nella modalità DirectQuery. Per altre informazioni, vedere [Guida di riferimento agli operatori DAX](https://msdn.microsoft.com/library/ee634237.aspx).
 
 
  
@@ -117,7 +117,7 @@ Nella modalità DirectQuery i cast da rappresentazioni stringa di date e ore a v
 I modelli che utilizzano l'archivio dati in memoria supportano una gamma più limitata di formati di testo per le date rispetto ai formati stringa per date supportati in SQL Server. Tuttavia, il linguaggio DAX supporta formati data e ora personalizzati.  
   
 **Cast da stringa ad altri valori non booleani**  
-In caso di cast da stringhe a valori non booleani, la modalità DirectQuery si comporta come SQL Server. Per altre informazioni, vedere [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+In caso di cast da stringhe a valori non booleani, la modalità DirectQuery si comporta come SQL Server. Per altre informazioni, vedere [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Cast da numeri a stringa non consentito**  
 ESEMPIO: `CONCATENATE(102,”,345”)`  
@@ -342,7 +342,7 @@ In un modello in memoria il risultato termina in corrispondenza dell'ultimo cara
 
 
 ## <a name="see-also"></a>Vedere anche  
-[Modalità DirectQuery](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[Modalità DirectQuery](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

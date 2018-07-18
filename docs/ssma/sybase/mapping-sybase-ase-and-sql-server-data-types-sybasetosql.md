@@ -1,5 +1,5 @@
 ---
-title: Mapping di Sybase ASE e tipi di dati SQL Server (SybaseToSQL) | Documenti Microsoft
+title: Mapping di Sybase ASE e tipi di dati SQL Server (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,56 +19,56 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 775d251eb43ae33457d6707f1d881a72d54c0112
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6400c9ef82a9e787cf818f21d06048c02b1d28f3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779141"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985323"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mapping di Sybase ASE e tipi di dati SQL Server (SybaseToSQL)
-Tipi di database di Sybase Adaptive Server Enterprise (ASE) diversi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tipi di database di SQL Azure. Quando si esegue la conversione di oggetti di database ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o oggetti di SQL Azure, è necessario specificare come eseguire il mapping di tipi di dati di base per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefinito oppure è possibile personalizzare i mapping, come illustrato nelle sezioni seguenti.  
+Tipi di database di Sybase Adaptive Server Enterprise (ASE) sono diversi dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tipi di database di SQL Azure. Quando si convertono oggetti di database ambiente del servizio app [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o gli oggetti di SQL Azure, è necessario specificare come eseguire il mapping di tipi di dati dall'ambiente del servizio app [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefinito, oppure è possibile personalizzare i mapping come illustrato nelle sezioni seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
-SSMA è un set predefinito di mapping dei tipi di dati. Per l'elenco di mapping predefiniti, vedere [impostazioni del progetto di &#40;Mapping dei tipi&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
+SSMA è un set predefinito di mapping dei tipi di dati. Per l'elenco di mapping predefiniti, vedere [impostazioni del progetto &#40;Mapping dei tipi&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
   
-## <a name="type-mapping-inheritance"></a>Mapping di ereditarietà dei tipi  
-È possibile personalizzare i mapping dei tipi a livello di progetto, il livello di categoria oggetto (ad esempio, tutte le stored procedure) o livello di oggetto. Impostazioni vengono ereditate da un livello più alto, a meno che non viene sottoposto a override con un livello inferiore. Ad esempio, se si esegue il mapping **smallmoney** a **money** a livello di progetti, tutti gli oggetti nel progetto utilizzerà questo mapping, a meno che per personalizzare il mapping a livello di oggetto o il livello di categoria dell'oggetto.  
+## <a name="type-mapping-inheritance"></a>Tipo di Mapping dell'ereditarietà  
+È possibile personalizzare i mapping dei tipi a livello di progetto, a livello di categoria di oggetto (ad esempio, tutte le stored procedure) o a livello di oggetto. Le impostazioni vengono ereditate da un livello superiore, a meno che a un livello inferiore viene sottoposto a override. Ad esempio, se si esegue il mapping **smallmoney** al **denaro** a livello di progetti, tutti gli oggetti nel progetto userà questo mapping non è stato personalizzato il mapping a livello di oggetto categoria oppure a livello di oggetto.  
   
-Quando si visualizza il **del mapping dei tipi** scheda SSMA, lo sfondo è contraddistinte da colore per mostrare il mapping dei tipi vengono ereditati. Lo sfondo di un mapping dei tipi è giallo per il mapping dei tipi ereditati e bianco per qualsiasi mapping specificato al livello corrente.  
+Quando si visualizza il **Mapping dei tipi** scheda in SSMA, lo sfondo è contraddistinte da colorata per mostrare il mapping dei tipi vengono ereditati. Lo sfondo di un mapping dei tipi è di colore giallo per dei mapping dei tipi ereditati e bianco per qualsiasi mapping specificato al livello corrente.  
   
 ## <a name="customizing-data-type-mappings"></a>Personalizzazione dei mapping dei tipi di dati  
-La procedura seguente viene illustrato come eseguire il mapping di tipi di dati nel progetto, database o il livello di oggetto.  
+La procedura seguente illustra come eseguire il mapping di tipi di dati nel progetto, database o a livello di oggetto.  
   
 **Eseguire il mapping di tipi di dati**  
   
-1.  Per personalizzare i mapping dei tipi di dati per l'intero progetto, aprire il **impostazioni progetto** la finestra di dialogo:  
+1.  Per personalizzare i mapping dei tipi di dati per l'intero progetto, aprire il **impostazioni del progetto** nella finestra di dialogo:  
   
-    1.  Nel **strumenti** dal menu **impostazioni progetto**.  
+    1.  Nel **degli strumenti** dal menu **le impostazioni del progetto**.  
   
-    2.  Nel riquadro a sinistra, selezionare **del mapping dei tipi**.  
+    2.  Nel riquadro sinistro, selezionare **Mapping dei tipi**.  
   
         Il grafico di mapping di tipo e i pulsanti vengono visualizzati nel riquadro di destra.  
   
-    In alternativa, per personalizzare il tipo di dati mapping a livello di database, tabella, vista o stored procedure, selezionare il database, la categoria dell'oggetto oppure l'oggetto in Visualizzatore metadati Sybase:  
+    In alternativa, per personalizzare il tipo di dati mapping al database, tabella, vista o a livello di stored procedure, selezionare il database, una categoria dell'oggetto o un oggetto nel Visualizzatore metadati Sybase:  
   
-    1.  In Visualizzatore metadati Sybase, selezionare la cartella o un oggetto che si desidera personalizzare.  
+    1.  Nel Visualizzatore metadati Sybase, selezionare la cartella o un oggetto che si desidera personalizzare.  
   
-    2.  Nel riquadro di destra, fare clic su di **del mapping dei tipi** scheda.  
+    2.  Nel riquadro di destra, scegliere il **Mapping dei tipi** scheda.  
   
-2.  Per aggiungere un nuovo mapping, eseguire le operazioni seguenti:  
+2.  Per aggiungere un nuovo mapping, procedere come segue:  
   
     1.  Scegliere **Aggiungi**.  
   
-    2.  In **tipo di origine**, selezionare il tipo di dati di base per eseguire il mapping.  
+    2.  Sotto **tipo di origine**, selezionare il tipo di dati di ambiente del servizio App per eseguire il mapping.  
   
-    3.  Se il tipo richiede una lunghezza, specificare la lunghezza minima di dati per il mapping nel **da** e specificare la lunghezza massima dei dati per il mapping nel **a** casella.  
+    3.  Se il tipo richiede una lunghezza, specificare la lunghezza minima dei dati per il mapping nel **dal** casella e specificare la lunghezza massima dei dati per il mapping nel **a** casella.  
   
-        Ciò consente di personalizzare il mapping dei dati per i valori di dimensioni minori e più grandi dello stesso tipo di dati.  
+        Ciò consente di personalizzare il mapping dei dati per i valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o il tipo di dati di SQL Azure.  
+    4.  Sotto **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tipo di dati di SQL Azure.  
   
-        Alcuni tipi richiedono una lunghezza di tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire** casella.  
+        Alcuni tipi richiedono una lunghezza del tipo dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire con** casella.  
   
     5.  Fare clic su **OK**.  
   
@@ -76,27 +76,27 @@ La procedura seguente viene illustrato come eseguire il mapping di tipi di dati 
   
     1.  Fare clic su **Modifica**.  
   
-    2.  In **tipo di origine**, selezionare il tipo di dati di base per eseguire il mapping.  
+    2.  Sotto **tipo di origine**, selezionare il tipo di dati di ambiente del servizio App per eseguire il mapping.  
   
-    3.  Se il tipo richiede una lunghezza, specificare la lunghezza minima di dati per il mapping nel **da** e specificare la lunghezza massima dei dati per il mapping nel **a** casella.  
+    3.  Se il tipo richiede una lunghezza, specificare la lunghezza minima dei dati per il mapping nel **dal** casella e specificare la lunghezza massima dei dati per il mapping nel **a** casella.  
   
-        Ciò consente di personalizzare il mapping dei dati per i valori di dimensioni minori e più grandi dello stesso tipo di dati.  
+        Ciò consente di personalizzare il mapping dei dati per i valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o il tipo di dati di SQL Azure.  
+    4.  Sotto **tipo di destinazione**, selezionare la destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tipo di dati di SQL Azure.  
   
-        Alcuni tipi richiedono una lunghezza di tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire con** casella e quindi fare clic su **OK**.  
+        Alcuni tipi richiedono una lunghezza del tipo dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituita** casella e quindi fare clic su **OK**.  
   
-4.  Per rimuovere un mapping dei tipi di dati personalizzati, effettuare le operazioni seguenti:  
+4.  Per rimuovere un mapping dei tipi di dati personalizzate, eseguire le operazioni seguenti:  
   
     1.  Selezionare la riga nell'elenco di mapping di tipo che contiene il mapping dei tipi di dati che si desidera rimuovere.  
   
     2.  Scegliere **Rimuovi**.  
   
-        È possibile rimuovere i mapping ereditati. Tuttavia, i mapping ereditati vengono sovrascritte dai mapping personalizzati in un oggetto specifico o una categoria dell'oggetto.  
+        Non è possibile rimuovere i mapping ereditati. Tuttavia, i mapping ereditati vengono sottoposte a override dai mapping personalizzati di un oggetto specifico o per categoria dell'oggetto.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
-Il passaggio successivo del processo di migrazione è su [creare una relazione di valutazione](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) o [oggetti di database Sybase ASE convertire la sintassi di SQL Server o SQL Azure](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3). Se si crea una relazione di valutazione, gli oggetti di Sybase ASE vengono convertiti automaticamente durante la valutazione.  
+Il passaggio successivo del processo di migrazione consiste nel [creare un report di valutazione](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) oppure [gli oggetti di database di Sybase ASE converte alla sintassi di SQL Server o SQL Azure](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3). Se si crea un report di valutazione, gli oggetti di Sybase ASE vengono convertiti automaticamente durante la valutazione.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database Sybase ASE a SQL Server: SQL Azure database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrazione dei database di Sybase ASE a SQL Server - Azure SQL database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

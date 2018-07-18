@@ -1,5 +1,5 @@
 ---
-title: Gestione basata su criteri di Stored procedure (Transact-SQL) | Documenti Microsoft
+title: Stored procedure (Transact-SQL) della gestione basata su criteri | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7b941921556665ef27fc20f8af706d45f44dbcd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238082"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991943"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>Stored procedure per la gestione basata su criteri (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le seguente stored procedure di sistema che vengono utilizzate per la gestione basata su criteri.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le seguente stored procedure di sistema utilizzati per la gestione basata su criteri.  
   
 > [!IMPORTANT]  
 >  Sono supportate solo le stored procedure della gestione basata su criteri indicate nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le stored procedure non documentate sono utilizzate dai componenti della gestione basata su criteri interni e non devono essere utilizzate per l'amministrazione della gestione basata su criteri.  

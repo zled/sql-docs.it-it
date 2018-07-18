@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_diag_events (Transact-SQL) | Documenti Microsoft
+title: pdw_diag_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 3c7cb2aaf1fac585514c4d7e540c35c1f44fad1b
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696364"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987224"
 ---
 # <a name="syspdwdiagevents-transact-sql"></a>sys.pdw_diag_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "33696364"
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|**name**|**nvarchar(255)**|Nome dell'evento di diagnostica specifici.||  
-|**origine**|**nvarchar(255)**|Origine dell'evento (motore, generale, dms e così via)||  
-|**is_enabled**|**bit**|Se l'evento viene pubblicata.||  
+|**name**|**nvarchar(255)**|Nome dell'evento di diagnostica specifico.||  
+|**origine**|**nvarchar(255)**|Origine dell'evento (motore generale, servizio migrazione del database, e così via.)||  
+|**is_enabled**|**bit**|Indica se la pubblicazione dell'evento in corso.||  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e viste del catalogo Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse e Parallel Data Warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

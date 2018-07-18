@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5617e3d37b6c880e2d35b9f562e26714eea05a51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242888"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974013"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +59,10 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_delete_maintenance_plan_job** deve essere eseguita la **msdb** database.  
   
- Quando tutti i processi sono stati rimossi dal piano di manutenzione, è consigliabile che gli utenti eseguire **sp_delete_maintenance_plan_db** per rimuovere i database rimanenti dal piano.  
+ Quando tutti i processi sono stati rimossi dal piano di manutenzione, è consigliabile che gli utenti eseguiti **sp_delete_maintenance_plan_db** per rimuovere i database rimanenti dal piano.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_delete_maintenance_plan_job**.  

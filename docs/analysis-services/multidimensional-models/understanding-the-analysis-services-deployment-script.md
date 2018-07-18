@@ -1,5 +1,5 @@
 ---
-title: Comprendere l'analisi dello Script di distribuzione di servizi | Documenti Microsoft
+title: La comprensione dell'analisi dello Script di distribuzione di servizi | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84179762d2c4819fb5fc5f82ad6d0528ea689ecf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026578"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021426"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>Informazioni sullo script di distribuzione di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34026578"
 >  Tramite la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile distribuire oggetti solo in un singolo database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Non è possibile distribuire alcun oggetto o dato a livello del server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esegue la distribuzione guidata Analysis Services](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)   
- [Informazioni sui file di Input utilizzati per creare lo Script di distribuzione](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)  
+ [Esecuzione della Distribuzione guidata Analysis Services](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)   
+ [Informazioni sui file di input utilizzati per creare uno script di distribuzione](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)  
   
   

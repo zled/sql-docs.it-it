@@ -1,5 +1,5 @@
 ---
-title: Gestire ruoli tramite SSMS | Documenti Microsoft
+title: Gestire ruoli tramite SSMS | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 08cd1e2c1244304f0a6310485b4cac49d3174e33
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045215"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045349"
 ---
 # <a name="manage-roles-by-using-ssms"></a>Gestire ruoli tramite SSMS 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,12 +58,12 @@ ms.locfileid: "34045215"
   
 6.  Nella finestra delle impostazioni di appartenenza fare clic su **Aggiungi**e quindi, nella finestra di dialogo **Seleziona utenti o gruppi** , aggiungere gli utenti o i gruppi di Windows che si vuole aggiungere come membri.  
   
-7.  Se il ruolo in fase di creazione dispone dell'autorizzazione Lettura, è possibile aggiungere filtri di riga per qualsiasi tabella utilizzando una formula DAX. Per aggiungere filtri di riga, il **proprietà ruolo - \<rolename >** della finestra di dialogo **selezione pagina**, fare clic su **i filtri di riga**.  
+7.  Se il ruolo in fase di creazione dispone dell'autorizzazione Lettura, è possibile aggiungere filtri di riga per qualsiasi tabella utilizzando una formula DAX. Per aggiungere filtri di riga, il **proprietà ruolo - \<rolename >** nella finestra di dialogo **seleziona una pagina**, fare clic su **filtri di riga**.  
   
-8.  Nella finestra filtri di riga, selezionare una tabella, quindi fare clic su di **filtro DAX** campo, quindi nel **filtro DAX - \<tablename >** , digitare una formula DAX.  
+8.  Nella finestra filtri di riga, selezionare una tabella, quindi fare clic sul **filtro DAX** campo, quindi nel **filtro DAX - \<NomeTabella >** digitare una formula DAX.  
   
     > [!NOTE]  
-    >  Filtro DAX - \<tablename > campo non contiene un editor di query di completamento automatico o inserire una funzione. Per usare il completamento automatico quando si scrive una formula DAX, è necessario usare un editor di formule DAX in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+    >  Filtro DAX - \<NomeTabella > campo non contiene un editor di query di completamento automatico o funzione caratteristica di inserimento. Per usare il completamento automatico quando si scrive una formula DAX, è necessario usare un editor di formule DAX in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 9. Fare clic su **OK** per salvare il ruolo.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "34045215"
   
 ###  <a name="bkmk_edit_role"></a> Per modificare un ruolo  
   
--   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere il database del modello tabulare che contiene il ruolo da modificare, espandere **Ruoli**, quindi fare clic con il pulsante destro del mouse sul ruolo e fare clic su **Proprietà**.  
+-   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il database del modello tabulare che contiene il ruolo da modificare, espandere **Ruoli**, quindi fare clic con il pulsante destro del mouse sul ruolo e fare clic su **Proprietà**.  
   
-     Nel **le proprietà del ruolo** \<rolename > nella finestra di dialogo è possibile modificare le autorizzazioni, aggiungere o rimuovere membri, e aggiungere o modificare filtri di riga.  
+     Nel **le proprietà del ruolo** \<rolename > finestra di dialogo, è possibile modificare le autorizzazioni, aggiungere o rimuovere membri e i filtri di riga aggiunta/modifica.  
   
 ###  <a name="bkmk_deletet_role"></a> Per eliminare un ruolo  
   

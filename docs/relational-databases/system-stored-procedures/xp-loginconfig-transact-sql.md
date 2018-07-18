@@ -1,5 +1,5 @@
 ---
-title: xp_loginconfig (Transact-SQL) | Documenti Microsoft
+title: xp_loginconfig (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 950a01041db936c83a5a3c799f1055ab3996aa34
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260325"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003173"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,19 +47,19 @@ xp_loginconfig ['config_name']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **'** *config_name* **'**  
- Valore di configurazione da visualizzare. Se *config_name* viene omesso, vengono segnalati tutti i valori di configurazione. *config_name* viene **sysname**, con un valore predefinito è NULL, e può essere uno dei valori seguenti.  
+ **«** *config_name* **»**  
+ Valore di configurazione da visualizzare. Se *config_name* viene omesso, vengono segnalati tutti i valori di configurazione. *config_name* viene **sysname**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**modalità di accesso**|Modalità di sicurezza dell'account di accesso. I valori possibili sono **Mixed** e **l'autenticazione di Windows**.<br /><br /> Sostituito da:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**account di accesso predefinito**|Nome dell'ID di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito per gli utenti autorizzati su connessioni trusted (ovvero gli utenti che non dispongono di un nome di account di accesso corrispondente). Account di accesso predefinito è **guest**. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
 |**Dominio predefinito**|Nome del dominio di Windows predefinito per gli utenti di rete su connessioni trusted. Il dominio predefinito è il dominio del computer in cui sono in esecuzione Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
-|**livello di controllo**|Livello di controllo. I valori possibili sono **Nessuno**, **successo**, **errore**, e **tutti**. I controlli vengono scritti nel log degli errori e nel Visualizzatore eventi di Windows.|  
-|**nome host di serie**|Indica se il nome dell'host proveniente dal record dell'account di accesso del client viene sostituito con il nome utente di rete di Windows. I valori possibili sono **true** o **false**. Se questo valore è impostato, il nome utente di rete viene visualizzato nell'output da **sp_who**.|  
-|**eseguire il mapping di _**|Restituisce i caratteri speciali di Windows sui quali viene eseguito il mapping al carattere di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido _ (sottolineatura). I valori possibili sono **separatore dominio** (impostazione predefinita), **spazio**, **null**, o qualsiasi carattere singolo. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
-|**eseguire il mapping di $**|Restituisce i caratteri speciali di Windows sui quali viene eseguito il mapping al carattere di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido $ (segno di dollaro). I valori possibili sono **separatore dominio**, **spazio**, **null**, o qualsiasi carattere singolo. Il valore predefinito è **spazio**. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
-|**eseguire il mapping #**|Restituisce i caratteri speciali di Windows sui quali viene eseguito il mapping al carattere di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido # (simbolo di cancelletto). I valori possibili sono **separatore dominio**, **spazio**, **null**, o qualsiasi carattere singolo. Il valore predefinito è il segno meno. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
+|**livello di controllo**|Livello di controllo. I valori possibili sono **none**, **successo**, **errore**, e **tutti**. I controlli vengono scritti nel log degli errori e nel Visualizzatore eventi di Windows.|  
+|**Nome set di host**|Indica se il nome dell'host proveniente dal record dell'account di accesso del client viene sostituito con il nome utente di rete di Windows. I valori possibili sono **true** oppure **false**. Se è impostato, il nome utente di rete viene visualizzato nell'output dal **sp_who**.|  
+|**eseguire il mapping di _**|Restituisce i caratteri speciali di Windows sui quali viene eseguito il mapping al carattere di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido _ (sottolineatura). I valori possibili sono **separatore dominio** (impostazione predefinita), **spazio**, **null**, qualsiasi carattere singolo. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
+|**eseguire il mapping di $**|Restituisce i caratteri speciali di Windows sui quali viene eseguito il mapping al carattere di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido $ (segno di dollaro). I valori possibili sono **separatore dominio**, **spazio**, **null**, qualsiasi carattere singolo. Il valore predefinito è **spazio**. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
+|**eseguire il mapping di &**|Restituisce i caratteri speciali di Windows sui quali viene eseguito il mapping al carattere di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido # (simbolo di cancelletto). I valori possibili sono **separatore dominio**, **spazio**, **null**, qualsiasi carattere singolo. Il valore predefinito è il segno meno. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -71,13 +71,13 @@ xp_loginconfig ['config_name']
 |**name**|**sysname**|Valore di configurazione|  
 |**valore di configurazione**|**sysname**|Impostazione del valore di configurazione|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **xp_loginconfig** non può essere utilizzato per impostare i valori di configurazione.  
   
  Per impostare la modalità di accesso e il livello di controllo, utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede l'autorizzazione di controllo per il **master** database.  
+ Richiede l'autorizzazione CONTROL sul **master** database.  
   
 ## <a name="examples"></a>Esempi  
   

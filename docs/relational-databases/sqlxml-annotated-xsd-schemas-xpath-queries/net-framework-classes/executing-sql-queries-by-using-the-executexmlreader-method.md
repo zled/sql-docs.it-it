@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di query SQL tramite il metodo ExecuteXMLReader | Documenti Microsoft
+title: Esecuzione di query SQL usando il metodo ExecuteXMLReader | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9a219162953134810976461ba682359193246ad8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053759"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Esecuzione di query SQL tramite il metodo ExecuteXMLReader
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Anziché utilizzare il metodo ExecuteToStream, è possibile utilizzare il metodo ExecuteXmlReader dell'oggetto SqlXmlCommand per eseguire i comandi. Questo metodo restituisce un oggetto XmlReader che può essere utilizzato per un'ulteriore elaborazione del risultato (che in questo esempio la stampa di valori e i nomi di elemento o attributo).  
+  Invece di usare il metodo ExecuteToStream, è possibile usare il metodo ExecuteXmlReader dell'oggetto SqlXmlCommand per eseguire i comandi. Questo metodo restituisce un oggetto XmlReader che può essere usato per un'ulteriore elaborazione del risultato (che in questo esempio è una stampa i nomi di elemento o attributo e i valori).  
   
 > [!NOTE]  
 >  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione.  

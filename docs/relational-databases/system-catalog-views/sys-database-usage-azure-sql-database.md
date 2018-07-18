@@ -1,5 +1,5 @@
 ---
-title: Sys. database_usage (Database SQL di Azure) | Documenti Microsoft
+title: Sys. database_usage (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -28,16 +28,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: affdc08bb7ae507ca30edfa986cd68a81ba564f2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177454"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038819"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Nota: Si applica solo al V11 Database SQL di Azure.**  
+  **Nota: Si applica solo al Database di SQL Azure V11.**  
   
  Elenca il numero, tipo e durata dei database sul [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "33177454"
 |Nome colonna|Description|  
 |-----------------|-----------------|  
 |time|Data di esecuzione degli eventi di utilizzo.|  
-|sku|Il tipo di livello di servizio per il database: **Web**, **Business**, **base**, **Standard**, **Premium**|  
+|sku|Il tipo del livello di servizio per il database: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
 |quantity|Numero massimo di database di un tipo SKU presente durante il giorno.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Accesso in sola lettura a questa vista è disponibile per tutti gli utenti con autorizzazioni per connettersi al **master** database.  
+ Accesso in lettura a questa vista è disponibile per tutti gli utenti con autorizzazioni sufficienti per connettersi al **master** database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Il **Sys. database_usage** vista restituisce una riga per ogni giorno della sottoscrizione.  
   
 ## <a name="see-also"></a>Vedere anche  

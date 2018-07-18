@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di tabelle e di partizione dell'indice | Documenti Microsoft
+title: Con partizionamento di tabelle e indici | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,21 +22,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c6dca91e1be799d4fd666432820a7839718d3e28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969226"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039065"
 ---
 # <a name="using-table-and-index-partitioning"></a>Utilizzo del partizionamento di tabelle e indici
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Dati possono essere archiviati tramite gli algoritmi di archiviazione forniti da [tabelle e indici partizionati](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Il partizionamento semplifica la gestione delle tabelle e degli indici di grandi dimensioni e li rende più scalabili.  
+  I dati possono essere archiviati tramite gli algoritmi di archiviazione forniti da [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Il partizionamento semplifica la gestione delle tabelle e degli indici di grandi dimensioni e li rende più scalabili.  
   
 ## <a name="index-and-table-partitioning"></a>Partizionamento di indici e tabelle  
  La funzionalità consente la distribuzione di dati relativi a indici e tabelle in più filegroup all'interno delle partizioni. Una funzione di partizione definisce la modalità di mapping delle righe di una tabella o di un indice a un set di partizioni in base ai valori di alcune colonne definite colonne di partizionamento. Uno schema di partizione consente di eseguire il mapping di ogni partizione specificata dalla funzione di partizione a un filegroup. In questo modo, è possibile sviluppare strategie di archiviazione che prevedano la scalabilità delle tabelle tra filegroup e di conseguenza tra dispositivi fisici.  
   
- Il <xref:Microsoft.SqlServer.Management.Smo.Database> oggetto contiene una raccolta di <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> gli oggetti che rappresentano le funzioni di partizione implementate e una raccolta di <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> oggetti che descrivono come dati viene eseguito il mapping a gruppi di file.  
+ Il <xref:Microsoft.SqlServer.Management.Smo.Database> oggetto contiene una raccolta di <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> gli oggetti che rappresentano le funzioni di partizione implementate e una raccolta di <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> oggetti che descrivono come viene eseguito il mapping dei dati ai filegroup.  
   
  Ogni oggetto <xref:Microsoft.SqlServer.Management.Smo.Table> e <xref:Microsoft.SqlServer.Management.Smo.Index> specifica lo schema di partizione utilizzato nella proprietà <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> e specifica le colonne in <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "32969226"
  Per gli esempi di codice seguenti, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Configurazione di uno schema di partizione per una tabella in Visual C#  
- L'esempio di codice viene illustrato come creare una funzione di partizione e uno schema di partizione per il `TransactionHistory` tabella il [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database di esempio. Le partizioni sono divise in base alla data con l'intenzione di separare i record obsoleti nella tabella `TransactionHistoryArchive` .  
+ L'esempio di codice viene illustrato come creare una funzione di partizione e uno schema di partizione per il `TransactionHistory` tabella di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database di esempio. Le partizioni sono divise in base alla data con l'intenzione di separare i record obsoleti nella tabella `TransactionHistoryArchive` .  
   
 ```csharp  
 {   
@@ -92,7 +92,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>Configurazione di uno schema di partizione per una tabella in PowerShell  
- L'esempio di codice viene illustrato come creare una funzione di partizione e uno schema di partizione per il `TransactionHistory` tabella il [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database di esempio. Le partizioni sono divise in base alla data con l'intenzione di separare i record obsoleti nella tabella `TransactionHistoryArchive` .  
+ L'esempio di codice viene illustrato come creare una funzione di partizione e uno schema di partizione per il `TransactionHistory` tabella di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database di esempio. Le partizioni sono divise in base alla data con l'intenzione di separare i record obsoleti nella tabella `TransactionHistoryArchive` .  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  
@@ -138,6 +138,6 @@ $ps.Create()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle e indici partizionati](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: query_store_query (Transact-SQL) | Documenti Microsoft
+title: Sys. query_store_query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,52 +27,52 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d9d53bc6cd0219502698ba8a02b6ba19eaf5f34f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182207"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985187"
 ---
-# <a name="sysquerystorequery-transact-sql"></a>query_store_query (Transact-SQL)
+# <a name="sysquerystorequery-transact-sql"></a>Sys. query_store_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Contiene informazioni sulle query e le statistiche di esecuzione di runtime aggregate complessivo associato.  
+  Contiene informazioni sulle query e le statistiche di esecuzione runtime aggregate complessivo associato.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**query_id**|**bigint**|Chiave primaria.|  
-|**query_text_id**|**bigint**|Chiave esterna. Unisce in join alla [query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
-|**context_settings_id**|**bigint**|Chiave esterna. Unisce in join alla [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).|  
-|**object_id**|**bigint**|ID dell'oggetto di database che fa parte di query (stored procedure, trigger, CLR definita dall'utente/aggregazione definita dall'utente, ecc.). 0 se non viene eseguita la query come parte di un oggetto di database (query ad hoc).|  
-|**batch_sql_handle**|**varbinary(64)**|ID del batch di istruzione, la query fa parte di. Popolato solo se la query fa riferimento alle tabelle temporanee o variabili di tabella.|  
-|**query_hash**|**binary(8)**|Hash MD5 della singola query, in base a una struttura della query logica. Include l'hint di ottimizzazione.|  
+|**query_text_id**|**bigint**|Chiave esterna. Crea un join al [query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
+|**context_settings_id**|**bigint**|Chiave esterna. Crea un join al [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).|  
+|**object_id**|**bigint**|ID dell'oggetto di database che fa parte della query (stored procedure, trigger, funzioni definite dall'utente CLR/UDAgg, ecc.). 0 se non viene eseguita la query come parte di un oggetto di database (query ad hoc).|  
+|**batch_sql_handle**|**varbinary(64)**|ID del batch di istruzione della query fa parte di. Popolato solo se la query fa riferimento a tabelle temporanee o variabili di tabella.|  
+|**query_hash**|**binary(8)**|Hash MD5 della singola query, basata sull'albero query logica. Include gli hint per query optimizer.|  
 |**is_internal_query**|**bit**|La query è stata generata internamente.|  
-|**query_parameterization_type**|**tinyint**|Tipo di parametrizzazione automatica:<br /><br /> 0: nessuno<br /><br /> 1-utente<br /><br /> 2-semplice<br /><br /> 3 – forzato|  
-|**query_parameterization_type_desc**|**nvarchar(60)**|Descrizione per il tipo di parametrizzazione.|  
-|**initial_compile_start_time**|**datetimeoffset**|Compilare l'ora di inizio.|  
-|**last_compile_start_time**|**datetimeoffset**|Compilare l'ora di inizio.|  
-|**last_execution_time**|**datetimeoffset**|Ora dell'ultima esecuzione fa riferimento all'ultima ora di fine del piano di query /.|  
-|**last_compile_batch_sql_handle**|**varbinary(64)**|Handle dell'ultimo batch SQL in cui query è stata utilizzata l'ora dell'ultima. Può essere fornito come input per [DM exec_sql_text &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) per ottenere il testo completo del batch.|  
-|**last_compile_batch_offset_start**|**bigint**|Informazioni che possono essere fornite a Sys.dm exec_sql_text insieme last_compile_batch_sql_handle.|  
-|**last_compile_batch_offset_end**|**bigint**|Informazioni che possono essere fornite a Sys.dm exec_sql_text insieme last_compile_batch_sql_handle.|  
-|**count_compiles**|**bigint**|Statistiche di compilazione.|  
+|**query_parameterization_type**|**tinyint**|Tipo di parametrizzazione:<br /><br /> 0: nessuno<br /><br /> 1-utente<br /><br /> 2-semplice<br /><br /> 3 – forzato|  
+|**query_parameterization_type_desc**|**nvarchar(60)**|Descrizione testuale per il tipo di parametrizzazione automatica.|  
+|**initial_compile_start_time**|**datetimeoffset**|Compilare ora di inizio.|  
+|**last_compile_start_time**|**datetimeoffset**|Compilare ora di inizio.|  
+|**last_execution_time**|**datetimeoffset**|Ora dell'ultima esecuzione si riferisce all'ultima ora di fine del piano di query /.|  
+|**last_compile_batch_sql_handle**|**varbinary(64)**|Handle dell'ultimo batch SQL in cui query è stata usata l'ora dell'ultima. Può essere fornita come input per [DM exec_sql_text &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) per ottenere il testo completo del batch.|  
+|**last_compile_batch_offset_start**|**bigint**|Informazioni che possono essere fornite a DM exec_sql_text insieme last_compile_batch_sql_handle.|  
+|**last_compile_batch_offset_end**|**bigint**|Informazioni che possono essere fornite a DM exec_sql_text insieme last_compile_batch_sql_handle.|  
+|**count_compiles**|**bigint**|Statistiche della compilazione.|  
 |**avg_compile_duration**|**float**|Statistiche di compilazione in microsecondi.|  
 |**last_compile_duration**|**bigint**|Statistiche di compilazione in microsecondi.|  
 |**avg_bind_duration**|**float**|Statistiche di associazione in microsecondi.|  
 |**last_bind_duration**|**bigint**|Statistiche di associazione.|  
 |**avg_bind_cpu_time**|**float**|Statistiche di associazione.|  
 |**last_bind_cpu_time**|**bigint**|Statistiche di associazione.|  
-|**avg_optimize_duration**|**float**|Statistiche di ottimizzazione in microsecondi.|  
+|**avg_optimize_duration**|**float**|Statistiche di ottimizzazione espressa in microsecondi.|  
 |**last_optimize_duration**|**bigint**|Statistiche di ottimizzazione.|  
-|**avg_optimize_cpu_time**|**float**|Statistiche di ottimizzazione in microsecondi.|  
+|**avg_optimize_cpu_time**|**float**|Statistiche di ottimizzazione espressa in microsecondi.|  
 |**last_optimize_cpu_time**|**bigint**|Statistiche di ottimizzazione.|  
-|**avg_compile_memory_kb**|**float**|Compilazione di statistiche di memoria.|  
-|**last_compile_memory_kb**|**bigint**|Compilazione di statistiche di memoria.|  
-|**max_compile_memory_kb**|**bigint**|Compilazione di statistiche di memoria.|  
-|**is_clouddb_internal_query**|**bit**|Restituisce sempre 0 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale.|  
+|**avg_compile_memory_kb**|**float**|Compilare le statistiche di memoria.|  
+|**last_compile_memory_kb**|**bigint**|Compilare le statistiche di memoria.|  
+|**max_compile_memory_kb**|**bigint**|Compilare le statistiche di memoria.|  
+|**is_clouddb_internal_query**|**bit**|Sempre 0 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in locale.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede il **VIEW DATABASE STATE** autorizzazione.  
+ Richiede la **VIEW DATABASE STATE** l'autorizzazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modello&gt;. CONTENUTO (DMX) | Documenti Microsoft
+title: SELECT FROM &lt;modello&gt;. CONTENUTO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842664"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040349"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modello&gt;. CONTENUTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,19 +40,19 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *model*  
  Identificatore del modello.  
   
- *Espressione della condizione*  
+ *espressione della condizione*  
  Facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
  Facoltativo. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Remarks  
- Il **SELECT FROM**  *\<modello > * * *. CONTENUTO** contenuto specifico per ogni algoritmo restituito dall'istruzione. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile utilizzare un **SELECT FROM \<modello >. CONTENUTO** istruzione per restituire i valori nella colonna NODE_RULE del modello.  
+## <a name="remarks"></a>Note  
+ Il **SELECT FROM**  *\<modello > * * *. CONTENUTO** contenuto specifico per ogni algoritmo restituito dall'istruzione. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile usare una **SELECT FROM \<modello >. CONTENUTO** istruzione per restituire i valori nella colonna NODE_RULE del modello.  
   
  Nella tabella seguente vengono elencate le colonne incluse nel contenuto del modello di data mining.  
   
 > [!NOTE]  
->  Gli algoritmi possono interpretare le colonne in modo diverso al fine di rappresentarne correttamente il contenuto. Per una descrizione del contenuto per ogni algoritmo e i suggerimenti su come interpretare ed eseguire query sul modello di data mining il contenuto di ogni tipo di modello del modello di data mining, vedere [contenuto del modello di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Gli algoritmi possono interpretare le colonne in modo diverso al fine di rappresentarne correttamente il contenuto. Per una descrizione del contenuto per ogni algoritmo e suggerimenti su come interpretare ed eseguire query sul modello di data mining contenuto per ogni tipo di modello del modello di data mining, vedere [contenuto del modello di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 |Colonna del set di righe relativo al contenuto|Description|  
 |---------------------------|-----------------|  
@@ -145,7 +145,7 @@ WHERE NODE_TYPE = 26
   
 ## <a name="see-also"></a>Vedere anche  
  [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

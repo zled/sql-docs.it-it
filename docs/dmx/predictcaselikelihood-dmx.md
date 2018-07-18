@@ -1,5 +1,5 @@
 ---
-title: PredictCaseLikelihood (DMX) | Documenti Microsoft
+title: PredictCaseLikelihood (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8159af8ac4b3c9bf21dcdc68a0cfb30c46e33e5
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841779"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040309"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,13 +36,13 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  Il valore restituito contiene la probabilità non elaborata del case, che rappresenta il prodotto delle probabilità degli attributi del case.  
   
 ## <a name="applies-to"></a>Si applica a  
- I modelli compilati utilizzando il [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering e [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi Sequence Clustering.  
+ I modelli compilati usando il [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering e [!INCLUDE[msCoName](../includes/msconame-md.md)] gli algoritmi di Sequence Clustering.  
   
 ## <a name="return-type"></a>Tipo restituito  
  Numero a virgola mobile a precisione doppia compreso tra 0 e 1. Un numero più vicino a 1 indica che il case ha una maggiore probabilità di essere presente nel modello. Un numero più vicino a 0 indica che il case ha una minore probabilità di essere presente nel modello.  
   
-## <a name="remarks"></a>Remarks  
- Per impostazione predefinita, il risultato di **PredictCaseLikelihood** (funzione) è normalizzata. I valori normalizzati sono in genere più utili come numero di attributi in un aumento del case e le differenze tra le probabilità non elaborate di uno dei due case si riducono notevolmente.  
+## <a name="remarks"></a>Note  
+ Per impostazione predefinita, il risultato del **PredictCaseLikelihood** viene normalizzata (funzione). I valori normalizzati sono in genere più utili come numero di attributi in un aumento del case e le differenze tra le probabilità non elaborate di uno dei due case si riducono notevolmente.  
   
  L'equazione seguente viene utilizzata per calcolare i valori normalizzati, dati x e y:  
   
@@ -78,11 +78,11 @@ NATURAL PREDICTION JOIN
 |-------------------------|----------------------------|---------------------|  
 |6.30672792729321E-08|6.30672792729321E-08|9.5824454056846E-48|  
   
- La differenza tra questi risultati dimostra l'effetto della normalizzazione. Il valore non elaborato per **CaseLikelihood** suggerisce che la probabilità del case è di circa il 20%, tuttavia, quando si normalizzano i risultati, risulta più evidente che la probabilità del case è molto bassa.  
+ La differenza tra questi risultati dimostra l'effetto della normalizzazione. Il valore non elaborato per **CaseLikelihood** suggerisce che la probabilità del case è circa il 20%, tuttavia, quando si normalizzano i risultati, risulta evidente che la probabilità del case è molto bassa.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

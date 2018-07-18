@@ -1,5 +1,5 @@
 ---
-title: Sys.dm os_cluster_properties (Transact-SQL) | Documenti Microsoft
+title: DM os_cluster_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,10 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 617f40a71074c8480d38e2eb5f59e108ee2d6ff7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058235"
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +40,12 @@ ms.lasthandoff: 05/23/2018
 
 |Nome colonna|Proprietà|Description|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|bigint|Livello di registrazione per il cluster di failover di SQL Server. La registrazione dettagliata può essere attivata per fornire dettagli aggiuntivi nei log degli errori per la risoluzione dei problemi. I valori validi sono:<br /><br /> 0: la registrazione è disabilitata (impostazione predefinita)<br /><br /> 1: solo errori<br /><br /> 2: errori e avvisi<br /><br /> Per altre informazioni, vedere [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
-|SqlDumperDumpFlags|bigint|I flag di dump di SQLDumper determinano il tipo dei file di dump generati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'impostazione predefinita è 0.|  
+|VerboseLogging|BIGINT|Livello di registrazione per il cluster di failover di SQL Server. La registrazione dettagliata può essere attivata per fornire dettagli aggiuntivi nei log degli errori per la risoluzione dei problemi. I valori validi sono:<br /><br /> 0: la registrazione è disabilitata (impostazione predefinita)<br /><br /> 1: solo errori<br /><br /> 2: errori e avvisi<br /><br /> Per altre informazioni, vedere [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
+|SqlDumperDumpFlags|BIGINT|I flag di dump di SQLDumper determinano il tipo dei file di dump generati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'impostazione predefinita è 0.|  
 |SqlDumperDumpPath|nvarchar(260)|Percorso in cui l'utilità SQLDumper genera i file di dump.|  
-|SqlDumperDumpTimeOut|bigint|Valore di timeout in millisecondi prima che l'utilità SQLDumper generi un dump in caso di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore predefinito è 0.|  
-|FailureConditionLevel|bigint|Consente di impostare le condizioni in cui il cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve restituire un errore o essere riavviato. Il valore predefinito è 3. Per una spiegazione dettagliata o per modificare le impostazioni delle proprietà, vedere [configurare le impostazioni della proprietà FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).|  
-|HealthCheckTimeout|bigint|Valore di timeout che consente di definire il tempo di attesa da parte della DLL risorse del motore di database di SQL Server relativo alla restituzione delle informazioni sull'integrità del server prima che venga stabilita la mancata risposta dell'istanza di SQL Server. Il valore di timeout è espresso in millisecondi. Valore predefinito è 60000. Per ulteriori informazioni o per modificare questa impostazione di proprietà, vedere [configurazione delle impostazioni HealthCheckTimeout](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
+|SqlDumperDumpTimeOut|BIGINT|Valore di timeout in millisecondi prima che l'utilità SQLDumper generi un dump in caso di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore predefinito è 0.|  
+|FailureConditionLevel|BIGINT|Consente di impostare le condizioni in cui il cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve restituire un errore o essere riavviato. Il valore predefinito è 3. Per una spiegazione dettagliata o per modificare le impostazioni delle proprietà, vedere [configurare le impostazioni della proprietà FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).|  
+|HealthCheckTimeout|BIGINT|Valore di timeout che consente di definire il tempo di attesa da parte della DLL risorse del motore di database di SQL Server relativo alla restituzione delle informazioni sull'integrità del server prima che venga stabilita la mancata risposta dell'istanza di SQL Server. Il valore di timeout è espresso in millisecondi. Valore predefinito è 60000. Per altre informazioni o per modificare questa proprietà, vedere [configurazione delle impostazioni HealthCheckTimeout](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede le autorizzazioni VIEW SERVER STATE sull'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

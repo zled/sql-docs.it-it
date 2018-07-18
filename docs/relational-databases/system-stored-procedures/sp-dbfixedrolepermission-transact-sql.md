@@ -1,5 +1,5 @@
 ---
-title: sp_dbfixedrolepermission (Transact-SQL) | Documenti Microsoft
+title: sp_dbfixedrolepermission (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 32ca47ff848d735c9310d894eff46c94b0c8da92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239681"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037809"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@rolename =** ] **'***ruolo***'**  
- Nome di un ruolo predefinito del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido. *ruolo* viene **sysname**, con un valore predefinito è NULL. Se *ruolo* viene omesso, vengono visualizzate le autorizzazioni per tutti i ruoli predefiniti del database.  
+ Nome di un ruolo predefinito del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido. *ruolo* viene **sysname**, con un valore predefinito è NULL. Se *ruolo* non viene specificato, vengono visualizzate le autorizzazioni per tutti i ruoli predefiniti del database.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -58,10 +58,10 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Nome del ruolo predefinito del database|  
-|**Autorizzazione**|**nvarchar(70)**|Autorizzazioni associate **DbFixedRole**|  
+|**Autorizzazione**|**nvarchar(70)**|Le autorizzazioni associate **DbFixedRole**|  
   
-## <a name="remarks"></a>Osservazioni  
- Per visualizzare un elenco di ruoli predefiniti del database, eseguire **sp_helpdbfixedrole**. Nella tabella seguente vengono elencati i ruoli predefiniti del database.  
+## <a name="remarks"></a>Note  
+ Per visualizzare un elenco dei ruoli predefiniti del database, eseguire **sp_helpdbfixedrole**. Nella tabella seguente vengono elencati i ruoli predefiniti del database.  
   
 |Ruolo predefinito del database|Description|  
 |-------------------------|-----------------|  
@@ -93,7 +93,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
  [sp_srvrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

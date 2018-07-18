@@ -1,5 +1,5 @@
 ---
-title: sp_validate_replica_hosts_as_publishers (Transact-SQL) | Documenti Microsoft
+title: sp_validate_replica_hosts_as_publishers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 408d6c239afd528deeae25f925b8626968dff6bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000908"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037749"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **sp_validate_replica_hosts_as_publishers** è un'estensione del **sp_validate_redirected_publisher** che consente tutte le repliche secondarie, piuttosto che solo la replica primaria corrente, da convalidare. **sp_validate_replicat_hosts_as_publisher** convalida un'intera Always On topologia di replica. **sp_validate_replica_hosts_as_publishers** deve essere eseguita direttamente nel server di distribuzione usando una sessione desktop remoto per evitare un errore di sicurezza a doppio hop (21892).  
+  **sp_validate_replica_hosts_as_publishers** è un'estensione del **sp_validate_redirected_publisher** che consente tutte le repliche secondarie, piuttosto che solo la replica primaria corrente, da convalidare. **sp_validate_replicat_hosts_as_publisher** convalida un'intera sempre nella topologia di replica. **sp_validate_replica_hosts_as_publishers** deve essere eseguita direttamente nel server di distribuzione tramite una sessione desktop remoto per evitare un errore di sicurezza a doppio hop (21892).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,17 +58,17 @@ sp_validate_replica_hosts_as_publishers
  La destinazione di reindirizzamento quando **sp_redirect_publisher** è stato chiamato per l'originale server di pubblicazione/database pubblicato coppia. *redirected_publisher* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ Nessuna.  
   
-## <a name="remarks"></a>Osservazioni  
- Se non esiste alcuna voce per il server di pubblicazione e il database di pubblicazione, **sp_validate_redirected_publisher** restituisce null per il parametro di output *@redirected_publisher*. In caso contrario, viene restituito il server di pubblicazione reindirizzato associato, sia in caso di esito positivo che di esito negativo.  
+## <a name="remarks"></a>Note  
+ Se non esiste alcuna voce per il server di pubblicazione e il database di pubblicazione **sp_validate_redirected_publisher** restituisce null per il parametro di output *@redirected_publisher*. In caso contrario, viene restituito il server di pubblicazione reindirizzato associato, sia in caso di esito positivo che di esito negativo.  
   
  Se la convalida ha esito positivo, **sp_validate_redirected_publisher** restituisce un'indicazione di esito positivo.  
   
- Se la convalida non riesce, vengono generati gli errori appropriati.  **sp_validate_redirected_publisher** rende ha rilevato un limite generale per la generazione di tutti i problemi e non solo sulla prima.  
+ Se la convalida non riesce, vengono generati gli errori appropriati.  **sp_validate_redirected_publisher** rende ha rilevato un tentativi per generare tutti i problemi e non solo il primo.  
   
 > [!NOTE]  
 >  **sp_validate_replica_hosts_as_publishers** avrà esito negativo e verrà visualizzato il messaggio di errore seguente durante la convalida degli host della replica secondaria che non consentono l'accesso in lettura o richiedono che venga specificata la finalità di lettura.  
@@ -80,7 +80,7 @@ sp_validate_replica_hosts_as_publishers
 >  Sono stati rilevati uno o più errori di convalida del server di pubblicazione per l'host della replica 'MyReplicaHostName'.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Chiamante deve essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database per il database di distribuzione o un membro di un elenco di accesso per una pubblicazione definita associato al database di pubblicazione.  
+ Chiamante deve essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database per database di distribuzione o un membro di un elenco accesso pubblicazione per una pubblicazione definita associati al database di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

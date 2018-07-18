@@ -1,5 +1,5 @@
 ---
-title: Sul lato client e lato Server, la formattazione (SQLXML 4.0) | Documenti Microsoft
+title: La formattazione dal lato client e lato Server (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a387f27bee5a4325709b3268c7e2deb6157768e3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708459"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003384"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Formattazione sul lato server e sul lato client (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34708459"
   
 -   Formattazione sul lato client  
   
- In questa sezione include informazioni sulla formattazione di documenti XML sul lato client o lato server dai set di righe generati dalle query eseguite su un database in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ In questa sezione include informazioni sulla formattazione di documenti XML sul lato client o lato server dai set di righe generati da query eseguite su un database in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
  [Architettura della formattazione XML sul lato Client e lato Server &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  

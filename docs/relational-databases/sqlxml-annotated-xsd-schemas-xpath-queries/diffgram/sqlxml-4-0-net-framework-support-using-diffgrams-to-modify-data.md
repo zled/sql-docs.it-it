@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di DiffGram per modificare i dati in SQLXML 4.0 | Documenti Microsoft
+title: Utilizzo di DiffGram per modificare i dati in SQLXML 4.0 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -32,15 +32,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b054765ab3fe626d1eb8360691a56da17b3174c0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707399"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053829"
 ---
-# <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>Supporto per SQLXML 4.0 di .NET Framework - utilizzo di DiffGram per modificare i dati
+# <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>Supporto SQLXML 4.0 per .NET Framework - utilizzo di DiffGram per modificare i dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Il formato DiffGram è stato introdotto nel **DataSet** componente del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. In .NET Framework è possibile creare DiffGram e utilizzarli per modificare i dati delle tabelle di un database di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Il formato DiffGram è stato introdotto nel **set di dati** componente del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. In .NET Framework è possibile creare DiffGram e utilizzarli per modificare i dati delle tabelle di un database di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  In questa sezione vengono forniti una breve introduzione ai Diffgram e alcuni esempi relativi al loro utilizzo. Si presuppone che l'utente abbia familiarità con i DiffGram in .NET Framework. La presente documentazione tratta principalmente dei problemi relativi ai Diffgram specifici di SQLXML.  

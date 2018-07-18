@@ -1,5 +1,5 @@
 ---
-title: Funzione ID (XQuery) | Documenti Microsoft
+title: Funzione ID (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b31e1dc2894511d56cf8809396853dbb0a2e8329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077848"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004623"
 ---
 # <a name="functions-on-sequences---id"></a>Funzioni per le sequenze - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,18 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Uno o più valori xs:IDREF.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Il risultato della funzione è una sequenza di elementi dell'istanza XML, nell'ordine in cui ricorrono nel documento, con un valore xs:ID uguale a uno o più valori xs:IDREF nell'elenco di valori xs:IDREF candidati.  
   
  Se il valore xs:IDREF non corrisponde ad alcun elemento, la funzione restituisce la sequenza vuota.  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo di [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo i [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Recupero di elementi basati sul valore dell'attributo IDREF  
  Nell'esempio seguente viene utilizzato fn:id per recuperare gli elementi <`employee`>, basati sull'attributo IDREF manager. In questo esempio, l'attributo manager è un attributo di tipo IDREF, mentre l'attributo eid è un attributo di tipo ID.  
   
- Per un valore di attributo specifico di gestione di **ID** funzione trova il <`employee`> elemento il cui valore di attributo di tipo ID corrisponde il valore IDREF di input. In altre parole, per un dipendente specifico, il **ID** funzione restituisce il relativo responsabile.  
+ Per un valore di attributo responsabile specifico, il **ID ()** funzione Trova i <`employee`> elemento il cui valore di attributo di tipo ID corrisponde al valore IDREF di input. In altre parole, per un dipendente specifico, il **ID ()** funzione restituisce il relativo responsabile.  
   
  Tale caso è illustrato nell'esempio seguente:  
   
@@ -65,7 +65,7 @@ fn:id($arg as xs:IDREF*) as element()*
   
 -   Un oggetto tipizzato **xml** variabile creata tramite la raccolta di XML schema.  
   
--   La query recupera l'elemento con un valore dell'attributo ID a cui fa riferimento il **manager** attributo IDREF di <`employee`> elemento.  
+-   La query recupera l'elemento che ha un valore di attributo ID fa riferimento il **gestore** attributo IDREF del <`employee`> elemento.  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -108,7 +108,7 @@ Go
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Recupero di elementi basati sul valore dell'attributo IDREFS OrderList  
  Nell'esempio seguente, l'attributo OrderList dell'elemento <`Customer`> è un attributo di tipo IDREFS. che elenca gli ID degli ordini del cliente specifico. Per ogni ID di un ordine, è disponibile un elemento figlio <`Order`> di <`Customer`> che indica il valore dell'ordine.  
   
- L'espressione di query, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera il primo valore dall'elenco IDRES relativo al primo cliente. Questo valore viene quindi passato al **ID** (funzione). La funzione trova quindi il <`Order`> elemento il cui valore di attributo OrderID corrispondente all'input di **ID** (funzione).  
+ L'espressione di query, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera il primo valore dall'elenco IDRES relativo al primo cliente. Questo valore viene quindi passato per il **ID ()** (funzione). La funzione trova quindi la <`Order`> elemento il cui valore dell'attributo OrderID corrispondente all'input per il **ID ()** (funzione).  
   
 ```  
 drop xml schema collection SC  
@@ -184,9 +184,9 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta la versione a due argomenti **ID ()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta la versione di due argomenti di **ID ()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede il tipo di argomento del **ID ()** sia un sottotipo di xs: IDREF *.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede che il tipo di argomento del **ID ()** a essere un sottotipo di xs: IDREF *.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni per le sequenze](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  

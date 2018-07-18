@@ -1,5 +1,5 @@
 ---
-title: sp_polybase_join_group | Documenti Microsoft
+title: sp_polybase_join_group | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2016
 ms.prod: sql
@@ -20,18 +20,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927c07456401bf441e3ad6491111bad6c85e3c19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237490"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037779"
 ---
 # <a name="sppolybasejoingroup-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Aggiunge un'istanza di SQL Server come nodo di calcolo a un gruppo di PolyBase per il calcolo di scalabilità orizzontale.  
+  Aggiunge un'istanza di SQL Server come nodo di calcolo a un gruppo di PolyBase per il calcolo della scalabilità orizzontale.  
   
- L'istanza di SQL Server deve disporre di [PolyBase](../../relational-databases/polybase/polybase-guide.md) funzionalità installata.  PolyBase consente l'integrazione di origini dati non SQL Server, ad esempio l'archiviazione blob di Hadoop e Azure. Vedere anche [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+ L'istanza di SQL Server deve disporre di [PolyBase](../../relational-databases/polybase/polybase-guide.md) funzionalità installata.  PolyBase consente l'integrazione di origini dati non SQL Server, ad esempio l'archivio blob di Hadoop e Azure. Vedere anche [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  Il nome del computer che ospita il nodo head di SQL Server del gruppo di scalabilità orizzontale di PolyBase. *@head_node_address* è nvarchar(255.  
   
  *@dms_control_channel_port* = dms_control_channel_port  
- La porta in cui è in esecuzione il canale di controllo per il nodo head PolyBase Data Movement Service. *@dms_control_channel_port* è un __int16 senza segno. Il valore predefinito è **16450**.  
+ La porta in cui viene eseguito il canale di controllo per il nodo head PolyBase Data Movement Service. *@dms_control_channel_port* è un __int16 senza segno. Il valore predefinito è **16450**.  
   
  *@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
  Il nome dell'istanza di SQL Server del nodo head del gruppo di scalabilità orizzontale di PolyBase. *@head_node_sql_server_instance_name* è nvarchar (16).  
@@ -60,11 +60,11 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
-## <a name="remarks"></a>Osservazioni  
- Dopo aver eseguito la stored procedure, arrestare il motore PolyBase e riavviare PolyBase Data Movement Service nel computer. Per verificare eseguire sulla seguente DMV nel nodo head: **Sys.dm exec_compute_nodes**.  
+## <a name="remarks"></a>Note  
+ Dopo aver eseguito la stored procedure, arrestare il motore PolyBase e riavviare PolyBase Data Movement Service nel computer. Per verificare eseguire sulla seguente DMV nel nodo head: **DM exec_compute_nodes**.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio viene aggiunto il computer corrente come nodo di calcolo a un gruppo di PolyBase.  Il nome del nodo head è **HST01** e il nome dell'istanza di SQL Server nel nodo head è **MSSQLSERVER**.  
+ Nell'esempio viene aggiunto il computer corrente come nodo di calcolo a un gruppo PolyBase.  È il nome del nodo head **HST01** ed è il nome dell'istanza di SQL Server nel nodo head **MSSQLSERVER**.  
   
 ```  
 EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'   

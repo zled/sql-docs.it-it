@@ -1,5 +1,5 @@
 ---
-title: Aggiungere colonne a una tabella | Documenti Microsoft
+title: Aggiungere colonne a una tabella | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77be2e392add4811d011d85ebc1ee9efbf52191d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043455"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991473"
 ---
 # <a name="add-columns-to-a-table"></a>Aggiungere colonne a una tabella
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  In questo articolo viene descritto come aggiungere colonne a una tabella esistente.  
+  Questo articolo descrive come aggiungere colonne a una tabella esistente.  
   
 ## <a name="add-columns-from-the-datasource"></a>Aggiungere colonne dall'origine dati  
  Quando si utilizza l'Importazione guidata tabella per importare dati da una tabella dell'origine dati, viene creata una nuova tabella del modello in cui sono incluse tutte le colonne nella tabella di origine oppure, se si sceglie di escludere determinate colonne utilizzando la funzionalità Visualizza anteprima e applica filtro, solo quelle colonne e quei dati filtrati vengono selezionati. È inoltre possibile scrivere una query SQL che consente di specificare solo determinate colonne da importare. Tuttavia, successivamente è possibile determinare che una tabella di origine disponga di colonne aggiuntive da aggiungere al modello oppure che sia necessario aggiungere una colonna calcolata con i valori derivati da una formula DAX.  
@@ -51,7 +51,7 @@ ms.locfileid: "34043455"
 2.  Nella barra della formula digitare una formula DAX per aggiungere attributi per ogni riga.  
   
 ## <a name="add-a-blank-column"></a>Aggiungere una colonna vuota  
- È possibile creare una colonna denominata, vuota in una tabella del modello. Le colonne vuote possono essere utili se si desidera incollare dati da un'altra origine. Tenere presente che i dati incollati vengono archiviati in modo diverso da quelli importati. Per ulteriori informazioni, vedere [copiare e incollare dati](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
+ È possibile creare una colonna denominata, vuota in una tabella del modello. Le colonne vuote possono essere utili se si desidera incollare dati da un'altra origine. Tenere presente che i dati incollati vengono archiviati in modo diverso da quelli importati. Per altre informazioni, vedere [copiare e incollare dati](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
   
 #### <a name="to-create-a-named-blank-column"></a>Per creare una colonna denominata, vuota  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34043455"
 2.  Fare clic sulla prima cella, quindi digitare un nome e premere INVIO.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Proprietà tabella di modifica](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
+ [Modifica finestra di dialogo Proprietà tabella](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
  [Modificare i mapping di filtri tabella, colonna o riga](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   
