@@ -1,5 +1,5 @@
 ---
-title: Casi di utilizzo di XQuery generale | Documenti Microsoft
+title: Casi di utilizzo di XQuery generale | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9a28080c682d40d1e08aaa96e594c96496d79026
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078088"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999833"
 ---
 # <a name="general-xquery-use-cases"></a>Esempi di carattere generale sull'utilizzo di XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ WHERE CatalogDescription is not null
   
  Dalla query precedente si noti quanto segue:  
   
--   Il **dello spazio dei nomi** parola chiave nel prologo XQuery definisce un prefisso dello spazio dei nomi utilizzato nel corpo della query.  
+-   Il **dello spazio dei nomi** parola chiave nel prologo della XQuery definisce un prefisso dello spazio dei nomi utilizzato nel corpo della query.  
   
 -   Il corpo della query costruisce il codice XML richiesto.  
   
@@ -79,7 +79,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- La query seguente recupera le stesse informazioni, ma solo per i modelli per i quali le descrizioni del catalogo dei prodotti includono il peso, ovvero l'elemento <`Weight`> nelle specifiche rappresentate dall'elemento <`Specifications`>. In questo esempio viene utilizzata WITH XMLNAMESPACES per dichiarare il prefisso pd e la relativa associazione dello spazio dei nomi. In questo modo, l'associazione non è descritta in entrambi i **query ()** (metodo) e il **exist ()** (metodo).  
+ La query seguente recupera le stesse informazioni, ma solo per i modelli per i quali le descrizioni del catalogo dei prodotti includono il peso, ovvero l'elemento <`Weight`> nelle specifiche rappresentate dall'elemento <`Specifications`>. In questo esempio viene utilizzata WITH XMLNAMESPACES per dichiarare il prefisso pd e la relativa associazione dello spazio dei nomi. In questo modo, l'associazione non è descritto in entrambe le **query ()** metodo e nel **exist ()** (metodo).  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -94,7 +94,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- Nella query precedente, il **exist ()** metodo il **xml** nella clausola WHERE verifica per verificare la presenza del tipo di dati un <`Weight`> elemento il <`Specifications`> elemento.  
+ Nella query precedente, il **exist ()** metodo del **xml** tipo di dati nella clausola WHERE verifica se è presente un <`Weight`> elemento il <`Specifications`> elemento.  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. Ricerca degli ID dei modelli del prodotto per cui sono disponibili descrizioni del catalogo che includono immagini frontali e di piccole dimensioni  
  La descrizione del catalogo prodotti XML include le immagini dei prodotti, ovvero l'elemento <`Picture`>. Ogni immagine ha diverse proprietà, che includono l'angolazione, ovvero l'elemento <`Angle`>, e le dimensioni, ovvero l'elemento <`Size`>.  
@@ -127,7 +127,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
 -   Nella clausola WHERE, il **exist ()** metodo viene utilizzato per recuperare solo le righe che includono descrizioni del catalogo prodotti con il <`Picture`> elemento.  
   
--   La clausola WHERE utilizza il **Value ()** metodo due volte per confrontare i valori di <`Size`> e <`Angle`> elementi.  
+-   La clausola WHERE utilizza il **Value ()** metodo due volte per confrontare i valori del <`Size`> e <`Angle`> elementi.  
   
  Risultato parziale:  
   
@@ -143,7 +143,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ...  
 ```  
   
-### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. Creare un elenco semplice del prodotto di coppie di nome e funzionalità del modello, con ogni coppia racchiusa nel \<funzionalità > elemento  
+### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. Creare un elenco semplice del prodotto coppie di nome e la funzione di modello, con ogni coppia racchiusa nel \<funzionalità > elemento  
  Nella descrizione del catalogo dei modelli, il codice XML contiene numerose caratteristiche del prodotto, che sono incluse nell'elemento <`Features`>. La query utilizza [costruzione di strutture XML (XQuery)](../xquery/xml-construction-xquery.md) per costruire il codice XML richiesto. L'espressione racchiusa tra parentesi graffe viene sostituita dal risultato.  
   
 ```  
@@ -194,8 +194,8 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. Dalla descrizione del catalogo di un modello di prodotto, ID di nome, il modello modello di elenco del prodotto e caratteristiche raggruppati all'interno di un \<prodotto > elemento  
- Utilizzando le informazioni archiviate nella descrizione del catalogo del modello del prodotto, la query seguente elenca il nome del modello di prodotto, ID di modello, e caratteristiche raggruppati all'interno di un \<prodotto > elemento.  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. Dalla descrizione del catalogo di un modello di prodotto, ID di modello, nome del modello elenco il prodotto e caratteristiche raggruppati all'interno di un \<Product > elemento  
+ Usando le informazioni archiviate nella descrizione del catalogo del modello del prodotto, la query seguente elenca il nome del modello del prodotto, ID di modello, e caratteristiche raggruppati all'interno di un \<Product > elemento.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -231,7 +231,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>E. Recupero delle descrizioni delle caratteristiche del modello di prodotto  
- La query seguente costruisce codice XML che include un <`Product`> elemento **ProducModelID**, **ProductModelName** gli attributi e il primo due caratteristiche del prodotto. In particolare, le prime due caratteristiche del prodotto sono i primi due elementi figlio dell'elemento <`Features`>. Se sono disponibili più caratteristiche, verrà restituito un elemento <`There-is-more/`> vuoto.  
+ La query seguente costruisce codice XML che include un <`Product`> elemento avente **ProducModelID**, **ProductModelName** attributi e i primi due caratteristiche del prodotto. In particolare, le prime due caratteristiche del prodotto sono i primi due elementi figlio dell'elemento <`Features`>. Se sono disponibili più caratteristiche, verrà restituito un elemento <`There-is-more/`> vuoto.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -257,7 +257,7 @@ WHERE CatalogDescription is not NULL
   
  Dalla query precedente si noti quanto segue:  
   
--   La struttura del ciclo FOR ... RETURN recupera le prime due caratteristiche del prodotto. Il **Position** funzione viene utilizzata per individuare la posizione degli elementi nella sequenza.  
+-   La struttura del ciclo FOR ... RETURN recupera le prime due caratteristiche del prodotto. Il **Position** funzione viene utilizzata per trovare la posizione degli elementi nella sequenza.  
   
 ### <a name="f-find-element-names-from-the-product-catalog-description-that-end-with-ons"></a>F. Ricerca dei nomi di elementi che terminano con "ons" nella descrizione del catalogo dei prodotti  
  La query seguente esegue una ricerca nelle descrizioni del catalogo e restituisce tutti gli elementi dell'elemento <`ProductDescription`> che terminano con "ons".  
@@ -303,15 +303,15 @@ WHERE CatalogDescription.value('
      contains( string( (/pd:ProductDescription/pd:Summary)[1] ),"Aerodynamic")','bit') = 1  
 ```  
   
- Si noti che la query SELECT specifica **query ()** e **Value ()** metodi di **xml** tipo di dati. Anziché ripetere la dichiarazione dello spazio dei nomi in due prologhi di query diversi, nella query viene pertanto utilizzato il prefisso pd che è definito una sola volta tramite WITH XMLNAMESPACES.  
+ Si noti che la query SELECT specifica **query ()** e **Value ()** metodi del **xml** tipo di dati. Anziché ripetere la dichiarazione dello spazio dei nomi in due prologhi di query diversi, nella query viene pertanto utilizzato il prefisso pd che è definito una sola volta tramite WITH XMLNAMESPACES.  
   
  Dalla query precedente si noti quanto segue:  
   
 -   Viene utilizzata la clausola WHERE per recuperare solo le righe per le quali la descrizione del catalogo contiene la parola "Aerodynamic" nell'elemento <`Summary`>.  
   
--   Il **Contains ()** funzione viene utilizzata per vedere se la parola è inclusa nel testo.  
+-   Il **Contains ()** funzione viene utilizzata per determinare se la parola è inclusa nel testo.  
   
--   Il **Value ()** metodo il **xml** tipo di dati confronta il valore restituito da **Contains ()** su 1.  
+-   Il **Value ()** metodo per il **xml** tipo di dati confronta il valore restituito da **Contains ()** su 1.  
   
  Risultato:  
   
@@ -342,14 +342,14 @@ AND     CatalogDescription.exist('declare namespace p1="http://schemas.microsoft
   
  Dalla query precedente si noti quanto segue:  
   
--   Se il **exist ()** metodo nella clausola WHERE restituisce False (0), viene restituito l'ID modello di prodotto. In caso contrario, l'ID del modello non viene restituito.  
+-   Se il **exist ()** metodo nella clausola WHERE restituisce False (0), viene restituito l'ID di modello di prodotto. In caso contrario, l'ID del modello non viene restituito.  
   
 -   Poiché tutte le descrizioni di prodotto includono un elemento <`Picture`>, in questo caso il set di risultati è vuoto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query XQuery che coinvolgono gerarchie](../xquery/xqueries-involving-hierarchy.md)   
- [Esecuzione di query XQuery che implicano l'ordinamento](../xquery/xqueries-involving-order.md)   
- [Dati relazionali di XQuery per la gestione](../xquery/xqueries-handling-relational-data.md)   
+ [Query XQuery relative alle gerarchia](../xquery/xqueries-involving-hierarchy.md)   
+ [Query XQuery che implicano ordine](../xquery/xqueries-involving-order.md)   
+ [XQuery per la gestione di dati relazionali](../xquery/xqueries-handling-relational-data.md)   
  [Ricerca di stringhe in XQuery](../xquery/string-search-in-xquery.md)   
  [Gestione degli spazi dei nomi in XQuery](../xquery/handling-namespaces-in-xquery.md)   
  [Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

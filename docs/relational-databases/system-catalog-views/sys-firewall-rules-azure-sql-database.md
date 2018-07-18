@@ -1,5 +1,5 @@
 ---
-title: Sys. firewall_rules (Database SQL di Azure) | Documenti Microsoft
+title: Sys. firewall_rules (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
@@ -28,16 +28,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 090ec967e25fff1fac3761298214e0366c0f2478
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33180257"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000904"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Restituisce informazioni sulle impostazioni del firewall di livello server associate le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+  Restituisce informazioni sulle impostazioni del firewall a livello di server associato con il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  La vista `sys.firewall_rules` contiene le colonne seguenti:  
   
@@ -46,20 +46,20 @@ ms.locfileid: "33180257"
 |id|**INT**|Identificatore dell'impostazione del firewall a livello di server.|  
 |NAME|**NVARCHAR (128)**|Nome scelto per descrivere e distinguere l'impostazione del firewall a livello di server.|  
 |start_ip_address|**VARCHAR (50)**|L'indirizzo IP più basso nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o maggiori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più basso possibile è `0.0.0.0`.|  
-|end_ip_address|**VARCHAR (50)**|L'indirizzo IP più alto nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o minori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`.<br /><br /> Nota: Tentativi di connessione di Azure di Windows sono consentiti quando sia questo campo e **start_ip_address** campo uguale a `0.0.0.0`.|  
-|create_date|**DATA/ORA**|Data e ora UTC in cui è stata creata l'impostazione del firewall a livello di server.<br /><br /> Nota: L'ora UTC è l'acronimo di Coordinated Universal Time.|  
+|end_ip_address|**VARCHAR (50)**|L'indirizzo IP più alto nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o minori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`.<br /><br /> Nota: Tentativi di connessione di Azure di Windows sono consentiti quando sia questo campo e il **start_ip_address** campo equals `0.0.0.0`.|  
+|create_date|**DATA/ORA**|Data e ora UTC in cui è stata creata l'impostazione del firewall a livello di server.<br /><br /> Nota: Ora UTC è l'acronimo di Coordinated Universal Time.|  
 |modify_date|**DATA/ORA**|Data e ora UTC in cui è stata modificata per l'ultima volta l'impostazione del firewall a livello di server.|  
   
-## <a name="remarks"></a>Remarks  
- Per rimuovere una regola del firewall del database, utilizzare [sp_delete_firewall_rule &#40;Database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md). Per impostare una regola del firewall per un singolo database, vedere [Sys. database_firewall_rules &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md). Per restituire informazioni sulle regole firewall esistenti, eseguire query su Sys. firewall_rules (Database SQL di Azure).  
+## <a name="remarks"></a>Note  
+ Per rimuovere una regola del firewall del database, usare [sp_delete_firewall_rule &#40;Database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md). Per impostare una regola del firewall per un singolo database, vedere [Sys. database_firewall_rules &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md). Per restituire informazioni sulle regole firewall esistenti, eseguire una query Sys. firewall_rules (Database SQL di Azure).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Accesso in sola lettura a questa vista è disponibile per tutti gli utenti con autorizzazioni per connettersi al **master** database.  
+ Accesso in lettura a questa vista è disponibile per tutti gli utenti con autorizzazione per connettersi al **master** database.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sys. database_firewall_rules &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
  [sp_set_firewall_rule &#40;Database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [Configurare Windows Firewall per l'accesso al motore di Database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
+ [Configurare un Firewall di Windows per l'accesso al motore di Database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [Configurare un Firewall per l'accesso FILESTREAM](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)   
  [Configurare un firewall per l'accesso al server di report](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [Procedura: Configurare le impostazioni del firewall (database SQL di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  

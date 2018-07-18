@@ -1,5 +1,5 @@
 ---
-title: sp_helpextendedproc (Transact-SQL) | Documenti Microsoft
+title: sp_helpextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a7e9cc50f543232dea6b5ce39153eee2292284ac
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248055"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052249"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@funcname =**] **'***procedure***'**  
- Nome della stored procedure estesa su cui si desidera ottenere informazioni. *stored procedure* viene **sysname**, con un valore predefinito è NULL.  
+ Nome della stored procedure estesa su cui si desidera ottenere informazioni. *routine* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -60,11 +60,11 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |**name**|**sysname**|Nome della stored procedure estesa.|  
 |**DLL**|**nvarchar(255)**|Nome della DLL.|  
   
-## <a name="remarks"></a>Osservazioni  
- Quando *procedura* è specificato, **sp_helpextendedproc** report sulle stored procedure estesa. Quando questo parametro non viene fornito, **sp_helpextendedproc** restituisce tutti i nomi di stored procedure e i nomi delle DLL a cui ogni stored procedure estesa estesi appartiene.  
+## <a name="remarks"></a>Note  
+ Quando *routine* omette **sp_helpextendedproc** restituisce informazioni sulla stored procedure estesa. Quando questo parametro viene omesso, **sp_helpextendedproc** restituisce tutti i nomi di stored procedure e i nomi delle DLL a cui ogni stored procedure estesa estesi appartiene.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Autorizzazione per l'esecuzione **sp_helpextendedproc** è concessa al **pubblica**.  
+ L'autorizzazione per eseguire **sp_helpextendedproc** viene concessa ai **pubblico**.  
   
 ## <a name="examples"></a>Esempi  
   

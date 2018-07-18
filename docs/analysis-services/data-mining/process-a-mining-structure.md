@@ -1,5 +1,5 @@
 ---
-title: Elaborare una struttura di Data Mining | Documenti Microsoft
+title: Elaborare una struttura di Data Mining | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9cb977ace8ccd1856d9a08c8eeaa2cf698637e68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017128"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999733"
 ---
 # <a name="process-a-mining-structure"></a>Elaborare una struttura di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,15 +36,15 @@ ms.locfileid: "34017128"
   
      Se sono state apportate modifiche alla struttura, prima di elaborare i modelli verrà richiesto di ridistribuire la struttura. Scegliere **Sì**.  
   
-2.  Fare clic su **eseguire** nel **struttura di Data Mining elaborazione - \<struttura >** la finestra di dialogo.  
+2.  Fare clic su **eseguiti** nel **Processing Mining Structure - \<struttura >** nella finestra di dialogo.  
   
      Verrà aperta la finestra di dialogo **Stato elaborazione** in cui vengono visualizzate informazioni sull'elaborazione dei modelli.  
   
 3.  Fare clic su **Chiudi** nella finestra di dialogo **Stato elaborazione** dopo che l'elaborazione dei modelli è stata completata.  
   
-4.  Fare clic su **Chiudi** nel **struttura di Data Mining elaborazione - \<struttura >** la finestra di dialogo.  
+4.  Fare clic su **Close** nel **Processing Mining Structure - \<struttura >** nella finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data mining struttura attività e procedure](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

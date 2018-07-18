@@ -1,5 +1,5 @@
 ---
-title: Colonne di dati degli eventi di sessione | Documenti Microsoft
+title: Colonne di dati degli eventi di sessione | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e3a0287edc3081273f2a3c3075f355e9b2b2493
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044345"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007243"
 ---
 # <a name="session-events-data-columns"></a>Colonne di dati degli eventi di sessione
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34044345"
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Durata|5|2|Durata dell'evento in millisecondi.|  
+|Duration|5|2|Durata dell'evento in millisecondi.|  
 |CPUTime|6|2|Tempo della CPU in millisecondi utilizzato dall'evento.|  
 |ConnectionID|25|1|ID connessione univoco.|  
 |DatabaseName|28|8|Nome del database in cui è in esecuzione l'istruzione dell'utente.|  

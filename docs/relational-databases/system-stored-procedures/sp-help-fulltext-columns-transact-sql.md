@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_columns (Transact-SQL) | Documenti Microsoft
+title: sp_help_fulltext_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 6179297a3634479ebd090395d4cbb5cb48f0e441
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250171"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063659"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33250171"
   Restituisce le colonne impostate per l'indicizzazione full-text.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Usare la [fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) vista del catalogo.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Usare la [Sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) invece la vista del catalogo.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,10 +49,10 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@table_name=**] **'***table_name***'**  
- Nome della tabella composto da una o due parti su cui si desidera ottenere informazioni relative all'indice full-text. *TABLE_NAME* viene **nvarchar(517)**, con valore predefinito è NULL. Se *table_name* viene omesso, vengono recuperate informazioni di colonna di indice full-text per ogni tabella indicizzata full-text.  
+ Nome della tabella composto da una o due parti su cui si desidera ottenere informazioni relative all'indice full-text. *TABLE_NAME* viene **nvarchar(517)**, con un valore predefinito NULL. Se *table_name* viene omesso, viene recuperati informazioni sulle colonne di indice full-text per ogni tabella indicizzata full-text.  
   
- [  **@column_name=**] **'***nome_colonna***'**  
- Nome della colonna per cui vengono richiesti metadati di indice full-text. *column_name* viene **sysname**, con valore predefinito è NULL. Se *column_name* viene omesso oppure è NULL, vengono restituite informazioni di colonna full-text per ogni colonna indicizzata full-text per *table_name*. Se *table_name* anche viene omesso oppure è NULL, vengono restituite informazioni di colonna di indice full-text per ogni colonna indicizzata full-text per tutte le tabelle nel database.  
+ [  **@column_name=**] **'***column_name***'**  
+ Nome della colonna per cui vengono richiesti metadati di indice full-text. *column_name* viene **sysname**, con un valore predefinito NULL. Se *column_name* viene omesso oppure è NULL, vengono restituite informazioni di colonna full-text per ogni colonna indicizzata full-text per *table_name*. Se *table_name* anche viene omesso oppure è NULL, vengono restituite informazioni di colonna di indice full-text per ogni colonna indicizzata full-text per tutte le tabelle nel database.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -66,8 +66,8 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 |**TABLE_NAME**|**sysname**|Nome della tabella.|  
 |**FULLTEXT_COLUMN_NAME**|**sysname**|Colonna impostata per l'indicizzazione in una tabella indicizzata full-text.|  
 |**FULLTEXT_COLID**|**int**|ID della colonna indicizzata full-text.|  
-|**FULLTEXT_BLOBTP_COLNAME**|**sysname**|Colonna di una tabella indicizzata full-text che specifica il tipo di documento della colonna indicizzata full-text. Questo valore è applicabile solo quando la colonna indicizzata full-text è un **varbinary (max)** o **immagine** colonna.|  
-|**FULLTEXT_BLOBTP_COLID**|**int**|ID della colonna per il tipo di documento. Questo valore è applicabile solo quando la colonna indicizzata full-text è un **varbinary (max)** o **immagine** colonna.|  
+|**FULLTEXT_BLOBTP_COLNAME**|**sysname**|Colonna di una tabella indicizzata full-text che specifica il tipo di documento della colonna indicizzata full-text. Questo valore è applicabile solo quando la colonna indicizzata full-text è un **varbinary (max)** oppure **immagine** colonna.|  
+|**FULLTEXT_BLOBTP_COLID**|**int**|ID della colonna per il tipo di documento. Questo valore è applicabile solo quando la colonna indicizzata full-text è un **varbinary (max)** oppure **immagine** colonna.|  
 |**FULLTEXT_LANGUAGE**|**sysname**|Lingua utilizzata per la ricerca full-text nella colonna.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

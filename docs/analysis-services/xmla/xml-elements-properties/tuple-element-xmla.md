@@ -1,5 +1,5 @@
 ---
-title: Elemento Tuple (XMLA) | Documenti Microsoft
+title: Elemento Tuple (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0192a126b3be4338cedd47c1cd5b175ba1debc41
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576673"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062668"
 ---
 # <a name="tuple-element-xmla"></a>Elemento Tuple (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34576673"
 </Tuples>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -40,14 +40,14 @@ ms.locfileid: "34576673"
 |Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Tuple](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)|  
 |Elementi figlio|[Membro](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Quando un'applicazione client imposta la proprietà **AxisFormat** su *TupleFormat*, un’asse viene rappresentata come un set di tuple. Ogni elemento **Axis** contiene un elemento **Tuples** che rappresenta il set di tuple su quell’asse. Ogni tupla viene rappresentata usando un elemento **Tuple** che contiene elementi **Member** di ogni gerarchia sull'asse.  
   
 ## <a name="example"></a>Esempio  

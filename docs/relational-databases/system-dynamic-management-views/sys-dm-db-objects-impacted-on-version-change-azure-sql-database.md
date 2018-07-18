@@ -1,5 +1,5 @@
 ---
-title: Sys.dm db_objects_impacted_on_version_change (Database SQL di Azure) | Documenti Microsoft
+title: Sys.dm_db_objects_impacted_on_version_change (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -27,11 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ae5daae796ba134c883cb074ffd4130c67e0aba1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465127"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051289"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "34465127"
 |class_desc|**nvarchar(60)** non NULL|Descrizione della classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** non NULL|ID oggetto del vincolo o ID oggetto della tabella che contiene l'indice o l'heap.|  
 |minor_id|**int** NULL|**NULL** per i vincoli<br /><br /> Index_id per indici e heap|  
-|dependency|**nvarchar(60)** non NULL|Descrizione della dipendenza che causerà l'interessamento di un vincolo o di un indice. Lo stesso valore viene inoltre utilizzato per gli avvisi generati durante l'aggiornamento.<br /><br /> Esempi:<br /><br /> **spazio** (per la funzione intrinseca)<br /><br /> **Geometry** (per UDT di sistema)<br /><br /> **Geography:: Parse** (per metodo UDT di sistema)|  
+|dependency|**nvarchar(60)** non NULL|Descrizione della dipendenza che causerà l'interessamento di un vincolo o di un indice. Lo stesso valore viene inoltre utilizzato per gli avvisi generati durante l'aggiornamento.<br /><br /> Esempi:<br /><br /> **spazio** (per la funzione intrinseca)<br /><br /> **geometria** (per sistema definito dall'utente)<br /><br /> **Geography:: Parse** (per sistema metodo UDT)|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una query su **Sys.dm db_objects_impacted_on_version_change** per trovare gli oggetti interessati da un aggiornamento alla versione principale del server successiva  
+ Nell'esempio seguente viene illustrata una query sul **sys.dm_db_objects_impacted_on_version_change** per trovare gli oggetti interessati da un aggiornamento alla versione del server principale successivo  
   
 ```  
 SELECT * FROM sys.dm_db_objects_disabled_on_version_change;  
@@ -66,14 +66,14 @@ class  class_desc        major_id    minor_id    dependency
 1      OBJECT_OR_COLUMN  101575400   NULL        geometry     
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 ### <a name="how-to-update-impacted-objects"></a>Come aggiornare gli oggetti interessati  
  Nei passaggi ordinati seguenti viene descritta l'azione correttiva da intraprendere dopo l'aggiornamento dalla versione del servizio di giugno.  
   
 |JSON|Oggetto interessato|Azione correttiva|  
 |-----------|---------------------|-----------------------|  
-|1|**Indici**|Ricompilare gli indici identificati da **sys.dm_db_objects_impacted_on_version_change** , ad esempio:  `ALTER INDEX ALL ON <table> REBUILD`<br />o<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Oggetto**|Tutti i vincoli identificati da **Sys.dm db_objects_impacted_on_version_change** devono essere riconvalidati dopo che i dati geometry e geography nella tabella sottostante viene ricalcolati. Per i convalidi, riconvalidare utilizzando ALTER TABLE. <br />Esempio: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />o<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Indici**|Ricompilare gli indici identificati da **sys.dm_db_objects_impacted_on_version_change** , ad esempio:  `ALTER INDEX ALL ON <table> REBUILD`<br />o Gestione configurazione<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Oggetto**|Tutti i vincoli identificati da **sys.dm_db_objects_impacted_on_version_change** devono essere riconvalidati dopo che i dati geometry e geography nella tabella sottostante viene ricalcolati. Per i convalidi, riconvalidare utilizzando ALTER TABLE. <br />Esempio: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />o Gestione configurazione<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

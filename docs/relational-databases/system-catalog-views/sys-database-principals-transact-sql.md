@@ -1,5 +1,5 @@
 ---
-title: Sys. database_principals (Transact-SQL) | Documenti Microsoft
+title: Sys. database_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: a879dfcc6dd0feb57126574947b51f84261af915
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181937"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995875"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,17 +46,17 @@ ms.locfileid: "33181937"
 |**default_schema_name**|**sysname**|Nome da utilizzare quando il nome SQL non specifica uno schema. Restituisce Null per entità non di tipo S, U o A.|  
 |**create_date**|**datetime**|Ora di creazione dell'entità.|  
 |**modify_date**|**datetime**|Ora dell'ultima modifica dell'entità.|  
-|**owning_principal_id**|**int**|ID dell'entità proprietaria dell'entità corrente. Tutte le entità, ad eccezione dei ruoli di Database devono essere di proprietà **dbo**.|  
+|**owning_principal_id**|**int**|ID dell'entità proprietaria dell'entità corrente. Tutte le entità, ad eccezione dei ruoli di Database devono essere proprietario **dbo**.|  
 |**sid**|**varbinary(85)**|ID di sicurezza (SID) dell'entità.  NULL per SYS e INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Se è 1, questa riga rappresenta una voce per uno dei ruoli predefiniti del database, ovvero db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
-|**authentication_type e**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica il tipo di autenticazione. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 0: Nessuna autenticazione<br />1: autenticazione istanza<br />2: l'autenticazione del database<br />3: l'autenticazione di Windows|  
-|**denominata authentication_type_desc**|**nvarchar(60)**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descrizione del tipo di autenticazione. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> NONE: Nessuna autenticazione<br />ISTANZA: Autenticazione istanza<br />DATABASE: L'autenticazione Database<br />WINDOWS: L'autenticazione di Windows|  
+|**authentication_type**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica il tipo di autenticazione. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 0: Nessuna autenticazione<br />1: autenticazione istanza<br />2: l'autenticazione del database<br />3: l'autenticazione di Windows|  
+|**denominata authentication_type_desc**|**nvarchar(60)**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descrizione del tipo di autenticazione. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> NONE: Nessuna autenticazione<br />ISTANZA: Autenticazione istanza<br />DATABASE: L'autenticazione del Database<br />WINDOWS: L'autenticazione di Windows|  
 |**default_language_name**|**sysname**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica la lingua predefinita per questa entità.|  
 |**default_language_lcid**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica l'identificatore LCID predefinito per questa entità.|  
-|**allow_encrypted_value_modifications**|**bit**|**Si applica a**: da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di copia bulk dei dati crittografate con crittografia sempre attiva, tra le tabelle o database, senza la decrittografia dei dati. Il valore predefinito è OFF. |      
+|**allow_encrypted_value_modifications**|**bit**|**Si applica a**: da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di copia bulk di dati con Always Encrypted, tra le tabelle o database, senza la decrittografia dei dati. Il valore predefinito è OFF. |      
   
-## <a name="remarks"></a>Osservazioni  
- Il *PasswordLastSetTime* sono disponibili in tutte le configurazioni supportate di SQL Server, mentre le altre proprietà è disponibile solo quando SQL Server è in esecuzione su Windows Server 2003 o versione successiva e CHECK_POLICY e CHECK_ SCADENZA sono abilitati. Vedere [criteri Password](../../relational-databases/security/password-policy.md) per ulteriori informazioni.  
+## <a name="remarks"></a>Note  
+ Il *PasswordLastSetTime* proprietà sono disponibili in tutte le configurazioni supportate di SQL Server, ma le altre proprietà è disponibile solo quando viene eseguito SQL Server in Windows Server 2003 o versione successiva ed entrambe le opzioni CHECK_POLICY e CHECK_ SCADENZA sono abilitati. Visualizzare [criteri Password](../../relational-databases/security/password-policy.md) per altre informazioni.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può visualizzare il proprio nome utente, gli utenti di sistema e i ruoli predefiniti del database. Per visualizzare altri utenti, è richiesta l'autorizzazione ALTER ANY USER o un'autorizzazione dell'utente. Per visualizzare i ruoli definiti dall'utente, è richiesta l'autorizzazione ALTER ANY ROLE o l'appartenenza al ruolo.  
@@ -99,7 +99,7 @@ JOIN sys.schemas AS s
  Nella query seguente vengono elencate le autorizzazioni concesse o negate in modo esplicito alle entità di database.  
   
 > [!IMPORTANT]  
->  Le autorizzazioni dei ruoli predefiniti del database non vengono visualizzati `sys.database_permissions`. Pertanto, le entità di database potrebbero contenere ulteriori autorizzazioni non presenti in questo elenco.  
+>  Le autorizzazioni dei ruoli predefiniti del database non sono incluse `sys.database_permissions`. Pertanto, le entità di database potrebbero contenere ulteriori autorizzazioni non presenti in questo elenco.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -110,7 +110,7 @@ JOIN sys.database_permissions AS pe
 ```  
   
 ### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>Unità d: elenco delle autorizzazioni per gli oggetti dello schema all'interno di un database  
- La query seguente join `sys.database_principals` e `sys.database_permissions` a `sys.objects` e `sys.schemas` per elencare le autorizzazioni concesse o negate agli oggetti dello schema specifico.  
+ La query seguente join `sys.database_principals` e `sys.database_permissions` al `sys.objects` e `sys.schemas` per elencare le autorizzazioni concesse o negate agli oggetti dello schema specifico.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

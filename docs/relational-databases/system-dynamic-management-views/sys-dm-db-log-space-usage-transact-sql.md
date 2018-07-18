@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9bedbe8d5aa7b4e50ce4f486f2f3dbbf84e48a9c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061439"
 ---
 # <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,19 +44,19 @@ Restituisce lo spazio informazioni sull'utilizzo per il log delle transazioni.
 |database_id|**smallint**|ID del database.|  
 |total_log_size_in_bytes |**bigint** |Le dimensioni del log  |
 |used_log_space_in_bytes |**bigint** |Le dimensioni del log occupata  |     
-|used_log_space_in_percent |**real** |Le dimensioni del log come percentuale delle dimensioni del log totale occupata |
-|log_space_in_bytes_since_last_backup |**bigint** |La quantità di spazio utilizzato dall'ultimo backup del log <br />**Si applica a:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] tramite [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
+|used_log_space_in_percent |**real** |Le dimensioni del log sotto forma di percentuale delle dimensioni totali log occupata |
+|log_space_in_bytes_since_last_backup |**bigint** |La quantità di spazio utilizzato dall'ultimo backup del log <br />**Si applica a:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] attraverso [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
     
   
 ## <a name="permissions"></a>Autorizzazioni  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. Determinare la quantità di Log spazio disponibile in tempdb   
-La query seguente restituisce lo spazio di log libero totale in megabyte (MB) disponibile in tempdb.
+La query seguente restituisce lo spazio del log libero totale in megabyte (MB) disponibile in tempdb.
 
 ```sql
 USE tempdb;  

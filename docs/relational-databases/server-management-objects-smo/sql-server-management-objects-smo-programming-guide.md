@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Objects (SMO) Guida per programmatori | Documenti Microsoft
+title: SQL Server Management Objects (SMO) Guida per programmatori | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7b1e782a49f972c1fe463cb989f57b35ff806dd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967416"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061839"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Guida alla programmazione di SMO (SQL Server Management Objects)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) è una raccolta di oggetti che sono progettati per programmare tutti gli aspetti della gestione delle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. RMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects) è una raccolta di oggetti che incapsula la gestione delle repliche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) è una raccolta di oggetti progettati per programmare tutti gli aspetti della gestione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. RMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects) è una raccolta di oggetti che incapsula la gestione delle repliche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Argomento|Description|  
 |-----------|-----------------|

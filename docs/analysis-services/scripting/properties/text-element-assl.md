@@ -1,5 +1,5 @@
 ---
-title: Elemento di testo (ASSL) | Documenti Microsoft
+title: Elemento Text (ASSL) | Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 77e7fad88ddba7d6eaed048f1c2b1ef95bd9c5bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34046015"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062709"
 ---
 # <a name="text-element-assl"></a>Elemento Text (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "34046015"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String|  
-|Valore predefinito|Nessuno|  
+|Valore predefinito|None|  
 |Cardinalità|1-1: elemento obbligatorio visualizzato una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -42,13 +42,13 @@ ms.locfileid: "34046015"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[Command](../../../analysis-services/scripting/objects/command-element-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
- L'elemento che corrisponde all'elemento padre **testo** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Command>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di **testo** nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Command>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento i comandi &#40;ASSL&#41;](../../../analysis-services/scripting/collections/commands-element-assl.md)   
- [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [I comandi di elemento &#40;ASSL&#41;](../../../analysis-services/scripting/collections/commands-element-assl.md)   
+ [Proprietà &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

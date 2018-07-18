@@ -1,5 +1,5 @@
 ---
-title: Configurare l'archiviazione failover istanza cluster NFS - SQL Server in Linux | Documenti Microsoft
+title: Configurare l'archiviazione failover istanza del cluster NFS - SQL Server in Linux | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,79 +12,79 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: e0432452021919690c4d170f040e183e7de6b635
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322962"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061879"
 ---
-# <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurare i cluster di failover - NFS - SQL Server in Linux
+# <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurare cluster di failover - NFS - SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In questo articolo viene illustrato come configurare l'archiviazione NFS per un'istanza del cluster di failover (FCI) in Linux. 
+Questo articolo illustra come configurare l'archiviazione NFS per un'istanza cluster di failover (FCI) in Linux. 
 
-NFS o network file system, è un metodo comune per la condivisione di dischi in Linux world ma non di uno. Analogamente a iSCSI, NFS può essere configurato in un server o un tipo di dispositivo o l'unità di archiviazione, purché soddisfi i requisiti di archiviazione per SQL Server.
+NFS o network file system, è un metodo comune per la condivisione dei dischi nel mondo Linux ma non il Windows uno. Analogamente a iSCSI, NFS può essere configurato in un server o una sorta di appliance o unità di archiviazione, purché soddisfi i requisiti di archiviazione per SQL Server.
 
-## <a name="important-nfs-server-information"></a>Importanti informazioni del server NFS
+## <a name="important-nfs-server-information"></a>Importanti informazioni server NFS
 
-L'origine hosting NFS (un server Linux o altro) deve essere utilizzando/conforme con la versione 4.2 o versioni successive. Le versioni precedenti non funzioneranno con SQL Server in Linux.
+L'origine hosting NFS (un server Linux o qualcos'altro) deve essere usando/conformi con la versione 4.2 o versione successiva. Le versioni precedenti non funzioneranno con SQL Server in Linux.
 
-Quando si configurano le cartelle per essere condivisa nel server NFS, assicurarsi che le funzioni seguono queste opzioni di linee guida generali:
-- `rw` Per garantire che la cartella possono essere essere letti e scritti
-- `sync` Per garantire operazioni di scrittura per la cartella è garantito
-- Non utilizzare `no_root_squash` un rischio per la sicurezza viene considerato come un'opzione.
-- Verificare che la cartella disponga di diritti completi (777) applicati
+Quando si configurano le cartelle per essere condivise nel server di NFS, assicurarsi che seguono queste opzioni generali di linee guida:
+- `rw` Per garantire che la cartella può essere letto da e scritti
+- `sync` Per garantire operazioni di scrittura garantiti nella cartella
+- Non usare `no_root_squash` come opzione; viene considerata un rischio per la sicurezza
+- Assicurarsi che la cartella disponga di diritti completi (777) applicati
 
-Verificare che gli standard di sicurezza vengono applicati per l'accesso. Quando si configura la cartella, assicurarsi che solo i server che fanno parte dell'istanza FCI devono visualizzare la cartella NFS. Un esempio di un /etc/exports modificato in una soluzione basata su Linux NFS è illustrato di seguito in cui la cartella è limitata a FCIN1 e FCIN2.
+Assicurarsi che vengano applicati i propri standard di sicurezza per l'accesso. Quando si configura la cartella, assicurarsi che solo i server che fanno parte dell'istanza FCI verrà visualizzata la cartella NFS. Un esempio di un /etc/exports modificato in una soluzione basato su Linux con NFS è illustrato di seguito in cui la cartella è limitata a FCIN1 e FCIN2.
 
 ![05 nfsacl][1]
 
 ## <a name="instructions"></a>Istruzioni
 
-1. Scegliere uno dei server che farà parte della configurazione di FCI. Non è importante quale. 
+1. Scegliere uno dei server che verranno incluse nella configurazione di FCI. Non importa quale di essi. 
 
-2. Verificare che il server possa vedere il mount(s) nel server NFS.
+2. Verificare che il server possa vedere il mount(s) sul server NFS.
 
     ```bash
     sudo showmount -e <IPAddressOfNFSServer>
     ```
 
-    \<IPAddressOfNFSServer > è l'indirizzo IP del server NFS che si desidera utilizzare.
+    \<IPAddressOfNFSServer > è l'indirizzo IP del server NFS che si intende usare.
 
-3. Per i database di sistema o qualsiasi elemento archiviato nel percorso dati predefinito, seguire questi passaggi. In caso contrario, andare al passaggio 4.
+3. Per i database di sistema o tutti gli elementi archiviati nel percorso dati predefinito, seguire questa procedura. In caso contrario, andare al passaggio 4.
  
-   * Verificare che SQL Server è stato arrestato nel server che si sta lavorando.
+   * Verificare che SQL Server è arrestato nel server che si sta lavorando.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-   * Opzione completamente all'utente avanzato. Non riceverà un acknowledgement se ha esito positivo.
+   * Opzione completamente da essere l'utente con privilegi avanzati. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     sudo -i
     ```
 
-   * Opzione per l'utente mssql. Non riceverà un acknowledgement se ha esito positivo.
+   * Passa a corrispondere all'utente mssql. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     su mssql
     ```
 
-   * Creare una directory temporanea per archiviare i dati di SQL Server e i file di log. Non riceverà un acknowledgement se ha esito positivo.
+   * Creare una directory temporanea per archiviare i dati di SQL Server e i file di log. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     mkdir <TempDir>
     ```
 
-    \<TempDir > è il nome della cartella. Nell'esempio seguente viene creata una cartella denominata /var/opt/mssql/tmp.
+    \<TempDir > è il nome della cartella. L'esempio seguente crea una cartella denominata /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
     ```
 
-   * Copiare i file di dati e di log di SQL Server per la directory temporanea. Non riceverà un acknowledgement se ha esito positivo.
+   * Copiare i file di dati e di log di SQL Server per la directory temporanea. Non riceverà alcun acknowledgement se ha esito positivo.
     
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
@@ -92,7 +92,7 @@ Verificare che gli standard di sicurezza vengono applicati per l'accesso. Quando
 
     \<TempDir > è il nome della cartella nel passaggio precedente.
 
-   * Verificare che i file nella directory.
+   * Verificare che i file sono nella directory.
 
     ```bash
     ls TempDir
@@ -100,27 +100,27 @@ Verificare che gli standard di sicurezza vengono applicati per l'accesso. Quando
 
     \<TempDir > è il nome della cartella dal passaggio d.
 
-   * Eliminare i file dalla directory dei dati di SQL Server esistente. Non riceverà un acknowledgement se ha esito positivo.
+   * Eliminare i file dalla directory di dati di SQL Server esistente. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     rm – f /var/opt/mssql/data/*
     ```
 
-   * Verificare che i file sono stati eliminati. 
+   * Verificare che i file siano stati eliminati. 
 
     ```bash
     ls /var/opt/mssql/data
     ```
     
-   * Digitare exit per tornare all'utente root.
+   * Tipo di uscita per tornare all'utente radice.
 
-   * Montare la condivisione NFS nella cartella dati SQL Server. Non riceverà un acknowledgement se ha esito positivo.
+   * Montare la condivisione NFS nella cartella dati SQL Server. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
     ```
 
-    \<IPAddressOfNFSServer > è l'indirizzo IP del server NFS che si desidera utilizzare 
+    \<IPAddressOfNFSServer > è l'indirizzo IP del server NFS che si intende usare 
 
     \<FolderOnNFSServer > è il nome della condivisione NFS. La sintassi di esempio seguente corrisponde alle informazioni di NFS dal passaggio 2.
 
@@ -134,87 +134,87 @@ Verificare che gli standard di sicurezza vengono applicati per l'accesso. Quando
     mount
     ```
 
-    ![10 mountnoswitches][2]
+    ![10-mountnoswitches][2]
 
-   * Passare all'utente mssql. Non riceverà un acknowledgement se ha esito positivo.
+   * Passare all'utente mssql. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     su mssql
     ```
 
-   * Copiare i file da /var/opt/mssql/data la directory temporanea. Non riceverà un acknowledgement se ha esito positivo.
+   * Copiare i file da /var/opt/mssql/data la directory temporanea. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     cp /var/opt/mssql/tmp/* /var/opt/mssqldata
     ```
 
-   * Verificare che i file sono presenti.
+   * Verificare che i file siano presenti.
 
     ```bash
     ls /var/opt/mssql/data
     ```
 
-   * Immettere l'uscita da non mssql 
+   * Immettere l'uscita per non essere mssql 
     
-   * Immettere l'uscita da non radice
+   * Immettere l'uscita per non essere radice
 
-   * Avviare SQL Server. Se tutto ciò che è stata copiata correttamente e sicurezza applicata correttamente, SQL Server dovrebbe essere mostrato come avviato.
+   * Avviare SQL Server. Se tutto ciò che è stato copiato correttamente e sicurezza applicata correttamente, SQL Server dovrebbe risultare avviato.
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ```
     
-   * Creare un database per verificare che la protezione è stata impostata correttamente. L'esempio seguente mostra che viene eseguita tramite codice Transact-SQL può essere eseguita tramite SQL Server Management Studio.
+   * Creare un database per verificare che la protezione è impostata correttamente. L'esempio seguente mostra che viene eseguita tramite codice Transact-SQL è possibile tramite SSMS.
  
     ![CreateTestdatabase][3]
 
-   * Arrestare SQL Server e verificare che viene chiuso.
+   * Arresto di SQL Server e verificare che sia arrestato.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-   * Se non si sta creando eventuali altri mount NFS, disinstallare la condivisione. Se si è, non disinstallare.
+   * Se non si intende creare tutti gli altri punti di montaggio di NFS, smontare la condivisione. Se si è, non smontare.
 
     ```bash
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
     ```
 
-    \<IPAddressOfNFSServer > è l'indirizzo IP del server NFS che si desidera utilizzare
+    \<IPAddressOfNFSServer > è l'indirizzo IP del server NFS che si intende usare
 
     \<FolderOnNFSServer > è il nome della condivisione NFS
 
     \<FolderMountedIn > è la cartella creata nel passaggio precedente. 
 
-4. Per scopi diversi da database di sistema, ad esempio i database utente o di backup, seguire questi passaggi. Se solo utilizzando il percorso predefinito, andare al passaggio 5.
+4. Per scopi diversi da database di sistema, ad esempio i database utente o i backup, seguire questa procedura. Se solo utilizzando il percorso predefinito, andare al passaggio 5.
 
-   * Opzione per l'utente avanzato. Non riceverà un acknowledgement se ha esito positivo.
+   * Commutatore sia l'utente con privilegi avanzati. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     sudo -i
     ```
 
-   * Creare una cartella che verrà utilizzata da SQL Server. 
+   * Creare una cartella che verrà usata da SQL Server. 
 
     ```bash
     mkdir <FolderName>
     ```
 
-    \<Nome cartella > è il nome della cartella. Percorso completo della cartella deve essere specificato ma non nella posizione corretta. Nell'esempio seguente viene creata una cartella denominata /var/opt/mssql/userdata.
+    \<Nomecartella > è il nome della cartella. Percorso completo della cartella deve essere specificata se non sono in posizione corretta. L'esempio seguente crea una cartella denominata /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
     ```
 
-   * Montare la condivisione NFS nella cartella creata nel passaggio precedente. Non riceverà un acknowledgement se ha esito positivo.
+   * Montare la condivisione NFS nella cartella creata nel passaggio precedente. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
     Mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn> -o nfsvers=4.2,timeo=14,intr
     ```
 
-    \<IPAddressOfNFSServer > è l'indirizzo IP del server NFS che si desidera utilizzare
+    \<IPAddressOfNFSServer > è l'indirizzo IP del server NFS che si intende usare
 
     \<FolderOnNFSServer > è il nome della condivisione NFS
 
@@ -226,19 +226,19 @@ Verificare che gli standard di sicurezza vengono applicati per l'accesso. Quando
 
    * Verificare che il montaggio ha esito negativo generando montaggio senza opzioni.
   
-   * Digitare exit per non essere più l'utente avanzato.
+   * Uscita di tipo che non rappresenta più l'utente con privilegi avanzati.
 
-   * Per eseguire il test, creare un database in tale cartella. L'esempio seguente usa sqlcmd per creare un database, passare il contesto, verificare i file presenti nel livello del sistema operativo e quindi Elimina il percorso temporaneo. È possibile utilizzare SQL Server Management Studio.
+   * Per eseguire il test, creare un database in tale cartella. L'esempio seguente usa sqlcmd per creare un database, passare a esso, verificare i file esistono a livello di sistema operativo e quindi Elimina il percorso temporaneo. È possibile usare SQL Server Management Studio.
 
-    ![15 createtestdatabase][4]
+    ![15-createtestdatabase][4]
  
-   * Disinstallare la condivisione 
+   * Smontare la condivisione 
 
     ```bash
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
     ```
 
-    \<IPAddressOfNFSServer > è l'indirizzo IP del server NFS che si desidera utilizzare
+    \<IPAddressOfNFSServer > è l'indirizzo IP del server NFS che si intende usare
     
     \<FolderOnNFSServer > è il nome della condivisione NFS
 
@@ -249,7 +249,7 @@ Verificare che gli standard di sicurezza vengono applicati per l'accesso. Quando
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Configurare l'istanza del cluster di failover, SQL Server in Linux](sql-server-linux-shared-disk-cluster-configure.md)
+[Configurare l'istanza del cluster di failover: SQL Server in Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/05-nfsacl.png

@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f834434e2e03bad82df9221b1d66db6f4f1e300a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181062"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059128"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>sys.external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -34,17 +34,17 @@ ms.locfileid: "33181062"
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|file_format_id|**int**|ID di oggetto per il formato di file esterno.||  
-|name|**sysname**|Nome del formato di file. in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], questo valore è univoco per il database. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], questo valore è univoco per il server.||  
-|format_type|**tinyint**|Il tipo di formato di file.|PARQUET DELIMITEDTEXT, RCFILE, ORC,|  
-|field_terminator|**nvarchar(10)**|Per format_type = DELIMITEDTEXT, questo è il carattere di terminazione del campo.||  
+|file_format_id|**int**|ID oggetto per il formato di file esterno.||  
+|NAME|**sysname**|Nome del formato di file. nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], questo valore è univoco per il database. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], questo valore è univoco per il server.||  
+|format_type|**tinyint**|Il tipo di formato di file.|DELIMITEDTEXT, RCFILE, ORC, PARQUET|  
+|carattere_terminazione_campo|**nvarchar(10)**|Per format_type = DELIMITEDTEXT, questo è il carattere di terminazione del campo.||  
 |string_delimiter|**nvarchar(10)**|Per format_type = DELIMITEDTEXT, questo è il delimitatore di stringa.||  
-|date_format|**nvarchar(50)**|Per format_type = DELIMITEDTEXT, si tratta della data definito dall'utente e il formato di ora.||  
-|use_type_default|**bit**|Per format_type = testo delimitato, specifica come gestire i valori mancanti quando PolyBase sta importando dati da file di testo HDFS in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – archiviare i valori mancanti sotto forma di stringa 'NULL'.<br /><br /> 1: archiviare i valori mancanti come il valore predefinito della colonna.|  
+|date_format|**nvarchar(50)**|Per format_type = DELIMITEDTEXT, si tratta della data definito dall'utente e il formato dell'ora.||  
+|use_type_default|**bit**|Per format_type = delimitato da testo: specifica come gestire valori mancanti quando PolyBase sta importando dati da file di testo HDFS in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – archiviare i valori mancanti come stringa 'NULL'.<br /><br /> 1: archiviare i valori mancanti come il valore predefinito della colonna.|  
 |serde_method|**nvarchar(255)**|Per format_type = RCFILE, si tratta del metodo di serializzazione/deserializzazione.||  
-|row_terminator|**nvarchar(10)**|Per format_type = DELIMITEDTEXT, questa è la stringa di caratteri che termina ogni riga nel file Hadoop esterno.|Sempre '\n'.|  
-|codifica|**nvarchar(10)**|Per format_type = DELIMITEDTEXT, si tratta del metodo di codifica del file Hadoop esterno.|Sempre 'UTF8'.|  
-|data_compression|**nvarchar(255)**|Il metodo di compressione dati per i dati esterni.|Per format_type = DELIMITEDTEXT:<br /><br /> -   'org.apache.hadoop.io.compress.DefaultCodec'<br />-   'org.apache.hadoop.io.compress.GzipCodec'<br /><br /> Per format_type = RCFILE:<br /><br /> -   'org.apache.hadoop.io.compress.DefaultCodec'<br /><br /> Per format_type = ORC:<br /><br /> -   'org.apache.hadoop.io.compress.DefaultCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'<br /><br /> Per format_type = PARQUET:<br /><br /> -   'org.apache.hadoop.io.compress.GzipCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'|  
+|carattere_terminazione_riga|**nvarchar(10)**|Per format_type = DELIMITEDTEXT, questa è la stringa di carattere che interrompe ogni riga nel file Hadoop esterno.|Sempre '\n'.|  
+|codifica|**nvarchar(10)**|Per format_type = DELIMITEDTEXT, si tratta del metodo di codifica per il file Hadoop esterno.|Sempre 'UTF8'.|  
+|data_compression|**nvarchar(255)**|Il metodo di compressione dei dati per i dati esterni.|Per format_type = DELIMITEDTEXT:<br /><br /> -   'org.apache.hadoop.io.compress.DefaultCodec'<br />-   'org.apache.hadoop.io.compress.GzipCodec'<br /><br /> Per format_type = RCFILE:<br /><br /> -   'org.apache.hadoop.io.compress.DefaultCodec'<br /><br /> Per format_type = ORC:<br /><br /> -   'org.apache.hadoop.io.compress.DefaultCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'<br /><br /> Per format_type = PARQUET:<br /><br /> -   'org.apache.hadoop.io.compress.GzipCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

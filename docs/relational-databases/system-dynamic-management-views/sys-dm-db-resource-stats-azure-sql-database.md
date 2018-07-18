@@ -1,5 +1,5 @@
 ---
-title: Sys.dm db_resource_stats (Database SQL di Azure) | Documenti Microsoft
+title: DM db_resource_stats (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2018
 ms.prod: ''
@@ -26,11 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a91988c36604ce38c7022e6bc111cc1941e43a03
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ae25c2075fdb3cb618a38d1a4be2212c9135001d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005695"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,30 +41,31 @@ ms.lasthandoff: 05/23/2018
 |Colonne|Tipo di dati|Description|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Ora UTC che indica la fine dell'intervallo di reporting corrente.|  
-|avg_cpu_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  
-|avg_data_io_percent|**Decimal (5,2)**|Media di dati utilizzo i/o in percentuale del limite del livello del servizio.|  
-|avg_log_write_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio delle risorse di scrittura del limite del livello del servizio.|  
-|avg_memory_usage_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio della memoria del limite del livello del servizio.<br /><br /> Ciò include la memoria utilizzata per l'archiviazione di oggetti di OLTP In memoria.|  
-|xtp_storage_percent|**Decimal (5,2)**|Utilizzo di archiviazione per OLTP In memoria in percentuale del limite del livello del servizio (alla fine dell'intervallo di reporting). Ciò include la memoria utilizzata per l'archiviazione degli oggetti OLTP In memoria: le tabelle con ottimizzazione per la memoria, indici e le variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione di operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP In memoria non viene utilizzato nel database.|  
-|max_worker_percent|**Decimal (5,2)**|Massimi simultanee processi di lavoro (richieste) in percentuale del limite del livello di servizio del database.|  
-|max_session_percent|**Decimal (5,2)**|Numero massimo di sessioni simultaneo espresso come percentuale del limite del livello di servizio del database.|  
-|dtu_limit|**int**|Max database DTU impostazione corrente per il database durante questo intervallo. |
+|avg_cpu_percent|**numero decimale (5,2)**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  
+|avg_data_io_percent|**numero decimale (5,2)**|Media di dati utilizzo i/o in percentuale del limite del livello di servizio.|  
+|avg_log_write_percent|**numero decimale (5,2)**|Percentuale dell'utilizzo medio delle risorse di scrittura del limite del livello del servizio.|  
+|avg_memory_usage_percent|**numero decimale (5,2)**|Percentuale dell'utilizzo medio della memoria del limite del livello del servizio.<br /><br /> Ciò include la memoria usata per l'archiviazione di oggetti di OLTP In memoria.|  
+|xtp_storage_percent|**numero decimale (5,2)**|Utilizzo spazio di archiviazione per OLTP In memoria, espresso in percentuale del limite del livello di servizio (alla fine dell'intervallo di reporting). Ciò include la memoria usata per l'archiviazione degli oggetti OLTP In memoria seguenti: tabelle con ottimizzazione per la memoria, indici e le variabili di tabella. Include anche la memoria utilizzata per l'elaborazione di operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP In memoria non viene utilizzato nel database.|  
+|max_worker_percent|**numero decimale (5,2)**|Massimi ruoli di lavoro simultanei (richieste) espresso come percentuale del limite del livello di servizio del database.|  
+|max_session_percent|**numero decimale (5,2)**|Numero massimo di sessioni simultaneo espresso in percentuale del limite del livello di servizio del database.|  
+|dtu_limit|**int**|Database max DTU impostazione corrente per il database durante questo intervallo. Per i database usando il modello basato su vCore, questa colonna è NULL.|
+|cpu_limit|**numero decimale (5,2)**|Numero di Vcore per il database durante questo intervallo. Per i database usando il modello basato su DTU, questa colonna è NULL.|
 |||
   
 > [!TIP]  
->  Per ulteriori informazioni di contesto su questi limiti e i livelli di servizio, vedere gli argomenti [livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) e [funzionalità di livello e i limiti del servizio](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
+>  Per altre informazioni su questi limiti e i livelli di servizio, vedere gli argomenti [livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) e [limiti e funzionalità dei livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Questa vista richiede l'autorizzazione VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Osservazioni  
- I dati restituiti da **db_resource_stats** espressa come percentuale del valore massimo consentito i limiti del livello di servizio/prestazioni livello sia in esecuzione.
+## <a name="remarks"></a>Note  
+ I dati restituiti da **DM db_resource_stats** viene espresso come percentuale dei limiti massimi consentiti per il livello di prestazioni/livello di servizio in esecuzione.
  
  Se è stato effettuato il failover del database in un altro server negli ultimi 60 minuti, la vista restituirà solo i dati relativi al tempo in cui il database è stato primario dopo il failover.  
   
- Per una vista meno dettagliata di questi dati, utilizzare **resource_stats** vista del catalogo di **master** database. Questa vista acquisisce i dati ogni 5 minuti e conserva i dati cronologici per 14 giorni.  Per altre informazioni, vedere [Sys. resource_stats &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Per una vista meno dettagliata di questi dati, usare **Sys. resource_stats** vista del catalogo il **master** database. Questa vista acquisisce i dati ogni 5 minuti e conserva i dati cronologici per 14 giorni.  Per altre informazioni, vedere [Sys. resource_stats &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
- Quando un database è un membro di un pool elastico, presentate come i valori percentuali, le statistiche di risorse sono espressi come percentuale del limite massimo per i database impostati nella configurazione del pool elastico.  
+ Quando un database è un membro di un pool elastico, le statistiche di resource presentate come valori percentuali, sono espresse come percentuale del limite massimo per database impostato nella configurazione del pool elastico.  
   
 ## <a name="example"></a>Esempio  
   
@@ -104,6 +106,6 @@ FROM sys.dm_db_resource_stats;
 ## <a name="see-also"></a>Vedere anche  
  [Sys. resource_stats &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Limiti e delle funzionalità di livello di servizio](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
+ [Limiti e le funzionalità del livello servizio](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   
   

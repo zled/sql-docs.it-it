@@ -1,5 +1,5 @@
 ---
-title: Funzione Min (XQuery) | Documenti Microsoft
+title: Funzione Min (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8e5ce4f5ac16b337db62633d8b0a72ca98c708a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077408"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051709"
 ---
-# <a name="aggregate-functions---min"></a>-Funzioni di aggregazione min
+# <a name="aggregate-functions---min"></a>Funzioni di aggregazione - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce da una sequenza di valori atomici, *$arg*, l'unico elemento il cui valore è minore rispetto a quello di tutti gli altri.  
+  Da una sequenza di valori atomici, restituisce *$arg*, l'unico elemento il cui valore è minore di quello di tutti gli altri.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,12 +46,12 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Sequenza di elementi da cui viene restituito il valore minimo.  
   
-## <a name="remarks"></a>Osservazioni  
- Tutti i tipi di valori atomizzati passati a **min ()** devono essere sottotipi dello stesso tipo di base. Tipi di base accettati sono i tipi che supportano il **gt** operazione. Tra questi tipi sono inclusi i tre tipi di base numerici predefiniti, ovvero i tipi di base di data/ora xs:string, xs:boolean e xdt:untypedAtomic. Per i valori di tipo xdt:untypedAtomic viene eseguito il cast a xs:double. Se è presente una combinazione di questi tipi, o se vengono passati altri valori di altri tipi, viene generato un errore statico.  
+## <a name="remarks"></a>Note  
+ Tutti i tipi di valori atomizzati passati a **min ()** devono essere sottotipi dello stesso tipo di base. Tipi di base accettati sono i tipi che supportano il **gt** operazione. Tra questi tipi sono inclusi i tre tipi di base numerici predefiniti, ovvero i tipi di base di data/ora xs:string, xs:boolean e xdt:untypedAtomic. Per i valori di tipo xdt:untypedAtomic viene eseguito il cast a xs:double. Se c'è una combinazione di questi tipi, o se vengono passati altri valori di altri tipi, viene generato un errore statico.  
   
- Il risultato di **min ()** riceve il tipo di base dei tipi passati, ad esempio xs: double nel caso di xdt: untypedAtomic. Se l'input è una sequenza vuota calcolata in modo statico, la sequenza vuota è implicita e viene restituito un errore statico.  
+ Il risultato del **min ()** riceve il tipo di base dei tipi passati, ad esempio xs: double nel caso di xdt: untypedAtomic. Se l'input è una sequenza vuota calcolata in modo statico, la sequenza vuota è implicita e viene restituito un errore statico.  
   
- Il **min ()** funzione restituisce un valore nella sequenza di dimensioni inferiori a quelle di qualsiasi altro valore della sequenza di input. Per i valori xs:string, vengono utilizzate le regole di confronto predefinite dei punti di codice Unicode. Se non è possibile eseguire il cast di un valore xdt: untypedAtomic a xs: Double, il valore viene ignorato nella sequenza di input, *$arg*. Se l'input è una sequenza vuota calcolata in modo dinamico, viene restituita la sequenza vuota.  
+ Il **min ()** funzione restituisce un valore nella sequenza di dimensioni inferiori a quelle di qualsiasi altro nella sequenza di input. Per i valori xs:string, vengono utilizzate le regole di confronto predefinite dei punti di codice Unicode. Se non è possibile eseguire il cast di un valore xdt: untypedAtomic a xs: Double, il valore viene ignorato nella sequenza di input *$arg*. Se l'input è una sequenza vuota calcolata in modo dinamico, viene restituita la sequenza vuota.  
   
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
@@ -76,7 +76,7 @@ WHERE ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   Il **dello spazio dei nomi** parola chiave nel prologo XQuery definisce un prefisso dello spazio dei nomi. In seguito, tale prefisso viene utilizzato nel corpo della query XQuery.  
+-   Il **dello spazio dei nomi** parola chiave nel prologo della XQuery definisce un prefisso dello spazio dei nomi. In seguito, tale prefisso viene utilizzato nel corpo della query XQuery.  
   
  Corpo della query XQuery costruisce il codice XML con un \<percorso > elemento con WCID e **LaborHrs** attributi.  
   

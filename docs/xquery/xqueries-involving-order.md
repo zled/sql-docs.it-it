@@ -1,5 +1,5 @@
 ---
-title: Query XQuery che implicano ordine | Documenti Microsoft
+title: Query XQuery che implicano ordine | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,16 +25,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 978e800ba5539878eb805c16f2460de3761dda59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077135"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051679"
 ---
 # <a name="xqueries-involving-order"></a>Query XQuery che implicano l'ordinamento
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Nei database relazionali non esiste il concetto di sequenza. Ad esempio, non è possibile eseguire una richiesta per ottenere il primo cliente del database, Tuttavia, è possibile eseguire query di un documento XML e recuperare il primo \<cliente > elemento. In questo modo si otterrà lo stesso cliente.  
+  Nei database relazionali non esiste il concetto di sequenza. Ad esempio, non è possibile eseguire una richiesta per ottenere il primo cliente del database, Tuttavia, è possibile eseguire query sui documenti XML e recuperare il primo \<cliente > elemento. In questo modo si otterrà lo stesso cliente.  
   
  In questo argomento vengono illustrate le query basate sulla sequenza di visualizzazione dei nodi nel documento.  
   
@@ -89,7 +89,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- La query precedente recupera unicamente i nodi di testo. Se si desidera che l'intero <`step`> elemento restituito, invece, rimuovere il **String ()** funzione dalla query:  
+ La query precedente recupera unicamente i nodi di testo. Se si desidera che l'intera <`step`> elemento restituito al contrario, rimuovere il **String ()** funzione della query:  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Ricerca di tutti i materiali e gli strumenti utilizzati nel secondo centro di lavorazione per la produzione di un prodotto  
  La query seguente recupera gli strumenti e i materiali utilizzati per un modello di prodotto specifico nel secondo centro di lavorazione della sequenza di centri coinvolta nel processo di produzione.  
@@ -189,7 +189,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. Ricerca dei primi due strumenti utilizzati nel primo centro di lavorazione coinvolto nel processo di produzione del prodotto  
- La query seguente restituisce i primi due strumenti utilizzati per un modello di prodotto nel primo centro di lavorazione della sequenza di centri coinvolti nel processo di produzione. La query viene eseguita sulle istruzioni di produzione archiviate nel **istruzioni** colonna il **Production. ProductModel** tabella.  
+ La query seguente restituisce i primi due strumenti utilizzati per un modello di prodotto nel primo centro di lavorazione della sequenza di centri coinvolti nel processo di produzione. La query viene eseguita sulle istruzioni di produzione archiviati nel **istruzioni** della colonna della **Production. ProductModel** tabella.  
   
 ```  
 SELECT Instructions.query('  
@@ -225,7 +225,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. Ricerca delle ultime due fasi di produzione nel primo centro di lavorazione coinvolto nella produzione di un prodotto specifico  
- La query utilizza la **Last** per recuperare le ultime due fasi di produzione.  
+ La query Usa la **Last** funzione per recuperare le ultime due fasi di produzione.  
   
 ```  
 SELECT Instructions.query('   

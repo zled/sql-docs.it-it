@@ -1,5 +1,5 @@
 ---
-title: Sys.dm db_wait_stats (Database SQL di Azure) | Documenti Microsoft
+title: Sys.dm_db_wait_stats (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
@@ -27,10 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: af54ac9890cf903e0646d9b6d8eefe031924ffce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051403"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ ms.lasthandoff: 05/23/2018
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar(60)**|Nome del tipo di attesa. Per ulteriori informazioni, vedere [tipi di attesa](#WaitTypes), più avanti in questo argomento.|  
+|wait_type|**nvarchar(60)**|Nome del tipo di attesa. Per altre informazioni, vedere [tipi di attesa](#WaitTypes), più avanti in questo argomento.|  
 |waiting_tasks_count|**bigint**|Numero di attese del tipo specificato. Questo contatore viene incrementato all'inizio di ogni attesa.|  
 |wait_time_ms|**bigint**|Tempo di attesa totale, espresso in millisecondi, per il tipo di attesa specifico. Il tempo comprende signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tempo di attesa massimo per il tipo di attesa specifico.|  
 |signal_wait_time_ms|**bigint**|Differenza tra il momento in cui è stato rilevato il thread in attesa e quello in cui è stata avviata l'esecuzione del thread.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 -   In questa DMV vengono visualizzati solo i dati solo per il database corrente.  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/23/2018
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il server.  
   
-##  <a name="WaitTypes"></a> Tipi di attesa  
+##  <a name="WaitTypes"></a> Tipi di attese  
  Attesa di risorse  
  Questo tipo di attesa si verifica quando un thread di lavoro richiede l'accesso a una risorsa non disponibile perché usata da un altro thread di lavoro o perché non è ancora disponibile. Un esempio di attesa di risorse è rappresentato da blocchi, latch e attese di I/O su rete e su disco. Le attese blocchi e latch sono attese sugli oggetti di sincronizzazione.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/23/2018
   
  Anche se il thread non è più in attesa, la sua esecuzione non deve necessariamente essere avviata subito perché tale thread viene innanzitutto inserito nella coda dei thread di lavoro eseguibili e pertanto deve attendere un quantum per essere eseguito nell'utilità di pianificazione.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i contatori del tempo di attesa sono **bigint** valori e pertanto non sono soggetti al rollover dei contatori come i contatori equivalenti nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono i contatori di tempo di attesa **bigint** i valori e pertanto non sono soggetti al rollover dei contatori come i corrispondenti contatori nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Nella tabella seguente sono elencati i tipi di attesa rilevati dalle attività.  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 05/23/2018
 |AUDIT_ON_DEMAND_TARGET_LOCK|Si verifica in caso di attesa su un blocco usato per assicurare l'inizializzazione singola delle destinazioni degli eventi estesi relative ai controlli.|  
 |AUDIT_XE_SESSION_MGR|Si verifica in caso di attesa su un blocco usato per sincronizzare l'avvio e l'arresto delle sessioni degli eventi estesi relative ai controlli.|  
 |BACKUP|Si verifica quando un'attività è bloccata in quanto parte dell'elaborazione di un backup.|  
-|BACKUP_OPERATOR|Si verifica quando un'attività è in attesa del montaggio del nastro. Per visualizzare lo stato del nastro, eseguire una query [Sys.dm io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). Se un'operazione di montaggio non è in sospeso, questo tipo di attesa potrebbe indicare un problema a livello di hardware nell'unità nastro.|  
+|BACKUP_OPERATOR|Si verifica quando un'attività è in attesa del montaggio del nastro. Per visualizzare lo stato del nastro, eseguire una query [DM io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). Se un'operazione di montaggio non è in sospeso, questo tipo di attesa potrebbe indicare un problema a livello di hardware nell'unità nastro.|  
 |BACKUPBUFFER|Si verifica quando un'attività di backup è in attesa di dati oppure di un buffer in cui archiviare dati. Questo tipo di attesa non è comune, tranne quando un'attività è in attesa del montaggio di un nastro.|  
 |BACKUPIO|Si verifica quando un'attività di backup è in attesa di dati oppure di un buffer in cui archiviare dati. Questo tipo di attesa non è comune, tranne quando un'attività è in attesa del montaggio di un nastro.|  
 |BACKUPTHREAD|Si verifica quando un'attività è in attesa del completamento di un'attività di backup. I tempi di attesa possono essere lunghi, da alcuni minuti a parecchie ore. Se l'attività per la quale si è verificata l'attesa è un processo di I/O, questo tipo di attesa non indica un problema.|  
@@ -198,27 +199,27 @@ ms.lasthandoff: 05/23/2018
 |LATCH_SH|Si verifica durante l'attesa di un latch di condivisione (SH). Non include i latch del buffer o i latch di contrassegno di transazione. In sys.dm_os_latch_stats è disponibile un elenco delle attese LATCH_*. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.|  
 |LATCH_UP|Si verifica durante l'attesa di un latch di aggiornamento (UP). Non include i latch del buffer o i latch di contrassegno di transazione. In sys.dm_os_latch_stats è disponibile un elenco delle attese LATCH_*. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.|  
 |LAZYWRITER_SLEEP|Si verifica quando le attività Lazywriter vengono sospese. Si tratta di una misura della durata dell'attesa delle attività in background. Non considerare questo stato durante il rilevamento di stalli a livello di utente.|  
-|LCK_M_BU|Si verifica quando un'attività è in attesa di acquisire un blocco aggiornamenti bulk (BU). Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IS|Si verifica quando un'attività è in attesa di acquisire un blocco preventivo condiviso (IS). Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IU|Si verifica quando un'attività è in attesa di acquisire un blocco preventivo di aggiornamento (IU). Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IX|Si verifica quando un'attività è in attesa di acquisire un blocco preventivo esclusivo (IX). Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_NL|Si verifica quando un'attività è in attesa di acquisire un blocco NULL per il valore di chiave corrente e un blocco di intervallo di inserimento tra la chiave corrente e quella precedente. Un blocco NULL per la chiave è un blocco a rilascio immediato. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_S|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso per il valore di chiave corrente e un blocco di intervallo di inserimento tra la chiave corrente e quella precedente. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_U|Si verifica quando un'attività è in attesa di acquisire un blocco di aggiornamento per il valore di chiave corrente e un blocco di intervallo di inserimento tra la chiave corrente e quella precedente. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_X|Si verifica quando un'attività è in attesa di acquisire un blocco esclusivo per il valore di chiave corrente e un blocco di intervallo di inserimento tra la chiave corrente e quella precedente. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_S|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso per il valore di chiave corrente e un blocco di intervallo condiviso tra la chiave corrente e quella precedente. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_U|Si verifica quando un'attività è in attesa di acquisire un blocco di aggiornamento per il valore di chiave corrente e un blocco di intervallo di aggiornamento tra la chiave corrente e quella precedente. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_S|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso per il valore di chiave corrente e un blocco di intervallo esclusivo tra la chiave corrente e quella precedente. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_U|Si verifica quando un'attività è in attesa di acquisire un blocco di aggiornamento per il valore di chiave corrente e un blocco di intervallo esclusivo tra la chiave corrente e quella precedente. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_X|Si verifica quando un'attività è in attesa di acquisire un blocco esclusivo per il valore di chiave corrente e un blocco di intervallo esclusivo tra la chiave corrente e quella precedente. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_S|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_M|Si verifica quando un'attività è in attesa di acquisire un blocco di modifica dello schema. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_S|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso dello schema. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIU|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso preventivo di aggiornamento. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIX|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso preventivo esclusivo. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_U|Si verifica quando un'attività è in attesa di acquisire un blocco di aggiornamento. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_UIX|Si verifica quando un'attività è in attesa di acquisire un blocco di aggiornamento preventivo esclusivo. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_X|Si verifica quando un'attività è in attesa di acquisire un blocco esclusivo. Per una matrice di compatibilità di blocchi, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_BU|Si verifica quando un'attività è in attesa di acquisire un blocco aggiornamenti bulk (BU). Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IS|Si verifica quando un'attività è in attesa di acquisire un blocco preventivo condiviso (IS). Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IU|Si verifica quando un'attività è in attesa di acquisire un blocco preventivo di aggiornamento (IU). Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IX|Si verifica quando un'attività è in attesa di acquisire un blocco preventivo esclusivo (IX). Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_NL|Si verifica quando un'attività è in attesa di acquisire un blocco NULL per il valore di chiave corrente e un blocco di intervallo di inserimento tra la chiave corrente e quella precedente. Un blocco NULL per la chiave è un blocco a rilascio immediato. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_S|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso per il valore di chiave corrente e un blocco di intervallo di inserimento tra la chiave corrente e quella precedente. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_U|Si verifica quando un'attività è in attesa di acquisire un blocco di aggiornamento per il valore di chiave corrente e un blocco di intervallo di inserimento tra la chiave corrente e quella precedente. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_X|Si verifica quando un'attività è in attesa di acquisire un blocco esclusivo per il valore di chiave corrente e un blocco di intervallo di inserimento tra la chiave corrente e quella precedente. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_S|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso per il valore di chiave corrente e un blocco di intervallo condiviso tra la chiave corrente e quella precedente. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_U|Si verifica quando un'attività è in attesa di acquisire un blocco di aggiornamento per il valore di chiave corrente e un blocco di intervallo di aggiornamento tra la chiave corrente e quella precedente. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_S|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso per il valore di chiave corrente e un blocco di intervallo esclusivo tra la chiave corrente e quella precedente. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_U|Si verifica quando un'attività è in attesa di acquisire un blocco di aggiornamento per il valore di chiave corrente e un blocco di intervallo esclusivo tra la chiave corrente e quella precedente. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_X|Si verifica quando un'attività è in attesa di acquisire un blocco esclusivo per il valore di chiave corrente e un blocco di intervallo esclusivo tra la chiave corrente e quella precedente. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_S|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_M|Si verifica quando un'attività è in attesa di acquisire un blocco di modifica dello schema. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_S|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso dello schema. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIU|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso preventivo di aggiornamento. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIX|Si verifica quando un'attività è in attesa di acquisire un blocco condiviso preventivo esclusivo. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_U|Si verifica quando un'attività è in attesa di acquisire un blocco di aggiornamento. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_UIX|Si verifica quando un'attività è in attesa di acquisire un blocco di aggiornamento preventivo esclusivo. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_X|Si verifica quando un'attività è in attesa di acquisire un blocco esclusivo. Per una matrice di compatibilità del blocco, vedere [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
 |LOG_RATE_GOVERNOR|Si verifica quando il DB è in attesa della quota da scrivere nel log.|  
 |LOGBUFFER|Si verifica quando un'attività è in attesa di spazio nel buffer del log per l'archiviazione di un record di log. Valori costantemente alti possono indicare che i dispositivi di log non sono in grado di far fronte alla quantità di log generati dal server.|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -256,17 +257,17 @@ ms.lasthandoff: 05/23/2018
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|Si verifica quando l'utilità di pianificazione del sistema operativo di SQL Server passa alla modalità preemptive per chiudere un dispositivo di backup virtuale.|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|Si verifica quando l'utilità di pianificazione del sistema operativo di SQL Server passa alla modalità preemptive per eseguire operazioni di cluster di failover di Windows.|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|Si verifica quando l'utilità di pianificazione del sistema operativo di SQL Server passa alla modalità preemptive per creare un oggetto COM.|  
-|PREEMPTIVE_HADR_LEASE_MECHANISM|Pianificazione per la diagnostica CSS della gestione dei lease dei gruppi di disponibilità AlwaysOn.|  
+|PREEMPTIVE_HADR_LEASE_MECHANISM|Gestione pianificazione per la diagnostica CSS dei lease dei gruppi di disponibilità AlwaysOn.|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|Utilizzato per l'attesa durante la conclusione di processi utente in un database in cui si è verificata una transizione tramite la clausola di terminazione ALTER DATABASE. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Si verifica quando un'attività in background è in attesa del completamento dell'attività in background mediante cui vengono ricevute (tramite polling) notifiche di Windows Server Failover Clustering.  Solo per uso interno.|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|Accodamento, sostituzione e/o rimuovere operazione è in attesa di acquisire un blocco di scrittura su un elenco interno AlwaysOn (ad esempio un elenco di reti, indirizzi di rete o listener del gruppo di disponibilità).  Solo per uso interno.|  
-|PWAIT_HADR_OFFLINE_COMPLETED|Una Always On rilascio operazione gruppo di disponibilità è in attesa per il gruppo di disponibilità di destinazione non in linea prima dell'eliminazione di oggetti di Windows Server Failover Clustering.|  
-|PWAIT_HADR_ONLINE_COMPLETED|Creare un Always On o operazione di gruppo di disponibilità di failover è in attesa per il gruppo di disponibilità di destinazione per portare in linea.|  
-|PWAIT_HADR_POST_ONLINE_COMPLETED|Una Always On rilascio operazione gruppo di disponibilità è in attesa del completamento di qualsiasi attività in background pianificata come parte di un comando precedente. Ad esempio, è possibile che sia in corso la transizione al ruolo primario di database di disponibilità di un'attività in background. Per evitare situazioni di race condition è necessaria l'attesa del completamento dell'attività in background da parte di DROP AVAILABILITY GROUP DDL.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|Accodamento, sostituzione e/o rimuovere operazione è in attesa di acquisire un blocco di scrittura in un elenco interno AlwaysOn (ad esempio, un elenco di reti, indirizzi di rete o listener del gruppo di disponibilità).  Solo per uso interno.|  
+|PWAIT_HADR_OFFLINE_COMPLETED|Una Always On drop operazione gruppo di disponibilità è in attesa per il gruppo di disponibilità di destinazione venga disconnesso prima dell'eliminazione definitiva di oggetti di Windows Server Failover Clustering.|  
+|PWAIT_HADR_ONLINE_COMPLETED|Operazione di gruppo di disponibilità di failover è in attesa per il gruppo di disponibilità di destinazione venga portato online un Always On creare.|  
+|PWAIT_HADR_POST_ONLINE_COMPLETED|Una Always On drop operazione gruppo di disponibilità è in attesa della chiusura di qualsiasi attività in background pianificata come parte di un comando precedente. Ad esempio, è possibile che sia in corso la transizione al ruolo primario di database di disponibilità di un'attività in background. Per evitare situazioni di race condition è necessaria l'attesa del completamento dell'attività in background da parte di DROP AVAILABILITY GROUP DDL.|  
 |PWAIT_HADR_WORKITEM_COMPLETED|Attesa interna da un thread in attesa del completamento di un'attività di lavoro asincrona. Si tratta di un'attesa prevista e consente l'utilizzo di CSS.|  
 |PWAIT_MD_LOGIN_STATS|Si verifica durante la sincronizzazione interna nei metadati per le statistiche di accesso.|  
 |PWAIT_MD_RELATION_CACHE|Si verifica durante la sincronizzazione interna nei metadati per la tabella o l'indice.|  

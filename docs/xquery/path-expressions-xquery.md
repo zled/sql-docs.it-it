@@ -1,5 +1,5 @@
 ---
-title: Espressioni di percorso (XQuery) | Documenti Microsoft
+title: Espressioni di percorso (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b964a11fe7e726abf1e5342641171aa11f583cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077778"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063984"
 ---
 # <a name="path-expressions-xquery"></a>Espressioni di percorso (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "33077778"
   Le espressioni di percorso XQuery consentono di individuare nodi, ad esempio di testo, attributo o elemento, all'interno di un documento. Il risultato di un'espressione di percorso è sempre nell'ordine del documento, senza nodi duplicati nella sequenza risultante. Nello specificare un percorso è possibile utilizzare la sintassi abbreviata o non abbreviata. Le informazioni seguenti sono relative alla sintassi non abbreviata. La sintassi abbreviata è descritta di seguito in questo argomento.  
   
 > [!NOTE]  
->  Poiché le query di esempio in questo argomento vengono specificate la **xml** colonne di tipo **CatalogDescription** e **istruzioni**nel  **ProductModel** tabella, è consigliabile acquisire familiarità con il contenuto e struttura dei documenti XML archiviati in queste colonne.  
+>  Poiché le query di esempio in questo argomento vengono specificate con il **xml** colonne di tipo **CatalogDescription** e **istruzioni**, nel  **ProductModel** tabella, è consigliabile acquisire familiarità con il contenuto e struttura del documenti XML archiviati in queste colonne.  
   
  Esistono espressioni di percorso relativo ed espressioni di percorso assoluto. Di seguito vengono descritti ambedue i tipi di espressione:  
   
@@ -47,11 +47,11 @@ ms.locfileid: "33077778"
   
      Se un percorso assoluto inizia con una sola barra, può essere o meno seguito da un percorso relativo. Se si specifica una sola barra, l'espressione restituisce il nodo radice del nodo di contesto. Per un tipo di dati XML, si tratta del nodo del documento.  
   
- Una tipica espressione di percorso è costituita da passi. Ad esempio, l'espressione di percorso assoluto, `/child::ProductDescription/child::Summary`, contiene due passi separati da una barra.  
+ Una tipica espressione di percorso è costituita da passi. Ad esempio, l'espressione di percorso assoluto `/child::ProductDescription/child::Summary`, contiene due passi separati da una barra.  
   
 -   Il primo passo recupera i \<ProductDescription > nodi elemento figlio della radice del documento.  
   
--   Il secondo passo recupera i \<riepilogo > nodi elemento figlio per ogni recuperati \<ProductDescription > nodo elemento, che a sua volta diventa il nodo di contesto.  
+-   Il secondo passo recupera i \<Summary > nodi figlio dell'elemento per ogni recuperato \<ProductDescription > nodo elemento, che a sua volta diventa il nodo di contesto.  
   
  Un passo in un'espressione di percorso può essere un passo dell'asse o un passo generale.  
   
@@ -61,21 +61,21 @@ ms.locfileid: "33077778"
  [axis](../xquery/path-expressions-specifying-axis.md)  
  Definisce la direzione di spostamento. Un passo dell'asse in un'espressione di percorso che inizia dal nodo di contesto e si sposta ai nodi raggiungibili nella direzione specificata dall'asse.  
   
- [Test di nodo](../xquery/path-expressions-specifying-node-test.md)  
+ [test di nodo](../xquery/path-expressions-specifying-node-test.md)  
  Specifica il tipo di nodo o i nomi dei nodi da selezionare.  
   
  Zero o più predicati facoltativi  
  Filtrano i nodi selezionandone alcuni e scartandone altri.  
   
- Negli esempi seguenti viene utilizzato un **axisstep** nelle espressioni di percorso:  
+ Gli esempi seguenti usano un **axisstep** nelle espressioni di percorso:  
   
 -   L'espressione di percorso assoluto `/child::ProductDescription` contiene un solo passo. Specifica un asse (`child`) e un test di nodo (`ProductDescription`).  
   
 -   L'espressione di percorso relativo `child::ProductDescription/child::Features` contiene due passi separati da una barra. Entrambi i passi specificano un asse child. ProductDescription e Features sono test di nodo.  
   
--   L'espressione di percorso relativo, `child::root/child::Location[attribute::LocationID=10]`, contiene due passi separati da una barra. Il primo passo specifica un asse (`child`) e un test di nodo (`root`). Il secondo passo specifica tutti e tre i componenti di un passo dell'asse: un asse (child), un test di nodo (`Location`) e un predicato (`[attribute::LocationID=10]`).  
+-   L'espressione di percorso relativo `child::root/child::Location[attribute::LocationID=10]`, contiene due passi separati da una barra. Il primo passo specifica un asse (`child`) e un test di nodo (`root`). Il secondo passo specifica tutti e tre i componenti di un passo dell'asse: un asse (child), un test di nodo (`Location`) e un predicato (`[attribute::LocationID=10]`).  
   
- Per ulteriori informazioni sui componenti di un passo dell'asse, vedere [asse specifica in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-axis.md), [specificando i Test di nodo in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-node-test.md), e [specifica di predicati in un Passo dell'espressione di percorso](../xquery/path-expressions-specifying-predicates.md).  
+ Per altre informazioni sui componenti di un passo dell'asse, vedere [che specifica l'asse in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-axis.md), [specificando i Test di nodo in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-node-test.md), e [specifica di predicati in una Passo dell'espressione di percorso](../xquery/path-expressions-specifying-predicates.md).  
   
 ## <a name="general-step"></a>Passo generale  
  Un passo generale è semplicemente un'espressione che deve restituire una sequenza di nodi.  
@@ -87,13 +87,13 @@ ms.locfileid: "33077778"
 id(/a/b)  
 ```  
   
- Per ulteriori informazioni sulla funzione id, vedere [id funzione &#40;XQuery&#41;](../xquery/functions-on-sequences-id.md).  
+ Per altre informazioni sulla funzione id, vedere [funzione id &#40;XQuery&#41;](../xquery/functions-on-sequences-id.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Definizione dell'asse in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-axis.md)  
  Descrive l'utilizzo del passo dell'asse in un'espressione di percorso.  
   
- [Specifica di Test di nodo in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-node-test.md)  
+ [Definizione di Test di nodo in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-node-test.md)  
  Descrive l'utilizzo dei test di nodo in un'espressione di percorso.  
   
  [Specifica di predicati in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-predicates.md)  

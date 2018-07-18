@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geography_index_xml (Transact-SQL) | Documenti Microsoft
+title: sp_help_spatial_geography_index_xml (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 13c388b03208c015ab8f0f6405b33b8ac3bd4a80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259078"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000713"
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce il nome e il valore per un determinato set di proprietà su un **geography** indice spaziale. È possibile scegliere di restituire un set principale di proprietà oppure tutte le proprietà dell'indice.  
+  Restituisce il nome e il valore per un set specificato di proprietà su un **geografia** indice spaziale. È possibile scegliere di restituire un set principale di proprietà oppure tutte le proprietà dell'indice.  
   
  I risultati vengono restituiti in un frammento XML in cui vengono visualizzati il nome e valore delle proprietà selezionate.  
   
@@ -50,21 +50,21 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Vedere [Stored procedure di argomenti e le proprietà dell'indice spaziale](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Visualizzare [Stored procedure di argomenti e le proprietà dell'indice spaziale](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="properties"></a>Proprietà  
- Vedere [Stored procedure di argomenti e le proprietà dell'indice spaziale](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Visualizzare [Stored procedure di argomenti e le proprietà dell'indice spaziale](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per accedere alla procedura, l'utente deve essere assegnato a un ruolo PUBLIC. È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Le proprietà che contengono valori NULL non sono incluse nel set restituito.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa `sp_help_spatial_geography_index_xml` per esaminare l'indice spaziale **SIndx_SpatialTable_geography_col2** definiti nella tabella **geography_col** per l'esempio di query specificata in  **@qs**. L'esempio restituisce le proprietà principali dell'indice specificato in un frammento XML in cui vengono visualizzati il nome e il valore delle proprietà selezionate.  
   
- Un [XQuery](../../xquery/xquery-basics.md) viene quindi eseguito nel set di risultati, la restituzione di una proprietà specifica.  
+ Un' [XQuery](../../xquery/xquery-basics.md) viene quindi eseguita nel set di risultati, la restituzione di una proprietà specifica.  
   
 ```  
 declare @qs geography  
@@ -74,14 +74,14 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- Simile a [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md), questa stored procedure fornisce accesso a livello di programmazione più semplice per le proprietà di un **geography** indice spaziale e segnala il set di risultati in XML.  
+ Simile a [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md), questa stored procedure fornisce accesso a livello di codice più semplice per le proprietà di un **geography** indice spaziale e segnala il set di risultati in XML.  
   
- Il rettangolo di selezione di un **geography** è la terra intera.  
+ Il rettangolo di selezione di un **geografia** è la terra intera.  
   
 ## <a name="requirements"></a>Requisiti  
   
 ## <a name="see-also"></a>Vedere anche  
- [Indice spaziale Stored procedure](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Stored procedure di indice spaziale](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Dati spaziali &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   

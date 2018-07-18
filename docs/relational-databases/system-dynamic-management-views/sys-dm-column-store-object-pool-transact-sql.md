@@ -18,34 +18,35 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 18faadc4dbcd4b2966c8e922aed01127b13c8baa
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061409"
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- Restituisce i conteggi di diversi tipi di utilizzo di pool di oggetti della memoria per gli oggetti indice columnstore.  
+ Restituisce i conteggi dei diversi tipi di oggetto pool di utilizzo della memoria per gli oggetti indice columnstore.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|`database_id`|`int`|ID del database. È univoco all'interno di un'istanza di un database di SQL Server o un server di database SQL di Azure. |  
-|`object_id`|`int`|ID dell'oggetto. L'oggetto è uno degli oggetti di object_type. | 
+|`database_id`|`int`|ID del database. Questo è univoco all'interno di un'istanza di un database di SQL Server o un server di database SQL di Azure. |  
+|`object_id`|`int`|ID dell'oggetto. L'oggetto è uno degli oggetti object_type. | 
 |`index_id`|`int`|ID dell'indice columnstore.|  
 |`partition_number`|`bigint`|Numero di partizione in base 1 all'interno dell'indice o heap. Ogni tabella o vista che include almeno una partizione.| 
 |`column_id`|`int`|ID della colonna columnstore. È NULL per DELETE_BITMAP.| 
-|`row_group_id`|`int`|ID del gruppo di righe.|
+|`row_group_id`|`int`|ID del rowgroup.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – un segmento di colonna. `object_id` è l'ID del segmento. Un segmento archivia tutti i valori per una colonna all'interno di un gruppo di righe. Ad esempio, se una tabella ha 10 colonne, esistono 10 segmenti di colonna per ogni gruppo di righe. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – dizionario globale contenente informazioni per tutti i segmenti di colonna nella tabella di ricerca.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - un dizionario locale associato a una colonna.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY: un'altra rappresentazione del dizionario globale. Fornisce una ricerca inversa del valore dictionary_id. Utilizzato per la creazione di segmenti compressi come parte del motore di Tuple o il caricamento Bulk.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP: Elimina una bitmap che tiene traccia di segmento. È una bitmap di eliminazione per ogni partizione.|  
-|`access_count`|`int`|Numero di lettura o scrittura accede a questo oggetto.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – un segmento di colonna. `object_id` è l'ID del segmento. Un segmento archivia tutti i valori per una colonna all'interno di un rowgroup. Ad esempio, se una tabella ha 10 colonne, esistono 10 segmenti di colonna per ogni rowgroup. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – globale dizionario che contiene le informazioni di ricerca su tutti i segmenti di colonna nella tabella.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - dizionario locale associato a una colonna.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY: un'altra rappresentazione nel dizionario globale. In questo modo una ricerca inversa del valore da dictionary_id. Utilizzato per creare segmenti compressi come parte del processo Tuple-Mover o il caricamento Bulk.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP: Elimina una bitmap che tiene traccia di segmento. È presente una singola bitmap delete per ogni partizione.|  
+|`access_count`|`int`|Numero di leggere o scrittura gli accessi a questo oggetto.|  
 |`memory_used_in_bytes`|`bigint`|Memoria utilizzata da questo oggetto nel pool di oggetti.|  
-|`object_load_time`|`datetime`|Ora per Quando object_id è stato introdotto nel pool di oggetti.|  
+|`object_load_time`|`datetime`|Ora per quando è stato portato object_id nel pool di oggetti.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
  
 ## <a name="see-also"></a>Vedere anche  
   

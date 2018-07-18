@@ -1,5 +1,5 @@
 ---
-title: Destinazione elemento (XMLA) | Documenti Microsoft
+title: Elemento (XMLA) target | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53cf0589cff69dab21c07979ba89e84e35f30d11
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576523"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064138"
 ---
 # <a name="target-element-xmla"></a>Elemento Target (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34576523"
 </MergePartitions>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -42,15 +42,15 @@ ms.locfileid: "34576523"
 |Valore predefinito|None|  
 |Cardinalità|1-n: elemento obbligatorio che può presentarsi più di una volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
 |Elementi figlio|[CubeID](../../../analysis-services/xmla/xml-elements-properties/cubeid-element-xmla.md), [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [MeasureGroupID](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md), [PartitionID](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- Il **destinazione** elemento è un riferimento a una singola partizione in cui il contenuto delle partizioni di origine, specificato dall'oggetto di [origini](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md) dell'elemento padre **MergePartitions** elemento, da unire.  
+## <a name="remarks"></a>Note  
+ Il **destinazione** elemento è un riferimento all'oggetto a una singola partizione in cui il contenuto delle partizioni di origine, specificato mediante il [origini](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md) dell'elemento padre **MergePartitions** elemento, da unire.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente sono rappresentate tutte le quattro partizioni del gruppo di misure di Vendite Internet nella partizione di destinazione `Internet_Sales_2004`. L'esempio si riferisce al cubo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] dell'esempio [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

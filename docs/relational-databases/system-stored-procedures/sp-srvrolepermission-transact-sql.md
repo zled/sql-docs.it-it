@@ -1,5 +1,5 @@
 ---
-title: sp_srvrolepermission (Transact-SQL) | Documenti Microsoft
+title: sp_srvrolepermission (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db6b3367b1d1a048bb47e4d30b96970557f48939
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261510"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014762"
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
  [  **@srvrolename =** ] **'***ruolo***'**  
  Nome del ruolo predefinito del server di cui vengono restituite autorizzazioni. *ruolo* viene **sysname**, con un valore predefinito è NULL. Se il ruolo viene omesso, vengono restituite le autorizzazioni di tutti i ruoli predefiniti del server. *ruolo* può avere uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**sysadmin**|Amministratori di sistema|  
 |**securityadmin**|Amministratori di sicurezza|  
@@ -71,7 +71,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |**ServerRole**|**sysname**|Nome di un ruolo predefinito del server.|  
 |**Autorizzazione**|**sysname**|Autorizzazione associata **ServerRole**|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Le autorizzazioni visualizzate includono le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e altre attività speciali che possono essere eseguite dai membri del ruolo predefinito del server. Per visualizzare un elenco dei ruoli predefiniti del server, eseguire **sp_helpsrvrole**.  
   
  Il **sysadmin** ruolo predefinito del server disponga delle autorizzazioni di tutti gli altri ruoli predefiniti del server.  

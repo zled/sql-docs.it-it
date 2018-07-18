@@ -1,5 +1,5 @@
 ---
-title: Sys.dm database_copies (Database SQL di Azure) | Documenti Microsoft
+title: DM database_copies (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -27,17 +27,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9b2e5b7b257ea0a22cf847f4e28f58c3c89a2d68
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061479"
 ---
 # <a name="sysdmdatabasecopies-azure-sql-database"></a>sys.dm_database_copies (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Restituisce informazioni sulla copia del database.  
   
-Per restituire informazioni sui collegamenti di replica geografica, utilizzare il [sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) o [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) viste (disponibile nel Database SQL V12).
+Per restituire informazioni sui collegamenti di replica geografica, usare il [Sys. geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) oppure [DM geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) viste (disponibile nel Database SQL V12).
   
   
 |Nome colonna|Tipo di dati|Description|  
@@ -51,9 +52,9 @@ Per restituire informazioni sui collegamenti di replica geografica, utilizzare i
 |**error_severity**|**int**|Restituisce 16 se la copia del database ha esito negativo.|  
 |**error_state**|**int**|Restituisce 1 se la copia ha esito negativo.|  
 |**copy_guid**|**uniqueidentifier**|ID univoco dell'operazione di copia.|  
-|**partner_server**|**sysname**|Nome del Database SQL server in cui viene creata la copia.|  
+|**partner_server**|**sysname**|Nome del server di Database SQL in cui viene creata la copia.|  
 |**partner_database**|**sysname**|Nome della copia del database nel server partner.|  
-|**replication_state**|**tinyint**|Lo stato della replica di copia continua per questo database. I valori possibili sono:<br /><br /> 0 = in sospeso. Creazione della copia del database è stata pianificata ma i passaggi necessari per la preparazione non sono ancora stati completati o sono temporaneamente bloccati dalla quota di seeding.<br /><br /> 1 = Seeding. Il copia database in fase di seeding non è ancora completamente sincronizzato con il database di origine. In questo stato non è possibile connettersi alla copia. Per annullare l'operazione di seeding in corso, è necessario eliminare il database della copia.|  
+|**replication_state**|**tinyint**|Lo stato della replica di copia continua per questo database. I valori possibili sono:<br /><br /> 0 = in sospeso. La creazione della copia del database è pianificata ma i passaggi necessari per la preparazione non sono ancora stati completati o sono temporaneamente bloccati dalla quota di seeding.<br /><br /> 1 = Seeding. La copia del database in corso il seeding non è ancora completamente sincronizzato con il database di origine. In questo stato non è possibile connettersi alla copia. Per annullare l'operazione di seeding in corso, è necessario eliminare il database della copia.|  
 |**replication_state_desc**|**nvarchar(256)**|Descrizione di replication_state. I valori possibili sono:<br /><br /> PENDING<br /><br /> SEEDING<br />|  
 |**maximum_lag**|**int**|Campo riservato.|  
 |**is_continuous_copy**|**bit**|0 = restituisce 0|  
@@ -62,9 +63,9 @@ Per restituire informazioni sui collegamenti di replica geografica, utilizzare i
 |**is_offline_secondary**|bit|Campo riservato.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Questa vista è disponibile solo nel **master** database all'account di accesso dell'entità a livello di server.  
+ In questa vista è disponibile solo nel **master** database all'account di accesso dell'entità a livello di server.  
   
-## <a name="remarks"></a>Osservazioni  
- È possibile utilizzare il **Sys.dm database_copies** visualizzare il **master** database di origine o destinazione [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server. Quando la copia del database viene completata correttamente e il nuovo database diventa ONLINE, la riga di **Sys.dm database_copies** vista viene rimossa automaticamente.  
+## <a name="remarks"></a>Note  
+ È possibile usare la **DM database_copies** visualizzare il **master** database di origine o destinazione [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server. Quando la copia del database ha esito positivo e il nuovo database diventa ONLINE, la riga nel **DM database_copies** visualizzazione viene rimosso automaticamente.  
   
   

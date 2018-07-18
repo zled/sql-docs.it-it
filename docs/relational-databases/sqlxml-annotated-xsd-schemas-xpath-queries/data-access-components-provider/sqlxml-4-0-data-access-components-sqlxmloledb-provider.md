@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 Data Access Components | Documenti Microsoft
+title: SQLXML 4.0 Data Access Components | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e825d46a60fe8a0d27e54e1989658861f77a7c9a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049989"
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 Data Access Components - Provider SQLXMLOLEDB
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34708189"
   
 -   classi gestite SQLXML  
   
-     Espone la funzionalità di SQLXML in [!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework. Per ulteriori informazioni, vedere [classi gestite SQLXML](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md).  
+     Espone la funzionalità di SQLXML in [!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework. Per altre informazioni, vedere [le classi gestite SQLXML](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md).  
   
 -   SQL Server Native Client (SQLNCLI11)  
   

@@ -1,5 +1,5 @@
 ---
-title: Funzione local-name (XQuery) | Documenti Microsoft
+title: Funzione local-name (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a5cdd64e6c283a41a4a51f71f84381b584d03f4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078098"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997133"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funzioni sui nodi - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce la parte locale del nome di *$arg* come xs: String che sarà la stringa di lunghezza zero o avrà il formato lessicale di un xs: NCName. Se non si specifica l'argomento, il valore predefinito è il nodo di contesto.  
+  Restituisce la parte locale del nome della *$arg* come xs: String che sarà la stringa di lunghezza zero o avrà il formato lessicale di un xs: NCName. Se non si specifica l'argomento, il valore predefinito è il nodo di contesto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,9 +46,9 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Nome del nodo di cui verrà recuperata la parte local-name.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
--   In SQL Server, **fn:local-name()** senza un argomento può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi (`[ ]`).  
+-   In SQL Server **fn:local-name()** senza un argomento può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi (`[ ]`).  
   
 -   Se si specifica l'argomento e questo corrisponde alla sequenza vuota, la funzione restituisce la stringa di lunghezza zero.  
   
@@ -79,7 +79,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Utilizzo della funzione local-name senza argomento in un predicato  
- La query seguente viene specificata sulla colonna Instructions, tipizzata **xml** colonna della tabella ProductModel. L'espressione restituisce tutti gli elementi figlio dell'elemento <`root`>, per il quale la parte di nome locale del nome completo (QName) è "Location". Il **Local** funzione è specificata nel predicato e non contiene argomenti del nodo di contesto viene utilizzato dalla funzione.  
+ La query seguente viene specificata sulla colonna Instructions, tipizzata **xml** colonna della tabella ProductModel. L'espressione restituisce tutti gli elementi figlio dell'elemento <`root`>, per il quale la parte di nome locale del nome completo (QName) è "Location". Il **Local** funzione è specificata nel predicato e non include argomenti nodo di contesto viene utilizzato dalla funzione.  
   
 ```  
 SELECT Instructions.query('  

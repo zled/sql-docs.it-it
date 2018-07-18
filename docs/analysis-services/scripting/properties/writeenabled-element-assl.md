@@ -1,5 +1,5 @@
 ---
-title: Elemento WriteEnabled (ASSL) | Documenti Microsoft
+title: Elemento WriteEnabled (ASSL) | Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: cd95189a8da82c22d13d53357bf17943d0a38fdc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039436"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050639"
 ---
 # <a name="writeenabled-element-assl"></a>Elemento WriteEnabled (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,23 +33,23 @@ ms.locfileid: "34039436"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|Boolean|  
-|Valore predefinito|Nessuno|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elemento padre|[Dimensione](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elemento padre|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
+|Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
- L'elemento che corrisponde all'elemento padre **WriteEnabled** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di **WriteEnabled** nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Proprietà &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

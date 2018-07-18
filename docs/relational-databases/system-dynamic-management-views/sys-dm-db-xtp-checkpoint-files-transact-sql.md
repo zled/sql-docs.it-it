@@ -26,47 +26,48 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c4ad13459024604d748c1dac8a6649c09a53f10f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005743"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Visualizza informazioni sui file del checkpoint, incluse le dimensioni del file, la posizione fisica e l'ID transazione.  
   
-> **Nota:** per il checkpoint corrente che non è chiusa, la colonna stato di s`ys.dm_db_xtp_checkpoint_files` sarà UNDER CONSTRUCTION per i nuovi file. Un checkpoint viene chiuso automaticamente quando è sufficiente aumento delle dimensioni del log delle transazioni dall'ultimo checkpoint oppure se si esegue il `CHECKPOINT` comando ([CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
+> **Nota:** per il checkpoint corrente che non è chiusa, la colonna contenente gli stati di s`ys.dm_db_xtp_checkpoint_files` sarà UNDER CONSTRUCTION per i nuovi file. Un checkpoint viene chiuso automaticamente quando è presente l'aumento delle dimensioni del log delle transazioni sufficiente dall'ultimo checkpoint oppure se si esegue la `CHECKPOINT` comando ([CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
   
- Un filegroup con ottimizzazione per la memoria utilizza internamente solo aggiungere i file per archiviare le righe inserite ed eliminate per le tabelle in memoria. Sono disponibili due tipi di file. Un file di dati contiene le righe inserite mentre un file differenziale contiene riferimenti alle righe eliminate. 
+ Un filegroup ottimizzato per la memoria utilizza internamente i file di solo accodamento per archiviare le righe inserite ed eliminate per le tabelle in memoria. Sono disponibili due tipi di file. Un file di dati contiene le righe inserite mentre un file differenziale contiene riferimenti alle righe eliminate. 
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è notevolmente diverso rispetto alle versioni più recenti e viene illustrato più basso nell'argomento relativo alla [SQL Server 2014](#bkmk_2014).  
   
- Per ulteriori informazioni, vedere [creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
+ Per altre informazioni, vedere [creazione e la gestione dell'archiviazione per gli oggetti ottimizzati per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive  
- Nella tabella seguente vengono descritte le colonne per `sys.dm_db_xtp_checkpoint_files`, a partire da **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
+ Nella tabella seguente vengono descritte le colonne per `sys.dm_db_xtp_checkpoint_files`, a partire **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
   
 |Nome colonna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|ID del contenitore (rappresentato come file con tipo FILESTREAM in sys.database_files) di cui fa parte il file di dati o il file differenziale. Join con file_id in [Sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
-|container_guid|**uniqueidentifier**|GUID del contenitore, ovvero il file radice, dati o differenziale. Crea un join con file_guid nella tabella sys. database_files.|  
+|container_guid|**uniqueidentifier**|GUID del contenitore, che il file radice, dati o differenziale fa parte di. Crea un join con file_guid nella tabella sys. database_files.|  
 |checkpoint_file_id|**uniqueidentifier**|GUID del file del checkpoint.|  
 |relative_file_path|**nvarchar(256)**|Percorso del file relativo contenitore a che è mappata.|  
-|file_type|**smallint**|-1 per gratuito<br /><br /> 0 per i file di dati.<br /><br /> 1 per il file differenziale.<br /><br /> 2 per il file radice<br /><br /> 3 per il file di dati di grandi dimensioni|  
-|file_type_desc|**nvarchar(60)**|File FREE - All gestiti come disponibili sono disponibili per l'allocazione. File gratuiti possono variare nella dimensione in base a esigenze previste dal sistema. La dimensione massima è di 1GB.<br /><br /> DATI - file di dati contengono righe che sono state inserite nelle tabelle con ottimizzazione per la memoria.<br /><br /> DELTA - file differenziali contengono riferimenti a righe nei file di dati che sono stati eliminati.<br /><br /> RADICE - file radice contengano i metadati di sistema per gli oggetti con ottimizzazione per la memoria e compilati in modo nativo.<br /><br /> DATI di grandi dimensioni - file di dati di grandi dimensioni contengono valori inseriti nelle (colonne varchar e varbinary (max), nonché i segmenti di colonna che fanno parte di indici columnstore nelle tabelle con ottimizzazione per la memoria.|  
-|internal_storage_slot|**int**|Indice del file nella matrice di archiviazione interna. NULL per la radice o di stato diverso da 1.|  
-|checkpoint_pair_file_id|**uniqueidentifier**|File di dati corrispondenti o differenziale. NULL per la radice.|  
+|file_type|**smallint**|-1 per il livello gratuito<br /><br /> 0 per file di dati.<br /><br /> 1 per il file differenziale.<br /><br /> 2 per il file radice<br /><br /> 3 per il file di dati di grandi dimensioni|  
+|file_type_desc|**nvarchar(60)**|File gratuito - All gestiti come disponibile sono disponibili per l'allocazione. File gratuiti possono variare nella dimensione in base alla esigenze previste dal sistema. La dimensione massima è di 1GB.<br /><br /> DATA - file di dati contengono righe che sono state inserite nelle tabelle ottimizzate per la memoria.<br /><br /> DELTA - file differenziali contengono i riferimenti alle righe nel file di dati che sono stati eliminati.<br /><br /> RADICE - file radice contengano metadati di sistema per gli oggetti con ottimizzazione per la memoria e compilati in modo nativo.<br /><br /> DATI di grandi dimensioni - file di grandi quantità di dati contengono valori inseriti nelle (colonne varchar e varbinary (max), nonché i segmenti di colonna che fanno parte di indici columnstore nelle tabelle ottimizzate per la memoria.|  
+|internal_storage_slot|**int**|Indice del file nella matrice di archiviazione interna. NULL per la radice o per lo stato diverso da 1.|  
+|checkpoint_pair_file_id|**uniqueidentifier**|I dati corrispondenti o il file differenziale. NULL per la radice.|  
 |file_size_in_bytes|**bigint**|Dimensioni del file sul disco.|  
 |file_size_used_in_bytes|**bigint**|Per le coppie di file del checkpoint ancora da popolare, questa colonna verrà aggiornata dopo il checkpoint successivo.|  
 |logical_row_count|**bigint**|Per i dati, numero di righe inserite.<br /><br /> Delta, numero di righe eliminate dopo aver tenuto conto per la tabella di riepilogo.<br /><br /> Per la radice, NULL.|  
 |state|**smallint**|0 – PRECREATED<br /><br /> 1 - IN FASE DI COSTRUZIONE<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 8: IN ATTESA DI TRONCAMENTO DEL LOG|  
-|state_desc|**nvarchar(60)**|PRECREATED: un numero di file del checkpoint è preallocato per ridurre o eliminare le attese di allocazione di nuovi file durante l'esecuzione delle transazioni. Questi file creati in precedenza possono variare nella dimensione, a seconda delle esigenze stimate del carico di lavoro, ma non contengono dati. Si tratta di un overhead di archiviazione nei database con un filegroup MEMORY_OPTIMIZED_DATA.<br /><br /> IN fase di costruzione - questi file di checkpoint sono in fase di costruzione, vale a dire che vengono popolati in base al record del log generato dal database e non sono ancora parte di un checkpoint.<br /><br /> ACTIVE: contengono le righe inserite/eliminate dai precedenti checkpoint chiusi. Contengono il contenuto delle tabelle in cui leggere area in memoria prima di applicare la parte attiva del log delle transazioni al riavvio del database. È probabile che tali dimensioni di questi file di checkpoint di circa 2 x delle dimensioni in memoria delle tabelle con ottimizzazione per la memoria, supponendo che l'operazione di unione è sufficiente per gestire il carico di lavoro transazionale.<br /><br /> MERGE TARGET: la destinazione delle operazioni di unione - questi file di checkpoint archiviano le righe di dati consolidati dai file di origine che sono stati identificati dai criteri di unione. Una volta installata l'operazione di unione, lo stato di MERGE TARGET diventa ACTIVE.<br /><br /> In attesa di troncamento del LOG: una volta completata l'unione e CFP di destinazione di tipo MERGE fa parte di un checkpoint durevole, la transizione di file checkpoint di merge origine in questo stato. File in questo stato sono necessari per la correttezza operativa del database con tabella con ottimizzazione per la memoria.  Ad esempio, per recuperare da un checkpoint durevole tornando indietro nel tempo.|  
-|lower_bound_tsn|**bigint**|Limite inferiore della transazione nel file. null se lo stato non in (1, 3).|  
-|upper_bound_tsn|**bigint**|Limite superiore della transazione nel file. null se lo stato non in (1, 3).|  
-|begin_checkpoint_id|**bigint**|ID del checkpoint di inizio.|  
-|end_checkpoint_id|**bigint**|ID del checkpoint finale.|  
-|last_updated_checkpoint_id|**bigint**|ID dell'ultimo checkpoint che il file aggiornato.|  
+|state_desc|**nvarchar(60)**|PRECREATED: un numero di file di checkpoint viene preallocato per ridurre al minimo o eliminare le attese di allocazione di nuovi file durante l'esecuzione delle transazioni. Questi file precreati possono variare nella dimensione, a seconda delle necessità stimate del carico di lavoro, ma non contengono dati. Si tratta di un overhead di archiviazione nei database con un filegroup MEMORY_OPTIMIZED_DATA.<br /><br /> UNDER CONSTRUCTION: questi file di checkpoint sono in fase di costruzione, ovvero che verranno popolati in base i record di log generati dal database e non fanno ancora parte di un checkpoint.<br /><br /> ACTIVE: contengono le righe inserite/eliminate dai precedenti checkpoint chiusi. Contengono il contenuto delle tabelle che area lette in memoria prima di applicare la parte attiva del log delle transazioni al riavvio del database. È probabile che le dimensioni di questi file del checkpoint da circa 2x delle dimensioni in memoria delle tabelle ottimizzate per la memoria, supponendo che l'operazione di unione è mantenersi aggiornato rispetto al carico di lavoro transazionale.<br /><br /> MERGE TARGET: la destinazione delle operazioni di unione: questi file di checkpoint archiviano le righe di dati consolidate dai file di origine identificate dai criteri di unione. Una volta installata l'operazione di unione, lo stato di MERGE TARGET diventa ACTIVE.<br /><br /> In attesa di troncamento del LOG: una volta che è stato installato l'unione e MERGE TARGET PCP fa parte del checkpoint durevole, la transizione di file checkpoint di merge source a questo stato. File in questo stato sono necessari per la correttezza operativa del database con tabelle ottimizzate per la memoria.  Ad esempio, per recuperare da un checkpoint durevole tornando indietro nel tempo.|  
+|lower_bound_tsn|**bigint**|Limite inferiore della transazione nel file. null se non nello stato (1, 3).|  
+|upper_bound_tsn|**bigint**|Limite superiore della transazione nel file. null se non nello stato (1, 3).|  
+|begin_checkpoint_id|**bigint**|ID del punto di arresto iniziale.|  
+|end_checkpoint_id|**bigint**|ID del punto di arresto finale.|  
+|last_updated_checkpoint_id|**bigint**|ID dell'ultimo checkpoint che questo file aggiornato.|  
 |encryption_status|**smallint**|0, 1, 2|  
 |encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; CRITTOGRAFATO CON CHIAVE 1<br /><br /> 2 = &GT; CRITTOGRAFATO CON CHIAVE 2. Valido solo per i file attivi.|  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/23/2018
 |checkpoint_file_id|**GUID**|ID del file di dati o differenziale.|  
 |relative_file_path|**nvarchar(256)**|Percorso del file di dati o differenziale, relativo al percorso del contenitore.|  
 |file_type|**tinyint**|0 per il file di dati.<br /><br /> 1 per il file differenziale.<br /><br /> NULL se la colonna contenente gli stati è impostata su 7.|  
-|file_type_desc|**nvarchar(60)**|Il tipo di file: DATA_FILE, DELTA_FILE o NULL se la colonna stato è impostata su 7.|  
+|file_type_desc|**nvarchar(60)**|Il tipo di file: DATA_FILE, DELTA_FILE o NULL se la colonna contenente gli stati è impostata su 7.|  
 |internal_storage_slot|**int**|Indice del file nella matrice di archiviazione interna. NULL se la colonna contenente gli stati è impostata su 2 o 3.|  
 |checkpoint_pair_file_id|**uniqueidentifier**|File di dati o differenziale corrispondente.|  
 |file_size_in_bytes|**bigint**|Dimensioni del file in uso. NULL se la colonna contenente gli stati è impostata su 5, 6 o 7.|  
@@ -102,7 +103,7 @@ ms.lasthandoff: 05/23/2018
  È richiesta l'autorizzazione `VIEW DATABASE STATE` per il server.  
   
 ## <a name="use-cases"></a>Modalità di utilizzo comuni  
- È possibile stimare lo spazio di archiviazione utilizzato da OLTP In memoria come segue:  
+ È possibile stimare la memoria usata da OLTP In memoria come segue:  
   
 ```  
 -- total storage used by In-Memory OLTP  
@@ -111,7 +112,7 @@ FROM sys.dm_db_xtp_checkpoint_files
 ```  
   
   
-Per visualizzare i dettagli dell'utilizzo di archiviazione dal tipo di stato e i file di eseguire la query seguente:
+Per visualizzare i dettagli di utilizzo di spazio di archiviazione dal tipo di stato e i file di eseguire la query seguente:
   
 ```  
 SELECT state_desc  
@@ -126,6 +127,6 @@ ORDER BY state, file_type
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica tabella ottimizzazione della memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

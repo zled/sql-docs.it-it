@@ -1,5 +1,5 @@
 ---
-title: Linguaggi di programmazione | Documenti Microsoft
+title: I linguaggi di programmazione | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5de4117bd8c400d94cb1bdb5ac7c6dcc9ee109ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061928"
 ---
 # <a name="smo-programming-languages"></a>Linguaggi di programmazione di SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "32966726"
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Introduzione a Visual C&#35; .NET](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|Fornisce informazioni su come iniziare a scrivere un programma SMO in Visual c# .NET|  
+|[Guida introduttiva a Visual C#&#35; .NET](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|Fornisce informazioni su come iniziare a scrivere un programma SMO in Visual c# .NET|  
   
- SMO è un assembly .NET. Per programmare mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, è necessario scegliere un linguaggio supportato da Common Language Runtime. Il riferimento SMO, prevede la sintassi per i linguaggi gestiti quali Visual c# .NET.  
+ SMO è un assembly .NET. Per programmare mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, è necessario scegliere un linguaggio supportato da Common Language Runtime. In riferimento di SMO, è presente la sintassi per i linguaggi gestiti, ad esempio Visual c# .NET.  
   
   

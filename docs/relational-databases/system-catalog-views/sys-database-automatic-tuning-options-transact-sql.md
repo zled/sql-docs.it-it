@@ -1,6 +1,6 @@
 ---
 title: sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs
-description: Informazioni su come visualizzare le opzioni di ottimizzazione automatica in un Database SQL
+description: Informazioni su come visualizzare le opzioni di ottimizzazione automatica su un Database SQL
 ms.custom: ''
 ms.date: 07/20/2017
 ms.prod: sql
@@ -28,26 +28,26 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 6a9fc30a86c3033264dc723de282caffd03289fd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181247"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38065401"
 ---
 # <a name="sysdatabaseautomatictuningoptions-transact-sql"></a>sys.database\_automatic\_tuning_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Restituisce le opzioni di ottimizzazione automatica per il database.  
+  Restituisce le opzioni di ottimizzazione automatica per questo database.  
 
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|Il nome dell'opzione di ottimizzazione automatica. Fare riferimento a [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) per le opzioni disponibili.|  
-|**desired_state**|**smallint**|Indica la modalità operativa desiderata per l'opzione di ottimizzazione automatica, impostare in modo esplicito dall'utente.<br />0 = OFF<br />1 = ON|  
-|**desired_state_desc**|**nvarchar(60)**|Descrizione testuale della modalità operativa desiderata dell'opzione di ottimizzazione automatica.<br />OFF<br />ON|  
-|**actual_state**|**smallint**|Indica la modalità operativa dell'opzione di ottimizzazione automatica.<br />0 = OFF<br />1 = ON|  
-|**actual_state_desc**|**nvarchar(60)**|Descrizione testuale della modalità operativa effettiva dell'opzione di ottimizzazione automatica.<br />OFF<br />ON|  
-|**reason**|**smallint**|Indica perché effettivi e desiderati stati sono diversi.<br />2 = DISABILITATO<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
-|**reason_desc**|**nvarchar(60)**|Descrizione del motivo perché effettivi e desiderati stati sono diversi.<br />DISABILITATO = viene disattivata dal sistema<br />QUERY_STORE_OFF = archivio Query è stata disattivata<br />QUERY_STORE_READ_ONLY = archivio Query è in modalità di sola lettura<br />NOT_SUPPORTED = disponibile solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition| 
+|**name**|**nvarchar(128)**|Il nome dell'opzione ottimizzazione automatica. Fare riferimento a [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) per le opzioni disponibili.|  
+|**desired_state**|**smallint**|Indica la modalità operativa desiderata per l'opzione ottimizzazione automatica, impostata in modo esplicito dall'utente.<br />0 = OFF<br />1 = ON|  
+|**desired_state_desc**|**nvarchar(60)**|Descrizione testuale della modalità operativa desiderata dell'opzione ottimizzazione automatica.<br />OFF<br />ON|  
+|**actual_state**|**smallint**|Indica la modalità di funzionamento dell'opzione ottimizzazione automatica.<br />0 = OFF<br />1 = ON|  
+|**actual_state_desc**|**nvarchar(60)**|Descrizione testuale della modalità operativa effettiva dell'opzione ottimizzazione automatica.<br />OFF<br />ON|  
+|**reason**|**smallint**|Indica il motivo per cui gli stati desiderati ed effettivi sono diversi.<br />2 = DISABLED<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
+|**reason_desc**|**nvarchar(60)**|Descrizione testuale del motivo perché sono diversi stati effettivi e desiderati.<br />DISABILITATO = opzione viene disabilitata dal sistema<br />QUERY_STORE_OFF = Query Store è stata disattivata<br />QUERY_STORE_READ_ONLY = Query Store è in modalità di sola lettura<br />NOT_SUPPORTED = disponibile solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition| 
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione `VIEW DATABASE STATE`.  

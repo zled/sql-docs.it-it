@@ -1,5 +1,5 @@
 ---
-title: sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Documenti Microsoft
+title: sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 1d699e62251f8f2c750795d2389f338e9bd1bf11
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247060"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999623"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33247060"
   Stima la riduzione delle dimensioni medie delle righe se in una tabella viene abilitato il formato di archiviazione vardecimal. Utilizzare questo numero per stimare la riduzione complessiva delle dimensioni della tabella. Poiché per calcolare la riduzione media delle dimensioni delle righe viene utilizzato il campionamento statistico, i risultati ottenuti devono essere considerati esclusivamente come una stima. In rari casi è possibile che le dimensioni delle righe aumentino dopo l'abilitazione del formato di archiviazione vardecimal.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare preferibilmente la compressione di riga e di pagina. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md). Per gli effetti di compressione alle dimensioni di tabelle e indici, vedere [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare preferibilmente la compressione di riga e di pagina. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md). Per gli effetti di compressione per le dimensioni di tabelle e indici, vedere [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,14 +62,14 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**avg_rowlen_fixed_format**|**Decimal (12, 2)**|Rappresenta la lunghezza della riga nel formato di archiviazione decimal fisso.|  
-|**avg_rowlen_vardecimal_format**|**Decimal (12, 2)**|Rappresenta le dimensioni medie delle righe in caso di utilizzo del formato di archiviazione vardecimal.|  
+|**avg_rowlen_fixed_format**|**numero decimale (12, 2)**|Rappresenta la lunghezza della riga nel formato di archiviazione decimal fisso.|  
+|**avg_rowlen_vardecimal_format**|**numero decimale (12, 2)**|Rappresenta le dimensioni medie delle righe in caso di utilizzo del formato di archiviazione vardecimal.|  
 |**row_count**|**int**|Numero di righe nella tabella.|  
   
-## <a name="remarks"></a>Osservazioni  
- Utilizzare **sp_estimated_rowsize_reduction_for_vardecimal** per stimare il risparmio risultante se si abilita il formato di archiviazione vardecimal per una tabella. Se, ad esempio, le dimensioni medie della riga possono essere ridotte del 40%, è possibile ridurre del 40% le dimensioni della tabella. Si potrebbe non ottenere un risparmio in termini di spazio a seconda del fattore di riempimento e delle dimensioni della riga. Se, ad esempio, si riducono del 40% le dimensioni di una riga lunga 8000 byte, una pagina di dati può comunque contenere una sola riga, pertanto non si hanno risparmi in termini di spazio.  
+## <a name="remarks"></a>Note  
+ Uso **sp_estimated_rowsize_reduction_for_vardecimal** per stimare il risparmio risultante se si abilita il formato di archiviazione vardecimal per una tabella. Se, ad esempio, le dimensioni medie della riga possono essere ridotte del 40%, è possibile ridurre del 40% le dimensioni della tabella. Si potrebbe non ottenere un risparmio in termini di spazio a seconda del fattore di riempimento e delle dimensioni della riga. Se, ad esempio, si riducono del 40% le dimensioni di una riga lunga 8000 byte, una pagina di dati può comunque contenere una sola riga, pertanto non si hanno risparmi in termini di spazio.  
   
- Se i risultati di **sp_estimated_rowsize_reduction_for_vardecimal** indicano un aumento delle dimensioni della tabella, ciò significa che molte righe della tabella viene utilizzata quasi la precisione completa dei tipi di dati decimali e l'aggiunta del limitato overhead necessario per il formato di archiviazione vardecimal è supera il risparmio garantito dal formato di archiviazione vardecimal. In questi rari casi, non abilitare il formato di archiviazione vardecimal.  
+ Se i risultati della **sp_estimated_rowsize_reduction_for_vardecimal** indicano che la tabella si espanderà, ciò significa che molte righe della tabella usano quasi la precisione completa dei tipi di dati decimali e l'aggiunta del limitato overhead aggiuntivo necessario per il formato di archiviazione vardecimal è supera il risparmio garantito da tale formato. In questi rari casi, non abilitare il formato di archiviazione vardecimal.  
   
  Se una tabella è abilitata per il formato di archiviazione vardecimal, utilizzare **sp_estimated_rowsize_reduction_for_vardecimal** per stimare le dimensioni medie della riga se il formato di archiviazione vardecimal è disabilitato.  
   

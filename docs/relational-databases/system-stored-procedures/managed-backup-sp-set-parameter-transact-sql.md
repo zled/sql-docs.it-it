@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a9f1d5eeec1fc5b24fbc1974d27e9f4b5efd00d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238338"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058829"
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="Arguments"></a> Argomenti  
  @parameter_name  
- Nome del parametro per cui si desidera impostare il valore. @parameter_name è nvarchar (128). I nomi dei parametri disponibili **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**, e **StorageOperationDebugXevent**.  
+ Nome del parametro per cui si desidera impostare il valore. @parameter_name è nvarchar (128). I nomi dei parametri disponibili sono **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**, e **StorageOperationDebugXevent**.  
   
  @parameter_value  
  Valore del parametro che si desidera impostare. @parameter il valore è nvarchar (128).  Di seguito vengono indicati il nome del parametro e le coppie di valori consentiti:  
@@ -73,10 +73,10 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="best-practices"></a>Procedure consigliate  
  Sezione facoltativa in cui vengono descritte le procedure consigliate che l'utente deve conoscere quando viene eseguita l'istruzione o la routine.  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
- Richiede **EXECUTE** le autorizzazioni per **managed_backup.sp_set_parameter** stored procedure.  
+ È necessario **EXECUTE** autorizzazioni sul **managed_backup.sp_set_parameter** stored procedure.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti vengono abilitati eventi estesi operativi e di debug.  

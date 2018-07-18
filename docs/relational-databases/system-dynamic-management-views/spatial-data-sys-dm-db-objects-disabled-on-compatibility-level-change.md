@@ -25,12 +25,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 083af55f2629a14f2ad28b293bb84ea9184a0345
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998143"
 ---
-# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>I dati spaziali - Sys.dm db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Dati spaziali - sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Elenca gli indici e i vincoli che saranno disabilitati come risultato della modifica del livello di compatibilità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Indici e vincoli che contengono colonne calcolate persistenti le cui espressioni utilizzano tipi definiti dall'utente spaziali saranno disabilitati dopo l'aggiornamento o la modifica del livello di compatibilità. Utilizzare questa funzione a gestione dinamica per determinare l'impatto di una modifica nel livello di compatibilità.  
@@ -55,7 +56,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |**class_desc**|**nvarchar(60)**|OBJECT o COLUMN per i vincoli<br /><br /> INDEX per indici e heap|  
 |**major_id**|**int**|OBJECT ID dei vincoli<br /><br /> OBJECT ID della tabella che contiene indici e heap|  
 |**minor_id**|**int**|NULL per i vincoli<br /><br /> Index_id per indici e heap|  
-|**Dipendenza**|**nvarchar(60)**|Descrizione della dipendenza che provoca la disabilitazione del vincolo o dell'indice. Gli stessi valori vengono utilizzati inoltre negli avvisi generati durante l'aggiornamento. Negli esempi vengono illustrati gli aspetti seguenti:<br /><br /> "space" per una funzione intrinseco<br /><br /> 'geometry' per un tipo definito dall'utente del sistema<br /><br /> 'geography::Parse' per un metodo di un tipo definito dall'utente del sistema|  
+|**dipendenza**|**nvarchar(60)**|Descrizione della dipendenza che provoca la disabilitazione del vincolo o dell'indice. Gli stessi valori vengono utilizzati inoltre negli avvisi generati durante l'aggiornamento. Negli esempi vengono illustrati gli aspetti seguenti:<br /><br /> "space" per una funzione intrinseco<br /><br /> 'geometry' per un tipo definito dall'utente del sistema<br /><br /> 'geography::Parse' per un metodo di un tipo definito dall'utente del sistema|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Le colonne calcolate persistenti in cui sono utilizzate alcune funzioni intrinseche vengono disabilitate quando il livello di compatibilità viene modificato. In modo analogo, anche le colonne calcolate persistenti che utilizzano metodi geometry o geography vengono disabilitate quando un database viene aggiornato.  
@@ -116,11 +117,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>Comportamento degli oggetti disabilitati  
  **Indici**  
   
- Se l'indice cluster è disabilitato o se viene forzato un indice non cluster, viene generato l'errore seguente: "query processor non è in grado di generare un piano perché l'indice ' %. \*ls' sulla tabella o vista ' %. \*ls' è disabilitato. " Per abilitare nuovamente questi oggetti, ricompilare gli indici dopo l'aggiornamento chiamando **ALTER INDEX ON... RICOMPILARE**.  
+ Se l'indice cluster è disabilitato o se viene forzato un indice non cluster, viene generato l'errore seguente: "query processor non è riuscito a generare un piano perché l'indice ' %. \*ls' sulla tabella o della vista ' %. \*ls' è disabilitato. " Per abilitare nuovamente questi oggetti, ricompilare gli indici dopo l'aggiornamento chiamando **ALTER INDEX ON... RICOMPILARE**.  
   
  **Heap**  
   
- Se viene utilizzata una tabella con un heap disabilitato, viene generato l'errore seguente. Per abilitare nuovamente questi oggetti, ricompilare dopo l'aggiornamento chiamando **ALTER INDEX ON tutti... RICOMPILARE**.  
+ Se viene utilizzata una tabella con un heap disabilitato, viene generato l'errore seguente. Per abilitare nuovamente questi oggetti, ricompilare dopo l'aggiornamento chiamando **ALTER INDEX tutti ON... RICOMPILARE**.  
   
 ```  
 // ErrorNumber: 8674  
@@ -133,7 +134,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 // ErrorFirstProduct: SQL11  
 ```  
   
- Se si tenta di ricompilare l'heap durante un'operazione in linea, viene generato un errore.  
+ Se si tenta di ricompilare l'heap durante un'operazione online, viene generato un errore.  
   
  **I vincoli CHECK e chiavi esterne**  
   
@@ -143,13 +144,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  Poiché non è possibile disabilitare una sola colonna, l'intera tabella viene disabilitata applicando questa operazione all'indice cluster o all'heap.  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una query su **Sys.dm db_objects_disabled_on_compatibility_level_change** per trovare gli oggetti interessati dall'impostazione del livello di compatibilità su 120.  
+ Nell'esempio seguente viene illustrata una query sul **sys.dm_db_objects_disabled_on_compatibility_level_change** per trovare gli oggetti interessati dall'impostazione del livello di compatibilità su 120.  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

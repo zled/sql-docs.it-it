@@ -1,5 +1,5 @@
 ---
-title: xp_grantlogin (Transact-SQL) | Documenti Microsoft
+title: xp_grantlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 0fd1ba37422fa5491d6dd834bc35cdd536830b97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258848"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058789"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,19 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
   
 ## <a name="arguments"></a>Argomenti  
  [ **@loginame =** ] **'***login***'**  
- Nome dell'utente o gruppo di Windows da aggiungere. L'utente di Windows o il gruppo deve essere qualificato con un nome di dominio di Windows nel formato *dominio*\\*utente*. *account di accesso* viene **sysname**, non prevede alcun valore predefinito.  
+ Nome dell'utente o gruppo di Windows da aggiungere. L'utente di Windows o il gruppo deve essere qualificato con un nome di dominio Windows nel formato *Domain*\\*utente*. *account di accesso* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@logintype =** ] **'***logintype***'**  
- Livello di sicurezza dell'account di accesso a cui viene concesso l'accesso. *LoginType* viene **varchar (5)**, con un valore predefinito è NULL. Solo **admin** può essere specificato. Se **admin** è specificato, *accesso* è concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e aggiunto come membro del **sysadmin** ruolo predefinito del server.  
+ Livello di sicurezza dell'account di accesso a cui viene concesso l'accesso. *LoginType* viene **varchar (5)**, con un valore predefinito è NULL. Solo **admin** può essere specificato. Se **admin** è specificato, *login* viene concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e aggiunti come membro del **sysadmin** ruolo predefinito del server.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **xp_grantlogin** è ora un sistema di stored procedure anziché una stored procedure estesa. **xp_grantlogin** chiamate **sp_grantlogin** e **sp_addsrvrolemember**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **securityadmin** ruolo predefinito del server. Quando si modifica il *logintype*, richiede l'appartenenza di **sysadmin** ruolo predefinito del server.  
+ Richiede l'appartenenza al **securityadmin** ruolo predefinito del server. Quando si modifica il *logintype*, richiede l'appartenenza al **sysadmin** ruolo predefinito del server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: XML for Analysis (XMLA) conformità | Documenti Microsoft
+title: XML for Analysis (XMLA) conformità | Microsoft Docs
 ms.date: 05/30/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b618fdd8cca3faed72afb0276f18cd928a3f31f7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576883"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051589"
 ---
 # <a name="xml-for-analysis-xmla-compliance"></a>XML for Analysis (XMLA) conformità
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]  
@@ -29,7 +29,7 @@ Analysis Services è conforme a tutti gli elementi obbligatori elencati nella sp
 |Supporto sessione|Gli elementi dell'intestazione SOAP elencati nella sezione "Supporto per Statefulness in XML for Analysis" della specifica XML for Analysis 1.1.|Tutti gli elementi di intestazione SOAP elencati sono supportati da Analysis Services, come descritto all'interno della specifica.|  
   
 ## <a name="extensions"></a>Estensioni  
- Analysis Services si estende anche la specifica XML for Analysis 1.1 per supportare le funzionalità aggiuntive seguenti.  
+ Analysis Services estende la specifica XML for Analysis 1.1 per supportare le funzionalità aggiuntive seguenti.  
   
 |Elemento|Specifica|Implementazione|  
 |----------|-------------------|--------------------|  

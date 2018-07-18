@@ -26,10 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2b2f8c78b1802ff177040352cd7342b51b035c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051319"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +49,12 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> Argomenti  
  @xevent_channel  
- Tipo di evento esteso. Il valore predefinito è impostato per restituire tutti gli eventi registrati per i 30 minuti precedenti. Gli eventi registrati dipendono dal tipo di eventi estesi abilitati. È possibile utilizzare questo parametro per filtrare la stored procedure per mostrare solo gli eventi di un determinato tipo. È possibile specificare il nome completo dell'evento o specificare una sottostringa, ad esempio: **'Admin'**, **'Analytic'**, **'Operational'**, e **'Debug'** . Il @event_channel è **VARCHAR (255)**.  
+ Tipo di evento esteso. Il valore predefinito è impostato per restituire tutti gli eventi registrati per i 30 minuti precedenti. Gli eventi registrati dipendono dal tipo di eventi estesi abilitati. È possibile utilizzare questo parametro per filtrare la stored procedure per mostrare solo gli eventi di un determinato tipo. È possibile specificare il nome completo dell'evento o specificare una sottostringa, ad esempio: **'Admin'**, **'Analytic'**, **'Operational'**, e **'Debug'** . Il @event_channel viene **VARCHAR (255)**.  
   
- Per ottenere un elenco di eventi attualmente abilitati tipi utilizzo il **managed_backup.fn_get_current_xevent_settings** (funzione).  
+ Per ottenere un elenco di eventi attualmente abilitati tipi Usa la **managed_backup.fn_get_current_xevent_settings** (funzione).  
   
  [@begin_time  
- Inizio del periodo di tempo a partire dal quale devono essere visualizzati gli eventi. Il @begin_time parametro è DATETIME e il valore predefinito NULL. Se non è specificato, vengono visualizzati gli eventi a partire dai 30 minuti precedenti.  
+ Inizio del periodo di tempo a partire dal quale devono essere visualizzati gli eventi. Il @begin_time parametro è DateTime e il valore predefinito NULL. Se non è specificato, vengono visualizzati gli eventi a partire dai 30 minuti precedenti.  
   
  @end_time  
  Fine del periodo di tempo fino al quale devono essere visualizzati gli eventi. Il @end_time parametro è DATATIME e il valore predefinito NULL.  Se non è specificato, vengono visualizzati gli eventi fino all'ora corrente.  
@@ -66,12 +67,12 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 |Nome colonna|Tipo di dati|Description|  
 |event_type|NVARCHAR(512)|Tipo di evento esteso.|  
 |Evento|NVARCHAR(512)|Riepilogo dei registri eventi.|  
-|Timestamp|TIMESTAMP|Timestamp dell'evento che mostra quando è stato generato l'evento.|  
+|Timestamp|timestamp|Timestamp dell'evento che mostra quando è stato generato l'evento.|  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
- Richiede **EXECUTE** autorizzazioni nella stored procedure. È inoltre necessario **VIEW SERVER STATE** autorizzazioni poiché vengono chiamati internamente altri oggetti di sistema che richiedono tale autorizzazione.  
+ È necessario **EXECUTE** autorizzazioni nella stored procedure. Richiede inoltre **VIEW SERVER STATE** autorizzazioni poiché vengono chiamati internamente altri oggetti di sistema che richiedono tale autorizzazione.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti tutti gli eventi registrati per i 30 minuti precedenti.  

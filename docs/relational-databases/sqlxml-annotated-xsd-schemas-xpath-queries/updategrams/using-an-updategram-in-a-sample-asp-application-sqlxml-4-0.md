@@ -1,5 +1,5 @@
 ---
-title: Utilizza un Updategram in un'applicazione ASP di esempio (SQLXML 4.0) | Documenti Microsoft
+title: Utilizza un Updategram in un'applicazione ASP di esempio (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 3e6ab461bc1916394b53e5b8c0017bbef71eabe7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970606"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049916"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilizzo di un updategram in un'applicazione ASP di esempio (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "32970606"
   
  L'utente può quindi aggiornare le informazioni di contatto ma non l'ID (poiché ContactID è la chiave primaria). Dopo che l'utente invia le informazioni, viene eseguito un updategram e tutti i parametri del form vengono passati all'updategram.  
   
- Di seguito viene presentato il primo modello (GetContact.xml). Salvare questo modello nella directory associata al nome virtuale di **modello** tipo.  
+ Di seguito viene presentato il primo modello (GetContact.xml). Salvare questo modello nella directory che è associato il nome virtuale del **modello** tipo.  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -55,7 +55,7 @@ ms.locfileid: "32970606"
 </root>  
 ```  
   
- Di seguito viene presentato il secondo modello (UpdateContact.xml). Salvare questo modello nella directory associata al nome virtuale di **modello** tipo.  
+ Di seguito viene presentato il secondo modello (UpdateContact.xml). Salvare questo modello nella directory che è associato il nome virtuale del **modello** tipo.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -166,6 +166,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza di updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

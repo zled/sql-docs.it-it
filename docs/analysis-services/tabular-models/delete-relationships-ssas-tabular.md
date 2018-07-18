@@ -1,5 +1,5 @@
 ---
-title: Eliminare relazioni | Documenti Microsoft
+title: Eliminare relazioni | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 115d72bd0b833d1f392b2349d3ed4e4970f58453
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040095"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999180"
 ---
 # <a name="delete-relationships"></a>Eliminare relazioni 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   È possibile eliminare relazioni esistenti utilizzando Progettazione modelli nella Vista diagramma o la finestra di dialogo Gestisci relazioni. Per informazioni sull'utilizzo delle relazioni nei modelli tabulari, vedere [relazioni](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
-## <a name="considerations-for-deleting-relationships"></a>Considerazioni sull'eliminazione di relazioni  
+## <a name="considerations-for-deleting-relationships"></a>Considerazioni per l'eliminazione di relazioni  
  Quando si decide se eliminare una relazione, tenere presente i fattori seguenti:  
   
 -   L'eliminazione di una relazione non può essere annullata in alcun modo. È possibile creare nuovamente la relazione, tuttavia questa azione richiede un ricalcolo completo delle formule nel modello. Eseguire pertanto sempre un controllo prima di eliminare una relazione utilizzata nelle formule.  

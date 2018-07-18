@@ -1,5 +1,5 @@
 ---
-title: Riferimento alla funzione di Data Mining Extensions (DMX) | Documenti Microsoft
+title: Riferimento alle funzioni di Data Mining Extensions (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9f0851d3ec373161c9277013fc746ebda5b91f89
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842534"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998423"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Guida di riferimento alle funzioni DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34842534"
 |[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Indica se un case appartiene al set di test case.|  
 |[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)|Indica se un case appartiene al set di case di training.|  
 |[Lag &#40;DMX&#41;](../dmx/lag-dmx.md)|Restituisce l'intervallo di tempo tra la data del case corrente e l'ultima data presente nei dati.|  
-|[Stimare &#40;DMX&#41;](../dmx/predict-dmx.md)|Esegue una stima su una colonna specificata.|  
+|[Prevedere &#40;DMX&#41;](../dmx/predict-dmx.md)|Esegue una stima su una colonna specificata.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|Restituisce la probabilità adattata della colonna stimabile specificata.|  
 |[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|Consente di stimare l'appartenenza associativa in una colonna.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|Restituisce la probabilità che un case di input risulti adatto al modello esistente. Questa funzione può essere utilizzata solo con i modelli di clustering.|  
@@ -63,10 +63,10 @@ ms.locfileid: "34842534"
 |[TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)|Restituisce una tabella che contiene il più piccolo numero di righe, a partire dalla prima, che consente di ottenere la somma restituita da un'espressione specificata, in ordine di rango decrescente in base a un'espressione di rango.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Estensioni Data Mining &#40;DMX&#41; riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
- [Estensioni Data Mining &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Estensioni Data Mining &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle istruzioni](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struttura e l'utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  

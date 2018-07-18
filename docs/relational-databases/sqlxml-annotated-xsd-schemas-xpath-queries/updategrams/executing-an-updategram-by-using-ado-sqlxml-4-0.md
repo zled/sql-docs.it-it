@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di un Updategram mediante ADO (SQLXML 4.0) | Documenti Microsoft
+title: Esecuzione di un Updategram mediante ADO (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 95272db4677cafad6f1e3c84f14b5705dd5f4718
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971976"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051459"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Esecuzione di un updategram mediante ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "32971976"
   
  In questa applicazione di esempio:  
   
--   Il **conn** oggetto (**ADODB. Connessione**) stabilisce una connessione a un'istanza in esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un computer server specifico.  
+-   Il **conn** oggetto (**ADODB. Connessione**) stabilisce una connessione a un'istanza attiva di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un computer server specifico.  
   
--   Il **cmd** oggetto (**ADODB**) viene eseguito durante la connessione.  
+-   Il **cmd** oggetto (**ADODB. Command**) viene eseguito durante la connessione.  
   
 -   Il sottolinguaggio del comando viene impostato su DBGUID_MSSQLXML.  
   
 -   L'updategram viene copiato nel flusso di comandi (**strmIn**).  
   
--   Flusso di output del comando è impostato sul **StrmOut** oggetto (**ADODB. Flusso**) per ricevere i dati restituiti.  
+-   Flusso di output del comando è impostato il **StrmOut** oggetto (**ADODB. Stream**) per ricevere eventuali dati restituiti.  
   
 -   Il comando (updategram) viene infine eseguito.  
   
@@ -189,7 +189,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Passaggio di parametri  
- Nelle applicazioni Visual Basic fornite precedentemente i parametri non vengono passati. In questa applicazione, il **ContactID** e **MiddleName** i valori vengono passati come input con parametri all'updategram.  
+ Nelle applicazioni Visual Basic fornite precedentemente i parametri non vengono passati. In questa applicazione, il **ContactID** e **MiddleName** valori vengono passati come input con parametri all'updategram.  
   
 ```vb  
 Private Sub Form_Load()  

@@ -1,5 +1,5 @@
 ---
-title: Funzione position (XQuery) | Documenti Microsoft
+title: Funzione position (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0afc659ea30da13a520c04c3d9f7efbdfaf8681
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077928"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052409"
 ---
-# <a name="context-functions---position-xquery"></a>Funzioni di contesto - posizione (XQuery)
+# <a name="context-functions---position-xquery"></a>Funzioni di contesto - position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce un valore integer che indica la posizione dell'elemento di contesto all'interno della sequenza di elementi corrente da elaborare.  
@@ -40,11 +40,11 @@ ms.locfileid: "33077928"
 fn:position() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **fn:position()** può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]). I confronti basati su tale funzione non riducono la cardinalità durante l'interferenza dei tipi statici.  
+## <a name="remarks"></a>Note  
+ Nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **fn:position()** può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]). I confronti basati su tale funzione non riducono la cardinalità durante l'interferenza dei tipi statici.  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo di [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo i [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Utilizzo della funzione XQuery position() per recuperare le prime due caratteristiche del prodotto  
  La query seguente recupera le prime due caratteristiche, ovvero i primi due elementi figlio dell'elemento <`Features`>, dalla descrizione del catalogo prodotti. Se sono disponibili più caratteristiche, viene aggiunto un elemento <`there-is-more/`> al risultato.  
@@ -75,11 +75,11 @@ WHERE CatalogDescription is not null
   
 -   Il **dello spazio dei nomi** parola chiave nel [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) definisce un prefisso dello spazio dei nomi utilizzato nel corpo della query.  
   
--   Il corpo della query costruisce codice XML con un \<prodotto > elemento con **ProductModelID** e **ProductModelName** attributi e le caratteristiche del prodotto restituite come elementi figlio.  
+-   Il corpo della query costruisce informazioni XML che ha un \<Product > elemento con **ProductModelID** e **ProductModelName** gli attributi e le caratteristiche del prodotto restituite come elementi figlio.  
   
--   Il **Position** funzione viene utilizzata nel predicato per determinare la posizione del \<funzionalità > elemento figlio nel contesto. Viene restituita se si tratta della prima o della seconda caratteristica.  
+-   Il **Position ()** funzione viene utilizzata nel predicato per determinare la posizione del \<funzionalità > elemento figlio nel contesto. Viene restituita se si tratta della prima o della seconda caratteristica.  
   
--   L'istruzione IF aggiunge un \<non esiste-is-more / > elemento per il risultato se sono presenti più di due caratteristiche del catalogo prodotti.  
+-   L'istruzione IF aggiunge un \<-is-more / > elemento per il risultato se sono presenti più di due caratteristiche del catalogo prodotti.  
   
 -   Poiché non tutte le descrizioni del catalogo dei modelli di prodotto vengono archiviate nella tabella, viene utilizzata la clausola WHERE per scartare le righe in cui CatalogDescriptions è NULL.  
   

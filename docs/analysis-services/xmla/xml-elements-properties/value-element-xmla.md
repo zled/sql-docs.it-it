@@ -1,5 +1,5 @@
 ---
-title: Valore elemento (XMLA) | Documenti Microsoft
+title: Valore elemento (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2ecaaf902ee1f29700b2d6333bbccd549d9c2193
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576793"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062852"
 ---
 # <a name="value-element-xmla"></a>Elemento Value (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene il valore desiderato di un [attributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elemento devono essere aggiunti da un [inserire](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) comando, o un [cella](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) elemento da aggiornare tramite un [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)comando.  
+  Contiene il valore desiderato di un [attributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elemento da aggiungere a un [Inserisci](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) comando, o un [celle](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) elemento deve essere aggiornata da un [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)comando.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576793"
 </Attribute>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -39,17 +39,17 @@ ms.locfileid: "34576793"
 |Valore predefinito|None|  
 |Cardinalità|1-1: elemento obbligatorio visualizzato una sola volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Attributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md), [cella](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Per **attributo** elementi, il **valore** elemento contiene il valore desiderato che deve contenere il membro dopo il **inserire** comando viene eseguito il commit. Per ulteriori informazioni sull'inserimento di membri, vedere [inserimento, aggiornamento ed eliminazione di membri &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
+## <a name="remarks"></a>Note  
+ Per **attributo** gli elementi, il **valore** elemento contiene il valore desiderato che deve contenere il membro dopo la **Inserisci** comando viene eseguito il commit. Per altre informazioni sull'inserimento di membri, vedere [inserimento, aggiornamento ed eliminazione di membri &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
- Per **cella** elementi, il **valore** elemento contiene il valore desiderato della cella deve contenere dopo il **UpdateCells** comando viene eseguito il commit. Il valore effettivo archiviato nella tabella writeback per quella cella è la differenza tra il valore originale della cella e il valore desiderato della cella.  
+ Per la **cella** gli elementi, il **valore** elemento contiene il valore desiderato che la cella deve contenere dopo il **UpdateCells** comando viene eseguito il commit. Il valore effettivo archiviato nella tabella writeback per quella cella è la differenza tra il valore originale della cella e il valore desiderato della cella.  
   
  Il tipo di dati utilizzato da questo elemento deve corrispondere al tipo di dati della cella che deve essere aggiornata.  
   

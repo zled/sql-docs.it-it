@@ -1,5 +1,5 @@
 ---
-title: Sys.dm io_virtual_file_stats (Transact-SQL) | Documenti Microsoft
+title: DM io_virtual_file_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2720aba7dc9b3d8c1a6e34db5a588829245ed97a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066832"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/23/2018
   Restituisce le statistiche di I/O per i file di log e di dati. Questa vista a gestione dinamica sostituisce il [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) (funzione).  
   
 > [!NOTE]  
->  Per chiamare questo metodo dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], utilizzare il nome **sys.dm_pdw_nodes_io_virtual_file_stats**. 
+>  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], usare il nome **sys.dm_pdw_nodes_io_virtual_file_stats**. 
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +63,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  **SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure
 
- ID del database. *database_id* è di tipo int, non prevede alcun valore predefinito. Gli input validi sono il numero di ID di un database o NULL. Se si specifica NULL, vengono restituiti tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ ID del database. *database_id* è int, non prevede alcun valore predefinito. Gli input validi sono il numero di ID di un database o NULL. Se si specifica NULL, vengono restituiti tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md) può essere specificato.  
   
@@ -70,18 +71,18 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
 **SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure
  
-ID del file. *file_id* è di tipo int, non prevede alcun valore predefinito. Gli input validi sono il numero di ID di un file o NULL. Se si specifica NULL, vengono restituiti tutti i file nel database.  
+ID del file. *file_id* è int, non prevede alcun valore predefinito. Gli input validi sono il numero di ID di un file o NULL. Se si specifica NULL, vengono restituiti tutti i file nel database.  
   
- La funzione predefinita [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) possono essere specificati e fa riferimento a un file nel database corrente.  
+ La funzione predefinita [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) può essere specificata e fa riferimento a un file nel database corrente.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Nome del database.</br></br>Per SQL Data Warehouse, questo è il nome del database archiviato nel nodo identificato dal pdw_node_id. Ogni nodo dispone di un database tempdb con 13 file. Ogni database di distribuzione è 5 file ogni nodo dispone di un database per ogni distribuzione. Se, ad esempio, ogni nodo contiene 4 distribuzioni, i risultati mostrano 20 file di database di distribuzione per pdw_node_id. 
+|**database_name**|**sysname**|Nome del database.</br></br>Per SQL Data Warehouse, questo è il nome del database archiviato nel nodo identificato da pdw_node_id. Ogni nodo dispone di un database di tempdb con 13 file. Ogni nodo ha anche un database per ogni distribuzione, e ogni database di distribuzione include 5 file. Ad esempio, se ogni nodo contiene 4 distribuzioni, i risultati mostrano 20 file di database di distribuzione per pdw_node_id. 
 |**database_id**|**smallint**|ID del database.|  
 |**file_id**|**smallint**|ID di file.|  
-|**sample_ms**|**bigint**|Numero di millisecondi dall'avvio del computer. È possibile utilizzare questa colonna per confrontare output diversi di questa funzione.</br></br>Il tipo di dati è **int** per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|Numero di millisecondi dall'avvio del computer. È possibile utilizzare questa colonna per confrontare output diversi di questa funzione.</br></br>Il tipo di dati viene **int** per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Numero di letture eseguite nel file.|  
 |**num_of_bytes_read**|**bigint**|Numero totale di byte letti nel file.|  
 |**io_stall_read_ms**|**bigint**|Tempo totale di attesa degli utenti, in millisecondi, per il completamento delle operazioni di lettura nel file.|  
@@ -103,7 +104,7 @@ ID del file. *file_id* è di tipo int, non prevede alcun valore predefinito. Gli
 
 ### <a name="a-return-statistics-for-a-log-file"></a>A. Restituisce le statistiche per un file di log
 
-**Si applica a:** SQL Server (a partire 2008), Database SQL di Azure
+**Si applica a:** SQL Server (a partire da 2008), Database SQL di Azure
 
  Nell'esempio seguente vengono restituite le statistiche per il file di log nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
@@ -112,7 +113,7 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Restituire statistiche per il file in tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Restituisce le statistiche per il file nel database tempdb
 
 **Si applica a:** Azure SQL Data Warehouse
 
@@ -124,7 +125,7 @@ WHERE database_name = ‘tempdb’ AND file_id = 2;
 
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [È possibile O funzioni e viste a gestione dinamica relative &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [I/O funzioni e viste a gestione dinamica relative &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

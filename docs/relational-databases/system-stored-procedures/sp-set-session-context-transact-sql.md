@@ -1,5 +1,5 @@
 ---
-title: sp_set_session_context (Transact-SQL) | Documenti Microsoft
+title: sp_set_session_context (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2d1396ef79eb69b96a40f075c50cd38b6ad77d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248349"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015007"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,23 +54,23 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
  La chiave viene impostata, di tipo **sysname**. La dimensione massima della chiave è 128 byte.  
   
  [ @value=] 'value'  
- Il valore per la chiave specificata, di tipo **sql_variant**. Impostazione di un valore NULL libera la memoria. Le dimensioni massime sono pari a 8.000 byte.  
+ Il valore della chiave specificata, di tipo **sql_variant**. Impostazione di un valore null libera la memoria. Le dimensioni massime sono pari a 8.000 byte.  
   
  [ @read_only= ] { 0 | 1 }  
- Un flag di tipo **bit**. Se è 1, quindi il valore per la chiave specificata non può essere modificato nuovamente questa connessione logica. Se 0 (impostazione predefinita), quindi il valore può essere modificato.  
+ Un flag di tipo **bit**. Se è 1, quindi il valore della chiave specificata non può essere più modificato in questa connessione logica. Se 0 (impostazione predefinita), quindi il valore può essere modificato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Qualsiasi utente può impostare un contesto di sessione per la sessione.  
+ Qualsiasi utente può impostare un contesto di sessione per la propria sessione.  
   
-## <a name="remarks"></a>Osservazioni  
- Analogamente alle altre stored procedure, solo i valori letterali e variabili (non a espressioni o chiamate di funzione) possono essere passate come parametri.  
+## <a name="remarks"></a>Note  
+ Analogamente alle altre stored procedure, solo i valori letterali e variabili (chiamate di funzione o espressioni not) possono essere passate come parametri.  
   
  Le dimensioni totali del contesto della sessione sono limitata a 256 kb. Se impostato un valore che determina il superamento del limite, l'istruzione ha esito negativo. È possibile monitorare l'utilizzo della memoria globale nel [DM os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
- È possibile monitorare l'utilizzo della memoria globale per l'esecuzione di query [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) come indicato di seguito: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ È possibile monitorare l'utilizzo della memoria globale eseguendo una query [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) come indicato di seguito: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato come impostare e restituire quindi una chiave di contesto sessioni denominata lingua con un valore per la lingua inglese.  
+ Nell'esempio seguente viene illustrato come impostare e restituire quindi una chiave di contesto sessioni denominata linguaggio con un valore di lingua inglese.  
   
 ```  
 EXEC sp_set_session_context 'language', 'English';  

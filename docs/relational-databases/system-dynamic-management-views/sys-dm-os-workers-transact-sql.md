@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ea9d2aa6365c421bcf8e04920c2cf1bd4ab415a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052380"
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/23/2018
   Restituisce una riga per ogni thread di lavoro nel sistema.  
   
 > [!NOTE]  
->  Per chiamare questo metodo dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_os_workers**.  
+>  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_workers**.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -53,10 +54,10 @@ ms.lasthandoff: 05/23/2018
 |pending_io_count|**int**|Numero di I/O fisici eseguiti dal thread di lavoro.|  
 |pending_io_byte_count|**bigint**|Numero totale di byte per tutti gli I/O fisici in sospeso per il thread di lavoro.|  
 |pending_io_byte_average|**int**|Numero medio di byte per gli I/O fisici per il thread di lavoro.|  
-|wait_started_ms_ticks|**bigint**|Punto nel tempo, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), quando il thread di lavoro è passato allo stato sospeso. Se si sottrae questo valore da ms_ticks in [Sys.dm os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) restituisce il numero di millisecondi che il thread di lavoro è rimasto in attesa.|  
-|wait_resumed_ms_ticks|**bigint**|Punto nel tempo, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), in cui il thread di lavoro stato RUNNABLE. Se si sottrae questo valore da ms_ticks in [Sys.dm os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) restituisce il numero di millisecondi che il thread di lavoro è rimasto nella coda eseguibile.|  
-|task_bound_ms_ticks|**bigint**|Punto nel tempo, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), quando un'attività è associata al thread di lavoro.|  
-|worker_created_ms_ticks|**bigint**|Punto nel tempo, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), quando viene creato un processo di lavoro.|  
+|wait_started_ms_ticks|**bigint**|Punto nel tempo, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), quando il thread di lavoro è passato allo stato SUSPENDED. Se si sottrae questo valore da ms_ticks in [DM os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) restituisce il numero di millisecondi che il ruolo di lavoro è rimasto in attesa.|  
+|wait_resumed_ms_ticks|**bigint**|Punto nel tempo, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), quando il thread di lavoro è passato allo stato RUNNABLE. Se si sottrae questo valore da ms_ticks in [DM os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) restituisce il numero di millisecondi che il ruolo di lavoro è rimasto nella coda eseguibile.|  
+|task_bound_ms_ticks|**bigint**|Punto nel tempo, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), quando un'attività è associata a questo ruolo di lavoro.|  
+|worker_created_ms_ticks|**bigint**|Punto nel tempo, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), quando viene creato un ruolo di lavoro.|  
 |exception_num|**int**|Numero di errore dell'ultima eccezione rilevata dal thread di lavoro.|  
 |exception_severity|**int**|Gravità dell'ultima eccezione rilevata dal thread di lavoro.|  
 |exception_address|**varbinary(8)**|Indirizzo del codice che ha generato l'eccezione|  
@@ -71,23 +72,23 @@ ms.lasthandoff: 05/23/2018
 |boost_count|**int**|Solo per uso interno.|  
 |tasks_processed_count|**int**|Numero di attività elaborate dal thread di lavoro.|  
 |fiber_address|**varbinary(8)**|Indirizzo di memoria del fiber a cui il thread di lavoro è associato.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è configurato per il lightweight pooling.|  
-|task_address|**varbinary(8)**|Indirizzo di memoria dell'attività corrente. Per altre informazioni, vedere [os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
+|task_address|**varbinary(8)**|Indirizzo di memoria dell'attività corrente. Per altre informazioni, vedere [DM os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
 |memory_object_address|**varbinary(8)**|Indirizzo di memoria dell'oggetto memoria del thread di lavoro. Per altre informazioni, vedere [DM os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |thread_address|**varbinary(8)**|Indirizzo di memoria del thread associato al thread di lavoro corrente. Per altre informazioni, vedere [DM os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|signal_worker_address|**varbinary(8)**|Indirizzo di memoria del thread di lavoro che ha segnalato per ultimo l'oggetto. Per ulteriori informazioni, vedere [os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|signal_worker_address|**varbinary(8)**|Indirizzo di memoria del thread di lavoro che ha segnalato per ultimo l'oggetto. Per altre informazioni, vedere [DM os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |scheduler_address|**varbinary(8)**|Indirizzo di memoria dell'utilità di pianificazione. Per altre informazioni, vedere [DM os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Archivia l'ID del gruppo di processori assegnato a questo thread.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se lo stato del thread di lavoro è RUNNING e il thread di lavoro è in esecuzione in modalità non preemptive, l'indirizzo del thread di lavoro corrisponde alla colonna active_worker_address in sys.dm_os_schedulers.  
   
  Quando viene segnalato un thread di lavoro in attesa di un evento, tale thread viene inserito all'inizio della coda eseguibile. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente l'esecuzione di questa operazione mille volte in una riga. Superato questo valore, il thread di lavoro viene inserito alla fine della coda. Lo spostamento di un thread di lavoro alla fine della coda è caratterizzato da alcune implicazioni a livello di prestazioni.  
   
 ## <a name="permissions"></a>Autorizzazioni
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
 
 ## <a name="examples"></a>Esempi  
  La query seguente consente di determinare per quanto tempo un thread di lavoro è rimasto in esecuzione in stato SUSPENDED o RUNNABLE.  

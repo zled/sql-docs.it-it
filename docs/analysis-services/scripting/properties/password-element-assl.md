@@ -1,5 +1,5 @@
 ---
-title: Elemento password (ASSL) | Documenti Microsoft
+title: Elemento password (ASSL) | Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: cc5464e4530e00a0d12807cb0cef2c2e1aa22afa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34038738"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050669"
 ---
 # <a name="password-element-assl"></a>Elemento Password (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "34038738"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String|  
-|Valore predefinito|Nessuno|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -44,15 +44,15 @@ ms.locfileid: "34038738"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
- Il valore della **Password** elemento, nonché il valore della [Account](../../../analysis-services/scripting/properties/account-element-impersonationinfo-assl.md) elemento, viene utilizzato per gli scopi della rappresentazione se il valore del [ImpersonationMode](../../../analysis-services/scripting/properties/impersonationmode-element-assl.md) elemento per qualsiasi elemento derivato dal **ImpersonationInfo** tipo di dati è impostato su *ImpersonateAccount*.  
+## <a name="remarks"></a>Note  
+ Il valore dei **Password** elemento, nonché il valore della [Account](../../../analysis-services/scripting/properties/account-element-impersonationinfo-assl.md) elemento, viene usato per gli scopi della rappresentazione se il valore del [ImpersonationMode](../../../analysis-services/scripting/properties/impersonationmode-element-assl.md) (elemento) per qualsiasi elemento derivato dal **ImpersonationInfo** tipo di dati è impostato su *ImpersonateAccount*.  
   
  Solo i membri del ruolo di amministratore del server per il [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza può fornire un valore vuoto per il **Password** elemento  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento DataSourceImpersonationInfo &#40;ASSL&#41;](../../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md)   
- [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Proprietà &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

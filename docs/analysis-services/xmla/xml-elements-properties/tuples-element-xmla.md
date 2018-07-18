@@ -1,5 +1,5 @@
 ---
-title: Elemento tuples (XMLA) | Documenti Microsoft
+title: Elemento tuples (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c0578c541c39bdaceede6bff8afdea3d642abcef
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576863"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062545"
 ---
 # <a name="tuples-element-xmla"></a>Elemento Tuples (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene un set di [tupla](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) gli oggetti per un [asse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) elemento che utilizza il [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo di dati restituito dal [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) metodo.  
+  Contiene un set di [tupla](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) degli oggetti per un' [asse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) elemento che utilizza il [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo di dati restituito dal [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) (metodo).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34576863"
 </Axis>  
 ```  
   
-## <a name="element-characteristics"></a>Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche di elementi  
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
@@ -41,18 +41,18 @@ ms.locfileid: "34576863"
 |Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
-## <a name="element-relationships"></a>Relazioni elemento  
+## <a name="element-relationships"></a>Elementi-relazioni  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
 |Elementi figlio|[Tupla](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Quando un'applicazione client imposta la proprietà **AxisFormat** su *TupleFormat*, un’asse viene rappresentata come un set di tuple. Ogni elemento **Axis** contiene un elemento **Tuples** che rappresenta il set di tuple su quell’asse. Ogni tupla viene rappresentata usando un elemento **Tuple** che contiene elementi [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) di ogni gerarchia sull'asse.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata la struttura del **Tuple** elemento quando un client specifica *TupleFormat* o *CustomFormat* per il **AxisFormat**  XML per la proprietà Analysis (XMLA), presupponendo i membri seguenti per l'asse:  
+ Nell'esempio seguente viene illustrata la struttura del **Tuple** elemento quando un client specifica *TupleFormat* oppure *CustomFormat* per il **AxisFormat**  XML per la proprietà Analysis (XMLA), presupponendo i membri seguenti per l'asse:  
   
 |||||  
 |-|-|-|-|  

@@ -1,5 +1,5 @@
 ---
-title: Grafico di elaborazione con SQL Server e Database SQL di Azure | Documenti Microsoft
+title: Graph processing con SQL Server e Database SQL di Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
@@ -21,49 +21,49 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 8c2ad7f5b31a97de5d0bfb22074b55bd61bb825b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707049"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015677"
 ---
-# <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Grafico di elaborazione con SQL Server e Database SQL di Azure
+# <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph processing con SQL Server e Database SQL di Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre funzionalità di database di graph di modellare relazioni molti-a-molti. Le relazioni di grafico sono integrate [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e ricevere i vantaggi dell'utilizzo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come sistema di gestione di database fondamentali.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre funzionalità di database di grafi per modellare le relazioni molti-a-molti. Le relazioni di graph sono integrate [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e ricevere i vantaggi dell'uso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come sistema di gestione di database fondamentali.
 
 
-## <a name="what-is-a-graph-database"></a>Che cos'è un database grafico?  
-Un database di grafico è una raccolta di nodi (o vertici) e bordi (o relazioni). Un nodo rappresenta un'entità (ad esempio, una persona o organizzazione) e un bordo rappresenta una relazione tra i due nodi che si connette (ad esempio, simili o amici). I nodi e bordi possono avere proprietà associate. Ecco alcune funzionalità che rendono un database di graph univoco:  
--   Bordi o le relazioni sono entità di prima classe in un diagramma di Database e può avere attributi o proprietà associate. 
--   Un bordo singolo può connettersi in modo flessibile in più nodi in un diagramma di Database.
--   È possibile esprimere criteri di ricerca e query di navigazione di multi-hop facilmente.
--   È possibile esprimere facilmente query polimorfica e chiusura transitiva.
+## <a name="what-is-a-graph-database"></a>Che cos'è un database a grafo?  
+Un database a grafo è una raccolta di nodi (o i vertici) e i bordi (o le relazioni). Un nodo rappresenta un'entità (ad esempio, una persona o un'organizzazione) e una rete perimetrale rappresenta una relazione tra i due nodi che si connette (ad esempio, mi piace o amici). I nodi e bordi possono avere proprietà associate. Ecco alcune funzionalità che rendono un database a grafo univoco:  
+-   Perimetri o le relazioni sono entità di prima classe in un Database a grafo e possono avere attributi o le proprietà associate. 
+-   Un bordo singolo può connettersi in modo flessibile più nodi in un Database a grafo.
+-   È possibile esprimere facilmente criteri di ricerca e query di esplorazione multi hop.
+-   È possibile esprimere query polimorfica e chiusura transitiva con facilità.
 
-## <a name="when-to-use-a-graph-database"></a>Quando utilizzare un database di graph
+## <a name="when-to-use-a-graph-database"></a>Quando usare un database a grafo
 
-Non è possibile ottenere un database di grafico, che non può essere ottenuta utilizzando un database relazionale. Un database grafico può tuttavia rendere più semplice esprimere determinato tipo di query. Inoltre, con le ottimizzazioni specifiche, alcune query può offrono prestazioni migliori. La decisione di scegliere uno di essi può essere basata su fattori seguenti:  
--   L'applicazione dispone di dati gerarchici. Il tipo di dati HierarchyID può essere utilizzato per implementare le gerarchie, ma presenta alcune limitazioni. Ad esempio, quindi non consente di archiviare più elementi padre di un nodo.
--   L'applicazione include relazioni molti-a-molti complesse; Quando l'applicazione continua a evolvere, vengono aggiunte nuove relazioni.
+Non è possibile ottenere un database a grafo, che non può essere ottenuta utilizzando un database relazionale. Tuttavia, un database a grafo può rendere più semplice esprimere determinato tipo di query. Inoltre, con le ottimizzazioni specifiche, determinate query siano migliori. La decisione di scegliere uno di essi può essere basata sui fattori seguenti:  
+-   L'applicazione include i dati gerarchici. Il tipo di dati HierarchyID consente di implementare le gerarchie, ma presenta alcune limitazioni. Ad esempio, non consentono di archiviare più elementi padre per un nodo.
+-   L'applicazione presenta le complesse relazioni molti-a-molti; l'evoluzione dell'applicazione, vengono aggiunte nuove relazioni.
 -   È necessario analizzare le relazioni e i dati interconnessi.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Funzionalità di grafico introdotte in [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
-Si inizierà aggiungere estensioni graph a SQL Server, per semplificare l'esecuzione di query e l'archiviazione dei dati del grafico. Le funzionalità seguenti vengono introdotti nella prima versione. 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Funzionalità di Graph introdotte in [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+Sta iniziando l'aggiunta di estensioni graph per SQL Server, per rendere più semplice l'esecuzione di query e l'archiviazione dei dati del grafico. Le funzionalità seguenti vengono introdotti nella prima versione. 
 
 
-### <a name="create-graph-objects"></a>Creare gli oggetti del grafico
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni consentirà agli utenti di creare tabelle di nodo o bordo. I nodi e bordi possono disporre di proprietà associate ad essi. Poiché, nodi e bordi vengono archiviati come tabelle, tutte le operazioni che sono supportate nelle tabelle relazionali sono supportate nella tabella di nodo o bordo. Esempio:  
+### <a name="create-graph-objects"></a>Creare gli oggetti di graph
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] le estensioni consentirà agli utenti di creare le tabelle nodi o bordi. I nodi e bordi possono avere proprietà associate a essi. Poiché, nodi e archi vengono archiviati come tabelle, tutte le operazioni che sono supportate nelle tabelle relazionali sono supportate nella tabella nodi o bordi. Esempio:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![tabelle di amici persona](../../relational-databases/graphs/media/person-friends-tables.png "nodo persona e amici bordo tabelle")  
-I nodi e bordi vengono archiviati come tabelle  
+![le tabelle Person-amici](../../relational-databases/graphs/media/person-friends-tables.png "nodo /People/Person e amici edge tabelle")  
+I nodi e archi vengono archiviati come tabelle  
 
 ### <a name="query-language-extensions"></a>Estensioni del linguaggio di query  
-Nuovo `MATCH` clausola è stato introdotto per supportare i criteri di ricerca e navigazione multi-hop tramite graph. Il `MATCH` funzione Usa sintassi grafica ASCII per criteri di ricerca. Esempio:  
+Nuovo `MATCH` clausola è stata introdotta per supportare criteri di ricerca e l'esplorazione multi hop tramite graph. Il `MATCH` funzione Usa sintassi grafica ASCII per criteri di ricerca. Esempio:  
 
 ```   
 -- Find friends of John
@@ -74,12 +74,12 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Completamente integrato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore 
-Le estensioni del grafico sono completamente integrati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore. Viene usato il stesso motore di archiviazione, i metadati, il processore di query, e così via per archiviare ed eseguire query su dati del grafico. Ciò consente agli utenti di eseguire una query tra loro grafico e dati relazionali in una singola query. Gli utenti possono trarre vantaggio dalla combinazione di funzionalità di grafico con altri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le tecnologie come columnstore, a disponibilità elevata, R services, e così via. Database SQL di grafico supporta inoltre tutte la sicurezza e conformità le funzionalità disponibili con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Estensioni per i grafi sono completamente integrate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore. Usiamo lo stesso motore di archiviazione, i metadati, il processore di query, e così via per archiviare ed eseguire query sui dati del grafico. Ciò consente agli utenti di eseguire query tra loro graph e i dati relazionali in una singola query. Gli utenti possono trarre vantaggio dalla combinazione di funzionalità di grafi con altri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologie come la tecnologia columnstore, a disponibilità elevata, R services, e così via. Database a grafo SQL supporta anche tutte le sicurezza e conformità di funzionalità disponibili con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
-### <a name="tooling-and-ecosystem"></a>Strumenti e l'ecosistema  
-Gli utenti possono beneficiare gli strumenti esistenti e l'ecosistema che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre. Strumenti come backup e ripristino, importare ed esportare, lavoro solo di BCP predefinita. Altri strumenti o i servizi come SSIS, SSRS o Power BI funziona con le tabelle di grafico, nel modo in cui funzionano con le tabelle relazionali.
+### <a name="tooling-and-ecosystem"></a>Gli strumenti e l'ecosistema  
+Gli utenti possono beneficiare gli strumenti esistenti e l'ecosistema che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre. Strumenti come il backup e ripristino, importare ed esportare, funzionano perfettamente BCP impostazione predefinita. Altri strumenti o servizi, ad esempio SSIS, SSRS o Power BI funzionerà con tabelle, graph nel modo in cui funzionano con tabelle relazionali.
  
  ## <a name="next-steps"></a>Passaggi successivi  
-Lettura di [Database SQL di Graph - architettura](./sql-graph-architecture.md)
+Lettura di [Database a grafo SQL - architettura](./sql-graph-architecture.md)
    
 

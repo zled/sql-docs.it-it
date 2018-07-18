@@ -1,5 +1,5 @@
 ---
-title: Sys.partition_range_values (Transact-SQL) | Documenti Microsoft
+title: Sys.partition_range_values (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 35e2b56ec8338a45defd87b136db91712ef29e5d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33179567"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001213"
 ---
 # <a name="syspartitionrangevalues-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "33179567"
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|ID della funzione di partizione per il valore limite di intervallo.|  
 |**boundary_id**|**int**|ID (ordinale in base 1) della tupla del valore limite con il primo limite a sinistra che inizia con l'ID 1.|  
-|**parameter_id**|**int**|ID del parametro della funzione a cui questo valore corrisponde. I valori in questa colonna corrispondono a quelli del **parameter_id** colonna del **partition_parameters** visualizzazione per qualsiasi particolare catalogo **function_id**.|  
-|**valore**|**sql_variant**|Il valore limite effettivo.|  
+|**parameter_id**|**int**|ID del parametro della funzione a cui questo valore corrisponde. I valori in questa colonna corrispondono a quelli di **parameter_id** colonna del **Sys. partition_parameters** vista per qualsiasi particolare del catalogo **function_id**.|  
+|**Valore**|**sql_variant**|Il valore limite effettivo.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -1,5 +1,5 @@
 ---
-title: sp_changeobjectowner (Transact-SQL) | Documenti Microsoft
+title: sp_changeobjectowner (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db97bba80119f8d460b221bcbfdb4932e1eee692
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238538"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005723"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,18 +54,18 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
  Nome di una tabella, vista, funzione definita dall'utente o stored procedure esistente nel database corrente. *oggetto* è un **nvarchar(776)**, non prevede alcun valore predefinito. *oggetto* può essere qualificato con il proprietario dell'oggetto esistente, nel formato *existing_owner ***.*** oggetto* se lo schema e il relativo proprietario hanno lo stesso nome.  
   
  [  **@newowner=**] **' * * * proprietario* **'**  
- Nome dell'account di sicurezza che rappresenta il nuovo proprietario dell'oggetto. *proprietario* viene **sysname**, non prevede alcun valore predefinito. *proprietario* deve essere un utente valido per il database, ruolo del server [!INCLUDE[msCoName](../../includes/msconame-md.md)] account di accesso di Windows o il gruppo di Windows con accesso al database corrente. Se il nuovo proprietario è un utente di Windows o un gruppo di Windows per cui non esiste un'entità corrispondente a livello di database, verrà creato un utente di database.  
+ Nome dell'account di sicurezza che rappresenta il nuovo proprietario dell'oggetto. *proprietario* viene **sysname**, non prevede alcun valore predefinito. *proprietario* deve essere un utente valido del database, ruolo del server [!INCLUDE[msCoName](../../includes/msconame-md.md)] account di accesso di Windows, o il gruppo di Windows con accesso al database corrente. Se il nuovo proprietario è un utente di Windows o un gruppo di Windows per cui non esiste un'entità corrispondente a livello di database, verrà creato un utente di database.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_changeobjectowner** rimuove tutte le autorizzazioni esistenti dall'oggetto. È necessario riapplicare le autorizzazioni che si desidera mantenere dopo l'esecuzione **sp_changeobjectowner**. È pertanto consigliabile includere le autorizzazioni esistenti prima dell'esecuzione **sp_changeobjectowner**. Dopo avere modificato il proprietario dell'oggetto, è possibile eseguire lo script per riapplicare le autorizzazioni. È prima necessario modificare il proprietario dell'oggetto nello script.  
   
  Per modificare il proprietario di un'entità a sicurezza diretta, utilizzare ALTER AUTHORIZATION. Per modificare uno schema, utilizzare ALTER SCHEMA.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede l'appartenenza di **db_owner** fissa, o l'appartenenza al ruolo del database sia nel **db_ddladmin** ruolo predefinito del database e **db_securityadmin** ruolo predefinito del database, e anche dell'autorizzazione CONTROL per l'oggetto.  
+ Richiede l'appartenenza al **db_owner** fisse, o appartenenza al ruolo di database in entrambi i **db_ddladmin** ruolo predefinito del database e il **db_securityadmin** ruolo predefinito del database, e anche dell'autorizzazione CONTROL per l'oggetto.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene modificato il proprietario della tabella `authors` in `Corporate\GeorgeW`.  

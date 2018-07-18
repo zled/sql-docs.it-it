@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di un DiffGram mediante ADO (SQLXML 4.0) | Documenti Microsoft
+title: Esecuzione di un DiffGram mediante ADO (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,27 +23,27 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 02796c6cfe29817c48541a6b42b660ca7b2b0b57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969108"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053719"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Esecuzione di un DiffGram mediante ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Questa applicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utilizza ADO per stabilire una connessione a un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], quindi esegue un DiffGram. In questa applicazione il DiffGram e lo schema XSD vengono archiviati in un file. L'applicazione carica il DiffGram dal file specificato. È possibile utilizzare qualsiasi DiffGram (e lo schema XSD associato) descritto in [esempi di DiffGram](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
+  Questa applicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utilizza ADO per stabilire una connessione a un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], quindi esegue un DiffGram. In questa applicazione il DiffGram e lo schema XSD vengono archiviati in un file. L'applicazione carica il DiffGram dal file specificato. È possibile usare uno dei DiffGram (e lo schema XSD associato) descritto nella [esempi di DiffGram](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
   
  Il processo per l'applicazione di esempio è il seguente:  
   
 -   Il **conn** oggetto (**ADODB. Connessione**) stabilisce una connessione a un'istanza di SQL Server in esecuzione in un server specifico.  
   
--   Il **cmd** oggetto (**ADODB**) viene eseguito durante la connessione.  
+-   Il **cmd** oggetto (**ADODB. Command**) viene eseguito durante la connessione.  
   
 -   Il sottolinguaggio del comando viene impostato su DBGUID_MSSQLXML.  
   
 -   Il DiffGram viene copiato nel flusso di comandi (**strmIn**) da un file.  
   
--   Flusso di output del comando è impostato sul **StrmOut** oggetto (**ADODB. Flusso**) per ricevere i dati restituiti.  
+-   Flusso di output del comando è impostato il **StrmOut** oggetto (**ADODB. Stream**) per ricevere eventuali dati restituiti.  
   
 -   Quando si utilizza il provider SQLOLEDB, per impostazione predefinita si otterrà la funzionalità Microsoft SQLXML fornita da Sqlxmlx.dll. Per utilizzare Sqlxml4.dll con il Provider SQLOLEDB, il **SQLXML Version** proprietà deve essere impostata su **SQLXML.4.0** il provider SQLOLEDB **connessione** oggetto.  
   
@@ -91,7 +91,7 @@ End Sub
   
 ### <a name="to-test-the-diffgram"></a>Per testare DiffGram  
   
-1.  In una cartella nel computer, copiare uno dei DiffGram e lo schema XSD corrispondente da uno degli esempi in [esempi di DiffGram](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
+1.  In una cartella nel computer, copiare uno dei DiffGram e lo schema XSD corrispondente da uno degli esempi nella [esempi di DiffGram](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
   
 2.  Aprire Visual Basic e creare un progetto Standard Exe.  
   
@@ -101,7 +101,7 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  Nella casella degli strumenti, fare clic su **CommandButton**e quindi disegnare un pulsante sul form.  
+4.  Nella casella degli strumenti, fare clic su **CommandButton**, quindi disegnare un pulsante nel form.  
   
 5.  Fare doppio clic sul pulsante per modificare il codice e aggiungere il codice dell'applicazione fornito nell'argomento.  
   

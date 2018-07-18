@@ -1,5 +1,5 @@
 ---
-title: Schemas (Transact-SQL) | Documenti Microsoft
+title: Sys. Schemas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fb74ca331e580ffa71111f987bf3a93450f2b56
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178337"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049948"
 ---
-# <a name="schemas-catalog-views---sysschemas"></a>-Vista del catalogo schemi schemas
+# <a name="schemas-catalog-views---sysschemas"></a>Schemi - vista del catalogo sys. Schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Include una riga per ogni schema di database.  
@@ -46,7 +46,7 @@ ms.locfileid: "33178337"
 |**schema_id**|**int**|ID dello schema. Valore univoco all'interno del database.|  
 |**principal_id**|**int**|ID dell'entità che possiede lo schema.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli schemi di database fungono da spazi dei nomi o contenitori per gli oggetti, ad esempio tabelle, viste, procedure e funzioni, che possono essere trovati nel **Sys. Objects** vista del catalogo.  
   
 ## <a name="permissions"></a>Autorizzazioni  

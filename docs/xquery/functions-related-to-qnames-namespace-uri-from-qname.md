@@ -1,5 +1,5 @@
 ---
-title: namespace-uri-da-QName (XQuery) | Documenti Microsoft
+title: namespace-uri-from-QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 67475f0f7e10f8d49e4adefab8b44c2d4cefc272
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077488"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999803"
 ---
-# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Funzioni correlate a elementi QName - spazio dei nomi uri da QName
+# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Funzioni correlate a elementi QName - namespace-uri-from-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una stringa che rappresenta l'uri dello spazio dei nomi dell'elemento QName specificato da *$arg*. Il risultato è una sequenza vuota se *$arg* è una sequenza vuota.  
@@ -49,12 +49,12 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. Recuperare l'URI dello spazio dei nomi per un QName  
- Per un esempio funzionante, vedere [-nome locale da QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
+ Per un esempio funzionante, vedere [local-name-from-QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
   
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  
   
--   Il **namespace-uri-from-QName()** funzione restituisce istanze di xs: String anziché di xs: anyURI.  
+-   Il **namespace-uri-from-QName()** funzione restituisce le istanze di xs: String anziché di xs: anyURI.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Le funzioni correlate a elementi QName &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  

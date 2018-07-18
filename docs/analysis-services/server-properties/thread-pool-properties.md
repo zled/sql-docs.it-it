@@ -1,5 +1,5 @@
 ---
-title: Proprietà dei Pool di thread | Documenti Microsoft
+title: Proprietà dei Pool di thread | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239251"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050602"
 ---
 # <a name="thread-pool-properties"></a>Proprietà dei pool di thread
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il multithreading viene usato per molte operazioni, con il conseguente miglioramento delle prestazioni complessive del server dovuto all'esecuzione di più processi in parallelo. Per gestire i thread in modo più efficiente, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono usati i pool di thread per preallocare i thread e semplificarne la disponibilità per il processo successivo.  
   
- Ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene il proprio set di pool di thread. Esistono differenze significative nel modo in cui i pool di thread vengono usati dalle istanze tabulari e da quelle multidimensionali. Ad esempio, solo le istanze multidimensionali usano il pool di thread **IOProcess** . Di conseguenza, il **PerNumaNode** proprietà, descritto in questo articolo, non è significativa per le istanze tabulari. Nella sezione [Guida di riferimento alle proprietà](#bkmk_propref) seguente, i requisiti di modalità sono indicati per ogni proprietà.
+ Ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene il proprio set di pool di thread. Esistono differenze significative nel modo in cui i pool di thread vengono usati dalle istanze tabulari e da quelle multidimensionali. Ad esempio, solo le istanze multidimensionali usano il pool di thread **IOProcess** . Di conseguenza, il **PerNumaNode** proprietà, descritta in questo articolo, non è significativo per le istanze tabulari. Nella sezione [Guida di riferimento alle proprietà](#bkmk_propref) seguente, i requisiti di modalità sono indicati per ogni proprietà.
   
  In questo articolo sono contenute le sezioni seguenti:  
   
@@ -277,7 +277,7 @@ ms.locfileid: "35239251"
  [Gruppi di processori](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
  [Modifiche al Pool di Thread di Analysis Services in SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Impostazioni di analisi configurazione Services 2012 (Blog di Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [Il supporto di sistemi che dispongono di più di 64 processori](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [Sistemi di supporto che dispongono di più di 64 processori](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [Guida operativa di SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   
