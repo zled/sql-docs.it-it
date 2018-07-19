@@ -21,6 +21,7 @@
 
 ## [Replica in sottoscrittori di tabelle con ottimizzazione per la memoria](replication-to-memory-optimized-table-subscribers.md)  
 ## [Replica nel database SQL](replication-to-sql-database.md)  
+## [Replica con il database SQL](replication-with-sql-database-managed-instance.md)
 ## [Ripubblicare i dati](republish-data.md)  
 ## [Replica su Internet](replication-over-the-internet.md)  
 ### [Pubblicare i dati su Internet tramite VPN](publish-data-over-the-internet-using-vpn.md)  
