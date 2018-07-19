@@ -1,5 +1,5 @@
 ---
-title: Opzioni (pagina ambiente-Help-Online) | Documenti Microsoft
+title: Opzioni (pagina ambiente-Help-Online) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a6be02ad438f35c145c7cadc3738525c1ea60d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2e15edf6e83edf97d39da4a20e99891c7b08a3a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204391"
 ---
-# <a name="options-environment-help-online-page"></a>Opzioni (pagina ambiente-Help-Online)
+# <a name="options-environment-help-online-page"></a>Opzioni (ambiente-Help-Online pagina)
   La finestra di dialogo **Opzioni** consente di specificare le origini della Guida da usare per le ricerche di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], tra cui la Guida sensibile al contesto. Scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Ambiente** , selezionare **Guida**e quindi fare clic su **Online**. Se la pagina **Online** non viene visualizzata nell'elenco, selezionare la casella di controllo **Mostra tutte le impostazioni** nella finestra di dialogo **Opzioni** .  
   
  **Al caricamento della Guida**  

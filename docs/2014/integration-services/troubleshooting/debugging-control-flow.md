@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -20,16 +20,16 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8b8de78b135245c36d11f4dfb96a993fd0bbc4dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd6b99c23bd2a8ef82597025c402f0f881c13982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170992"
 ---
 # <a name="debugging-control-flow"></a>Debug del flusso di controllo
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includono funzionalità e strumenti che è possibile utilizzare per risolvere il flusso di controllo in un [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] pacchetto.  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includono funzionalità e strumenti che è possibile usare per risolvere i problemi di flusso di controllo in un [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] pacchetto.  
   
 -   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] supporta i punti di interruzione in contenitori e attività.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36065861"
 -   In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] sono disponibili finestre di debug.  
   
 ## <a name="breakpoints"></a>Punti di interruzione  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Finestra di progettazione fornisce le **Imposta punti di interruzione** della finestra di dialogo in cui è possibile impostare i punti di interruzione attivando condizioni di interruzione e specificando il numero di volte in cui un punto di interruzione può verificarsi prima dell'esecuzione del pacchetto viene sospeso. I punti di interruzione possono essere abilitati a livello di pacchetto oppure a livello di singolo componente. Se le condizioni di interruzione vengono abilitate a livello di attività o di contenitore, nell'area di progettazione della scheda **Flusso di controllo** accanto all'attività o al contenitore verrà visualizzata l'icona del punto di interruzione. Se le condizioni di interruzione vengono abilitate a livello di pacchetto, l'icona del punto di interruzione verrà visualizzata sull'etichetta della scheda **Flusso di controllo** .  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Finestra di progettazione fornisce il **Imposta punti di interruzione** della finestra di dialogo in cui è possibile impostare i punti di interruzione attivando condizioni di interruzione e specificando il numero di volte in cui un punto di interruzione può verificarsi prima dell'esecuzione del pacchetto venga sospesa. I punti di interruzione possono essere abilitati a livello di pacchetto oppure a livello di singolo componente. Se le condizioni di interruzione vengono abilitate a livello di attività o di contenitore, nell'area di progettazione della scheda **Flusso di controllo** accanto all'attività o al contenitore verrà visualizzata l'icona del punto di interruzione. Se le condizioni di interruzione vengono abilitate a livello di pacchetto, l'icona del punto di interruzione verrà visualizzata sull'etichetta della scheda **Flusso di controllo** .  
   
  Quando viene rilevato un punto di interruzione, la relativa icona viene modificata in modo da aiutare l'utente a identificarne l'origine. È possibile aggiungere, eliminare e modificare i punti di interruzione durante l'esecuzione del pacchetto.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36065861"
 |Quando l'attività o il contenitore riceve il `OnTaskFailed` evento.|Viene chiamata dall'host delle attività in caso di errore.|  
 |Quando l'attività o il contenitore riceve il `OnProgress` evento.|Viene chiamata per aggiornare le informazioni sullo stato di esecuzione dell'attività.|  
 |Quando l'attività o il contenitore riceve il `OnQueryCancel` evento.|Viene chiamata in qualsiasi momento dell'elaborazione dell'attività in cui è possibile annullare l'esecuzione.|  
-|Quando l'attività o il contenitore riceve il `OnVariableValueChanged` evento.|Viene chiamata dal runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] quando il valore di una variabile viene modificato. RaiseChangeEvent della variabile deve essere impostato su `true` per generare questo evento.<br /><br /> **\*\* Avviso \*\*** La variabile associata a questo punto di interruzione deve essere definita nell'ambito del **contenitore** . Se la variabile viene definita nell'ambito del pacchetto, il punto di interruzione non viene raggiunto.|  
+|Quando l'attività o il contenitore riceve il `OnVariableValueChanged` evento.|Viene chiamata dal runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] quando il valore di una variabile viene modificato. RaiseChangeEvent della variabile deve essere impostata su `true` per generare questo evento.<br /><br /> **\*\* Avviso \*\*** La variabile associata a questo punto di interruzione deve essere definita nell'ambito del **contenitore** . Se la variabile viene definita nell'ambito del pacchetto, il punto di interruzione non viene raggiunto.|  
 |Quando l'attività o il contenitore riceve il `OnCustomEvent` evento.|Chiamato dalle attività per generare eventi personalizzati definiti per le singole attività.|  
   
  Oltre a quelle disponibili per tutte le attività e i contenitori, alcuni contenitori e attività includono speciali condizioni di interruzione per l'impostazione dei punti di interruzione. Per il contenitore Ciclo For è ad esempio possibile abilitare un punto di interruzione che sospende l'esecuzione all'inizio di ogni iterazione del ciclo.  
@@ -78,10 +78,10 @@ ms.locfileid: "36065861"
   
 #### <a name="to-set-breakpoints"></a>Per impostare punti di interruzione  
   
--   [Debug di un pacchetto impostando punti di interruzione in un'attività o un contenitore](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
+-   [Debug di un pacchetto impostando punti di interruzione in un'attività o in un contenitore](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
   
 ## <a name="progress-reporting"></a>Report di stato  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Finestra di progettazione include due tipi di report di stato: codifica a colori nell'area di progettazione del **flusso di controllo** scheda e i messaggi di stato sul **lo stato di avanzamento** scheda.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Progettazione include due tipi di report di stato: codifica a colori nell'area di progettazione del **flusso di controllo** scheda e i messaggi di stato sulle **lo stato di avanzamento** scheda.  
   
  Durante l'esecuzione di un pacchetto, Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] indica l'avanzamento dell'esecuzione visualizzando ogni attività o contenitore con un colore che ne indica lo stato di esecuzione. Dal colore è possibile capire se l'elemento è in attesa di esecuzione, in fase di esecuzione, ha terminato l'esecuzione o è stato interrotto senza completare l'esecuzione. Quando l'esecuzione del pacchetto viene arrestata, la codifica a colori non viene più utilizzata.  
   

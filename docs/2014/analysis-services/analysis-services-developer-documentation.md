@@ -1,5 +1,5 @@
 ---
-title: Gli sviluppatori&#39;s Guida (Analysis Services) | Documenti Microsoft
+title: Per gli sviluppatori&#39;Guida (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f18e3283284688a89772f7b305fecf84ce824e27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9fcba17c91cca47b6d73baab9d5e508a6a0f5c63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180868"
 ---
-# <a name="developer39s-guide-analysis-services"></a>Gli sviluppatori&#39;s Guida (Analysis Services)
+# <a name="developer39s-guide-analysis-services"></a>Per gli sviluppatori&#39;Guida (Analysis Services)
     
 ## <a name="in-this-section"></a>Argomenti della sezione  
- [Programmazione del modello tabulare](tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
+ [Programmazione di modelli tabulari](tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
  Vengono descritte le estensioni CSDL con cui viene definito un modello tabulare nella sintassi XML. Sono inoltre incluse informazioni sul modello a oggetti tabulare.  
   
- [Programmazione di Data Mining](dev-guide/data-mining-programming.md)  
+ [Programmazione di data mining](dev-guide/data-mining-programming.md)  
  Vengono descritte le modalità di compilazione di soluzioni contenenti oggetti di data mining.  
   
  [Programmazione del modello multidimensionale](multidimensional-models/multidimensional-model-programming.md)  

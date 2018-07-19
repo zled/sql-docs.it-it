@@ -1,5 +1,5 @@
 ---
-title: Preparazione all'utilizzo di SMO | Documenti Microsoft
+title: Preparazione all'utilizzo di SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - SMO [SQL Server], about SQL Server Management Objects
 ms.assetid: 05018a4d-2339-4ecf-8769-414ec781c535
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a0a94a059bd764cb2b13bf03dd04ec21ae5e2d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5572213042ddbb071e9123f231b3c74bd209cab1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231961"
 ---
 # <a name="preparing-to-use-smo"></a>Preparazione all'utilizzo di SMO
   In questa sezione sono contenute informazioni introduttive sull'utilizzo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). Grazie all'elenco seguente sarà possibile individuare informazioni su tipi di sintassi nella documentazione, requisiti di sistema per la programmazione in SMO, file e numeri di versione, nonché una descrizione delle novità di SMO e una guida all'installazione.  
   
 |||  
 |-|-|  
-|**Preparazione all'utilizzo di SMO**<br /><br /> -   [Convenzioni della sintassi](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md) vengono descritte le convenzioni della sintassi utilizzate in questa sezione.<br />-   [Requisiti di sistema](../../../2014/database-engine/dev-guide/system-requirements.md) specifica i requisiti di sistema per l'installazione e utilizzo di SMO.<br />-   [I file e numeri di versione](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md) sono elencati i componenti SMO e i numeri di versione corrispondente.|-   [Installazione di SMO](../../relational-databases/server-management-objects-smo/installing-smo.md) fornisce istruzioni per l'installazione di SMO.|  
+|**Preparazione all'uso di SMO**<br /><br /> -   [Convenzioni della sintassi](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md) vengono descritte le convenzioni della sintassi usate in questa sezione.<br />-   [Requisiti di sistema](../../../2014/database-engine/dev-guide/system-requirements.md) specifica i requisiti di sistema per l'installazione e utilizzo di SMO.<br />-   [I file e numeri di versione](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md) sono elencati i componenti SMO e numeri di versione corrispondenti.|-   [Installazione di SMO](../../relational-databases/server-management-objects-smo/installing-smo.md) fornisce istruzioni per l'installazione di SMO.|  
   
   

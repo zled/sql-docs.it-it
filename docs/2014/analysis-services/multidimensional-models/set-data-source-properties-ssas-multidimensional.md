@@ -1,5 +1,5 @@
 ---
-title: Impostare le proprietà di origine dati (SSAS multidimensionale) | Documenti Microsoft
+title: Impostare le proprietà di origine dati (SSAS multidimensionale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.datasourceproperties.f1
 helpviewer_keywords:
 - Data Source Properties dialog box
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdd8eca5f49e79c3f6d284a404f23121a1182a0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb4fcd1e2945e01b5e81d38542b0b8c7950c1fcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208291"
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Impostare proprietà origine dati (SSAS multidimensionale)
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un'origine dati consente di specificare una connessione a un data warehouse esterno o a un database relazionale che fornisce dati a un modello multidimensionale. Le proprietà sull'origine dati determinano la stringa di connessione, un intervallo di timeout, il numero massimo di connessioni e il livello di isolamento delle transazioni.  
@@ -48,7 +48,7 @@ ms.locfileid: "36064810"
 |**Timestamp creazione**|Questa proprietà di sola lettura viene visualizzata in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Consente di visualizzare la data e l'ora di creazione dell'origine dati.|  
 |**Ultimo aggiornamento schema**|Questa proprietà di sola lettura viene visualizzata in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei metadati relativi all'origine dati. Questo valore viene aggiornato quando si distribuisce la soluzione.|  
 |**Timeout query**|Consente di specificare per quanto tempo si tenterà di eseguire una richiesta di connessione prima che venga eliminata.<br /><br /> Digitare il timeout delle query nel formato seguente:<br /><br /> *\<Ore >*:*\<minuti >*:*\<secondi >*<br /><br /> Questa proprietà può essere sostituita dal `DatabaseConnectionPoolTimeoutConnection` proprietà del server. Se il valore della proprietà del server è inferiore, verrà usato al posto di **Timeout query**.<br /><br /> Per altre informazioni sulla proprietà **Timeout query** , vedere <xref:Microsoft.AnalysisServices.DataSource.Timeout%2A>. Per altre informazioni sulla proprietà del server, vedere [Proprietà OLAP](../server-properties/olap-properties.md).|  
-|**Stringa di connessione**|Consente di specificare la posizione fisica di un database che fornisce dati a un modello multidimensionale, nonché il provider di dati utilizzato per la connessione. Queste informazioni vengono fornite a una libreria client che effettua la richiesta di connessione. Il provider determina le proprietà del server che è possibile impostare nella stringa di connessione.<br /><br /> La stringa di connessione viene compilata con le informazioni fornite nella finestra di dialogo **Gestione connessione** . È inoltre possibile visualizzare e modificare la stringa di connessione nella pagina delle proprietà dell'origine dati in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .<br /><br /> Per un database di SQL Server, una stringa di connessione contenente `user ID` indica l'autenticazione del database; una connessione contenente `Integrated Security=SSPI` indica l'autenticazione di Windows.<br /><br /> Se il database è stato spostato in una nuova posizione, è possibile modificare il nome del server o del database. Verificare che per le credenziali attualmente specificate per la connessione venga eseguito il mapping a un account di accesso al database.|  
+|**Stringa di connessione**|Consente di specificare la posizione fisica di un database che fornisce dati a un modello multidimensionale, nonché il provider di dati utilizzato per la connessione. Queste informazioni vengono fornite a una libreria client che effettua la richiesta di connessione. Il provider determina le proprietà del server che è possibile impostare nella stringa di connessione.<br /><br /> La stringa di connessione viene compilata con le informazioni fornite nella finestra di dialogo **Gestione connessione** . È inoltre possibile visualizzare e modificare la stringa di connessione nella pagina delle proprietà dell'origine dati in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .<br /><br /> Per un database di SQL Server, una stringa di connessione che contiene `user ID` indica l'autenticazione del database; una connessione contenente `Integrated Security=SSPI` indica l'autenticazione di Windows.<br /><br /> Se il database è stato spostato in una nuova posizione, è possibile modificare il nome del server o del database. Verificare che per le credenziali attualmente specificate per la connessione venga eseguito il mapping a un account di accesso al database.|  
 |**Numero massimo di connessioni**|Consente di specificare il numero massimo di connessioni consentito da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la connessione all'origine dati. Se sono richieste più connessioni, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rimane in attesa finché una connessione non diventa disponibile. Il valore predefinito è 10. L'impostazione di un vincolo al numero di connessioni impedisce l'overload dell'origine dati esterna con richieste di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |**Isolamento**|Consente di specificare il funzionamento relativo ai blocchi e al controllo delle versioni delle righe per i comandi SQL eseguiti da una connessione a un database relazionale. I valori validi sono ReadCommitted o Snapshot. L'impostazione predefinita è ReadCommitted, che indica la necessità di eseguire il commit dei dati prima della relativa lettura, al fine di evitare letture dirty. Snapshot indica che le letture provengono da uno snapshot di dati di cui è stato eseguito in precedenza il commit. Per altre informazioni sul livello di isolamento in SQL Server, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).|  
 |**Provider gestito**|Consente di visualizzare il nome del provider gestito, ad esempio System.Data.SqlClient o System.Data.OracleClient, se l'origine dati ne utilizza uno.<br /><br /> Se l'origine dati non utilizza un provider gestito, per questa proprietà verrà visualizzata una stringa vuota.<br /><br /> Questa proprietà è di sola lettura in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per modificare il provider utilizzato per la connessione, modificare la stringa di connessione.|  

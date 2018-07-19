@@ -1,5 +1,5 @@
 ---
-title: Oggetti (XMLA) | Documenti Microsoft
+title: Oggetti (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - XMLA, objects
 ms.assetid: 768188ef-85d4-432a-9390-be05c835137f
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 98ff50749cc45b5ffe4343acc19668f4dd0db126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3fdaa8cc81b642212c6aa404a8b6d39e3872c743
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205901"
 ---
 # <a name="objects-xmla"></a>Oggetti (XMLA)
-  Il protocollo XML for Analysis (XMLA) utilizza due metodi, `Discover` e `Execute`, per fornire una modalità standard per le applicazioni accedere alle informazioni in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Poiché questi metodi vengono richiamati utilizzando il protocollo SOAP (Simple Object Access Protocol), accettano input e creano output in formato XML.  
+  Il protocollo XML for Analysis (XMLA) utilizza due metodi, `Discover` e `Execute`, per offrire un modo standard per le applicazioni accedere alle informazioni in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Poiché questi metodi vengono richiamati utilizzando il protocollo SOAP (Simple Object Access Protocol), accettano input e creano output in formato XML.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
  Negli argomenti seguenti vengono descritti gli oggetti XMLA implementati da [!INCLUDE[ssAS](../../includes/ssas-md.md)].  

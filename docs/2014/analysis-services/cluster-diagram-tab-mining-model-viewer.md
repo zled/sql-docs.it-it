@@ -1,5 +1,5 @@
 ---
-title: Scheda diagramma (Visualizzatore modello di Data Mining) del cluster | Documenti Microsoft
+title: Scheda diagramma (Visualizzatore modello di Data Mining) del cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.diagram.f1
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1080183439eac579bbbbd6ec8a716d0fbe12dca2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: abab1915e4a17ddd4e9c3ea3a6f524dcb5493150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173592"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Scheda Diagramma dei cluster (Visualizzatore modello di data mining)
   La scheda **Diagramma dei cluster** offre una visualizzazione grafica di tutti i cluster contenuti nel modello di clustering.  
@@ -50,13 +50,13 @@ ms.locfileid: "36063217"
  **Copia grafico intero**  
  Consente di copiare tutto il diagramma negli Appunti.  
   
- **Scala adatta il diagramma alla finestra**  
+ **Scalabilità adatta il diagramma alla finestra**  
  Consente di eseguire lo zoom indietro del diagramma finché l'intero diagramma non si adatta alla schermata.  
   
  **Trovare il nodo**  
  Verrà aperta la finestra di dialogo **Trova nodo** . Questa caratteristica è utile nei modelli grandi in cui può risultare difficile trovare l'attributo desiderato. È possibile immettere criteri di ricerca nella finestra di dialogo in modo che la vista dei cluster venga filtrata per mostrare solo il cluster contenente la stringa di ricerca.  
   
- **Migliorare il Layout**  
+ **Migliora Layout**  
  Consente di riordinare i cluster nel diagramma per migliorarne il layout.  
   
  **Density**  
@@ -75,7 +75,7 @@ ms.locfileid: "36063217"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

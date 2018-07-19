@@ -1,5 +1,5 @@
 ---
-title: Finestre di dialogo riferimento (SSAS) | Documenti Microsoft
+title: Finestre di dialogo Guida di riferimento (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7d1059a-3133-4884-b2f0-518febfc56ad
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe923450d0bc23940250728c52c0f61144293870
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fb38f8a65dbf1fccc9dac0cf467e204b5ab7700b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221991"
 ---
 # <a name="dialog-boxes-reference-ssas"></a>Guida di riferimento alle finestre di dialogo (SSAS)
   Per informazioni sulle finestre di dialogo in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], vedere gli argomenti seguenti.  
   
 -   [Finestra di dialogo larghezza colonna &#40;SSAS&#41;](column-width-dialog-box-ssas.md)  
   
--   [Contrassegna come tabella data di dialogo &#40;SSAS&#41;](mark-as-date-table-dialog-box-ssas.md)  
+-   [Contrassegna come finestra di dialogo tabella data &#40;SSAS&#41;](mark-as-date-table-dialog-box-ssas.md)  
   
--   [Finestra di dialogo Proprietà tabella Modifica &#40;SSAS&#41;](edit-table-properties-dialog-box-ssas.md)  
+-   [Modifica finestra di dialogo Proprietà tabella &#40;SSAS&#41;](edit-table-properties-dialog-box-ssas.md)  
   
 -   [Passare alla finestra di dialogo &#40;SSAS&#41;](go-to-dialog-box-ssas.md)  
   

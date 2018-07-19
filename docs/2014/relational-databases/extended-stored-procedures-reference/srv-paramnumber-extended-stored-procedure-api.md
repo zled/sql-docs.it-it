@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_paramnumber
 ms.assetid: d7a6dbff-71d9-4297-8a4f-bfd2876fe204
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c0037b53bb5454aa703a1d1c006c2ad4f49e99ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: cb706950bdda865d4f68d2971bfad36edb909e90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169188"
 ---
 # <a name="srvparamnumber-extended-stored-procedure-api"></a>srv_paramnumber (API delle stored procedure estese)
     
@@ -69,7 +69,7 @@ namelen
 ## <a name="returns"></a>Valori di codice restituiti  
  Numero di parametro del parametro denominato. Il primo parametro è 1. Se non è presente alcun parametro denominato *name* o alcuna stored procedure remota, viene restituito 0 e viene generato un messaggio.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Quando viene effettuata una chiamata a una stored procedure remota con parametri, tali parametri possono essere passati per nome o per posizione (senza nome). Se invece viene effettuata con alcuni parametri passati per nome e altri passati per posizione, si verifica un errore. Il gestore SRV_RPC viene comunque chiamato, ma risulta che non sono presenti parametri e **srv_rpcparams** restituisce 0.  
   
 > [!IMPORTANT]  

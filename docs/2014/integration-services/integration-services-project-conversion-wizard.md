@@ -1,5 +1,5 @@
 ---
-title: Conversione guidata di Integration Services progetto | Documenti Microsoft
+title: Conversione guidata di progetto di Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.migrationwizard.f1
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c123f00433dde1f25755772919d7e48b8745e0bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c547623597e72e4c6ae144baed226dbf88af60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219651"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Conversione guidata progetto di Integration Services
   Con la **Conversione guidata progetto di Integration Services** è possibile convertire un progetto nel modello di distribuzione del progetto.  
@@ -246,6 +246,6 @@ ms.locfileid: "36063864"
  Fare clic su questa opzione per salvare un riepilogo della conversione del progetto in un file con estensione xml.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Distribuire progetti nel Server Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
+ [Distribuire progetti nel server Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

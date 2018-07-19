@@ -1,5 +1,5 @@
 ---
-title: Creare una Query di Data Mining tramite XMLA | Documenti Microsoft
+title: Creare una Query di Data Mining usando XMLA | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2421d501ea5040a177cb1d52aea1c3a56b59e107
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 220d9b284175e9427a28a886e46ffe91b277fe3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226601"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Creare una query di data mining usando XMLA
   È possibile creare diverse query sugli oggetti di data mining utilizzando AMO, DMX o XML/A.  
@@ -48,7 +48,7 @@ ms.locfileid: "36065488"
   
      Viene visualizzato un elenco di set di righe dello schema nel riquadro **Risultati** che contiene i nomi e le colonne di tutti i set di righe disponibili nell'istanza corrente.  
   
-2.  Nel **Query** riquadro, posizionare il cursore dopo  **\<elenco restrizioni >** e premere INVIO per aggiungere una nuova riga.  
+2.  Nel **Query** riquadro, posizionare il cursore dopo  **\<Restriction List >** e premere INVIO per aggiungere una nuova riga.  
   
 3.  Posizionare il cursore sulla riga vuota e digitare  **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36065488"
      Nel riquadro Risultati viene visualizzata la definizione dello schema insieme ai valori del modello specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Set di righe dello schema di data mining](../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
   
   

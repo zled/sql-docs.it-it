@@ -1,5 +1,5 @@
 ---
-title: Proprietà PropertyValType (classe ClientNetworkProtocolProperty) | Documenti Microsoft
+title: Proprietà PropertyValType (classe ClientNetworkProtocolProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyValType property
 ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd4238a43c5bc8a31e33bae9993c52b05e9e750b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 93c4ce90c3d9fa82ea462e003cf86844bdfaa10c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244531"
 ---
 # <a name="propertyvaltype-property-clientnetworkprotocolproperty-class"></a>Proprietà PropertyValType (classe ClientNetworkProtocolProperty)
   Ottiene il tipo di dati del valore archiviato nella proprietà a cui fa riferimento il valore della [proprietà PropertyIdx (classe ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  
@@ -48,7 +48,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore `uint32` che specifica il tipo di dati del valore della proprietà.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md)  

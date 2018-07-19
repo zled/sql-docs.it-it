@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 caps.latest.revision: 50
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2594ecdb53df53413f3851203ae110c1de754dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ae14ea283a7558b854481f435d6c9a62e5b51e52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225901"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Creare o configurare un listener del gruppo di disponibilità (SQL Server)
   In questo argomento viene illustrato come creare o configurare un singolo *listener del gruppo di disponibilità* per un gruppo di disponibilità AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -207,14 +206,14 @@ ms.locfileid: "36065450"
 ###  <a name="ADQuotas"></a> Impossibile creare un listener del gruppo di disponibilità a causa di quote di Active Directory  
  La creazione di un nuovo listener del gruppo di disponibilità può avere esito negativo perché è stata raggiunta una quota di Active Directory per l'account del computer del nodo del cluster interessato.  Per ulteriori informazioni, vedere gli articoli seguenti:  
   
--   [Collegamento ipertestuale "http://support.microsoft.com/kb/307532" come risolvere l'Account del servizio Cluster durante la modifica di oggetti Computer](http://support.microsoft.com/kb/307532)  
+-   [Collegamento ipertestuale "http://support.microsoft.com/kb/307532" come risolvere l'Account del servizio Cluster in relazione alla modifica di oggetti Computer](http://support.microsoft.com/kb/307532)  
   
 -   [Collegamento ipertestuale "http://technet.microsoft.com/library/cc904295(WS.10).aspx" quote di Active Directory](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> Completamento: Creazione di un listener del gruppo di disponibilità  
   
 ###  <a name="MultiSubnetFailover"></a> Parola chiave MultiSubnetFailover e funzionalità associate  
- `MultiSubnetFailover` una nuova parola chiave stringa di connessione consente di accelerare il failover con gruppi di disponibilità AlwaysOn e le istanze Cluster di Failover AlwaysOn in SQL Server 2012. Le tre seguenti funzionalità secondarie vengono abilitate quando `MultiSubnetFailover=True` è impostato nella stringa di connessione:  
+ `MultiSubnetFailover` una nuova parola chiave stringa di connessione consente di accelerare il failover con i gruppi di disponibilità AlwaysOn e le istanze del Cluster di Failover AlwaysOn in SQL Server 2012. Le tre seguenti funzionalità secondarie vengono abilitate quando `MultiSubnetFailover=True` è impostato nella stringa di connessione:  
   
 -   Failover multisubnet più rapido su un listener su più subnet per un gruppo di disponibilità AlwaysOn o istanze del cluster di failover.  
   
@@ -242,7 +241,7 @@ ms.locfileid: "36065450"
   
      **Vantaggi:** non è necessario aumentare il valore di timeout della connessione client.  
   
-     **Svantaggi:** se si verifica un failover tra subnet, il tempo di ripristino client potrebbe essere 15 minuti o, a seconda del `HostRecordTTL` impostazione e della pianificazione della replica DNS/AD tra siti.  
+     **Svantaggi:** se si verifica un failover tra subnet, il tempo di recupero client potrebbe essere di 15 minuti o, a seconda di `HostRecordTTL` impostazione e della pianificazione della replica DNS/AD tra siti.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Impostazione RegisterAllProvidersIP  
  Quando si usa [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], o PowerShell per creare un listener del gruppo di disponibilità, il punto di accesso Client viene creato in WSFC con la `RegisterAllProvidersIP` proprietà impostata su 1 (true). L'effetto del valore di questa proprietà dipende dalla stringa di connessione client, come indicato di seguito:  
@@ -265,13 +264,13 @@ ms.locfileid: "36065450"
      Se `RegisterAllProvidersIP = 1`, in tutti i client le cui stringhe di connessione non utilizzano `MultiSubnetFailover = True`si verificheranno connessioni ad alta latenza. Questa situazione si verifica in quanto questi client tentano di effettuare connessioni a tutti gli indirizzi IP in sequenza. Al contrario, se `RegisterAllProvidersIP` viene impostato su 0, l'indirizzo IP attivo viene registrato nel punto di accesso client del cluster WSFC, riducendo la latenza per i client legacy. Pertanto, se alcuni client legacy devono connettersi a un listener del gruppo di disponibilità e non è possibile utilizzare la proprietà `MultiSubnetFailover`, è consigliabile impostare `RegisterAllProvidersIP` su 0.  
   
     > [!IMPORTANT]  
-    >  Quando si crea un listener del gruppo di disponibilità tramite il cluster WSFC (GUI di gestione Cluster di Failover), `RegisterAllProvidersIP` sarà pari a 0 (false) per impostazione predefinita.  
+    >  Quando si crea un listener del gruppo di disponibilità con il cluster WSFC (GUI di gestione Cluster di Failover), `RegisterAllProvidersIP` sarà pari a 0 (false) per impostazione predefinita.  
   
 ###  <a name="HostRecordTTL"></a> Impostazione HostRecordTTL  
- Per impostazione predefinita, tramite i client vengono memorizzati nella cache record DNS del cluster per 20 minuti.  Grazie alla riduzione `HostRecordTTL`, il tempo a Live (TTL), per i record memorizzati nella cache, i client legacy possono riconnettersi più rapidamente.  Tuttavia, la riduzione di `HostRecordTTL` impostazione maggio anche risultati un aumento del traffico ai server DNS.  
+ Per impostazione predefinita, tramite i client vengono memorizzati nella cache record DNS del cluster per 20 minuti.  Grazie alla riduzione `HostRecordTTL`, il tempo a Live (TTL), per i record memorizzati nella cache, i client legacy possono riconnettersi più rapidamente.  Tuttavia, riducendo il `HostRecordTTL` impostando maggio anche risultato un aumento del traffico ai server DNS.  
   
 ###  <a name="SampleScript"></a> Script PowerShell di esempio per disabilitare RegisterAllProvidersIP e ridurre TTL  
- Nell'esempio di PowerShell riportato di seguito viene illustrato come configurare entrambe le `RegisterAllProvidersIP` e `HostRecordTTL` parametri per la risorsa listener cluster.  Il record DNS verrà memorizzato nella cache per 5 minuti anziché per i 20 minuti predefiniti.  Modificando entrambi i parametri del cluster è possibile ridurre il tempo di connessione all'indirizzo IP corretto dopo un failover per client legacy tramite cui non è possibile utilizzare il parametro `MultiSubnetFailover`.  Sostituire `yourListenerName` con il nome del listener che si sta modificando.  
+ L'esempio di PowerShell seguente illustra come configurare entrambi i `RegisterAllProvidersIP` e `HostRecordTTL` parametri per la risorsa listener del cluster.  Il record DNS verrà memorizzato nella cache per 5 minuti anziché per i 20 minuti predefiniti.  Modificando entrambi i parametri del cluster è possibile ridurre il tempo di connessione all'indirizzo IP corretto dopo un failover per client legacy tramite cui non è possibile utilizzare il parametro `MultiSubnetFailover`.  Sostituire `yourListenerName` con il nome del listener che si sta modificando.  
   
 ```  
 Import-Module FailoverClusters  
@@ -331,10 +330,10 @@ Start-ClusterResource yourAGResource
   
 -   [Come creare più listener per lo stesso gruppo di disponibilità](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
   
--   [SQL Server AlwaysOn Team Blog: SQL Server AlwaysOn blog del team ufficiale](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: Di SQL Server AlwaysOn team blog ufficiale](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Clustering su più subnet di SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   

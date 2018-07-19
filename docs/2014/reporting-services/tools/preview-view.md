@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.previewview.f1
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e64635a1600a6949287e4528802faf8cdc93f15d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3114b56007619d54d0a9aea95e136d65fe0f725b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212221"
 ---
 # <a name="preview-view"></a>Visualizzazione Anteprima
   Utilizzare la visualizzazione **Anteprima** per visualizzare il report di cui è stato eseguito il rendering. Quando si visualizza l'anteprima di un report, Progettazione report esegue il report localmente e lo visualizza nella visualizzazione Anteprima. Nella modalità di anteprima, il report viene completamente elaborato. Se la query del report è complessa o il report contiene una grande quantità di dati, la visualizzazione dell'anteprima potrebbe impiegare alcuni minuti la prima volta. Per le modifiche successive che riguardano solo il formato del report, l'anteprima utilizza i dati nella cache.  
@@ -85,7 +85,7 @@ ms.locfileid: "36064832"
  **Testo di ricerca**  
  Consente di digitare il testo da cercare nel report. Non è possibile utilizzare operatori di ricerca. Fare clic su **Trova** per cercare la prima occorrenza.  
   
- **Trova**  
+ **Trovare**  
  Selezionare questa opzione per iniziare la ricerca del testo desiderato nel report.  
   
  **Trova successivo**  

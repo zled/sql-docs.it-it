@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - security [data collector]
 - data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1864b580a681cb3c9e7fca612140f21548d2c96a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df296ef140f92e8a035e85d3123b0f1426e6288a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235281"
 ---
 # <a name="data-collector-security"></a>Sicurezza agente di raccolta dati
   L'agente di raccolta dati usano il modello di sicurezza basato sui ruoli implementato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questo modello consente all'amministratore del database di eseguire le varie attività dell'agente di raccolta dati in un contesto di sicurezza che ha solo le autorizzazioni necessarie per eseguire quell'attività. Questo approccio è usato anche per operazioni con tabelle interne, a cui è possibile accedere solo mediante una stored procedure o una vista. Per le tabelle interne non vengono concesse autorizzazioni. Le autorizzazioni vengono invece controllate sull'utente della stored procedure o della vista usata per accedere a una tabella.  
@@ -52,13 +52,13 @@ ms.locfileid: "36064055"
   
  Questi ruoli sono archiviati nel database msdb. Per impostazione predefinita, nessun utente è membro di questi ruoli di database. L'appartenenza dell'utente a questi ruoli deve essere concessa esplicitamente.  
   
- Gli utenti che sono membri del `sysadmin` ruolo predefinito del server hanno accesso completo alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viste dell'agente di raccolta dati e gli oggetti dell'agente. Tuttavia è necessario che vengano aggiunti esplicitamente ai ruoli dell'agente di raccolta dati.  
+ Gli utenti che sono membri del `sysadmin` ruolo predefinito del server hanno accesso completo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viste dell'agente oggetti e dati dell'agente di raccolta. Tuttavia è necessario che vengano aggiunti esplicitamente ai ruoli dell'agente di raccolta dati.  
   
 > [!IMPORTANT]  
 >  I membri dei ruoli db_ssisadmin e dc_admin potrebbero essere in grado di elevare i loro privilegi a sysadmin. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono essere eseguiti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza sysadmin di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per impedire questa elevazione dei privilegi durante l'esecuzione dei piani di manutenzione, set di raccolta dati e altri pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo da utilizzare un account proxy con privilegi limitati o aggiungere solo i membri sysadmin ai ruoli db_ssisadmin e dc_admin.  
   
 ### <a name="dcadmin-role"></a>Ruolo dc_admin  
- Gli utenti assegnati al `dc_admin` ruolo dispone dell'accesso di amministratore completo (Create, Read, Update e Delete) alla configurazione dell'agente di raccolta dati in un'istanza del server. I membri di questo ruolo possono eseguire le seguenti operazioni:  
+ Gli utenti assegnati al `dc_admin` ruolo disporrà di accesso amministratore completo per la configurazione dell'agente di raccolta dati (Create, Read, Update e Delete) in un'istanza del server. I membri di questo ruolo possono eseguire le seguenti operazioni:  
   
 -   Impostare proprietà a livello di agente di raccolta  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36064055"
 -   **SQLAgentUserRole**. Questo ruolo è necessario per creare pianificazioni ed eseguire processi.  
   
     > [!NOTE]  
-    >  I proxy creati per l'agente di raccolta dati devono concedere l'accesso a `dc_admin` crearli e usarli in ogni passaggio di processo che richiede un proxy.  
+    >  I proxy creati per l'agente di raccolta dati deve concedere l'accesso a `dc_admin` crearli e usarli in ogni passaggio di processo che richiede un proxy.  
   
 -   **dc_operator**. I membri del `dc_admin` ereditano le autorizzazioni concesse a **dc_operator**.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36064055"
 -   Modificare lo schema del data warehouse di gestione se necessario (ad esempio per aggiungere una nuova tabella quando viene installato un nuovo tipo di raccolta).  
   
     > [!NOTE]  
-    >  In cui è presente una modifica dello schema, l'utente deve inoltre essere un membro del `dc_admin` ruolo per installare un nuovo tipo di agente di raccolta, in quanto tale azione richiede un'autorizzazione per aggiornare la configurazione dell'agente di raccolta dati in msdb.  
+    >  In cui è presente una modifica dello schema, l'utente deve anche essere un membro del `dc_admin` ruoli per installare un nuovo tipo di agente di raccolta, in quanto questa azione richiede l'autorizzazione per aggiornare la configurazione dell'agente di raccolta dati nel database msdb.  
   
 -   Eseguire processi di manutenzione sul data warehouse di gestione, ad esempio archiviazione o pulizia.  
   

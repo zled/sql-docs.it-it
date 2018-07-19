@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7051dfeda3af9e4bc8de42eaee7f1b52c92589d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f4e61e4ce1c3db29354657f4eb6e3e6c746d7f3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214501"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
   In questa esercitazione si creerà un report tabella semplice basato su dati di vendita di esempio, quindi si aggiungerà un grafico sparkline a una cella della tabella.  
   
- Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per ulteriori informazioni sul download di questo report di esempio e ad altri utenti, vedere [Report di Generatore report di esempio](http://go.microsoft.com/fwlink/?LinkId=184851). Nell'immagine seguente viene illustrato il report di esempio simile a quello che verrà creato.  
+ Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per altre informazioni sul download di questo report di esempio e ad altri utenti, vedere [Report di Generatore report di esempio](http://go.microsoft.com/fwlink/?LinkId=184851). Nell'immagine seguente viene illustrato il report di esempio simile a quello che verrà creato.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
@@ -63,10 +63,10 @@ ms.locfileid: "36064185"
   
 1.  Fare clic sul menu **Start**, scegliere **Programmi**, **Generatore report per Microsoft SQL Server 2012**e quindi fare clic su **Generatore report**.  
   
-     Il **Getting Started** verrà visualizzata la finestra di dialogo.  
+     Il **introduttiva** verrà visualizzata la finestra di dialogo.  
   
     > [!NOTE]  
-    >  Se il **Getting Started** finestra di dialogo non viene visualizzata, dal **Generatore Report** pulsante, fare clic su **nuovo**.  
+    >  Se il **Guida introduttiva** non viene visualizzato nella finestra di dialogo, dalle **Generatore Report** pulsante, fare clic su **New**.  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36064185"
   
      **Origine dati =\<nomeserver >**  
   
-     L'espressione \<nomeserver >, ad esempio Report001, specifica un computer in cui è installata un'istanza del motore di Database di SQL Server. Poiché i dati del report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene utilizzato il database predefinito nel server specificato.  
+     L'espressione \<servername >, ad esempio Report001, specifica un computer in cui è installata un'istanza del motore di Database SQL Server. Poiché i dati del report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene utilizzato il database predefinito nel server specificato.  
   
 9. Fare clic su **Credenziali**. Immettere le credenziali necessarie per accedere all'origine dati esterna.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "36064185"
   
      Nel riquadro di anteprima viene visualizzato un esempio della tabella con lo stile selezionato.  
   
-13. Fare clic su **Fine**.  
+13. Scegliere **Fine**.  
   
 14. La tabella viene aggiunta all'area di progettazione. Nella tabella sono presenti tre colonne e altrettante righe.  
   
@@ -200,13 +200,13 @@ ms.locfileid: "36064185"
   
 3.  Fare clic con il pulsante destro del mouse, scegliere **Inserisci colonna**e fare clic su **A sinistra**.  
   
-4.  Nella nuova colonna, fare doppio clic nella riga [Product], scegliere il **inserire** scheda della barra multifunzione e quindi fare clic su **grafico Sparkline**.  
+4.  Nella nuova colonna, fare doppio clic nella riga [Product], scegliere il **inserire** scheda della barra multifunzione e quindi fare clic su **Sparkline**.  
   
 5.  Assicurarsi che il primo grafico sparkline nel **colonna** riga è selezionata e quindi fare clic su **OK**.  
   
 6.  Fare clic sul grafico sparkline per visualizzare il riquadro Dati grafico.  
   
-7.  Fare clic sul segno più (+) nella casella valori e quindi fare clic su **vendite**.  
+7.  Fare clic sul segno più (+) nella casella valori e quindi fare clic su **Sales**.  
   
      I valori nel campo **Sales** corrispondono ora ai valori per il grafico sparkline.  
   
@@ -258,11 +258,11 @@ ms.locfileid: "36064185"
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic sul pulsante **Valuta** . Nelle celle i numeri vengono visualizzati nel formato di valuta.  
   
-     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non presente un valore di valuta di esempio, fare clic su **stili segnaposto** nel **numeri** gruppo e quindi fare clic su **dei valori di esempio**.  
+     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non è possibile visualizzare un valore di valuta di esempio, fare clic su **stili segnaposto** nel **numeri** gruppo e quindi fare clic su **valori di esempio**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
- I valori di riepilogo per **vendite** visualizzati come valuta.  
+ I valori di riepilogo per **Sales** visualizzati come valuta.  
   
 ##  <a name="FormatDates"></a> 6. (Facoltativo) Formattare i dati come date  
  Per impostazione predefinita, nel campo **SalesDate** vengono visualizzate sia la data che l'ora. È possibile formattare tale campo in modo da visualizzare solo la data.  
@@ -273,7 +273,7 @@ ms.locfileid: "36064185"
   
 2.  Fare clic sulla cella contenente `[SalesDate]`.  
   
-3.  Sulla barra multifunzione, nel **Home** nella scheda il **numero** gruppo, nell'elenco di riepilogo a discesa, selezionare **data**.  
+3.  Sulla barra multifunzione, nella **Home** nella scheda il **numero** gruppo dall'elenco a discesa, selezionare **data**.  
   
      Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
   
@@ -294,7 +294,7 @@ ms.locfileid: "36064185"
   
      Le barre grigie lungo la parte superiore e laterale della tabella sono gli handle di riga e di colonna.  
   
-3.  Posizionare il puntatore del mouse sulla riga tra gli handle di colonna in modo che il cursore assuma la forma di una doppia freccia. Trascinare le colonne fino a ottenere le dimensioni desiderate. Ad esempio, espandere la colonna **prodotto** in modo che venga visualizzato il nome del prodotto su una riga.  
+3.  Posizionare il puntatore del mouse sulla riga tra gli handle di colonna in modo che il cursore assuma la forma di una doppia freccia. Trascinare le colonne fino a ottenere le dimensioni desiderate. Ad esempio, espandere la colonna **prodotto** in modo che il nome del prodotto vengono visualizzati in una sola riga.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   

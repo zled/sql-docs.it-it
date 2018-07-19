@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a01425734f0d3182a90481cb2641bb55e6611d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1118f3a7ee1e9bbace60dc2ac36c813d5b147edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178068"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Finestra di dialogo Filtro (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]usare la finestra di dialogo **Filtro** per limitare l'elenco di dati gestiti da MDS prima di caricarlo in Excel.  
@@ -35,7 +35,7 @@ ms.locfileid: "36065392"
 |Gerarchia esplicita|Se si sceglie il tipo di attributo **Consolidato**, scegliere la gerarchia alla quale appartengono i membri consolidati. Per altre informazioni, vedere [Gerarchie esplicite &#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md).|  
 |Gruppi di attributi|I gruppi di attributi consentono il raggruppamento di subset di attributi. Scegliere un gruppo di attributi se si desidera mostrare un subset di attributi disponibili. Per altre informazioni sui gruppi di attributi, vedere [Gruppi di attributi &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md).|  
 |Seleziona tutto|Fare clic per selezionare tutti gli attributi visualizzati nell'elenco.|  
-|Cancella tutto|Fare clic per cancellare gli attributi selezionati visualizzati nell'elenco.<br /><br /> Nota: Non è possibile deselezionare **nome** e **codice**.|  
+|Cancella tutto|Fare clic per cancellare gli attributi selezionati visualizzati nell'elenco.<br /><br /> Nota: Non è possibile deselezionare **Name** e **codice**.|  
 |Freccia SU|Selezionare per spostare l'attributo selezionato verso l'alto nell'elenco. L'ordine dall'alto verso il basso corrisponde all'ordine da sinistra a destra con cui le colonne vengono visualizzate nel foglio di lavoro.|  
 |Freccia GIÙ|Consente di spostare l'attributo selezionato verso il basso nell'elenco. L'ordine dall'alto verso il basso corrisponde all'ordine da sinistra a destra con cui le colonne vengono visualizzate nel foglio di lavoro.|  
   

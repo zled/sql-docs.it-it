@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico per annotazioni di Business Intelligence per CSDL | Documenti Microsoft
+title: Riferimento tecnico per le annotazioni di Business Intelligence per CSDL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 27ed1339d64dd3c4035288a96b31ae163a304733
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 78300a412d7db986edd76172c7cf49e6c86aaec9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192385"
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Riferimento tecnico per le annotazioni di Business Intelligence per CSDL
   In questa sezione vengono elencati gli elementi, l'attributo e le proprietà in CSDL utilizzati per rappresentare i modelli tabulari di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Alcuni elementi sono nuovi, altri sono stati annotati o estesi per supportare la modellazione di Business Intelligence.  
   
- Per una panoramica dei modelli tabulari e modo in cui sono rappresentate le entità, relazioni e formule in CSDL, vedere [annotazioni CSDL per Business Intelligence &#40;CSDLBI&#41;](../csdl-annotations-for-business-intelligence-csdlbi.md).  
+ Per una panoramica dei modelli tabulari e al modo in cui sono rappresentate le entità, relazioni e formule in CSDL, vedere [annotazioni CSDL per Business Intelligence &#40;CSDLBI&#41;](../csdl-annotations-for-business-intelligence-csdlbi.md).  
   
 ## <a name="extended-csdl-elements-complex-types"></a>Elementi estesi CSDL: tipi complessi  
  I seguenti elementi CSDL sono stati aggiunti o estesi per supportare modelli di dati tabulari e multidimensionali di Business Intelligence.  
@@ -38,7 +38,7 @@ ms.locfileid: "36064990"
   
 -   [Elemento DisplayKey &#40;CSDLBI&#41;](displaykey-element-csdlbi.md)  
   
--   [Elemento EntityContainer &#40;CSDLBI&#41;](entitycontainer-element-csdlbi.md)  
+-   [EntityContainer (elemento) &#40;CSDLBI&#41;](entitycontainer-element-csdlbi.md)  
   
 -   [Elemento EntitySet &#40;CSDLBI&#41;](entityset-element-csdlbi.md)  
   
@@ -52,11 +52,11 @@ ms.locfileid: "36064990"
   
 -   [Elemento KpiStatus &#40;CSDLBI&#41;](kpistatus-element-csdlbi.md)  
   
--   [Livello di elemento &#40;CSDLBI&#41;](level-element-csdlbi.md)  
+-   [Il livello di elemento &#40;CSDLBI&#41;](level-element-csdlbi.md)  
   
--   [Elemento di misure &#40;CSDLBI&#41;](measure-element-csdlbi.md)  
+-   [Misurare l'elemento &#40;CSDLBI&#41;](measure-element-csdlbi.md)  
   
--   [Elemento membro &#40;CSDLBI&#41;](member-element-csdlbi.md)  
+-   [Elemento member &#40;CSDLBI&#41;](member-element-csdlbi.md)  
   
 -   [Elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md)  
   
@@ -72,11 +72,11 @@ ms.locfileid: "36064990"
 |Tipo semplice|Presente nell'argomento|  
 |-----------------|--------------------|  
 |Alignment|[Elemento BaseProperty &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
-|CompareOptions|[Elemento EntityContainer &#40;CSDLBI&#41;](entitycontainer-element-csdlbi.md)|  
+|CompareOptions|[EntityContainer (elemento) &#40;CSDLBI&#41;](entitycontainer-element-csdlbi.md)|  
 |Sommario|[Elemento EntityType &#40;CSDLBI&#41;](entitytype-element-csdlbi.md)|  
-|ContextualNameRule|[Elemento membro &#40;CSDLBI&#41;](member-element-csdlbi.md)|  
+|ContextualNameRule|[Elemento member &#40;CSDLBI&#41;](member-element-csdlbi.md)|  
 |DefaultAggregationFunction|[Elemento della proprietà &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
-|DirectQueryMode|[Elemento EntityContainer &#40;CSDLBI&#41;](entitycontainer-element-csdlbi.md)|  
+|DirectQueryMode|[EntityContainer (elemento) &#40;CSDLBI&#41;](entitycontainer-element-csdlbi.md)|  
 |GroupingBehavior|[Elemento della proprietà &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
 |MemberRefs|[Elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md)|  
 |PropertyRefs|[Elemento PropertyRef &#40;CSDLBI&#41;](propertyref-element-csdlbi.md)|  

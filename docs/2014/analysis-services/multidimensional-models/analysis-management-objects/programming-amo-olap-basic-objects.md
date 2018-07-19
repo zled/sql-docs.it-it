@@ -1,5 +1,5 @@
 ---
-title: Programmazione di oggetti di base OLAP in AMO | Documenti Microsoft
+title: Programmazione di oggetti di base OLAP in AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df3206f9bf6bd0548749abf981d6088e9ab85c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b36af3a013c10567e23852c338c79a834bc8376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228251"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Programmazione di oggetti di base OLAP in AMO
   La creazione di oggetti di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] complessi è un'operazione estremamente semplice per cui è necessario tuttavia prestare attenzione ai dettagli. In questo argomento vengono descritti i dettagli relativi alla programmazione di oggetti di base OLAP. In questo argomento sono incluse le sezioni seguenti:  
   
 -   [Oggetti Dimension](#Dim)  
   
--   [Oggetti del cubo](#Cub)  
+-   [Oggetti Cube](#Cub)  
   
 -   [Oggetti MeasureGroup](#MG)  
   
@@ -165,7 +165,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>Elaborazione di una dimensione  
  L'elaborazione di una dimensione è semplice come l'utilizzo del metodo Process dell'oggetto <xref:Microsoft.AnalysisServices.Dimension>.  
   
- L'elaborazione di una dimensione può influire su tutti i cubi che utilizzano la dimensione stessa. Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di oggetti &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) e [l'elaborazione di oggetti modello multidimensionale](../processing-a-multidimensional-model-analysis-services.md).  
+ L'elaborazione di una dimensione può influire su tutti i cubi che utilizzano la dimensione stessa. Per altre informazioni sulle opzioni di elaborazione, vedere [elaborazione di oggetti &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) e [l'elaborazione di oggetti modello multidimensionale](../processing-a-multidimensional-model-analysis-services.md).  
   
  Nel codice seguente viene eseguito un aggiornamento incrementale in tutte le dimensioni di un database specificato:  
   
@@ -177,7 +177,7 @@ static void UpdateAllDimensions(Database db)
 }  
 ```  
   
-##  <a name="Cub"></a> Oggetti del cubo  
+##  <a name="Cub"></a> Oggetti cubo  
  Per amministrare o elaborare un cubo, programmare l'oggetto <xref:Microsoft.AnalysisServices.Cube>.  
   
 ### <a name="creating-dropping-and-finding-a-cube"></a>Creazione, eliminazione e individuazione di un cubo  
@@ -252,7 +252,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>Elaborazione di un cubo  
  L'elaborazione di un cubo è semplice come l'utilizzo del metodo Process dell'oggetto <xref:Microsoft.AnalysisServices.Cube>. L'elaborazione di un cubo comporta l'elaborazione di tutti i gruppi di misure del cubo e di tutte le partizioni del gruppo di misure. In un cubo le partizioni costituiscono gli unici oggetti che possono essere elaborati. Ai fini dell'elaborazione i gruppi di misure sono solo contenitori di partizioni. Il tipo specificato di elaborazione per il cubo viene propagato alle partizioni. L'elaborazione di un cubo e di un gruppo di misure viene risolta internamente nell'elaborazione di dimensioni e di partizioni.  
   
- Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di oggetti &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), e [l'elaborazione di oggetti modello multidimensionale](../processing-a-multidimensional-model-analysis-services.md).  
+ Per altre informazioni sulle opzioni di elaborazione, vedere [elaborazione di oggetti &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), e [l'elaborazione di oggetti modello multidimensionale](../processing-a-multidimensional-model-analysis-services.md).  
   
  Nel codice seguente verrà eseguita un'elaborazione completa di tutti i cubi in un database specificato:  
   
@@ -417,9 +417,9 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ```  
   
 ### <a name="processing-a-measure-group"></a>Elaborazione di un gruppo di misure  
- L'elaborazione di un gruppo di misure è semplice come l'utilizzo del metodo Process dell'oggetto <xref:Microsoft.AnalysisServices.MeasureGroup>. L'elaborazione di un gruppo di misure comporta l'elaborazione di tutte le partizioni che appartengono al gruppo di misure. L'elaborazione di un gruppo di misure viene risolta internamente nell'elaborazione di dimensioni e di partizioni. Vedere [elaborazione di una partizione](#ProcPart) in questo documento.  
+ L'elaborazione di un gruppo di misure è semplice come l'utilizzo del metodo Process dell'oggetto <xref:Microsoft.AnalysisServices.MeasureGroup>. L'elaborazione di un gruppo di misure comporta l'elaborazione di tutte le partizioni che appartengono al gruppo di misure. L'elaborazione di un gruppo di misure viene risolta internamente nell'elaborazione di dimensioni e di partizioni. Visualizzare [elaborazione di una partizione](#ProcPart) in questo documento.  
   
- Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di oggetti &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), e [l'elaborazione di oggetti modello multidimensionale](../processing-a-multidimensional-model-analysis-services.md).  
+ Per altre informazioni sulle opzioni di elaborazione, vedere [elaborazione di oggetti &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), e [l'elaborazione di oggetti modello multidimensionale](../processing-a-multidimensional-model-analysis-services.md).  
   
  Nel codice seguente verrà eseguita un'elaborazione completa di tutti i gruppi di misure di un cubo specificato:  
   
@@ -485,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> Elaborazione di una partizione  
  L'elaborazione di una dimensione è semplice come l'utilizzo del metodo Process dell'oggetto <xref:Microsoft.AnalysisServices.Partition>.  
   
- Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di oggetti &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) e [l'elaborazione di oggetti modello multidimensionale](../processing-a-multidimensional-model-analysis-services.md).  
+ Per altre informazioni sulle opzioni di elaborazione, vedere [elaborazione di oggetti &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) e [l'elaborazione di oggetti modello multidimensionale](../processing-a-multidimensional-model-analysis-services.md).  
   
  Nell'esempio di codice seguente viene eseguita un'elaborazione completa di tutte le partizioni di un gruppo di misure specificato.  
   
@@ -510,7 +510,7 @@ static void FullProcessAllPartitions(MeasureGroup mg)
   
 -   Presenza delle partizioni nello stesso server. Le partizioni remote possono essere unite solo se si trovano nello stesso server.  
   
- Diversamente dalle versioni precedenti, in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] non è necessario che tutte le partizioni di origine sono progettazione di aggregazioni identica.  
+ Diversamente dalle versioni precedenti, in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] non è necessario che tutte le partizioni di origine abbiano una progettazione di aggregazioni identica.  
   
  Il set risultante di aggregazioni per la partizione di destinazione è lo stesso set di aggregazioni relativo allo stato precedente all'esecuzione del comando Merge.  
   
@@ -534,7 +534,7 @@ static void MergeAllPartitions(MeasureGroup mg)
  Per progettare un'aggregazione e applicarla a una o più a partizioni, programmare l'oggetto <xref:Microsoft.AnalysisServices.Aggregation>.  
   
 ### <a name="creating-and-dropping-aggregations"></a>Creazione ed eliminazione di aggregazioni  
- Le aggregazioni possono essere create e assegnate in modo semplice a gruppi di misure oppure a partizioni tramite il metodo DesignAggregations dell'oggetto <xref:Microsoft.AnalysisServices.AggregationDesign>. Il <xref:Microsoft.AnalysisServices.AggregationDesign> è un oggetto separato dalla partizione, il <xref:Microsoft.AnalysisServices.AggregationDesign> oggetto è contenuto nella <xref:Microsoft.AnalysisServices.MeasureGroup> oggetto. Le aggregazioni possono essere progettate in base a un livello specificato di ottimizzazione (compreso tra 0 e 100) o in base a un livello specificato di archiviazione (espresso in byte). Più partizioni possono utilizzare la stessa progettazione di aggregazioni.  
+ Le aggregazioni possono essere create e assegnate in modo semplice a gruppi di misure oppure a partizioni tramite il metodo DesignAggregations dell'oggetto <xref:Microsoft.AnalysisServices.AggregationDesign>. Il <xref:Microsoft.AnalysisServices.AggregationDesign> oggetto è un oggetto separato dalla partizione, il <xref:Microsoft.AnalysisServices.AggregationDesign> nell'oggetto è contenuto il <xref:Microsoft.AnalysisServices.MeasureGroup> oggetto. Le aggregazioni possono essere progettate in base a un livello specificato di ottimizzazione (compreso tra 0 e 100) o in base a un livello specificato di archiviazione (espresso in byte). Più partizioni possono utilizzare la stessa progettazione di aggregazioni.  
   
  Nell'esempio di codice seguente vengono create le aggregazioni per tutte le partizioni di un gruppo di misure specificato. Qualsiasi aggregazione esistente nelle partizioni viene eliminata.  
   
@@ -569,7 +569,7 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices>   
  [Introduzione a classi AMO](amo-classes-introduction.md)   
- [Classi OLAP in AMO](amo-olap-classes.md)   
+ [Classi OLAP di AMO](amo-olap-classes.md)   
  [Architettura logica &#40;Analysis Services - dati multidimensionali&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Gli oggetti di database &#40;Analysis Services - dati multidimensionali&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Elaborazione degli oggetti modello multidimensionale](../processing-a-multidimensional-model-analysis-services.md)  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93626d4db9c82360369e0f94bd91574e77274c4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d0248cb60068c86c641046b4d80deda1b78f95da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168222"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generare elementi di pari livello tramite query nidificate in modalità AUTO
   Nell'esempio seguente viene descritta la procedura per generare elementi di pari livello tramite una query nidificata in modalità AUTO. L'unico metodo alternativo per generare un valore XML di questo tipo è utilizzare la modalità EXPLICIT, ma ciò può rivelarsi eccessivamente complesso.  
@@ -70,7 +70,7 @@ FOR XML AUTO, TYPE
   
 -   Esegue una query sul set di righe `SalesOrder`, specificato nella clausola `FROM`. Viene restituito un valore XML con uno o più elementi <`SalesOrder`>.  
   
--   Specifica la modalità `AUTO` e la direttiva `TYPE` . `AUTO` modalità Trasforma il risultato della query in XML e il `TYPE` direttiva restituisce il risultato come `xml` tipo.  
+-   Specifica la modalità `AUTO` e la direttiva `TYPE` . `AUTO` Trasforma il risultato della query in XML e il `TYPE` direttiva restituisce il risultato come `xml` tipo.  
   
 -   Include due istruzioni `SELECT` nidificate, separate da una virgola (,). La prima istruzione nidificata `SELECT` recupera le informazioni relative all'ordine di vendita, l'intestazione ed i dettagli, mentre la seconda istruzione `SELECT` recupera le informazioni relative al venditore.  
   
@@ -148,7 +148,7 @@ FOR XML AUTO, TYPE
   
 -   La query precedente viene aggiunta nella clausola `FROM` . Il risultato della query viene restituito sotto forma di tabella. Viene aggiunto l'alias `XmlCol` .  
   
--   La clausola `SELECT` specifica una query XQuery sul valore `XmlCol` restituito nella clausola `FROM` . Il `query()` metodo il `xml` tipo di dati viene utilizzato quando si specifica l'espressione XQuery. Per altre informazioni, vedere [Metodo query&#40;&#41; con &#40;tipo di dati XML&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
+-   La clausola `SELECT` specifica una query XQuery sul valore `XmlCol` restituito nella clausola `FROM` . Il `query()` metodo di `xml` specificare la query XQuery viene utilizzato il tipo di dati. Per altre informazioni, vedere [Metodo query&#40;&#41; con &#40;tipo di dati XML&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

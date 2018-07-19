@@ -1,5 +1,5 @@
 ---
-title: Elemento HierarchyID (ASSL) | Documenti Microsoft
+title: Elemento HierarchyID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - HierarchyID element
 ms.assetid: 6effe47d-e598-41f8-993a-b2bce49fd7dd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96fd95f6853f5edd7f7eaa5d6aa9627cc322a1bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c10b01b17c8ceb6cb3e550d07fe78d6469526fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220011"
 ---
 # <a name="hierarchyid-element-assl"></a>Elemento HierarchyID (ASSL)
   Contiene l'identificatore (ID) per un [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [MeasureGroupHierarchy](../data-type/measuregrouphierarchy-data-type-assl.md), o [PerspectiveHierarchy](../data-type/perspectivehierarchy-data-type-assl.md) elemento.  
@@ -58,10 +58,10 @@ ms.locfileid: "36066158"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [MeasureGroupHierarchy](../data-type/measuregrouphierarchy-data-type-assl.md), [PerspectiveHierarchy](../data-type/perspectivehierarchy-data-type-assl.md)|  
+|Elementi padre|[Oggetto CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [MeasureGroupHierarchy](../data-type/measuregrouphierarchy-data-type-assl.md), [PerspectiveHierarchy](../data-type/perspectivehierarchy-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli elementi che corrispondono ai padri di `HierarchyID` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.CubeHierarchy> e <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>.  
   
 ## <a name="see-also"></a>Vedere anche  

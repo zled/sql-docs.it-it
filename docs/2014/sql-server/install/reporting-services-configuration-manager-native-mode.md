@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 342cca1892640e1e5c32fda049427d70c478f910
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc97beba507789ef821b8f69faa6f5db85822a00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220781"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gestione configurazione Reporting Services (modalità nativa)
   Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa. Se si è installato un server di report mediante l'opzione di installazione di tipo "solo file", è necessario utilizzare Gestione configurazione per configurare il server prima di poterlo utilizzare. Se si è installato un server di report mediante l'opzione di installazione della configurazione predefinita, è possibile utilizzare Gestione configurazione per verificare o modificare le impostazioni specificate durante l'installazione. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un'istanza remota o locale di un server di report.  
@@ -42,7 +42,7 @@ ms.locfileid: "36063974"
  [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  Viene descritto come configurare gli URL usati per accedere al servizio Web ReportServer e a Gestione report.  
   
- [Creare un database del Server di Report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+ [Creare un Database del Server di Report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
  Descrive come creare un database del server di report necessario per l'archiviazione di oggetti e metadati del server.  
   
  [Configurare una connessione di Database Server di Report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
@@ -63,8 +63,8 @@ ms.locfileid: "36063974"
  [Gestire un server di report in modalità nativa di Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
  Include istruzioni dettagliate su alcune attività comuni.  
   
- [Argomenti della Guida F1 di Gestione configurazione di Reporting Services &#40;modalità nativa SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- Fornisce argomenti della Guida per le pagine di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dello strumento di configurazione.  
+ [Gli argomenti della Guida F1 di Gestione configurazione di Reporting Services &#40;modalità nativa SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ Fornisce gli argomenti della Guida per le pagine di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dello strumento di configurazione.  
   
  **Contenuto dell'argomento:**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36063974"
   
 -   Configurare l'account del servizio del server di report. Questo account viene inizialmente configurato durante l'installazione, ma può essere modificato tramite Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se la password viene aggiornata o si desidera utilizzare un account diverso.  
   
--   Creare e configurare URL. Il server di report e gestione Report sono [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applicazioni eseguite tramite URL. L'URL del server di report fornisce l'accesso agli endpoint di SOAP del server di report. L'URL di Gestione report viene utilizzato per aprire Gestione report. È possibile configurare un solo URL o più URL per ogni applicazione.  
+-   Creare e configurare URL. Il server di report e gestione Report siano [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applicazioni eseguite tramite URL. L'URL del server di report fornisce l'accesso agli endpoint di SOAP del server di report. L'URL di Gestione report viene utilizzato per aprire Gestione report. È possibile configurare un solo URL o più URL per ogni applicazione.  
   
 -   Creare e configurare il database del server di report. Il server di report è un server senza stato che richiede un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per lo spazio di archiviazione interno. Per creare il database del server di report e configurare una connessione al database del server di report, è possibile utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È anche possibile selezionare un database del server di report esistente in cui è già incluso il contenuto che si desidera utilizzare.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "36063974"
   
     -   Nella schermata iniziale di Windows digitare **Reporting** e nei risultati di ricerca selezionare **Gestione configurazione Reporting Services** .  
   
-    -   Fare clic su **avviare**, scegliere **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], quindi scegliere **strumenti di configurazione**.  
+    -   Fare clic su **avviare**, scegliere **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e quindi scegliere **strumenti di configurazione**.  
   
-         Se si desidera configurare un'istanza del server di report di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aprire la cartella del programma per la versione specifica. Ad esempio, scegliere [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] invece di [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] per aprire gli strumenti di configurazione per [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] componenti server.  
+         Se si desidera configurare un'istanza del server di report di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aprire la cartella del programma per la versione specifica. Ad esempio, scegliere [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] invece di [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] per aprire gli strumenti di configurazione per [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] componenti del server.  
   
          Fare clic su **Gestione configurazione Reporting Services**.  
   

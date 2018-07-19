@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà generale, condivise origini dati (gestione Report) | Documenti Microsoft
+title: Pagina delle proprietà generale, condivise origini dati (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0a570567691692f008f6f71966b5ee0b01921dab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b729c41bf0ed0950c20b465bd1f0c70ebbee4a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162282"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Pagina delle proprietà Generale, Origini dati condivise (Gestione report)
   La pagina delle proprietà Generale consente di visualizzare o modificare le proprietà di un elemento origine dati condivisa. Quando si fa clic su **Applica**, tutte le modifiche apportate alle proprietà vengono applicate a tutti i report che fanno riferimento all'origine dei dati condivisa.  
@@ -54,7 +54,7 @@ ms.locfileid: "36065773"
  Si noti che se si utilizza [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services, è possibile scegliere solo origini dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Stringa di connessione**  
- Specificare la stringa di connessione utilizzata dal server di report per la connessione all'origine dati. Il tipo di connessione determina la sintassi da utilizzare. Ad esempio, una stringa di connessione per l'estensione per l'elaborazione dei dati XML è rappresentata da un URL per un documento XML. In una stringa di connessione tipica vengono in genere specificati il server di database e un file di dati. Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per connettersi ai [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database:  
+ Specificare la stringa di connessione utilizzata dal server di report per la connessione all'origine dati. Il tipo di connessione determina la sintassi da utilizzare. Ad esempio, una stringa di connessione per l'estensione per l'elaborazione dei dati XML è rappresentata da un URL per un documento XML. In una stringa di connessione tipica vengono in genere specificati il server di database e un file di dati. Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per connettersi al [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database:  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -71,10 +71,10 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
   
  Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se l'utente fornisce credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si utilizza il sistema di autenticazione del database, ad esempio l'autenticazione di SQL Server.  
   
- **Credenziali archiviate in modo protetto nel server di report**  
+ **Credenziali archiviate in modo sicuro nel server di report**  
  Consente di archiviare nome utente e password in forma crittografata nel database del server di report. Selezionare questa opzione per eseguire un report in modo automatico, ad esempio nel caso di report avviati tramite pianificazioni o eventi anziché da un'azione dell'utente. Se si utilizza la sicurezza predefinita, il nome utente deve essere un account di dominio di Windows. Specificare l'account nel formato seguente: \<dominio >\\< nome utente\>. L'account specificato deve disporre di autorizzazioni di accesso locale nel computer che ospita l'origine dati utilizzata dal report.  
   
- Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se vengono utilizzate credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si utilizza l'autenticazione del database (ad esempio, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticazione).  
+ Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se vengono utilizzate credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si usa l'autenticazione del database (ad esempio, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticazione).  
   
  Se si utilizza l'autenticazione del database, selezionare **Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dei dati (Connetti tramite)** per consentire la delega delle credenziali del database, ma solo se un server di database supporta la rappresentazione. Per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, questa opzione imposta la funzione SETUSER.  
   
@@ -85,10 +85,10 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
   
  Non utilizzare questa opzione se si prevede di pianificare o sottoscrivere questo report. L'elaborazione pianificata o automatica dei report richiede credenziali che è possibile ottenere senza l'input dell'utente o il contesto di sicurezza di un utente corrente. Questa funzionalità è offerta solo dalle credenziali archiviate. Per questo motivo, il server di report impedisce la pianificazione dell'elaborazione di report o di sottoscrizioni se il report è configurato per il tipo di credenziali della sicurezza integrata di Windows. Se si sceglie questa opzione per un report già sottoscritto o per il quale sono previste operazioni pianificate, le sottoscrizioni e le operazioni pianificate vengono arrestate.  
   
- **Non sono necessarie credenziali**  
+ **Non sono richieste credenziali**  
  Consente di specificare che non sono necessarie credenziali per l'accesso all'origine dei dati. Si noti che se un'origine dei dati richiede l'accesso da parte degli utenti, la selezione di questa opzione non avrà alcun effetto. È consigliabile selezionare questa opzione solo se la connessione all'origine dei dati non richiede credenziali utente.  
   
- Per utilizzare questa opzione, è necessario avere prima configurato l'account di esecuzione automatica per la distribuzione del server di report. L'account di esecuzione automatica viene utilizzato per la connessione alle origini dati esterne quando le altre origini di credenziali non sono disponibili. Se si specifica questa opzione e l'account non è configurato, la connessione all'origine dati del report ha esito negativo e il report non viene elaborato. Per ulteriori informazioni su questo account, vedere [configurare l'Account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Per utilizzare questa opzione, è necessario avere prima configurato l'account di esecuzione automatica per la distribuzione del server di report. L'account di esecuzione automatica viene utilizzato per la connessione alle origini dati esterne quando le altre origini di credenziali non sono disponibili. Se si specifica questa opzione e l'account non è configurato, la connessione all'origine dati del report ha esito negativo e il report non viene elaborato. Per altre informazioni su questo account, vedere [configurare l'Account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  **Applica**  
  Fare clic per salvare le modifiche.  

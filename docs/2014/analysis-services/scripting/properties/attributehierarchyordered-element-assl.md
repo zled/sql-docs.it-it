@@ -1,5 +1,5 @@
 ---
-title: Elemento AttributeHierarchyOrdered (ASSL) | Documenti Microsoft
+title: Elemento AttributeHierarchyOrdered (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyOrdered element
 ms.assetid: 7e2fa8b3-04a7-4748-bdc1-8a0ab2f984e1
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2114243cdecf646b78abd769b70908f4961e201
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6731ab4d711e042bdefbed0cf713681d05f8812b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188998"
 ---
 # <a name="attributehierarchyordered-element-assl"></a>Elemento AttributeHierarchyOrdered (ASSL)
   Determina se la gerarchia dell'attributo associata viene ordinata.  
@@ -61,8 +61,8 @@ ms.locfileid: "36065451"
 |Elemento padre|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `AttributeHierarchyOrdered` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `AttributeHierarchyOrdered` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

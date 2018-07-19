@@ -1,5 +1,5 @@
 ---
-title: Analizza fattori di influenza chiave (strumenti di analisi tabelle per Excel) | Documenti Microsoft
+title: Analizza fattori di influenza chiave (strumenti di analisi tabelle per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - key influencers
 - factor analysis
 ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41b30eb0f3f0dc68c5666581a2682470fac7f978
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e280644cbd3d5fd78ba6f1b29f8a989948094a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187638"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analizza fattori di influenza chiave (Strumenti di analisi tabelle per Excel)
-  ![Pulsante analizza fattori di influenza chiave della barra multifunzione](media/tat-aki.gif "pulsante analizza fattori di influenza chiave sulla barra multifunzione")  
+  ![Pulsante analizza fattori di influenza chiave sulla barra multifunzione](media/tat-aki.gif "pulsante analizza fattori di influenza chiave sulla barra multifunzione")  
   
  Con il **analizza fattori di influenza chiave** strumento, si sceglie una colonna che contiene un risultato di destinazione e l'algoritmo determina quali fattori hanno influenzato maggiormente il risultato.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "36064835"
   
 1.  Aprire una tabella di dati di Excel.  
   
-2.  In **strumenti di tabelle**via il **Analizza** sulla barra multifunzione, fare clic su **analizza fattori di influenza chiave.**  
+2.  Nelle **strumenti tabella**via le **Analizza** sulla barra multifunzione, fare clic su **analizza fattori di influenza chiave.**  
   
 3.  Selezionare la singola colonna di destinazione dell'analisi.  
   
-4.  Facoltativamente, fare clic su **scegliere le colonne da utilizzare per l'analisi**. Nel **selezione colonne avanzata** finestra di dialogo, scegliere le colonne che con maggiore probabilità contengono dati rilevanti. Per migliorare le prestazioni e l'accuratezza, deselezionare le colonne contenenti ID o nomi, in genere non significative per l'analisi dei modelli. Fare clic su **OK** per chiudere la **selezione colonne avanzata** finestra di dialogo.  
+4.  Facoltativamente, fare clic su **scegliere le colonne da utilizzare per l'analisi**. Nel **selezione colonne avanzata** finestra di dialogo scegliere le colonne che con maggiore possono contengono dati rilevanti. Per migliorare le prestazioni e l'accuratezza, deselezionare le colonne contenenti ID o nomi, in genere non significative per l'analisi dei modelli. Fare clic su **OK** per chiudere la **selezione colonne avanzata** nella finestra di dialogo.  
   
 5.  Fare clic su **Esegui**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36064835"
   
 #### <a name="create-a-custom-report"></a>Creazione di un report personalizzato  
   
-1.  Nel **analisi discriminante basata sui fattori di influenza chiave** finestra di dialogo, scegliere i due valori che si desidera confrontare selezionandoli il **valore 1** e **valore 2** negli elenchi a discesa . Si potrebbero ad esempio confrontare gli acquirenti con coloro che non effettuano acquisti.  
+1.  Nel **analisi discriminante basata sui fattori di influenza chiave** finestra di dialogo scegliere i due valori che si desidera confrontare selezionandoli le **valore 1** e **valore 2** negli elenchi a discesa . Si potrebbero ad esempio confrontare gli acquirenti con coloro che non effettuano acquisti.  
   
 2.  Fare clic su **aggiungere Report**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36064835"
 3.  Dopo avere effettuato i confronti, fare clic su **Chiudi**.  
   
 ## <a name="understanding-the-key-influencers-report"></a>Informazioni sul report dei fattori di influenza chiave  
- Dopo aver creato il modello di dati, il **analizza fattori di influenza chiave** strumento consente di creare report che consentono di esplorare e confrontare i fattori di influenza chiave.  
+ Dopo aver creato il modello di dati, il **analizza fattori di influenza chiave** lo strumento consente di creare report che consentono di esplorare e confrontare i fattori di influenza chiave.  
   
 -   Il report a sinistra è quello generato per impostazione predefinita. Indica le stime più attendibili della colonna dei risultati (la variabile dipendente).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36064835"
  **Predilige**  
  Nel secondo report, i valori di destinazione confrontati sono elencati in due colonne insieme ai fattori correlati elencati in ordine di confidenza discendente.  
   
--   Il **blu** barra indica gli attributi che contribuiscono al risultato, "No" (= non hanno acquistato).  
+-   Il **blu** barra indica gli attributi che contribuiscono al risultato, "No" (= non è stata acquistata).  
   
 -   Il **rosso** barra indica gli attributi che contribuiscono al risultato, "Yes" (= acquistato una bicicletta).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36064835"
  Poiché tutti i grafici sono basati sulle tabelle di Excel, è possibile filtrare e ordinare in modo da concentrare l'attenzione su fattori o risultati specifici.  
   
 ## <a name="more-about-the-analyze-key-influencers-tool"></a>Ulteriori informazioni sullo strumento Analizza fattori di influenza chiave  
- Quando il **analizza fattori di influenza chiave** strumento analizza i dati, esegue le operazioni seguenti:  
+ Quando la **analizza fattori di influenza chiave** strumento analizza i dati, esegue le operazioni seguenti:  
   
 -   Creazione di una struttura dei dati per l'archiviazione delle informazioni principali relative alla distribuzione dei dati.  
   
@@ -105,22 +105,22 @@ ms.locfileid: "36064835"
 -   Creazione di un report che descrive i fattori di influenza chiave, ordinati in base ai punteggi di confidenza.  
   
 ### <a name="requirements"></a>Requisiti  
- Se la colonna di destinazione contiene valori numerici continui, i valori numerici vengono automaticamente segmentati in gruppi. Tali raggruppamenti rappresentano cluster di case con caratteristiche simili. I valori numerici potrebbero tuttavia non essere divisi in gruppi semplici da usare. Ad esempio, il report potrebbe contenere un raggruppamento, ad esempio "\<12.85701", mentre in genere gli utenti dei report da visualizzare raggruppamenti che utilizzano numeri interi, ad esempio 10-19, 20-29 e così via.  
+ Se la colonna di destinazione contiene valori numerici continui, i valori numerici vengono automaticamente segmentati in gruppi. Tali raggruppamenti rappresentano cluster di case con caratteristiche simili. I valori numerici potrebbero tuttavia non essere divisi in gruppi semplici da usare. Ad esempio, il report potrebbe contenere un raggruppamento, ad esempio "\<12.85701", mentre gli utenti del report è in genere preferibile visualizzare raggruppamenti che utilizzano numeri interi, ad esempio 10-19, 29, 20 e così via.  
   
- Se si desidera raggruppare i dati numerici in un modo diverso, è necessario segmentare i dati nel modo desiderato prima di creare l'analisi. Ad esempio, è possibile utilizzare il [Modifica etichette](relabel-sql-server-data-mining-add-ins.md) strumento Client di Data Mining per Excel per creare una nuova etichetta di raggruppamento in una colonna separata e quindi utilizzare solo tale nuova colonna nell'analisi.  
+ Se si desidera raggruppare i dati numerici in un modo diverso, è necessario segmentare i dati nel modo desiderato prima di creare l'analisi. Ad esempio, è possibile usare la [Rietichettare](relabel-sql-server-data-mining-add-ins.md) strumento nel Client di Data Mining per Excel per creare una nuova etichetta di raggruppamento in una colonna separata e quindi utilizzare solo tale nuova colonna nell'analisi.  
   
 ### <a name="related-tools"></a>Strumenti correlati  
- Il **Data Mining** della barra multifunzione sono disponibili strumenti più avanzati, inclusa la possibilità di personalizzare modelli di data mining  
+ Il **Data Mining** della barra multifunzione fornisce strumenti più avanzati, inclusa la possibilità di personalizzare modelli di data mining  
   
- Se si salva il modello utilizzando il **analizza fattori di influenza chiave** strumento, è possibile utilizzare Client di Data Mining per esplorare il modello e analizzare le relazioni più dettagliatamente. Per informazioni, vedere [esplorazione di modelli in Excel &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md). È inoltre possibile utilizzare Microsoft Office Visio per creare grafici e diagrammi per rappresentare le relazioni come cluster o come reti di dipendenze. Per altre informazioni, vedere [risoluzione dei problemi di Data Mining ai diagrammi di Visio &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md).  
+ Se si salva il modello usando il **analizza fattori di influenza chiave** strumento, è possibile usare il Client di Data Mining per esplorare il modello e analizzare le relazioni più dettagliatamente. Per informazioni, vedere [esplorazione di modelli in Excel &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md). È inoltre possibile utilizzare Microsoft Office Visio per creare grafici e diagrammi per rappresentare le relazioni come cluster o come reti di dipendenze. Per altre informazioni, vedere [risoluzione dei problemi dei diagrammi di Data Mining di Visio Data &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md).  
   
 > [!NOTE]  
 >  I modelli creati con Strumenti di analisi tabelle vengono eliminati quando si chiude il foglio di lavoro o si termina la connessione con il server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È pertanto possibile esplorare i modelli solo fino a quando la connessione rimane aperta. Se si chiude la connessione o il foglio di lavoro, non è inoltre possibile eseguire il rendering dei modelli in Visio.  
   
- Per ulteriori informazioni sull'algoritmo utilizzato per il **analizza fattori di influenza chiave** strumento, vedere "Algoritmo di Microsoft Naive Bayes" nella documentazione Online di SQL Server.  
+ Per altre informazioni sull'algoritmo utilizzato per il **analizza fattori di influenza chiave** dello strumento, vedere "Microsoft all'algoritmo Naive Bayes" nella documentazione Online di SQL Server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)   
- [Creazione di un modello di Data Mining](creating-a-data-mining-model.md)  
+ [Creazione di un modello di data mining](creating-a-data-mining-model.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Oggetto elemento (Dimension) (XMLA) | Documenti Microsoft
+title: Oggetto elemento (Dimension) (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Object element
 ms.assetid: db7feb39-7cc1-4b54-8979-77ce402ef71f
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2f0a80bcd26e5a54a0c45adff7667b4cfebdc467
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 652e5b2b42df856c7668e690b6595ecd41f8d8a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228151"
 ---
 # <a name="object-element-dimension-xmla"></a>Elemento Object (Dimension) (XMLA)
-  Contiene un riferimento all'oggetto per la dimensione in cui l'elemento padre [inserire](../xml-elements-commands/insert-element-xmla.md), [aggiornamento](../xml-elements-commands/update-element-xmla.md), o [eliminare](../xml-elements-commands/drop-element-xmla.md) comando viene eseguito.  
+  Contiene un riferimento all'oggetto per la dimensione in cui l'elemento padre [inserire](../xml-elements-commands/insert-element-xmla.md), [Update](../xml-elements-commands/update-element-xmla.md), o [Drop](../xml-elements-commands/drop-element-xmla.md) comando viene eseguito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,10 +64,10 @@ ms.locfileid: "36063412"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[DROP](../xml-elements-commands/drop-element-xmla.md), [inserire](../xml-elements-commands/insert-element-xmla.md), [aggiornamento](../xml-elements-commands/update-element-xmla.md)|  
+|Elementi padre|[DROP](../xml-elements-commands/drop-element-xmla.md), [inserire](../xml-elements-commands/insert-element-xmla.md), [Update](../xml-elements-commands/update-element-xmla.md)|  
 |Elementi figlio|[Cubo](cube-element-xmla.md), [Database](database-element-xmla.md), [dimensione](dimension-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;XMLA&#41;](xml-elements-properties.md)  

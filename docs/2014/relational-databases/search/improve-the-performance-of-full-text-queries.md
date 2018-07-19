@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 070a39e8ef8d4010ac423fefa39baa39fc3a8304
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d64d6e7fa360bc66324cfbaaaf97548144234e0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172362"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Migliorare le prestazioni delle query full-text
   Di seguito viene riportato un elenco di indicazioni che possono favorire il miglioramento delle prestazioni di esecuzione delle query full-text.  
@@ -30,7 +29,7 @@ ms.locfileid: "36065793"
   
 -   Riorganizzare il catalogo full-text tramite [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql). È necessario eseguire queste operazioni prima del test delle prestazioni poiché l'esecuzione di questa istruzione determina un'unione nell'indice master degli indici full-text in tale catalogo.  
   
--   Limitare la scelta delle colonne chiave full-text a una a colonna di dimensioni ridotte. Benché le colonne a 900 byte siano supportate, è consigliabile utilizzare una colonna chiave di dimensioni inferiori per un indice full-text. `int` e `bigint` offrire le migliori prestazioni.  
+-   Limitare la scelta delle colonne chiave full-text a una a colonna di dimensioni ridotte. Benché le colonne a 900 byte siano supportate, è consigliabile utilizzare una colonna chiave di dimensioni inferiori per un indice full-text. `int` e `bigint` offrire prestazioni ottimali.  
   
 -   L'uso di una chiave full-text a numero intero evita la creazione di un join con la tabella di mapping **docid** . Una chiave full-text di tipo integer, pertanto, consente di migliorare le prestazioni di esecuzione delle query di un ordine di grandezza e le prestazioni della ricerca per indicizzazione. Nel caso in cui la chiave full-text corrisponda anche alla chiave di indice cluster, i vantaggi a livello di prestazioni saranno ancora maggiori.  
   

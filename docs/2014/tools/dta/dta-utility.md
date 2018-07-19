@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
 - command prompt utilities [SQL Server], dta
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c659a1637b56015bf4642e87677529b0ea4e518b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200821"
 ---
 # <a name="dta-utility"></a>dta - utilità
   L'utilità **dta** è la versione per il prompt dei comandi dello strumento Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
@@ -138,7 +138,7 @@ dta -d AdventureWorks2012 ...
   
  Se vengono specificati più nomi di database, **dta** restituisce un errore. L'argomento **-d** è facoltativo.  
   
- Se si utilizza un file di input XML, è possibile specificare il primo database al quale **dta** si connette utilizzando il `DatabaseToConnect` elemento che si trova sotto il `TuningOptions` elemento. Per altre informazioni, vedere [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ Se si usa un file di input XML, è possibile specificare il primo database al quale **dta** si connette utilizzando il `DatabaseToConnect` elemento che si trova sotto il `TuningOptions` elemento. Per altre informazioni, vedere [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  In caso di ottimizzazione di un solo database, l'argomento **-d** è caratterizzato da una funzionalità simile all'argomento **-d** dell'utilità **sqlcmd** , ma non esegue l'istruzione USE *database_name* . Per altre informazioni, vedere [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -338,7 +338,7 @@ dta -n number_of_events -A 0
  **-x**  
  Avvia la sessione di ottimizzazione e chiude l'utilità.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Premere CTRL+C una volta per arrestare la sessione di ottimizzazione e generare le indicazioni in base all'analisi completata da **dta** fino a quel momento. Verrà richiesto di decidere se generare le indicazioni o meno. Premere nuovamente CTRL+C per arrestare la sessione di ottimizzazione senza generare le indicazioni.  
   
 ## <a name="examples"></a>Esempi  

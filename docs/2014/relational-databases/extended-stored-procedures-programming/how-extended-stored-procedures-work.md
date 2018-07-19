@@ -1,5 +1,5 @@
 ---
-title: Funzionamento Stored procedure estese | Documenti Microsoft
+title: Funzionamento Stored procedure estese | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], about extended stored procedures
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8b51dc3d5e0401861e188814fd229753428ded9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 08f7c6f353264b11ac0b927ac1ec19bbb6cacd1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184588"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Funzionamento delle stored procedure estese
     

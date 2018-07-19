@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10545"
 - "10547"
@@ -18,15 +18,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6f01f4c20446507bd63c8bd1c82d6c32355582b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 30938348fcb78d1afeeeacaead3bb02362a28574
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168312"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicatori (Generatore report e SSRS)
   Gli indicatori sono piccoli misuratori sui quali è possibile leggere immediatamente lo stato di un singolo valore di dati. Le icone che rappresentano gli indicatori e i relativi stati sono semplici e visivamente valide anche quando vengono utilizzate in dimensioni ridotte.  
@@ -191,22 +191,22 @@ ms.locfileid: "36063273"
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure in cui viene illustrato come aggiungere, modificare ed eliminare gli indicatori, come configurare e personalizzare gli indicatori, nonché come utilizzare gli indicatori nei misuratori.  
   
--   [Aggiungere o eliminare un indicatore &#40;SSRS e Generatore Report&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
+-   [Aggiungere o eliminare un indicatore &#40;Report e SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
   
--   [Modificare le icone degli indicatori e dei set &#40;SSRS e Generatore Report&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Modificare le icone degli indicatori e dei set &#40;Report e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Impostare e configurare le unità di misura &#40;SSRS e Generatore Report&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Impostare e configurare le unità di misura &#40;Report e SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Imposta ambito di sincronizzazione &#40;SSRS e Generatore Report&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Imposta ambito di sincronizzazione &#40;Report e SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [Specificare le dimensioni di un indicatore tramite un'espressione &#40;SSRS e Generatore Report&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [Specificare le dimensioni di un indicatore tramite un'espressione &#40;Report e SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
--   [Inclusione di indicatori e misuratori in un pannello del misuratore &#40;SSRS e Generatore Report&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
+-   [Includere indicatori e misuratori in un pannello del misuratore &#40;Report e SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>Vedere anche  
- [I misuratori &#40;SSRS e Generatore Report&#41;](gauges-report-builder-and-ssrs.md)   
+ [I misuratori &#40;Report e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Grafici &#40;SSRS e Generatore Report&#41;](charts-report-builder-and-ssrs.md)  
+ [Grafici &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

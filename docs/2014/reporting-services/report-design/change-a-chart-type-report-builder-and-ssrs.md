@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c2aadf05db9ddef965acbb7164068dd975d0869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 58e47fd86d19881c96d5ff13a87d846ca4016ac8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161922"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Modificare un tipo di grafico (Generatore report e SSRS)
-  Quando si inserisce innanzitutto un grafico in un report, il **Seleziona tipo di grafico** verrà visualizzata la finestra di dialogo. Se si elimina questa finestra di dialogo, per impostazione predefinita viene aggiunto un istogramma.  
+  Quando si inserisce innanzitutto un grafico in un report, il **Seleziona tipo di grafico** viene visualizzata la finestra. Se si elimina questa finestra di dialogo, per impostazione predefinita viene aggiunto un istogramma.  
   
  In qualsiasi fase della progettazione del report, è possibile impostare il grafico su un tipo più appropriato in relazione al report. È importante selezionare il tipo di grafico adeguato per i dati utilizzati in modo che possa essere interpretato correttamente. È necessario comprendere le caratteristiche di ogni tipo di grafico per determinare il grafico più appropriato per i dati. Per altre informazioni, vedere [Tipi di grafico &#40;Generatore report e SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36063042"
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [I misuratori &#40;SSRS e Generatore Report&#41;](gauges-report-builder-and-ssrs.md)   
- [Aggiungere un grafico a un Report &#40;SSRS e Generatore Report&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [I misuratori &#40;Report e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Aggiungere un grafico a un Report &#40;Report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_alloc
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9c821df66c6599dd3e7e3fecdff637d250f965c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: a5cc264f27814ed5d577dddfae5bc0d2cb81cc34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236781"
 ---
 # <a name="srvalloc-extended-stored-procedure-api"></a>srv_alloc (API delle stored procedure estese)
     
@@ -56,7 +56,7 @@ size
 ## <a name="returns"></a>Valori di codice restituiti  
  Un puntatore al nuovo spazio allocato. Se i byte di *size* non possono essere allocati, viene restituito un puntatore Null.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  La funzione **srv_alloc** è equivalente alla funzione **GlobalAlloc** dell'API [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Normali funzioni di gestione della memoria di runtime del linguaggio C dell'API Windows possono essere utilizzate in un'applicazione API di stored procedure estese.  
   
 > [!IMPORTANT]  

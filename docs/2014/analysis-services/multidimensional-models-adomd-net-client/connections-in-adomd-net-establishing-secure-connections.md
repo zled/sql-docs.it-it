@@ -1,5 +1,5 @@
 ---
-title: Tentativo di stabilire connessioni protette in ADOMD.NET | Documenti Microsoft
+title: Tentativo di stabilire connessioni protette in ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dd860308d9e4e7f7ed17072572594d6b8aaeeb70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d97079ca400d92502cf3ff217137eb6f32d1920d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180858"
 ---
 # <a name="establishing-secure-connections-in-adomdnet"></a>Implementazione di connessioni protette in ADOMD.NET
   Quando si implementa una connessione in ADOMD.NET, il metodo di sicurezza utilizzato per la connessione dipende dal valore della proprietà `ProtectionLevel` della stringa di connessione utilizzata quando si chiama il metodo <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> di <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
@@ -54,9 +54,9 @@ ms.locfileid: "36064827"
 |Valore di ProtectionLevel|Utilizzo con una connessione TCP|Risultati|  
 |---------------------------|------------------------------|-------------|  
 |`None`|Sì|Specifica di una connessione non autenticata.<br /><br /> Il provider richiede un flusso TCP, ma all'utente che effettua la richiesta del flusso non viene applicata alcuna forma di autenticazione.|  
-|`Connect`|Sì|Specifica di una connessione autenticata.<br /><br /> Il provider richiede un flusso TCP e successivamente il contesto di sicurezza relativo all'utente che effettua la richiesta del flusso viene autenticato nel server.<br /><br /> -Se l'autenticazione ha esito positivo, viene eseguita alcuna altra azione.<br />-Se l'autenticazione non riesce, il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto disconnette dall'origine dati multidimensionale e viene generata un'eccezione.<br /><br /> Dopo l'esito positivo o negativo dell'autenticazione, il contesto di sicurezza utilizzato per autenticare la connessione viene eliminato.|  
-|`Pkt Integrity` o `PktIntegrity`|Sì|Specifica di una connessione firmata.<br /><br /> Il provider richiede un flusso TCP e successivamente il contesto di sicurezza relativo all'utente che effettua la richiesta del flusso viene autenticato nel server.<br /><br /> -Se l'autenticazione ha esito positivo, il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto chiude il flusso TCP esistente e apre un flusso TCP firmato per gestire tutte le richieste. Ogni richiesta di dati o metadati viene autenticata tramite il contesto di sicurezza utilizzato per aprire la connessione. Ogni pacchetto viene inoltre firmato digitalmente per garantire che al payload del pacchetto TCP non sia stata apportata alcuna modifica.<br />-Se l'autenticazione non riesce, il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto disconnette dall'origine dati multidimensionale e viene generata un'eccezione.|  
-|`Pkt Privacy` o `PktPrivacy`|Sì|Specifica di una connessione crittografata. **Nota:** è inoltre possibile specificare una connessione crittografata non impostando la `ProtectionLevel` proprietà nella stringa di connessione. <br /><br /> Il provider richiede un flusso TCP e successivamente il contesto di sicurezza relativo all'utente che effettua la richiesta del flusso viene autenticato nel server.<br /><br /> -Se l'autenticazione ha esito positivo, il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto chiude il flusso TCP esistente e apre un flusso TCP crittografato per gestire tutte le richieste. Ogni richiesta di dati o metadati viene autenticata tramite il contesto di sicurezza utilizzato per aprire la connessione. Il payload di ogni pacchetto TCP viene inoltre crittografato tramite il metodo di crittografia di livello più elevato supportato sia dal provider che dall'origine dati multidimensionale.<br />-Se l'autenticazione non riesce, il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto disconnette dall'origine dati multidimensionale e viene generata un'eccezione.|  
+|`Connect`|Sì|Specifica di una connessione autenticata.<br /><br /> Il provider richiede un flusso TCP e successivamente il contesto di sicurezza relativo all'utente che effettua la richiesta del flusso viene autenticato nel server.<br /><br /> -Se l'autenticazione riesce, non viene eseguita alcuna altra azione.<br />-Se l'autenticazione non riesce, il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto di disconnette dall'origine dati multidimensionale e viene generata un'eccezione.<br /><br /> Dopo l'esito positivo o negativo dell'autenticazione, il contesto di sicurezza utilizzato per autenticare la connessione viene eliminato.|  
+|`Pkt Integrity` o `PktIntegrity`|Sì|Specifica di una connessione firmata.<br /><br /> Il provider richiede un flusso TCP e successivamente il contesto di sicurezza relativo all'utente che effettua la richiesta del flusso viene autenticato nel server.<br /><br /> -Se l'autenticazione riesce, il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto chiude il flusso TCP esistente e apre un flusso TCP firmato per gestire tutte le richieste. Ogni richiesta di dati o metadati viene autenticata tramite il contesto di sicurezza utilizzato per aprire la connessione. Ogni pacchetto viene inoltre firmato digitalmente per garantire che al payload del pacchetto TCP non sia stata apportata alcuna modifica.<br />-Se l'autenticazione non riesce, il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto di disconnette dall'origine dati multidimensionale e viene generata un'eccezione.|  
+|`Pkt Privacy` o `PktPrivacy`|Sì|Specifica di una connessione crittografata. **Nota:** è inoltre possibile specificare una connessione crittografata non impostando la `ProtectionLevel` proprietà nella stringa di connessione. <br /><br /> Il provider richiede un flusso TCP e successivamente il contesto di sicurezza relativo all'utente che effettua la richiesta del flusso viene autenticato nel server.<br /><br /> -Se l'autenticazione riesce, il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto chiude il flusso TCP esistente e si apre un flusso TCP crittografato per gestire tutte le richieste. Ogni richiesta di dati o metadati viene autenticata tramite il contesto di sicurezza utilizzato per aprire la connessione. Il payload di ogni pacchetto TCP viene inoltre crittografato tramite il metodo di crittografia di livello più elevato supportato sia dal provider che dall'origine dati multidimensionale.<br />-Se l'autenticazione non riesce, il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto di disconnette dall'origine dati multidimensionale e viene generata un'eccezione.|  
   
 ### <a name="using-windows-integrated-security-for-the-connection"></a>Utilizzo della sicurezza integrata di Windows per la connessione  
  La sicurezza integrata di Windows rappresenta il modo migliore di stabilire e di proteggere una connessione a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Nella sicurezza integrata di Windows le credenziali di sicurezza, ad esempio un nome utente o una password, non vengono rivelate durante il processo di autenticazione. Per stabilire l'identità, viene invece utilizzato l'ID di sicurezza del processo attualmente in esecuzione. Per la maggior parte delle applicazioni client, tale ID di sicurezza rappresenta l'identità dell'utente attualmente connesso.  

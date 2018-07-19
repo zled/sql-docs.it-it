@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - joining report server instances [SQL Server]
@@ -24,13 +24,13 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 46b2afdb0687586761160397b1af197cdba8cd0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e39e1bd9772ea1e05e4e2c0dbb951cba721caaa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214831"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
   Questa utilità consente di estrarre, ripristinare, creare ed eliminare la chiave simmetrica utilizzata per proteggere i dati riservati del server di report dall'accesso non autorizzato. Questa utilità viene inoltre utilizzata per unire in join istanze del server di report in un'implementazione basata sulla scalabilità orizzontale. La *distribuzione con scalabilità orizzontale di un server di report* fa riferimento a più istanze del server di report che condividono lo stesso database del server di report.  
@@ -82,7 +82,7 @@ ms.locfileid: "36064390"
  **-r**  *installationID*  
  Consente di rimuovere le informazioni relative alla chiave simmetrica per un'istanza specifica del server di report, quindi di rimuovere il server di report da un'implementazione basata sulla scalabilità orizzontale. *installationID* è un valore GUID disponibile nel file RSReportserver.config.  
   
- `-f`  *File*  
+ `-f`  *file*  
  Consente di specificare il percorso completo del file in cui è archiviata una copia di backup delle chiavi simmetriche.  
   
  Per l'argomento **rskeymgmt -e**, la chiave simmetrica viene scritta nel file specificato.  
@@ -93,19 +93,19 @@ ms.locfileid: "36064390"
  (Obbligatorio per `-f`) Consente di specificare la password utilizzata per eseguire il backup o applicare una chiave simmetrica. Questo valore non può essere omesso.  
   
  `-i`  
- Specifica un'istanza locale del server di report. Questo argomento è facoltativo se il valore predefinito è installato il server di report [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza (il valore predefinito per `-i` è MSSQLSERVER). Se il server di report è stato installato come istanza denominata, `-i` è obbligatorio.  
+ Specifica un'istanza locale del server di report. Questo argomento è facoltativo se è installato il server di report predefinito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza (il valore predefinito per `-i` è MSSQLSERVER). Se si installa il server di report come istanza denominata, `-i` è obbligatorio.  
   
  `-m`  
  Specifica il nome del computer remoto in cui risiede l'istanza del server di report che si sta unendo in join all'implementazione del server di report basata sulla scalabilità orizzontale. Utilizzare il nome del computer che lo identifica all'interno della rete.  
   
  `-n`  
- Specifica il nome dell'istanza del server di report in un computer remoto. Questo argomento è facoltativo se il valore predefinito è installato il server di report [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza (il valore predefinito per `-n` è MSSQLSERVER). Se il server di report è stato installato come istanza denominata, `-n` è obbligatorio.  
+ Specifica il nome dell'istanza del server di report in un computer remoto. Questo argomento è facoltativo se è installato il server di report predefinito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza (il valore predefinito per `-n` è MSSQLSERVER). Se si installa il server di report come istanza denominata, `-n` è obbligatorio.  
   
  `-u`  *useraccount*  
  Consente di specificare l'account amministratore nel computer remoto che si sta unendo in join alla distribuzione con scalabilità orizzontale Se non si specifica un account, vengono utilizzate le credenziali dell'utente corrente.  
   
  `-v`  *Password*  
- (Necessario per `-u`) specifica la password dell'account amministratore nel computer remoto che si desidera aggiungere alla distribuzione con scalabilità orizzontale.  
+ (Obbligatorio per `-u`) specifica la password dell'account amministratore nel computer remoto che si desidera aggiungere alla distribuzione con scalabilità orizzontale.  
   
  **-t**  *trace*  
  Crea l'output dei messaggi di errore nel log di traccia. Questo argomento non accetta un valore. Per altre informazioni, vedere [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
@@ -171,7 +171,7 @@ rskeymgmt -r <installationID>
 ## <a name="file-location"></a>Percorso del file  
  Rskeymgmt.exe è disponibile in **\<*unità*>:\Programmi\Microsoft SQL Server\110\Tools\Binn** o **\<*unità*>:\Programmi (x86)\Microsoft SQL Server\110\Tools\Binn**. È possibile eseguire l'utilità da qualsiasi cartella del file system.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il server di report crittografa le informazioni di connessione e le credenziali archiviate. Per la crittografia dei dati vengono utilizzate una chiave pubblica e una chiave simmetrica. Il server di report viene eseguito solo se un database del server di report dispone di chiavi valide. È possibile usare **rskeymgmt** per eseguire il backup, eliminare o ripristinare le chiavi. Se non è possibile ripristinare le chiavi, questo strumento consente di eliminare il contenuto crittografato non più utilizzabile.  
   
  L'utilità **rskeymgmt** consente di gestire il set di chiavi definito durante l'installazione o l'inizializzazione. L'utilità si connette al servizio Windows ReportServer locale tramite un endpoint RPC (Remote Procedure Call, chiamata di procedura remota). Per garantire il corretto funzionamento di questa utilità, è necessario che il servizio Windows ReportServer sia in esecuzione.  

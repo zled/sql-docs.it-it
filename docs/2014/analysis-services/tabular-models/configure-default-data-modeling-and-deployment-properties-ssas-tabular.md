@@ -1,5 +1,5 @@
 ---
-title: Configurare la modellazione di dati predefinito e le proprietà di distribuzione (SSAS tabulare) | Documenti Microsoft
+title: Configurare la modellazione dei dati predefinite e le proprietà di distribuzione (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deployment.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
@@ -16,15 +16,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a38556f1c6b9d93f844441327a5ea8fe5f9ae9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13c674a47f074adaad3e4dbeff41797018bb0dbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171472"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Configurare la modellazione dei dati e le proprietà di distribuzione predefinite (SSAS tabulare)
   Questo argomento descrive come configurare le impostazioni delle proprietà del livello di compatibilità, della distribuzione e del database dell'area di lavoro predefiniti, che possono essere predefinite per ogni nuovo progetto di modello tabulare creato in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dopo aver creato un nuovo progetto, queste proprietà possono comunque essere modificate in base a requisiti specifici.  
@@ -39,7 +39,7 @@ ms.locfileid: "36063193"
   
     |Proprietà|Impostazione predefinita|Description|  
     |--------------|---------------------|-----------------|  
-    |**Livello di compatibilità predefinito per nuovi progetti**|SQL Server 2012 (1100)|Questa impostazione consente di specificare il livello di compatibilità predefinito da utilizzare per la creazione di un nuovo progetto di modello tabulare. È possibile scegliere SQL Server 2012 RTM (1100) se la distribuzione verrà eseguita in un'istanza di Analysis Services senza SP1 applicato, SQL Server 2012 SP1 se per l'istanza di distribuzione è applicato SP1 oppure SQL Server 2014. Per altre informazioni, vedere [livello di compatibilità &#40;SP1 tabulare SSAS&#41;](compatibility-level-for-tabular-models-in-analysis-services.md).|  
+    |**Livello di compatibilità predefinito per nuovi progetti**|SQL Server 2012 (1100)|Questa impostazione consente di specificare il livello di compatibilità predefinito da utilizzare per la creazione di un nuovo progetto di modello tabulare. È possibile scegliere SQL Server 2012 RTM (1100) se la distribuzione verrà eseguita in un'istanza di Analysis Services senza SP1 applicato, SQL Server 2012 SP1 se per l'istanza di distribuzione è applicato SP1 oppure SQL Server 2014. Per altre informazioni, vedere [livello di compatibilità &#40;SP1 in formato tabulare SSAS&#41;](compatibility-level-for-tabular-models-in-analysis-services.md).|  
     |**Opzioni del livello di compatibilità**|Tutte selezionate|Specifica le opzioni del livello di compatibilità per i nuovi progetti di modello tabulare e in caso di distribuzione in un'altra istanza di Analysis Services.|  
   
 #### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>Per configurare l'impostazione della proprietà del server di distribuzione predefinito per nuovi progetti di modello  
@@ -77,6 +77,6 @@ ms.locfileid: "36063193"
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà del progetto &#40;tabulare di SSAS&#41;](properties-ssas-tabular.md)   
  [Proprietà del modello &#40;tabulare di SSAS&#41;](model-properties-ssas-tabular.md)   
- [Livello di compatibilità &#40;SP1 tabulare di SSAS&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)  
+ [Livello di compatibilità &#40;SP1 in formato tabulare SSAS&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

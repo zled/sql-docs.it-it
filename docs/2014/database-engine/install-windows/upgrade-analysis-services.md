@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [Analysis Services], upgrading
@@ -21,32 +21,32 @@ helpviewer_keywords:
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 caps.latest.revision: 63
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: dd4ae8ef0eb99859885dfbd33af284c843c282d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: Minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f59e24f7028dd54b39ea7b27ab98ad85c149cadd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245251"
 ---
 # <a name="upgrade-analysis-services"></a>Aggiornare Analysis Services
-  Utilizzare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per aggiornare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni dettagliate sull'aggiornamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità SharePoint, vedere [aggiornare PowerPivot per SharePoint](upgrade-power-pivot-for-sharepoint.md). Per ulteriori informazioni sull'aggiornamento di un Server SQL esistente dell'istanza, vedere [eseguire l'aggiornamento a SQL Server 2014 tramite l'installazione guidata di &#40;programma di installazione di&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+  Utilizzare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per aggiornare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni dettagliate sull'aggiornamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità SharePoint, vedere [aggiornare PowerPivot per SharePoint](upgrade-power-pivot-for-sharepoint.md). Per altre informazioni sull'aggiornamento di un Server SQL esistente dell'istanza, vedere [esegue l'aggiornamento a SQL Server 2014 usando l'installazione guidata di &#40;installazione&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="known-upgrade-issues"></a>Problemi di aggiornamento noti  
  Prima di effettuare l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere gli argomenti seguenti:  
   
 -   [Note sulla versione di SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
   
--   Per informazioni su cui [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] caratteristiche e funzionalità sono stati non più supportate, deprecate o modificate vedere [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md).  
+-   Per informazioni sulle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] caratteristiche e funzionalità sono stati non più disponibile, deprecate o modificate vedere [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Elenco di controllo preliminare all'aggiornamento  
  Prima di eseguire l'aggiornamento, vedere le informazioni seguenti:  
   
 -   [Aggiornamenti di versione ed edizione supportati](supported-version-and-edition-upgrades.md)  
   
--   [Requisiti hardware e Software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Parametri di controllo di Controllo configurazione sistema](check-parameters-for-the-system-configuration-checker.md)  
   
@@ -54,14 +54,14 @@ ms.locfileid: "36062930"
   
 -   [Backup e ripristino di database di Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
--   [Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
+-   [Usare la Preparazione aggiornamento per preparare gli aggiornamenti](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
 ## <a name="upgrading-analysis-services"></a>Aggiornamento di Analysis Services  
  È possibile scegliere diversi approcci per aggiornare il server e i dati:  
   
--   Un' **aggiornamento sul posto** sostituisce i file di programma esistente con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] i file di programma. I database rimangono nello stesso percorso. Le cartelle del programma vengono aggiornate in modo da riflettere il nuovo nome.  
+-   Un' **aggiornamena sul posa** sostituisce i file di programma esistenti con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] i file di programma. I database rimangono nello stesso percorso. Le cartelle del programma vengono aggiornate in modo da riflettere il nuovo nome.  
   
--   Un **aggiornamento side-by-side** è una nuova installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nello stesso computer che dispone di un'istanza di Analysis Services esistente. È possibile spostare database nella nuova istanza dello stesso computer, quindi disinstallare la versione precedente se non viene più utilizzata.  
+-   Oggetto **aggiornamento side-by-side** è una nuova installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nello stesso computer che dispone di un'istanza di Analysis Services esistente. È possibile spostare database nella nuova istanza dello stesso computer, quindi disinstallare la versione precedente se non viene più utilizzata.  
   
 -   È possibile inoltre installare Analysis Services in un nuovo hardware e, successivamente, eseguire la migrazione dei database esistenti in tale server.  
   
@@ -87,6 +87,6 @@ ms.locfileid: "36062930"
  [Informazioni sull'architettura Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)   
  [Aggiornare PowerPivot per SharePoint](upgrade-power-pivot-for-sharepoint.md)   
  [Installazione di Analysis Services in modalità Multidimensionale e Data Mining](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
- [Installazione PowerPivot per SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [Installazione di PowerPivot per SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   
