@@ -1,5 +1,5 @@
 ---
-title: Annotazioni CSDL per Business Intelligence (CSDLBI) | Documenti Microsoft
+title: Annotazioni CSDL per Business Intelligence (CSDLBI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 caps.latest.revision: 19
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e545667bd907460b695f63cbe9f2f537c9be62d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 45f29343fe3fb3bd95e8f9753438e90214f18c80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328431"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Annotazioni CSDL per Business Intelligence (CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta la presentazione della definizione di un modello tabulare in un formato XML denominato Conceptual Schema Definition Language con annotazioni Business Intelligence (CSDLBI).  
@@ -34,9 +34,9 @@ ms.locfileid: "36062473"
   
 -   [Soluzioni di modelli tabulari &#40;tabulare di SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
--   [Distribuzione della soluzione di modello tabulare &#40;tabulare di SSAS&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [Distribuzione di soluzioni di modelli tabulari &#40;tabulare di SSAS&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
--   [Connessione BI Semantic Model PowerPivot &#40;con estensione bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
+-   [Connessione BI Semantic Model di PowerPivot &#40;con estensione bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
  Lo schema CSDLBI è generato dal server Analysis Services in risposta a una richiesta di una definizione del modello da un client, ad esempio [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. L'applicazione client invia una query XML al server Analysis Services che ospita i dati del modello. In risposta, il server invia un messaggio XML che contiene una definizione delle entità nel modello,utilizzando le annotazioni CSDLBI. Il client di creazione report quindi utilizza le informazioni per presentare i campi, le aggregazioni e le misure disponibili nel modello. Le annotazioni CSDLBI forniscono inoltre informazioni sul raggruppamento, l'ordinamento e la formattazione dei dati.  
   
@@ -81,6 +81,6 @@ ms.locfileid: "36062473"
 ## <a name="see-also"></a>Vedere anche  
  [Comprendere il modello a oggetti tabulare](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [Concetti di CSDLBI](csdlbi-concepts.md)   
- [Comprendere il modello a oggetti tabulare](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
+ [Informazioni sul modello a oggetti tabulare](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

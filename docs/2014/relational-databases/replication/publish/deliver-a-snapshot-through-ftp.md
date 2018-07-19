@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
 - FTP snapshots [SQL Server replication]
 - snapshot replication [SQL Server], FTP
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 76f70c85774a84a1d6b7be8de3348c2f6162431b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4396b84840deb4a0973e3aae73183a551d54fce3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331531"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Recapito di snapshot tramite FTP
   In questo argomento viene descritto come recapitare uno snapshot utilizzando l'FTP in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -93,7 +93,7 @@ ms.locfileid: "36062843"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>Per abilitare il recapito di snapshot tramite FTP per una pubblicazione snapshot o transazionale  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Specificare **@publication**, il valore `true` per **@enabled_for_internet**e valori appropriati per i parametri seguenti:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Specificare **@publication**, un valore di `true` per **@enabled_for_internet**e valori appropriati per i parametri seguenti:  
   
     -   **@ftp_address** : indirizzo del server FTP utilizzato per il recapito dello snapshot.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36062843"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>Per attivare il recapito di snapshot tramite FTP per una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Specificare **@publication**, il valore `true` per **@enabled_for_internet** e valori appropriati per i parametri seguenti:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Specificare **@publication**, un valore di `true` per **@enabled_for_internet** e valori appropriati per i parametri seguenti:  
   
     -   **@ftp_address** : indirizzo del server FTP utilizzato per il recapito dello snapshot.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36062843"
   
 1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Specificare **@publisher** e **@publication**.  
   
-    -   Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Specificare **@publisher**, **@publisher_db**, **@publication**la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] le credenziali di Windows con cui l'agente di distribuzione nel Sottoscrittore viene eseguita per **@job_login** e **@job_password**e il valore `true` per **@use_ftp**.  
+    -   Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Specificare **@publisher**, **@publisher_db**, **@publication**, il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] le credenziali di Windows con cui l'agente di distribuzione nel Sottoscrittore dura **@job_login** e **@job_password**e il valore `true` per **@use_ftp**.  
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) per registrare la sottoscrizione pull. Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../create-a-pull-subscription.md).  
   
@@ -145,7 +145,7 @@ ms.locfileid: "36062843"
   
     -   `ftp_address` -l'indirizzo del server FTP utilizzato per il recapito dello snapshot.  
   
-    -   `ftp_port` -la porta utilizzata dal server FTP.  
+    -   `ftp_port` -la porta usata dal server FTP.  
   
     -   `ftp_subdirectory` -la sottodirectory della directory FTP predefinita utilizzata per lo snapshot tramite FTP.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36062843"
   
     -   `ftp_address` -l'indirizzo del server FTP utilizzato per il recapito dello snapshot.  
   
-    -   `ftp_port` -la porta utilizzata dal server FTP.  
+    -   `ftp_port` -la porta usata dal server FTP.  
   
     -   `ftp_subdirectory` -la sottodirectory della directory FTP predefinita utilizzata per lo snapshot tramite FTP.  
   

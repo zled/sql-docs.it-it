@@ -1,5 +1,5 @@
 ---
-title: Elemento ImpersonationInfo (ASSL) | Documenti Microsoft
+title: Elemento ImpersonationInfo (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ImpersonationInfo element
 ms.assetid: d4b9c372-1023-43f7-97e9-b0a90f544fbb
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a97f9949baa904b2282568d1005ad99f8b10fdcd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ed7caa18c18f73f70a3f39dce608f2b32dbc319
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275497"
 ---
 # <a name="impersonationinfo-element-assl"></a>Elemento ImpersonationInfo (ASSL)
   Contiene le informazioni usate per determinare il comportamento della rappresentazione quando si accede a un assembly o lo si esegue.  
@@ -59,7 +59,7 @@ ms.locfileid: "36065214"
 |Elementi padre|[Assembly](../data-type/assembly-data-type-assl.md), [DataSource](../data-type/datasource-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

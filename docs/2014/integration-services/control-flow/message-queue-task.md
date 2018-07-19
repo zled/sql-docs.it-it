@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3be2c48f2a3b2dc552d3f9c89bf2caf57b0e0bf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 176e1798f453771f17aa197e122521bb3852bbc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269667"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   L'attività Message Queue consente di usare Microsoft Message Queuing (noto anche come MSMQ) per scambiare messaggi tra pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o per inviare messaggi a una coda di applicazione elaborata da un'applicazione personalizzata. I messaggi possono essere in forma di testo semplice, di file o di variabili con i rispettivi valori.  
@@ -53,9 +53,9 @@ ms.locfileid: "36065186"
   
 -   `Data file` messaggio specifica che un file contiene il messaggio. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da salvare il file, sovrascrivere un file esistente e specificare il pacchetto da cui l'attività può ricevere messaggi.  
   
--   `String` messaggio specifica il messaggio sotto forma di stringa. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da confrontare la stringa ricevuta con una stringa definita dall'utente ed eseguire un'azione che dipende dal risultato del confronto. Il confronto tra le stringhe può essere esatto, con o senza distinzione tra maiuscole e minuscole oppure utilizzare una sottostringa.  
+-   `String` messaggio specifica il messaggio come stringa. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da confrontare la stringa ricevuta con una stringa definita dall'utente ed eseguire un'azione che dipende dal risultato del confronto. Il confronto tra le stringhe può essere esatto, con o senza distinzione tra maiuscole e minuscole oppure utilizzare una sottostringa.  
   
--   `String message to variable` Specifica il messaggio di origine sotto forma di stringa che viene inviato a una variabile di destinazione. È possibile configurare l'attività in modo da confrontare la stringa ricevuta con una stringa definita dall'utente, utilizzando un confronto esatto, senza distinzione tra maiuscole e minuscole o tra sottostringhe. Questo tipo di messaggio è disponibile solo quando l'attività riceve messaggi.  
+-   `String message to variable` Specifica l'origine del messaggio sotto forma di stringa che viene inviato a una variabile di destinazione. È possibile configurare l'attività in modo da confrontare la stringa ricevuta con una stringa definita dall'utente, utilizzando un confronto esatto, senza distinzione tra maiuscole e minuscole o tra sottostringhe. Questo tipo di messaggio è disponibile solo quando l'attività riceve messaggi.  
   
 -   `Variable` Specifica che il messaggio contiene una o più variabili. È possibile configurare l'attività in modo da specificare i nomi delle variabili incluse nel messaggio. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da specificare sia il pacchetto da cui può ricevere messaggi, sia la variabile che costituisce la destinazione del messaggio.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36065186"
   
 -   Sovrascrivere un file esistente, se il messaggio è archiviato in un `Data file`.  
   
--   Il salvataggio del file di messaggio con un nome di file diverso, se il messaggio utilizza il `Data file message` tipo.  
+-   Salvare il file di messaggio con un nome di file diverso, se il messaggio di `Data file message` tipo.  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Messaggi di registrazione personalizzati disponibili nell'attività Message Queue  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Message Queue. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  

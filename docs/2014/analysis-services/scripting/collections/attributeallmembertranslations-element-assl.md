@@ -1,5 +1,5 @@
 ---
-title: Elemento AttributeAllMemberTranslations (ASSL) | Documenti Microsoft
+title: Elemento AttributeAllMemberTranslations (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeAllMemberTranslations element
 ms.assetid: 1a0d86ea-d95d-4d93-b321-acd35ed4ac26
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa787c7c3731962690c1b8d25e736f061caf74e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fd4a3afeac18c5b0aa4935e6abbb51a79015256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332881"
 ---
 # <a name="attributeallmembertranslations-element-assl"></a>Elemento AttributeAllMemberTranslations (ASSL)
   Contiene la raccolta di traduzioni per la didascalia del membro Totale della dimensione.  
@@ -63,8 +63,8 @@ ms.locfileid: "36062988"
 |Elementi padre|[Dimension](../objects/dimension-element-assl.md)|  
 |Elementi figlio|[AttributeAllMemberTranslation](../objects/translation-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `AttributeAllMemberTranslations` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `AttributeAllMemberTranslations` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento Translation &#40;ASSL&#41;](translations-element-assl.md)   

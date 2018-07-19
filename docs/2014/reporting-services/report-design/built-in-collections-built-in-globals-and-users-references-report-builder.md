@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 897cb599b73c6a136c2d79e2a21068dfb05655ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331011"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Riferimenti alle raccolte predefinite Globals e Users (Generatore report e SSRS)
   La raccolta di campi predefinita, in cui sono incluse le raccolte `Globals` e `User`, rappresenta i valori globali forniti da Reporting Services durante l'elaborazione di un report. La raccolta `Globals` fornisce valori come il nome del report, l'ora di inizio dell'elaborazione e i numeri di pagina correnti per l'intestazione o il piè di pagina. La raccolta `User` fornisce le impostazioni relative a ID utente e lingua. Questi valori possono essere usati nelle espressioni per filtrare i risultati in un report.  
@@ -28,12 +28,12 @@ ms.locfileid: "36062355"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Utilizzo della raccolta Globals  
- Il `Globals` raccolta contiene le variabili globali per il report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&ReportName]`. Nella tabella seguente vengono descritti i membri del `Globals` insieme.  
+ Il `Globals` raccolta contiene le variabili globali per il report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&ReportName]`. Nella tabella seguente vengono descritti i membri del `Globals` raccolta.  
   
 |**Membro**|**Tipo**|**Descrizione**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|Data e ora di inizio dell'esecuzione del report.|  
-|PageNumber|`Integer`|Numero di pagina corrente relativo a interruzioni di pagina che ne determinano la reimpostazione. All'inizio dell'elaborazione del report, il valore è impostato su 1. Il numero di pagina aumenta per ogni pagina di cui è stato eseguito il rendering.<br /><br /> Per numerare le pagine all'interno di interruzioni di pagina per un rettangolo, un'area dati, un gruppo di aree dati o una mappa, la proprietà PageBreak, impostare la proprietà ResetPageNumber su `True`. Non supportato dai gruppi di gerarchie di colonna Tablix.<br /><br /> La proprietà PageNumber può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
+|PageNumber|`Integer`|Numero di pagina corrente relativo a interruzioni di pagina che ne determinano la reimpostazione. All'inizio dell'elaborazione del report, il valore è impostato su 1. Il numero di pagina aumenta per ogni pagina di cui è stato eseguito il rendering.<br /><br /> Per numerare le pagine all'interno di interruzioni di pagina per un rettangolo, un'area dati, un gruppo di aree dati o una mappa, nella proprietà PageBreak, impostare la proprietà ResetPageNumber su `True`. Non supportato dai gruppi di gerarchie di colonna Tablix.<br /><br /> La proprietà PageNumber può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
 |ReportFolder|`String`|Percorso completo della cartella contenente il report. Non include l'URL del server di report.|  
 |ReportName|`String`|Nome del report archiviato nel database del server di report.|  
 |ReportServerUrl|`String`|URL del server di report in cui il report è in esecuzione.|  
@@ -72,9 +72,9 @@ ms.locfileid: "36062355"
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Utilizzo della raccolta User  
- Il `User` insieme contiene dati relativi all'utente che esegue il report. È possibile usare questa raccolta per filtrare i dati visualizzati in un report, per mostrare, ad esempio, solo quelli dell'utente corrente o visualizzare l'ID utente nel titolo del report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&UserID]`.  
+ Il `User` raccolta contiene i dati relativi all'utente che esegue il report. È possibile usare questa raccolta per filtrare i dati visualizzati in un report, per mostrare, ad esempio, solo quelli dell'utente corrente o visualizzare l'ID utente nel titolo del report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&UserID]`.  
   
- Nella tabella seguente vengono descritti i membri del `User` insieme.  
+ Nella tabella seguente vengono descritti i membri del `User` raccolta.  
   
 |**Membro**|**Tipo**|**Descrizione**|  
 |----------------|--------------|---------------------|  
@@ -96,7 +96,7 @@ ms.locfileid: "36062355"
  [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Finestra di dialogo Espressione &#40;Generatore report&#41;](../expression-dialog-box-report-builder.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Formattazione di numeri e date &#40;SSRS e Generatore Report&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date di &#40;Report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

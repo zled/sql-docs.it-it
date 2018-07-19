@@ -1,5 +1,5 @@
 ---
-title: Visualizzare la cronologia (PowerPivot per SharePoint) di aggiornamento dati | Documenti Microsoft
+title: Visualizzare la Data dell'aggiornamento della cronologia (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - data refresh history [Analysis Services with SharePoint]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6331cbfa7fc019991b004e81acea9c50159fd292
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ecca7d87492645502e122497cc66eb54f083097
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267587"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Visualizzare la cronologia dell'aggiornamento dati (PowerPivot per SharePoint)
   La cronologia dell'aggiornamento dati è un record di tutte le attività di aggiornamento dei dati PowerPivot in una cartella di lavoro di Excel. Le operazioni di aggiornamento dati vengono eseguite in un'istanza del server Analysis Services di una farm di SharePoint in base a una pianificazione fornita dall'utente. Per impostazione predefinita, la cronologia dell'aggiornamento dati viene mantenuta per un anno. L'amministratore di una farm può tuttavia specificare criteri di memorizzazione diversi per la cronologia relativa all'utilizzo e agli eventi, in modo da stabilire la durata di mantenimento in memoria dei record dell'aggiornamento dati.  
@@ -78,6 +78,6 @@ ms.locfileid: "36063204"
 ## <a name="see-also"></a>Vedere anche  
  [Configurare la raccolta di dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Pianificare un aggiornamento di dati &#40;PowerPivot per SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
- [Aggiornamento dati PowerPivot](power-pivot-data-refresh.md)  
+ [Aggiornamento dei dati PowerPivot](power-pivot-data-refresh.md)  
   
   

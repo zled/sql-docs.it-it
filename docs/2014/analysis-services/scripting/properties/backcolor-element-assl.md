@@ -1,5 +1,5 @@
 ---
-title: Elemento BackColor (ASSL) | Documenti Microsoft
+title: Elemento BackColor (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - BackColor element
 ms.assetid: 9024d131-74cc-4815-833a-f8cae57b7453
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe0ab54477b22f1e6ea1bdc55156ea8318dd87a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed491d6307e6e5776843c3f5e490d9369235143b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274117"
 ---
 # <a name="backcolor-element-assl"></a>Elemento BackColor (ASSL)
   Descrive le caratteristiche di visualizzazione dell'elemento padre correlate al colore.  
@@ -61,10 +61,10 @@ ms.locfileid: "36063437"
 |Elemento padre|[CalculationProperty](../objects/calculationproperty-element-assl.md), [misura](../objects/measure-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il `BackColor` proprietà contiene un'espressione del linguaggio MDX (Multidimensional Expressions) e si applica a `CalculationProperty` gli elementi con un [CalculationType](calculationtype-element-assl.md) dei *membro* o  *Le celle*.  
   
- L'elemento che corrisponde al padre di `BackColor` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ L'elemento che corrisponde al padre di `BackColor` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento Calculationproperty &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

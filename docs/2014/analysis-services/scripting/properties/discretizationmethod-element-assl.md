@@ -1,5 +1,5 @@
 ---
-title: Elemento DiscretizationMethod (ASSL) | Documenti Microsoft
+title: Elemento DiscretizationMethod (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DiscretizationMethod element
 ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c22387c74c49446c74b06125da02bda11acd0b7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6347db0e5d964b10112516b4c607a5185f247b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253003"
 ---
 # <a name="discretizationmethod-element-assl"></a>Elemento DiscretizationMethod (ASSL)
   Definisce il metodo da usare per la discretizzazione.  
@@ -61,8 +61,8 @@ ms.locfileid: "36063922"
 |Elementi padre|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il valore dell'elemento `DiscretizationMethod` determina la modalità di discretizzazione dei valori per `DimensionAttribute` o `ScalarMiningStructureColumn` oppure il modo in cui tali valori vengono organizzati in un set di gruppi specifico. Per ulteriori informazioni sui metodi di discretizzazione, vedere [metodi di discretizzazione &#40;Data Mining&#41;](../../data-mining/discretization-methods-data-mining.md).  
+## <a name="remarks"></a>Note  
+ Il valore dell'elemento `DiscretizationMethod` determina la modalità di discretizzazione dei valori per `DimensionAttribute` o `ScalarMiningStructureColumn` oppure il modo in cui tali valori vengono organizzati in un set di gruppi specifico. Per altre informazioni sui metodi di discretizzazione, vedere [metodi di discretizzazione &#40;Data Mining&#41;](../../data-mining/discretization-methods-data-mining.md).  
   
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   

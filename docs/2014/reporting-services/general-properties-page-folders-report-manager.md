@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà generale, cartelle (gestione Report) | Documenti Microsoft
+title: Pagina delle proprietà generale, le cartelle (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 69330b9a1a65ed147d716d47d9a2cc68e34bab6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255823"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Pagina delle proprietà Generale, Cartelle (Gestione report)
   La pagina delle proprietà Generale per le cartelle consente di visualizzare e impostare le proprietà per le cartelle create. Nella pagina delle proprietà Generale vengono visualizzati il nome dell'utente che ha creato o modificato la cartella e la data e ora di creazione o modifica.  
   
- Le proprietà delle cartelle includono inoltre le impostazioni di sicurezza. Per ulteriori informazioni sulla sicurezza delle cartelle, vedere [proteggere cartelle](security/secure-folders.md).  
+ Le proprietà delle cartelle includono inoltre le impostazioni di sicurezza. Per altre informazioni sulla sicurezza delle cartelle, vedere [proteggere le cartelle](security/secure-folders.md).  
   
  Le cartelle speciali, ad esempio Home, Report personali e Cartelle utenti, non possono essere rinominate o spostate nello spazio dei nomi del server di report. Per queste cartelle non è disponibile la pagina delle proprietà Generale.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36065537"
   
 ## <a name="options"></a>Opzioni  
  **Nome**  
- Digitare un nome per la cartella. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : @ & = +, $ * \< > | "o / quando si specifica un nome.  
+ Digitare un nome per la cartella. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : @ & = +, $ * \< > | "oppure / per specificare un nome.  
   
  **Descrizione**  
  Consente di digitare una descrizione del contenuto della cartella. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere alla cartella.  
@@ -58,6 +58,6 @@ ms.locfileid: "36065537"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

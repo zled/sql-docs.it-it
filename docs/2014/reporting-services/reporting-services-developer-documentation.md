@@ -1,5 +1,5 @@
 ---
-title: Gli sviluppatori&#39;s Guide (Reporting Services) | Documenti Microsoft
+title: Per gli sviluppatori&#39;Guida (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - programming [Reporting Services]
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 caps.latest.revision: 21
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 30fba34bd5c00935e4d41a657481fb8225f9a669
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 0cb0e08f48dbb873d3dec7d4d688182ebe3415fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249901"
 ---
-# <a name="developer39s-guide-reporting-services"></a>Gli sviluppatori&#39;s Guide (Reporting Services)
+# <a name="developer39s-guide-reporting-services"></a>Per gli sviluppatori&#39;Guida (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre diverse interfacce di programmazione che è possibile usare nelle proprie applicazioni. È possibile utilizzare le caratteristiche e le funzionalità esistenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per compilare strumenti di gestione e di creazione di report personalizzati nei siti Web e nelle applicazioni Windows oppure per estendere la piattaforma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
  L'estensione della piattaforma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include la creazione di nuovi componenti e risorse che è possibile utilizzare per l'accesso ai dati, il recapito dei report e altro ancora. È possibile offrire questi componenti e risorse alle società che utilizzano [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nell'organizzazione.  

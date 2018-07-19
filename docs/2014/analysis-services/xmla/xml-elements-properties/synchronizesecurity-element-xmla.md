@@ -1,5 +1,5 @@
 ---
-title: Elemento SynchronizeSecurity (XMLA) | Documenti Microsoft
+title: Elemento SynchronizeSecurity (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - SynchronizeSecurity element
 ms.assetid: d37dbb95-f4a4-44ac-8eb9-f661d5bb5018
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cc50a9acd38fe394e5ac6b457f72e76669b5ec64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: dee99edf98aec8a9cd3b11add261cd941f9c9a0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330261"
 ---
 # <a name="synchronizesecurity-element-xmla"></a>Elemento SynchronizeSecurity (XMLA)
-  Specifica come sincronizzare definizioni di sicurezza, ad esempio ruoli e autorizzazioni, durante una [Sincronizza](../xml-elements-commands/synchronize-element-xmla.md) comando.  
+  Specifica come sincronizzare definizioni di sicurezza, ad esempio ruoli e autorizzazioni, durante una [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36062948"
 |Elementi padre|[Sincronizza](../xml-elements-commands/synchronize-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il `Security` elemento determina se le definizioni di sicurezza, ad esempio ruoli e autorizzazioni, definiti in un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database sono sincronizzati durante un `Synchronize` comando. Questo elemento determina anche se gli account utente di Windows e i gruppi definiti come membri delle definizioni di sicurezza sono inclusi come parte del comando `Synchronize`.  
   
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  

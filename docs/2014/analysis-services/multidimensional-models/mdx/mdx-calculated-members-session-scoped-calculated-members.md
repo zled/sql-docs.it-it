@@ -1,5 +1,5 @@
 ---
-title: Creazione con ambito sessione calcolato membri (MDX) | Documenti Microsoft
+title: Creazione con ambito sessione calcolati membri (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE MEMBER statement
 - session-scoped calculated members [MDX]
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8e51a2fa5d8179134ac2654f55e9da7ff5ced67
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79e6466c7f514b3453f8840a72dc0028a215259b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249861"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Creazione di membri calcolati con ambito sessione (MDX)
   Per creare un membro calcolato disponibile nell'ambito di un'intera sessione MDX (Multidimensional Expressions), è possibile usare l'istruzione [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member). Un membro calcolato creato utilizzando l'istruzione CREATE MEMBER non viene rimosso fino alla chiusura della sessione MDX.  
@@ -56,6 +56,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di Query con ambito di membri calcolati &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [Membri calcolati per la creazione con ambito Query &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

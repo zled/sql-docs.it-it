@@ -1,5 +1,5 @@
 ---
-title: È supportato l'accesso alle funzionalità di Report (SSRS) | Documenti Microsoft
+title: Caratteristiche supportate dei accesso Report (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
 - functions [Reporting Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 caps.latest.revision: 43
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a3bb7caa0d570b83bb8b487a42fa2364731602d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268477"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Caratteristiche supportate dei report di Access (SSRS)
   Quando si importa un report in Progettazione report, il processo di importazione converte il report di Access [!INCLUDE[msCoName](../includes/msconame-md.md)] in un file RDL (Report Definition Language) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta molte caratteristiche di Access; tuttavia, a causa delle differenze tra Access e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], alcuni elementi vengono modificati leggermente o non sono supportati. In questo argomento vengono descritte le modalità di conversione delle caratteristiche dei report di Access in file RDL.  
@@ -35,7 +35,7 @@ ms.locfileid: "36063052"
 ## <a name="importing-access-reports"></a>Importazione di report di Access  
  Alcune query contengono codice specifico di Access. Il codice di Access non viene importato con il report. Inoltre, se una query contiene stringhe incorporate, il report potrebbe essere importato in modo non corretto. Per risolvere il problema, sostituire le stringhe con un codice con caratteri. Sostituire, ad esempio, il carattere virgola (,) con CHAR(34).  
   
- Il processo di importazione non ha superato correttamente il punto e virgola (;) o caratteri di markup XML (\<, > e così via) nelle informazioni della stringa di connessione. Se una stringa di connessione include un punto e virgola o un carattere di markup XML, sarà necessario impostare manualmente la password nel nuovo report dopo l'importazione.  
+ Il processo di importazione non supera correttamente il punto e virgola (;) o caratteri di markup XML (\<, > e così via) nelle informazioni della stringa di connessione. Se una stringa di connessione include un punto e virgola o un carattere di markup XML, sarà necessario impostare manualmente la password nel nuovo report dopo l'importazione.  
   
  Durante l'importazione non vengono importate le impostazioni di connessione o di timeout generale nella stringa di connessione. Potrebbe essere necessario correggere queste impostazioni dopo l'importazione del report.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36063052"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta origini dati OLE DB, ad esempio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se i report vengono importati da un progetto di Access (file con estensione adp), la stringa di connessione per l'origine dei dati viene recuperata dalla stringa di connessione presente nel file con estensione adp. Nel caso di report importati da database di Access (file con estensione mdb o accdb), è possibile che la stringa di connessione punti al database di Access e che sia necessario correggerla dopo l'importazione dei report. Se l'origine dei dati del report di Access è una query, le informazioni della query vengono archiviate nel file RDL senza modifiche. Se invece l'origine dei dati è una tabella, durante il processo di conversione viene creata una query in base al nome della tabella e ai campi in essa contenuti.  
   
 ## <a name="reports-with-custom-modules"></a>Report con moduli personalizzati  
- Se si è personalizzato [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] codice contenuto all'interno di moduli, non viene convertito. Se durante il processo di importazione, progettazione Report viene rilevato codice, un avviso viene generato e visualizzato nel **elenco attività** finestra.  
+ Se è presente personalizzato [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] codice contenuto all'interno dei moduli non viene convertito. Se vengono rilevati blocchi di codice durante il processo di importazione, un avviso viene generato e visualizzato nei **elenco attività** finestra.  
   
 ## <a name="report-controls"></a>Controlli dei report  
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono supportati i seguenti controlli di Access, che vengono inclusi nelle definizioni dei report convertiti.  
@@ -61,7 +61,7 @@ ms.locfileid: "36063052"
 |||||  
 |-|-|-|-|  
 |image|Etichetta|Riga|Rectangle|  
-|SubForm|SubReport<br /><br /> **Nota** mentre un sottoreport viene convertito nel report principale, il sottoreport vero e proprio viene convertito separatamente.|TextBox||  
+|SubForm|SubReport<br /><br /> **Nota** controllo mentre SubReport viene convertito nel report principale, il sottoreport vero e proprio viene convertito separatamente.|TextBox||  
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono supportati i seguenti controlli:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36063052"
 |CustomControl|ListBox|ObjectFrame|OptionButton|  
 |TabControl|ToggleButton|||  
   
- Se vengono rilevati questi controlli durante il processo di importazione, un avviso viene generato e visualizzato nel **elenco attività** finestra.  
+ Se vengono rilevati questi controlli durante il processo di importazione, un avviso viene generato e visualizzato nei **elenco attività** finestra.  
   
  Gli altri controlli, ad esempio i controlli ActiveX e Office Web Components, non vengono importati. Se ad esempio un report di Access include un controllo grafico OWC, tale controllo non verrà convertito durante l'importazione del report.  
   

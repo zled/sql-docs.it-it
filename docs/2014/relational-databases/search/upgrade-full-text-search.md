@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], installing
 - migrating full-text indexes [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 caps.latest.revision: 103
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ab9109e79d845416d89fe44282fe2b2f70629ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 192893274803d5c753fa6bd7acd90c7789d7f8b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264328"
 ---
 # <a name="upgrade-full-text-search"></a>Aggiornamento della ricerca full-text
   L'aggiornamento della ricerca full-text a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene effettuato in fase di installazione e durante il collegamento, il ripristino o la copia dei file di database e dei cataloghi full-text di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la Copia guidata database.  
@@ -36,7 +35,7 @@ ms.locfileid: "36063564"
   
 -   [Opzioni di aggiornamento Full-Text](#FT_Upgrade_Options)  
   
--   [Opzione di aggiornamento considerazioni per la scelta Full-Text](#Choosing_Upgade_Option)  
+-   [Opzione di aggiornamento di considerazioni relative alla selezione Full-Text](#Choosing_Upgade_Option)  
   
 -   [Migrazione degli indici Full-Text durante l'aggiornamento di un Database a SQL Server 2014](#Upgrade_Db)  
   
@@ -80,7 +79,7 @@ ms.locfileid: "36063564"
  Reimposta  
  I cataloghi full-text vengono ripristinati. Quando si esegue l'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], i file dei cataloghi full-text vengono rimossi, ma i metadati per i cataloghi full-text e gli indici full-text vengono mantenuti. Dopo l'aggiornamento, in tutti gli indici full-text il rilevamento delle modifiche viene disabilitato e le ricerche per indicizzazione non vengono avviate automaticamente. Il catalogo resterà vuoto fino a quando non si eseguirà manualmente un popolamento completo al termine dell'aggiornamento.  
   
-##  <a name="Choosing_Upgade_Option"></a> Opzione di aggiornamento considerazioni per la scelta Full-Text  
+##  <a name="Choosing_Upgade_Option"></a> Opzione di aggiornamento di considerazioni relative alla selezione Full-Text  
  Quando si sceglie l'opzione di aggiornamento, considerare gli elementi seguenti:  
   
 -   È richiesta coerenza nei risultati delle query?  

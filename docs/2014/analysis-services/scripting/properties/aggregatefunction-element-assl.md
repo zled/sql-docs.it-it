@@ -1,5 +1,5 @@
 ---
-title: Elemento AggregateFunction (ASSL) | Documenti Microsoft
+title: Elemento AggregateFunction (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregateFunction element
 ms.assetid: 880b6bd0-d62a-4221-831c-39f748ee84f2
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e292a0c509a746130493c7df601a9d373096c406
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc2eccf4ca6e41ffba52424c4f45edb71c9c1c46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261207"
 ---
 # <a name="aggregatefunction-element-assl"></a>Elemento AggregateFunction (ASSL)
-  Definisce il tipo di funzione di aggregazione usata da un [misure](../objects/measure-element-assl.md) elemento.  
+  Definisce il tipo di funzione di aggregazione usata da un [misura](../objects/measure-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36063925"
 |Elementi padre|[Misura](../objects/measure-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
 |valore|Description|  

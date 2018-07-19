@@ -1,5 +1,5 @@
 ---
-title: 'Opzioni (pagina XML:Tabs: Editor di testo) | Documenti Microsoft'
+title: 'Opzioni (pagina XML:Tabs: Editor di testo) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Tabs
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb41fb44ad1f820623ab3db96b1bf6108fd580a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2843acbc8935d8bd9f505a9265c704a342ddee3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324921"
 ---
 # <a name="options-text-editorxmltabs-page"></a>Opzioni (pagina XML:Tabs: Editor di testo)
   Questa finestra di dialogo consente di cambiare il comportamento di tabulazione dell'editor XML utilizzato per modificare i documenti XML. Per visualizzare queste impostazioni, scegliere **Opzioni** dal menu **Strumenti** , espandere la cartella **Editor di testo** , espandere la sottocartella **XML** e quindi fare clic su **Tabulazioni**.  
@@ -36,17 +36,17 @@ ms.locfileid: "36063158"
  **Blocco**  
  Quando è selezionata questa opzione la nuova riga creata premendo INVIO viene rientrata automaticamente della stessa distanza della riga precedente.  
   
- **Intelligente**  
+ **Smart**  
  Quando questa opzione è selezionata, la nuova riga creata in seguito alla pressione di INVIO viene posizionata in base al contesto. Ad esempio, dopo una parentesi graffa di apertura ({) le righe incluse vengono rientrate automaticamente di una tabulazione aggiuntiva. La corrispondente parentesi graffa di chiusura (}) viene riallineata con quella di apertura.  
   
 ## <a name="tabs"></a>Tabulazioni  
  **Dimensione tabulazione**  
  Consente di impostare la distanza in spazi tra le tabulazioni. Il valore predefinito è quattro spazi.  
   
- **Dimensione rientro**  
+ **Dimensione del rientro**  
  Consente di impostare la dimensione in spazi di un rientro automatico. Il valore predefinito è quattro spazi. Per riempire il rientro specificato verranno inseriti caratteri di tabulazione, caratteri di spazio o entrambi.  
   
- **Inserisci spazi**  
+ **Inserisci gli spazi**  
  Quando questa opzione è selezionata, durante le operazioni di rientro vengono inseriti solo caratteri spazio, non caratteri di tabulazione. Se la **Dimensione rientro** è impostata su 5, ad esempio, verranno inseriti cinque caratteri di spazio ogni volta che viene premuto TAB o si fa clic sul pulsante **Aumenta rientro** sulla barra degli strumenti della finestra principale di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .  
   
  **Mantieni tabulazioni**  

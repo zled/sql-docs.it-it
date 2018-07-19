@@ -1,5 +1,5 @@
 ---
-title: Definizione periodi di tempo (origine dati) (Creazione guidata dimensione) | Documenti Microsoft
+title: Definizione periodi di tempo (origine dati) (Creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timeperioddefinition.f1
 ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2c20dc34617590c5e4d1ab7134378afb2b7cfb93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b62c3da0e8a92eda40d883a596e862a6c679364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328861"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Definizione periodi di tempo (Origine dati) (Creazione guidata dimensione)
   Utilizzare la pagina **Definizione periodi di tempo** per definire gli attributi che rappresentano periodi di tempo nella dimensione temporale con colonne nella tabella specificata nella pagina **Selezione tipo di dimensione** .  
@@ -42,8 +42,8 @@ ms.locfileid: "36062768"
  Per cambiare la colonna, fare clic sulla colonna e quindi selezionare una colonna diversa nell'elenco.  
   
 ## <a name="see-also"></a>Vedere anche  
- [F1 Guida della procedura guidata di dimensione](dimension-wizard-f1-help.md)   
- [Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

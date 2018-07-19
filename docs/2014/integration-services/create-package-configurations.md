@@ -1,5 +1,5 @@
 ---
-title: Creare le configurazioni di pacchetto | Documenti Microsoft
+title: Creare le configurazioni di pacchetto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, configurations
 - Package Configurations Organizer dialog box
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 caps.latest.revision: 71
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be150c6e13e1e677539e19fd96398eaa659bc26d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec353414e9b910285152ed3f391ca4dc1970ed45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266787"
 ---
 # <a name="create-package-configurations"></a>Creazione di configurazioni dei pacchetti
   Le configurazioni di pacchetto vengono create nella finestra di dialogo **Libreria configurazioni pacchetto** e tramite la Configurazione guidata pacchetto. Per accedere a questi strumenti, fare clic su **Configurazioni pacchetto** nel menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -121,7 +121,7 @@ ms.locfileid: "36063395"
 -   Post di blog [API Sample – Programmatically add a configuration file to a package](http://go.microsoft.com/fwlink/?LinkId=217664)(esempio di API relativo all'aggiunta a livello di programmazione di un file di configurazione a un pacchetto), su blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazioni dei pacchetti](../../2014/integration-services/package-configurations.md)   
+ [Configurazioni di pacchetto](../../2014/integration-services/package-configurations.md)   
  [Distribuzione del pacchetto &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [Utilizzo delle variabili a livello di programmazione](building-packages-programmatically/working-with-variables-programmatically.md)  
   

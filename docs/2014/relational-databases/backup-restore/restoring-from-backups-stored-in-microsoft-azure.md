@@ -1,25 +1,24 @@
 ---
-title: Ripristino da backup archiviati in Microsoft Azure | Documenti Microsoft
+title: Il ripristino dai backup archiviati in Microsoft Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 90fe4fd8aacb3d945aab6d2b0872f2aff958f01f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5eb28e1bf53d889db8767d0c7fcdfcf94a2e5a45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269077"
 ---
 # <a name="restoring-from-backups-stored-in-windows-azure"></a>Ripristino da backup archiviati in Windows Azure
   In questo argomento vengono illustrate le considerazioni relative al ripristino di un database tramite un backup archiviato nel servizio di archiviazione BLOB di Windows Azure. Ciò si applica ai backup creati tramite il backup di SQL Server nell'URL o tramite [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  

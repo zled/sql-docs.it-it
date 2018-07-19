@@ -1,5 +1,5 @@
 ---
-title: Pagina di selezione (gestione Report) dell'origine dati | Documenti Microsoft
+title: Pagina di selezione (gestione Report) dell'origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 800b6fdbe63ca1c7adb5f79367e317a4a2a62167
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 528e30c885150e3d9fc422449987ba211e77161b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256480"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Pagina di selezione dell'origine dei dati (Gestione report)
   La pagina di selezione dell'origine dati consente di selezionare un'origine dati condivisa esistente da utilizzare con un report o un modello di report. È inoltre possibile utilizzare questa pagina per selezionare un'origine dati diversa. Per visualizzare il tipo di origine dati o la stringa di connessione, è necessario navigare fino all'origine dati condivisa e visualizzare le pagine delle proprietà.  
@@ -54,6 +54,6 @@ ms.locfileid: "36063989"
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Pagina delle proprietà Origini dati &#40;Gestione report&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [Pagina Nuova origine dati &#40;Gestione report&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

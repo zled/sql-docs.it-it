@@ -1,5 +1,5 @@
 ---
-title: Vista origine dati (scheda struttura dimensione, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Vista origine dati (scheda struttura dimensione, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c960a5c08f3d95ee6ef0813db67f8d9a33a6a683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246161"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Vista origine dati (scheda Struttura dimensione, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
   Il riquadro **Vista origine dati** consente di visualizzare le tabelle e le colonne della vista origine dati associate alla dimensione selezionata. Questo riquadro consente di creare attributi, proprietà del membro, gerarchie e livelli trascinando le colonne dal riquadro **Vista origine dati** ai riquadri **Attributi** o **Gerarchie e livelli** .  
@@ -101,7 +101,7 @@ ms.locfileid: "36063488"
  **Nascondi tabella**  
  Consente di rimuovere la tabella dal riquadro.  
   
- **Esplorare i dati**  
+ **Esplorazione dati**  
  Consente di visualizzare la finestra di dialogo **Esplora dati** per la tabella selezionata.  
   
  **Modifica vista origine dati**  
@@ -116,7 +116,7 @@ ms.locfileid: "36063488"
  **Nuovo attributo da colonna**  
  Consente di visualizzare nel riquadro le tabelle correlate a quella selezionata nella vista origine dati.  
   
- **Esplorare i dati**  
+ **Esplorazione dati**  
  Consente di visualizzare la finestra di dialogo **Esplora dati** per la tabella contenente la colonna selezionata.  
   
  **Modifica vista origine dati**  
@@ -136,8 +136,8 @@ ms.locfileid: "36063488"
   
 ## <a name="see-also"></a>Vedere anche  
  [Struttura dimensione &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barra degli strumenti &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
+ [Sulla barra degli strumenti &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
  [Gli attributi &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
- [Gerarchie &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Gerarchie di &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

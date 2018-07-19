@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione OLE DB (pagina Gestione connessione) | Documenti Microsoft
+title: Editor destinazione OLE DB (pagina Gestione connessione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 caps.latest.revision: 81
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cead24f56ca904d8d1286dfb7e1dd1b96302291
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 1e6aaff0e415aeaab5e42395a3acd7c0b96a0f00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328071"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Editor destinazione OLE DB (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione OLE DB** per selezionare la connessione OLE DB per la destinazione. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
@@ -161,9 +161,9 @@ ms.locfileid: "36324715"
  Consente di verificare la sintassi del testo della query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione OLE DB &#40;pagina mapping&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
- [Editor destinazione OLE DB &#40;pagina di Output di errore&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [Editor destinazione OLE DB &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Caricare dati tramite la destinazione OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   
