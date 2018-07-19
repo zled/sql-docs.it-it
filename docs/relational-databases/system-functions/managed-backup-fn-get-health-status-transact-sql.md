@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fa9a510f2be08329173898b7e0e6794458ea8fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229504"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041969"
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,27 +53,27 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
  L'inizio del periodo di tempo a partire dal quale viene eseguito il conteggio aggregato degli errori.  Il @begin_time parametro è DATETIME. Il valore predefinito è NULL. Quando il valore è NULL, la funzione elabora gli eventi restituiti fino a 30 minuti prima dell'ora corrente.  
   
  [ @end_time]  
- La fine del periodo di tempo nel quale viene eseguito il conteggio aggregato degli errori. Il @end_time parametro è DATETIME e il valore predefinito NULL. Quando il valore è NULL, la funzione elabora gli eventi estesi fino all'ora corrente.  
+ La fine del periodo di tempo nel quale viene eseguito il conteggio aggregato degli errori. Il @end_time parametro è DateTime e il valore predefinito NULL. Quando il valore è NULL, la funzione elabora gli eventi estesi fino all'ora corrente.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|Numero di errori di connessione quando il programma si connette all'account di archiviazione di Windows Azure.|  
-|number_of_sql_errors|int|Numero di errori restituiti mentre il programma si connette al motore di SQL Server.|  
-|number_of_invalid_credential_errors|int|Numero di errori restituiti mentre il programma tenta di eseguire l'autenticazione utilizzando le credenziali SQL.|  
-|number_of_other_errors|int|Numero di errori di altre categorie oltre la connettività, SQL o le credenziali.|  
-|number_of_corrupted_or_deleted_backups|int|Numero di file di backup danneggiati o eliminati.|  
-|number_of_backup_loops|int|Il numero di analisi eseguite dall'agente di backup su tutti i database configurati con il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|number_of_retention_loops|int|Numero di analisi eseguite sui database per valutare il periodo di memorizzazione impostato.|  
+|number_of_storage_connectivity_errors|INT|Numero di errori di connessione quando il programma si connette all'account di archiviazione di Windows Azure.|  
+|number_of_sql_errors|INT|Numero di errori restituiti mentre il programma si connette al motore di SQL Server.|  
+|number_of_invalid_credential_errors|INT|Numero di errori restituiti mentre il programma tenta di eseguire l'autenticazione utilizzando le credenziali SQL.|  
+|number_of_other_errors|INT|Numero di errori di altre categorie oltre la connettività, SQL o le credenziali.|  
+|number_of_corrupted_or_deleted_backups|INT|Numero di file di backup danneggiati o eliminati.|  
+|number_of_backup_loops|INT|Il numero di analisi eseguite dall'agente di backup su tutti i database configurati con il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|number_of_retention_loops|INT|Numero di analisi eseguite sui database per valutare il periodo di memorizzazione impostato.|  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- Questi conteggi aggregati possono essere utilizzati per monitorare l'integrità del sistema. Ad esempio, se la colonna number_ of_retention_loops è 0 in 30 minuti, è possibile che la gestione della memorizzazione richieda del tempo o che addirittura non funzioni correttamente. Le colonne di errori diverse da zero possono indicare problemi e, per individuarli, è necessario verificare i registri eventi estesi. In alternativa, utilizzare la stored procedure **managed_backup.sp_get_backup_diagnostics** per ottenere un elenco degli eventi estesi per trovare i dettagli dell'errore.  
+ Questi conteggi aggregati possono essere utilizzati per monitorare l'integrità del sistema. Ad esempio, se la colonna number_ of_retention_loops è 0 in 30 minuti, è possibile che la gestione della memorizzazione richieda del tempo o che addirittura non funzioni correttamente. Le colonne di errori diverse da zero possono indicare problemi e, per individuarli, è necessario verificare i registri eventi estesi. In alternativa, usare la stored procedure **managed_backup.sp_get_backup_diagnostics** per ottenere un elenco degli eventi estesi per trovare i dettagli dell'errore.  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
- Richiede **selezionare** autorizzazioni nella funzione.  
+ È necessario **seleziona** autorizzazioni nella funzione.  
   
 ## <a name="examples"></a>Esempi  
   

@@ -1,5 +1,5 @@
 ---
-title: CREARE LA STRUTTURA DI DATA MINING (DMX) | Documenti Microsoft
+title: CREARE LA STRUTTURA DI DATA MINING (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842754"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041268"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Crea una nuova struttura di data mining in un database e facoltativamente definisce le partizioni di training e test. Dopo aver creato la struttura di data mining, è possibile usare il [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) istruzione per aggiungere modelli alla struttura di data mining.  
+  Crea una nuova struttura di data mining in un database e facoltativamente definisce le partizioni di training e test. Dopo aver creato la struttura di data mining, è possibile usare la [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) istruzione per aggiungere modelli alla struttura di data mining.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,13 +38,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  *struttura*  
  Nome univoco della struttura.  
   
- *elenco delle definizioni di colonna*  
+ *elenco di definizioni di colonna*  
  Elenco delimitato da virgole contenente le definizioni delle colonne.  
   
- *controllo maxpercent*  
+ *dati di controllo-maxpercent*  
  Valore intero tra 1 e 100 che indica la percentuale di dati accantonata per l'esecuzione di test.  
   
- *controllo maxcases*  
+ *dati di controllo-maxcases*  
  Valore intero che indica il numero massimo di case da utilizzare per l'esecuzione di test.  
   
  Se il valore massimo specificato per i case è maggiore del numero dei case di input, tutti i case di input sono utilizzati per l'esecuzione di test e viene generato un avviso.  
@@ -52,7 +52,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  Se sono specificati entrambi, percentuale e numero massimo di case, viene utilizzato il più piccolo dei due limiti.  
   
- *valore di inizializzazione di controllo*  
+ *valore di inizializzazione dei dati di controllo*  
  Valore intero utilizzato come valore di inizializzazione per avviare il partizionamento dei dati.  
   
  Se è impostato su 0, come valore di inizializzazione viene utilizzato l'hash del'ID della struttura di data mining.  
@@ -62,7 +62,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Valore predefinito: REPEATABLE (0)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per definire una struttura di data mining è necessario specificare un elenco di colonne, specificando facoltativamente le relazioni gerarchiche tra le stesse e partizionando facoltativamente la struttura di data mining in set di dati di training e test.  
   
  La parola chiave SESSION facoltativa indica che si tratta di una struttura temporanea che è possibile utilizzare solo per la durata della sessione corrente. Al termine della sessione, la struttura e gli eventuali modelli basati su di essa verranno eliminati. Per creare modelli e strutture di data mining temporanei, è innanzitutto necessario impostare la proprietà del database AllowSessionMiningModels. Per altre informazioni, vedere [Proprietà di data mining](../analysis-services/server-properties/data-mining-properties.md).  
@@ -102,12 +102,12 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
 -   [Distribuzioni delle colonne &#40;Data Mining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [I flag di modellazione &#40;Data Mining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Flag di modellazione &#40;Data Mining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  È possibile definire più valori dei flag di modellazione per una colonna. Tuttavia, è possibile disporre solo di un tipo di contenuto e di un tipo di dati per colonna.  
   
 ### <a name="column-relationships"></a>Relazioni tra colonne  
- Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola a qualsiasi istruzione per la definizione di colonna. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta l'utilizzo delle operazioni seguenti \<relazione a colonna > clausola.  
+ Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola a qualsiasi istruzione per la definizione di colonna. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta l'utilizzo delle opzioni seguenti \<relazione a colonna > clausola.  
   
  **CORRELATI A**  
  Indica una gerarchia di valori. La destinazione di una colonna con clausola RELATED TO può essere una colonna chiave in una tabella nidificata, una colonna con valori discreti nella riga dei case oppure un'altra colonna con una clausola RELATED TO, che indica una gerarchia con più livelli.  
@@ -120,7 +120,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  Il **ALTER MINING STRUCTURE** istruzione non supporta i dati di controllo.  
   
- È possibile specificare fino a tre parametri di controllo. Se si specifica sia un numero massimo di case di controllo sia una percentuale di controllo, viene riservata una percentuale di case fino al raggiungimento del limite massimo dei case. Specificare la percentuale di controllo come un numero intero seguito dal **%** (parola chiave) e specificare il numero massimo di case come un numero intero seguito dal **casi** (parola chiave). È possibile combinare le condizioni in qualsiasi ordine, come mostrato negli esempi seguenti:  
+ È possibile specificare fino a tre parametri di controllo. Se si specifica sia un numero massimo di case di controllo sia una percentuale di controllo, viene riservata una percentuale di case fino al raggiungimento del limite massimo dei case. Specificare la percentuale di dati di controllo come valore intero seguito dal **percento** parola chiave e specificare il numero massimo di case come valore intero seguito dal **casi** (parola chiave). È possibile combinare le condizioni in qualsiasi ordine, come mostrato negli esempi seguenti:  
   
 ```  
 WITH HOLDOUT (20 PERCENT)   
@@ -132,7 +132,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  Il valore di inizializzazione di controllo controlla il punto iniziale del processo di assegnazione casuale dei case ai set di dati di training o test. Impostando un valore di inizializzazione di controllo, è possibile garantire che la partizione possa essere ripetuta. Se non viene specificato un valore di inizializzazione di controllo, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizza il nome della struttura di data mining per creare un valore di inizializzazione. Se si modifica il nome della struttura, il valore di inizializzazione cambierà. È possibile utilizzare il parametro del valore di inizializzazione di controllo con uno o entrambi gli altri parametri di controllo.  
   
 > [!NOTE]  
->  Poiché le informazioni di partizione sono memorizzata nella cache con i dati di training, per utilizzare il controllo, è necessario assicurarsi che il **CacheMode** della struttura di data mining è impostata su **KeepTrainingData**. Si tratta dell'impostazione predefinita in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per le strutture di data mining nuove. Modifica il **CacheMode** proprietà **ClearTrainingCases** su una struttura di data mining esistente che contiene un controllo partizione non influiranno sui modelli di data mining che sono stati elaborati. Tuttavia, se <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> non è impostata su **KeepTrainingData**, parametri di controllo non ha alcun effetto. Ciò significa che tutti i dati di origine saranno utilizzati per il training e non sarà disponibile alcun set di test. La definizione della partizione è memorizzata nella cache con la struttura; se si cancella la cache dei case di training, verrà cancellata anche la cache dei dati di test e la definizione del controllo impostato.  
+>  Poiché le informazioni di partizione viene memorizzato nella cache con i dati di training, per utilizzare il controllo, è necessario assicurarsi che il **CacheMode** della struttura di data mining è impostata su **KeepTrainingData**. Si tratta dell'impostazione predefinita in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per le strutture di data mining nuove. Modifica il **CacheMode** proprietà **ClearTrainingCases** su una struttura di data mining esistente che contiene un controllo partizione non influirà su qualsiasi modello di data mining è stati elaborati. Tuttavia, se <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> non è impostata su **KeepTrainingData**, parametri di controllo non ha alcun effetto. Ciò significa che tutti i dati di origine saranno utilizzati per il training e non sarà disponibile alcun set di test. La definizione della partizione è memorizzata nella cache con la struttura; se si cancella la cache dei case di training, verrà cancellata anche la cache dei dati di test e la definizione del controllo impostato.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato come creare una struttura di data mining con controllo mediante DMX.  
@@ -179,8 +179,8 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

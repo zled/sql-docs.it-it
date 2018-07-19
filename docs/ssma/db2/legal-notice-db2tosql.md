@@ -1,5 +1,5 @@
 ---
-title: Note legali (DB2toSQL) | Documenti Microsoft
+title: Legal Notice (DB2toSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,29 +23,29 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 06/05/2018
 ms.locfileid: "34774827"
 ---
-# <a name="legal-notice-db2tosql"></a>Note legali (DB2toSQL)
-La presente documentazione, incluse le applicazioni di esempio in essa contenute, viene fornita a scopo esclusivamente informativo e senza alcuna garanzia, espressa o implicita. Le informazioni contenute nella presente documentazione, compresi indirizzi URL e altri riferimenti a siti Web Internet, sono soggette a modifiche senza preavviso. L'utente utilizza la presente documentazione a proprio rischio.  
+# <a name="legal-notice-db2tosql"></a>Legal Notice (DB2toSQL)
+This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  
   
-Obiettivo principale degli esempi inclusi nella documentazione è quello di illustrare un concetto o l'utilizzo comune di un'istruzione o di una clausola specifica. La maggior parte degli esempi non include il codice completo normalmente disponibile in un sistema completo e finale, in quanto una parte dei normali dati di convalida o la gestione degli errori vengono in genere rimossi dagli esempi per mettere in maggiore evidenza il concetto o l'istruzione specifici illustrati nell'esempio stesso. I servizi del Servizio Supporto Tecnico Clienti Microsoft non sono disponibili per gli esempi e il codice sorgente incluso.  
+The primary purpose of a sample contained within this documentation is to illustrate a concept, or a reasonable use of a particular statement or clause. Most samples do not include all of the code that may normally be found in a full production system, as some of the usual data validation and error handling is removed to focus the sample on a particular concept or statement. Technical support is not available for these samples or for any included source code.  
   
-Se non specificato diversamente, società, organizzazioni, prodotti, nomi di dominio, indirizzi di posta elettronica, persone, luoghi ed eventi citati in questo documento sono puramente casuale e nessuna associazione con qualsiasi società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica, persona, luogo o evento è intenzionale o può essere presupposta. Il rispetto di tutte le applicabili leggi in materia di copyright è esclusivamente a carico dell'utente. Fermi restando tutti i diritti coperti da copyright, nessuna parte di questa documentazione potrà comunque essere riprodotta o inserita in un sistema di riproduzione o trasmessa in qualsiasi forma e con qualsiasi mezzo (in formato elettronico, meccanico, fotocopia, tramite registrazione o altro) per qualsiasi scopo, senza il permesso scritto di Microsoft Corporation.  
+Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, person, place, or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this documentation may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.  
   
-Microsoft può essere titolare di brevetti, domande di brevetto, marchi, copyright o altri diritti di proprietà intellettuale relativi all'oggetto della presente documentazione. Salvo quanto espressamente previsto in un contratto scritto di licenza Microsoft, la consegna della presente documentazione non implica la concessione di alcuna licenza su tali brevetti, marchi, copyright o altra proprietà intellettuale.  
+Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this documentation. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this documentation does not give you any license to these patents, trademarks, copyrights, or other intellectual property.  
   
-© 2016 Microsoft Corporation. Tutti i diritti sono riservati.  
+© 2016 Microsoft Corporation. All rights reserved.  
   
-Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System e WinFX sono marchi o marchi registrati di Microsoft Corporation negli Stati Uniti e/o in altri paesi/aree geografiche.  
+Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System, and WinFX are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries/regions.  
   
-SAP NetWeaver è un marchio registrato di SAP AG in Germania e in altri paesi/aree geografiche.  
+SAP NetWeaver is the registered trademark of SAP AG in Germany and in several other countries/regions.  
   
-Altri nomi di prodotti e società citati nel presente documento sono marchi dei rispettivi proprietari.  
+All other trademarks are property of their respective owners.  
   
-## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Criteri relativi alla documentazione per il supporto e l'aggiornamento di SQL Server  
-Il contenuto visualizzato nella documentazione di SQL Server viene pubblicato solo dopo sufficienti test. La documentazione del prodotto, ossia la documentazione online di SQL Server, i file leggimi, i documenti sui problemi noti e gli articoli della Knowledge Base, contiene contenuti relativi alle caratteristiche e alle funzionalità di SQL Server sufficientemente solidi da poter essere usati da tutti i clienti. Tali criteri si applicano alla documentazione di SQL Server, inclusi i file leggimi relativi a versioni e Service Pack. I file leggimi sono considerati estensioni della documentazione online.  
+## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Documentation Policy for SQL Server Support and Upgrade  
+Content that appears in SQL Server documentation is published only after it has been tested sufficiently. Product documentation – SQL Server Books Online, readme files, known issues documents, and Knowledge Base articles – contains content regarding SQL Server features and functionality that is robust enough to be safe for general use by all customers. This policy applies to all SQL Server documentation, including readme files for releases and services packs; a readme file is considered an extension of Books Online.  
   
-In alcuni casi, una determinata funzionalità non può essere usata direttamente dai clienti e, pertanto, non è stata documentata. A meno che una funzionalità non venga descritta anche nella documentazione di SQL Server pubblicata da Microsoft, il contenuto della documentazione o di siti Web di terze parti non è supportato dall'assistenza clienti Microsoft e non deve essere usato in applicazioni o database di produzione.  
+In some cases, a particular feature is not something that customers should use directly and, therefore, it is not documented. Unless a feature is also discussed in SQL Server documentation published by Microsoft, content from third-party books or Web sites is not supported by Microsoft customer support, and should not be used in production databases or applications.  
   
-I clienti non devono usare le API non documentate, inclusi a titolo esemplificativo: stored procedure, stored procedure estese, funzioni, viste, tabelle, colonne, proprietà o metadati. L'assistenza clienti Microsoft non supporta i database o le applicazioni che usano punti di ingresso non trattati nella documentazione.  
+Customers must not use undocumented APIs, including but not limited to: stored procedures, extended stored procedures, functions, views, tables, columns, properties, or metadata. Microsoft customer support will not support databases or applications that leverage or use undocumented entry points.  
   
-Gli aggiornamenti di server e database alle versioni successive di SQL Server non sono garantiti per le applicazioni e i database che usano punti di ingresso non trattati nella documentazione. L'uso delle caratteristiche e delle funzionalità di SQL Server deve essere limitato a quanto incluso nella documentazione di Microsoft SQL Server. Se una funzionalità non è documentata nella documentazione di Microsoft SQL Server, non è una parte di SQL Server supportata.  
+Server and database upgrades to future versions of SQL Server are not guaranteed for applications and databases that leverage and use undocumented entry points. Use of SQL Server features and functionality must be limited to those that are included in Microsoft SQL Server documentation. If a feature is not documented in Microsoft SQL Server documentation, it is not a supported part of SQL Server.  
   

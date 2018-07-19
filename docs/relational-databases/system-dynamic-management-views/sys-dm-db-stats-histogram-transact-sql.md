@@ -25,15 +25,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: af1930b1cd5f8536c9e9f196a8ea739538042ca0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042769"
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Restituisce l'istogramma delle statistiche per l'oggetto di database specificato (tabella o vista indicizzata) nell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Simile a `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
+Restituisce l'istogramma delle statistiche per l'oggetto database specificato (tabella o vista indicizzata) nell'attuale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Simile a `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
 > [!NOTE] 
 > È disponibile a partire da questa DMF [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
@@ -62,13 +63,13 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |RANGE_ROWS |**real** |Numero stimato di righe il cui valore di colonna è compreso in un intervallo dell'istogramma, escluso il limite superiore. |
 |equal_rows |**real** |Numero stimato di righe il cui valore di colonna è uguale al limite superiore dell'intervallo dell'istogramma. |
 |distinct_range_rows |**bigint** |Numero stimato di righe con un valore distinct di colonna compreso in un intervallo dell'istogramma, escluso il limite superiore. |
-|average_range_rows |**real** |Numero medio di righe con valori di colonna duplicati in un istogramma, escluso il limite superiore (`RANGE_ROWS / DISTINCT_RANGE_ROWS` per `DISTINCT_RANGE_ROWS > 0`). |
+|average_range_rows |**real** |Numero medio di righe con valori di colonna duplicati in un istogramma, escluso il limite massimo (`RANGE_ROWS / DISTINCT_RANGE_ROWS` per `DISTINCT_RANGE_ROWS > 0`). |
   
- ## <a name="remarks"></a>Osservazioni  
+ ## <a name="remarks"></a>Note  
  
- Il set di risultati per `sys.dm_db_stats_histogram` restituisce informazioni simili alle `DBCC SHOW_STATISTICS WITH HISTOGRAM` e include anche `object_id`, `stats_id`, e `step_number`.
+ Il set di risultati per `sys.dm_db_stats_histogram` restituisce informazioni simili alle `DBCC SHOW_STATISTICS WITH HISTOGRAM` e include inoltre `object_id`, `stats_id`, e `step_number`.
 
- Poiché la colonna `range_high_key` è di tipo data sql_variant tipo, potrebbe essere necessario utilizzare `CAST` o `CONVERT` in caso di un predicato di confronto con una costante non di tipo stringa.
+ Perché la colonna `range_high_key` è una dati sql_variant tipo, potrebbe essere necessario usare `CAST` o `CONVERT` se un predicato di confronto con una costante non di tipo stringa.
 
 ### <a name="histogram"></a>Istogramma
   
@@ -97,7 +98,7 @@ L'utente deve avere autorizzazioni di selezione per le colonne delle statistiche
 ## <a name="examples"></a>Esempi  
 
 ### <a name="a-simple-example"></a>A. Esempio semplice    
-Nell'esempio seguente crea e popola una tabella semplice. Quindi Crea statistiche per il `Country_Name` colonna.
+Nell'esempio seguente crea e popola una tabella semplice. Quindi crea le statistiche di `Country_Name` colonna.
 
 ```sql
 CREATE TABLE Country
@@ -113,7 +114,7 @@ La chiave primaria occupa `stat_id` numero 1, quindi chiamare `sys.dm_db_stats_h
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-### <a name="b-useful-query"></a>B. Query utile:   
+### <a name="b-useful-query"></a>B. Query utili:   
 ```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
@@ -122,15 +123,15 @@ CROSS APPLY sys.dm_db_stats_histogram(s.[object_id], s.stats_id) AS hist
 WHERE s.[name] = N'<statistic_name>';
 ```
 
-### <a name="c-useful-query"></a>C. Query utile:
-L'esempio seguente seleziona dalla tabella `Country` con un predicato per la colonna `Country_Name`.
+### <a name="c-useful-query"></a>C. Query utili:
+L'esempio seguente seleziona dalla tabella `Country` con un predicato nella colonna `Country_Name`.
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-Nell'esempio seguente esamina la statistica creata in precedenza nella tabella `Country` e di colonna `Country_Name` per il tipo di istogramma che corrispondono al predicato della query precedente.
+L'esempio seguente esamina la statistica creata in precedenza nella tabella `Country` e alla colonna `Country_Name` per l'intervallo dell'istogramma che corrispondono al predicato nella query precedente.
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 

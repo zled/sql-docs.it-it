@@ -1,5 +1,5 @@
 ---
-title: sp_dbremove (Transact-SQL) | Documenti Microsoft
+title: sp_dbremove (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 518ffebe8638292ee1b6bd4aa63a7f5e5f19a4d3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255646"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042715"
 ---
 # <a name="spdbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33255646"
   Rimuove un database e tutti i file associati.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È consigliabile utilizzare [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È consigliabile usare [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) invece.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@dbname=** ] **'***database***'**  
- Nome del database da rimuovere. *database* viene **sysname**, con valore predefinito è NULL.  
+ Nome del database da rimuovere. *database* viene **sysname**, con un valore predefinito NULL.  
   
  [  **@dropdev=** ] **'***dropdev***'**  
  Flag disponibile per compatibilità con le versioni precedenti e attualmente ignorato. *dropdev* ha il valore **dropdev**.  
@@ -57,7 +57,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  

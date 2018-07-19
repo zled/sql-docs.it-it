@@ -1,1 +1,1 @@
- C:\Program Files\Microsoft SQL Server\\*nnn*\  
+ C:\Programmi\Microsoft SQL Server\\*nnn*\  

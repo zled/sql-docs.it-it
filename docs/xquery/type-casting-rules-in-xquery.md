@@ -1,5 +1,5 @@
 ---
-title: Tipo di regole del cast in XQuery | Documenti Microsoft
+title: Tipo di regole del cast in XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3142794843083c5dcc314b7dc6b0f69cb62f889e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077908"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055246"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Regole del cast dei tipi in XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,27 +50,27 @@ ms.locfileid: "33077908"
 ## <a name="explicit-casting"></a>Cast esplicito  
  Nella tabella seguente viene illustrato il cast dei tipi consentito tra i tipi primitivi predefiniti.  
   
- ![Vengono descritte le regole di cast per XQuery. ] (../xquery/media/casting-builtin-types.gif "Vengono descritte le regole di cast per XQuery.")  
+ ![Descrive le regole di cast per XQuery. ] (../xquery/media/casting-builtin-types.gif "Descrive le regole di cast per XQuery.")  
   
 -   Per un tipo primitivo predefinito è possibile eseguire il cast a un altro tipo primitivo predefinito, in base alle regole indicate nella tabella.  
   
--   Per un tipo primitivo è possibile eseguire il cast a qualsiasi tipo derivato da tale tipo primitivo. Ad esempio, è possibile eseguire il cast da **xs: decimal** a **xs: integer**, o da **xs: decimal** a **xs: long**.  
+-   Per un tipo primitivo è possibile eseguire il cast a qualsiasi tipo derivato da tale tipo primitivo. Ad esempio, è possibile eseguire il cast da **xs: decimal** al **xs: integer**, o da **xs: decimal** al **xs: long**.  
   
--   Per un tipo derivato è possibile eseguire il cast a qualsiasi tipo che rappresenti un predecessore corrispondente nella gerarchia di tipi, fino al relativo tipo di base primitivo predefinito. Ad esempio, è possibile eseguire il cast da **xs: token** a **xs: normalizedString** o **xs: String**.  
+-   Per un tipo derivato è possibile eseguire il cast a qualsiasi tipo che rappresenti un predecessore corrispondente nella gerarchia di tipi, fino al relativo tipo di base primitivo predefinito. Ad esempio, è possibile eseguire il cast da **xs: token** al **xs: normalizedString** o a **xs: String**.  
   
--   Per un tipo derivato è possibile eseguire il cast a un tipo primitivo a condizione di poter eseguire il cast del relativo predecessore al tipo di destinazione. Ad esempio, è possibile eseguire il cast **xs: integer**, un oggetto derivato a tipo, un **xs: String**primitivo tipo, perché **xs: decimal**, **xs: integer**del predecessore primitivo, può essere convertito in **xs: String**.  
+-   Per un tipo derivato è possibile eseguire il cast a un tipo primitivo a condizione di poter eseguire il cast del relativo predecessore al tipo di destinazione. Ad esempio, è possibile eseguire il cast **xs: integer**, un derivato a tipo, un **xs: String**primitivo tipo mene **xs: decimal**, **xs: integer**del predecessore primitivo, può essere convertito in **xs: String**.  
   
--   Per un tipo derivato è possibile eseguire il cast a un altro tipo derivato a condizione di poter eseguire il cast del predecessore primitivo del tipo di origine al predecessore primitivo del tipo di destinazione. Ad esempio, è possibile eseguire il cast da **xs: integer** a **xs: token**, in quanto è possibile eseguire il cast da **xs: decimal** a **xs: String**.  
+-   Per un tipo derivato è possibile eseguire il cast a un altro tipo derivato a condizione di poter eseguire il cast del predecessore primitivo del tipo di origine al predecessore primitivo del tipo di destinazione. Ad esempio, è possibile eseguire il cast da **xs: integer** al **xs: token**, in quanto è possibile eseguire il cast da **xs: decimal** al **xs: String**.  
   
--   Le regole per il cast di tipi definiti dall'utente a tipi predefiniti sono le stesse applicate per i tipi predefiniti. Ad esempio, è possibile definire un **myInteger** tipo derivato da **xs: integer** tipo. Quindi, **myInteger** può essere convertito in **xs: token**perché **xs: decimal** può essere convertito in **xs: String**.  
+-   Le regole per il cast di tipi definiti dall'utente a tipi predefiniti sono le stesse applicate per i tipi predefiniti. Ad esempio, è possibile definire un **myInteger** tipo derivato da **xs: integer** tipo. Quindi **myInteger** può essere eseguito il cast **xs: token**, in quanto **xs: decimal** può essere convertito in **xs: String**.  
   
  Non sono supportati i tipi di cast seguenti:  
   
--   Cast a/da tipi elenco, Include sia tipi elenco definiti dall'utente e elenco incorporate quali **xs: IDREFS**, **xs**, e **xs: NMTOKENS**.  
+-   Cast a/da tipi elenco, Questo include, ad esempio i tipi elenco definiti dall'utente e i tipi elenco predefiniti **xs: IDREFS**, **xs: Entities**, e **xs: NMTOKENS**.  
   
--   Cast a / da **xs: QName** non è supportata.  
+-   Esegue il cast da o verso **xs: QName** non è supportato.  
   
--   **xs: NOTATION** e i sottotipi di durata completamente ordinati **xdt: yearmonthduration** e **xdt: daytimeduration**, non sono supportati. incluso di conseguenza il cast da/a questi tipi.  
+-   **xs: NOTATION** e i sottotipi di durata, completamente ordinati **xdt: yearmonthduration** e **xdt: daytimeduration**, non sono supportati. incluso di conseguenza il cast da/a questi tipi.  
   
  Negli esempi seguenti viene illustrato il cast dei tipi esplicito.  
   
@@ -142,23 +142,23 @@ go
 ```  
   
 ## <a name="implicit-casting"></a>Cast implicito  
- Il cast implicito è consentito solo per i tipi numeric e per i tipi atomici non tipizzati. Ad esempio, **min ()** funzione restituisce il valore minimo di due valori:  
+ Il cast implicito è consentito solo per i tipi numeric e per i tipi atomici non tipizzati. Ad esempio, il seguente **min ()** funzione restituisce il numero minimo di due valori:  
   
 ```  
 min(xs:integer("1"), xs:double("1.1"))  
 ```  
   
- In questo esempio, i due valori passati a XQuery **min ()** funzione sono di tipo diverso. Pertanto, in cui viene eseguita la conversione implicita in **intero** tipo viene promosso a **doppie** e le due **doppie** vengono confrontati i valori.  
+ In questo esempio, i due valori passati per la query XQuery **min ()** funzione sono di tipo diverso. Pertanto, viene eseguita la conversione implicita in cui **integer** tipo viene promosso a **double** e due **double** valori vengono confrontati.  
   
  Per la promozione dei tipi descritta in questo esempio vengono applicate le regole seguenti:  
   
--   Un tipo numeric derivato può essere promosso al tipo di base corrispondente. Ad esempio, **intero** può essere promosso al **decimale**.  
+-   Un tipo numeric derivato può essere promosso al tipo di base corrispondente. Ad esempio, **integer** può essere promosso al **decimale**.  
   
--   Oggetto **decimale** può essere promosso al **float,** e **float** può essere promosso al **double**.  
+-   Oggetto **decimale** può essere promosso al **float** e un **float** può essere promosso al **doppie**.  
   
  Poiché il cast implicito è consentito solo per i tipi numeric, non è possibile eseguirlo nei casi seguenti:  
   
--   Non è consentito il cast implicito per i tipi string. Ad esempio, se due **stringa** sono previsti tipi e si passa un **stringa** e **token**, si verifica alcun cast implicito e viene restituito un errore.  
+-   Non è consentito il cast implicito per i tipi string. Ad esempio, se due **stringa** tipi sono previsti e si passa un **stringa** e un **token**, il cast implicito non viene generato e viene restituito un errore.  
   
 -   Non è consentito il cast implicito da tipi numeric a tipi string. Se ad esempio si passa un valore di tipo integer a una funzione che prevede un parametro di tipo string, il cast implicito non viene eseguito e viene restituito un errore.  
   
@@ -175,7 +175,7 @@ min(xs:integer("1"), xs:double("1.1"))
  Nel caso del cast a tipi binari quali xs:base64Binary o xs:hexBinary da un tipo string o untypedAtomic, per i valori di input deve essere utilizzato rispettivamente il formato di codifica base64 o hex.  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>Cast di un valore a un tipo string o untypedAtomic  
- Il cast a un tipo string o untypedAtomic trasforma il valore nella relativa rappresentazione lessicale canonica XQuery. In particolare, è possibile che un valore conforme a un pattern specifico o a un altro vincolo durante l'input non venga rappresentato in base a tale vincolo.  Per informare gli utenti, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contrassegna i tipi in cui il vincolo di tipo può rappresentare un problema, visualizzando un avviso quando tali tipi vengono caricati nella raccolta di schemi.  
+ Il cast a un tipo string o untypedAtomic trasforma il valore nella relativa rappresentazione lessicale canonica XQuery. In particolare, è possibile che un valore conforme a un pattern specifico o a un altro vincolo durante l'input non venga rappresentato in base a tale vincolo.  Per notificare agli utenti, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contrassegna i tipi in cui il vincolo di tipo può rappresentare un problema, visualizzando un avviso quando tali tipi vengono caricati nella raccolta di schemi.  
   
  Nel cast di un valore di tipo xs:float o xs:double o di uno qualsiasi dei relativi sottotipi a un tipo string o untypedAtomic, il valore viene rappresentato nella notazione scientifica, ma solo se il valore assoluto del valore è minore di 1.0E-6 oppure maggiore o uguale a 1.0E6. Per tale motivo, 0 viene serializzato nella notazione scientifica come 0.0E0.  
   

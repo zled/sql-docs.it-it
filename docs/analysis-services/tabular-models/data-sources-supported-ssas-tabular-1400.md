@@ -1,5 +1,5 @@
 ---
-title: Origini dati supportate nei modelli di SQL Server Analysis Services tabulari 1400 | Documenti Microsoft
+title: Origini dati supportate nei modelli 1400 tabulari di SQL Server Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 856e15e7365128bc79d119afe267334fb8470832
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043155"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041659"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Origini dati supportate in SQL Server Analysis Services i modelli tabulari 1400
 
 [!INCLUDE[ssas-appliesto-sql2017](../../includes/ssas-appliesto-sql2017.md)]
 
-In questo articolo descrive i tipi di origini dati che possono essere utilizzate con i modelli tabulari di SQL Server Analysis Services (SSAS) a livello di compatibilità 1400. 
+Questo articolo descrive i tipi di origini dati che possono essere utilizzate con i modelli tabulari di SQL Server Analysis Services (SSAS) a livello di compatibilità 1400. 
 
-Per i modelli tabulari di SSAS a livello di compatibilità 1200 e inferiore, vedere [origini dati supportate nei modelli di SQL Server Analysis Services tabulari 1200](data-sources-supported-ssas-tabular.md).
+Per modelli tabulari di SSAS a livello di compatibilità 1200 e versioni precedenti, vedere [origini dati supportate nei modelli 1200 tabulari di SQL Server Analysis Services](data-sources-supported-ssas-tabular.md).
 
 Per Azure Analysis Services, vedere [origini dati supportate in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
 
@@ -31,29 +31,29 @@ Per Azure Analysis Services, vedere [origini dati supportate in Azure Analysis S
 
 |Origine dati di Azure  |In memoria  |DirectQuery  |
 |---------|---------|---------|
-|Azure SQL Database     |   Sì      |    Sì      |
+|Database SQL di Azure     |   Sì      |    Sì      |
 |Azure SQL Data Warehouse     |   Sì      |   Sì       |
 |Archiviazione BLOB Azure     |   Sì       |    no      |
 |Archiviazione tabelle di Azure    |   Sì       |    no      |
-|DB Cosmos Azure      |  Sì        |  no        |
-|Archivio Azure Data Lake     |   Sì       |    no      |
+|Azure Cosmos DB      |  Sì        |  no        |
+|Azure Data Lake Store     |   Sì       |    no      |
 |Azure HDInsight HDFS     |     Sì     |   no       |
-|Spark in Azure HDInsight (Beta)     |   Sì       |   no       |
+|Azure HDInsight Spark (Beta)     |   Sì       |   no       |
 ||||
 
 **Provider**   
-In memoria e i modelli DirectQuery, la connessione a origini dati di Azure è possibile utilizzare il Provider di dati di .NET Framework per SQL Server.
+In memoria e i modelli DirectQuery, la connessione a origini dati di Azure usano Provider di dati .NET Framework per SQL Server.
 
 ## <a name="on-premises-data-sources"></a>Origini dati locali
 
 ### <a name="supported-by-in-memory-and-directquery-models"></a>Supportato in memoria e i modelli DirectQuery
 
-|Origine dati | Provider in memoria | Provider di DirectQuery |
+|Origine dati | Provider in memoria | Provider DirectQuery |
 |  --- | --- | --- |
-| SQL Server |SQL Server Native Client 11.0, Provider Microsoft OLE DB per SQL Server, il Provider di dati .NET Framework per SQL Server | Provider di dati .NET Framework per SQL Server |
-| SQL Server Data Warehouse |SQL Server Native Client 11.0, Provider Microsoft OLE DB per SQL Server, il Provider di dati .NET Framework per SQL Server | Provider di dati .NET Framework per SQL Server |
-| Oracle |Provider Microsoft OLE DB per Oracle, il Provider di dati Oracle per .NET |Provider di dati Oracle per .NET | |
-| Teradata |Provider OLE DB per Teradata, il Provider di dati Teradata per .NET |Provider di dati Teradata per .NET | |
+| SQL Server |SQL Server Native Client 11.0, Provider Microsoft OLE DB per SQL Server, Provider di dati .NET Framework per SQL Server | Provider di dati .NET Framework per SQL Server |
+| SQL Server Data Warehouse |SQL Server Native Client 11.0, Provider Microsoft OLE DB per SQL Server, Provider di dati .NET Framework per SQL Server | Provider di dati .NET Framework per SQL Server |
+| Oracle |Provider Microsoft OLE DB per Oracle, Provider di dati Oracle per .NET |Provider di dati Oracle per .NET | |
+| Teradata |Provider OLE DB per Teradata, Provider di dati Teradata per .NET |Provider di dati Teradata per .NET | |
 | | | |
 
 > [!NOTE]
@@ -67,7 +67,7 @@ In memoria e i modelli DirectQuery, la connessione a origini dati di Azure è po
 |SQL Server Analysis Services     | 
 |IBM Informix (beta) | 
 |Documento JSON     | 
-|Righe dai dati binari     | 
+|Righe dal file binario     | 
 |Database MySQL     | 
 |Database PostgreSQL    | Sì | no
 |SAP HANA   | Sì | no
@@ -87,20 +87,20 @@ In memoria e i modelli DirectQuery, la connessione a origini dati di Azure è po
 |Servizi online  |  
 |---------|---------|
 |Dynamics 365      |
-|Exchange Online     |
-|Oggetti Saleforce    | 
+|Forum di Exhange Online     |
+|Oggetti Salesforce    | 
 |Report di Salesforce     |
-|Elenco di SharePoint Online     |
+|Elenchi SharePoint Online     |
 |||
 
 |Altro  |  
 |---------|---------|
 |Active Directory      | 
-|Exchange     |  
+|Forum di Exhange     |  
 |Feed OData     | 
 |Query ODBC     | 
 |OLE DB  | 
-|Elenco SharePoint | 
+|Elenco di SharePoint | 
 |||
 
 ## <a name="see-also"></a>Vedere anche

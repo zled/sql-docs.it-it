@@ -1,5 +1,5 @@
 ---
-title: Implementazione di endpoint | Documenti Microsoft
+title: Implementazione di endpoint | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5bd1f57ee89138dca4354d1a558d605784cb3310
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970186"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042009"
 ---
 # <a name="implementing-endpoints"></a>Implementazione di endpoint
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "32970186"
   
  Avendo specificato il tipo di payload, il payload effettivo può essere impostato utilizzando il <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> proprietà dell'oggetto. La proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Payload> fornisce un riferimento a un oggetto payload del tipo specificato, per cui è possibile modificare le proprietà.  
   
- Per l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, è necessario specificare il ruolo di mirroring e se è abilitata o meno la crittografia. Il <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> oggetto richiede informazioni sull'inoltro di messaggi, il numero massimo di connessioni consentite e la modalità di autenticazione. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> richiede l'impostazione di varie proprietà tra cui la proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> che specifica i metodi di payload SOAP disponibili ai client (stored procedure e funzioni definite dall'utente).  
+ Per l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, è necessario specificare il ruolo di mirroring e se è abilitata o meno la crittografia. Il <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> oggetto richiede informazioni sull'inoltro di messaggi, numero massimo di connessioni consentite e la modalità di autenticazione. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> richiede l'impostazione di varie proprietà tra cui la proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> che specifica i metodi di payload SOAP disponibili ai client (stored procedure e funzioni definite dall'utente).  
   
  Analogamente, il protocollo può essere impostato tramite la proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> che fa riferimento a un oggetto protocollo del tipo specificato dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> richiede un elenco di indirizzi IP con restrizioni e informazioni relative a porte, siti Web e autenticazione. Il <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> oggetto richiede inoltre un elenco di indirizzi IP con restrizioni e informazioni sulla porta.  
   

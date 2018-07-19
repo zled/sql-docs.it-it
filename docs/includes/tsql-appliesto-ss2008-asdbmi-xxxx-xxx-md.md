@@ -1,2 +1,2 @@
-<Token>**QUESTO argomento si applica a:**![yes](media/yes.png)SQL Server (a partire 2008)![Sì](media/yes.png)Database SQL di Azure (solo gestito istanza)![nessun](media/no.png)Azure SQL Data Warehouse ![alcun](media/no.png)Parallel Data Warehouse </Token>
+<Token>**QUESTO ARGOMENTO SI APPLICA A:** ![sì](media/yes.png)SQL Server (a partire dalla versione 2008)![sì](media/yes.png)Database SQL di Azure (solo Istanza gestita)![no](media/no.png)Azure SQL Data Warehouse ![no](media/no.png)Parallel Data Warehouse </Token>
 

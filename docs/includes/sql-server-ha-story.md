@@ -68,7 +68,7 @@ A causa della differenza nello stack di cluster, è necessario apportare alcune 
 
 * WSFC 
 * External
-* Nessuno
+* None
 
 Tutti i gruppi di disponibilità che richiedono la disponibilità devono usare un cluster sottostante, che nel caso di SQL Server 2017 significa un cluster WSFC o Pacemaker. Per i gruppi di disponibilità basati su Windows Server che usano un cluster WSFC sottostante, il tipo di cluster predefinito è WSFC e non è necessario impostarlo. Per i gruppi di disponibilità basati su Linux, quando si crea il gruppo di disponibilità, il tipo di cluster deve essere impostato su External. L'integrazione con Pacemaker viene configurata dopo la creazione del gruppo di disponibilità, mentre per un cluster WSFC, si esegue al momento della creazione.
 
@@ -132,7 +132,7 @@ Se il punto di recupero e gli obiettivi del tempo di recupero sono più flessibi
 > [!IMPORTANT] 
 > In Linux SQL Server Agent - processi non è incluso come parte dell'installazione di SQL Server. È disponibile nel pacchetto mssql-server-Agent - processi, che deve a sua volta essere installato per usare il log shipping.
 
-![Log shipping][LogShipping]
+![Log Shipping][LogShipping]
  
 Senza dubbio il principale vantaggio offerto dal log shipping in alcune capacità è che prende in considerazione l'errore umano. L'applicazione dei log delle transazioni può subire un ritardo. Quindi, se ad esempio qualcuno rilascia un oggetto UPDATE senza una clausola WHERE, lo standby può non contenere la modifica ed è quindi possibile usarlo mentre si ripara il sistema primario. Benché il log shipping sia facile da configurare, il passaggio dall'istanza primaria al warm standby, noto come modifica del ruolo, è sempre manuale. Una modifica del ruolo viene avviata attraverso Transact-SQL e, come per un gruppo di disponibilità, tutti gli oggetti non acquisiti nel log delle transazioni devono essere sincronizzati manualmente. Il log shipping deve inoltre essere configurato per ogni database, mentre un singolo gruppo di disponibilità può contenere più database. A differenza di un gruppo di disponibilità o un'istanza FCI, il log shipping non è in grado di astrarre le modifiche di ruolo. Le applicazioni devono essere in grado di gestire questa situazione. È possibile ricorrere a tecniche come l'alias DNS (CNAME), ma esistono pro e contro, ad esempio il tempo necessario per l'aggiornamento di DNS dopo il passaggio.
 

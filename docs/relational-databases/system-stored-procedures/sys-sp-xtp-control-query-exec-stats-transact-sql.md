@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23301458684008945c057aa1d7f9f97380a9cb68
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257572"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055849"
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
  @new_collection_value è impostato su zero quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato.  
   
  @database_id = = *database_id*, @xtp_object_id = *procedure_id*  
- L'ID database e l'ID oggetto per la stored procedure compilata in modo nativo. Se la raccolta delle statistiche è abilitata per l'istanza ([Sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), vengono raccolte statistiche per una stored procedure compilata in modo nativo. La disabilitazione della raccolta delle statistiche dell'istanza non disabilita la raccolta delle statistiche delle singole stored procedure compilate in modo nativo.  
+ L'ID database e l'ID oggetto per la stored procedure compilata in modo nativo. Se la raccolta delle statistiche è abilitata per l'istanza di ([Sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), le statistiche per una stored procedure compilata in modo nativo vengono raccolte. La disabilitazione della raccolta delle statistiche dell'istanza non disabilita la raccolta delle statistiche delle singole stored procedure compilate in modo nativo.  
   
- Uso [Sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md), o [OBJECT_ID &#40;Transact-SQL&#41; ](../../t-sql/functions/object-id-transact-sql.md) per ottenere gli ID per un database e la stored procedure.  
+ Uso [Sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md), oppure [OBJECT_ID &#40;Transact-SQL&#41; ](../../t-sql/functions/object-id-transact-sql.md) per ottenere gli ID per un database e la stored procedure.  
   
  @old_collection_value = *valore*  
  Restituisce lo stato corrente.  
