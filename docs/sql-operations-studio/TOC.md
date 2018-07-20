@@ -8,12 +8,14 @@
 # Esercitazioni
 ## [Editor T-SQL](tutorial-sql-editor.md) 
 ## [Widget insight di esempio: query lente](tutorial-qds-sql-server.md)
-## [Widget di informazioni dettagliate di esempio: spazio utilizzato dalle tabelle](tutorial-table-space-sql-server.md)
+## [Widget insight di esempio: utilizzo dello spazio delle tabelle](tutorial-table-space-sql-server.md)
 ## [Creazione di un widget insight personalizzato](tutorial-build-custom-insight-sql-server.md) 
 ## [Backup e ripristino](tutorial-backup-restore-sql-server.md)
 # Guide pratiche
 ## [Dashboard e widget insight](insight-widgets.md)
 ## [Estensioni](extensions.md)
+### [SQL Server Agent](sql-server-agent-extension.md)
+### [SQL Server Profiler](sql-server-profiler-extension.md)
 ## [Frammenti di codice](code-snippets.md)
 ## [Terminale integrato (PowerShell, Bash)](integrated-terminal.md)
 ## [Tasti di scelta rapida](keyboard-shortcuts.md)
