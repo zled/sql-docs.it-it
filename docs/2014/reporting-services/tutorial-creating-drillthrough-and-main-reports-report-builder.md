@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69d6d5352c2f537add31fe2481166bb3a7982d56
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200831"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084043"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
   In questa esercitazione verrà illustrato come creare due tipi di report: un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. Nell'illustrazione seguente vengono mostrati i report creati.  
@@ -344,10 +344,10 @@ ms.locfileid: "37200831"
   
 1.  Nel riquadro Dati report espandere **Parametri**.  
   
-2.  Fare clic con il pulsante destro del mouse su @ProductProductCategoryName, quindi fare clic su **Proprietà parametri**.  
+2.  Fare doppio clic su \@ProductProductCategoryName, quindi fare clic su **proprietà parametri**.  
   
     > [!NOTE]  
-    >  Il @ carattere accanto al nome indica che questo è un parametro.  
+    >  Il \@ carattere accanto al nome indica che si tratta di un parametro.  
   
 3.  Nella scheda **Generale** fare clic su **Nascondi**.  
   

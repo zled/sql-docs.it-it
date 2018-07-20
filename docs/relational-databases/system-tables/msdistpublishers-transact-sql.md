@@ -1,5 +1,5 @@
 ---
-title: MSdistpublishers (Transact-SQL) | Documenti Microsoft
+title: MSdistpublishers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSdistpublishers system table
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2565f080af7fc798a4f53cdaa425387b75652d2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0cf48f494c04bd57e1bf20930917e4f9a3d015b
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006768"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102679"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,11 @@ ms.locfileid: "33006768"
 |**login**|**sysname**|ID dell'account di accesso per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**nvarchar(524**|Password (crittografata) per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Attiva**|**bit**|Indica se il server di distribuzione locale viene utilizzato dal server di pubblicazione remoto.|  
-|**attendibile**|**bit**|Indica se il server di pubblicazione remoto utilizza la stessa password del server di distribuzione locale:<br /><br /> **0** = A password è necessaria nel server di pubblicazione remoto per connettersi al server di distribuzione.<br /><br /> **1** = No è necessaria la password.|  
+|**attendibile**|**bit**|Indica se il server di pubblicazione remoto utilizza la stessa password del server di distribuzione locale:<br /><br /> **0** = una password è necessaria nel server di pubblicazione remoto per connettersi al server di distribuzione.<br /><br /> **1** = No è necessaria la password.|  
 |**third_party**|**bit**|Indica se il server di pubblicazione è un computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione. **1** = origine dei dati eterogenee.|  
 |**publisher_type**|**sysname**|Tipo di server di pubblicazione:<br /><br /> **MSSQLSERVER**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.<br /><br /> **ORACLE** = server di pubblicazione Oracle standard.<br /><br /> **ORACLE GATEWAY** = server di pubblicazione Oracle Gateway.|  
+|**storage_connection_string**|**nvarchar(779)**|Valore della stringa di connessione di archiviazione di Database SQL di Azure.|  
+
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

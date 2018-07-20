@@ -1,5 +1,5 @@
 ---
-title: MSrepl_version (Transact-SQL) | Documenti Microsoft
+title: MSrepl_version (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSrepl_version system table
 ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e37b35a02bc79f79f1cc43c1e57e079de6d9375e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ded35f8c17bc715055288125c66068de9e0bbd52
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004758"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101299"
 ---
 # <a name="msreplversion-transact-sql"></a>MSrepl_version (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33004758"
 |-----------------|---------------|-----------------|  
 |**versione_principale**|**int**|Numero di versione principale del database di distribuzione.|  
 |**versione_secondaria**|**int**|Numero di versione secondario del database di distribuzione.|  
-|**Revisione**|**int**|Numero di revisione.|  
+|**revisione**|**int**|Numero di revisione.|  
 |**db_existed**|**bit**|Indica se il database di distribuzione esiste prima **sp_adddistributiondb** viene chiamato.|  
   
 ## <a name="see-also"></a>Vedere anche  

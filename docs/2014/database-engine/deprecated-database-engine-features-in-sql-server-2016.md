@@ -18,12 +18,12 @@ caps.latest.revision: 208
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 05cf9071049947adceaeeccf2e728f1d5045d05d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c268854800acdfa1e725b4d00b564c018dd70f94
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326401"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084073"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>Funzionalità del Motore di database deprecate in SQL Server 2014
   In questo argomento verranno descritte le funzionalità deprecate di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ancora disponibili in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Tali funzionalità verranno rimosse a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
@@ -40,7 +40,7 @@ ms.locfileid: "37326401"
 |Oggetti di database|Possibilità di restituire set di risultati dai trigger|None|Restituzione di risultati da un trigger|12|  
 |Crittografia|Crittografia tramite RC4 o RC4_128 deprecata. Rimozione pianificata nella prossima versione. Decrittografia RC4 e RC4_128 non deprecata.|Utilizzare un'altra crittografia, ad esempio AES.|Algoritmo di crittografia deprecata|253|  
 |Server remoti|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Sostituire i server remoti utilizzando server collegati. sp_addserver può essere usata solo con l'opzione locale.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Server remoti|@@remserver|Sostituire i server remoti utilizzando server collegati.|None|None|  
+|Server remoti|\@\@remserver|Sostituire i server remoti utilizzando server collegati.|None|None|  
 |Server remoti|SET REMOTE_PROC_TRANSACTIONS|Sostituire i server remoti utilizzando server collegati.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Opzioni SET|`SET ROWCOUNT` per istruzioni `INSERT`, `UPDATE` e `DELETE`|Parola chiave TOP|SET ROWCOUNT|109|  
 |Hint di tabella|Hint di tabella HOLDLOCK senza parentesi|Utilizzare HOLDLOCK con parentesi.|Hint di tabella HOLDLOCK senza parentesi|167|  
@@ -117,7 +117,7 @@ ms.locfileid: "37326401"
 |Security|Algoritmi di crittografia RC4 e DESX|Utilizzare un altro algoritmo, ad esempio AES.|Algoritmo DESX|238|  
 |Opzioni SET|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql), [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) e [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql).|SET FMTONLY|250|  
 |Opzioni di configurazione del server|opzione c2 audit<br /><br /> default trace enabled - opzione|[Opzione di configurazione del server common criteria compliance enabled](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Eventi estesi](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
-|Classi SMO|`Microsoft.SQLServer.Management.Smo.Information` classe<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` classe<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` classe<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` Proprietà|`Microsoft.SqlServer.Management.Smo.Server` classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` classe<br /><br /> None|None|None|  
+|Classi SMO|`Microsoft.SQLServer.Management.Smo.Information` Classe<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` Classe<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` Classe<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` Proprietà|`Microsoft.SqlServer.Management.Smo.Server` Classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` Classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` Classe<br /><br /> None|None|None|  
 |SQL Server Agent|Notifica**net send** <br /><br /> Notifica tramite cercapersone<br /><br /> Sottosistema ActiveX|Notifica tramite posta elettronica<br /><br /> Notifica tramite posta elettronica<br /><br /> Script di comandi o di PowerShell|None|None|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Integrazione di Esplora soluzioni in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> Integrazione del controllo codice sorgente in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|None|  
 |Stored procedure di sistema|sp_db_increased_partitions|Nessuna. Il supporto per l'estensione del numero di partizioni è disponibile per impostazione predefinita in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|sp_db_increased_partitions|253|  
@@ -143,7 +143,7 @@ ms.locfileid: "37326401"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL come nome di colonna nelle istruzioni DML.|Utilizzare $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL come nome di colonna nelle istruzioni DML.|Utilizzare $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo di # e ## come nomi di tabelle e di stored procedure temporanee.|Usare almeno un carattere aggiuntivo.|'#' e '##' come nomi di tabelle e stored procedure temporanee|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo di @, @@ o @@ come identificatori di [!INCLUDE[tsql](../includes/tsql-md.md)] .|Non usare @ o @@ o nomi che iniziano con @@ come identificatori.|"@" e nomi che iniziano con "@@" come identificatori di [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso di \@, \@\@ o \@\@ come identificatori [!INCLUDE[tsql](../includes/tsql-md.md)].|Non usare come identificatori \@ o \@\@ o nomi che iniziano con \@\@.|"\@" e nomi che iniziano con "\@\@" come identificatori [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo della parola chiave DEFAULT come valore predefinito.|Non utilizzare la parola DEFAULT come valore predefinito.|Parola chiave DEFAULT come valore predefinito|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo di uno spazio come separatore tra gli hint di tabella.|Per separare gli hint di tabella, utilizzare la virgola.|Più hint di tabella senza virgola|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|L'elenco di selezione di una vista indicizzata aggregata deve contenere COUNT_BIG(*) in modalità di compatibilità 90.|Utilizzare COUNT_BIG(*).|Elenco di selezione di una vista indicizzata senza COUNT_BIG(*)|2|  

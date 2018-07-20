@@ -4,21 +4,20 @@ description: Informazioni dettagliate sui widget di Insight in SQL Operations St
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
+ms.technology: ssops
 ms.reviewer: alayu; sstein
 ms.suite: sql
-ms.prod_service: sql-tools
-ms.component: sos
 ms.tgt_pltfrm: ''
-ms.topic: article"
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77f34ceebb4f02c829b2df3efcae5e64c2eaa1bf
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 79918d899fa978404dde63bf9257ffb9fc52d185
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235930"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082853"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gestire server e database con i widget di Insight in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -35,7 +34,7 @@ Per iniziare a comprendere e creare i tipi diversi di widget Insight, vedere le 
 
 
 - [Costruire un widget Insight personalizzato](tutorial-build-custom-insight-sql-server.md)
-- *Abilitare i widget predefiniti informazioni dettagliate*
+- *Abilitare widget insight predefiniti*
    - [Abilitare l'insight di monitoraggio delle prestazioni](tutorial-qds-sql-server.md)
    - [Abilitare l'insight di spazio utilizzato dalle tabelle](tutorial-table-space-sql-server.md)
 
@@ -61,5 +60,5 @@ La query T-SQL e il relativo set di risultati determinano il comportamento del w
 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
-- [Editor query](tutorial-sql-editor.md)
+- [Editor di query](tutorial-sql-editor.md)
 

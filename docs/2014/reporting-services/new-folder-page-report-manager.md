@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f580f26ac2431c7872f3a311027780900d4dd58f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162292"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083403"
 ---
 # <a name="new-folder-page-report-manager"></a>Pagina Nuova cartella (Gestione report)
   La pagina Nuova cartella consente di creare una nuova cartella nella gerarchia di cartelle del server di report. La cartella creata è una cartella virtuale archiviata in un database del server di report. La cartella non viene creata nel file system del computer in uso.  
@@ -39,7 +39,7 @@ ms.locfileid: "37162292"
   
 ## <a name="options"></a>Opzioni  
  **Nome**  
- Consente di specificare il nome della cartella. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : @ & = +, $ / * \< > | "oppure / per specificare un nome.  
+ Consente di specificare il nome della cartella. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $ / * \< > | "oppure / per specificare un nome.  
   
  **Descrizione**  
  Consente di digitare una descrizione del contenuto della cartella. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere alla cartella.  

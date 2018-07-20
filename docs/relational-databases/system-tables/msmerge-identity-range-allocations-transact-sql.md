@@ -1,5 +1,5 @@
 ---
-title: MSmerge_identity_range_allocations (Transact-SQL) | Documenti Microsoft
+title: MSmerge_identity_range_allocations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSmerge_identity_range_allocations system table
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7d2e628f8bd70b5e71b294b64674214dd2a0f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df286fcd67db26ac149bd56d3635425453d78405
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005478"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102789"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33005478"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|ID del server di pubblicazione.|  
 |**publisher_db**|**nvarchar(128)**|Nome del database di pubblicazione.|  
-|**Pubblicazione**|**nvarchar(128)**|Nome della pubblicazione.|  
+|**pubblicazione**|**nvarchar(128)**|Nome della pubblicazione.|  
 |**article**|**nvarchar(128)**|Nome dell'articolo.|  
 |**subscriber**|**nvarchar(128)**|Nome del Sottoscrittore.|  
 |**subscriber_db**|**nvarchar(128)**|Nome del database di sottoscrizione.|  

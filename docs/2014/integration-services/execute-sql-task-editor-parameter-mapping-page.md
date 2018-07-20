@@ -18,12 +18,12 @@ caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4baffae0ada8cddc911561f63ca32f9b4b578283
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9c35360c4cddebecf7f6237071bc430b74f726cb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152782"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082953"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Editor attività Esegui SQL (pagina Mapping parametri)
   Usare la pagina **Mapping parametri** della finestra di dialogo **Editor attività Esegui SQL** per eseguire il mapping tra variabili e parametri nell'istruzione SQL.  
@@ -45,7 +45,7 @@ ms.locfileid: "37152782"
  **Nome parametro**  
  Consente di specificare un nome per il parametro.  
   
- A seconda del tipo di gestione connessione utilizzata dall'attività, è necessario specificare numeri o nomi di parametri. Alcuni tipi di gestioni delle connessioni prevedono che il primo carattere del nome del parametro sia il segno @, nomi specifici come @Param1 oppure nomi di colonna come nomi di parametri.  
+ A seconda del tipo di gestione connessione utilizzata dall'attività, è necessario specificare numeri o nomi di parametri. Alcuni tipi di Gestioni richiedono che il primo carattere del nome del parametro è il \@ l'accesso, nomi specifici, ad esempio \@Param1 oppure colonna i nomi come nomi di parametro.  
   
  **Argomenti correlati:** [Parametri e codici restituiti nell'attività Esegui SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
   

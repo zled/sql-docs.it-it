@@ -1,5 +1,5 @@
 ---
-title: MSmerge_replinfo (Transact-SQL) | Documenti Microsoft
+title: MSmerge_replinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSmerge_replinfo system table
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44bd1de5c31f43c56e2fe7cb90bfe8e6585ad45d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 120141183f975a96168254bbd9a680aa6bb54a9d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005528"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103029"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "33005528"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**repid**|**uniqueidentifier**|ID univoco della replica.|  
-|**use_interactive_resolver**|**bit**|Specifica se nella fase di riconciliazione dei conflitti viene utilizzato il sistema di risoluzione interattivo.<br /><br /> **0** = non non utilizzare il sistema di risoluzione interattivo.<br /><br /> **1** = utilizzare il sistema di risoluzione interattivo.|  
-|**validation_level**|**int**|Tipo di convalida da eseguire sulla sottoscrizione. I possibili valori sono i seguenti:<br /><br /> **0** = Nessuna convalida.<br /><br /> **1** = convalida solo mediante conteggio delle righe.<br /><br /> **2** = convalida mediante conteggio delle righe e checksum.<br /><br /> **3** = numero di righe e la convalida mediante checksum binario.|  
-|**resync_gen**|**bigint**|Numero di generazione utilizzato per la risincronizzazione della sottoscrizione. Il valore **– 1** indica che la sottoscrizione non è contrassegnata per la risincronizzazione.|  
+|**use_interactive_resolver**|**bit**|Specifica se nella fase di riconciliazione dei conflitti viene utilizzato il sistema di risoluzione interattivo.<br /><br /> **0** = non non utilizzare il sistema di risoluzione interattivo.<br /><br /> **1** = Usa il sistema di risoluzione interattivo.|  
+|**validation_level**|**int**|Tipo di convalida da eseguire sulla sottoscrizione. I possibili valori sono i seguenti:<br /><br /> **0** = Nessuna convalida.<br /><br /> **1** = convalida solo mediante conteggio delle righe.<br /><br /> **2** = convalida mediante conteggio delle righe e checksum.<br /><br /> **3** = conteggio delle righe e convalida mediante checksum binario.|  
+|**resync_gen**|**bigint**|Numero di generazione utilizzato per la risincronizzazione della sottoscrizione. Un valore pari **-1** indica che la sottoscrizione non è contrassegnata per la risincronizzazione.|  
 |**login_name**|**sysname**|Nome dell'utente che ha creato la sottoscrizione.|  
 |**Nome host**|**sysname**|Valore utilizzato dal filtro di riga con parametri durante la generazione della partizione per la sottoscrizione.|  
 |**merge_jobid**|**binary(16)**|ID del processo di merge della sottoscrizione.|  

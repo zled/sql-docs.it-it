@@ -19,12 +19,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9ff94d28a55da5d199647af200c6179ccadc2d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26900d1b1ba9500c114d65927121be80760d484e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271317"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083923"
 ---
 # <a name="ole-db-source"></a>Origine OLE DB
   L'origine OLE DB consente di estrarre dati da un'ampia gamma di database relazionali conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB consente ad esempio di estrarre dati dalle tabelle nei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -81,7 +81,7 @@ ms.locfileid: "37271317"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- La stored procedure prevede che i valori dei parametri vengano specificati dalle variabili `@StartProductID` e `@CheckDate`. L'ordine in cui i parametri sono visualizzati nell'elenco **Mapping** è irrilevante. L'unico requisito consiste nel fatto che i nomi dei parametri devono coincidere con quelli delle variabili nella stored procedure, incluso il simbolo @.  
+ La stored procedure prevede che i valori dei parametri vengano specificati dalle variabili `@StartProductID` e `@CheckDate`. L'ordine in cui i parametri sono visualizzati nell'elenco **Mapping** è irrilevante. L'unico requisito è che i nomi dei parametri corrispondono ai nomi di variabili nella stored procedure, tra cui la \@ sign.  
   
 ### <a name="mapping-parameters-to-variables"></a>Mapping di parametri a variabili  
  Il mapping dei parametri alle variabili che ne specificano i valori avviene in fase di esecuzione. Sebbene in genere vengano usate variabili definite dall'utente, è possibile usare anche le variabili di sistema disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se si utilizzano variabili definite dall'utente, verificare che il tipo di dati impostato sia compatibile con quello della colonna a cui fa riferimento il parametro di cui viene eseguito il mapping. Per altre informazioni, vedere [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md).  
@@ -106,7 +106,7 @@ ms.locfileid: "37271317"
   
 -   [Proprietà personalizzate OLE DB](ole-db-custom-properties.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 -   [Estrarre dati tramite l'origine OLE DB](ole-db-source.md)  
   

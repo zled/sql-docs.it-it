@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 78ce09a93d36daf74150750f3f13ce6cbdb242a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5bc389fff162d5e04aabb1bd9e4be85590eaab30
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292191"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083253"
 ---
 # <a name="new-model-page-report-manager"></a>Pagina Nuovo modello (Gestione report)
   Questa pagina consente di generare un modello di report predefinito da un'origine dati condivisa. È possibile generare modelli di report solo da origini dati multidimensionali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , origini dati relazionali di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e origini dati relazionali di Oracle.  
@@ -45,7 +45,7 @@ ms.locfileid: "37292191"
  **Nome**  
  Consente di specificare il nome del modello. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Il nome non può contenere i caratteri seguenti:  
   
- ; ? : @ & = +, $ / * \< > | " /  
+ ; ? : \@ & = +, $ / * \< > | " /  
   
  **Descrizione**  
  Indica una descrizione del modello. Gli utenti che visualizzano questo elemento tramite Gestione report possono vedere questa descrizione durante l'esplorazione della gerarchia di cartelle.  

@@ -1,5 +1,5 @@
 ---
-title: MSmerge_agents (Transact-SQL) | Documenti Microsoft
+title: MSmerge_agents (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2199793fc6bc8d7822468d1fc0984347946277c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23204288fc2bfb3358feb11ccb77c59a393c68b5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102310"
 ---
 # <a name="msmergeagents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +40,10 @@ ms.lasthandoff: 05/03/2018
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'agente di merge.|  
-|**name**|**Nvarchar (100)**|Nome dell'agente di merge.|  
+|**name**|**Nvarchar(100)**|Nome dell'agente di merge.|  
 |**publisher_id**|**smallint**|ID del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
-|**Pubblicazione**|**sysname**|Nome della pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**subscriber_id**|**smallint**|ID del Sottoscrittore.|  
 |**subscriber_db**|**sysname**|Nome del database di sottoscrizione.|  
 |**local_job**|**bit**|Specifica se nel server di distribuzione locale è presente un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 |**anonymous_subid**|**uniqueidentifier**|ID di un agente anonimo.|  
 |**subscriber_name**|**sysname**|Nome del Sottoscrittore.|  
 |**creation_date**|**datetime**|Data e ora di creazione dell'agente di distribuzione o di merge.|  
-|**offload_enabled**|**bit**|Specifica se è possibile o meno attivare l'agente in remoto.<br /><br /> **0** specifica l'agente non può essere attivato in remoto.<br /><br /> **1** specifica l'agente verrà attivato in remoto nel computer remoto specificato nella proprietà offload_server.|  
+|**offload_enabled**|**bit**|Specifica se è possibile o meno attivare l'agente in remoto.<br /><br /> **0** specifica l'agente non può essere attivato in remoto.<br /><br /> **1** specifica verrà attivato l'agente in remoto nel computer remoto specificato nella proprietà offload_server.|  
 |**offload_server**|**sysname**|Nome di rete del server da utilizzare per l'attivazione remota dell'agente.|  
 |**sid**|**varbinary(85)**|ID di sicurezza (SID) dell'agente di distribuzione o di merge durante la prima esecuzione dell'agente.|  
 |**subscriber_security_mode**|**smallint**|Modalità di sicurezza utilizzata dall'agente per la connessione al Sottoscrittore. I possibili valori sono i seguenti:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'autenticazione di Windows.|  

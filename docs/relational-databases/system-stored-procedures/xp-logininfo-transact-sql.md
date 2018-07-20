@@ -1,5 +1,5 @@
 ---
-title: xp_logininfo (Transact-SQL) | Documenti Microsoft
+title: xp_logininfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_logininfo
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ae6820bc76ff2bb98360a77c4c3a5432d1e18af5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0638bf40e5edfea83c50c34a1aae67cfb5954bb1
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263237"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103129"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@acctname =** ] **'***account_name***'**  
- Nome di un utente o di un gruppo di Windows a cui è stato concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* viene **sysname**, con un valore predefinito è NULL. Se *account_name* non viene specificato, tutti i gruppi di Windows e gli utenti di Windows che sono stati esplicitamente concessa l'autorizzazione di accesso vengono segnalati. *account_name* devono essere completi. ad esempio ADVWKS4\macraes o BUILTIN\Administrators.  
+ Nome di un utente o di un gruppo di Windows a cui è stato concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* viene **sysname**, con un valore predefinito è NULL. Se *account_name* non viene specificato, tutti i gruppi di Windows e gli utenti di Windows che sono stati esplicitamente concesso l'autorizzazione di accesso vengono segnalati. *account_name* deve essere completo. ad esempio ADVWKS4\macraes o BUILTIN\Administrators.  
   
- **'tutte'** | **'membri'**  
- Specifica se devono essere restituite informazioni su tutti i percorsi di autorizzazione per l'account oppure sui membri del gruppo di Windows. **@option** viene **varchar(10**, con un valore predefinito è NULL. A meno che non **tutti** viene specificato, viene visualizzato solo il primo percorso di autorizzazione.  
+ **'tutte'** | **'members'**  
+ Specifica se devono essere restituite informazioni su tutti i percorsi di autorizzazione per l'account oppure sui membri del gruppo di Windows. **@option** viene **varchar (10)**, con un valore predefinito è NULL. A meno che **tutti** viene specificato, viene visualizzato solo il primo percorso di autorizzazione.  
   
- [  **@privilege =** ] *nome_variabile*  
- Parametro di output tramite cui viene restituito il livello di privilegio dell'account di Windows specificato. *nome_variabile* viene **varchar(10**, con valore 'Not wanted' predefinito. Il livello di privilegio restituito è **utente**, **admin**, o **null**.  
+ [  **@privilege =** ] *variable_name*  
+ Parametro di output tramite cui viene restituito il livello di privilegio dell'account di Windows specificato. *variable_name* viene **varchar (10)**, valore predefinito 'Not wanted'. Il livello di privilegio restituito è **utente**, **admin**, o **null**.  
   
  OUTPUT  
- Quando specificato, viene inserita *nome_variabile* nel parametro di output.  
+ Quando specificato, lo inserisce *variable_name* nel parametro di output.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -65,25 +64,25 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**Nome dell'account**|**sysname**|Nome completo dell'account di Windows.|  
-|**type**|**Char(8)**|Tipo di account di Windows. I valori validi sono **utente** o **gruppo**.|  
+|**nome dell'account**|**sysname**|Nome completo dell'account di Windows.|  
+|**type**|**Char(8)**|Tipo di account di Windows. I valori validi sono **utente** oppure **gruppo**.|  
 |**con privilegi**|**char(9)**|Privilegio di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I valori validi sono **admin**, **utente**, o **null**.|  
-|**nome di accesso mappato**|**sysname**|Per gli account utente con privilegi utente, **nome account di accesso mappato** mostra che il nome di accesso mappato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di utilizzare quando si accede con questo account utilizzando le regole mappate con il nome di dominio aggiunto prima di esso.|  
+|**nome account di accesso con mapping**|**sysname**|Per gli account utente che dispongono dei privilegi di utente, **mappati il nome di accesso** mostra che il nome di accesso con mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di usare quando si accede con questo account utilizzando le regole mappate con il nome di dominio aggiunto prima di esso.|  
 |**percorso di autorizzazione**|**sysname**|Appartenenza al gruppo che ha permesso all'account di ottenere l'accesso.|  
   
-## <a name="remarks"></a>Osservazioni  
- Se *account_name* è specificato, **xp_logininfo** segnala il massimo livello di privilegio dell'utente di Windows specificato o del gruppo. Se un utente di Windows può accedere sia come amministratore di sistema che come utente di dominio, verrà restituito come amministratore di sistema. Se l'utente è membro di più gruppi di Windows con livello di privilegio uguale, viene restituito soltanto il gruppo a cui è stato concesso per primo l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Note  
+ Se *account_name* omette **xp_logininfo** segnala il massimo livello di privilegio dell'utente di Windows specificato o del gruppo. Se un utente di Windows può accedere sia come amministratore di sistema che come utente di dominio, verrà restituito come amministratore di sistema. Se l'utente è membro di più gruppi di Windows con livello di privilegio uguale, viene restituito soltanto il gruppo a cui è stato concesso per primo l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Se *account_name* è un utente di Windows valido o un gruppo che non è associato un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso, viene restituito un set di risultati vuoto. Se *account_name* non possono essere identificati come un utente di Windows valido o un gruppo, viene restituito un messaggio di errore.  
+ Se *account_name* è un utente di Windows valido o un gruppo che non è associato un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso, viene restituito un set di risultati vuoto. Se *account_name* non può essere identificato come un utente di Windows valido o un gruppo, viene restituito un messaggio di errore.  
   
- Se *account_name* e **tutti** sono specificate, vengono restituiti tutti i percorsi di autorizzazione per l'utente di Windows o il gruppo. Se *account_name* è un membro di più gruppi, ognuno dei quali stato concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vengono restituite più righe. Il **admin** vengono restituite le righe di privilegio prima di **utente** privilegio righe e all'interno di un privilegio di righe al livello vengono restituite nell'ordine in cui corrispondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono stati creati account di accesso.  
+ Se *account_name* e **tutte** sono specificati, vengono restituiti tutti i percorsi di autorizzazione per l'utente di Windows o il gruppo. Se *account_name* è un membro di più gruppi, ognuno dei quali stato concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vengono restituite più righe. Il **admin** privilegio viene restituita prima il **utente** privilegio righe e all'interno di un privilegio vengono restituite righe livello nell'ordine in cui corrispondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono stati creati gli account di accesso.  
   
- Se *account_name* e **membri** sono specificato, viene restituito un elenco dei membri del gruppo di livello successivo. Se *account_name* è un gruppo locale, l'elenco può includere utenti locali, gli utenti del dominio e gruppi. Se *account_name* è un account di dominio, l'elenco è costituito da utenti del dominio. Per recuperare informazioni sull'appartenenza ai gruppi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere connesso al controller di dominio. Se il server non può contenere il controller di dominio, non verranno restituite informazioni.  
+ Se *account_name* e **membri** sono specificati, viene restituito un elenco dei membri del gruppo di livello successivo. Se *account_name* è un gruppo locale, l'elenco può includere utenti locali, gli utenti del dominio e gruppi. Se *account_name* è un account di dominio, l'elenco è costituito da utenti di dominio. Per recuperare informazioni sull'appartenenza ai gruppi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere connesso al controller di dominio. Se il server non può contenere il controller di dominio, non verranno restituite informazioni.  
   
- **xp_logininfo** restituisce solo informazioni dai gruppi globali di Active Directory, non dai gruppi universali.  
+ **xp_logininfo** restituisce solo le informazioni da gruppi globali di Active Directory, i gruppi universali non.  
   
-## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **sysadmin** ruolo del server o l'appartenenza al **pubblica** ruolo predefinito del database nel **master** database con l'autorizzazione EXECUTE.  
+## <a name="permissions"></a>Permissions  
+ Richiede l'appartenenza al **sysadmin** ruolo del server o appartenenza al **pubblici** ruolo predefinito del database nel **master** database con l'autorizzazione EXECUTE.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono visualizzate informazioni sul gruppo di Windows `BUILTIN\Administrators`.  

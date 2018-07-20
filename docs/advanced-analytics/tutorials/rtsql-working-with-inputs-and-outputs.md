@@ -1,27 +1,34 @@
 ---
-title: Utilizzo di input e output (R nella Guida rapida SQL) | Documenti Microsoft
+title: Guida introduttiva per l'utilizzo di input e output in R (SQL Server Machine Learning Services) | Microsoft Docs
+description: In questa Guida introduttiva per lo script R in SQL Server, informazioni su come strutturare gli input e output per la stored procedure sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9b2a493293f79ed823aa78a5a1d16190b5254449
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b41a8c30cd0ecbe040819478c0cadece1b9eb704
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204653"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086583"
 ---
-# <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>Utilizzo di input e output (R nella Guida rapida SQL)
+# <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Guida rapida: Gestire gli input e output usano R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Quando si desidera eseguire il codice R in SQL Server, è necessario eseguire il wrapping dello script R in una stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Questa stored procedure permette di avviare il runtime R nel contesto di SQL Server, che passa i dati a R, gestisce le sessioni utente di R in modo sicuro e restituisce gli eventuali risultati al client.
+Quando si desidera eseguire il codice R in SQL Server, è necessario eseguire il wrapping dello script R in una stored procedure. È possibile scrivere uno o passare script R [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Questo sistema stored procedure viene utilizzata per avviare il runtime di R nel contesto di SQL Server, che passa i dati in R, gestisce le sessioni utente di R in modo sicuro e restituisce gli eventuali risultati al client.
 
-## <a name="bkmk_SSMSBasics"></a>Creare alcuni semplici dati di prova
+## <a name="prerequisites"></a>Prerequisiti
 
-Creare una tabella di dati di test eseguendo l'istruzione T-SQL seguente:
+Una Guida introduttiva precedente [Hello World in R e SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), vengono fornite informazioni e collegamenti per configurare l'ambiente R necessario per questa Guida introduttiva.
+
+<a name="bkmk_SSMSBasics"></a>
+
+## <a name="create-some-simple-test-data"></a>Creare dati di prova semplici
+
+Creare una piccola tabella di dati di test eseguendo l'istruzione T-SQL seguente:
 
 ```sql
 CREATE TABLE RTestData ([col1] int not null) ON [PRIMARY]
@@ -39,11 +46,8 @@ SELECT * FROM RTestData
 
 **Risultati**
 
-|col1|
-|------|
-|*1*|
-|*10*|
-|*100*|
+![Contenuto della tabella RTestData](media/quickstart-r-working-input-outputs-results-1.png)
+
 
 ## <a name="get-the-same-data-using-r-script"></a>Ottenere gli stessi dati con lo script R
 
@@ -57,7 +61,7 @@ EXECUTE sp_execute_external_script
     WITH RESULT SETS (([NewColName] int NOT NULL));
 ```
 
-Ottiene i dati dalla tabella, effettua un round trip mediante il runtime di R e restituisce i valori con il nome di colonna, *NewColName*.
+Ottiene i dati dalla tabella, effettua un round trip tramite il runtime R e restituisce i valori con il nome della colonna, *NewColName*.
 
 **Risultati**
 
@@ -66,7 +70,6 @@ Ottiene i dati dalla tabella, effettua un round trip mediante il runtime di R e 
 
 **Commenti**
 
-+ In Management Studio i risultati tabulari vengono restituiti nel riquadro **Valori**. I messaggi restituiti dal runtime R vengono visualizzati nel riquadro **Messaggi**.
 + Il parametro *@language* definisce l'estensione del linguaggio da chiamare, in questo caso R.
 + Nel parametro *@script* è possibile definire i comandi da passare al runtime R. L'intero script R deve essere incluso in questo argomento come testo Unicode. È anche possibile aggiungere il testo a una variabile di tipo **nvarchar** e quindi chiamare la variabile.
 + I dati restituiti dalla query vengono passati al runtime R, che restituisce i dati a SQL Server come frame di dati.
@@ -88,27 +91,26 @@ EXECUTE sp_execute_external_script
   WITH RESULT SETS (([NewColName] int NOT NULL));
 ```
 
-È stato viene visualizzato l'errore, "dell'oggetto SQL\_in non trovato"? Il motivo è che R supporta la distinzione tra maiuscole e minuscole. Nell'esempio lo script R usa le variabili *SQL_in* e *SQL_out*, ma i parametri per la stored procedure usano le variabili *SQL_In* e *SQL_Out*.
+È stato visualizzato l'errore, "dell'oggetto SQL\_in non trovata"? Il motivo è che R supporta la distinzione tra maiuscole e minuscole. Nell'esempio lo script R usa le variabili *SQL_in* e *SQL_out*, ma i parametri per la stored procedure usano le variabili *SQL_In* e *SQL_Out*.
 
-Ciò avviene perché R è tra maiuscole e minuscole. Nell'esempio lo script R usa le variabili *SQL_in* e *SQL_out*, ma i parametri per la stored procedure usano le variabili *SQL_In* e *SQL_Out*.
-Tenta correzione **solo** il *SQL_In* variabile ed eseguire di nuovo la stored procedure.
+Provare a correggere **soltanto** le *SQL_In* variabile *@script* ed eseguire di nuovo la stored procedure.
 
-Ora viene visualizzato un **diversi** errore:
+A questo punto viene visualizzato un **diversi** errore:
 
 ```Error
 EXECUTE statement failed because its WITH RESULT SETS clause specified 1 result set(s), but the statement only sent 0 result set(s) at run time.
 ```
 
-Verrà visualizzato questo errore perché è possibile prevedere la verifica spesso quando si testa nuovo codice R. Significa che lo script R è stato eseguito correttamente, ma ha ricevuto dati non SQL Server o ha ricevuto dati non corretti o imprevisti.
+Verrà visualizzata l'errore perché sarà possibile visualizzarlo spesso quando si testa nuovo codice R. Significa che lo script R è stato eseguito correttamente, ma SQL Server ha ricevuto alcun dato oppure ha ricevuto dati errati o imprevisti.
 
 In questo caso, lo schema di output (riga che inizia con **WITH**) specifica che deve essere restituita una colonna di dati Integer, ma poiché R ha inserito i dati in una variabile diversa, nessun dato è stato restituito a SQL Server e, di conseguenza, è stato generato l'errore. Per correggere l'errore, correggere il secondo nome della variabile.
 
-**Ricordare questi requisiti.**
+**Ricorda di questi requisiti.**
 
 - I nomi delle variabili devono seguire le regole per gli identificatori SQL validi.
 - L'ordine dei parametri è importante. È necessario specificare per primi i parametri obbligatori *@input_data_1* e *@output_data_1*, per poi usare i parametri facoltativi *@input_data_1_name* e *@output_data_1_name*.
 - È possibile passare come parametro un solo set di dati di input ed è possibile restituire un solo set di dati. È tuttavia possibile chiamare altri set di dati dall'interno del codice R e restituire output di altri tipi oltre al set di dati. È anche possibile aggiungere la parola chiave OUTPUT a qualsiasi parametro in modo che venga restituito con i risultati. Più avanti in questa esercitazione viene fornito un semplice esempio.
-- L'istruzione `WITH RESULT SETS` definisce lo schema per i dati, a favore di SQL Server. È necessario specificare tipi di dati compatibili con SQL per ogni colonna restituita da R. È possibile usare la definizione dello schema per specificare anche nuovi nomi di colonna. Non è necessario usare i nomi di colonna dal frame di dati R. In alcuni casi, questa clausola è facoltativa. Provare omettendola e osservare cosa accade.
+- L'istruzione `WITH RESULT SETS` definisce lo schema per i dati, a favore di SQL Server. È necessario specificare tipi di dati compatibili con SQL per ogni colonna restituita da R. È possibile usare la definizione dello schema per specificare anche nuovi nomi di colonna. Non è necessario usare i nomi di colonna dal frame di dati R. In alcuni casi, questa clausola è facoltativa. Provare a ometterla e osservare cosa accade.
 
 ## <a name="generate-results-using-r"></a>Generare risultati con R
 
@@ -125,13 +127,11 @@ EXECUTE sp_execute_external_script
 
 **Risultati**
 
-*Col1*
-*hello*
-<code>   </code>
-*world*
+![I risultati della query usando @script come input](media/quickstart-r-working-input-outputs-results-3.png)
 
-## <a name="next-lesson"></a>Lezione successiva
+## <a name="next-steps"></a>Passaggi successivi
 
-Verranno esaminati alcuni dei possibili problemi riscontrati quando si passano dati tra R e SQL Server, ad esempio quelli relativi alle conversioni implicite e alle differenze nei dati tabulari tra R e SQL.
+Esaminare alcuni dei problemi che possono verificarsi quando si passano dati tra R e SQL Server, ad esempio le conversioni implicite e le differenze nei dati tabulari tra R e SQL.
 
-[R e tipi di dati e oggetti dati SQL](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+> [!div class="nextstepaction"]
+> [Guida rapida: Gestire i tipi di dati e oggetti](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)

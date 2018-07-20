@@ -16,12 +16,12 @@ caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 107c05439db3016618a84c5ad4ea389e23231286
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b98f6b18b4cf979e8345eaa601ee49f08113101b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204801"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083153"
 ---
 # <a name="new-shared-schedule-management-studio"></a>Nuova pianificazione condivisa (Management Studio)
   Questa pagina consente di creare una pianificazione condivisa per l'esecuzione di sottoscrizioni e report pubblicati. È possibile utilizzare le pianificazioni condivise al posto di di pianificazioni specifiche di report o sottoscrizioni. Le informazioni centralizzate sulla pianificazione e la possibilità di sospendere e riprendere le operazioni pianificate costituiscono due funzionalità fondamentali che distinguono le pianificazioni condivise da quelle specifiche degli elementi.  
@@ -39,7 +39,7 @@ ms.locfileid: "37204801"
  **Nome**  
  Consente di digitare un nome per la pianificazione condivisa. Questo nome viene visualizzato negli elenchi a discesa quando gli utenti selezionano una pianificazione condivisa per report e sottoscrizioni. Assicurarsi di fornire un nome descrittivo che possa essere inserito facilmente in un elenco e che consenta di distinguere in modo immediato le pianificazioni condivise. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Il nome non può contenere i caratteri seguenti:  
   
- ; ? : @ & = +, $ / * \< >  
+ ; ? : \@ & = +, $ / * \< >  
   
  " /  
   

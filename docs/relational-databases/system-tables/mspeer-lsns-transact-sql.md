@@ -1,5 +1,5 @@
 ---
-title: MSpeer_lsns (Transact-SQL) | Documenti Microsoft
+title: MSpeer_lsns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,26 +22,27 @@ helpviewer_keywords:
 - MSpeer_lsns system table
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4c68b32d5b6c86fad158962deb360e64fa129d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de37f4de25bef419c67af1ff858251bec4b5e543
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101999"
 ---
 # <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **Mspeer_lsns** tabella viene utilizzata per eseguire il mapping di ogni transazione a una sottoscrizione in una topologia di replica peer-to-peer. Questa tabella è archiviata in tutti i database di pubblicazione in una topologia di replica peer-to-peer e nel database di sottoscrizione di tutti i Sottoscrittori di una pubblicazione peer-to-peer. Per ulteriori informazioni su questo tipo di topologia di replica transazionale, vedere [la replica transazionale Peer-to-Peer](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md). Questa tabella è archiviata nel database di pubblicazione.  
+  Il **Mspeer_lsns** tabella viene utilizzata per eseguire il mapping di ogni transazione a una sottoscrizione in una topologia di replica peer-to-peer. Questa tabella è archiviata in tutti i database di pubblicazione in una topologia di replica peer-to-peer e nel database di sottoscrizione di tutti i Sottoscrittori di una pubblicazione peer-to-peer. Per altre informazioni su questo tipo di topologia di replica transazionale, vedere [la replica transazionale Peer-to-Peer](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md). Questa tabella è archiviata nel database di pubblicazione.  
   
 ## <a name="definition"></a>Definizione  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica un LSN peer-to-peer.|  
-|**last_updated**|**datetime**|Il **datetime** in cui è stato effettuato l'ultimo aggiornamento della riga.|  
+|**last_updated**|**datetime**|Il **datetime** in cui è stato effettuato l'ultimo aggiornamento di riga.|  
 |**originator**|**sysname**|Nome del server di pubblicazione che ha avviato la transazione.|  
 |**originator_db**|**sysname**|Nome del database in cui è stata avviata la transazione.|  
 |**originator_publication**|**sysname**|Nome della pubblicazione in cui è stata avviata la transazione.|  

@@ -1,5 +1,5 @@
 ---
-title: MSreplication_queue (Transact-SQL) | Documenti Microsoft
+title: MSreplication_queue (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSreplication_queue system table
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1230ab84f1d5082fd1f8b9482702a9361b7b9f2e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 663a07279a7bfe0ba9afe8ce6dc37cd74c71434c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005508"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102139"
 ---
 # <a name="msreplicationqueue-transact-sql"></a>MSreplication_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "33005508"
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database di pubblicazione.|  
-|**Pubblicazione**|**sysname**|Nome della pubblicazione.|  
-|**Tranid**|**sysname**|ID di transazione utilizzato per l'esecuzione del comando in coda.|  
+|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
+|**tranid**|**sysname**|ID di transazione utilizzato per l'esecuzione del comando in coda.|  
 |**data**|**varbinary(8000)**|Flusso di byte compresso in cui sono archiviate informazioni sul comando in coda.|  
 |**datalen**|**int**|Lunghezza dei dati in byte.|  
 |**CommandType**|**int**|Tipo di comando che viene inserito in coda:<br /><br /> 1 = Comando utente nella transazione.<br /><br /> 2 = Comando di sincronizzazione della sottoscrizione.|  

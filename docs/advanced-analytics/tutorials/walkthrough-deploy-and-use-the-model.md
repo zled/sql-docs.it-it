@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 290659402622ab04de85e81f05328778b0f0c1eb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 74a5d8b7ac8bd36a6ce76b895b2dde4a07f5ea96
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983013"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085353"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Distribuire il modello R e usarlo in SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,9 +59,9 @@ Questo esempio illustra due modi più comuni per usare un modello nell'assegnazi
     END
     ```
 
-    + Utilizzare un'istruzione SELECT per chiamare il modello archiviato da una tabella SQL. Il modello viene recuperato dalla tabella **varbinary (max)** i dati, archiviati nella variabile SQL _@lmodel2_e passato come parametro *mod* al sistema archiviato routine [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Utilizzare un'istruzione SELECT per chiamare il modello archiviato da una tabella SQL. Il modello viene recuperato dalla tabella **varbinary (max)** i dati, archiviati nella variabile SQL  _\@lmodel2_e passato come parametro *mod* al sistema stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + I dati usati come input per l'assegnazione dei punteggi è definito come una query SQL e archiviata come una stringa nella variabile SQL _@input_. I dati recuperati dal database, questo viene archiviato in un frame di dati denominato *InputDataSet*, che è semplicemente il nome predefinito per i dati di input per il [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure; è possibile definire un altro nome di variabile se necessario, usando il parametro *_@input_data_1_name_*.
+    + I dati usati come input per l'assegnazione dei punteggi è definito come una query SQL e archiviata come una stringa nella variabile SQL  _\@input_. I dati recuperati dal database, questo viene archiviato in un frame di dati denominato *InputDataSet*, che è semplicemente il nome predefinito per i dati di input per il [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure; è possibile definire un altro nome di variabile se necessario, usando il parametro   *_\@input_data_1_name_*.
 
     + Per generare i punteggi, la stored procedure chiama la funzione `rxPredict` dalla libreria **RevoScaleR** .
 

@@ -19,12 +19,12 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c96bcc524d3c9fc6a37f252b1221bbfaab36410
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227411"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084063"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
   L'oggetto SQLServer:Caratteristiche deprecate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un contatore per monitorare le caratteristiche definite deprecate. In ognuno dei casi il contatore fornisce un conteggio dell'utilizzo indicante il numero di volte in cui è stata rilevata la funzionalità deprecata dall'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "37227411"
 |------------------------------------------------------|-----------------|  
 |'#' e '##' come nomi di tabelle e stored procedure temporanee|È stato rilevato un identificatore che non contiene alcun carattere diverso da #. Usare almeno un carattere aggiuntivo. Si verifica una volta per ogni compilazione.|  
 |Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituire con `SELECT column_list FROM`  *\< nome_funzione >*`()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
-|"@" e nomi che iniziano con "@@" come identificatori di [!INCLUDE[tsql](../../includes/tsql-md.md)]|È stato rilevato un identificatore che inizia con @ o @@. Non usare @ o @@ o nomi che iniziano con @@ come identificatori. Si verifica una volta per ogni compilazione.|  
+|"\@" e nomi che iniziano con "\@\@" come identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)]|È stato rilevato un identificatore che inizia con \@ o \@\@. Non usare come identificatori \@ o \@\@ o nomi che iniziano con \@\@. Si verifica una volta per ogni compilazione.|  
 |ADDING TAPE DEVICE|La caratteristica deprecata sp_addumpdevice'`tape`' è stata rilevata. Utilizzare sp_addumpdevice'`disk`' invece. Si verifica una volta per ogni utilizzo.|  
 |Autorizzazione ALL|Numero totale di volte in cui è stata rilevata la sintassi GRANT ALL, DENY ALL o REVOKE ALL. Modificare la sintassi in modo da negare autorizzazioni specifiche. Si verifica una volta per ogni query.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Numero totale di volte in cui è stata usata la funzionalità deprecata TORN_PAGE_DETECTION di ALTER DATABASE dall'avvio dell'istanza del server. Usare la sintassi PAGE_VERIFY. Si verifica una volta per ogni utilizzo in un'istruzione DDL.|  
@@ -174,7 +174,7 @@ ms.locfileid: "37227411"
 |sp_defaultlanguage|È stata rilevata la procedura sp_defaultlanguage. In alternativa, usare ALTER LOGIN. Si verifica una volta per ogni compilazione.|  
 |sp_denylogin|È stata rilevata la procedura sp_denylogin. In alternativa, usare ALTER LOGIN DISABLE. Si verifica una volta per ogni query.|  
 |sp_depends|È stata rilevata la procedura sp_depends. Utilizzare sys.dm_sql_referencing_entities e sys.dm_sql_referenced_entities. Si verifica una volta per ogni query.|  
-|sp_detach_db @keepfulltextindexfile|È stato rilevato l'argomento @keepfulltextindexfile in un'istruzione sp_detach_db. Non usare questo argomento.|  
+|sp_detach_db \@keepfulltextindexfile|È stato rilevato l'argomento \@keepfulltextindexfile in un'istruzione sp_detach_db. Non usare questo argomento.|  
 |sp_dropalias|È stata rilevata la procedura sp_dropalias. Sostituire gli alias con una combinazione di account utente e ruoli del database. Utilizzare sp_dropalias per rimuovere gli alias in database aggiornati. Si verifica una volta per ogni compilazione.|  
 |sp_dropapprole|È stata rilevata la procedura sp_dropapprole. In alternativa, usare DROP APPLICATION ROLE. Si verifica una volta per ogni query.|  
 |sp_dropextendedproc|È stata rilevata la procedura sp_dropextendedproc. In alternativa, usare CLR. Si verifica una volta per ogni compilazione.|  
@@ -187,10 +187,10 @@ ms.locfileid: "37227411"
 |sp_fulltext_catalog|È stata rilevata la procedura sp_fulltext_catalog. In alternativa, usare CREATE/ALTER/DROP FULLTEXT CATALOG. Si verifica una volta per ogni compilazione.|  
 |sp_fulltext_column|È stata rilevata la procedura sp_fulltext_column. In alternativa, usare ALTER FULLTEXT INDEX. Si verifica una volta per ogni compilazione.|  
 |sp_fulltext_database|È stata rilevata la procedura sp_fulltext_database. In alternativa, usare ALTER DATABASE. Si verifica una volta per ogni compilazione.|  
-|sp_fulltext_service @action=clean_up|È stata rilevata l'opzione clean_up della procedura sp_fulltext_service. Si verifica una volta per ogni query.|  
-|sp_fulltext_service @action=connect_timeout|È stata rilevata l'opzione connect_timeout della procedura sp_fulltext_service. Si verifica una volta per ogni query.|  
-|sp_fulltext_service @action=data_timeout|È stata rilevata l'opzione data_timeout della procedura sp_fulltext_service. Si verifica una volta per ogni query.|  
-|sp_fulltext_service @action=resource_usage|È stata rilevata l'opzione resource_usage della procedura sp_fulltext_service. Questa opzione non ha alcuna funzione. Si verifica una volta per ogni query.|  
+|sp_fulltext_service \@action=clean_up|È stata rilevata l'opzione clean_up della procedura sp_fulltext_service. Si verifica una volta per ogni query.|  
+|sp_fulltext_service \@action=connect_timeout|È stata rilevata l'opzione connect_timeout della procedura sp_fulltext_service. Si verifica una volta per ogni query.|  
+|sp_fulltext_service \@action=data_timeout|È stata rilevata l'opzione data_timeout della procedura sp_fulltext_service. Si verifica una volta per ogni query.|  
+|sp_fulltext_service \@action=resource_usage|È stata rilevata l'opzione resource_usage della procedura sp_fulltext_service. Questa opzione non ha alcuna funzione. Si verifica una volta per ogni query.|  
 |sp_fulltext_table|È stata rilevata la procedura sp_fulltext_table. In alternativa, usare CREATE/ALTER/DROP FULLTEXT INDEX. Si verifica una volta per ogni compilazione.|  
 |sp_getbindtoken|È stata rilevata la procedura sp_getbindtoken. In alternativa, usare MARS (Multiple Active Result Set) o transazioni distribuite. Si verifica una volta per ogni compilazione.|  
 |sp_grantdbaccess|È stata rilevata la procedura sp_grantdbaccess. In alternativa, usare CREATE USER. Si verifica una volta per ogni query.|  

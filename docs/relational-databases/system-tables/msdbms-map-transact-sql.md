@@ -1,5 +1,5 @@
 ---
-title: MSdbms_map (Transact-SQL) | Documenti Microsoft
+title: MSdbms_map (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,26 +22,27 @@ helpviewer_keywords:
 - MSdbms_map system table
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7a281666290cd18567691cb8b5e02abded8bd16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 811c7487f55ddcde9a7aedd4b7e6fb6ef318961b
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103241"
 ---
 # <a name="msdbmsmap-transact-sql"></a>MSdbms_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSdbms_map** tabella contiene informazioni sul tipo di dati di origine, nonché un collegamento per impostazione predefinita informazioni sul tipo di dati di destinazione per le coppie DBMS di origine e di destinazione. Questa tabella è archiviata nel **msdb** database e viene utilizzato per la pubblicazione eterogenea.  
+  Il **MSdbms_map** tabella contiene informazioni sul tipo di dati di origine, nonché un collegamento per impostazione predefinita informazioni sul tipo di dati di destinazione per le coppie DBMS di origine e destinazione. Questa tabella è archiviata nel **msdb** del database e viene usato per la pubblicazione eterogenea.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**map_id**|**int**|Identifica in modo univoco un mapping di tipi di dati.|  
-|**src_dbms_id**|**int**|Identifica il DBMS di origine specificando il relativo **dbms_id** nel [MSdbms](../../relational-databases/system-tables/msdbms-transact-sql.md) tabella.|  
-|**dest_dbms_id**|**int**|Identifica il DBMS di destinazione, specificando il relativo **dbms_id** nel [MSdbms](../../relational-databases/system-tables/msdbms-transact-sql.md) tabella.|  
-|**src_datatype_id**|**int**|Identifica la **datatype_id** dal [MSdbms_datatype](../../relational-databases/system-tables/msdbms-datatype-transact-sql.md) tabella per il tipo di dati di origine.|  
+|**src_dbms_id**|**int**|Identifica il DBMS di origine specificando il **dbms_id** nel [MSdbms](../../relational-databases/system-tables/msdbms-transact-sql.md) tabella.|  
+|**dest_dbms_id**|**int**|Identifica il DBMS di destinazione, specificando il **dbms_id** nel [MSdbms](../../relational-databases/system-tables/msdbms-transact-sql.md) tabella.|  
+|**src_datatype_id**|**int**|Identifica la **datatype_id** dalle [MSdbms_datatype](../../relational-databases/system-tables/msdbms-datatype-transact-sql.md) tabella per il tipo di dati di origine.|  
 |**src_len_min**|**bigint**|Lunghezza minima del tipo di dati nel DBMS di origine. Il valore NULL indica che la lunghezza non viene utilizzata.|  
 |**src_len_max**|**bigint**|Lunghezza massima del tipo di dati nel DBMS di origine. Il valore NULL indica che la lunghezza non viene utilizzata.|  
 |**src_prec_min**|**bigint**|Precisione minima del tipo di dati nel DBMS di origine. Il valore NULL indica che la precisione non viene utilizzata.|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |**src_scale_min**|**int**|Scala minima del tipo di dati nel DBMS di origine. Il valore NULL indica che la scala non viene utilizzata.|  
 |**src_scale_max**|**int**|Scala massima del tipo di dati nel DBMS di origine. Il valore NULL indica che la scala non viene utilizzata.|  
 |**src_nullable**|**bit**|Specifica se la colonna di destinazione nel mapping ammette valori NULL. Il valore NULL indica che questa definizione non è necessaria.|  
-|**default_datatype_mapping_id**|**int**|Identifica il mapping dei tipi di dati predefinito tramite il relativo **map_id** nella tabella [MSdbms_datatype_mapping](../../relational-databases/system-tables/msdbms-datatype-mapping-transact-sql.md).|  
+|**default_datatype_mapping_id**|**int**|Identifica il mapping dei tipi di dati predefinito specificando relativi **map_id** nella tabella [MSdbms_datatype_mapping](../../relational-databases/system-tables/msdbms-datatype-mapping-transact-sql.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Replica di database eterogenei](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

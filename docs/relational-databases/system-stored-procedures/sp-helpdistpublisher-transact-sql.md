@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistpublisher (Transact-SQL) | Documenti Microsoft
+title: sp_helpdistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,12 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: c2944745c938fbeb3c36f37da950a6413c4fbde7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4eed56a7e9356ac7f42c5f1bf2a5d55e85111523
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082413"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,21 +63,22 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**password**|**nvarchar(524**|Password restituita in formato crittografato semplice. La password è diverso da NULL per gli utenti **sysadmin**.|  
 |**Attiva**|**bit**|Indica se un server di pubblicazione remoto utilizza il server locale come server di distribuzione:<br /><br /> **0** = No<br /><br /> **1** = Sì|  
 |**working_directory**|**nvarchar(255)**|Nome della directory di lavoro.|  
-|**attendibile**|**bit**|Indica se la password è obbligatoria per la connessione del server di pubblicazione al server di distribuzione. Per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, deve sempre restituire **0**, il che significa che la password è obbligatoria.|  
-|**thirdparty_flag**|**bit**|Indica se la pubblicazione è abilitata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o da un'applicazione di terze parti:<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oracle o server di pubblicazione Oracle Gateway.<br /><br /> **1** = server di pubblicazione è stato integrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un'applicazione di terze parti.|  
+|**attendibile**|**bit**|Indica se la password è obbligatoria per la connessione del server di pubblicazione al server di distribuzione. Per la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, deve sempre restituire **0**, il che significa che la password è obbligatoria.|  
+|**thirdparty_flag**|**bit**|Indica se la pubblicazione è abilitata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o da un'applicazione di terze parti:<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oracle o server di pubblicazione Oracle Gateway.<br /><br /> **1** = server di pubblicazione è stato integrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando un'applicazione di terze parti.|  
 |**publisher_type**|**sysname**|Tipo di server di pubblicazione. Può essere uno dei tipi seguenti:<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|Nome dell'origine dati OLE DB nel server di pubblicazione.|  
+|**storage_connection_string**|**nvarchar(4000)**|Chiave di accesso di archiviazione per la directory di lavoro quando server di distribuzione o server di pubblicazione nel Database SQL di Azure.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  **sp_helpdistpublisher** viene utilizzata in tutti i tipi di replica.  
   
- **sp_helpdistpublisher** non verrà visualizzato l'account di accesso del server di pubblicazione o per impostare una password nel risultato non -**sysadmin** gli account di accesso.  
+ **sp_helpdistpublisher** non verranno visualizzati l'account di accesso del server di pubblicazione o per impostare una password nel risultato diverso da**sysadmin** gli account di accesso.  
   
-## <a name="permissions"></a>Autorizzazioni  
- I membri del **sysadmin** ruolo predefinito del server può essere eseguita **sp_helpdistpublisher** per qualsiasi server di pubblicazione utilizzando il server locale come server di distribuzione. I membri del **db_owner** ruolo predefinito del database o **replmonitor** può essere eseguita in un database di distribuzione **sp_helpdistpublisher** per qualsiasi server di pubblicazione che utilizza quel database di distribuzione. Elenco di utenti l'accesso alla pubblicazione per una pubblicazione specificato *publisher* possono eseguire **sp_helpdistpublisher**. Se *publisher* viene omesso, vengono restituite informazioni per tutti i server di pubblicazione che l'utente disponga dei diritti di accesso.  
+## <a name="permissions"></a>Permissions  
+ I membri del **sysadmin** ruolo predefinito del server possono essere eseguiti **sp_helpdistpublisher** per qualsiasi server di pubblicazione utilizzando il server locale come server di distribuzione. I membri del **db_owner** ruolo predefinito del database o il **replmonitor** ruolo in un database di distribuzione può eseguire **sp_helpdistpublisher** per qualsiasi server di pubblicazione che utilizza quel database di distribuzione. Elencare gli utenti l'accesso alla pubblicazione per una pubblicazione specificata *server di pubblicazione* può essere eseguita **sp_helpdistpublisher**. Se *server di pubblicazione* non viene specificato, vengono restituite informazioni per tutti gli autori che l'utente disponga dei diritti di accesso.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

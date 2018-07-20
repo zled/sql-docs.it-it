@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e8f46405dab619292d057d854034ea989908846
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274627"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084013"
 ---
 # <a name="examples-using-path-mode"></a>Esempi di utilizzo della modalità PATH
   Negli esempi seguenti viene illustrato l'utilizzo della modalità PATH nella creazione di codice XML da una query SELECT. Molte di queste query vengono specificate sui documenti XML di istruzioni per la produzione di biciclette archiviate nella colonna Instructions della tabella ProductModel.  
@@ -126,7 +126,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>Specifica di nomi di colonna in formato XPath  
- Nella query seguente il nome di colonna `ProductModelID` specificato inizia con "@" e non contiene una barra ("/"). Nel codice XML risultante viene pertanto creato un attributo dell'elemento <`row`> con il valore di colonna corrispondente.  
+ Nella query seguente il `ProductModelID` nome di colonna specificato inizia con '\@' e non contiene una barra ('/'). Nel codice XML risultante viene pertanto creato un attributo dell'elemento <`row`> con il valore di colonna corrispondente.  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,5 +1,5 @@
 ---
-title: MSsubscriptions (Transact-SQL) | Documenti Microsoft
+title: MSsubscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSsubscriptions system table
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05f5100843227093cd11909adede12f449cf0051
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d580a5164595a12d96ae8f7b491bc896d451fa8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007758"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102969"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ ms.locfileid: "33007758"
 |**subscriber_id**|**smallint**|ID del Sottoscrittore.|  
 |**subscriber_db**|**sysname**|Nome del database di sottoscrizione.|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push.<br /><br /> **1** = pull.<br /><br /> **2** = anonimo.|  
-|**sync_type**|**tinyint**|Tipo di sincronizzazione:<br /><br /> **1** = automatic.<br /><br /> **2** = Nessuna sincronizzazione.|  
-|**status**|**tinyint**|Stato della sottoscrizione:<br /><br /> **0** = inattivo.<br /><br /> **1** = sottoscritta.<br /><br /> **2** = attivo.|  
+|**sync_type**|**tinyint**|Tipo di sincronizzazione:<br /><br /> **1** = automatic.<br /><br /> **2** non = Nessuna sincronizzazione.|  
+|**status**|**tinyint**|Stato della sottoscrizione:<br /><br /> **0** = inattiva.<br /><br /> **1** = sottoscritta.<br /><br /> **2** = attivo.|  
 |**subscription_seqno**|**varbinary(16)**|Numero di sequenza della transazione snapshot.|  
 |**snapshot_seqno_flag**|**bit**|Indica l'origine del numero di sequenza delle transazioni snapshot, dove il valore **1** significa che **subscription_seqno** è il numero di sequenza dello snapshot.|  
 |**independent_agent**|**bit**|Indica se per questa pubblicazione è disponibile un agente di distribuzione autonomo.|  
 |**subscription_time**|**datetime**|Solo per uso interno.|  
-|**loopback_detection**|**bit**|Si applica alle sottoscrizioni che fanno parte di una topologia di replica transazionale bidirezionale. Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **1** = non restituisce le transazioni.<br /><br /> **0** = restituisce le transazioni.<br /><br /> Nota: Questa colonna è supportata solo per la compatibilità con la funzionalità di replica bidirezionale [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Con le versioni più recenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è consigliabile utilizzare la replica peer-to-peer. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|**loopback_detection**|**bit**|Si applica alle sottoscrizioni che fanno parte di una topologia di replica transazionale bidirezionale. Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **1** = non restituisce le transazioni.<br /><br /> **0** = restituisce le transazioni.<br /><br /> Nota: Questa colonna è supportata solo per garantire la compatibilità con la funzionalità di replica bidirezionale [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Con le versioni più recenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è consigliabile utilizzare la replica peer-to-peer. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |**agent_id**|**int**|ID dell'agente.|  
 |**update_mode**|**tinyint**|Tipo di aggiornamento.|  
 |**publisher_seqno**|**varbinary(16)**|Numero di sequenza della transazione nel server di pubblicazione per questa sottoscrizione.|  

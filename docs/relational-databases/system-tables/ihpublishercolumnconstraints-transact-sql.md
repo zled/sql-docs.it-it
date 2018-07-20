@@ -1,5 +1,5 @@
 ---
-title: IHpublishercolumnconstraints (Transact-SQL) | Documenti Microsoft
+title: IHpublishercolumnconstraints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - IHpublishercolumnconstraints system table
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4b764ec9638f207d504052598f6867a9123f945
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b5e927ce418b1f556a9529823a389f8d2cce54c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000345"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101699"
 ---
 # <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **IHpublishercolumnconstraints** tabella di sistema esegue il mapping di colonne di una pubblicazione non SQL Server nel [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) ai vincoli della tabella di sistema di [IHpublisherconstraints ](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md) tabella di sistema. Questa tabella è archiviata nel database di distribuzione.  
+  Il **IHpublishercolumnconstraints** tabella di sistema esegue il mapping di colonne di una pubblicazione non SQL Server nel [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) tabella di sistema per i vincoli nel [IHpublisherconstraints ](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md) tabella di sistema. Questa tabella è archiviata nel database di distribuzione.  
   
 ## <a name="definition"></a>Definizione  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**publishercolumn_id**|**int**|Identifica la colonna da [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) con il vincolo associato.|  
-|**publisherconstraint_id**|**int**|Identifica un vincolo da [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md) associato alla colonna.|  
+|**publishercolumn_id**|**int**|Identifica la colonna dalla [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) con il vincolo associato.|  
+|**publisherconstraint_id**|**int**|Identifica il vincolo dalla [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md) associato alla colonna.|  
 |**indid**|**int**|Indica la posizione della colonna nella tabella pubblicata.|  
   
 ## <a name="see-also"></a>Vedere anche  

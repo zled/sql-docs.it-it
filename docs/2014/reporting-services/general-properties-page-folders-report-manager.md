@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
-ms.translationtype: HT
+ms.openlocfilehash: 9418474fed667dade02caaa7eb809ee8d2e16042
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255823"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083903"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Pagina delle proprietà Generale, Cartelle (Gestione report)
   La pagina delle proprietà Generale per le cartelle consente di visualizzare e impostare le proprietà per le cartelle create. Nella pagina delle proprietà Generale vengono visualizzati il nome dell'utente che ha creato o modificato la cartella e la data e ora di creazione o modifica.  
@@ -39,7 +39,7 @@ ms.locfileid: "37255823"
   
 ## <a name="options"></a>Opzioni  
  **Nome**  
- Digitare un nome per la cartella. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : @ & = +, $ * \< > | "oppure / per specificare un nome.  
+ Digitare un nome per la cartella. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $ * \< > | "oppure / per specificare un nome.  
   
  **Descrizione**  
  Consente di digitare una descrizione del contenuto della cartella. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere alla cartella.  

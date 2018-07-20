@@ -1,5 +1,5 @@
 ---
-title: IHindextypes (Transact-SQL) | Documenti Microsoft
+title: IHindextypes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - IHindextypes system table
 ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 374e65832301d0cc655e0d1da33b8ccd20448616
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3190f4795272d1736d676d40547f3de9c1df869f
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998978"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102119"
 ---
 # <a name="ihindextypes-transact-sql"></a>IHindextypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **IHindextypes** tabella di sistema contiene una riga per ogni tipo di indice non SQL Server per SQL Server di pubblicazione non è supportato. Questa tabella è archiviata nel database di distribuzione.  
+  Il **IHindextypes** tabella di sistema contiene una riga per ogni tipo di indice non SQL Server supportato per la pubblicazione non SQL Server. Questa tabella è archiviata nel database di distribuzione.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  

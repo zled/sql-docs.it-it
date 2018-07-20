@@ -1,5 +1,5 @@
 ---
-title: MSreplication_subscriptions (Transact-SQL) | Documenti Microsoft
+title: MSreplication_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,26 +20,26 @@ helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74fed5b79386ae09b3733a23980d0a1b32bd1c39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1caaedff89c120cc9607d06976f26a10d780a12c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005468"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103379"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSreplication_subscriptions** tabella contiene una riga di informazioni di replica per ogni agente di distribuzione per la manutenzione del database sottoscrittore locale. Questa tabella è archiviata nel database di sottoscrizione.  
+  Il **MSreplication_subscriptions** tabella contiene una riga delle informazioni di replica per ogni agente di distribuzione per la manutenzione del database sottoscrittore locale. Questa tabella è archiviata nel database di sottoscrizione.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
-|**Pubblicazione**|**sysname**|Nome della pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**independent_agent**|**bit**|Indica se per questa pubblicazione è disponibile un agente di distribuzione autonomo.|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> 0 = push<br /><br /> 1 = pull<br /><br /> 2 = anonima|  
 |**distribution_agent**|**sysname**|Nome dell'agente di distribuzione.|  

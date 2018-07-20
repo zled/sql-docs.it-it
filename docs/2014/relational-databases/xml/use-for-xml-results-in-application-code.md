@@ -22,12 +22,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8cb0fb56cd1715331c5c3f0e09c4319e0b82335
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d20d074f30f15acaec3065bc45ecd4ac92da8f4d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254113"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083164"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utilizzare i risultati di query FOR XML nel codice di un'applicazione
   L'utilizzo delle clausole FOR XML nelle query SQL consente di recuperare e inoltre di eseguire il cast dei risultati delle query come dati XML. Se i risultati di una query FOR XML possono essere utilizzati nel codice XML dell'applicazione, è possibile eseguire le operazioni seguenti:  
@@ -143,7 +143,7 @@ ms.locfileid: "37254113"
  I risultati visualizzati per la pagina HTML creata saranno simili all'output di esempio seguente:  
   
 ##### <a name="server-side-processing"></a>Elaborazione sul lato server  
- Page Generated @ 3/11/2006 3:36:02 PM  
+ Pagina generate \@ 11/3/2006 3 36: alle 17:02 del  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
   

@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ace3f33f02be295fbaf22fcd8f0e9d82480db2d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202691"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085083"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Creare, eliminare o modificare un'origine dei dati condivisa (Gestione report)
   Un'origine dati condivisa consente di specificare le proprietà di connessione per un'origine dati. Se si dispone di un'origine dati utilizzata da un numero elevato di report, modelli o sottoscrizioni guidate dai dati, creare un'origine dati condivisa per eliminare l'overhead provocato dalla necessità di gestire le stesse informazioni sulla connessione in più posizioni.  
@@ -43,7 +43,7 @@ Icona dell'origine dati condivisa
   
 3.  Fare clic su **Nuova origine dati**. Verrà visualizzata la pagina **Nuova origine dati** .  
   
-4.  Digitare un nome per l'elemento. Un nome deve includere almeno un carattere e deve iniziare con una lettera. È inoltre possibile utilizzare alcuni simboli, con l'esclusione degli spazi e dei caratteri ; ? : @ & = +, $ / * \< > | " /.  
+4.  Digitare un nome per l'elemento. Un nome deve includere almeno un carattere e deve iniziare con una lettera. È inoltre possibile utilizzare alcuni simboli, con l'esclusione degli spazi e dei caratteri ; ? : \@ & = +, $ / * \< > | " /.  
   
 5.  È possibile digitare facoltativamente una descrizione per fornire agli utenti informazioni sulla connessione. La descrizione verrà visualizzata nella pagina **Contenuto** in Gestione report.  
   

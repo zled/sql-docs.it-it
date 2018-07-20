@@ -1,5 +1,5 @@
 ---
-title: MSsubscriber_schedule (Transact-SQL) | Documenti Microsoft
+title: MSsubscriber_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - MSsubscriber_schedule system table
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e38c0d789862bc0e2464c74e0ff0ba438c32ffb3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1424947221413447e0277df4c10b17c0ea08d8b2
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011118"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103659"
 ---
 # <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSsubscriber_schedule** tabella contiene le pianificazioni di sincronizzazione transazionale per ogni coppia server di pubblicazione/sottoscrittore e di unione predefinita. Questa tabella è archiviata nel database di distribuzione.  
+  Il **MSsubscriber_schedule** tabella contiene l'unione predefinito e le pianificazioni della sincronizzazione transazionale per ogni coppia server di pubblicazione/sottoscrittore. Questa tabella è archiviata nel database di distribuzione.  
   
 > [!NOTE]  
 >  Questa tabella di sistema è stata deprecata e viene mantenuta per supportare le versioni precedenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -45,10 +45,10 @@ ms.locfileid: "33011118"
 |**agent_type**|**smallint**|Tipo di agente:<br /><br /> 0 = agente di distribuzione<br /><br /> 1 = agente di merge|  
 |**frequency_type**|**int**|Frequenza di pianificazione dell'agente di distribuzione:<br /><br /> **1** = una sola volta.<br /><br /> **2** = su richiesta.<br /><br /> **4** = giornaliera.<br /><br /> **8** = settimanale.<br /><br /> **16** = mensile.<br /><br /> **32** = mensile relativa.<br /><br /> **64** = avvio automatico.<br /><br /> **128** = periodica.|  
 |**frequency_interval**|**int**|Il valore da applicare alla frequenza impostata da **frequency_type**.|  
-|**frequency_relative_interval**|**int**|Data dell'agente di distribuzione:<br /><br /> **1** = primo.<br /><br /> **2** = secondo.<br /><br /> **4** = terzo.<br /><br /> **8** = quarto.<br /><br /> **16** = ultimo.|  
+|**frequency_relative_interval**|**int**|Data dell'agente di distribuzione:<br /><br /> **1** = first.<br /><br /> **2** = secondo.<br /><br /> **4** = terzo.<br /><br /> **8** = quarto.<br /><br /> **16** = ultima.|  
 |**frequency_recurrence_factor**|**int**|Fattore di occorrenza utilizzato da **frequency_type**.|  
-|**frequency_subday**|**int**|Frequenza di ripianificazione durante il periodo definito:<br /><br /> **1** = una volta.<br /><br /> **2** = secondo.<br /><br /> **4** = minuto.<br /><br /> **8** = ora.|  
-|**frequency_subday_interval**|**int**|L'intervallo per **frequency_subday**.|  
+|**frequency_subday**|**int**|Frequenza di ripianificazione durante il periodo definito:<br /><br /> **1** = una sola volta.<br /><br /> **2** = secondo.<br /><br /> **4** = minuto.<br /><br /> **8** = ora.|  
+|**frequency_subday_interval**|**int**|L'intervallo per la **frequency_subday**.|  
 |**active_start_time_of_day**|**int**|Ora della prima pianificazione dell'agente di distribuzione, in formato HHMMSS.|  
 |**active_end_time_of_day**|**int**|Ora della fine della pianificazione dell'agente di distribuzione, in formato HHMMSS|  
 |**active_start_date**|**int**|Data della prima pianificazione dell'agente di distribuzione, in formato AAAAMMGG.|  

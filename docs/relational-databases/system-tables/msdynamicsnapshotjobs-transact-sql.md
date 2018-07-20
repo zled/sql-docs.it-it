@@ -1,5 +1,5 @@
 ---
-title: MSdynamicsnapshotjobs (Transact-SQL) | Documenti Microsoft
+title: MSdynamicsnapshotjobs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSdynamicsnapshotjobs system table
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cdfc74bad45bcb3e77bfdf8b438df45e1491633
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73100b05902605f5fb017db077066f8cdc793a27
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004228"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101889"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "33004228"
 |**id**|**int**|ID per il processo snapshot dei dati filtrati.|  
 |**name**|**sysname**|Nome del processo snapshot dei dati filtrati.|  
 |**pubid**|**uniqueidentifier**|Numero di identificazione univoco della pubblicazione.|  
-|**job_id**|**uniqueidentifier**|ID del processo di SQL Server Agent nel server di distribuzione.|  
+|**job_id**|**uniqueidentifier**|L'ID del processo di SQL Server Agent nel server di distribuzione.|  
 |**agent_id**|**int**|L'ID di SQL Server Agent.|  
-|**dynamic_filter_login**|**sysname**|Il valore utilizzato per la valutazione di [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) funzione nei filtri di riga con parametri definiti per la pubblicazione.|  
-|**dynamic_filter_hostname**|**sysname**|Il valore utilizzato per la valutazione di [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) funzione nei filtri di riga con parametri definiti per la pubblicazione.|  
+|**dynamic_filter_login**|**sysname**|Il valore utilizzato per la valutazione di [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) funzione nei filtri di riga con parametri definito per la pubblicazione.|  
+|**dynamic_filter_hostname**|**sysname**|Il valore utilizzato per la valutazione di [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) funzione nei filtri di riga con parametri definito per la pubblicazione.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Percorso della cartella in cui verranno letti i file di snapshot in caso di utilizzo di uno snapshot di dati filtrati.|  
 |**partition_id**|**int**|ID della partizione di dati a cui appartiene il processo.|  
   

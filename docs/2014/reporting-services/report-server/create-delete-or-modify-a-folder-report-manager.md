@@ -21,12 +21,12 @@ caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5052533d7ad6ec684a9da0262761e923c43a5a64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ccfded2316c40eaede10cfcc366025c55dec589c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177268"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084719"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Creare, eliminare o modificare una cartella (Gestione report)
   È possibile creare cartelle per organizzare e gestire gli elementi pubblicati in un server di report. La creazione di cartelle consente agli utenti di individuare in modo semplice i report desiderati. Per gli utenti con ruolo di gestione del contenuto, le cartelle costituiscono una struttura per l'applicazione di autorizzazioni. È possibile creare assegnazioni di ruolo su cartelle specifiche per limitare l'accesso a report in fase di sviluppo o che non devono essere distribuiti su larga scala.  
@@ -39,7 +39,7 @@ ms.locfileid: "37177268"
   
      Verrà visualizzata la pagina **Nuova cartella** .  
   
-3.  Digitare il nome della cartella. I nomi di cartella possono includere spazi, ma non caratteri riservati utilizzati per la codifica degli URL, ad esempio ; ? : @ & = +, $ / * \< > |. Non è possibile digitare una serie di nomi di cartella per creare più cartelle contemporaneamente.  
+3.  Digitare il nome della cartella. I nomi di cartella possono includere spazi, ma non caratteri riservati utilizzati per la codifica degli URL, ad esempio ; ? : \@ & = +, $ / * \< > |. Non è possibile digitare una serie di nomi di cartella per creare più cartelle contemporaneamente.  
   
 4.  Se lo si desidera, digitare una descrizione.  
   

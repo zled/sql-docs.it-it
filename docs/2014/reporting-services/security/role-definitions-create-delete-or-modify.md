@@ -22,12 +22,12 @@ caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4f2c77960d87f06aed87ffddefa534b8ee8a1640
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e30e89de74cfd031229effc1bebedb5b32c896e1
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148232"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083843"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Creare, eliminare o modificare un ruolo (Management Studio)
   In Reporting Services sono disponibili ruoli predefiniti che definiscono un livello di accesso a un server di report. La richiesta di accesso al server di report da parte di ogni utente o gruppo viene effettuata tramite un ruolo che descrive le attività che possono essere eseguite. I ruoli vengono definiti per il server di report complessivamente. Non è possibile variare una definizione di ruolo per parti specifiche del server di report o specificare che un ruolo venga utilizzato in modo diverso a seconda delle circostanze.  
@@ -49,7 +49,7 @@ ms.locfileid: "37148232"
   
      Se invece si vuole creare una definizione di ruolo a livello di sistema, fare clic con il pulsante destro del mouse su **Ruoli a livello di sistema**e scegliere **Nuovo ruolo a livello di sistema**.  
   
-4.  Digitare un nome univoco per il ruolo. Il nome deve includere almeno un carattere. È inoltre possibile utilizzare spazi e alcuni simboli, con l'esclusione dei caratteri ; ? : @ & = +, $ / * \< > | "o /.  
+4.  Digitare un nome univoco per il ruolo. Il nome deve includere almeno un carattere. È inoltre possibile utilizzare spazi e alcuni simboli, con l'esclusione dei caratteri ; ? : \@ & = +, $ / * \< > | "o /.  
   
 5.  Se lo si desidera, digitare una descrizione. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] questa descrizione verrà visualizzata solo in questa pagina. Gli utenti che visualizzeranno l'elemento in Gestione report potranno leggere la descrizione.  
   

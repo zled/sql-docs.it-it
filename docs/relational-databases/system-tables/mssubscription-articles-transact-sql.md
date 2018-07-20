@@ -1,5 +1,5 @@
 ---
-title: MSsubscription_articles (Transact-SQL) | Documenti Microsoft
+title: MSsubscription_articles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,27 +22,28 @@ helpviewer_keywords:
 - MSsubscription_articles system table
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5f1530091601cb241da7f1e4b1d48e02f699497
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff060482ddd1b9a678cdd37a9f4f2d1f26077272
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103159"
 ---
 # <a name="mssubscriptionarticles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSsubscription_articles** tabella contiene informazioni relative agli articoli di una sottoscrizione in coda. Questa tabella viene popolata solo per i tipi di replica ad aggiornamento in coda e ad aggiornamento immediato sostituito dall'aggiornamento in coda in caso di errore.  
+  Il **MSsubscription_articles** tabella contiene informazioni relative agli articoli in una sottoscrizione in coda. Questa tabella viene popolata solo per i tipi di replica ad aggiornamento in coda e ad aggiornamento immediato sostituito dall'aggiornamento in coda in caso di errore.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ID dell'agente che gestisce l'articolo.|  
-|**artid**|**int**|L'ID dell'articolo di **sysarticles** tabella.|  
-|**article**|**sysname**|Il nome dell'articolo di **sysarticles** tabella.|  
+|**artid**|**int**|L'ID dell'articolo dal **sysarticles** tabella.|  
+|**article**|**sysname**|Il nome dell'articolo dal **sysarticles** tabella.|  
 |**dest_table**|**sysname**|Il nome della tabella di destinazione dal **sysarticles** tabella.|  
-|**proprietario**|**sysname**|Proprietario della sottoscrizione.|  
+|**Proprietario**|**sysname**|Proprietario della sottoscrizione.|  
 |**cft_table**|**sysname**|Nome della tabella dei conflitti dell'articolo per il tipo di replica ad aggiornamento in coda.|  
   
 ## <a name="see-also"></a>Vedere anche  

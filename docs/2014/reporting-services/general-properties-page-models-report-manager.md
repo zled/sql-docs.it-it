@@ -16,12 +16,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 052ea58263c2167035f09d7c81c0e1732c530e03
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280667"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082723"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Pagina delle proprietà Generale, Modelli (Gestione report)
   La pagina delle proprietà Generale per i modelli di report consente di rinominare, eliminare, spostare o sostituire il file di definizione del modello, con estensione smdl. Nella parte superiore della pagina vengono visualizzati il nome dell'utente che ha creato o modificato il modello e la data e ora di creazione o modifica.  
@@ -41,7 +41,7 @@ ms.locfileid: "37280667"
  **Nome**  
  Consente di specificare il nome del modello. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Il nome non può contenere i caratteri seguenti:  
   
- ; ? : @ & = +, $ / * \< > | " /  
+ ; ? : \@ & = +, $ / * \< > | " /  
   
  **Descrizione**  
  Indica una descrizione del modello. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere al modello.  

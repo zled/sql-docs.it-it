@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 810f73e16599f153c604c605e33ad1b6f282811b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 6c136cfeb7a01671c76a8ddaf60451a7565ee6cb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974496"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085473"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @tsql =] 'Transact-SQL_batch'  
+ [ \@tsql =] 'Transact-SQL_batch'  
  Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transact-SQL_batch potrebbe essere nvarchar (n) o nvarchar (max).  
   
- [ @params =] 'N'parameters  
- *@params* fornisce una stringa di dichiarazione per i parametri per il batch Transact-SQL, che è simile a sp_executesql. I parametri possono essere nvarchar (n) o nvarchar (max).  
+ [ \@params =] 'N'parameters  
+ *\@params* fornisce una stringa di dichiarazione per i parametri per il batch Transact-SQL, che è simile a sp_executesql. I parametri possono essere nvarchar (n) o nvarchar (max).  
   
- Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati nel [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato nell'istruzione deve essere definito *@params*. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nell'istruzione non contiene parametri, *@params* non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
+ Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati nel [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato nell'istruzione deve essere definito  *\@params*. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nell'istruzione non contiene parametri,  *\@params* non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
   
 ## <a name="return-value"></a>Valore restituito  
  0 indica l'esito positivo. Qualsiasi altro elemento indicano un errore.  
@@ -82,7 +82,7 @@ sp_describe_parameter_encryption
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|ID della riga nel set di risultati.|  
-|**parameter_name**|**sysname**|Nome di uno dei parametri specificati nel *@params* argomento.|  
+|**parameter_name**|**sysname**|Nome di uno dei parametri specificati nel  *\@params* argomento.|  
 |**column_encryption_algorithm**|**tinyint**|Il codice che indica l'algoritmo di crittografia configurato per la colonna, il parametro corrisponde al. I valori attualmente supportati sono: 2 per **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
 |**column_encryption_type**|**tinyint**|Codice che indica il tipo di crittografia configurato per la colonna, il parametro corrisponde alla. I valori supportati sono:<br /><br /> 0-testo normale (la colonna non è crittografata)<br /><br /> 1 – la crittografia casuale<br /><br /> 2: crittografia deterministica.|  
 |**column_encryption_key_ordinal**|**int**|Codice della riga nel risultato del primo set. La riga di cui viene fatto riferimento descrive la chiave di crittografia della colonna configurata per la colonna, il parametro corrisponde alla.|  
@@ -91,7 +91,7 @@ sp_describe_parameter_encryption
 ## <a name="remarks"></a>Note  
  Oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver del client, che supporta Always Encrypted, chiama automaticamente **sp_describe_parameter_encryption** per recuperare i metadati di crittografia per le query con parametri, emessi dall'applicazione. Successivamente, il driver Usa i metadati di crittografia per crittografare i valori dei parametri che corrispondono alle colonne di database protette con Always Encrypted e sostituisce i valori dei parametri in testo normale, inviati dall'applicazione, con la crittografia valori dei parametri, prima di inviare la query al motore di database.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede la **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** e **VIEW ANY COLUMN MASTER KEY DEFINITION** autorizzazioni nel database.  
   
 ## <a name="examples"></a>Esempi  
@@ -160,7 +160,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|@c1|1|1|  
+|1|\@C1|1|1|  
   
  (Risultati continuano).  
   

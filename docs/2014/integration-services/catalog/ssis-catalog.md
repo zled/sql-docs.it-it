@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 968676f1d56299a720a85cee508fd860d7dc1d6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160914"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084083"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
   Il `SSISDB` catalogo è il punto centrale per l'utilizzo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] progetti (SSIS) che è stato distribuito il [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Ad esempio, è possibile impostare parametri di progetti e pacchetti, configurare ambienti per specificare valori di runtime per i pacchetti, eseguire e risolvere i problemi dei pacchetti e gestire le operazioni del server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -64,7 +64,7 @@ ms.locfileid: "37160914"
   
 -   Nel nome potrebbero non essere contenuti spazi iniziali o finali.  
   
--   Il simbolo @ non è consentito come primo carattere, ma può essere usato nei caratteri successivi.  
+-   \@ non è consentito come primo carattere, ma può essere usato nei caratteri successivi \@.  
   
 -   La lunghezza del nome deve essere maggiore di 0 e minore o uguale a 128.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "37160914"
   
 -   Nel nome potrebbero non essere contenuti spazi iniziali o finali.  
   
--   Il simbolo @ non è consentito come primo carattere, ma può essere usato nei caratteri successivi.  
+-   \@ non è consentito come primo carattere, ma può essere usato nei caratteri successivi \@.  
   
 -   La lunghezza del nome deve essere maggiore di 0 e minore o uguale a 128.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "37160914"
 |Numero massimo di versioni per progetto|MAX_PROJECT_VERSIONS|  
 |Livello di registrazione predefinito per l'intero server|SERVER_LOGGING_LEVEL|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  I progetti, gli ambienti e i pacchetti sono contenuti in cartelle che sono oggetti a protezione diretta. È possibile concedere le autorizzazioni a una cartella, inclusa l'autorizzazione MANAGE_OBJECT_PERMISSIONS. L'autorizzazione MANAGE_OBJECT_PERMISSIONS consente di delegare l'amministrazione del contenuto di una cartella a un utente senza dover concedere all'utente l'appartenenza al ruolo ssis_admin. È inoltre possibile concedere autorizzazioni per progetti, ambienti e operazioni. Le operazioni includono l'inizializzazione [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], distribuzione di progetti, la creazione e avvio di esecuzioni, la convalida di progetti e pacchetti e la configurazione di `SSISDB` catalogo.  
   
  Per altre informazioni sui ruoli di database, vedere [Ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md).  
@@ -279,7 +279,7 @@ ms.locfileid: "37160914"
   
  È possibile convalidare i progetti e i pacchetti chiamando le stored procedure [catalog.validate_project &#40;Database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database) e [catalog.validate_package &#40;Database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database). La vista [catalog.validations &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-validations-ssisdb-database) fornisce dettagli sulle convalide, ad esempio i riferimenti all'ambiente server considerati nella convalida, se si tratta di una convalida della dipendenza o di una convalida completa e se viene usato il runtime a 32 bit o a 64 bit per eseguire il pacchetto.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 -   [Creare il catalogo SSIS](ssis-catalog.md)  
   

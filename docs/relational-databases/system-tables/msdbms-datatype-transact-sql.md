@@ -1,5 +1,5 @@
 ---
-title: MSdbms_datatype (Transact-SQL) | Documenti Microsoft
+title: MSdbms_datatype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - MSdbms_datatype system table
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5927d0c839793e58b2bc6422fa9f3646b0538699
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10e748d771414e9dee552a0e0f7ecdc643ba298a
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103539"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSdbms_datatype** tabella contiene l'elenco completo dei tipi di dati nativi in ogni sistema di gestione di database supportate (DBMS) utilizzato come server di pubblicazione o sottoscrittore nella replica di database eterogenei. Questa tabella è archiviata nel **msdb** database.  
+  Il **MSdbms_datatype** tabella contiene l'elenco completo dei tipi di dati nativi in ogni sistema di gestione supportate del database (DBMS) utilizzato come server di pubblicazione o sottoscrittore nella replica di database eterogenei. Questa tabella è archiviata nel **msdb** database.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -43,8 +44,8 @@ ms.lasthandoff: 05/03/2018
 |**type**|**sysname**|Nome del tipo di dati (nativo).|  
 |**CreateParams**|**int**|Mappa di bit che descrive la combinazione di lunghezza, precisione e scala valida per ogni tipo di dati, che include:<br /><br /> **0x1** = PRECISION.<br /><br /> **0x2** = scala.<br /><br /> **0x4** = lunghezza.|  
   
-## <a name="remarks"></a>Osservazioni  
- Questa tabella contiene le voci per i tipi di dati SQL Server perché un'istanza di SQL Server può sottoscrivere un database non SQL Server e a un sottoscrittore non SQL Server di pubblicazione.  
+## <a name="remarks"></a>Note  
+ Questa tabella contiene le voci per i tipi di dati di SQL Server perché un'istanza di SQL Server può sottoscrivere un database non SQL Server sia per un sottoscrittore non SQL Server di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Replica di database eterogenei](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

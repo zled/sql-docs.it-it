@@ -1,5 +1,5 @@
 ---
-title: Tabelle di replica (Transact-SQL) | Documenti Microsoft
+title: Tabelle di replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1746bf67f4858a97d91e5e7f7740449d14126b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 919b11f4d9b5e71fe9ff0fc084ce4d591c807329
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012828"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103439"
 ---
 # <a name="replication-tables-transact-sql"></a>Tabelle di replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Una topologia di replica è supportata dalle tabelle di replica di sistema. Quando un database utente viene configurato come server di pubblicazione o Sottoscrittore, la replica aggiunge tabelle di sistema al database. Tali tabelle vengono rimosse non appena un database utente viene rimosso da una topologia di replica. Per le regole generali relative a utilizzo tabelle di sistema, vedere [le tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
+  Una topologia di replica è supportata dalle tabelle di replica di sistema. Quando un database utente viene configurato come server di pubblicazione o Sottoscrittore, la replica aggiunge tabelle di sistema al database. Tali tabelle vengono rimosse non appena un database utente viene rimosso da una topologia di replica. Per le regole generali relative a utilizzo tabelle di sistema, vedere [tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
 ## <a name="replication-tables"></a>Tabelle di replica  
  Nell'elenco seguente sono riportate le tabelle di sistema utilizzate dalla replica, raggruppate in base al database.  
@@ -75,7 +75,7 @@ ms.locfileid: "33012828"
 |[MSpublication_access](../../relational-databases/system-tables/mspublication-access-transact-sql.md)|[MStracer_history](../../relational-databases/system-tables/mstracer-history-transact-sql.md)|  
 |[MSpublications](../../relational-databases/system-tables/mspublications-transact-sql.md)|[MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)|  
   
- Queste tabelle disponibili nel database di distribuzione vengono utilizzate per la replica dei dati da server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [di pubblicazione Non SQL Server](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
+ Queste tabelle disponibili nel database di distribuzione vengono utilizzate per la replica dei dati da server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [server di pubblicazione Non SQL Server](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
   
 |||  
 |-|-|  

@@ -1,5 +1,5 @@
 ---
-title: MSdynamicsnapshotviews (Transact-SQL) | Documenti Microsoft
+title: MSdynamicsnapshotviews (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSdynamicsnapshotviews system table
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 587f5859f174e184d55d2fa297d76c0f07ffbdca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ca4e1ab1d13e88f54790205b2c3bad8e32a6b70
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004188"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102559"
 ---
 # <a name="msdynamicsnapshotviews-transact-sql"></a>MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSdynamicsnapshotviews** tabella tiene traccia di tutte le visualizzazioni snapshot di dati temporanei filtrati create dall'agente snapshot e viene utilizzata dal sistema per la pulizia delle viste in caso di una chiusura anomala di SQL Server Agent o Agente snapshot. Questa tabella è archiviata nei database di pubblicazione e di sottoscrizione.  
+  Il **MSdynamicsnapshotviews** tabella tiene traccia di tutte le viste snapshot dei dati temporanei filtrati create dall'agente snapshot e viene utilizzata dal sistema per l'eliminazione delle viste in caso di chiusura anomala di SQL Server Agent o Agente snapshot. Questa tabella è archiviata nei database di pubblicazione e di sottoscrizione.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: xp_msver (Transact-SQL) | Documenti Microsoft
+title: xp_msver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_msver
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: eb4961a51a7a4104fd47b64544727eb609618da4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0d35365cc3c1891521635b463d795c98af97f1ea
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261167"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103649"
 ---
 # <a name="xpmsver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ xp_msver [ optname ]
   
 |Opzione/nome colonna|Description|  
 |-------------------------|-----------------|  
-|**ProductName**|Nome di prodotto. ad esempio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**ProductName**|Nome del prodotto; ad esempio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ProductVersion**|Versione del prodotto.|  
 |**Lingua**|Lingua della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Piattaforma**|Nome del sistema operativo, del produttore e del tipo di chip del computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -74,9 +73,9 @@ xp_msver [ optname ]
  1 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- **xp_msver**, senza alcun parametro, restituisce un set di risultati a quattro colonne in cui sono elencati tutti i valori dell'opzione. **xp_msver**, per qualsiasi parametro, restituisce il risultato di quattro colonne impostate con i valori per tale opzione.  
+ **xp_msver**, senza alcun parametro, restituisce un set di risultati a quattro colonne in cui sono elencati tutti i valori delle opzioni. **xp_msver**, un parametro, restituisce i risultati a quattro colonne impostate con i valori per tale opzione.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="see-also"></a>Vedere anche  

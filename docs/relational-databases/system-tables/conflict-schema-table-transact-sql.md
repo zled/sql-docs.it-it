@@ -1,5 +1,5 @@
 ---
-title: conflict_&lt;schema&gt;_&lt;tabella&gt; (Transact-SQL) | Documenti Microsoft
+title: conflict_&lt;schema&gt;_&lt;tabella&gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64d89c82ffa149c55c8834ca46a11607f33459c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2424c16b56455ca14fafdd8cc1c070aa3058447a
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002138"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103669"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;tabella&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.locfileid: "33002138"
 |__$conflict_type|**int**|Tipo di conflitto. I valori possibili sono i seguenti:<br /><br /> 1: Aggiornamento non riuscito perché la riga locale è stata modificata da un altro aggiornamento oppure è stata eliminata e quindi reinserita.<br /><br /> 2: Aggiornamento non riuscito perché la riga locale è stata già eliminata.<br /><br /> 3: Eliminazione non riuscita perché la riga locale è stata modificata da un altro aggiornamento oppure è stata eliminata e quindi reinserita.<br /><br /> 4: Eliminazione non riuscita perché la riga locale è stata già eliminata.<br /><br /> 5: Inserimento non riuscito perché la riga locale è stata già inserita oppure è stata inserita e quindi aggiornata.|  
 |__$is_winner|**bit**|Indica se la riga presente in questa tabella è la riga confermata, ovvero se è stata applicata al nodo locale.|  
 |__$pre_version|**varbinary (32)**|Versione del database in cui ha avuto origine la modifica in conflitto.|  
-|__$reason_code|**int**|Codice di risoluzione del conflitto. I possibili valori sono i seguenti:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Per ulteriori informazioni, vedere **_ $reason_text**.|  
+|__$reason_code|**int**|Codice di risoluzione del conflitto. I possibili valori sono i seguenti:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Per altre informazioni, vedere **_ $reason_text**.|  
 |__$reason_text|**nvarchar (720)**|Risoluzione del conflitto. I possibili valori sono i seguenti:<br /><br /> Risolto (1)<br /><br /> Non risolto (2)<br /><br /> Sconosciuto (0)|  
-|__$update_bitmap|**varbinary (** *n* **)**. Dimensione varia in base al contenuto.|Bitmap che indica le colonne aggiornate nel caso di un conflitto aggiornamento-aggiornamento.|  
+|__$update_bitmap|**varbinary (** *n* **)**. Dimensioni variano a seconda del contenuto.|Bitmap che indica le colonne aggiornate nel caso di un conflitto aggiornamento-aggiornamento.|  
 |__$inserted_date|**datetime**|Data e ora in cui la riga in conflitto è stata inserita in questa tabella.|  
 |__$row_id|**timestamp**|Versione della riga associata alla riga che ha causato il conflitto.|  
-|__$change_id|**binario (8)**|Per una riga locale, questo valore è uguale a __$row_id della riga in ingresso in conflitto con la riga locale. Questo valore è NULL per una riga in ingresso.|  
-|\<nomi delle colonne di tabella di base >|\<tipi di colonna nella tabella di base >|Questa tabella dei conflitti contiene una colonna per ogni colonna presente nella tabella di base.|  
+|__$change_id|**file binario (8)**|Per una riga locale, questo valore è uguale a __$row_id della riga in ingresso in conflitto con la riga locale. Questo valore è NULL per una riga in ingresso.|  
+|\<i nomi di colonna nella tabella di base >|\<tipi di colonna nella tabella di base >|Questa tabella dei conflitti contiene una colonna per ogni colonna presente nella tabella di base.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

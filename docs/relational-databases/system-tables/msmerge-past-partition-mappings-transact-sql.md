@@ -1,5 +1,5 @@
 ---
-title: MSmerge_past_partition_mappings (Transact-SQL) | Documenti Microsoft
+title: MSmerge_past_partition_mappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSmerge_past_partition_mappings system table
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd96435535dec6413e135015563d3f83fe8b5d05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41e59be5287086ba7b6a201d4d5b24fbcb03628f
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004378"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101349"
 ---
 # <a name="msmergepastpartitionmappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSmerge_past_partition_mappings** tabella contiene una riga per ogni id di partizione di una determinata riga modificata può appartenere a, ma non appartiene più al. Questa tabella è archiviata nel database di pubblicazione.  
+  Il **MSmerge_past_partition_mappings** tabella archivia una riga per ogni id di partizione alla quale apparteneva in una determinata riga modificata, ma non è più a cui appartiene. Questa tabella è archiviata nel database di pubblicazione.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  

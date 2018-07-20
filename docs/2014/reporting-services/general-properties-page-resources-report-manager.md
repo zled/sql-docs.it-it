@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e910172bc11137f2691e1e7dda492b78bd78b26
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164178"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082905"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Pagina delle proprietà Generale, Risorse (Gestione report)
   La pagina delle proprietà Generale per le risorse consente di rinominare, eliminare, spostare o sostituire una risorsa. Nella parte superiore della pagina viene visualizzato il nome dell'utente che ha aggiunto la risorsa o ne ha modificato le proprietà.  
@@ -39,7 +39,7 @@ ms.locfileid: "37164178"
   
 ## <a name="options"></a>Opzioni  
  **Nome**  
- Digitare un nome per la risorsa. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : @ & = +, $ / * \< > | "oppure / per specificare un nome.  
+ Digitare un nome per la risorsa. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $ / * \< > | "oppure / per specificare un nome.  
   
  **Descrizione**  
  Consente di digitare una descrizione della risorsa. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere alla risorsa.  

@@ -14,12 +14,12 @@ caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f29cf01e446c30a69bb2c205d26965b9288ef7f3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272317"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083031"
 ---
 # <a name="upload-file-page-report-manager"></a>Pagina Carica file (Gestione report)
   La pagina Carica file consente di pubblicare un file dal file system nel database del server di report. I file caricati vengono rappresentati come elementi nella gerarchia di cartelle del server di report.  
@@ -54,7 +54,7 @@ ms.locfileid: "37272317"
  Fare clic per selezionare un file nel file system.  
   
  **Nome**  
- Consente di digitare il nome del file nel modo in cui si desidera venga visualizzato nello spazio dei nomi del server di report. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : @ & = +, $ * \< > | "oppure / per specificare il nome di un elemento.  
+ Consente di digitare il nome del file nel modo in cui si desidera venga visualizzato nello spazio dei nomi del server di report. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $ * \< > | "oppure / per specificare il nome di un elemento.  
   
  **Sovrascrivi se esistente**  
  Selezionare questa casella di controllo se si desidera sostituire un elemento esistente con una versione più recente. Per sovrascrivere la versione esistente è necessario che i nomi del nuovo elemento e dell'elemento esistente siano identici.  

@@ -1,5 +1,5 @@
 ---
-title: sysreplicationalerts (Transact-SQL) | Documenti Microsoft
+title: sysreplicationalerts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6579b75ab8d8af66ed62bd9af021f65235423f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbc1aa2be529d00d2dfd453b181a72ea116809a2
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007258"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103009"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,15 @@ ms.locfileid: "33007258"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|ID dell'avviso.|  
-|**status**|**int**|Valore definito dall'utente:<br /><br /> **0** = non gestito.<br /><br /> **1** = servite.|  
+|**status**|**int**|Valore definito dall'utente:<br /><br /> **0** = non gestito.<br /><br /> **1** = serviti.|  
 |**agent_type**|**int**|Tipo di agente:<br /><br /> **1** = agente snapshot.<br /><br /> **2** = agente di lettura log.<br /><br /> **3** = agente di distribuzione.<br /><br /> **4** = agente di merge.|  
-|**agent_id**|**int**|L'ID dell'agente dalle tabelle **MSsnapshot_agents**, **MSlogreader_agents**, **MSdistribution_agents**, o **MSmerge_agents**.|  
+|**agent_id**|**int**|L'ID dell'agente dalle tabelle **MSsnapshot_agents**, **MSlogreader_agents**, **MSdistribution_agents**, oppure **MSmerge_agents**.|  
 |**error_id**|**int**|L'ID dell'errore archiviato **MSrepl_errors**.|  
 |**alert_error_code**|**int**|ID di messaggio dell'avviso generato durante la registrazione del record.|  
 |**time**|**datetime**|Ora di inserimento del record.|  
 |**publisher**|**sysname**|Nome del server di pubblicazione associato all'agente che ha attivato l'avviso.|  
 |**publisher_db**|**sysname**|Database del server di pubblicazione associato all'agente che ha attivato l'avviso.|  
-|**Pubblicazione**|**sysname**|Pubblicazione associata all'agente che ha attivato l'avviso.|  
+|**pubblicazione**|**sysname**|Pubblicazione associata all'agente che ha attivato l'avviso.|  
 |**publication_type**|**int**|Tipo di pubblicazione:<br /><br /> **0** = snapshot.<br /><br /> **1** = transazionale.<br /><br /> **2** = unione nell'indice.|  
 |**subscriber**|**sysname**|Nome del Sottoscrittore associato all'agente che ha attivato l'avviso.|  
 |**subscriber_db**|**sysname**|Nome del database del Sottoscrittore associato all'agente che ha attivato l'avviso.|  

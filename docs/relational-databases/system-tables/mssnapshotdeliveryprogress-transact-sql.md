@@ -1,5 +1,5 @@
 ---
-title: MSsnapshotdeliveryprogress (Transact-SQL) | Documenti Microsoft
+title: MSsnapshotdeliveryprogress (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSsnapshotdeliveryprogress system table
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0989999080b57bf2f78b6a297df29a0ee8a32f35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc2e466ac2eeb91aed75703a8d0fd973f4033c5e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008788"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101269"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "33008788"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**session_token**|**nvarchar(260)**|Identifica il percorso della cartella snapshot dalla quale il file è stato recapitato con esito positivo. Per le pubblicazioni che utilizzano filtri con parametri, la stringa **dynsnap** verrà aggiunto al valore.|  
-|**progress_token_hash**|**int**|Un valore hash generato in base al valore di *progress_token* utilizzato migliorare l'efficienza di ricerca per un determinato *progress_token* valore.|  
+|**progress_token_hash**|**int**|Un valore hash generato in base al valore della *progress_token* utilizzato migliorare l'efficienza di ricerca per un determinato *progress_token* valore.|  
 |**progress_token**|**nvarchar(500)**|Identifica un file recapitato con esito positivo, dove il valore è dato dalla combinazione di nome file e percorso.|  
-|**progress_timestamp**|**datetime**|Il **datetime** valore che indica quando un file di snapshot è stato recapitato correttamente.|  
+|**progress_timestamp**|**datetime**|Il **datetime** valore che indica quando è stato recapitato con un file di snapshot.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0365cedaa710627b8dab6b2060c9c414f126cf99
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: de9cee024eb56925134559d22b988cbd318845bb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37972365"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083294"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Aggiornamento di un'applicazione da MDAC a SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "37972365"
   
 -   Gli avvisi e gli errori non hanno subito modifiche particolarmente rilevanti. Quelli restituiti dal server mantengono ora lo stesso livello di gravità quando vengono passati a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Se l'intercettazione di determinati avvisi ed errori riveste un'importanza particolare, è necessario assicurarsi che l'applicazione sia stata sottoposta a test approfonditi.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prevede un controllo degli errori più rigido rispetto a MDAC. Ciò significa che le applicazioni che non sono completamente conformi alle specifiche ODBC e OLE DB potrebbero avere un comportamento diverso. A differenza del provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, il provider SQLOLEDB, ad esempio, non ha applicato la regola in base alla quale i nomi dei parametri devono iniziare con '@' per i parametri del risultato.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prevede un controllo degli errori più rigido rispetto a MDAC. Ciò significa che le applicazioni che non sono completamente conformi alle specifiche ODBC e OLE DB potrebbero avere un comportamento diverso. Ad esempio, il provider SQLOLEDB non ha applicato la regola che i nomi dei parametri devono iniziare con '\@' per i parametri del risultato, ma il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e MDAC gestiscono i problemi di connessione in modo diverso. MDAC, ad esempio, restituisce valori delle proprietà memorizzati nella cache per una connessione non riuscita, mentre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client segnala un errore all'applicazione chiamante.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "37972365"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta l'ambiguità nelle stringhe di connessione. In pratica, alcune parole chiave possono essere specificate più volte e, qualora siano in conflitto, viene adottata una risoluzione basata sulla posizione o sulla precedenza per garantire la compatibilità con le versioni precedenti. È possibile che nelle versioni successive di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tale ambiguità non sia più supportata. Quando si modificano le applicazioni, è consigliabile utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per eliminare l'eventuale dipendenza dall'ambiguità delle stringhe di connessione.  
   
--   Se si utilizza una chiamata ODBC o OLE DB per avviare le transazioni, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e MDAC presentano un comportamento diverso. Con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client le transazioni hanno inizio immediatamente, mentre con MDC si attende il primo accesso al database. Questo può influire sul comportamento di stored procedure e batch perché per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è necessario che @@TRANCOUNT non cambi al termine dell'esecuzione di un batch o di una stored procedure.  
+-   Se si utilizza una chiamata ODBC o OLE DB per avviare le transazioni, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e MDAC presentano un comportamento diverso. Con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client le transazioni hanno inizio immediatamente, mentre con MDC si attende il primo accesso al database. Ciò può influenzare il comportamento di stored procedure e batch in quanto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede \@ \@TRANCOUNT sia lo stesso dopo che un batch o stored procedure termina com'era quando la stored procedure o batch avviato.  
   
 -   Con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ITransactionLocal::BeginTransaction causerà una transazione deve essere avviata immediatamente. Con MDAC l'avvio della transazione viene ritardato fino all'esecuzione da parte dell'applicazione di un'istruzione che ha richiesto una transazione in modalità implicita. Per altre informazioni, vedere [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   

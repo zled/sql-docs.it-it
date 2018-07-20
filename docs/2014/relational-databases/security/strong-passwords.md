@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5dca0aafb208835a270be3192f8d3c6020229154
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58aea76071a92e1ea9638a745d7a8493f9b778ec
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227167"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083013"
 ---
 # <a name="strong-passwords"></a>Password complesse
   Le password possono costituire il punto debole nell'ambito distribuzione della sicurezza in un server. È dunque necessario prestare grande attenzione alla scelta delle password. Una password complessa ha le caratteristiche seguenti:  
@@ -53,9 +53,9 @@ ms.locfileid: "37227167"
   
 -   Include o inizia con uno spazio.  
   
--   Inizia con il carattere $ o @.  
+-   Inizia con il simbolo $ o \@ carattere.  
   
- Gli account di accesso e le password usati in una stringa di connessione OLE DB o ODBC non devono contenere i caratteri seguenti: [] {}() , ; ? * ! @(Indici per tabelle con ottimizzazione per la memoria). Questi caratteri vengono utilizzati per inizializzare una connessione o per separare i relativi valori.  
+ Gli account di accesso e le password usati in una stringa di connessione OLE DB o ODBC non devono contenere i caratteri seguenti: [] {}() , ; ? * ! \@(Indici per tabelle con ottimizzazione per la memoria). Questi caratteri vengono utilizzati per inizializzare una connessione o per separare i relativi valori.  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [Criteri password](password-policy.md)  

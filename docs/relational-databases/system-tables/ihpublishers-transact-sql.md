@@ -1,5 +1,5 @@
 ---
-title: IHpublishers (Transact-SQL) | Documenti Microsoft
+title: IHpublishers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - IHpublishers system table
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e59cadf84f2e05bf08690d44fb14036369fc502
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b57b1577f806aa14a9649b40c8b0cbf7b6fe533d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004038"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102179"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **IHpublishers** tabella di sistema contiene una riga per ogni pubblicazione non SQL Server utilizzando il server di distribuzione corrente. Questa tabella è archiviata nel database di distribuzione.  
+  Il **IHpublishers** tabella di sistema contiene una riga per ogni pubblicazione non SQL Server usando il server di distribuzione corrente. Questa tabella è archiviata nel database di distribuzione.  
   
 ## <a name="definition"></a>Definizione  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Identifica un Server di pubblicazione non SQL.|  
-|**Fornitore**|**sysname**|Il nome del fornitore per il database non SQL Server.|  
+|**fornitore**|**sysname**|Il nome del fornitore per il database non SQL Server.|  
 |**publisher_guid**|**uniqueidentifier**|GUID che identifica il server di pubblicazione non SQL Server.|  
 |**flush_request_time**|**datetime**|Indica la data e l'ora in cui è stata apportata l'ultima modifica ai metadati dell'articolo che ha comportato l'aggiornamento da parte dell'agente di lettura log della propria cache dei metadati.|  
 |**version**|**sysname**|Una stringa di testo che caratterizza la versione di pubblicazione non SQL Server.|  

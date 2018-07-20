@@ -1,5 +1,5 @@
 ---
-title: MSqreader_history (Transact-SQL) | Documenti Microsoft
+title: MSqreader_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c060cd85f1b4a36087f3d8756bf0d48c1976110f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 621b446ea1310becc626d35f53a1a9ff523c39d5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006018"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101859"
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "33006018"
 |**transaction_rate**|**float(53)**|Velocità delle transazioni elaborate.|  
 |**subscriber**|**sysname**|Nome del Sottoscrittore.|  
 |**subscriberdb**|**sysname**|Nome del database di sottoscrizione.|  
-|**error_id**|**int**|Se non è zero, il numero rappresenta un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio di errore.|  
+|**error_id**|**int**|Se diverso da zero, questo numero rappresenta un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio di errore.|  
 |**timestamp**|**timestamp**|Colonna di tipo timestamp della tabella.|  
   
 ## <a name="see-also"></a>Vedere anche  

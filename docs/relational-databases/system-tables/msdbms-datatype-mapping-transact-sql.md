@@ -1,5 +1,5 @@
 ---
-title: MSdbms_datatype_mapping (Transact-SQL) | Documenti Microsoft
+title: MSdbms_datatype_mapping (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSdbms_datatype_mapping system table
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69bc82596929c5ba42c7f67b63c8c57b56cb3561
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13c950a172ddf9b757f82f2cefe1e9a630728d54
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004748"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102799"
 ---
 # <a name="msdbmsdatatypemapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSdbms_datatype_mapping** tabella contiene i mapping dei tipi di dati consentito dal tipo di dati nel sistema di gestione di database (DBMS) origine a uno o più tipi di dati specifico nel sistema DBMS di destinazione. Questa tabella è archiviata nel **msdb** database e viene utilizzato per la replica di database eterogenei.  
+  Il **MSdbms_datatype_mapping** tabella contiene i mapping dei tipi di dati consentiti dal tipo di dati nel sistema di gestione di database (DBMS) origine a uno o più tipi di dati specifici nel sistema DBMS di destinazione. Questa tabella è archiviata nel **msdb** del database e viene usato per la replica di database eterogenei.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  

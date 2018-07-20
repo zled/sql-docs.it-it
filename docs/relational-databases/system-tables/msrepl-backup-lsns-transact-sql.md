@@ -1,5 +1,5 @@
 ---
-title: MSrepl_backup_lsns (Transact-SQL) | Documenti Microsoft
+title: MSrepl_backup_lsns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSrepl_backup_Isns system table
 ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4223b1bac4bd9990d328fd00092be2630b8cf736
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2978827ac47e46e7d9a5af7770101be52981b41f
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004948"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101439"
 ---
 # <a name="msreplbackuplsns-transact-sql"></a>MSrepl_backup_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSrepl_backup_lsns** tabella contiene i numeri di sequenza del log delle transazioni (LSN) per supportare l'opzione 'sync with backup' del database di distribuzione. Questa tabella è archiviata nel database di distribuzione.  
+  Il **MSrepl_backup_lsns** tabella sono contenuti numeri di sequenza del log delle transazioni (LSN) per supportare l'opzione 'sync with backup' del database di distribuzione. Questa tabella è archiviata nel database di distribuzione.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  

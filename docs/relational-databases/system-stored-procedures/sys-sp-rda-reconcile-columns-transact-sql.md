@@ -19,12 +19,12 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e53540b06850f380f6ea5cfe80ea7cc33455fd7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fe05d88b6453bd9918b5777b3f52291ec9fefc2c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414210"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087943"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- @objname = '*@objname*'  
+ \@objname = '*\@objname*'  
  Il nome della tabella abilitata per l'estensione SQL Server.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o >0 (esito negativo)  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede autorizzazioni db_owner.  
    
 ## <a name="remarks"></a>Note  

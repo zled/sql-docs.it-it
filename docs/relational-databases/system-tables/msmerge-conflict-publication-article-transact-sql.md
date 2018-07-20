@@ -1,5 +1,5 @@
 ---
-title: Msmerge_conflict _&lt;pubblicazione&gt;_&lt;articolo&gt; (Transact-SQL) | Documenti Microsoft
+title: Msmerge_conflict _&lt;publication&gt;_&lt;articolo&gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSmerge_conflict_publication_article system table
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e873cf77753c4d3e210cd1238a1cfc6bd7aaca1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b5ec935f352e64678b98136953dfbb5041430a0
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004858"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101199"
 ---
-# <a name="msmergeconflictltpublicationgtltarticlegt-transact-sql"></a>Msmerge_conflict _&lt;pubblicazione&gt;_&lt;articolo&gt; (Transact-SQL)
+# <a name="msmergeconflictltpublicationgtltarticlegt-transact-sql"></a>Msmerge_conflict _&lt;publication&gt;_&lt;articolo&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **msmerge_conflict _*pubblicazione*_ * articolo*** tabella contiene informazioni sulle righe in conflitto oppure sulle modifiche delle righe che sono state annullate per garantire la convergenza dei dati. Per ogni tabella replicata di una pubblicazione è disponibile una tabella dei conflitti, il cui nome è seguito dai nomi della pubblicazione e dell'articolo. Queste tabelle dei conflitti specifiche dell'articolo sono archiviate nel database utilizzato per la registrazione dei conflitti, che in genere corrisponde al database di pubblicazione, ma può essere il database di sottoscrizione se la registrazione dei conflitti è decentralizzata.  
+  Il **msmerge_conflict _*publication*_ * articolo*** tabella contiene informazioni sulle righe che è in conflitto oppure sulle modifiche delle righe che sono state annullate per garantire la convergenza dei dati. Per ogni tabella replicata di una pubblicazione è disponibile una tabella dei conflitti, il cui nome è seguito dai nomi della pubblicazione e dell'articolo. Queste tabelle dei conflitti specifiche dell'articolo sono archiviate nel database utilizzato per la registrazione dei conflitti, che in genere corrisponde al database di pubblicazione, ma può essere il database di sottoscrizione se la registrazione dei conflitti è decentralizzata.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: MSmerge_articlehistory (Transact-SQL) | Documenti Microsoft
+title: MSmerge_articlehistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,32 +22,32 @@ helpviewer_keywords:
 - MSmerge_articlehistory system table
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44f758d3f56b595407b15077031a911a828ff48f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a271583707ee57335a04f02f7a3569752e4f289
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006348"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101969"
 ---
 # <a name="msmergearticlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSmerge_articlehistory** tabella tiene traccia delle modifiche apportate agli articoli durante una sessione di sincronizzazione dell'agente di Merge, con una riga per ogni articolo a cui sono state apportate modifiche. Questa tabella è archiviata nel database di distribuzione.  
+  Il **MSmerge_articlehistory** tabella tiene traccia delle modifiche apportate agli articoli durante una sessione di sincronizzazione dell'agente di Merge, con una riga per ogni articolo al quale sono state apportate modifiche. Questa tabella è archiviata nel database di distribuzione.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|L'ID di una sessione del processo di agente di Merge nel [MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) tabella di sistema.|  
+|**session_id**|**int**|L'ID di una sessione di processo dell'agente di Merge nel [MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) tabella di sistema.|  
 |**phase_id**|**int**|Fase della sessione di sincronizzazione, i cui valori possono essere:<br /><br /> **1** = caricamento.<br /><br /> **2** = download.<br /><br /> **4** = pulizia.<br /><br /> **5** = chiusura.<br /><br /> **6** = modifiche dello schema.<br /><br /> **7** = BCP.|  
 |**article_name**|**sysname**|Nome dell'articolo al quale sono state apportate le modifiche.|  
 |**start_time**|**datetime**|Ora di inizio dell'elaborazione dell'articolo.|  
 |**duration**|**int**|Durata dell'elaborazione di un articolo, in secondi.|  
 |**inserimenti**|**int**|Numero di inserimenti applicati a un articolo specifico durante la sincronizzazione. Questo valore verrà incrementato durante il processo di sincronizzazione e il valore finale rappresenta il numero totale.|  
-|**Aggiornamenti**|**int**|Numero di aggiornamenti applicati a un articolo specifico durante la sincronizzazione. Questo valore verrà incrementato durante il processo di sincronizzazione e il valore finale rappresenta il numero totale.|  
+|**aggiornamenti**|**int**|Numero di aggiornamenti applicati a un articolo specifico durante la sincronizzazione. Questo valore verrà incrementato durante il processo di sincronizzazione e il valore finale rappresenta il numero totale.|  
 |**Elimina**|**int**|Numero di eliminazioni applicate a un articolo specifico durante la sincronizzazione. Questo valore verrà incrementato durante il processo di sincronizzazione e il valore finale rappresenta il numero totale.|  
-|**È in conflitto**|**int**|Numero di conflitti che si sono verificati durante la sincronizzazione. Questo valore verrà incrementato durante il processo di sincronizzazione e il valore finale rappresenta il numero totale.|  
+|**è in conflitto**|**int**|Numero di conflitti che si sono verificati durante la sincronizzazione. Questo valore verrà incrementato durante il processo di sincronizzazione e il valore finale rappresenta il numero totale.|  
 |**conflicts_resolved**|**int**|Numero di conflitti che si sono verificati durante la sincronizzazione e che sono stati risolti. Questo valore verrà incrementato durante il processo di sincronizzazione e il valore finale rappresenta il numero totale.|  
 |**rows_retried**|**int**|Numero di righe per cui si è verificato un errore e che sono state ritentate durante la sincronizzazione. Questo valore verrà incrementato durante il processo di sincronizzazione e il valore finale rappresenta il numero totale.|  
 |**percent_complete**|**decimal**|Percentuale del tempo di sincronizzazione totale impiegato dall'agente di merge per l'articolo durante la sessione. Questo valore è Null fino a quando la sessione non è stata completata.|  

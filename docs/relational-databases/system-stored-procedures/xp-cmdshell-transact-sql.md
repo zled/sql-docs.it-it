@@ -1,5 +1,5 @@
 ---
-title: xp_cmdshell (Transact-SQL) | Documenti Microsoft
+title: xp_cmdshell (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 73609eae141fd96f9a2f01bccc3cf18347a0fc00
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4474d6bcd0c24c00ae4c0b6297d11cdbe76ff55b
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262924"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102379"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,26 +61,26 @@ EXEC xp_cmdshell 'dir *.exe';
 GO  
 ```  
   
- Le righe vengono restituite un **nvarchar (255)** colonna. Se il **no_output** viene utilizzata l'opzione, verranno restituiti solo le operazioni seguenti:  
+ Le righe vengono restituite un **nvarchar(255** colonna. Se il **no_output** viene utilizzata l'opzione, verranno restituiti solo gli elementi seguenti:  
   
 ```  
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Il processo di Windows generato da **xp_cmdshell** ha gli stessi diritti di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio.  
+## <a name="remarks"></a>Note  
+ Il processo di Windows generato dal **xp_cmdshell** ha gli stessi diritti di sicurezza come il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio.  
   
  **xp_cmdshell** opera in modo sincrono. ovvero il controllo viene restituito al chiamante solo dopo il completamento del comando della shell.  
   
- **xp_cmdshell** possono essere abilitati e disabilitati tramite la gestione basata su criteri oppure eseguendo **sp_configure**. Per ulteriori informazioni, vedere [Configurazione superficie di attacco](../../relational-databases/security/surface-area-configuration.md) e [opzione di configurazione del Server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+ **xp_cmdshell** possono essere abilitati e disabilitati tramite la gestione basata su criteri oppure eseguendo **sp_configure**. Per altre informazioni, vedere [Configurazione superficie di attacco](../../relational-databases/security/surface-area-configuration.md) e [opzione di configurazione del Server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 > [!IMPORTANT]  
->  Se **xp_cmdshell** viene eseguita all'interno di un batch e restituisce un errore, il batch avrà esito negativo. Questa è una differenza funzionale Nelle versioni precedenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] batch continuerebbe.  
+>  Se **xp_cmdshell** viene eseguita all'interno di un batch e restituisce un errore, il batch avrà esito negativo. Questa è una differenza funzionale Nelle versioni precedenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] batch continuerebbe a eseguire.  
   
 ## <a name="xpcmdshell-proxy-account"></a>Account proxy per xp_cmdshell  
- Quando viene chiamato da un utente che non è membro il **sysadmin** ruolo predefinito del server, **xp_cmdshell** si connette a Windows utilizzando il nome account e password archiviati nella credenziale denominata **# # xp_cmdshell_proxy_account # #**. Se questa credenziale proxy non esiste, **xp_cmdshell** avrà esito negativo.  
+ Quando viene chiamato da un utente che non è un membro del **sysadmin** ruolo predefinito del server **xp_cmdshell** si connette a Windows usando il nome dell'account e una password archiviati nella credenziale denominata **# # xp_cmdshell_proxy_account # #**. Se questa credenziale proxy non esiste, **xp_cmdshell** avrà esito negativo.  
   
- Le credenziali dell'account proxy possono essere create eseguendo **sp_xp_cmdshell_proxy_account**. Questa stored procedure accetta un nome utente e una password di Windows come argomenti. Il comando seguente, ad esempio, crea una credenziale proxy per l'utente di dominio di Windows `SHIPPING\KobeR` con la password di Windows `sdfh%dkc93vcMt0`.  
+ La credenziale dell'account proxy può essere creata eseguendo **sp_xp_cmdshell_proxy_account**. Questa stored procedure accetta un nome utente e una password di Windows come argomenti. Il comando seguente, ad esempio, crea una credenziale proxy per l'utente di dominio di Windows `SHIPPING\KobeR` con la password di Windows `sdfh%dkc93vcMt0`.  
   
 ```  
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
@@ -88,25 +88,25 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
   
  Per altre informazioni, vedere [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
- Poiché gli utenti malintenzionati talvolta tentano di elevare i propri privilegi tramite **xp_cmdshell**, **xp_cmdshell** è disabilitato per impostazione predefinita. Utilizzare **sp_configure** o **gestione basata su criteri** per abilitarlo. Per altre informazioni, vedere [Opzione di configurazione del server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+## <a name="permissions"></a>Permissions  
+ Poiché gli utenti malintenzionati talvolta tentano di elevare i propri privilegi tramite **xp_cmdshell**, **xp_cmdshell** è disabilitata per impostazione predefinita. Uso **sp_configure** oppure **gestione basata su criteri** per abilitarlo. Per altre informazioni, vedere [Opzione di configurazione del server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
- Quando si abilita la prima volta, **xp_cmdshell** richiede l'autorizzazione CONTROL SERVER per l'esecuzione e il processo di Windows creato da **xp_cmdshell** ha lo stesso contesto di sicurezza come il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio è spesso più autorizzazioni necessarie per il lavoro eseguito dal processo creato da **xp_cmdshell**. Per migliorare la sicurezza, l'accesso a **xp_cmdshell** deve essere limitato agli utenti con privilegi elevati.  
+ Quando si abilita la prima volta, **xp_cmdshell** richiede l'autorizzazione CONTROL SERVER per l'esecuzione e il processo Windows creato da **xp_cmdshell** stesso contesto di sicurezza ha il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio è spesso più autorizzazioni necessarie per le operazioni eseguite dal processo creato dal **xp_cmdshell**. Per migliorare la sicurezza, l'accesso a **xp_cmdshell** deve essere limitato agli utenti con privilegi elevati.  
   
- Per consentire a utenti non amministratori di utilizzare **xp_cmdshell**e consentire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per creare processi figlio con il token di sicurezza di un account con privilegi più bassi, seguire questi passaggi:  
+ Per consentire a utenti non amministratori di usare **xp_cmdshell**e consentire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per creare processi figlio con il token di sicurezza di un account con meno privilegi, seguire questa procedura:  
   
 1.  Creare e personalizzare un account utente locale di Windows o un account di dominio con i privilegi minimi richiesti dai processi.  
   
-2.  Utilizzare il **sp_xp_cmdshell_proxy_account** procedure di sistema per configurare **xp_cmdshell** per usare l'account con privilegi minimi.  
+2.  Usare la **sp_xp_cmdshell_proxy_account** procedure di sistema per configurare **xp_cmdshell** usare tale account con privilegi minimi.  
   
     > [!NOTE]  
-    >  È inoltre possibile configurare questo account proxy utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] facendo **proprietà** sul nome del server in Esplora oggetti e cercando nel **sicurezza** per la scheda di **Server account proxy** sezione.  
+    >  È anche possibile configurare questo account proxy utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] facendo clic **proprietà** sul nome del server in Esplora oggetti e cercando nel **sicurezza** per la scheda di **Server account proxy** sezione.  
   
-3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], utilizzando il database master, eseguire il `GRANT exec ON xp_cmdshell TO '<somelogin>'` istruzione per concedere a specifici non**sysadmin** agli utenti la possibilità di eseguire **xp_cmdshell**. L'accesso specificato deve essere mappato a un utente nel database master.  
+3.  Nella [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], con il database master, eseguire il `GRANT exec ON xp_cmdshell TO '<somelogin>'` istruzione per concedere specifici non**sysadmin** agli utenti la capacità di realizzarla **xp_cmdshell**. L'accesso specificato deve essere mappato a un utente nel database master.  
   
- Ora a utenti non amministratori possono avviare processi del sistema operativo con **xp_cmdshell** ed eseguire i processi con le autorizzazioni dell'account proxy configurato. Gli utenti con autorizzazione CONTROL SERVER (membri del **sysadmin** ruolo predefinito del server) continuerà a ricevere le autorizzazioni del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di servizio per i processi figlio avviati da **xp_cmdshell** .  
+ A questo punto gli utenti non amministratori possono avviare processi del sistema operativo con **xp_cmdshell** e tali processi vengono eseguiti con le autorizzazioni dell'account proxy configurato. Gli utenti che dispongono dell'autorizzazione CONTROL SERVER (membri del **sysadmin** ruolo predefinito del server) continueranno a ricevere le autorizzazioni del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio per i processi figlio avviati da **xp_cmdshell** .  
   
- Per determinare l'account di Windows utilizzato da **xp_cmdshell** all'avvio dei processi del sistema operativo, eseguire l'istruzione seguente:  
+ Per determinare l'account di Windows utilizzato da **xp_cmdshell** durante l'avvio di processi del sistema operativo, eseguire l'istruzione seguente:  
   
 ```  
 xp_cmdshell 'whoami.exe'  
@@ -144,7 +144,7 @@ GO
 ```  
   
 ### <a name="c-using-return-status"></a>C. Restituzione del codice di stato  
- Nell'esempio seguente, il `xp_cmdshell` stored procedure estesa suggerisce di stato restituito. Il valore restituito viene archiviato nella variabile `@result`.  
+ Nell'esempio seguente, il `xp_cmdshell` stored procedure estesa viene inoltre suggerito lo stato di restituzione. Il valore restituito viene archiviato nella variabile `@result`.  
   
 ```  
 DECLARE @result int;  

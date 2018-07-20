@@ -1,7 +1,7 @@
 ---
-title: sp_addpublication_snapshot (Transact-SQL) | Documenti Microsoft
+title: sp_addpublication_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -23,14 +23,15 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 659d0b54238795663f1daea81332004f3c5bf7f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ea774a66ea2e89eba185197d07630a6a2edc6ab
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088033"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Crea l'agente snapshot per la pubblicazione specificata. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -70,7 +71,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [  **@frequency_type=**] *frequency_type*  
  Frequenza di esecuzione dell'agente snapshot. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Singola occorrenza.|  
 |**4** (impostazione predefinita)|Giornaliera.|  
@@ -81,22 +82,22 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**128**|Quando il computer è inattivo|  
   
  [  **@frequency_interval=**] *frequency_interval*  
- È il valore da applicare alla frequenza impostata da *frequency_type*. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
+ Il valore da applicare alla frequenza impostata *frequency_type*. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
   
 |Valore di frequency_type|Effetto su frequency_interval|  
 |------------------------------|-----------------------------------|  
-|**1**|*frequency_interval* è inutilizzato.|  
-|**4** (impostazione predefinita)|Ogni *frequency_interval* giorni, con il valore predefinito è ogni giorno.|  
+|**1**|*frequency_interval* risulta inutilizzato.|  
+|**4** (impostazione predefinita)|Ogni *frequency_interval* giorni, con un valore predefinito di ogni giorno.|  
 |**8**|*frequency_interval* corrisponde a uno o più dei valori seguenti (combinato con un [ &#124; (OR bit per bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) operatore logico):<br /><br /> **1** = domenica&#124;<br /><br /> **2** = lunedì&#124;<br /><br /> **4** = martedì&#124;<br /><br /> **8** = mercoledì&#124;<br /><br /> **16** = giovedì&#124;<br /><br /> **32** = venerdì&#124;<br /><br /> **64** = sabato|  
 |**16**|Nel *frequency_interval* giorno del mese.|  
 |**32**|*frequency_interval* è uno dei seguenti:<br /><br /> **1** = domenica&#124;<br /><br /> **2** = lunedì&#124;<br /><br /> **3** = martedì&#124;<br /><br /> **4** = mercoledì&#124;<br /><br /> **5** = giovedì&#124;<br /><br /> **6** = venerdì&#124;<br /><br /> **7** = sabato&#124;<br /><br /> **8** = giorno&#124;<br /><br /> **9** = giorno feriale&#124;<br /><br /> **10** = giorno festivo|  
-|**64**|*frequency_interval* è inutilizzato.|  
-|**128**|*frequency_interval* è inutilizzato.|  
+|**64**|*frequency_interval* risulta inutilizzato.|  
+|**128**|*frequency_interval* risulta inutilizzato.|  
   
  [  **@frequency_subday=**] *frequency_subday*  
- Unità di *freq_subday_interval*. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
+ È l'unità per *freq_subday_interval*. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -104,7 +105,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**8**|Ora|  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Intervallo per *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è 5, ovvero ogni 5 minuti.  
+ È l'intervallo *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è 5, ovvero ogni 5 minuti.  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Data di esecuzione dell'agente snapshot. *frequency_relative_interval* viene **int**, con un valore predefinito è 1.  
@@ -122,16 +123,16 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  Ora del giorno della prima esecuzione pianificata dell'agente snapshot, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è 0.  
   
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Ora del giorno dell'ultima esecuzione pianificata dell'agente snapshot, nel formato HHMMSS. *active_end_time_of_day* viene **int**, un valore predefinito è 235959, che corrisponde alle 11:59: le ore 23.59.59 nel formato 24 ore.  
+ Ora del giorno dell'ultima esecuzione pianificata dell'agente snapshot, nel formato HHMMSS. *active_end_time_of_day* viene **int**, con un valore predefinito è 235959, che significa 59: 11:59 P.M. nel formato 24 ore.  
   
  [  **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
- Nome di un processo dell'agente snapshot esistente se viene utilizzato un processo esistente. *snapshot_agent_name* viene **nvarchar(100)** con valore predefinito è NULL. Questo parametro è per uso interno e non deve essere specificato per la creazione di una nuova pubblicazione. Se *snapshot_agent_name* non viene specificato, *job_login* e *job_password* deve essere NULL.  
+ Nome di un processo dell'agente snapshot esistente se viene utilizzato un processo esistente. *snapshot_agent_name* viene **nvarchar(100)** con un valore predefinito NULL. Questo parametro è per uso interno e non deve essere specificato per la creazione di una nuova pubblicazione. Se *snapshot_agent_name* è specificato, quindi *job_login* e *job_password* deve essere NULL.  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
- Modalità di sicurezza utilizzata dall'agente per la connessione al server di pubblicazione. *publisher_security_mode* viene **smallint**, con un valore predefinito è 1. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione, e **1** specifica l'autenticazione di Windows. Il valore **0** deve essere specificato per non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+ Modalità di sicurezza utilizzata dall'agente per la connessione al server di pubblicazione. *publisher_security_mode* viene **smallint**, con un valore predefinito è 1. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione, e **1** specifica l'autenticazione di Windows. Un valore pari **0** deve essere specificato per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**=] **'***publisher_login***'**  
- Account di accesso utilizzato per la connessione al server di pubblicazione. *publisher_login* viene **sysname**, con un valore predefinito è NULL. *publisher_login* deve essere specificato quando *publisher_security_mode* viene **0**. Se *publisher_login* è NULL e *publisher_security_mode* è **1**, l'account Windows specificato *job_login* verrà utilizzato Quando ci si connette al server di pubblicazione.  
+ Account di accesso utilizzato per la connessione al server di pubblicazione. *publisher_login* viene **sysname**, con un valore predefinito è NULL. *publisher_login* deve essere specificato quando *publisher_security_mode* viene **0**. Se *publisher_login* è NULL e *publisher_security_mode* viene **1**, quindi l'account specificato nella *job_login* verrà usato quando la connessione al server di pubblicazione.  
   
  [ **@publisher_password**=] **'***publisher_password***'**  
  Password utilizzata per la connessione al server di pubblicazione. *publisher_password* viene **sysname**, con un valore predefinito è NULL.  
@@ -140,7 +141,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 >  Non archiviare informazioni di autenticazione in file script. Per migliorare la sicurezza, si consiglia di specificare nomi e password di accesso in fase di esecuzione.  
   
  [ **@job_login**=] **'***job_login***'**  
- Account di accesso per l'account di Windows utilizzato per l'esecuzione dell'agente. *job_login* viene **nvarchar(257)**, con un valore predefinito è NULL. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione. È necessario specificare questo parametro per la creazione di un nuovo processo per l'agente snapshot.  
+ È l'account di accesso per l'account con cui viene eseguito l'agente. SQL Database istanza gestita di Azure, usare un account di SQL Server. *job_login* viene **nvarchar(257)**, con un valore predefinito è NULL. Questo account viene sempre utilizzato per le connessioni dell'agente al server di distribuzione. È necessario specificare questo parametro per la creazione di un nuovo processo per l'agente snapshot.  
   
 > [!NOTE]  
 >  Per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione deve essere l'account di accesso specificato [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
@@ -155,22 +156,22 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere utilizzato durante la creazione di un agente Snapshot in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  *server di pubblicazione* non deve essere usata durante la creazione di un agente Snapshot in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_addpublication_snapshot** viene utilizzata nella replica snapshot, transazionale e di tipo merge.  
+## <a name="remarks"></a>Note  
+ **sp_addpublication_snapshot** viene utilizzata nella replica snapshot, la replica transazionale e di tipo merge.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addpublication-snapsh_1.sql)]  
   
-## <a name="permissions"></a>Autorizzazioni  
- Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_addpublication_snapshot**.  
+## <a name="permissions"></a>Permissions  
+ Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_addpublication_snapshot**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una pubblicazione](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Creare e applicare lo snapshot](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
