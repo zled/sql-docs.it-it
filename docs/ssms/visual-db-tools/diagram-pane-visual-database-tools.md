@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a749cafa34c8db9d7cf2bc81c97e90da39e1bed3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055298"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066589"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Riquadro Diagramma (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ Ogni rettangolo mostra le colonne di dati della tabella o dell'oggetto con valor
   
 Nella seguente tabella sono elencati i simboli e le caselle di controllo utilizzati nel rettangolo per ogni tabella o oggetto con valori di tabella.  
   
-|Casella di controllo o simbolo|Description|  
+|Casella di controllo o simbolo|Descrizione|  
 |-----------------------|---------------|  
 |![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi7.gif "Icona di Visual Database Tools")<br /><br />![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi8.gif "Icona di Visual Database Tools")<br /><br />![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi9.gif "Icona di Visual Database Tools")<br /><br />![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbia.gif "Icona di Visual Database Tools")|Specifica se una colonna di dati viene visualizzata nel set di risultati di una query di selezione o viene utilizzata in una query di aggiornamento, accodamento, creazione tabella o accodamento valori. Per aggiungere la colonna ai risultati è sufficiente selezionarla. Se si è selezionato **(Tutte le colonne)** , nell'output verranno visualizzate tutte le colonne di dati.<br /><br />L'icona utilizzata con la casella di controllo varia in base al tipo di query creato. Quando si crea una query di eliminazione, non è possibile selezionare singole colonne.|  
 |![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbib.gif "Icona di Visual Database Tools")<br /><br />![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbic.gif "Icona di Visual Database Tools")|Indica che la colonna di dati viene utilizzata per ordinare i risultati della query (ovvero fa parte di una clausola ORDER BY). L'icona indica A-Z se l'ordinamento è crescente o Z-A se l'ordinamento è decrescente.|  
@@ -85,7 +85,7 @@ Se la query implica un join, verrà visualizzata una linea di join fra le colonn
   
 La forma dell'icona al centro della linea di join indica come le tabelle o gli oggetti con struttura a tabella sono uniti in join. Se la clausola di join utilizza un operatore diverso da uguale (=), tale operatore verrà visualizzato nell'icona della linea di join. Nella seguente tabella sono elencate le icone che possono essere visualizzate in una linea di join.  
   
-|Icona della linea di join|Description|  
+|Icona della linea di join|Descrizione|  
 |------------------|---------------|  
 |![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbih.gif "Icona di Visual Database Tools")|Inner join (creato con il segno di uguale).|  
 |![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbii.gif "Icona di Visual Database Tools")|Inner join basato sull'operatore "maggiore di". L'operatore visualizzato nell'icona della linea di join corrisponde all'operatore utilizzato nel join.|  
@@ -95,7 +95,7 @@ La forma dell'icona al centro della linea di join indica come le tabelle o gli o
   
 Le icone alle estremità della linea di join indicano il tipo di join. Nella seguente tabella sono elencati i tipi di join e le icone che possono essere visualizzate alle estremità della linea di join.  
   
-|Icona alle estremità di una linea di join|Description|  
+|Icona alle estremità di una linea di join|Descrizione|  
 |-----------------------------|---------------|  
 |![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbim.gif "Icona di Visual Database Tools")|Join uno-a-uno|  
 |![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbin.gif "Icona di Visual Database Tools")|Join uno-a-molti|  

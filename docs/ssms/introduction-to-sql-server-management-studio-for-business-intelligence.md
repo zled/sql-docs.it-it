@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 823a2ed8a1a4c81587d71d1646e19312c0afea8f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 34e614c397fd1de17c7c46fe320d76dd0fb17581
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044608"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985353"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>Introduzione a SQL Server Management Studio per Business Intelligence
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ Per accedere, configurare, gestire e amministrare [!INCLUDE[ssASnoversion](../in
   
 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] include un progetto script di [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] in cui è possibile sviluppare e salvare script creati in MDX (Multidimensional Expressions), DMX (Data Mining Extensions) e XMLA (XML per Analysis). Usare i progetti script di [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] per eseguire attività di gestione o ricreare oggetti, ad esempio database e cubi in istanze di [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] . È possibile, ad esempio, sviluppare uno script XMLA in un progetto script di [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] per la creazione diretta di nuovi oggetti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] esistente. È possibile salvare i progetti script di [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] come parte di una soluzione e integrarli con il controllo del codice sorgente.  
   
-Per altre informazioni su come usare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)], vedere [Sviluppo e implementazione tramite SQL Server Management Studio](http://msdn.microsoft.com/en-us/c4f5a06b-e2e4-4660-a3a8-6fd356742c02).  
+Per altre informazioni su come usare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)], vedere [Sviluppo e implementazione tramite SQL Server Management Studio](http://msdn.microsoft.com/c4f5a06b-e2e4-4660-a3a8-6fd356742c02).  
   
 ## <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>Gestione di soluzioni Integration Services tramite SQL Server Management Studio  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] consente di usare il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] per gestire i pacchetti e monitorare i pacchetti in esecuzione. È inoltre possibile utilizzare [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] per organizzare pacchetti in cartelle, eseguire pacchetti, importare ed esportare pacchetti, eseguire la migrazione di pacchetti DTS (Data Transformation Services) e aggiornare pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] .  
@@ -48,21 +48,21 @@ Utilizzare SQL Server Management Studio per abilitare le funzionalità di Report
   
 Lo strumento consente di gestire pianificazioni condivise tramite la cartella Pianificazioni condivise e di gestire i database del server di report (ReportServer e ReportServerTempdb). È inoltre possibile creare un ruolo RSExecRole nel database di sistema Master quando si sposta un database del server di report in un'istanza nuova o diversa del Motore di database SQL Server ([!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Per ulteriori informazioni su queste attività, vedere gli argomenti seguenti:  
   
--   [Procedure per SQL Server Management Studio](http://msdn.microsoft.com/en-us/60685458-9108-47bf-820a-5e7db454d408)  
+-   [Procedure per SQL Server Management Studio](http://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
   
--   [Amministrazione del database del server di report](http://msdn.microsoft.com/en-us/97b2e1b5-3869-4766-97b9-9bf206b52262)  
+-   [Amministrazione del database del server di report](http://msdn.microsoft.com/97b2e1b5-3869-4766-97b9-9bf206b52262)  
   
--   [Procedura: Creazione di RSExecRole](http://msdn.microsoft.com/en-us/7ac17341-df7e-4401-870e-652caa2859c0)  
+-   [Procedura: Creazione di RSExecRole](http://msdn.microsoft.com/7ac17341-df7e-4401-870e-652caa2859c0)  
   
 Per gestire il server è inoltre possibile abilitare e configurare numerose funzionalità, configurare le impostazioni predefinite del server e gestire ruoli e processi. Per ulteriori informazioni su queste attività, vedere gli argomenti seguenti:  
   
--   [Procedura: Impostazione delle proprietà di un server di report (Management Studio)](http://msdn.microsoft.com/en-us/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
+-   [Procedura: Impostazione delle proprietà di un server di report (Management Studio)](http://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
   
--   [Procedura: Creazione, eliminazione o modifica di un ruolo (Management Studio)](http://msdn.microsoft.com/en-us/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
+-   [Procedura: Creazione, eliminazione o modifica di un ruolo (Management Studio)](http://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
   
--   [Attivazione e disabilitazione della stampa sul lato client per Reporting Services](http://msdn.microsoft.com/en-us/0e709c96-7517-4547-8ef6-5632f8118524)  
+-   [Attivazione e disabilitazione della stampa sul lato client per Reporting Services](http://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Sviluppo e implementazione tramite SQL Server Management Studio](http://msdn.microsoft.com/en-us/132ed779-3ec8-4734-9698-802116d1b017)  
-[Reporting Services in SQL Server Data Tools](http://msdn.microsoft.com/en-us/0903c7b2-ac59-45f1-b7d0-922ecd9d76f8)  
+[Sviluppo e implementazione tramite SQL Server Management Studio](http://msdn.microsoft.com/132ed779-3ec8-4734-9698-802116d1b017)  
+[Reporting Services in SQL Server Data Tools](http://msdn.microsoft.com/0903c7b2-ac59-45f1-b7d0-922ecd9d76f8)  
   

@@ -19,10 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64ce1d99c60eb8863c0e149b8560d99d5d16ffeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980739"
 ---
 # <a name="arguments-for-external-tools"></a>Strumenti esterni - Argomenti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ Gli argomenti sono variabili per le quali l'ambiente Visual Studio specifica dei
   
 Nella tabella seguente vengono elencati gli argomenti per gli strumenti esterni.  
   
-|nome|Argomento|Description|  
+|nome|Argomento|Descrizione|  
 |--------|------------|---------------|  
 |**Percorso elemento**|$(ItemPath)|Il nome file completo dell'origine corrente (definito come unità + percorso + nome file); vuoto se è attiva una finestra non di origine.|  
 |**Directory elemento**|$(ItemDir)|La directory dell'origine corrente (definita come unità + percorso); vuoto se è attiva una finestra non di origine.|  

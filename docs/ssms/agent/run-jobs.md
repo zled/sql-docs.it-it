@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9341a431d5908fe4b6475e28aaa1463fd29cb7d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043918"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064656"
 ---
 # <a name="run-jobs"></a>Esecuzione di processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33043918"
 
 Per gestire i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], stored procedure [!INCLUDE[tsql](../../includes/tsql_md.md)] oppure oggetti SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |||  
 |-|-|  

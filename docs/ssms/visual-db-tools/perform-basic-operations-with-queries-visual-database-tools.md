@@ -19,17 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28814c1df05e6e5c90c546cdc053bc938f77abe6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053060"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031039"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Esecuzione di operazioni di base con le query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Le seguenti operazioni fondamentali sono applicabili a quasi tutte le query.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 [Creazione di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 Viene descritta la procedura per creare nuove query.  
   

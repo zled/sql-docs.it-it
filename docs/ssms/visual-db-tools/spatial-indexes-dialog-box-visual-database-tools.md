@@ -17,18 +17,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb7c869dbf087db4c59eb9e5ba30c48f6e33f055
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef9e1bc117338fe66816b32634c188730caf4244
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053788"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981873"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici spaziali (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 La finestra di dialogo **Indici spaziali** consente di creare indici per le colonne con tipo di dati **geometria** o **geografia** (*colonne spaziali*), che non possono essere indicizzate con la finestra di dialogo **Indici/chiavi** . Ogni colonna spaziale può avere più indici spaziali, ma gli indici devono essere creati uno alla volta.  
   
-Per informazioni sulle restrizioni alla creazione di indici spaziali, vedere [Panoramica degli indici spaziali](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293).  
+Per informazioni sulle restrizioni alla creazione di indici spaziali, vedere [Panoramica degli indici spaziali](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293).  
   
 ## <a name="options"></a>Opzioni  
 **Indice spaziale selezionato**  
@@ -122,5 +122,5 @@ Consente di specificare se calcolare nuove statistiche quando viene creato l'ind
 Consente di specificare se per l'indice è consentito il blocco a livello di riga. L'attivazione o la disattivazione di tale blocco incide sulle prestazioni del database.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Panoramica degli indici spaziali](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)  
+[Panoramica degli indici spaziali](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)  
   

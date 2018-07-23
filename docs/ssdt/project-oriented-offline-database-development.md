@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.general
 - sql.data.tools.dbprojectwizard.summary
@@ -17,12 +17,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9eecb9e54dcbf43a359130e58dc4769279710b3c
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 6cdd7e27cfba54215f3f2eda52c9132c0b366325
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094118"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088013"
 ---
 # <a name="project-oriented-offline-database-development"></a>Sviluppo di database offline orientato ai progetti
 Questa sezione descrive le funzionalità fornite SQL Server Data Tools (SSDT) per la creazione, la compilazione, il debug e la pubblicazione di un progetto di database.  
@@ -32,7 +32,7 @@ Se si usa SSDT, sarà possibile creare un database di sviluppo da un database di
 > [!NOTE]  
 > Negli argomenti in cui sono descritte le procedure inclusi in questa sezione è contenuta una serie di attività che può essere completata in una sequenza.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |---------|---------------|  

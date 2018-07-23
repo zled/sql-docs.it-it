@@ -22,17 +22,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c9e40baacaa66fffb2a8c9ee100f6367a1a4057
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33051008"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053009"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Tipi di query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 In Progettazione query e Progettazione viste sono disponibili caratteristiche incorporate per alcuni tipi di query, ovvero query di selezione (Select), di accodamento (Insert Results), di accodamento valori (Insert Values), di aggiornamento (Update), di eliminazione (Delete) e di creazione tabella (Make Table), e sono supportate le query di unione (UNION), di ricerca full-text e con l'espressione CASE.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 [Tipi di query supportati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 Vengono descritti i tipi di query che è possibile utilizzare con Progettazione query e Progettazione viste.  
   

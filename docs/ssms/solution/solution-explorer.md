@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 02ac675f7dd209cb538e90142f6b9049068e2ad7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043618"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045959"
 ---
 # <a name="solution-explorer"></a>Esplora soluzioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ Questi contenitori possono essere utilizzati per:
   
 Gli elementi contenuti nei progetti dipendono dal tipo di progetto e dall'eventuale utilizzo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
 Utilizzare gli argomenti seguenti per iniziare a utilizzare le soluzioni di SQL Server:  
   
 |||  

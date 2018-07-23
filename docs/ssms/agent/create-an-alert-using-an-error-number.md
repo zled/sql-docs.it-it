@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 870cdc5102be974aadb82bb1e669a56469090ba5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5dbcfc40770714a5a6d6b3a99052b096e4e384e5
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043818"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985273"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>Creazione di un avviso utilizzando un numero di errore
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,5 +113,5 @@ Per impostazione predefinita, solo i membri del ruolo predefinito del server **s
     GO  
     ```  
   
-Per altre informazioni, vedere [sp_add_alert](http://msdn.microsoft.com/en-us/d9b41853-e22d-4813-a79f-57efb4511f09).  
+Per altre informazioni, vedere [sp_add_alert](http://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09).  
   

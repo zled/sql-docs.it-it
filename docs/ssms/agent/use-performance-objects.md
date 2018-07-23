@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a672a845e28cd3d8a005603b5ccdc1871761e7b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01d245a9ac6eb32bd38978bd2ed4189f774332ca
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042828"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982413"
 ---
 # <a name="use-performance-objects"></a>Utilizzo degli oggetti prestazioni
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ Nella tabella seguente viene illustrata la modalità di assegnazione dei nomi pe
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] include gli oggetti prestazione seguenti per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
-|Nome oggetto|Description|  
+|Nome oggetto|Descrizione|  
 |---------------|---------------|  
-|[SQLAgent:Processi](http://msdn.microsoft.com/en-us/225b5e2d-4a78-4178-b2b6-b419df83c4aa)|Informazioni sulle prestazioni relative a processi avviati, alle percentuali di processi completati e allo stato corrente|  
-|[SQLAgent:JobSteps](http://msdn.microsoft.com/en-us/44f9983c-1753-4fe0-8475-973aa2460b3a)|Informazioni sullo stato relative ai passaggi di processo|  
-|[SQLAgent:Avvisi](http://msdn.microsoft.com/en-us/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|Informazioni sul numero di avvisi e notifiche|  
-|[SQLAgent:Statistiche](http://msdn.microsoft.com/en-us/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|Informazioni generali sulle prestazioni|  
+|[SQLAgent:Processi](http://msdn.microsoft.com/225b5e2d-4a78-4178-b2b6-b419df83c4aa)|Informazioni sulle prestazioni relative a processi avviati, alle percentuali di processi completati e allo stato corrente|  
+|[SQLAgent:JobSteps](http://msdn.microsoft.com/44f9983c-1753-4fe0-8475-973aa2460b3a)|Informazioni sullo stato relative ai passaggi di processo|  
+|[SQLAgent:Avvisi](http://msdn.microsoft.com/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|Informazioni sul numero di avvisi e notifiche|  
+|[SQLAgent:Statistiche](http://msdn.microsoft.com/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|Informazioni generali sulle prestazioni|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Monitoraggio e ottimizzazione delle prestazioni](http://msdn.microsoft.com/en-us/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
-[Procedura: Avvio di Monitoraggio di sistema (Windows)](http://msdn.microsoft.com/en-us/5e51bb79-5737-470b-9c47-fac330c001c5)  
+[Monitoraggio e ottimizzazione delle prestazioni](http://msdn.microsoft.com/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
+[Procedura: Avvio di Monitoraggio di sistema (Windows)](http://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

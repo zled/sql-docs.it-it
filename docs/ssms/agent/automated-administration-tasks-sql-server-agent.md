@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 64cf56df3d9e7ff4f2cb82bf157226b9a8f33993
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039218"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984773"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Automatizzazione delle attività amministrative (SQL Server Agent)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33039218"
 
 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] consente di automatizzare le attività amministrative. Per automatizzare le attività amministrative, è necessario definire quelle prevedibili e quindi specificare le condizioni in cui si verifica ogni attività. L'utilizzo dell'amministrazione automatica per gestire attività ed eventi di routine consente di dedicare il proprio tempo all'esecuzione di altre funzioni amministrative.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  
   
 [Implementazione di processi](../../ssms/agent/implement-jobs.md)  

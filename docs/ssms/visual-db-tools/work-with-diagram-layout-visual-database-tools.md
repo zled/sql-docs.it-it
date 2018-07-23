@@ -20,17 +20,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 399167c14d1524d2e1e1a6875417e63d607a0e92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049638"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040079"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>Utilizzare il layout di un diagramma (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 È possibile personalizzare l'aspetto dei diagrammi di database.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 [Personalizzazione della quantità di informazioni visualizzate nei diagrammi &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
   
 [Aggiunta di annotazioni testo a diagrammi &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-text-annotations-to-diagrams-visual-database-tools.md)  

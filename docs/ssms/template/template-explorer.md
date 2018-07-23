@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d6fadfa9b084a16f6464bbebf6d6a8e32b7cbbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046668"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015970"
 ---
 # <a name="template-explorer"></a>Esplora modelli
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ Creare modelli personalizzati per le attività eseguite di frequente. Organizzar
   
 L'editor di query del [!INCLUDE[ssDE](../../includes/ssde_md.md)] supporta anche frammenti di codice che possono essere inseriti in percorsi specifici in uno script facendo clic con il pulsante destro del mouse sul percorso.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
 Utilizzare i seguenti argomenti per ottenere un'introduzione ai modelli.  
   
 |**Description**|**Argomento**|  

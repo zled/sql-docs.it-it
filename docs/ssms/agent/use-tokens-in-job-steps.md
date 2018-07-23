@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 01eb7c21ff82d25e49982d5acd700ed9226f53bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046038"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971363"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utilizzo dei token nei passaggi dei processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supporta
   
 ### <a name="sql-server-agent-tokens"></a>Token di SQL Server Agent  
   
-|Token|Description|  
+|Token|Descrizione|  
 |---------|---------------|  
 |**(A-DBN)**|Nome del database. Se il processo viene eseguito da un avviso, il valore del nome del database sostituisce automaticamente il token nel passaggio di processo.|  
 |**(A-SVR)**|Nome del server. Se il processo viene eseguito da un avviso, il valore del nome del server sostituisce automaticamente il token nel passaggio di processo.|  
@@ -97,7 +97,7 @@ Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supporta
   
 ### <a name="sql-server-agent-escape-macros"></a>Macro di escape di SQL Server Agent  
   
-|Macro di escape|Description|  
+|Macro di escape|Descrizione|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(***nome_token***))**|Utilizza caratteri di escape per virgolette singole (') nella stringa di sostituzione del token. Sostituisce una virgoletta singola con due virgolette singole.|  
 |**$(ESCAPE_DQUOTE(***nome_token***))**|Utilizza caratteri di escape per virgolette doppie (") nella stringa di sostituzione del token. Sostituisce una virgoletta doppia con due virgolette doppie.|  

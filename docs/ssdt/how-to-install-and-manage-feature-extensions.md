@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b3d6d4c85a287dc000d761df1eafeb49e4261336
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 078e69c2df09253141aa55d66e387f7972ce8b2e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094160"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087883"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>Procedura: Installare e gestire le estensioni delle funzionalità
 È possibile aggiungere regole per l'analisi del codice del database, condizioni per gli unit test del database e collaboratori alla compilazione/distribuzione per aumentare le funzionalità offerte dalle edizioni di Visual Studio che includono SQL Server Data Tools. Tuttavia, per potere usare un'estensione della funzionalità è necessario prima installarla, indipendentemente dal fatto che l'estensione sia stata creata dall'utente stesso o se ne stia installando una creata da un altro utente.  

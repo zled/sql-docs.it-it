@@ -17,24 +17,24 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f6991e63b876f3a9d31b318907941e46a55d4a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046648"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981314"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Ambiente di SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] offre un ambiente completo per la gestione e lo sviluppo di query in [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 [Elementi generali dell'interfaccia utente](../ssms/general-user-interface-elements.md)  
 Vengono definite le caratteristiche generali dell'interfaccia utente, ad esempio Esplora soluzioni, Esplora oggetti, la finestra Proprietà e il browser integrato.  
   
 [Esplora soluzioni](../ssms/solution/solution-explorer.md)  
 Viene illustrato Esplora soluzioni, che offre una visualizzazione organizzata dei progetti e dei rispettivi file e un facile accesso ai comandi per gestirli.  
   
-[Controllo del codice sorgente di Esplora soluzioni](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+[Controllo del codice sorgente di Esplora soluzioni](https://msdn.microsoft.com/library/ms173879.aspx)  
 Viene descritto come [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] si integra con i prodotti del controllo del codice sorgente.  
   

@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLEDITOR
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eccaf60d648824e2f170bf1fd78b8a8f1a16dc28
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4bdca5a6c8ea949e9106bd8d62b8fa6868577d13
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094166"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082963"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Utilizzare l'Editor Transact-SQL per modificare ed eseguire script
 L'editor Transact\-SQL offre un'esperienza di modifica e di debug completa durante l'utilizzo degli script. Viene richiamato quando si usa il menu contestuale **Visualizza codice** per aprire un'entità del database in un progetto o in un database connesso. Viene anche aperto automaticamente quando si usa il menu contestuale **Nuova query** da Esplora oggetti di SQL Server o si aggiunge un nuovo oggetto script a un progetto di database.  
@@ -30,7 +30,7 @@ Se non si è connessi a un database ma si vuole eseguire una query sul database 
   
 Nell'editor Transact\-SQL è disponibile un riquadro **T-SQL** principale in cui è possibile scrivere e modificare script Transact\-SQL. L'editor supporta IntelliSense e il codice a colori della sintassi per migliorare la leggibilità di istruzioni complesse. Supporta inoltre le operazioni di ricerca e sostituzione, creazione di commenti bulk, caratteri e colori personalizzati e numerazione delle righe. Inoltre, è possibile modificare il database in cui sarà eseguito lo script nell'editor. Per altre informazioni, vedere [Procedura: Clonare un database esistente](../ssdt/how-to-clone-an-existing-database.md). Nel riquadro **Risultati** vengono visualizzati i risultati della query in una griglia o in un testo. Tali risultati possono anche essere reindirizzati in un file. Nel riquadro **Messaggio** vengono visualizzati errori, avvisi e messaggi informativi restituiti quando viene eseguito uno script. Se le statistiche client sono abilitate, nel riquadro **Statistiche** vengono visualizzate le informazioni sull'esecuzione di query raggruppate in categorie. Nel riquadro **Piano di esecuzione** vengono visualizzati i metodi di recupero dei dati scelti da SQL Server e vengono mostrati i costi di esecuzione di istruzioni e query specifiche.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |---------|---------------|  

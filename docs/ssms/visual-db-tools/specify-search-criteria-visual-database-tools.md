@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7975547333f76fdf86c0c3633e6b0794be8a98a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33052138"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040159"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>Specifica di criteri di ricerca (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ I criteri di ricerca consentono di limitare il numero di righe restituito da una
   
 Per informazioni dettagliate sulla procedura per la creazione di criteri di ricerca, vedere gli argomenti indicati nella tabella seguente.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 [Regole per l'immissione di valori di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
 Viene descritto come immettere testo, numeri, date o valori logici.  
   

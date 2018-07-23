@@ -18,12 +18,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 024175506b041ae9c62585dbdcc05da4b84bea02
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0cabc48571c7b3656086d918b649bb5bb305e23
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039638"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985373"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Amministrazione di server con SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33039638"
 I componenti di [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] includono Server registrati, Esplora oggetti, Esplora soluzioni, Esplora modelli, la pagina Dettagli Esplora oggetti e la finestra del documento. Per visualizzare uno strumento, scegliere il nome desiderato dal menu **Visualizza** . Per visualizzare lo strumento Editor di query, fare clic sul pulsante **Nuova query** sulla barra degli strumenti.  
   
 > [!IMPORTANT]  
-> Per impostazione predefinita, il traffico di rete tra [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] e [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] non è crittografato. In [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] lavorare con dati sensibili (comprese le password) solo dopo aver stabilito una connessione crittografata. Per altre informazioni, vedere [Procedura: Abilitazione di connessioni crittografate al Motore di database (Gestione configurazione SQL Server)](http://msdn.microsoft.com/en-us/e1e55519-97ec-4404-81ef-881da3b42006).  
+> Per impostazione predefinita, il traffico di rete tra [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] e [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] non è crittografato. In [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] lavorare con dati sensibili (comprese le password) solo dopo aver stabilito una connessione crittografata. Per altre informazioni, vedere [Procedura: Abilitazione di connessioni crittografate al Motore di database (Gestione configurazione SQL Server)](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006).  
   
 Utilizzare [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] per:  
   
@@ -66,5 +66,5 @@ Per avviare e arrestare [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] o
   
 ## <a name="see-also"></a>Vedere anche  
 [Utilizzo di SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[Procedura: Visualizzazione o modifica delle proprietà del server (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
+[Procedura: Visualizzazione o modifica delle proprietà del server (SQL Server Management Studio)](http://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   
