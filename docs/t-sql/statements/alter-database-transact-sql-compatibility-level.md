@@ -1,10 +1,9 @@
 ---
 title: Livello di compatibilità ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,24 +24,23 @@ helpviewer_keywords:
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 caps.latest.revision: 89
-author: edmacauley
-ms.author: edmaca
-manager: craigg
-ms.openlocfilehash: 1a52042015340454ed33c4883a2b6efcd387b526
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg'
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6ec0fd8539a4d2a0f1c5a93ff6ed80d6fb95e5ef
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689139"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791512"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Livello di compatibilità ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Imposta aspetti specifici del comportamento del database in modo che risultino compatibili con la versione specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre opzioni di ALTER DATABASE, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,12 +54,13 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
  Nome del database da modificare.  
   
  COMPATIBILITY_LEVEL { 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
- Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui il database deve risultare compatibile. È possibile configurare i valori di livello di compatibilità seguenti:  
+ Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui il database deve risultare compatibile. È possibile configurare i valori di livello di compatibilità seguenti (non tutte le versioni supportano tutti i livelli di compatibilità elencati):  
   
 |Prodotto|Versione del motore di database|Designazione di livello di compatibilità|Valori del livello di compatibilità supportato|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|140, 130, 120, 110, 100|  
+|Server logico [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|140, 130, 120, 110, 100|  
+|Istanza gestita [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|  
@@ -136,8 +135,14 @@ Per aggiornare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 
 
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>Utilizzo del livello di compatibilità per garantire la compatibilità con le versioni precedenti  
 L'impostazione del *livello di compatibilità del database* influisce sui comportamenti solo del database specificato, non dell'intero server. Il livello di compatibilità del database offre solo una compatibilità parziale con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
+
+> [!TIP]
+> Poiché il *livello di compatibilità del database* è un'impostazione a livello di database, un'applicazione in esecuzione su un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] più recente con un livello di compatibilità del database meno recente può comunque sfruttare i miglioramenti a livello di server senza alcun bisogno di modifiche all'applicazione.
+>
+> Questi includono miglioramenti del monitoraggio e della risoluzione dei problemi, con le nuove [Viste a gestione dinamica (DMV) di sistema](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) e gli [Eventi estesi](../../relational-databases/extended-events/extended-events.md). È stata inoltre migliorata la scalabilità, ad esempio con l'[Architettura soft-NUMA automatica](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+
 A partire dalla modalità di compatibilità 130, tutte le nuove funzionalità che influiscono sul piano di query sono state aggiunte intenzionalmente solo al nuovo livello di compatibilità. In questo modo si riduce al minimo il rischio che si corre durante gli aggiornamenti di ridurre il livello delle prestazioni per modifiche apportate al piano di query.   
-Dal punto di vista dell'applicazione, l'obiettivo dovrebbe essere sempre l'aggiornamento al livello di compatibilità più recente per ereditare alcune delle nuove funzionalità e sfruttare i miglioramenti in termini di prestazioni offerti da Query Optimizer, il tutto eseguito in modo controllato. Per una migrazione più sicura in cui sia possibile risolvere i problemi correlati alle differenze tra le versioni usare il livello di compatibilità inferiore nei comportamenti controllati dall'impostazione del livello di compatibilità pertinente. Per altri dettagli, incluso il flusso di lavoro consigliato per aggiornare il livello di compatibilità del database, vedere [Procedure consigliate per aggiornare il livello di compatibilità del database](#best-practices-for-upgrading-database-compatibility-evel) più avanti in questo articolo.  
+Dal punto di vista dell'applicazione, l'obiettivo dovrebbe essere sempre l'aggiornamento al livello di compatibilità più recente per ereditare alcune delle nuove funzionalità e sfruttare i miglioramenti in termini di prestazioni offerti da Query Optimizer, il tutto eseguito in modo controllato. Per una migrazione più sicura in cui sia possibile risolvere i problemi correlati alle differenze tra le versioni usare il livello di compatibilità inferiore nei comportamenti controllati dall'impostazione del livello di compatibilità pertinente. Per altri dettagli, incluso il flusso di lavoro consigliato per aggiornare il livello di compatibilità del database, vedere [Procedure consigliate per aggiornare il livello di compatibilità del database](#best-practices-for-upgrading-database-compatibility-level) più avanti in questo articolo.  
   
 > [!IMPORTANT]
 > Le funzionalità che non sono più supportate in una determinata versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono protette dal livello di compatibilità. Ciò si riferisce alle funzionalità rimosse dal [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
@@ -350,7 +355,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
-SET compatibility_level = 90;  
+SET compatibility_level = 110;  
 GO  
 USE AdventureWorks2012;  
 GO  
@@ -376,7 +381,7 @@ SELECT @v;
 ## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Parole chiave riservate &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  

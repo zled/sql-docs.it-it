@@ -14,15 +14,15 @@ ms.service: sql-database
 ms.custom: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/19/2018
+ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e5031c7e0b17177bb09ee91845626c9c32bd1bcc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
+ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698332"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37107239"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption con supporto Bring Your Own Key per i database e data warehouse SQL di Azure
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ Quando TDE viene configurato per la prima volta per l'uso di una protezione TDE 
 
 ### <a name="general-guidelines"></a>Linee guida generali
 - Assicurarsi che Azure Key Vault e il database SQL di Azure si trovino nello stesso tenant.  Le interazioni dell'insieme di credenziali delle chiavi e del server tra tenant **non sono supportate**.
-- Definire le sottoscrizioni da usare per le risorse necessarie poiché se il server viene spostato successivamente in un'altra sottoscrizione sarà necessario eseguire una nuova impostazione di TDE con BYOK.
+- Definire le sottoscrizioni da usare per le risorse necessarie poiché se il server viene spostato successivamente in un'altra sottoscrizione sarà necessario eseguire una nuova impostazione di TDE con BYOK. Altre informazioni sullo [spostamento di risorse](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources)
 - Quando si configura TDE con BYOK è importante valutare il carico che le ripetute operazioni di wrapping e annullamento del wrapping determinano sull'insieme di credenziali delle chiavi. Ad esempio, poiché tutti i database associati a un server logico usano la stessa protezione TDE, un failover del server attiverà un numero di operazioni sull'insieme di credenziali delle chiavi equivalente al numero di database presenti nel server. In base all'esperienza e ai [limiti del servizio Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) documentati, è consigliabile associare al massimo 500 database Standard/Utilizzo generico o 200 database Premium/Business Critical a un'istanza di Azure Key Vault in una sottoscrizione singola al fine di garantire una disponibilità costantemente elevata durante l'accesso alla protezione TDE nell'insieme di credenziali. 
 - Consigliato: conservare una copia della protezione TDE in locale.  A tale scopo, è necessario che un modulo di protezione hardware crei una protezione TDE locale e che un sistema di deposito delle chiavi memorizzi una copia locale della protezione TDE.
 
@@ -68,6 +68,7 @@ Quando TDE viene configurato per la prima volta per l'uso di una protezione TDE 
 - Creare un insieme di credenziali delle chiavi con l'[eliminazione temporanea](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) abilitata per evitare la perdita di dati in caso di eliminazione accidentale della chiave o dell'insieme di credenziali delle chiavi.  Usare [PowerShell per abilitare la proprietà di "eliminazione temporanea"](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) per gli insiemi di credenziali delle chiavi. Questa opzione non è ancora disponibile nel portale di Azure Key Vault, ma è richiesta da SQL:  
   - Le risorse eliminate temporaneamente vengono conservate per un periodo di tempo di 90 giorni, a meno che non vengano recuperate o ripulite.
   - Alle azioni di **recupero** e **pulizia** sono associate autorizzazioni specifiche nei criteri di accesso dell'insieme di credenziali delle chiavi. 
+- Impostare un blocco di risorsa per l'insieme di credenziali delle chiavi per controllare chi può eliminare questa risorsa critica e per impedire eliminazioni accidentali o non autorizzate.  [Altre informazioni sui blocchi delle risorse](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources)
 
 - Concedere al server logico l'accesso all'insieme di credenziali delle chiavi usando la relativa identità di Azure Active Directory (Azure AD).  Quando viene usata l'interfaccia utente del portale, l'identità Azure AD creata automaticamente e le autorizzazioni di accesso all'insieme di credenziali delle chiavi vengono concesse al server.  Se si usa PowerShell per configurare TDE con BYOK, è necessario creare l'identità Azure AD e verificare il completamento. Per istruzioni passo passo dettagliate per l'uso di PowerShell, vedere [Configurare TDE con BYOK](transparent-data-encryption-byok-azure-sql-configure.md).
 

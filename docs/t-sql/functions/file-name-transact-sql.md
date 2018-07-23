@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,20 +26,20 @@ helpviewer_keywords:
 - logical file names [SQL Server]
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4092e8dc584847d1a3a5e18c570838145ed88d14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8342dff7af15fc9c497521124e52e5c60519245b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050818"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791922"
 ---
 # <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce il nome di file logico corrispondente al numero di identificazione di file (ID) specificato.  
+Questa funzione restituisce il nome di file logico corrispondente al numero di identificazione di file (ID) specificato.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,17 +50,17 @@ FILE_NAME ( file_id )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *file_id*  
- Numero di identificazione del file per cui restituire il nome. *file_id* è di tipo **int**.  
+*file_id*  
+Numero di identificazione di file per cui `FILE_NAME` restituirà il nome di file. *file_ID* ha un tipo di dati **int**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- *file_ID* corrisponde alla colonna file_id nella vista del catalogo sys.master_files o sys.database_files.  
+*file_ID* corrisponde alla colonna file_id nella vista del catalogo sys.master_files o sys.database_files.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono restituiti i nomi file per `file_ID 1` e `file_ID` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+L'esempio seguente restituisce i nomi di file per `file_ID 1` e `file_ID` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
@@ -71,9 +70,9 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-File Name 1           File Name 2  
-----------------      ------------------------  
-AdventureWorks2012_Data   AdventureWorks2012_Log  
+File Name 1                File Name 2  
+-------------------------  ------------------------  
+AdventureWorks2012_Data    AdventureWorks2012_Log  
 
 (1 row(s) affected)
 ``` 

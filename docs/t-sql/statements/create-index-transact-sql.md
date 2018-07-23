@@ -1,10 +1,9 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/21/2017
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -55,16 +54,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 caps.latest.revision: 223
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b3e9f873046646b3c247cd2930c458da810d203
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0253d659a428b46aceee2b261f4b07e96983325b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582303"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782712"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -143,6 +142,8 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }  
   | DROP_EXISTING = { ON | OFF }  
   | ONLINE = { ON | OFF }  
+  | RESUMABLE = {ON | OF }
+  | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }  
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -309,7 +310,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  Specifica la posizione dei dati FILESTREAM per la tabella quando viene creato un indice cluster. La clausola FILESTREAM_ON consente di spostare i dati FILESTREAM in uno schema di partizione o in un filegroup FILESTREAM diverso.  
   
- *filestream_filegroup_name* è il nome di un filegroup FILESTREAM. Nel filegroup deve essere disponibile un file definito usando un'istruzione [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). In caso contrario, viene generato un errore.  
+ *filestream_filegroup_name* è il nome di un filegroup FILESTREAM. Nel filegroup deve essere disponibile un file definito usando un'istruzione [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). In caso contrario, viene generato un errore.  
   
  Se la tabella è partizionata, la clausola FILESTREAM_ON deve essere inclusa e deve specificare uno schema di partizione dei filegroup FILESTREAM che utilizzi la stessa funzione di partizione e le stesse colonne di partizione dello schema di partizione per la tabella. In caso contrario, viene generato un errore.  
   
@@ -461,7 +462,26 @@ Specifica se le tabelle sottostanti e gli indici associati sono disponibili per 
  I blocchi di tabella vengono applicati per la durata dell'operazione sugli indici. Un'operazione sugli indici offline che crea, ricompila o elimina un indice cluster oppure ricompila o elimina un indice non cluster acquisisce un blocco di modifica dello schema (SCH-M) sulla tabella. Il blocco impedisce agli utenti di accedere alla tabella sottostante per la durata dell'operazione. Un'operazione sugli indici offline che crea un indice non cluster acquisisce un blocco condiviso (S) sulla tabella. Tale blocco impedisce l'aggiornamento della tabella sottostante ma consente operazioni di lettura, ad esempio l'esecuzione di istruzioni SELECT.  
   
  Per altre informazioni, vedere [Funzionamento delle operazioni sugli indici online](../../relational-databases/indexes/how-online-index-operations-work.md).  
-  
+ 
+RESUMABLE **=** { ON | **OFF**}
+
+**Si applica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] come funzionalità in anteprima pubblica
+
+ Specifica se un'operazione sull'indice online è ripristinabile.
+
+ L'operazione sull'indice ON è ripristinabile.
+
+ L'operazione sull'indice OFF non è ripristinabile.
+
+MAX_DURATION **=** *time* [**MINUTES**] usato con **RESUMABLE = ON** (richiede **ONLINE = ON**).
+ 
+**Si applica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] come funzionalità in anteprima pubblica 
+
+Indica il tempo (un valore intero specificato in minuti) di esecuzione di un'operazione sull'indice online ripristinabile prima di essere sospesa. 
+
+> [!WARNING]
+>  Per informazioni più dettagliate sulle operazioni di indice eseguibili online, vedere [Linee guida per operazioni di indice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
+
  È possibile creare online tutti gli indici, inclusi quelli di tabelle temporanee globali, ad eccezione dei seguenti:  
   
 -   Indice XML  
@@ -648,7 +668,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** possono essere indicizzate come colonne chiave o colonne non chiave incluse purché il tipo di dati della colonna calcolata sia consentito come colonna chiave o colonna non chiave dell'indice. Ad esempio, non è possibile creare un indice XML primario per una colonna **xml** calcolata. Se la dimensione della chiave di indice supera i 900 byte, viene visualizzato un messaggio di avviso.  
   
- La creazione di un indice su una colonna calcolata può impedire l'esecuzione di un'operazione di inserimento o di aggiornamento che in precedenza veniva eseguita correttamente. Questo problema si può verificare quando la colonna calcolata genera un errore aritmetico. Nella tabella seguente, ad esempio, nonostante la colonna calcolata `c` generi un errore aritmetico, l'istruzione `INSERT` viene eseguita correttamente.  
+ La creazione di un indice su una colonna calcolata può impedire l'esecuzione di un'operazione di inserimento o di aggiornamento che in precedenza veniva eseguita correttamente. Questo problema si può verificare quando la colonna calcolata genera un errore aritmetico. Nella tabella seguente, ad esempio, nonostante la colonna calcolata `c` generi un errore aritmetico, l'istruzione INSERT viene eseguita correttamente.  
   
 ```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
@@ -696,7 +716,50 @@ INSERT INTO t1 VALUES (1, 0);
 -   È possibile eseguire operazioni online su indici partizionati e indici che contengono colonne calcolate persistenti o colonne incluse.  
   
  Per altre informazioni, vedere [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
-  
+ 
+### <a name="resumable-indexes"></a>Operazioni sull'indice ripristinabili
+
+**Si applica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] come funzionalità in anteprima pubblica.
+
+Per l'esecuzione di operazioni sull'indice ripristinabili, è necessario attenersi alle indicazioni seguenti:
+
+- La creazione degli indici online viene specificata come ripristinabile usando l'opzione RESUMABLE=ON. 
+- L'opzione RESUMABLE non è persistente nei metadati per un determinato indice e si applica solo alla durata di un'istruzione DDL corrente. Per abilitare la funzione di ripristino, è necessario quindi che la clausola RESUMABLE=ON sia specificata in modo esplicito.
+- L'opzione MAX_DURATION è supportata solo per l'opzione RESUMABLE = ON. 
+-  L'opzione MAX_DURATION per RESUMABLE specifica l'intervallo di tempo per la compilazione di un indice. Trascorso questo tempo, la compilazione dell'indice viene sospesa oppure viene completata. È l'utente a decidere quando riprendere la compilazione di un indice che è stata sospesa. Il valore espresso in minuti in **time** per MAX_DURATION deve essere maggiore di 0 e minore o uguale a una settimana (7 * 24 * 60 = 10080 minuti). Una sospensione prolungata di un'operazione sull'indice può compromettere le prestazioni DML su una tabella specifica, nonché la capacità del disco del database poiché entrambi gli indici, quello originale e quello appena creato, richiedono spazio su disco e devono essere aggiornati durante le operazioni DML. Se l'opzione MAX_DURATION viene omessa, l'operazione sull'indice continuerà fino al suo completamento o fino a quando non si verificherà un errore. 
+- Per sospendere immediatamente l'operazione sull'indice, è possibile arrestare il comando in corso (CTRL-C) oppure eseguire il comando [ALTER INDEX](alter-index-transact-sql.md) PAUSE o il comando KILL `<session_id>`. Quando il comando viene sospeso, è possibile riprenderlo usando il comando [ALTER INDEX](alter-index-transact-sql.md). 
+- Eseguendo nuovamente l'istruzione CREATE INDEX originale per l'indice ripristinabile, un'operazione di creazione indice sospesa riprende automaticamente.
+- L'opzione SORT_IN_TEMPDB=ON non è supportata per l'indice ripristinabile. 
+- Il comando DDL con RESUMABLE=ON non può essere eseguito all'interno di una transazione esplicita (non può far parte del blocco BEGIN TRAN … COMMIT).
+- Per riprendere/interrompere la compilazione o ricompilazione di un indice, usare la sintassi T-SQL [ALTER INDEX](alter-index-transact-sql.md)
+
+> [!NOTE]
+> Il comando DDL viene eseguito fin tanto che è completato, sospeso o non riuscito. Nel caso in cui il comando sia sospeso, verrà generato un errore a indicare che l'operazione è stata sospesa e che la creazione dell'indice non è stata completata. Altre informazioni sullo stato corrente dell'indice sono disponibili in [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Come in precedenza, in caso di errore verrà generato un errore. 
+
+Per indicare che la creazione di un indice viene eseguita come operazione ripristinabile e per verificarne lo stato di esecuzione corrente, vedere [index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Per l'anteprima pubblica, le colonne seguenti in questa visualizzazione sono impostate su 0:
+- total_execution_time
+- percent_complete e page_count
+
+**Risorse** Le risorse seguenti sono obbligatorie per un'operazione di creazione dell'indice online ripristinabile
+- Uno spazio aggiuntivo necessario per mantenere l'indice compilato, incluso il tempo di sospensione dell'indice
+- Velocità effettiva superiore del log delle transazioni nella fase di ordinamento. L'utilizzo complessivo dello spazio nel log delle transazioni è minore rispetto alla normale creazione di indici online e consente il troncamento del log durante questa operazione.
+- Uno stato DDL per impedire eventuali modifiche DDL
+  - La pulizia fantasma è bloccata nell'indice della compilazione per la durata dell'operazione, sia in pausa che mentre l'operazione è in esecuzione.
+
+**Limitazioni funzionali attuali**
+
+> [!IMPORTANT]
+> La **creazione dell'indice online ripristinabile** è attualmente supportata solo per gli indici non cluster.
+
+Le funzionalità seguenti sono disabilitate per le operazioni di creazione dell'indice ripristinabili
+- La creazione dell'indice ripristinabile non è supportata per un indice cluster nell'anteprima pubblica.
+- Quando un'operazione di creazione dell'indice online ripristinabile è sospesa, il valore iniziale di MAXDOP non può essere modificato
+- La clausola DROP EXISTING non è supportata
+- Creazione di un indice che contiene 
+ - Colonne calcolate o colonne TIMESTAMP come colonne chiave
+ - Colonna LOB come colonna inclusa per la creazione indice ripristinabile
+- Indice filtrato
+ 
 ## <a name="row-and-page-locks-options"></a>Opzioni per blocchi di riga e di pagina  
  Se ALLOW_ROW_LOCKS = ON e ALLOW_PAGE_LOCK = ON, sono consentiti blocchi di riga, pagina e tabella per l'accesso all'indice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] sceglie il blocco appropriato e può eseguire un'escalation del blocco da un blocco di riga o di pagina a un blocco di tabella.  
   
@@ -983,11 +1046,53 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),
     DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4 ) ) ;  
 GO  
 ```  
-  
+### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. Creare, riprendere, sospendere e interrompere operazioni sull'indice ripristinabili
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx1 on test_table PAUSE   
+ALTER INDEX test_idx2 on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx1 on test_table RESUME   
+ALTER INDEX test_idx2 on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx1 on test_table ABORT 
+ALTER INDEX test_idx2 on test_table ABORT 
+```
+
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="m-basic-syntax"></a>M. Sintassi di base  
-  
+### <a name="n-basic-syntax"></a>N. Sintassi di base  
+  ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>Creare, riprendere, sospendere e interrompere operazioni sull'indice ripristinabili
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx on test_table ABORT 
+
 ```sql  
 CREATE INDEX IX_VendorID   
     ON ProductVendor (VendorID);  
@@ -997,7 +1102,7 @@ CREATE INDEX IX_VendorID
     ON Purchasing..ProductVendor (VendorID);  
 ```  
   
-### <a name="n-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>N. Creare un indice non cluster per una tabella nel database corrente  
+### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O. Creare un indice non cluster per una tabella nel database corrente  
  Nell'esempio seguente viene creato un indice non cluster per la colonna `VendorID` della tabella `ProductVendor`.  
   
 ```sql  
@@ -1005,7 +1110,7 @@ CREATE INDEX IX_ProductVendor_VendorID
     ON ProductVendor (VendorID);   
 ```  
   
-### <a name="o-create-a-clustered-index-on-a-table-in-another-database"></a>O. Creare un indice cluster per una tabella in un altro database  
+### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>P. Creare un indice cluster per una tabella in un altro database  
  Nell'esempio seguente viene creato un indice non cluster per la colonna `VendorID` della tabella `ProductVendor` nel database `Purchasing`.  
   
 ```sql  

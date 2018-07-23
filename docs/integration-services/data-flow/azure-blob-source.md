@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b00b3fbfeeff2fa7c99ac8f69e3c46c79e4ed796
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334705"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964353"
 ---
 # <a name="azure-blob-source"></a>Origine BLOB di Azure
   Il componente **Origine Blob di Azure** consente a un pacchetto SSIS di leggere dati da un BLOB di Azure. I formati di file supportati sono CSV e AVRO.
@@ -37,10 +37,14 @@ ms.locfileid: "35334705"
   
 3.  Nel campo **Nome BLOB** specificare il percorso per il BLOB.  
   
-4.  Nel campo **Formato del file BLOB** specificare il formato BLOB che si vuole usare.  
+4.  Nel campo **Formato del file BLOB** selezionare il formato BLOB che si vuole usare **Testo** o **Avro**.  
   
-5.  Se il formato del file è CSV, è necessario impostare il valore **Carattere delimitatore di colonna** . Selezionare anche **Nomi di colonne nella prima riga di dati** se la prima riga nel file contiene i nomi di colonna.  
+5.  Se il formato del file è **Testo**, è necessario impostare il valore **Carattere delimitatore di colonna**. Selezionare anche **Nomi di colonne nella prima riga di dati** se la prima riga nel file contiene i nomi di colonna.
+
+6.  Se il file è compresso, selezionare **Decomprimi file**.
+
+7.  Se il file è compresso, selezionare il **Tipo di compressione**: **GZIP**, **DEFLATE** oppure **BZIP2**. Si noti che il formato di file ZIP non è supportato.
   
-6.  Dopo aver specificato le informazioni di connessione, passare alla pagina **Colonne** per eseguire il mapping delle colonne di origine alle colonne di destinazione per il flusso di dati SSIS.  
+8.  Dopo aver specificato le informazioni di connessione, passare alla pagina **Colonne** per eseguire il mapping delle colonne di origine alle colonne di destinazione per il flusso di dati SSIS.  
   
   

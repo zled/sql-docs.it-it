@@ -3,11 +3,6 @@ title: Partner di monitoraggio per SQL Server | Microsoft Docs
 description: Elenchi di partner di terze parti con soluzioni di monitoraggio per SQL Server.
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -15,14 +10,15 @@ ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: f9c0dbc7ddcd40f8dbd859711c32dc4f9ff79f71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: f5251195c95036abb741672c593dbd82e8817fca
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033638"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926212"
 ---
 # <a name="sql-server-monitoring-partners"></a>Partner di monitoraggio per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +29,7 @@ Per monitorare i servizi di SQL Server, è possibile scegliere tra una vasta gam
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Partner di monitoraggio Microsoft
-| Partner | Description | Collegamenti |
+| Partner | Descrizione | Collegamenti |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager è una potente soluzione di monitoraggio e diagnostica delle prestazioni in grado di avvisare in modo proattivo gli amministratori da una console centrale se vengono rilevati problemi di integrità, disponibilità e prestazioni negli ambienti SQL Server.<br><br>[Requisiti di sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sito Web][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>Spotlight in SQL Server Enterprise - Prestazioni ottimali in ogni momento con capacità avanzate di monitoraggio, diagnostica e ottimizzazione degli ambienti SQL Server. Spotlight consente l'accesso ai dettagli necessari per l'ottimizzazione dei database di SQL Server. È possibile ottenere una panoramica intuitiva di integrità e prestazioni, avvisi e azioni automatizzate e supporto per i dispositivi mobili.|[Marketplace][quest_marketplace]<br>[Sito Web][quest_website]<br>[Video][quest_video] | |
@@ -72,9 +68,7 @@ Per saperne di più su altri partner Microsoft, vedere i [partner di disponibili
 [solarwinds_datasheet]:https://www.solarwinds.com/-/media/solarwinds/swdcv2/licensed-products/database-performance-analyzer-sql-server/resources/datasheets/dpa-datasheet-sql-server.ashx
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
-[quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview 
-[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/--> [quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview [solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview
 
 <!--Press links-->
 <!--[idera_press]:-->

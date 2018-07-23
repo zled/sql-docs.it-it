@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: tsql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -46,17 +45,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cbd5a65f85fa7b54964abf60e01c24a94969753e
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 866e481123bc73db91a093cc79de0c2e7e277fa9
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "34154651"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262575"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -194,7 +192,7 @@ ALTER INDEX { index_name | ALL }
 |REORGANIZE PARTITION = *partition_number*|Indice non partizionato, indice XML, indice spaziale o indice disabilitato|  
 |IGNORE_DUP_KEY = ON|Indice XML<br /><br /> Indice spaziale<br /><br /> Indice columnstore: **si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |ONLINE = ON|Indice XML<br /><br /> Indice spaziale<br /><br /> Indice columnstore: **si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
-| RESUMABLE = ON  | Indici ripristinabili non supportati con la parola chiave **ALL**. <br /><br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
+|RESUMABLE = ON  | Indici ripristinabili non supportati con la parola chiave **ALL**. <br /><br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
   
 > [!WARNING]
 >  Per informazioni più dettagliate sulle operazioni di indice eseguibili online, vedere [Linee guida per operazioni di indice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
@@ -575,7 +573,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- Per una ricompilazione di indice online è necessario attendere il blocco delle operazioni su questa tabella. **WAIT_AT_LOW_PRIORITY** indica che l'operazione di ricompilazione dell'indice online rimarrà in attesa di blocchi a bassa priorità, consentendo alle altre operazioni di proseguire mentre la compilazione dell'indice online è in attesa. L'omissione dell'opzione **WAIT AT LOW PRIORITY** equivale a `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Per altre informazioni, vedere [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
+ Per una ricompilazione di indice online è necessario attendere il blocco delle operazioni su questa tabella. **WAIT_AT_LOW_PRIORITY** indica che l'operazione di ricompilazione dell'indice online rimarrà in attesa di blocchi a bassa priorità, consentendo alle altre operazioni di proseguire mentre la compilazione dell'indice online è in attesa. L'omissione dell'opzione **WAIT AT LOW PRIORITY** equivale a WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minuti, ABORT_AFTER_WAIT = NONE). Per altre informazioni, vedere [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
   
  MAX_DURATION = *time* [**MINUTES**]  
   
@@ -598,7 +596,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**Si applica a **: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]  
+**Si applica a** : a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]  
 
 Riprende un'operazione sull'indice che è stata sospesa manualmente o a causa di un errore.
 
@@ -613,7 +611,7 @@ WAIT_AT_LOW_PRIORITY usato con **RESUMABLE=ON** e **ONLINE = ON**.
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- Per una ricompilazione di indice online dopo una sospensione è necessario attendere il blocco delle operazioni su questa tabella. **WAIT_AT_LOW_PRIORITY** indica che l'operazione di ricompilazione dell'indice online rimarrà in attesa di blocchi a bassa priorità, consentendo alle altre operazioni di proseguire mentre la compilazione dell'indice online è in attesa. L'omissione dell'opzione **WAIT AT LOW PRIORITY** equivale a `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Per altre informazioni, vedere [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
+ Per una ricompilazione di indice online dopo una sospensione è necessario attendere il blocco delle operazioni su questa tabella. **WAIT_AT_LOW_PRIORITY** indica che l'operazione di ricompilazione dell'indice online rimarrà in attesa di blocchi a bassa priorità, consentendo alle altre operazioni di proseguire mentre la compilazione dell'indice online è in attesa. L'omissione dell'opzione **WAIT AT LOW PRIORITY** equivale a WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minuti, ABORT_AFTER_WAIT = NONE). Per altre informazioni, vedere [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 PAUSE
@@ -629,19 +627,19 @@ ABORT
 Interrompe un'operazione sull'indice in esecuzione o sospesa, dichiarata ripristinabile. È necessario eseguire in modo esplicito un comando **ABORT** per terminare un'operazione di ricompilazione dell'indice ripristinabile. L'errore o la sospensione di un'operazione sull'indice ripristinabile non termina l'esecuzione. Lascia invece l'operazione in uno stato di sospensione indefinito.
   
 ## <a name="remarks"></a>Remarks  
-`ALTER INDEX` non può essere usato per ripartizionare un indice o spostarlo in un filegroup diverso né per modificare la definizione dell'indice, ad esempio per aggiungere o eliminare colonne oppure per modificarne l'ordine. Per eseguire queste operazioni usare `CREATE INDEX` con la clausola `DROP_EXISTING`.  
+L'istruzione ALTER INDEX non può essere utilizzata per ripartizionare un indice o spostarlo in un filegroup diverso né per modificare la definizione dell'indice, ad esempio per aggiungere o eliminare colonne oppure per modificarne l'ordine. Per eseguire queste operazioni, utilizzare CREATE INDEX con la clausola DROP_EXISTING.  
   
-Quando un'opzione non viene specificata in modo esplicito, viene applicata l'impostazione corrente. Se, ad esempio, non viene specificata un'impostazione `FILLFACTOR` nella clausola `REBUILD`, durante il processo di ricompilazione verrà usato il valore del fattore di riempimento archiviato nel catalogo di sistema. Per visualizzare le impostazioni correnti delle opzioni per gli indici, usare [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+Quando un'opzione non viene specificata in modo esplicito, viene applicata l'impostazione corrente. Se, ad esempio, non viene specificata un'impostazione per FILLFACTOR nella clausola REBUILD, verrà utilizzato il valore del fattore di riempimento archiviato nel catalogo di sistema durante il processo di ricompilazione. Per visualizzare le impostazioni correnti delle opzioni per gli indici, usare [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
-I valori per `ONLINE`, `MAXDOP` e `SORT_IN_TEMPDB` non vengono archiviati nel catalogo di sistema. Se non viene specificato un valore nell'istruzione dell'indice, viene utilizzato il valore predefinito dell'opzione.
+I valori di ONLINE, MAXDOP e SORT_IN_TEMPDB non vengono archiviati nel catalogo di sistema. Se non viene specificato un valore nell'istruzione dell'indice, viene utilizzato il valore predefinito dell'opzione.
   
-Nei computer multiprocessore l'istruzione `ALTER INDEX ... REBUILD` usa automaticamente più processori per eseguire le operazioni di analisi e ordinamento associate alla modifica dell'indice, in modo identico ad altre query. Quando si esegue `ALTER INDEX ... REORGANIZE`, con o senza `LOB_COMPACTION`, il valore di **max degree of parallelism** corrisponde a un'operazione a thread singolo. Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+Nei computer multiprocessore l'istruzione ALTER INDEX... REBUILD usa automaticamente più processori per eseguire le operazioni di analisi e ordinamento associate alla modifica dell'indice, in modo identico ad altre query. Quando si esegue ALTER INDEX ... REORGANIZE, con o senza LOB_COMPACTION, il valore di **max degree of parallelism** corrisponde a un'operazione a thread singolo. Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!IMPORTANT]
-> Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup offline o di sola lettura. Quando viene specificata la parola chiave `ALL` e uno o più indici si trovano in un filegroup offline o di sola lettura, l'istruzione ha esito negativo.  
+> Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup offline o di sola lettura. Quando viene specificata la parola chiave ALL e uno o più indici si trovano in un filegroup offline o di sola lettura, l'istruzione ha esito negativo.  
   
 ## <a name="rebuilding-indexes"></a> Ricompilazione degli indici  
-La ricompilazione di un indice consiste nell'eliminazione e nella ricreazione dell'indice. Questa operazione consente di rimuovere la frammentazione, rendere disponibile spazio su disco grazie alla compattazione delle pagine in base all'impostazione del fattore di riempimento esistente o specificata e riordinare le righe dell'indice in pagine contigue. Quando viene specificata la parola chiave `ALL`, tutti gli indici della tabella vengono eliminati e ricompilati in una singola transazione. Non è necessario eliminare in anticipo i vincoli di chiave esterna. Quando vengono ricompilati indici con un numero di extent pari o superiore a 128, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] posticipa le effettive deallocazioni delle pagine e i blocchi associati fino al termine del commit della transazione.  
+La ricompilazione di un indice consiste nell'eliminazione e nella ricreazione dell'indice. Questa operazione consente di rimuovere la frammentazione, rendere disponibile spazio su disco grazie alla compattazione delle pagine in base all'impostazione del fattore di riempimento esistente o specificata e riordinare le righe dell'indice in pagine contigue. Quando viene specificata la parola chiave ALL, tutti gli indici della tabella vengono eliminati e ricompilati in una singola transazione. Non è necessario eliminare in anticipo i vincoli di chiave esterna. Quando vengono ricompilati indici con un numero di extent pari o superiore a 128, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] posticipa le effettive deallocazioni delle pagine e i blocchi associati fino al termine del commit della transazione.  
  
 Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
   
@@ -651,7 +649,7 @@ Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../re
 > [!IMPORTANT]
 > Quando un indice viene creato o ricompilato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le statistiche vengono create o aggiornate analizzando tutte le righe nella tabella.
 > 
-> A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tuttavia, le statistiche non vengono create analizzando tutte le righe nella tabella quando un indice partizionato viene creato o ricompilato. Query Optimizer usa invece l'algoritmo di campionamento predefinito per generare queste statistiche. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, usare `CREATE STATISTICS` o `UPDATE STATISTICS` con la clausola `FULLSCAN`.  
+> A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tuttavia, le statistiche non vengono create analizzando tutte le righe nella tabella quando un indice partizionato viene creato o ricompilato. Query Optimizer usa invece l'algoritmo di campionamento predefinito per generare queste statistiche. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, utilizzare CREATE STATISTICS o UPDATE STATISTICS con la clausola FULLSCAN.  
   
 Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è talvolta possibile ricompilare un indice non cluster per risolvere le incoerenze causate da errori hardware.    
 In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e nelle versioni successive, è ancora possibile correggere tali incoerenze tra l'indice e l'indice cluster tramite la ricompilazione di un indice non cluster offline. Non è possibile, tuttavia, correggere le incoerenze di indici non cluster tramite la ricompilazione dell'indice online, in quanto il meccanismo di ricompilazione online utilizza l'indice non cluster esistente come base per la ricompilazione e di conseguenza l'incoerenza persiste. La ricompilazione dell'indice offline può talvolta forzare l'analisi dell'indice cluster (o dell'heap) rimuovendo pertanto l'incoerenza. Per garantire una ricompilazione dall'indice cluster, eliminare e ricreare l'indice non cluster. Come nelle versioni precedenti, il metodo consigliato per il recupero in seguito all'individuazione di incoerenze consiste nel ripristino da backup dei dati interessati. È tuttavia possibile correggere le incoerenze dell'indice tramite la ricompilazione offline dell'indice non cluster. Per altre informazioni, vedere [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
@@ -669,7 +667,7 @@ Per ricompilare un indice columnstore cluster, [!INCLUDE[ssNoVersion](../../incl
 ## <a name="reorganizing-indexes"></a> Riorganizzazione degli indici  
 La riorganizzazione di un indice richiede una quantità minima di risorse di sistema. Questa operazione deframmenta il livello foglia di indici cluster e non cluster di tabelle e viste tramite il riordinamento fisico delle pagine al livello foglia in base all'ordine logico, da sinistra verso destra, dei nodi foglia. La riorganizzazione consente inoltre di compattare le pagine di indice in base al valore del fattore di riempimento esistente. Per visualizzare l'impostazione del fattore di riempimento, usare [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
-Quando viene specificato `ALL`, vengono riorganizzati gli indici relazionali, sia cluster sia non cluster, e gli indici XML della tabella. Quando si specifica `ALL`, vengono applicate alcune restrizioni. Vedere la definizione di `ALL` nella sezione Argomenti di questo articolo.  
+Quando viene specificata la parola chiave ALL, vengono riorganizzati gli indici relazionali, sia cluster sia non cluster, e gli indici XML della tabella. Quando si specifica ALL, vengono applicate alcune restrizioni. Vedere la definizione di ALL nella sezione Argomenti di questo articolo.  
   
 Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
  
@@ -684,14 +682,14 @@ Se una tabella è inclusa in una pubblicazione per la replica transazionale, non
 Per abilitare l'indice, utilizzare l'istruzione ALTER INDEX REBUILD oppure CREATE INDEX WITH DROP_EXISTING. Quando l'opzione ONLINE è impostata su ON, non è possibile ricompilare un indice cluster disabilitato. Per altre informazioni, vedere [Disabilitazione di indici e vincoli](../../relational-databases/indexes/disable-indexes-and-constraints.md).  
   
 ## <a name="setting-options"></a>Impostazione delle opzioni  
-È possibile impostare le opzioni `ALLOW_ROW_LOCKS`, `ALLOW_PAGE_LOCKS`, `IGNORE_DUP_KEY` e `STATISTICS_NORECOMPUTE` per un indice specificato senza ricompilare o riorganizzare l'indice. I valori modificati vengono applicati immediatamente all'indice. Per visualizzare tali impostazioni, usare **sys.indexes**. Per altre informazioni vedere [Impostare le opzioni di indice](../../relational-databases/indexes/set-index-options.md).  
+È possibile impostare le opzioni ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, IGNORE_DUP_KEY e STATISTICS_NORECOMPUTE per un indice specificato senza ricompilare o riorganizzare l'indice. I valori modificati vengono applicati immediatamente all'indice. Per visualizzare tali impostazioni, usare **sys.indexes**. Per altre informazioni vedere [Impostare le opzioni di indice](../../relational-databases/indexes/set-index-options.md).  
   
 ### <a name="row-and-page-locks-options"></a>Opzioni per blocchi di riga e di pagina  
-Se `ALLOW_ROW_LOCKS = ON` e `ALLOW_PAGE_LOCK = ON`, sono consentiti blocchi a livello di riga, pagina e tabella quando si accede all'indice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] sceglie il blocco appropriato e può eseguire un'escalation del blocco da un blocco di riga o di pagina a un blocco di tabella.  
+Se ALLOW_ROW_LOCKS = ON e ALLOW_PAGE_LOCK = ON, sono consentiti blocchi di riga, di pagina e di tabella per l'accesso all'indice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] sceglie il blocco appropriato e può eseguire un'escalation del blocco da un blocco di riga o di pagina a un blocco di tabella.  
   
-Se `ALLOW_ROW_LOCKS = OFF` e `ALLOW_PAGE_LOCK = OFF`, è consentito solo un blocco a livello di tabella quando si accede all'indice.  
+Se ALLOW_ROW_LOCKS = OFF e ALLOW_PAGE_LOCK = OFF, sono consentiti solo blocchi a livello di tabella per l'accesso all'indice.  
   
-Se si specifica `ALL` al momento dell'impostazione delle opzioni di blocco di riga o pagina, le impostazioni vengono applicate a tutti gli indici. Se la tabella sottostante è un heap, le impostazioni vengono applicate nei modi seguenti:  
+Se si specifica la parola chiave ALL durante l'impostazione di opzioni per blocchi di riga o di pagina, le impostazioni vengono applicate a tutti gli indici. Se la tabella sottostante è un heap, le impostazioni vengono applicate nei modi seguenti:  
   
 |||  
 |-|-|  
@@ -716,8 +714,8 @@ Qualsiasi altra operazione sugli indici online eseguita nello stesso istante avr
 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
-La ricompilazione dell'indice online viene specificata come ripristinabile usando l'opzione `RESUMABLE = ON`. 
--  L'opzione `RESUMABLE` non è persistente nei metadati per un determinato indice e si applica solo alla durata di un'istruzione DDL corrente. Per abilitare la funzione di ripristino, è necessario quindi che la clausola `RESUMABLE = ON` sia specificata in modo esplicito.
+La ricompilazione dell'indice online viene specificata come ripristinabile usando l'opzione RESUMABLE=ON. 
+-  L'opzione RESUMABLE non è persistente nei metadati per un determinato indice e si applica solo alla durata di un'istruzione DDL corrente. Per abilitare la funzione di ripristino, è necessario quindi che la clausola RESUMABLE=ON sia specificata in modo esplicito.
 -  L'opzione MAX_DURATION è supportata per l'opzione RESUMABLE = ON o l'opzione dell'argomento **low_priority_lock_wait**. 
    -  MAX_DURATION per l'opzione RESUMABLE specifica l'intervallo di tempo per la ricompilazione di un indice. Trascorso questo tempo, la ricompilazione dell'indice viene sospesa oppure viene completata. È l'utente a decidere quando riprendere la ricompilazione di un indice che è stata sospesa. Il valore espresso in minuti in **time** per MAX_DURATION deve essere maggiore di 0 e minore o uguale a una settimana (7 * 24 * 60 = 10080 minuti). Una sospensione prolungata di un'operazione sull'indice può compromettere le prestazioni DML su una tabella specifica, nonché la capacità del disco del database poiché entrambi gli indici, quello originale e quello appena creato, richiedono spazio su disco e devono essere aggiornati durante le operazioni DML. Se l'opzione MAX_DURATION viene omessa, l'operazione sull'indice continuerà fino al suo completamento o fino a quando non si verificherà un errore. 
    -  L'opzione dell'argomento \<low_priority_lock_wait > consente di definire il comportamento dell'operazione sull'indice quando è bloccata sul blocco SCH-M.
@@ -749,7 +747,7 @@ La funzionalità seguente è disabilitata per le operazioni di ricompilazione de
   
  ### <a name="waitatlowpriority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY con operazioni sull'indice online  
   
- Per eseguire l'istruzione DDL per una ricompilazione dell'indice online, è necessario completare tutte le transazioni bloccanti attive in esecuzione in una specifica tabella. Quando la ricompilazione dell'indice online viene eseguita, blocca tutte le nuove transazioni pronte per l'esecuzione in questa tabella. Sebbene la durata del blocco della ricompilazione dell'indice online sia molto breve, l'attesa del completamento di tutte le transazioni aperte in una tabella specificata e il blocco dell'avvio di nuove transazioni potrebbero influire in modo significativo sulla velocità effettiva, provocando un rallentamento o un timeout del carico di lavoro e limitando notevolmente l'accesso alla tabella sottostante. L'opzione **WAIT_AT_LOW_PRIORITY** consente agli amministratori di database di gestire i blocchi S e Sch-M necessari per le ricompilazioni degli indici online, nonché di selezionare una tra 3 opzioni. In tutti e tre i casi, se durante il tempo di attesa, ( `(MAX_DURATION = n [minutes])` ),non sono presenti attività di blocco, la ricompilazione dell'indice online viene eseguita immediatamente senza attendere il completamento dell'istruzione DDL.  
+ Per eseguire l'istruzione DDL per una ricompilazione dell'indice online, è necessario completare tutte le transazioni bloccanti attive in esecuzione in una specifica tabella. Quando la ricompilazione dell'indice online viene eseguita, blocca tutte le nuove transazioni pronte per l'esecuzione in questa tabella. Sebbene la durata del blocco della ricompilazione dell'indice online sia molto breve, l'attesa del completamento di tutte le transazioni aperte in una tabella specificata e il blocco dell'avvio di nuove transazioni potrebbero influire in modo significativo sulla velocità effettiva, provocando un rallentamento o un timeout del carico di lavoro e limitando notevolmente l'accesso alla tabella sottostante. L'opzione **WAIT_AT_LOW_PRIORITY** consente agli amministratori di database di gestire i blocchi S e Sch-M necessari per le ricompilazioni degli indici online, nonché di selezionare una tra 3 opzioni. In tutti e tre i casi, se durante il tempo di attesa, ( (MAX_DURATION = n [minuti]) ),non sono presenti attività di blocco, la ricompilazione dell'indice online viene eseguita immediatamente senza attendere il completamento dell'istruzione DDL.  
   
 ## <a name="spatial-index-restrictions"></a>Restrizioni relative agli indici spaziali  
  Quando si ricompila un indice spaziale, la tabella utente sottostante non è disponibile per tutta la durata dell'operazione sull'indice, in quanto l'indice spaziale acquisisce un blocco di schema.  
@@ -767,7 +765,7 @@ La funzionalità seguente è disabilitata per le operazioni di ricompilazione de
   
 Agli indici partizionati vengono applicate le restrizioni seguenti:  
   
--   Quando si usa `ALTER INDEX ALL ...`, non è possibile modificare l'impostazione di compressione di una singola partizione se la tabella include indici non allineati.  
+-   Quando si utilizza ALTER INDEX ALL ... non è possibile modificare l'impostazione di compressione di una singola partizione se la tabella include indici non allineati.  
 -   La sintassi ALTER INDEX \<index> ... REBUILD PARTITION... consente di ricompilare la partizione specificata dell'indice.  
 -   La sintassi ALTER INDEX \<index> ... REBUILD WITH ... consente di ricompilare tutte le partizioni dell'indice.  
   
@@ -957,7 +955,7 @@ SELECT * FROM sys.column_store_row_groups;
  I risultati dell'istruzione SELECT mostrano che il rowgroup è COMPRESSED, il che significa che i segmenti di colonna del rowgroup vengono compressi e archiviati nel columnstore.  
   
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. Ricompilare una partizione di un indice columnstore cluster offline  
- **Si applica a **: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+ **Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
  
  Usare ALTER INDEX REBUILD con l'opzione partizione per ricompilare una partizione di un indice columnstore cluster di grandi dimensioni. In questo esempio viene ricompilata la partizione 12. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è consigliabile sostituire REBUILD con REORGANIZE.  
   
@@ -1011,7 +1009,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
 ```  
   
 ### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Ricompilazione di tutti gli indici di una tabella e impostazione di opzioni  
- Nell'esempio seguente viene specificata la parola chiave `ALL`. In questo modo vengono ricompilati tutti gli indici associati alla tabella Production.Product nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Vengono inoltre specificate tre opzioni.  
+ Nell'esempio seguente viene specificata la parola chiave ALL. In questo modo vengono ricompilati tutti gli indici associati alla tabella Production.Product nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Vengono inoltre specificate tre opzioni.  
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

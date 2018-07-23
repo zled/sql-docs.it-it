@@ -15,12 +15,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df45518dc367d3b2a2c980ba39cad09084c30ecf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d433843076a83c8a09319c118bbd44e7f89a24d1
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401263"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262305"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Lezione 1-2 - Aggiunta e configurazione di una gestione connessione file flat
 In questa attività si aggiungerà una gestione connessione file flat al pacchetto appena creato. Una gestione connessione file flat abilita un pacchetto all'estrazione di dati da un file flat. Utilizzando tale gestione connessione è possibile specificare il nome file e la posizione, le impostazioni locali e la tabella codici e il formato del file, inclusi i delimitatori di colonna, da applicare quando il pacchetto estrae i dati dal file flat. È anche possibile specificare manualmente il tipo di dati per le singole colonne o usare la finestra di dialogo **Suggerisci tipo di colonne** per eseguire automaticamente il mapping delle colonne di dati estratti ai tipi di dati di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -95,7 +95,7 @@ Gestione connessione file flat fornisce informazioni sulle impostazioni locali p
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Data|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-    Il tipo di dati suggerito per la colonna **CurrencyID** non è compatibile con il tipo di dati del campo della tabella di destinazione. Dal momento che il tipo di dati di `DimCurrency.CurrencyAlternateKey` è nchar (3), **CurrencyID** deve essere modificato da stringa [DT_STR] in stringa [DT_WSTR]. Il campo `DimDate.FullDateAlternateKey` viene anche definito come tipo di dati relativo alla data, quindi **CurrencyDate** deve essere modificato da date [DT_Date] in database date [DT_DBDATE].  
+    Il tipo di dati suggerito per la colonna **CurrencyID** non è compatibile con il tipo di dati del campo della tabella di destinazione. Dal momento che il tipo di dati di `DimCurrency.CurrencyAlternateKey` è nchar (3), **CurrencyID** deve essere modificato da stringa [DT_STR] in stringa Unicode [DT_WSTR]. Il campo `DimDate.FullDateAlternateKey` viene anche definito come tipo di dati relativo alla data, quindi **CurrencyDate** deve essere modificato da date [DT_Date] in database date [DT_DBDATE].  
   
 2.  Nell'elenco selezionare la colonna CurrencyID e nel riquadro delle proprietà modificare il tipo di dati della colonna **CurrencyID** da string [DT_STR] in Unicode string [DT_WSTR].  
   

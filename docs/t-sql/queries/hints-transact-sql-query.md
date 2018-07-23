@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -59,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9265dea7529c1f80eb2d12741193a43c216489e9
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34470292"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854343"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -246,7 +245,7 @@ ms.locfileid: "34470292"
  SIMPLE indica a Query Optimizer di tentare la parametrizzazione semplice. FORCED indica a Query Optimizer di tentare la parametrizzazione forzata. Per altre informazioni, vedere [Parametrizzazione forzata in Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), e [Parametrizzazione semplice in Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
  RECOMPILE  
- Indica a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di eliminare il piano generato per la query dopo che questa è stata eseguita e forza Query Optimizer a ricompilare un piano di query alla successiva esecuzione della stessa query. Se RECOMPILE non viene specificato, i piani di query vengono inseriti nella cache e riutilizzati da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Durante la compilazione dei piani di query, l'hint per la query RECOMPILE utilizza i valori correnti delle variabili locali incluse nella query e, se la query è contenuta in una stored procedure, i valori correnti vengono passati ai parametri.  
+ Indica a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di generare un nuovo piano temporaneo per la query ed eliminare immediatamente tale piano al termine dell'esecuzione della query. Il piano di query generato non sostituisce un piano memorizzato nella cache quando la stessa query viene eseguita senza l'hint RECOMPILE. Se RECOMPILE non viene specificato, i piani di query vengono inseriti nella cache e riutilizzati da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Durante la compilazione dei piani di query, l'hint per la query RECOMPILE utilizza i valori correnti delle variabili locali incluse nella query e, se la query è contenuta in una stored procedure, i valori correnti vengono passati ai parametri.  
   
  RECOMPILE rappresenta una valida alternativa alla creazione di una stored procedure che utilizza la clausola WITH RECOMPILE quando è necessario ricompilare solo un subset di query all'interno della stored procedure, anziché l'intera stored procedure. Per altre informazioni, vedere [Ricompilare una stored procedure](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md). RECOMPILE risulta utile anche durante la creazione delle guide di piano.  
   

@@ -18,12 +18,15 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 80d50132c4e2b38ecda9d24b3c0f4c09b93ca4e6
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+- Find SQL Server Instance
+- find instance name
+- find sql server instance name
+ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455255"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080099"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Esercitazione: Suggerimenti e consigli per l'uso di SSMS
 Questa esercitazione offre alcuni suggerimenti aggiuntivi per l'uso di SQL Server Management Studio (SSMS). Questo articolo illustra come: 
@@ -201,7 +204,7 @@ Il log degli errori è un file che contiene i dettagli di ciò che si verifica n
 
 6. Aprire il file errorlog.log nel Blocco note. 
 
-## <a name="determine-sql-server-name"></a>Trovare il nome di SQL Server
+## <a name="determine-sql-server-name"></a>Trovare il nome dell'istanza di SQL Server
 Per trovare il nome dell'istanza di SQL Server prima e dopo la connessione a SQL Server sono disponibili alcune opzioni.  
 
 ### <a name="before-you-connect-to-sql-server"></a>Prima di connettersi a SQL Server

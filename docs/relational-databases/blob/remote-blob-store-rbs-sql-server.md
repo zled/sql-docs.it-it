@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 11/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +17,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7fa5a31e0ffaafdff982fdfb64fd6f260624f70
-ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
+ms.openlocfilehash: 31f1e34d745c08ac19157fb9d2e096ac0d72ed69
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34799821"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36772076"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Archivio Blob remoto (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "34799821"
 ## <a name="why-rbs"></a>Vantaggi di RBS  
   
 ### <a name="optimized-database-storage-and-performance"></a>Archiviazione e prestazioni ottimizzate del database  
- L'archiviazione di BLOB nel database può utilizzare grandi quantità di spazio file e risorse server costose. RBS consente di trasferire BLOB in una soluzione di archiviazione dedicata selezionata e di archiviare i riferimenti ai relativi BLOB nel database. In questo modo vengono liberate l'archiviazione su server per i dati strutturati e le risorse server per le operazioni del database.  
+ L'archiviazione di BLOB nel database può utilizzare grandi quantità di spazio file e risorse server costose. Archivio BLOB remoto consente di trasferire BLOB in una soluzione di archiviazione dedicata selezionata e di archiviare i riferimenti ai BLOB nel database. In questo modo vengono liberate l'archiviazione su server per i dati strutturati e le risorse server per le operazioni del database.  
   
 ### <a name="efficient-blob-management"></a>Gestione efficiente di BLOB  
  Diverse funzionalità di RBS supportano la gestione di BLOB archiviati:  

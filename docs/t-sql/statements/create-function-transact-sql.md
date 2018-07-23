@@ -1,10 +1,9 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -37,14 +36,15 @@ helpviewer_keywords:
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 caps.latest.revision: 162
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a2b6f3905029c6929f4c747f3d34fa54bfde0f07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c14264516a877a193e9fa076114f52a492985ca
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790402"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,10 @@ ms.lasthandoff: 05/03/2018
 -   Usare una funzione inline come predicato di filtro per un criterio di sicurezza  
   
 > [!NOTE]  
->  In questo argomento viene illustrata l'integrazione di .NET Framework CLR in SQL Server. L'integrazione di CLR non si applica al database SQL di Azure.  
+>  In questo argomento viene illustrata l'integrazione di .NET Framework CLR in SQL Server. L'integrazione di CLR non si applica al database SQL di Azure.
+
+> [!NOTE]  
+>  Per Azure SQL Data Warehouse, vedere l'articolo [CREATE FUNCTION (SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016).
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -572,7 +575,7 @@ RETURNS return_data_type
 ### <a name="computed-column-interoperability"></a>Interoperabilità delle colonne calcolate  
  Le funzioni presentano le proprietà seguenti. I valori di tali proprietà determinano se le funzioni sono utilizzabili nelle colonne calcolate che possono essere persistenti o indicizzate.  
   
-|Proprietà|Description|Note|  
+|Proprietà|Descrizione|Note|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|La funzione è deterministica o non deterministica.|L'accesso ai dati locali è consentito nelle funzioni deterministiche. Ad esempio, le funzioni che restituiscono sempre lo stesso valore ogni volta che vengono richiamate utilizzando un set specifico di valori di input e con lo stesso stato del database vengono definite funzioni deterministiche.|  
 |**IsPrecise**|La funzione è precisa o imprecisa.|Le funzioni imprecise includono operazioni quali le operazioni a virgola mobile.|  
@@ -648,7 +651,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Metadati  
  Nella tabella seguente vengono elencate le viste del catalogo di sistema utilizzate per restituire i metadati sulle funzioni definite dall'utente.  
   
-|Vista di sistema|Description|  
+|Vista di sistema|Descrizione|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Vedere l'esempio E nella sezione Esempi riportata più avanti.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Visualizza le informazioni sulle funzioni CLR definite dall'utente.|  

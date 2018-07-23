@@ -9,15 +9,13 @@ ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: sql-server
 ms.date: 04/28/2018
-ms.openlocfilehash: 9ccf32a232b501bb3184786af0c48dc7214b1936
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: f1e3d0fd2b63ac3eb9ab0d66b14df15dad0c15ee
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32686651"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926822"
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Articoli nuovi e aggiornati di recente: documentazione di SQL Server
 
@@ -183,7 +181,7 @@ SQL Server 2016 SP2 include tutti gli aggiornamenti cumulativi rilasciati dopo l
 
 
 <!-- : : : m-r -->
-**Prova SQL Server 2016;**
+**Provare SQL Server**
 - Download da Evaluation Center: [scaricare SQL Server per Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - Download da Evaluation Center: scaricare SQL Server Management Studio (SSMS)
 - Download da Evaluation Center: scaricare SQL Server Data Tools (SSDT)

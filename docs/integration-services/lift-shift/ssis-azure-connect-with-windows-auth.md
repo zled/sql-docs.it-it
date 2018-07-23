@@ -1,38 +1,44 @@
 ---
-title: Connettersi a dati e condivisioni file con autenticazione di Windows | Microsoft Docs
-description: Informazioni su come configurare il catalogo SSIS nel database SQL di Azure per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati e condivisioni file.
-ms.date: 02/05/2018
+title: Connettersi a origini dati e condivisioni file con autenticazione di Windows | Microsoft Docs
+description: Informazioni su come configurare il catalogo SSIS nel database SQL di Azure e nel runtime di integrazione Azure-SSIS per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati e condivisioni file.
+ms.date: 06/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: cca5deecf90fbbe28399d33ac2038bc2264b1ae6
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c2b7a091b4bfe5add722ad224adc175b06817a74
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332685"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066021"
 ---
-# <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-in-ssis-packages-in-azure"></a>Connettersi a origini dati e condivisioni file con l'autenticazione di Windows in pacchetti SSIS in Azure
+# <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Connettersi a origini dati e condivisioni file con l'autenticazione di Windows da pacchetti SSIS in Azure
+È possibile usare l'autenticazione di Windows per connettersi alle origini dati e alle condivisioni file nella stessa rete virtuale del runtime di integrazione Azure-SSIS, sia in locale che nelle macchine virtuali di Azure e in File di Azure. Esistono tre metodi per la connessione alle origini dati e alle condivisioni file con l'autenticazione di Windows da pacchetti SSIS in esecuzione nel runtime di integrazione Azure-SSIS:
 
-Questo articolo descrive come configurare il catalogo SSIS nel database SQL di Azure per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati e condivisioni file. È possibile usare l'autenticazione di Windows per connettersi alle origini dati nella stessa rete virtuale del runtime di integrazione SSIS di Azure, sia in locale che nelle macchine virtuali di Azure e in File di Azure.
+| Metodo di connessione | Ambito effettivo | Passaggio di configurazione | Metodo di accesso nei pacchetti | Numero di set di credenziali e risorse connesse | Tipo di risorse connesse | 
+|---|---|---|---|---|---|
+| Rendere persistenti le credenziali tramite il comando `cmdkey` | Per ogni runtime di integrazione Azure-SSIS | Eseguire il comando `cmdkey` in uno script di installazione personalizzato (`main.cmd`) durante il provisioning o la riconfigurazione del runtime di integrazione Azure-SSIS, ad esempio `cmdkey /add:fileshareserver /user:xxx /pass:yyy`.<br/><br/> Per altre informazioni, vedere [Customize setup for Azure-SSIS IR](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) (Personalizzare l'installazione per il runtime di integrazione Azure-SSIS). | Accedere alle risorse direttamente nei pacchetti tramite un percorso UNC, ad esempio, `\\fileshareserver\folder` | Sono supportati più set di credenziali per risorse connesse diverse | - Condivisioni file in macchine virtuali locali/di Azure<br/><br/> - File di Azure, vedere [Montare una condivisione file di Azure](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - SQL Server con l'autenticazione di Windows<br/><br/> - Altre risorse con l'autenticazione di Windows |
+| Configurazione di un contesto di esecuzione a livello di catalogo | Per ogni runtime di integrazione Azure-SSIS | Eseguire la stored procedure SSISDB `catalog.set_execution_credential` per configurare un contesto di "esecuzione come".<br/><br/> Per altre informazioni, vedere il resto di questo articolo. | Accedere alle risorse direttamente nei pacchetti | È supportato un solo set di credenziali per tutte le risorse connesse | - Condivisioni file in macchine virtuali locali/di Azure<br/><br/> - File di Azure, vedere [Montare una condivisione file di Azure](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - SQL Server con l'autenticazione di Windows<br/><br/> - Altre risorse con l'autenticazione di Windows | 
+| Montaggio di unità in fase di esecuzione del pacchetto (senza persistenza) | Per pacchetto | Eseguire il comando `net use` nell'attività Esegui processo aggiunta all'inizio del flusso di controllo nei pacchetti, ad esempio, `net use D: \\fileshareserver\sharename` | Accedere alle condivisioni file tramite unità mappate | Sono supportate più unità per condivisioni file diverse | - Condivisioni file in macchine virtuali locali/di Azure<br/><br/> - File di Azure, vedere [Montare una condivisione file di Azure](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) |
+|||||||
 
 > [!WARNING]
-> Se non si specificano credenziali di dominio valide per l'autenticazione di Windows eseguendo `catalog`.`set_execution_credential` come descritto in questo articolo, i pacchetti che dipendono dall'autenticazione di Windows non possono connettersi alle origini dati e restituiscono errori in fase di esecuzione.
+> Se non si usa uno dei metodi sopra riportati per la connessione a origini dati e condivisioni file con l'autenticazione di Windows, i pacchetti che dipendono dall'autenticazione di Windows non saranno in grado di connettersi e causeranno errori in fase di esecuzione. 
+
+Il resto di questo articolo descrive come configurare il catalogo SSIS nel database SQL di Azure per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati e condivisioni file. 
 
 ## <a name="you-can-only-use-one-set-of-credentials"></a>È possibile usare un solo set di credenziali
-
-In questo momento, è possibile usare un solo set di credenziali in un pacchetto. Le credenziali del dominio specificate quando si esegue la procedura illustrata in questo articolo sono valide per tutte le esecuzioni di pacchetti interattive o pianificate sull'istanza del database SQL, finché non si modificano o rimuovono le credenziali. Se il pacchetto deve connettersi a più origini dati con set di credenziali diversi, potrebbe essere necessario dividere il pacchetto in più pacchetti.
-
-Se una delle origini dati è File di Azure, è possibile aggirare questa limitazione eseguendo il montaggio della condivisione file di Azure in fase di esecuzione del pacchetto con `net use` o equivalente in un'attività Esegui processo. Per altre informazioni, vedere [Montare una condivisione file di Azure e accedere alla condivisione in Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows).
+Con questo metodo è possibile usare un solo set di credenziali in un pacchetto. Le credenziali del dominio specificate quando si esegue la procedura illustrata in questo articolo sono valide per tutte le esecuzioni di pacchetti interattive o pianificate nel runtime di integrazione Azure-SSIS, finché non si modificano o rimuovono le credenziali. Se il pacchetto deve connettersi a più origini dati e condivisioni file con set di credenziali diversi, potrebbe essere necessario prendere in considerazione i metodi alternativi descritti in precedenza.
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Fornire le credenziali di dominio per l'autenticazione di Windows
-Per specificare le credenziali del dominio che consentono ai pacchetti che usano l'autenticazione di Windows di connettersi alle origini dati locali, eseguire le operazioni seguenti:
+Per specificare le credenziali del dominio che consentono ai pacchetti che usano l'autenticazione di Windows di connettersi alle origini dati locali e alle condivisioni file, seguire questa procedura:
 
 1.  Con SQL Server Management Studio (SSMS) o un altro strumento connettersi al database SQL che ospita il database del catalogo SSIS (SSISDB). Per altre informazioni, vedere [Connettersi al database del catalogo SSIS (SSISDB) in Azure](ssis-azure-connect-to-catalog-database.md).
 
@@ -44,7 +50,7 @@ Per specificare le credenziali del dominio che consentono ai pacchetti che usano
     catalog.set_execution_credential @user='<your user name>', @domain='<your domain name>', @password='<your password>'
     ```
 
-4.  Eseguire i pacchetti SSIS. I pacchetti usano le credenziali specificate per connettersi alle origini dati locali con autenticazione di Windows.
+4.  Eseguire i pacchetti SSIS. I pacchetti usano le credenziali specificate per connettersi alle origini dati locali e alle condivisioni file con l'autenticazione di Windows.
 
 ### <a name="view-domain-credentials"></a>Visualizzare le credenziali del dominio
 Per visualizzare le credenziali del dominio attive, eseguire queste operazioni:
@@ -124,7 +130,7 @@ Per connettersi a una condivisione file in una macchina virtuale di Azure, segui
 ## <a name="connect-to-a-file-share-in-azure-files"></a>Connettersi a una condivisione file in File di Azure
 Per altre informazioni sui file di Azure, vedere [File di Azure](https://azure.microsoft.com/services/storage/files/).
 
-Per connettersi a una condivisione file in una condivisione file di Azure, seguire questa procedura:
+Per connettersi a una condivisione file in File di Azure, seguire questa procedura:
 
 1.  Con SQL Server Management Studio (SSMS) o un altro strumento connettersi al database SQL che ospita il database del catalogo SSIS (SSISDB).
 

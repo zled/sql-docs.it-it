@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Log delle modifiche (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 06/26/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,23 +15,97 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84073aa122fbb4654e183fefa3c6b7977b751b1e
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+ms.openlocfilehash: dc20fa7c10d8922587801e6936c568e4363a207b
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619538"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957724"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Questo articolo fornisce informazioni dettagliate sugli aggiornamenti, i miglioramenti e le correzioni di bug per le versioni correnti e precedenti di SSMS. Scaricare le [versioni precedenti di SSMS indicate di seguito](#previous-ssms-releases).
 
 
-## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-Numero di versione: 17.7<br>
+
+## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+*È stato rilevato un bug nella versione 17.8 correlato al provisioning dei database SQL, quindi SSMS 17.8.1 sostituisce 17.8.*
+
+
+Numero di build: 14.0.17277.0<br>
+Data di rilascio: 26 giugno 2018
+
+
+### <a name="whats-new"></a>Novità
+
+**SQL Server Management Studio (SSMS) - Generale**
+
+Proprietà database:
+
+- Questo miglioramento espone l'opzione di configurazione **AUTOGROW_ALL_FILES** per i filegroup. Questa nuova opzione di configurazione viene aggiunta nella finestra Proprietà database > Filegroup sotto forma di nuova colonna (Aumento automatico di tutti i file) di caselle di controllo per ogni filegroup disponibile (tranne che per Filestream e i filegroup ottimizzati per la memoria). L'utente può abilitare/disabilitare AUTOGROW_ALL_FILES per un determinato filegroup attivando o disattivando la corrispondente casella di controllo Autogrow_All_Files. In maniera corrispondente, lo script dell'opzione **AUTOGROW_ALL_FILES** viene correttamente generato quando si genera lo script del database per creare/generare gli script per il database (SQL 2016 e versioni successive).
+    
+Editor SQL:
+
+- Esperienza migliorata con IntelliSense nel database SQL di Azure quando l'utente non ha l'accesso master.
+
+Scripting:
+
+- Miglioramenti delle prestazioni generali, soprattutto nelle connessioni a latenza elevata.
+    
+**Analysis Services (AS)**
+
+- Provider di dati e librerie client di Analysis Services aggiornati alla versione più recente, con aggiunta del supporto per la nuova autorità AAD di Azure per enti pubblici (login.microsoftonline.us).
+
+
+
+### <a name="bug-fixes"></a>Correzioni di bug
+
+**SQL Server Management Studio (SSMS) - Generale**
+    
+Piani di manutenzione:
+
+- Risoluzione di un problema durante la modifica dei piani di manutenzione con autenticazione SQL a causa del quale "Attività Notifica operatori" genera errori quando si usa l'autenticazione SQL.
+    
+Scripting:
+
+- Risoluzione di un problema a causa del quale le azioni PostProcess in SMO causano esaurimento delle risorse ed errori di accesso SQL
+    
+SMO:
+
+- Risoluzione di un problema a causa del quale Table.Alter() ha esito negativo se si aggiungere una colonna con un vincolo predefinito e la tabella contiene già dati. Per informazioni dettagliate, vedere [sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625) (SQL Server SMO: generazione di vincolo predefinito inline quando si aggiunge una colonna a una tabella contenente dati).
+    
+Always Encrypted:
+
+- Risoluzione di un problema (in DacFx) che causava un errore di timeout di blocco quando si abilita Always Encrypted in una tabella partizionata
+    
+
+**Analysis Services (AS)**
+
+- Risoluzione di un problema che verificava durante la modifica di un'origine dati OAuth in un modello tabulare con livello di compatibilità 1400 per Analysis Services, a causa del quale le modifiche nei token OAuth non venivano aggiornate nell'origine dati.
+- Risoluzione di un arresto anomalo in SSMS che poteva verificarsi durante l'uso di alcune credenziali dell'origine dati non valide o la modifica di origini dati che non supportano la migrazione Modifica origine dati in Power Query (ad esempio, Oracle) nei modelli tabulari con livello di compatibilità 1400 di Analysis Services.
+
+
+### <a name="known-issues"></a>Problemi noti
+
+- Facendo clic sul pulsante *Script* dopo avere modificato una proprietà del filegroup nella finestra *Proprietà*, vengono generati due script: uno script con un'istruzione *USE <database>* e un secondo script con un'istruzione *USE master*.  Lo script con *USE master* viene generato per errore e deve essere rimosso. Eseguire lo script contenente l'istruzione *USE <database>*.
+- Alcune finestre di dialogo visualizzano un errore di edizione non valida quando si lavora con nuove edizioni del database SQL di Azure *Utilizzo generico* oppure *Business Critical*.
+- È possibile osservare latenza nel visualizzatore XEvents. Si tratta di un [problema noto in .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Considerare l'aggiornamento a NetFx 4.7.2.
+
+
+
+## <a name="previous-ssms-releases"></a>Versioni precedenti di SSMS
+
+Scaricare le versioni precedenti di SSMS facendo clic sui collegamenti ai titoli nelle sezioni seguenti.
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![download](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)
+
 Numero di build: 14.0.17254.0<br>
 Data di rilascio: 09 maggio 2018
+
+[Cinese (Repubblica popolare cinese)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [Cinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>Novità
 
@@ -178,9 +252,7 @@ Posta elettronica database:
 > [!WARNING]
 > Si verifica il problema noto in cui SSMS 17.6 diventa instabile e si blocca quando si usano [piani di manutenzione](../relational-databases/maintenance-plans/maintenance-plans.md). Se si usano piani di manutenzione, non installare SSMS 17.6. Effettuare il downgrade a SSMS 17.5 se è già installata la versione 17.6 e si è riscontrato questo problema. 
 
-## <a name="previous-ssms-releases"></a>Versioni precedenti di SSMS
 
-Scaricare le versioni precedenti di SSMS facendo clic sui collegamenti ai titoli nelle sezioni seguenti.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![Download](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 Disponibile per il pubblico | Numero di build: 14.0.17224.0
@@ -310,7 +382,7 @@ Query Store:
     - Risoluzione di un problema che causa l'arresto anomalo di SSMS quando l'utente non ha autorizzazioni *VISUALIZZAZIONE STATO DEL SERVER*.
     - Risoluzione di un problema per cui la chiusura della finestra dei dati dinamici di Profiler XE non arresta la sessione sottostante.
 - Server registrati:
-    - Risoluzione di un problema per cui il comando "Sposta in" smette di funzionare - [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) e [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/).
+    - Risoluzione di un problema a causa del quale il comando "Sposta in" smetteva di funzionare - [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) e [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/).
 - SMO:
     - Risoluzione di un problema per cui il metodo TransferData sull'oggetto Transfer non funziona.
     - Risoluzione di un problema per cui i database del server generano un'eccezione per i database di SQL DW in pausa.
@@ -427,7 +499,7 @@ Disponibile a livello generale | Numero di build: 14.0.17199.0
 **SQL Server Management Studio (SSMS) - Generale**
 
 - Le funzionalità di SSMS riportate di seguito non sono supportate per l'autenticazione di Azure AD tramite agente utente con MFA:
-   - La procedura Ottimizzazione guidata motore di database non è supportata per l'autenticazione di Azure AD: è stato rilevato un problema per cui l'utente visualizza un messaggio di errore poco chiaro: "Impossibile caricare il file o l'assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…" mentre dovrebbe visualizzare il messaggio "Ottimizzazione guidata motore di database non supporta il database SQL di Microsoft Azure. (DTAClient)".
+   - La procedura Ottimizzazione guidata motore di database non è supportata per l'autenticazione di Azure AD: esiste un problema noto a causa del quale il messaggio di errore visualizzato all'utente è poco chiaro: "Impossibile caricare il file o l'assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…", invece del previsto "Ottimizzazione guidata motore di database non supporta database SQL di Microsoft Azure." (DTAClient)".
 - Il tentativo di analizzare una query in DTA restituisce un errore: "L'oggetto deve implementare IConvertible. (mscorlib)".
 - *Query regredite* non è disponibile nell'elenco di report Query Store in Esplora oggetti.
    - Soluzione alternativa: fare clic con il pulsante destro del mouse sul nodo **Query Store** e selezionare **View Regressed Queries** (Visualizza le query regredite).
@@ -728,7 +800,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Gli errori di Always Encrypted derivanti dall'aggiornamento dei moduli dopo la crittografia non vengono gestiti in modo corretto.
 - Modificato il timeout di connessione predefinito per OLTP e OLAP da 15 a 30 secondi per risolvere una serie di errori di connessione ignorati. 
 - Risolto un arresto anomalo in SSMS all'avvio di un report personalizzato. [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
-- Risolto un problema a causa del quale "Genera script..." ha esito negativo per i database SQL di Azure.
+- Risoluzione di un problema a causa del quale "Genera script" ha esito negativo per i database SQL di Azure.
 - Correzione di "Script come" e della procedura guidata "Genera script" per evitare l'aggiunta di nuove righe superflue durante la creazione di script per oggetti, come le stored procedure. [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - Provider PowerShell SQLAS: aggiunta della proprietà LastProcessed alle cartelle Dimension e MeasureGroup. [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
 - Statistiche query dinamiche: risolto un problema a causa del quale veniva visualizzata solo la prima query in un batch. [Argomento Connect] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  

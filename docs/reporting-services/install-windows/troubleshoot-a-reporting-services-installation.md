@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 345d104ce52a89e7ddcfdca24c93283ddfabb0d0
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 0bfbd13fb96fa78071043ed1ff564be2f9a8e30c
+ms.sourcegitcommit: ad297e041f0b7c65aa0bf7f4be8073d204977d9b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322590"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37923643"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Risolvere i problemi di installazione di Reporting Services
 
@@ -55,7 +55,7 @@ ms.locfileid: "35322590"
   
  Il programma di impostazione non verifica più la presenza di Internet Information Services (IIS) o [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede MDAC 2.0 e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0, che verranno installati automaticamente se non sono già presenti.  
   
-##  <a name="bkmk_tshoot_sharepoint"></a> Risolvere i problemi relativi alle installazioni della modalità SharePoint  
+##  <a name="bkmk_tshoot_sharepoint"></a> Risoluzione dei problemi relativi alle installazioni della modalità SharePoint  
   
 -   [Impossibile avviare Gestione configurazione Reporting Services](#bkmk_configmanager_notstart)  
   

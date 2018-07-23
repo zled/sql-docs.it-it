@@ -17,12 +17,12 @@ caps.latest.revision: 91
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 977041d3925ed11fc6098f1617c95c263391171f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: fa00305db62ead0bd7eded16f22991914e3c80cc
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771497"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080129"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installare SQL Server dall'Installazione guidata (programma di installazione)
 
@@ -68,7 +68,10 @@ Microsoft ha rilevato un problema con una versione specifica dei file binari di 
   
      Scegliere **Avanti**per continuare.  
 
-4.  Nella pagina Condizioni di licenza leggere il contratto di licenza e, per accettare, selezionare la casella di controllo **Accetto le condizioni di licenza** , quindi fare clic su **Avanti**. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  Nella pagina Condizioni di licenza leggere il contratto di licenza e, per accettare, selezionare la casella di controllo **Accetto le condizioni di licenza** , quindi fare clic su **Avanti**.  
+
+  >[!NOTE]
+  > SQL Server trasmette le informazioni sull'esperienza di installazione, nonché altri dati sull'utilizzo e le prestazioni per aiutare Microsoft a migliorare il prodotto. Per altre informazioni sull'elaborazione dei dati e i controlli sulla privacy di SQL Server, vedere l'[informativa sulla privacy](https://privacy.microsoft.com/en-us/privacystatement) e [Configurare SQL Server per inviare commenti e suggerimenti a Microsoft](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
   
 5.  Nella finestra Regole globali, con la procedura di installazione si passerà automaticamente alla finestra Aggiornamenti prodotti se non vi sono errori di regole.  
   
@@ -80,9 +83,9 @@ Microsoft ha rilevato un problema con una versione specifica dei file binari di 
   
 9. In **Regole di installazione** il programma di installazione di SQL Server esegue un controllo per rilevare i problemi potenziali che potrebbero verificarsi durante l'esecuzione dell'installazione. Se si verificano errori, fare clic sulla colonna **Stato** per altre informazioni. In caso contrario, fare clic su **Avanti**. 
 
-10. Da **Tipo di installazione** scegliere di eseguire una nuova installazione o di aggiungere funzionalità a un'installazione esistente. Scegliere **Avanti**. 
+10. Se questa è la prima installazione di SQL Server nel computer, la pagina **Tipo di installazione** non viene visualizzata e si passa direttamente alla pagina **Selezione funzionalità**. Tuttavia, se SQL Server è già installato nel sistema, nella pagina **Tipo di installazione** scegliere di eseguire una nuova installazione o aggiungere funzionalità a un'installazione esistente. Scegliere **Avanti**. 
   
-11. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Per installare una nuova istanza del motore di database di SQL Server, ad esempio, selezionare **Servizi motore di database**.
+11. Nella pagina **Selezione funzionalità** selezionare i componenti per l'installazione. Per installare una nuova istanza del motore di database di SQL Server, ad esempio, selezionare **Servizi motore di database**.
 
     Una volta selezionato il nome della funzionalità desiderata, nel riquadro **Descrizione funzionalità** viene visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo. Per altre informazioni, vedere [Edizioni e componenti di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) e [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   

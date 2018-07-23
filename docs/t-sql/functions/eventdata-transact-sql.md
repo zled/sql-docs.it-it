@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,20 +25,20 @@ helpviewer_keywords:
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0853aaa013cd46c81d22ad8093a891ecb54a6d3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: acdfdee721729b68b43a6b0a32a10cb91ea6d889
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055198"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790832"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce informazioni sugli eventi del server o del database. La funzione EVENTDATA viene chiamata quando viene generata una notifica degli eventi e i risultati vengono restituiti al servizio Service Broker specificato. È possibile utilizzare EVENTDATA anche nel corpo di un trigger DDL o LOGON.  
+Questa funzione restituisce informazioni sugli eventi del server o del database. La funzione `EVENTDATA` viene chiamata quando viene generata una notifica degli eventi e il Service Broker specificato riceve i risultati. Anche un trigger DDL o LOGON supporta l'uso interno di `EVENTDATA`.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +50,17 @@ EVENTDATA( )
 ```  
   
 ## <a name="remarks"></a>Remarks  
- EVENTDATA restituisce dati solo se utilizzata direttamente in un trigger DDL o LOGON. EVENTDATA restituisce Null se viene chiamata da altre routine, anche se tali routine sono chiamate da un trigger DDL o LOGON.  
+`EVENTDATA` restituisce dati solo se usata direttamente in un trigger DDL o LOGON. `EVENTDATA` restituisce Null se chiamata da altre routine, anche se queste routine sono chiamate da un trigger DDL o LOGON.
   
- I dati restituiti da EVENTDATA non sono validi dopo il commit o il rollback di una transazione che ha chiamato EVENTDATA, in modo implicito o esplicito.  
+I dati restituiti da `EVENTDATA` non sono validi dopo una transazione
+
++ che chiama `EVENTDATA` in modo esplicito
++ che chiama `EVENTDATA` in modo implicito
++ che esegue il commit
++ di cui viene eseguito il rollback  
   
 > [!CAUTION]  
->  EVENTDATA restituisce dati XML. Tali dati vengono inviati al client in formato Unicode, utilizzando 2 byte per ogni carattere. Gli elementi di codice Unicode seguenti possono essere rappresentati nel codice XML restituito da EVENTDATA:  
+>  `EVENTDATA` restituisce dati XML, inviati al client in formato Unicode che usa 2 byte per ogni carattere. `EVENTDATA` restituisce codice XML che può rappresentare questi punti di codice Unicode:  
 >   
 >  `0x0009`  
 >   
@@ -70,22 +74,22 @@ EVENTDATA( )
 >   
 >  Alcuni caratteri che possono essere inclusi in identificatori e dati [!INCLUDE[tsql](../../includes/tsql-md.md)] non sono rappresentabili o consentiti in XML. Sui caratteri o i dati con elementi di codice non indicati nell'elenco precedente viene eseguito il mapping a un punto interrogativo (?).  
   
- Per proteggere la sicurezza degli account di accesso, quando vengono eseguite le istruzioni CREATE LOGIN o ALTER LOGIN, le password non vengono visualizzate.  
+Le password non vengono visualizzate quando si eseguono istruzioni `CREATE LOGIN` o `ALTER LOGIN`. Ciò consente di proteggere la sicurezza degli account di accesso.  
   
 ## <a name="schemas-returned"></a>Schemi restituiti  
- EVENTDATA restituisce un valore di tipo **xml**. Per impostazione predefinita, la definizione dello schema per tutti gli eventi è installata nella directory seguente: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
+EVENTDATA restituisce un valore con tipo di dati **xml**. Per impostazione predefinita, la definizione dello schema per tutti gli eventi è installata in questa directory: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
- In alternativa, lo schema degli eventi è pubblicato nella pagina Web [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850).  
+Lo schema di eventi è disponibile anche nella pagina Web [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) (Schemi XML di Microsoft SQL Server).  
   
- Per estrarre lo schema di un evento specifico, cercare nello schema il tipo complesso `EVENT_INSTANCE_\<event_type>`. Ad esempio, per estrarre lo schema di un evento DROP_TABLE, cercare nello schema `EVENT_INSTANCE_DROP_TABLE`.  
+Per estrarre lo schema di un evento specifico, cercare nello schema il tipo complesso `EVENT_INSTANCE_<event_type>`. Ad esempio, per estrarre lo schema per l'evento `DROP_TABLE`, cercare nello schema `EVENT_INSTANCE_DROP_TABLE`.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-querying-event-data-in-a-ddl-trigger"></a>A. Recupero tramite query dei dati di eventi in un trigger DDL  
- Nell'esempio seguente viene creato un trigger DDL per impedire la creazione di nuove tabelle nel database. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che attiva il trigger viene acquisita utilizzando XQuery sui dati XML generati da EVENTDATA. Per altre informazioni, vedere [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md).  
+Questo esempio crea un trigger DDL che impedisce la creazione di nuove tabelle di database. L'uso di XQuery sui dati XML generati da `EVENTDATA` consente di acquisire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che attiva il trigger. Per altre informazioni, vedere [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md).  
   
 > [!NOTE]  
->  Quando si esegue una query sull'elemento `\<TSQLCommand>` tramite **Risultati in formato griglia** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], le interruzioni di riga nel testo del comando non vengono visualizzate. Usare invece **Risultati in formato testo**.  
+>  Quando si usa **Risultati in formato griglia** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per recuperare l'elemento `<TSQLCommand>`, le interruzioni di riga nel testo del comando non vengono visualizzate. Usare invece **Risultati in formato testo**.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,10 +115,10 @@ GO
 ```  
   
 > [!NOTE]  
->  Per restituire dati sugli eventi, è consigliabile usare il metodo XQuery **value()** invece del metodo **query()**. Il metodo **query()** restituisce istanze XML e CR/LF (ritorno a capo/avanzamento riga) trasformate con il carattere di escape e commerciale (&amp;) nell'output, mentre il metodo **value()** rende le istanze CR/LF invisibili nell'output.  
+>  Per la restituzione dei dati evento, usare il metodo XQuery **value()** invece del metodo **query()**. Il metodo **query()** restituisce istanze XML e CR/LF (ritorno a capo/avanzamento riga) trasformate con il carattere di escape e commerciale (&amp;) nell'output, mentre il metodo **value()** rende le istanze CR/LF invisibili nell'output.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Creazione di una tabella di log con dati di eventi in un trigger DDL  
- Nell'esempio seguente viene creata una tabella per l'archiviazione di informazioni su tutti gli eventi a livello di database e tale tabella viene popolata con un trigger DDL. Il tipo di evento e l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono acquisiti utilizzando XQuery sui dati XML generati da `EVENTDATA`.  
+Questo esempio crea una tabella per l'archiviazione di informazioni su tutti gli eventi a livello di database e tale tabella viene popolata con un trigger DDL. L'uso di XQuery sui dati XML generai da `EVENTDATA` consente di acquisire il tipo di evento e l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```  
 USE AdventureWorks2012;  

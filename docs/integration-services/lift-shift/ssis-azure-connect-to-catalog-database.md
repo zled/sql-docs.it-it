@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 571fe7755803dcb3ef76a678969295864436f16a
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405673"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36798266"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Connettersi al catalogo SSIS (SSISDB) in Azure
 
@@ -26,7 +27,7 @@ Trovare le informazioni di connessione necessarie per connettersi al catalogo SS
 - informazioni di accesso 
 
 > [!IMPORTANT]
-> In questo momento, non è possibile creare il database del catalogo SSISDB in un database SQL di Azure se non si crea il runtime di integrazione SSIS di Azure in Azure Data Factory versione 2. Il runtime di integrazione Azure-SSIS è l'ambiente di runtime che esegue i pacchetti SSIS in Azure. Per una procedura dettagliata del processo, vedere [Distribuire ed eseguire un pacchetto SSIS in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
+> In questo momento, non è possibile creare il database del catalogo SSISDB in un database SQL di Azure se non si crea il runtime di integrazione SSIS di Azure in Azure Data Factory. Il runtime di integrazione Azure-SSIS è l'ambiente di runtime che esegue i pacchetti SSIS in Azure. Per una procedura dettagliata del processo, vedere [Distribuire ed eseguire un pacchetto SSIS in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Prerequisites
 Prima di iniziare, verificare di avere la versione 17.2 o successiva di SQL Server Management Studio (SSMS). Se il database del catalogo SSISDB è ospitato nell'Istanza gestita di database SQL (anteprima), verificare di disporre di SSMS 17.6 o versioni successive. Per scaricare la versione più recente di SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

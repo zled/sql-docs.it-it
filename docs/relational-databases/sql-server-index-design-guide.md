@@ -1,7 +1,7 @@
 ---
 title: Architettura e guida per la progettazione degli indici di SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -28,12 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a934f7311096e9f97463fc9c7e826aab1fe063f6
-ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
+ms.openlocfilehash: 15c3db3784c056946a8ec047360691515c1c12be
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34812165"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909591"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,13 +108,20 @@ Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-t
 ### <a name="query-considerations"></a>Considerazioni sulle query  
  Quando si progetta un indice è consigliabile attenersi alle linee guida seguenti sulle query:  
   
--   Creare indici non cluster nelle colonne che vengono utilizzate spesso in predicati e condizioni di join nelle query. Tuttavia, è consigliabile non aggiungere colonne non necessarie. L'aggiunta di un numero eccessivo di colonne di indice può avere effetti negativi sullo spazio su disco e sulle prestazioni per la gestione degli indici.  
+-   Creare indici non cluster nelle colonne che vengono utilizzate spesso in predicati e condizioni di join nelle query. Queste sono le colonne SARGable<sup>1</sup>. Tuttavia, è consigliabile non aggiungere colonne non necessarie. L'aggiunta di un numero eccessivo di colonne di indice può avere effetti negativi sullo spazio su disco e sulle prestazioni per la gestione degli indici.  
   
 -   Gli indici di copertura possono migliorare le prestazioni delle query, perché tutti i dati necessari per soddisfare i requisiti della query esistono all'interno dell'indice stesso. In altre parole, per recuperare i dati richiesti sono necessarie solo le pagine di indice, e non le pagine di dati della tabella o dell'indice cluster. Viene dunque ridotto l'I/O complessivo del disco. Una query di colonne **a** e **b** in una tabella con un indice composto creato nelle colonne **a**, **b**e **c** può recuperare i dati specificati dall'indice solo.  
-  
+
+    > [!IMPORTANT]
+    > Il termine indice di copertura indica un [indice non cluster](#nonclustered-index-architecture) che risolve uno o più risultati di query simili direttamente, senza accedere alla tabella di base e senza incorrere in ricerche.
+    > Tali indici hanno tutte le colonne non [SARGable](#sargable) necessarie al livello foglia. Questo significa che le colonne restituite dalla clausola SELECT e tutti gli argomenti WHERE e JOIN sono coperti dall'indice.
+    > Il carico di I/O richiesto per eseguire la query è potenzialmente molto minore, se l'indice è sufficientemente ridotto rispetto alle righe e alle colonne nella tabella, ovvero rappresenta realmente un subset del totale delle colonne. Prendere in considerazione gli indici di copertura quando si seleziona una piccola parte di una tabella di grandi dimensioni e tale piccola parte è definita da un predicato fisso, ad esempio le [colonne di tipo sparse](../relational-databases/tables/use-sparse-columns.md) che contengono solo pochi valori non NULL.
+    
 -   Scrivere query che inseriscono o modificano il numero più alto possibile di righe con una sola istruzione, anziché utilizzare più query per aggiornare le stesse righe. L'utilizzo di una sola istruzione consente di avvalersi della gestione ottimizzata degli indici.  
   
 -   Valutare il tipo di query e la modalità di utilizzo delle colonne nella query. Una colonna utilizzata in un tipo di query di corrispondenze esatte, ad esempio, potrebbe essere valida per un indice non cluster o cluster.
+
+<a name="sargable"></a><sup>1</sup> Il termine SARGable nei database relazionali si riferisce a un predicato **S**earch **ARG**ument -**able** (ovvero un predicato che supporta argomenti di ricerca) che può sfruttare un indice per accelerare l'esecuzione delle query.
   
 ### <a name="column-considerations"></a>Considerazioni sulle colonne  
  Quando si progetta un indice è consigliabile attenersi alle linee guidata seguenti:  
@@ -148,7 +155,7 @@ Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-t
 -   Columnstore e rowstore
 -   Hash e non cluster per tabelle ottimizzate per la memoria
   
- È inoltre possibile personalizzare le caratteristiche iniziali dell'archiviazione dell'indice per ottimizzarne le prestazioni o la gestione impostando un'opzione quale FILLFACTOR. È inoltre possibile determinare la posizione di archiviazione dell'indice utilizzando filegroup o schemi di partizione per ottimizzare le prestazioni.  
+È inoltre possibile personalizzare le caratteristiche iniziali dell'archiviazione dell'indice per ottimizzarne le prestazioni o la gestione impostando un'opzione quale FILLFACTOR. È inoltre possibile determinare la posizione di archiviazione dell'indice utilizzando filegroup o schemi di partizione per ottimizzare le prestazioni.  
   
 ###  <a name="Index_placement"></a> Posizione degli indici nei filegroup o negli schemi di partizioni  
  Durante lo sviluppo della strategia di progettazione degli indici, è opportuno considerare la posizione degli indici nei filegroup associati al database. Un'attenta selezione dello schema di filegroup o di partizione può contribuire a migliorare le prestazioni delle query.  
@@ -159,9 +166,9 @@ Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-t
 -   Partizionare indici cluster e non cluster tra più filegroup.  
 -   Spostare una tabella da un filegroup a un altro eliminando l'indice cluster e specificando un nuovo schema di filegroup o di partizione nella clausola MOVE TO dell'istruzione DROP INDEX oppure utilizzando l'istruzione CREATE INDEX con la clausola DROP_EXISTING.  
   
- La creazione dell'indice non cluster in un altro filegroup consente di migliorare le prestazioni se i filegroup utilizzano unità fisiche diverse con controller distinti. In tal caso, i dati e le informazioni degli indici possono essere letti in parallelo contemporaneamente da più testine. Ad esempio, se `Table_A` nel filegroup `f1` e `Index_A` nel filegroup `f2` vengono entrambi utilizzati dalla stessa query, è possibile che si riscontrino miglioramenti delle prestazioni, in quanto i filegroup vengono utilizzati integralmente senza contese. Se invece tramite la query viene eseguita l'analisi di `Table_A` ma non è presente un riferimento a `Index_A` , verrà utilizzato solo il filegroup `f1` . e non si otterrà un miglioramento delle prestazioni.  
+La creazione dell'indice non cluster in un altro filegroup consente di migliorare le prestazioni se i filegroup utilizzano unità fisiche diverse con controller distinti. In tal caso, i dati e le informazioni degli indici possono essere letti in parallelo contemporaneamente da più testine. Ad esempio, se `Table_A` nel filegroup `f1` e `Index_A` nel filegroup `f2` vengono entrambi utilizzati dalla stessa query, è possibile che si riscontrino miglioramenti delle prestazioni, in quanto i filegroup vengono utilizzati integralmente senza contese. Se invece tramite la query viene eseguita l'analisi di `Table_A` ma non è presente un riferimento a `Index_A` , verrà utilizzato solo il filegroup `f1` . e non si otterrà un miglioramento delle prestazioni.  
   
- Non potendo prevedere il tipo di accesso e tantomeno il momento in cui questo si verifica, risulta più appropriato scegliere di suddividere le tabelle e gli indici tra tutti i filegroup. Poiché tutti i dati e gli indici sono suddivisi equamente in tutti i dischi, l'accesso riguarderà tutti i dischi, indipendentemente dalla modalità di accesso. Questo approccio è inoltre più semplice per gli amministratori del sistema.  
+Non potendo prevedere il tipo di accesso e tantomeno il momento in cui questo si verifica, risulta più appropriato scegliere di suddividere le tabelle e gli indici tra tutti i filegroup. Poiché tutti i dati e gli indici sono suddivisi equamente in tutti i dischi, l'accesso riguarderà tutti i dischi, indipendentemente dalla modalità di accesso. Questo approccio è inoltre più semplice per gli amministratori del sistema.  
   
 #### <a name="partitions-across-multiple-filegroups"></a>Partizioni tra più filegroup  
  È anche possibile scegliere di partizionare indici cluster e non cluster tra più filegroup. Gli indici vengono partizionati in orizzontale, ovvero per riga, in base a una funzione di partizione. Tale funzione definisce la modalità di mapping di ciascuna riga a un set di partizioni sulla base dei valori di colonne specifiche, dette colonne di partizionamento. Uno schema di partizione consente di specificare il mapping delle partizioni a un set di filegroup.  
@@ -172,7 +179,7 @@ Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-t
   
 -   Rendere più rapida ed efficace l'esecuzione delle query. Quando le query accedono a diverse partizioni di un indice, Query Optimizer è in grado di elaborare le singole partizioni contemporaneamente e di escludere quelle non interessate dalla query.  
   
- Per altre informazioni, vedere [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+Per altre informazioni, vedere [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Linee guida per la progettazione dell'ordinamento dell'indice  
  Quando si definiscono gli indici, è necessario valutare se la colonna chiave dell'indice deve essere archiviata in ordine crescente o decrescente. L'ordine crescente rappresenta l'impostazione predefinita e consente di garantire la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La sintassi delle istruzioni CREATE INDEX, CREATE TABLE e ALTER TABLE supporta le parole chiave ASC (ascending, crescente) e DESC (descending, decrescente) per singole colonne di indici e vincoli.  
@@ -237,7 +244,7 @@ Usare queste viste dei metadati per visualizzare gli attributi degli indici. In 
   
 -   Possono essere utilizzate in query di intervallo.  
   
- Se l'indice cluster non viene creato con la proprietà `UNIQUE`, tramite il [!INCLUDE[ssDE](../includes/ssde-md.md)] viene aggiunta automaticamente una colonna uniqueifier a 4 byte alla tabella. Se necessario, tramite il [!INCLUDE[ssDE](../includes/ssde-md.md)] viene aggiunto automaticamente un valore uniqueifier a una riga per rendere univoca ciascuna chiave. Questa colonna e i relativi valori sono per uso interno e non sono visualizzati o accessibili dagli utenti.  
+Se l'indice cluster non viene creato con la proprietà `UNIQUE`, tramite il [!INCLUDE[ssDE](../includes/ssde-md.md)] viene aggiunta automaticamente una colonna uniqueifier a 4 byte alla tabella. Se necessario, tramite il [!INCLUDE[ssDE](../includes/ssde-md.md)] viene aggiunto automaticamente un valore uniqueifier a una riga per rendere univoca ciascuna chiave. Questa colonna e i relativi valori sono per uso interno e non sono visualizzati o accessibili dagli utenti.  
   
 ### <a name="clustered-index-architecture"></a>Architettura dell'indice cluster  
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]gli indici sono organizzati in alberi B. Ogni pagina dell'albero B di un indice viene definita nodo. Il nodo di livello superiore dell'albero B viene definito nodo radice. I nodi inferiori dell'indice vengono definiti nodi foglia. I livelli dell'indice compresi tra il nodo radice e i nodi foglia sono noti come livelli intermedi. In un indice cluster il livello foglia include le pagine di dati della tabella sottostante. I nodi di livello radice e intermedio contengono pagine di indice che includono le righe dell'indice. Ogni riga di indice contiene un valore di chiave e un puntatore a una pagina di livello intermedio nell'albero B o a una riga di dati nel livello foglia dell'indice. Le pagine di ogni livello dell'indice sono collegate in un elenco collegato doppiamente.  
@@ -272,32 +279,32 @@ Usare queste viste dei metadati per visualizzare gli attributi degli indici. In 
   
 -   Sono univoche o contengono molti valori distinti.  
   
-     Gli ID dipendente consentono ad esempio di identificare in modo univoco i dipendenti. Un indice cluster o un vincolo [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) nella colonna `EmployeeID` contribuisce a migliorare le prestazioni di query tramite cui viene eseguita la ricerca di informazioni sui dipendenti in base al numero ID del dipendente. In alternativa, è possibile creare un indice cluster in `LastName`, `FirstName`, `MiddleName` perché i record relativi ai dipendenti sono in genere raggruppati e sottoposti a query in questo modo. Inoltre, la combinazione di queste colonne garantisce un elevato livello di differenziazione. 
+    Gli ID dipendente consentono ad esempio di identificare in modo univoco i dipendenti. Un indice cluster o un vincolo [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) nella colonna `EmployeeID` contribuisce a migliorare le prestazioni di query tramite cui viene eseguita la ricerca di informazioni sui dipendenti in base al numero ID del dipendente. In alternativa, è possibile creare un indice cluster in `LastName`, `FirstName`, `MiddleName` perché i record relativi ai dipendenti sono in genere raggruppati e sottoposti a query in questo modo. Inoltre, la combinazione di queste colonne garantisce un elevato livello di differenziazione. 
 
-     > [!TIP]
-     > Se non specificato diversamente, durante la creazione di un vincolo [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]crea un [indice cluster](#clustered_index) per supportare tale vincolo.
-     > Sebbene un *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* possa essere usato per applicare una PRIMARY KEY di univocità, non si tratta di una chiave di clustering efficiente.
-     > Se si usa un valore *uniqueidentifier* come PRIMARY KEY, è consigliabile crearlo come un indice non cluster e usare un'altra colonna, ad esempio `IDENTITY`, per creare l'indice cluster.   
+    > [!TIP]
+    > Se non specificato diversamente, durante la creazione di un vincolo [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]crea un [indice cluster](#clustered_index) per supportare tale vincolo.
+    > Sebbene un *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* possa essere usato per applicare una PRIMARY KEY di univocità, non si tratta di una chiave di clustering efficiente.
+    > Se si usa un valore *uniqueidentifier* come PRIMARY KEY, è consigliabile crearlo come un indice non cluster e usare un'altra colonna, ad esempio `IDENTITY`, per creare l'indice cluster.   
   
 -   Sono caratterizzate dall'accesso in modalità sequenziale.  
   
-     Tramite un ID prodotto, ad esempio, vengono identificati in modo univoco i prodotti inclusi nella tabella `Production.Product` del database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . La definizione di un indice cluster in `WHERE ProductID BETWEEN 980 and 999`produce effetti positivi sulle query in cui è stata specificata una ricerca sequenziale, come nel caso di `ProductID`, in quanto le righe vengono archiviate in base all'ordinamento definito per tale colonna chiave.  
+    Tramite un ID prodotto, ad esempio, vengono identificati in modo univoco i prodotti inclusi nella tabella `Production.Product` del database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . La definizione di un indice cluster in `WHERE ProductID BETWEEN 980 and 999`produce effetti positivi sulle query in cui è stata specificata una ricerca sequenziale, come nel caso di `ProductID`, in quanto le righe vengono archiviate in base all'ordinamento definito per tale colonna chiave.  
   
 -   Definito come `IDENTITY`.  
   
 -   Vengono utilizzate di frequente per ordinare i dati recuperati da una tabella.  
   
-     Può essere utile eseguire il clustering della tabella, ovvero ordinarla fisicamente, in base a tale colonna per evitare il costo di un'operazione di ordinamento ogni volta che si esegue la query sulla colonna.  
+    Può essere utile eseguire il clustering della tabella, ovvero ordinarla fisicamente, in base a tale colonna per evitare il costo di un'operazione di ordinamento ogni volta che si esegue la query sulla colonna.  
   
  Gli indici cluster non sono consigliati per gli attributi seguenti:  
   
 -   Colonne che vengono modificate di frequente  
   
-     Le modifiche frequenti determinano lo spostamento dell'intera riga in quanto [!INCLUDE[ssDE](../includes/ssde-md.md)] deve mantenere i valori dei dati nell'ordine fisico. Si tratta di una considerazione importante nel caso di sistemi che elaborano volumi elevati di transazioni in cui i dati sono in genere volatili.  
+    Le modifiche frequenti determinano lo spostamento dell'intera riga in quanto [!INCLUDE[ssDE](../includes/ssde-md.md)] deve mantenere i valori dei dati nell'ordine fisico. Si tratta di una considerazione importante nel caso di sistemi che elaborano volumi elevati di transazioni in cui i dati sono in genere volatili.  
   
 -   Chiavi estese  
   
-     Le chiavi estese sono costituite da diverse colonne normali o di grandi dimensioni. I valori di chiave dell'indice cluster vengono utilizzati come chiavi di ricerca da tutti gli indici non cluster. Gli indici non cluster definiti nella stessa tabella saranno significativamente più grandi perché le voci di indice non cluster includono la chiave di clustering, nonché le colonne chiave definite per l'indice non cluster.  
+    Le chiavi estese sono costituite da diverse colonne normali o di grandi dimensioni. I valori di chiave dell'indice cluster vengono utilizzati come chiavi di ricerca da tutti gli indici non cluster. Gli indici non cluster definiti nella stessa tabella saranno significativamente più grandi perché le voci di indice non cluster includono la chiave di clustering, nonché le colonne chiave definite per l'indice non cluster.  
   
 ##  <a name="Nonclustered"></a> Linee guida per la progettazione di un indice non cluster  
  Un indice non cluster contiene i valori della chiave di indice e gli indicatori di posizione delle righe che puntano al percorso di archiviazione dei dati della tabella. In una vista tabella o indicizzata è possibile creare più indici non cluster. In genere, gli indici non cluster consentono di migliorare le prestazioni di query utilizzate di frequente non coperte da un indice cluster.  
@@ -311,17 +318,17 @@ Usare queste viste dei metadati per visualizzare gli attributi degli indici. In 
   
 -   Il livello foglia di un indice non cluster è composto da pagine di indice invece che da pagine di dati.  
   
- Gli indicatori di posizione delle righe nelle righe di indice non cluster sono rappresentati da un puntatore a una riga o da una chiave di indice cluster per una riga, come illustrato di seguito:  
+Gli indicatori di posizione delle righe nelle righe di indice non cluster sono rappresentati da un puntatore a una riga o da una chiave di indice cluster per una riga, come illustrato di seguito:  
   
 -   Se la tabella è un heap, ovvero non include un indice cluster, l'indicatore di posizione è un puntatore riferito alla riga e compilato in base all'ID del file, al numero della pagina e al numero della riga nella pagina. L'intero puntatore è noto come ID di riga.  
   
 -   Se una tabella include un indice cluster oppure l'indice è riferito a una vista indicizzata, l'indicatore di posizione delle righe corrisponde alla chiave di indice cluster per la riga.  
   
- Negli indici non cluster è inclusa una riga in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) con **index_id** > 1 per ogni partizione usata dall'indice. Per impostazione predefinita, un indice non cluster include una singola partizione. Quando in un indice non cluster sono incluse più partizioni, ogni partizione ha un albero B contenente le righe di indice per la partizione specifica. Se, ad esempio, un indice non cluster include quattro partizioni, vi sono quattro alberi B, una in ogni partizione.  
+Negli indici non cluster è inclusa una riga in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) con **index_id** > 1 per ogni partizione usata dall'indice. Per impostazione predefinita, un indice non cluster include una singola partizione. Quando in un indice non cluster sono incluse più partizioni, ogni partizione ha un albero B contenente le righe di indice per la partizione specifica. Se, ad esempio, un indice non cluster include quattro partizioni, vi sono quattro alberi B, una in ogni partizione.  
   
- In base ai tipi di dati nell'indice non cluster, ogni struttura dell'indice non cluster avrà una o più unità di allocazione in cui archiviare e gestire i dati per una partizione specifica. Ogni indice non cluster ha almeno un'unità di allocazione *IN_ROW_DATA* per partizione in cui sono archiviate le pagine relative all'albero B dell'indice. L'indice non cluster include anche un'unità di allocazione *LOB_DATA* per partizione se contiene colonne LOB. L'indice include anche un'unità di allocazione *ROW_OVERFLOW_DATA* per partizione se contiene colonne a lunghezza variabile che superano le dimensioni massime di 8.060 byte.  
+In base ai tipi di dati nell'indice non cluster, ogni struttura dell'indice non cluster avrà una o più unità di allocazione in cui archiviare e gestire i dati per una partizione specifica. Ogni indice non cluster ha almeno un'unità di allocazione *IN_ROW_DATA* per partizione in cui sono archiviate le pagine relative all'albero B dell'indice. L'indice non cluster include anche un'unità di allocazione *LOB_DATA* per partizione se contiene colonne LOB. L'indice include anche un'unità di allocazione *ROW_OVERFLOW_DATA* per partizione se contiene colonne a lunghezza variabile che superano le dimensioni massime di 8.060 byte.  
   
- Nella figura seguente viene illustrata la struttura di un indice non cluster in una singola partizione.  
+Nella figura seguente viene illustrata la struttura di un indice non cluster in una singola partizione.  
 
 ![bokind1a](../relational-databases/media/bokind1a.gif)  
   
@@ -332,7 +339,7 @@ Usare queste viste dei metadati per visualizzare gli attributi degli indici. In 
   
      In caso di applicazioni DSS (Decision Support System) e database che contengono principalmente dati di sola lettura è consigliabile l'utilizzo di molti indici non cluster. In questo modo, saranno disponibili per Query Optimizer più indici tra cui scegliere per determinare il metodo di accesso più rapido e la bassa frequenza di aggiornamento del database significa che la manutenzione dell'indice non influirà negativamente sulle prestazioni.  
   
--   In caso di applicazioni di elaborazione delle transazioni online (OLP) e database contenenti tabelle aggiornate di frequente, è consigliabile evitare di utilizzare un numero eccessivo di indici. È inoltre necessario che gli indici siano limitati, ovvero con il minor numero possibile di colonne.  
+-   In caso di applicazioni di elaborazione delle transazioni online (OLTP) e database contenenti tabelle aggiornate di frequente, è consigliabile evitare di usare un numero eccessivo di indici. È inoltre necessario che gli indici siano limitati, ovvero con il minor numero possibile di colonne.  
   
      Un numero elevato di indici in una tabella ha ripercussioni sulle prestazioni delle istruzioni INSERT, UPDATE, DELETE e MERGE perché, quando vengono modificati i dati nella tabella, tutti gli indici devono essere modificati di conseguenza.  
   
@@ -345,19 +352,25 @@ Usare queste viste dei metadati per visualizzare gli attributi degli indici. In 
   
 -   Query che non restituiscono set di risultati estesi.  
   
-     Creare indici filtrati per coprire query che restituiscono un subset ben definito di righe da una tabella di elevate dimensioni.  
-  
+     Creare indici filtrati per coprire query che restituiscono un subset ben definito di righe da una tabella di elevate dimensioni. 
+     
+     > [!TIP] 
+     > In genere la clausola WHERE dell'istruzione CREATE INDEX corrisponde alla clausola WHERE di una query con copertura.  
+
 -   Query che contengono colonne interessate di frequente da condizioni di ricerca di una query, ad esempio la clausola WHERE, che restituiscono corrispondenze esatte.  
-  
+
+    > [!TIP]
+    > Quando si aggiungono nuovi indici, valutare il rapporto tra costi e benefici. Può essere preferibile consolidare le esigenze di query aggiuntive in un indice esistente. Ad esempio, è consigliabile aggiungere uno o due colonne a livello foglia a un indice esistente, se ciò consente la copertura di diverse query critiche, invece di avere un indice di copertura per ogni query critica.
+    
 ### <a name="column-considerations"></a>Considerazioni sulle colonne  
  Considerare le colonne con uno o più degli attributi seguenti:  
   
 -   Colonne che coprono la query.  
   
-     È possibile ottenere un miglioramento delle prestazioni quando l'indice contiene tutte le colonne nella query. Query Optimizer può individuare tutti i valori della colonna all'interno dell'indice. Poiché non viene effettuato l'accesso ai dati della tabella o dell'indice cluster, il numero di operazioni di I/O su disco risulta inferiore. Utilizzare un indice con colonne per aggiungere colonne di copertura anziché creare una chiave di indice esteso.  
+     È possibile ottenere un miglioramento delle prestazioni quando l'indice contiene tutte le colonne nella query. Query Optimizer può individuare tutti i valori della colonna all'interno dell'indice. Poiché non viene effettuato l'accesso ai dati della tabella o dell'indice cluster, il numero di operazioni di I/O su disco risulta inferiore. Usare un indice con [colonne incluse](#Included_Columns) per aggiungere colonne di copertura invece di creare una chiave di indice esteso.  
   
      Se la tabella include un indice cluster, la colonna o le colonne definite in tale indice vengono automaticamente accodate alla fine di ogni indice non cluster nella tabella. In questo modo, è possibile produrre una query coperta senza specificare le colonne dell'indice cluster nella definizione dell'indice non cluster. Se, ad esempio, in una tabella sono inclusi un indice cluster nella colonna `C`, un indice non cluster nelle colonne `B` e `A` , le colonne `B`, `A`e `C`della tabella in questione rappresenteranno i relativi valori chiave.  
-  
+      
 -   Colonne che includono un numero elevato di valori distinct, ad esempio una combinazione di cognome e nome, se per le altre colonne viene utilizzato un indice cluster.  
   
      Se sono presenti soltanto pochi valori distinct, ad esempio 1 e 0, la maggior parte delle query non utilizzerà l'indice in quanto una scansione della tabella risulta in genere più efficiente. Per questo tipo di dati, creare un indice filtrato su un valore distinto che presente solo in un numero ridotto di righe. Se la maggior parte dei valori è impostata su 0, Query Optimizer potrebbe utilizzare un indice filtrato per le righe di dati che contengono il valore 1.  
@@ -392,7 +405,7 @@ INCLUDE (FileName);
 ```  
   
 ##### <a name="index-with-included-columns-guidelines"></a>Linee guida sull'utilizzo degli indici con colonne incluse  
- Quando si progettano indici non cluster con colonne incluse è opportuno considerare le indicazioni generali seguenti:  
+Quando si progettano indici non cluster con colonne incluse è opportuno considerare le indicazioni generali seguenti:  
   
 -   Le colonne non chiave vengono definite nella clausola INCLUDE dell'istruzione CREATE INDEX.  
   
@@ -407,7 +420,7 @@ INCLUDE (FileName);
 -   Non è possibile specificare i nomi delle colonne sia nell'elenco INCLUDE che nell'elenco delle colonne chiave.  
   
 -   Non è possibile ripetere i nomi delle colonne nell'elenco INCLUDE.  
-  
+
 ##### <a name="column-size-guidelines"></a>Linee guida sulle dimensioni delle colonne  
   
 -   È necessario definire almeno una colonna chiave. Il numero massimo di colonne non chiave è 1023. Questo limite è rappresentato dal numero massimo di colonne nelle tabelle meno 1.  

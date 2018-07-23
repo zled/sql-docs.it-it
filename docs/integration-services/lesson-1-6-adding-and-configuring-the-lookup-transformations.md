@@ -16,12 +16,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6735e372f7c1a4b49cdf57e73ee5cd82b2930bba
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 57cadee90ac69a76942c6b3c763ffb9900c4f8d8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332735"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297407"
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>Lezione 1-6 - Aggiunta e configurazione delle trasformazioni Ricerca
 Dopo aver configurato l'origine file flat per l'estrazione di dati dal file di origine si definiranno le trasformazioni Ricerca necessarie per ottenere i valori di **CurrencyKey** e **DateKey**. Una trasformazione Ricerca esegue una ricerca tramite l'unione in join dei dati della colonna di input specificata con una colonna di un set di dati di riferimento. Il set di dati di riferimento può essere una vista o tabella esistente, una nuova tabella o il risultato di un'istruzione SQL. In questa esercitazione, la trasformazione Ricerca utilizza una gestione connessione OLE DB per connettersi al database che contiene i dati che costituiscono l'origine del set di dati di riferimento.  
@@ -41,7 +41,7 @@ In entrambi i casi nella trasformazione Ricerca verrà utilizzata la gestione co
   
 1.  Nella **Casella degli strumenti SSIS**espandere **Comune**, quindi trascinare **Ricerca** sull'area di progettazione della scheda **Flusso di dati** . Posizionare Ricerca proprio sotto l'origine **Extract Sample Currency Data**.  
   
-2.  Fare clic sull'origine del file flat **Extract Sample Currency Data** e trascinare la freccia verde sulla trasformazione **Ricerca** appena aggiunta per collegare i due componenti.  
+2.  Fare clic sull'origine del file flat **Extract Sample Currency Data** e trascinare la freccia blu sulla trasformazione **Ricerca** appena aggiunta per collegare i due componenti.  
   
 3.  Nell'area di progettazione **Flusso di dati** fare clic su **Ricerca** nella trasformazione **Ricerca** e cambiare il nome in **Lookup Currency Key**.  
   

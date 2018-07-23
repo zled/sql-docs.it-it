@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c586823c0ad4b270ba03283e4ce75b9f2f9c022
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9314c7ffa3a25aa9feb0e8632c68667a4662f86e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955730"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356053"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Miglioramento delle prestazioni della replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,8 @@ ms.locfileid: "32955730"
   
 -   Ridurre al minimo le dimensioni delle transazioni nella progettazione delle applicazioni.  
   
-     Per impostazione predefinita, la replica transazionale propaga le modifiche in base ai limiti delle transazioni. Più piccole sono le transazioni, minori saranno le probabilità che l'agente di distribuzione dovrà rinviare una transazione a causa di problemi di rete. Se è necessario che l'agente rinvii una transazione, la quantità di dati inviati sarà inferiore.  
+     Per impostazione predefinita, la replica transazionale propaga le modifiche in base ai limiti delle transazioni. Più piccole sono le transazioni, minori saranno le probabilità che l'agente di distribuzione debba rinviare una transazione a causa di problemi di rete. Se è necessario che l'agente rinvii una transazione, la quantità di dati inviati sarà inferiore. 
+
   
 ## <a name="distributor-configuration"></a>Configurazione del server di distribuzione  
   
@@ -62,51 +62,78 @@ ms.locfileid: "32955730"
   
 -   Distribuire gli articoli in più pubblicazioni.  
   
-     Se non è possibile utilizzare il parametro **-SubscriptionStreams** , descritto più avanti in questo argomento, provare a creare più pubblicazioni. La distribuzione di articoli tra queste pubblicazioni consente alla replica di applicare le modifiche in parallelo con i Sottoscrittori.  
+     Se non è possibile usare il [parametro **-SubscriptionStreams**](#subscriptionstreams), provare a creare più pubblicazioni. La distribuzione di articoli tra queste pubblicazioni consente alla replica di applicare le modifiche in parallelo con i Sottoscrittori.  
   
 ## <a name="subscription-considerations"></a>Considerazioni sulle sottoscrizioni  
   
 -   Utilizzare agenti indipendenti anziché agenti condivisi se si dispone di più pubblicazioni nello stesso server di pubblicazione, in base all'impostazione predefinita di Creazione guidata nuova pubblicazione.  
   
--   Eseguire gli agenti in modo continuo anziché pianificarne l'esecuzione con frequenza elevata.  
+-   Eseguire gli agenti in modo continuo invece di pianificarne l'esecuzione frequente.  
   
      L'impostazione di un'esecuzione continua degli agenti anziché la creazione di pianificazioni frequenti, ad esempio ogni minuto, consente di migliorare le prestazioni della replica in quanto non richiede l'avvio e l'arresto dell'agente. Quando si imposta l'esecuzione continua dell'agente di distribuzione, le modifiche vengono propagate con una bassa latenza agli altri server connessi nella topologia. Per altre informazioni, vedere:  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specificare le pianificazioni della sincronizzazione](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parametri dell'agente di distribuzione e dell'agente di lettura log  
+I parametri del profilo dell'agente vengono spesso modificati per aumentare la velocità effettiva dell'agente di lettura log e dell'agente di distribuzione con i sistemi OLTP a traffico elevato. 
+
+Sono stati eseguiti test per determinare i valori ottimali per migliorare le prestazioni per l'agente di lettura log e l'agente di distribuzione. Dai test risulta che il carico di lavoro è un fattore determinante per stabilire quali valori sono ottimali in quale situazione e pertanto non esiste una singola modifica di un valore che può migliorare le prestazioni in ogni situazione. 
+
+Risultati: 
+- Per un *agente di lettura log* con carichi di lavoro di transazioni più ridotte (meno di 500 comandi), la velocità effettiva può trarre vantaggio da un valore più alto per **ReadBatchSize**. Tuttavia, per carichi di lavoro con transazioni di grandi dimensioni, la modifica di questo valore non migliorerà le prestazioni. 
+    - Quando sono presenti più agenti di lettura log e più agenti di distribuzione in esecuzione in parallelo nello stesso server, un valore più alto per **ReadBatchSize** causa condizioni di contesa nel database di distribuzione. 
+- Per l'*agente di distribuzione*
+    - L'aumento di **CommitBatchSize** può migliorare la velocità effettiva. Il compromesso è che, se si verifica un errore, l'agente di distribuzione deve eseguire il rollback e ricominciare per riapplicare un numero maggiore di transazioni. 
+    - L'aumento del valore **SubscriptionStreams** è utile per la velocità effettiva complessiva dell'agente di distribuzione, perché più connessioni al Sottoscrittore applicano batch di modifiche in parallelo. Tuttavia, a seconda del numero di processori e di altre condizioni dei metadati (ad esempio una chiave primaria, chiavi esterne, vincoli UNIQUE e indici), un valore più alto di SubscriptionStreams potrebbe avere effetti negativi. Inoltre, in caso di esito negativo dell'esecuzione o del commit di un flusso, l'agente di distribuzione esegue il fallback e torna a usare un singolo flusso per ripetere i batch non riusciti.
+
+
+Per altre informazioni su questi test, vedere il blog [Optimizing replication agent profile parameters for better performance](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/) (Ottimizzazione dei parametri del profilo dell'agente di replica per migliorare le prestazioni).
+
+
+### <a name="log-reader-agent"></a>Agente di lettura log
+
+#### <a name="readbatchsize"></a>ReadBatchSize
+- Aumentare il valore del parametro **-ReadBatchSize** per l'agente di lettura log.  
   
--   Per risolvere i colli di bottiglia accidentali, usare il parametro **–MaxCmdsInTran** per l'agente di lettura log.  
+L'agente di lettura log e l'agente di distribuzione supportano le dimensioni di batch per operazioni di lettura e commit delle transazioni. Per impostazione predefinita, le dimensioni del batch sono pari a 500 transazioni. L'agente di lettura log legge il numero specifico di transazioni nel log, indipendentemente dal fatto che siano contrassegnate o meno per la replica. Se in un database di pubblicazione viene scritto un numero elevato di transazioni, ma solo un subset ridotto è contrassegnato per la replica, è necessario usare il parametro **-ReadBatchSize** per aumentare la dimensione del batch di lettura dell'agente di lettura log. Questo parametro non è applicabile ai server di pubblicazione Oracle.  
+
+   - Per i carichi di lavoro di transazioni più piccole (meno di 500 comandi) si assiste a un aumento del numero di comandi elaborati al secondo quando il valore di **ReadBatchSize** viene aumentato fino a 5000. 
+   - Per i carichi di lavoro di dimensioni maggiori (transazioni con 500-1000 comandi), l'aumento di **ReadBatchSize** consente di ottenere miglioramenti limitati delle prestazioni. L'aumento di **ReadBatchSize** consente di ottenere un maggior numero di transazioni scritte nel database di distribuzione in un unico roundtrip. In questo modo aumenta il tempo durante il quale le transazioni e i comandi sono visibili per l'agente di distribuzione e si introduce latenza per il processo di replica.  
+
+#### <a name="pollinginterval"></a>PollingInterval
+- Ridurre il valore del parametro **-PollingInterval** per l'agente di lettura log.  
   
-     Il parametro **–MaxCmdsInTran** specifica il numero massimo di istruzioni raggruppate in una transazione mentre l'agente di lettura log scrive i comandi nel database di distribuzione. L'utilizzo di questo parametro consente all'agente di lettura log e all'agente di distribuzione di dividere le transazioni di grandi dimensioni, ovvero costituite da molti comandi, nel server di pubblicazione in diverse transazioni più piccole quando i comandi vengono applicati al Sottoscrittore. Può inoltre ridurre la possibilità che si verifichino contese nel server di distribuzione e diminuire la latenza tra il server di pubblicazione e il Sottoscrittore. Dal momento che la transazione originale viene applicata in unità più piccole, il Sottoscrittore può accedere alle righe di una vasta transazione logica del server di pubblicazione prima della fine della transazione originale, violando la rigida atomicità transazionale. Il valore predefinito è **0**, che consente di mantenere i limiti delle transazioni del server di pubblicazione. Questo parametro non è applicabile ai server di pubblicazione Oracle.  
+Il parametro **-PollingInterval** specifica la frequenza con cui viene eseguita la query sulle transazioni da replicare nel log delle transazioni di un database pubblicato. Il valore predefinito è 5 secondi. Se si riduce tale valore, il polling del log viene eseguito più spesso con la possibilità di generare una latenza più bassa per il recapito delle transazioni dal database di pubblicazione nel database di distribuzione. È tuttavia consigliabile valutare la necessità di una latenza più bassa rispetto a un carico maggiore sul server determinato dall'esecuzione più frequente del polling.   
   
-    > [!WARNING]  
-    >  **MaxCmdsInTran** non è stato progettato per essere sempre abilitato. Sono disponibili casi di risoluzione in cui qualcuno ha accidentalmente eseguito un numero elevato di operazioni DML in una singola transazione (causando ritardi nella distribuzione dei comandi fino a che l'intera transazione è in database di distribuzione, blocchi mantenuti e così via). Se periodicamente si verifica questa situazione, è necessario esaminare le applicazioni e trovare un modo per ridurre le dimensioni della transazione.  
+#### <a name="maxcmdsintran"></a>MaxCmdsInTran
+- Per risolvere i colli di bottiglia accidentali, usare il parametro **–MaxCmdsInTran** per l'agente di lettura log.  
   
--   usare il parametro **–SubscriptionStreams** per l'agente di distribuzione.  
+Il parametro **–MaxCmdsInTran** specifica il numero massimo di istruzioni raggruppate in una transazione mentre l'agente di lettura log scrive i comandi nel database di distribuzione. L'utilizzo di questo parametro consente all'agente di lettura log e all'agente di distribuzione di dividere le transazioni di grandi dimensioni, ovvero costituite da molti comandi, nel server di pubblicazione in diverse transazioni più piccole quando i comandi vengono applicati al Sottoscrittore. Può inoltre ridurre la possibilità che si verifichino contese nel server di distribuzione e diminuire la latenza tra il server di pubblicazione e il Sottoscrittore. Dal momento che la transazione originale viene applicata in unità più piccole, il Sottoscrittore può accedere alle righe di una vasta transazione logica del server di pubblicazione prima della fine della transazione originale, violando la rigida atomicità transazionale. Il valore predefinito è **0**, che consente di mantenere i limiti delle transazioni del server di pubblicazione. Questo parametro non è applicabile ai server di pubblicazione Oracle.  
   
-     Il parametro **–SubscriptionStreams** può migliorare notevolmente la velocità effettiva della replica aggregata. e consente a più connessioni a un Sottoscrittore l'applicazione di batch di modifiche in parallelo, conservando molte delle caratteristiche transazionali disponibili quando si utilizza un singolo thread. Se si verifica un errore di esecuzione o di commit di una delle connessioni, tutte le connessioni interromperanno il batch corrente e l'agente utilizzerà un singolo flusso per ripetere i batch non riusciti. Prima del completamento di questa fase di tentativi, possono verificarsi inconsistenze temporanee delle transazioni nel Sottoscrittore. Al termine del commit dei batch non riusciti, viene ripristinata la consistenza delle transazioni nel Sottoscrittore.  
+   > [!WARNING]  
+   >  **MaxCmdsInTran** non è stato progettato per essere sempre abilitato. Sono disponibili casi di risoluzione in cui qualcuno ha accidentalmente eseguito un numero elevato di operazioni DML in una singola transazione (causando ritardi nella distribuzione dei comandi fino a che l'intera transazione è in database di distribuzione, blocchi mantenuti e così via). Se periodicamente si verifica questa situazione, esaminare le applicazioni e trovare un modo per ridurre le dimensioni delle transazioni.  
   
-     È possibile specificare un valore per questo parametro di agente usando **@subscriptionstreams** di [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
+### <a name="distribution-agent"></a>Agente di distribuzione
+
+#### <a name="subscriptionstreams"></a>SubscriptionStreams
+- Aumentare il parametro **-SubscriptionStreams** per l'agente di distribuzione.  
   
--   Aumentare il valore del parametro **-ReadBatchSize** per l'agente di lettura log.  
+Il parametro **–SubscriptionStreams** può migliorare notevolmente la velocità effettiva della replica aggregata. e consente a più connessioni a un Sottoscrittore l'applicazione di batch di modifiche in parallelo, conservando molte delle caratteristiche transazionali disponibili quando si utilizza un singolo thread. Se si verifica un errore di esecuzione o di commit di una delle connessioni, tutte le connessioni interromperanno il batch corrente e l'agente utilizzerà un singolo flusso per ripetere i batch non riusciti. Prima del completamento di questa fase di tentativi, possono verificarsi inconsistenze temporanee delle transazioni nel Sottoscrittore. Al termine del commit dei batch non riusciti, viene ripristinata la consistenza delle transazioni nel Sottoscrittore.  
   
-     L'agente di lettura log e l'agente di distribuzione supportano le dimensioni di batch per operazioni di lettura e commit delle transazioni. Per impostazione predefinita, le dimensioni del batch sono pari a 500 transazioni. L'agente di lettura log legge il numero specifico di transazioni nel log, indipendentemente dal fatto che siano contrassegnate o meno per la replica. Se in un database di pubblicazione viene scritto un numero elevato di transazioni, ma solo un subset ridotto è contrassegnato per la replica, è necessario usare il parametro **-ReadBatchSize** per aumentare la dimensione del batch di lettura dell'agente di lettura log. Questo parametro non è applicabile ai server di pubblicazione Oracle.  
+È possibile specificare un valore per questo parametro di agente usando **@subscriptionstreams** di [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
+
+Per altre informazioni sull'implementazione di flussi di sottoscrizione, vedere [Navigating SQL replication subscriptionStream setting](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting) (Informazioni sull'impostazione subscriptionStream per la replica SQL).
   
--   Aumentare il valore del parametro **-CommitBatchSize** per l'agente di distribuzione.  
+#### <a name="commitbatchsize"></a>CommitBatchSize
+- Aumentare il valore del parametro **-CommitBatchSize** per l'agente di distribuzione.  
   
-     Il commit di un set di transazioni presenta un overhead fisso. Se si esegue il commit di un numero maggiore di transazioni con una frequenza minore, l'overhead viene distribuito in un volume più ampio di dati. Tuttavia, il vantaggio offerto dall'aumento del valore di questo parametro decade in quanto il costo dell'applicazione delle modifiche è controllato da altri fattori, come l'I/O massimo del disco che contiene il log. È inoltre necessario tenere presente che gli errori che determinano l'avvio dell'agente di distribuzione richiedono l'esecuzione del rollback e la nuova applicazione di un numero maggiore di transazioni. Per le reti non affidabili, un valore più basso può generare meno errori nonché il rollback e la riapplicazione di un numero inferiore di transazioni in caso di errore.  
+Il commit di un set di transazioni presenta un overhead fisso. Se si esegue il commit di un numero maggiore di transazioni con una frequenza minore, l'overhead viene distribuito in un volume più ampio di dati.  L'aumento di CommitBatchSize (fino a 200) può migliorare le prestazioni, perché viene eseguito il commit di più transazioni nel Sottoscrittore. Tuttavia, il vantaggio offerto dall'aumento del valore di questo parametro decade in quanto il costo dell'applicazione delle modifiche è controllato da altri fattori, come l'I/O massimo del disco che contiene il log. È anche necessario tenere presente che gli eventuali errori che causano il riavvio delle operazioni dell'agente di distribuzione richiedono l'esecuzione del rollback e la nuova applicazione di un numero maggiore di transazioni. Per le reti non affidabili, un valore più basso può generare meno errori nonché il rollback e la riapplicazione di un numero inferiore di transazioni in caso di errore.  
   
--   Ridurre il valore del parametro **-PollingInterval** per l'agente di lettura log.  
+
+##<a name="see-more"></a>Altre informazioni
   
-     Il parametro **-PollingInterval** specifica la frequenza con cui viene eseguita la query sulle transazioni da replicare nel log delle transazioni di un database pubblicato. Il valore predefinito è 5 secondi. Se si riduce tale valore, il polling del log viene eseguito più spesso con la possibilità di generare una latenza più bassa per il recapito delle transazioni dal database di pubblicazione nel database di distribuzione. È tuttavia consigliabile valutare la necessità di una latenza più bassa rispetto a un carico maggiore sul server determinato dall'esecuzione più frequente del polling.  
-  
- I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
-  
--   [Usare i profili agenti di replica](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
-  
--   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
-  
--   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+[Usare i profili agenti di replica](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
+[Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

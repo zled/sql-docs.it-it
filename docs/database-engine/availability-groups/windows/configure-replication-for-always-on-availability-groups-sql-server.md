@@ -1,7 +1,7 @@
 ---
 title: Configurare la replica per i gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2016
+ms.date: 07/09/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ea2fb342bc881d79f8e3184535bbe888e939068
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ac96fc19852fa45b972308fc48b55687f0885ea6
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770467"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934873"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Configurare la replica per i gruppi di disponibilità AlwaysOn (SQL Server)
 
@@ -128,6 +128,9 @@ ALTER AVAILABILITY GROUP 'MyAG'
 ```  
   
  Per altre informazioni, vedere [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md).  
+ 
+> [!NOTE]  
+>  Non è possibile abilitare la replica nei database in un gruppo di disponibilità con DTC_Support abilitato usando l'opzione Per_DB.  
   
 ##  <a name="step3"></a> 3. Assicurare che tutti gli host della replica secondaria siano configurati per la replica  
  In ogni host della replica secondaria verificare che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sia stato configurato per supportare la replica. È possibile eseguire la query seguente in ogni host della replica secondaria per determinare se la replica è installata:  

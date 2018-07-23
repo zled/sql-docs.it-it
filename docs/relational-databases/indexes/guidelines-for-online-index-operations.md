@@ -22,14 +22,14 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: d62566a8e5db1eaee81944d364f169ccfa6ef477
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235795"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262145"
 ---
-# <a name="guidelines-for-online-index-operations"></a>Linee guida per operazioni di indice online
+# <a name="guidelines-for-online-index-operations"></a>Linee guida per le operazioni sugli indici online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Quando si eseguono operazioni sugli indici online sono da ritenersi valide le linee guida seguenti:  
@@ -91,27 +91,29 @@ Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations
 ## <a name="transaction-log-considerations"></a>Considerazioni sul log delle transazioni  
  Operazioni sugli indici su larga scala, eseguite online oppure offline, possono generare volumi di dati elevati i quali possono esaurire rapidamente lo spazio disponibile nel log delle transazioni. Per garantire la possibilità di eseguire il rollback dell'operazione sugli indici, non è possibile troncare il log delle transazioni fino al completamento dell'operazione. È tuttavia possibile eseguire il backup del log durante l'operazione sugli indici. È pertanto necessario che il log delle transazioni abbia spazio sufficiente per archiviare sia le transazioni dell'operazione sugli indici sia tutte le transazioni utente simultanee per l'intera durata dell'operazione sugli indici. Per altre informazioni, vedere [Spazio su disco per il log delle transazioni per operazioni sugli indici](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
 
-## <a name="resumable-index-rebuild-considerations"></a>Considerazioni sulla ricompilazione degli indici ripristinabili
+## <a name="resumable-index-considerations"></a>Considerazioni sugli indici ripristinabili
 
 > [!NOTE]
-> L'opzione dell'indice ripristinabile è valida per SQL Server (a partire da SQL Server 2017) e per il database SQL. Vedere [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
+> L'opzione RESUMABLE per gli indici si applica a SQL Server (a partire da SQL Server 2017) (solo ricompilazione dell'indice) e al database SQL (creazione di un indice non cluster e ricompilazione dell'indice). Vedere [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) (attualmente in versione di anteprima pubblica solo per il database SQL) e [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). 
 
-Per eseguire la ricompilazione di un indice online ripristinabile, attenersi alle seguenti linee guida:
--   Gestione, pianificazione ed estensione delle finestre di manutenzione degli indici. È possibile sospendere e riavviare un'operazione di ricompilazione dell'indice più volte in base alle finestre di manutenzione.
-- Recupero da errori di ricompilazione degli indici, ad esempio failover del database o esaurimento dello spazio su disco.
+Per eseguire operazioni di creazione o ricompilazione di un indice online ripristinabile, attenersi alle seguenti linee guida:
+-   Gestione, pianificazione ed estensione delle finestre di manutenzione degli indici. È possibile sospendere e riavviare un'operazione di creazione o ricompilazione dell'indice più volte in base alle finestre di manutenzione.
+- Recupero da errori di creazione o ricompilazione dell'indice, ad esempio failover del database o esaurimento dello spazio su disco.
 - Quando un'operazione sull'indice è sospesa, sia l'indice originale sia quello appena creato richiedono spazio su disco e devono essere aggiornati durante le operazioni DML.
 
-- È consentito il troncamento dei log delle transazioni durante le operazioni di ricompilazione dell'indice (non possono invece essere eseguiti per le normali operazioni sull'indice online).
+- Abilita il troncamento dei log delle transazioni durante un'operazione di creazione o ricompilazione dell'indice.
 - L'opzione SORT_IN_TEMPDB=ON non è supportata
 
 > [!IMPORTANT]
-> Per la ricompilazione ripristinabile non è necessario tenere aperta una transazione con esecuzione prolungata ed è possibile eseguire il troncamento del log durante l'operazione ottimizzando la gestione dello spazio del log. Con la nuova progettazione è possibile mantenere i dati necessari in un database insieme a tutti i riferimenti richiesti per riavviare l'operazione ripristinabile.
+> Per la creazione o la ricompilazione di un indice ripristinabile non è necessario tenere aperta una transazione con esecuzione prolungata ed è possibile eseguire il troncamento del log durante l'operazione ottimizzando la gestione dello spazio del log. Con la nuova progettazione è possibile mantenere i dati necessari in un database insieme a tutti i riferimenti richiesti per riavviare l'operazione ripristinabile.
 
-In generale non vi sono differenze di prestazioni tra la ricompilazione degli indici online ripristinabili e quella degli indici non ripristinabili. Quando si aggiorna un indice ripristinabile mentre un'operazione di ricompilazione di indice è in pausa:
+In generale non vi sono differenze di prestazioni tra la ricompilazione degli indici online ripristinabili e quella degli indici non ripristinabili. Per la creazione dell'indice ripristinabile esiste un sovraccarico costante che causa differenze contenute a livello di prestazioni tra la creazione di un indice ripristinabile e uno non ripristinabile. Queste differenze sono principalmente degne di nota solo per le tabelle più piccole.
+
+Quando si aggiorna un indice ripristinabile mentre un'operazione sull'indice è sospesa:
 - Per i carichi di lavoro prevalentemente di lettura, l'impatto sulle prestazioni è trascurabile. 
 - Per i carichi di lavoro con intensa attività di aggiornamento, è possibile riscontrare una riduzione delle prestazioni in termini di velocità effettiva (i test indicano una riduzione inferiore al 10%).
 
-In generale non vi sono differenze di qualità della deframmentazione nella ricompilazione degli indici online ripristinabili rispetto agli indici non ripristinabili.
+In generale non vi sono differenze di qualità della deframmentazione nella creazione o ricompilazione degli indici online ripristinabili rispetto agli indici non ripristinabili.
 
 ## <a name="online-default-options"></a>Opzioni online predefinite 
 

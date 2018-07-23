@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 51db3ea10ef3c4f074dbf0b6aaae2a80aac8d458
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769677"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066001"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Creare o configurare un listener del gruppo di disponibilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "34769677"
 >  Prima di creare il primo listener, è consigliabile leggere l'agomento [Connettività client AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
 ###  <a name="DNSnameReqs"></a> Requisiti per il nome DNS di un listener del gruppo di disponibilità  
- Ogni listener del gruppo di disponibilità richiede un nome host DNS univoco nel dominio e in NetBIOS. Il nome DNS è un valore stringa. Può contenere solo caratteri alfanumerici, trattini (-) e caratteri di sottolineatura (_), in qualsiasi ordine. Per i nomi host DNS non viene fatta distinzione tra maiuscole e minuscole. La lunghezza massima è di 63 caratteri, tuttavia in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]è possibile specificare una lunghezza massima di 15 caratteri.  
+ Ogni listener del gruppo di disponibilità richiede un nome host DNS univoco nel dominio e in NetBIOS. Il nome DNS è un valore stringa. Può contenere solo caratteri alfanumerici, trattini/segni meno (-) e caratteri di sottolineatura (_), in qualsiasi ordine. Per i nomi host DNS non viene fatta distinzione tra maiuscole e minuscole. La lunghezza massima è di 63 caratteri, tuttavia in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]è possibile specificare una lunghezza massima di 15 caratteri.  
   
  È consigliabile specificare una stringa significativa. Ad esempio, per un gruppo di disponibilità denominato `AG1`un nome host DNS significativo potrebbe essere `ag1-listener`.  
   

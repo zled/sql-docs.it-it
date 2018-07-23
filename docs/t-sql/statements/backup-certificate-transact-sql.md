@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -29,16 +28,16 @@ helpviewer_keywords:
 - cryptography [SQL Server], certificates
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13d7e7e0c6ddb7760bb28dfd703904957c4fd820
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e56a65ce4dd6ccfb31e8c55dad26b16c7c1415aa
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067308"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788292"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -84,7 +83,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  Password utilizzata per crittografare la chiave privata prima di scriverla nel file di backup. Questa password è soggetta ai controlli di complessità delle password.  
   
  *decryption_password*  
- Password utilizzata per decrittografare la chiave privata prima di eseguire il backup della chiave.  
+ Password utilizzata per decrittografare la chiave privata prima di eseguire il backup della chiave. Non è necessaria se il certificato viene crittografato tramite la chiave master. 
   
 ## <a name="remarks"></a>Remarks  
  Se la chiave privata è crittografata con una password nel database, è necessario specificare la password di decrittografia.  
