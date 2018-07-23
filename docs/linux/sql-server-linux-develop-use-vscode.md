@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: 3291767b4fa1f7b18e751661f9beeb0e061f8146
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: be5a40a904389979c1646aab9d8b4420ac71356a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984333"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084743"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Usare Visual Studio Code per creare ed eseguire script Transact-SQL per SQL Server
 
@@ -50,7 +50,7 @@ I passaggi seguenti illustrano come installare l'estensione mssql.
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > Per macOS, è necessario installare OpenSSL. Questo è un prerequisito per.NET Core usati dall'estensione mssql. Seguire le **installare prerequisito** passaggi nel [Istruzioni di.NET Core]. In alternativa, è possibile eseguire i comandi seguenti in Terminal di macOS.
+   > Per macOS, è necessario installare OpenSSL. Questo è un prerequisito per.NET Core usati dall'estensione mssql. Seguire le **installare prerequisito** passaggi nel [.NET Core istruzioni]. In alternativa, è possibile eseguire i comandi seguenti in Terminal di macOS.
    >
    >   ```bash
    >   brew update
@@ -260,7 +260,7 @@ Per altre informazioni sull'uso di Visual Studio Code, vedere la [documentazione
 
 [**mssql** estensione per il codice di Visual Studio]:https://aka.ms/mssql-marketplace
 [Scaricare e installare Visual Studio Code]:https://code.visualstudio.com/Download
-[Istruzioni di.NET Core]:https://www.microsoft.com/net/core
+[.NET Core istruzioni]:https://www.microsoft.com/net/core
 [gestire i profili di connessione]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [consigli per la risoluzione dei problemi di connessione]:./sql-server-linux-troubleshooting-guide.md#connection
 [personalizzare i tasti di scelta rapida]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts

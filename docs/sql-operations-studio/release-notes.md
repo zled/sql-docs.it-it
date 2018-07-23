@@ -2,7 +2,7 @@
 title: Note sulla versione di Microsoft SQL Operations Studio (anteprima) | Microsoft Docs
 description: Note sulla versione di Microsoft SQL Operations Studio (anteprima)
 ms.custom: tools|sos
-ms.date: 06/20/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,117 +13,156 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29ae09022c18e5c96ffe4db25f59e6bfd619f432
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.openlocfilehash: d5c331fc8b9e95940e0aaca29efbada78083340f
+ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271012"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39188957"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Note sulla versione di SQL Operations Studio (anteprima)
 
-**[Scaricare l'anteprima di giugno pubblico](download.md)**
+**[Scaricare la versione di anteprima pubblica di luglio](download.md)**
+
+## <a name="july-2018-july-public-preview"></a>Luglio 2018 (luglio anteprima pubblica)
+
+Data di rilascio: 19 luglio 2018  
+versione: 0.31.4
+
+Il *versione di anteprima pubblica di luglio* è incentrato sul rilascio iniziale degli scenari di configurazione di SQL Server Agent, miglioramenti di modello della sessione e visualizzazione di SQL Server Profiler e continuare correzioni di bug per problemi di GitHub segnalati dai clienti. Questa versione include le caratteristiche principali seguenti:  
+
+- [SQL Server Agent per l'estensione di SQL Operations Studio](sql-server-agent-extension.md) miglioramenti
+ - Visualizzazione aggiunta di avvisi, operatori e proxy e le icone nel riquadro a sinistra
+ - Finestre di dialogo aggiunta per nuovo processo, nuovo passaggio di processo, nuovo avviso e operatore New
+ - Aggiunto il processo di eliminazione, Elimina avviso e Delete-operatore (pulsante destro del mouse)
+ - Aggiunta la visualizzazione esecuzioni precedenti
+ - Aggiunta di filtri per ogni nome di colonna
+- [SQL Server Profiler per l'estensione di SQL Operations Studio](sql-server-profiler-extension.md) miglioramenti
+ - Aggiunti i tasti di scelta rapida per avviare e rapidamente avvio/arresto Profiler
+ - Aggiungere 5 modelli predefiniti per visualizzare gli eventi estesi
+ - Nome della connessione Server/Database aggiunto
+ - Aggiunta del supporto per le istanze del Database SQL di Azure
+ - Suggerimento aggiunta per uscire dal Profiler quando scheda è chiusa quando il Profiler è ancora in esecuzione
+- Versione dell'estensione di script di combinazione
+- Punti di estensibilità di finestra di dialogo e procedura guidata aggiunti per gli autori delle estensioni
+- Risolvere i problemi di GitHub:
+ - Correggere [emettere 728](https://github.com/Microsoft/sqlopsstudio/issues/728): nessuna risposta al Aggiungi connessione in macOS
+ - Correggere [emettere 1612](https://github.com/Microsoft/sqlopsstudio/issues/1612): visualizzazione di testo della griglia di risultati è un disastro per caratteri internazionali
+ - Correggere [emettere 1693](https://github.com/Microsoft/sqlopsstudio/issues/1693): finestra di dialogo Backup: il browser File dell'interfaccia utente viene interrotto
+ - Correggere [emettere 1713](https://github.com/Microsoft/sqlopsstudio/issues/1713): numero di righe interessate
+ - Correggere [emettere 1718](https://github.com/Microsoft/sqlopsstudio/issues/1718): Impossibile connettersi a qualsiasi origine dati
+ - Correggere [emettere 1719](https://github.com/Microsoft/sqlopsstudio/issues/1719): TypeError quando ci si connette al Server
+ - Correggere [emettere 1724](https://github.com/Microsoft/sqlopsstudio/issues/1724): le finestre di dialogo di estensione hanno smesso di funzionare
+ - Correggere [emettere 1749](https://github.com/Microsoft/sqlopsstudio/issues/1749): BUG: interpretazione dei dati HTML in una colonna
+ - Correggere [emettere 1789](https://github.com/Microsoft/sqlopsstudio/issues/1789): estendibilità: se si aggiunge un provider di connessione disinstallazione non verrà mai rimosso dall'elenco
+ - Correggere [emettere 1791](https://github.com/Microsoft/sqlopsstudio/issues/1791): Sqlops estensioni: queryeditor.connect() si connette al database di destinazione, ma dell'interfaccia utente non viene visualizzato l'editor è connesso
+ - Correggere [emettere 1799](https://github.com/Microsoft/sqlopsstudio/issues/1799): grafico Top 10 DB dimensioni non funziona nelle istanze di maiuscole / minuscole
+ - Correggere [emettere 1814](https://github.com/Microsoft/sqlopsstudio/issues/1814): definizione del tipo di errore di digitazione sqlops.d.ts causa implicita 'any'
+ - Correggere [emettere 1817](https://github.com/Microsoft/sqlopsstudio/issues/1817): errore de Ortografia
+ - Correggere [emettere 1830](https://github.com/Microsoft/sqlopsstudio/issues/1830): l'impostazione iconPath in ButtonComponent dopo la chiamata di component() non modifica icona
+ - Correggere [emettere 1843](https://github.com/Microsoft/sqlopsstudio/issues/1843): organizzazione di tabelle migliori
 
 
-## <a name="june-2018-june-public-preview"></a>Giugno 2018 (anteprima pubblica di giugno)
+Per altre informazioni, vedere la [Log delle modifiche](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), e [versioni](https://github.com/Microsoft/sqlopsstudio/releases).
+
+
+
+## <a name="june-2018-june-public-preview"></a>Giugno 2018 (anteprima pubblica del giugno)
 
 Data di rilascio: 20 giugno 2018  
 versione: 0.30.6
 
-Il *anteprima pubblica di giugno* contiene le caratteristiche principali seguenti:  
+Il *versione di anteprima pubblica di giugno* contiene le caratteristiche principali seguenti:  
 
-- **SQL Server Profiler per le operazioni SQL Studio *anteprima***  versione iniziale di estensione.
-- Il nuovo **SQL Data Warehouse** estensione include widget del dashboard personalizzabile rich esporre informazioni dettagliate per il data warehouse. Ciò consente di sbloccare gli scenari principali per la gestione e ottimizzazione del data warehouse per verificare che è ottimizzato per assicurare prestazioni coerenti.
+- **SQL Server Profiler per SQL Operations Studio *Preview***  versione iniziale di estensione.
+- Il nuovo **SQL Data Warehouse** estensione include i widget di dashboard personalizzabili avanzato esporre informazioni dettagliate nel tuo data warehouse. Ciò consente di sbloccare gli scenari principali per la gestione e ottimizzazione del data warehouse per assicurarti che è ottimizzato per prestazioni coerenti.
 - **Modificare "applicazione di filtri e l'ordinamento dei dati"** supportano.
-- **SQL Server Agent per operazioni SQL Studio *anteprima***  miglioramenti dell'estensione per i processi e nella cronologia processo viste.
-- Migliorate **guidata & finestra di dialogo dell'interfaccia utente generatore Framework** API di estensibilità.
-- Aggiornare l'integrazione di Visual Studio codice piattaforma origine codice [marzo 2018 (1.22)](https://code.visualstudio.com/updates/v1_22) e [aprile 2018 (1.23)](https://code.visualstudio.com/updates/v1_23) rilascia.
+- **SQL Server Agent per SQL Operations Studio *Preview***  miglioramenti dell'estensione per i processi e la cronologia processo viste.
+- Migliorato **guidata & finestra di dialogo dell'interfaccia utente generatore Framework** API di estendibilità.
+- Aggiornare l'integrazione di Visual Studio Code piattaforma origine codice [mese di marzo 2018 (1.22)](https://code.visualstudio.com/updates/v1_22) e [aprile 2018 (1.23)](https://code.visualstudio.com/updates/v1_23) rilascia.
 - Risolvere i problemi di GitHub:
-  - Richiesta di funzionalità ([emettere 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): per rendere i risultati di larghezza di colonna di adattamento automatico della griglia ai dati e/o tenere presente che le modifiche manuali se la stessa query viene rieseguita.
-  - Correggere [emettere 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): necessario Mostra aggiungere dei messaggi e pulsante Aggiungi account account quando account collegato è vuoto.
+  - Richiesta di funzionalità ([emettere 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)):. verificare i risultati della larghezza della colonna di adattamento della griglia ai dati e/o ricordare le modifiche manuali se la stessa query viene rieseguita.
+  - Correggere [emettere 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): necessario show aggiungere dei messaggi e pulsante Aggiungi account account quando l'account collegato è vuota.
   - Correggere [emettere 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): scheda account collegato viene interrotta quando la visualizzazione è compressa.
-  - Correggere [emettere 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): arresto anomalo del servizio di strumenti di SQL durante l'apertura di file con estensione SQL dal disco.
-  - Correggere [emettere 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): parola chiave SQL mancanti "BETWEEN".
-  - Correggere [emettere 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): parola chiave 'MATCH' arresto anomalo del servizio di strumenti di SQL.
-  - Correggere [emettere 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): opzione di menu di scelta rapida "Nuovo Profiler" in Esplora oggetti non esegue alcuna operazione.
-  - Correggere [emettere 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): piano di query "Descrizione" editor di Query viene interrotta.
+  - Correggere [emettere 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): arresti anomali del servizio di strumenti di SQL all'apertura di file con estensione SQL dal disco.
+  - Correggere [emettere 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): la parola chiave SQL manca "BETWEEN".
+  - Correggere [emettere 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): parola chiave 'MATCH' di arresto anomalo del servizio di strumenti SQL.
+  - Correggere [emettere 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): opzione del menu di scelta rapida "Nuovo Profiler" in Esplora oggetti non esegue alcuna operazione.
+  - Correggere [emettere 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): piano di query "Spiegazione" editor di Query viene interrotta.
 
 
-Per altre informazioni, vedere la [registro delle modifiche](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), e [versioni](https://github.com/Microsoft/sqlopsstudio/releases).
+## <a name="may-2018-may-public-preview"></a>Mese di maggio 2018 (maggio di anteprima pubblica)
 
-
-## <a name="may-2018-may-public-preview"></a>2018 maggio (maggio anteprima pubblica)
-
-Data di rilascio: 7 maggio 2018  
+Data di rilascio: 7 marzo 2018  
 versione: 0.29.3
 
-Il *anteprima pubblica potrebbe* è incentrato sulla stabilizzazione e correzioni di bug. Questa generazione contiene le caratteristiche principali seguenti:  
+Il *potrebbe Public Preview* è incentrato su stabilizzazione e correzioni di bug. Questa build contiene le caratteristiche principali seguenti:  
 
-- Annuncio relativo all'estensione di ricerca SQL Redgate disponibile in Gestione estensioni.
-- Localizzazione di community disponibile per 10 lingue: tedesco, spagnolo, francese, italiano, giapponese, coreano, portoghese, russo, cinese semplificato e cinese tradizionale.
-- Raccolta di dati di telemetria ridotta, migliorata l'esperienza di rifiutare esplicitamente e nel prodotto collegamenti all'informativa sulla Privacy.
-- Gestore estensioni ha Marketplace una migliore esperienza per individuare facilmente le estensioni della community.
-- Analisi utilizzo software consente di visualizzare i processi di estensione di SQL Agent e nella cronologia processo.
-- Aggiornamenti per whoisactive ed estensioni di Server report.
+- Annuncio relativo all'estensione di Redgate SQL Search disponibile in Gestione estensioni.
+- Localizzazione della community disponibile per 10 lingue: tedesco, spagnolo, francese, italiano, giapponese, coreano, portoghese, russo, cinese semplificato e cinese tradizionale.
+- Raccolta dati di telemetria ridotta, esperienza migliorata per rifiutare esplicitamente e nel prodotto collegamenti all'informativa sulla Privacy.
+- Gestione estensioni ha Marketplace migliorata esperienza per individuare facilmente le estensioni della community.
+- Processi di estensione di SQL Agent e la cronologia processo visualizzare analisi utilizzo software.
+- Aggiornamenti per whoisactive ed estensioni di rapporti del Server.
 - Migliorare la gestione proprietà Dashboard lo scorrimento.
 - Risolvere i problemi di GitHub:
-   - Correggere [emettere 703](https://github.com/Microsoft/sqlopsstudio/issues/703): immissione di testo HTML simile a quello nei dati di modifica comporta valore da visualizzare in modo non corretto finché l'aggiornamento
-   - Correggere [emettere 821](https://github.com/Microsoft/sqlopsstudio/issues/821): dipendenza pacchetto sqlopsstudio.deb
-   - Correggere [emettere 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260): parola chiave 'distinct' non è evidenziato
+   - Correggere [emettere 703](https://github.com/Microsoft/sqlopsstudio/issues/703): immissione di testo simile a HTML nei dati di modifica provoca valore da visualizzare in modo non corretto finché l'aggiornamento
+   - Correggere [emettere 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb dipendenza del pacchetto
+   - Correggere [emettere 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260): parola chiave 'distinct' non è evidenziata
    - Correggere [emettere 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332): ripristino i dati di modifica riga non funziona
-   - Correggere [emettere 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): estensione SQL Agent e la barra di stato
+   - Correggere [emettere 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): estensione di SQL Agent e la barra di stato
    - Correggere [emettere 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL Agent non ridimensionare dopo la modifica delle dimensioni di windows
 
 
 
 
-## <a name="april-2018-april-public-preview"></a>2018 aprile (anteprima pubblica di aprile)
+## <a name="april-2018-april-public-preview"></a>Aprile 2018 (anteprima pubblica del mese di aprile)
 
 Data di rilascio: 25 aprile 2018  
 versione: 0.28.6
 
-Il *anteprima pubblica di aprile* include miglioramenti e correzioni di bug. 
+Il *versione di anteprima pubblica di aprile* include miglioramenti e correzioni di bug. 
 
-- Miglioramenti all'estensione di anteprima di SQL Agent.
-- Migliorato il supporto di file di grandi dimensioni e protetti per il salvataggio di amministratore protetto e > file 256M all'interno di SQL Studio operazioni.
-- Integrato suddivisione Terminal per l'utilizzo di più terminali aperti in una sola volta.
-- Footprint di conteggio file su disco di installazione ridotti di stampa per installazioni più veloce e tempi di avvio.
-- Continuare a risolvere i problemi di GitHub:
+- Miglioramenti per l'estensione di anteprima di SQL Agent.
+- Migliorato il supporto di file di grandi dimensioni e protetto per il salvataggio di amministratore protetto e > 256M file all'interno di SQL Operations Studio.
+- Terminale integrato di suddivisione per lavorare con più terminali aperti in una sola volta.
+- Consente di stampare piede conteggio file su disco di installazione ridotti per le installazioni più veloce e tempi di avvio.
+- Continuare a correggere i problemi di GitHub:
    - Correggere [emettere 37](https://github.com/Microsoft/sqlopsstudio/issues/37): quando il Visualizzatore grafico genera un errore, si verifica un comportamento imprevisto.
    - Correggere [emettere 462](https://github.com/Microsoft/sqlopsstudio/issues/462): funzionalità richiesta: opzione per i gruppi di Server per essere espanso per impostazione predefinita.
-   - Correggere [emettere 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense - suggerimento non valida per il comando 'update'.
+   - Correggere [emettere 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense - suggerimento non valido per 'update' comando.
    - Correggere [emettere 967](https://github.com/Microsoft/sqlopsstudio/issues/967): prevede che il piano di query quando seleziona showplan XML nella griglia di risultati.
-   - Correggere [emettere 1023](https://github.com/Microsoft/sqlopsstudio/issues/1023): aggiungere delle parentesi quadre per chiamata ms_foreachdb da flyfishingdba.
-   - Correggere [emettere 1048](https://github.com/Microsoft/sqlopsstudio/issues/1048): errore di handshake di pre-accesso SSL/TLS.
-   - Correggere [emettere 1050](https://github.com/Microsoft/sqlopsstudio/issues/1050): consente di visualizzare informazioni dettagliate non crittografati prima della visualizzazione errore.
-   - Correggere [emettere 1057](https://github.com/Microsoft/sqlopsstudio/issues/1057): nuove azioni di query in Esplora widget e ripristino vengono interrotte.
-   - Correggere [emettere 1068](https://github.com/Microsoft/sqlopsstudio/issues/1068): Output Dashboard windows pop-up con messaggio di errore per il Database SQL di Azure.
-   - Correggere [emettere 1069](https://github.com/Microsoft/sqlopsstudio/issues/1069): finestra di dialogo connessione viene visualizzato l'errore Server necessarie quando inizialmente visualizzato.
+   - Correggere [emettere 1023](https://github.com/Microsoft/sqlopsstudio/issues/1023): aggiungere le parentesi quadre per ms_foreachdb chiamata dalla flyfishingdba.
+   - Correggere [emettere 1048](https://github.com/Microsoft/sqlopsstudio/issues/1048): errore di handshake SSL/TLS di pre-login.
+   - Correggere [emettere 1050](https://github.com/Microsoft/sqlopsstudio/issues/1050): Cancella insights visualizzare prima di visualizzare l'errore.
+   - Correggere [emettere 1057](https://github.com/Microsoft/sqlopsstudio/issues/1057): nuove azioni di query in Esplora-widget e ripristino vengono interrotte.
+   - Correggere [emettere 1068](https://github.com/Microsoft/sqlopsstudio/issues/1068): Output Dashboard windows pop-up con il messaggio di errore per il Database SQL di Azure.
+   - Correggere [emettere 1069](https://github.com/Microsoft/sqlopsstudio/issues/1069): finestra di dialogo connessione Mostra errore è necessario un Server alla visualizzazione iniziale.
    - Correggere [emettere 1070](https://github.com/Microsoft/sqlopsstudio/issues/1070): gruppi di Server è ora necessario un doppio clic per espandere.
-   - Correggere [emettere 1072](https://github.com/Microsoft/sqlopsstudio/issues/1072): sfondo del controllo selezionato è semi-trasparente.
-   - Correggere [emettere 1115](https://github.com/Microsoft/sqlopsstudio/issues/1115): risolvere i problemi di accessibilità contrasto elevato tutti i in Studio operazioni SQL.
-   - Correggere [emettere 1101](https://github.com/Microsoft/sqlopsstudio/issues/1101): ha esito negativo di estensione per l'aggiornamento "scaricare manualmente" collegamento passa alla posizione errata.
+   - Correggere [emettere 1072](https://github.com/Microsoft/sqlopsstudio/issues/1072): sfondo del controllo di selezione è semi-trasparente.
+   - Correggere [emettere 1115](https://github.com/Microsoft/sqlopsstudio/issues/1115): risolvere i problemi di accessibilità di tutti a contrasto elevato in SQL Operations Studio.
+   - Correggere [emettere 1101](https://github.com/Microsoft/sqlopsstudio/issues/1101): ha esito negativo di estensione per il collegamento di aggiornamento "scaricare manualmente" passa a una posizione non valida.
    - Correggere [emettere 1103](https://github.com/Microsoft/sqlopsstudio/issues/1103): V scorrimento non funziona nella scheda Home.
    - Correggere [emettere 1104](https://github.com/Microsoft/sqlopsstudio/issues/1104): schede dell'estensione SQL ha smesso di funzionare.
 
 
-Un'evidenziazione significativa per l'anteprima pubblica di aprile è l'aggiornamento di codice sorgente della piattaforma Visual Studio codice 1.21. Verrà visualizzata in diversi aggiornamenti per l'editor dei componenti di base e workbench dal punto di 1.19 sincronizzazione precedente. Alcuni esempi includono quanto segue:
+Un'evidenziazione significativa per l'anteprima pubblica di aprile è l'aggiornamento di codice sorgente di piattaforma pari a 1,21 codice di Visual Studio. In questo modo diversi aggiornamenti per l'editor principale e workbench dal punto di 1.19 sincronizzazione precedente. Alcuni esempi includono quanto segue:
 
-- [Nuova interfaccia utente delle notifiche](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) - facilmente gestire ed esaminare le notifiche di Studio operazioni SQL.
-- [Integrato suddivisione Terminal](https://code.visualstudio.com/updates/v1_21#_split-terminals) -lavorare con più terminali aperti contemporaneamente.
-- [Salvare i file di grandi dimensioni e protected](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges) : consente di salvare amministratore protetto e > file 256 M all'interno di SQL Studio operazioni.
+- [Nuova interfaccia utente delle notifiche](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) : facilmente gestire e controllare le notifiche di SQL Operations Studio.
+- [Integrato suddivisione Terminal](https://code.visualstudio.com/updates/v1_21#_split-terminals) -lavorare contemporaneamente con più terminali open.
+- [Salvare i file di grandi dimensioni e protetti](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges) : consente di salvare amministratore protetto e > 256M file all'interno di SQL Operations Studio.
 - [Migliorato il supporto di file di grandi dimensioni](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements) -ottimizzazioni di buffer di testo per file di grandi dimensioni.
-- [Una funzionalità di ricerca impostazioni](https://code.visualstudio.com/updates/v1_20#_settings-search) - facilmente individuare l'impostazione a destra con la ricerca di linguaggio naturale.
-- [I frammenti di codice globale](https://code.visualstudio.com/updates/v1_20#_global-snippets) -creare frammenti di codice è possibile utilizzare in tutti i tipi di file.
-- [Selezione multipla Esplora](https://code.visualstudio.com/updates/v1_20#_multi-select-in-the-explorer) -eseguire azioni su più file in una sola volta.
-- [Errori e avvisi in soluzioni](https://code.visualstudio.com/updates/v1_20#_error-indicators-in-the-explorer) - rapidamente passare gli errori della codebase.
-- [Trascinare, copiare e incollare dati tra windows](https://code.visualstudio.com/updates/v1_21#_better-drag-and-drop-support) -spostarli tra finestre aperte Studio operazioni SQL.
-- [Supporto di modulo secondario GIT](https://code.visualstudio.com/updates/v1_20#_git-submodules) -Git eseguire operazioni in nidificato repository Git.
-- [Supporto per Terminal screen reader](https://code.visualstudio.com/updates/v1_20#_screen-reader-support) -Terminal integrata è ora la modalità "Screen Reader ottimizzato".
-- [Editor centrato layout](https://code.visualstudio.com/updates/v1_21#_centered-editor-layout) -ottimizzare il codice visualizzazione area dello schermo.
-- [Risultati della ricerca orizzontale (anteprima)](https://code.visualstudio.com/updates/v1_21#_horizontal-search) -è possibile ora Visualizza risultati di ricerca in un pannello orizzontale.
+- [Funzionalità di ricerca migliorata impostazioni](https://code.visualstudio.com/updates/v1_20#_settings-search) - facilmente individuare la corretta impostazione con la ricerca del linguaggio naturale.
+- [Frammenti di codice globale](https://code.visualstudio.com/updates/v1_20#_global-snippets) -creare frammenti di codice è possibile usare in tutti i tipi di file.
+- [Selezione multipla Esplora](https://code.visualstudio.com/updates/v1_20#_multi-select-in-the-explorer) -eseguire azioni su più file contemporaneamente.
+- [Errori e avvisi in Esplora](https://code.visualstudio.com/updates/v1_20#_error-indicators-in-the-explorer) - rapidamente passare agli errori nella base di codice.
+- [Trascinare e rilasciare, copiare e incollare dati tra windows](https://code.visualstudio.com/updates/v1_21#_better-drag-and-drop-support) -spostarli tra finestre aperte di SQL Operations Studio.
+- [Supporto di modulo secondario GIT](https://code.visualstudio.com/updates/v1_20#_git-submodules) -Git eseguire operazioni nei repository Git annidati.
+- [Supporto di lettura dello schermo terminal](https://code.visualstudio.com/updates/v1_20#_screen-reader-support) -terminale integrato è ora la modalità "Schermata lettore con ottimizzazione per la".
+- [Layout centrato editor](https://code.visualstudio.com/updates/v1_21#_centered-editor-layout) -ottimizzare il codice visualizza sullo schermo.
+- [I risultati della ricerca orizzontale (anteprima)](https://code.visualstudio.com/updates/v1_21#_horizontal-search) -è possibile ora Visualizza risultati di ricerca in un pannello orizzontale.
 
-Per ulteriori dettagli, estrarre il [note sulla versione di Visual Studio codice febbraio](https://code.visualstudio.com/updates/v1_21)e il [note sulla versione di Visual Studio codice gennaio](https://code.visualstudio.com/updates/v1_20).
+Per altri dettagli, estrarre il [note sulla versione di Visual Studio Code febbraio](https://code.visualstudio.com/updates/v1_21)e il [note sulla versione di Visual Studio Code gennaio](https://code.visualstudio.com/updates/v1_20).
 
 Per ulteriori informazioni, vedere il [log delle modifiche](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
@@ -137,7 +176,7 @@ L'*anteprima pubblica di marzo* continua a rivolgersi ai principali issue su Git
 - Migliorato il modello di estendibilità delle dashboard tramite l'aggiunta del supporto di schede per gli insight e riquadri di configurazione.
    - Aggiunto il pannello ESTENSIONI, che consente la semplice acquisizione delle estensioni.
    - Aggiunta un'estensione per sp_whoisactive da [whoisactive.com](http://www.whoisactive.com).
-   - Per informazioni dettagliate, vedere [estendere le funzionalità di SQL Studio operazioni](extensions.md).
+   - Per informazioni dettagliate, vedere [estendono le funzionalità di SQL Operations Studio](extensions.md).
 - Aggiunte ulteriori [API di estendibilità per le connessioni ed Esplora Oggetti](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API).
 - Correzioni dei [problemi di GitHub](https://github.com/Microsoft/sqlopsstudio/issues) ad alto impatto sui clienti.
 
@@ -183,7 +222,7 @@ L'*anteprima pubblica di gennaio* include alcuni suggerimenti sulle funzionalit�
 - Aggiunta l'icona mancante dell'Account di Azure.
 
 
-## <a name="december-2017-december-public-preview"></a>Dicembre 2017 (dicembre in anteprima pubblica)
+## <a name="december-2017-december-public-preview"></a>Dicembre 2017 (anteprima pubblica di dicembre)
 
 Data di rilascio: 19 dicembre 2017  
 versione: 0.24.1
