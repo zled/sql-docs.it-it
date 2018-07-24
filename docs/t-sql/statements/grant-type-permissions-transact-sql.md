@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 7d3821d97198bdb69dd5ff49c357fc7aca8c25fc
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941007"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030447"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT - autorizzazioni per tipi (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa.  
   
  Se si utilizza l'opzione AS, sono previsti i requisiti aggiuntivi seguenti.  

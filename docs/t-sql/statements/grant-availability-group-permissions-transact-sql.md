@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1acab0935afabb7dc0d06455ce58a752a4461d37
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786612"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038093"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>GRANT, autorizzazioni del gruppo di disponibilità (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
   
  Per un grafico di tutte le autorizzazioni del [!INCLUDE[ssDE](../../includes/ssde-md.md)], vedere il documento relativo alle [autorizzazioni del motore di database](https://aka.ms/sql-permissions-poster).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione CONTROL per il gruppo di disponibilità o l'autorizzazione ALTER ANY AVAILABILTIY GROUP per il server.  
   
 ## <a name="examples"></a>Esempi  

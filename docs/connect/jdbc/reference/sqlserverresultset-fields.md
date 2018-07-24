@@ -1,5 +1,5 @@
 ---
-title: Campi di SQLServerResultSet | Documenti Microsoft
+title: Campi di SQLServerResultSet | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f93a84e056726ffa5cf96ea05b9fd02933ed3c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847566"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036199"
 ---
 # <a name="sqlserverresultset-fields"></a>Campi di SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

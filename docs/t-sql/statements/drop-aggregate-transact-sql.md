@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a0abb9e26fa1c12aee35ed174ca4cfb43073fa41
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790872"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035289"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 ## <a name="remarks"></a>Remarks  
  L'istruzione DROP AGGREGATE non viene eseguita se sono presenti viste, funzioni o stored procedure create in base all'associazione a schemi che fanno riferimento alla funzione di aggregazione definita dall'utente che si desidera eliminare.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire l'istruzione DROP AGGREGATE, è necessario disporre almeno dell'autorizzazione ALTER per lo schema al quale appartiene la funzione di aggregazione definita dall'utente oppure dell'autorizzazione CONTROL per la funzione di aggregazione.  
   
 ## <a name="examples"></a>Esempi  

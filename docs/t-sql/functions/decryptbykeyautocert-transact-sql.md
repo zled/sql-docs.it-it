@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7541b3f935ab66997315f04f43980beae24698d
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790212"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031949"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Variabile contenente i dati dai quali derivare un autenticatore. Deve corrispond
 ## <a name="remarks"></a>Remarks  
 `DECRYPTBYKEYAUTOCERT` consente di combinare le funzionalità di `OPEN SYMMETRIC KEY` e `DECRYPTBYKEY`. In un'unica operazione consente prima di decrittografare una chiave simmetrica e quindi di usarla per la decrittografia del testo crittografato.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 È richiesta l'autorizzazione `VIEW DEFINITION` per la chiave simmetrica e l'autorizzazione `CONTROL` per il certificato.   
   
 ## <a name="examples"></a>Esempi  

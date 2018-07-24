@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fa6b4c80779b39f0afd245d971a12ec8fd86c077
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255433"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38028994"
 ---
 # <a name="extended-methods-on-geometry-instances"></a>Metodi estesi sulle istanze di geometria
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "36255433"
   
 -   [Specifiche OGC, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [AsBinaryZM &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/asbinaryzm-geometry-datatype.md)  
   

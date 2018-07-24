@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 155e01d4c19f111b553510a8db648d66b4f4a788
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028138"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052195"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Distribuire la web part Visualizzatore report di SQL Server Reporting Services in un sito di SharePoint
 

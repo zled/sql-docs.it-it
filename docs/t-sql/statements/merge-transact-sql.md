@@ -29,11 +29,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d55da07e2011cf611525f1ba5edd904ad5d6095c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786222"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38028983"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -289,7 +289,7 @@ SET
   
  Se in *target_table* è definito un trigger INSTEAD OF INSERT, l'operazione di inserimento non viene eseguita, ma viene attivato il trigger e la tabella **inserita** viene popolata di conseguenza.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessario disporre dell'autorizzazione SELECT per la tabella di origine e dell'autorizzazione INSERT, UPDATE o DELETE per quella di destinazione. Per altre informazioni, vedere gli argomenti relativi a [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) e [DELETE](../../t-sql/statements/delete-transact-sql.md) nella sezione Autorizzazioni.  
   
 ## <a name="examples"></a>Esempi  

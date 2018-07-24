@@ -36,11 +36,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 49a9a6bdbd2b952614dff3c1095847a434803c78
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251033"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052039"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -375,7 +375,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>Procedure consigliate  
  Specificare un account di accesso o un utente che disponga almeno dei privilegi necessari per eseguire le operazioni definite nell'istruzione o nel modulo. Ad esempio, non specificare un nome account di accesso con autorizzazioni a livello di server se sono richieste solo autorizzazioni a livello di database oppure non specificare l'account di un proprietario di database a meno che siano richieste le autorizzazioni corrispondenti.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire l'istruzione EXECUTE, non è necessario disporre di autorizzazioni specifiche. Sono tuttavia richieste autorizzazioni per le entità a protezione diretta a cui viene fatto riferimento all'interno della stringa EXECUTE. Se, ad esempio, la stringa include un'istruzione INSERT, il chiamante dell'istruzione EXECUTE deve disporre dell'autorizzazione INSERT per la tabella di destinazione. Le autorizzazioni vengono verificate non appena viene rilevata l'istruzione EXECUTE, anche se l'istruzione è inclusa in un modulo.  
   
  Le autorizzazioni per l'istruzione EXECUTE per un modulo vengono assegnate per impostazione predefinita al proprietario del modulo, che può quindi trasferirle ad altri utenti. Quando si esegue un modulo che esegue una stringa, la verifica delle autorizzazioni viene eseguita nel contesto dell'utente che esegue il modulo e non nel contesto dell'utente che l'ha creato. Se, tuttavia, lo stesso utente è proprietario del modulo chiamante e del modulo richiamato, la verifica delle autorizzazioni per l'istruzione EXECUTE non viene eseguita per il secondo modulo.  

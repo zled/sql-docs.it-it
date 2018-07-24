@@ -29,11 +29,11 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9aa56df824fcad5da2ef2165e0a5e2e265331cd0
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262853"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041639"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 - La vista di sistema [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) può essere usata per recuperare le informazioni sulla classificazione di riservatezza per un database.
 
 
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
 È necessaria l'autorizzazione ALTER ANY SENSITIVITY CLASSIFICATION. L'autorizzazione ALTER ANY SENSITIVITY CLASSIFICATION è implicita nell'autorizzazione del database ALTER o nell'autorizzazione del server CONTROL SERVER.
 

@@ -16,11 +16,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3f9985fe10338c593425be74115152f250e16891
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789792"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041109"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transazioni (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
  Attiva e disattiva le stesse modalità di SET AUTOCOMMIT. Quando è impostata su ON, l'opzione SET IMPLICIT_TRANSACTIONS imposta per la connessione la modalità di transazione implicita. Quando è impostata su OFF, ripristina la modalità di transazione con commit automatico.  Per altre informazioni, vedere [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire le istruzioni correlate alle transazioni non sono necessarie autorizzazioni specifiche. Le autorizzazioni sono necessarie per eseguire le istruzioni all'interno della transazione.  
   
 ## <a name="error-handling"></a>Gestione degli errori  

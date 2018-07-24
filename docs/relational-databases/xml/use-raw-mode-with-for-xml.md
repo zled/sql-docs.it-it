@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 7030a29f9965641ea3819c2df40c7b03bfaf4196
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014088"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38028819"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Utilizzo della modalità RAW con FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "33014088"
   
  Per restituire i dati binari nel formato con codifica Base64, è necessario specificare l'opzione BINARY BASE64 nella clausola FOR XML. Se si recuperano dati binari nella modalità RAW senza specificare l'opzione BINARY BASE64, verrà generato un errore.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  In questa sezione sono disponibili gli esempi seguenti:  
   
 -   [Esempio: recupero delle informazioni relative al modello del prodotto in formato XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  

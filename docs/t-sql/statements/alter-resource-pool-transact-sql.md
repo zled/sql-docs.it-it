@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d66d89496ad0c411da75a76fad392926e6c87f30
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790232"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039989"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 > [!CAUTION]  
 >  La cancellazione dei piani memorizzati nella cache da un pool di risorse associato a più di un gruppo del carico di lavoro avrà effetto su tutti i gruppi di carico di lavoro che hanno il pool di risorse definito dall'utente identificato da *pool_name*.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  

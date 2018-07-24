@@ -1,5 +1,5 @@
 ---
-title: Monitoraggio dei log degli errori | Documenti Microsoft
+title: Monitoraggio dei log degli errori | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6917f16f1807d68b8a3124596fa1e19ddf56e692
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067968"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38043077"
 ---
 # <a name="monitoring-the-error-logs"></a>Monitoraggio dei log degli errori
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "33067968"
 ## <a name="comparing-error-and-application-log-output"></a>confronto tra output del log degli errori e output del registro applicazioni  
  Per identificare la causa di eventuali problemi, è possibile utilizzare sia il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che il registro applicazioni di Windows. Ad esempio, durante il monitoraggio del log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbero venire visualizzati messaggi di errore privi di informazioni sulla causa dell'errore. Confrontando la data e l'ora degli eventi riportate nel registro errori e la data e l'ora riportate nel registro applicazioni è possibile circoscrivere le possibili cause. Nel Visualizzatore file di log di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile integrare in un unico elenco il log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e il registro applicazioni di Windows. Ciò consente di capire più facilmente gli eventi del server e gli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correlati. Per ulteriori informazioni, vedere l'argomento "Visualizzatore file di log" nella documentazione online di SQL Server.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Visualizzazione del log degli errori di SQL Server](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|Contiene informazioni sul log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e descrive come visualizzarlo.|  
 |[Visualizzazione del registro applicazioni di Windows](../../tools/configuration-manager/viewing-the-windows-application-log.md)|Contiene informazioni sul registro applicazioni di Windows e descrive come visualizzarlo.|  

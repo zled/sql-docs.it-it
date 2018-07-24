@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42f8c29ea27d7a4f6e39d9cccd93d6e12af24f37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077078"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031409"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>Modelli e autorizzazioni di SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ ms.locfileid: "33077078"
 > [!NOTE]  
 >  I valori della colonna di traccia maggiori di 1 GB restituiscono un errore e vengono troncati nell'output di traccia.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Modelli di SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates.md)|Presenta informazioni sui modelli di traccia predefiniti disponibili in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|Presenta informazioni sulle autorizzazioni necessarie per l'esecuzione di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  

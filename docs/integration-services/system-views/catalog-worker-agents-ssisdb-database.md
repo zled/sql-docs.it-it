@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 057d97572962ae13354d43abafe7d3016eafde7d
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404443"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045149"
 ---
 # <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Visualizza le informazioni su [!INCLUDE[ssISnoversion](../../includes/ssisnovers
 ## <a name="remarks"></a>Remarks
 Questa vista mostra una riga per ogni Scale Out Worker che si connette allo Scale Out Master che interagisce con il catalogo SSISDB.
 
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 Per questa vista è necessaria una delle autorizzazioni seguenti:
 
 - Appartenenza al ruolo del database **ssis_admin**

@@ -18,11 +18,11 @@ ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24a2eb0a69a6fcbedf1d5323caa97cdccd180fd5
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36915032"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039776"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
  [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  Il nome di tabella composto da una, due o tre parti da visualizzare. Per i nomi di tabella composti da due o tre parti, il nome deve essere racchiuso tra virgolette doppie (""). L'uso delle virgolette nei nomi di tabella composti da una parte è facoltativo. Quando non viene specificato alcun nome di tabella, vengono visualizzate le informazioni per il database corrente.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 È richiesta l'autorizzazione VIEW SERVER STATE.
   
 ## <a name="result-sets"></a>Set di risultati  

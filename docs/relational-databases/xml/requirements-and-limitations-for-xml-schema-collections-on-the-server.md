@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: cfece11f3cec121dcdd56a3918f3bdafc7bbd05e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017208"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049259"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "33017208"
 |Tipi unione|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta restrizioni da tipi di unione.|  
 |Decimali di precisione delle variabili|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta decimali di precisione delle variabili. Il tipo **xs:decimal** rappresenta numeri decimali di precisione arbitraria. I processori XML conformi devono supporto numeri decimali con almeno `totalDigits=18`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta `totalDigits=38,` , ma con un limite per le cifre frazionarie pari a 10. Tutti i valori **xs:decimal** per i quali viene creata un'istanza vengono rappresentati internamente dal server con il tipo numeric SQL (38, 10).|  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Spiegazione delle forme canoniche e delle restrizioni di pattern.|  
 |[Componenti jolly e convalida del contenuto](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Descrizione delle limitazioni dell'utilizzo di Elementi dei caratteri jolly, della convalida lax e dell'anyType con le raccolte di XML Schema.|  

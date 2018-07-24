@@ -34,11 +34,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9630b7e56f2e741c96f370069ad00fc2f7721f5f
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942077"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031779"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -158,7 +158,7 @@ L'uso di AS in questa istruzione non implica la possibilità di rappresentare un
   
  L'istruzione REVOKE avrà esito negativo se l'argomento CASCADE viene omesso in caso di revoca a un'entità di un'autorizzazione concessa tramite GRANT OPTION.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Le entità con l'autorizzazione CONTROL per un'entità a protezione diretta possono revocare l'autorizzazione per quella entità. I proprietari degli oggetti possono revocare autorizzazioni per gli oggetti di cui sono proprietari.  
   
  Gli utenti che dispongono dell'autorizzazione CONTROL SERVER, ad esempio i membri del ruolo predefinito del server sysadmin, possono revocare qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel server. Gli utenti che dispongono dell'autorizzazione CONTROL in un database, ad esempio i membri del ruolo predefinito del database db_owner, possono revocare qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel database. Gli utenti che dispongono dell'autorizzazione CONTROL in uno schema possono revocare qualsiasi autorizzazione per qualsiasi oggetto all'interno dello schema.  

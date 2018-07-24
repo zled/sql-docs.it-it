@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 842c02dfb20f6e39e186937bad25f07c40e7b533
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027658"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049149"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Abilitare e disabilitare RDL Sandboxing per Reporting Services in modalità integrata SharePoint
 
@@ -71,7 +71,7 @@ La funzionalità RDL (Report Definition Language) Sandboxing consente di rilevar
 
  Nella tabella seguente sono contenute le informazioni sulle impostazioni di configurazione. Le impostazioni sono elencate nell'ordine in cui vengono visualizzate nel file di configurazione.  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|Numero massimo di caratteri consentiti nelle espressioni RDL.<br /><br /> Valore predefinito: 1000|  
 |**MaxResourceSize**|Numero massimo di KB consentiti per una risorsa esterna.<br /><br /> Valore predefinito: 100|  

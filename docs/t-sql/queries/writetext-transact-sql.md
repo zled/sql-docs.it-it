@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 7b6beeb57513ade4f192a597e433ebd811989613
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36249593"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035179"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ WRITETEXT [BULK]
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile che esistano ma non siano validi puntatori di testo all'interno di righe a dati di tipo **text**, **ntext** o **image**. Per informazioni sull'opzione text in row, vedere [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Per informazioni su come invalidare i puntatori di testo, vedere [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione UPDATE per la tabella specificata. L'autorizzazione è trasferibile in caso di trasferimento dell'autorizzazione UPDATE.  
   
 ## <a name="examples"></a>Esempi  

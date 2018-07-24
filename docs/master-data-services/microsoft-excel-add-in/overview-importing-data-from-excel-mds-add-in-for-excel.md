@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9af12b09b1bcfb74990fcfcd5471e4e9e0b74569
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328945"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051519"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>Panoramica: Importazione di dati da Excel (componente aggiuntivo MDS per Excel)
 
@@ -54,7 +54,7 @@ ms.locfileid: "35328945"
 ## <a name="business-rule-and-other-validation"></a>Regola business e altre convalide  
  Quando si pubblicano dati, la convalida viene eseguita per assicurare che i dati siano esatti prima di aggiungerli al repository MDS. Se i dati non soddisfano i criteri specificati, non verranno pubblicati nel repository. Per altre informazioni, vedere [Convalida dei dati &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

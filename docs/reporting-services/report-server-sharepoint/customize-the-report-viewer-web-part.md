@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d2a9368b1617c89dcc85cfddd7fe2ac998a18579
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028588"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052182"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizzare la web part Visualizzatore report
 
@@ -69,7 +69,7 @@ ms.locfileid: "33028588"
   
  Le proprietà personalizzate della web part Visualizzatore report sono elencate di seguito.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |Report|Percorso completo di un report presente nel sito di SharePoint corrente oppure in un sito disponibile nella stessa farm o applicazione Web. Se si desidera impostare proprietà aggiuntive, per ottenere risultati ottimali fare clic su Applica dopo avere specificato l'URL del report.|  
 |Destinazione collegamento ipertestuale|Codice HTML standard che specifica il frame di destinazione per la visualizzazione dei contenuti collegati nel documento corrente. Per i report che includono collegamenti ipertestuali a siti Web esterni, è possibile specificare se un documento di destinazione sostituisce il report esistente nella finestra corrente oppure viene aperto in una nuova finestra del browser. I valori validi includono **_Top**, **_Blank**e **_Self**. **_Top** usa la finestra corrente, **_Blank** carica il documento in una nuova finestra del browser e **_Self** apre il documento nel frame corrente. Anche se nel linguaggio HTML **_Parent** è un valore valido per l'attributo Target, evitare l'uso di questo valore per una web part Visualizzatore report incorporata in una pagina.|  

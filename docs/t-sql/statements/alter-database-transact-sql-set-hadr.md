@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 79e7acd2b1e0665865315b5d4ffa4517bc69213d
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941057"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037639"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ ALTER DATABASE database_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione ALTER per il database. Per la creazione di un join di un database a un gruppo di disponibilità è richiesta l'appartenenza al ruolo predefinito del database **db_owner** .  
   
 ## <a name="examples"></a>Esempi  

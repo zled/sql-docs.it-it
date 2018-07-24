@@ -1,5 +1,5 @@
 ---
-title: Tipi di cursore (Driver PDO_SQLSRV) | Documenti Microsoft
+title: Tipi di cursore (Driver PDO_SQLSRV) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72cf83b4c4903c7df0b6a857746937e848fccf80
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306990"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062358"
 ---
-# <a name="cursor-types-pdosqlsrv-driver"></a>Tipi di cursore (Driver PDO_SQLSRV)
+# <a name="cursor-types-pdosqlsrv-driver"></a>Tipi di cursore (driver PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Il driver PDO_SQLSRV consente di creare set di risultati scorrevoli con uno dei cursori diversi.  
   
 Per informazioni su come specificare un cursore utilizzando il driver PDO_SQLSRV e per esempi di codice, vedere [PDO:: Prepare](../../connect/php/pdo-prepare.md).  
   
-## <a name="pdosqlsrv-and-server-side-cursors"></a>PDO_SQLSRV e i cursori sul lato Server  
-Prima versione 3.0 del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], il driver PDO_SQLSRV ha consentito di creare un set di risultati con un cursore forward-only o statico sul lato server. A partire dalla versione 3.0 del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], keyset e cursori dinamici sono disponibili.  
+## <a name="pdosqlsrv-and-server-side-cursors"></a>PDO_SQLSRV e cursori sul lato Server  
+Prima della versione 3.0 del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], il driver PDO_SQLSRV consentiva di creare un set di risultati con un cursore forward-only o statico sul lato server. Partire dalla versione 3.0 del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], keyset e cursori dinamici sono anche disponibili.  
   
-È possibile indicare il tipo di cursore sul lato server usando PDO:: Prepare o pdostatement:: SetAttribute per selezionare un tipo di cursore:  
+È possibile indicare il tipo di cursore lato server con pdostatement:: SetAttribute o PDO:: Prepare per selezionare uno dei due tipi di cursore:  
   
 -   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_FWDONLY  
   
 -   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_SCROLL  
   
-È possibile richiedere un cursore keyset o dinamico, specificando PDO:: attr_cursor = > PDO:: cursor_scroll e quindi passare il valore appropriato per PDO:: sqlsrv_attr_cursor_scroll_type. È possibile passare a PDO:: sqlsrv_attr_cursor_scroll_type i valori possibili sono:  
+È possibile richiedere un cursore keyset o dynamic specificando PDO:: attr_cursor = > PDO:: cursor_scroll e quindi passare il valore appropriato per PDO:: sqlsrv_attr_cursor_scroll_type. I valori possibili che è possibile passare a PDO:: sqlsrv_attr_cursor_scroll_type sono:  
   
 -   PDO::SQLSRV_CURSOR_BUFFERED  
   
@@ -47,16 +47,16 @@ Prima versione 3.0 del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
   
 -   PDO::SQLSRV_CURSOR_STATIC  
   
-## <a name="pdosqlsrv-and-client-side-cursors"></a>PDO_SQLSRV e i cursori sul lato Client  
-I cursori sul lato client sono stati aggiunti nella versione 3.0 del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] che consente di memorizzare nella cache un intero set di risultati in memoria. Un vantaggio consiste nel fatto che il numero di riga è disponibile dopo l'esecuzione di una query.  
+## <a name="pdosqlsrv-and-client-side-cursors"></a>PDO_SQLSRV e cursori sul lato Client  
+I cursori sul lato client sono stati aggiunti nella versione 3.0 del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] che consente di memorizzare nella cache un intero set di risultati in memoria. Un vantaggio è che il numero di riga è disponibile dopo che viene eseguita una query.  
   
-Cursori sul lato client devono essere utilizzati per set di risultati di piccole e medie. Set di risultati di grandi dimensioni devono utilizzare cursori sul lato server.  
+Usare cursori sul lato client per i set di risultati di piccole e medie. Set di risultati di grandi dimensioni devono usare cursori sul lato server.  
   
-Una query restituirà false se il buffer non è sufficientemente grande da contenere un intero set di risultati quando utilizza un cursore sul lato client. È possibile aumentare le dimensioni del buffer fino al limite di memoria PHP.  
+Una query restituirà false se il buffer non è sufficientemente grande da contenere un intero set di risultati quando utilizza un cursore lato client. È possibile aumentare le dimensioni del buffer fino al limite di memoria PHP.  
   
-È possibile configurare le dimensioni del buffer che contiene il set di risultati con l'attributo PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE [PDO:: SetAttribute](../../connect/php/pdo-setattribute.md) o [pdostatement:: SetAttribute](../../connect/php/pdostatement-setattribute.md). È inoltre possibile impostare le dimensioni massime del buffer nel file php.ini con pdo_sqlsrv.client_buffer_max_kb_size (ad esempio, pdo_sqlsrv.client_buffer_max_kb_size = 1024).  
+È possibile configurare le dimensioni del buffer che contiene il set di risultati con l'attributo PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE del [PDO:: SetAttribute](../../connect/php/pdo-setattribute.md) oppure [pdostatement:: SetAttribute](../../connect/php/pdostatement-setattribute.md). È anche possibile impostare la dimensione massima del buffer nel file PHP. ini con pdo_sqlsrv.client_buffer_max_kb_size (ad esempio, pdo_sqlsrv.client_buffer_max_kb_size = 1024).  
   
-Indicare che si desidera un cursore sul lato client usando PDO:: Prepare o pdostatement:: SetAttribute e selezionare il PDO:: attr_cursor = > PDO:: cursor_scroll tipo di cursore.  Specificare quindi PDO:: sqlsrv_attr_cursor_scroll_type = > PDO::SQLSRV_CURSOR_BUFFERED.  
+Indicare che si vuole un cursore lato client usando PDO:: Prepare o pdostatement:: SetAttribute e si seleziona il PDO:: attr_cursor = > PDO:: cursor_scroll il tipo di cursore.  È quindi possibile specificare PDO:: sqlsrv_attr_cursor_scroll_type = > PDO::SQLSRV_CURSOR_BUFFERED.  
   
 ```  
 <?php  

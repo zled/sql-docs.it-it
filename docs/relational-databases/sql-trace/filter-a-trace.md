@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32c4039457be6660d837bbc0f3a41da91ab08b4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974216"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046209"
 ---
 # <a name="filter-a-trace"></a>Filtrare una traccia
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "32974216"
   
  La disponibilità dei filtri dipende dalla colonna di dati. Non è possibile filtrare alcune colonne di dati. Le colonne di dati che possono essere filtrate consentono solo determinati operatori relazionali, come illustrato nella tabella seguente.  
   
-|Operatore relazionale|Simbolo operatore|Description|  
+|Operatore relazionale|Simbolo operatore|Descrizione|  
 |-------------------------|---------------------|-----------------|  
 |Simile a|Simile a|Consente di specificare che i dati dell'evento di traccia devono essere simili al testo specificato. Supporta più valori.|  
 |Non simile a|Non simile a|Specifica che i dati dell'evento di traccia devono essere diversi dal testo specificato. Supporta più valori.|  

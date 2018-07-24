@@ -1,5 +1,5 @@
 ---
-title: Riprodurre un File di traccia (SQL Server Profiler) | Documenti Microsoft
+title: Riprodurre un File di traccia (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b0dc2625cfeae43ef4c524c460df5f2723130eb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076556"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035494"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>Riprodurre un file di traccia (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "33076556"
   
 5.  Selezionare **Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**oppure **Riproduci gli eventi usando più thread**. Nella tabella seguente viene spiegata la differenza tra queste impostazioni.  
   
-    |Opzione|Description|  
+    |Opzione|Descrizione|  
     |------------|-----------------|  
     |**Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**|Gli eventi vengono riprodotti nell'ordine in cui sono stati inseriti nella traccia. Questa opzione consente il debug.|  
     |**Riproduci gli eventi usando più thread**|Vengono utilizzati più thread per riprodurre i vari eventi, indipendentemente dalla sequenza. Questa opzione consente di ottimizzare le prestazioni.|  

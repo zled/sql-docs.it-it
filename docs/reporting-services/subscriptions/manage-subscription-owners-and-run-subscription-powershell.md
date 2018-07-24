@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 149c5e9142dc87cc538b0ae6521d0754b5d03d42
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585523"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038282"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Gestire i proprietari di sottoscrizioni ed eseguire la sottoscrizione - PowerShell
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34585523"
   
 ##  <a name="bkmk_how_to"></a> Come usare gli script  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  In questa sezione sono riepilogati i livelli di autorizzazione necessari per usare ogni metodo della modalità nativa e della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Gli script in questo argomento usano i metodi seguenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   [Metodo ReportingService2010.ListSubscriptions](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  

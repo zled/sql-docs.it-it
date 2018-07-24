@@ -30,11 +30,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0dbee4b5b28b2dd72c4c6bdb7cc91eb07272cbf5
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36242253"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054020"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +144,7 @@ SELECT <select_criteria>
 >
 > Si supponga, ad esempio, di avere un indice cluster in una vista, che la vista escluda alcune righe di tabella e che l'elenco della colonna SELECT della vista usi una funzione CONVERT che modifica un tipo di dati da *varchar* a *integer*. In questo caso la funzione CONVERT può essere eseguita prima della clausola WHERE. Si tratta di una situazione molto insolita. Spesso è possibile modificare la vista per evitare una sequenza diversa, se è importante nel caso specifico. 
 
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  La selezione di dati richiede l'autorizzazione **SELECT** per la tabella o la vista che potrebbe essere ereditata da un ambito più elevato, ad esempio l'autorizzazione **SELECT** per lo schema o l'autorizzazione **CONTROL** per la tabella. Oppure richiede l'appartenenza al ruolo predefinito del database **db_datareader** o **db_owner** o il ruolo predefinito del server **sysadmin**. La creazione di una nuova tabella tramite **SELECTINTO** richiede anche le autorizzazioni **CREATETABLE** e **ALTERSCHEMA** per lo schema proprietario della nuova tabella.  
   
 ## <a name="examples"></a>Esempi:   

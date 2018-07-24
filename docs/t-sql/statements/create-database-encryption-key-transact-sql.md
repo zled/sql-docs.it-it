@@ -33,11 +33,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d381437c61993d51c585fd08bc4e0f64fbaf14cb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784112"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030420"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -93,7 +93,7 @@ Non è necessario rigenerare la chiave di crittografia del database in caso di m
   
 Una chiave di crittografia del database viene creata automaticamente per un database [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Non è necessario creare una chiave usando l'istruzione CREATE DATABASE ENCRYPTION KEY.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 Sono necessarie l'autorizzazione CONTROL per il database e l'autorizzazione VIEW DEFINITION per la chiave asimmetrica o il certificato utilizzato per crittografare la chiave di crittografia del database.  
   
 ## <a name="examples"></a>Esempi  

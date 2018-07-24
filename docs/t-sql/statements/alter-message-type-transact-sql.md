@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: efd67a613268da1fc556c29193567d083ff14891
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781982"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037531"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ALTER MESSAGE TYPE message_type_name
   
  Per modificare AUTHORIZATION per un tipo di messaggio, utilizzare l'istruzione ALTER AUTHORIZATION.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'autorizzazione per modificare un tipo di messaggio viene assegnata per impostazione predefinita al proprietario del tipo di messaggio, ai membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
   
  Quando l'istruzione ALTER MESSAGE TYPE specifica una raccolta di schemi, l'utente che esegue l'istruzione deve disporre dell'autorizzazione REFERENCES nella raccolta di schemi specificata.  

@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12800181219baf82db30c25cc542dacd1975de6f
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37359263"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048679"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definizione di una relazione tra record logici degli articoli di tabelle di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -32,11 +32,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8fb4045343c17ffea8d132edc22cbd7898f4ec00
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941927"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038359"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,7 +151,7 @@ L'uso di AS in questa istruzione non implica la possibilità di rappresentare un
 > [!CAUTION]  
 >  Se si nega l'autorizzazione CONTROL SERVER, viene implicitamente negata anche l'autorizzazione CONNECT SQL per il server. Un'entità a cui viene negata l'autorizzazione CONTROL SERVER per un server non può connettersi a tale server.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Il chiamante (o l'entità specificata con l'opzione AS) deve disporre dell'autorizzazione CONTROL per un'entità a protezione diretta o di un'autorizzazione di livello superiore che implichi l'autorizzazione CONTROL per tale entità a protezione diretta. Se si utilizza l'opzione AS, l'entità specificata deve essere proprietaria dell'entità a protezione diretta per la quale viene negata un'autorizzazione.  
   
  Gli utenti che dispongono dell'autorizzazione CONTROL SERVER, ad esempio i membri del ruolo predefinito del server sysadmin, possono negare qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel server. Gli utenti che dispongono dell'autorizzazione CONTROL per il database, ad esempio i membri del ruolo predefinito del database db_owner, possono negare qualsiasi autorizzazione per ogni entità a protezione diretta nel database. Gli utenti che dispongono dell'autorizzazione CONTROL per uno schema possono negare qualsiasi autorizzazione per qualsiasi oggetto nello schema. Se si utilizza la clausola AS, l'entità specificata deve essere proprietaria dell'entità a protezione diretta per cui vengono negate le autorizzazioni.  

@@ -19,11 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c69da5538488f1660dae8a3c1f56b1f7dff2e5ff
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182137"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052391"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Creazione e gestione di indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-
 
 ##  <a name="view"></a> Visualizzare le proprietà di un indice full-text
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Visualizzare le proprietà di un indice full-text con Transact-SQL
-|Catalogo o vista a gestione dinamica|Description|  
+|Catalogo o vista a gestione dinamica|Descrizione|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Restituisce una riga per ogni catalogo full-text in riferimento all'indice full-text.|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|Contiene una riga per ogni colonna che fa parte di un indice full-text.|  
@@ -76,7 +76,7 @@ Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-
   
 5.  Nel riquadro **Seleziona una pagina** è possibile selezionare le pagine seguenti:  
   
-    |Pagina|Description|  
+    |Pagina|Descrizione|  
     |----------|-----------------|  
     |**Generale**|Sono contenute le proprietà di base dell'indice full-text, incluse diverse proprietà modificabili e alcune proprietà non modificabili quali il nome del database, il nome della tabella e il nome della colonna chiave full-text. Le proprietà modificabili sono le seguenti:<br /><br /> **Elenco di parole non significative indice full-text**<br /><br /> **Indicizzazione full-text abilitata**<br /><br /> **Rilevamento delle modifiche**<br /><br /> **Elenco delle proprietà di ricerca**<br /><br />Per altre informazioni, vedere [Proprietà indice full-text &#40;pagina Generale&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
     |**Colonne**|Consente di visualizzare le colonne della tabella disponibili per l'indicizzazione full-text. La colonna o le colonne selezionate contengono indici full-text. È possibile selezionare il numero desiderato di colonne disponibili da includere nell'indice full-text. Per altre informazioni, vedere [Proprietà indice full-text &#40;pagina Colonne&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
@@ -89,7 +89,7 @@ Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-
   
  Nella tabella seguente sono elencate le proprietà full-text relative a tabelle e colonne indicizzate e le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] correlate.  
   
-|Proprietà|Description|Funzione|  
+|Proprietà|Descrizione|Funzione|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|TYPE COLUMN nella tabella in cui sono contenute le informazioni sui tipi di documenti della colonna.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|Indica se una colonna è stata abilitata per l'indicizzazione full-text.|COLUMNPROPERTY|  

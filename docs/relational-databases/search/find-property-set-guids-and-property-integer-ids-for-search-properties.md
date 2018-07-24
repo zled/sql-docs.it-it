@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 974155cff19984223d015c5ef38165ece3517c97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180537"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038459"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "33180537"
 ##  <a name="wellknown"></a> Ricerca di informazioni sulle proprietà Microsoft note e ampiamente utilizzate  
  Microsoft definisce centinaia di proprietà del documento da utilizzare in molti contesti, ma solo un piccolo subset delle proprietà disponibili viene utilizzato da ogni formato di file. Tra le proprietà di Windows utilizzate di frequente è presente un piccolo set di proprietà generiche. Nella tabella seguente sono illustrati alcuni esempi di proprietà generiche note. Nella tabella sono indicati il nome noto, il nome canonico di Windows (in base alla descrizione della proprietà pubblicata da Microsoft), il GUID del set di proprietà, l'identificatore di tipo integer della proprietà e una breve descrizione.  
   
-|Nome noto|Nome canonico di Windows.|GUID set di proprietà|ID di tipo integer|Description|  
+|Nome noto|Nome canonico di Windows.|GUID set di proprietà|ID di tipo integer|Descrizione|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Autori|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autore o autori di un elemento specificato.|  
 |Tag|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Set di parole chiave (note anche come tag) assegnate all'elemento.|  

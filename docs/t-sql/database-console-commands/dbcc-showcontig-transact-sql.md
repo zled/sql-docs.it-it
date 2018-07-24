@@ -28,11 +28,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: d473c726aefc9f0f2975e975027bb8cfcd008d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263323"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040049"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>Set di risultati  
 Nella tabella seguente vengono descritte le informazioni del set di risultati.
   
-|Statistiche|Description|  
+|Statistiche|Descrizione|  
 |---|---|
 |**Pagine sottoposte ad analisi**|Numero di pagine della tabella o dell'indice.|  
 |**Extent sottoposti ad analisi**|Numero di extent della tabella o dell'indice.|  
@@ -114,7 +114,7 @@ Se si specificano *table_id* e l'opzione FAST, l'istruzione DBCC SHOWCONTIG rest
   
 Se si specifica TABLERESULTS, DBCC SHOWCONTIG restituisce le colonne seguenti oltre alle nove colonne descritte nella tabella precedente.
   
-|Statistiche|Description|  
+|Statistiche|Descrizione|  
 |---|---|
 |**nome oggetto**|Nome della tabella o vista elaborata.|  
 |**ObjectId**|ID del nome di oggetto.|  
@@ -188,7 +188,7 @@ Il numero **Media byte disponibili per pagina** e **Media densità pagina (compl
     > [!NOTE]  
     >  Il valore **Frammentazione analisi extent** sarà elevato se l'indice è esteso a più file. Per ridurre questo valore, è necessario ridurre la frammentazione dell'indice.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 L'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_owner** o **db_ddladmin**.
   
 ## <a name="examples"></a>Esempi  
