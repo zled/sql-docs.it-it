@@ -23,16 +23,16 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c7dfed0144de73aa7bf84db9999e4b6a5aec6c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bed6a93030c854c89ec32658ed086d6b0092a8c9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947746"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984483"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Creazione di server collegati (Motore di database di SQL Server)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx).
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Creazione di server collegati (Motore di database di SQL Server)](https://msdn.microsoft.com/library/ff772782(SQL.120).aspx).
 
   In questo argomento viene illustrato come creare un server collegato e come accedere ai dati da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creazione di server collegati consente di utilizzare dati di più origini. Il server collegato non deve essere un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia si tratta di uno scenario comune.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32947746"
   
 ##  <a name="Security"></a> Sicurezza  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  Quando si utilizzano istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] è richiesta l'autorizzazione **ALTER ANY LINKED SERVER** per il server o l'appartenenza nel ruolo predefinito del server **setupadmin** . Quando si utilizza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] è richiesta l'autorizzazione **CONTROL SERVER** o l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ##  <a name="Procedures"></a> Come creare un server collegato  

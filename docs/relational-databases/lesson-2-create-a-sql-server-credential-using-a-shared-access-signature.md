@@ -17,12 +17,12 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88a95ea4ad99373c5f8a1994599a2dbea961669
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0badf80ef7108ddcbeeafba703873ed97b5c2b14
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942426"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983164"
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>Lezione 2: Creare credenziali di SQL Server usando una firma di accesso condiviso
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ In questa lezione verranno create credenziali per archiviare le informazioni sul
 Una credenziale di SQL Server è un oggetto utilizzato per archiviare le informazioni di autenticazione necessarie per connettersi a una risorsa all'esterno di SQL Server. Nelle credenziali vengono archiviati il percorso URI del contenitore di archiviazione e i valori della firma di accesso condivisa per questo contenitore.  
   
 > [!NOTE]  
-> Se si vuole eseguire il backup di SQL Server 2012 SP1 CU2 o versione successiva o di un database di SQL Server 2014 nel contenitore di Azure, è possibile usare la [sintassi deprecata](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) illustrata qui per creare credenziali di SQL Server sulla base della chiave dell'account di archiviazione.  
+> Se si vuole eseguire il backup di SQL Server 2012 SP1 CU2 o versione successiva o di un database di SQL Server 2014 nel contenitore di Azure, è possibile usare la [sintassi deprecata](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) illustrata qui per creare credenziali di SQL Server sulla base della chiave dell'account di archiviazione.  
   
 ## <a name="create-sql-server-credential"></a>Creare credenziali di SQL Server  
 Per creare credenziali di SQL Server, seguire questa procedura:  

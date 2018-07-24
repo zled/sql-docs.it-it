@@ -54,16 +54,16 @@ caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59306ab48061fe2c759b4cb2dac784e7a24cb325
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: c409047c510bb97c6e915140758a304e145747ad
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33989359"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981353"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Per informazioni relative alle versioni precedenti di SQL Server, vedere [Configurare account di servizio e autorizzazioni di Windows](https://msdn.microsoft.com/en-US/library/ms143504(SQL.120).aspx).
+ > Per informazioni relative alle versioni precedenti di SQL Server, vedere [Configurare account di servizio e autorizzazioni di Windows](https://msdn.microsoft.com/library/ms143504(SQL.120).aspx).
 
 
   Ogni servizio in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresenta un processo o un set di processi destinato a gestire l'autenticazione delle operazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Windows. Nel presente argomento viene fornita la descrizione della configurazione predefinita dei servizi disponibili in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e delle opzioni di configurazione per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile impostare durante e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo argomento offre informazioni dettagliate sugli account di servizio destinate agli utenti avanzati.  
@@ -404,7 +404,7 @@ In questa sezione vengono descritte le autorizzazioni configurate dal programma 
 
 Potrebbe essere necessario concedere alcune autorizzazioni relative al controllo dell'accesso ad account predefiniti o ad altri account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella tabella seguente sono inclusi gli elenchi di controllo di accesso aggiuntivi impostati dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Componente richiedente|Account|Risorsa|Autorizzazioni|  
+|Componente richiedente|Account|Risorsa|Permissions|  
 |--------------------------|-------------|--------------|-----------------|  
 |MSSQLServer|Performance Log Users|Instid\MSSQL\binn|Visualizzazione contenuto cartella|  
 ||Performance Monitor Users|Instid\MSSQL\binn|Visualizzazione contenuto cartella|  

@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: feaca5b69a76fb7e3bffc67d58998de1bbd8b97e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 27c3931a5b735e91796c322d36dd7090b0a7b269
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417490"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087603"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ Definisce una data costituita dalla combinazione di un'ora del giorno espressa n
 |Proprietà|valore|  
 |--------------|-----------|  
 |Sintassi|**datetime2** [ (*precisione in secondi frazionari*) ]|  
-|Utilizzo|DECLARE @MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|Utilizzo|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |Formato predefinito dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|AAAA-MM-GG hh:mm:ss[.secondi frazionari]<br /><br /> Per ulteriori informazioni, vedere la sezione seguente relativa alla compatibilità con le versioni precedenti per i client legacy.|  
 |Intervallo di date|Da 01-01-0001 a 31-12-9999<br /><br /> Dal 1º gennaio 1 e.c. al 31 dicembre 9999 e.c.|  
 |Intervallo di ore|da 00:00:00 a 23:59:59.9999999|  

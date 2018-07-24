@@ -20,18 +20,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 750bb45c40674b572af1ef7f4e9b3eaa83318478
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4627eeb473ba1b2075ea4de12b0b5770e4f44447
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353963"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983093"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Esercitazione: Configurare la replica tra un server e più client per dispositivi mobili (replica di tipo merge)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 La replica di tipo merge è una buona soluzione al problema legato al trasferimento dei dati tra un server centrale e client per dispositivi mobili connessi solo occasionalmente. Le procedure guidate relative alla replica consentono di eseguire in modo semplificato i passaggi necessari per configurare e amministrare una topologia di replica di tipo merge. 
 
-In questa esercitazione viene illustrato come configurare una topologia di replica per client mobili. Per altre informazioni sulla replica di tipo merge, vedere [Panoramica della replica di tipo merge](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication).
+In questa esercitazione viene illustrato come configurare una topologia di replica per client mobili. Per altre informazioni sulla replica di tipo merge, vedere [Panoramica della replica di tipo merge](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
 Questa esercitazione illustra come usare la replica di tipo merge per pubblicare dati da un database centrale per uno o più utenti di dispositivi mobili in modo che ogni utente riceva un subset dei dati filtrato in modo univoco. 
@@ -54,14 +54,14 @@ Per completare questa esercitazione, sono necessari SQL Server, SQL Server Manag
   
 - Nel server sottoscrittore (destinazione) installare qualsiasi edizione di SQL Server, ad eccezione di [!INCLUDE[ssEW](../../includes/ssew-md.md)]. La pubblicazione creata in questa esercitazione non supporta [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
 
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Scaricare il [database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Per istruzioni sul ripristino di un database in SSMS, vedere [Ripristino di un database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+- Scaricare il [database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Per istruzioni sul ripristino di un database in SSMS, vedere [Ripristino di un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
  
   
 >[!NOTE]
 > - La replica non è supportata nelle istanze di SQL Server con versioni la cui distanza sia maggiore di 2. Per altre informazioni, vedere [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (Versioni di SQL Server supportate nella topologia di replica).
-> - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è necessario connettersi al server di pubblicazione e al sottoscrittore usando un account di accesso che sia membro del ruolo predefinito del server **sysadmin**. Per altre informazioni su questo ruolo, vedere [Ruoli a livello di server](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è necessario connettersi al server di pubblicazione e al sottoscrittore usando un account di accesso che sia membro del ruolo predefinito del server **sysadmin**. Per altre informazioni su questo ruolo, vedere [Ruoli a livello di server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
 **Tempo stimato per il completamento dell'esercitazione: 60 minuti**  
@@ -97,7 +97,7 @@ In questa sezione viene creata una pubblicazione di tipo merge con [!INCLUDE[ssM
    >
    > Se si usa una build precedente a SQL Server 2017, nella parte inferiore della schermata viene visualizzato un messaggio che informa della possibilità di perdere dati se si usa questa colonna nella replica bidirezionale. Ai fini di questa esercitazione, è possibile ignorare questo messaggio. Questo tipo di dati, tuttavia, deve essere replicato in un ambiente di produzione solo se si usa la build supportata.
    > 
-   > Per altre informazioni sulla replica del tipo di dati **hierarchyid**, vedere [Uso di colonne hierarchyid nella replica](https://docs.microsoft.com/en-us/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
+   > Per altre informazioni sulla replica del tipo di dati **hierarchyid**, vedere [Uso di colonne hierarchyid nella replica](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
     
   
 7. Nella pagina **Filtro righe tabella** selezionare **Aggiungi** e quindi **Aggiungi filtro**.  

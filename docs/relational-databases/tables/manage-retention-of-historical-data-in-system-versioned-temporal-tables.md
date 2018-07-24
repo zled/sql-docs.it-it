@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ea8eaee6227db90dcc6696cb60d09c7fa4261fb
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: cd599eb85988501d9d7919ecb40f7d080406d926
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239120"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985613"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -504,7 +504,7 @@ L'attività di pulizia per il columnstore cluster rimuove interi gruppi (ognuno 
 
 Un'ottima compressione dei dati e una pulizia efficiente dei dati conservati fanno dell'indice columnstore cluster la soluzione ottimale per gli scenari in cui il carico di lavoro genera rapidamente volumi elevati di dati cronologici. Questo scenario è tipico di carichi di lavoro di elaborazione transazioni intensiva, che usano le tabelle temporali per il rilevamento e il controllo delle modifiche, l'analisi dei trend o l'inserimento di dati IoT.
 
-Per altre informazioni, vedere [Gestire i dati cronologici nelle tabelle temporali con criteri di conservazione](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy).
+Per altre informazioni, vedere [Gestire i dati cronologici nelle tabelle temporali con criteri di conservazione](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle temporali](../../relational-databases/tables/temporal-tables.md)   

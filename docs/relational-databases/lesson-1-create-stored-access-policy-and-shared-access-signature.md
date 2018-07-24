@@ -17,16 +17,16 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 721f9245ff8057c54cef5facdf4a4de423e53961
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e76820fc010a88e7bc276e028bd84bcddc981ba8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942006"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984683"
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Lezione 1: Creare criteri di accesso archiviati e una firma di accesso condiviso
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In questa lezione si userà uno [script Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) per creare una firma di accesso condiviso in un contenitore BLOB di Azure tramite criteri di accesso archiviati.  
+In questa lezione si userà uno [script Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) per creare una firma di accesso condiviso in un contenitore BLOB di Azure tramite criteri di accesso archiviati.  
   
 > [!NOTE]  
 > Questo script è stato scritto con Azure PowerShell 5.0.10586.  
@@ -139,7 +139,7 @@ Per creare i criteri per il contenitore e generare una chiave di firma di access
 [Lezione 2: Creare credenziali di SQL Server usando una firma di accesso condiviso](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Uso delle firme di accesso condiviso, parte 1: conoscere il modello di firma di accesso condiviso](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Uso delle firme di accesso condiviso, parte 1: conoscere il modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)  

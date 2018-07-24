@@ -26,12 +26,12 @@ caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a3d81598480aab552b0891fb7ae1247d9149ce71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47ac8b682f2e31fc104c91203b9174ea0a4f0297
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036918"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980843"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   Una sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è una configurazione che recapita un report in un momento specifico o in risposta a un evento e in un formato file specificato. Ad esempio, è possibile salvare il report MonthlySales.rdl ogni mercoledì come documento di Microsoft Word in una condivisione file. Le sottoscrizioni possono essere usate per pianificare e automatizzare il recapito di un report e con un set specifico di valori di parametri di report.  
@@ -85,7 +85,7 @@ ms.locfileid: "33036918"
   
  Nella tabella seguente sono descritti gli scenari di sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] più comuni.  
   
-|Scenario|Description|  
+|Scenario|Descrizione|  
 |--------------|-----------------|  
 |Invia report tramite posta elettronica|Inviare report tramite posta elettronica a singoli utenti e gruppi. Creare una sottoscrizione e specificare un alias di gruppo o un alias di posta elettronica per ricevere un report che si desidera distribuire. È possibile che [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] determini in fase di esecuzione i dati della sottoscrizione. Per inviare lo stesso report a un gruppo che dispone di un elenco di membri che cambia, è possibile utilizzare una query per dedurre in fase di esecuzione l'elenco delle sottoscrizioni.|  
 |Visualizzare i report offline|Gli utenti possono selezionare uno dei formati seguenti per l'output della sottoscrizione:<br /><br /> -   File XML con dati del report<br />-   CSV (delimitato da virgole)<br />-   PDF<br />-   MHTML (archivio Web)<br />-   Microsoft Excel<br />-   File TIFF<br />-   Microsoft Word<br /><br /> È possibile inviare i report da archiviare direttamente a una cartella condivisa della quale si esegue il backup in una pianificazione notturna. I report di grandi dimensioni che impiegano troppo lungo per il caricamento in un browser possono essere inviati a una cartella condivisa in un formato che può essere visualizzato in un'applicazione desktop.|  
@@ -104,10 +104,10 @@ ms.locfileid: "33036918"
 ##  <a name="bkmk_subscription_requirements"></a> Requisiti della sottoscrizione  
  Per poter creare una sottoscrizione di un report, è innanzitutto necessario che siano soddisfatti i requisiti seguenti:  
   
-|Requisito|Description|  
+|Requisito|Descrizione|  
 |-----------------|-----------------|  
-|Autorizzazioni|È necessario poter accedere al report. Per poter sottoscrivere un report, è necessario disporre delle autorizzazioni necessarie per visualizzarlo.<br /><br /> Per i server di report in modalità nativa le assegnazioni dei ruoli seguenti influiscono sulle sottoscrizioni:<br /><br /> -   L'attività "Gestione di sottoscrizioni individuali" consente di creare, modificare ed eliminare sottoscrizioni per un report specifico. Nei ruoli predefiniti questa attività appartiene ai ruoli Visualizzazione e Generatore report. Le assegnazioni di ruolo che includono questa attività consentono a un utente di gestire solo le proprie sottoscrizioni.<br />-   L'attività "Gestione di tutte le sottoscrizioni" consente di accedere a tutte le sottoscrizioni e di modificarle. Questa attività è necessaria per creare sottoscrizioni guidate dai dati. Nei ruoli predefiniti solo il ruolo Gestione contenuto include questa attività.|  
-|Credenziali archiviate.|Per creare una sottoscrizione, è necessario che per il report siano usate credenziali archiviate oppure nessuna credenziale per poter recuperare i dati in fase di esecuzione. Non è possibile sottoscrivere un report configurato per utilizzare credenziali rappresentate o delegate dell'utente corrente per connettersi a un'origine dati esterna. Le credenziali archiviate possono essere un account di Windows o un account utente del database. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> e si dispone delle autorizzazioni necessarie per visualizzare il report e creare sottoscrizioni individuali. È necessario che l'opzione**Eventi pianificati e recapito report** sia abilitata sul server di report. Per altre informazioni, vedere [old_Creare e gestire sottoscrizioni per server di report in modalità nativa](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
+|Permissions|È necessario poter accedere al report. Per poter sottoscrivere un report, è necessario disporre delle autorizzazioni necessarie per visualizzarlo.<br /><br /> Per i server di report in modalità nativa le assegnazioni dei ruoli seguenti influiscono sulle sottoscrizioni:<br /><br /> -   L'attività "Gestione di sottoscrizioni individuali" consente di creare, modificare ed eliminare sottoscrizioni per un report specifico. Nei ruoli predefiniti questa attività appartiene ai ruoli Visualizzazione e Generatore report. Le assegnazioni di ruolo che includono questa attività consentono a un utente di gestire solo le proprie sottoscrizioni.<br />-   L'attività "Gestione di tutte le sottoscrizioni" consente di accedere a tutte le sottoscrizioni e di modificarle. Questa attività è necessaria per creare sottoscrizioni guidate dai dati. Nei ruoli predefiniti solo il ruolo Gestione contenuto include questa attività.|  
+|Credenziali archiviate.|Per creare una sottoscrizione, è necessario che per il report siano usate credenziali archiviate oppure nessuna credenziale per poter recuperare i dati in fase di esecuzione. Non è possibile sottoscrivere un report configurato per utilizzare credenziali rappresentate o delegate dell'utente corrente per connettersi a un'origine dati esterna. Le credenziali archiviate possono essere un account di Windows o un account utente del database. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> e si dispone delle autorizzazioni necessarie per visualizzare il report e creare sottoscrizioni individuali. È necessario che l'opzione**Eventi pianificati e recapito report** sia abilitata sul server di report. Per altre informazioni, vedere [old_Creare e gestire sottoscrizioni per server di report in modalità nativa](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
 |Valori dipendenti dall'utente in un report|Per le sole sottoscrizioni standard è possibile creare sottoscrizioni a report in cui le informazioni sull'account utente sono incluse in un filtro o sono disponibili sotto forma di testo visualizzato nel report. Nel report il nome dell'account utente viene specificato tramite un'espressione **User!UserID** che corrisponde all'utente corrente. Quando si crea una sottoscrizione, l'autore della sottoscrizione viene considerato come utente corrente.|  
 |Nessuna sicurezza degli elementi del modello|Non è possibile sottoscrivere un report di Generatore report che utilizza come origine dei dati un modello contenente impostazioni di sicurezza degli elementi del modello. La restrizione riguarda solo i report che utilizzano la sicurezza degli elementi del modello.|  
 |Valori dei parametri|Se il report utilizza parametri, è necessario specificare un valore di parametro con il report stesso oppure nella sottoscrizione che viene definita. Se nel report sono stati specificati valori predefiniti, è possibile impostare il valore di parametro per utilizzare l'impostazione predefinita.|  
@@ -117,7 +117,7 @@ ms.locfileid: "33036918"
   
  Al momento della creazione di una sottoscrizione, gli utenti hanno la possibilità di scegliere una delle estensioni per il recapito disponibili che determinano la modalità di recapito del report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili le estensioni per il recapito seguenti.  
   
-|Estensione per il recapito|Description|  
+|Estensione per il recapito|Descrizione|  
 |------------------------|-----------------|  
 |Condivisione file di Windows|Consente di recapitare un report come file di applicazione statico a una cartella condivisa cui è possibile accedere sulla rete.|  
 |Posta elettronica|Consente di recapitare una notifica o un report come un allegato della posta elettronica o un collegamento URL.|  

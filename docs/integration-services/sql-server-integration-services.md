@@ -47,8 +47,8 @@ ms.locfileid: "37909861"
 Per informazioni sull'installazione di SQL Server Integration Services con SQL Server e sui download aggiuntivi che potrebbero essere necessari o utili, vedere [Installare Integration Services](install-windows/install-integration-services.md).
 
 ##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) Risorse
--   [Informazioni del forum SSIS](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+-   [Cerca aiuto sul forum SSIS](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 -   [Informazioni su Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
--   [Seguire il blog del team SSIS](https://blogs.msdn.microsoft.com/ssis/)
--   [Segnalare problemi e richiedere funzionalità](https://feedback.azure.com/forums/908035-sql-server)
--   [Scaricare i documenti sul PC](../sql-server/sql-server-help-installation.md)
+-   [Segui il blog del team SSIS](https://blogs.msdn.microsoft.com/ssis/)
+-   [Segnala problemi e richiedi funzionalità](https://feedback.azure.com/forums/908035-sql-server)
+-   [Scarica la documentazione sul PC](../sql-server/sql-server-help-installation.md)

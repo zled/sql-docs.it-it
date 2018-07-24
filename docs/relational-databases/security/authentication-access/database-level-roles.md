@@ -39,15 +39,15 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 49
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bd67d9005d5862bdb24d8112b2a04d023f4141
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 252ba405e8ad04b47581fcbbaca89cc7aee1eaf6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943157"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106697"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -145,9 +145,9 @@ Quando R Services è installato, i ruoli di database aggiuntivi sono disponibili
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Comando|Rimuove un ruolo del database dal database corrente.|  
 |[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Comando|Aggiunge un utente del database, un ruolo del database, un account di accesso di Windows o un gruppo di Windows a un ruolo del database nel database corrente. Tutte le piattaforme ad accezione di [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] devono usare invece `ALTER ROLE` .|  
 |[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Comando|Rimuove un account di sicurezza da un ruolo di SQL Server nel database corrente. Tutte le piattaforme ad accezione di [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] devono usare invece `ALTER ROLE` .|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Autorizzazioni | Aggiunge autorizzazioni a un ruolo.
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Autorizzazioni | Nega un'autorizzazione a un ruolo.
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Autorizzazioni | Rimuove un'autorizzazione precedentemente concessa o negata.
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | Aggiunge autorizzazioni a un ruolo.
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | Nega un'autorizzazione a un ruolo.
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | Rimuove un'autorizzazione precedentemente concessa o negata.
   
   
 ## <a name="public-database-role"></a>Ruolo di database public  

@@ -3,7 +3,6 @@ title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2018
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - collations [SQL Server], modifying
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
-caps.latest.revision: 282
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3bc109184f7678f48205c66b4c47684eecde9e4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c97a6b7e9735c7db5be82187767486bff93a6f92
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786542"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102549"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -212,7 +210,7 @@ Se vengono generati nomi duplicati in seguito all'applicazione delle nuove regol
 ## <a name="viewing-database-information"></a>Visualizzazione delle informazioni sui database  
 Per restituire informazioni su database, file e filegroup, è possibile usare viste del catalogo, funzioni di sistema e stored procedure di sistema.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 È richiesta l'autorizzazione ALTER per il database.  
   
 ## <a name="examples"></a>Esempi  
@@ -531,7 +529,7 @@ La cache delle procedure viene scaricata anche nello scenario seguente: vengono 
 
 Per restituire informazioni su database, file e filegroup, è possibile usare viste del catalogo, funzioni di sistema e stored procedure di sistema.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 
 Solo l'account di accesso dell'entità a livello di server (creato dal processo di provisioning) o i membri del ruolo del database `dbmanager` possono modificare un database.  
   
@@ -681,7 +679,7 @@ La cache delle procedure viene scaricata anche nello scenario seguente: vengono 
 
 Per restituire informazioni su database, file e filegroup, è possibile usare viste del catalogo, funzioni di sistema e stored procedure di sistema.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 
 Solo l'account di accesso dell'entità a livello di server (creato dal processo di provisioning) o i membri del ruolo del database `dbmanager` possono modificare un database.  
   
@@ -761,7 +759,7 @@ Dimensioni massime consentite per i dati rowstore nel database. Le dimensioni de
 SERVICE_OBJECTIVE  
 Specifica il livello di prestazioni. Per altre informazioni sugli obiettivi di servizio per [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], vedere [Livelli di prestazioni](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 Richiede le autorizzazioni seguenti:  
   
 - Accesso principale di livello server (creato dal processo di provisioning) oppure  
@@ -885,7 +883,7 @@ Il valore predefinito è ON per i nuovi database creati dopo l'aggiornamento ad 
 
 Per altre informazioni sulle statistiche, vedere [Statistiche](/sql/relational-databases/statistics/statistics).
 
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 È necessaria l'autorizzazione ALTER per il database.  
   
 ## <a name="error-messages"></a>messaggi di errore

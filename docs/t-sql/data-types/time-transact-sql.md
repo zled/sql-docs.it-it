@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 704baf98a80b0fa17b10303e2ce18fec4463f39d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421570"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088123"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37421570"
 |Proprietà|valore|  
 |--------------|-----------|  
 |Sintassi|**time** [ (*fractional seconds scale*) ]|  
-|Utilizzo|DECLARE @MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|Utilizzo|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*fractional seconds scale*|Specifica il numero di cifre per la parte frazionaria dei secondi.<br /><br /> Può essere un numero intero compreso tra 0 e 7. Per Informatica, può essere un numero intero compreso tra 0 e 3.<br /><br /> La scala frazionaria predefinita è 7 (100 ns).|  
 |Formato predefinito dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|hh:mm:ss[.nnnnnnn] per Informatica)<br /><br /> Per ulteriori informazioni, vedere la sezione seguente relativa alla compatibilità con le versioni precedenti per i client legacy.|  
 |Intervallo|da 00:00:00.0000000 a 23:59:59.9999999 (da 00:00:00.000 a 23:59:59.999 per Informatica)|  

@@ -24,12 +24,12 @@ caps.latest.revision: 121
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8a1dfae6233ddf9c8c4a736d7d2fb4c640ce196a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4e5fbe77dc85496fd51100c496467a4672c254e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017188"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984153"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Supporto browser per Reporting Services e Power View
 
@@ -155,7 +155,7 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 
 [Ricerca e visualizzazione di report nel portale Web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Strumenti di Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
-[Portale Web (modalità nativa SSRS)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[Portale Web (modalità nativa SSRS)](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md)  
 

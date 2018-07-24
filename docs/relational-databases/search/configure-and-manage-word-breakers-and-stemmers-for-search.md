@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ece22b891139b95d025ccf1f67c6dcac6633b8c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4360dec65a22ff313cf19340f4b9310aa6a6f7af
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181487"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985393"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurazione e gestione di word breaker e stemmer per la ricerca
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 Per altre opzioni e ulteriori informazioni, vedere [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md).
 
 ##  <a name="tshoot"></a> Risolvere i problemi relativi agli errori di timeout del word breaking  
- Un errore di timeout del word breaking può verificarsi in diverse situazioni. Per informazioni su queste situazioni e su come rispondere, vedere [MSSQLSERVER_30053](https://msdn.microsoft.com/en-us/library/cc879279.aspx).
+ Un errore di timeout del word breaking può verificarsi in diverse situazioni. Per informazioni su queste situazioni e su come rispondere, vedere [MSSQLSERVER_30053](https://msdn.microsoft.com/library/cc879279.aspx).
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>Informazioni sull'errore MSSQLSERVER_30053
   

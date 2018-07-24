@@ -18,12 +18,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2aef9476c254267156c5bbde4d777a2ed5ab570
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66a70e19399b04968d37a7b9b54b657e47bf6ab6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012400"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981473"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Benvenuti nell'esercitazione sull'uso di SQL Server 2016 nel servizio di archivi
 Il supporto di integrazione di SQL Server per il servizio di archiviazione BLOB di Microsoft Azure è stato per la prima volta incluso come funzionalità avanzata di SQL Server 2012 Service Pack 1 CU2, ulteriormente potenziato in SQL Server 2014 e SQL Server 2016. Per una panoramica della funzionalità e dei vantaggi offerti dall'uso di questa funzionalità, vedere [File di dati di SQL Server in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Per una dimostrazione dal vivo, vedere la [demo del ripristino temporizzato](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo).  
   
   
-**Scarica**<br /><br />**>>**  Per scaricare [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], passare alla pagina  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.<br /><br />**>>**  Se si ha un account di Azure,  fare clic **[qui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
+**Scarica**<br /><br />**>>**  Per scaricare [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], passare alla pagina  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.<br /><br />**>>**  Se si ha un account di Azure,  fare clic **[qui](https://azure.microsoft.com/services/virtual-machines/sql-server/)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
 Nell'esercitazione viene illustrato come usare i file di dati di SQL Server nel servizio di archiviazione BLOB di Microsoft Azure in più lezioni. Ogni lezione è incentrata su un'attività specifica e le lezioni devono essere completate in sequenza. In primo luogo, si apprenderà come creare un nuovo contenitore nell'archiviazione BLOB con criteri di accesso archiviati e una firma di accesso condiviso. Successivamente, verrà illustrato come creare le credenziali di SQL Server per poter integrare SQL Server con il servizio di archiviazione BLOB di Azure. Verrà quindi eseguito il backup di un database nel servizio di archiviazione BLOB e ne verrà eseguito il ripristino in una macchina virtuale di Azure. Verrà quindi usato il backup del log delle transazioni di snapshot di file di SQL Server 2016 per il ripristino temporizzato e in un nuovo database. Infine, l'esercitazione descriverà l'uso di stored procedure e funzioni di sistema dei metadati per consentire di comprendere e usare i backup di snapshot di file.  
@@ -43,7 +43,7 @@ In questo articolo si presuppone quanto segue:
   
 -   Si dispone di un account di archiviazione Azure.  
   
--   Si dispone di almeno una macchina virtuale di Azure con SQL Server 2016 installato e configurata in base a quanto descritto in [Effettuare il provisioning di una macchina virtuale di SQL Server nel portale di Azure](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-provision-sql-server/). È anche possibile usare una seconda macchina virtuale per lo scenario della [Lezione 8: Ripristinare come nuovo database da un backup del log](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)).  
+-   Si dispone di almeno una macchina virtuale di Azure con SQL Server 2016 installato e configurata in base a quanto descritto in [Effettuare il provisioning di una macchina virtuale di SQL Server nel portale di Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/). È anche possibile usare una seconda macchina virtuale per lo scenario della [Lezione 8: Ripristinare come nuovo database da un backup del log](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)).  
   
 Questa esercitazione è suddivisa in nove lezioni che devono essere completate nell'ordine:  
   

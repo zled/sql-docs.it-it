@@ -20,16 +20,16 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a7509cdfe26c95bb9122fb776aeaf444e218568
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870156"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984503"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
+ > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx).
 
 Microsoft SQL Server 2016 Express **LocalDB** è una funzionalità di [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) destinata agli sviluppatori. È disponibile in SQL Server 2016 Express with Advanced Services.  
 
@@ -40,7 +40,7 @@ Microsoft SQL Server 2016 Express **LocalDB** è una funzionalità di [SQL Serve
   
 -   Per scaricare e installare SQL Server 2016 Express, passare ai **[download di SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB è una funzionalità selezionabile durante l'installazione ed è disponibile quando si scarica il supporto. Se si scarica il supporto, scegliere **Express Advanced** o il pacchetto **LocalDB** . 
   
--   Se si ha un account di Azure,  fare clic **[qui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
+-   Se si ha un account di Azure,  fare clic **[qui](https://azure.microsoft.com/services/virtual-machines/sql-server/)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
   
 ## <a name="install-localdb"></a>Installare LocalDB  
  Installare **LocalDB** tramite l'installazione guidata o usando il programma SqlLocalDB.msi. **LocalDB** è un'opzione dell'installazione di [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
@@ -49,7 +49,7 @@ Selezionare **LocalDB** nella pagina **Selezione funzionalità** durante l'insta
 
  Un'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** viene gestita con l'utilità **SqlLocalDB.exe** . [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** deve essere usato al posto della funzionalità dell'istanza utente [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] deprecata. 
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Il programma di installazione di **LocalDB** usa il programma SqlLocalDB.msi per installare i file necessari nel computer. Una volta installato, **LocalDB** è un'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con cui è possibile creare e aprire database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I file del database di sistema per il database sono archiviati nel percorso locale AppData degli utenti che generalmente è nascosto. Ad esempio **C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. I file del database utente sono archiviati nel percorso indicato dall'utente, in genere nella cartella **C:\Users\\<user\>\Documents\\**.  
   
  Per altre informazioni su come includere **LocalDB** in un'applicazione, vedere la documentazione su [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] relativa a [ Cenni preliminari sui dati locali](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Procedura dettagliata: Creazione di un database LocalDB di SQL Server](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) e [Procedura dettagliata: Connessione ai dati di un database SQL Server Express LocalDB (Windows Form)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
@@ -125,7 +125,7 @@ REM Gather information about the instance of LocalDB
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
  Per informazioni sulla risoluzione dei problemi di **LocalDB**, vedere la pagina relativa alla [risoluzione dei problemi di SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Un'istanza di [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** è un'istanza creata da un utente per l'uso personale. Qualsiasi utente del computer è in grado di creare un database mediante un'istanza di **LocalDB**, archiviando i file nel relativo percorso utente ed eseguendo il processo con le relative credenziali. Per impostazione predefinita, l'accesso all'istanza di **LocalDB** è limitato al relativo proprietario. I dati contenuti in **LocalDB** sono protetti dall'accesso ai file di database tramite il file system. Se i file di database dell'utente vengono archiviati in un percorso condiviso, il database può essere aperto da qualsiasi utente con accesso al file system in quel percorso usando un'istanza di **LocalDB** di cui è proprietario. Se i file di database si trovano in un percorso protetto, ad esempio la cartella dati utente, solo quell'utente e gli amministratori con accesso a quella cartella, possono aprire il database. I file di **LocalDB** possono essere aperti solo da un'istanza di **LocalDB** alla volta.  
   
 > [!NOTE]  

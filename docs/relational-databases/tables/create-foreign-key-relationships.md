@@ -17,17 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 67760c658b27bcddff443a943c65d725e23f44e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 328468c781bd0061b12bc2e29817da7801dd45c3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012954"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983293"
 ---
 # <a name="create-foreign-key-relationships"></a>Creare relazioni di chiave esterna
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Creare relazioni di chiave esterna](https://msdn.microsoft.com/en-US/library/ms189049(SQL.120).aspx).
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Creare relazioni di chiave esterna](https://msdn.microsoft.com/library/ms189049(SQL.120).aspx).
 
 
   In questo argomento si illustra come creare relazioni di chiave esterna in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Una relazione tra due tabelle consente di stabilire un'associazione tra le righe di una tabella e le righe di un'altra tabella.    
@@ -62,7 +62,7 @@ ms.locfileid: "33012954"
     
 
     
-##   <a name="permissions"></a>Autorizzazioni    
+##   <a name="permissions"></a>Permissions    
  Per la creazione di una nuova tabella con una chiave esterna è richiesta l'autorizzazione CREATE TABLE per il database e l'autorizzazione ALTER per lo schema in cui viene creata la tabella.    
     
  Per la creazione di una chiave esterna in una tabella esistente è richiesta l'autorizzazione ALTER per la tabella.    

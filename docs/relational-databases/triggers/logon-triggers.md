@@ -17,15 +17,15 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fa1d89d7fa17fb09ffedd054524be178918796e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c12464c584e667e66dfdf3de3c13278ef1732e55
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423181"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108363"
 ---
 # <a name="logon-triggers"></a>Trigger LOGON
-[!INCLUDE[tsql-appliesto-ss2008-xxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   I trigger LOGON consentono di attivare stored procedure in risposta a un evento LOGON generato quando viene stabilita una sessione utente a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I trigger LOGON vengono attivati dopo il completamento della fase di autenticazione della procedura di accesso, ma prima che la sessione utente venga effettivamente stabilita. Per questo motivo, tutti i messaggi generati all'interno del trigger che verrebbero normalmente visualizzati all'utente, come i messaggi di errore e i messaggi dall'istruzione PRINT, vengono invece indirizzati al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I trigger LOGON non vengono attivati in caso di esito negativo dell'autenticazione.  
   
  È possibile utilizzare i trigger LOGON per controllare e gestire le sessioni server, ad esempio tenendo traccia delle attività di accesso, limitando gli accessi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o limitando il numero di sessioni per uno specifico account di accesso. Nel codice seguente, ad esempio, il trigger LOGON nega i tentativi di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguiti dall'account di accesso *login_test* se esistono già tre sessioni utente in esecuzione create da tale account di accesso.  
@@ -74,7 +74,7 @@ END;
 ## <a name="disabling-a-logon-trigger"></a>Disabilitazione di un trigger di accesso  
  Un trigger di accesso può impedire le connessioni al [!INCLUDE[ssDE](../../includes/ssde-md.md)] per tutti gli utenti, inclusi i membri del ruolo predefinito del server **sysadmin** . Quando un trigger di accesso impedisce le connessioni, i membri del ruolo predefinito del server **sysadmin** possono connettersi tramite la connessione amministrativa dedicata o avviando il [!INCLUDE[ssDE](../../includes/ssde-md.md)] nella modalità di configurazione minima (- f). Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Attività|Argomento|  
 |----------|-----------|  
