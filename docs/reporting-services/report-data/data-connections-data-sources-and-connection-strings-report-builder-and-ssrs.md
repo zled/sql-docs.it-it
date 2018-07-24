@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 421bc54759f8390ecb866f9e3ec95ded4f1c47cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969414"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS
 
@@ -48,7 +48,7 @@ ms.locfileid: "33022868"
   
  La tabella seguente riepiloga le differenze fra le origini dati incorporate e quelle condivise.  
   
-|Description|Origine dati<br /><br /> origine dati|Condivisa<br /><br /> origine dati|  
+|Descrizione|Origine dati<br /><br /> origine dati|Condivisa<br /><br /> origine dati|  
 |-----------------|------------------------------|----------------------------|  
 |La connessione dati è incorporata nella definizione del report.|![Disponibile](../../reporting-services/report-data/media/greencheck.gif "Disponibile")||  
 |Il puntatore alla connessione dati nel server di report è incorporato nella definizione del report.||![Disponibile](../../reporting-services/report-data/media/greencheck.gif "Disponibile")|  

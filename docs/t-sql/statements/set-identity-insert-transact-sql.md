@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd77cfaca0d7bda93f51b9274169ed5539211fc
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786712"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971643"
 ---
 # <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table { ON | OFF }
   
  L'opzione SET IDENTITY_INSERT viene impostata in fase di esecuzione, non in fase di analisi.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'utente deve essere il proprietario della tabella o deve disporre dell'autorizzazione ALTER per la tabella.  
   
 ## <a name="examples"></a>Esempi  

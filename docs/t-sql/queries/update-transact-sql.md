@@ -43,11 +43,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 3583834a24bd9f2026c2b61219c132b33432ddaa
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36241233"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969783"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -466,7 +466,7 @@ ID     Value
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  Le autorizzazioni UPDATE sono necessarie nella tabella di destinazione. Se l'istruzione UPDATE include una clausola WHERE oppure l'argomento *expression* nella clausola SET usa una colonna della tabella, sono anche necessarie le autorizzazioni per l'esecuzione dell'istruzione SELECT nella tabella da aggiornare.  
   
  Le autorizzazioni per l'istruzione UPDATE vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin**, dei ruoli predefiniti del database **db_owner** e **db_datawriter** e al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner** e **db_securityadmin** e il proprietario della tabella possono trasferire autorizzazioni ad altri utenti.  

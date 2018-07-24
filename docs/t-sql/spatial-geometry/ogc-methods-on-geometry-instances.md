@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 611c8d5e883cc98849d6f2d4f0d958c04929a8eb
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260463"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005218"
 ---
 # <a name="ogc-methods-on-geometry-instances"></a>Metodi OGC sulle istanze di geometria
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "36260463"
   
 -   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [STArea](../../t-sql/spatial-geometry/starea-geometry-data-type.md)  
   

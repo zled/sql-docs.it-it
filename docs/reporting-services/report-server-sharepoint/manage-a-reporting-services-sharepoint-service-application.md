@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1414b6cbf166c136dd942d974d6cb1aea866bc8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028068"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971783"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
 
@@ -114,7 +114,7 @@ ms.locfileid: "33028068"
 > [!IMPORTANT]  
 >  La modifica periodica della chiave di crittografia di Reporting Services è una procedura consigliata ai fini della sicurezza. È consigliabile modificare la chiave immediatamente dopo un aggiornamento della versione principale di Reporting Services. Modificando la chiave di crittografia di Reporting Services dopo un aggiornamento si riduce il rischio di ulteriori interruzioni del servizio rispetto invece all'eseguire questa operazione all'esterno del ciclo di aggiornamento.  
   
-|Pagina|Description|  
+|Pagina|Descrizione|  
 |----------|-----------------|  
 |Backup della chiave di crittografia|1) Digitare una password nelle caselle **Password:** e **Conferma password** , quindi fare clic su **Esporta**. Se la password digitata non soddisfa i requisiti di complessità dei criteri di dominio, verrà visualizzato un avviso.<br /><br /> 2) Viene chiesto di specificare un percorso in cui salvare il file della chiave. Valutare l'opportunità di archiviare il file della chiave in un computer distinto da quello che esegue [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il nome file predefinito corrisponde al nome dell'applicazione di servizio.|  
 |Ripristina chiave di crittografia|1) Digitare o individuare il file della chiave nella casella **Percorso file**<br /><br /> 2) Nella casella **Password** digitare la password usata per eseguire il backup del file di crittografia.<br /><br /> 3) Fare clic su **OK**|  

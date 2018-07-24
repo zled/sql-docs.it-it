@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 17c352a6db5e03c9d1b1b7d49bb793bb1085a45d
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251853"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017569"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ SET STATISTICS XML { ON | OFF }
 > [!NOTE]  
 >  Se l'opzione **Includi piano di esecuzione effettivo** è selezionata in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l'opzione SET non genera alcun output di Showplan XML. Prima di usare l'opzione SET, deselezionare il pulsante **Includi piano di esecuzione effettivo**.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per utilizzare SET STATISTICS XML e visualizzare l'output, è necessario che gli utenti dispongano delle autorizzazioni seguenti:  
   
 -   Autorizzazioni appropriate per l'esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  

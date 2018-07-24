@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 94917fe4165b0d6d3fdd498c1aa3b482e4fff745
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015148"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968905"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2016
 

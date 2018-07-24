@@ -20,11 +20,11 @@ ms.author: heidist
 manager: cgronlund
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9579a28d1d243475aeea5d2120f7895c10b6582a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408220"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974653"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -94,7 +94,7 @@ Per il linguaggio R, è necessario preparare i pacchetti sotto forma di file di 
 
 L'istruzione `ALTER EXTERNAL LIBRARY` carica solo i bit della libreria nel database. La libreria modificata viene installata quando un utente esegue il codice [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) che chiama la libreria.
 
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
 Per impostazione predefinita, l'utente **dbo** o qualsiasi membro del ruolo **db_owner** ha l'autorizzazione per eseguire ALTER EXTERNAL LIBRARY. Inoltre, una libreria esterna può essere modificata dall'utente che ha creato la libreria.
 

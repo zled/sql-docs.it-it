@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 74c0cd02499ab10f2aeded7cc528c7db244cd2cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032938"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971703"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Usare gli indicatori KPI in Reporting Services
 
@@ -57,7 +57,7 @@ Verrà visualizzata la schermata **Nuovo indicatore KPI** .
   
 È possibile assegnare valori statici o usare i dati di un set di dati condiviso. L'indicatore KPI appena creato verrà popolato con un set casuale di dati da aggiornare manualmente.  
   
-|Campo|Description|  
+|Campo|Descrizione|  
 |---|---|  
 |Formato del valore|  Consente di modificare il formato del valore visualizzato.|   
 |valore|Il valore da visualizzare per l'indicatore KPI.|  
