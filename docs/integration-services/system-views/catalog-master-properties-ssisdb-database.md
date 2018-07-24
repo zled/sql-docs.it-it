@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5614a15df481602ee0bdaa755afd53b522e79e47
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404533"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020657"
 ---
 # <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,5 +44,5 @@ Questa vista mostra una riga per ogni proprietà di Scale Out Master. Nelle prop
 |**MASTER_SERVICE_PORT**|Porta nell'endpoint di Scale Out Master.|
 |**SSLCERT_THUMBPRINT**|Identificazione personale di Scale Out Master.|
 
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 Tutti i membri del ruolo del database pubblico hanno l'autorizzazione di lettura per questa vista. 

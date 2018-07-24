@@ -24,11 +24,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 ms.openlocfilehash: 7e4ae3239332c004ad6ceda624b641b7bf7603be
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415380"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999293"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ Specifica il numero massimo di processi consentiti per il pool di risorse estern
 
 Per informazioni specifiche per la gestione di pool di risorse esterne usati per il machine learning, vedere [Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md) (Gestione delle risorse per il machine learning in SQL Server). 
 
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
 È richiesta l'autorizzazione `CONTROL SERVER`.
 

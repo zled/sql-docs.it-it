@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 41ad9d69b045a149bf6adad58f16f881ccc5d98e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783482"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004764"
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>BACKUP DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -102,7 +102,7 @@ BACKUP DATABASE database_name
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'autorizzazione **BACKUP DATABASE** o l'appartenenza nel ruolo predefinito del database **db_backupoperator**. Il backup del database master può essere eseguito solo da un utente standard aggiunto al ruolo predefinito del database **db_backupoperator**. Il backup del database master può essere eseguito solo da **sa**, l'amministratore dell'infrastruttura, o dai membri del ruolo predefinito del server **sysadmin**.  
   
  Richiede un account di Windows con l'autorizzazione per accedere, creare e scrivere nella directory di backup. È anche necessario archiviare il nome e la password dell'account di Windows in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Per aggiungere queste credenziali di rete in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare la stored procedure [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  

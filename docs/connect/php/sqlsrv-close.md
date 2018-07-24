@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e071fc2ac51931a52ba6672e97936dc60ee12072
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309110"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006843"
 ---
 # <a name="sqlsrvclose"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ sqlsrv_close( resource $conn )
 Valore booleano **true** a meno che la funzione non venga chiamata con un parametro non valido. Se la funzione viene chiamata con un parametro non valido, viene restituito **false** .  
   
 > [!NOTE]  
-> **Null** è un parametro valido per questa funzione. Permette alla funzione di essere chiamata più volte in uno script. Ad esempio, se si chiude una connessione in una condizione di errore e si chiude nuovamente alla fine dello script, la seconda chiamata a **sqlsrv_close** restituirà **true** perché la prima chiamata a **sqlsrv _ Chiudere** (nella condizione di errore) imposta la risorsa di connessione su **null**.  
+> **Null** è un parametro valido per questa funzione. Permette alla funzione di essere chiamata più volte in uno script. Ad esempio, se si chiude una connessione in una condizione di errore e la si chiude nuovamente alla fine dello script, la seconda chiamata a sqlsrv_close **restituirà true** perché la prima chiamata a sqlsrv_close **(nella condizione di errore) imposta la risorsa di connessione su null**.  
   
 ## <a name="example"></a>Esempio  
 L'esempio seguente chiude una connessione. Nell'esempio si presuppone che SQL Server sia installato nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  

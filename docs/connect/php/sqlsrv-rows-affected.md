@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_rows_affected | Documenti Microsoft
+title: sqlsrv_rows_affected | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f416bf1633909e548572f8f90c7fac7e188ecf75
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309350"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991383"
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ sqlsrv_rows_affected( resource $stmt)
 Valore intero che indica il numero di righe modificate dall'ultima istruzione eseguita. Se nessuna riga è stata modificata, viene restituito il valore zero (0). Se non sono disponibili informazioni sul numero di righe modificate, viene restituito il valore uno negativo (-1). Se si è verificato un errore nel recupero del numero di righe modificate, viene restituito **false** .  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente visualizza il numero di righe modificate da un'istruzione UPDATE. Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+L'esempio seguente visualizza il numero di righe modificate da un'istruzione UPDATE. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

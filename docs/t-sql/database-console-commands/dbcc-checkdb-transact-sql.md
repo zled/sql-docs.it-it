@@ -39,11 +39,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 7f270fd58e58b7e6c850a520dff4cd37e2ddb4ec
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262944"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988495"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -217,7 +217,7 @@ Per impostazione predefinita, DBCC CHECKDB esegue il controllo parallelo degli o
 ## <a name="understanding-dbcc-error-messages"></a>Informazioni sui messaggi di errore DBCC    
 Dopo il completamento del comando DBCC CHECKDB, nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene scritto un messaggio. Se l'esecuzione del comando DBCC ha esito positivo, il messaggio segnala che il completamento è avvenuto correttamente e indica la durata di esecuzione del comando. Se il comando DBCC viene arrestato prima del completamento del controllo a causa di un errore, il messaggio indica che il comando è stato terminato e specifica un valore di stato e la durata dell'esecuzione del comando. Nella tabella seguente sono elencati e descritti i valori di stato che possono essere inclusi nel messaggio.
     
-|State|Description|    
+|State|Descrizione|    
 |-----------|-----------------|    
 |0|È stato generato l'errore numero 8930. Indica un danneggiamento dei metadati che ha causato l'interruzione del comando DBCC.|    
 |1|È stato generato l'errore numero 8967. Si è verificato un errore DBCC interno.|    
@@ -368,7 +368,7 @@ DBCC CHECKDB restituisce il set di risultati seguente quando viene specificato E
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>Autorizzazioni    
+## <a name="permissions"></a>Permissions    
 È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner.
     
 ## <a name="examples"></a>Esempi    

@@ -31,11 +31,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a6689e70d21e9b566afcfd612bc7083225c16433
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789052"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983795"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ CREATE FULLTEXT CATALOG catalog_name
 ## <a name="remarks"></a>Remarks  
  Gli ID dei cataloghi full-text iniziano da 00005 e vengono incrementati di un'unità per ogni catalogo creato.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'utente deve avere l'autorizzazione CREATE FULLTEXT CATALOG per il database oppure essere membro dei ruoli predefiniti del database **db_owner** o **db_ddladmin**.  
   
 ## <a name="examples"></a>Esempi  

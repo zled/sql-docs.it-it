@@ -17,18 +17,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9263398523ccb96f91834efd31e04fbf1d835b8
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791238"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981423"
 ---
 # <a name="trigger-functions-transact-sql"></a>Funzioni trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Le seguenti funzioni scalari possono essere utilizzate nella definizione di un trigger per testare le modifiche dei valori dei dati o per restituire altri dati.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md)  
   
  [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)  

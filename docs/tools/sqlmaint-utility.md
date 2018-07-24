@@ -1,5 +1,5 @@
 ---
-title: Utilità sqlmaint | Documenti Microsoft
+title: Utilità sqlmaint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077898"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997143"
 ---
 # <a name="sqlmaint-utility"></a>utilità sqlmaint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -245,7 +245,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   Si verifica un errore generale.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'utilità **sqlmaint** può essere eseguita da qualsiasi utente di Windows che abbia l'autorizzazione **Lettura/esecuzione** su `sqlmaint.exe`, archiviato nella cartella `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` per impostazione predefinita. L'account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificato con **-login_ID** deve avere anche le autorizzazioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessarie per eseguire l'operazione specificata. Se la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza l'autenticazione di Windows, l'account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sul quale viene eseguito il mapping all'utente di Windows autenticato deve disporre delle autorizzazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessarie per eseguire l'operazione specificata.  
   
  Ad esempio, per usare **-BkUpDB** è necessaria l'autorizzazione per eseguire l'istruzione BACKUP, mentre l'uso dell'argomento **-UpdOptiStats** richiede l'autorizzazione per eseguire l'istruzione UPDATE STATISTICS. Per ulteriori informazioni, vedere le sezioni dedicate alle autorizzazioni nei relativi argomenti della documentazione online.  

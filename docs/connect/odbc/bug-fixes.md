@@ -1,7 +1,7 @@
 ---
-title: Elenco dei bug corretti | Documenti Microsoft
+title: Elenco dei bug corretti | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,44 +14,57 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 caps.latest.revision: 69
 author: v-makouz
-ms.author: genemi
+ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 9cba17b1f03b07320b644889bc111752f4f65a6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3b5969a723b230139b9466f75569375f97a0d7b0
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852231"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946905"
 ---
-# <a name="list-of-bugs-fixed"></a>Elenco di bug risolti
+# <a name="list-of-bugs-fixed"></a>Elenco dei bug corretti
 
-Questa pagina contiene un elenco di bug in ogni versione, a partire da [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 Driver ODBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+Questa pagina contiene un elenco dei bug corretti in ogni versione, a partire da [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd"></a>Correzioni di bug nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.2 Driver ODBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+
+- Risolto un messaggio di errore sull'autenticazione di Azure Active Directory
+- Correzione del rilevamento codifica quando le variabili di ambiente locali sono impostate in modo diverso
+- Fissa un arresto anomalo del sistema al momento disconnettere con ripristino della connessione in corso
+- Correzione del rilevamento di attività di connessione
+- Correzione del rilevamento corretto di socket chiuso
+- Correzione di un'attesa infinita quando si prova a un handle di istruzione di rilascio durante il ripristino non riuscito
+- Corretto il comportamento di disinstallazione non corretto quando entrambe le versioni 13 e 17 sono installati in Windows
+- Comportamento di decrittografia fisso sulla piattaforma Windows meno recente (Windows 7, 8 e Server 2012)
+- Risolto un problema di cache quando si usa l'autenticazione ADAL in Windows
+- Risolto un problema che è stato blocco e la sovrascrittura di traccia dei log da Windows
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>Correzioni di bug nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.1 Driver ODBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- Fisso da 1 secondo ritardo quando si chiama la funzione SQLFreeHandle con MARS abilitato e attributo di connessione "Encrypt = yes"
-- Fissa un arresto anomalo del sistema errore 22003 in SQLGetData quando le dimensioni del buffer passato sono minore, i dati recuperati (Windows)
-- Messaggi di errore ADAL troncati fissa
-- Correzione di un bug raro in Windows a 32 bit quando la conversione mobile numero a virgola in un intero
-- Risolto un problema in cui l'inserimento di double nel campo decimale con crittografia sempre attiva in restituirebbe errore di troncamento dei dati
-- Fissa un avviso nel programma di installazione MacOS
-- Fisso l'invio di stato non corretto a SQL Server durante il tentativo di ripristino della sessione quando resilienza di connessione sia il pool di connessioni sono abilitati, causando sessione da eliminare dal Server
+- Risolto da 1 secondo ritardo quando si chiama la funzione SQLFreeHandle con MARS abilitato e attributo di connessione "Encrypt = yes"
+- Corretto un arresto anomalo errore 22003 in SQLGetData quando la dimensione del buffer passato è inferiore, i dati recuperati (Windows)
+- Correzione di messaggi di errore ADAL troncati
+- Risolto un bug raro in Windows a 32 bit quando la conversione mobile numero a virgola a un integer
+- Risolto un problema in cui l'inserimento di double nel campo di decimale con Always Encrypted in restituirebbe errore di troncamento dei dati
+- Risolto un messaggio di avviso nel programma di installazione di MacOS
+- L'invio corretto stato fisso per SQL Server durante il tentativo di ripristino della sessione quando resilienza della connessione e il pool di connessioni entrambe sono abilitate, causando sessione da eliminare dal Server
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Correzioni di bug nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 Driver ODBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Correzioni di bug nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- Correzione di un bug in quando si utilizza l'autenticazione Kerberos, bulk insert potrebbe non riuscire con errore "accesso negato"
-- Soluzione alternativa rimosso per un bug unixODBC presente nella versione precedente a 2.3.1 (driver raddoppiato le dimensioni di alcuni buffer passato a unixODBC)
-- Fissa resilienza delle connessioni (riconnessione) sporgente quando si utilizza ColumnEncryption = abilitata
-- Correzione di bug di creazione DSN, in cui quando utilizza "L'autenticazione di Active Directory interattivo" l'opzione autenticazione di Azure finestra potrebbe diventare non risponde (Windows)
-- Fissa un arresto anomalo del sistema rari durante l'arresto ODBC quando è abilitata l'esecuzione asincrona (si è verificato durante la cancellazione di handle di connessione)
-- Risolto un problema in cui il Driver SQL causato elevato della CPU durante l'esecuzione prolungata stored procedure
-- Fisso impossibilità di recuperare i dati in una colonna varbinary (max) crittografata senza conversione
-- Risolto un problema in cui dopo un varchar (max) null colonna crittografata viene recuperata mediante SQLGetData() su un cursore statico, la colonna seguente viene annullata anche anche se dispone di dati
-- Risolto un problema con il recupero di campo varbinary (max) con crittografia sempre attiva in
+- Risolto un bug in cui quando si usa l'autenticazione Kerberos, bulk insert può avere esito negativo con errore "accesso negato"
+- Soluzione alternativa rimosso per un bug unixODBC presente nella versione sotto 2.3.1 (driver raddoppiato le dimensioni di alcuni buffer passato a unixODBC)
+- Risolto resilienza della connessione (riconnessione) blocca quando si usa ColumnEncryption = abilitata
+- Correzione di bug di creazione DSN, in cui quando utilizza "Autenticazione interattiva di Active Directory" l'opzione autenticazione di Azure finestra potrebbe diventare non risponde (Windows)
+- Risolto un arresto anomalo raro durante l'arresto ODBC quando è abilitata l'esecuzione asincrona (si è verificato durante la cancellazione di handle di connessione)
+- Risolto un problema in cui il Driver SQL causato utilizzo elevato di CPU durante l'esecuzione prolungata stored procedure
+- Risolta l'impossibilità di recuperare i dati in una colonna varbinary (max) crittografati senza conversione
+- Risolto un problema in cui dopo un null varchar (max) colonna crittografata viene recuperata usando SQLGetData() su un cursore statico, la colonna seguente viene annullata anche anche se dispone di dati
+- Risolto un problema con il recupero di campi varbinary (max) con crittografia sempre attiva in
 - Risolto un problema di setlocale non funziona con crittografia sempre attiva
-- Risolto un problema con SQLDescribeParam() restituzione errore quando viene chiamato nel parametro di routine di tipo XML archiviato con crittografia sempre attiva su
+- Risolto un problema con SQLDescribeParam() restituzione errore quando viene chiamato sul parametro di routine di tipo XML archiviato con crittografia sempre attiva in
 - Caratteri di sottolineatura con caratteri di escape predefiniti non funziona in SQLTables
-- Correzione di un bug in cui i dati ebraici (varchar) viene troncati se viene restituito come caratteri "wide" in Linux
+- Risolto un bug in cui i dati ebraici (varchar) viene troncati se viene restituito come caratteri wide in Linux
 - Risolto un problema con l'esecuzione di query con codificata Shift-JIS char/varchar dall'applicazione UTF-8
-- Correzione del bug in cui la chiamata a SQLGetInfo con parametro SQL_DRIVER_NAME restituito filename Linux-style su MacOS
-- Risolto un problema in cui il caricamento di dati di tipo carattere Windows-1252, utilizzando l'input file maggiore di 32 KB byte in colonne VARCHAR tramite l'utilità BCP darà errori
+- Correzione del bug in cui chiamando SQLGetInfo con parametro SQL_DRIVER_NAME restituito filename basato su Linux in MacOS
+- Risolto un problema in cui il caricamento di dati di tipo carattere Windows-1252, utilizzando l'input file maggiore di 32 KB byte in colonne VARCHAR con l'utilità BCP potrebbero comportare errori

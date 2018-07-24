@@ -1,5 +1,5 @@
 ---
-title: Elemento EventString (DTA) | Documenti Microsoft
+title: Elemento EventString (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c90feb22a7850c024b355816a693542a417d31c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987413"
 ---
 # <a name="eventstring-element-dta"></a>Elemento EventString (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +44,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|attribute|Description|  
+|attribute|Descrizione|  
 |---------------|-----------------|  
 |**Weight**|Facoltativa. Specifica il fattore di ponderazione, o fattore di importanza, della query per l'evento specificato. Per specificare il fattore di ponderazione, utilizzare un tipo di dati **float** . Ad esempio, **Weight**="100.01". Il valore minimo che è possibile specificare per **Weight** è "0".|  
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**string**, lunghezza illimitata.|  
 |**Valore predefinito**|Nessuna.|  

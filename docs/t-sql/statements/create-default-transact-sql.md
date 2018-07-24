@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8058a122907400b576dd17a2fd7b758abe08bca2
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782092"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983752"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ AS constant_expression [ ; ]
   
  Per rinominare un valore predefinito, usare **sp_rename**. Per ottenere un report relativo a un valore predefinito, usare **sp_help**.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire CREATE DEFAULT, un utente deve disporre come minimo dell'autorizzazione CREATE DEFAULT nel database corrente e dell'autorizzazione ALTER per lo schema in cui viene creato il valore predefinito.  
   
 ## <a name="examples"></a>Esempi  

@@ -1,5 +1,5 @@
 ---
-title: Utilità tablediff | Documenti Microsoft
+title: Utilità tablediff | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: daf978c77bca856ebc380c95bdca7185bcdee836
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077536"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974123"
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -172,7 +172,7 @@ tablediff
   
 ## <a name="return-value"></a>Valore restituito  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Esito positivo|  
 |**1**|Errore critico|  
@@ -220,7 +220,7 @@ tablediff
   
 -   **image**  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per confrontare tabelle, è necessario disporre delle autorizzazioni SELECT ALL sugli oggetti tabella da confrontare.  
   
  Per usare l'opzione **-et** , è necessario essere membro del ruolo predefinito del database db_owner oppure disporre almeno dell'autorizzazione CREATE TABLE nel database di sottoscrizione e dell'autorizzazione ALTER per lo schema del proprietario della destinazione nel server di destinazione.  

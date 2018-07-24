@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c1f882cf07a504b63218862e79324c32b74b2628
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781802"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991693"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ EXECUTE dbo.usp_myproc;
   
  Questo meccanismo risulta utile in un ambiente in cui vengono utilizzati pool di connessioni. Tramite i pool di connessioni vengono gestiti i gruppi di connessioni al database in modo che tali connessioni possano essere riutilizzate dalle applicazioni tra più utenti finali. Poiché il valore passato a *@varbinary_variable* è noto solo al chiamante dell'istruzione EXECUTE AS (in questo caso l'applicazione), il chiamante è in grado di garantire che il contesto di esecuzione stabilito non venga modificato dall'utente finale che chiama l'applicazione. Dopo il ripristino del contesto di esecuzione l'applicazione può cambiare il contesto a un'altra entità.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Non sono necessarie autorizzazioni.  
   
 ## <a name="examples"></a>Esempi  

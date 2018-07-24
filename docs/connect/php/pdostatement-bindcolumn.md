@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Bindcolumn | Documenti Microsoft'
+title: 'Pdostatement:: Bindcolumn | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b01f19dcb7b55da9c547d07d07784fe1730cdd66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308450"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006893"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,15 +34,15 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>Parametri  
-$*colonna*: il numero (misto) della colonna (indice in base 1) o nome della colonna nel set di risultati.  
+$$: numero (misto) della colonna (indice in base 1) o nome della colonna nel set di risultati.  
   
-&$*param*: il nome (misto) della variabile PHP a cui verrà associata la colonna.  
+&$param *: nome* misto della variabile PHP a cui verrà associata la colonna.  
   
-$*tipo*: il tipo di dati facoltativo del parametro, rappresentato da una costante PDO::PARAM_ *.  
+$type *: tipo di dati facoltativo del parametro, rappresentato da una costante PDO::PARAM*.  
   
 $*maxLen*: intero facoltativo, non usato dai driver Microsoft per PHP per SQL Server.  
   
-$*driverdata*: o parametri per il driver misti facoltativi. Ad esempio, è possibile specificare PDO::SQLSRV_ENCODING_UTF8 per associare la colonna a una variabile come stringa codificata in UTF-8.  
+$driverdata *: parametro o parametri misti facoltativi per il driver. Ad esempio, è possibile specificare PDO::SQLSRV_ENCODING_UTF8 per associare la colonna a una variabile come stringa codificata in UTF-8.  
   
 ## <a name="return-value"></a>Valore restituito  
 TRUE se ha esito positivo; in caso contrario, FALSE.  

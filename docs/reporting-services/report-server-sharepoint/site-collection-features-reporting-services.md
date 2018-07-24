@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 100ec0e739dc397b8173259abcfaf7c8e6cdfd9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024954"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982413"
 ---
 # <a name="reporting-services-site-collection-features"></a>Funzionalità di raccolta siti di Reporting Services
 
@@ -35,7 +35,7 @@ La modalità SharePoint di Reporting Services offre tre funzionalità di raccolt
 
  Nella tabella seguente vengono descritte le funzionalità di raccolta siti di Reporting Services.  
   
-|Funzionalità|Description|  
+|Funzionalità|Descrizione|  
 |-------------|-----------------|  
 |**Funzionalità Amministrazione centrale del server di report**|Consente di abilitare le funzionalità per gestire l'integrazione con un server di report di Reporting Services. Questa funzionalità viene installata e utilizzata solo nella raccolta siti di Amministrazione centrale SharePoint.<br /><br /> La funzionalità di integrazione del server di report viene attivata automaticamente nella raccolta siti di Amministrazione centrale SharePoint dopo aver installato il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] per prodotti SharePoint. In alcune situazioni è necessario attivare la funzionalità manualmente. Per attivare la funzionalità del server di report usare le pagine di Reporting Services nella pagina Impostazioni sito di Amministrazione centrale SharePoint.<br /><br /> Con la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services e successive del componente aggiuntivo per prodotti SharePoint, la funzionalità di integrazione del server di report viene attivata per tutte le raccolte siti esistenti al momento dell'installazione del componente aggiuntivo. La funzionalità risulta inoltre attivata automaticamente per le nuove raccolte siti.|  
 |**Funzionalità di integrazione con il server di report**|Consente di generare report avanzati tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services<br /><br /> Questa funzionalità è attiva per impostazione predefinita.|  

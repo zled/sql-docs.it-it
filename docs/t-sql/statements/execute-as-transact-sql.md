@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2520b75495006760b5755ed57ab109d6ef99573a
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941957"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991723"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ Se l'utente è reso orfano, ovvero se l'accesso associato non esiste più, e non
 ## <a name="determining-the-original-login"></a>Determinazione dell'account di accesso originale  
  Usare la funzione [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) per restituire il nome dell'account di accesso connesso all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare questa funzione per restituire l'identità dell'account di accesso originale in sessioni in cui si verificano numerosi cambi di contesto espliciti o impliciti.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per specificare l'istruzione **EXECUTE AS** per un account di accesso, il chiamante deve disporre dell'autorizzazione **IMPERSONATE** per il nome dell'account di accesso specificato e non gli deve essere negata l'autorizzazione **IMPERSONATE ANY LOGIN**. Per specificare l'istruzione **EXECUTE AS** per un utente del database, il chiamante deve disporre delle autorizzazioni **IMPERSONATE** per il nome utente specificato. Se si specifica **EXECUTE AS CALLER**, le autorizzazioni **IMPERSONATE** non sono obbligatorie.  
   
 ## <a name="examples"></a>Esempi  

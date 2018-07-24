@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4b3d11967ea4aca8fee3c72784cf1353c984a5cb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792084"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38026994"
 ---
 # <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
   
  Se l'opzione `SET FIPS_FLAGGER` viene impostata in una stored procedure, il valore dell'opzione `SET FIPS_FLAGGER` viene ripristinato al termine della stored procedure. Un'istruzione `SET FIPS_FLAGGER` specificata nel codice SQL dinamico pertanto non ha alcun effetto sulle istruzioni successive.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="see-also"></a>Vedere anche  

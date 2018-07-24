@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 0dadf902763e48a94ba83c6aee1b465e0c0ec21e
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36242423"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984601"
 ---
 # <a name="extended-static-geometry-methods"></a>Metodi di geometria statici estesi
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "36242423"
   
  [Specifiche OGC, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [GeomFromGML](../../t-sql/spatial-geometry/geomfromgml-geometry-data-type.md)  
   

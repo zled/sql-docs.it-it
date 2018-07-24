@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 55027355a13f4eb2301f9471fca7cad5959c8619
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781282"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979363"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
 ## <a name="remarks"></a>Remarks  
  È possibile eliminare una funzione di partizione solo se non viene utilizzata da alcuno schema di partizione. Se vi sono schemi di partizione che utilizzano la funzione di partizione, DROP PARTITION FUNCTION restituisce un errore.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire DROP PARTITION FUNCTION è possibile utilizzare qualsiasi delle autorizzazioni seguenti:  
   
 -   Autorizzazione ALTER ANY DATASPACE. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_owner** e **db_ddladmin** .  

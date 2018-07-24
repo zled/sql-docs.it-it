@@ -51,11 +51,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d193ca55d720bb8c843280b553a2ef01e5c742a7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790422"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990463"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -463,7 +463,7 @@ GO
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  Sono richieste l'autorizzazione **CREATE PROCEDURE** per il database e **ALTER** per lo schema in cui viene creata la procedura. In alternativa, è richiesta l'appartenenza al ruolo predefinito del database **db_ddladmin**.  
   
  Per le stored procedure CLR è necessaria la proprietà dell'assembly a cui viene fatto riferimento nella clausola EXTERNAL NAME oppure l'autorizzazione **REFERENCES** per tale assembly.  

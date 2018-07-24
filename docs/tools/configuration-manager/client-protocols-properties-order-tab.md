@@ -1,5 +1,5 @@
 ---
-title: Proprietà (scheda ordine)-protocolli client | Documenti Microsoft
+title: (Scheda ordine) proprietà-protocolli client | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 394e659a17fb4a27deac8fd62c342aa11bdac72f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987473"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Proprietà - Protocolli client (scheda Ordine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
  Elenca i protocolli installati ma non in uso.  
   
  **Protocolli abilitati**  
- Elenca i protocolli disponibili per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client nel computer.  
+ Sono elencati i protocolli disponibili per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i client in questo computer.  
   
  **>**  
  Abilita il protocollo selezionato nella casella **Protocolli disabilitati** , spostandolo nella casella **Protocolli abilitati** .  

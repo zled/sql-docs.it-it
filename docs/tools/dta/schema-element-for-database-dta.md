@@ -1,5 +1,5 @@
 ---
-title: Elemento schema per Database (DTA) | Documenti Microsoft
+title: Elemento schema per Database (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 07b3e86c5329eac6685e6411b9abc8af55e64641
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33070588"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984343"
 ---
 # <a name="schema-element-for-database-dta"></a>Elemento Schema per Database (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33070588"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|Nessuna.|  
 |**Valore predefinito**|Nessuna.|  

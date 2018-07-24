@@ -30,11 +30,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a84d8fc9021ad80798b921cdf0ecc799afcb3392
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784492"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38026974"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
  I predicati di blocco vengono valutati dopo l'esecuzione dell'operazione DML corrispondente. Pertanto una query READ UNCOMMITTED può rilevare valori temporanei che saranno sottoposti a rollback.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'autorizzazione ALTER ANY SECURITY POLICY e l'autorizzazione ALTER per lo schema.  
   
  Inoltre, per ogni predicato che viene aggiunto sono richieste le autorizzazioni seguenti:  

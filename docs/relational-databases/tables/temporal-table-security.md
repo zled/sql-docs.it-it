@@ -16,10 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ee27537dd58803a79291ea75a47e51d1cd53936
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993513"
 ---
 # <a name="temporal-table-security"></a>Sicurezza di una tabella temporale
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="security-principles"></a>Principi di sicurezza  
  La tabella seguente descrive i principi di sicurezza che riguardano le tabelle temporali:  
   
-|Principio|Description|  
+|Principio|Descrizione|  
 |---------------|-----------------|  
 |L'abilitazione/disabilitazione del controllo delle versioni di sistema richiede i privilegi più elevati per gli oggetti interessati|L'abilitazione e disabilitazione di SYSTEM_VERSIONING richiede l'autorizzazione CONTROL sia per la tabella corrente che per quella di cronologia|  
 |I dati di cronologia non possono essere modificati direttamente|Quando SYSTEM_VERSIONING è ON, gli utenti non possono modificare i dati di cronologia indipendentemente dalle autorizzazioni effettive per la tabella corrente o di cronologia. Ciò vale sia per le modifiche dei dati che per quelle dello schema.|  

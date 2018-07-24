@@ -22,11 +22,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 65f064f7893f9dde1f42d94daee1ec6207a0a868
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36254553"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995173"
 ---
 # <a name="insert-sql-graph"></a>INSERT (grafo SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ L'inserimento bulk per la tabella nodi rimane identico a quello di una tabella r
 Prima dell'inserimento bulk in una tabella bordi, è necessario importare le tabelle nodi. I valori di `$from_id` e `$to_id` possono essere estratti dalla colonna `$node_id` della tabella nodi ed essere inseriti come bordi. 
 
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione INSERT per la tabella di destinazione.  
   
  Le autorizzazioni INSERT vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e ai membri dei ruoli predefiniti del database **db_owner** e **db_datawriter** nonché al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner** e **db_securityadmin** e il proprietario della tabella possono trasferire le autorizzazioni ad altri utenti.  

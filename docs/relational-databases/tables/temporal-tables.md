@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b7e70190afc73d0dbad741f89e7d1dfc47404c87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012598"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000673"
 ---
 # <a name="temporal-tables"></a>Tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ SELECT * FROM Employee
   
  Nella tabella seguente il valore SysStartTime della colonna delle righe risultanti rappresenta il valore presente nella colonna **SysStartTime** della tabella su cui si esegue la query e **SysEndTime** rappresenta il valore presente nella colonna **SysEndTime** della tabella su cui si esegue la query. Per la sintassi completa e per esempi, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) e [Query sui dati in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
-|Espressione|Righe risultanti|Description|  
+|Espressione|Righe risultanti|Descrizione|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Restituisce una tabella con una singola riga contenente i valori che erano effettivi (correnti) in un momento specificato nel passato. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori nella riga che era valida nel momento specificato dal parametro *<date_time>*. Il valore per una riga viene considerato valido se il valore *system_start_time_column_name* è minore o uguale al valore del parametro *<date_time>* e il valore *system_end_time_column_name* è maggiore del valore del parametro *<date_time>*.|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Restituisce una tabella con i valori per tutte le versioni di riga che erano attive nell'intervallo di tempo specificato, indipendentemente dal fatto che abbiano iniziato a essere attive prima del valore del parametro *<start_date_time>* per l'argomento FROM o non siano più state attive dopo il valore del parametro *<end_date_time>* per l'argomento TO. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori per tutte le versioni di riga che erano attive in qualsiasi momento durante l'intervallo di tempo specificato. Le righe che non sono più state attive esattamente in corrispondenza del limite inferiore definito dall'endpoint FROM non sono incluse e le righe diventate attive esattamente in corrispondenza del limite superiore definito dall'endpoint TO non sono incluse.|  

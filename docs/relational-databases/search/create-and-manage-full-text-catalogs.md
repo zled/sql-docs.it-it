@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 14f7dc1176ff57705775ae6c23e30b49202533f7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181547"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001483"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Creazione e gestione dei cataloghi full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ GO
   
 Nella tabella seguente sono elencate le proprietà correlate ai cataloghi full-text. Queste informazioni possono essere utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text. 
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Impostazione relativa alla distinzione tra caratteri accentati e non accentati.|
 |**ImportStatus**|Indica se il catalogo full-text viene importato o meno.|  

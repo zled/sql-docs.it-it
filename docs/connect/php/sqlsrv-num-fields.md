@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d533d9293641be5d40db2306f035827bf83b8722
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309180"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006867"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,9 +46,9 @@ sqlsrv_num_fields( resource $stmt)
 Un valore intero che rappresenta il numero di campi nel set di risultati attivo. Se si verifica un errore, viene restituito il valore booleano **false** .  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene eseguita una query per recuperare tutti i campi per le prime tre righe nel *HumanResources. Department* tabella del database AdventureWorks. La funzione **sqlsrv_num_fields** determina il numero di campi nel set di risultati. In questo modo è possibile visualizzare i dati eseguendo un'iterazione attraverso i campi in ogni riga restituita.  
+L'esempio seguente esegue una query per recuperare tutti i campi delle prime tre righe della tabella *HumanResources.Department* del database Adventureworks. La funzione **sqlsrv_num_fields** determina il numero di campi nel set di risultati. In questo modo è possibile visualizzare i dati eseguendo un'iterazione attraverso i campi in ogni riga restituita.  
   
-Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
