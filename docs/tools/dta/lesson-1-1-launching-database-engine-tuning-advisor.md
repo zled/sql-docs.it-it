@@ -21,10 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f95e9b831b21ab71053c04d2ab2bc27238906c4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048336"
 ---
 # <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>Lezione 1-1: Avvio dello strumento Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ Accedere in primo luogo all'interfaccia utente grafica (GUI) dello strumento Ott
   
 Per impostazione predefinita, la configurazione all'avvio dello strumento Ottimizzazione guidata motore di database è quella illustrata nella figura seguente:  
   
-![Finestra predefinita Ottimizzazione guidata motore di database](../../tools/dta/media/defaultdtagui.gif "finestra predefinita di ottimizzazione guidata motore di Database")  
+![Finestra predefinita da Ottimizzazione guidata motore di database](../../tools/dta/media/defaultdtagui.gif "finestra predefinita di ottimizzazione guidata motore di Database")  
   
 > [!NOTE]  
 > Nella scheda e nella casella **Nome sessione** vengono visualizzati il nome del computer e l'istanza a cui si è connessi. Inoltre, vengono visualizzate la data e l'ora correnti.  

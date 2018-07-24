@@ -36,11 +36,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7f22e6ca9f21a4d40ec5b4a0839c3c308414f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078068"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004583"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag - utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ sqldiag
 > [!NOTE]  
 >  Con**SQLdiag** l'output non viene accodato alla cartella di output corrente al momento dell'avvio. È possibile soltanto sovrascrivere la cartella di output predefinita (opzione 1) o rinominare la cartella (opzione 2), quindi l'output viene scritto nella nuova cartella di output predefinita denominata SQLDIAG.  
   
- **/M** *Computer1* [ *Computer2 * * machineN*] | *@machinelistfile*  
+ **/M** *Computer1* [ *machine2 * * machineN*] | *@machinelistfile*  
  Esegue l'override del computer specificato nel file di configurazione. Per impostazione predefinita il file di configurazione è SQLDiag.Xml o è impostato con il parametro **/I** . Quando si specifica più di un computer, separare ogni nome di computer con uno spazio.  
   
  L'utilizzo di *@machinelistfile* consente di specificare un nome di file di un elenco di computer da archiviare nel file di configurazione.  

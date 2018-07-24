@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3e81a3b98bbfe6507c768e541ac0fc613d28d52e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032378"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055836"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Risolvere i problemi di progettazione dei report con Reporting Services
 I problemi di progettazione del report si possono verificare quando si crea il layout del report nella visualizzazione Progettazione in un'applicazione per la progettazione di report. Usare le informazioni presenti in questo argomento per risolvere questi problemi.   

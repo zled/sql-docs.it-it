@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 031bfb83581d84095826cb3ce2593170dd2eb8ef
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782932"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066430"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  Le specifiche del controllo del database sono oggetti non a sicurezza diretta che risiedono in un database specifico. Quando una specifica del controllo del database viene creata, il relativo stato è disabilitato.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Gli utenti che dispongono dell'autorizzazione `ALTER ANY DATABASE AUDIT` possono creare specifiche del controllo del database e associarle a qualsiasi controllo.  
   
  Dopo essere stata creata, la specifica del controllo del database può essere visualizzata dalle entità con le autorizzazioni `CONTROL SERVER` e `ALTER ANY DATABASE AUDIT` o con l'account `sysadmin`.  

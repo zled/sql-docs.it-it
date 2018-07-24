@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 89ec24adc8c02bdf1458391c66233f640d5e0262
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335325"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054473"
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Panoramica: Esportazione dei dati in Excel (componente aggiuntivo MDS per Excel)
 
@@ -43,7 +43,7 @@ ms.locfileid: "35335325"
 ## <a name="refreshing-data"></a>Aggiornamento dei dati  
  I dati nel repository MDS possono essere aggiornati da altri utenti dopo l'esportazione. È possibile recuperare questi dati senza perdere le modifiche apportate a dati diversi da MDS. Per altre informazioni, vedere [Aggiornamento dei dati &#40;Componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

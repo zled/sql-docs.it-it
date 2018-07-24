@@ -30,11 +30,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: dec794a04d383d2727de58e0b70ab9e663fce8af
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789552"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063564"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -117,7 +117,7 @@ DROP DATABASE database_name [;]
   
  L'istruzione DROP DATABASE deve essere l'unica istruzione in un batch SQL ed è possibile eliminare un solo database alla volta.
 
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  È richiesta l'autorizzazione **CONTROL** per il database, l'autorizzazione **ALTER ANY DATABASE** o l'appartenenza al ruolo predefinito del database **db_owner**.  

@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3503952eb791c4423826626b98e8f8feb2bce0c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032328"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066669"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Risolvere i problemi di recupero dei dati con i report di Reporting Services
 Il primo passaggio dell'elaborazione del report consiste nel recuperare i dati del report per ogni set di dati tramite la query del set di dati. Quando si visualizza in anteprima un report in locale, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel computer. Quando si esegue un report nel server di report, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel server di report. Utilizzare questo argomento per risolvere i problemi relativi al recupero dei dati del report.   

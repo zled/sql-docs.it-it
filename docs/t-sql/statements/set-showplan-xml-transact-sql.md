@@ -29,11 +29,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9557a9576f214dcc84aa47e474797da9c570ff85
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36254363"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061629"
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -72,7 +72,7 @@ SET SHOWPLAN_XML { ON | OFF }
 > [!NOTE]  
 >  Se l'opzione **Includi piano di esecuzione effettivo** è selezionata in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l'opzione SET non genera alcun output di Showplan XML. Prima di usare l'opzione SET, deselezionare il pulsante **Includi piano di esecuzione effettivo**.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per poter utilizzare SET SHOWPLAN_XML, è necessario disporre delle autorizzazioni sufficienti per eseguire le istruzioni in cui SET SHOWPLAN_XM viene eseguito, nonché l'autorizzazione SHOWPLAN per tutti i database contenenti oggetti di riferimento.  
   
  Per poter generare uno Showplan con le istruzioni SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure* ed EXEC *user_defined_function*, l'utente deve avere:  

@@ -4,22 +4,20 @@ description: Visualizza frammenti di contenuto aggiornato per modifiche recenti 
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: tools
 ms.date: 04/28/2018
-ms.openlocfilehash: 0547653c4fc2d8bd04f851b843e74fd9ec78d2ea
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 31df25173ad475c733bc7239366a6c2ce820289e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32739163"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088183"
 ---
-# <a name="new-and-recently-updated-tools-for-sql-server"></a>Nuovi e aggiornati: Tools per SQL Server
+# <a name="new-and-recently-updated-tools-for-sql-server"></a>Nuovi e aggiornati di recente: Tools per SQL Server
 
 
 
@@ -94,16 +92,16 @@ Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati el
 
 
 
-**-G**<a name="G"></a> Questa opzione viene usata dal client durante la connessione al database SQL di Azure o ad Azure SQL Data Warehouse per specificare che l'utente venga autenticato tramite l'autenticazione di Azure Active Directory. L'opzione -G richiede [versione 14.0.3008.27 o versione successiva](http://go.microsoft.com/fwlink/?LinkID=825643). Per determinare la versione, eseguire bcp-v. Per ulteriori informazioni, vedere [utilizzare Azure Active Directory l'autenticazione per l'autenticazione con il Database SQL o SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
+**-G**<a name="G"></a> Questa opzione viene usata dal client durante la connessione al database SQL di Azure o ad Azure SQL Data Warehouse per specificare che l'utente venga autenticato tramite l'autenticazione di Azure Active Directory. L'opzione -G richiede [14.0.3008.27 versione o versioni successive](http://go.microsoft.com/fwlink/?LinkID=825643). Per determinare la versione, eseguire bcp-v. Per altre informazioni, vedere [usare Azure Active Directory l'autenticazione per l'autenticazione con il Database SQL o SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
 
 > [!TIP]
->  Per verificare se la versione dell'utilità bcp include il supporto per il tipo di Azure Active Directory l'autenticazione (AAD) **bcp -** (bcp\<spazio >\<dash >\<dash >) e verificare che venga visualizzato - lettera G nell'elenco di argomenti disponibili.
+>  Per verificare se la versione di bcp comprende il supporto per Azure Active Directory Authentication (AAD) del tipo **bcp -** (bcp\<spazio >\<dash >\<dash >) e verificare che venga visualizzato - G nell'elenco di argomenti disponibili.
 
 - **Nome utente e password di Azure Active Directory:**
 
     Quando si vuole usare nome utente e password di Azure Active Directory, è possibile fornire l'opzione **-G** e anche usare nome utente e password fornendo le opzioni **-U** e **-P** .
 
-    Nell'esempio seguente esporta dati utilizza il nome utente di Active Directory di Azure e la Password in utente e la password è una credenziale di AAD. Nell'esempio vengono esportati tabella `bcptest` dal database `testdb` dal server Azure `aadserver.database.windows.net` e archivia i dati nel file `c:\last\data1.dat`:
+    Nell'esempio seguente consente di esportare i dati usando nome utente di Azure AD e la Password in cui utente e la password è una credenziale di AAD. Nell'esempio nella tabella vengono esportati `bcptest` dal database `testdb` dal server di Azure `aadserver.database.windows.net` e archivia i dati nel file `c:\last\data1.dat`:
 ```
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
 ```
@@ -117,7 +115,7 @@ Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati el
 
 - **Integrazione con Azure Active Directory**
 
-    Per l'autenticazione integrata di Azure Active Directory, fornire l'opzione **-G** senza nome utente o password. Questa configurazione si presuppone che l'account utente di Windows corrente (l'account viene eseguito il comando bcp) è federata con Azure AD:
+    Per l'autenticazione integrata di Azure Active Directory, fornire l'opzione **-G** senza nome utente o password. Questa configurazione si presuppone che l'account utente di Windows corrente (l'account viene eseguito il comando bcp) è federato con Azure AD:
 
 
 

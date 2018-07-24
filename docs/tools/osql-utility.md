@@ -31,10 +31,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c4f0f070a9f8644fe8198adb7ed6c11559932c40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002603"
 ---
 # <a name="osql-utility"></a>Utilità osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,7 +102,7 @@ C:\>osql
  Utilizza una connessione trusted anziché richiedere una password.  
   
  **-S** *server_name*[ **\\***instance_name*]  
- Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alla quale connettersi. Specificare il *nome_server* per connettersi all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] su tale server. Specificare il *server_name***\\*** instance_name* per connettersi all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] su tale server. Se non si specifica alcun server, **osql** si connette all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel computer locale. Questa opzione è obbligatoria per l'esecuzione di **osql** da un computer remoto sulla rete.  
+ Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alla quale connettersi. Specificare il *nome_server* per connettersi all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] su tale server. Specificare il *server_name***\\***instance_name* per connettersi all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] su tale server. Se non si specifica alcun server, **osql** si connette all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel computer locale. Questa opzione è obbligatoria per l'esecuzione di **osql** da un computer remoto sulla rete.  
   
  **-H** *wksta_name*  
  Nome della workstation. Il nome della workstation viene archiviato in **sysprocesses.hostname** ed è visualizzato tramite **sp_who**. Se omesso, viene utilizzato il nome del computer corrente.  
@@ -213,7 +214,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>Comandi OSQL  
  Oltre alle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] all'interno di **osql**, sono disponibili anche i comandi seguenti.  
   
-|Comando|Description|  
+|Comando|Descrizione|  
 |-------------|-----------------|  
 |GO|Esegue tutte le istruzioni immesse dopo l'ultimo comando GO.|  
 |RESET|Cancella tutte le istruzioni immesse.|  

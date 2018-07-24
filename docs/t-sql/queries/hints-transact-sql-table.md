@@ -41,11 +41,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: bb4aadeab22932e1d50792cd2f812b7368f488cb
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909541"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064387"
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - Tabella
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -416,7 +416,7 @@ Tuttavia, affinché Query Optimizer utilizzi le viste indicizzate oppure una vis
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Utilizzo di un hint di tabella come hint per la query  
  Gli *hint di tabella* possono anche essere specificati come hint per la query tramite la clausola OPTION (TABLE HINT). È consigliabile usare un hint di tabella come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md). Per le query ad hoc, specificare questi hint solo come hint di tabella. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Gli hint KEEPIDENTITY, IGNORE_CONSTRAINTS e IGNORE_TRIGGERS richiedono l'autorizzazione ALTER sulla tabella.  
   
 ## <a name="examples"></a>Esempi  

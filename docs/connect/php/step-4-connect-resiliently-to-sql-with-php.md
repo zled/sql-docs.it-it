@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 4: Connettere in modo resiliente a SQL con PHP | Documenti Microsoft'
+title: 'Passaggio 4: Connettersi in modo resiliente a SQL tramite PHP | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -14,22 +14,22 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b422ab79b0a0cec89683835f592d4813edc99d0
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: da5c3b99eab34afded5fd92c19f53f3868517d43
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310000"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983024"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>Passaggio 4: Connettere in modo resiliente a SQL con PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-Il programma demo è progettato in modo che un errore temporaneo (ovvero qualsiasi codice di errore con il prefisso '08' come indicato in questo [appendice](https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) durante il tentativo di connessione di responsabili di un nuovo tentativo. Ma un errore temporaneo durante il comando di query, il programma di ignorare la connessione e creare una nuova connessione, prima di eseguire nuovamente il comando di query. È consigliabile né sconsigliata questa scelta di progettazione. Il programma demo illustra alcuni la flessibilità di progettazione che è disponibile.  
+Il programma demo è progettato in modo che un errore temporaneo (vale a dire qualsiasi codice di errore con il prefisso '08' come descritto in questo [appendice](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) durante un tentativo di connessione lead a un nuovo tentativo. Ma un errore temporaneo durante il comando di query fa sì che il programma ignori la connessione e creare una nuova connessione, prima di ripetere il comando di query. Non consigliamo né sconsigliamo tale scelta di progettazione. Il programma demo vengono illustrati alcuni la flessibilità di progettazione che è disponibile all'utente.  
   
 La lunghezza di questo esempio di codice è dovuta principalmente alla logica delle eccezioni catch.   
   
-Il [sqlsrv_query()](../../connect/php/sqlsrv-query.md) funzione può essere utilizzata per recuperare un set di risultati da una query sul Database SQL. Questa funzione è essenzialmente accetta qualsiasi oggetto di query e connessione e restituisce un set di risultati, può eseguire un'iterazione con l'utilizzo di [sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array.md). 
+Il [sqlsrv_query ()](../../connect/php/sqlsrv-query.md) funzione può essere utilizzata per recuperare un set di risultati da una query sul Database SQL. Questa funzione accetta qualsiasi oggetto di query e connessione e restituisce un set di risultati, che può eseguire l'iterazione tramite l'uso di essenzialmente [sqlsrv_fetch_array ()](../../connect/php/sqlsrv-fetch-array.md). 
   
 ```php
 

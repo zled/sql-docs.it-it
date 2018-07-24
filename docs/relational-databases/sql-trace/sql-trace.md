@@ -17,10 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5517458968f64bab9a64b0692deaa973022d9109
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062064"
 ---
 # <a name="sql-trace"></a>Traccia SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="use-data-columns-to-describe-returned-events"></a>Utilizzare le colonne di dati per descrivere gli eventi restituiti  
  Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gli eventi restituiti quando viene eseguita la traccia. Nella tabella seguente vengono descritte le colonne di dati di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] che sono le stesse utilizzate da Traccia SQL e vengono indicate le colonne selezionate per impostazione predefinita.  
   
-|Colonna di dati|Numero colonna|Description|  
+|Colonna di dati|Numero colonna|Descrizione|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName***|10|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione anziché con il nome visualizzato del programma.|  
 |**BigintData1**|52|Valore (tipo di dati**bigint** ) che dipende dalla classe di evento specificata nella traccia.|  

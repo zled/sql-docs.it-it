@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6b667bf8be87561461c1ceec2543dcce051b93e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 30a22bd9661ea6b5be5d33fad5a9ce03e4f3b1c1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332492"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981423"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "34332492"
   
 ##  <a name="SSMS"></a> Usare la versione più recente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha un set di interfacce utente progettate per la configurazione dell'archivio query nonché per l'utilizzo dei dati raccolti relativi al carico di lavoro.  
-Scaricare la versione più recente di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [qui](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
+Scaricare la versione più recente di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [qui](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).  
   
- Per una rapida descrizione dell'uso di Query Store in scenari di risoluzione dei problemi, vedere il post relativo a [Query Store nei blog @Azure](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
+ Per una rapida descrizione dell'uso di Query Store in scenari di risoluzione dei problemi, vedere il post relativo a [Query Store nei blog @Azure](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
 ##  <a name="Insight"></a> Usare Informazioni dettagliate prestazioni query nel database SQL di Azure  
  Se si esegue l'archivio query in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è possibile usare **Informazioni dettagliate prestazioni query** per analizzare il consumo di DTU nel tempo.  

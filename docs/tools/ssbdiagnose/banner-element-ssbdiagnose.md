@@ -1,5 +1,5 @@
 ---
-title: Banner (ssbdiagnose) elemento | Documenti Microsoft
+title: Banner (ssbdiagnose) elemento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5119e483fc089c19782eb6287ea42a08c79c4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076098"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055116"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Elemento Banner (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33076098"
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|attribute|Description|  
+|attribute|Descrizione|  
 |---------------|-----------------|  
 |**title**|Identifica l'utilità che ha generato il file di output XML di **ssbdiagnose** .|  
 |**product**|Identifica il prodotto che ha generato il file di output XML di **ssbdiagnose** .|  
@@ -51,7 +51,7 @@ ms.locfileid: "33076098"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|Nessuna.|  
 |**Valore predefinito**|Nessuna.|  

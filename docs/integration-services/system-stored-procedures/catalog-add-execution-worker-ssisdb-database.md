@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: dbf3db6560e4a32969abd5162479cb41ca6c40e9
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409113"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063940"
 ---
 # <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ID agente di lavoro di uno Scale Out Worker. *workeragent_id* è di tipo **uniqu
 ## <a name="result-sets"></a>Set di risultati  
  None  
 
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni READ e MODIFY per l'istanza di esecuzione  
