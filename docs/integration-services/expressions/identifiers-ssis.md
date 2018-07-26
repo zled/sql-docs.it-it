@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6f62fd9e99c4359af731c0177e443baa4d1edae2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61529c64150bb28c595ade859f45453591526b51
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084583"
 ---
 # <a name="identifiers-ssis"></a>Identificatori (SSIS)
   Nelle espressioni gli identificatori sono colonne e variabili disponibili per l'operazione. Le espressioni possono utilizzare identificatori regolari e qualificati.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Il primo carattere del nome deve essere una lettera, come definito dallo standard Unicode 2.0, o un carattere di sottolineatura (_).  
   
--   I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, il carattere di sottolineatura (_) e i caratteri @, $ e #.  
+-   I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, il carattere di sottolineatura (_) e i caratteri \@, $ e #.  
   
 > [!IMPORTANT]  
 >  Gli identificatori regolari non possono contenere spazi e caratteri speciali diversi da quelli indicati. Se si desidera includere spazi e caratteri speciali, sarà necessario utilizzare un identificatore qualificato anziché un identificatore regolare.  
@@ -90,15 +89,15 @@ ms.lasthandoff: 05/03/2018
 >  Se nella notazione con punto entrambi gli elementi sono racchiusi da una coppia di parentesi quadre, l'analizzatore di espressioni interpreta la coppia come un identificatore unico, non come combinazione origine-colonna.  
   
 ## <a name="variables-in-expressions"></a>Variabili nelle espressioni  
- Quando in un'espressione viene fatto riferimento a una variabile, è necessario anteporre il prefisso @ al nome della variabile. Per fare riferimento alla variabile **Counter**, ad esempio, è necessario specificare @Counter. Il carattere @ non fa parte del nome della variabile, ma consente all'analizzatore di espressioni di identificarla come tale. Se per compilare le espressioni si utilizzano le finestre di dialogo disponibili in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , il carattere @ verrà aggiunto automaticamente al nome della variabile. Non è consentito includere spazi tra il carattere @ e il nome della variabile.  
+ Quando in un'espressione viene fatto riferimento a una variabile, è necessario anteporre il prefisso \@ al nome della variabile. Per fare riferimento alla variabile **Counter**, ad esempio, è necessario specificare \@Counter. Il carattere \@ non fa parte del nome della variabile, ma consente all'analizzatore di espressioni di identificarla come tale. Se per compilare le espressioni si usano le finestre di dialogo disponibili in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)], il carattere \@ verrà aggiunto automaticamente al nome della variabile. Non è consentito includere spazi tra il carattere \@ e il nome della variabile.  
   
  Per i nomi delle variabili valgono le stesse regole applicate agli altri identificatori regolari:  
   
 -   Il primo carattere del nome deve essere una lettera, come definito dallo standard Unicode 2.0, o un carattere di sottolineatura (_).  
   
--   I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, il carattere di sottolineatura (_) e i caratteri @, $ e #.  
+-   I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, il carattere di sottolineatura (_) e i caratteri \@, $ e #.  
   
- I nomi di variabile contenenti caratteri diversi da quelli elencati devono essere racchiusi tra parentesi quadre. È ad esempio necessario racchiudere tra parentesi quadre i nomi di variabili che includono spazi. La parentesi quadra di apertura viene inserita dopo il carattere @. Per fare riferimento alla variabile **My Name** , ad esempio, è necessario specificare @[My Name]. Non è consentito includere spazi tra il nome della variabile e le parentesi quadre.  
+ I nomi di variabile contenenti caratteri diversi da quelli elencati devono essere racchiusi tra parentesi quadre. È ad esempio necessario racchiudere tra parentesi quadre i nomi di variabili che includono spazi. La parentesi quadra di apertura viene inserita dopo il carattere \@. Per fare riferimento alla variabile **My Name**, ad esempio, è necessario specificare \@[My Name]. Non è consentito includere spazi tra il nome della variabile e le parentesi quadre.  
   
 > [!NOTE]  
 >  I nomi delle variabili di sistema e delle variabili definite dall'utente devono essere specificati rispettando la distinzione tra maiuscole e minuscole.  

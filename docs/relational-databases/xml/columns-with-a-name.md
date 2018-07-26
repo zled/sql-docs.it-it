@@ -17,28 +17,29 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46b121595162e60bedecfb4338fa058bb7cb8c01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c591d7cb9a2eab7bca51c9829fbff82c37bf58c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084303"
 ---
 # <a name="columns-with-a-name"></a>Colonne provviste di un nome
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Di seguito vengono illustrate le condizioni specifiche in cui viene eseguito il mapping tra le colonne del set di righe provviste di nome e il codice XML risultante, con distinzione tra maiuscole e minuscole:  
   
--   Il nome di colonna inizia con un simbolo di chiocciola (@)  
+-   Il nome di colonna inizia con un simbolo di chiocciola (\@).  
   
--   Il nome di colonna non inizia con un simbolo di chiocciola (@)  
+-   Il nome di colonna non inizia con un simbolo di chiocciola (\@).  
   
--   Il nome di colonna non inizia con un simbolo di chiocciola (@) e contiene una barra (/)  
+-   Il nome di colonna non inizia con un simbolo di chiocciola (\@) e contiene una barra (/).  
   
 -   Più colonne condividono lo stesso prefisso.  
   
 -   Una colonna ha un nome diverso.  
   
-## <a name="column-name-starts-with-an-at-sign-"></a>Il nome di colonna inizia con un simbolo di chiocciola (@)  
- Se il nome della colonna inizia con un simbolo di chiocciola (@) e non contiene una barra (/), viene creato un attributo dell'elemento `row` con il valore di colonna corrispondente. Ad esempio, la query seguente restituisce un set di righe a due colonne (@PmId, Name). Nel codice XML risultante viene aggiunto un attributo **PmId** all'elemento `row` corrispondente e gli viene assegnato un valore di ProductModelID.  
+## <a name="column-name-starts-with-an-at-sign-"></a>Il nome di colonna inizia con un simbolo di chiocciola (\@)  
+ Se il nome della colonna inizia con un simbolo di chiocciola (\@) e non contiene una barra (/), viene creato un attributo dell'elemento `row` con il valore di colonna corrispondente. Ad esempio, la query seguente restituisce un set di righe a due colonne (\@PmId, Name). Nel codice XML risultante viene aggiunto un attributo **PmId** all'elemento `row` corrispondente e gli viene assegnato un valore di ProductModelID.  
   
 ```  
   
@@ -70,8 +71,8 @@ FOR XML PATH
 go  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign-"></a>Il nome di colonna non inizia con un simbolo di chiocciola (@)  
- Se il nome di colonna non inizia con un simbolo di chiocciola (@), non è uno dei test di nodo XPath e non contiene una barra (/), viene creato un elemento XML che è un sottoelemento dell'elemento riga, per impostazione predefinita `row`.  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>Il nome di colonna non inizia con un simbolo di chiocciola (\@)  
+ Se il nome di colonna non inizia con un simbolo di chiocciola (\@), non è uno dei test di nodo XPath e non contiene una barra (/), viene creato un elemento XML che è un sottoelemento dell'elemento riga, per impostazione predefinita `row`.  
   
  La query seguente specifica il nome della colonna, il risultato. Un elemento figlio `result` viene pertanto aggiunto all'elemento `row`.  
   
@@ -117,8 +118,8 @@ go
 </row>  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>Il nome di colonna non inizia con un simbolo di chiocciola (@) e contiene una barra (/)  
- Se il nome di colonna non inizia con un simbolo di chiocciola (@), ma contiene una barra (/), il nome della colonna indica una gerarchia XML. Ad esempio, se il nome della colonna è "Name1/Name2/Name3.../Name***n*** ", ogni Name***i*** rappresenta un nome di elemento nidificato nell'elemento di riga corrente (per i=1) o che si trova sotto l'elemento il cui nome è Name***i-1***. Se Name***n*** inizia con il simbolo @, viene eseguito il mapping a un attributo dell'elemento Name***n-1*** .  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>Il nome di colonna non inizia con un simbolo di chiocciola (\@) e contiene una barra (/)  
+ Se il nome di colonna non inizia con un simbolo di chiocciola (\@), ma contiene una barra (/), il nome della colonna indica una gerarchia XML. Ad esempio, se il nome della colonna è "Name1/Name2/Name3.../Name***n*** ", ogni Name***i*** rappresenta un nome di elemento nidificato nell'elemento di riga corrente (per i=1) o che si trova sotto l'elemento il cui nome è Name***i-1***. Se Name***n*** inizia con il simbolo '\@', viene mappato a un attributo dell'elemento Name***n-1***.  
   
  Ad esempio, la query seguente restituisce l'ID e il nome di un dipendente rappresentati come un elemento complesso EmpName che contiene nome, secondo nome e cognome.  
   

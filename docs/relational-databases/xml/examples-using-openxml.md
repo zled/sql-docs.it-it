@@ -31,12 +31,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33f794f164a1fbd63ce65289c36b30391a87587b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edd4106a1e58631112337d0dcae8da78907a519d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017424"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087483"
 ---
 # <a name="examples-using-openxml"></a>Esempi: utilizzo di OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ LILAS      Carlos Gonzlez
   
  Gli elementi <`Customer`> non hanno sottoelementi, quindi, se si esegue la stessa istruzione SELECT con il parametro *flags* impostato su **2** per indicare il mapping incentrato sugli elementi, i valori **CustomerID** e **ContactName** verranno restituiti come NULL per entrambi i clienti.  
   
- La variabile @xmlDocument può essere anche di tipo **xml** o di tipo **(n)varchar(max)**.  
+ La variabile \@xmlDocument può essere anche di tipo **xml** o di tipo **(n)varchar(max)**.  
   
  Se nel documento XML <`CustomerID`> e <`ContactName`> sono sottoelementi, il mapping incentrato sugli elementi ne recupererà i valori.  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  Nell'istruzione OPENXML si noti quanto segue:  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) termina con un attributo XML, **ProductID**. Nel set di righe risultante viene creata una riga per ogni nodo di attributo selezionato nel documento XML.  
+-   Il parametro *rowpattern* (/ROOT/Customer/Order/OrderDetail/\@ProductID) termina con l'attributo XML, **ProductID**. Nel set di righe risultante viene creata una riga per ogni nodo di attributo selezionato nel documento XML.  
   
 -   In questo esempio il parametro *flags* non è specificato e i mapping vengono definiti dal parametro *ColPattern* .  
   
@@ -482,9 +482,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   Il modello XPath (**.**) specificato come *ColPattern* per la colonna **ProdID** nel set di righe identifica il nodo di contesto, ovvero il nodo corrente. Il valore specificato per *rowpattern* è l'attributo **ProductID** dell'elemento <`OrderDetail`>.  
   
--   Il valore di *ColPattern*, **../@Quantity**, specificato per la colonna **Qty** nel set di righe identifica l'attributo **Quantity** del nodo padre, <`OrderDetail`>, del nodo di contesto, \<ProductID.  
+-   Il valore di *ColPattern*, **../\@Quantity**, specificato per la colonna **Qty** nel set di righe identifica l'attributo **Quantity** del nodo padre, <`OrderDetail`>, del nodo di contesto, \<ProductID>.  
   
--   Analogamente, il valore di *ColPattern*, **../../@OrderID**, specificato per la colonna **OID** nel set di righe identifica l'attributo **OrderID** dell'elemento padre, <`Order`>, del nodo padre del nodo di contesto. Il nodo padre è <`OrderDetail`>, mentre il nodo di contesto è <`ProductID`>.  
+-   Analogamente, il valore di *ColPattern*, **../../\@OrderID**, specificato per la colonna **OID** nel set di righe identifica l'attributo **OrderID** dell'elemento padre, <`Order`>, del nodo padre del nodo di contesto. Il nodo padre è <`OrderDetail`>, mentre il nodo di contesto è <`ProductID`>.  
   
  L'istruzione SELECT recupera quindi tutte le colonne nel set di righe specificato da OPENXML.  
   
@@ -582,7 +582,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- In particolare, viene passata una variabile di tipo **xml**, @x, alla funzione **sp_xml_preparedocument()**.  
+ In particolare, viene passata una variabile di tipo **xml**, \@x, alla funzione **sp_xml_preparedocument()**.  
   
  Risultato:  
   

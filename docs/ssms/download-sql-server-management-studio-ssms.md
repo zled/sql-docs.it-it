@@ -1,7 +1,7 @@
 ---
 title: Scaricare SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8872987bbd90664f2c6fb3477f91e323a2ce96
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 567833724450a0240d68c8195bddd2d68d5c11e6
+ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957684"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39188937"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,9 +45,9 @@ SSMS è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL, d
 
 SSMS 17.x è l'ultima generazione di *SQL Server Management Studio* e supporta SQL Server 2017.
 
-**[![Download](../ssdt/media/download.png) Scaricare SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)**
+**[![download](../ssdt/media/download.png) Scaricare SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802) (non è richiesta alcuna versione precedente di SQL Server Management Studio 17.x nel computer)**
 
-**[![Download](../ssdt/media/download.png) Scaricare il pacchetto di aggiornamento di SQL Server Management Studio 17.8.1 (aggiornamento dalla versione 17.x alla versione 17.8.1)](https://go.microsoft.com/fwlink/?linkid=875804)**
+**[![download](../ssdt/media/download.png) Scaricare il pacchetto di aggiornamento di SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875804) (per l'aggiornamento dalla versione 17.x alla 17.8.1; non è richiesta una versione precedente di SQL Server Management Studio 17.x nel computer)**
 
 
 **Informazioni sulla versione**
@@ -96,7 +96,7 @@ Proprietà database:
     
 Editor SQL:
 
-- Esperienza migliorata con Intellisense nel database SQL di Azure quando l'utente non ha l'accesso master.
+- Esperienza migliorata con IntelliSense nel database SQL di Azure quando l'utente non ha l'accesso master.
 
 Scripting:
 
@@ -142,11 +142,16 @@ Se usata con l'ultimo Service Pack disponibile, questa versione di SSMS supporta
 
 ## <a name="release-notes"></a>Note sulla versione
 
-Di seguito sono riportati problemi e limitazioni della versione 17.8:
+Di seguito sono riportati problemi e limitazioni della versione 17.8.1:
 
 - Facendo clic sul pulsante *Script* dopo avere modificato una proprietà del filegroup nella finestra *Proprietà*, vengono generati due script: uno script con un'istruzione *USE <database>* e un secondo script con un'istruzione *USE master*.  Lo script con *USE master* viene generato per errore e deve essere rimosso. Eseguire lo script contenente l'istruzione *USE <database>*.
 - Alcune finestre di dialogo visualizzano un errore di edizione non valida quando si lavora con nuove edizioni del database SQL di Azure *Utilizzo generico* oppure *Business Critical*.
 - È possibile osservare latenza nel visualizzatore XEvents. Si tratta di un [problema noto in .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Considerare l'aggiornamento a NetFx 4.7.2.
+- Arresto anomalo di Monitoraggio replica con un errore *Impossibile caricare il file o l'assembly...*. Per risolvere questo problema:
+  1. Chiudere *SqlMonitor.exe* (ad esempio Monitoraggio replica) e SQL Server Management Studio.
+  2. Scaricare il file *sqlmonitor.exe.config* aggiornato da [https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw).
+  3. Sostituire il file *sqlmonitor.exe.config* (si trova in genere in "C:\Programmi (x86)\Microsoft SQL Server\140\Tools\Bin") con quello scaricato.
+  4. Riavviare SQL Server Management Studio e/o Monitoraggio replica.
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>Disinstallare e reinstallare SSMS

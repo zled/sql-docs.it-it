@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6fe22eaec4105f8b849bc3a582a131ab59e46446
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e7f44a11de210090ba9afaf734ceeb3353dbbe4d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357823"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085133"
 ---
 # <a name="replication-to-sql-database"></a>Replica nel database SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,8 @@ ms.locfileid: "37357823"
  -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in locale o un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in una macchina virtuale di Azure nel cloud. Per altre informazioni, vedere [Panoramica di SQL Server in Macchine virtuali di Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).  
  - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] deve essere un sottoscrittore push di un server di pubblicazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  -  Il database di distribuzione e gli agenti di replica non possono essere collocati in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
- - Sono supportate la replica snapshot e la replica transazionale unidirezionale. Non sono supportate la replica transazionale peer-to-peer e la replica di tipo merge.  
+ - Sono supportate la replica snapshot e la replica transazionale unidirezionale. Non sono supportate la replica transazionale peer-to-peer e la replica di tipo merge.
+ - Istanza gestita di database SQL (anteprima) supporta i database di distribuzione e di pubblicazione. Per altre informazioni, vedere [Replication with SQL Database Managed Instance](replication-with-sql-database-managed-instance.md) (Replica con Istanza gestita di database SQL).
  
  ## <a name="versions"></a>Versioni  
  - Il server di pubblicazione e il database di distribuzione devono eseguire almeno una delle versioni seguenti:  

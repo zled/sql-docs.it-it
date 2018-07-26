@@ -2,7 +2,7 @@
 title: Elaborazione di query adattive nei database Microsoft SQL | Microsoft Docs
 description: Funzionalità per l'elaborazione di query adattive e il miglioramento delle prestazioni delle query in SQL Server (2017 e versioni successive) e nel database SQL di Azure.
 ms.custom: ''
-ms.date: 05/08/2018
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 092f623dff8bd240bdc5349a3e6973d5c139b23f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: c7a38b9765d15e3d62c2ba022b356f627ee9c6ce
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332443"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087503"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Elaborazione di query adattive nei database SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,6 +107,29 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 ```
 
 L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
+
+## <a name="row-mode-memory-grant-feedback"></a>Feedback delle concessioni di memoria in modalità riga
+**Si applica a**: database SQL come funzionalità in anteprima pubblica
+
+Il feedback delle concessioni di memoria in modalità riga estende la funzionalità di feedback delle concessioni di memoria in modalità batch adattando le dimensioni delle concessioni di memoria sia per gli operatori in modalità batch che per quelli in modalità riga.  
+
+Per abilitare l'anteprima pubblica del feedback delle concessioni di memoria in modalità riga nel database SQL di Azure, abilitare il livello di compatibilità del database 150 per il database a cui si è connessi quando si esegue la query.
+
+L'attività di feedback delle concessioni di memoria in modalità riga sarà visibile tramite l'XEvent **memory_grant_updated_by_feedback**. 
+
+A partire dal feedback delle concessioni di memoria in modalità riga, verranno visualizzati due nuovi attributi di piano di query per i piani di post-esecuzione effettivi: **IsMemoryGrantFeedbackAdjusted** e **LastRequestedMemory**, che vengono aggiunti all'elemento XML per i piani di query MemoryGrantInfo. 
+
+LastRequestedMemory mostra la memoria concessa in kilobyte (KB) dall'esecuzione della query precedente. L'attributo IsMemoryGrantFeedbackAdjusted consente di controllare lo stato del feedback delle concessioni di memoria per l'istruzione all'interno di un piano di esecuzione query effettivo. I valori esposti in questo attributo sono i seguenti:
+
+| Valore di IsMemoryGrantFeedbackAdjusted | Descrizione |
+|--- |--- |
+| No: First Execution | Il feedback delle concessioni di memoria non regola la memoria per la prima compilazione e l'esecuzione associata.  |
+| No: Accurate Grant | In assenza di spill su disco e se l'istruzione usa almeno il 50% della memoria concessa, il feedback delle concessioni di memoria non viene attivato. |
+| No: Feedback disabled | Se il feedback delle concessioni di memoria viene attivato continuamente e alterna tra operazioni di aumento della memoria e riduzione della memoria, il feedback delle concessioni di memoria verrà disabilitato per l'istruzione. |
+| Yes: Adjusting | Il feedback delle concessioni di memoria è stato applicato e può essere ulteriormente regolato per l'esecuzione successiva. |
+| Yes: Stable | Il feedback delle concessioni di memoria è stato applicato e la memoria concessa è ora stabile, ovvero quella concessa per l'esecuzione precedente è uguale a quella concessa per l'esecuzione corrente. |
+
+Gli attributi del piano per il feedback delle concessioni di memoria non sono attualmente visibili nei piani di esecuzione di query grafici di SQL Server Management Studio, ma per eseguire test preliminari è possibile visualizzarli usando SET STATISTICS XML ON per l'XEvent query_post_execution_showplan.  
 
 ## <a name="batch-mode-adaptive-joins"></a>Join adattivi in modalità batch
 La funzionalità di join adattivo in modalità batch consente di rimandare a **dopo** la scansione del primo input la scelta tra l'[esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati](../../relational-databases/performance/joins.md). L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.

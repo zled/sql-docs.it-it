@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ad62b912dbe788aa6fffb016440a597c0a27cce
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 1d411c73e322e4043645a161e059d5cd6f1a300f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36249703"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088393"
 ---
 # <a name="variables-transact-sql"></a>Variabili (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ Una variabile Transact-SQL locale è un oggetto che può contenere un solo valor
 * Salvare un valore di dati che deve essere restituito dal codice restituito di una stored procedure o dal valore restituito da una funzione.
 
 > [!NOTE]
-> Il nome di alcune funzioni di sistema Transact-SQL inizia con due *simboli di chiocciola (@@)*. Anche se nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tali funzioni @@functions sono denominate variabili globali, in realtà non sono variabili e non funzionano come tali. Le @@functions sono funzioni di sistema e la loro sintassi segue le regole previste per le funzioni.
+> Il nome di alcune funzioni di sistema Transact-SQL inizia con due simboli di *chiocciola* (\@\@). Benché nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le funzioni \@\@ vengano denominate variabili globali, non si tratta in realtà di variabili e non funzionano come le variabili. Le funzioni \@\@ sono in effetti funzioni di sistema e la relativa sintassi segue le regole previste per le funzioni.
 
 Lo script seguente crea e popola con 26 righe una piccola tabella di prova. Lo script utilizza una variabile per eseguire tre operazioni: 
 
@@ -85,17 +85,17 @@ GO
 
 ## <a name="declaring-a-transact-sql-variable"></a>Dichiarazione di una variabile Transact-SQL
 L'istruzione DECLARE inizializza una variabile Transact-SQL tramite l'esecuzione delle seguenti operazioni: 
-* Assegnazione di un nome. Il nome deve iniziare con il carattere chiocciola (@).
+* Assegnazione di un nome. Il nome deve iniziare con il carattere chiocciola (\@).
 * Assegnazione di un tipo di dati definito dall'utente o di sistema, nonché la lunghezza del tipo di dati. Alle variabili numeriche vengono inoltre assegnate precisione e scala. Alle variabili XML è possibile assegnare una raccolta di schemi facoltativa.
 * Impostazione del valore su NULL.
 
-Ad esempio, l'istruzione **DECLARE** seguente crea la variabile locale **@mycounter** con tipo di dati int.  
+Ad esempio, l'istruzione **DECLARE** seguente crea la variabile locale **\@mycounter** con tipo di dati int.  
 ```sql
 DECLARE @MyCounter int;
 ```
 Per dichiarare più variabili locali, è necessario inserire una virgola dopo la prima variabile locale e quindi specificare il nome della variabile locale successiva con il tipo di dati corrispondente.
 
-Ad esempio, l'istruzione **DECLARE** seguente crea le tre variabili locali **@LastName**, **@FirstName** e **@StateProvince**, quindi le inizializza con il valore NULL:  
+Ad esempio, l'istruzione **DECLARE** seguente crea le tre variabili locali **\@LastName**, **\@FirstName** e **\@StateProvince**, quindi le inizializza con il valore NULL:  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -165,7 +165,7 @@ GO
 > [!WARNING]
 > Se in una singola istruzione SELECT sono presenti più clausole di assegnazione, l'ordine di valutazione delle espressioni non viene garantito. Si noti che gli effetti sono visibili sole se sono presenti riferimenti per le assegnazioni.
 
-Se l'istruzione SELECT restituisce più di una riga e la variabile fa riferimento a un'espressione non scalare, la variabile viene impostata sul valore restituito per l'espressione nell'ultima riga del set di risultati. Ad esempio nel batch seguente **@EmpIDVariable** viene impostata sul valore **BusinessEntityID** dell'ultima riga restituita, ovvero 1:  
+Se l'istruzione SELECT restituisce più di una riga e la variabile fa riferimento a un'espressione non scalare, la variabile viene impostata sul valore restituito per l'espressione nell'ultima riga del set di risultati. Ad esempio nel batch seguente **\@EmpIDVariable** viene impostata sul valore **BusinessEntityID** dell'ultima riga restituita, ovvero 1:  
 
 ```sql
 USE AdventureWorks2014;

@@ -17,12 +17,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50aade82abccaa58b62d28b086392a276dee3f2d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a7b7e364b9384813e63036b184f80f4e807f7218
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335895"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084833"
 ---
 # <a name="syntax-ssis"></a>Sintassi (SSIS)
   La sintassi delle espressioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è simile a quella utilizzata nei linguaggi C e C#. Le espressioni includono elementi quali identificatori (colonne e variabili), valori letterali, operatori e funzioni. In questo argomento vengono riepilogati i requisiti specifici della sintassi dell'analizzatore di espressioni, in relazione ai diversi elementi delle espressioni.  
@@ -39,7 +39,7 @@ ms.locfileid: "35335895"
 ## <a name="identifiers"></a>Identificatori  
  Le espressioni possono includere identificatori di colonna e di variabile. È possibile utilizzare colonne esistenti nell'origine dei dati oppure colonne create da trasformazioni nel flusso di dati. Nelle espressioni è possibile utilizzare identificatori di derivazione per fare riferimento alle colonne. Gli identificatori di derivazione sono numeri che identificano in modo univoco gli elementi di un pacchetto. Per fare riferimento a un identificatore di derivazione nell'ambito di un'espressione, è necessario anteporvi un simbolo di cancelletto (#). Per fare riferimento all'identificatore di derivazione 138, ad esempio, è necessario specificare #138.  
   
- Le espressioni possono includere variabili personalizzate e le variabili di sistema disponibili in [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Quando in un'espressione viene fatto riferimento a una variabile, è necessario anteporre il prefisso @ al nome della variabile. Per fare riferimento alla variabile `Counter`, ad esempio, è necessario usare @Counter. Il carattere @ non fa parte del nome della variabile, ma consente all'analizzatore di espressioni di identificarla come tale. Per altre informazioni, vedere [Identificatori &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md).  
+ Le espressioni possono includere variabili personalizzate e le variabili di sistema disponibili in [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Quando in un'espressione viene fatto riferimento a una variabile, è necessario anteporre il prefisso \@ al nome della variabile. Per fare riferimento alla variabile `Counter`, ad esempio, è necessario specificare \@Counter. Il carattere \@ non fa parte del nome della variabile, ma consente all'analizzatore di espressioni di identificarla come tale. Per altre informazioni, vedere [Identificatori &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md).  
   
 ## <a name="literals"></a>Valori letterali  
  Le espressioni possono includere valori letterali numerici, stringa e booleani. I valori letterali stringa utilizzati nelle espressioni devono essere racchiusi tra virgolette. Le virgolette non devono essere invece utilizzate per i valori letterali numerici e booleani. Il linguaggio delle espressioni include sequenze di escape per i caratteri di escape più comuni. Per altre informazioni, vedere [Valori letterali &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md).  
@@ -79,7 +79,7 @@ ms.locfileid: "35335895"
   
  Per altre informazioni, vedere [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Utilizzo di un'espressione in un componente flusso di dati](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenuto correlato  

@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a807550f86205d3f1f6c341599188cea08b6ee97
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: e2c2625c036a1f8d6a66660760c383ad4b676eb7
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36240973"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999321"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  L'istruzione ROLLBACK TRANSACTION non può fare riferimento a un *savepoint_name* in transazioni distribuite avviate in modo esplicito con l'istruzione BEGIN DISTRIBUTED TRANSACTION o risultanti dall'escalation di una transazione locale.  
   
- Non è possibile eseguire il rollback di una transazione dopo l'esecuzione di un'istruzione COMMIT TRANSACTION, tranne quando l'istruzione COMMIT TRANSACTION viene associata a una transazione nidificata contenuta all'interno della transazione sottoposta a rollback. In tal caso, il rollback della transazione annidata viene eseguito anche se per la transazione è stata eseguita un'istruzione COMMIT TRANSACTION.  
+ Non è possibile eseguire il rollback di una transazione dopo l'esecuzione di un'istruzione COMMIT TRANSACTION, tranne quando l'istruzione COMMIT TRANSACTION viene associata a una transazione nidificata contenuta all'interno della transazione sottoposta a rollback. In questo caso, il rollback della transazione annidata viene eseguito anche se per la transazione è stata eseguita un'istruzione COMMIT TRANSACTION.  
   
  In una transazione sono consentiti nomi di punti di salvataggio duplicati. In tal caso il rollback viene tuttavia eseguito solo fino all'istruzione SAVE TRANSACTION più recente che utilizza il punto di salvataggio.  
   
@@ -104,7 +104,7 @@ L'effetto di ROLLBACK sui cursori viene definito dalle tre regole seguenti:
 ## <a name="locking-behavior"></a>Comportamento di blocco  
  Un'istruzione ROLLBACK TRANSACTION che specifica un argomento *savepoint_name* rilascia tutti i blocchi acquisiti oltre il punto di salvataggio, ad eccezione di escalation e conversioni. Tali blocchi non vengono rilasciati né riconvertiti alla loro precedente modalità di blocco.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  

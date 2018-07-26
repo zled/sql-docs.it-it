@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8af424b2ba5f8e23a0907c37d8f7e259e9d4192
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 4b16a7d07358ff1c561bc840a958e24205688b86
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248453"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083373"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Linee guida per l'utilizzo dei metodi con tipo di dati xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
  Se il compilatore non è in grado di determinare se un determinato valore singleton è garantito in fase di esecuzione, i passi, i parametri delle funzioni e gli operatori che richiedono un singleton restituiranno un errore. Questo problema si verifica di frequente con i dati non tipizzati. Per la ricerca di un attributo, ad esempio, è necessario un elemento padre singleton. È sufficiente un numero ordinale che seleziona un nodo padre singolo. Per valutare una combinazione **node()**-**value()** per l'estrazione dei valori degli attributi potrebbe non essere necessario specificare il numero ordinale, come illustrato nell'esempio seguente.  
   
 ### <a name="example-known-singleton"></a>Esempio: singleton noto  
- In questo esempio il metodo **nodes()** genera una riga distinta per ogni elemento <`book`>. Il metodo **value()**, valutato su un nodo <`book`>, estrae il valore di @genre e, essendo un attributo, è un singleton.  
+ In questo esempio il metodo **nodes()** genera una riga distinta per ogni elemento <`book`>. Il metodo **value()**, valutato su un nodo <`book`>, estrae il valore di \@genre e, essendo un attributo, è un singleton.  
   
 ```  
 SELECT nref.value('@genre', 'varchar(max)') LastName  

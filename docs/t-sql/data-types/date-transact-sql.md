@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f7f20eda403c6f3fabea20e77a0c87b29a5f8dfb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e32dac3a1145695c33fc06c818f8c59361e025dd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415440"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083833"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ Definisce una data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 |Proprietà|valore|  
 |--------------|-----------|  
 |Sintassi|**data**|  
-|Utilizzo|DECLARE @MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
+|Utilizzo|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Formato predefinito dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|YYYY-MM-DD<br /><br /> Per ulteriori informazioni, vedere la sezione seguente relativa alla compatibilità con le versioni precedenti per i client legacy.|  
 |Intervallo|da 0001-01-01 a 9999-12-31 (da 1582-10-15 a 9999-12-31 per Informatica)<br /><br /> da 1 gennaio 1 a 31 dicembre 9999 (da 15 ottobre 1582 a 31 dicembre 9999 per Informatica)|  
 |Intervalli di elementi|AAAA rappresenta un numero di quattro cifre compreso tra 0001 e 9999 indicante l'anno. Per Informatica, AAAA è limitato all'intervallo compreso tra 1582 e 9999.<br /><br /> MM rappresenta un numero di due cifre compreso tra 01 e 12 indicante un mese dell'anno specificato.<br /><br /> GG rappresenta un numero di due cifre compreso tra 01 e 31, a seconda del mese, indicante il giorno del mese specificato.|  

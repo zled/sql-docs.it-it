@@ -20,12 +20,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c592f50ab6f58af87089c28fdfb48e65bf885a11
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 0a9a404de670421850f985f5db7be2efc9d6d58d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408363"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084903"
 ---
 # <a name="integration-services-ssis-expressions"></a>Espressioni di Integration Services (SSIS)
   Un'espressione è una combinazione di simboli, ovvero identificatori, valori letterali, funzioni e operatori, che restituiscono un singolo valore di dati. È possibile creare espressioni semplici, costituite da un'unica costante, variabile o funzione, In genere le espressioni sono complesse in quanto includono più operatori e funzioni e fanno riferimento a più colonne e variabili. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile usare le espressioni per definire condizioni per istruzioni CASE, creare e aggiornare valori in colonne di dati, assegnare valori a variabili, aggiornare o popolare proprietà in fase di esecuzione, definire vincoli in vincoli di precedenza e definire espressioni usate dal contenitore Ciclo For.  
@@ -47,9 +47,9 @@ ms.locfileid: "35408363"
   
 -   Il valore delle variabili viene impostato tramite un'espressione. Ad esempio, GETDATE() imposta il valore della variabile sulla data corrente.  
   
--   Nei vincoli di precedenza le espressioni consentono di impostare le condizioni che determinano se l'attività o il contenitore vincolato di un pacchetto viene eseguito. Le espressioni usate in un vincolo di precedenza devono restituire **true** o **false**. Ad esempio, l'espressione @A > @B esegue un confronto tra due variabili definite dall'utente per determinare se l'attività vincolata viene eseguita.  
+-   Nei vincoli di precedenza le espressioni consentono di impostare le condizioni che determinano se l'attività o il contenitore vincolato di un pacchetto viene eseguito. Le espressioni usate in un vincolo di precedenza devono restituire **true** o **false**. Ad esempio, l'espressione \@A > \@B confronta due variabili definite dall'utente per determinare se l'attività vincolata viene eseguita.  
   
--   In un contenitore Ciclo For le espressioni consentono di compilare le istruzioni di inizializzazione, valutazione e incremento utilizzate dalla struttura del ciclo. Ad esempio, l'espressione @Counter = 1 inizializza il contatore del ciclo.  
+-   In un contenitore Ciclo For le espressioni consentono di compilare le istruzioni di inizializzazione, valutazione e incremento utilizzate dalla struttura del ciclo. Ad esempio, l'espressione \@Counter = 1 inizializza il contatore del ciclo.  
   
  Con le espressioni è inoltre possibile aggiornare i valori delle proprietà di pacchetti, contenitori quali ciclo For e ciclo Foreach, attività, gestioni connessioni a livello di pacchetto e progetto, provider di log ed enumeratori Foreach. Ad esempio, tramite un'espressione di proprietà, è possibile assegnare la stringa "Localhost.AdventureWorks" alla proprietà ConnectionName dell'attività Esegui SQL. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -59,14 +59,14 @@ ms.locfileid: "35408363"
 ## <a name="expression-builder"></a>Generatore di espressioni  
  Generatore di espressioni è uno strumento grafico per la compilazione di espressioni. È disponibile nelle finestre di dialogo **Editor trasformazione Suddivisione condizionale**, **Editor trasformazione Colonna derivata** e **Generatore di espressioni** ed è uno strumento grafico per la compilazione di espressioni.  
   
- Il Generatore di espressioni include cartelle contenenti elementi specifici dei pacchetti e cartelle contenenti le funzioni, i cast di tipo e gli operatori del linguaggio delle espressioni. Gli elementi specifici dei pacchetti sono variabili definite dall'utente e di sistema. Nelle finestre di dialogo **Editor trasformazione Suddivisione condizionale** e **Editor trasformazione Colonna derivata** è inoltre possibile visualizzare le colonne di dati. Per compilare espressioni per le trasformazioni, è possibile trascinare elementi dalle cartelle alla colonna **Condizione** o **Espressione** o digitare l'espressione direttamente nella colonna. Generatore di espressioni aggiunge automaticamente gli elementi di sintassi necessari, ad esempio il prefisso @ per i nomi delle variabili.  
+ Il Generatore di espressioni include cartelle contenenti elementi specifici dei pacchetti e cartelle contenenti le funzioni, i cast di tipo e gli operatori del linguaggio delle espressioni. Gli elementi specifici dei pacchetti sono variabili definite dall'utente e di sistema. Nelle finestre di dialogo **Editor trasformazione Suddivisione condizionale** e **Editor trasformazione Colonna derivata** è inoltre possibile visualizzare le colonne di dati. Per compilare espressioni per le trasformazioni, è possibile trascinare elementi dalle cartelle alla colonna **Condizione** o **Espressione** o digitare l'espressione direttamente nella colonna. Generatore di espressioni aggiunge automaticamente gli elementi di sintassi necessari, ad esempio il prefisso \@ per i nomi delle variabili.  
   
 > [!NOTE]  
 >  I nomi delle variabili di sistema e delle variabili definite dall'utente devono essere specificati rispettando la distinzione tra maiuscole e minuscole.  
   
  Alle variabili è associato un ambito. Nella cartella **Variabili** del Generatore di espressioni sono elencate solo le variabili incluse nell'ambito e utilizzabili. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Utilizzo di un'espressione in un componente flusso di dati](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenuto correlato  

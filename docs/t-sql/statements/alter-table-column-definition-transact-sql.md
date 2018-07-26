@@ -1,7 +1,7 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 972d3c177d596240fba0a04625c5bbff36e80ae5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d727179427421ff0d7c06f8336f098f222d43eb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785332"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109243"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,8 +157,11 @@ DEFAULT
 *constant_expression*  
  Valore letterale, valore Null o funzione di sistema utilizzati come valore predefinito della colonna. Se usato insieme a una colonna definita come tipo definito dall'utente di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], l'implementazione del tipo deve supportare una conversione implicita da *constant_expression* nel tipo definito dall'utente.  
   
-WITH VALUES  
- Specifica che il valore assegnato in DEFAULT *constant_expression* viene archiviato in una nuova colonna aggiunta alle righe esistenti. Se la colonna aggiunta ammette valori Null e viene specificata la clausola WITH VALUES, il valore predefinito viene archiviato nella nuova colonna aggiunta alle righe esistenti. Se per le colonne che ammettono valori Null la clausola WITH VALUES non viene specificata, il valore NULL viene archiviato nella nuova colonna nelle righe esistenti. Se la nuova colonna non ammette valori Null, il valore predefinito viene archiviato nelle nuove righe, indipendentemente dal fatto che la clausola WITH VALUES sia o meno specificata.  
+WITH VALUES   
+ Quando si aggiunge una colonna e un vincolo DEFAULT, se la colonna consente valori NULL con WITH VALUES, per le righe esistenti, il valore della nuova colonna verrà impostato su valore specificato in DEFAULT *constant_expression*. Se la colonna da aggiungere non consente valori NULL, per le righe esistenti, il valore della colonna verrà sempre impostato sul valore specificato in DEFAULT *constant_expression*. A partire da SQL Server 2012 questa potrebbe essere un'operazione sui metadati (vedere [Aggiunta di colonne NOT NULL come operazione online](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)).
+Se viene usata quando non viene aggiunta anche la colonna correlata, non ha alcun effetto.
+ 
+ Specifica che il valore assegnato in DEFAULT *constant_expression* viene archiviato in una nuova colonna aggiunta alle righe esistenti. Se la colonna aggiunta ammette valori Null e viene specificata la clausola WITH VALUES, il valore predefinito viene archiviato nella nuova colonna aggiunta alle righe esistenti. Se la clausola WITH VALUES non viene specificata per le colonne che consentono valori Null, il valore NULL viene archiviato nella nuova colonna nelle righe esistenti. Se la nuova colonna non ammette valori Null, il valore predefinito viene archiviato nelle nuove righe, indipendentemente dal fatto che la clausola WITH VALUES sia o meno specificata.  
   
 IDENTITY  
  Specifica che la nuova colonna è una colonna Identity. Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] fornisce un valore univoco incrementale per la colonna. Quando si aggiungono colonne identificatore alle tabelle esistenti, alle righe esistenti della tabella vengono aggiunti i valori Identity con i valori di inizializzazione e di incremento. L'ordine con cui le righe vengono aggiornate non è prevedibile. Vengono inoltre generati valori Identity per qualsiasi nuova riga aggiunta.  

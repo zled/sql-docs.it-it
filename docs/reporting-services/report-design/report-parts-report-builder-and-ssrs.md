@@ -17,11 +17,12 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c6685cf99cb3a46b4b90d5e0126c4df05dcb9575
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 968fa4c440e02c7a322b3a9c32af66267a38fa64
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984163"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Parti del report (Generatore report e SSRS)
   È possibile pubblicare come *parti di report*elementi quali tabelle, matrici, grafici e immagini. Le parti di report sono elementi impaginati pubblicati separatamente in un server di report e che possono essere riusati in altri report impaginati. Le parti di report hanno un'estensione di file rsc.  
@@ -113,7 +114,7 @@ ms.lasthandoff: 05/03/2018
  Ogni volta che si apre un report in Generatore report, viene eseguita la verifica dello stato di aggiornamento delle istanze del server delle parti di report in quel report. Consente di verificare inoltre le modifiche negli elementi dipendenti delle parti di report, ad esempio nel set di dati e nei parametri. Se eventuali parti di report pubblicate o le relative dipendenze sono state aggiornate sul server, in una barra informazioni del report in uso viene visualizzato il numero di quelle interessate dall'aggiornamento. È possibile scegliere di visualizzare e accettare, o rifiutare, gli aggiornamenti oppure di ignorare la barra informazioni. Se si sceglie di visualizzare gli aggiornamenti, viene visualizzata un'anteprima della parte di report con la data e il nome dell'autore dell'ultima modifica. È quindi possibile accettare alcuni o tutti gli elementi aggiornati.  
   
 > [!NOTE]  
->  La barra può essere disabilitata ed è quindi possibile non venire informati di eventuali modifiche a una parte del report. Questa opzione può essere impostata quando si aggiunge la parte di report al report. Anche se la barra informazioni è stata disabilitata, è ancora possibile verificare gli aggiornamenti. Per altre informazioni, vedere [Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
+>  La barra può essere disabilitata ed è quindi possibile non venire informati di eventuali modifiche a una parte del report. Questa opzione può essere impostata quando si aggiunge la parte di report al report. Anche se la barra informazioni è stata disabilitata, è ancora possibile verificare gli aggiornamenti. Per altre informazioni, vedere [Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
   
  Generatore report consente di verificare le differenze tra la data dell'ultimo aggiornamento apportato alla parte di report nel server e la data dell'ultima sincronizzazione della parte di report con il server. Non consente di controllare la data di modifica della parte di report nel report. Pertanto, la parte di report nel report in uso e la parte di report sul server potrebbero essere completamente diverse, tuttavia quando si esegue la verifica degli aggiornamenti mediante Generatore report, non ne verrà rilevato alcuno.  
   
@@ -142,11 +143,11 @@ ms.lasthandoff: 05/03/2018
   
  [Ricerca di parti del report e impostazione di una cartella predefinita &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
+ [Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](http://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Gestione di parti di report](../../reporting-services/report-design/managing-report-parts.md)  
   
   

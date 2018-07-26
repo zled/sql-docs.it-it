@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c035428e526b64dd4b0245719b139f6567108b6
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.openlocfilehash: cddd67d02c64d8be20bda88f00bc05153c366b45
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270952"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083732"
 ---
 # <a name="distributed-availability-groups"></a>Gruppi di disponibilità distribuiti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,11 +102,11 @@ Di seguito sono riportati i tre scenari di utilizzo principali per un gruppo di 
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>Scenari multisito e di ripristino di emergenza
 
-In un gruppo di disponibilità tradizionale tutti i server devono far parte dello stesso cluster WSFC. Questo può rendere difficoltosa l'estensione in più data center. La figura seguente mostra l'aspetto dell'architettura di un gruppo di disponibilità multisito tradizionale, incluso il flusso di dati. Una replica primaria invia transazioni a tutte le repliche secondarie. Per alcuni versi, questa configurazione è meno flessibile di un gruppo di disponibilità distribuito. Ad esempio, è necessario implementare Active Directory (se applicabile) e il controllo del quorum nel cluster WSFC. Potrebbe anche essere necessario prendere in considerazione altri aspetti di un cluster WSFC, ad esempio la modifica dei voti del nodo.
+In un gruppo di disponibilità tradizionale tutti i server devono far parte dello stesso cluster WSFC. Questo può rendere difficoltosa l'estensione in più data center. La figura seguente mostra l'aspetto dell'architettura di un gruppo di disponibilità multisito tradizionale, incluso il flusso di dati. Una replica primaria invia transazioni a tutte le repliche secondarie. Per alcuni aspetti, questa configurazione è meno flessibile di un gruppo di disponibilità distribuito. Ad esempio, è necessario implementare Active Directory (se applicabile) e il controllo del quorum nel cluster WSFC. Potrebbe anche essere necessario prendere in considerazione altri aspetti di un cluster WSFC, ad esempio la modifica dei voti del nodo.
 
 ![Gruppo di disponibilità multisito tradizionale][4]
 
-I gruppi di disponibilità distribuiti offrono uno scenario di distribuzione più flessibile per i gruppi di disponibilità che comprendono più data center. È anche possibile usare i gruppi di disponibilità distribuiti dove in passato venivano usate funzionalità come il [log shipping]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server). A differenza dei gruppi di disponibilità tradizionali, tuttavia, i gruppi di disponibilità distribuiti non possono avere un'applicazione ritardata delle transazioni. Ciò significa che i gruppi di disponibilità o i gruppi di disponibilità distribuiti non potranno essere utili in caso di errore umano in cui i dati vengano aggiornati o eliminati involontariamente.
+I gruppi di disponibilità distribuiti offrono uno scenario di distribuzione più flessibile per i gruppi di disponibilità che comprendono più data center. È anche possibile usare i gruppi di disponibilità distribuiti dove in passato venivano usate funzionalità come il [log shipping]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server) per scenari come il ripristino di emergenza. A differenza del log shipping, tuttavia, i gruppi di disponibilità distribuiti non possono avere un'applicazione ritardata delle transazioni. Ciò significa che i gruppi di disponibilità o i gruppi di disponibilità distribuiti non potranno essere utili in caso di errore umano in cui i dati vengano aggiornati o eliminati involontariamente.
 
 I gruppi di disponibilità distribuiti sono a regime di controllo libero, vale a dire che in questo caso non richiedono un cluster WSFC singolo e vengono gestiti da SQL Server. Dato che i cluster WSFC vengono gestiti singolarmente e la sincronizzazione tra i due gruppi di disponibilità è principalmente asincrona, è più semplice configurare il ripristino di emergenza in un altro sito. Le repliche primarie in ogni gruppo di disponibilità sincronizzano le relative repliche secondarie.
 
@@ -222,9 +222,9 @@ Gli stessi concetti sono validi quando si usano le viste a gestione dinamica. Us
 SELECT ag.[name] as 'AG Name', 
     ag.Is_Distributed, 
     ar.replica_server_name as 'Replica Name'
-FROM    sys.availability_groups ag, 
-    sys.availability_replicas ar       
-WHERE   ag.group_id = ar.group_id
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar       
+    ON  ag.group_id = ar.group_id
 ```
 
 Un esempio di output dal secondo cluster WSFC incluso in un gruppo di disponibilità distribuito viene mostrato nella figura seguente. SPAG1 è costituito da due repliche: DENNIS e JY. Il gruppo di disponibilità distribuito denominato SPDistAG include tuttavia i nomi dei due gruppi di disponibilità inclusi (SPAG1 e SPAG2), invece dei nomi delle istanze, usati in un gruppo di disponibilità tradizionale. 
@@ -235,12 +235,12 @@ In SQL Server Management Studio qualsiasi stato mostrato nel Dashboard e in altr
 
 ```sql
 SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM    sys.availability_groups ag, 
-sys.availability_replicas ar,       
-sys.dm_hadr_availability_replica_states ars       
-WHERE   ar.replica_id = ars.replica_id
-and     ag.group_id = ar.group_id 
-and ag.is_distributed = 1
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar
+    ON ag.group_id = ar.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars       
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
        
        
@@ -251,16 +251,16 @@ Per estendere ulteriormente la query precedente, è anche possibile visualizzare
 
 ```
 SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM    sys.databases dbs,
-    sys.availability_groups ag,
-    sys.availability_replicas ar,
-    sys.dm_hadr_availability_replica_states ars,
-    sys.dm_hadr_database_replica_states drs
-WHERE   drs.group_id = ag.group_id
-and ar.replica_id = ars.replica_id
-and ars.replica_id = drs.replica_id
-and dbs.database_id = drs.database_id
-and ag.is_distributed = 1
+FROM    sys.databases dbs
+  INNER JOIN sys.dm_hadr_database_replica_states drs
+    ON dbs.database_id = drs.database_id
+  INNER JOIN sys.availability_groups ag
+    ON drs.group_id = ag.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars
+    ON ars.replica_id = drs.replica_id
+  INNER JOIN sys.availability_replicas ar
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
 
 ![Informazioni sulle prestazioni per un gruppo di disponibilità distribuito][13]

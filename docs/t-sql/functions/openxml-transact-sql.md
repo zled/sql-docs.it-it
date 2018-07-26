@@ -23,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255513"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086743"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|Per impostazione predefinita viene impostato il mapping **incentrato sugli attributi**.|  
 |**1**|Viene usato il mapping **incentrato sugli attributi**. Può essere utilizzato in combinazione con XML_ELEMENTS. In questo caso, il mapping **incentrato sugli attributi** verrà applicato per primo; il mapping **incentrato sugli elementi** verrà applicato successivamente a tutte le colonne non ancora elaborate.|  
 |**2**|Viene usato il mapping **incentrato sugli elementi**. Può essere utilizzato in combinazione con XML_ATTRIBUTES. In questo caso, il mapping **incentrato sugli attributi** verrà applicato per primo; il mapping **incentrato sugli elementi** verrà applicato successivamente a tutte le colonne non ancora elaborate.|  
-|**8**|Può essere utilizzato in combinazione (OR logico) con XML_ATTRIBUTES o XML_ELEMENTS. Nel contesto di operazioni di recupero, questo flag indica che i dati consumati non devono essere copiati nella proprietà di overflow **@mp:xmltext**.|  
+|**8**|Può essere utilizzato in combinazione (OR logico) con XML_ATTRIBUTES o XML_ELEMENTS. Nel contesto di operazioni di recupero, questo flag indica che i dati consumati non devono essere copiati nella proprietà di overflow **\@mp:xmltext**.|  
   
  *SchemaDeclaration*  
  È la definizione dello schema nel formato: *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...]  

@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 312d082d3126bd3f0365b674177b59d32e9b613b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1aae0ce86304b3093e9151ed1741b615f423c1e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035208"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984963"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità nativa
   Il termine sottoscrizione standard si riferisce alla sottoscrizione creata dai singoli utenti che desiderano che un report venga recapitato tramite posta elettronica o a una cartella condivisa. In questo argomento vengono fornite informazioni sulle sottoscrizioni standard che vengono create e gestite dai singoli utenti. Le sottoscrizioni guidate dai dati prevedono procedure e requisiti diversi e sono illustrate in un altro argomento. Per altre informazioni, vedere [Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "33035208"
   
 -   Per utilizzare il recapito tramite posta elettronica, è necessario che il server di report sia configurato per una connessione tramite un server SMTP o gateway prima di creare la sottoscrizione.  
   
--   Per utilizzare il recapito tramite condivisione file, è necessario aver già definito la cartella di destinazione. Per altre informazioni, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+-   Per utilizzare il recapito tramite condivisione file, è necessario aver già definito la cartella di destinazione. Per altre informazioni, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Per sottoscrivere un report, è necessario che l'origine dati del report sia configurata per l'utilizzo di credenziali archiviate o di nessuna credenziale. Per altre informazioni, vedere [Archiviare le credenziali in un'origine dati di Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md). Se non le utilizza, il pulsante **Nuova sottoscrizione** non è disponibile.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "33035208"
   
 4.  **Proprietario**: il campo del proprietario viene impostato sull'utente corrente per impostazione predefinita e non può essere modificato quando si crea la sottoscrizione. Dopo aver salvato la sottoscrizione, tuttavia, è possibile modificare le proprietà di sottoscrizione, tra cui il proprietario e la descrizione.  
   
-5.  **Recapito**: selezionare **Messaggio di posta elettronica**. Se l'opzione **Messaggio di posta elettronica** non è disponibile, il server di report non è stato configurato per le sottoscrizioni tramite posta elettronica. Vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+5.  **Recapito**: selezionare **Messaggio di posta elettronica**. Se l'opzione **Messaggio di posta elettronica** non è disponibile, il server di report non è stato configurato per le sottoscrizioni tramite posta elettronica. Vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-6.  **A**: il nome del destinatario nel campo A viene compilato automaticamente con l'account utente di dominio. Verificare che il formato sia [nome utente]@[dominio.com]. Le impostazioni di configurazione del server di report determinano se il campo **A** : viene compilato con l'account utente corrente. Per altre informazioni sulla modifica delle impostazioni di configurazione di indirizzi di posta elettronica, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+6.  **A**: il nome del destinatario nel campo A viene compilato automaticamente con l'account utente di dominio. Verificare che il formato sia [nome utente]@[dominio.com]. Le impostazioni di configurazione del server di report determinano se il campo **A** : viene compilato con l'account utente corrente. Per altre informazioni sulla modifica delle impostazioni di configurazione di indirizzi di posta elettronica, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
     > [!NOTE]  
     >  A seconda delle autorizzazioni, può essere possibile digitare l'indirizzo di posta elettronica cui si desidera recapitare il report. Per specificare più indirizzi di posta elettronica, separarli con un punto e virgola (;). È anche possibile digitare indirizzi di posta elettronica supplementari nelle caselle di testo **Cc**, **Ccn**e **Risposta** . A questo fine è necessario disporre dell'autorizzazione per la gestione di tutte le sottoscrizioni.  

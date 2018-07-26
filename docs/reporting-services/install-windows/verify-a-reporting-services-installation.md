@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -22,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8f53a3644eecad3486d74cf185d14a2bb019dfd0
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d7999de8fa0a00d6479483b3b352fe52622a00b1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550542"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983777"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere installati in modalità nativa o in modalità SharePoint. La procedura da seguire per verificare l'installazione dipende dalla modalità del server di report.  
@@ -40,7 +39,7 @@ ms.locfileid: "34550542"
   
 2.  Verificare che il **Servizio SQL Server Reporting Services** sia installato e **In esecuzione** .  
   
-     Se non si visualizza il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nell'elenco, verificare che il servizio sia installato. Per altre informazioni, vedere [Installare il primo server di report in modalità SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+     Se non si visualizza il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nell'elenco, verificare che il servizio sia installato. Per altre informazioni, vedere [Installare il primo server di report in modalità SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 ### <a name="to-verify-the-service-application"></a>Per verificare l'applicazione di servizio  
   
@@ -72,7 +71,7 @@ ms.locfileid: "34550542"
   
 1.  In una raccolta documenti di SharePoint creare un report semplice di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contenente solo una casella di testo, ad esempio un titolo. Il report non contiene origini dati e set di dati. L'obiettivo consiste nel verificare che sia possibile aprire Generatore report. In tal caso, verrà visualizzato in anteprima un report di base.  
   
-2.  Salvare il report nella raccolta documenti e quindi eseguire il report dalla raccolta. Per altre informazioni sulla creazione di report con Generatore report, vedere [Avviare Generatore report (Generatore report)](http://msdn.microsoft.com/en-us/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
+2.  Salvare il report nella raccolta documenti e quindi eseguire il report dalla raccolta. Per altre informazioni sulla creazione di report con Generatore report, vedere [Avviare Generatore report](http://msdn.microsoft.com/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
   
 ### <a name="reporting-services-samples"></a>Esempi di Reporting Services  
   
@@ -101,7 +100,7 @@ ms.locfileid: "34550542"
   
 2.  Usare [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] per creare una nuova cartella o caricare un file per testare se le definizioni vengono passate al database del server di report. L'esito positivo di queste operazioni indica il corretto funzionamento della connessione.  
   
-     Per altre informazioni, vedere [Portale Web &#40;SSRS in modalità nativa&#41;](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Per altre informazioni, vedere [Portale Web &#40;SSRS in modalità nativa&#41;](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Per verificare che Progettazione report sia installato e in esecuzione  
   

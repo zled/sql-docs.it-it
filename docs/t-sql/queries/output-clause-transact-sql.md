@@ -34,12 +34,12 @@ caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90b258ba3b34d46a48e4ae34953ea5392052b5f0
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36252403"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088363"
 ---
 # <a name="output-clause-transact-sql"></a>Clausola OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ ms.locfileid: "36252403"
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- @*table_variable*  
- Specifica una variabile **table** in cui vengono inserite le righe restituite invece di essere restituite al chiamante. @*table_variable* deve essere dichiarato prima dell'istruzione INSERT, UPDATE, DELETE o MERGE.  
+ \@*table_variable*  
+ Specifica una variabile **table** in cui vengono inserite le righe restituite invece di essere restituite al chiamante. \@*table_variable* deve essere dichiarato prima dell'istruzione INSERT, UPDATE, DELETE o MERGE.  
   
  Se non si specifica *column_list*, la variabile **table** deve avere lo stesso numero di colonne del set dei risultati OUTPUT. Le eccezioni sono le colonne calcolate e Identity, le quali devono essere ignorate. Se *column_list* viene specificato, le colonne omesse devono consentire i valori Null oppure devono avere valori predefiniti assegnati.  
   
@@ -143,7 +143,7 @@ DELETE Sales.ShoppingCartItem
  È disponibile solo per l'istruzione MERGE. Specifica una colonna di tipo **nvarchar(10)** nella clausola OUTPUT in un'istruzione MERGE che restituisce uno dei tre valori per ogni riga: 'INSERT', 'UPDATE' o 'DELETE', secondo l'azione eseguita sulla riga.  
   
 ## <a name="remarks"></a>Remarks  
- La clausola OUTPUT \<dml_select_list> e la clausola OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } possono essere definite in un'unica istruzione INSERT, UPDATE, DELETE o MERGE.  
+ La clausola OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } può essere definita in un'unica istruzione INSERT, UPDATE, DELETE o MERGE.  
   
 > [!NOTE]  
 >  Se non specificato diversamente, i riferimenti alla clausola OUTPUT fanno riferimento a entrambe le clausole OUTPUT e OUTPUT INTO.  
@@ -207,9 +207,9 @@ DELETE Sales.ShoppingCartItem
   
 -   La clausola OUTPUT INTO non è supportata in istruzioni INSERT che contengono una clausola \<dml_table_source>.  
   
--   @@ROWCOUNT restituisce solo le righe inserite dall'istruzione INSERT esterna.  
+-   \@\@ROWCOUNT restituisce solo le righe inserite dall'istruzione INSERT esterna.  
   
--   @@IDENTITY, SCOPE_IDENTITY e IDENT_CURRENT restituiscono solo i valori Identity generati dall'istruzione DML nidificata e non quelli generati dall'istruzione INSERT esterna.  
+-   \@\@IDENTITY, SCOPE_IDENTITY e IDENT_CURRENT restituiscono solo i valori Identity generati dall'istruzione DML annidata e non quelli generati dall'istruzione INSERT esterna.  
   
 -   Le notifiche delle query considerano l'istruzione come entità singola e il tipo di qualsiasi messaggio creato sarà il tipo dell'istruzione DML nidificata, anche se la modifica significativa proviene dall'istruzione INSERT esterna stessa.  
   
@@ -310,7 +310,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  Utilizzare l'hint di tabella READPAST nelle istruzioni UPDATE e DELETE se lo scenario consente a più applicazioni di eseguire una operazione di lettura distruttiva da una tabella. Ciò evita i problemi relativi ai blocchi che possono verificarsi se un'altra applicazione sta già leggendo il primo record qualificato nella tabella.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Le autorizzazioni SELECT sono necessarie in ogni colonna recuperata tramite \<dml_select_list> o usata in \<scalar_expression>.  
   
  Le autorizzazioni INSERT sono necessarie in ogni tabella specificata in \<output_table>.  

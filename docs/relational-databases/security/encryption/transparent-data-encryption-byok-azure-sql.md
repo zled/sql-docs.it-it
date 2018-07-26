@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: a803f26e65a4bdda5264fc2cea53a5b360f0df89
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107239"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982393"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption con supporto Bring Your Own Key per i database e data warehouse SQL di Azure
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -73,9 +73,10 @@ Quando TDE viene configurato per la prima volta per l'uso di una protezione TDE 
 - Concedere al server logico l'accesso all'insieme di credenziali delle chiavi usando la relativa identità di Azure Active Directory (Azure AD).  Quando viene usata l'interfaccia utente del portale, l'identità Azure AD creata automaticamente e le autorizzazioni di accesso all'insieme di credenziali delle chiavi vengono concesse al server.  Se si usa PowerShell per configurare TDE con BYOK, è necessario creare l'identità Azure AD e verificare il completamento. Per istruzioni passo passo dettagliate per l'uso di PowerShell, vedere [Configurare TDE con BYOK](transparent-data-encryption-byok-azure-sql-configure.md).
 
   >[!NOTE]
-  >Se l'identità Azure AD **viene eliminata per errore o se vengono revocate le autorizzazioni del server** usando i criteri di accesso dell'insieme di credenziali delle chiavi, il server perde l'accesso all'insieme di credenziali delle chiavi.
+  >Se l'identità di Azure AD **viene eliminata per errore o se vengono revocate le autorizzazioni del server** usando i criteri di accesso dell'insieme di credenziali delle chiavi, il server perde l'accesso all'insieme di credenziali delle chiavi e i database con crittografia TDE vengono eliminati entro 24 ore.
   >
-  
+
+- Configurare Azure Key Vault senza una rete virtuale o un firewall.  Se SQL perde l'accesso all'insieme di credenziali delle chiavi, i database con crittografia TDE vengono eliminati entro 24 ore.
 - Abilitare il controllo e la creazione di report per tutte le chiavi di crittografia: Key Vault offre log che possono essere facilmente inseriti in altri strumenti di informazioni di sicurezza e gestione degli eventi (SIEM). [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) di Operations Management Suite (OMS) è un esempio di servizio già integrato.
 - Per garantire la disponibilità elevata dei database crittografati, configurare ogni server logico con due Azure Key Vault che risiedono in aree diverse.
 

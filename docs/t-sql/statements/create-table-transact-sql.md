@@ -50,12 +50,12 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1db17ce1dcf7cbc0c14c3ef1cf0edeaf3441e539
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d3164cec2ddeca0e5fe2c84fc915bd66ee0832bc
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786012"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216932"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -206,8 +206,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         [ NOT FOR REPLICATION ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
  
-
-  
 < table_index > ::=   
 {  
     {  
@@ -225,7 +223,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]  
   
 }   
-
 
 <table_option> ::=  
 {  
@@ -272,8 +269,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
-  
-      --Memory optimized CREATE TABLE Syntax  
+--Memory optimized CREATE TABLE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -382,7 +378,7 @@ column_name <data_type>
 -   Non è possibile usare una colonna calcolata in un'istruzione INSERT o UPDATE.  
   
 > [!NOTE]  
->  Ogni riga di una tabella può includere valori diversi per le colonne correlate a una colonna calcolata. È pertanto possibile che non sia disponibile lo stesso valore per ciascuna riga della colonna calcolata.  
+> Ogni riga di una tabella può includere valori diversi per le colonne correlate a una colonna calcolata. È pertanto possibile che non sia disponibile lo stesso valore per ciascuna riga della colonna calcolata.  
   
  In base alle espressioni utilizzate, il supporto dei valori Null per le colonne calcolate viene determinato automaticamente da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si presuppone che il risultato della maggior parte delle espressioni ammetta valori Null anche se sono presenti solo colonne in cui tali valori non sono ammessi, perché anche i possibili underflow oppure overflow generano risultati NULL. Per stabilire se una colonna calcolata in una tabella ammette o meno i valori Null, usare la funzione COLUMNPROPERTY con la proprietà **AllowsNull**. Un'espressione che ammette valori Null può essere convertita in un'espressione in cui tali valori non sono ammessi specificando ISNULL con la costante *check_expression*, dove la costante è un valore non Null che sostituisce qualsiasi risultato NULL. Per le colonne calcolate basate su espressioni di tipo CLR (Common Language Runtime) definito dall'utente è richiesta l'autorizzazione REFERENCES per il tipo.  
   
@@ -414,7 +410,9 @@ TEXTIMAGE_ON modifica solo la posizione dello "spazio di archiviazione LOB", non
 > [!NOTE]  
 >  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, ad esempio TEXTIMAGE_ON **"** default **"** o TEXTIMAGE_ON **[** default **]**. Se si specifica "**"** default **"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } 
+ 
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
  Specifica il filegroup per i dati FILESTREAM.  
   
@@ -495,6 +493,7 @@ TEXTIMAGE_ON modifica solo la posizione dello "spazio di archiviazione LOB", non
  Nell'istruzione CREATE TABLE è possibile specificare la clausola NOT FOR REPLICATION per la proprietà IDENTITY, i vincoli FOREIGN KEY e i vincoli CHECK. Se si specifica questa clausola per la proprietà IDENTITY, i valori non vengono incrementati nelle colonne Identity per gli inserimenti eseguiti dagli agenti di replica. Se per un vincolo si specifica questa clausola, il vincolo non viene imposto quando gli agenti di replica eseguono le operazioni di inserimento, aggiornamento o eliminazione.  
   
  GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ]  
+ 
  **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifica che verrà usata dal sistema una colonna di tipo datetime2 specifica per registrare l'ora di inizio o l'ora di fine per cui un record è valido. La colonna deve essere definita come NOT NULL. Se si tenta di specificare i valori come NULL, il sistema genera un errore. Se non si specifica in modo esplicito NOT NULL per una colonna periodo, il sistema definirà la colonna come NOT NULL per impostazione predefinita. Usare questo argomento in combinazione con gli argomenti SET SYSTEM_VERSIONING e WITH SYSTEM_VERSIONING = ON per consentire il controllo delle versioni di sistema in una tabella. Per altre informazioni, vedere [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
@@ -509,14 +508,12 @@ Specifica che deve essere creato un indice per la tabella. Può trattarsi di un 
   
  INDEX *index_name* CLUSTERED COLUMNSTORE  
    
-  
 **Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Specifica di archiviare l'intera tabella nel formato a colonne con un indice columnstore cluster. Questo include sempre tutte le colonne nella tabella. I dati non sono riportati in ordine alfabetico o numerico poiché le righe sono organizzate in modo da sfruttare la compressione del columnstore.  
   
  INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )  
    
-  
 **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Specifica che deve essere creato un indice columnstore non cluster per la tabella. La tabella sottostante può essere un heap rowstore o un indice cluster oppure può essere un indice columnstore cluster. In tutti i casi, la creazione di un indice columnstore non cluster in una tabella consente di archiviare una seconda copia dei dati per le colonne dell'indice.  
@@ -527,12 +524,12 @@ Specifica che deve essere creato un indice per la tabella. Può trattarsi di un 
  Specifica lo schema di partizione che definisce i filegroup a cui verrà eseguito il mapping delle partizioni di un indice partizionato. È necessario che lo schema di partizione sia presente nel database e sia stato creato eseguendo [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* specifica la colonna in base alla quale verrà eseguita la partizione di un indice partizionato. La colonna deve corrispondere all'argomento della funzione di partizione usata da *partition_scheme_name* per tipo di dati, lunghezza e precisione. *column_name* non è limitato alle colonne nella definizione dell'indice. È possibile specificare qualsiasi colonna della tabella di base tranne quando si esegue la partizione di un indice UNIQUE. In questo caso il valore *column_name* deve essere scelto tra quelli usati come chiave univoca. Questa restrizione consente a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di verificare l'univocità dei valori di chiave all'interno di una singola partizione.  
   
 > [!NOTE]  
->  Quando si partiziona un indice cluster non univoco, per impostazione predefinita [!INCLUDE[ssDE](../../includes/ssde-md.md)] aggiunge la colonna di partizionamento all'elenco delle chiavi di indice cluster, se non è già presente. Quando si partiziona un indice non cluster non univoco, [!INCLUDE[ssDE](../../includes/ssde-md.md)] aggiunge la colonna di partizionamento come colonna non chiave (inclusa) dell'indice, se non è già presente.  
+> Quando si partiziona un indice cluster non univoco, per impostazione predefinita [!INCLUDE[ssDE](../../includes/ssde-md.md)] aggiunge la colonna di partizionamento all'elenco delle chiavi di indice cluster, se non è già presente. Quando si partiziona un indice non cluster non univoco, [!INCLUDE[ssDE](../../includes/ssde-md.md)] aggiunge la colonna di partizionamento come colonna non chiave (inclusa) dell'indice, se non è già presente.  
   
  Se non si specifica *partition_scheme_name* o *filegroup* e la tabella è partizionata, l'indice viene posizionato nello stesso schema di partizione, usando la stessa colonna di partizionamento della tabella sottostante.  
   
 > [!NOTE]  
->  Non è possibile specificare uno schema di partizione per un indice XML. Se la tabella di base è partizionata, l'indice XML utilizzerà lo stesso schema di partizione della tabella.  
+> Non è possibile specificare uno schema di partizione per un indice XML. Se la tabella di base è partizionata, l'indice XML utilizzerà lo stesso schema di partizione della tabella.  
   
  Per altre informazioni sul partizionamento degli indici, vedere [Tabelle e indici partizionati](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
@@ -581,16 +578,18 @@ Specifica che deve essere creato un indice per la tabella. Può trattarsi di un 
  Le colonne devono essere di un tipo di dati idoneo.  
   
  ALGORITHM  
+   
+ **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+ 
  Deve essere **'AEAD_AES_256_CBC_HMAC_SHA_256'**.  
   
  Per altre informazioni sui vincoli della funzionalità, vedere [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
-  
- **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
+ 
  SPARSE  
  Indica che la colonna è di tipo sparse. L'archiviazione delle colonne di tipo sparse è ottimizzata per valori Null. Non è possibile designare le colonne di tipo sparse come NOT NULL. Per altre restrizioni e informazioni relative alle colonne di tipo sparse, vedere [Usare le colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).  
   
  ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
+ 
  **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifica una maschera dati dinamica. *mask_function* è il nome della funzione di maschera con i parametri appropriati. Sono disponibili tre funzioni:  
@@ -776,14 +775,12 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  COLUMNSTORE  
    
-  
 **Si applica a** : da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Si applica solo agli indici columnstore, inclusi gli indici columnstore cluster e quelli non cluster. COLUMNSTORE indica di usare la compressione del columnstore che offre le prestazioni migliori. Questa è la scelta tipica.  
   
  COLUMNSTORE_ARCHIVE  
    
-  
 **Si applica a** : da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Si applica solo agli indici columnstore, inclusi gli indici columnstore cluster e quelli non cluster. COLUMNSTORE_ARCHIVE comprimerà ulteriormente la tabella o la partizione a una dimensione inferiore. Può essere utilizzata per l'archiviazione o in altre situazioni in cui sono richieste dimensioni di archiviazione inferiori ed è possibile concedere più tempo per l'archiviazione e il recupero.  
@@ -849,14 +846,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_DIRECTORY = *directory_name*  
    
-  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Specifica un nome di directory FileTable compatibile con Windows. Questo nome deve essere univoco tra tutti i nomi di directory FileTable nel database. Il confronto di univocità non supporta la distinzione tra maiuscole e minuscole, indipendentemente dalle impostazioni delle regole di confronto. Se questo valore non è specificato, viene utilizzato il nome della tabella FileTable.  
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
    
-  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Specifica il nome delle regole di confronto da applicare alla colonna **Name** della tabella FileTable. Nelle regole di confronto specificate non deve essere applicata la distinzione tra maiuscole e minuscole ai fini della conformità con la semantica di denominazione dei file di Windows. Se questo valore non è specificato, vengono utilizzate le regole di confronto predefinite del database. Se nelle regole di confronto predefinite del database viene applicata la distinzione tra maiuscole e minuscole, viene generato un errore e l'operazione CREATE TABLE non riesce.  
@@ -875,28 +870,24 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
    
-  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Specifica il nome da usare per il vincolo univoco che viene creato automaticamente nella colonna **stream_id** di FileTable. Se questo valore non è specificato, tramite il sistema viene generato un nome per il vincolo.  
   
  FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
    
-  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Specifica il nome da usare per il vincolo univoco che viene creato automaticamente per le colonne **parent_path_locator** e **name** di FileTable. Se questo valore non è specificato, tramite il sistema viene generato un nome per il vincolo.  
   
  SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .  *history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ]  
    
-  
 **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
  Abilita il controllo delle versioni di sistema della tabella se vengono soddisfatti i requisiti relativi a tipo di dati, vincolo di chiave primaria e vincolo per il supporto dei valori Null. Se non si usa l'argomento **HISTORY_TABLE**, il sistema genera una nuova tabella di cronologia corrispondente allo schema della tabella corrente nello stesso filegroup della tabella corrente, creando un collegamento tra le due tabelle, e consente al sistema di registrare la cronologia di ogni record nella tabella corrente della tabella di cronologia. Il nome di questa tabella di cronologia sarà `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Per impostazione predefinita, la tabella di cronologia è **PAGE** compresso. Se si usa l'argomento HISTORY_TABLE per creare un collegamento e usare una tabella di cronologia esistente, il collegamento viene creato tra la tabella corrente e la tabella specificata. Se la tabella corrente è partizionata, la tabella di cronologia viene creata nel filegroup predefinito perché la configurazione del partizionamento non viene replicata automaticamente dalla tabella corrente nella tabella di cronologia. Se durante la creazione della tabella di cronologia viene specificato il nome di una tabella di cronologia, è necessario specificare il nome tabella e il nome schema. Quando si crea un collegamento a una tabella di cronologia esistente, è possibile scegliere di eseguire una verifica della coerenza dei dati. La coerenza dei dati viene controllata per garantire che i record esistenti non si sovrappongano. L'impostazione predefinita prevede l'esecuzione della verifica della coerenza dei dati. Usare questo argomento in combinazione con gli argomenti PERIOD FOR SYSTEM TIME e GENERATED ALWAYS AS ROW { START | END } per consentire il controllo delle versioni di sistema in una tabella. Per altre informazioni, vedere [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
  REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }  
    
-  
 **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Crea la nuova tabella con Stretch Database abilitato o disabilitato. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
@@ -911,13 +902,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  [ FILTER_PREDICATE = { null | *predicate* } ]  
    
-  
 **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifica facoltativamente un predicato di filtro per selezionare le righe di cui eseguire la migrazione da una tabella che contiene sia dati cronologici sia dati correnti. Il predicato deve eseguire la chiamata a una funzione inline con valori di tabella. Per altre informazioni, vedere [Abilitare Stretch Database per una tabella](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) e [Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). 
    
 > [!IMPORTANT]  
->  Se si specifica un predicato del filtro inefficace, anche la migrazione dei dati risulterà inefficace. Stretch Database applica il predicato del filtro alla tabella usando l'operatore CROSS APPLY.  
+> Se si specifica un predicato del filtro inefficace, anche la migrazione dei dati risulterà inefficace. Stretch Database applica il predicato del filtro alla tabella usando l'operatore CROSS APPLY.  
   
  Se non si specifica un predicato del filtro, viene eseguita la migrazione dell'intera tabella.  
   
@@ -925,7 +915,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MIGRATION_STATE = { OUTBOUND |  INBOUND | PAUSED }  
    
-  
 **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e Azure SQL. 
   
 -   Specificare `OUTBOUND` per eseguire la migrazione dei dati da SQL Server ad Azure.  
@@ -938,7 +927,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-  
 **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Il valore ON indica che la tabella è ottimizzata per la memoria. Le tabelle ottimizzate per la memoria fanno parte della funzionalità OLTP in memoria, che viene usata ottimizzare le prestazioni dell'elaborazione delle transazioni. Per un'introduzione a OLTP in memoria, vedere [Avvio rapido 1: Tecnologie OLTP in memoria per migliorare le prestazioni di Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Per informazioni più dettagliate sulle tabelle ottimizzate per la memoria, vedere [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
@@ -947,7 +935,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  DURABILITY  
    
-  
 **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
  Il valore di SCHEMA_AND_DATA indica che la tabella è durevole, ovvero le modifiche sono persistenti sul disco e restano valide anche dopo il riavvio o il failover.  SCHEMA_AND_DATA è il valore predefinito.  
@@ -955,11 +942,10 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Il valore di SCHEMA_ONLY indica che la tabella non è durevole. Lo schema delle tabelle è persistente, ma tutti gli aggiornamenti dei dati non sono persistenti al riavvio o failover del database. DURABILITY=SCHEMA_ONLY è consentita solo con MEMORY_OPTIMIZED=ON.  
   
 > [!WARNING]  
->  Quando si crea una tabella con **DURABILITY = SCHEMA_ONLY**, e successivamente si modifica **READ_COMMITTED_SNAPSHOT** usando **ALTER DATABASE**, i dati della tabella andranno perduti.  
+> Quando si crea una tabella con **DURABILITY = SCHEMA_ONLY**, e successivamente si modifica **READ_COMMITTED_SNAPSHOT** usando **ALTER DATABASE**, i dati della tabella andranno perduti.  
   
  BUCKET_COUNT  
    
-  
 **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Indica il numero di bucket che deve essere creato nell'indice hash. Il valore massimo per BUCKET_COUNT in indici hash è 1.073.741.824. Per altre informazioni sui numeri di bucket, vedere [Indici in tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
@@ -968,14 +954,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  INDEX  
    
-  
 **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
 Gli indici di tabella e di colonna possono essere specificati come parte dell'istruzione CREATE TABLE. Per informazioni dettagliate sull'aggiunta e rimozione degli indici nelle tabelle ottimizzate per la memoria, vedere: [Modifica di tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
    
-  
 **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Indica che viene creato un indice HASH.  
@@ -998,7 +982,7 @@ Gli indici di tabella e di colonna possono essere specificati come parte dell'is
   
  Le istruzioni SQL fanno riferimento alla tabella temporanea usando il valore specificato per *table_name* nell'istruzione CREATE TABLE, ad esempio:  
   
-```  
+```sql  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
   
 INSERT INTO #MyTempTable VALUES (1);  
@@ -1018,7 +1002,7 @@ INSERT INTO #MyTempTable VALUES (1);
   
  Una tabella temporanea locale creata all'interno di una stored procedure o in un trigger può avere lo stesso nome di una tabella temporanea creata prima della chiamata alla stored procedure o al trigger. Se tuttavia una query fa riferimento a una tabella temporanea e sono disponibili due tabelle temporanee con lo stesso nome, non è possibile stabilire in base a quale tabella verrà risolta la query. Anche le stored procedure nidificate possono creare tabelle temporanee con lo stesso nome di una tabella temporanea creata dalla stored procedure chiamante. In questo caso, tuttavia, per fare in modo che le modifiche vengano applicate alla tabella creata nella stored procedure nidificata, è necessario che la struttura della tabella e i nomi di colonna siano identici a quelli della tabella creata nella procedura chiamante, come illustrato nell'esempio seguente.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.Test2  
 AS  
 n    CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1060,30 +1044,31 @@ GO
   
  Se una tabella temporanea viene creata con un vincolo denominato e all'interno dell'ambito di una transazione definita dall'utente, solo un utente alla volta può eseguire l'istruzione che crea la tabella temporanea. Se ad esempio una stored procedure crea una tabella temporanea con un vincolo di chiave primaria denominato, la stored procedure non può essere eseguita simultaneamente dai più utenti.  
 
-
 ## <a name="database-scoped-global-temporary-tables-azure-sql-database"></a>Tabelle temporanee globali con ambito database (database SQL di Azure)
 
-Le tabelle temporanee globali per SQL Server (avviate con ## table_name) sono archiviate in tempdb e condivise tra le sessioni di tutti gli utenti nell'intera istanza di SQL Server. Per informazioni sui tipi di tabella SQL, vedere la sezione precedente sulla creazione delle tabelle.  
+Le tabelle temporanee globali per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (avviate con ## table_name) sono archiviate in tempdb e condivise tra le sessioni di tutti gli utenti nell'intera istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sui tipi di tabella SQL, vedere la sezione precedente sulla creazione delle tabelle.  
 
-Il database SQL di Azure supporta le tabelle temporanee globali archiviate a loro volta in tempdb e con ambito a livello di database.  Ciò significa che le tabelle temporanee globali vengono condivise per le sessioni di tutti gli utenti all'interno dello stesso database SQL di Azure. Le sessioni utente di altri database SQL di Azure non possono accedere alle tabelle temporanee globali.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supporta le tabelle temporanee globali archiviate a loro volta in tempdb e con ambito a livello di database. Questo significa che le tabelle temporanee globali vengono condivise per le sessioni di tutti gli utenti all'interno dello stesso [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Le sessioni utente da altri database non possono accedere alle tabelle temporanee globali.
 
-Le tabelle temporanee globali per il database SQL di Azure seguono la stessa sintassi e la stessa semantica usate da SQL Server per le tabelle temporanee.  Analogamente, le stored procedure temporanee globali hanno un ambito limitato a livello di database nel database SQL di Azure. Anche le tabelle temporanee locali (avviate con # table_name) sono supportate per il database SQL di Azure e seguono la stessa sintassi e la stessa semantica usate da SQL Server.  Vedere la sezione precedente relativa alle [tabelle temporanee](#temporary-tables).  
+Le tabelle temporanee globali per il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] seguono la stessa sintassi e la stessa semantica usate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le tabelle temporanee. Analogamente, le stored procedure temporanee globali hanno un ambito limitato a livello di database nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Anche le tabelle temporanee locali (avviate con # table_name) sono supportate per il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e seguono la stessa sintassi e la stessa semantica usate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Vedere la sezione precedente relativa alle [tabelle temporanee](#temporary-tables).  
 
 > [!IMPORTANT]
-> Questa funzionalità è disponibile solo per il database SQL di Azure.
->
+> Questa funzionalità è disponibile per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>Risoluzione dei problemi delle tabelle temporanee globali per il database SQL di Azure 
+### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Risoluzione dei problemi delle tabelle temporanee globali per il database SQL di Azure 
 
-Per la risoluzione dei problemi di tempdb, vedere [Risoluzione dei problemi relativi allo spazio su disco insufficiente in tempdb](https://technet.microsoft.com/library/ms176029%28v=sql.105%29.aspx?f=255&MSPPError=-2147217396). Per accedere alle DMV di risoluzione dei problemi nel database SQL di Azure, è necessario essere un amministratore del server.
+Per la risoluzione dei problemi di tempdb, vedere [Risoluzione dei problemi relativi allo spazio su disco insufficiente in tempdb](http://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
+
+> [!NOTE]
+> Solo un amministratore del server può accedere alle DMV di risoluzione dei problemi in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
 
- Qualsiasi utente può creare oggetti temporanei globali. Gli utenti possono accedere solo ai propri oggetti, a meno che non ottengano ulteriori autorizzazioni. ,  
+ Qualsiasi utente può creare oggetti temporanei globali. Gli utenti possono accedere solo ai propri oggetti, a meno che non ottengano ulteriori autorizzazioni.  
   
 ### <a name="examples"></a>Esempi 
 
-- La sessione A crea una tabella temporanea globale ##test nel database SQL di Azure testdb1 e aggiunge 1 riga
+- La sessione A crea una tabella temporanea globale ##test nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 e aggiunge 1 riga
 
 ```sql
 CREATE TABLE ##test ( a int, b int);
@@ -1101,7 +1086,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ---Result
 ##test
 ```
-- La sessione B si connette al database SQL di Azure testdb1 e può accedere alla tabella ##test creata dalla sessione A
+- La sessione B si connette al [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 e può accedere alla tabella ##test creata dalla sessione A
 
 ```sql
 SELECT * FROM ##test
@@ -1109,7 +1094,7 @@ SELECT * FROM ##test
 1,1
 ```
 
-- Sessione C si connette a un altro database nel database SQL di Azure testdb2 e richiede l'accesso alla tabella ##test creata in testdb1. Questa selezione non riesce a causa dell'ambito del database per le tabelle temporanee globali 
+- La sessione C si connette a un altro database nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb2 e richiede l'accesso alla tabella ##test creata in testdb1. Questa selezione non riesce a causa dell'ambito del database per le tabelle temporanee globali 
 
 ```sql
 SELECT * FROM ##test
@@ -1118,15 +1103,13 @@ Msg 208, Level 16, State 0, Line 1
 Invalid object name '##test'
 ```
 
-- Indirizzamento di un oggetto di sistema nel database SQL di Azure tempdb dal database utente corrente testdb1
+- Indirizzamento di un oggetto di sistema nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tempdb dal database utente corrente testdb1
 
 ```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
 ```
-
-
 
 ## <a name="partitioned-tables"></a>Tabelle partizionate  
  Prima di creare una tabella partizionata con CREATE TABLE, è necessario creare una funzione di partizione per specificare la modalità di partizionamento della tabella. Una funzione di partizione viene creata usando [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md). In secondo luogo, è necessario creare uno schema di partizione per specificare i filegroup di destinazione delle partizioni indicate dalla funzione di partizione. Uno schema di partizione viene creato usando [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). Per le tabelle partizionate non è possibile posizionare i vincoli PRIMARY KEY o UNIQUE in filegroup diversi. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
@@ -1142,7 +1125,7 @@ SELECT * FROM tempdb.sys.database_files
 -   Tutte le colonne specificate in un vincolo PRIMARY KEY devono essere definite come NOT NULL. Se non si specifica il supporto di valori Null, per tutte le colonne coinvolte in un vincolo PRIMARY KEY viene impostato NOT NULL.  
   
     > [!NOTE]  
-    >  Per le tabelle ottimizzate per la memoria, è consentita la colonna chiave che ammette i valori Null.  
+    > Per le tabelle ottimizzate per la memoria, è consentita la colonna chiave che ammette i valori Null.  
   
 -   Se si definisce una chiave primaria in una colonna di tipo CLR definito dall'utente, è necessario che l'implementazione del tipo supporti l'ordinamento binario. Per altre informazioni, vedere [Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
@@ -1184,7 +1167,7 @@ SELECT * FROM tempdb.sys.database_files
   
 -   Le colonne incluse in una relazione di chiave esterna devono essere definite con la stessa lunghezza e la stessa scala.  
   
-## <a name="default-definitions"></a>Definizioni DEFAULT  
+## <a name="default-definitions"></a>definizioni DEFAULT  
   
 -   Una colonna può contenere una sola definizione DEFAULT.  
   
@@ -1220,13 +1203,13 @@ SELECT * FROM tempdb.sys.database_files
   
 ## <a name="additional-constraint-information"></a>Informazioni aggiuntive sui vincoli  
   
--   L'istruzione DROP INDEX non consente di eliminare un indice creato per un vincolo. Per eliminare il vincolo, è necessario usare l'istruzione ALTER TABLE. Un indice creato per un vincolo specifico e da esso utilizzato può essere ricompilato tramite l'istruzione ALTER INDEX...REBUILD. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+-   `DROP INDEX` non consente di eliminare un indice creato per un vincolo. Per eliminare il vincolo, è necessario usare l'istruzione ALTER TABLE. Un indice creato per e usato da un vincolo può essere ricompilato tramite `ALTER INDEX ... REBUILD`. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   I nomi di vincolo devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md), con l'eccezione che il nome non può iniziare con il simbolo di cancelletto (#). Se *constraint_name* viene omesso, al vincolo viene assegnato un nome generato dal sistema. Il nome del vincolo viene indicato nei messaggi di errore relativi alle violazioni di vincolo.  
   
 -   Quando in un'istruzione INSERT, UPDATE o DELETE viene violato un vincolo, l'istruzione viene interrotta. Con l'impostazione OFF per SET XACT_ABORT, tuttavia, la transazione continua a essere elaborata se l'istruzione fa parte di una transazione esplicita. Se l'impostazione di SET XACT_ABORT è ON, viene eseguito il rollback dell'intera transazione. È anche possibile usare l'istruzione ROLLBACK TRANSACTION con la definizione di transazione eseguendo un controllo con la funzione di sistema @@ERROR.  
   
--   Con ALLOW_ROW_LOCKS = ON e ALLOW_PAGE_LOCK = ON, sono consentiti blocchi a livello di riga, di pagina e di tabella per l'accesso all'indice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] sceglie il blocco appropriato e può eseguire un'escalation del blocco da un blocco di riga o di pagina a un blocco di tabella. Se ALLOW_ROW_LOCKS = OFF e ALLOW_PAGE_LOCK = OFF, sono consentiti solo blocchi a livello di tabella per l'accesso all'indice.  
+-   Quando `ALLOW_ROW_LOCKS = ON` e `ALLOW_PAGE_LOCK = ON`, i blocchi a livello di riga, pagina e tabella sono consentiti quando si accede all'indice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] sceglie il blocco appropriato e può eseguire un'escalation del blocco da un blocco di riga o di pagina a un blocco di tabella. Se `ALLOW_ROW_LOCKS = OFF` e `ALLOW_PAGE_LOCK = OFF`, è consentito solo un blocco a livello di tabella quando si accede all'indice.  
   
 -   Se una tabella include vincoli FOREIGN KEY o CHECK e trigger, le condizioni di vincolo vengono valutate prima dell'esecuzione del trigger.  
   
@@ -1257,7 +1240,7 @@ SELECT * FROM tempdb.sys.database_files
   
  Per valutare il modo in cui la modifica dello stato di compressione influirà su una tabella, un indice o una partizione, usare la stored procedure [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Sono richieste l'autorizzazione CREATE TABLE per il database e l'autorizzazione ALTER per lo schema in cui viene creata la tabella.  
  
  Se una colonna nell'istruzione CREATE TABLE è definita con un tipo definito dall'utente, è necessaria l'autorizzazione REFERENCES per il tipo definito dall'utente. 
@@ -1273,7 +1256,7 @@ SELECT * FROM tempdb.sys.database_files
 ### <a name="a-create-a-primary-key-constraint-on-a-column"></a>A. Creare un vincolo PRIMARY KEY in una colonna  
  Nell'esempio seguente viene illustrata la definizione di colonna per un vincolo PRIMARY KEY con un indice cluster nella colonna `EmployeeID` della tabella `Employee`. Poiché un nome di vincolo non viene specificato, ne viene fornito uno dal sistema.  
   
-```  
+```sql  
 CREATE TABLE dbo.Employee (EmployeeID int  
 PRIMARY KEY CLUSTERED);  
 ```  
@@ -1281,20 +1264,20 @@ PRIMARY KEY CLUSTERED);
 ### <a name="b-using-foreign-key-constraints"></a>B. Utilizzo di vincoli FOREIGN KEY  
  Il vincolo FOREIGN KEY viene utilizzato per fare riferimento a un'altra tabella. Le chiavi esterne possono essere chiavi a colonna singola o a più colonne. Nell'esempio seguente viene illustrato un vincolo FOREIGN KEY a colonna singola nella tabella `SalesOrderHeader` che fa riferimento alla tabella `SalesPerson`. Per un vincolo FOREIGN KEY a colonna singola è sufficiente specificare solo la clausola REFERENCES.  
   
-```  
+```sql  
 SalesPersonID int NULL  
 REFERENCES SalesPerson(SalesPersonID)  
 ```  
   
  È inoltre possibile usare la clausola FOREIGN KEY in modo esplicito per ridefinire l'attributo di colonna. Si noti che il nome della colonna non deve essere identico in entrambe le tabelle.  
   
-```  
+```sql  
 FOREIGN KEY (SalesPersonID) REFERENCES SalesPerson(SalesPersonID)  
 ```  
   
  I vincoli con chiavi a più colonne vengono creati come vincoli di tabella. La tabella `SpecialOfferProduct` del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] include un vincolo PRIMARY KEY a più colonne. Nell'esempio seguente viene illustrato come fare riferimento a questa chiave da un'altra tabella. Il nome di vincolo esplicito è facoltativo.  
   
-```  
+```sql  
 CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail FOREIGN KEY  
  (ProductID, SpecialOfferID)  
 REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)  
@@ -1303,7 +1286,7 @@ REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
 ### <a name="c-using-unique-constraints"></a>C. Utilizzo di vincoli UNIQUE  
  I vincoli UNIQUE vengono utilizzati per imporre l'univocità di colonne chiave non primaria. Nell'esempio seguente viene applicata una restrizione per specificare che la colonna `Name` della tabella `Product` deve essere univoca.  
   
-```  
+```sql  
 Name nvarchar(100) NOT NULL  
 UNIQUE NONCLUSTERED  
 ```  
@@ -1311,32 +1294,32 @@ UNIQUE NONCLUSTERED
 ### <a name="d-using-default-definitions"></a>D. Utilizzo di definizioni DEFAULT  
  I valori predefiniti forniscono un valore (tramite le istruzioni INSERT e UPDATE) nel caso in cui non ne viene specificato alcuno. Il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] potrebbe, ad esempio, includere una tabella di ricerca con un elenco dei vari ruoli professionali che possono essere assegnati ai dipendenti della società. Nella colonna destinata alla descrizione di ogni ruolo professionale, si potrebbe usare una stringa di caratteri predefinita per fornire una descrizione nel caso in cui questa non venga immessa in modo esplicito.  
   
-```  
+```sql  
 DEFAULT 'New Position - title not formalized yet'  
 ```  
   
  Oltre alle costanti, le definizioni DEFAULT possono includere funzioni. Per ottenere la data corrente per una voce, è possibile usare l'esempio seguente:  
   
-```  
+```sql  
 DEFAULT (getdate())  
 ```  
   
  È inoltre possibile migliorare l'integrità dei dati tramite un'analisi di funzioni senza parametri. Per tenere traccia dell'utente che ha inserito una riga, usare la funzione senza parametri per USER. Non racchiudere le funzioni senza parametri tra parentesi.  
   
-```  
+```sql  
 DEFAULT USER  
 ```  
   
 ### <a name="e-using-check-constraints"></a>E. Utilizzo di vincoli CHECK  
  Nell'esempio seguente viene illustrata l'applicazione di una restrizione ai valori immessi nella colonna `CreditRating` della tabella `Vendor`. Al vincolo non viene assegnato un nome.  
   
-```  
+```sql  
 CHECK (CreditRating >= 1 and CreditRating <= 5)  
 ```  
   
  Nell'esempio seguente viene illustrato un vincolo denominato con una restrizione basata su modello per i dati di tipo carattere immessi in una colonna di una tabella.  
   
-```  
+```sql  
 CONSTRAINT CK_emp_id CHECK (emp_id LIKE   
 '[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'   
 OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')  
@@ -1344,7 +1327,7 @@ OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')
   
  Nell'esempio seguente viene specificato che i valori devono essere inclusi in un elenco specifico o essere conformi a un modello specificato.  
   
-```  
+```sql  
 CHECK (emp_id IN ('1389', '0736', '0877', '1622', '1756')  
 OR emp_id LIKE '99[0-9][0-9]')  
 ```  
@@ -1352,7 +1335,7 @@ OR emp_id LIKE '99[0-9][0-9]')
 ### <a name="f-showing-the-complete-table-definition"></a>F. Visualizzazione della definizione completa della tabella  
  Nell'esempio seguente vengono illustrate le definizioni di tabella complete con tutte le definizioni dei vincoli per la tabella `PurchaseOrderDetail` creata nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Per l'esecuzione dell'esempio, lo schema della tabella viene modificato in `dbo`.  
   
-```  
+```sql  
 CREATE TABLE dbo.PurchaseOrderDetail  
 (  
     PurchaseOrderID int NOT NULL  
@@ -1381,7 +1364,7 @@ ON PRIMARY;
 ### <a name="g-creating-a-table-with-an-xml-column-typed-to-an-xml-schema-collection"></a>G. Creazione di una tabella con una colonna xml tipizzata in una raccolta di XML Schema  
  Nell'esempio seguente viene creata una tabella con una colonna `xml` tipizzata nella raccolta di XML Schema `HRResumeSchemaCollection`. La parola chiave `DOCUMENT` specifica che ogni istanza del tipo di dati `xml` in *column_name* può contenere un solo elemento di livello superiore.  
   
-```  
+```sql  
 CREATE TABLE HumanResources.EmployeeResumes   
    (LName nvarchar(25), FName nvarchar(25),   
     Resume xml( DOCUMENT HumanResources.HRResumeSchemaCollection) );  
@@ -1390,7 +1373,7 @@ CREATE TABLE HumanResources.EmployeeResumes
 ### <a name="h-creating-a-partitioned-table"></a>H. Creazione di una tabella partizionata  
  Nell'esempio seguente viene creata una funzione di partizione per suddividere una tabella o indice in quattro partizioni. Viene quindi creato uno schema di partizione per specificare i filegroup in cui posizionare ognuna delle quattro partizioni. Infine viene creata una tabella che utilizza tale schema di partizione. Nell'esempio si presuppone che i filegroup esistano già nel database.  
   
-```  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES (1, 100, 1000) ;  
 GO  
@@ -1415,7 +1398,7 @@ GO
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>I. Utilizzo del tipo di dati uniqueidentifier in una colonna  
  Nell'esempio seguente viene creata una tabella con una colonna `uniqueidentifier`. Il vincolo PRIMARY KEY viene utilizzato per evitare che gli utenti inseriscano valori duplicati nella tabella, mentre la funzione `NEWSEQUENTIALID()` nel vincolo `DEFAULT` fornisce i valori per le nuove righe. La proprietà ROWGUIDCOL viene applicata alla colonna `uniqueidentifier` in modo che sia possibile farvi riferimento tramite la parola chiave $ROWGUID.  
   
-```  
+```sql  
 CREATE TABLE dbo.Globally_Unique_Data  
     (guid uniqueidentifier   
         CONSTRAINT Guid_Default DEFAULT   
@@ -1427,7 +1410,7 @@ CREATE TABLE dbo.Globally_Unique_Data
 ### <a name="j-using-an-expression-for-a-computed-column"></a>J. Utilizzo di un'espressione per una colonna calcolata  
  Nell'esempio seguente viene illustrato l'utilizzo di un'espressione (`(low + high)/2`) per calcolare la colonna calcolata `myavg`.  
   
-```  
+```sql  
 CREATE TABLE dbo.mytable   
     ( low int, high int, myavg AS (low + high)/2 ) ;  
 ```  
@@ -1435,7 +1418,7 @@ CREATE TABLE dbo.mytable
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>K. Creazione di una colonna calcolata basata su una colonna di tipo definito dall'utente  
  Nell'esempio seguente viene creata una tabella con una colonna di tipo definito dall'utente `utf8string` presupponendo che l'assembly del tipo e il tipo stesso siano già stati creati nel database corrente. Viene definita una seconda colonna basata su `utf8string` e viene usato il metodo `ToString()` di **type(class)**`utf8string` per calcolare un valore per la colonna.  
   
-```  
+```sql  
 CREATE TABLE UDTypeTable   
     ( u utf8string, ustr AS u.ToString() PERSISTED ) ;  
 ```  
@@ -1443,7 +1426,7 @@ CREATE TABLE UDTypeTable
 ### <a name="l-using-the-username-function-for-a-computed-column"></a>L. Utilizzo della funzione USER_NAME per una colonna calcolata  
  Nell'esempio seguente viene utilizzata la funzione `USER_NAME()` nella colonna `myuser_name`.  
   
-```  
+```sql  
 CREATE TABLE dbo.mylogintable  
     ( date_in datetime, user_id int, myuser_name AS USER_NAME() ) ;  
 ```  
@@ -1451,7 +1434,7 @@ CREATE TABLE dbo.mylogintable
 ### <a name="m-creating-a-table-that-has-a-filestream-column"></a>M. Creazione di una tabella con una colonna FILESTREAM  
  Nell'esempio seguente viene creata una tabella con una colonna `FILESTREAM` `Photo`. Se in una tabella sono presenti una o più colonne `FILESTREAM`, tale tabella deve includere anche una colonna `ROWGUIDCOL`.  
   
-```  
+```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
     EmployeeId int NOT NULL PRIMARY KEY,  
@@ -1464,7 +1447,7 @@ CREATE TABLE dbo.EmployeePhoto
 ### <a name="n-creating-a-table-that-uses-row-compression"></a>N. Creazione di una tabella che utilizza la compressione di riga  
  Nell'esempio seguente viene creata una tabella che utilizza la compressione di riga.  
   
-```  
+```sql  
 CREATE TABLE dbo.T1   
 (c1 int, c2 nvarchar(200) )  
 WITH (DATA_COMPRESSION = ROW);  
@@ -1477,7 +1460,7 @@ WITH (DATA_COMPRESSION = ROW);
   
  Nell'esempio viene creata una tabella con una colonna di tipo sparse.  
   
-```  
+```sql  
 CREATE TABLE dbo.T1  
     (c1 int PRIMARY KEY,  
     c2 varchar(50) SPARSE NULL ) ;  
@@ -1485,7 +1468,7 @@ CREATE TABLE dbo.T1
   
  In questo esempio viene creata una tabella con due colonne di tipo sparse e un set di colonne denominato `CSet`.  
   
-```  
+```sql  
 CREATE TABLE T1  
     (c1 int PRIMARY KEY,  
     c2 varchar(50) SPARSE NULL,  
@@ -1495,14 +1478,13 @@ CREATE TABLE T1
   
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>P. Creazione di una tabella temporale basata su disco con controllo delle versioni di sistema  
    
-  
 **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Gli esempi seguenti spiegano come creare una tabella temporale collegata a una nuova tabella di cronologia e come creare una tabella temporale collegata a una tabella di cronologia esistente. Si noti che per la tabella temporale deve essere definita una chiave primaria affinché la tabella venga abilitata per il controllo delle versioni di sistema. Per esempi che illustrano come aggiungere o rimuovere il controllo delle versioni di sistema per una tabella esistente, vedere Controllo delle versioni di sistema in [Esempi](../../t-sql/statements/alter-table-transact-sql.md#Example_Top). Per i casi d'uso, vedere [Tabelle temporali](../../relational-databases/tables/temporal-tables.md).  
   
  In questo esempio viene creata una nuova tabella temporale collegata a una nuova tabella di cronologia.  
   
-```  
+```sql  
 CREATE TABLE Department   
 (  
     DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,   
@@ -1518,8 +1500,7 @@ WITH (SYSTEM_VERSIONING = ON);
   
  In questo esempio viene creata una nuova tabella temporale collegata a una tabella di cronologia già esistente.  
   
-```  
-  
+```sql  
 --Existing table   
 CREATE TABLE Department_History   
 (  
@@ -1549,14 +1530,13 @@ WITH
   
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>Q. Creazione di una tabella temporale ottimizzata per la memoria con controllo delle versioni di sistema  
    
-  
 **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  L'esempio seguente illustra come creare una tabella temporale ottimizzata per la memoria con controllo delle versioni di sistema collegata a una nuova tabella di cronologia basata su disco.  
   
  In questo esempio viene creata una nuova tabella temporale collegata a una nuova tabella di cronologia.  
   
-```  
+```sql  
 CREATE SCHEMA History  
 GO  
 CREATE TABLE dbo.Department   
@@ -1578,8 +1558,7 @@ WITH
   
  In questo esempio viene creata una nuova tabella temporale collegata a una tabella di cronologia già esistente.  
   
-```  
-  
+```sql 
 --Existing table   
 CREATE TABLE Department_History   
 (  
@@ -1610,7 +1589,7 @@ WITH
 ### <a name="r-creating-a-table-with-encrypted-columns"></a>R. Creazione di una tabella con colonne crittografate  
  L'esempio seguente crea una tabella con due colonne crittografate. Per altre informazioni, vedere [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
-```  
+```sql  
 CREATE TABLE Customers (  
     CustName nvarchar(60)   
         ENCRYPTED WITH   
@@ -1633,15 +1612,38 @@ CREATE TABLE Customers (
 ### <a name="s-create-an-inline-filtered-index"></a>S. Creare un indice filtrato inline 
 Crea una tabella con un indice filtrato inline.
   
-  ```
+```sql
   CREATE TABLE t1 
- (
+  (
       c1 int,
       index IX1  (c1) WHERE c1 > 0   
  )
 GO
- ```
+```
+
+### <a name="t-create-a-temporary-table-with-an-anonymously-named-compound-primary-key"></a>T. Creare una tabella temporanea con una chiave primaria composta denominata in modo anonimo
+Crea una tabella con una chiave primaria composta denominata in modo anonimo. Ciò è utile per evitare conflitti di runtime quando due tabelle temporanee con ambito sessione, ognuna in una sessione separata, usano lo stesso nome per un vincolo. 
+  
+```
+  CREATE TABLE #tmp 
+ (
+      c1 int,
+      c2 int,
+      PRIMARY KEY CLUSTERED ([c1], [c2])
+ )
+GO
+```
+
+Se si assegna in modo esplicito il vincolo, la seconda sessione genererà un errore, ad esempio:
  
+```
+Msg 2714, Level 16, State 5, Line 1
+There is already an object named 'PK_#tmp' in the database.
+Msg 1750, Level 16, State 1, Line 1
+Could not create constraint or index. See previous errors.
+```
+
+Il problema sorge dal fatto che mentre il nome della tabella temporanea è reso univoco, i nomi di vincolo non lo sono.
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
