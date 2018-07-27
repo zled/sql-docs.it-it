@@ -25,11 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7d3b07692b4e12ab4bdd0be15566cf115ad71b76
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 55d4e8b272b9ffaa120062ae6d870639bc3b6647
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310258"
 ---
 # <a name="sysdmdbmissingindexdetails-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,26 +47,29 @@ ms.lasthandoff: 05/23/2018
 |**object_id**|**int**|Identifica la tabella in cui l'indice risulta mancante.|  
 |**equality_columns**|**nvarchar(4000)**|Elenco delimitato da virgole delle colonne che contribuiscono ai predicati di uguaglianza nel formato seguente:<br /><br /> *table.column* =*constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|Elenco delimitato da virgole delle colonne che contribuiscono ai predicati di disuguaglianza, ad esempio predicati nel formato seguente:<br /><br /> *table.column* > *constant_value*<br /><br /> Qualsiasi operatore di confronto diverso da "=" esprime disuguaglianza.|  
-|**included_columns**|**nvarchar(4000)**|Elenco delimitato da virgole delle colonne necessarie come colonne di copertura per la query. Per ulteriori informazioni sulla copertura o le colonne incluse, vedere [creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Per gli indici con ottimizzazione per la memoria (sia hash con ottimizzazione per la memoria non cluster), ignorare **included_columns**. Tutte le colonne della tabella vengono incluse in ogni indice ottimizzato per la memoria.|  
+|**included_columns**|**nvarchar(4000)**|Elenco delimitato da virgole delle colonne necessarie come colonne di copertura per la query. Per altre informazioni sulla copertura o le colonne incluse, vedere [creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Per gli indici con ottimizzazione per la memoria (sia hash con ottimizzazione per la memoria non cluster), ignorare **included_columns**. Tutte le colonne della tabella vengono incluse in ogni indice ottimizzato per la memoria.|  
 |**istruzione**|**nvarchar(4000)**|Nome della tabella in cui l'indice risulta mancante.|  
   
-## <a name="remarks"></a>Osservazioni  
- Le informazioni restituite da **Sys.dm db_missing_index_details** viene aggiornato quando una query viene ottimizzata attraverso il query optimizer e non è persistente. Le informazioni relative agli indici mancanti vengono mantenute solo fino al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per mantenere tali informazioni anche dopo il riciclo del server, gli amministratori di database devono eseguirne periodicamente copie di backup.  
+## <a name="remarks"></a>Note  
+ Le informazioni restituite da **DM db_missing_index_details** viene aggiornato quando una query ottimizzata da query optimizer e non è persistente. Le informazioni relative agli indici mancanti vengono mantenute solo fino al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per mantenere tali informazioni anche dopo il riciclo del server, gli amministratori di database devono eseguirne periodicamente copie di backup.  
   
- Per determinare il gruppo di indici mancanti a cui un determinato indice mancante, è possibile eseguire una query di **Sys.dm db_missing_index_groups** vista a gestione dinamica appartiene con **Sys.dm db_missing_index_details**  in base il **index_handle** colonna.  
+ Per individuare un determinato indice mancante i gruppi di indici mancanti a cui fa parte di, è possibile eseguire una query di **db_missing_index_groups** vista a gestione dinamica appartiene con **DM db_missing_index_details**  base il **index_handle** colonna.  
+
+  >[!NOTE]
+  >Set di risultati di questa DMV sono limitato a 600 righe. Ogni riga contiene un indice mancano. Se si dispone di più di 600 degli indici mancanti, è necessario risolvere tutti gli indici mancanti esistenti in modo che è quindi possibile visualizzare quelli più recenti. 
   
 ## <a name="using-missing-index-information-in-create-index-statements"></a>Utilizzo di informazioni sugli indici mancanti in istruzioni CREATE INDEX  
- Per convertire le informazioni restituite da **Sys.dm db_missing_index_details** in un'istruzione CREATE INDEX per gli indici con ottimizzazione per la memoria sia basata su disco, le colonne di uguaglianza devono essere inserite prima delle colonne di disuguaglianza e insieme deve costituire la chiave dell'indice. Aggiungere le colonne incluse all'istruzione CREATE INDEX mediante la clausola INCLUDE. Per determinare un ordine efficiente per le colonne di uguaglianza, ordinarle in base alla selettività a partire dalle colonne più selettive, all'estrema sinistra nell'elenco di colonne.  
+ Per convertire le informazioni restituite da **DM db_missing_index_details** in un'istruzione CREATE INDEX per gli indici con ottimizzazione per la memoria sia basata su disco, le colonne di uguaglianza devono essere inserite prima delle colonne di disuguaglianza e insieme deve costituire la chiave dell'indice. Aggiungere le colonne incluse all'istruzione CREATE INDEX mediante la clausola INCLUDE. Per determinare un ordine efficiente per le colonne di uguaglianza, ordinarle in base alla selettività a partire dalle colonne più selettive, all'estrema sinistra nell'elenco di colonne.  
   
- Per ulteriori informazioni sugli indici con ottimizzazione per la memoria, vedere [indici per tabelle con ottimizzazione](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
+ Per altre informazioni sugli indici con ottimizzazione per la memoria, vedere [indici per tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
   
 ## <a name="transaction-consistency"></a>Consistenza delle transazioni  
  Se in una transazione viene creata o eliminata una tabella, le righe contenenti le informazioni sugli indici mancanti per gli oggetti eliminati vengono rimosse da questo oggetto a gestione dinamica, mantenendo la consistenza delle transazioni.  
   
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
 
 ## <a name="see-also"></a>Vedere anche  
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

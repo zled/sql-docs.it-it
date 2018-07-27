@@ -2,7 +2,7 @@
 title: Scaricare e installare SQL Operations Studio (preview) | Microsoft Docs
 description: Scaricare e installare Microsoft SQL Operations Studio (preview) per Windows, Mac OS o Linux
 ms.custom: tools|sos
-ms.date: 06/20/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,24 +13,24 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 421b22fd1489561ff04a69e23ecac15d1d52be5a
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.openlocfilehash: 1cd69a0dbc2399c4b16a656d20731e4548739505
+ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270992"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146821"
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Scaricare e installare SQL Operations Studio (preview)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] è supportato in Windows, macOS e Linux.
 
-Scaricare e installare la versione più recente, il *anteprima pubblica di giugno*:
+Scaricare e installare la versione più recente, il *versione di anteprima pubblica di luglio*:
 
 |Piattaforma|Scarica|Data di rilascio| Versione |
 |:---|:---|:---|:---|
-|Windows|[Programma di installazione](https://go.microsoft.com/fwlink/?linkid=875602)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=875603)|20 giugno 2018 |0.30.6|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=875604)|20 giugno 2018 |0.30.6|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=875607)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=875606)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)|20 giugno 2018 |0.30.6|
+|Windows|[Programma di installazione](https://go.microsoft.com/fwlink/?linkid=2005949)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2005950)|19 luglio 2018 |0.31.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2005959)|19 luglio 2018 |0.31.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2006084)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2006083)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2005960)|19 luglio 2018 |0.31.4|
 
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes.md).
 
@@ -40,20 +40,20 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 
 **Programma di installazione**
 
-1. Scaricare ed eseguire il [programma di installazione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Windows](https://go.microsoft.com/fwlink/?linkid=875602).
+1. Scaricare ed eseguire il [programma di installazione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Windows](https://go.microsoft.com/fwlink/?linkid=2005949).
 1. Avviare l'app [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 
 **file con estensione zip**
 
-1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP per Windows](https://go.microsoft.com/fwlink/?linkid=875603).
+1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP per Windows](https://go.microsoft.com/fwlink/?linkid=2005950).
 2. Individuare il file scaricato e decomprimerlo.
 3. Eseguire `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>Ottenere SQL Operations Studio (preview) per macOS
 
-1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] per macOS](https://go.microsoft.com/fwlink/?linkid=875604).
+1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] per macOS](https://go.microsoft.com/fwlink/?linkid=2005959).
 2. Per espandere il contenuto del file zip, fare doppio clic.
 3. Per rendere [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibile nel *Launchpad*, trascinare *sqlops.app* sulla cartella *applicazioni*.
 
@@ -61,12 +61,12 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Ottenere SQL Operations Studio (preview) per Linux
 
 1. Scaricare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Linux usando uno dei programmi di installazione o l'archivio GZ:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=875607)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=875606)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)
-1. Per estrarre il file e avviare [!INCLUDE[name-sos](../includes/name-sos-short.md)], aprire una nuova finestra terminale e digitare i comandi seguenti:
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2006084)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2006083)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2005960)
+1. Per estrarre il file e avviare [!INCLUDE[name-sos](../includes/name-sos-short.md)], aprire una nuova finestra del terminale e digitare i comandi seguenti:
 
-   **Debian installazione:**
+   **Installazione di Debian:**
    ```bash
    cd ~
    sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
@@ -74,7 +74,7 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
    sqlops
    ```
 
-   **RPM installazione:**
+   **Installazione di RPM:**
    ```bash
    cd ~
    yum install ./Downloads/sqlops-linux-<version string>.rpm
@@ -101,7 +101,7 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
    sudo apt-get install libuwind8
    ```
 
-   **Redhat:** 
+   **RedHat:** 
    ```bash
    yum install libXScrnSaver
    ```
@@ -142,12 +142,12 @@ Se[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] è stato installato 
 
 ### <a name="linux"></a>Linux
 - Red Hat Enterprise Linux 7.4
-- Server 7.3 di Red Hat Enterprise Linux
+- Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
 ## <a name="check-for-updates"></a>Verificare gli aggiornamenti
-Per verificare gli aggiornamenti più recenti, scegliere l'icona dell'ingranaggio nell'angolo inferiore sinistro della finestra e fare clic su **verificare la presenza di aggiornamenti**
+Per verificare gli aggiornamenti più recenti, fare clic sull'icona a forma di ingranaggio nell'angolo inferiore sinistro della finestra e fare clic su **Controlla aggiornamenti**
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -159,4 +159,4 @@ Seguire una delle guide rapide qui sotto per iniziare:
 Contribuire a [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 - [https://github.com/Microsoft/sqlopsstudio](https://github.com/Microsoft/sqlopsstudio) 
 
-[Informativa sulla Privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) e [raccolta dati di utilizzo](usage-data-collection.md).
+[Informativa sulla Privacy Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) e [raccolta dati di utilizzo](usage-data-collection.md).

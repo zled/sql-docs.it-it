@@ -1,5 +1,5 @@
 ---
-title: MScached_peer_lsns (Transact-SQL) | Documenti Microsoft
+title: MScached_peer_lsns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - MScached_peer_lsns system table
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c88be8f7ffd489fbc276b58f253819b2f1d9f7ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ee2580aa933108da5fce53ff74d67f6c4de2ea1
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004218"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103849"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MScached_peer_lsns** tabella viene utilizzata per rilevare i LSN nel log delle transazioni che vengono utilizzati per determinare i comandi da restituire a un determinato sottoscrittore nella replica peer-to-peer. Questa tabella è archiviata nel database di distribuzione.  
+  Il **MScached_peer_lsns** tabella viene utilizzata per rilevare gli LSN nel log delle transazioni che vengono usate per determinare i comandi da restituire a un determinato sottoscrittore nella replica peer-to-peer. Questa tabella è archiviata nel database di distribuzione.  
   
 ## <a name="definition"></a>Definizione  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33004218"
 |**originator_db_version**|**int**|Identifica il numero di versione del database di origine.|  
 |**originator_lsn**|**varbinary(16)**|LSN della transazione di origine.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Gli LSN vengono utilizzati solo immediatamente dopo l'inserimento e non hanno un significato permanente nel sistema.  
   
 ## <a name="see-also"></a>Vedere anche  

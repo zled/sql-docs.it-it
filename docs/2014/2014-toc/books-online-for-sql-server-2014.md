@@ -21,15 +21,15 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: cb9c3bdbf0e8661106fe69eacd6f692273d82d32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232533"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310198"
 ---
 # Books Online for SQL Server 2014
-  Benvenuti [!INCLUDE[msCoName](../includes/msconame-md.md)]® documentazione Online per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Documentazione Online contiene le descrizioni delle attività e la documentazione di riferimento che descrive come eseguire operazioni di business intelligence aziendale e di gestione di dati mediante [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Documentazione online di [!INCLUDE[msCoName](../includes/msconame-md.md)]® per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Documentazione Online contiene le descrizioni delle attività e la documentazione di riferimento che descrive come eseguire operazioni di business intelligence aziendale e di gestione di dati mediante [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Per provarlo:**  
  ![Macchina virtuale di Azure piccola](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Se si ha un account di Azure,  Quindi andare **[qui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** creare rapidamente una macchina virtuale con SQL Server 2014 Service Pack 1 (SP1) già installato. Per altre informazioni su SQL Server 2014 (SP1), vedere [informazioni sulla versione di SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
