@@ -1,7 +1,7 @@
 ---
-title: sp_refreshsqlmodule (Transact-SQL) | Documenti Microsoft
+title: sp_refreshsqlmodule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-stored-procedures
@@ -31,17 +31,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b54f1410be78cc1be6095a1870fc5b6b9e5b694f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 80012f2172193a277053485ca763122d9ba1fe16
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261007"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278732"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Aggiorna i metadati per stored procedure non associata a schema specificato, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database, o trigger DDL a livello di server nel database corrente. I metadati persistenti per questi oggetti, come i tipi di dati dei parametri, possono diventare obsoleti in seguito a modifiche degli oggetti sottostanti.  
+  Aggiorna i metadati per stored procedure non associata a schema specificato, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database, o trigger DDL a livello di server nel database corrente. I metadati persistenti per questi oggetti, come i tipi di dati dei parametri, possono diventare obsoleti in seguito a modifiche degli oggetti sottostanti.
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,11 +61,11 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name=** ] **'***nome_modulo***'**  
- Nome della stored procedure, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *nome_modulo* non può essere un common language runtime (CLR) stored procedure o una funzione CLR. *nome_modulo* non può essere associata a schema. *nome_modulo* viene **nvarchar**, non prevede alcun valore predefinito. *nome_modulo* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.  
+ [  **@name=** ] **'***module_name***'**  
+ Nome della stored procedure, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *module_name* non può essere un common language runtime (CLR) stored procedure o una funzione CLR. *module_name* non può essere associata a schema. *module_name* viene **nvarchar**, non prevede alcun valore predefinito. *module_name* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.  
   
  [ **,** @**dello spazio dei nomi** =] **'** \<classe > **'**  
- Classe del modulo specificato. Quando *nome_modulo* è un trigger DDL, \<classe > è obbligatorio. *\<classe >* viene **nvarchar**(20). Gli input validi sono:  
+ Classe del modulo specificato. Quando *module_name* è un trigger DDL, \<classe > è obbligatorio. *\<classe >* viene **nvarchar**(20). Gli input validi sono:  
   
 |||  
 |-|-|  
@@ -75,17 +75,17 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_refreshsqlmodule** deve essere eseguito quando vengono apportate modifiche agli oggetti sottostanti il modulo che influiscono sulla definizione. In caso contrario, le query o le chiamate su tale modulo potrebbero generare risultati imprevisti. Per aggiornare una vista, è possibile utilizzare **sp_refreshsqlmodule** o **sp_refreshview** con gli stessi risultati.  
+## <a name="remarks"></a>Note  
+ **sp_refreshsqlmodule** deve essere eseguito quando vengono apportate modifiche agli oggetti sottostanti il modulo che influiscono sulla definizione. In caso contrario, le query o le chiamate su tale modulo potrebbero generare risultati imprevisti. Per aggiornare una vista, è possibile usare **sp_refreshsqlmodule** oppure **sp_refreshview** con gli stessi risultati.  
   
- **sp_refreshsqlmodule** non influisce su autorizzazioni, le proprietà estese o impostare le opzioni che sono associate all'oggetto.  
+ **sp_refreshsqlmodule** non influiscono su eventuali autorizzazioni, le proprietà estese o le opzioni SET che sono associate all'oggetto.  
   
  Per aggiornare un trigger DDL a livello di server, eseguire questa stored procedure dal contesto di un qualsiasi database.  
   
 > [!NOTE]  
->  Le eventuali firme associate all'oggetto vengono eliminate quando si esegue **sp_refreshsqlmodule**.  
+>  Le eventuali firme associate con l'oggetto vengono eliminate quando si esegue **sp_refreshsqlmodule**.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Sono necessarie l'autorizzazione ALTER per il modulo e l'autorizzazione REFERENCES per i tipi CLR definiti dall'utente e le raccolte di XML Schema a cui fa riferimento l'oggetto. È necessario disporre dell'autorizzazione ALTER ANY DATABASE DDL TRIGGER per il database corrente quando il modulo specificato è un trigger DDL a livello di database. Richiede l'autorizzazione CONTROL SERVER quando il modulo specificato è un trigger DDL a livello di server.  
   
  Per i moduli definiti nella clausola EXECUTE AS è inoltre richiesta l'autorizzazione IMPERSONATE per l'entità specificata. In genere, l'aggiornamento di un oggetto non comporta modifiche per l'entità EXECUTE AS corrispondente, a meno che il modulo non venga definito con EXECUTE AS USER e il nome utente dell'entità non venga risolto in seguito in un utente diverso da quello utilizzato al momento della creazione del modulo.  
@@ -177,6 +177,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: xp_sscanf (Transact-SQL) | Documenti Microsoft
+title: xp_sscanf (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_sscanf
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b989dfa254330034cab4ab5278e2e4a9cca4da3d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8f4cc1369f4de19b025f5fc5d78285cf10d55fcb
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257635"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103859"
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
  Quando specificato, viene inserito il valore di *argomento* nel parametro di output.  
   
  *format*  
- È una stringa di caratteri con formattazione simile al formato supportato dal linguaggio C **sscanf** (funzione). Attualmente è supportato solo l'argomento di formato %.  
+ È una stringa di caratteri con formattazione simile a ciò che è supportato dal linguaggio C **sscanf** (funzione). Attualmente è supportato solo l'argomento di formato %.  
   
  *argument*  
  È un **varchar** variabile impostata sul valore dell'oggetto corrispondente *formato* argomento.  
@@ -67,7 +66,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
   
  `Command(s) completed successfully.`  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  

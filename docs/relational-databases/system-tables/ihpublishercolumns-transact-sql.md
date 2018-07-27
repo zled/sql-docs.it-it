@@ -1,5 +1,5 @@
 ---
-title: IHpublishercolumns (Transact-SQL) | Documenti Microsoft
+title: IHpublishercolumns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,35 +22,36 @@ helpviewer_keywords:
 - IHpublishercolumns system table
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bd15161e658348ea68c2f87c1468ede00bac5e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1032578837699182d4c1ba73a118d03ece01b5f6
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103873"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **IHpublishercolumns** tabella di sistema rappresenta i metadati archiviati nel server di pubblicazione. Questa tabella contiene una riga per ogni colonna replicata da Server di pubblicazione non SQL utilizzando il server di distribuzione corrente. Informazioni nel tipo di dati **IHpublishercolumns** è specifico del sistema non SQL Server di gestione database (DBMS) da cui i dati vengono pubblicati. Questa tabella è archiviata nel database di distribuzione.  
+  Il **IHpublishercolumns** tabella di sistema rappresenta i metadati archiviati nel server di pubblicazione. Questa tabella contiene una riga per ogni colonna replicata da Server di pubblicazione non SQL usando il server di distribuzione corrente. Le informazioni nel tipo di dati **IHpublishercolumns** è specifico per il sistema non SQL Server di gestione database (DBMS) da cui i dati vengono pubblicati. Questa tabella è archiviata nel database di distribuzione.  
   
 ## <a name="definition"></a>Definizione  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|Identifica una colonna pubblicata.|  
-|**table_id**|**int**|Identifica la tabella di origine da [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) a cui appartiene la colonna.|  
-|**publisher_id**|**smallint**|Identifica la pubblicazione non SQL Server da cui la colonna è pubblicata.|  
+|**table_id**|**int**|Identifica la tabella di origine [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) a cui appartiene la colonna.|  
+|**publisher_id**|**smallint**|Identifica la pubblicazione non SQL Server da cui la colonna viene pubblicata.|  
 |**name**|**sysname**|Nome della colonna pubblicata.|  
 |**column_ordinal**|**int**|Identifica la colonna in base all'ordine.|  
 |**type**|**varchar(255)**|Tipo di dati della colonna di origine nel server di pubblicazione.|  
-|**lunghezza**|**bigint**|Lunghezza della colonna di origine nel server di pubblicazione.|  
+|**Lunghezza**|**bigint**|Lunghezza della colonna di origine nel server di pubblicazione.|  
 |**Prec**|**int**|Precisione della colonna di origine nel server di pubblicazione.|  
-|**scala**|**int**|Scala della colonna di origine nel server di pubblicazione.|  
-|**IsNullable**|**bit**|Indica se la colonna accetta valori NULL, in cui **1** significa che i valori NULL vengono accettati.|  
-|**iscaptured**|**bit**|Indica se esiste un trigger nella colonna. Il trigger potrebbe esistere anche se la colonna non è pubblicata in un articolo. Il valore **1** significa che il trigger esiste nella colonna.|  
+|**Scalabilità**|**int**|Scala della colonna di origine nel server di pubblicazione.|  
+|**IsNullable**|**bit**|Indica se la colonna accetta valori NULL, dove **1** significa che i valori NULL vengono accettati.|  
+|**iscaptured**|**bit**|Indica se esiste un trigger nella colonna. Il trigger potrebbe esistere anche se la colonna non è pubblicata in un articolo. Un valore pari **1** significa che il trigger esiste nella colonna.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Replica di database eterogenei](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

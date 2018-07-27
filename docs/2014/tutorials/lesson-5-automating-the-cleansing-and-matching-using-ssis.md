@@ -16,15 +16,15 @@ caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbdc7b555a4517fb59fea23c33ac8835d8578aa4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91d0310663c738f524101f0bb4862c2db2d89cf3
+ms.sourcegitcommit: d457bb828eb46ee83f8ff5bdecfff09b26d7b154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291707"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39259786"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Lezione 5: Automatizzazione della pulizia e della corrispondenza tramite SSIS
-  Nella lezione 1 è compilata la knowledge base Suppliers e usato per pulire i dati nella lezione 2 e corrispondenza dei dati nella lezione 3 mediante lo strumento **Client DQS**. In uno scenario reale, potrebbe essere necessario eseguire il pull dei dati da un'origine che DQS non supporta o si desidera automatizzare il processo di pulizia e di un processo di corrispondenza senza dover usare il **Client DQS** dello strumento. SQL Server Integration Services (SSIS) include componenti che è possibile utilizzare per integrare dati da diverse origini eterogenee e un **[HYPERLINK "http://msdn.microsoft.com/library/ee677619.aspx" \t blank"trasformazione DQS Cleansing](http://msdn.microsoft.com/library/ee677619.aspx)** componente per richiamare la funzionalità di pulizia esposta da DQS. Attualmente, DQS non viene esposta la funzionalità corrispondente per SSIS, ma è possibile usare la **[trasformazione Raggruppamento Fuzzy](http://msdn.microsoft.com/library/ms141764.aspx)** per identificare duplicati nei dati.  
+  Nella lezione 1 è compilata la knowledge base Suppliers e usato per pulire i dati nella lezione 2 e corrispondenza dei dati nella lezione 3 mediante lo strumento **Client DQS**. In uno scenario reale, potrebbe essere necessario eseguire il pull dei dati da un'origine che DQS non supporta o si desidera automatizzare il processo di pulizia e di un processo di corrispondenza senza dover usare il **Client DQS** dello strumento. SQL Server Integration Services (SSIS) include componenti che è possibile utilizzare per integrare dati da diverse origini eterogenee e un **[trasformazione DQS Cleansing](http://msdn.microsoft.com/library/ee677619.aspx)** componente da richiamare operazioni di pulizia funzionalità esposta da DQS. Attualmente, DQS non viene esposta la funzionalità corrispondente per SSIS, ma è possibile usare la **[trasformazione Raggruppamento Fuzzy](http://msdn.microsoft.com/library/ms141764.aspx)** per identificare duplicati nei dati.  
   
  È possibile caricare i dati in MDS utilizzando il **funzionalità di gestione temporanea basata su entità**. Quando si crea un'entità in MDS, vengono create automaticamente le tabelle di staging e le stored procedure corrispondenti. Ad esempio, quando è creata l'entità Supplier, il **stg. supplier_leaf** tabella e il **stg. udp_supplier_leaf** stored procedure create automaticamente. È possibile utilizzare le stored procedure e le tabelle di staging per creare, aggiornare ed eliminare membri di entità. In questa lezione vengono creati nuovi membri entità per l'entità Supplier. Per caricare i dati nel server MDS, tramite il pacchetto SSIS vengono innanzitutto caricati i dati nella tabella di staging stg.supplier_Leaf e, successivamente, viene attivata la stored procedure associata stg.udp_Supplier_Leaf. Visualizzare [importazione di dati](http://msdn.microsoft.com/library/ee633726.aspx) per altri dettagli.  
   

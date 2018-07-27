@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: a2b725caa90ef277394637e4c65cfe5f241c1cc2
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 5157bd9bbadec02fe21c9b552f05c6f5635c31a4
+ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102429"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268749"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
 
@@ -204,6 +204,10 @@ Se la macchina Linux non ha accesso al repository online usati nel [introduttive
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
+## <a name="licensing-and-pricing"></a>Gestione delle licenze e prezzi
+
+Viene concesso in licenza SQL Server lo stesso per Linux e Windows. Per altre informazioni su SQL Server licenze e sui prezzi, vedere [licenza di SQL Server come](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+
 ## <a name="optional-sql-server-features"></a>Funzionalità facoltative di SQL Server
 
 Dopo l'installazione, è anche possibile installare o abilitare le funzionalità facoltative di SQL Server.
@@ -211,7 +215,7 @@ Dopo l'installazione, è anche possibile installare o abilitare le funzionalità
 - [Strumenti da riga di comando di SQL Server](sql-server-linux-setup-tools.md)
 - [SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 - [Ricerca full-Text SQL Server](sql-server-linux-setup-full-text-search.md)
-- [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
+- [SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
