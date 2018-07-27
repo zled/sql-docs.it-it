@@ -1,6 +1,0 @@
-# [Amministratore origine dati ODBC](odbc-data-source-administrator.md)
-# [Visualizzazione dei driver](viewing-drivers.md)
-# [Gestione delle origini dati](managing-data-sources.md)
-# [Impostazione delle opzioni di traccia](setting-tracing-options.md)
-# [Informazioni su driver e origini dati](about-drivers-and-data-sources.md)
-# [Impostazione di opzioni del pool di connessioni ODBC](setting-odbc-connection-pooling-options.md)

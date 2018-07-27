@@ -1,6 +1,0 @@
-# [Nozioni fondamentali su ADO MD](ado-md-fundamentals.md)
-# [Uso di ADO con ADO MD](using-ado-with-ado-md.md)
-# [Panoramica di schemi e dati multidimensionali](overview-of-multidimensional-schemas-and-data.md)
-# [Programmazione con ADO MD](programming-with-ado-md.md)
-# [Utilizzo dei dati multidimensionali](working-with-multidimensional-data.md)
-# [ADO (multidimensionale) (ADO MD)](ado-multidimensional-ado-md.md)

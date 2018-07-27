@@ -1,7 +1,0 @@
-# [Risultati dell'elaborazione (ODBC)](processing-results-odbc.md)
-# [Assegnazione di una risorsa di archiviazione](assigning-storage.md)
-# [Conversione automatica dei dati di tipo carattere](autotranslation-of-character-data.md)
-# [Utilizzo del tipo di dati](data-type-usage.md)
-# [Determinazione delle caratteristiche di un set di risultati (ODBC)](determining-the-characteristics-of-a-result-set-odbc.md)
-# [Recupero di dati dei risultati](fetching-result-data.md)
-# [Mapping di tipi di dati [ODBC]](mapping-data-types-odbc.md)

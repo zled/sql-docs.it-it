@@ -1,7 +1,0 @@
-# [Panoramica](statistics.md)  
-## [Creare](create-statistics.md)  
-## [Modificare](modify-statistics.md)  
-## [Eliminare](delete-statistics.md)  
-## [Visualizzare proprietà](view-statistics-properties.md)  
-## [Rinominare](rename-statistics.md)  
-## [Aggiornare](update-statistics.md)  

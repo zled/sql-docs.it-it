@@ -1,5 +1,0 @@
-# [Autenticazione in Reporting Services](authentication-in-reporting-services.md)
-# [Autorizzazione in Reporting Services](authorization-in-reporting-services.md)
-# [Come installare estensioni di sicurezza personalizzate](how-to-install-custom-security-extensions.md)
-# [Implementazione di un'estensione di sicurezza](implementing-a-security-extension.md)
-# [Panoramica delle estensioni di sicurezza](security-extensions-overview.md)

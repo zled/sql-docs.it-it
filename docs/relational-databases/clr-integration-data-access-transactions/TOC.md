@@ -1,5 +1,0 @@
-# [Integrazione con CLR e transazioni](clr-integration-and-transactions.md)
-# [Accesso alla transazione corrente](accessing-the-current-transaction.md)
-# [Durata delle transazioni](transaction-lifetimes.md)
-# [Promozione delle transazioni](transaction-promotion.md)
-# [Uso di System.Transactions](using-system-transactions.md)

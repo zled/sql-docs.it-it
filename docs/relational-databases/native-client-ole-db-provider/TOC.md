@@ -1,6 +1,0 @@
-# [Creazione di un'applicazione del provider OLE DB di SQL Server Native Client](creating-a-sql-server-native-client-ole-db-provider-application.md)
-# [Informazioni sulle proprietà OLE DB](about-ole-db-properties.md)
-# [Avvio di una connessione a un'origine dati](establishing-a-connection-to-a-data-source.md)
-# [Esecuzione di un comando](executing-a-command.md)
-# [Elaborazione dei risultati](processing-results.md)
-# [Uso della clausola OUTPUT con OLE DB in SQL Server Native Client](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)

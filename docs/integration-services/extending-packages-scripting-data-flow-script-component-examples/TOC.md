@@ -1,5 +1,0 @@
-# [Ulteriori esempi di componente script](additional-script-component-examples.md)
-# [Creazione di una destinazione ODBC con il componente script](creating-an-odbc-destination-with-the-script-component.md)
-# [Ottimizzazione di un output degli errori con il componente script](enhancing-an-error-output-with-the-script-component.md)
-# [Analisi di formati di file di testo non standard con il componente script](parsing-non-standard-text-file-formats-with-the-script-component.md)
-# [Simulazione di un output degli errori per il componente script](simulating-an-error-output-for-the-script-component.md)

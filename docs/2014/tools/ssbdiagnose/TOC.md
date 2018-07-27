@@ -1,5 +1,0 @@
-# [Utilità ssbdiagnose (Service Broker)](ssbdiagnose-utility-service-broker.md)
-# [Formato del file di output XML (ssbdiagnose)](xml-output-file-format-ssbdiagnose.md)
-## [Elemento DiagnosticInformation (ssbdiagnose)](diagnosticinformation-element-ssbdiagnose.md)
-## [Elemento Banner (ssbdiagnose)](banner-element-ssbdiagnose.md)
-## [Elemento Issue (ssbdiagnose)](issue-element-ssbdiagnose.md)

@@ -1,7 +1,0 @@
-# [Sviluppo di un'attività personalizzata](developing-a-custom-task.md)
-# [Creazione di un'attività personalizzata](creating-a-custom-task.md)
-# [Scrittura del codice di un'attività personalizzata](coding-a-custom-task.md)
-# [Connessione alle origini dati in un'attività personalizzata](connecting-to-data-sources-in-a-custom-task.md)
-# [Generazione e definizione di eventi in un'attività personalizzata](raising-and-defining-events-in-a-custom-task.md)
-# [Aggiunta di supporto per il debug in un'attività personalizzata](adding-support-for-debugging-in-a-custom-task.md)
-# [Sviluppo di un'interfaccia utente per un'attività personalizzata](developing-a-user-interface-for-a-custom-task.md)

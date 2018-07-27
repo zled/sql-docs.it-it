@@ -1,7 +1,0 @@
-# [Panoramica](install-data-quality-services.md)  
-# [Eseguire DQSInstaller.exe per completare l'installazione del server DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)  
-# [Concedere ruoli DQS agli utenti](grant-dqs-roles-to-users.md)  
-# [Accedere ai dati per le operazioni DQS](access-data-for-the-dqs-operations.md)  
-# [Esportare e importare le Knowledge Base di DQS con DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
-# [Aggiornare gli assembly SQLCLR dopo l'aggiornamento di .NET Framework](upgrade-sqlclr-assemblies-after-net-framework-update.md)  
-# [Aggiornare lo schema dei database DQS dopo l'installazione dell'aggiornamento di SQL Server](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  

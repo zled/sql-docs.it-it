@@ -1,5 +1,0 @@
-# [Set di righe DBSCHEMA_CATALOGS](dbschema-catalogs-rowset.md)
-# [Set di righe DBSCHEMA_COLUMNS](dbschema-columns-rowset.md)
-# [Set di righe DBSCHEMA_PROVIDER_TYPES](dbschema-provider-types-rowset.md)
-# [Set di righe DBSCHEMA_TABLES](dbschema-tables-rowset.md)
-# [Set di righe dello schema OLE DB](ole-db-schema-rowsets.md)
