@@ -1,0 +1,34 @@
+- name: Set di righe DISCOVER_INSTANCES
+  href: discover-instances-rowset.md
+- name: Set di righe DISCOVER_KEYWORDS (OLE DB per OLAP)
+  href: discover-keywords-rowset-ole-db-for-olap.md
+- name: Set di righe MDSCHEMA_ACTIONS
+  href: mdschema-actions-rowset.md
+- name: Set di righe MDSCHEMA_CUBES
+  href: mdschema-cubes-rowset.md
+- name: Set di righe MDSCHEMA_DIMENSIONS
+  href: mdschema-dimensions-rowset.md
+- name: Set di righe MDSCHEMA_FUNCTIONS
+  href: mdschema-functions-rowset.md
+- name: Set di righe MDSCHEMA_HIERARCHIES
+  href: mdschema-hierarchies-rowset.md
+- name: Set di righe MDSCHEMA_INPUT_DATASOURCES
+  href: mdschema-input-datasources-rowset.md
+- name: Set di righe MDSCHEMA_KPIS
+  href: mdschema-kpis-rowset.md
+- name: Set di righe MDSCHEMA_LEVELS
+  href: mdschema-levels-rowset.md
+- name: Set di righe MDSCHEMA_MEASUREGROUP_DIMENSIONS
+  href: mdschema-measuregroup-dimensions-rowset.md
+- name: Set di righe MDSCHEMA_MEASUREGROUPS
+  href: mdschema-measuregroups-rowset.md
+- name: Set di righe MDSCHEMA_MEASURES
+  href: mdschema-measures-rowset.md
+- name: Set di righe MDSCHEMA_MEMBERS
+  href: mdschema-members-rowset.md
+- name: Set di righe MDSCHEMA_PROPERTIES
+  href: mdschema-properties-rowset.md
+- name: Set di righe MDSCHEMA_SETS
+  href: mdschema-sets-rowset.md
+- name: Set di righe dello schema OLE DB per OLAP
+  href: ole-db-for-olap-schema-rowsets.md
