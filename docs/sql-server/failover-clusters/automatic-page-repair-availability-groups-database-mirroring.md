@@ -47,7 +47,7 @@ ms.locfileid: "33036698"
   
 -   [Procedura: Visualizzare i tentativi di correzione automatica della pagina](#ViewAPRattempts)  
   
-##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
+##  <a name="ErrorTypes"></a>Tipi di errore che provocano un tentativo di correzione automatica delle pagine  
  Durante la correzione automatica delle pagine tramite mirroring del database, viene eseguito il tentativo di ripristinare solo le pagine in un file di dati in cui non è stato possibile completare un'operazione, a causa di uno degli errori elencati nella tabella seguente.  
   
 |Numero di errore|Description|Istanze che provocano un tentativo di correzione automatica della pagina|  
@@ -69,7 +69,7 @@ ms.locfileid: "33036698"
 -   Pagine di allocazione: pagine mappa di allocazione globale (GAM, Global Allocation Map), pagine mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map) e pagine spazio libero nella pagina (PFS, Page Free Space).  
   
  
-##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
+##  <a name="PrimaryIOErrors"></a> Gestione degli errori di I/O nel database principale o primario  
  Nel database principale o primario, la correzione automatica della pagina è possibile solo quando il database è nello stato SINCRONIZZATO e tramite esso si stanno ancora inviando record di log per il database al database mirror o secondario. La sequenza di azioni di base in un tentativo di correzione automatica della pagina è la seguente:  
   
 1.  Quando si verifica un errore di lettura in una pagina di dati nel database principale o primario, tramite quest'ultimo viene inserita una riga nella tabella [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) con lo stato di errore appropriato. Per il mirroring del database, dal database principale viene richiesta una copia della pagina dal database mirror. Per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], tramite il database primario viene trasmessa la richiesta a tutti i database secondari e la pagina viene restituita dal primo a rispondere. Nella richiesta viene specificato l'ID della pagina e il numero LSN presente attualmente al termine del log scaricato. La pagina è contrassegnata come *ripristino in sospeso*. In questo modo non sarà possibile accedervi durante il tentativo di correzione automatica della pagina. L'accesso a questa pagina durante il tentativo di correzione non verrà consentito e sarà visualizzato l'errore 829 (ripristino in sospeso).  
@@ -83,7 +83,7 @@ ms.locfileid: "33036698"
 5.  Se l'errore di I/O della pagina ha causato una qualsiasi [transazione posticipata](../../relational-databases/backup-restore/deferred-transactions-sql-server.md), una volta corretta la pagina, tramite il database principale o primario viene tentato di risolvere queste transazioni.  
   
  
-##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
+##  <a name="SecondaryIOErrors"></a> Gestione degli errori di I/O nel database mirror o secondario  
  Gli errori di I/O nelle pagine di dati che si verificano nel database mirror o secondario sono gestiti in genere nello stesso modo dal mirroring del database e da [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
 1.  Con il mirroring del database, se vengono rilevati errori di I/O in una o più pagine dal database mirror quando tramite quest'ultimo viene eseguito il rollforward di un record di log, per la sessione di mirroring viene attivato lo stato SOSPESO. Con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], se vengono rilevati errori di I/O in una o più pagine da una replica secondaria quando tramite quest'ultima viene eseguito il rollforward di un record di log, per il database secondario viene attivato lo stato SOSPESO. A questo punto, il database mirror o secondario inserisce una riga con la stato di errore appropriato nella tabella **suspect_pages** . Dal database mirror o secondario viene quindi richiesta una copia della pagina dal database principale o primario.  

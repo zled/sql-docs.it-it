@@ -75,7 +75,7 @@ Per utilizzare l'esercitazione è necessario che nel computer sia installato qua
   
 -   Il database di esempio **AdventureWorks2014** che contiene i dati per il report di esempio.  
   
--   Un'assegnazione di ruolo [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] che include l'attività Gestione di tutte le sottoscrizioni nel report di esempio. Questa attività è necessaria per la definizione di una sottoscrizione guidata dai dati. Per gli amministratori del computer, l'assegnazione di ruolo predefinita per gli amministratori locali fornisce le autorizzazioni necessarie per la creazione di sottoscrizioni guidate dai dati. Per altre informazioni, vedere [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+-   Un'assegnazione di ruolo [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] che include l'attività Gestione di tutte le sottoscrizioni nel report di esempio. Questa attività è necessaria per la definizione di una sottoscrizione guidata dai dati. Per gli amministratori del computer, l'assegnazione di ruolo predefinita per gli amministratori locali fornisce le autorizzazioni necessarie per la creazione di sottoscrizioni guidate dai dati. Per altre informazioni, vedere [Concessione di autorizzazioni in un server di report in modalità nativa](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   Una cartella condivisa per la quale si dispone di autorizzazioni di scrittura. La cartella condivisa deve essere accessibile su una connessione di rete.  
   
