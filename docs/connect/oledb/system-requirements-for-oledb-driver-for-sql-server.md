@@ -1,6 +1,6 @@
 ---
-title: Requisiti di sistema per il Driver OLE DB per SQL Server | Documenti Microsoft
-description: Requisiti per il Driver OLE DB per SQL Server
+title: Requisiti di sistema del driver OLE DB per SQL Server | Microsoft Docs
+description: Requisiti del driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 485693e8f350370a293696a09f11ba036397b15e
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: d7b390f385f94dbe65d667440d27e748a84bcb86
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689464"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106577"
 ---
-# <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Requisiti di sistema per il Driver OLE DB per SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Requisiti di sistema del driver OLE DB per SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -41,35 +41,35 @@ ms.locfileid: "35689464"
 >  Assicurarsi di accedere con privilegi di amministratore prima di installare il software.  
 
 ## <a name="operating-system-requirements"></a>Requisiti del sistema operativo  
- Per un elenco di sistemi operativi che supportano il Driver OLE DB per SQL Server, vedere [supporta i criteri per il Driver OLE DB per SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
+ Per un elenco di sistemi operativi che supportano i Driver OLE DB per SQL Server, vedere [i criteri di supporto per Driver OLE DB per SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
 
 ## <a name="sql-server-requirements"></a>Requisiti di SQL Server  
- Per utilizzare il Driver OLE DB per SQL Server per accedere ai dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, è necessario disporre di un'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installato.  
+ Usare il Driver OLE DB per SQL Server per accedere ai dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, è necessario disporre di un'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installato.  
 
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] supporta connessioni da tutte le versioni di MDAC, Windows Data Access Components e tutte le versioni di Driver OLE DB per SQL Server. Quando si stabilisce una connessione tra una versione client meno recente e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i tipi di dati del server non riconosciuti dal client vengono mappati a tipi compatibili con la versione client. Per altre informazioni, vedere Compatibilità dei tipi di dati per le versioni client, più avanti in questo argomento.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] supporta connessioni da tutte le versioni di MDAC, Windows Data Access Components e da tutte le versioni del driver OLE DB per SQL Server. Quando si stabilisce una connessione tra una versione client meno recente e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i tipi di dati del server non riconosciuti dal client vengono mappati a tipi compatibili con la versione client. Per altre informazioni, vedere Compatibilità dei tipi di dati per le versioni client, più avanti in questo argomento.  
 
 ## <a name="cross-language-requirements"></a>Requisiti per lingue diverse  
- La versione in lingua inglese del Driver OLE DB per SQL Server è supportata in tutte le versioni localizzate dei sistemi operativi supportati. Le versioni localizzate di Driver OLE DB per SQL Server sono supportate nei sistemi operativi localizzati nella lingua stesso come il localizzata Driver OLE DB per SQL Server versione. Le versioni localizzate di Driver OLE DB per SQL Server sono supportate anche nelle versioni in lingua inglese dei sistemi operativi supportati, purché le impostazioni della lingua corrispondente sono installate.  
+ La versione in lingua inglese del Driver OLE DB per SQL Server è supportata in tutte le versioni localizzate dei sistemi operativi supportati. Le versioni localizzate del Driver OLE DB per SQL Server sono supportate nei sistemi operativi localizzati che sono nella stessa lingua di localizzata Driver OLE DB per la versione di SQL Server. Le versioni localizzate del driver OLE DB per SQL Server sono supportate anche in tutti i sistemi operativi in lingua inglese, purché siano installate le impostazioni nella lingua corrispondente.  
 
  Per gli aggiornamenti:  
 
--   Versioni in lingua inglese del Driver OLE DB per SQL Server possono essere aggiornate a una versione localizzata di Driver OLE DB per SQL Server.  
+-   Versioni in lingua inglese del Driver OLE DB per SQL Server possono essere aggiornate a qualsiasi versione localizzata del Driver OLE DB per SQL Server.  
 
--   Le versioni localizzate di Driver OLE DB per SQL Server possono essere aggiornate alle versioni localizzate di Driver OLE DB per SQL Server nella stessa lingua.  
+-   Le versioni localizzate del Driver OLE DB per SQL Server possono essere aggiornate alle versioni localizzate del Driver OLE DB per SQL Server nella stessa lingua.  
 
--   Versione localizzata del Driver OLE DB per SQL Server può essere aggiornata alla versione in lingua inglese di Driver OLE DB per SQL Server.  
+-   Versione localizzata del Driver OLE DB per SQL Server può essere aggiornata alla versione in lingua inglese del Driver OLE DB per SQL Server.  
 
--   Impossibile aggiornare le versioni localizzate di Driver OLE DB per SQL Server a localizzata Driver OLE DB per SQL Server versione di una lingua diversa.  
+-   Impossibile aggiornare le versioni localizzate del Driver OLE DB per SQL Server a localizzata Driver OLE DB per le versioni di SQL Server di una lingua diversa.  
 
 ## <a name="data-type-compatibility-for-client-versions"></a>Compatibilità dei tipi di dati per le versioni client  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il Driver OLE DB per SQL Server mappa nuovi tipi di dati meno recenti che sono compatibili con i client legacy, come illustrato nella tabella seguente.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il driver OLE DB per SQL Server eseguono il mapping dei nuovi tipi di dati a tipi di dati meno recenti compatibili con client di versioni precedenti, come illustrato nella tabella riportata di seguito.  
 
- Le applicazioni OLE DB e ADO possono utilizzare il **DataTypeCompatibility** parola chiave di stringa di connessione con il Driver OLE DB per SQL Server per il funzionamento con tipi di dati precedenti. Quando si **DataTypeCompatibility porta=80**, i client OLE DB si connetteranno utilizzando il [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] del flusso di dati tabulari (TDS) versione, anziché la versione TDS. Ciò significa che per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e tipi di dati successivi, conversione di livello inferiore verranno eseguiti dal server anziché dal Driver OLE DB per SQL Server. Significa inoltre che le caratteristiche disponibili nella connessione saranno limitate al set di funzionalità di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. I tentativi di usare nuovi tipi di dati o caratteristiche vengono rilevati il prima possibile nelle chiamate API e, anziché tentare di passare richieste non valide al server, vengono restituiti errori all'applicazione chiamante.   
+ Le applicazioni OLE DB e ADO possono utilizzare il **DataTypeCompatibility** parola chiave di stringa di connessione con il Driver OLE DB per SQL Server per il funzionamento con tipi di dati meno recenti. Se **DataTypeCompatibility=80**, i client OLE DB si connettono usando la versione del flusso TDS di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], anziché quella corrente. Ciò significa che per i tipi di dati di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, la conversione alle versioni precedenti verrà eseguita dal server e non dal driver OLE DB per SQL Server. Significa inoltre che le caratteristiche disponibili nella connessione saranno limitate al set di funzionalità di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. I tentativi di usare nuovi tipi di dati o caratteristiche vengono rilevati il prima possibile nelle chiamate API e, anziché tentare di passare richieste non valide al server, vengono restituiti errori all'applicazione chiamante.   
 
 
  IDBInfo:: GetKeywords restituirà sempre un elenco di parole chiave che corrisponde alla versione del server per la connessione e non è influenzato **DataTypeCompatibility**.  
 
-|Tipo di dati|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Driver OLE DB per SQL Server|Applicazioni OLE DB di Windows Data Access Components, MDAC e<br /><br /> Driver OLE DB per le applicazioni OLE DB per SQL Server con DataTypeCompatibility = 80|  
+|Tipo di dati|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Driver OLE DB per SQL Server|Applicazioni OLE DB di Windows Data Access Components, MDAC e<br /><br /> Driver OLE DB per le applicazioni OLE DB per SQL Server con Datatypecompatibility=80 = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  

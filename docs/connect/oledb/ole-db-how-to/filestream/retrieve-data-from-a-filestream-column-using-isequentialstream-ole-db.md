@@ -1,6 +1,6 @@
 ---
-title: Recuperare dati da una colonna FILESTREAM utilizzando ISequentialStream (OLE DB) | Documenti Microsoft
-description: Recuperare i dati da una colonna FILESTREAM utilizzando ISequentialStream (OLE DB)
+title: Recuperare dati da una colonna FILESTREAM usando ISequentialStream (OLE DB) | Microsoft Docs
+description: Recuperare dati da una colonna FILESTREAM usando ISequentialStream (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,30 +14,30 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: df98e47d26a9e6cce3e5f98e74deae4b0783aafa
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a975a770b870ada72af1a7c5eb8b1ed582b25ea9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665541"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107017"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Recuperare dati da una colonna FILESTREAM utilizzando ISequentialStream (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   In questo esempio viene illustrato come utilizzare un'interfaccia ISequentialStream in un'interfaccia ICommandText per recuperare un record singolo da una colonna FILESTREAM.  
   
- Per ulteriori informazioni sulla caratteristica filestream, vedere [supporto FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Per altre informazioni sulla caratteristica filestream, vedere [supporto FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Esempio  
- Verificare che nella variabile di ambiente include la directory contenente msoledbsql.h.  
+ Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
  Per creare la tabella letta in questo esempio, utilizzare uno degli esempi seguenti:  
   
--   [Inviare dati a una colonna FILESTREAM utilizzando ISequentialStream in associazione al parametro ICommandText &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Inviare dati a una colonna FILESTREAM usando ISequentialStream associato al parametro ICommandText &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Inviare dati a una colonna FILESTREAM usando IRowsetFastUpload &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Copiare il primo listato di codice e incollarlo in un file denominato ISSHelper.h.  
   

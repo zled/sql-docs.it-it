@@ -1,6 +1,6 @@
 ---
-title: Driver OLE DB per SQL Server Support for LocalDB | Documenti Microsoft
-description: Driver OLE DB per il supporto di SQL Server per LocalDB
+title: Driver OLE DB per il supporto SQL Server per LocalDB | Microsoft Docs
+description: Driver OLE DB per il supporto SQL Server per LocalDB
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c66855285d9912b8a818b5e270f38880c7828ebc
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 669d221ada6ff693194266618952d53c17bb6d87
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612316"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107683"
 ---
-# <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>Driver OLE DB per SQL Server Support for LocalDB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>Driver OLE DB per il supporto SQL Server per LocalDB
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -31,15 +31,15 @@ ms.locfileid: "35612316"
 ## <a name="remarks"></a>Remarks  
  Per ulteriori informazioni sul database locale inclusa la modalità di installazione del database locale e di configurazione della relativa istanza, vedere:  
   
--   [Riferimento al database locale SQL Server Express](../../../relational-databases/sql-server-express-localdb-reference.md)  
+-   [Riferimento al database locale di SQL Server Express](../../../relational-databases/sql-server-express-localdb-reference.md)  
   
 -   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
   
  Riepilogando, il database locale consente di:  
   
--   Utilizzare **sqllocaldb.exe è** per individuare il nome dell'istanza predefinita.  
+-   Uso **sqllocaldb.exe ho** per individuare il nome dell'istanza predefinita.  
   
--   Utilizzare il **AttachDBFilename** parola chiave di stringa di connessione per specificare quale file di database il server deve essere connesso. Quando si utilizza **AttachDBFilename**, se non si specifica il nome del database con il **Database** parola chiave di stringa di connessione, verrà rimosso dal database dell'istanza del database locale quando l'applicazione chiude.  
+-   Usare la parola chiave della stringa di connessione **AttachDBFilename** per specificare a quale file di database si deve collegare il server. Quando si usa **AttachDBFilename**, se non viene specificato il nome del database con la parola chiave della stringa di connessione **Database**, il database sarà rimosso dall'istanza del database locale quando l'applicazione viene chiusa.  
   
 -   Specificare un'istanza del database locale nella stringa di connessione:  
   

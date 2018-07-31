@@ -1,6 +1,6 @@
 ---
-title: Enumerare origini dati OLE DB (OLE DB) | Documenti Microsoft
-description: Enumerare le origini dati OLE DB mediante MSOLEDBSQL enumeratore
+title: Enumerare origini dati OLE DB (OLE DB) | Microsoft Docs
+description: Enumerare origini dati OLE DB utilizza MSOLEDBSQL enumeratore
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,27 +16,27 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9b4911e94ec5cb21e2950a09b0a0e18d5f842bd7
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 2466ebc1b701cc5f2102a895afa475a107c8af4c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665881"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107984"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Enumerare origini dati OLE DB (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In questo esempio viene illustrato come utilizzare l'oggetto enumeratore per elencare le origini dati disponibili.  
   
- Per elencare le origini dati visibili all'enumeratore MSOLEDBSQL, il consumer chiama il [ISourcesRowset:: GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) metodo. Questo metodo restituisce un set di righe di informazioni sulle origini dati attualmente visibili.  
+ Per elencare le origini dati visibili all'enumeratore SQLOLEDB, il consumer chiama il metodo [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312). Questo metodo restituisce un set di righe di informazioni sulle origini dati attualmente visibili.  
   
  A seconda della libreria di rete utilizzata, viene cercato il dominio appropriato per le origini dati. Per le named pipe, si tratta del dominio a cui è connesso il client. Per AppleTalk, si tratta dell'area predefinita. Per SPX/IPX, si tratta dell'elenco di installazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] individuate nel bindery. Per Banyan VINES, si tratta delle installazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] individuate nella rete locale. I socket multiprotocollo e TCP/IP non sono supportati.  
   
  Quando il server viene abilitato o disabilitato, possono essere necessari alcuni minuti per l'aggiornamento delle informazioni in tali domini.  
   
- In questo esempio richiede il database di esempio AdventureWorks, è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) pagina iniziale.  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -45,7 +45,7 @@ ms.locfileid: "35665881"
   
 1.  Recuperare il set di righe di origine chiamando **ISourceRowset:: GetSourcesRowset**.  
   
-2.  Individuare la descrizione del set di righe di enumeratori chiamando **GetColumnInfo:: IColumnInfo**.  
+2.  Individuare la descrizione del set di righe enumeratori chiamando **GetColumnInfo:: IColumnInfo**.  
   
 3.  Creare le strutture di associazione dalle informazioni di colonna.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "35665881"
   
 5.  Recuperare le righe chiamando **IRowset:: GetNextRows**.  
   
-6.  Recuperare dati da una copia del set di righe della riga chiamando **IRowset:: GetData**ed elaborarlo.  
+6.  Recuperare i dati dalla copia del set di righe della riga chiamando **IRowset::GetData** ed elaborarli.  
   
 ## <a name="example"></a>Esempio  
- Compilare il listato di codice C++ seguente con ole32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" per L"(local)\\\name", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente include la directory contenente msoledbsql.h.  
+ Compilare il listato di codice C++ seguente con ole32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
 ```  
 // compile with: ole32.lib  

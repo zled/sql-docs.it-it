@@ -1,6 +1,6 @@
 ---
-title: Creazione di un Driver OLE DB per SQL Server applicazione | Documenti Microsoft
-description: Creazione di un Driver OLE DB per SQL Server
+title: Creazione di un driver OLE DB per applicazione SQL Server | Microsoft Docs
+description: Creazione di un driver OLE DB per applicazione SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 09cd1243859ef11dccf4a86084aa919a3cc5624a
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7d6b0b995fb5171f8eda41045751bad2932e9afa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665311"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109463"
 ---
-# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Creazione di un Driver OLE DB per SQL Server applicazione
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Creazione di un driver OLE DB per applicazione SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Creazione di un Driver OLE DB per SQL Server, è necessario completare questi passaggi:  
+  La creazione di un Driver OLE DB per applicazione SQL Server prevede questi passaggi:  
   
 1.  Avvio di una connessione a un'origine dati.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "35665311"
 3.  Elaborazione dei risultati.  
   
 > [!NOTE]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle utilizzando [cryptoAPI Win32](http://go.microsoft.com/fwlink/?LinkId=9504).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando [CryptoAPI Win32](http://go.microsoft.com/fwlink/?LinkId=9504).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Avvio di una connessione a un'origine dati](../../oledb/ole-db-driver/establishing-a-connection-to-a-data-source.md)  
   

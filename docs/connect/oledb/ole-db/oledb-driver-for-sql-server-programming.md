@@ -1,6 +1,6 @@
 ---
-title: Driver OLE DB per la programmazione di SQL Server | Documenti Microsoft
-description: Driver OLE DB per la programmazione di SQL Server
+title: Driver OLE DB per programmazione in SQL Server | Microsoft Docs
+description: Driver OLE DB per programmazione con SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -22,25 +22,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 53b88cb2ecd2b74d8ea1a4670a5fbd34abbb1723
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: f009803808366fe784de790b01e412d7f6888194
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612186"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109153"
 ---
-# <a name="ole-db-driver-for-sql-server-programming"></a>Driver OLE DB per la programmazione di SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-programming"></a>Driver OLE DB per programmazione con SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server è un'API COM di basso livello che viene utilizzato per l'accesso ai dati. Il Driver OLE DB per SQL Server è consigliato per lo sviluppo di strumenti, utilità o componenti di basso livello che necessitano di prestazioni elevate. Il Driver OLE DB per SQL Server è un provider nativo e ad alte prestazioni a cui accede il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] direttamente al protocollo flusso TDS (Tabular Data).  
+  Il Driver OLE DB per SQL Server è un'API COM di basso livello che viene usato per accedere ai dati. Il driver OLE DB per SQL Server è consigliato per lo sviluppo di strumenti, utilità o componenti di basso livello che necessitano di prestazioni elevate. Il driver OLE DB per SQL Server è un provider nativo a prestazioni elevate che accede direttamente al protocollo TDS (Tabular Data Stream) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Il Driver OLE DB per SQL Server fornisce supporto OLE DB alle applicazioni che si connettono a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Driver OLE DB per SQL Server fornisce supporto OLE DB alle applicazioni che si connettono a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Il Driver OLE DB per SQL Server è un provider compatibile 2.0 versione OLE DB.  
+ Il Driver OLE DB per SQL Server è un provider conforme a 2.0 versione OLE DB.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Creazione di un driver OLE DB per applicazione SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
@@ -58,13 +58,13 @@ ms.locfileid: "35612186"
   
 -   [Tipi di dati &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
--   [Supporto di set di righe dello schema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+-   [Supporto del set di righe dello schema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
--   [Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
+-   [Parametri con valori di tabella &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [Data e ora miglioramenti &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
--   [Tipi definiti dall'utente CLR di grandi dimensioni &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
+-   [Tipi CLR definiti dall'utente di grandi dimensioni &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
 -   [Supporto FILESTREAM](../../oledb/features/filestream-support.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "35612186"
   
 -   [errori](../../oledb/ole-db-errors/errors.md)  
   
--   [Nomi dell'entità servizio &#40;i nomi SPN&#41; nelle connessioni Client &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Nomi SPN &#40;Service Principal Name&#41; nelle connessioni client &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
 -   [Supporto per colonne di tipo sparse &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   

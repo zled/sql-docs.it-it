@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: BCPColumns (OLE DB) | Documenti Microsoft'
+title: 'Ibcpsession:: BCPColumns (OLE DB) | Microsoft Docs'
 description: IBCPSession::BCPColumns (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 201692b9ec795fd2ca472b2cd1eb1a938b5e1854
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: a458f5968a2cc56accf18b5cfac43eaef09a76ea
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690234"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107733"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -43,25 +43,25 @@ HRESULT BCPColumns(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Chiama internamente [ibcpsession:: BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) per impostare i valori predefiniti per i dati del campo. Questi valori predefiniti vengono ottenuti dalle informazioni di colonna SQL Server che il provider recupera internamente quando il nome della tabella viene specificato tramite [ibcpsession:: BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
+ Chiama internamente [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) per impostare i valori predefiniti per i dati dei campi. Questi valori predefiniti vengono ottenuti dalle informazioni sulle colonne di SQL Server recuperate internamente dal provider quando si specifica il nome di tabella tramite [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
   
 > [!NOTE]  
->  Questo metodo può essere chiamato solo dopo aver **BCPInit** è stata chiamata con un nome file valido.  
+>  È possibile chiamare questo metodo solo dopo avere chiamato **BCPInit** con un nome di file valido.  
   
- È consigliabile chiamare questo metodo solo se si intende utilizzare un formato di file utente diverso da quello predefinito. Per ulteriori informazioni su una descrizione del formato di file utente predefinito, vedere la **BCPInit** metodo.  
+ È consigliabile chiamare questo metodo solo se si intende utilizzare un formato di file utente diverso da quello predefinito. Per ulteriori informazioni su una descrizione del formato di file utente predefinito, vedere il metodo **BCPInit**.  
   
- Dopo la chiamata di **BCPColumns** metodo, è necessario chiamare il **BCPColFmt** metodo per ogni colonna nel file utente per definire completamente un formato di file personalizzato.  
+ Dopo avere chiamato il metodo **BCPColumns**, è necessario chiamare il metodo **BCPColFmt** per ogni colonna del file utente per definire in modo completo un formato di file personalizzato.  
   
 ## <a name="arguments"></a>Argomenti  
  *nColumns*[in]  
- Numero totale di campi nel file utente. Anche se ci si prepara a copia bulk di dati dal file utente a un Server SQL di tabella e non si intende copiare tutti i campi nel file utente, è comunque necessario impostare il *nColumns* argomento per il numero totale di campi del file utente. I campi ignorati possono quindi essere specificati tramite **BCPColFmt**.  
+ Numero totale di campi nel file utente. Anche se si prepara la copia bulk dei dati dal file utente in una tabella di SQL Server e non si prevede di copiare tutti i campi del file utente, è comunque necessario impostare l'argomento *nColumns* sul numero totale di campi del file utente. I campi ignorati possono quindi essere specificati tramite **BCPColFmt**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  S_OK  
  Il metodo è riuscito.  
   
  E_FAIL  
- Si è verificato un errore specifico del provider; Per informazioni dettagliate, utilizzare il [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interfaccia.  
+ Si è verificato un errore specifico del provider. Per informazioni dettagliate, usare l'interfaccia [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
   
  E_UNEXPECTED  
  La chiamata al metodo non era prevista. Non è stato ad esempio chiamato il metodo **BCPInit** prima della chiamata a questo metodo. Si verifica inoltre quando questo metodo viene chiamato più volte per un'operazione di copia bulk.  

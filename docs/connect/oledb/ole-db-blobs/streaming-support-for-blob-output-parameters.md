@@ -1,6 +1,6 @@
 ---
-title: I parametri di Output di supporto dello streaming per BLOB | Documenti Microsoft
-description: Supporto dello streaming per i parametri di output BLOB
+title: Supporto del flusso per il BLOB dei parametri di Output | Microsoft Docs
+description: Supporto del flusso per parametri di output BLOB
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7f53688497cba5fb5397a25b04a94731262ed1d5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 92a9e7501d709b5509d5226a06cf1e08db05d555
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665171"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106867"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Supporto del flusso per parametri di output BLOB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Questo articolo contiene un esempio che illustra il supporto per i parametri di output BLOB, che associa BLOB dello streaming output parametri come ISequentialStreams.  
+  In questo articolo è incluso un esempio in cui viene illustrato il supporto del flusso per parametri di output, che associa parametri di output BLOB come ISequentialStreams.  
   
- È possibile che i parametri di output vengano bloccati in IMultipleResults::GetResult e che venga restituito il valore DB_E_OBJECTOPEN. Il chiamante deve verificare blob in sospeso, parametri e la leggerli completamente o rilasciarli.  
+ È possibile che i parametri di output vengano bloccati in IMultipleResults::GetResult e che venga restituito il valore DB_E_OBJECTOPEN. Il chiamante deve verificare l'eventuale presenza di parametri BLOB in sospeso e leggerli completamente o rilasciarli.  
   
 ## <a name="example"></a>Esempio  
   

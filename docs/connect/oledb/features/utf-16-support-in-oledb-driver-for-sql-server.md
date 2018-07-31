@@ -1,6 +1,6 @@
 ---
-title: Supporto UTF-16 in OLE DB Driver per SQL Server | Documenti Microsoft
-description: Supporto UTF-16 in OLE DB Driver per SQL Server
+title: Supporto di UTF-16 nel Driver OLE DB per SQL Server | Microsoft Docs
+description: Supporto UTF-16 nel driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: bcb7393315063102315fdf5062bdfa05ee07282d
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 8374545412ca244e6af643ed10f101a714985da6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611626"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108143"
 ---
-# <a name="utf-16-support-in-ole-db-driver-for-sql-server"></a>Supporto UTF-16 in OLE DB Driver per SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="utf-16-support-in-ole-db-driver-for-sql-server"></a>Supporto UTF-16 nel driver OLE DB per SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], se si fornisce un buffer a lunghezza fissa quando si associa un parametro di risultato o di output di colonna e il **wchar** carattere scritto nel buffer prima che il carattere di terminazione è un punto di codice surrogato alto di una coppia di surrogati e se alla successiva **wchar** carattere è un punto di codice surrogato basso, il Driver OLE DB per SQL Server non aggiungerà il punto di codice surrogato alto nel buffer.  
+  A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], se si specifica un buffer a lunghezza fissa quando si esegue l'associazione di un risultato della colonna o di un parametro di output e se il carattere **wchar** scritto nel buffer prima del carattere di terminazione è un punto di codice surrogato elevato in una coppia di surrogati, nonché se il carattere **wchar** successivo è un punto di codice surrogato basso, nel driver OLE DB per SQL Server il punto di codice surrogato elevato non viene aggiunto al buffer.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per funzionalità di SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   

@@ -1,5 +1,5 @@
 ---
-title: Funzionalità di Microsoft ODBC Driver for SQL Server in Windows | Documenti Microsoft
+title: Funzionalità di Microsoft ODBC Driver for SQL Server in Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e2b7c107a40a60a1da5ed891d7a26a7c85011db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dd787ee638e570419362fd62a4844ff856e8dbf1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32856336"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982353"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funzionalità di Microsoft ODBC Driver for SQL Server in Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "32856336"
     
 ## <a name="microsoft-odbc-driver-131-for-sql-server-on-windows"></a>Microsoft ODBC Driver 13.1 for SQL Server in Windows
 
-ODBC Driver 13.1 for SQL Server contiene tutte le funzionalità della versione precedente (11) e aggiunge il supporto per l'autenticazione di Always Encrypted e Azure Active Directory utilizzato in combinazione con Microsoft SQL Server 2016.  
+Il Driver ODBC 13.1 per SQL Server contiene tutte le funzionalità della versione precedente (11) e aggiunge il supporto per Always Encrypted e Azure Active Directory l'autenticazione quando usato in combinazione con Microsoft SQL Server 2016.  
   
-Always Encrypted consente ai client di eseguire la crittografia dei dati sensibili all'interno delle applicazioni client e non rivelare le chiavi di crittografia di SQL Server. Un driver abilitato Always Encrypted installato nel computer client fa tutto questo eseguendo automaticamente la crittografia e la decrittografia dei dati sensibili nell'applicazione client di SQL Server. Il driver esegue la crittografia dei dati in colonne riservate prima di passare i dati a SQL Server e riscrive automaticamente le query in modo da mantenere la semantica per l'applicazione. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati archiviati in colonne crittografate del database contenute nei risultati della query. Per ulteriori informazioni, vedere [uso di Always Encrypted con il Driver ODBC](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md).
+Always Encrypted consente ai client di eseguire la crittografia dei dati sensibili all'interno delle applicazioni client e non rivelare le chiavi di crittografia di SQL Server. Un driver abilitato Always Encrypted installato nel computer client fa tutto questo eseguendo automaticamente la crittografia e la decrittografia dei dati sensibili nell'applicazione client di SQL Server. Il driver esegue la crittografia dei dati in colonne riservate prima di passare i dati a SQL Server e riscrive automaticamente le query in modo da mantenere la semantica per l'applicazione. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati archiviati in colonne crittografate del database contenute nei risultati della query. Per altre informazioni, vedere [Using Always Encrypted with the Windows ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) (Uso di Always Encrypted with the con il driver ODBC di Windows).
  
-Azure Active Directory consente agli utenti, gli amministratori di database e i programmatori di applicazioni di utilizzare l'autenticazione di Azure Active Directory come un meccanismo di connessione al Database SQL di Microsoft Azure e Microsoft SQL Server 2016 usando le identità in Azure Active Directory (Azure AD ). Per ulteriori informazioni, vedere [tramite Azure Active Directory con il Driver ODBC](../../../connect/odbc/using-azure-active-directory.md), e [la connessione al Database SQL o Data Warehouse da usando Azure Active Directory l'autenticazione di SQL](https://azure.microsoft.com/en-us/documentation/articles/sql-database-aad-authentication/).   
+Azure Active Directory consente agli utenti, gli amministratori di database e i programmatori di applicazioni utilizzare l'autenticazione di Azure Active Directory come un meccanismo di connessione al Database SQL di Microsoft Azure e Microsoft SQL Server 2016 tramite identità in Azure Active Directory (Azure AD ). Per altre informazioni, vedere [tramite Azure Active Directory con il Driver ODBC](../../../connect/odbc/using-azure-active-directory.md), e [ci si connette al Database SQL o SQL Data Warehouse da con Azure Active Directory l'autenticazione](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Microsoft ODBC Driver 11 for SQL Server in Windows  
 
@@ -39,28 +39,28 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con
   
 Questa versione di Driver ODBC for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] contiene le nuove funzionalità seguenti:  
   
-### <a name="bcpexe-l-option-for-specifying-a-login-timeout"></a>opzione – l bcp.exe consente di specificare un timeout di accesso
+### <a name="bcpexe-l-option-for-specifying-a-login-timeout"></a>opzione – l bcp.exe per specificare un timeout di accesso
  
-L'opzione – l Specifica il numero di secondi prima che un `bcp.exe` account di accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] timeout quando si tenta di connettersi a un server. Il timeout di accesso predefinito è 15 secondi. Il timeout di accesso deve essere un numero compreso tra 0 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, `bcp.exe` genera un messaggio di errore. Il valore 0 specifica un timeout infinito. Il timeout di accesso di minore di (circa) a 10 secondi non è affidabile.  
+L'opzione –l specifica il numero di secondi che devono trascorrere prima che si verifichi il timeout di un accesso di `bcp.exe` a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] quando si prova la connessione a un server. Il timeout di accesso predefinito è 15 secondi. Il valore del timeout deve essere un numero compreso tra 0 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, `bcp.exe` genera un messaggio di errore. Un valore pari a 0 specifica un timeout infinito. Un timeout di accesso inferiore a (circa) 10 secondi non è affidabile.  
   
 ### <a name="driver-aware-connection-pooling"></a>Pool di connessioni compatibile con il driver  
-Il Driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supporta [Driver-Aware Connection Pooling](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Per altre informazioni, vedere [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
+Il driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supporta il [pool di connessioni compatibile con il driver](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Per altre informazioni, vedere [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### <a name="asynchronous-execution-notification-method"></a>Esecuzione asincrona (metodo di notifica)  
-Il Driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supporta [esecuzione asincrona (metodo di notifica)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Per un esempio di utilizzo, vedere [esecuzione asincrona &#40;metodo di notifica&#41; esempio](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supporta l'[esecuzione asincrona (metodo di notifica)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Per un esempio d'uso, vedere [Asynchronous Execution &#40;Notification Method&#41; Sample](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md) (Esempio di esecuzione asincrona - metodo di notifica).  
   
 ### <a name="connection-resiliency"></a>Resilienza della connessione
 Per garantire che le applicazioni rimangano connesse a un database SQL di Microsoft Azure, il driver ODBC in Windows può ripristinare le connessioni inattive. Per altre informazioni, vedere [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  
   
 ## <a name="behavior-changes"></a>Differenze di funzionamento
 
-In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client, il `-y0` opzione `sqlcmd.exe` ha generato l'output può essere troncato a 1 MB se la larghezza di visualizzazione è 0.
+Nelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client, il `-y0` opzione per `sqlcmd.exe` causato output risulta troncato in corrispondenza di 1 MB se la larghezza di visualizzazione è 0.
   
-A partire da ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], senza alcun limite sulla quantità di dati che possono essere recuperati in un'unica colonna quando `–y0` è specificato. `sqlcmd.exe` ora trasmette colonne di dimensioni pari a 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] massimo per tipo di dati).  
+A partire da ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], non esiste limite alla quantità di dati recuperabili in un'unica colonna quando è specificato `–y0`. `sqlcmd.exe` ora trasmette colonne di dimensioni pari a 2 GB (massimo per il tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]).  
   
-Un'altra differenza è che se si specifica sia `-h` e `-y0` ora genera un errore di reporting, le opzioni sono incompatibili. `-h`, che specifica il numero di righe da stampare tra le intestazioni di colonna e non è mai stato compatibile con `-y0`, anche se non venivano stampate intestazioni è stato ignorato.
+Un'altra differenza è che se si specifica sia `-h` e `-y0` genera ora un errore di creazione di report, le opzioni sono incompatibili. `-h`, che specifica il numero di righe da stampare tra le intestazioni di colonna e che non è mai stato compatibile con `-y0`, veniva ignorato anche se non venivano stampate intestazioni.
   
-Si noti che `-y0` potrebbe causare gravi problemi di prestazioni sia nel server di rete, a seconda delle dimensioni dei dati restituiti.
+L'opzione `-y0` potrebbe causare gravi problemi a livello di prestazioni del server e della rete, in funzione della dimensione dei dati restituiti.
 
 ## <a name="see-also"></a>Vedere anche  
 [Microsoft ODBC Driver for SQL Server in Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  

@@ -1,5 +1,5 @@
 ---
-title: Impostazione dati di grandi dimensioni | Documenti Microsoft
+title: Impostazione dati di grandi dimensioni | Microsoft Docs
 description: Impostazione dati di grandi dimensioni usando il Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 27e50280df7bfe1bcbadcb76988d8962ebee1d77
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a528171a6f58f9fc463cd161c7e5b2213794474a
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665931"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107197"
 ---
 # <a name="setting-large-data"></a>Impostazione di dati di grandi dimensioni
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "35665931"
   
  Il consumer crea un oggetto di archiviazione che contiene i dati e passa un puntatore a tale oggetto di archiviazione al provider. Il provider legge quindi i dati dall'oggetto di archiviazione del consumer e li scrive nella colonna BLOB.  
   
- Per passare un puntatore al relativo oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB. Il consumer chiama quindi il **IRowsetChange:: SetData** o **IRowsetChange:: InsertRow** metodo con la funzione di accesso che associa la colonna BLOB. Passa quindi un puntatore a un'interfaccia di archiviazione nell'oggetto di archiviazione del consumer.  
+ Per passare un puntatore al relativo oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB. Il consumer chiama quindi il metodo **IRowsetChange::SetData** o **IRowsetChange::InsertRow** con la funzione di accesso che associa la colonna BLOB. Passa quindi un puntatore a un'interfaccia di archiviazione nell'oggetto di archiviazione del consumer.  
   
  In questo argomento vengono descritte le funzionalità disponibili con le funzioni seguenti:  
   
@@ -47,19 +47,19 @@ ms.locfileid: "35665931"
 -   IRowsetUpdate::Update  
   
 ## <a name="how-to-set-large-data"></a>Come impostare dati di grandi dimensioni  
- Per passare un puntatore al relativo oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama il **IRowsetChange:: SetData** o **IRowsetChange:: InsertRow** metodi. Per impostare dati BLOB  
+ Per passare un puntatore al proprio oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama il metodo **IRowsetChange::SetData** o **IRowsetChange::InsertRow**. Per impostare dati BLOB  
   
-1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare il *dwFlag* elemento della struttura DBOBJECT su STGM_READ e impostare il *iid* elemento su IID_ISequentialStream (interfaccia da esporre).  
+1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare l'elemento *dwFlag* della struttura DBOBJECT su STGM_READ e impostare l'elemento *iid* su IID_ISequentialStream (l'interfaccia da esporre).  
   
 2.  Impostare le proprietà nel gruppo di proprietà DBPROPSET_ROWSET in modo che il set di righe sia aggiornabile.  
   
-3.  Creare un set di associazioni, uno per ogni colonna, utilizzando una matrice di strutture DBBINDING. Impostare il *wType* elemento nella struttura DBBINDING su DBTYPE_IUNKNOWN e *pObject* elemento in modo che punti alla struttura DBOBJECT creata.  
+3.  Creare un set di associazioni, uno per ogni colonna, utilizzando una matrice di strutture DBBINDING. Impostare l'elemento *wType* nella struttura DBBINDING su DBTYPE_IUNKNOWN e l'elemento *pObject* in modo che punti alla struttura DBOBJECT creata.  
   
 4.  Creare una funzione di accesso utilizzando le informazioni di associazione nella matrice di strutture DBBINDINGS.  
   
 5.  Chiamare **GetNextRows** per recuperare le righe successive nel set di righe. Chiamare **GetData** per leggere i dati dal set di righe.  
   
-6.  Creare un oggetto di archiviazione contenente i dati (e anche l'indicatore di lunghezza) e quindi chiamare **IRowsetChange:: SetData** (o **IRowsetChange:: InsertRow**) con la funzione di accesso che associa la colonna BLOB per impostare i dati.  
+6.  Creare un oggetto di archiviazione contenente i dati, nonché l'indicatore di lunghezza, e quindi chiamare **IRowsetChange::SetData** (o **IRowsetChange::InsertRow**) con la funzione di accesso che associa la colonna BLOB per impostare i dati.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come impostare dati BLOB. Nell'esempio viene creata una tabella, viene aggiunto un record di esempio, viene recuperato il record nel set di righe e viene quindi impostato il valore del campo BLOB.  
@@ -726,7 +726,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti BLOB e OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB e oggetti OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [Uso di tipi valore di grandi dimensioni](../../oledb/features/using-large-value-types.md)  
   
   

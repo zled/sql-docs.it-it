@@ -1,6 +1,6 @@
 ---
-title: L'autenticazione Kerberos (OLE DB) integrata | Documenti Microsoft
-description: Autenticazione kerberos integrata (OLE DB)
+title: L'autenticazione Kerberos (OLE DB) integrata | Microsoft Docs
+description: Autenticazione Kerberos integrata (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 49aac384ef7f330a445aca4c69ea0478edc85481
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 0bbfbf6d3f497143de12ff8c44e160d5eca8578d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665631"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109133"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Autenticazione Kerberos integrata (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In questo esempio viene illustrato come ottenere l'autenticazione Kerberos reciproca tramite OLE DB nel Driver OLE DB per SQL Server. Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o versione successiva.  
   
- Per ulteriori informazioni sui nomi SPN e l'autenticazione Kerberos, vedere [nome dell'entità servizio &#40;SPN&#41; supporto nelle connessioni Client](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
+ Per altre informazioni sui nomi SPN e l'autenticazione Kerberos, vedere l'argomento relativo al [supporto dei nomi dell'entità servizio &#40;SPN&#41; nelle connessioni client](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Esempio  
  È necessario specificare un server. Nel file con estensione cpp impostare "MyServer" su un nome di computer in cui sia presente un'istanza di [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o versione successiva.  
   
  È inoltre necessario specificare un nome SPN fornito dall'utente. Nel file con estensione cpp modificare "CPSPN" impostando un nome SPN fornito dall'utente.  
   
- Verificare che nella variabile di ambiente include la directory contenente msoledbsql.h. Eseguire la compilazione con oleaut32.lib ole32.lib.  
+ Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h. Eseguire la compilazione con oleaut32.lib ole32.lib.  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

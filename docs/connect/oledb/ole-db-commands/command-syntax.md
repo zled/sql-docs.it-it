@@ -1,5 +1,5 @@
 ---
-title: Sintassi del comando | Documenti Microsoft
+title: Sintassi del comando | Microsoft Docs
 description: Sintassi di comando e Stored procedure
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a3ea215d3596842503517a9485187ba2b1368059
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8e7fab68cc4a945bc34c64b2b832b182c734d927
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665751"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105937"
 ---
 # <a name="command-syntax"></a>Sintassi dei comandi
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server riconosce sintassi dei comandi specificata dalla macro DBGUID_SQL. Per il Driver OLE DB per SQL Server, l'identificatore indica che un amalgama di ODBC SQL, ISO, e [!INCLUDE[tsql](../../../includes/tsql-md.md)] è una sintassi valida. L'istruzione SQL seguente, ad esempio, utilizza una sequenza di escape ODBC SQL per specificare la funzione per i valori stringa LCASE:  
+  Il Driver OLE DB per SQL Server riconosce sintassi dei comandi specificata dalla macro DBGUID_SQL. Per il Driver OLE DB per SQL Server, l'identificatore indica che un amalgama di ODBC SQL, ISO e [!INCLUDE[tsql](../../../includes/tsql-md.md)] è una sintassi valida. L'istruzione SQL seguente, ad esempio, utilizza una sequenza di escape ODBC SQL per specificare la funzione per i valori stringa LCASE:  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  
@@ -43,10 +43,10 @@ SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 SELECT customerid=LOWER(CustomerID) FROM Customers  
 ```  
   
- Il Driver OLE DB per SQL Server elabora qualsiasi forma di istruzione correttamente quando vengono specificate come testo di un comando.  
+ Il driver OLE DB per SQL Server elabora correttamente entrambe le forme dell'istruzione se specificate come testo per un comando.  
   
 ## <a name="stored-procedures"></a>Stored procedure  
- Quando si esegue un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedure tramite un Driver OLE DB per il comando di SQL Server, utilizzare la sequenza di escape ODBC CALL nel testo del comando. Il Driver OLE DB per SQL Server utilizza quindi il meccanismo di chiamata RPC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ottimizzare l'elaborazione del comando. L'istruzione ODBC SQL seguente, ad esempio, rappresenta il testo del comando preferito rispetto alla forma [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
+ Quando si esegue una stored procedure di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando un comando del driver OLE DB per SQL Server, utilizzare la sequenza di escape ODBC CALL nel testo del comando. Il driver OLE DB per SQL Server utilizza quindi il meccanismo di chiamata a stored procedure remote di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ottimizzare l'elaborazione del comando. L'istruzione ODBC SQL seguente, ad esempio, rappresenta il testo del comando preferito rispetto alla forma [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
   
 -   ODBC SQL  
   

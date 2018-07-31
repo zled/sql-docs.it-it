@@ -1,6 +1,6 @@
 ---
-title: Colonna di visualizzazione e i metadati del catalogo per le colonne di tipo Sparse (OLE DB) | Documenti Microsoft
-description: Visualizzare i metadati di colonna e del catalogo per le colonne di tipo sparse (OLE DB)
+title: Visualizzare i metadati della colonna e del catalogo per le colonne di tipo sparse (OLE DB) | Microsoft Docs
+description: Visualizzare i metadati della colonna e del catalogo per le colonne di tipo sparse (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,24 +14,24 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 64446574a70cab878c9c95b833f0065ad4a846ad
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7fff85eaf61d32f2e064a827e53349bd832e411c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665601"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108993"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Visualizzare i metadati della colonna e del catalogo per le colonne di tipo sparse (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In questo esempio viene creata una tabella con tre colonne, ovvero una colonna di tipo sparse, una colonna non di tipo sparse e una colonna ColumnSet. Nell'esempio vengono quindi visualizzati i flag OLE DB che indicano i metadati della colonna e del catalogo per la colonna non di tipo sparse e per quella ColumnSet.  
   
- Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o versione successiva. Per ulteriori informazioni sulle colonne di tipo sparse, vedere [supporto per colonne di tipo Sparse nel Driver OLE DB per SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
+ Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o versione successiva. Per altre informazioni sulle colonne di tipo sparse, vedere [supporto per colonne di tipo Sparse nel Driver OLE DB per SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Esempio  
- Verificare che nella variabile di ambiente include la directory contenente msoledbsql.h.  
+ Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
 ```  
 #include <stddef.h>  

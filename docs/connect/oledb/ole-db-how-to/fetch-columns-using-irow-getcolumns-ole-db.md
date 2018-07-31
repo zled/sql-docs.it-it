@@ -1,6 +1,6 @@
 ---
-title: 'Recuperare colonne tramite IRow:: GetColumns (OLE DB) | Documenti Microsoft'
-description: 'Recuperare colonne tramite IRow:: GetColumns (OLE DB)'
+title: 'Recuperare colonne usando IRow:: GetColumns (OLE DB) | Microsoft Docs'
+description: Recuperare colonne usando IRow::GetColumns (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,25 +16,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 15d2531eb06f742644c6e7cf207ca45c8ca8dc8f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8340996f96d2307a980797e93073001768dbc98f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666331"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108883"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Recuperare colonne tramite IRow::GetColumns (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il **IRow** interfaccia consente l'accesso diretto alle colonne di una singola riga nel set di risultati. Di conseguenza, **IRow** è un modo efficiente per recuperare le colonne da un set di risultati con una riga.  
+  L'interfaccia **IRow** consente di accedere direttamente alle colonne di una singola riga nel set di risultati. Di conseguenza, tramite **IRow** è possibile recuperare in modo efficace colonne da un set di risultati con una sola riga.  
   
- È disponibile un esempio di codice che viene illustrato come recuperare una singola riga mediante **IRow**. In questo esempio viene recuperata una colonna per volta dalla riga. Nell'esempio vengono illustrate le operazioni seguenti:  
+ È disponibile un esempio di codice in cui viene illustrato come recuperare una singola riga tramite **IRow**. In questo esempio viene recuperata una colonna per volta dalla riga. Nell'esempio vengono illustrate le operazioni seguenti:  
   
 -   Come recuperare un gruppo di colonne (in sequenza).  
   
--   Come accedere due volte a una colonna. La prima volta viene ottenuta la larghezza di colonna effettiva, mentre la seconda volta viene eseguito l'accesso ai dati effettivi. Nella struttura DBCOLUMNACCESS, se **pData** è NULL e **cbMaxLen** è 0, la chiamata a **IRow**-**> GetColumns()** Restituisce solo la lunghezza di colonna effettivi. In questo caso, **IRow -> GetColumns()** può essere chiamato di nuovo nella stessa colonna per recuperare i dati effettivi.  
+-   Come accedere due volte a una colonna. La prima volta viene ottenuta la larghezza di colonna effettiva, mentre la seconda volta viene eseguito l'accesso ai dati effettivi. Nella struttura DBCOLUMNACCESS, se **pData** è NULL e **cbMaxLen** è 0, tramite la chiamata a **IRow**-**->GetColumns** viene restituita solo la lunghezza effettiva della colonna. In questo caso, è possibile chiamare nuovamente **IRow->GetColumns()** nella stessa colonna per recuperare i dati effettivi.  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -58,11 +58,11 @@ ms.locfileid: "35666331"
   
  Nella struttura DBCOLUMNACCESS, se pData è NULL e cbMaxLen è 0, tramite la chiamata a IRow->GetColumns viene restituita solo la larghezza di colonna effettiva. In questo caso, è possibile chiamare nuovamente IRow->GetColumns nella stessa colonna per recuperare i dati effettivi. Questo esempio non è supportato in IA64.  
   
- In questo esempio richiede il database di esempio AdventureWorks, è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) pagina iniziale.  
+ Per l'esempio seguente è necessario disporre del database di esempio AdventureWorks, scaricabile dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
  Il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) consente di creare una tabella utilizzata dall'esempio.  
   
- Compilare il secondo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" per L"(local)\\\name", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente include la directory contenente msoledbsql.h.  
+ Compilare il secondo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
  Il terzo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) consente di eliminare la tabella utilizzata dall'esempio.  
   

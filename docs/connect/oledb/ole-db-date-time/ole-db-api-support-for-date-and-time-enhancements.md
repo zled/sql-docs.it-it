@@ -1,6 +1,6 @@
 ---
-title: Supporto dell'API OLE DB per data e ora miglioramenti | Documenti Microsoft
-description: Supporto delle API OLE DB per funzionalità avanzate di data e ora
+title: Supporto dell'API OLE DB per i miglioramenti relativi a data e ora | Microsoft Docs
+description: Supporto dell'API OLE DB per i miglioramenti relativi a data e ora
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,33 +14,33 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: dd179b4cceb7bc3b47578b556c83919175cb9ace
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e46fce7c9ca55b6d4deefe9f346142e9fb29ed23
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665621"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108723"
 ---
-# <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Supporto dell'API OLE DB per data e ora miglioramenti
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Supporto dell'API OLE DB per i miglioramenti relativi a data e ora
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Le caratteristiche avanzate di data e ora sono supportate dalle seguenti API OLE DB.  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
-|IAccessor::CreateAccessor|Viene aggiunto un contrassegno nella struttura DBBINDING per consentire alle applicazioni di distinguere tra **datetime**, **datetime2**, e **smalldatetime** valori. Per ulteriori informazioni, vedere [Metadata per parametri e Rowset](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IBCPSession::BCPColFmt|Per altre informazioni, vedere [modifiche di copia Bulk per avanzate di data e ora tipi &#40;OLE DB&#41;](../../oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md).|  
-|ICommandWithParameters::GetParameterInfo|Per ulteriori informazioni, vedere[Metadata per parametri e Rowset](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|ICommandWithParameters::SetParameterinfo|Per ulteriori informazioni, vedere[Metadata per parametri e Rowset](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IColumnsRowset::GetColumnsRowset|Per ulteriori informazioni, vedere[Metadata per parametri e Rowset](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IColumnsInfo::GetColumnInfo|Per ulteriori informazioni, vedere[Metadata per parametri e Rowset](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IDBSchemaRowset::GetRowset|Per informazioni dettagliate di righe dello schema interessati, vedere[rowset dello Schema di data e ora](../../oledb/ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md).|  
+|IAccessor:: CreateAccessor|Viene aggiunto un contrassegno nella struttura DBBINDING per consentire alle applicazioni per la discriminazione tra **data/ora**, **datetime2**, e **smalldatetime** valori. Per altre informazioni, vedere [Rowset Metadata e parametro](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IBCPSession::BCPColFmt|Per altre informazioni, vedere [modifiche apportate alla copia Bulk per avanzate di data e ora i tipi &#40;OLE DB&#41;](../../oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md).|  
+|ICommandWithParameters::GetParameterInfo|Per altre informazioni, vedere[Rowset Metadata e parametro](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|ICommandWithParameters::SetParameterinfo|Per altre informazioni, vedere[Rowset Metadata e parametro](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IColumnsRowset::GetColumnsRowset|Per altre informazioni, vedere[Rowset Metadata e parametro](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IColumnsInfo::GetColumnInfo|Per altre informazioni, vedere[Rowset Metadata e parametro](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IDBSchemaRowset:: GetRowset|Per informazioni dettagliate di righe dello schema interessati, vedere[data e ora e i set di righe dello Schema](../../oledb/ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md).|  
 |IRowsetFastLoad|Questa interfaccia supporta i nuovi tipi di data/ora, ma non è stata apportata alcuna modifica all'interfaccia.|  
-|ITableDefinition::CreateTable|Per ulteriori informazioni, vedere [supporto tipo di dati per OLE DB data e ora miglioramenti](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).|  
+|Itabledefinition:: CreateTable|Per altre informazioni, vedere [supporto dei tipi di dati per data OLE DB e miglioramenti per la fase](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e ora miglioramenti &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

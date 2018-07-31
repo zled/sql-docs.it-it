@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati (OLE DB) | Documenti Microsoft
+title: I tipi di dati (OLE DB) | Microsoft Docs
 description: Tipi di dati (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 717e9da58a28daccb6fdfab18f1c3423d9d310df
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: f04b6729f97efdacdc79b035eda9f43c6458d61d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665161"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109343"
 ---
 # <a name="data-types-ole-db"></a>Tipi di dati (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Per eseguire [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni e processo i risultati usando il Driver OLE DB per SQL Server, è necessario sapere come il Driver OLE DB per SQL Server esegue il mapping [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipi di dati ai tipi di dati OLE DB quando si associano parametri o colonne in un set di righe e quando si u Se il **ITableDefinition** interfaccia per creare una tabella in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Per eseguire le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] ed elaborare i risultati usando il driver OLE DB per SQL Server è necessario conoscere le modalità con cui il driver OLE DB per SQL Server, esegue il mapping dei tipi di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ai tipi di dati OLE DB quando associa parametri o colonne in un set di righe e quando usa l'interfaccia **ITableDefinition** per creare una tabella in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Mapping dei tipi di dati in set di righe e parametri](../../oledb/ole-db-data-types/data-type-mapping-in-rowsets-and-parameters.md)  
   

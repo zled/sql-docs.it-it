@@ -1,6 +1,6 @@
 ---
-title: Le conversioni eseguite dal Server al Client | Documenti Microsoft
-description: Conversioni eseguite dal server al client
+title: Le conversioni eseguite da Server a Client | Microsoft Docs
+description: Conversioni eseguite da server a client
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,22 +16,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a90953e9ee026f4f2c941520b1fe94bcf74eb1d5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 60adf00e05d190f72229b252a3877b417be7f260
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666411"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109433"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversioni eseguite da server a client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Questo articolo vengono descritte le conversioni di data/ora eseguite tra [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o versione successiva) e un'applicazione client scritta con il Driver OLE DB per SQL Server.  
+  Questo articolo descrive le conversioni di data/ora eseguite tra [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o versione successiva) e un'applicazione client scritta con il Driver OLE DB per SQL Server.  
   
 ## <a name="conversions"></a>Conversioni  
- Nella tabella seguente vengono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se è stato chiamato ICommandWithParameters:: SetParameterInfo e il tipo specificato in *pwszDataSourceType* non corrisponde al tipo effettivo il server, una conversione implicita verrà eseguito dal server , e il tipo restituito al client corrisponderà al tipo specificato tramite ICommandWithParameters:: SetParameterInfo. Ciò può causare risultati imprevisti conversione quando le regole di conversione del server sono diverse da quelli descritti in questo articolo. Quando ad esempio è necessario specificare una data predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizza 1900-1-1 anziché 1899-12-30.  
+ Nella tabella seguente vengono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se è stato chiamato ICommandWithParameters:: SetParameterInfo e il tipo specificato nel *pwszDataSourceType* non corrisponde verrà eseguito il tipo effettivo nel server, una conversione implicita dal server , e il tipo restituito al client corrisponderà al tipo specificato tramite ICommandWithParameters:: SetParameterInfo. Se le regole di conversione del server sono diverse da quelle descritte in questo articolo, la conversione potrebbe dare risultati imprevisti. Quando ad esempio è necessario specificare una data predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizza 1900-1-1 anziché 1899-12-30.  
   
 |A -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  

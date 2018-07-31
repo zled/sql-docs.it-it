@@ -1,6 +1,6 @@
 ---
-title: Driver OLE DB per SQL Server (OLE DB) riferimento | Documenti Microsoft
-description: Driver OLE DB per il riferimento di SQL Server (OLE DB)
+title: Driver OLE DB per SQL Server (OLE DB) Reference | Microsoft Docs
+description: Informazioni di riferimento sul driver OLE DB per SQL Server (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,25 +20,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4877a5a4a3965b65bd9a61f33303dabff34af4e6
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: feb8c904963b0974a736b6524f11f5551aa02005
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690164"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105807"
 ---
-# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Driver OLE DB per interfacce di SQL Server (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Driver OLE DB per interfacce SQL Server (OLE DB)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server espone interfacce ai consumer che richiedono l'accesso ai dati in uno o più computer che eseguono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il Driver OLE DB per SQL Server è un provider compatibile 2.0 versione OLE DB.  
+  Il driver OLE DB per SQL Server espone interfacce ai consumer che richiedono l'accesso ai dati su uno o più computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il Driver OLE DB per SQL Server è un provider conforme a 2.0 versione OLE DB.  
   
- Il Driver OLE DB per riferimento di programmazione di SQL Server non sono documentate tutte le interfacce OLE DB e i metodi, solo le interfacce e metodi che possono presentare un comportamento specifico del provider quando si utilizza il Driver OLE DB per SQL Server.  
+ In questa guida di riferimento alla programmazione del driver OLE DB per SQL Server non vengono descritte tutte le interfacce e i metodi OLE DB, ma solo le interfacce e i metodi che hanno un comportamento specifico del provider quando usano il driver OLE DB per SQL Server.  
   
- Per una descrizione completa delle interfacce OLE DB principale e dei metodi, vedere la [riferimento per programmatori OLE DB](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ Per una descrizione completa delle interfacce e dei metodi OLE DB di base, vedere [OLE DB Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45232).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Le interfacce &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   

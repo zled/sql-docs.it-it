@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati SQL Server predefinito | Documenti Microsoft
+title: Tipi di dati SQL Server predefinito | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 21dab579da73cc8d5290d0b08d3448d76b5337cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307226"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979573"
 ---
 # <a name="default-sql-server-data-types"></a>Tipi di dati di SQL Server predefiniti
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ Se l'utente non ha specificato alcun tipo di dati di SQL Server, quando si invia
 |Boolean|bit|bit|  
 |Valore intero|INT|INT|  
 |float|float(24)|non supportato|  
-|Stringa (lunghezza minore di 8000 byte)|varchar (<string length>)|varchar (<string length>)|  
+|Stringa (lunghezza minore di 8000 byte)|varchar(<string length>)|varchar(<string length>)|  
 |Stringa (lunghezza maggiore di 8000 byte)|ntext|ntext|  
 |Risorsa|Non supportato.|Non supportato.|  
 |Flusso (codifica: non binaria)|ntext|ntext|  
@@ -53,5 +53,5 @@ Se l'utente non ha specificato alcun tipo di dati di SQL Server, quando si invia
 
 [Tipi PHP](http://php.net/manual/language.types.php)
 
-[Tipi di dati (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
+[Tipi di dati (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

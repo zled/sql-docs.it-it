@@ -1,7 +1,7 @@
 ---
-title: Note (Driver ODBC per SQL Server) | Documenti Microsoft
+title: Release Notes (Driver ODBC per SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,62 +12,70 @@ ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
 caps.latest.revision: 7
 author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21380decd228d82695c4ca9972852585a4fc3dbc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.author: v-jizho2
+manager: kenvh
+ms.openlocfilehash: 0e99381224c03bf185044d57cc4b415fcfaedd3b
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32858799"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024227"
 ---
 # <a name="release-notes"></a>Note sulla versione
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Note sulla versione per Microsoft ODBC Driver for SQL Server in Windows.  
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Windows
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Windows
+
+**Funzionalità aggiunte**:
+
+Classificazione dei dati per il Database SQL di Azure e SQL Server
+
+[Correzioni di bug](../bug-fixes.md)
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Windows
 
 **Funzionalità aggiunte**:
 
 Supporto per `SQL_COPT_SS_CEKCACHETTL` e `SQL_COPT_SS_TRUSTEDCMKPATHS` attributi di connessione (per altre informazioni, vedere [utilizzo di Always Encrypted con il Driver ODBC per SQL Server](../using-always-encrypted-with-the-odbc-driver.md))
 - `SQL_COPT_SS_CEKCACHETTL` Consente di controllare l'ora in cui è presente nella cache locale delle chiavi di crittografia di colonna, nonché lo scaricamento
-- `SQL_COPT_SS_TRUSTEDCMKPATHS` Consente all'applicazione di limitare le operazioni di AE per usare solo l'elenco specificato di chiavi Master della colonna
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` Consente all'applicazione limitare le operazioni di Always Encrypted per usare solo l'elenco specificato di chiavi Master della colonna
 
 
-Supporto dell'autenticazione interattivo Azure Active Directory
+Supporto dell'autenticazione interattiva di Azure Active Directory
 
 [Correzioni di bug](../bug-fixes.md)
 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] il Driver ODBC 17 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Windows
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Windows
 
 **Funzionalità aggiunte**:
 
-Always Encrypted supporto per API BCP
+Supporto per Always Encrypted per l'API BCP
 
-Nuovo attributo di stringa di connessione UseFMTOnly causa del driver per l'uso di metadati legacy in casi particolari richiede che le tabelle temporanee.
+Nuovo attributo di stringa di connessione UseFMTOnly fa sì che i driver per l'uso di metadati legacy in casi particolari che richiedono le tabelle temporanee.
 
-Supporto per l'istanza gestita di SQL Azure (anteprima privata estesa). 
+Supporto per l'istanza gestita SQL di Azure (anteprima privata estesa). 
 > [!NOTE]
-> Quando si utilizza l'istanza gestita, esistono alcune differenze:
+> Esistono numerose differenze quando si usa l'istanza gestita:
 > -   FILESTREAM non è supportato 
-> -   Accesso ai file System locale non è supportata, ma necessari per elementi quali tracefiles 
-> -   Il nome di tipo definito dall'utente locale percorso non è supportato. 
-> -   Autenticazione integrata di Windows non è supportata. 
-> -   DTC non è supportata. 
-> -   l'account 'sa' non è presente (l'account predefinito viene chiamato 'cloudSA')
-> -   Errore nel token TDS (0xAA) restituisce il nome server errato
-> -   Non sono supportati i caratteri speciali nei nomi di database 
-> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] non è supportata.
+> -   Accesso del file System locale non è supportato, ma obbligatorio per elementi quali tracefiles 
+> -   Crea tipo definito dall'utente da local path non è supportato 
+> -   Non è supportata l'autenticazione integrata di Windows 
+> -   DTC non è supportato 
+> -   account 'sa' non è presente (l'account predefinito viene chiamato 'cloudSA')
+> -   Errore di token TDS (0xAA) restituisce il nome server errato
+> -   Non sono supportati i caratteri speciali nel nome del database 
+> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] non è supportato
 > -   I messaggi di errore vengono sempre visualizzati in inglese, indipendentemente dal linguaggio impostazioni (come Azure) 
   
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Windows  
- ODBC Driver 13.1 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] aggiunge il supporto per [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) e [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) quando utilizzato in combinazione con Microsoft SQL Server 2016.  Connessione corrispondente pooling parole chiave o attributi sono descritti in [Driver compatibile con il pool di connessioni nel Driver ODBC per SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).
+ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] aggiunge il supporto per [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) e [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) quando usato in combinazione con Microsoft SQL Server 2016.  Connessione corrispondente pooling le parole chiave e attributi sono descritti in [Driver Aware Connection Pooling in ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).
 
  ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-13-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Windows  
- ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] include la funzionalità precedente da ODBC Driver 11 per SQL Server e aggiunge il supporto per Microsoft SQL Server 2016.
+ ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] include una funzionalità precedente da ODBC Driver 11 for SQL Server e aggiunge il supporto per Microsoft SQL Server 2016.
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Windows  
- ODBC Driver 11 for SQL Server contiene nuove [funzionalità](./features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md) nonché tutte le funzionalità fornite con ODBC in SQL Server 2012 Native Client.  
+ ODBC Driver 11 for SQL Server contiene nuove [funzionalità](./features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md), nonché tutte le funzionalità fornite con ODBC in SQL Server 2012 Native Client.  

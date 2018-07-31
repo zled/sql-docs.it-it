@@ -1,6 +1,6 @@
 ---
-title: Utilizzo di ADO con il Driver OLE DB per SQL Server | Documenti Microsoft
-description: Utilizzo di ADO con il Driver OLE DB per SQL Server
+title: Uso di ADO con Driver OLE DB per SQL Server | Microsoft Docs
+description: Uso di ADO con il driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -19,35 +19,35 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 89f11eda93f9ac8eb67259265b646a2544143ae5
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: e1fdea857c21b66fd4e72f541f9a6a653aeb44c6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612196"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108083"
 ---
-# <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Utilizzo di ADO con il Driver OLE DB per SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Uso di ADO con il driver OLE DB per SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Per sfruttare i vantaggi delle nuove funzionalità introdotte [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , ad esempio multiple active result set (MARS), le notifiche delle query, tipi definiti dall'utente (UDT) o il nuovo **xml** tipo di dati, le applicazioni esistenti che utilizzano ActiveX Data Objects (ADO) deve utilizzare il Driver OLE DB per SQL Server come provider di accesso ai dati.  
+  Per sfruttare le nuove caratteristiche introdotte in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], come MARS (Multiple Active Result Set), notifiche delle query, tipi definiti dall'utente (UDT) o il nuovo tipo di dati **xml**, è necessario che nelle applicazioni esistenti che usano ADO (ActiveX Data Objects) come provider di accesso ai dati venga usato il driver OLE DB per SQL Server.  
   
- Per abilitare ADO usare nuove funzionalità delle versioni recenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], sono stati apportati alcuni miglioramenti per il Driver OLE DB per SQL Server che estende le funzionalità di base di OLE DB. Questi miglioramenti consentono alle applicazioni ADO di utilizzare più recente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funzionalità e di utilizzare due tipi di dati introdotti in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** e **udt**. Questi miglioramenti anche di sfruttare i miglioramenti per il **varchar**, **nvarchar**, e **varbinary** tipi di dati. Il Driver OLE DB per SQL Server aggiunge la proprietà di inizializzazione SSPROP_INIT_DATATYPECOMPATIBILITY di proprietà DBPROPSET_SQLSERVERDBINIT per l'utilizzo nelle applicazioni ADO in modo che i nuovi tipi di dati sono esposti in modo compatibile con ADO. Inoltre, il Driver OLE DB per SQL Server definisce anche una nuova parola chiave della connessione stringa denominata **DataTypeCompatibility** impostato nella stringa di connessione.  
+ Per consentire l'uso in ADO delle nuove funzionalità delle ultime versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], al driver OLE DB per SQL Server sono stati apportati alcuni miglioramenti che estendono le funzionalità principali di OLE DB. Questi miglioramenti consentono l'uso nelle applicazioni ADO delle più recenti funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e di due tipi di dati introdotti in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** e **udt**. Consentono inoltre di sfruttare i miglioramenti ai tipi di dati **varchar**, **nvarchar** e **varbinary**. Nel driver OLE DB per SQL Server viene aggiunta la proprietà di inizializzazione SSPROP_INIT_DATATYPECOMPATIBILITY al set di proprietà DBPROPSET_SQLSERVERDBINIT per consentirne l'uso nelle applicazioni ADO, in modo che i nuovi tipi di dati siano esposti in modo compatibile con ADO. Inoltre, il Driver OLE DB per SQL Server definisce anche una nuova parola chiave stringa connessione denominata **DataTypeCompatibility** impostato nella stringa di connessione.  
 
 > [!NOTE]  
->  Le applicazioni ADO esistenti possono accedere a valori XML, UDT, nonché di campi binari e di testo valore di grandi dimensioni ed eseguirne l'aggiornamento utilizzando il provider SQLOLEDB. Il nuovo maggiore **varchar (max)**, **nvarchar (max)**, e **varbinary (max)** tipi di dati vengono restituiti come i tipi ADO **adLongVarChar**, **adLongVarWChar** e **adLongVarBinary** rispettivamente. Le colonne XML vengono restituite come **adLongVarChar**, e vengono restituite le colonne di tipo definito dall'utente come **adVarBinary**. Tuttavia, se si utilizza il Driver OLE DB per SQL Server (MSOLEDBSQL) anziché SQLOLEDB, è necessario verificare di aver impostato il **DataTypeCompatibility** (parola chiave) su "80" in modo che i nuovi tipi di dati verranno eseguito il mapping correttamente ai tipi di dati ADO.  
+>  Le applicazioni ADO esistenti possono accedere a valori XML, UDT, nonché di campi binari e di testo valore di grandi dimensioni ed eseguirne l'aggiornamento utilizzando il provider SQLOLEDB. I nuovi tipi di dati **varchar(max)**, **nvarchar(max)** e **varbinary(max)** di grandi dimensioni vengono restituiti rispettivamente come i tipi ADO **adLongVarChar**, **adLongVarWChar** e **adLongVarBinary**. Le colonne XML vengono restituite come **adLongVarChar**, mentre le colonne con tipo definito dall'utente vengono restituite come **adVarBinary**. Tuttavia, se si usa il Driver OLE DB per SQL Server (MSOLEDBSQL) anziché SQLOLEDB, è necessario assicurarsi di impostare il **DataTypeCompatibility** (parola chiave) su "80" in modo che i nuovi tipi di dati verranno eseguito il mapping correttamente per i tipi di dati ADO.  
 
 ## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>L'abilitazione di Driver OLE DB per SQL Server da ADO  
- Per abilitare l'utilizzo del Driver OLE DB per SQL Server, le applicazioni ADO dovrà implementare le parole chiave seguenti nelle stringhe di connessione:  
+ Per abilitare l'uso del driver OLE DB per SQL Server, è necessario che nelle stringhe di connessione delle applicazioni ADO vengano implementate le parole chiave seguenti:  
 
 -   `Provider=MSOLEDBSQL`  
 
 -   `DataTypeCompatibility=80`  
 
- Per ulteriori informazioni su ADO connessioni stringhe parole chiave supportate nel Driver OLE DB per SQL Server, vedere [Using Connection String Keywords con il Driver OLE DB per SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Per altre informazioni su ADO connessioni stringa le parole chiave supportate nel Driver OLE DB per SQL Server, vedere [Using Connection String Keywords con il Driver OLE DB per SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
- Di seguito è riportato un esempio di creazione di una stringa di connessione ADO pienamente abilitata per funzionare con il Driver OLE DB per SQL Server, inclusa l'abilitazione della funzionalità MARS:  
+ Di seguito è riportato un esempio di stringa di connessione ADO completamente abilitata per l'uso nel driver OLE DB per SQL Server con l'abilitazione del servizio MARS:  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -62,10 +62,10 @@ con.Open
 ```  
 
 ## <a name="examples"></a>Esempi  
- Nelle sezioni seguenti vengono forniti esempi di come è possibile utilizzare ADO con il Driver OLE DB per SQL Server.  
+ Le sezioni seguenti forniscono esempi di come è possibile utilizzare ADO con il Driver OLE DB per SQL Server.  
 
 ### <a name="retrieving-xml-column-data"></a>Recupero dei dati delle colonne XML  
- In questo esempio viene utilizzato un recordset per recuperare e visualizzare i dati da una colonna XML nel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks** database di esempio.  
+ In questo esempio viene usato un recordset per recuperare e visualizzare i dati da una colonna XML nel database di esempio **AdventureWorks** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -101,7 +101,7 @@ Set con = Nothing
 >  L'applicazione di filtri al recordset non è supportata con le colonne XML. Se si prova ad applicare i filtri, viene generato un errore.  
 
 ### <a name="retrieving-udt-column-data"></a>Recupero dei dati delle colonne con tipo definito dall'utente  
- In questo esempio, un **comando** oggetto viene usato per eseguire una query SQL che restituisce un tipo definito dall'utente, i dati di tipo definito dall'utente vengono aggiornati e quindi i nuovi dati viene inseriti nel database. In questo esempio si presuppone che il **punto** tipo definito dall'utente è già stato registrato nel database.  
+ In questo esempio viene utilizzato un oggetto **Command** per eseguire una query SQL che restituisce un tipo definito dall'utente, vengono aggiornati i dati UDT, quindi i nuovi dati vengono nuovamente inseriti nel database. In questo esempio si presuppone che il tipo definito dall'utente (UDT) **Point** sia già stato registrato nel database.  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -144,7 +144,7 @@ Set con = Nothing
 ```  
 
 ### <a name="enabling-and-using-mars"></a>Abilitazione e utilizzo di MARS  
- In questo esempio, la stringa di connessione viene creata per abilitare MARS mediante il Driver OLE DB per SQL Server e quindi vengono creati due oggetti di recordset da eseguire utilizzando la stessa connessione.  
+ In questo esempio viene costruita la stringa di connessione per abilitare MARS mediante il driver OLE DB per SQL Server, quindi vengono creati due oggetti di recordset da eseguire usando la stessa connessione.  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -168,7 +168,7 @@ con.Close
 Set con = Nothing  
 ```  
 
- Nelle versioni precedenti del provider OLE DB questo codice determinerebbe la creazione di una connessione implicita alla seconda esecuzione, in quanto per una sola connessione sarebbe possibile aprire un solo set attivo di risultati. Poiché la connessione implicita non sarebbe inserita nel pool di connessioni OLE DB, questa situazione provocherebbe overhead aggiuntivo. Con il servizio MARS esposto dal Driver OLE DB per SQL Server, si ottengono più risultati attivi in un'unica connessione.  
+ Nelle versioni precedenti del provider OLE DB questo codice determinerebbe la creazione di una connessione implicita alla seconda esecuzione, in quanto per una sola connessione sarebbe possibile aprire un solo set attivo di risultati. Poiché la connessione implicita non sarebbe inserita nel pool di connessioni OLE DB, questa situazione provocherebbe overhead aggiuntivo. Con la funzionalità MARS esposta dal driver OLE DB per SQL Server, si ottengono più risultati attivi su un'unica connessione.  
 
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni con il driver OLE DB per SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

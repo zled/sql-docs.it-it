@@ -1,5 +1,5 @@
 ---
-title: Risincronizzazione delle righe | Documenti Microsoft
+title: Risincronizzazione delle righe | Microsoft Docs
 description: Risincronizzazione delle righe usando il Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 99e355ded49f480a6ac0f27dc700d96c8ced9e87
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 7990651bf9d412eec7d2826daedee0fafaa53943
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690244"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107903"
 ---
-# <a name="updating-data-in-rowsets---resynchronizing-rows"></a>L'aggiornamento dei dati nei set di righe - risincronizzazione delle righe
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="updating-data-in-rowsets---resynchronizing-rows"></a>Aggiornamento dei dati nei set di righe - Risincronizzazione delle righe
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

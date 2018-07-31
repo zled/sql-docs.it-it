@@ -1,6 +1,6 @@
 ---
-title: Quando utilizzare OLE DB Driver per SQL Server | Documenti Microsoft
-description: Quando utilizzare Driver OLE DB per SQL Server
+title: Quando utilizzare Driver OLE DB per SQL Server | Microsoft Docs
+description: Quando usare il driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,29 +18,29 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1aaca043dc057f6f7cc07322e6bf75822a8ebe8b
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: d4e83751fe83db3ab678547a3a1fde68b5db22df
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690104"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107673"
 ---
-# <a name="when-to-use-ole-db-driver-for-sql-server"></a>Quando utilizzare OLE DB Driver per SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="when-to-use-ole-db-driver-for-sql-server"></a>Quando usare il driver OLE DB per SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server è una tecnologia che è possibile utilizzare per accedere ai dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  Per una descrizione delle tecnologie di accesso ai dati diversi, vedere [Mappa stradale tecnologie di accesso ai dati](http://go.microsoft.com/fwlink/?LinkID=179186)  
+  Driver OLE DB per SQL Server è una tecnologia che è possibile usare per accedere ai dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  Per una discussione sulle diverse tecnologie di accesso ai dati, vedere [Panoramica delle tecnologie di accesso ai dati](http://go.microsoft.com/fwlink/?LinkID=179186)  
   
- Quando si decide se utilizzare il Driver OLE DB per SQL Server come la tecnologia di accesso ai dati dell'applicazione, è necessario considerare diversi fattori.  
+ Quando si decide se usare il driver OLE DB per SQL Server come tecnologia di accesso ai dati dell'applicazione, è necessario considerare diversi fattori.  
   
  Per le nuove applicazioni, se si utilizza un linguaggio di programmazione gestito, come Microsoft Visual C# o Visual Basic, e si desidera accedere alle nuove caratteristiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario utilizzare il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso in .NET Framework.  
   
- Se si sviluppa un'applicazione basata su COM e si desidera accedere alle nuove funzionalità introdotte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è consigliabile utilizzare Driver OLE DB per SQL Server. Se non è necessario accedere alle nuove caratteristiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile continuare a utilizzare Windows Data Access Components (WDAC).  
+ L'uso del driver OLE DB per SQL Server è consigliabile se si sviluppa un'applicazione basata su COM e si ha l'esigenza di accedere alle nuove caratteristiche introdotte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non è necessario accedere alle nuove caratteristiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile continuare a utilizzare Windows Data Access Components (WDAC).  
   
- Per le applicazioni OLE DB esistente, il problema principale è dato dalla necessità di accedere alle nuove funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In caso di un'applicazione obsoleta per la quale non sono richieste le nuove funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile continuare a utilizzare WDAC. Tuttavia, se si desidera accedere alle nuove funzionalità, ad esempio il [tipo di dati xml](../../t-sql/xml/xml-transact-sql.md), è consigliabile utilizzare Driver OLE DB per SQL Server.  
+ Per le applicazioni OLE DB esistenti, il problema principale è dato dalla necessità o meno di accedere alle nuove caratteristiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In caso di un'applicazione obsoleta per la quale non sono richieste le nuove funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile continuare a utilizzare WDAC. Se tuttavia è necessario accedere a queste funzionalità, ad esempio al [tipo di dati xml](../../t-sql/xml/xml-transact-sql.md), è consigliabile usare il driver OLE DB per SQL Server.  
   
- Entrambi Driver OLE DB per SQL Server che MDAC supportano l'isolamento transazione sottoposta a commit utilizzando delle versioni delle righe, ma solo Driver OLE DB per SQL Server supporta l'isolamento delle transazioni read. In termini di programmazione, l'isolamento delle transazioni Read Committed mediante il controllo delle versioni delle righe equivale a una transazione Read Committed.  
+ Entrambi Driver OLE DB per SQL Server che MDAC supportano l'isolamento di commit della transazione usando il controllo delle versioni di riga, ma solo Driver OLE DB per SQL Server supporta l'isolamento della transazione snapshot read. In termini di programmazione, l'isolamento delle transazioni Read Committed mediante il controllo delle versioni delle righe equivale a una transazione Read Committed.  
   
  Per informazioni sulle differenze tra il Driver OLE DB per SQL Server e MDAC, vedere [aggiornamento di un'applicazione al Driver OLE DB per SQL Server da MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
   

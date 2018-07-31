@@ -1,5 +1,5 @@
 ---
-title: Modifica delle password a livello di codice | Documenti Microsoft
+title: Modifica delle password a livello di codice | Microsoft Docs
 description: Modifica delle password a livello di codice usando il Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -24,22 +24,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e09154c595f2e008f29ef6bd690968388cbe062b
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 0bdb0c998c10b0b33b6640877c918f7a40971043
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611997"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108013"
 ---
 # <a name="changing-passwords-programmatically"></a>Modifica delle password a livello di programmazione
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] una password di un utente scaduta può essere reimpostata solo da un amministratore. A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il Driver OLE DB per SQL Server supporta gestisce la scadenza delle password a livello di programmazione tramite Driver OLE DB e le modifiche per il **account di accesso di SQL Server** finestre di dialogo.  
+  Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] una password di un utente scaduta può essere reimpostata solo da un amministratore. A partire [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il Driver OLE DB per SQL Server supporta la gestione della scadenza della password a livello di programmazione tramite Driver OLE DB e le modifiche per il **account di accesso di SQL Server** finestre di dialogo.  
   
 > [!NOTE]  
->  Quando possibile, richiedere agli utenti di immettere le credenziali in fase di esecuzione ed evitare di archiviarle in un formato persistente. Se è necessario mantenere le proprie credenziali, è consigliabile crittografarle utilizzando il [CryptoAPI Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Per ulteriori informazioni sull'utilizzo delle password, vedere [Strong Passwords](../../../relational-databases/security/strong-passwords.md).  
+>  Quando possibile, richiedere agli utenti di immettere le credenziali in fase di esecuzione ed evitare di archiviarle in un formato persistente. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Per altre informazioni sull'uso delle password, vedere [Password complesse](../../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Codici di errore degli account di accesso di SQL Server  
  Quando non è possibile stabilire una connessione a causa di problemi di autenticazione, sarà disponibile uno dei codici di errore di SQL Server seguenti per consentire la diagnosi e il recupero.  
@@ -57,17 +57,17 @@ ms.locfileid: "35611997"
 |18488|Accesso non riuscito per l'utente '%.*ls'. Motivo: è necessario modificare la password dell'account.|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Driver OLE DB per SQL Server  
- Il Driver OLE DB per SQL Server supporta la scadenza delle password mediante un'interfaccia utente e a livello di codice.  
+ Il Driver OLE DB per SQL Server supporta la scadenza password mediante un'interfaccia utente e a livello di codice.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>Scadenza password dell'interfaccia utente OLE DB  
- Il Driver OLE DB per SQL Server supporta la scadenza delle password mediante le modifiche apportate per i **account di accesso di SQL Server** finestre di dialogo. Se il valore di DBPROP_INIT_PROMPT è impostato su DBPROMPT_NOPROMPT, il tentativo di connessione iniziale non riesce se la password è scaduta.  
+ Il driver OLE DB per SQL Server supporta la scadenza password mediante le modifiche apportate alle finestre di dialogo **Account di accesso di SQL Server**. Se il valore di DBPROP_INIT_PROMPT è impostato su DBPROMPT_NOPROMPT, il tentativo di connessione iniziale non riesce se la password è scaduta.  
   
- Se DBPROP_INIT_PROMPT è stato impostato su qualsiasi altro valore, l'utente visualizzerà il **account di accesso di SQL Server** finestra di dialogo, indipendentemente dal fatto che la password è scaduta. L'utente può scegliere di **opzioni** pulsante e controllare **Cambia Password** per modificare la password.  
+ Se DBPROP_INIT_PROMPT è stato impostato su qualsiasi altro valore, viene visualizzata la finestra di dialogo **Account di accesso di SQL Server** indipendentemente dalla scadenza della password. L'utente può cambiare la password facendo clic sul pulsante **Opzioni** e selezionando **Cambia password**.  
   
- Se l'utente fa clic su OK e la password è scaduta, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiesto all'utente di immettere e confermare una password utilizzando il **modifica Password SQL Server** finestra di dialogo.  
+ Se l'utente fa clic su OK e la password è scaduta, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede all'utente di immettere e confermare una nuova password usando la finestra di dialogo **Modifica password SQL Server**.  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>Comportamento del prompt di OLE DB e account bloccati  
- È possibile che non si riesca a stabilire una connessione perché l'account è bloccato. Se questo errore si verifica dopo la visualizzazione del **account di accesso di SQL Server** finestra di dialogo, all'utente viene visualizzato il messaggio di errore di server e il tentativo di connessione viene interrotta. Può inoltre verificarsi dopo la visualizzazione del **modifica Password SQL Server** finestra di dialogo se l'utente immette un valore non valido per la vecchia password. In questo caso viene visualizzato lo stesso messaggio di errore e il tentativo di connessione viene interrotto.  
+ È possibile che non si riesca a stabilire una connessione perché l'account è bloccato. Se questo problema si verifica in seguito alla visualizzazione della finestra di dialogo **Account di accesso di SQL Server**, viene visualizzato il messaggio di errore del server e il tentativo di connessione viene interrotto. Il problema può verificarsi anche se, in seguito alla visualizzazione della finestra di dialogo **Modifica password SQL Server**, l'utente immette un valore non corretto per la vecchia password. In questo caso viene visualizzato lo stesso messaggio di errore e il tentativo di connessione viene interrotto.  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>Pool di connessioni OLE DB, scadenza password e account bloccati  
  Un account può essere bloccato o la rispettiva password può scadere mentre la connessione è ancora attiva in un pool di connessioni. Il server controlla le password scadute e gli account bloccati in due circostanze. Quando una connessione viene creata per la prima volta e quando la connessione viene reimpostata, ovvero quando viene estratta dal pool.  
@@ -75,7 +75,7 @@ ms.locfileid: "35611997"
  Quando il tentativo di ripristino non riesce, la connessione viene rimossa dal pool e viene restituito un errore.  
   
 ### <a name="ole-db-programmatic-password-expiration"></a>Scadenza password OLE DB a livello di programmazione  
- Il Driver OLE DB per SQL Server supporta la scadenza password mediante l'aggiunta della proprietà SSPROP_AUTH_OLD_PASSWORD (tipo VT_BSTR) che è stato aggiunto al set di proprietà DBPROPSET_SQLSERVERDBINIT.  
+ Il driver OLE DB per SQL Server supporta la scadenza password mediante l'aggiunta della proprietà SSPROP_AUTH_OLD_PASSWORD (tipo VT_BSTR) che è stata aggiunta al set di proprietà DBPROPSET_SQLSERVERDBINIT.  
   
  La proprietà "Password" esistente si riferisce a DBPROP_AUTH_PASSWORD e viene utilizzata per archiviare la nuova password.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "35611997"
   
  Ogni volta che la proprietà "Vecchia password" viene impostata, il provider presuppone che sia in atto un tentativo di modificare la password, a meno che non venga specificata anche l'autenticazione di Windows. In questo caso, questa avrebbe comunque ha la precedenza.  
   
- Se viene utilizzata l'autenticazione di Windows, specificare la vecchia password comporta DB_E_ERRORSOCCURRED o DB_S_ERRORSOCCURRED a seconda se la vecchia password è stata specificata come REQUIRED o OPTIONAL rispettivamente e il valore di stato di DBPROPSTATUS Value CONFLICTINGBADVALUE viene restituito in *dwStatus*. Questo errore viene rilevato quando **IDBInitialize:: Initialize** viene chiamato.  
+ Se si usa l'autenticazione di Windows, l'immissione della vecchia password restituisce DB_E_ERRORSOCCURRED o DB_S_ERRORSOCCURRED, a seconda se la vecchia password è stata specificata rispettivamente come REQUIRED o OPTIONAL e il valore dello stato di DBPROPSTATUS_CONFLICTINGBADVALUE viene restituito in *dwStatus*. Questo errore viene rilevato quando viene chiamato **IDBInitialize::Initialize**.  
   
  Se un tentativo di modificare la password non riesce in modo imprevisto, il server restituisce il codice di errore 18468. Dal tentativo di connessione viene restituito un errore OLE DB standard.  
   
- Per ulteriori informazioni sul set di proprietà DBPROPSET_SQLSERVERDBINIT, vedere [proprietà di inizializzazione e autorizzazione](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Per altre informazioni sul set di proprietà DBPROPSET_SQLSERVERDBINIT, vedere [proprietà di inizializzazione e autorizzazione](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
 ## <a name="see-also"></a>Vedere anche  

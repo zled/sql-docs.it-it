@@ -1,6 +1,6 @@
 ---
-title: Modifiche apportate alla copia di massa per avanzata tipi data e ora (OLE DB) | Documenti Microsoft
-description: Modifiche di copia bulk per avanzata tipi data e ora (OLE DB)
+title: Modifiche apportate alla copia bulk per i tipi di data e ora migliorati (OLE DB) | Microsoft Docs
+description: Modifiche apportate alla copia bulk per i tipi di data e ora migliorati (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,24 +16,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7f4ead57eb84257a4c57b345bd3a4857a85ded2e
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: b69c0b2d5df0a9d8d0608093cde626666e136116
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666401"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107693"
 ---
-# <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Modifiche di copia bulk per avanzata tipi data e ora (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Modifiche apportate alla copia bulk per i tipi di data e ora migliorati (OLE DB)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In questo articolo vengono descritti i miglioramenti di data/ora per supportare la funzionalità di copia bulk nel Driver OLE DB per SQL Server.  
+  Questo articolo vengono descritti i miglioramenti di data/ora per supportare la funzionalità di copia bulk nel Driver OLE DB per SQL Server.  
   
 ## <a name="format-files"></a>File di formato  
  Nella tabella seguente viene descritto l'input utilizzato per specificare i tipi di data/ora e i nomi dei tipi di dati del file host corrispondenti quando si compilano file di formato in modo interattivo.  
   
-|tipo di archiviazione di file|Tipo di dati del file host|Risposta alla richiesta: "specificare il tipo di archiviazione di file del campo < nome_campo > [\<predefinito >]:"|  
+|tipo di archiviazione di file|Tipo di dati del file host|Risposta alla richiesta: "Specificare il tipo di archiviazione di file del campo <nome_campo> [\<impostazione predefinita>]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
@@ -68,9 +68,9 @@ ms.locfileid: "35666401"
 ```  
   
 ## <a name="character-data-files"></a>File di dati di tipo carattere  
- Nei file di dati di tipo carattere, valori di data e ora vengono rappresentati come descritto nella sezione "Dati formatta: stringhe e valori letterali" di [tipi di dati supportati per data OLE DB e i miglioramenti ora](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) per OLE DB.  
+ Nei file di dati di tipo carattere, i valori di data e ora vengono rappresentati come descritto nella sezione "Dati nei formati: stringhe e valori letterali" di [supporto dei tipi di dati per data OLE DB e miglioramenti per la fase](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) per OLE DB.  
   
- Nei file di dati nativi, i valori di data e ora per i quattro nuovi tipi sono rappresentati come rispettive rappresentazioni TDS con una scala pari a 7 (poiché si tratta di al massimo supportato dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e file di dati bcp non archiviano la scala di queste colonne). Non viene modificata per l'archiviazione dell'oggetto esistente **datetime** e **smalldatetime** i dati tabulari o tipo stream rappresentazioni TDS.  
+ Nei file di dati nativi, i valori di data e ora per i quattro nuovi tipi vengono rappresentati come le rispettive rappresentazioni TDS (Tabular Data Stream) con scala 7, in quanto si tratta del valore massimo supportato da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e nei file di dati con estensione bcp non viene archiviata la scala di tali colonne. Non è stata apportata alcuna modifica all'archiviazione dei tipi **datetime** e **smalldatetime** esistenti o delle rispettive rappresentazioni TDS.  
   
  Di seguito vengono indicate le dimensioni dello spazio di archiviazione per i diversi tipi di archiviazione per OLE DB:  
   
@@ -85,9 +85,9 @@ ms.locfileid: "35666401"
  
   
 ## <a name="bcp-types-in-msoledbsqlh"></a>Tipi BCP in msoledbsql.h  
- I tipi seguenti vengono definiti in msoledbsql.h. Questi tipi vengono passati con il *eUserDataType* parametro di ibcpsession:: BCPColFmt in OLE DB.  
+ I tipi seguenti vengono definiti in msoledbsql.h. Questi tipi vengono passati con il *eUserDataType* parametro ibcpsession:: BCPColFmt in OLE DB.  
   
-|tipo di archiviazione di file|Tipo di dati del file host|Digitare msoledbsql.h per l'utilizzo con ibcpsession:: BCPColFmt|valore|  
+|tipo di archiviazione di file|Tipo di dati del file host|Digitare msoledbsql.h per l'uso con ibcpsession:: BCPColFmt|valore|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
@@ -99,7 +99,7 @@ ms.locfileid: "35666401"
 ## <a name="bcp-data-type-conversions"></a>Conversioni dei tipi di dati BCP  
  Nelle tabelle seguenti vengono fornite informazioni sulla conversione.  
   
- **Nota per OLE DB** le conversioni seguenti vengono eseguite da IBCPSession. IRowsetFastLoad utilizza conversioni OLE DB come definito in [conversioni eseguite da Client a Server](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md). Si noti che i valori datetime vengono arrotondati a 1/300 di secondo, mentre per i valori smalldatetime i secondi vengono impostati su zero in seguito all'esecuzione delle conversioni client descritte di seguito. L'arrotondamento dei valori datetime viene applicato a ore e minuti, ma non alla data.  
+ **Nota per OLE DB** Le conversioni seguenti vengono eseguite da IBCPSession. IRowsetFastLoad utilizza conversioni OLE DB come definito in [conversioni eseguite da Client a Server](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md). Si noti che i valori datetime vengono arrotondati a 1/300 di secondo, mentre per i valori smalldatetime i secondi vengono impostati su zero in seguito all'esecuzione delle conversioni client descritte di seguito. L'arrotondamento dei valori datetime viene applicato a ore e minuti, ma non alla data.  
   
 |A --><br /><br /> From|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
@@ -121,19 +121,19 @@ ms.locfileid: "35666401"
 |-|Non viene supportata alcuna conversione.<br />|  
 |1|Se i dati forniti non sono validi, viene inserito un errore. Per i valori datetimeoffset, la parte relativa all'ora deve essere compresa nell'intervallo supportato in seguito alla conversione in UTC, anche se non è necessaria alcuna conversione in UTC. Ciò è dovuto al fatto che TDS e il server in genere normalizzano l'ora nei valori datetimeoffset per UTC. Di conseguenza, il client deve verificare che i componenti relativi all'ora siano compresi nell'intervallo supportato in seguito alla conversione in UTC.|  
 |2|Il componente relativo all'ora viene ignorato.|  
-|3|Se si verifica un troncamento con perdita di dati, viene inserito un errore. Per datetime2 il numero di cifre per i secondi frazionari, ovvero la scala, è determinato dalle dimensioni della colonna di destinazione in base alla tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **In cui è inclusa la scala 0** 8<br /><br /> **In cui è inclusa la scala 1..9** 1..9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **In cui è inclusa la scala 0:** 19<br /><br /> **In cui è inclusa la scala 1..9:** 21..29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **In cui è inclusa la scala 0:** 26<br /><br /> **In cui è inclusa la scala 1..9:** 28..36|  
+|3|Se si verifica un troncamento con perdita di dati, viene inserito un errore. Per datetime2 il numero di cifre per i secondi frazionari, ovvero la scala, è determinato dalle dimensioni della colonna di destinazione in base alla tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Scala prevista 0** 8<br /><br /> **Scala prevista 1..9** 1..9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Scala prevista 0:** 19<br /><br /> **Scala prevista 1..9:** 21..29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Scala prevista 0:** 26<br /><br /> **Scala prevista 1..9:** 28..36|  
 |4|Il componente relativo alla data viene ignorato.|  
 |5|Il fuso orario è impostato su UTC, ad esempio 00:00.|  
 |6|L'ora è impostata su zero.|  
 |7|La data è impostata su 1900-01-01.|  
 |8|La differenza di fuso orario viene ignorata.|  
-|9|La stringa viene analizzata e convertita in un valore date, datetime, datetimeoffset o time a seconda del primo carattere di punteggiatura rilevato e della presenza degli altri componenti. La stringa viene quindi convertita nel tipo di destinazione, in base alle regole nella tabella alla fine di questo articolo per il tipo di origine individuato da questo processo. Se i dati forniti non possono essere analizzati senza errore, se qualsiasi parte del componente non è compreso nell'intervallo consentito oppure se nessuna conversione dal tipo di valore letterale di tipo di destinazione, viene inserito un errore. Per i parametri datetime e smalldatetime, se l'anno è compreso nell'intervallo che supportano questi tipi, viene inserito un errore.<br /><br /> Per datetimeoffset, il valore deve essere compreso nell'intervallo supportato in seguito alla conversione in UTC, anche se non è necessaria alcuna conversione in UTC. Ciò è dovuto al fatto che TDS e il server normalizzano sempre l'ora in valori datetimeoffset per UTC. Il client deve pertanto verificare che i componenti relativi all'ora siano compresi nell'intervallo supportato in seguito alla conversione in UTC. Se il valore non compreso nell'intervallo UTC supportato, viene inserito un errore.|  
+|9|La stringa viene analizzata e convertita in un valore date, datetime, datetimeoffset o time a seconda del primo carattere di punteggiatura rilevato e della presenza degli altri componenti. La stringa viene quindi convertita nel tipo di destinazione, in base alle regole indicate nella tabella alla fine di questo articolo per il tipo di origine individuato dal processo. Se i dati forniti non possono essere analizzati senza errore o se qualsiasi componente è compreso nell'intervallo consentito, o se è presente alcuna conversione dal tipo di valore letterale nel tipo di destinazione, viene inserito un errore. Per i parametri datetime e smalldatetime, se l'anno è compreso nell'intervallo che supportano questi tipi, viene inserito un errore.<br /><br /> Per datetimeoffset, il valore deve essere compreso nell'intervallo supportato in seguito alla conversione in UTC, anche se non è necessaria alcuna conversione in UTC. Ciò è dovuto al fatto che TDS e il server normalizzano sempre l'ora in valori datetimeoffset per UTC. Il client deve pertanto verificare che i componenti relativi all'ora siano compresi nell'intervallo supportato in seguito alla conversione in UTC. Se il valore non è compreso nell'intervallo UTC supportato, viene inserito un errore.|  
 |10|Per client per le conversioni di server, se si verifica un troncamento con perdita di dati viene inserito un errore. Questo errore si verifica anche se il valore non è incluso nell'intervallo che può essere rappresentato dall'intervallo UTC utilizzato dal server. Se si verifica un troncamento dei secondi o dei secondi frazionari in una conversione da server a client, viene generato solo un avviso.|  
 |11|Per client per le conversioni di server, se si verifica un troncamento con perdita di dati viene inserito un errore.|
 |12|I secondi vengono impostati su zero e i secondi frazionari vengono ignorati. Non è possibile alcun errore di troncamento.|  
 |N/D|Viene mantenuto il comportamento di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni precedenti.|  
   
 ## <a name="see-also"></a>Vedere anche     
- [Data e ora miglioramenti &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

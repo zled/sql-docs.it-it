@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di Stored procedure (OLE DB) | Documenti Microsoft
+title: Esecuzione di Stored procedure (OLE DB) | Microsoft Docs
 description: Esecuzione di stored procedure (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9919fedbb999600e17c767a3206a587b99aec4da
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b4abfa519b9f083ee90df466ec7db3bd5c7341a9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611886"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108963"
 ---
-# <a name="stored-procedures---running"></a>Stored procedure - esecuzione
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="stored-procedures---running"></a>Stored procedure - Esecuzione
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -42,7 +42,7 @@ ms.locfileid: "35611886"
   
 -   Maggior numero di funzionalità.  
   
- Il Driver OLE DB per SQL Server supporta tre dei meccanismi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzano stored procedure per restituire dati:  
+ Il Driver OLE DB per SQL Server supporta tre dei meccanismi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usano stored procedure per restituire i dati:  
   
 -   Ogni istruzione SELECT nella procedura genera un set di risultati.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "35611886"
   
  L'applicazione deve essere in grado di gestire tutti questi output dalle stored procedure.  
   
- Provider OLE DB diversi restituiscono parametri di output e valori in momenti diversi durante l'elaborazione dei risultati. In caso del Driver OLE DB per SQL Server, i parametri di output e codici restituiti non vengono forniti fino a quando il consumer ha recuperato o annullato i set di risultati restituiti dalla stored procedure. I codici e i parametri di output vengono restituiti nell'ultimo pacchetto TDS dal server.  
+ Provider OLE DB diversi restituiscono parametri di output e valori in momenti diversi durante l'elaborazione dei risultati. Nel caso del driver OLE DB per SQL Server i parametri di output e i codici restituiti non vengono specificati finché il consumer non ha recuperato o annullato i set di risultati restituiti dalla stored procedure. I codici e i parametri di output vengono restituiti nell'ultimo pacchetto TDS dal server.  
   
  I provider utilizzano la proprietà DBPROP_OUTPUTPARAMETERAVAILABILITY per segnalare la restituzione di parametri di output e valori. Questa proprietà è inclusa nel set di proprietà DBPROPSET_DATASOURCEINFO.  
   
- Il Driver OLE DB per SQL Server imposta la proprietà DBPROP_OUTPUTPARAMETERAVAILABILITY su DBPROPVAL_OA_ATROWRELEASE per indicare che i codici restituiti e parametri di output non vengono restituiti fino a quando il set di risultati viene elaborato o rilasciato.  
+ Il driver OLE DB per SQL Server imposta la proprietà DBPROP_OUTPUTPARAMETERAVAILABILITY su DBPROPVAL_OA_ATROWRELEASE per indicare che i codici e i parametri di output non vengono restituiti finché il set di risultati non viene elaborato o rilasciato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure](../../oledb/ole-db/stored-procedures.md)  

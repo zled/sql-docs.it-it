@@ -1,6 +1,6 @@
 ---
-title: Rimuovere una colonna da una tabella di SQL Server | Documenti Microsoft
-description: Rimozione di una colonna da una tabella di SQL Server utilizzando il Driver OLE DB per SQL Server
+title: Rimuovere una colonna da una tabella di SQL Server | Microsoft Docs
+description: Rimuovere una colonna da una tabella di SQL Server usando il Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,23 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 962e36bf135c6f01594652f4549b7e0216cd063f
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 007f4a21096dfc2e933ed7777c5bd407a6d40eb1
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689084"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109743"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Rimozione di una colonna da una tabella di SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server espone il **itabledefinition:: Dropcolumn** (funzione). Ciò consente ai consumer di rimuovere una colonna da un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella.  
+  Il Driver OLE DB per SQL Server espone il **itabledefinition:: Dropcolumn** (funzione). Questo consente ai consumer di rimuovere una colonna da una tabella di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- I consumer specificano il nome della tabella come stringa di caratteri Unicode nel *pwszName*appartenente il *uName* unione nel *pTableID* parametro. Il *eKind*appartenente *pTableID* deve essere DBKIND_NAME.  
+ I consumer specificano il nome della tabella come stringa di caratteri Unicode nel membro *pwszName* dell'unione *uName* nel parametro *pTableID*. Il membro *eKind* di *pTableID* deve essere DBKIND_NAME.  
   
- Il consumer indica un nome di colonna nel *pwszName*appartenente il *uName* unione nel *pColumnID* parametro. Il nome di colonna è una stringa di caratteri Unicode. Il *eKind* appartenente *pColumnID* deve essere DBKIND_NAME.  
+ Il consumer indica un nome di colonna nel *pwszName*membro delle *uName* union nel *pColumnID* parametro. Il nome di colonna è una stringa di caratteri Unicode. Il membro *eKind* di *pColumnID* deve essere DBKIND_NAME.  
   
 ## <a name="example"></a>Esempio  
   

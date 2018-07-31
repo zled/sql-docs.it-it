@@ -1,6 +1,6 @@
 ---
-title: Ricerca di ulteriori OLE DB Driver per informazioni su SQL Server | Documenti Microsoft
-description: Dove trovare ulteriori Driver OLE DB di per informazioni su SQL Server
+title: Ricerca di altre informazioni sul driver OLE DB per SQL Server | Microsoft Docs
+description: Ricerca di altre informazioni sul driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,24 +17,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: dca26d61ca49a0e7e3baa0e4f8304311d90668a6
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 0b0131f2b2bce3af1eb4d0c7550d77b4089385af
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689784"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106277"
 ---
-# <a name="finding-more-ole-db-driver-for-sql-server-information"></a>Ricerca di ulteriori OLE DB Driver per informazioni su SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="finding-more-ole-db-driver-for-sql-server-information"></a>Ricerca di altre informazioni sul driver OLE DB per SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  Per ulteriori informazioni su Driver OLE DB per SQL Server e altri tipi di programmazione dell'accesso ai dati, vedere le risorse online seguenti:  
+  Per altre informazioni sul driver OLE DB per SQL Server e su altri tipi di programmazione per l'accesso ai dati, vedere le risorse online seguenti:  
   
- [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)  
- Questo sito sono presenti articoli tecnici, codice di esempio e le tecnologie di accesso ad altre risorse per il Driver OLE DB per SQL Server e altri dati.  
+ [Centro per sviluppatori di soluzioni di accesso ai dati e archiviazione](http://go.microsoft.com/fwlink?linkid=4173)  
+ In questo sito sono disponibili articoli tecnici, codice di esempio e altre risorse per il driver OLE DB per SQL Server e altre tecnologie di accesso ai dati.  
   
- [Blog dell'accesso ai dati](http://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Blog per l'accesso ai dati](http://go.microsoft.com/fwlink/?LinkId=48617)  
  In questo blog vengono fornite informazioni sulle tecnologie di accesso ai dati ed è possibile interagire direttamente con i membri del team di prodotto.  
   
  [Windows Data Access Components](http://go.microsoft.com/fwlink/?LinkId=107907)  

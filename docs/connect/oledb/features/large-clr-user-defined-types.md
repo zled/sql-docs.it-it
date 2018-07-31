@@ -1,5 +1,5 @@
 ---
-title: Tipi definiti dall'utente CLR di grandi dimensioni | Documenti Microsoft
+title: Tipi definiti dall'utente CLR di grandi dimensioni | Microsoft Docs
 description: Tipi CLR grandi dimensioni definito dall'utente nel Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: efb6e8f00859e98963dbf4f511899ef517c5f7c0
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 4cf71fa76c4759364954c8cbff446957dd80c8aa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611706"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108063"
 ---
 # <a name="large-clr-user-defined-types"></a>Tipi CLR definiti dall'utente di grandi dimensioni
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -34,9 +34,9 @@ ms.locfileid: "35611706"
   
 ## <a name="use-cases"></a>Modalità di utilizzo comuni   
   
- Per OLE DB, il supporto per i tipi UDT di grandi dimensioni include la possibilità di flusso dei valori da e verso il server utilizzando l'associazione di ISequentialStream.  
+ Per OLE DB, il supporto per i tipi definiti dall'utente di grandi dimensioni include la possibilità di eseguire il flusso dei valori di tali tipi al e dal server usando l'associazione ISequentialStream.  
   
- Tipi definiti dall'utente minori o uguali a 8.000 byte hanno lo stesso comportamento che in SQL Server 2005. Per OLE DB, si può comunque trasmettere small tipi definiti dall'utente utilizzando l'associazione di ISequentialStream.  
+ Tipi definiti dall'utente minori o uguali a 8.000 byte hanno lo stesso comportamento che in SQL Server 2005. Per OLE DB, si può comunque trasmettere piccole tipi definiti dall'utente tramite il binding di ISequentialStream.  
   
  Il codice nativo dovrà talvolta riconoscere il contenuto dei tipi CLR definiti dall'utente, ma non dovrà creare istanze di oggetti gestiti. In tal caso, è possibile utilizzare serializzazione personalizzata per convertire i valori dei tipi definiti dall'utente nel server in un formato noto per i client.  
   

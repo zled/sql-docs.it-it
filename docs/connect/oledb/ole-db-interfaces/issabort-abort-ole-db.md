@@ -1,5 +1,5 @@
 ---
-title: 'Issabort:: Abort (OLE DB) | Documenti Microsoft'
+title: 'Issabort:: Abort (OLE DB) | Microsoft Docs'
 description: ISSAbort::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,23 +20,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 39f56dd6c058c82783c8cff786e210884cd3bf0c
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: c725e8a55ab11c09089df37d217ba6f91095218e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690264"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105907"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Annulla il set di righe corrente oltre a qualsiasi comando eseguito in batch associato al comando corrente.  
   
-Il **ISSAbort** interfaccia, esposta nel Driver OLE DB per SQL Server, fornisce il **issabort:: Abort** metodo che viene utilizzato per annullare il set di righe corrente oltre a qualsiasi comando batch con il comando che ha inizialmente generato il set di righe e non ha ancora completato l'esecuzione.  
+L'interfaccia **ISSAbort**, esposta nel driver OLE DB per SQL Server, fornisce il metodo **ISSAbort::Abort** che viene utilizzato per annullare il set di righe corrente oltre a qualsiasi comando eseguito in batch insieme al comando che ha inizialmente generato il set di righe e non ha ancora completato l'esecuzione.  
   
- **ISSAbort** è disponibile un Driver OLE DB per l'interfaccia di specifiche di SQL Server usando **QueryInterface** sul **IMultipleResults** oggetto restituito da **ICommand:: Execute**  oppure **IOpenRowset:: OPENROWSET**.  
+ **ISSAbort** è un'interfaccia specifica del driver OLE DB per SQL Server disponibile mediante **QueryInterface** sull'oggetto **IMultipleResults** restituito da **ICommand::Execute** o **IOpenRowset::OpenRowset**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,19 +46,19 @@ HRESULT Abort(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Se il comando interrotto è in una stored procedure, l'esecuzione di stored procedure (e le procedure che ha chiamato la procedura) verrà terminata insieme al batch di comandi che contiene la chiamata di stored procedure. Se il server è in corso il trasferimento di un set di risultati al client, il trasferimento verrà arrestato. Se il client non desidera utilizzare un set di risultati, la chiamata **issabort:: Abort** prima di rilasciare il set di righe consente di velocizzare il rilascio di set di righe, ma se è presente una transazione aperta e XACT_ABORT è impostata su ON, verrà eseguito il rollback della transazione quando **Issabort:: Abort** viene chiamato  
+ Se il comando interrotto è in una stored procedure, l'esecuzione della stored procedure (e di qualsiasi procedura che ha chiamato la procedura) verrà terminata insieme al batch di comandi che contiene la chiamata alla stored procedure. Se nel server è in corso il trasferimento di un set di risultati al client, questo processo verrà arrestato. Se il client non desidera utilizzare un set di risultati, la chiamata a **ISSAbort::Abort** prima di rilasciare il set di righe accelererà il rilascio del set di righe, ma se è presente una transazione aperta e XACT_ABORT è ON, verrà eseguito il rollback della transazione quando viene chiamato **ISSAbort::Abort**  
   
- Dopo aver **issabort:: Abort** restituisce S_OK, associato **IMultipleResults** interfaccia entra in uno stato inutilizzabile e restituisce DB_E_CANCELED a tutte le chiamate di metodo (ad eccezione dei metodi definiti per il **IUnknown** interface) fino a quando non viene rilasciato. Se un **IRowset** ottenuto dal **IMultipleResults** prima di una chiamata a **Abort**, anche entra in uno stato inutilizzabile e restituisce DB_E_CANCELED a all (metodo) chiama ( ad eccezione dei metodi definiti per il **IUnknown** interfaccia e **:: ReleaseRows**) fino a quando non viene rilasciato dopo una chiamata a **issabort:: Abort** .  
+ Dopo che **ISSAbort::Abort** restituisce S_OK, l'interfaccia **IMultipleResults** associata passa in uno stato inutilizzabile e restituisce DB_E_CANCELED a tutte le chiamate ai metodi, ad eccezione dei metodi definiti dall'interfaccia **IUnknown**, fino a quando non viene rilasciata. Se si ottiene un'interfaccia **IRowset** da **IMultipleResults** prima di una chiamata a **Abort**, anche questa interfaccia passa in uno stato inutilizzabile e restituisce DB_E_CANCELED a tutte le chiamate ai metodi, ad eccezione dei metodi definiti dall'interfaccia **IUnknown** e da **IRowset::ReleaseRows**, fino a quando non viene rilasciata in seguito a una chiamata riuscita a **ISSAbort::Abort**.  
   
 > [!NOTE]  
->  A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se il server lo stato XACT_ABORT è ON, l'esecuzione **issabort:: Abort** terminerà e rollback di transazioni corrente implicita o esplicita quando si è connessi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la transazione corrente non viene interrotta.  
+>  A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se lo stato XACT_ABORT del server è ON, l'esecuzione di **ISSAbort::Abort** terminerà qualsiasi transazione implicita o esplicita e ne eseguirà il rollback durante la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la transazione corrente non viene interrotta.  
   
 ## <a name="arguments"></a>Argomenti  
  Nessuna.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  S_OK  
- Il **issabort:: Abort** metodo viene restituito S_OK se il batch è stato annullato e DB_E_CANTCANCEL in caso contrario. Se il batch è già stato annullato, viene restituito DB_E_CANCELED.  
+ Il metodo **ISSAbort::Abort** restituisce S_OK se il batch è stato annullato e DB_E_CANTCANCEL in caso contrario. Se il batch è già stato annullato, viene restituito DB_E_CANCELED.  
   
  DB_E_CANCELED  
  Il batch è già stato annullato.  
@@ -67,10 +67,10 @@ HRESULT Abort(void);
  Il batch non è stato annullato.  
   
  E_FAIL  
- Si è verificato un errore specifico del provider; Per informazioni dettagliate, utilizzare il [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interfaccia.  
+ Si è verificato un errore specifico del provider. Per informazioni dettagliate, usare l'interfaccia [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
   
  E_UNEXPECTED  
- La chiamata al metodo non era prevista. Ad esempio, l'oggetto è in uno stato non valido perché **issabort:: Abort** è già stato chiamato.  
+ La chiamata al metodo non era prevista. Lo stato dell'oggetto, ad esempio, è in dubbio in quanto **ISSAbort::Abort** è già stato chiamato.  
   
  E_OUTOFMEMORY  
  Errore di memoria insufficiente.  

@@ -1,6 +1,6 @@
 ---
-title: Le informazioni nelle interfacce di errore | Documenti Microsoft
-description: Informazioni nelle interfacce di errore
+title: Le informazioni nelle interfacce di errore | Microsoft Docs
+description: Le informazioni nelle interfacce di errore
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,23 +21,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 514b2328fce0f400315be4d21539f766f8715890
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 3f5b9334beae9c3a65c290adffae1075788191c4
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666141"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106027"
 ---
 # <a name="information-in-error-interfaces"></a>Informazioni nelle interfacce di errore
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server riporta alcune informazioni di errore e di stato nelle interfacce di errore definite da OLE DB **IErrorInfo**, **IErrorRecords**, e **ISQLErrorInfo**.  
+  Il driver OLE DB per SQL Server segnala informazioni sullo stato e sugli errori nelle interfacce di errore definite da OLE DB **IErrorInfo**, **IErrorRecords** e **ISQLErrorInfo**.  
   
  Il Driver OLE DB per SQL Server supporta **IErrorInfo** membro funziona nel modo seguente.  
   
-|Funzione membro|Description|  
+|Funzione membro|Descrizione|  
 |---------------------|-----------------|  
 |**GetDescription**|Stringa descrittiva del messaggio di errore.|  
 |**GetGUID**|GUID dell'interfaccia che ha definito l'errore.|  
@@ -47,20 +47,20 @@ ms.locfileid: "35666141"
   
  Il Driver OLE DB per SQL Server supporta disponibili per il consumer **IErrorRecords** membro funziona nel modo seguente.  
   
-|Funzione membro|Description|  
+|Funzione membro|Descrizione|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Inserisce in una struttura ERRORINFO le informazioni di base su un errore. Una struttura ERRORINFO contiene membri che identificano il valore restituito HRESULT per l'errore nonché il provider e l'interfaccia alle quali si applica l'errore.|  
 |**GetCustomErrorObject**|Restituisce un riferimento nelle interfacce **ISQLErrorInfo** e [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).|  
-|**GetErrorInfo**|Restituisce un riferimento in un **IErrorInfo** interfaccia.|  
-|**GetErrorParameters**|Il Driver OLE DB per SQL Server non restituisce parametri al consumer tramite **GetErrorParameters**.|  
+|**GetErrorInfo**|Restituisce un riferimento in un'interfaccia **IErrorInfo**.|  
+|**GetErrorParameters**|Il Driver OLE DB per SQL Server non restituisce parametri al consumer attraverso **GetErrorParameters**.|  
 |**GetRecordCount**|Conteggio dei record di errore disponibili.|  
   
  Il Driver OLE DB per SQL Server supporta **ISQLErrorInfo:: Getsqlinfo** parametri come indicato di seguito.  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*pbstrSQLState*|Restituisce un valore SQLSTATE per l'errore. I valori SQLSTATE vengono definiti nelle specifiche API, SQL-92, ODBC e ISO SQL. Né [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] né il Driver OLE DB per SQL Server definite valori SQLSTATE specifici dell'implementazione.|  
-|*plNativeError*|Restituisce il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] numero di errore **master.dbo** quando disponibile. Gli errori nativi sono disponibili dopo un tentativo riuscito di inizializzare un Driver OLE DB per l'origine dati di SQL Server. Prima del tentativo, il Driver OLE DB per SQL Server restituisce sempre zero.|  
+|*plNativeError*|Restituisce il numero di errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da **master.dbo.sysmessages**, quando disponibile. Gli errori nativi sono disponibili dopo un tentativo riuscito di inizializzare un Driver OLE DB per l'origine dati di SQL Server. Prima del tentativo, il Driver OLE DB per SQL Server restituisce sempre zero.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [errori](../../oledb/ole-db-errors/errors.md)  

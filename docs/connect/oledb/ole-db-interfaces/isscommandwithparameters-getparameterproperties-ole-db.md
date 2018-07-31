@@ -1,5 +1,5 @@
 ---
-title: 'Isscommandwithparameters:: Getparameterproperties (OLE DB) | Documenti Microsoft'
+title: 'Isscommandwithparameters:: Getparameterproperties (OLE DB) | Microsoft Docs'
 description: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9c0f35cd59a670e35db6400f681187c52e4b97ef
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 3bc5932fc68b627f6bc204deec971402046baca9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689994"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108093"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -44,17 +44,17 @@ HRESULT GetParameterProperties(
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *pcParams*[out] [in]  
- Puntatore alla memoria che contiene il numero di strutture SSPARAMPROPS restituite *prgParamProperties*.  
+ *pcParams*[out][in]  
+ Puntatore alla memoria contenente il numero di strutture SSPARAMPROPS restituite in *prgParamProperties*.  
   
  *prgParamProperties*[out]  
- Puntatore alla memoria nel quale viene restituita una matrice di strutture SSPARAMPROPS. Il provider alloca memoria per le strutture e restituisce l'indirizzo per la memoria, il consumer rilascia questa memoria con **IMalloc:: Free** quando non è più necessario le strutture. Prima di chiamare **IMalloc:: Free** per *prgParamProperties*, il consumer deve chiamare anche **VariantClear** per il *vValue* proprietà ogni struttura DBPROP per impedire una perdita di memoria nei casi in cui la variante contiene un riferimento di tipo, ad esempio BSTR. Se *pcParams* è zero nell'output o si verifica un errore diverso da DB_E_ERRORSOCCURRED, il provider non alloca alcuna memoria e assicura *prgParamProperties* è un puntatore null nell'output.  
+ Puntatore alla memoria nel quale viene restituita una matrice di strutture SSPARAMPROPS. Il provider alloca la memoria per le strutture e restituisce l'indirizzo alla memoria. Il consumer rilascia questa memoria con **IMalloc::Free** quando le strutture non sono più necessarie. Prima di chiamare **IMalloc::Free** per *prgParamProperties*, il consumer deve chiamare anche **VariantClear** per la proprietà *vValue* di ogni struttura DBPROP in modo da impedire una perdita di memoria nei casi in cui la variante contiene un tipo di riferimento, ad esempio BSTR. Se *pcParams* è zero nell'output o si verifica un errore diverso da DB_E_ERRORSOCCURRED, il provider non alloca alcuna memoria e verifica che *prgParamProperties* sia un puntatore Null nell'output.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Il **GetParameterProperties** metodo restituisce gli stessi codici di errore OLE DB principali **ICommandProperties** metodo, ad eccezione di tale DB_S_ERRORSOCCURRED e DB_E_ERRORSOCCURED non può essere generato.  
+ Il metodo **GetParameterProperties** restituisce gli stessi codici di errore del metodo **di ICommandProperties::GetProperties** OLE DB principale, a meno che non sia possibile generare DB_S_ERRORSOCCURRED e DB_E_ERRORSOCCURED.  
   
 ## <a name="remarks"></a>Remarks  
- **Isscommandwithparameters:: Getparameterproperties** metodo funziona in modo coerente rispetto a **GetParameterInfo**. Se [isscommandwithparameters:: Setparameterproperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) oppure **SetParameterInfo** non è stato chiamato o è stato chiamato con cParams pari a zero, **GetParameterInfo**deriva le informazioni sui parametri e lo restituisce. Se **isscommandwithparameters:: Setparameterproperties** oppure **SetParameterInfo** sono stati chiamati per almeno un parametro, **isscommandwithparameters:: Getparameterproperties**  metodo restituisce proprietà solo per i parametri per il quale **isscommandwithparameters:: Setparameterproperties** è stato chiamato. Se **isscommandwithparameters:: Setparameterproperties** viene chiamato dopo **isscommandwithparameters:: Getparameterproperties** oppure **GetParameterInfo**, le chiamate successive alle **isscommandwithparameters:: Getparameterproperties** restituiscono i valori sottoposti a override per i parametri per il quale **isscommandwithparameters:: Setparameterproperties** metodo è stato chiamato.  
+ **ISSCommandWithParameters::GetParameterProperties** ha un comportamento coerente rispetto a **GetParameterInfo**. Se [ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) o **SetParameterInfo** non è stato chiamato, o è stato chiamato con cParams pari a zero, **GetParameterInfo** deriva le informazioni sul parametro e restituisce questo risultato. Se **ISSCommandWithParameters::SetParameterProperties** o **SetParameterInfo** sono stati chiamati per almeno un parametro, **ISSCommandWithParameters::GetParameterProperties** restituisce proprietà solo per i parametri per i quali è stato chiamato **ISSCommandWithParameters::SetParameterProperties**. Se **ISSCommandWithParameters::SetParameterProperties** viene chiamato dopo **ISSCommandWithParameters::GetParameterProperties** o **GetParameterInfo**, le chiamate successive a **ISSCommandWithParameters::GetParameterProperties** restituiscono i valori sottoposti a override per i parametri per i quali è stato chiamato **ISSCommandWithParameters::SetParameterProperties**.  
   
  La struttura SSPARAMPROPS viene definita nel modo seguente:  
   
@@ -68,10 +68,10 @@ HRESULT GetParameterProperties(
   
  `};`  
   
-|Membro|Description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |*iOrdinal*|Numero ordinale del parametro passato.|  
-|*cPropertySets*|Il numero di strutture DBPROPSET in *rgPropertySets*.|  
+|*cPropertySets*|Numero di strutture DBPROPSET in *rgPropertySets*.|  
 |*rgPropertySets*|Puntatore alla memoria nel quale restituire una matrice di strutture DBPROPSET.|  
   
 ## <a name="see-also"></a>Vedere anche  

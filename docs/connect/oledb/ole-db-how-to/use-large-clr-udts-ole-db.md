@@ -1,6 +1,6 @@
 ---
-title: Utilizzare definiti dall'utente CLR di grandi dimensioni (OLE DB) | Documenti Microsoft
-description: Usare grandi tipi definiti dall'utente CLR (OLE DB)
+title: Usare i tipi UDT CLR di grandi dimensioni (OLE DB) | Microsoft Docs
+description: Usare tipi definiti dall'utente CLR di grandi dimensioni (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8e9733ecabfd5af93eb2e72328819fe54e8d9668
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 6151cbb2b05cf996e9660e59af75c97c8a8246d5
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666051"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109803"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Utilizzare tipi definiti dall'utente CLR di grandi dimensioni (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "35666051"
   
  Eseguire il secondo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per aggiungere l'assembly al database master.  
   
- Compilare il terzo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" per L"(local)\\\name", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente include la directory contenente msoledbsql.h.  
+ Compilare il terzo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
  Eseguire il quarto listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per eliminare l'assembly nel database master.  
   

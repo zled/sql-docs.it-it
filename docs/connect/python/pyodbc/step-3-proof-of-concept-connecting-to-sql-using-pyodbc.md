@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 3: Modello di prova di connessione a SQL tramite pyodbc | Documenti Microsoft'
+title: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite pyodbc | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9914b8bd941eb3e6ddc64fb1a4e37b38335fa01f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: a3fa70619208df8940ec10a1b5a0f46704ce9c43
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309750"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979977"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Passaggio 3: Modello di connessione a SQL tramite pyodbc prova
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Passaggio 3: Modello di verifica per la connessione a SQL tramite pyodbc
 
-In questo esempio deve essere considerato un modello solo di prova.  Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
+In questo esempio deve essere considerato un modello di verifica solo.  Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
 
-**Eseguire script di esempio riportato di seguito** creare un file denominato test.py e aggiungere ogni frammento di codice mentre Prosegui. 
+**Eseguire script di esempio riportato di seguito** creare un file denominato test.py e aggiungere ogni frammento di codice mentre si procede. 
 
 ```
 > python test.py
@@ -49,9 +49,9 @@ cursor = cnxn.cursor()
 ```  
   
   
-## <a name="step-2--execute-query"></a>Passaggio 2: Esecuzione di query  
+## <a name="step-2--execute-query"></a>Passaggio 2: Eseguire query  
   
-Il cursor.executefunction consente di recuperare un set di risultati da una query sul Database SQL. Questa funzione è essenzialmente accetta tutte le query e restituisce un set di risultati che è possibile eseguire un'iterazione con l'utilizzo di cursor.fetchone()
+Il cursor.executefunction utilizzabile per recuperare un set di risultati da una query sul Database SQL. Questa funzione accetta qualsiasi query essenzialmente e restituisce un set di risultati che può eseguire l'iterazione tramite l'uso di fetchone)
   
   
 ```python
@@ -66,7 +66,7 @@ while row:
   
 ## <a name="step-3--insert-a-row"></a>Passaggio 3: Inserire una riga  
   
-In questo esempio verrà visualizzato come eseguire un [inserire](../../../t-sql/statements/insert-transact-sql.md) istruzione in modo sicuro, passare parametri che la protezione dell'applicazione da [attacchi SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) valore.    
+In questo esempio illustra come eseguire un' [inserire](../../../t-sql/statements/insert-transact-sql.md) istruzione in modo sicuro, passare i parametri che proteggono l'applicazione dal [attacchi SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) valore.    
   
   
 ```python
@@ -82,4 +82,4 @@ while row:
   `      
   ## <a name="next-steps"></a>Passaggi successivi  
   
-Per ulteriori informazioni, vedere il [Centro per sviluppatori Python](https://azure.microsoft.com/en-us/develop/python/).
+Per altre informazioni, vedere la [Centro per sviluppatori Python](https://azure.microsoft.com/develop/python/).

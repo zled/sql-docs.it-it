@@ -1,5 +1,5 @@
 ---
-title: Metodo getExtraNameCharacters (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo getExtraNameCharacters (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a0c226a972330dcd9985b4b7c93074b8f7d2d14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 99ffe958cae6a13f4df573385b91143c7c259ea9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834246"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084813"
 ---
 # <a name="getextranamecharacters-method-sqlserverdatabasemetadata"></a>Metodo getExtraNameCharacters (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,15 +39,15 @@ public java.lang.String getExtraNameCharacters()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto **stringa** che contiene i caratteri aggiuntivi.  
+ Una **stringa** contenente i caratteri aggiuntivi.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo getExtraNameCharacters viene specificato dal metodo getExtraNameCharacters nell'interfaccia DatabaseMetaData.  
   
- Quando si utilizza il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database, questo metodo restituisce il simbolo $, # e @ caratteri aggiuntivi.  
+ Quando si utilizza [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], il metodo restituisce i caratteri aggiuntivi $, # e \@.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

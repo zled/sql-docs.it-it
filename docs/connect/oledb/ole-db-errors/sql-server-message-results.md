@@ -1,5 +1,5 @@
 ---
-title: Risultati dei messaggi di SQL Server | Documenti Microsoft
+title: Risultati dei messaggi SQL Server | Microsoft Docs
 description: risultati dei messaggi di SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 87dbfd1740223f6d3d2116ada8d8c0c109aba15f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 98d04b56c6e1709e629be46ad00fd3f7b8007a5b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665512"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105997"
 ---
 # <a name="sql-server-message-results"></a>Risultati dei messaggi di SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Nell'esempio [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni non generano Driver OLE DB per i set di righe di SQL Server o un conteggio delle righe interessate quando eseguita:  
+  Le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguenti non generano set di righe del driver OLE DB per SQL Server o un conteggio delle righe interessate durante l'esecuzione:  
   
 -   PRINT  
   
@@ -42,11 +42,11 @@ ms.locfileid: "35665512"
   
 -   SET STATISTICS  
   
- Queste istruzioni restituiscono uno o più messaggi informativi o determinano la restituzione da parte di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di messaggi informativi in sostituzione dei risultati del conteggio o del set di righe. Dopo l'esecuzione, il Driver OLE DB per SQL Server restituisce S_OK e i messaggi sono disponibili per il Driver OLE DB per il consumer di SQL Server.  
+ Queste istruzioni restituiscono uno o più messaggi informativi o determinano la restituzione da parte di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di messaggi informativi in sostituzione dei risultati del conteggio o del set di righe. In caso di esecuzione, il Driver OLE DB per SQL Server restituisce S_OK e i messaggi sono disponibili per il Driver OLE DB per il consumer di SQL Server.  
   
- Il Driver OLE DB per SQL Server restituisce S_OK e include uno o più messaggi informativi disponibili dopo l'esecuzione di molte [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni o all'esecuzione del consumer di un Driver OLE DB per la funzione membro di SQL Server.  
+ Il Driver OLE DB per SQL Server restituisce S_OK e include uno o più messaggi informativi disponibili in seguito all'esecuzione di molte [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni o l'esecuzione del consumer di un Driver OLE DB per la funzione membro di SQL Server.  
   
- Il Driver OLE DB per i consumer di SQL Server che consente la specifica dinamica del testo della query deve verificare le interfacce di errore dopo ogni esecuzione della funzione membro indipendentemente dal valore del codice restituito, la presenza o assenza di un insieme restituito **IRowset** oppure **IMultipleResults** riferimento all'interfaccia o un conteggio delle righe interessate.  
+ Il consumer del driver OLE DB per SQL Server che consente la specifica dinamica del testo della query deve controllare le interfacce di errore dopo l'esecuzione di ogni funzione membro, indipendentemente dal valore del codice restituito, dalla presenza o dall'assenza di un riferimento all'interfaccia **IRowset** o **IMultipleResults** restituito o di un conteggio delle righe interessate.  
   
 ## <a name="see-also"></a>Vedere anche  
  [errori](../../oledb/ole-db-errors/errors.md)  

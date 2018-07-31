@@ -1,6 +1,6 @@
 ---
-title: 'Recuperare colonne tramite IRow:: GetColumns (o IRow:: Open) e ISequentialStream | Documenti Microsoft'
-description: 'Recuperare colonne tramite IRow:: GetColumns (o IRow:: Open) e ISequentialStream'
+title: Recuperare colonne usando IRow::GetColumns (o IRow::Open) e ISequentialStream | Microsoft Docs
+description: Recuperare colonne usando IRow::GetColumns (o IRow::Open) e ISequentialStream
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8eac2f4cd623ac488de6d1d16a40e71965b3193d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e51fb6d127657cddcdca3cde3d3d7d769088f53f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666181"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107007"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Recuperare colonne mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dati di grandi dimensioni possono essere associati o recuperati utilizzando il **ISequentialStream** interfaccia. Per le colonne associate, il flag di stato DBSTATUS_S_TRUNCATED indica che i dati sono troncati.  
+  I dati di grandi dimensioni possono essere associati o recuperati utilizzando l'interfaccia **ISequentialStream**. Per le colonne associate, il flag di stato DBSTATUS_S_TRUNCATED indica che i dati sono troncati.  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -39,24 +39,24 @@ ms.locfileid: "35666181"
   
 1.  Stabilire una connessione all'origine dati.  
   
-2.  Eseguire il comando (in questo esempio, **ICommandExecute::** viene chiamato con IID_IRow).  
+2.  Eseguire il comando (nell'esempio seguente viene chiamato **ICommandExecute::Execute()** con IID_IRow).  
   
-3.  Recuperare i dati di colonna utilizzando **IRow::Open()** o **IRow::GetColumns()**.  
+3.  Recuperare i dati di colonna usando **IRow::Open()** oppure **IRow::GetColumns()**.  
   
-    -   **IRow::Open()** può essere utilizzato per aprire un' **ISequentialStream** sulla riga. Specificare DBGUID_STREAM per indicare che la colonna contiene un flusso di dati binari (**IStream** o **ISequentialStream** può quindi essere utilizzato per leggere i dati dalla colonna).  
+    -   **IRow::Open()** può essere utilizzato per aprire un' **ISequentialStream** sulla riga. Specificare DBGUID_STREAM per indicare che la colonna contiene un flusso di dati binari. Sarà quindi possibile utilizzare **IStream** o **ISequentialStream** per leggere i dati dalla colonna.  
   
-    -   Se **IRow::GetColumns()** viene utilizzato il **pData** elemento della struttura DBCOLUMNACCESS viene impostato in modo che punti a un oggetto flusso.  
+    -   Se viene utilizzato **IRow::GetColumns()**, l'elemento **pData** della struttura DBCOLUMNACCESS viene impostato in modo da puntare a un oggetto del flusso.  
   
-4.  Utilizzare **ISequentialStream::Read()** ripetutamente per leggere il numero specificato di byte nel buffer del consumer.  
+4.  Uso **ISequentialStream::Read()** ripetutamente per leggere il numero specificato di byte nel buffer del consumer.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come recuperare una singola riga mediante IRow. In questo esempio viene recuperata una colonna per volta dalla riga. In questo esempio viene illustrato l'utilizzo di IRow::Open() e di IRow::GetColumns(). Per leggere i dati della colonna, nell'esempio viene utilizzato un oggetto ISequentialStream::Read.  
   
- In questo esempio richiede il database di esempio AdventureWorks, è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) pagina iniziale.  
+ Per l'esempio seguente è necessario disporre del database di esempio AdventureWorks, scaricabile dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
  Il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) consente di creare una tabella utilizzata dall'esempio.  
   
- Compilare con ole32.lib oleaut32.lib ed eseguire il secondo listato di codice (C++). In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" per L"(local)\\\name", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente include la directory contenente msoledbsql.h.  
+ Compilare il secondo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
  Il terzo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) consente di eliminare la tabella utilizzata dall'esempio.  
   

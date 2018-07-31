@@ -1,6 +1,6 @@
 ---
-title: Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload (OLE DB) | Documenti Microsoft
-description: Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload (OLE DB)
+title: Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload (OLE DB) | Microsoft Docs
+description: Inviare dati a una colonna FILESTREAM usando IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 070e8022ffc0840f88f7b8e5b0b03abcd2f13dc3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a708966a35ef6311cf6912a988bcf4822f53b6f3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666191"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106557"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   In questo esempio viene utilizzata l'interfaccia IRowsetFastUpload per inviare una quantità di dati compresa tra 4 MB e 4 GB a una colonna FILESTREAM.  
   
- Per ulteriori informazioni sulla caratteristica filestream, vedere [supporto FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Per altre informazioni sulla caratteristica filestream, vedere [supporto FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Esempio  
- Prima di compilare ed eseguire l'esempio, abilitare il supporto FILESTREAM ([abilitare e configurare FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Prima di compilare ed eseguire questo esempio, abilitare il supporto FILESTREAM ([abilitare e configurare FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Verificare che nella variabile di ambiente include la directory contenente msoledbsql.h.  
+ Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
  Nel server deve essere presente una directory denominata C:\DBFsa in cui verrà creato il database. L'istanza di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] deve disporre di accesso in scrittura a questo percorso, che è possibile ottenere, ad esempio, eseguendo l'accesso come account di sistema locale.  
   

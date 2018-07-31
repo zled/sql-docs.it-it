@@ -1,6 +1,6 @@
 ---
-title: Copia bulk di dati mediante IRowsetFastLoad (OLE DB) | Documenti Microsoft
-description: Copia bulk di dati in un'interfaccia utilizzando IRowsetFastLoad tabella SQL Server del Driver OLE DB per SQL Server
+title: Copia bulk di dati mediante IRowsetFastLoad (OLE DB) | Microsoft Docs
+description: Copia bulk di dati in un'interfaccia bulk utilizzando IRowsetFastLoad tabella di SQL Server del Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,25 +19,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 915a9ba3bf4a9f9937d79cbb9449671ca09b3cb9
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 60141327793c4839110dfed05165102060de2d00
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665661"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107723"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Eseguire una copia bulk di dati mediante IRowsetFastLoad (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In questo esempio viene illustrato l'utilizzo di IRowsetFastLoad per la copia bulk di record in una tabella.  
   
- Il consumer notifica al Driver OLE DB per SQL Server della necessità di impostando il Driver OLE DB per la proprietà SSPROP_ENABLEFASTLOAD specifica del driver di SQL Server su VARIANT_TRUE la copia bulk. Con la proprietà impostata sull'origine dati, il consumer crea un Driver OLE DB per la sessione di SQL Server. La nuova sessione consente al consumer di accedere a **IRowsetFastLoad**.  
+ Il consumer notifica al Driver OLE DB per SQL Server della necessità di impostare il Driver OLE DB per la proprietà SSPROP_ENABLEFASTLOAD specifica del driver di SQL Server su VARIANT_TRUE la copia bulk. Con la proprietà è impostata sull'origine dati, il consumer crea un Driver OLE DB per la sessione di SQL Server. La nuova sessione consente al consumer di accedere al **IRowsetFastLoad**.  
   
- È disponibile un esempio completo che illustra l'uso di **IRowsetFastLoad** per la copia bulk dei record in una tabella. In questo esempio, vengono aggiunti 10 record alla tabella **IRFLTable**. È necessario creare la tabella **IRFLTable** nel database.  
+ In un esempio completo viene illustrato l'uso di **IRowsetFastLoad** per eseguire una copia bulk dei record in una tabella. In questo esempio vengono aggiunti 10 record alla tabella **IRFLTable**. È necessario creare la tabella **IRFLTable** nel database.  
   
- In questo esempio richiede il database di esempio AdventureWorks, è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) pagina iniziale.  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -46,24 +46,24 @@ ms.locfileid: "35665661"
   
 1.  Stabilire una connessione all'origine dati.  
   
-2.  Impostare il Driver OLE DB per la proprietà SSPROP_ENABLEFASTLOAD dell'origine dati specifici del driver SQL Server su VARIANT_TRUE. Con questa proprietà è impostata su VARIANT_TRUE, la sessione appena creata consente al consumer di accedere a **IRowsetFastLoad**.  
+2.  Impostare il Driver OLE DB per la proprietà SSPROP_ENABLEFASTLOAD dell'origine dati specifici del driver SQL Server su VARIANT_TRUE. Grazie a questa impostazione, la sessione appena creata consente al consumer di accedere a **IRowsetFastLoad**.  
   
-3.  Creare una sessione che richiede il **IOpenRowset** interfaccia.  
+3.  Creare una sessione che richiede la **IOpenRowset** interfaccia.  
   
-4.  Chiamare **IOpenRowset:: OPENROWSET** per aprire un set di righe che include tutte le righe dalla tabella (in cui dati non viene copiato tramite l'operazione di copia bulk).  
+4.  Chiamare **IOpenRowset::OpenRowset** per aprire un set di righe che include tutte le righe della tabella (in cui devono essere copiati i dati usando l'operazione di copia bulk).  
   
-5.  Le associazioni necessarie e creare una funzione di accesso tramite **IAccessor:: CreateAccessor**.  
+5.  Effettuare le associazioni necessarie e creare una funzione di accesso usando **IAccessor:: CreateAccessor**.  
   
 6.  Configurare il buffer della memoria dal quale verranno copiati i dati nella tabella.  
   
-7.  Chiamare **IRowsetFastLoad:: InsertRow** per la copia bulk dei dati nella tabella.  
+7.  Chiamare **IRowsetFastLoad:: InsertRow** alla copia bulk dei dati nella tabella.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio vengono aggiunti 10 record alla tabella IRFLTable. È necessario creare la tabella IRFLTable nel database. Questo esempio non è supportato in IA64.  
   
  Eseguire il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per creare la tabella utilizzata dall'applicazione.  
   
- Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" per L"(local)\\\name", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente include la directory contenente msoledbsql.h.  
+ Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
  Eseguire il terzo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'applicazione.  
   

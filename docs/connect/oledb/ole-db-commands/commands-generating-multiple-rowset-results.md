@@ -1,6 +1,6 @@
 ---
-title: Comandi che generano risultati di più set di righe | Documenti Microsoft
-description: Comandi che generano risultati di più set di righe
+title: Comandi che generano risultati di più set di righe | Microsoft Docs
+description: Comandi che generano risultati con più set di righe
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8538fa8326dd5ad103d50d4745279c77ed580db4
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 579fae980b0f612aa1317407f797be9d1ff02ed3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665519"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109623"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandi che generano risultati con più set di righe
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -52,7 +52,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
 ## <a name="stored-procedures"></a>Stored procedure  
  Tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene restituito un set di risultati per ogni istruzione di una stored procedure. Pertanto, dalla maggior parte delle stored procedure di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono restituiti più set di risultati.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Uso di IMultipleResults per elaborare più set di risultati](../../oledb/ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   

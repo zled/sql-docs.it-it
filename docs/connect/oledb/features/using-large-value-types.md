@@ -1,6 +1,6 @@
 ---
-title: Utilizzo di tipi di valori di grandi dimensioni | Documenti Microsoft
-description: Utilizzo di tipi di valori di grandi dimensioni con Driver OLE DB per SQL Server
+title: Utilizzo di tipi di valori di grandi dimensioni | Microsoft Docs
+description: Usando tipi di valori di grandi dimensioni con il Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,59 +20,59 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e41b35c8ea552708aa53f3cb8810bbaae06ca680
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b8b0e413eabbcf52e98d778ba309e9a2ca45f68f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612096"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107953"
 ---
 # <a name="using-large-value-types"></a>Utilizzo di tipi di dati per valori di grandi dimensioni
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilizzo dei tipi di dati per valori di grandi dimensioni richiede una gestione speciale. I tipi di dati di valori di grandi dimensioni sono quelli che superano le dimensioni massime di 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdotto un **max** identificatore **varchar**, **nvarchar**, e **varbinary** tipi di dati per consentire l'archiviazione dei valori di dimensioni pari a 2 ^ 31 -1 byte. Le colonne della tabella e [!INCLUDE[tsql](../../../includes/tsql-md.md)] possono specificare le variabili **varchar (max)**, **nvarchar (max)**, o **varbinary (max)** tipi di dati.  
+  Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilizzo dei tipi di dati per valori di grandi dimensioni richiede una gestione speciale. I tipi di dati per valori di grandi dimensioni sono quelli che superano le dimensioni di riga massime di 8 KB. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è stato introdotto un identificatore **max** per i tipi di dati **varchar**, **nvarchar** e **varbinary** per consentire l'archiviazione di valori fino a 2^31 -1 byte. Le colonne di tabella e le variabili [!INCLUDE[tsql](../../../includes/tsql-md.md)] possono specificare tipi di dati **varchar(max)**, **nvarchar(max)** o **varbinary(max)**.  
   
 > [!NOTE]  
->  Tipi di dati di valori di grandi dimensioni possono avere una dimensione massima compresa tra 1 KB e 8 KB, o possono essere specificate come dimensioni illimitate.  
+>  I tipi di dati per valori di grandi dimensioni possono presentare dimensioni massime comprese tra 1 KB e 8 KB oppure illimitate.  
   
- In precedenza, solo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipi di dati, ad esempio **testo**, **ntext** e **immagine** tali lunghezze erano consentite. Il **max** identificatore **varchar**, **nvarchar**, e **varbinary** apportate questi tipi di dati ridondanti. Tuttavia, poiché sono ancora disponibili tipi di dati di tipo long, la maggior parte delle interfacce per i componenti di accesso di dati OLE DB verrà restano inalterati. Per motivi di compatibilità con le versioni precedenti, il flag DBCOLUMNFLAGS_ISLONG nel Driver OLE DB per SQL Server rimane in uso. I provider e i driver scritti in base a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive continuano a utilizzare questi termini per i nuovi tipi quando vengono impostati sulla lunghezza massima illimitata.  
-  
-> [!NOTE]  
->  È inoltre possibile specificare **varchar (max)**, **nvarchar (max)**, e **varbinary (max)** tipi restituiscono di tipi di dati come tipi di parametro di input e output di stored procedure, funzione , o in [CAST e CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) funzioni.  
+ In precedenza, queste lunghezze erano consentite solo ai tipi di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come **text**, **ntext** e **image**. L'identificatore **max** per **varchar**, **nvarchar** e **varbinary** ha reso questi tipi di dati ridondanti. Tuttavia, poiché sono ancora disponibili tipi di dati long, la maggior parte delle interfacce dei componenti di accesso ai dati OLE DB rimane identica. Per garantire la compatibilità con le versioni precedenti, il flag DBCOLUMNFLAGS_ISLONG nel Driver OLE DB per SQL Server resta in uso. I provider e i driver scritti in base a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive continuano a utilizzare questi termini per i nuovi tipi quando vengono impostati sulla lunghezza massima illimitata.  
   
 > [!NOTE]  
->  Se la replica dei dati, è necessario configurare il [max text repl size server configuration-opzione](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) su -1.  
+>  È anche possibile specificare i tipi di dati **varchar(max)**, **nvarchar(max)** e **varbinary(max)** come tipi di parametri di input e output di stored procedure, tipi restituiti dalla funzione o nelle funzioni [CAST e CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
+  
+> [!NOTE]  
+>  In caso di replica di dati potrebbe essere necessario configurare l'[opzione di configurazione server max text repl size](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) su -1.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Driver OLE DB per SQL Server 
- Il Driver OLE DB per SQL Server espone il **varchar (max)**, **varbinary (max)**, e **nvarchar (max)** tipi rispettivamente come DBTYPE_STR, DBTYPE_BYTES e DBTYPE_WSTR, .  
+ Il driver OLE DB per SQL Server espone i tipi **varchar(max)**, **varbinary(max)** e **nvarchar(max)** rispettivamente come DBTYPE_STR, DBTYPE_BYTES e DBTYPE_WSTR.  
   
- I tipi di dati **varchar (max)**, **varbinary (max)**, e **nvarchar (max)** nelle colonne con il **max** sono dimensioni impostate come illimitate rappresentati come ISLONG nei set di righe dello schema OLE DB di base e interfacce che restituiscono tipi di dati di colonna.  
+ I tipi di dati **varchar(max)**, **varbinary(max)** e **nvarchar(max)** presenti nelle colonne con dimensioni **max** (massime) impostate come illimitate vengono rappresentati come ISLONG nei set di righe dello schema OLE DB principale e nelle interfacce che restituiscono tipi di dati colonna.  
   
- L'oggetto comando **IAccessor** implementazione è stata modificata per consentire l'associazione come DBTYPE_IUNKNOWN. Se il consumer specifica DBTYPE_IUNKNOWN e imposta *pObject* su null, verrà restituito il provider di **ISequentialStream** interfaccia al consumer, in modo che il consumer può trasmettere **(varchar max)**, **nvarchar (max)**, o **varbinary (max)** dati dalle variabili di output.  
+ L'implementazione di **IAccessor** dell'oggetto comando è stata modificata per consentire l'associazione come DBTYPE_IUNKNOWN. Se il consumer specifica DBTYPE_IUNKNOWN e imposta *pObject* su Null, il provider restituisce l'interfaccia **ISequentialStream** in modo che il consumer possa inviare come flusso i dati **varchar(max)**, **nvarchar(max)** o **varbinary(max)** dalle variabili di output.  
   
- I valori dei parametri di output inviati come flusso vengono restituiti dopo tutte le righe di risultati. Se l'applicazione tenta di passare al risultato successivo impostato chiamando **IMultipleResults:: GetResult** senza l'uso di tutti i valori di parametro di output restituiti, verrà restituito DB_E_OBJECTOPEN.  
+ I valori dei parametri di output inviati come flusso vengono restituiti dopo tutte le righe di risultati. Se l'applicazione tenta di passare al set di risultati successivo chiamando **IMultipleResults::GetResult** senza usare tutti i valori dei parametri di output restituiti, verrà restituito DB_E_OBJECTOPEN.  
   
- Per supportare il flusso, il Driver OLE DB per SQL Server richiede parametri di lunghezza variabile a cui accedere in ordine sequenziale. Ciò significa che è necessario impostare DBPROP_ACCESSORDER su DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS o DBPROPVAL_AO_SEQUENTIAL ogni volta che **varchar (max)**, **nvarchchar**, o  **varbinary (max)** colonne o parametri di output vengono associati a DBTYPE_IUNKNOWN. Le chiamate a **IRowset:: GetData** non riusciranno con DBSTATUS_E_UNAVAILABLE se questa restrizione dell'ordine di accesso non venga rispettata. Tale restrizione non si applica in assenza di associazioni di output definite utilizzando DBTYPE_IUNKNOWN.  
+ Per supportare il flusso, il driver OLE DB per SQL Server richiede l'accesso in ordine sequenziale ai parametri di lunghezza variabile. In altre parole, DBPROP_ACCESSORDER deve essere impostato su DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS o DBPROPVAL_AO_SEQUENTIAL ogni volta che colonne o parametri di output **varchar(max)**, **nvarchchar(max)** o **varbinary(max)** vengono associati a DBTYPE_IUNKNOWN. Le chiamate a **IRowset::GetData** non riusciranno con DBSTATUS_E_UNAVAILABLE se non si rispetta questa restrizione relativa all'ordine di accesso. Tale restrizione non si applica in assenza di associazioni di output definite utilizzando DBTYPE_IUNKNOWN.  
   
- Il Driver OLE DB per SQL Server supporta anche i parametri di output di associazione come DBTYPE_IUNKNOWN per i tipi di dati di valori di grandi dimensioni semplificare gli scenari in cui una stored procedure restituisce tipi di valori di grandi dimensioni come valori restituiti che vengono esposti come DBTYPE_IUNKNOWN al client.  
+ Il driver OLE DB per SQL Server supporta anche l'associazione dei parametri di output come DBTYPE_IUNKNOWN per i tipi di dati per valori di grandi dimensioni per facilitare gli scenari in cui una stored procedure restituisce tipi di dati per valori di grandi dimensioni esposti come DBTYPE_IUNKNOWN al client.  
   
  In un'applicazione è possibile utilizzare questi tipi nei modi seguenti:  
   
--   Eseguire l'associazione come un tipo che ha supportato associazioni con il tipo di base della colonna (ad esempio, per nvarchar (max), eseguire l'associazione come un tipo che può essere associato a nvarchar). Se il buffer non è grande sufficiente verificherà il troncamento, esattamente come accade per il tipo di base, ma che ora sono disponibili valori più grandi.  
+-   Associare come tipo con associazioni supportate al tipo di base della colonna (ad esempio, per nvarchar(max) associare come tipo che può essere associato a nvarchar). Se le dimensioni del buffer non sono sufficienti, si verificherà il troncamento, esattamente come accade per il tipo di base, anche se ora sono disponibili valori più grandi.  
   
 -   Eseguire l'associazione come tipo che ha supportato le conversioni con il tipo di base della colonna e specificare anche DBTYPE_BYREF.  
   
 -   Eseguire l'associazione come DBTYPE_IUNKNOWN e utilizzare il flusso.  
   
- Quando si segnalano la dimensione massima di una colonna, verrà segnalato il Driver OLE DB per SQL Server:  
+ Quando si segnalano le dimensioni massime di una colonna, verrà segnalato il Driver OLE DB per SQL Server:  
   
--   Le dimensioni massime definite, ad esempio, ovvero 2000 per un **varchar (** 2000 **)** colonna, o  
+-   Le dimensioni massime definite che, ad esempio, sono pari a 2000 per una colonna **varchar(** 2000 **)** oppure  
   
--   Il valore "illimitato" che, in caso di un **varchar (max)** colonna è uguale a ~ 0. Questo valore è impostato per la proprietà dei metadati DBCOLUMN_COLUMNSIZE.  
+-   Il valore "illimitato" che, nel caso di una colonna **varchar(max)**, è uguale a ~0. Questo valore è impostato per la proprietà dei metadati DBCOLUMN_COLUMNSIZE.  
   
- Le regole di conversione standard verranno applicate a un **varchar (max)** colonna, il che significa che qualsiasi conversione valida per un **varchar (** 2000 **)** colonna inoltre sarà valido per un **varchar (max)** colonna. Lo stesso vale per **nvarchar (max)** e **varbinary (max)** colonne.  
+ Le regole di conversione standard si applicano a una colonna **varchar(max)** a indicare che qualsiasi conversione valida per una colonna **varchar(** 2000 **)** lo sarà anche per una colonna **varchar(max)**. Ciò vale anche per le colonne **nvarchar(max)** e **varbinary(max)**.  
   
  In caso di recupero di tipi di dati per valori di grandi dimensioni, l'approccio più efficiente consiste nell'eseguire l'associazione come DBTYPE_IUNKNOWN e nell'impostare la proprietà del set di righe DBPROP_ACCESSORDER su DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. In questo modo il valore verrà inviato come flusso direttamente dalla rete senza alcuna memorizzazione nel buffer intermedia, come nell'esempio seguente:  
   
@@ -694,7 +694,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Per ulteriori informazioni su come il Driver OLE DB per SQL Server espone i tipi di dati di valori di grandi dimensioni, vedere [BLOB e gli oggetti OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Per altre informazioni sul modo in cui il Driver OLE DB per SQL Server espone i tipi di dati di valori di grandi dimensioni, vedere [BLOB e gli oggetti OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
 
   
 ## <a name="see-also"></a>Vedere anche  

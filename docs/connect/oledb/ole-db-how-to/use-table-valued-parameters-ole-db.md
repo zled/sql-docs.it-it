@@ -1,5 +1,5 @@
 ---
-title: Utilizzare parametri con valori di tabella (OLE DB) | Documenti Microsoft
+title: Usare parametri con valori di tabella (OLE DB) | Microsoft Docs
 description: Utilizzare parametri con valori di tabella (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f0bb98891fbaff6bc0512d2adfeee6e2a19d412b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 035ff9761df4b557bfc5d966c05a7be5e0e29d28
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666161"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109813"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Utilizzare parametri con valori di tabella (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -36,9 +36,9 @@ ms.locfileid: "35666161"
   
 -   Utilizzo di proprietà dei parametri personalizzate tramite ISSCommandWithParameters.  
   
--   Mostra errori MSOLEDBSQL di gestione degli errori.  
+-   Mostra gestione degli errori per errori MSOLEDBSQL.  
   
- Per ulteriori informazioni sui parametri con valori di tabella, vedere [Table-Valued Parameters &#40;il Driver OLE DB per SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
+ Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;Driver OLE DB per SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Esempio  
  Il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) consente di creare il database utilizzato dall'esempio.  
@@ -47,7 +47,7 @@ ms.locfileid: "35666161"
   
  Inserire il terzo listato di codice in un file denominato OLEDBUtils.hpp.  
   
- Compilare il quarto listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" per L"(local)\\\name", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente include la directory contenente msoledbsql.h.  
+ Compilare il quarto listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
  Il quinto listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) consente di creare il database utilizzato dall'esempio.  
   

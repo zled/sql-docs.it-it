@@ -1,6 +1,6 @@
 ---
-title: Inviare i dati FILESTREAM - ISequentialStream in associazione al ICommandText | Documenti Microsoft
-description: Inviare i dati FILESTREAM - ISequentialStream associata a ICommandText
+title: Inviare dati a FILESTREAM - ISequentialStream associato a ICommandText | Microsoft Docs
+description: Inviare dati a FILESTREAM - ISequentialStream associato a ICommandText
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4bfc03b8cdf3047ddfd46338be4796dd9f39d2d3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 36461107cf11c9119bd9e11b73cb7b96383483e7
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665571"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108773"
 ---
-# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Inviare i dati FILESTREAM - ISequentialStream in associazione al ICommandText
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Inviare dati a FILESTREAM - ISequentialStream associato a ICommandText
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   In questo esempio viene utilizzata un'interfaccia ISequentialStream associata a un parametro ICommandText per inviare una quantità di dati compresa tra 4 MB e 4 GB a una colonna FILESTREAM.  
   
- Per ulteriori informazioni sulla caratteristica filestream, vedere [supporto FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Per altre informazioni sulla caratteristica filestream, vedere [supporto FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Esempio  
- Prima di compilare ed eseguire l'esempio, abilitare il supporto FILESTREAM ([abilitare e configurare FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Prima di compilare ed eseguire questo esempio, abilitare il supporto FILESTREAM ([abilitare e configurare FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Verificare che nella variabile di ambiente include la directory contenente msoledbsql.h.  
+ Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
  Nel server deve essere presente una directory denominata C:\DBFsa in cui verrà creato il database. L'istanza di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] deve disporre di accesso in scrittura a questo percorso, che è possibile ottenere, ad esempio, eseguendo l'accesso come account di sistema locale.  
   

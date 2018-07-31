@@ -1,6 +1,6 @@
 ---
-title: Utilizzo dell'interfaccia IMultipleResults per elaborare più set di risultati | Documenti Microsoft
-description: Utilizzo dell'interfaccia IMultipleResults per elaborare i risultati più imposta
+title: Uso di IMultipleResults per elaborare più set di risultati | Microsoft Docs
+description: Uso di IMultipleResults per elaborare più set di risultati
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,23 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 59e39d472be21161d27b0449c1f2e81d31a09c4d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 2b622e56691a54ad6db4859b8099c29645357b87
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666281"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105922"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>Utilizzo dell'interfaccia IMultipleResults per elaborare più set di risultati
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  I consumer utilizzano le **IMultipleResults** interfaccia per elaborare i risultati restituiti dal Driver OLE DB per l'esecuzione di comandi di SQL Server. Quando il Driver OLE DB per SQL Server invia un comando per l'esecuzione, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue le istruzioni e restituisce i risultati.  
+  I consumer usano l'interfaccia **IMultipleResults** per elaborare i risultati restituiti dall'esecuzione dei comandi del driver OLE DB per SQL Server. Quando il driver OLE DB per SQL Server invia un comando per l'esecuzione, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue le istruzioni e restituisce tutti i risultati.  
   
- Tutti i risultati ottenuti dall'esecuzione dei comandi devono essere elaborati da un client. Poiché il Driver OLE DB per l'esecuzione di comandi di SQL Server può generare gli oggetti di più set di righe come risultato, usare il **IMultipleResults** interfaccia per essere certi che il recupero dei dati applicazione completino il round trip iniziato dal client.  
+ Tutti i risultati ottenuti dall'esecuzione dei comandi devono essere elaborati da un client. Dal momento che l'esecuzione dei comandi del driver OLE DB per SQL Server può generare come risultato oggetti con più set di righe, usare l'interfaccia **IMultipleResults** per assicurare che il recupero dei dati dell'applicazione completi il round trip iniziato dal client.  
   
- Le operazioni seguenti [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione genera più set di righe, alcuni dati riga contenente la **OrderDetails** tabella e altri contengono i risultati della clausola COMPUTE BY:  
+ L'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente genera più set di righe, alcuni dei quali contengono dati di riga della tabella **OrderDetails**, mentre altri contengono i risultati della clausola COMPUTE BY:  
   
 ```  
 SELECT OrderID, FullPrice = (UnitPrice * Quantity), Discount,  
@@ -47,16 +47,16 @@ COMPUTE
     BY OrderID  
 ```  
   
- Se un consumer esegue un comando contenente questo testo e richiede un set di righe come interfaccia dei risultati restituiti, viene restituito solo il primo set di righe. Il consumer può elaborare tutte le righe del set di righe restituito. Ma, se la proprietà dell'origine dati DBPROP_MULTIPLECONNECTIONS è impostata su VARIANT_FALSE e MARS non è abilitato per la connessione, nessun altro comando può essere eseguito per l'oggetto di sessione (il Driver OLE DB per SQL Server non creerà un'altra connessione) finché il comando viene annullato. Se MARS non è abilitato per la connessione, il Driver OLE DB per SQL Server restituisce un errore DB_E_OBJECTOPEN se DBPROP_MULTIPLECONNECTIONS è VARIANT_FALSE e restituisce E_FAIL se è presente una transazione attiva.  
+ Se un consumer esegue un comando contenente questo testo e richiede un set di righe come interfaccia dei risultati restituiti, viene restituito solo il primo set di righe. Il consumer può elaborare tutte le righe del set di righe restituito. Tuttavia, se la proprietà dell'origine dati DBPROP_MULTIPLECONNECTIONS è impostata su VARIANT_FALSE e sulla connessione non è abilitato il servizio MARS, sull'oggetto sessione non è possibile eseguire nessun altro comando (il driver OLE DB per SQL Server non creerà un'altra connessione) fino a quando il comando non verrà annullato. Se sulla connessione non è abilitato il servizio MARS, il driver OLE DB per SQL Server restituisce un errore DB_E_OBJECTOPEN nel caso in cui DBPROP_MULTIPLECONNECTIONS sia impostato su VARIANT_FALSE e restituisce E_FAIL nel caso in cui sia presente una transazione attiva.  
   
- Il Driver OLE DB per SQL Server restituirà anche DB_E_OBJECTOPEN quando si utilizzano i parametri di output di streaming e l'applicazione non ha utilizzato tutti i valori dei parametri di output restituiti prima di chiamare **IMultipleResults:: GetResults** a ottenere il set di risultati successivo. Se MARS non è abilitato e la connessione è occupata esegue un comando che non produce un set di righe o che produce un set di righe che non è un cursore del server e se proprietà dell'origine dati DBPROP_MULTIPLECONNECTIONS è impostata su VARIANT_TRUE, il Driver OLE DB per SQL Server Crea connessioni aggiuntive per supportare gli oggetti comando simultanei, a meno che una transazione è attiva, nel qual caso restituisce un errore. Le transazioni e il blocco vengono gestiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per singola connessione. Se viene generata una seconda connessione, il comando sulle connessioni separate non condivide i blocchi. È necessario assicurarsi che un comando non blocchi un altro comando mantenendo attivi i blocchi sulle righe richieste da quest'ultimo. Se MARS è abilitato, è possibile disporre di più comandi attivi sulle connessioni e se vengono utilizzate transazioni esplicite tutti i comandi condividono una transazione comune.  
+ Il driver OLE DB per SQL Server restituirà anche DB_E_OBJECTOPEN quando si usano parametri di output inviati come flusso e l'applicazione non ha usato tutti i valori del parametro di output restituiti prima di chiamare **IMultipleResults::GetResults** per ottenere il set di risultati successivo. Se MARS non è abilitato e la connessione è occupata poiché è in esecuzione un comando che non produce un set di righe o che produce un set di righe diverso da un cursore del server e se la proprietà dell'origine dati DBPROP_MULTIPLECONNECTIONS è impostata su VARIANT_TRUE, il driver OLE DB per SQL Server crea delle connessioni aggiuntive per supportare gli oggetti comando simultanei, a meno che non sia attiva una transazione. In tal caso restituisce un errore. Le transazioni e il blocco vengono gestiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per singola connessione. Se viene generata una seconda connessione, il comando sulle connessioni separate non condivide i blocchi. È necessario assicurarsi che un comando non blocchi un altro comando mantenendo attivi i blocchi sulle righe richieste da quest'ultimo. Se MARS è abilitato, è possibile disporre di più comandi attivi sulle connessioni e se vengono utilizzate transazioni esplicite tutti i comandi condividono una transazione comune.  
   
- Il consumer può annullare il comando utilizzando [issabort:: Abort](../../oledb/ole-db-interfaces/issabort-abort-ole-db.md) oppure rilasciando tutti i riferimenti mantenuti sull'oggetto comando e il set di righe derivato.  
+ Il consumer può annullare il comando usando [ISSAbort::Abort](../../oledb/ole-db-interfaces/issabort-abort-ole-db.md) oppure rilasciando tutti i riferimenti mantenuti sull'oggetto comando e sul set di righe derivato.  
   
- Utilizzando **IMultipleResults** in tutte le istanze consente al consumer di ottenere tutti i set di righe generato dall'esecuzione di comandi e consente ai consumer di determinare in modo appropriato il momento annullare l'esecuzione di comandi e liberare un oggetto di sessione per l'utilizzo da altri comandi.  
+ Se **IMultipleResults** viene usato in tutte le istanze, il consumer può ottenere tutti i set di righe generati dall'esecuzione dei comandi e determinare in modo appropriato il momento in cui annullare l'esecuzione dei comandi e liberare un oggetto sessione per consentirne l'uso da parte di altri comandi.  
   
 > [!NOTE]  
->  Quando si utilizzano cursori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'esecuzione di comandi crea il cursore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restituisce l'esito positivo o negativo della creazione del cursore. Pertanto, il round trip all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene completato al momento della restituzione da parte dell'esecuzione di comandi. Ogni **GetNextRows** chiamata diventa quindi un round trip. In questo modo, possono esistere più oggetti comando attivi, ognuno dei quali elabora un set di righe che rappresenta il risultato di un recupero dal cursore del server. Per ulteriori informazioni, vedere [set di righe e cursori del Server SQL](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
+>  Quando si utilizzano cursori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'esecuzione di comandi crea il cursore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restituisce l'esito positivo o negativo della creazione del cursore. Pertanto, il round trip all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene completato al momento della restituzione da parte dell'esecuzione di comandi. Ogni chiamata a **GetNextRows** diventa quindi un round trip. In questo modo, possono esistere più oggetti comando attivi, ognuno dei quali elabora un set di righe che rappresenta il risultato di un recupero dal cursore del server. Per altre informazioni, vedere [Set di righe e cursori SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Comandi](../../oledb/ole-db-commands/commands.md)  

@@ -1,5 +1,5 @@
 ---
-title: Creazione di un set di righe con IOpenRowset | Documenti Microsoft
+title: Creazione di un set di righe con IOpenRowset | Microsoft Docs
 description: Creazione di un set di righe con IOpenRowset interfaccia del Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,29 +19,29 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: dd1b48ee3ba9439f5a1cddbfed07196480265b74
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 53a9b42461fd9c7ba194af62f86d8670b8539ddf
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689064"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105947"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Creazione di un set di righe con IOpenRowset
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server supporta il **IOpenRowset:: OPENROWSET** (metodo) con le restrizioni seguenti:  
+  Il Driver OLE DB per SQL Server supporta il **IOpenRowset:: OPENROWSET** metodo con le restrizioni seguenti:  
   
--   Una tabella di base o una vista deve essere specificato in un database ID (DBID) struttura che la *pTableID* cui punta il parametro.  
+-   Una vista o una tabella di base deve essere specificata in una struttura del database (DBID) a cui punta il parametro *pTableID*.  
   
--   Il DBID *eKind* membro deve indicare DBKIND_NAME.  
+-   Il membro DBID *eKind* deve indicare DBKIND_NAME.  
   
--   Il DBID *uName* membro deve specificare il nome di una tabella di basa esistente o una vista come una stringa di caratteri Unicode.  
+-   Il membro DBID *uName* deve specificare il nome di una vista o di una tabella di base esistente come stringa di caratteri Unicode.  
   
--   Il *pIndexID* parametro della **OpenRowset** deve essere NULL.  
+-   Il parametro *pIndexID* di **OpenRowset** deve essere NULL.  
   
- Il set di risultati di **IOpenRowset:: OPENROWSET** contiene un singolo set di righe. Set di risultati che contengono un singolo set di righe possono essere supportati da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursori. Il supporto del cursore consente allo sviluppatore di utilizzare i meccanismi di concorrenza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Il set di risultati di **IOpenRowset::OpenRowset** contiene un solo set di righe. I set di risultati che contengono un solo set di righe possono essere supportati dai cursori di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il supporto del cursore consente allo sviluppatore di utilizzare i meccanismi di concorrenza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe](../../oledb/ole-db-rowsets/rowsets.md)  

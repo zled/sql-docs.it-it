@@ -1,5 +1,5 @@
 ---
-title: 'IRowsetFastLoad:: InsertRow (OLE DB) | Documenti Microsoft'
+title: 'IRowsetFastLoad:: InsertRow (OLE DB) | Microsoft Docs'
 description: IRowsetFastLoad::InsertRow (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,19 +20,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 59fde3a16ea1e79587150307da12d917fd7e9a82
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 3239fd370f5a79ad65fa02a044ce88dd22e6c7f9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689194"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109403"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Aggiunge una riga al set di righe della copia bulk. Per esempi, vedere [Bulk copia i dati mediante IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) e [inviare dati BLOB a SQL SERVER utilizzando IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
+  Aggiunge una riga al set di righe della copia bulk. Per esempi, vedere [Bulk copia i dati usando IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) e [inviare dati BLOB a SQL SERVER utilizzando IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +48,7 @@ HRESULT InsertRow(
  Handle della funzione di accesso che definisce i dati delle righe per la copia bulk. La funzione di accesso a cui viene fatto riferimento è una funzione di accesso di riga, che specifica l'associazione alla memoria del consumer contenente valori di dati.  
   
  *pData*[in]  
- Puntatore alla memoria del consumer contenente valori di dati. Per altre informazioni, vedere [strutture DBBINDING](http://go.microsoft.com/fwlink/?LinkId=65955).  
+ Puntatore alla memoria del consumer contenente valori di dati. Per altre informazioni, vedere le [strutture DBBINDING](http://go.microsoft.com/fwlink/?LinkId=65955).  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  S_OK  
@@ -58,24 +58,24 @@ HRESULT InsertRow(
  Si è verificato un errore. Le informazioni sull'errore sono disponibili nelle interfacce degli errori del set di righe.  
   
  E_INVALIDARG  
- Il *pData* argomento è stato impostato su un puntatore NULL.  
+ L'argomento *pData* è stato impostato su un puntatore NULL.  
   
  E_OUTOFMEMORY  
- MSOLEDBSQL: Impossibile allocare memoria sufficiente per completare la richiesta.  
+ MSOLEDBSQL non è stato in grado di allocare memoria sufficiente per completare la richiesta.  
   
  E_UNEXPECTED  
- Il metodo è stato chiamato su un set di righe copia bulk precedentemente invalidato dal [IRowsetFastLoad:: commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) metodo.  
+ Il metodo è stato chiamato su un set di righe della copia bulk precedentemente invalidato dal metodo [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
   
  DB_E_BADACCESSORHANDLE  
- Il *hAccessor* argomento fornito dal consumer non è valido.  
+ L'argomento *hAccessor* specificato dal consumer non è valido.  
   
  DB_E_BADACCESSORTYPE  
  La funzione di accesso specificata non è una funzione di accesso di riga o non specifica la memoria del consumer.  
   
 ## <a name="remarks"></a>Remarks  
- Un errore durante la conversione dei dati del consumer per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati per una colonna determina una restituzione E_FAIL dal Driver OLE DB per SQL Server. I dati possono essere trasmessi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] su qualsiasi **InsertRow** metodo o solo **Commit** (metodo). L'applicazione consumer può chiamare la **InsertRow** metodo più volte con dati non corretti prima di ricevere notifica dell'esistenza di un errore di conversione di tipo di dati. Poiché il **eseguire il Commit** metodo assicura che tutti i dati vengano specificati correttamente dal consumer, il consumer può utilizzare il **Commit** metodo in modo appropriato per convalidare i dati in base alle esigenze.  
+ Un errore di conversione dei dati del consumer nel tipo di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per una colonna causa la restituzione di E_FAIL da parte del driver OLE DB per SQL Server. I dati possono essere trasmessi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con qualsiasi metodo **InsertRow** o solo con il metodo **Commit**. L'applicazione consumer può chiamare il metodo **InsertRow** diverse volte usando i dati errati prima di ricevere un avviso relativo all'errore di conversione del tipo di dati. Poiché il metodo **Commit** verifica che tutti i dati vengano specificati correttamente dal consumer, se necessario, il consumer può usare **Commit** in modo appropriato per convalidare i dati.  
   
- Il Driver OLE DB per set di righe copia bulk SQL Server sono in sola lettura. Il Driver OLE DB per SQL Server non espone alcun metodo che consenta di query di tipo consumer del set di righe. Per terminare l'elaborazione, il consumer può rilasciare il riferimento al [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) interfaccia senza chiamare il **Commit** metodo. Non sono disponibili funzioni per accedere alle righe inserite dal consumer nel set di righe e modificarne i valori o per rimuoverle singolarmente dal set di righe.  
+ Il Driver OLE DB per set di righe copia bulk SQL Server sono in sola lettura. Il Driver OLE DB per SQL Server non espone alcun metodo che consenta di query di tipo consumer del set di righe. Per terminare l'elaborazione, il consumer può rilasciare il riferimento all'interfaccia [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) senza chiamare il metodo **Commit**. Non sono disponibili funzioni per accedere alle righe inserite dal consumer nel set di righe e modificarne i valori o per rimuoverle singolarmente dal set di righe.  
   
  Le righe oggetto di copia bulk vengono formattate sul server per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le opzioni eventualmente impostate per la connessione o per la sessione, ad esempio ANSI_PADDING, influiscono sul formato di riga. Questa opzione è impostata su per impostazione predefinita per qualsiasi connessione stabilita tramite il Driver OLE DB per SQL Server.  
   

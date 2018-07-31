@@ -1,6 +1,6 @@
 ---
-title: I comandi | Documenti Microsoft
-description: Comandi in OLE DB Driver per SQL Server
+title: I comandi | Microsoft Docs
+description: Comandi del driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a518a4a718007e1c1efb3b7c53732beef7d7c0ab
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 4fcc1b32e3e27fc70b5d96585194152621fc1f7b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665391"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108003"
 ---
 # <a name="commands"></a>Comandi
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server espone il **ICommand** interfaccia e gli oggetti comando, che sono descritte in questa sezione:  
+  Il driver OLE DB per SQL Server espone l'interfaccia **ICommand** e gli oggetti comando, descritti in questa sezione:  
   
 -   [Sintassi dei comandi](../../oledb/ole-db-commands/command-syntax.md)  
   

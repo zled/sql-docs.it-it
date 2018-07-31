@@ -1,7 +1,7 @@
 ---
-title: Note - Microsoft ODBC Driver for SQL Server in Linux e macOS | Documenti Microsoft
+title: Note sulla versione - Microsoft ODBC Driver for SQL Server in Linux e macOS | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,88 +10,111 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bddb826772d1c6ad7e33dce92b1e2615779b8931
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.author: v-jizho2
+manager: kenvh
+ms.openlocfilehash: 658cfd6ea66be82e243131eec9699c65708c2e5f
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853296"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024237"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Linux e macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Windows
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Linux e macOS
+
+**Nuove distribuzioni supportate**: 18.04 Ubuntu
 
 **Funzionalità aggiunte**:
 
-Supporto per `SQL_COPT_SS_CEKCACHETTL` e `SQL_COPT_SS_TRUSTEDCMKPATHS` attributi di connessione (per altre informazioni, vedere [utilizzo di Always Encrypted con il Driver ODBC per SQL Server](../using-always-encrypted-with-the-odbc-driver.md))
-- `SQL_COPT_SS_CEKCACHETTL` Consente di controllare l'ora in cui è presente nella cache locale delle chiavi di crittografia di colonna, nonché lo scaricamento
-- `SQL_COPT_SS_TRUSTEDCMKPATHS` Consente all'applicazione di limitare le operazioni di AE per usare solo l'elenco specificato di chiavi Master della colonna
+Classificazione dei dati per il Database SQL di Azure e SQL Server
 
+SQLBrowseConnect
 
+Delle dipendenze dinamiche in `libcurl`:
+- A partire da questa versione, la `libcurl` pacchetto non è presente una dipendenza esplicita. Il `libcurl` per OpenSSL o NSS è obbligatorio quando si usa l'autenticazione di Azure Key Vault o Azure Active Directory del pacchetto. Se si verifica un errore relative a `libcurl`, assicurarsi sia installato.
 
-Supporto per il caricamento di `.rll` dal percorso predefinito (per altre informazioni, vedere [sezione 'Caricamento File di risorse' nel documento installazione](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading))
+Inattività resilienza delle connessioni con parole chiave ConnectRetryCount e ConnectRetryInterval nella stringa di connessione (per altre informazioni, vedere [resilienza della connessione nel Driver ODBC Windows](../windows/connection-resiliency-in-the-windows-odbc-driver.md)):
+- Usare `SQL_COPT_SS_CONNECT_RETRY_COUNT`(sola lettura) per recuperare il numero di tentativi di connessione.
+- Usare `SQL_COPT_SS_CONNECT_RETRY_INTERVAL`(sola lettura) per recuperare la lunghezza dell'intervallo di ripetizione dei tentativi di connessione.
+- Connessione verrà ripetuta una volta per impostazione predefinita.
+
 
 [Correzioni di bug](../bug-fixes.md)
 
 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 17 Driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] su Linux e macOS
-
-**Nuove distribuzioni supportate**: macOS High Sierra e Ubuntu 17.10 
-
-**Miglioramenti delle prestazioni**: maggiore di 10 volte il miglioramento delle prestazioni quando il driver converte da e verso UTF-8/16.
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Linux e macOS
 
 **Funzionalità aggiunte**:
 
-Always Encrypted supporto per API BCP
+Supporto per `SQL_COPT_SS_CEKCACHETTL` e `SQL_COPT_SS_TRUSTEDCMKPATHS` attributi di connessione (per altre informazioni, vedere [utilizzo di Always Encrypted con il Driver ODBC per SQL Server](../using-always-encrypted-with-the-odbc-driver.md))
+- `SQL_COPT_SS_CEKCACHETTL` Consente di controllare l'ora in cui è presente nella cache locale delle chiavi di crittografia di colonna, nonché lo scaricamento
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` Consente all'applicazione limitare le operazioni di Always Encrypted per usare solo l'elenco specificato di chiavi Master della colonna
 
-Nuovo attributo di stringa di connessione UseFMTOnly causa del driver per l'uso di metadati legacy in casi particolari richiede che le tabelle temporanee.
 
-Supporto per l'istanza gestita di SQL Azure (anteprima privata estesa). 
+
+Supporto per il caricamento di `.rll` dal percorso predefinito (per altre informazioni, vedere [sezione "Caricamento File di risorse" nel documento di installazione](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading))
+
+[Correzioni di bug](../bug-fixes.md)
+
+
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Linux e macOS
+
+**Nuove distribuzioni supportate**: macOS High Sierra e Ubuntu 17.10 
+
+**Miglioramenti delle prestazioni**: maggiore di 10 volte il miglioramento delle prestazioni quando il driver converte da e verso UTF-8 o 16.
+
+**Funzionalità aggiunte**:
+
+Supporto per Always Encrypted per l'API BCP
+
+Nuovo attributo di stringa di connessione UseFMTOnly fa sì che i driver per l'uso di metadati legacy in casi particolari che richiedono le tabelle temporanee.
+
+Supporto per l'istanza gestita SQL di Azure (anteprima privata estesa). 
 > [!NOTE]
-> Quando si utilizza l'istanza gestita, esistono alcune differenze:
+> Esistono numerose differenze quando si usa l'istanza gestita:
 > -   FILESTREAM non è supportato 
-> -   Accesso ai file System locale non è supportata, ma necessari per elementi quali tracefiles 
-> -   Il nome di tipo definito dall'utente locale percorso non è supportato. 
-> -   Autenticazione integrata di Windows non è supportata. 
-> -   DTC non è supportata. 
-> -   l'account 'sa' non è presente (l'account predefinito viene chiamato 'cloudSA')
-> -   Errore nel token TDS (0xAA) restituisce il nome server errato
-> -   Non sono supportati i caratteri speciali nei nomi di database 
-> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] non è supportata.
+> -   Accesso del file System locale non è supportato, ma obbligatorio per elementi quali tracefiles 
+> -   Crea tipo definito dall'utente da local path non è supportato 
+> -   Non è supportata l'autenticazione integrata di Windows 
+> -   DTC non è supportato 
+> -   account 'sa' non è presente (l'account predefinito viene chiamato 'cloudSA')
+> -   Errore di token TDS (0xAA) restituisce il nome server errato
+> -   Non sono supportati i caratteri speciali nel nome del database 
+> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] non è supportato
 > -   I messaggi di errore vengono sempre visualizzati in inglese, indipendentemente dal linguaggio impostazioni (come Azure) 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] su Linux e macOS  
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Linux e macOS  
 
-ODBC Driver 13.1 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] aggiunge il supporto per Always Encrypted e Azure Active Directory utilizzato in combinazione con Microsoft SQL Server 2016.
+ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] aggiunge il supporto per Always Encrypted e Azure Active Directory quando usato in combinazione con Microsoft SQL Server 2016.
 
-**Nuove distribuzioni supportate**: OS X 10.11 e macOS 10.12 sono supportati nella prima versione del Driver ODBC in macOS. Ubuntu 16.10 ora anche supportato, insieme a Red Hat 6, 7 e 12 SUSE. Ogni piattaforma dispone di un pacchetto relativi alla piattaforma (RPM o DEB) per semplificare l'installazione e configurazione.  Vedere [l'installazione del Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) per le istruzioni di installazione.
+**Nuove distribuzioni supportate**: OS X 10.11 e macOS 10.12: sono supportati nella prima versione del Driver ODBC in macOS. Ubuntu 16.10 è ora supportata anche, insieme a Red Hat 6, 7 e SUSE 12. Ogni piattaforma ha un pacchetto piattaforma pertinente (RPM o DEB) per semplificare l'installazione e configurazione.  Visualizzare [installazione del Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) per le istruzioni di installazione.
 
-**Modifiche al supporto 2.3.1 di gestione Driver unixODBC**: il provider ODBC non dipende più pacchetti personalizzati per la gestione driver unixODBC (tranne RedHat 6) e si basa su Gestione distribuzione del pacchetto per risolvere la dipendenza UnixODBC da repository della distribuzione.
+**modifiche apportate al supporto 2.3.1 di gestione Driver unixODBC**: driver ODBC non dipende più pacchetti personalizzati per la gestione driver unixODBC (tranne che su RedHat 6) e si basa su Gestione distribuzione del pacchetto per risolvere la dipendenza UnixODBC dal repository di distribuzione.
 
-**Supporto API BCP**: il driver ODBC di Linux e macOS ora supporta l'utilizzo del [funzioni API BCP (**bcp_init**, ecc.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
+**Supporto per l'API BCP**: driver ODBC di Linux e macOS ora supporta l'uso del [le funzioni API BCP (**bcp_init**e così via.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
-## <a name="whats-new-in-the-microsoft-odbc-driver-130-for-includessnoversionincludesssnoversionmdmd-on-linux"></a>Novità di Microsoft ODBC Driver 13.0 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] su Linux  
-Con Microsoft ODBC Driver 13.0 per SQL Server, SQL Server 2014 e SQL Server 2016 ora supportati anche.  
+## <a name="whats-new-in-the-microsoft-odbc-driver-130-for-includessnoversionincludesssnoversionmdmd-on-linux"></a>What ' s New in Microsoft ODBC Driver 13.0 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Linux  
+Con Microsoft ODBC Driver 13.0 for SQL Server, SQL Server 2014 e SQL Server 2016 sono ora anche supportati.  
 
 **Nuove distribuzioni supportate**:
 
-Ubuntu è ora supportato, insieme a Red Hat e SUSE. Ogni piattaforma dispone di un pacchetto relativi alla piattaforma (RPM o DEB) per semplificare l'installazione e configurazione.  Vedere [l'installazione del Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) per le istruzioni di installazione.
+Ubuntu è ora supportato, insieme a Red Hat e SUSE. Ogni piattaforma ha un pacchetto piattaforma pertinente (RPM o DEB) per semplificare l'installazione e configurazione.  Visualizzare [installazione del Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) per le istruzioni di installazione.
 
-**Supporto 2.3.1 di gestione Driver unixODBC**: oltre a una Gestione driver più recente, è disponibile un pacchetto per l'installazione di questa dipendenza che semplifica l'installazione e configurazione.  
+**Supporto 2.3.1 di gestione Driver unixODBC**: oltre a una Gestione driver più recente, è inoltre disponibile un pacchetto per l'installazione di questa dipendenza che semplifica l'installazione e configurazione.  
 
-**Risoluzione IP di rete Transparent**: trasparente la risoluzione IP di rete è una revisione della funzionalità di Failover su più Subnet esistente che influisce sulla sequenza di connessione del driver nel caso in cui il primo risolto non IP dell'host rispondere e sono presenti più indirizzi IP associati al nome host.
+**Risoluzione dell'IP di rete trasparente**: risoluzione dell'IP di rete trasparente è una revisione della funzionalità di Failover su più Subnet esistente che interessa la sequenza di connessione del driver nel caso in cui il primo risolto IP del nome host non esiste rispondere e sono presenti più indirizzi IP associati al nome host.
 
-**Supporto di TLS 1.2**: il 13.0 di Microsoft ODBC Driver for SQL Server in Linux supporta TLS 1.2 quando vengono utilizzate proteggere le comunicazioni con SQL Server.
+**Supporto di TLS 1.2**: Microsoft ODBC Driver 13.0 for SQL Server in Linux supporta ora TLS 1.2 quando vengono usate le comunicazioni protette con SQL Server.
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversionmdmd-on-linux"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] su Linux  
-Il driver ODBC in SUSE Linux (anteprima) supporta SUSE Linux Enterprise 11 Service Pack 2 a 64 bit. Per ulteriori informazioni, vedere [requisiti di sistema](../../../connect/odbc/linux-mac/system-requirements.md).  
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversionmdmd-on-linux"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] in Linux  
+Il driver ODBC in SUSE Linux (anteprima) supporta SUSE Linux Enterprise 11 Service Pack 2 a 64 bit. Per altre informazioni, vedere [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md).  
 
-Il driver ODBC in Linux supporta [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Per ulteriori informazioni, vedere [Driver ODBC in Linux supporto per il ripristino di emergenza a disponibilità elevata](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Il driver ODBC in Linux supporta [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Per altre informazioni, vedere [Driver ODBC in Linux il supporto per la disponibilità elevata, ripristino di emergenza](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
 Il driver ODBC in Linux supporta le connessioni al database SQL di Microsoft Azure. Per altre informazioni, vedere la pagina relativa alla [procedura di connessione al database SQL di Windows Azure usando ODBC](http://msdn.microsoft.com/library/hh974312.aspx).  
 
-Il `-l` opzione (timeout di accesso) è stata aggiunta a `bcp`. Per ulteriori informazioni, vedere [connessione con **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).
+Il `-l` opzione (timeout di accesso) è stato aggiunto a `bcp`. Per altre informazioni, vedere [Connessione a **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

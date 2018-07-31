@@ -1,5 +1,5 @@
 ---
-title: Metodo setURL (SQLServerCallableStatement) | Documenti Microsoft
+title: Metodo setURL (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21c316b8293ce77ecd6c4e4719af9381dfc8cddc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066909"
 ---
 # <a name="seturl-method-sqlservercallablestatement"></a>Metodo setURL (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,17 +42,17 @@ public void setURL(java.lang.String sCol,
 #### <a name="parameters"></a>Parametri  
  *sCol*  
   
- Oggetto **stringa** che contiene il nome del parametro.  
+ Una **stringa** che contiene il nome del parametro.  
   
  *u*  
   
- Un oggetto di URL.  
+ Un oggetto URL.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo setURL è specificato dal metodo setURL nell'interfaccia Java.SQL. CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo setURL viene specificato dal metodo setURL nell'interfaccia java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

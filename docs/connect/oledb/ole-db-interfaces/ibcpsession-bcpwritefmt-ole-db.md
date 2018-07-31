@@ -1,6 +1,6 @@
 ---
-title: 'Ibcpsession:: Bcpwritefmt (OLE DB) | Documenti Microsoft'
-description: 'Utilizzo di ibcpsession:: Bcpwritefmt per salvare i file di formato in formato testo o xml (OLE DB)'
+title: 'Ibcpsession:: Bcpwritefmt (OLE DB) | Microsoft Docs'
+description: 'Usando ibcpsession:: Bcpwritefmt per salvare i file di formato in formato testo o xml (OLE DB)'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f7ca4586cc14d98e8d5a714e314b2c1ee157ae15
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: fdf1bb0c38382c42d9c2a292fe3b901c3cf45e3c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689414"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107813"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -43,11 +43,11 @@ HRESULT BCPWriteFmt(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Il file di formato specifica il formato dei dati di un file di dati creato dalla copia bulk. Le chiamate ai [ibcpsession:: BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) e [ibcpsession:: BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) metodi definiscono il formato del file di dati. Il **BCPWriteFmt** metodo Salva questa definizione nel file di cui fanno riferimento l'argomento pwszFormatFile.  
+ Il file di formato specifica il formato dei dati di un file di dati creato dalla copia bulk. Le chiamate ai metodi [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) e [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) definiscono il formato del file di dati. Il metodo **BCPWriteFmt** salva questa definizione nel file a cui fa riferimento l'argomento pwszFormatFile.  
   
- Il **BCPWriteFmt** metodo possibile salvare i file di formato in formato xml o testo. Queste devono essere indicate tramite l'opzione di controllo BCP_OPTION_XML con il [ibcpsession:: Bcpcontrol](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) metodo.  
+ Il metodo **BCPWriteFmt** può salvare i file di formato in formato XML o testo. Il formato deve essere indicato utilizzando l'opzione di controllo BCP_OPTION_XML con il metodo [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md).  
   
- Per caricare un file di formato salvato, utilizzare il [ibcpsession:: Bcpreadfmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) metodo.  
+ Per caricare un file di formato salvato, utilizzare il metodo [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md).  
   
 ## <a name="arguments"></a>Argomenti  
  *pwszFormatFile*[in]  
@@ -58,13 +58,13 @@ HRESULT BCPWriteFmt(
  Il metodo è riuscito.  
   
  E_FAIL  
- Si è verificato un errore specifico del provider; Per informazioni dettagliate, utilizzare il [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interfaccia.  
+ Si è verificato un errore specifico del provider. Per informazioni dettagliate, usare l'interfaccia [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
   
  E_OUTOFMEMORY  
  Errore di memoria insufficiente.  
   
  E_UNEXPECTED  
- La chiamata al metodo non era prevista. Ad esempio, il [ibcpsession:: BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) (metodo) non è stato chiamato prima di chiamare questo metodo.  
+ La chiamata al metodo non era prevista. Ad esempio, il metodo [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) non è stato chiamato prima della chiamata a questo metodo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
