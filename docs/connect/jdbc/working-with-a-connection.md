@@ -1,7 +1,7 @@
 ---
 title: Uso di una connessione | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbcd46cd9da1ab189aeafe77c7275aa103ea51f6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f758dfbed0a33885a1cc24cef6d39ab522fa5809
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060272"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279112"
 ---
 # <a name="working-with-a-connection"></a>Utilizzo di una connessione
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38060272"
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>Creazione di una connessione mediante la classe DriverManager  
  L'approccio più semplice per creare una connessione a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] consiste nel caricare il driver JDBC e chiamare il metodo getConnection della classe DriverManager, come nell'esempio seguente:  
   
-```  
+```java
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
 String connectionUrl = "jdbc:sqlserver://localhost;database=AdventureWorks;integratedSecurity=true;"  
 Connection con = DriverManager.getConnection(connectionUrl);  
@@ -46,7 +46,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Creazione di una connessione mediante la classe SQLServerDriver  
  Se è necessario specificare uno particolare dei driver presenti nell'elenco dei driver per DriverManager, è possibile creare una connessione di database usando il metodo [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) della classe [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md), come nell'esempio seguente:  
   
-```  
+```java
 Driver d = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();  
 String connectionUrl = "jdbc:sqlserver://localhost;database=AdventureWorks;integratedSecurity=true;"  
 Connection con = d.connect(connectionUrl, new Properties());  
@@ -55,7 +55,7 @@ Connection con = d.connect(connectionUrl, new Properties());
 ## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>Creazione di una connessione mediante la classe SQLServerDataSource  
  Se è necessario creare una connessione usando la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), è possibile usare diversi metodi per l'impostazione della classe prima di chiamare il metodo [getConnection](../../connect/jdbc/reference/getconnection-method.md), come nell'esempio seguente:  
   
-```  
+```java 
 SQLServerDataSource ds = new SQLServerDataSource();  
 ds.setUser("MyUserName");  
 ds.setPassword("*****");  
