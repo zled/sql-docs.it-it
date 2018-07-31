@@ -1,5 +1,5 @@
 ---
-title: Configurazione errori e degli avvisi usando il Driver SQLSRV | Documenti Microsoft
+title: Configurare la gestione degli errori e degli avvisi usando il driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,36 +17,36 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50018e401c67bd0c1fe2cefef71659aeb560a132
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307410"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999245"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Procedura: Configurare la gestione degli errori e degli avvisi usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In questo argomento viene descritto come configurare il driver SQLSRV per la gestione degli errori e degli avvisi.  
   
-Per impostazione predefinita, il driver SQLSRV considera gli avvisi come errori. una chiamata a un **sqlsrv** funzione che genera un errore o un avviso restituisce **false**. Per disabilitare questo comportamento, utilizzare il [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) (funzione). Quando la riga di codice seguente è inclusa all'inizio di uno script, un **sqlsrv** funzione che genera solo avvisi, ovvero senza errori, non verrà restituito **false**:  
+Per impostazione predefinita, il driver SQLSRV considera gli avvisi come errori. Una chiamata a una funzione **sqlsrv** che genera un errore o un avviso restituisce **false**. Per disabilitare questo comportamento, usare la funzione [sqlsrv_configure](../../connect/php/sqlsrv-configure.md). Quando la riga di codice seguente è inclusa all'inizio di uno script, una funzione **sqlsrv** che genera solo avvisi e nessun errore non restituisce **false**:  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 0);`  
   
-La riga di codice seguente Reimposta il comportamento predefinito (gli avvisi vengono considerati come errori):  
+La riga di codice seguente reimposta il comportamento predefinito (gli avvisi vengono considerati come errori):  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 1);`  
   
 > [!NOTE]  
 > Gli avvisi che corrispondono ai valori SQLSTATE 01000, 01001, 01003 e 01S02 non vengono mai considerati come errori. Indipendentemente dalla configurazione, una funzione **sqlsrv** che genera solo gli avvisi che corrispondono a uno di questi stati non restituisce **false**.  
   
-Il valore di **WarningsReturnAsErrors** può essere impostato anche nel file php.ini. Ad esempio, questa voce nella `[sqlsrv]` sezione del file PHP. ini consente di disattivare il comportamento predefinito.  
+Il valore di **WarningsReturnAsErrors** può essere impostato anche nel file php.ini. Ad esempio, questa voce nella sezione `[sqlsrv]` del file php.ini disabilita il comportamento predefinito.  
   
 `sqlsrv.WarningsReturnAsErrors = 0`  
   
 Per informazioni sul recupero delle informazioni su errori e avvisi, vedere [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) e [Procedura: Gestire errori e avvisi](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Esempio  
-L'esempio di codice riportato di seguito descrive come disabilitare il comportamento di gestione degli errori predefinito. L'esempio usa il comando PRINT Transact-SQL  per generare un avviso. Per ulteriori informazioni sul comando PRINT, vedere [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md).  
+L'esempio di codice riportato di seguito descrive come disabilitare il comportamento di gestione degli errori predefinito. L'esempio usa il comando PRINT Transact-SQL  per generare un avviso. Per altre informazioni sul comando PRINT, vedere [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md).  
   
 Nell'esempio viene innanzitutto illustrato il comportamento di gestione degli errori predefinito eseguendo una query che genera un avviso. L'avviso viene considerato come errore. Dopo aver modificato la configurazione di gestione degli errori, viene eseguita la stessa query. L'avviso non viene considerato come errore.  
   

@@ -1,5 +1,5 @@
 ---
-title: Il recupero dei dati | Documenti Microsoft
+title: Recupero di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309190"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983037"
 ---
 # <a name="retrieving-data"></a>Recupero di dati
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,10 +52,10 @@ Il driver SQLSRV dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] f
   
 Se la query recupera più set di risultati, è possibile passare al set di risultati successivo con [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md).  
   
-A partire dalla versione 1.1 del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è possibile utilizzare [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) per verificare se un set di risultati contiene righe.  
+A partire dalla versione 1.1 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è possibile usare [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) per verificare se un set di risultati contiene righe.  
   
 ## <a name="pdosqlsrv-driver"></a>Driver PDO_SQLSRV  
-Il driver PDO_SQLSRV del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] fornisce le seguenti opzioni per il recupero di dati da un set di risultati:  
+Il driver PDO_SQLSRV dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] offre le seguenti opzioni per il recupero dei dati da un set di risultati:  
   
 -   [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md)  
   
@@ -71,9 +71,9 @@ Per verificare il numero di righe incluse in un set di risultati, specificare un
   
 [PDO::prepare](../../connect/php/pdo-prepare.md) consente di specificare un tipo di cursore. È quindi possibile usare [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) per selezionare una riga. Vedere [PDO::prepare](../../connect/php/pdo-prepare.md) per un esempio e altre informazioni.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |---------|---------------|  
 |[Recupero di dati come flusso](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Fornisce una panoramica sull'uso dei flussi di dati e i collegamenti a specifici casi d'uso.|  
 |[Uso dei parametri direzionali](../../connect/php/using-directional-parameters.md)|Descrive l'uso dei parametri direzionali in una chiamata a una stored procedure.|  

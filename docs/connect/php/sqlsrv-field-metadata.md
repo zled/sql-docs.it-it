@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_field_metadata | Documenti Microsoft
+title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309390"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991273"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Recupera i metadati per i campi di un'istruzione preparata. Per informazioni sulla preparazione di un'istruzione, vedere [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). Si noti che **sqlsrv_field_metadata** può essere chiamato in qualsiasi istruzione preparata, pre-elaborazione o post-esecuzione.  
+Recupera i metadati per i campi di un'istruzione preparata. Per informazioni sulla preparazione di un'istruzione, vedere [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). Si noti che **sqlsrv_field_metadata** può essere chiamato in qualsiasi istruzione preparata, pre-esecuzione o post-esecuzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,14 +45,14 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>Valore restituito  
 Una **matrice** di matrici oppure **false**. La matrice è costituita da una singola matrice per ogni campo nel set di risultati. Ogni matrice secondaria include le chiavi elencate nella tabella seguente. Se si verifica un errore durante il recupero dei metadati del campo, viene restituito **false** .  
   
-|Key|Description|  
+|Key|Descrizione|  
 |-------|---------------|  
 |nome|Nome della colonna a cui corrisponde il campo.|  
 |Tipo|Valore numerico che corrisponde a un tipo SQL.|  
 |Dimensione|Numero di caratteri per i campi di tipo carattere (char(n), varchar(n), nchar(n), nvarchar(n), XML). Numero di byte per i campi di tipo binario (binary(n), varbinary(n), tipo definito dall'utente). **NULL** per altri tipi di dati di SQL Server.|  
 |Precisione|Precisione per i tipi di precisione delle variabili (real, numeric, decimal, datetime2, datetimeoffset e time). **NULL** per altri tipi di dati di SQL Server.|  
 |Scala|Scala per i tipi di scala delle variabili (numeric, decimal, datetime2, datetimeoffset e time). **NULL** per altri tipi di dati di SQL Server.|  
-|Ammette valori Null|Valore enumerato che indica se la colonna è nullable (**SQLSRV_NULLABLE_YES**), la colonna non ammette valori null (**SQLSRV_NULLABLE_NO**), o non è noto se la colonna è nullable ( **SQLSRV_NULLABLE_UNKNOWN**).|  
+|Ammette valori Null|Valore enumerato che indica se la colonna è nullable (**SQLSRV_NULLABLE_YES**), non è nullable (**SQLSRV_NULLABLE_NO**) o non è noto se la colonna è nullable (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
 Nella tabella seguente vengono fornite altre informazioni sulle chiavi di ogni matrice secondaria (per informazioni sui tipi, vedere la documentazione di SQL Server):  
   
@@ -94,7 +94,7 @@ Nella tabella seguente vengono fornite altre informazioni sulle chiavi di ogni m
 La chiave nullable può essere yes o no.  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene creata una risorsa di istruzione, quindi vengono recuperati e visualizzati i metadati dei campi. Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio seguente viene creata una risorsa di istruzione, quindi vengono recuperati e visualizzati i metadati dei campi. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

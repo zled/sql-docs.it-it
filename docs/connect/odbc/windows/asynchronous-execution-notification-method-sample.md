@@ -1,5 +1,5 @@
 ---
-title: Esempio di esecuzione asincrona (metodo di notifica) | Documenti Microsoft
+title: Esempio di esecuzione asincrona (metodo di notifica) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c0fb14245c5e3365389bb127ba735c4829f03e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852186"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047494"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>Esempio di esecuzione asincrona (metodo di notifica)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  Gli esempi di codice in questo argomento viene illustrato come utilizzare il [esecuzione asincrona (metodo di notifica)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
+  Negli esempi di codice di questo argomento viene illustrato come usare l'[esecuzione asincrona (metodo di notifica)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
   
- Questa funzione Usa la notifica asincrona per aprire cinque connessioni ed esegue una query in un'istruzione di ciascuna connessione.  
+ Questa funzione usa la notifica asincrona per aprire cinque connessioni ed eseguire una query sull'istruzione di ciascuna connessione.  
   
 ```  
   

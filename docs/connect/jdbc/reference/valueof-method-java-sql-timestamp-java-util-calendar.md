@@ -1,5 +1,5 @@
 ---
-title: Metodo valueOf (Java.SQL. timestamp, java.util.Calendar) | Documenti Microsoft
+title: Metodo valueOf (java.sql.Timestamp, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2b742e3ccdf297aaa6ede4feb5bb93b04224823
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850086"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039239"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>Metodo valueOf (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Crea un **DateTimeOffset** oggetto che rappresenta un punto nel tempo in un particolare offset GMT in base a un valore Java.SQL. timestamp e un valore di java.util.Calendar che indica l'offset.  
+  Crea una **DateTimeOffset** oggetto che rappresenta un punto nel tempo in un particolare offset GMT in base a un valore Java e un valore java.util.Calendar che indica l'offset.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,15 +38,15 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
   
  Valore java.sql.Timestamp.  
   
- *Calendario*  
+ *calendario*  
   
- Valori di offset.  I componenti di data e ora di *calendario* verrà impostato in base al *timestamp* valore.  
+ Valori di offset.  I componenti della data e ora *calendario* verrà impostato in base al *timestamp* valore.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un oggetto DateTimeOffset che rappresenta il punto nel tempo dato dall'oggetto java.SQL. timestamp nel fuso orario dell'oggetto java.util.Calendar specificato.  
+ Restituisce un oggetto DateTimeOffset che rappresenta il punto nel tempo dato dall'oggetto Java al fuso orario dell'oggetto java.util.Calendar specificato.  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo imposta inoltre l'oggetto java.util.Calendar al punto nel tempo dato dall'oggetto java.SQL. timestamp.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo imposta inoltre l'oggetto java.util.Calendar al punto nel tempo dato dall'oggetto java.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   

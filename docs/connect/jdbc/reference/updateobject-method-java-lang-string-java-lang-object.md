@@ -1,5 +1,5 @@
 ---
-title: Metodo updateObject (lang, lang) | Documenti Microsoft
+title: Metodo updateObject (java.lang.String, java.lang.Object) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2dcf906b0514f5b52b2367aef0a276cf66982271
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850626"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982363"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject"></a>Metodo updateObject (java.lang.String, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Aggiorna la colonna designata con un **oggetto** valore in base al nome della colonna.  
+  Aggiorna la colonna designata con un valore **Object** in base al nome della colonna.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,17 +42,17 @@ public void updateObject(java.lang.String columnName,
 #### <a name="parameters"></a>Parametri  
  *columnName*  
   
- Oggetto **stringa** che contiene il nome della colonna.  
+ Valore **String** contenente il nome della colonna.  
   
  *obj*  
   
- Un **oggetto** valore.  
+ Valore **Object**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo updateObject viene specificato dal metodo updateObject nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo updateObject viene specificato dal metodo nell'interfaccia ResultSet updateObject.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: disabilitare i set di risultati più attivi (MARS) | Documenti Microsoft'
+title: 'Procedura: Disabilitare più set di risultati attivi (MARS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc5e138bbd9e293076b0f05173d9d4a8d1747fde
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307910"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985603"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>Procedura: Disabilitare più set di risultati attivi (MARS)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -64,7 +64,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene illustrato come disabilitare il supporto MARS usando il driver PDO_SQLSRV del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+L'esempio seguente illustra come disabilitare il supporto MARS usando il driver PDO_SQLSRV dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ```  
 <?php  

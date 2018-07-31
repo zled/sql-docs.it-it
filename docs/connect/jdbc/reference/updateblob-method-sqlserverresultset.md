@@ -1,5 +1,5 @@
 ---
-title: Metodo updateBlob (SQLServerResultSet) | Documenti Microsoft
+title: Metodo updateBlob (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b6178a7da337197d2fe6b979bcd7e64c3d60245
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850916"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019919"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>Metodo updateBlob (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "32850916"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|Nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
-|[updateBlob (int, Java)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|Aggiorna la colonna designata con un valore java.sql.Blob.|  
-|[updateBlob (int,. InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|Aggiorna la colonna designata tramite il flusso di input specificato.|  
-|[updateBlob (int,. InputStream, long)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream-long.md)|Aggiorna la colonna designata tramite il flusso di input specificato, che conterrà il numero specificato di byte.|  
-|[updateBlob (lang. String, Java)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-sql-blob.md)|Aggiorna la colonna designata con un valore java.sql.Blob.|  
-|[updateBlob (lang. String,. InputStream)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream.md)|Aggiorna la colonna designata utilizzando il flusso di input specificato.|  
-|[updateBlob (lang. String,. InputStream, long)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream-long.md)|Aggiorna la colonna designata tramite il flusso di input specificato, che conterrà il numero specificato di byte.|  
+|[updateBlob (int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|Aggiorna la colonna designata con un valore java.sql.Blob.|  
+|[updateBlob (int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|Aggiorna la colonna designata tramite il flusso di input specificato.|  
+|[updateBlob (int, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream-long.md)|Aggiorna la colonna designata tramite il flusso di input specificato, che conterrà il numero specificato di byte.|  
+|[updateBlob (java.lang.String, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-sql-blob.md)|Aggiorna la colonna designata con un valore java.sql.Blob.|  
+|[updateBlob (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream.md)|Aggiorna la colonna designata utilizzando il flusso di input specificato.|  
+|[updateBlob (java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream-long.md)|Aggiorna la colonna designata tramite il flusso di input specificato, che conterrà il numero specificato di byte.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

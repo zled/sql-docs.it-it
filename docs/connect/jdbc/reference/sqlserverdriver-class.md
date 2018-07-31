@@ -1,5 +1,5 @@
 ---
-title: Classe SQLServerDriver | Documenti Microsoft
+title: Classe SQLServerDriver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 976893003e65ea226e5df03a3d636b20d38018ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845476"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052723"
 ---
 # <a name="sqlserverdriver-class"></a>Classe SQLServerDriver
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Rappresenta il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Questa classe include metodi per la connessione a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database e per ottenere informazioni sul driver JDBC.  
+  Rappresenta [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Questa classe include metodi per la connessione a un database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] e per il recupero di informazioni sul driver JDBC.  
   
  **Pacchetto:** com.microsoft.sqlserver.jdbc  
   
  **Estende:** java.lang.Object  
   
- **Implementa:** Java  
+ **Implementa:** java.sql.Driver  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,6 +41,6 @@ public final class SQLServerDriver
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
- [Riferimento all'API del Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Informazioni di riferimento sull'API del driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

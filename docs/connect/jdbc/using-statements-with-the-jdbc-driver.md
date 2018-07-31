@@ -1,5 +1,5 @@
 ---
-title: Utilizzo delle istruzioni con il Driver JDBC | Documenti Microsoft
+title: Uso di istruzioni con il Driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,33 +15,33 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c7da2ce5f69df8f28b281a935ea938b2648fa555
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851486"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968934"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Utilizzo delle istruzioni con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] consente di utilizzare i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database in diversi modi. Il driver JDBC può essere utilizzato per eseguire istruzioni SQL nel database o per chiamare le stored procedure nel database, utilizzando sia parametri di input che di output. Il driver JDBC supporta inoltre le sequenze di escape SQL, i conteggi di aggiornamento, le chiavi generate automaticamente e l'esecuzione degli aggiornamenti in un'operazione batch.  
+  È possibile usare [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] per operare con i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] in diversi modi. Il driver JDBC può essere utilizzato per eseguire istruzioni SQL nel database o per chiamare le stored procedure nel database, utilizzando sia parametri di input che di output. Il driver JDBC supporta inoltre le sequenze di escape SQL, i conteggi di aggiornamento, le chiavi generate automaticamente e l'esecuzione degli aggiornamenti in un'operazione batch.  
   
- Il driver JDBC fornisce tre classi per il recupero di dati da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database:  
+ Il driver JDBC offre tre classi per il recupero dei dati da un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
   
-1.  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) : utilizzate per l'esecuzione di istruzioni SQL senza parametri.  
+1.  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md): usata per l'esecuzione di istruzioni SQL senza parametri.  
   
-2.  [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) - (ereditato da SQLServerStatement), utilizzato per in esecuzione le istruzioni SQL compilate che possono contenere parametri IN.  
+2.  [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md): (ereditata da SQLServerStatement), usata per l'esecuzione di istruzioni SQL compilate che possono contenere parametri IN.  
   
-3.  [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) - (ereditato da SQLServerPreparedStatement), utilizzato per l'esecuzione di stored procedure che possono contenere parametri IN e parametri OUT, o entrambi.  
+3.  [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md): (ereditata da SQLServerPreparedStatement), usata per l'esecuzione di stored procedure che possono contenere parametri IN, parametri OUT o entrambi.  
   
- Negli argomenti di questa sezione viene illustrato come utilizzare ciascuna delle tre classi di istruzioni per utilizzare i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
+ Negli argomenti di questa sezione viene illustrato come usare ciascuna delle tre classi di istruzioni per operare con i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Uso di istruzioni con SQL](../../connect/jdbc/using-statements-with-sql.md)|Viene descritto come utilizzare istruzioni SQL con il driver JDBC per operare con i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.|  
-|[USo di istruzioni con stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)|Viene descritto come utilizzare stored procedure con il driver JDBC per operare con i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.|  
+|[Uso di istruzioni con SQL](../../connect/jdbc/using-statements-with-sql.md)|Viene descritto come usare le istruzioni SQL con il driver JDBC per operare con i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[USo di istruzioni con stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)|Viene descritto come usare le stored procedure con il driver JDBC per operare con i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Uso di più set di risultati](../../connect/jdbc/using-multiple-result-sets.md)|Viene descritto come utilizzare il driver JDBC per recuperare i dati da più set di risultati.|  
 |[Uso delle sequenze di escape SQL](../../connect/jdbc/using-sql-escape-sequences.md)|Viene descritto come utilizzare le sequenze di escape SQL, quali i valori letterali di data e ora e le funzioni.|  
 |[Uso delle chiavi generate automaticamente](../../connect/jdbc/using-auto-generated-keys.md)|Viene descritto come utilizzare le chiavi generate automaticamente.|  

@@ -1,5 +1,5 @@
 ---
-title: Metodo updateClob (int, Java.IO. Reader, long) | Documenti Microsoft
+title: Metodo updateClob (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 978c5f09f2c7524462dc950a5edc9b435324bdb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849476"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973008"
 ---
 # <a name="updateclob-method-int-javaioreader-long"></a>Metodo updateClob (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,21 +38,21 @@ public void updateClob(int columnIndex,
 #### <a name="parameters"></a>Parametri  
  *columnIndex*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
- *Lettore*  
+ *reader*  
   
- Un oggetto del lettore.  
+ Oggetto lettore.  
   
- *lunghezza*  
+ *length*  
   
  Numero di caratteri nei dati dei parametri.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo updateClob viene specificato dal metodo updateClob nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo updateClob viene specificato dal metodo nell'interfaccia ResultSet updateClob.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

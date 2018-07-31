@@ -1,5 +1,5 @@
 ---
-title: Recupero di dati di tipo carattere come flusso usando il Driver SQLSRV | Documenti Microsoft
+title: Recuperare di dati di tipo carattere come flusso usando il driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,25 +18,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9099e0854b0030e79645399377d8f47dc90c85a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307950"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054069"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Procedura: Recupero di dati di tipo carattere come flusso usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Il recupero dei dati come un flusso è disponibile nel driver SQLSRV dei solo il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]e non è disponibile nel driver PDO_SQLSRV.  
+Il recupero di dati come flusso è disponibile solo nel driver SQLSRV dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] e non è disponibile nel driver PDO_SQLSRV.  
   
 Il driver SQLSRV sfrutta i flussi PHP per recuperare grandi quantità di dati dal server. Nell'esempio riportato in questo argomento viene illustrato come recuperare i dati di tipo carattere come flusso.  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene recuperata una riga dalla tabella *Production.ProductReview* del database AdventureWorks. Il *commenti* campo della riga restituita viene recuperato come flusso e visualizzato tramite PHP [fpassthru](http://php.net/manual/function.fpassthru.php) (funzione).  
+Nell'esempio seguente viene recuperata una riga dalla tabella *Production.ProductReview* del database AdventureWorks. Il campo *Comments* della riga restituita viene recuperato come flusso e visualizzato tramite la funzione PHP [fpassthru](http://php.net/manual/function.fpassthru.php).  
   
-Il recupero di dati come flusso viene eseguito usando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) e [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) specificando flusso di caratteri come tipo restituito. Il tipo restituito viene specificato tramite la costante **SQLSRV_PHPTYPE_STREAM**. Per informazioni sulle **sqlsrv** costanti, vedere [costanti &#40;Microsoft Drivers for PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+Il recupero di dati come flusso viene eseguito usando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) e [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) specificando flusso di caratteri come tipo restituito. Il tipo restituito viene specificato usando la costante **SQLSRV_PHPTYPE_STREAM**. Per informazioni sulle costanti **sqlsrv**, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-Nell'esempio si presuppone che [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

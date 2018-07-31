@@ -1,5 +1,5 @@
 ---
-title: Impostazione dei dati delle proprietà dell'origine | Documenti Microsoft
+title: Impostazione dei dati delle proprietà dell'origine | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13a305b676d43a13ae731bcc98dd3f517a5bf733
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850386"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991443"
 ---
 # <a name="setting-the-data-source-properties"></a>Impostazione delle proprietà delle origini dei dati
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Le origini dati sono il meccanismo ideale con cui creare connessioni JDBC in un ambiente Java EE (Java Platform, Enterprise Edition). Le origini dati forniscono connessioni, connessioni in pool e connessioni distribuite senza la necessità di specificare le proprietà di connessione a livello di codice Java. Tutti [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] impostare o ottenere il valore di qualsiasi proprietà utilizzando rispettivamente le impostazione appropriato e i metodi di richiamo, origini dati.  
+  Le origini dati sono il meccanismo ideale con cui creare connessioni JDBC in un ambiente Java EE (Java Platform, Enterprise Edition). Le origini dati forniscono connessioni, connessioni in pool e connessioni distribuite senza la necessità di specificare le proprietà di connessione a livello di codice Java. Tutte le origini dati di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] consentono di impostare o ottenere il valore di qualsiasi proprietà usando rispettivamente i metodi setter e getter appropriati.  
   
- I prodotti Java EE, quali server applicazioni e motori servlet/JSP, consentono in genere di configurare origini dati per l'accesso ai database. Tutte le proprietà elencate nel [impostando le proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md) argomento può essere specificato ovunque la configurazione consente di immettere una proprietà come proprietà = coppia valore.  
+ I prodotti Java EE, quali server applicazioni e motori servlet/JSP, consentono in genere di configurare origini dati per l'accesso ai database. Tutte le proprietà elencate nell'argomento [Impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md) possono essere specificate ovunque la configurazione consenta di immettere una proprietà come coppia proprietà=valore.  
   
- Per ulteriori informazioni su [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] origini dati, vedere il [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) classe. Per un esempio di come utilizzare la classe SQLServerDataSource per stabilire una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database, vedere [origine dati di esempio](../../connect/jdbc/data-source-sample.md).  
+ Per altre informazioni sulle origini dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Per un esempio di come usare le classi di SQLServerDataSource per stabilire una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] del database, vedere [origine dati di esempio](../../connect/jdbc/data-source-sample.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessione a SQL Server con il driver JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

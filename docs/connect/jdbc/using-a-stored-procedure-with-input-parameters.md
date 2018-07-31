@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di una Stored Procedure con parametri di Input | Documenti Microsoft
+title: Uso di una stored procedure con parametri di input | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f736e2e901d17d4a6b8d114964a315afd389ab9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852172"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978593"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>Utilizzo di una stored procedure con parametri di input
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] stored procedure che è possibile chiamare è una che contiene uno o più parametri, IN cui sono parametri che possono essere usati per passare i dati alla stored procedure. Il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornisce il [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) (classe), che è possibile utilizzare per chiamare questo tipo di stored procedure ed elaborare i dati restituiti.  
+  Una stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] che è possibile chiamare è una procedura contenente uno o più parametri IN, ovvero i parametri utilizzabili per passare i dati alla stored procedure. Tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] viene fornita la classe [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), che è possibile usare per chiamare questo tipo di stored procedure ed elaborare i dati restituiti.  
   
- Quando si utilizza il driver JDBC per chiamare una stored procedure con parametri, è necessario utilizzare il `call` sequenza di escape SQL insieme con il [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) metodo il [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) classe. La sintassi per la `call` sequenza di escape con parametri è il seguente:  
+ Quando si chiama una stored procedure usando il driver JDBC con parametri IN, è necessario usare la sequenza di escape SQL `call` insieme al metodo [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La sintassi della sequenza di escape `call` con parametri IN è la seguente:  
   
  `{call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
->  Per ulteriori informazioni sulle sequenze di escape SQL, vedere [utilizzando le sequenze di Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
+>  Per altre informazioni sulle sequenze di escape SQL, vedere [usando le sequenze di Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
   
- Quando si costruisce la `call` sequenza di escape, specificare i parametri IN utilizzando il? (punto interrogativo), che funge da segnaposto per i valori di parametro che verranno passati alla stored procedure. Per specificare un valore per un parametro, è possibile utilizzare uno dei metodi setter della classe SQLServerPreparedStatement. Il metodo Set che è possibile utilizzare è determinato dal tipo di dati del parametro IN.  
+ Quando si costruisce la sequenza di escape `call`, specificare i parametri IN usando il carattere ? (punto interrogativo), che funge da segnaposto per i valori di parametro che verranno passati alla stored procedure. Per specificare un valore per un parametro, è possibile usare uno dei metodi setter della classe SQLServerPreparedStatement. Il metodo Set che è possibile utilizzare è determinato dal tipo di dati del parametro IN.  
   
  Quando si passa un valore al metodo Set, è necessario specificare non solo il valore effettivo da utilizzare nel parametro, ma anche la posizione ordinale del parametro nella stored procedure. Se, ad esempio, la stored procedure contiene un solo parametro IN, il relativo valore ordinale sarà 1. Se la stored procedure contiene due parametri, il primo valore ordinale sarà 1 e il secondo sarà 2.  
   
- Ad esempio di come chiamare una stored procedure che contiene un parametro IN, utilizzare la stored procedure uspGetEmployeeManagers nel [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database di esempio. Questa stored procedure accetta un singolo parametro di input denominato EmployeeID, ovvero un valore integer, e restituisce un elenco ricorsivo di dipendenti e responsabili in base al valore EmployeeID specificato. Il codice Java per la chiamata a questa stored procedure è il seguente:  
+ Per un esempio sulla modalità di chiamata a una stored procedure che contiene un parametro IN, usare la stored procedure uspGetEmployeeManagers nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Questa stored procedure accetta un singolo parametro di input denominato EmployeeID, ovvero un valore integer, e restituisce un elenco ricorsivo di dipendenti e responsabili in base al valore EmployeeID specificato. Il codice Java per la chiamata a questa stored procedure è il seguente:  
   
 ```  
 public static void executeSprocInParams(Connection con) {  

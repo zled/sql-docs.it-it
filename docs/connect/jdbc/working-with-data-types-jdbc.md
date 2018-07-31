@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di tipi di dati (JDBC) | Documenti Microsoft
+title: Utilizzo di tipi di dati (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73be4e0bc7a20a8a592493badf95a123ad6ade84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851194"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970056"
 ---
 # <a name="working-with-data-types-jdbc"></a>Utilizzo dei tipi di dati (JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  La funzione principale del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è consentire agli sviluppatori Java di accedere ai dati contenuti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. A tale scopo, il driver JDBC consente di eseguire la conversione tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di dati e tipi di linguaggio Java e gli oggetti.  
+  La funzione principale di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è consentire agli sviluppatori Java di accedere a dati contenuti in database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. A tale scopo, il driver JDBC consente di eseguire la conversione tra i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e i tipi e gli oggetti del linguaggio Java.  
   
 > [!NOTE]  
->  Per una descrizione dettagliata del [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e tipi di dati del driver JDBC, incluse le relative differenze e come vengono convertiti in tipi di dati del linguaggio Java, vedere [informazioni sui tipi di dati del Driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).  
+>  Per informazioni dettagliate sui tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e sui tipi di dati del driver JDBC, incluse le relative differenze e in che modo vengono convertiti in tipi di dati del linguaggio Java, vedere [Informazioni sui tipi di dati del driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).  
   
- Per poter funzionare con i tipi di dati di SQL Server, il driver JDBC fornisce get\<tipo > e impostare\<tipo > metodi per il [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) classi e fornisce get\<tipo > e aggiornare\<tipo > metodi per il [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) classe. Il metodo da adottare dipende dal tipo di dati che si sta utilizzando e dall'eventuale utilizzo di set di risultati o query.  
+ Per poter usare i tipi di dati di SQL Server, il driver JDBC offre i metodi get\<Type> e set\<Type> per le classi [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) e i metodi get\<Type> e update\<Type> per la classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md). Il metodo da adottare dipende dal tipo di dati che si sta utilizzando e dall'eventuale utilizzo di set di risultati o query.  
   
- Negli argomenti di questa sezione viene illustrato come utilizzare i tipi di dati del driver JDBC per accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dati nelle applicazioni Java.  
+ Negli argomenti di questa sezione viene descritto come usare i tipi di dati del driver JDBC per accedere ai dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nelle applicazioni Java.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Esempio di tipi di dati di base](../../connect/jdbc/basic-data-types-sample.md)|Viene descritto come utilizzare i metodi di richiamo del set di risultati per recuperare base [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] del tipo di dati, valori e come utilizzare i metodi di aggiornamento di set di risultati per aggiornare tali valori.|  
-|[Esempio di tipo di dati SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Viene descritto come archiviare dati XML in un database relazionale, come recuperare i dati XML da un database e come analizzare i dati XML con il **SQLXML** tipo di dati Java.|  
+|[Esempio di tipi di dati di base](../../connect/jdbc/basic-data-types-sample.md)|Viene descritto come usare i metodi di richiamo del set di risultati per recuperare i valori dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e in che modo usare i metodi di aggiornamento del set di risultati per aggiornare tali valori.|  
+|[Esempio di tipo di dati SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Viene descritto come archiviare dati XML in un database relazionale, come recuperare i dati XML da un database e come analizzare i dati XML con il tipo di dati Java **SQLXML**.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni di esempio del driver JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)  

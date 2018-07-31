@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e5a0d3cbf54917f32d0e30f2d0b1f15929d6836
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309070"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019689"
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,10 +46,10 @@ sqlsrv_free_stmt( resource $stmt)
 Valore booleano **true** a meno che la funzione non venga chiamata con un parametro non valido. Se la funzione viene chiamata con un parametro non valido, viene restituito **false** .  
   
 > [!NOTE]  
-> **Null** è un parametro valido per questa funzione. Permette alla funzione di essere chiamata più volte in uno script. Ad esempio, se si rilascia un'istruzione in una condizione di errore e si rilascia nuovamente alla fine dello script, la seconda chiamata a **sqlsrv_free_stmt** restituirà **true** perché la prima chiamata a **sqlsrv _ free_stmt** (nella condizione di errore) imposta la risorsa di istruzione su **null**.  
+> **Null** è un parametro valido per questa funzione. Permette alla funzione di essere chiamata più volte in uno script. Se ad esempio si rilascia un'istruzione in una condizione di errore e la si rilascia nuovamente alla fine dello script, la seconda chiamata a **sqlsrv_free_stmt** restituirà **true** perché la prima chiamata a **sqlsrv_free_stmt** (nella condizione di errore) imposta la risorsa di istruzione su **Null**.  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene creata una risorsa di istruzione, viene eseguita una query semplice e viene eseguita una chiamata a **sqlsrv_free_stmt** per rilasciare tutte le risorse associate all'istruzione. Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio seguente viene creata una risorsa di istruzione, viene eseguita una query semplice e viene eseguita una chiamata a **sqlsrv_free_stmt** per rilasciare tutte le risorse associate all'istruzione. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

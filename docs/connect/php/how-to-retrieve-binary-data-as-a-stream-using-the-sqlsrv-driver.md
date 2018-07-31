@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: recuperare dati binari come flusso usando il Driver SQLSRV | Documenti Microsoft'
+title: 'Procedura: Recuperare dati binari come flusso usando il driver SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d10cc259971d2a81177ee8e04844a54b26cf147c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307940"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979838"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Procedura: Recuperare dati binari come flusso usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Il recupero dei dati come un flusso è disponibile nel driver SQLSRV dei solo il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]e non è disponibile nel driver PDO_SQLSRV.  
+Il recupero di dati come flusso è disponibile solo nel driver SQLSRV dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] e non è disponibile nel driver PDO_SQLSRV.  
   
 I [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] sfruttano i flussi PHP per recuperare grandi quantità di dati binari dal server. In questo argomento viene illustrato come recuperare i dati binari come flusso.  
   
@@ -36,9 +36,9 @@ L'uso dei flussi per il recupero dei dati binari, ad esempio di immagini, consen
 ## <a name="example"></a>Esempio  
 Nell'esempio seguente vengono recuperati dati binari, in questo caso un'immagine, dalla tabella *Production.ProductPhoto* del database AdventureWorks. L'immagine viene recuperata come flusso e visualizzata nel browser.  
   
-Il recupero dei dati dell'immagine come flusso viene eseguito usando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) e [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) specificando flusso binario come tipo restituito. Il tipo restituito viene specificato tramite la costante **SQLSRV_PHPTYPE_STREAM**. Per informazioni sulle **sqlsrv** costanti, vedere [costanti &#40;Microsoft Drivers for PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+Il recupero dei dati dell'immagine come flusso viene eseguito usando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) e [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) specificando flusso binario come tipo restituito. Il tipo restituito viene specificato usando la costante **SQLSRV_PHPTYPE_STREAM**. Per informazioni sulle costanti **sqlsrv**, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -91,7 +91,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-La specifica del tipo restituito nell'esempio mostra come specificare il tipo restituito PHP come flusso binario. Tecnicamente, non è necessario nell'esempio perché il *LargePhoto* campo è di tipo di SQL Server varbinary (max) e, per impostazione predefinita, pertanto viene restituito come flusso binario. Per informazioni sui tipi di dati PHP predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md). Per informazioni su come specificare i tipi restituiti PHP, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+La specifica del tipo restituito nell'esempio mostra come specificare il tipo restituito PHP come flusso binario. Tecnicamente non è necessario nell'esempio perché il campo *LargePhoto* è del tipo SQL Server varbinary(max), che viene restituito come flusso binario per impostazione predefinita. Per informazioni sui tipi di dati PHP predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md). Per informazioni su come specificare i tipi restituiti PHP, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Recupero di dati](../../connect/php/retrieving-data.md)

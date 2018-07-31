@@ -1,5 +1,5 @@
 ---
-title: Metodo supportsExpressionsInOrderBy (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo supportsExpressionsInOrderBy (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb4280ba8e88b2e710dbbc7abbb02317354ebc1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847822"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983699"
 ---
 # <a name="supportsexpressionsinorderby-method-sqlserverdatabasemetadata"></a>Metodo supportsExpressionsInOrderBy (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsExpressionsInOrderBy()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo supportsExpressionsInOrderBy viene specificato dal metodo supportsExpressionsInOrderBy nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

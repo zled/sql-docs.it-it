@@ -1,5 +1,5 @@
 ---
-title: Con le istruzioni SQL | Documenti Microsoft
+title: Uso di istruzioni con SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,27 +15,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac74ec1c202341d6de099d97e2b7c719c2f72d27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851866"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978623"
 ---
 # <a name="using-statements-with-sql"></a>Utilizzo di istruzioni SQL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Quando si lavora con i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database utilizzando il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] e istruzioni SQL inline, diverse classi che è possibile utilizzare. in base al tipo di istruzione SQL che si desidera eseguire.  
+  Quando si gestiscono dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] e istruzioni SQL inline, è possibile usare diverse classi. in base al tipo di istruzione SQL che si desidera eseguire.  
   
- Se l'istruzione SQL non contiene parametri IN, utilizzare il [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) classe, ma contiene parametri, utilizzare il [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) classe.  
+ Se l'istruzione SQL non contiene parametri IN, usare la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md); se, invece, contiene parametri IN, usare la classe [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
   
 > [!NOTE]  
->  Se è necessario utilizzare istruzioni SQL che contengono entrambi IN e i parametri OUT, è necessario implementarle come stored procedure e chiamarle utilizzando la [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) classe. Per ulteriori informazioni sull'utilizzo di stored procedure, vedere [istruzioni Using con Stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+>  Se è necessario usare istruzioni SQL che contengono sia parametri IN che OUT, è necessario implementarle come stored procedure e chiamarle usando la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Per altre informazioni sull'uso di stored procedure, vedere [istruzioni Using con le Stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md).  
   
- Nelle sezioni seguenti vengono descritti i diversi scenari di utilizzo dei dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database tramite istruzioni SQL.  
+ Nelle sezioni seguenti sono descritti i diversi scenari di utilizzo di dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante istruzioni SQL.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Uso di un'istruzione SQL senza parametri](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)|Descrive come utilizzare istruzioni SQL che non contengono parametri.|  
 |[Uso di istruzioni SQL con parametri](../../connect/jdbc/using-an-sql-statement-with-parameters.md)|Descrive come utilizzare istruzioni SQL che contengono parametri.|  

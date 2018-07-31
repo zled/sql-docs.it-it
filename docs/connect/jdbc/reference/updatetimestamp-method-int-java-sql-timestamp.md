@@ -1,5 +1,5 @@
 ---
-title: Metodo updateTimestamp (int, Java.SQL. timestamp) | Documenti Microsoft
+title: Metodo updateTimestamp (int, java.sql.Timestamp) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 708011ac6289ea75828cf42deb9a36aa364e3644
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850076"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021451"
 ---
 # <a name="updatetimestamp-method-int-javasqltimestamp"></a>Metodo updateTimestamp (int, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public void updateTimestamp(int index,
 #### <a name="parameters"></a>Parametri  
  *index*  
   
- Un **int** che indica l'indice di colonna.  
+ Valore **int** che indica l'indice di colonna.  
   
  *x*  
   
@@ -51,8 +51,8 @@ public void updateTimestamp(int index,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo updateTimestamp viene specificato dal metodo updateTimestamp nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo updateTimestamp viene specificato dal metodo updateTimestamp nell'interfaccia ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateTimestamp &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetimestamp-method-sqlserverresultset.md)   

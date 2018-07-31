@@ -1,5 +1,5 @@
 ---
-title: Metodo usesLocalFiles (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo usesLocalFiles (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2efc86503bd370620e5bd1a0c8a8a2a2471fb5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849376"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039205"
 ---
 # <a name="useslocalfiles-method-sqlserverdatabasemetadata"></a>Metodo usesLocalFiles (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +39,12 @@ public boolean usesLocalFiles()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se il database utilizza file locali. In caso contrario, **false**.  
+ **true** se il database Usa i file locali. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo usesLocalFiles viene specificato dal metodo usesLocalFiles nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

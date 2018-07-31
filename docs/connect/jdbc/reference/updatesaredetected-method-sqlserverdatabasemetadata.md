@@ -1,5 +1,5 @@
 ---
-title: Metodo updatesAreDetected (SQLServerDatabaseMetaData) | Documenti Microsoft
+title: Metodo updatesAreDetected (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a91c3c3366a2f158b9ecf2f6e4b0d9341a60b2a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852126"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016042"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>Metodo updatesAreDetected (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o meno in cui è possibile rilevare un aggiornamento di riga visibile chiamando il [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) metodo il [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) classe.  
+  Recupera un valore che indica se è possibile rilevare un aggiornamento di riga visibile chiamando il metodo [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) della classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ public boolean updatesAreDetected(int type)
 #### <a name="parameters"></a>Parametri  
  *type*  
   
- Un **int** che indica il set di risultati tipo, che può essere uno dei valori seguenti come definito in Java.SQL. ResultSet o SQLServerResultSet:  
+ Valore **int** che indica il tipo di set di risultati, che può essere uno dei valori seguenti, in base a quanto definito in java.sql.ResultSet o SQLServerResultSet:  
   
 ## <a name="javasqlresultset-types"></a>Tipi java.sql.ResultSet  
  TYPE_FORWARD_ONLY  
@@ -62,12 +62,12 @@ public boolean updatesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se è possibile rilevare l'aggiornamento della riga. In caso contrario, **false**.  
+ **true** se l'aggiornamento di riga può essere rilevato. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo updatesAreDetected viene specificato dal metodo updatesAreDetected nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

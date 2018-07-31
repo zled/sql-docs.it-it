@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dei parametri direzionali | Documenti Microsoft
+title: Uso dei parametri direzionali | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8dc5a423b432d272565f8b8db6afdd2c22cbd16
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310190"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991263"
 ---
 # <a name="using-directional-parameters"></a>Uso dei parametri direzionali
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Quando si utilizza il driver PDO_SQLSRV, è possibile utilizzare [pdostatement:: Bindparam](../../connect/php/pdostatement-bindparam.md) per specificare i parametri di input e outpui.  
+Quando si usa il driver PDO_SQLSRV, è possibile usare [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) per specificare i parametri di input e output.  
   
 Negli argomenti di questa sezione viene descritto come usare i parametri direzionali durante la chiamata di stored procedure tramite il driver SQLSRV.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |---------|---------------|  
 |[Procedura: Specificare la direzione del parametro usando il driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|Descrive come specificare la direzione del parametro durante la chiamata di una stored procedure.|  
 |[Procedura: Recuperare i parametri di output mediante il driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|Descrive come chiamare una stored procedure con un parametro di output e come recuperare il relativo valore.|  

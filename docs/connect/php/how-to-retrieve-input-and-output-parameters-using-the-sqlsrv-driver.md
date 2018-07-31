@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: recuperare i parametri dei / o mediante il Driver SQLSRV | Documenti Microsoft'
+title: 'Procedura: recuperare i parametri dei / o usando il Driver SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563929"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054079"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In questo argomento viene illustrato come usare il driver SQLSRV per chiamare una stored procedure in cui un parametro è definito come parametro di input/output e come recuperare i risultati. Durante il recupero di un output o un parametro di input/output, tutti i risultati restituiti dalla stored procedure devono essere usati prima che il valore del parametro restituito sia accessibile.  
+In questo argomento viene illustrato come usare il driver SQLSRV per chiamare una stored procedure in cui un parametro è definito come parametro di input/output e come recuperare i risultati. Durante il recupero di un parametro di output o di input/output, tutti i risultati restituiti dalla stored procedure devono essere usati prima che il valore del parametro restituito sia accessibile.  
   
 > [!NOTE]  
 > Le variabili inizializzate o aggiornate su **null**, **DateTime**o tipi di flusso non possono essere usate come parametri di output.  
@@ -36,12 +36,12 @@ L'esempio seguente chiama una stored procedure che sottrae le ore di ferie usufr
 > [!NOTE]  
 > L'inizializzazione di *$vacationHrs* su 4 imposta il valore restituito di PHPTYPE su Integer. Per garantire l'integrità del tipo di dati, i parametri di input/output devono essere inizializzati prima di chiamare la stored procedure. In alternativa, è necessario specificare il valore di PHPTYPE voluto. Per informazioni sull'impostazione di PHPTYPE, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-Poiché la stored procedure restituisce due risultati, [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) deve essere chiamato dopo che è stata eseguita la stored procedure per rendere disponibile il valore del parametro di output. Dopo la chiamata **sqlsrv_next_result**, *$vacationHrs* contiene il valore del parametro di output restituito dalla stored procedure.  
+Poiché la stored procedure restituisce due risultati, è necessario chiamare [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) dopo l'esecuzione della stored procedure per rendere disponibile il valore del parametro di output. Dopo la chiamata a **sqlsrv_next_result**, *$vacationHrs*, contiene il valore del parametro di output restituito dalla stored procedure.  
   
 > [!NOTE]  
-> È consigliabile pertanto chiamare le stored procedure usando la sintassi canonica. Per ulteriori informazioni sulla sintassi canonica, vedere [chiamare una Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+> È consigliabile pertanto chiamare le stored procedure usando la sintassi canonica. Per altre informazioni sulla sintassi canonica, vedere [Chiamata di una stored procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -126,7 +126,7 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Quando si associa un parametro di input/output a un tipo bigint, se il valore può finire di fuori dell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), sarà necessario specificare il tipo di campo SQL come SQLSRV_SQLTYPE_BIGINT. In caso contrario, può comportare un'eccezione di "valore non compreso nell'intervallo".
+> Quando si associa un parametro di input/output a un tipo bigint, se il valore potrebbe finire compreso nell'intervallo di un' [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), è necessario specificarne il tipo di campo SQL come SQLSRV_SQLTYPE_BIGINT. In caso contrario, può comportare un'eccezione di "valore non compreso nell'intervallo".
 
 ## <a name="example-2"></a>Esempio 2
 Questo esempio di codice viene illustrato come associare un valore bigint grande come parametro di input/output.  

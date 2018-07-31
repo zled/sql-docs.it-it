@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d543667f15e3fcb1bf049bb595140098f303837e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309040"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991193"
 ---
 # <a name="sqlsrvcommit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "35309040"
 Esegue il commit della transazione corrente sulla connessione specificata e restituisce la connessione in modalità autocommit. La transazione corrente include tutte le istruzioni della connessione specificata eseguite dopo la chiamata a [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) e prima delle chiamate a [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) o **sqlsrv_commit**.  
   
 > [!NOTE]  
-> Il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] è in modalità autocommit per impostazione predefinita. Ciò significa che viene eseguito automaticamente il commit di tutte le query al completamento dell'operazione a meno che non siano state programmate come parte di una transazione esplicita usando **sqlsrv_begin_transaction**.  
+> I [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] sono in modalità autocommit per impostazione predefinita. Ciò significa che viene eseguito automaticamente il commit di tutte le query al completamento dell'operazione a meno che non siano state programmate come parte di una transazione esplicita usando **sqlsrv_begin_transaction**.  
   
 > [!NOTE]  
 > Se **sqlsrv_commit** viene chiamato in una connessione che non è presente in una transazione attiva e che è stata avviata con **sqlsrv_begin_transaction**, la chiamata restituisce **false** e un errore *Not in Transaction* viene aggiunto alla raccolta degli errori.  
@@ -57,7 +57,7 @@ Nell'esempio seguente vengono eseguite due query come parte di una transazione. 
   
 La prima query dell'esempio inserisce un nuovo ordine di vendita nella tabella *Sales.SalesOrderDetail* del database AdventureWorks. L'ordine è per cinque unità del prodotto con ID 709. La seconda query riduce la quantità di inventario del prodotto con ID 709 di 5 unità. Queste query vengono incluse in una transazione perché entrambe le query devono essere completate correttamente per riflettere accuratamente lo stato degli ordini e la disponibilità del prodotto.  
   
-Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -132,5 +132,5 @@ Per porre l'attenzione sul comportamento delle transazioni, una parte della gest
 
 [Procedura: Eseguire le transazioni](../../connect/php/how-to-perform-transactions.md)
 
-[Panoramica dei driver Microsoft per PHP per SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+[Panoramica dei Driver Microsoft per PHP per SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
   

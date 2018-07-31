@@ -1,5 +1,5 @@
 ---
-title: Il recupero dei risultati imposta dati di esempio | Documenti Microsoft
+title: Recupero dei risultati Set di dati di esempio | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4d073fb21077bc5873dcb55be452e32ee5a0af3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852996"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039195"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Esempio di recupero dei dati del set di risultati
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Questo [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] applicazione di esempio viene illustrato come recuperare un set di dati da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database e quindi visualizzare i dati.  
+  Con questa applicazione [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] di esempio viene illustrato come recuperare un set di dati da un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e quindi visualizzare i dati.  
   
  Il file di codice per questo esempio è denominato retrieveRS.java e si trova nella seguente posizione:  
   
- \<*directory di installazione*> \sqljdbc_\<*versione*>\\<*language*> \samples\resultsets  
+ \<*directory di installazione*> \sqljdbc_\<*versione*>\\<*linguaggio*> \samples\resultsets  
   
 ## <a name="requirements"></a>Requisiti  
- Per eseguire questa applicazione di esempio, è necessario impostare il classpath per includere il file sqljdbc.jar o sqljdbc4.jar. Se nel classpath manca una voce per il file sqljdbc.jar o sqljdbc4.jar, nell'applicazione di esempio verrà generata un'eccezione comune di classe non trovata. Sarà inoltre necessario l'accesso per il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database di esempio. Per ulteriori informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
+ Per eseguire questa applicazione di esempio, è necessario impostare il classpath per includere il file sqljdbc.jar o sqljdbc4.jar. Se nel classpath manca una voce per il file sqljdbc.jar o sqljdbc4.jar, nell'applicazione di esempio verrà generata un'eccezione comune di classe non trovata. Sarà inoltre necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Per altre informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  Il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornisce sqljdbc.jar e sqljdbc4.jar file della libreria di classe da utilizzare a seconda delle impostazioni preferite di Java Runtime Environment (JRE). Per ulteriori informazioni sui file JAR da scegliere, vedere [requisiti di sistema per il Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  Con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] vengono offerti i file di libreria di classi sqljdbc.jar e sqljdbc4.jar da utilizzare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. Per altre informazioni sui file JAR da scegliere, vedere [requisiti di sistema per il Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, il codice di esempio stabilisce una connessione per il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database di esempio. Quindi, usando un'istruzione SQL con il [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) dell'oggetto, che esegue l'istruzione SQL e inserisce i dati restituiti vengono posizionati in un [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto.  
+ Nell'esempio seguente, mediante il codice di esempio viene eseguita una connessione al database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] di esempio. Quindi, utilizzando un'istruzione SQL con l'oggetto [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), viene eseguita l'istruzione SQL e i dati restituiti vengono posizionati in un oggetto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
- Successivamente, il codice di esempio chiama il metodo displayRow personalizzato per scorrere le righe di dati contenuti nel set di risultati e utilizza il [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) metodo per visualizzare alcuni dei dati in esso contenuti.  
+ Quindi, il codice di esempio richiama il metodo personalizzato displayRow per ripetere le righe di dati contenuti nel set di risultati e utilizza il metodo [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) per visualizzare alcuni dei dati contenuti.  
   
 ```java
 import java.sql.*;  

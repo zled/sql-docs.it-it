@@ -1,5 +1,5 @@
 ---
-title: Metodo (SQLServerResultSet) updateFloat | Documenti Microsoft
+title: Metodo updateFloat (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,23 +20,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dddc90d2d40d500d7d014705c6fb2f90155c1ef8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849756"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972794"
 ---
-# <a name="updatefloat-method-sqlserverresultset"></a>updateFloat (metodo) (SQLServerResultSet)
+# <a name="updatefloat-method-sqlserverresultset"></a>Metodo updateFloat (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Aggiorna la colonna designata con un **float** valore.  
+  Aggiorna la colonna designata con un valore **float**.  
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|Nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
-|[updateFloat (int, float)](../../../connect/jdbc/reference/updatefloat-method-int-float.md)|Aggiorna la colonna designata con un **float** valore in base all'indice di colonna.|  
-|[updateFloat (lang. String, float)](../../../connect/jdbc/reference/updatefloat-method-java-lang-string-float.md)|Aggiorna la colonna designata con un **float** valore in base al nome della colonna.|  
+|[updateFloat (int, float)](../../../connect/jdbc/reference/updatefloat-method-int-float.md)|Aggiorna la colonna designata con un valore **float** in base all'indice della colonna.|  
+|[updateFloat (java.lang.String, float)](../../../connect/jdbc/reference/updatefloat-method-java-lang-string-float.md)|Aggiorna la colonna designata con un valore **float** in base al nome della colonna.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

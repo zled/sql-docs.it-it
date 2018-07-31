@@ -1,5 +1,5 @@
 ---
-title: Tipi definiti dall'utente | Documenti Microsoft
+title: Tipi definiti dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72dca79e295f54d4c01421ef79408008bd559210
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850289"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039140"
 ---
 # <a name="user-defined-types"></a>Tipi definiti dall'utente
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Tipi definiti dall'utente (UDT) sono stati introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] per consentire agli sviluppatori di estendere il sistema di tipi scalari del server archiviando oggetti common language runtime (CLR) in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. Tipi definiti dall'utente possono contenere più elementi e possono assumere comportamenti, a differenza dei tipi di dati alias tradizionali, costituiti da una singola [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] il tipo di dati di sistema. In precedenza, i tipi definiti dall'utente erano limitati a una dimensione massima di 8 kilobyte. In [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)], è stato aggiunto il supporto per tipi definiti dall'utente maggiore di 64 kilobyte. A partire dalla versione 3.0, il driver JDBC supporta anche tipi definiti dall'utente con dimensioni maggiori di 64 kilobyte quando si specifica il formato UserDefined.  
+  I tipi definiti dall'utente (UDT) sono stati introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] per consentire agli sviluppatori di estendere il sistema di tipo scalare del server archiviando oggetti Common Language Runtime (CLR) in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. I tipi definiti dall'utente possono contenere più elementi e avere comportamenti che, a differenza dei tradizionali tipi di dati alias, sono costituiti da un solo tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. In precedenza, i tipi definiti dall'utente erano limitati a una dimensione massima di 8 kilobyte. In [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] è stato aggiunto il supporto per i tipi definiti dall'utente con dimensioni superiori a 64 kilobyte. A partire dalla versione 3.0, il driver JDBC supporta anche tipi definiti dall'utente con dimensioni maggiori di 64 kilobyte quando si specifica il formato UserDefined.  
   
  Non esiste alcuna modifica di comportamento per i tipi definiti dall'utente minori o uguali a 8.000 byte, ma sono supportati tipi definiti dall'utente di dimensioni maggiori, che vengono indicate come illimitate ("unlimited").  
   

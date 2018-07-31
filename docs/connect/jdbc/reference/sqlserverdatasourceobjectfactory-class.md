@@ -1,5 +1,5 @@
 ---
-title: Classe SQLServerDataSourceObjectFactory | Documenti Microsoft
+title: Classe SQLServerDataSourceObjectFactory | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ecec8f58587d6a57468f8078e1f680675bede77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845816"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046849"
 ---
 # <a name="sqlserverdatasourceobjectfactory-class"></a>Classe SQLServerDataSourceObjectFactory
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "32845816"
   
  **Estende:** java.lang.Object  
   
- **Implementa:** ObjectFactory  
+ **Implementa:** javax.naming.spi.ObjectFactory  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,13 +39,13 @@ ms.locfileid: "32845816"
 public class SQLServerDataSourceObjectFactory  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo viene ereditato da tutte le classi dell'origine dati. Come parte del supporto per l'interfaccia Referenceable, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] espone questa classe che implementa un ObjectFactory. Server applicazioni Java chiameranno getReference in una classe di origine dati e verrà creato un oggetto di riferimento che utilizzerà il nome di classe internamente come relativa class factory.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo viene ereditato da tutte le classi dell'origine dati. Come parte del supporto per l'interfaccia Referenceable, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] espone questa classe che implementa un elemento ObjectFactory. I server applicazioni Java chiameranno getReference in una classe dell'origine dati creando in questo modo un oggetto Reference che userà il nome della classe internamente come relativa class factory.  
   
- Quando il Server applicazioni Java deve dereferenziare l'oggetto di riferimento, crea un'istanza dell'oggetto di SQLServerDataSourceObjectFactory e le chiamate di [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md) (metodo), passando l'oggetto di riferimento, a recuperare l'istanza dell'origine dati.  
+ Quando il Server applicazioni Java deve dereferenziare l'oggetto di riferimento, crea un'istanza dell'oggetto di SQLServerDataSourceObjectFactory e chiama il [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md) metodo, passando l'oggetto di riferimento, a recuperare l'istanza dell'origine dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   
- [Riferimento all'API del Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Informazioni di riferimento sull'API del driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

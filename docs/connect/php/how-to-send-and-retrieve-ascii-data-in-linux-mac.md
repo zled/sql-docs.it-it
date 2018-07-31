@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: invio e recupero di dati ASCII in Linux e macOS (SQL) | Documenti Microsoft'
+title: 'Procedura: inviare e recuperare dati ASCII in Linux e macOS (SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -17,33 +17,33 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307680"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979823"
 ---
-# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Procedura: invio e recupero di dati ASCII in Linux e macOS 
+# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Procedura: Inviare e recuperare dati ASCII in Linux e macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In questo articolo si presuppone che le impostazioni locali ASCII (non-UTF-8) sono state generate o installate nei sistemi Linux o Mac OS. 
+Questo articolo si presuppone che le impostazioni locali ASCII (non-UTF-8) sono state generate o installate nei sistemi Linux o macOS. 
 
-Per inviare o recuperare il set di caratteri ASCII per il server:  
+Per inviare o recuperare set di caratteri ASCII per il server:  
 
-1.  Se le impostazioni locali desiderate non sono il valore predefinito nell'ambiente di sistema, assicurarsi che si richiama `setlocale(LC_ALL, $locale)` prima di effettuare la prima connessione. La funzione setlocale PHP modifica le impostazioni locali solo per lo script corrente e, se richiamata dopo aver apportato la prima connessione, può essere ignorato.
+1.  Se le impostazioni locali desiderata non sono il valore predefinito del sistema nell'ambiente in uso, assicurarsi che si richiama `setlocale(LC_ALL, $locale)` prima di effettuare la prima connessione. La funzione setlocale PHP modifica le impostazioni locali solo per lo script corrente e se richiamata dopo aver apportato la prima connessione, può essere ignorato.
  
-2.  Quando si utilizza il driver SQLSRV, è possibile specificare `'CharacterSet' => SQLSRV_ENC_CHAR` come connessione opzione, ma questo passaggio è facoltativo, poiché il valore predefinito è la codifica.
+2.  Quando si usa il driver SQLSRV, è possibile specificare `'CharacterSet' => SQLSRV_ENC_CHAR` come connessione opzione, ma in questo passaggio è facoltativo perché è il valore predefinito di codifica.
 
-3.  Quando si utilizza il driver PDO_SQLSRV, sono disponibili due modi. Innanzitutto, quando si effettua la connessione, impostare `PDO::SQLSRV_ATTR_ENCODING` a `PDO::SQLSRV_ENCODING_SYSTEM` (per un esempio di impostazione di un'opzione di connessione, vedere [PDO::__construct](../../connect/php/pdo-construct.md)). In alternativa, una volta stabilita la connessione, aggiungere questa riga `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+3.  Quando si usa il driver PDO_SQLSRV, esistono due modi. Innanzitutto, quando si effettua la connessione, impostare `PDO::SQLSRV_ATTR_ENCODING` al `PDO::SQLSRV_ENCODING_SYSTEM` (per un esempio di impostazione di un'opzione di connessione, vedere [PDO::__construct](../../connect/php/pdo-construct.md)). In alternativa, dopo aver connesso, aggiungere questa riga `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
-Quando si specifica la codifica di una risorsa di connessione (in SQLSRV) o un oggetto di connessione (PDO_SQLSRV), il driver presuppone che le altre stringhe delle opzioni di connessione utilizzano la stessa codifica. Si presuppone, inoltre, che anche le stringhe di query e nome del server usino tale set di caratteri.  
+Quando si specifica la codifica di una risorsa di connessione (in SQLSRV) o un oggetto di connessione (PDO_SQLSRV), il driver presuppone che le altre stringhe di opzione di connessione usano la stessa codifica. Si presuppone, inoltre, che anche le stringhe di query e nome del server usino tale set di caratteri.  
   
-La codifica per il driver PDO_SQLSRV predefinita è UTF-8 (PDO:: sqlsrv_encoding_utf8), a differenza del driver SQLSRV. Per ulteriori informazioni su queste costanti, vedere [costanti &#40;Microsoft Drivers for PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
+La codifica per il driver PDO_SQLSRV predefinita è UTF-8 (PDO::SQLSRV_ENCODING_UTF8), a differenza del driver SQLSRV. Per altre informazioni su queste costanti, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
   
 ## <a name="example"></a>Esempio  
-Gli esempi seguenti illustrano come inviare e recuperare dati ASCII, usando i driver di PHP per SQL Server specificando una determinata lingua prima di effettuare la connessione. Le impostazioni locali in varie piattaforme Linux potrebbero essere denominate in modo diverso dalle stesse impostazioni locali in macOS. Ad esempio, le impostazioni locali ci ISO-8859-1 (Latin 1) sono `en_US.ISO-8859-1` in Linux, mentre in macOS è il nome `en_US.ISO8859-1`.
+Gli esempi seguenti illustrano come inviare e recuperare dati ASCII usando il driver PHP per SQL Server specificando determinate impostazioni locali prima di effettuare la connessione. Le impostazioni locali in varie piattaforme di Linux potrebbero essere denominate in modo diverso dalle stesse impostazioni locali in macOS. Ad esempio, le impostazioni locali US ISO-8859-1 (Latin 1) sono `en_US.ISO-8859-1` in Linux, mentre in macOS è il nome `en_US.ISO8859-1`.
   
-Gli esempi presuppongono che [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è installato in un server. Quando si eseguono gli esempi dal browser, tutto l'output viene scritto nel browser.  
+Gli esempi presuppongono che [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] viene installato in un server. Quando gli esempi vengono eseguiti dal browser, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -168,7 +168,7 @@ try {
 
 ## <a name="see-also"></a>Vedere anche  
 [Recupero di dati](../../connect/php/retrieving-data.md)  
-[Utilizzo di dati UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+[Utilizzo dei dati UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
 [l'aggiornamento dei dati &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
 [Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

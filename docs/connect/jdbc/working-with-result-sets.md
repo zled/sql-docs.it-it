@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di set di risultati | Documenti Microsoft
+title: Utilizzo di set di risultati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b2797c9ce000d687550ee50c27fdc51524f86c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851366"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060304"
 ---
 # <a name="working-with-result-sets"></a>Utilizzo dei set di risultati
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Quando si utilizzano i dati contenuti in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database, un metodo di manipolazione dei dati consiste nell'utilizzare un set di risultati. Il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'utilizzo del risultato set tramite la [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto. Tramite l'oggetto SQLServerResultSet, può recuperare i dati restituiti da un'istruzione SQL o stored procedure, aggiornare i dati in base alle esigenze e quindi inviare nuovamente i dati al database.  
+  Quando si usano i dati contenuti in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], un metodo di manipolazione dei dati consiste nell'uso di un set di risultati. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'uso dei set di risultati tramite l'oggetto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md). Usando l'oggetto SQLServerResultSet, è possibile recuperare i dati restituiti da un'istruzione SQL o da una stored procedure, aggiornare i dati secondo le necessità e quindi inviare nuovamente i dati al database.  
   
- Inoltre, l'oggetto SQLServerResultSet fornisce metodi per la navigazione nelle righe di dati, recupero o impostazione dei dati in esso contenuti e per la creazione di vari livelli di sensibilità alle modifiche nel database sottostante.  
+ L'oggetto SQLServerResultSet offre anche metodi per la navigazione nelle righe di dati, per il recupero o l'impostazione dei dati in esso contenuti, per la creazione di vari livelli di sensibilità alle modifiche nel database sottostante.  
   
 > [!NOTE]  
->  Per ulteriori informazioni sulla gestione di set di risultati, inclusa la sensibilità alle modifiche, vedere [gestione dei set di risultati con il Driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
+>  Per altre informazioni sulla gestione dei set di risultati, inclusa la sensibilità alle modifiche, vedere [gestione dei set di risultati con il Driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
   
- Negli argomenti di questa sezione vengono descritti diversi modi, che è possibile utilizzare un set di risultati per manipolare i dati contenuti un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
+ Negli argomenti della sezione vengono descritti vari modi di usare un set di risultati per manipolare i dati contenuti in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Esempio di recupero dei dati del set di risultati](../../connect/jdbc/retrieving-result-set-data-sample.md)|Viene descritto come utilizzare un set di risultati per recuperare dati da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database e la Visualizza.|  
-|[Esempio di modifica dei dati dei set di risultati](../../connect/jdbc/modifying-result-set-data-sample.md)|Viene descritto come utilizzare un set di risultati per inserire, recuperare e modificare i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.|  
-|[Esempio di memorizzazione nella cache dei dati dei set di risultati](../../connect/jdbc/caching-result-set-data-sample.md)|Viene descritto come utilizzare un set di risultati per recuperare grandi quantità di dati da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database e per controllare come vengono memorizzati i dati nel client.|  
+|[Esempio di recupero dei dati del set di risultati](../../connect/jdbc/retrieving-result-set-data-sample.md)|Descrive come usare un set di risultati per recuperare i dati da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e visualizzarli.|  
+|[Esempio di modifica dei dati dei set di risultati](../../connect/jdbc/modifying-result-set-data-sample.md)|Descrive come usare un set di risultati per inserire, recuperare e modificare i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Esempio di memorizzazione nella cache dei dati dei set di risultati](../../connect/jdbc/caching-result-set-data-sample.md)|Descrive come usare il set di risultati per recuperare grandi quantità di dati da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e per controllare come vengono memorizzati i dati nel client.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni di esempio del driver JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)  

@@ -1,5 +1,5 @@
 ---
-title: Metodo updateTime (SQLServerResultSet) | Documenti Microsoft
+title: Metodo updateTime (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ae10ca220b6f0834f08599e1c1ce3e98cc53549
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847996"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979203"
 ---
 # <a name="updatetime-method-sqlserverresultset"></a>Metodo updateTime (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "32847996"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|Nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
-|[updateTime (int, Java)](../../../connect/jdbc/reference/updatetime-method-int-java-sql-time.md)|Aggiorna la colonna designata con un valore di ora in base all'indice di colonna.|  
-|[updateTime (lang. String, Java)](../../../connect/jdbc/reference/updatetime-method-java-lang-string-java-sql-time.md)|Aggiorna la colonna designata con un valore di ora in base al nome della colonna.|  
+|[updateTime (int, java.sql.Time)](../../../connect/jdbc/reference/updatetime-method-int-java-sql-time.md)|Aggiorna la colonna designata con un valore di ora in base all'indice di colonna.|  
+|[updateTime (java.lang.String, java.sql.Time)](../../../connect/jdbc/reference/updatetime-method-java-lang-string-java-sql-time.md)|Aggiorna la colonna designata con un valore di ora in base al nome della colonna.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

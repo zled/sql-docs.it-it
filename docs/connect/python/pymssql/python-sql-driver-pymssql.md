@@ -1,5 +1,5 @@
 ---
-title: Il Driver SQL Python - pymssql | Documenti Microsoft
+title: Driver SQL Python - pymssql | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 190e77afb7d56a092a476db29c086f1a6987efe5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309540"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991253"
 ---
-# <a name="python-sql-driver---pymssql"></a>Driver SQL Python - pymssql
+# <a name="python-sql-driver---pymssql"></a>Driver SQL per Python - pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
 ## <a name="getting-started"></a>Introduzione
@@ -31,4 +31,4 @@ ms.locfileid: "35309540"
 * [Passaggio 3: Modello di verifica per la connessione a SQL tramite pymssql](../../../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md)  
 
 ## <a name="documentation"></a>Documentazione
-* [documentazione pymssql](http://pymssql.org)  
+* [documentazione di pymssql](http://pymssql.org)  

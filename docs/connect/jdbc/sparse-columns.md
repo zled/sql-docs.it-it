@@ -1,5 +1,5 @@
 ---
-title: Colonne di tipo sparse | Documenti Microsoft
+title: Colonna di tipo sparse | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2aa31ce2f41c8308025fd2648f18caf7ad8e04c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851686"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020977"
 ---
 # <a name="sparse-columns"></a>Colonne di tipo sparse
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Le colonne di tipo sparse sono colonne comuni che dispongono di archiviazione ottimizzata per i valori Null. Tali colonne consentono di ridurre i requisiti di spazio per i valori Null aumentando tuttavia l'overhead per il recupero dei valori non Null. È consigliabile utilizzare colonne di tipo sparse quando la quantità di spazio risparmiata è compresa almeno tra il 20% e il 40%.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Driver JDBC 3.0 supporta colonne di tipo sparse quando ci si connette a un [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (o versione successiva) server. È possibile utilizzare [GetColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [Getfunctioncolumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md), o [getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) per determinare quale colonna è di tipo sparsa e quale colonna è il set di colonne.  
+ Il driver JDBC 3.0 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] supporta colonne di tipo sparse quando si connette a un server [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (o versioni successive). È possibile utilizzare l'oggetto [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), l'oggetto [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) o l'oggetto [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) per determinare quale colonna è di tipo sparse e quale quella del set di colonne.  
   
  I set di colonne sono colonne calcolate che restituiscono tutte le colonne di tipo sparse nel form XML non tipizzato. È necessario utilizzare i set di colonne quando il numero di colonne di una tabella è elevato o maggiore di 1024 o l'esecuzione di operazioni sulle singole colonne di tipo sparse risulta eccessivamente complessa. Un set di colonne può contenere fino a 30.000 colonne.  
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  In questo esempio viene illustrato come rilevare i set di colonne e come analizzare l'output XML di un set di colonne per ottenere dati dalle colonne di tipo sparse.  
   
  Il primo listato di codice è Transact-SQL da eseguire nel server.  
   
  Il secondo listato di codice è il codice sorgente Java. Prima di compilare l'applicazione, modificare il nome del server nella stringa di connessione.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 use AdventureWorks  
@@ -67,7 +67,7 @@ VALUES ('07-20-09','05:15:00', 'CC', 'DD')
 GO  
 ```  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 import java.sql.*;  

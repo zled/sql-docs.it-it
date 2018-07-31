@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_next_result | Documenti Microsoft
+title: sqlsrv_next_result | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0e793dd1a1726d32e44c892ee14326acb30ff48
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309440"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019609"
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35309440"
 Rende attivo il risultato successivo (set di risultati, conteggio righe o parametro di output) dell'istruzione specificata.  
   
 > [!NOTE]  
-> Prima (o l'unico) risultato restituito da una query batch o stored procedure è attivo senza una chiamata a **sqlsrv_next_result**.  
+> Il primo (o l'unico) risultato restituito da una query batch o da una stored procedure è attivo senza bisogno di una chiamata a **sqlsrv_next_result**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,9 +54,9 @@ Se il risultato successivo è stato reso attivo, viene restituito il valore bool
 L'esempio seguente crea ed esegue una stored procedure che inserisce una revisione del prodotto nella tabella *Production.ProductReview* e quindi seleziona tutte le revisioni per il prodotto specificato. Dopo l'esecuzione della stored procedure, il primo risultato (il numero di righe interessate dalla query INSERT nella stored procedure) viene usato senza chiamare **sqlsrv_next_result**. Il risultato successivo (le righe restituite dalla query SELECT nella stored procedure) viene reso disponibile chiamando **sqlsrv_next_result** e usato mediante [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 > [!NOTE]  
-> È consigliabile pertanto chiamare le stored procedure usando la sintassi canonica. Per ulteriori informazioni sulla sintassi canonica, vedere [chiamare una Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+> È consigliabile pertanto chiamare le stored procedure usando la sintassi canonica. Per altre informazioni sulla sintassi canonica, vedere [Chiamata di una stored procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -187,9 +187,9 @@ Quando si esegue una stored procedure contenente parametri di output, è consigl
 Nell'esempio seguente viene eseguita una query batch che recupera le informazioni di revisione relative a un ID prodotto specifico, inserisce una revisione per il prodotto e quindi recupera di nuovo le informazioni di revisione per l'ID prodotto specificato. La revisione di prodotto appena inserita verrà inclusa nel set di risultati finale della query batch. L'esempio usa [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) per passare da un risultato della query batch a quello successivo.  
   
 > [!NOTE]  
-> Prima (o l'unico) risultato restituito da una query batch o stored procedure è attivo senza una chiamata a **sqlsrv_next_result**.  
+> Il primo (o l'unico) risultato restituito da una query batch o da una stored procedure è attivo senza bisogno di una chiamata a **sqlsrv_next_result**.  
   
-Nell'esempio viene utilizzato il *Purchasing* sommario il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) , del database e si presuppone che il database sia installato nel server. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+L'esempio usa la tabella *Purchasing.ProductReview* del database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) e presuppone che il database sia installato nel server. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite PHP | Documenti Microsoft'
+title: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite PHP | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6fe5c82561e32924c1a1792eda552caec522881
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309450"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006453"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Passaggio 3: Modello di verifica per la connessione a SQL tramite PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "35309450"
 ## <a name="step-1--connect"></a>Passaggio 1: connettersi  
   
   
-Questo **OpenConnection** funzione viene chiamata nella parte superiore di tutte le funzioni che seguono.  
+Ciò **OpenConnection** funzione viene chiamata nella parte superiore in tutte le funzioni che seguono.  
   
   
 ```php 
@@ -49,9 +49,9 @@ Questo **OpenConnection** funzione viene chiamata nella parte superiore di tutte
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>Passaggio 2: Esecuzione di query  
+## <a name="step-2--execute-query"></a>Passaggio 2: Eseguire query  
   
-Il [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) funzione può essere utilizzata per recuperare un set di risultati da una query sul Database SQL. Questa funzione è essenzialmente accetta tutte le query e l'oggetto di connessione e restituisce un set di risultati che è possibile eseguire un'iterazione con l'utilizzo di [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+Il [sqlsrv_query ()](http://php.net/manual/en/function.sqlsrv-query.php) funzione può essere utilizzata per recuperare un set di risultati da una query sul Database SQL. Questa funzione accetta qualsiasi query e l'oggetto di connessione e restituisce un set di risultati che può eseguire l'iterazione tramite l'uso di essenzialmente [sqlsrv_fetch_array ()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -83,7 +83,7 @@ Il [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) funzione
   
 ## <a name="step-3--insert-a-row"></a>Passaggio 3: Inserire una riga  
   
-In questo esempio verrà visualizzato come eseguire un [inserire](../../t-sql/statements/insert-transact-sql.md) istruzione in modo sicuro, passare parametri che la protezione dell'applicazione da [attacchi SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valore.    
+In questo esempio illustra come eseguire un' [inserire](../../t-sql/statements/insert-transact-sql.md) istruzione in modo sicuro, passare i parametri che proteggono l'applicazione dal [attacchi SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valore.    
   
   
 ```php 
@@ -120,9 +120,9 @@ Questo esempio di codice viene illustrato l'utilizzo di transazioni in cui è:
   
 -Avviare una transazione  
   
--Inserire una riga di dati, aggiornare un'altra riga di dati  
+-Inserimento di una riga di dati, aggiornare un'altra riga di dati  
   
--Commit la transazione se l'inserimento e aggiornamento hanno avuto esito positivo e il rollback della transazione se non è uno di essi  
+-Eseguire il commit di transazione se l'inserimento e aggiornamento hanno avuto esito positivo e il rollback della transazione se non è uno di essi  
   
   
 ```php 

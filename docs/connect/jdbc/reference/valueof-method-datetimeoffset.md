@@ -1,5 +1,5 @@
 ---
-title: Metodo valueOf (DateTimeOffset) | Documenti Microsoft
+title: Metodo valueOf (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fa41731f0d9d3bdde5bf0eb59c69ba1997e519c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850256"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021268"
 ---
 # <a name="valueof-method-datetimeoffset"></a>Metodo valueOf (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Crea un **DateTimeOffset** oggetto che rappresenta un punto nel tempo in un particolare offset GMT.  
+  Crea un oggetto **DateTimeOffset** che rappresenta un punto nel tempo in un particolare offset GMT.  
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|Nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
-|[valueOf (Java, int)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-int.md)|Crea un **DateTimeOffset** oggetto che rappresenta un punto nel tempo in un particolare offset GMT in base a un valore Java.SQL. timestamp e un valore che indica l'offset in minuti.|  
-|[valueOf (Java, java.util.Calendar)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-java-util-calendar.md)|Crea un **DateTimeOffset** oggetto che rappresenta un punto nel tempo in un particolare offset GMT in base a un valore Java.SQL. timestamp e un valore di java.util.Calendar che indica l'offset.|  
+|[valueOf(java.sql.Timestamp, int)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-int.md)|Crea un oggetto **DateTimeOffset** che rappresenta un punto nel tempo in un particolare offset GMT in base a un valore java.sql.Timestamp e un valore che indica l'offset in minuti.|  
+|[valueOf(java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-java-util-calendar.md)|Crea una **DateTimeOffset** oggetto che rappresenta un punto nel tempo in un particolare offset GMT in base a un valore Java e un valore java.util.Calendar che indica l'offset.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   

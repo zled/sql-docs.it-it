@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di sequenze di Escape SQL | Documenti Microsoft
+title: Usando le sequenze di Escape SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60af5198eb78ad23bf8ad55a1dc24690b91130ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852359"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978671"
 ---
 # <a name="using-sql-escape-sequences"></a>Utilizzo delle sequenze di escape SQL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'utilizzo di sequenze di escape SQL, come definito dall'API JDBC. Le sequenze di escape vengono utilizzate all'interno di un'istruzione SQL per indicare al driver che la parte della stringa SQL per cui vengono utilizzati caratteri di escape deve essere gestita in modo diverso. Quando la parte della stringa SQL per cui vengono utilizzati caratteri di escape viene elaborata dal driver JDBC, tale parte viene tradotta in codice SQL compreso da SQL Server.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'uso di sequenze di escape SQL, in base a quanto definito dall'API JDBC. Le sequenze di escape vengono utilizzate all'interno di un'istruzione SQL per indicare al driver che la parte della stringa SQL per cui vengono utilizzati caratteri di escape deve essere gestita in modo diverso. Quando la parte della stringa SQL per cui vengono utilizzati caratteri di escape viene elaborata dal driver JDBC, tale parte viene tradotta in codice SQL compreso da SQL Server.  
   
  L'API JDBC richiede cinque tipi di sequenze di escape, tutti supportati dal driver JDBC:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "32852359"
  Nelle sezioni seguenti vengono descritti i cinque tipi di sequenze di escape e viene illustrato in che modo sono supportati dal driver JDBC:  
   
 ## <a name="like-wildcard-literals"></a>Valori letterali dei caratteri jolly LIKE  
- Il driver JDBC supporta il `{escape 'escape character'}` sintassi per usare caratteri jolly della clausola LIKE come valori letterali. Il codice seguente restituisce, ad esempio, i valori per col3 se il valore di col2 inizia letteralmente con un carattere di sottolineatura (e non nel caso di utilizzo del carattere jolly).  
+ Il driver JDBC supporta la sintassi `{escape 'escape character'}` per l'uso dei caratteri jolly della clausola LIKE come valori letterali. Il codice seguente restituisce, ad esempio, i valori per col3 se il valore di col2 inizia letteralmente con un carattere di sottolineatura (e non nel caso di utilizzo del carattere jolly).  
   
 ```  
 ResultSet rst = stmt.executeQuery("SELECT col3 FROM test1 WHERE col2   
@@ -67,7 +67,7 @@ LIKE '\\_%' {escape '\\'}");
 {fn functionName}  
 ```  
   
- dove `functionName` è una funzione supportata dal driver JDBC. Esempio:  
+ dove `functionName` è una funzione supportata dal driver JDBC. Ad esempio  
   
 ```  
 SELECT {fn UCASE(Name)} FROM Employee  
@@ -89,15 +89,15 @@ SELECT {fn UCASE(Name)} FROM Employee
 {literal-type 'value'}  
 ```  
   
- dove `literal-type` è uno dei seguenti:  
+ dove `literal-type` è uno dei valori seguenti:  
   
-|Tipo di valore letterale|Description|Formato del valore|  
+|Tipo di valore letterale|Descrizione|Formato del valore|  
 |------------------|-----------------|------------------|  
-|d|Data|aaaa-mm-gg|  
+|d|date|aaaa-mm-gg|  
 |t|Time|hh:mm:ss [1]|  
 |ts|TimeStamp|aaaa-mm-gg hh:mm:ss[.f...]|  
   
- Esempio:  
+ Ad esempio  
   
 ```  
 UPDATE Orders SET OpenDate={d '2005-01-31'}   
@@ -105,7 +105,7 @@ WHERE OrderID=1025
 ```  
   
 ## <a name="stored-procedure-calls"></a>Chiamate di stored procedure  
- Il driver JDBC supporta la `{? = call proc_name(?,...)}` e `{call proc_name(?,...)}` sintassi per le chiamate di stored procedure, a seconda se è necessario elaborare un parametro restituito di escape.  
+ Il driver JDBC supporta la sintassi di escape `{? = call proc_name(?,...)}` e `{call proc_name(?,...)}` per le chiamate di stored procedure, a seconda che si debba o meno elaborare un parametro restituito.  
   
  Una stored procedure è un oggetto eseguibile archiviato nel database. In genere, si tratta di una o più istruzioni SQL precompilate. La sintassi della sequenza di escape per la chiamata di un stored procedure è la seguente:  
   
@@ -115,7 +115,7 @@ WHERE OrderID=1025
   
  dove `procedure-name` specifica il nome di una stored procedure e `parameter` specifica un parametro della stored procedure.  
   
- Per ulteriori informazioni sull'utilizzo di `call` sequenza con le stored procedure di escape, vedere [istruzioni Using con Stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+ Per altre informazioni sull'uso di `call` escape sequenza con le stored procedure, vedere [istruzioni Using con le Stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md).  
   
 ## <a name="outer-joins"></a>Outer join  
  Il driver JDBC supporta la sintassi left, right e full outer join SQL92. La sequenza di escape per gli outer join è la seguente:  
@@ -131,9 +131,9 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
 {table-reference | outer-join} ON search-condition  
 ```  
   
- dove `table-reference` è un nome di tabella e `search-condition` è la condizione di join che si desidera utilizzare per le tabelle.  
+ dove `table-reference` è il nome di una tabella e `search-condition` è la condizione di join che si desidera usare per le tabelle.  
   
- Esempio:  
+ Ad esempio  
   
 ```  
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   
@@ -155,7 +155,7 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ## <a name="limit-escape-syntax"></a>Sintassi di escape per Limit  
   
 > [!NOTE]  
->  La sintassi di escape limite supportata solo da Microsoft JDBC Driver 4.2 (o versione successiva) per SQL Server quando si utilizza JDBC 4.1 o versione successiva.  
+>  La sintassi di escape per LIMIT è supportata solo da Microsoft JDBC Driver 4.2 (o versioni successive) per SQL Server quando si usa JDBC 4.1 o versione successiva.  
   
  La sintassi di escape per LIMIT è la seguente:  
   
@@ -163,7 +163,7 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 LIMIT <rows> [OFFSET <row offset>]  
 ```  
   
- La sintassi di escape è costituito da due parti: \< *righe*> è obbligatorio e specifica il numero di righe da restituire. OFFSET e \< *offset di riga*> sono facoltativi e specificare il numero di righe da ignorare prima di iniziare a restituire le righe. Il driver JDBC supporta solo la parte obbligatoria trasformando la query per l'utilizzo di TOP invece di LIMIT. SQL Server non supporta la clausola LIMIT. **Il driver JDBC non supporta il parametro facoltativo \<offset di riga > e il driver genererà un'eccezione se viene utilizzato**.  
+ La sintassi di escape è costituita da due parti: \<*righe*> è obbligatorio e specifica il numero di righe da restituire. OFFSET e \<*offset di riga*> sono facoltativi e specificano il numero di righe da ignorare prima di iniziare a restituire le righe. Il driver JDBC supporta solo la parte obbligatoria trasformando la query per l'utilizzo di TOP invece di LIMIT. SQL Server non supporta la clausola LIMIT. **Il driver JDBC non supporta il parametro facoltativo \<offset di riga> e il driver genera un'eccezione se viene usato**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso delle istruzioni con il driver JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

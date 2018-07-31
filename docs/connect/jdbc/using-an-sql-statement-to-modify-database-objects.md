@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di un'istruzione SQL per modificare gli oggetti di Database | Documenti Microsoft
+title: Uso di un'istruzione SQL per modificare gli oggetti di database | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b126fb0b5a72688c1801cf8854d8035763c8245f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851496"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040579"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>Utilizzo di un'istruzione SQL per modificare gli oggetti di database
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Per modificare [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti di database utilizzando un'istruzione SQL, è possibile utilizzare il [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) metodo il [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) classe. Il metodo executeUpdate verrà passerà l'istruzione SQL al database per l'elaborazione e quindi restituire un valore pari a 0, perché nessuna riga è interessata.  
+  Per modificare gli oggetti di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante un'istruzione SQL, è possibile usare il metodo [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) della classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Il metodo executeUpdate passerà l'istruzione SQL al database per l'elaborazione e quindi restituirà un valore pari a 0 poiché non sono presenti righe interessate dall'operazione.  
   
- A tale scopo, è innanzitutto necessario creare un oggetto SQLServerStatement utilizzando il [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) metodo il [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) classe.  
+ A tale scopo, è necessario innanzitutto creare un oggetto SQLServerStatement usando il metodo [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 > [!NOTE]  
->  Le istruzioni SQL che modificano gli oggetti presenti in un database vengono definite istruzioni DDL (Data Definition Language) e includono, ad esempio, CREATE TABLE, DROP TABLE, CREATE INDEX e DROP INDEX. Per ulteriori informazioni sui tipi di istruzioni DDL supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] documentazione in linea.  
+>  Le istruzioni SQL che modificano gli oggetti presenti in un database vengono definite istruzioni DDL (Data Definition Language) e includono, ad esempio, CREATE TABLE, DROP TABLE, CREATE INDEX e DROP INDEX. Per altre informazioni sui tipi di istruzioni DDL supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere la documentazione in linea di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
- Nell'esempio seguente, una connessione aperta per la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database di esempio viene passato alla funzione, viene costruita un'istruzione SQL che creerà l'oggetto semplice TestTable nel database, quindi viene eseguita l'istruzione e viene visualizzato il valore restituito.  
+ Nell'esempio seguente viene passata alla funzione una connessione aperta al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], viene costruita un'istruzione SQL che creerà l'oggetto semplice TestTable nel database e quindi viene eseguita l'istruzione e visualizzato il valore restituito.  
   
  [!code[JDBC#UsingSQLToModifyDBObjects1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_0_1.java)]  
   

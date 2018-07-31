@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aab41821d2f4eb1eb3f92ce998fe440593567d0a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308970"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979714"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,13 +45,13 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [facoltativo]: costante predefinita. Questo parametro può assumere uno dei valori elencati nella tabella seguente:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|La riga successiva di dati viene restituita come matrice numerica.|  
 |SQLSRV_FETCH_ASSOC|La riga successiva di dati viene restituita come matrice associativa. Le chiavi della matrice sono i nomi di colonna nel set di risultati.|  
 |SQLSRV_FETCH_BOTH|La riga successiva di dati viene restituita come matrice numerica e matrice associativa. Si tratta del valore predefinito.|  
   
-*riga* [facoltativo]: aggiunto nella versione 1.1. Uno dei valori seguenti che specifica la riga a cui accedere in un set di risultati che usa un cursore scorrevole. (Quando *riga* è specificato, *fetchtype* devono essere specificati esplicitamente, anche se si specifica il valore predefinito.)  
+*row* [facoltativo]: aggiunto nella versione 1.1. Uno dei valori seguenti che specifica la riga a cui accedere in un set di risultati che usa un cursore scorrevole. (Se si specifica *row* è necessario specificare esplicitamente *fetchtype* anche se si indica il valore predefinito.)  
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -77,7 +77,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-Se il set di risultati restituito dal `SELECT SCOPE_IDENTITY()` parte di questa istruzione viene recuperato come matrice associativa, la chiave per il valore restituito sarà una stringa vuota ("") perché la colonna restituita non ha nome. Per evitare questa circostanza, è possibile recuperare il risultato come matrice numerica oppure specificare un nome per la colonna restituita nell'istruzione Transact-SQL. Di seguito è illustrato un modo per specificare un nome di colonna in Transact-SQL:  
+Se il set di risultati restituito dalla sezione `SELECT SCOPE_IDENTITY()` di questa istruzione viene recuperato come matrice associativa, la chiave per il valore restituito sarà una stringa vuota ("") perché la colonna restituita non ha nome. Per evitare questa circostanza, è possibile recuperare il risultato come matrice numerica oppure specificare un nome per la colonna restituita nell'istruzione Transact-SQL. Di seguito è illustrato un modo per specificare un nome di colonna in Transact-SQL:  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -86,7 +86,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 Se un set di risultati contiene più colonne senza nome, alla chiave della stringa vuota ("") verrà assegnato il valore dell'ultima colonna senza nome.  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente recupera ciascuna riga di un set di risultati in forma di **matrice**associativa. Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+L'esempio seguente recupera ciascuna riga di un set di risultati in forma di **matrice**associativa. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -127,9 +127,9 @@ sqlsrv_close( $conn);
 ## <a name="example"></a>Esempio  
 L'esempio seguente recupera ciascuna riga di un set di risultati in forma di matrice indicizzata numericamente.  
   
-L'esempio recupera informazioni sui prodotti dal *Purchasing. PurchaseOrderDetail* tabella del database AdventureWorks per prodotti con una data specifica e scorte (*StockQty*) minore di un valore specificato.  
+L'esempio recupera le informazioni sul prodotto dalla tabella *Purchasing.PurchaseOrderDetail* del database AdventureWorks per i prodotti con una data specifica e una quantità di scorte (*StockQty*) inferiore a un valore specificato.  
   
-Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

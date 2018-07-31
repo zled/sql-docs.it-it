@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire query con parametri | Documenti Microsoft'
+title: 'Procedura: eseguire query con parametri | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6095a83f4bb9982a929e0bb41e7269bc6e41935
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307570"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032990"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Procedura: Eseguire query con parametri
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,13 +35,13 @@ I passaggi per l'esecuzione di una query con parametri sono fondamentalmente qua
   
 2.  Inizializzare o aggiornare le variabili PHP che corrispondono ai segnaposto della query Transact-SQL.  
   
-3.  Utilizzare le variabili PHP del passaggio 2 per creare o aggiornare una matrice di valori di parametri che corrispondono ai segnaposto della stringa Transact-SQL. I valori dei parametri nella matrice deve essere nello stesso ordine come segnaposto progettate per illustrare le.
+3.  Usare le variabili PHP del passaggio 2 per creare o aggiornare una matrice di valori di parametri che corrispondono ai segnaposto della stringa di Transact-SQL. I valori dei parametri nella matrice devono essere nello stesso ordine in cui i segnaposto devono rappresentare tali.
   
 4.  Eseguire la query:  
   
     -   Se si usa il driver SQLSRV, usare [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
-    -   Se si utilizza il driver PDO_SQLSRV, eseguire la query con [PDO:: Prepare](../../connect/php/pdo-prepare.md) e [pdostatement:: Execute](../../connect/php/pdostatement-execute.md). Gli argomenti relativi a [PDO::prepare](../../connect/php/pdo-prepare.md) e [PDOStatement::execute](../../connect/php/pdostatement-execute.md) includono esempi di codice.  
+    -   Se si usa il driver PDO_SQLSRV, eseguire la query con [PDO::prepare](../../connect/php/pdo-prepare.md) e [PDOStatement::execute](../../connect/php/pdostatement-execute.md). Gli argomenti relativi a [PDO::prepare](../../connect/php/pdo-prepare.md) e [PDOStatement::execute](../../connect/php/pdostatement-execute.md) includono esempi di codice.  
   
 Nella parte rimanente di questo argomento sono descritte le query con parametri con il driver SQLSRV.  
   
@@ -53,7 +53,7 @@ L'esempio seguente aggiorna la quantità di un ID prodotto specificato nella tab
   
 L'esempio esegue quindi una query nel database per verificare che la quantità sia stata aggiornata correttamente. ID prodotto è un parametro nella query SELECT.  
   
-Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -114,12 +114,12 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-L'esempio precedente usa la funzione **sqlsrv_query** per eseguire le query. Questa funzione è utile per l'esecuzione di query singole poiché esegue sia la preparazione delle istruzioni che l'esecuzione. La combinazione di **sqlsrv_prepare**/**sqlsrv_execute** è ottimale per la riesecuzione di una query con valori di parametro diversi. Per un esempio di riesecuzione di una query con valori di parametri diversi, vedere l'esempio successivo.  
+L'esempio precedente usa la funzione **sqlsrv_query** per eseguire le query. Questa funzione è utile per l'esecuzione di query singole poiché esegue sia la preparazione delle istruzioni che l'esecuzione. Per rieseguire una query con valori di parametri diversi è consigliabile usare una combinazione di **sqlsrv_prepare**/**sqlsrv_execute**. Per un esempio di riesecuzione di una query con valori di parametri diversi, vedere l'esempio successivo.  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente mostra l'associazione implicita delle variabili durante l'uso della funzione **sqlsrv_prepare** . L'esempio inserisce più ordini di vendita nella tabella *Sales.SalesOrderDetail* . Il *$params* matrice è associata all'istruzione (*$stmt*) quando **sqlsrv_prepare** viene chiamato. Prima di ogni esecuzione di una query che inserisce un nuovo ordine di vendita nella tabella, la matrice *$params* viene aggiornata con i nuovi valori corrispondenti ai dettagli dell'ordine di vendita. La successiva esecuzione della query usa i nuovi valori di parametri.  
+L'esempio seguente mostra l'associazione implicita delle variabili durante l'uso della funzione **sqlsrv_prepare** . L'esempio inserisce più ordini di vendita nella tabella *Sales.SalesOrderDetail* . La matrice *$params* viene associata all'istruzione (*$stmt*) quando viene effettuata la chiamata a **sqlsrv_prepare**. Prima di ogni esecuzione di una query che inserisce un nuovo ordine di vendita nella tabella, la matrice *$params* viene aggiornata con i nuovi valori corrispondenti ai dettagli dell'ordine di vendita. La successiva esecuzione della query usa i nuovi valori di parametri.  
   
-Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

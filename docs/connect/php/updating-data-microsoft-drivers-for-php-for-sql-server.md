@@ -1,5 +1,5 @@
 ---
-title: L'aggiornamento dei dati (driver Microsoft per PHP per SQL Server) | Documenti Microsoft
+title: Aggiornamento dei dati (driver Microsoft per PHP per SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64ade4d758d7ee5c87283750259641f59959731a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310060"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979513"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Aggiornamento dei dati (Driver Microsoft per PHP per SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,9 +34,9 @@ I passaggi principali per l'uso dei [!INCLUDE[ssDriverPHP](../../includes/ssdriv
   
 3.  Eseguire le query Transact-SQL con i valori dei parametri aggiornati (se applicabile). Per altre informazioni sull'esecuzione di una query, vedere [Comparing Execution Functions](../../connect/php/comparing-execution-functions.md) .  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |---------|---------------|  
 |[Procedura: Eseguire query con parametri](../../connect/php/how-to-perform-parameterized-queries.md)|Descrive come eseguire le query con parametri.|  
 |[Procedura: Inviare dati come flusso](../../connect/php/how-to-send-data-as-a-stream.md)|Descrive come inviare un flusso di dati al server.|  

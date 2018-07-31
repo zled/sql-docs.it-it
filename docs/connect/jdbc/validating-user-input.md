@@ -1,5 +1,5 @@
 ---
-title: Convalida dell'Input utente | Documenti Microsoft
+title: Convalida dell'Input utente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 438f65ae8ec719339297b62e9bef7c347a063a1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851226"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980579"
 ---
 # <a name="validating-user-input"></a>Convalida dell'input utente
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Quando si costruisce un'applicazione che accede ai dati, è necessario presupporre che ogni input utente possa essere dannoso fino a quando non viene dimostrato il contrario. In caso contrario, l'applicazione può essere vulnerabile agli attacchi. Uno tipo di attacco che può verificarsi è detto attacchi SQL injection, in cui il codice dannoso viene aggiunto in stringhe successivamente passate a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] per essere analizzate ed eseguite. Per evitare questo tipo di attacco, è necessario utilizzare stored procedure con parametri, dove possibile, e convalidare sempre l'input utente.  
+  Quando si costruisce un'applicazione che accede ai dati, è necessario presupporre che ogni input utente possa essere dannoso fino a quando non viene dimostrato il contrario. In caso contrario, l'applicazione può essere vulnerabile agli attacchi. Uno tipo di attacco che può verificarsi è detto attacco intrusivo nel codice SQL e in questo tipo di attacco il codice dannoso viene aggiunto a stringhe che successivamente vengono passate a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] per essere analizzate ed eseguite. Per evitare questo tipo di attacco, è necessario utilizzare stored procedure con parametri, dove possibile, e convalidare sempre l'input utente.  
   
  La convalida dell'input utente nel codice client è importante per evitare di eseguire round trip al server non necessari. È altrettanto importante convalidare i parametri delle stored procedure nel server per intercettare l'input non valido e che ignora la convalida sul lato client.  
   
- Per ulteriori informazioni su SQL injection e su come evitarlo, vedere "SQL Injection" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] documentazione in linea. Per ulteriori informazioni sulla convalida dei parametri di stored procedure, vedere "Stored procedure ([!INCLUDE[ssDE](../../includes/ssde_md.md)])" e gli argomenti subordinati nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] documentazione in linea.  
+ Per altre informazioni sugli attacchi intrusivi nel codice SQL e su come evitarli, vedere l'argomento relativo a questo tipo di attacchi nella documentazione in linea di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Per altre informazioni sulla convalida dei parametri delle stored procedure, vedere "Stored procedure ([!INCLUDE[ssDE](../../includes/ssde_md.md)])" e gli argomenti subordinati nella documentazione in linea di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  

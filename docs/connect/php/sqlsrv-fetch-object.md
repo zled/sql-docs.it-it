@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309150"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991243"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,11 +43,11 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 #### <a name="parameters"></a>Parametri  
 *$stmt*: risorsa di istruzione corrispondente a un'istruzione eseguita.  
   
-*$className* [facoltativo]: una stringa che specifica il nome della classe per creare un'istanza. Se non viene specificato alcun valore per il parametro *$className* , viene creata un'istanza della classe **stdClass** PHP.  
+*$className* [facoltativo]: stringa che specifica il nome della classe di cui creare istanze. Se non viene specificato alcun valore per il parametro *$className* , viene creata un'istanza della classe **stdClass** PHP.  
   
-*$ctorParams* [facoltativo]: matrice che contiene i valori passati al costruttore della classe specificata con il *$className* parametro. Se il costruttore della classe specificata accetta valori di parametro, per la chiamata a *$ctorParams* object **sqlsrv_fetch_object**.  
+*$ctorParams* [facoltativo]: matrice che contiene i valori passati al costruttore della classe specificata con il parametro *$className*. Se il costruttore della classe specificata accetta valori di parametro, per la chiamata a *$ctorParams* object **sqlsrv_fetch_object**.  
   
-*riga* [facoltativo]: uno dei valori seguenti, che specifica la riga per accedere a un set di risultati che usa un cursore scorrevole. (Se *riga* è specificato, *$className* e *$ctorParams* deve essere specificato in modo esplicito, anche se è necessario specificare null per *$className*e *$ctorParams*.)  
+*row* [facoltativo]: uno dei valori seguenti, che specifica la riga per accedere a un set di risultati che usa un cursore scorrevole. Se si specifica *row*, *$className* e *$ctorParams* devono essere specificati esplicitamente anche se il valore da specificare per *$className* e *$ctorParams* è Null.  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -93,7 +93,7 @@ Se i risultati restituiti dalla query vengono recuperati con **sqlsrv_fetch_obje
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente recuperata ciascuna riga di un set di risultati in forma di oggetto PHP. Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+L'esempio seguente recuperata ciascuna riga di un set di risultati in forma di oggetto PHP. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente recupera ciascuna riga di un set di risultati in forma di istanza della classe *Product* definita nello script. L'esempio recupera informazioni sui prodotti dal *Purchasing. PurchaseOrderDetail* e *Production. Product* tabelle del database AdventureWorks per prodotti con una determinata data di scadenza ( *DueDate*) e scorte (*StockQty*) inferiore a un valore specificato. L'esempio evidenzia alcune delle regole applicate quando si specifica una classe in una chiamata a **sqlsrv_fetch_object**:  
+L'esempio seguente recupera ciascuna riga di un set di risultati in forma di istanza della classe *Product* definita nello script. L'esempio recupera le informazioni sul prodotto dalle tabelle *Purchasing.PurchaseOrderDetail* e *Production.Product* del database AdventureWorks per i prodotti con una determinata data di scadenza (*DueDate*) e una quantità di scorte (*StockQty*) inferiore a un valore specificato. L'esempio evidenzia alcune delle regole applicate quando si specifica una classe in una chiamata a **sqlsrv_fetch_object**:  
   
 -   La variabile *$product* è un'istanza della classe *Product* , perché con il parametro *$className* è specificato "Product" e la classe *Product* esiste.  
   
@@ -142,7 +142,7 @@ L'esempio seguente recupera ciascuna riga di un set di risultati in forma di ist
   
 -   La proprietà privata *UnitPrice* viene popolata con il valore del campo *UnitPrice* .  
   
-Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

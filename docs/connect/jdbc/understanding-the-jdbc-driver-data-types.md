@@ -1,5 +1,5 @@
 ---
-title: Informazioni sui tipi di dati del Driver JDBC | Documenti Microsoft
+title: Informazioni sui tipi di dati del Driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 399037b5f888c767edf28c40c0658d31e8703ddc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851376"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982166"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Informazioni sui tipi di dati del driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'utilizzo di tipi di dati di base e avanzati di JDBC all'interno di un'applicazione Java che utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] come database.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'uso di tipi di dati JDBC di base e avanzati in un'applicazione Java che usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] come database.  
   
- Il tipo di sistema JDBC consente di eseguire la conversione tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di dati e tipi di linguaggio Java e gli oggetti. I tipi JDBC sono basati sui tipi SQL-92 e SQL-99. Il driver JDBC è conforme alla specifica JDBC ed è progettato per fornire il giusto equilibrio tra prevedibilità e flessibilità.  
+ Il sistema dei tipi di JDBC consente di eseguire la conversione tra i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e i tipi e gli oggetti del linguaggio Java. I tipi JDBC sono basati sui tipi SQL-92 e SQL-99. Il driver JDBC è conforme alla specifica JDBC ed è progettato per fornire il giusto equilibrio tra prevedibilità e flessibilità.  
   
  Negli argomenti di questa sezione viene descritto come utilizzare i tipi di dati di base e avanzati e viene illustrato in che modo i tipi di dati possono essere convertiti in altri tipi di dati.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Uso di tipi di dati di base](../../connect/jdbc/using-basic-data-types.md)|Vengono descritti i tipi di dati JDBC di base. Sono inclusi esempi su come gestire i tipi di dati utilizzando set di risultati, query con parametri e stored procedure.|  
 |[Configurazione della modalità di invio dei valori java.sql.Time al server](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)|Viene descritto come il driver JDBC genera le date.|  
@@ -40,8 +40,8 @@ ms.locfileid: "32851376"
 |[Informazioni sulle differenze tra i tipi di dati](../../connect/jdbc/understanding-data-type-differences.md)|Vengono descritte le differenze tra i vari tipi di dati del driver JDBC.|  
 |[Informazioni sulle conversioni dei tipi di dati](../../connect/jdbc/understanding-data-type-conversions.md)|Viene descritto in che modo viene gestita la conversione dei tipi di dati quando si utilizzano i metodi di richiamo e impostazione.|  
 |[Supporto per set di caratteri nazionali](../../connect/jdbc/national-character-set-support.md)|Viene descritto il supporto per i tipi di set di caratteri nazionali.|  
-|[Supporto di dati XML](../../connect/jdbc/supporting-xml-data.md)|Viene descritta l'interfaccia SQLXML. Viene inoltre descritto come leggere e scrivere dati XML da e in un database relazionale con il **SQLXML** tipo di dati Java.|  
-|[Wrapper e interfacce](../../connect/jdbc/wrappers-and-interfaces.md)|Vengono descritte le interfacce che hanno il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] specifici metodi e le costanti che consentono a un server di applicazione creare un proxy della classe, viene inoltre supporto per l'interfaccia Java.SQL.|  
+|[Supporto di dati XML](../../connect/jdbc/supporting-xml-data.md)|Viene descritta l'interfaccia SQLXML. Descrive anche come leggere e scrivere dati XML da e in un database relazionale con il tipo di dati Java **SQLXML**.|  
+|[Wrapper e interfacce](../../connect/jdbc/wrappers-and-interfaces.md)|Tratta le interfacce che includono le costanti e i metodi specifici di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] che consentono a un server applicazioni di creare un proxy della classe. Tratta anche il supporto per l'interfaccia java.sql.Wrapper.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

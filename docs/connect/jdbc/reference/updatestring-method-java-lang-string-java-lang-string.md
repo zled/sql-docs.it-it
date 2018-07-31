@@ -1,5 +1,5 @@
 ---
-title: Metodo updateString (lang, lang) | Documenti Microsoft
+title: Metodo updateString (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77483ea821bb90c7a386c42a6eaa0dd4fd3ed11d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849836"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039259"
 ---
 # <a name="updatestring-method-javalangstring-javalangstring"></a>Metodo updateString (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Aggiorna la colonna designata con un **stringa** valore in base al nome della colonna.  
+  Aggiorna la colonna designata con un valore **String** in base al nome della colonna.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ public void updateString(java.lang.String columnName,
 #### <a name="parameters"></a>Parametri  
  *columnName*  
   
- Oggetto **stringa** che contiene il nome della colonna.  
+ Valore **String** contenente il nome della colonna.  
   
  *x*  
   
@@ -51,8 +51,8 @@ public void updateString(java.lang.String columnName,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo updateString viene specificato dal metodo updateString nell'interfaccia Java.SQL. ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo updateString viene specificato dal metodo updateString nell'interfaccia ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateString &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)   

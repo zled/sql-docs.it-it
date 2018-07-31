@@ -1,5 +1,5 @@
 ---
-title: Metodo setTimestamp (int, Java.SQL. timestamp, java.util.Calendar) | Documenti Microsoft
+title: Metodo setTimestamp (int, java.sql.Timestamp, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 319972f9c911236ffbcc35c14e7489d0f581328a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843956"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002173"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp-javautilcalendar"></a>Metodo setTimestamp (int, java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public final void setTimestamp(int n,
 #### <a name="parameters"></a>Parametri  
  *n*  
   
- Un **int** che indica il numero di parametro.  
+ Valore **int** che indica il numero di parametro.  
   
  *x*  
   
@@ -51,13 +51,13 @@ public final void setTimestamp(int n,
   
  *licenza CAL*  
   
- Un oggetto di calendario.  
+ Un oggetto calendario.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo setTimestamp viene specificato dal metodo setTimestamp nell'interfaccia Java.SQL. PreparedStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo setTimestamp viene specificato dal metodo setTimestamp nell'interfaccia PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo setTimestamp &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)   

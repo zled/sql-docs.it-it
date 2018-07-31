@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_cancel | Documenti Microsoft
+title: sqlsrv_cancel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c411bf9275f28b13896103565efb2af7dfbb8c66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308980"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983570"
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Annulla un'istruzione. Ciò significa che qualsiasi risultato in sospeso per l'istruzione viene eliminato. Dopo questa funzione viene chiamata, l'istruzione può essere eseguita nuovamente se è stata preparata con [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). La chiamata a questa funzione non è necessaria se sono stati usati tutti i risultati associati all'istruzione.  
+Annulla un'istruzione. Ciò significa che qualsiasi risultato in sospeso per l'istruzione viene eliminato. Dopo la chiamata a questa funzione, l'istruzione può essere eseguita nuovamente se è stata preparata con [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). La chiamata a questa funzione non è necessaria se sono stati usati tutti i risultati associati all'istruzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,7 +46,7 @@ sqlsrv_cancel( resource $stmt)
 Valore booleano: **true** se l'operazione è riuscita. In caso contrario, **false**.  
   
 ## <a name="example"></a>Esempio  
-Le seguenti destinazioni di esempio il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) del database per eseguire una query, quindi Usa e conta i risultati fino a quando la variabile *$salesTotal* raggiunge una quantità specificata. I risultati restanti della query vengono ignorati. Nell'esempio si presuppone che SQL Server e il database AdventureWorks siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+L'esempio seguente richiede al database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) di eseguire una query, quindi usa e conta i risultati fino a quando la variabile *$salesTotal* non raggiunge una quantità specificata. I risultati restanti della query vengono ignorati. Nell'esempio si presuppone che SQL Server e il database AdventureWorks siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -96,7 +96,7 @@ sqlsrv_cancel( $stmt);
 ```  
   
 ## <a name="comments"></a>Commenti  
-Un'istruzione che viene preparata ed eseguita utilizzando la combinazione di [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) e [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) può essere eseguita nuovamente con **sqlsrv_execute** dopo la chiamata **sqlsrv_cancel**. Un'istruzione che viene eseguita con [sqlsrv_query](../../connect/php/sqlsrv-query.md) non può essere eseguita nuovamente dopo la chiamata **sqlsrv_cancel**.  
+Un'istruzione che viene preparata ed eseguita usando la combinazione di [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) e [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) può essere eseguita nuovamente con **sqlsrv_execute** dopo la chiamata di **sqlsrv_cancel**. Un'istruzione eseguita con [sqlsrv_query](../../connect/php/sqlsrv-query.md) non può essere eseguita nuovamente dopo la chiamata di **sqlsrv_cancel**.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)

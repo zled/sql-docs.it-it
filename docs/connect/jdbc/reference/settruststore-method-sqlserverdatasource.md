@@ -1,5 +1,5 @@
 ---
-title: Metodo setTrustStore (SQLServerDataSource) | Documenti Microsoft
+title: Metodo setTrustStore (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf5d6034fbf2e9ce9d1c1b58909146dbcf56f0c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846736"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042281"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>Metodo setTrustStore (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public void setTrustStore(java.lang.String trustStore)
 #### <a name="parameters"></a>Parametri  
  *trustStore*  
   
- Oggetto **stringa** che contiene il percorso (incluso il nome di file) del file trustStore del certificato.  
+ Una **stringa** contenente il percorso, nome file incluso, del file trustStore del certificato.  
   
-## <a name="remarks"></a>Osservazioni  
- Se la proprietà trustStore non specificato o impostato su null, il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] si basano le regole per determinare l'archivio certificati da utilizzare ricerca della factory del manager di attendibilità. Tramite l'istanza predefinita di TrustManagerFactory SunX509 viene eseguito un tentativo di individuare il materiale attendibile nelle posizioni seguenti in base all'ordine indicato:  
+## <a name="remarks"></a>Remarks  
+ Quando la proprietà trustStore non è specificata o è impostata su Null, per determinare l'archivio certificati da utilizzare in [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] vengono utilizzate le regole di ricerca della factory del responsabile dell'attendibilità. Tramite l'istanza predefinita di TrustManagerFactory SunX509 viene eseguito un tentativo di individuare il materiale attendibile nelle posizioni seguenti in base all'ordine indicato:  
   
 -   1. Un file specificato dalla proprietà di sistema JVM (Java Virtual Machine) "javax.net.ssl.trustStore".  
   

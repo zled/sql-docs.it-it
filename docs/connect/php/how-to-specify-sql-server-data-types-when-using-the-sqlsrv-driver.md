@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: specificare i tipi di dati SQL Server quando si utilizza il Driver SQLSRV | Documenti Microsoft'
+title: 'Procedura: Specificare i tipi di dati di SQL Server con il driver SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9879edd7282beb2226593b70cab500fba4e09e4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308090"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032975"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>Procedura: Specificare i tipi di dati di SQL Server con il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ Per specificare il tipo di dati di SQL Server, è necessario usare la matrice fa
 Di seguito sono elencati i passaggi principali per la specifica del tipo di dati di SQL Server durante l'invio di dati al server:  
   
 > [!NOTE]  
-> Se viene specificato alcun tipo di dati di SQL Server, vengono usati i tipi predefiniti. Per altre informazioni sui tipi di dati di SQL Server predefiniti, vedere [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md).  
+> Se non viene specificato alcun tipo di dati di SQL Server vengono usati i tipi predefiniti. Per altre informazioni sui tipi di dati di SQL Server predefiniti, vedere [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md).  
   
 1.  Definire una query Transact-SQL che inserisce o aggiorna i dati. Usare i punti interrogativi (?) come segnaposto per i valori dei parametri nella query.  
   
@@ -42,7 +42,7 @@ Di seguito sono elencati i passaggi principali per la specifica del tipo di dati
   
 3.  Costruire la matrice *$params* da usare durante la preparazione o l'esecuzione della query. Si noti che ogni elemento della matrice *$params* deve essere una matrice quando si specifica il tipo di dati di SQL Server.  
   
-4.  Specificare il tipo di dati SQL Server desiderato utilizzando gli appropriati **SQLSRV_SQLTYPE\***  costante come quarto parametro in ciascuna matrice secondaria del *$params* matrice. Per un elenco completo del **SQLSRV_SQLTYPE\***  costanti, vedere la sezione SqlType di [costanti &#40;Microsoft Drivers for PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Ad esempio, nel codice seguente, *$changeDate*, *$rate*e *$payFrequency* sono specificati rispettivamente come tipi di SQL Server **datetime**, **money**e **tinyint** nella matrice *$params* . Poiché non è specificato alcun tipo di SQL Server per *$employeeId* che viene inizializzato su un numero intero, viene usato il tipo di SQL Server predefinito **integer** .  
+4.  Specificare il tipo di dati di SQL Server desiderato usando la costante **SQLSRV_SQLTYPE_\*** appropriata come quarto parametro in ogni matrice secondaria della matrice *$params*. Per un elenco completo delle costanti **SQLSRV_SQLTYPE_\***, vedere la sezione Costanti SQLTYPE in [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Ad esempio, nel codice seguente, *$changeDate*, *$rate*e *$payFrequency* sono specificati rispettivamente come tipi di SQL Server **datetime**, **money**e **tinyint** nella matrice *$params* . Poiché non è specificato alcun tipo di SQL Server per *$employeeId* che viene inizializzato su un numero intero, viene usato il tipo di SQL Server predefinito **integer** .  
   
     ```  
     $employeeId = 5;  
@@ -58,9 +58,9 @@ Di seguito sono elencati i passaggi principali per la specifica del tipo di dati
     ```  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente inserisce i dati nel *HumanResources. EmployeePayHistory* tabella del database AdventureWorks. I tipi di SQL Server sono specificati per i parametri *$changeDate*, *$rate*e *$payFrequency* . Il tipo di SQL Server predefinito viene usato per il parametro *$employeeId* . Per verificarne il corretto inserimento, i dati vengono recuperati e visualizzati.  
+L'esempio seguente inserisce i dati nella tabella *HumanResources.EmployeePayHistory* del database AdventureWorks. I tipi di SQL Server sono specificati per i parametri *$changeDate*, *$rate*e *$payFrequency* . Il tipo di SQL Server predefinito viene usato per il parametro *$employeeId* . Per verificarne il corretto inserimento, i dati vengono recuperati e visualizzati.  
   
-Questo esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+L'esempio presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

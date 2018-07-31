@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e097a5b89d708b3a91296c49c0c615f8955b96cb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309050"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979792"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Restituisce estesi errore e/o avviso informativo sull'ultimo **sqlsrv** operazione eseguita.  
+Restituisce informazioni complete sull'errore e/o sull'avviso relativo all'ultima operazione **sqlsrv** eseguita.  
   
-Il **sqlsrv_errors** funzione può restituire errori e/o informazioni di avviso quando viene chiamata con uno dei valori di parametro specificati nella sezione relativa ai parametri.  
+La funzione **sqlsrv_errors** può restituire informazioni su errori e/o avvisi quando viene chiamata con uno dei valori di parametro specificati nella sezione Parametri che segue.  
   
 Per impostazione predefinita, gli avvisi generati in una chiamata a qualsiasi funzione **sqlsrv** vengono considerati come errori; se viene generato un avviso in una chiamata a una funzione **sqlsrv** , la funzione restituisce false. Tuttavia, gli avvisi che corrispondono ai valori SQLSTATE 01000, 01001, 01003 e 01S02 non vengono mai considerati come errori.  
   
@@ -49,7 +49,7 @@ La riga di codice seguente ripristina il comportamento predefinito; gli avvisi, 
 sqlsrv_configure("WarningsReturnAsErrors", 1);  
 ```  
   
-Indipendentemente dall'impostazione, gli avvisi possono essere recuperati solo tramite la chiamata **sqlsrv_errors** con il **SQLSRV_ERR_ALL** o **SQLSRV_ERR_WARNINGS** valore del parametro (vedere Sezione parametri che segue per informazioni dettagliate).  
+Indipendentemente dall'impostazione, gli avvisi possono essere recuperati solo tramite una chiamata a **sqlsrv_errors** con il valore di parametro **SQLSRV_ERR_ALL** o **SQLSRV_ERR_WARNINGS**. Per informazioni dettagliate, vedere la sezione Parametri che segue.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,9 +59,9 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>Parametri  
-*$errorsAndOrWarnings*[facoltativo]: costante predefinita. Questo parametro può assumere uno dei valori elencati nella tabella seguente:  
+*$errorsAndOrWarnings* [facoltativo]: costante predefinita. Questo parametro può assumere uno dei valori elencati nella tabella seguente:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|Vengono restituiti gli errori e gli avvisi generati nell'ultima chiamata di funzione **sqlsrv** .|  
 |SQLSRV_ERR_ERRORS|Vengono restituiti gli errori generati nell'ultima chiamata di funzione **sqlsrv** .|  
@@ -70,18 +70,18 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 Se non viene specificato alcun valore di parametro, vengono restituiti gli avvisi e gli errori generati dall'ultima chiamata di funzione **sqlsrv** .  
   
 ## <a name="return-value"></a>Valore restituito  
-Una **matrice** di matrici oppure **null**. Ogni **matrice** nell'oggetto restituito **matrice** contiene tre coppie chiave-valore. Nella tabella seguente sono elencate le chiavi con la relativa descrizione:  
+Una **matrice** di matrici oppure **null**. Ogni **matrice** della **matrice** restituita contiene tre coppie chiave-valore. Nella tabella seguente sono elencate le chiavi con la relativa descrizione:  
   
-|Key|Description|  
+|Key|Descrizione|  
 |-------|---------------|  
-|SQLSTATE|Per errori originati dal driver ODBC, il valore SQLSTATE restituito da ODBC. Per informazioni sui valori SQLSTATE per ODBC, vedere [codici di errore ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Per gli errori originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valore SQLSTATE di IMSSP.<br /><br />Per gli avvisi originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valore SQLSTATE di 01SSP.|  
+|SQLSTATE|Per errori originati dal driver ODBC, il valore SQLSTATE restituito da ODBC. Per informazioni sui valori SQLSTATE per ODBC, vedere [Codici di errore ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Per gli errori originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valore SQLSTATE di IMSSP.<br /><br />Per gli avvisi originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valore SQLSTATE di 01SSP.|  
 |codice|Per errori originati da SQL Server, il codice di errore nativo di SQL Server.<br /><br />Per errori originati dal driver ODBC, il codice di errore restituito da ODBC.<br /><br />Per gli errori originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], il codice di errore [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Per altre informazioni, vedere [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
 |message|Descrizione dell'errore.|  
   
 I valori della matrice sono accessibili anche con le chiavi numeriche 0, 1 e 2. Se non si verificano errori o avvisi, viene restituito **null** .  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente visualizza gli errori che si verificano durante l'esecuzione di un'istruzione non riuscita. (L'istruzione ha esito negativo poiché **InvalidColumName** non è un nome di colonna valido nella tabella specificata.) Nell'esempio si presuppone che SQL Server e [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+L'esempio seguente visualizza gli errori che si verificano durante l'esecuzione di un'istruzione non riuscita. (L'istruzione non viene eseguita perché **InvalidColumName** non è un nome di colonna valido nella tabella specificata.) Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

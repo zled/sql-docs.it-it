@@ -1,5 +1,5 @@
 ---
-title: Con la copia Bulk con il Driver JDBC | Documenti Microsoft
+title: Utilizzando la copia Bulk con il Driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6daf0ae2773d8a99e4f9264c05024a86fcd79926
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853106"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978656"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Utilizzo della copia bulk con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Microsoft SQL Server include una popolare utilità della riga di comando denominata **bcp** per rapidamente la copia di massa file di grandi dimensioni in tabelle o viste nei database di SQL Server. La classe SQLServerBulkCopy consente di scrivere soluzioni di codice in Java che offrono funzionalità simili. Esistono altri modi per caricare dati in una tabella di SQL Server (ad esempio, istruzioni INSERT) ma SQLServerBulkCopy offre un significativo vantaggio in termini di prestazioni.  
+  Microsoft SQL Server include una popolare utilità della riga di comando denominata **bcp** per eseguire rapidamente la copia bulk di file di grandi dimensioni in tabelle o viste nei database di SQL Server. La classe SQLServerBulkCopy consente di scrivere soluzioni di codice in Java che offrono funzionalità simili. Esistono altri modi per caricare dati in una tabella di SQL Server (ad esempio, istruzioni INSERT) ma SQLServerBulkCopy offre un significativo vantaggio in termini di prestazioni.  
   
  La classe SQLServerBulkCopy può essere utilizzata per scrivere dati solo in tabelle di SQL Server. Tuttavia, l'origine dati non è limitata a SQL Server: può essere utilizzata qualsiasi origine dati, purché i dati possano essere letti con un'implementazione di ResultSet, RowSet o ISQLServerBulkRecord.  
   
@@ -124,17 +124,17 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 1.  Connettersi al server di origine e ottenere i dati da copiare. I dati possono provenire anche da altre origini, se l'origine può essere recuperata da un oggetto ResultSet o un'implementazione di ISQLServerBulkRecord.  
   
-2.  Connettersi al server di destinazione (a meno che non si desidera **SQLServerBulkCopy** per stabilire una connessione per l'utente).  
+2.  Connettersi al server di destinazione (a meno che non si desideri che **SQLServerBulkCopy** stabilisca automaticamente una connessione).  
   
 3.  Creare un oggetto SQLServerBulkCopy, impostando le proprietà necessarie tramite **setBulkCopyOptions**.  
   
-4.  Chiamare il **setDestinationTableName** metodo per indicare la tabella di destinazione per la maggior parte delle operazioni di inserimento.  
+4.  Chiamare il metodo **setDestinationTableName** per indicare la tabella di destinazione per l'operazione di inserimento bulk.  
   
-5.  Chiamare uno del **writeToServer** metodi.  
+5.  Chiamare uno dei metodi **writeToServer**.  
   
-6.  Facoltativamente, aggiornare le proprietà mediante **setBulkCopyOptions** e chiamare **writeToServer** nuovamente se necessario.  
+6.  Facoltativamente, aggiornare le proprietà mediante **setBulkCopyOptions** e chiamare nuovamente **writeToServer** in base alle esigenze.  
   
-7.  Chiamare **chiudere**, o eseguire il wrapping di operazioni di copia bulk all'interno di un'istruzione try-with-resources.  
+7.  Chiamare **close** o eseguire il wrapping delle operazioni di copia bulk all'interno di un'istruzione try-with-resources.  
   
 > [!CAUTION]  
 >  È consigliabile che i tipi di dati delle colonne di origine e di destinazione corrispondano. Se i tipi di dati non corrispondono, SQLServerBulkCopy tenta di convertire ogni valore di origine nel tipo di dati di destinazione. Le conversioni possono influire sulle prestazioni, nonché provocare errori imprevisti. Ad esempio, un tipo di dati double può essere convertito in un tipo di dati decimal nella maggior parte dei casi, ma non sempre.  
@@ -143,7 +143,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
  L'applicazione riportata di seguito illustra come caricare i dati utilizzando la classe SQLServerBulkCopy. In questo esempio, viene utilizzato un ResultSet per copiare i dati dalla tabella Production.Product nel database AdventureWorks di SQL Server in una tabella simile dello stesso database.  
   
 > [!IMPORTANT]  
->  Questo esempio non verrà eseguito a meno che non state create le tabelle di lavoro come descritto in [impostazione tabella](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
+>  Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
   
 ```  
 import java.sql.*;  
@@ -274,7 +274,7 @@ try (Connection con = DriverManager.getConnection(connectionString))
  Se si eseguono più operazioni di copia bulk utilizzando lo stesso oggetto SQLServerBulkCopy, non vi sono restrizioni relativamente al fatto che le informazioni di origine o di destinazione sono uguali o diverse in ogni operazione. È tuttavia necessario assicurarsi che le informazioni di associazione delle colonne siano impostate correttamente ogni volta che si esegue la scrittura nel server.  
   
 > [!IMPORTANT]  
->  Questo esempio non verrà eseguito a meno che non state create le tabelle di lavoro come descritto in [impostazione tabella](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
+>  Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
   
 ```  
 import java.sql.*;  
@@ -466,12 +466,12 @@ public class Program
 ### <a name="performing-a-non-transacted-bulk-copy-operation"></a>Esecuzione di un'operazione di copia bulk non transazionale  
  L'applicazione riportata di seguito illustra cosa accade quando si verifica un errore durante un'operazione di copia bulk non transazionale.  
   
- Nell'esempio, la tabella di origine e tabella di destinazione includono una colonna Identity denominata **ProductID**. Il codice innanzitutto prepara la tabella di destinazione eliminando tutte le righe e quindi inserendo una singola riga il cui **ProductID** è definito nella tabella di origine. Per impostazione predefinita, viene generato un nuovo valore per la colonna Identity nella tabella di destinazione per ogni riga aggiunta. In questo esempio, all'apertura della connessione viene invece impostata un'opzione che impone al processo di caricamento bulk di utilizzare i valori Identity della tabella di origine.  
+ Nell'esempio la tabella di origine e la tabella di destinazione includono una colonna Identity denominata **ProductID**. Il codice innanzitutto prepara la tabella di destinazione eliminando tutte le righe e quindi inserendo una singola riga il cui **ProductID** è presente nella tabella di origine. Per impostazione predefinita, viene generato un nuovo valore per la colonna Identity nella tabella di destinazione per ogni riga aggiunta. In questo esempio, all'apertura della connessione viene invece impostata un'opzione che impone al processo di caricamento bulk di utilizzare i valori Identity della tabella di origine.  
   
- L'operazione di copia bulk viene eseguita con il **BatchSize** proprietà è impostata su 10. Quando è rilevata la riga non valida, viene generata un'eccezione. In questo primo esempio, l'operazione di copia bulk è non transazionale. Viene eseguito il commit di tutti i batch copiati fino al punto dell'errore. Viene eseguito il rollback del batch che contiene la chiave duplicata e l'operazione di copia bulk viene interrotta prima dell'elaborazione di altri batch.  
+ L'operazione di copia bulk viene eseguita con la proprietà **BatchSize** impostata su 10. Quando è rilevata la riga non valida, viene generata un'eccezione. In questo primo esempio, l'operazione di copia bulk è non transazionale. Viene eseguito il commit di tutti i batch copiati fino al punto dell'errore. Viene eseguito il rollback del batch che contiene la chiave duplicata e l'operazione di copia bulk viene interrotta prima dell'elaborazione di altri batch.  
   
 > [!NOTE]  
->  Questo esempio non verrà eseguito a meno che non state create le tabelle di lavoro come descritto in [impostazione tabella](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
+>  Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
   
 ```  
 import java.sql.*;  
@@ -590,7 +590,7 @@ public class Program
 ```  
   
 ### <a name="performing-a-dedicated-build-copy-operation-in-a-transaction"></a>Esecuzione di un'operazione di copia bulk dedicata in una transazione  
- Per impostazione predefinita, un'operazione di copia bulk costituisce la propria transazione. Quando si desidera eseguire un'operazione di copia bulk dedicata, creare una nuova istanza di SQLServerBulkCopy con una stringa di connessione. In questo scenario, l'operazione di copia bulk crea e quindi esegue il commit o il rollback della transazione. È possibile specificare in modo esplicito il **UseInternalTransaction** opzione **SQLServerBulkCopyOptions** per fare in modo esplicito un'operazione di copia bulk venga eseguita nella relativa transazione, che quindi ogni batch di blocco copiare l'operazione da eseguire all'interno di una transazione separata.  
+ Per impostazione predefinita, un'operazione di copia bulk costituisce la propria transazione. Quando si desidera eseguire un'operazione di copia bulk dedicata, creare una nuova istanza di SQLServerBulkCopy con una stringa di connessione. In questo scenario, l'operazione di copia bulk crea e quindi esegue il commit o il rollback della transazione. È possibile specificare esplicitamente l'opzione **UseInternalTransaction** in **SQLServerBulkCopyOptions** per fare in modo che un'operazione di copia bulk venga eseguita nella propria transazione, determinando l'esecuzione di ogni batch dell'operazione di copia bulk all'interno di una transazione distinta.  
   
 > [!NOTE]  
 >  Poiché i diversi batch vengono eseguiti in diverse transazioni, se si verifica un errore durante l'operazione di copia bulk, verrà eseguito il rollback di tutte le righe nel batch corrente, ma le righe dei batch precedenti rimarranno nel database.  
@@ -598,7 +598,7 @@ public class Program
  L'applicazione seguente è simile all'esempio precedente, con una sola eccezione: in questo esempio l'operazione di copia bulk gestisce le proprie transazioni. Viene eseguito il commit di tutti i batch copiati fino al punto dell'errore. Viene eseguito il rollback del batch che contiene la chiave duplicata e l'operazione di copia bulk viene interrotta prima dell'elaborazione di altri batch.  
   
 > [!NOTE]  
->  Questo esempio non verrà eseguito a meno che non state create le tabelle di lavoro come descritto in [impostazione tabella](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
+>  Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
   
 ```  
 import java.sql.*;  
@@ -728,7 +728,7 @@ public class Program
  La seguente applicazione è simile al primo esempio (non transazionale), con una sola eccezione: in questo esempio, l'operazione di copia bulk è inclusa in una transazione esterna di maggiori dimensioni. Quando si verifica l'errore di violazione della chiave primaria, viene eseguito il rollback dell'intera transazione e non vengono aggiunte righe alla tabella di destinazione.  
   
 > [!NOTE]  
->  Questo esempio non verrà eseguito a meno che non state create le tabelle di lavoro come descritto in [impostazione tabella](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
+>  Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
   
 ```  
 import java.sql.*;  
@@ -858,21 +858,21 @@ public class Program
  L'applicazione riportata di seguito illustra come caricare i dati utilizzando la classe SQLServerBulkCopy. In questo esempio, viene utilizzato un file CSV per copiare i dati esportati dalla tabella Production.Product nel database AdventureWorks di SQL Server in una tabella simile del database.  
   
 > [!IMPORTANT]  
->  Questo esempio non verrà eseguito a meno che non state create le tabelle di lavoro come descritto in [impostazione delle tabelle](../../ssms/download-sql-server-management-studio-ssms.md) per ottenerlo.  
+>  Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../ssms/download-sql-server-management-studio-ssms.md).  
   
 1.  Aprire **SQL Server Management Studio** e connettersi a SQL Server con il database AdventureWorks.  
   
-2.  Espandere i database, fare clic con il pulsante destro del database AdventureWorks, selezionare **attività** e **Esporta dati**...  
+2.  Espandere i database, fare clic con il pulsante destro del mouse sul database AdventureWorks, selezionare **Attività** e quindi **Esporta dati**.  
   
-3.  Per l'origine dati, selezionare il **origine dati** che consente di connettersi a SQL Server (ad esempio SQL Server Native Client 11.0), controllare la configurazione e quindi **successivo**  
+3.  Per l'origine dati, selezionare l'**origine dati** che consente di connettersi a SQL Server (ad esempio SQL Server Native Client 11.0), controllare la configurazione e quindi fare clic su **Avanti**  
   
-4.  Per la destinazione, selezionare il **destinazione File Flat** e immettere un **nome File** con una destinazione come c:\test\testbulkcsvexample.csv. Verificare che il **formato** è delimitata, il **qualificatore di testo** sia nessuno e abilitare **nomi di colonna nella prima riga di dati**, quindi selezionare **successivo**  
+4.  Per la destinazione, selezionare **Destinazione file flat** e immettere un **nome file** con una destinazione, ad esempio C:\Test\TestBulkCSVExample.csv. Verificare che **Formato** sia impostato su Delimitato, che **Qualificatore di testo** sia impostato su Nessuno e abilitare **Nomi di colonne nella prima riga di dati**, quindi selezionare **Avanti**  
   
-5.  Selezionare **scrivere una query per specificare i dati da trasferire** e **Avanti**.  Immettere il **istruzione SQL** selezionare ProductID, Name, ProductNumber FROM Production. Product e **successivo**  
+5.  Selezionare **Scrivi una query per specificare i dati da trasferire** e fare clic su **Avanti**.  Immettere l'**istruzione SQL** SELECT ProductID, Name, ProductNumber FROM Production.Product e fare clic su **Avanti**  
   
-6.  Controllare la configurazione: È possibile lasciare il delimitatore di riga {CR} {LF} come e virgola come delimitatore di colonna {,}.  Selezionare **modificare i mapping**... e verificare che i dati **tipo** sia corretto per ogni colonna (ad esempio, integer per ProductID e stringa Unicode per gli altri).  
+6.  Controllare la configurazione: è possibile lasciare {CR}{LF} come delimitatore di riga e la virgola {,} come delimitatore di colonna.  Selezionare **Modifica mapping** e verificare che il **tipo** di dati sia corretto per ogni colonna (ad esempio, integer per ProductID e stringa Unicode per le altre colonne).  
   
-7.  Ignorare **fine** ed eseguire l'esportazione.  
+7.  Proseguire fino alla **fine** ed eseguire l'esportazione.  
   
 ```  
   
@@ -975,17 +975,17 @@ public class Program
   
 ```  
   
-### <a name="bulk-copy-with-always-encrypted-columns"></a>Copia bulk con le colonne con crittografia sempre attiva  
- A partire da Microsoft JDBC Driver 6.0 per SQL Server, è supportata la copia bulk con le colonne con crittografia sempre attiva.  
+### <a name="bulk-copy-with-always-encrypted-columns"></a>Copia bulk con colonne Always Encrypted  
+ A partire da Microsoft JDBC Driver 6.0 per SQL Server, è supportata la copia bulk con colonne Always Encrypted.  
   
- A seconda delle opzioni di copia bulk e la crittografia del tipo di tabelle di origine e destinazione il driver JDBC può decrittografare in modo trasparente e quindi crittografare i dati oppure può inviare i dati crittografati come. Ad esempio, quando si esegue la copia bulk dei dati da una colonna crittografata a una colonna non crittografata, il driver in modo trasparente decrittografa i dati prima dell'invio a SQL Server. Allo stesso modo quando si esegue la copia bulk dei dati da una colonna non crittografata (o da un file CSV) a una colonna crittografata, il driver in modo trasparente crittografa i dati prima dell'invio a SQL Server. Se entrambi di origine e destinazione è crittografata, a seconda quindi il **allowEncryptedValueModifications** opzione di copia bulk il driver potrebbe inviare i dati, è necessario decrittografare i dati e crittografarlo nuovamente prima dell'invio a SQL Server.  
+ A seconda le opzioni di copia bulk e la crittografia del tipo di tabella di origine e destinazione il driver JDBC può decrittografare in modo trasparente e quindi crittografare i dati oppure può inviare i dati crittografati come. Ad esempio, quando si esegue una copia bulk dei dati da una colonna crittografata in una colonna non crittografata, il driver decrittografa in modo trasparente i dati prima dell'invio a SQL Server. Allo stesso modo quando si esegue una copia bulk dei dati da una colonna non crittografata (o da un file CSV) per una colonna crittografata, il driver crittografa in modo trasparente i dati prima dell'invio a SQL Server. Se sia di origine e destinazione è crittografata, quindi in base il **allowEncryptedValueModifications** opzione di copia bulk il driver invia i dati o potrebbe decrittografare i dati e crittografarlo nuovamente prima dell'invio a SQL Server.  
   
- Per ulteriori informazioni, vedere il **allowEncryptedValueModifications** riportato di seguito, opzione di copia bulk e [uso di Always Encrypted con il Driver JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
+ Per altre informazioni, vedere la **allowEncryptedValueModifications** riportato di seguito, opzione di copia bulk e [utilizzo di Always Encrypted con il Driver JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
   
 > [!IMPORTANT]  
->  Limitazione di Microsoft JDBC Driver 6.0 per SQL Server, durante la copia di dati da un file CSV a colonne crittografate bulk:  
+>  Limitazione di Microsoft JDBC Driver 6.0 per SQL Server, durante la copia dei dati da un file CSV nelle colonne crittografate bulk:  
 >   
->  Solo Transact-SQL predefinito stringa letterale formato è supportato per i tipi di data e ora  
+>  Solo Transact-SQL predefinito stringa letterale formato è supportato per i tipi data e ora  
 >   
 >  Non sono supportati i tipi di dati DATETIME e SMALLDATETIME  
   
@@ -998,42 +998,42 @@ public class Program
   
  La classe SQLServerBulkCopy può essere utilizzata per scrivere dati solo in tabelle di SQL Server. Tuttavia, l'origine dati non è limitata a SQL Server: può essere utilizzata qualsiasi origine dati, purché i dati possano essere letti con un'istanza di ResultSet o un'implementazione di ISQLServerBulkRecord.  
   
-|Costruttore|Description|  
+|Costruttore|Descrizione|  
 |-----------------|-----------------|  
-|SQLServerBulkCopy(Connection)|Inizializza una nuova istanza della classe SQLServerBulkCopy utilizzando l'istanza aperta specificata di SQLServerConnection. Se la connessione ha transazioni abilitate, le operazioni di copia verranno eseguite all'interno della transazione.|  
-|SQLServerBulkCopy (stringa connectionURL)|Inizializza e apre una nuova istanza di SQLServerConnection in base al connectionURL fornito. Il costruttore utilizza SQLServerConnection per inizializzare una nuova istanza della classe SQLServerBulkCopy.|  
+|SQLServerBulkCopy(Connection)|Inizializza una nuova istanza della classe SQLServerBulkCopy usando l'istanza aperta specificata di SQLServerConnection. Se la connessione ha transazioni abilitate, le operazioni di copia verranno eseguite all'interno della transazione.|  
+|SQLServerBulkCopy (stringa connectionURL)|Inizializza e apre una nuova istanza di SQLServerConnection in base al valore connectionURL specificato. Il costruttore usa SQLServerConnection per inizializzare una nuova istanza della classe SQLServerBulkCopy.|  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
-|Stringa DestinationTableName|Nome della tabella di destinazione nel server.<br /><br /> Se DestinationTableName non è stato impostato quando viene chiamato writeToServer, viene generata un'eccezione SQLServerException.<br /><br /> DestinationTableName è un nome in tre parti (\<database >.\< schema >. \<nome >). Se si desidera, è possibile qualificare il nome della tabella con i relativi database e schema. Tuttavia, se il nome della tabella contiene un carattere di sottolineatura ("_") o altri caratteri speciali, è necessario racchiudere il nome tra parentesi quadre. Per ulteriori informazioni, vedere "Identificatori" nella documentazione online di SQL Server.|  
+|Stringa DestinationTableName|Nome della tabella di destinazione nel server.<br /><br /> Se DestinationTableName non è stato impostato quando viene chiamato writeToServer, viene generata un'eccezione SQLServerException.<br /><br /> DestinationTableName è un nome composto da tre parti (\<database>.\<nomeschema>.\<nome>). Se si desidera, è possibile qualificare il nome della tabella con i relativi database e schema. Tuttavia, se il nome della tabella contiene un carattere di sottolineatura ("_") o altri caratteri speciali, è necessario racchiudere il nome tra parentesi quadre. Per ulteriori informazioni, vedere "Identificatori" nella documentazione online di SQL Server.|  
 |ColumnMappings|I mapping delle colonne definiscono le relazioni tra le colonne nell'origine dati e le colonne nella destinazione.<br /><br /> Se i mapping non sono definiti, le colonne vengono mappate in modo implicito in base alla posizione ordinale. Per il corretto funzionamento, gli schemi di origine e di destinazione devono corrispondere. In caso contrario, verrà generata un'eccezione.<br /><br /> Se i mapping non sono vuoti, non tutte le colonne presenti nell'origine dati devono essere specificate. Le colonne di cui non viene eseguito il mapping sono ignorate.<br /><br /> È possibile fare riferimento alle colonne di origine e di destinazione in base al nome o alla posizione ordinale.|  
   
-|Metodo|Description|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
 |Void addColumnMapping ((sourceColumn int, int destinationColumn)|Aggiunge un nuovo mapping di colonne, utilizzando numeri ordinali per specificare le colonne di origine e di destinazione.|  
-|Void addColumnMapping ((sourceColumn int, String destinationColumn)|Aggiunge un nuovo mapping di colonne, utilizzando un numero ordinale per la colonna di origine e un nome di colonna per la colonna di destinazione.|  
-|Void addColumnMapping ((stringa sourceColumn, destinationColumn int)|Aggiunge un nuovo mapping di colonne, utilizzando un nome di colonna per la colonna di origine e un numero ordinale per la colonna di destinazione.|  
+|Void addColumnMapping ((sourceColumn int, stringa destinationColumn)|Aggiunge un nuovo mapping di colonne, utilizzando un numero ordinale per la colonna di origine e un nome di colonna per la colonna di destinazione.|  
+|Void addColumnMapping ((sourceColumn String, int destinationColumn)|Aggiunge un nuovo mapping di colonne, utilizzando un nome di colonna per la colonna di origine e un numero ordinale per la colonna di destinazione.|  
 |Void addColumnMapping (sourceColumn stringa, stringa destinationColumn)|Aggiunge un nuovo mapping di colonne, utilizzando nomi di colonna per specificare le colonne di origine e di destinazione.|  
-|ClearColumnMappings() void|Cancella il contenuto dei mapping di colonne.|  
-|Void Close)|Chiude l'istanza di SQLServerBulkCopy.|  
+|Void clearColumnMappings()|Cancella il contenuto dei mapping di colonne.|  
+|Close (void)|Chiude l'istanza di SQLServerBulkCopy.|  
 |SQLServerBulkCopyOptions getBulkCopyOptions()|Recupera il set corrente di SQLServerBulkCopyOptions.|  
-|Stringa getDestinationTableName()|Recupera il nome della tabella di destinazione corrente.|  
+|String getDestinationTableName()|Recupera il nome della tabella di destinazione corrente.|  
 |SetBulkCopyOptions(SQLServerBulkCopyOptions copyOptions) void|Aggiorna il comportamento dell'istanza di SQLServerBulkCopy in base alle opzioni fornite.|  
 |SetDestinationTableName(String tableName) void|Imposta il nome della tabella di destinazione.|  
 |WriteToServer(ResultSet sourceData) void|Copia tutte le righe nel ResultSet specificato in una tabella di destinazione specificata dalla proprietà DestinationTableName dell'oggetto SQLServerBulkCopy.|  
 |WriteToServer(RowSet sourceData) void|Copia tutte le righe nel RowSet specificato in una tabella di destinazione specificata dalla proprietà DestinationTableName dell'oggetto SQLServerBulkCopy.|  
-|WriteToServer(ISQLServerBulkRecord sourceData) void|Copia tutte le righe di implementazione di ISQLServerBulkRecord specificata in una tabella di destinazione specificata dalla proprietà DestinationTableName dell'oggetto SQLServerBulkCopy.|  
+|WriteToServer(ISQLServerBulkRecord sourceData) void|Copia tutte le righe nell'implementazione ISQLServerBulkRecord specificata in una tabella di destinazione specificata dalla proprietà DestinationTableName dell'oggetto SQLServerBulkCopy.|  
   
 ### <a name="sqlserverbulkcopyoptions"></a>SQLServerBulkCopyOptions  
  Raccolta di impostazioni che controllano il comportamento dei metodi writeToServer in un'istanza di SQLServerBulkCopy.  
   
-|Costruttore|Description|  
+|Costruttore|Descrizione|  
 |-----------------|-----------------|  
 |SQLServerBulkCopyOptions()|Inizializza una nuova istanza della classe SQLServerBulkCopyOptions utilizzando i valori predefiniti per tutte le impostazioni.|  
   
  Sono disponibili metodi di richiamo e di impostazione per le opzioni seguenti:  
   
-|Opzione|Description|Valore predefinito|  
+|Opzione|Descrizione|Default|  
 |------------|-----------------|-------------|  
 |CheckConstraints booleano|Controllare i vincoli durante l'inserimento dei dati.|False - i vincoli non vengono controllati|  
 |FireTriggers booleano|Se specificato, il server genera i trigger di inserimento per le righe da inserire nel database.|False - non vengono generati trigger|  
@@ -1042,36 +1042,36 @@ public class Program
 |TableLock booleano|Ottenere un blocco di aggiornamento bulk per la durata dell'operazione di copia bulk.|False - vengono utilizzati i blocchi a livello di riga.|  
 |UseInternalTransaction booleano|Se specificato, ogni batch dell'operazione di copia bulk viene eseguito all'interno di una transazione. Se SQLServerBulkCopy utilizza una connessione esistente (come specificato dal costruttore), si verificherà un'eccezione SQLServerException.  Se SQLServerBulkCopy ha creato una connessione dedicata, verrà abilitata una transazione.|False - nessuna transazione|  
 |int BatchSize|Numero di righe in ogni batch. Al termine di ogni batch, le righe nel batch vengono inviate al server.<br /><br /> Un batch è completato quando le righe BatchSize sono state elaborate o non sono più disponibili righe da inviare all'origine dati di destinazione.  Se l'istanza di SQLServerBulkCopy è stata dichiarata senza applicare l'opzione UseInternalTransaction, le righe vengono inviate al server in base al valore di BatchSize, ma non viene eseguita alcuna azione relativa alla transazione. Se viene applicata l'opzione UseInternalTransaction, ogni batch di righe viene inserito come una transazione distinta.|0 - indica che ogni operazione writeToServer è un singolo batch|  
-|int BulkCopyTimeout|Numero di secondi per il completamento dell'operazione prima del timeout. Il valore 0 indica nessun limite; la copia bulk attenderà per un tempo illimitato.|60 secondi.|  
-|AllowEncryptedValueModifications booleano|Questa opzione è disponibile con Microsoft JDBC Driver 6.0 (o versione successiva) per SQL Server.<br /><br /> Quando specificato, **allowEncryptedValueModifications** consente la copia bulk dei dati crittografati fra tabelle o database, senza la decrittografia dei dati. In genere, un'applicazione selezionerebbe i dati dalle colonne crittografate da una tabella senza la decrittografia dei dati (l'app si connetterebbe al database con la parola chiave impostazione di crittografia di colonna impostata su disabilitato) e quindi utilizzare questa opzione per l'inserimento bulk dei dati, che sono ancora crittografati. Per ulteriori informazioni, vedere [uso di Always Encrypted con il Driver JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Prestare attenzione quando si specifica **allowEncryptedValueModifications** come questo potrebbe causare il danneggiamento del database perché il driver non controlla se i dati vengono effettivamente crittografati o se vengono crittografati correttamente usando la stessa crittografia tipo di algoritmo e chiave come colonna di destinazione.||  
+|Int BulkCopyTimeout|Numero di secondi per il completamento dell'operazione prima del timeout. Il valore 0 indica nessun limite; la copia bulk attenderà per un tempo illimitato.|60 secondi.|  
+|AllowEncryptedValueModifications booleano|Questa opzione è disponibile con Microsoft JDBC Driver 6.0 (o versione successiva) per SQL Server.<br /><br /> Quando specificato, **allowEncryptedValueModifications** consente la copia bulk dei dati crittografati fra tabelle o database senza decrittografare i dati. In genere, un'applicazione selezionerebbe i dati dalle colonne crittografate da una tabella senza la decrittografia dei dati (l'app sarebbe connettersi al database con la parola chiave impostazione di crittografia di colonna impostata su disabilitato) e quindi userebbe questa opzione per l'inserimento bulk dei dati, che viene comunque crittografato. Per altre informazioni, vedere [Utilizzo di Always Encrypted con il driver JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Prestare attenzione quando si specifica **allowEncryptedValueModifications** poiché questa operazione può causare il danneggiamento del database perché il driver non verifica se i dati vengono effettivamente crittografati o se vengono crittografati correttamente usando lo stesso tipo di crittografia, l'algoritmo e la chiave come colonna di destinazione.||  
   
- Metodi get e set:  
+ Getter e setter:  
   
-|Metodi|Description|  
+|Metodi|Descrizione|  
 |-------------|-----------------|  
 |IsCheckConstraints() booleano|Indica se i vincoli devono essere controllati durante l'inserimento dei dati o non.|  
-|SetCheckConstraints(Boolean checkConstraints) void|Imposta se i vincoli devono essere controllati durante l'inserimento dei dati o non.|  
-|IsFireTriggers() booleano|Indica se il server deve trigger di inserimento per le righe da inserire nel database.|  
-|SetFireTriggers(Boolean fireTriggers) void|Imposta se il server deve essere impostato per i trigger per le righe da inserire nel database.|  
-|IsKeepIdentity() booleano|Indica se mantenere i valori identity di origine o meno.|  
-|SetKeepIdentity(Boolean keepIdentity) void|Imposta o meno mantenere i valori identity.|  
+|SetCheckConstraints(Boolean checkConstraints) void|Determina se i vincoli devono essere controllati durante l'inserimento dei dati o non.|  
+|IsFireTriggers() booleano|Indica se il server deve essere attivata i trigger di inserimento per le righe inserite nel database.|  
+|SetFireTriggers(Boolean fireTriggers) void|Imposta se il server deve essere impostato su attivano i trigger per le righe inserite nel database.|  
+|IsKeepIdentity() booleano|Indica se mantenere i valori identity di origine.|  
+|SetKeepIdentity(Boolean keepIdentity) void|Imposta se visualizzare o meno mantenere i valori identity.|  
 |IsKeepNulls() booleano|Indica se mantenere i valori null nella tabella di destinazione indipendentemente dalle impostazioni per i valori predefiniti o se questi devono essere sostituiti con i valori predefiniti (dove applicabile).|  
-|SetKeepNulls(Boolean keepNulls) void|Imposta se si desidera mantenere i valori null nella tabella di destinazione indipendentemente dalle impostazioni per i valori predefiniti o se questi devono essere sostituiti con i valori predefiniti (dove applicabile).|  
+|SetKeepNulls(Boolean keepNulls) void|Imposta se mantenere i valori null nella tabella di destinazione indipendentemente dalle impostazioni per i valori predefiniti o se questi devono essere sostituiti con i valori predefiniti (dove applicabile).|  
 |IsTableLock() booleano|Indica se SQLServerBulkCopy deve ottenere un blocco di aggiornamento bulk per la durata dell'operazione di copia bulk.|  
 |SetTableLock(Boolean tableLock) void|Imposta se SQLServerBulkCopy deve ottenere un blocco di aggiornamento bulk per la durata dell'operazione di copia bulk.|  
-|IsUseInternalTransaction() booleano|Indica se ogni batch dell'operazione di copia bulk verrà eseguito all'interno di una transazione.|  
-|SetUseInternalTranscation(Boolean useInternalTransaction) void|Determina se ogni batch di operazioni di copia bulk verrà eseguito all'interno di una transazione o non.|  
-|GetBatchSize() int|Ottiene il numero di righe in ogni batch. Alla fine di ogni batch, le righe nel batch vengono inviate al server|  
+|IsUseInternalTransaction() booleano|Indica se ogni batch dell'operazione di copia bulk viene eseguito all'interno di una transazione.|  
+|SetUseInternalTranscation(Boolean useInternalTransaction) void|Determina se ogni batch le operazioni di copia bulk verrà eseguito nell'ambito di una transazione o non.|  
+|GetBatchSize() int|Ottiene il numero di righe in ogni batch. Al termine di ogni batch, le righe nel batch vengono inviate al server.|  
 |SetBatchSize(int batchSize) void|Imposta il numero di righe in ogni batch. Al termine di ogni batch, le righe nel batch vengono inviate al server.|  
-|GetBulkCopyTimeout() int|Ottiene il numero di secondi per l'operazione di completamento prima del timeout.|  
-|SetBulkCopyTimeout(int timeout) void|Imposta il numero di secondi per l'operazione di completamento prima del timeout.|  
+|GetBulkCopyTimeout() int|Ottiene il numero di secondi per il completamento dell'operazione prima del timeout.|  
+|SetBulkCopyTimeout(int timeout) void|Imposta il numero di secondi per il completamento dell'operazione prima del timeout.|  
 |isAllowEncryptedValueModifications() booleano|Indica se l'impostazione allowEncryptedValueModifications è abilitato o disabilitato.|  
-|setAllowEncryptedValueModifications(boolean allowEncryptedValueModifications) void|Configura l'impostazione allowEncryptedValueModifications viene utilizzato per la copia bulk con le colonne con crittografia sempre attiva.|  
+|setAllowEncryptedValueModifications(boolean allowEncryptedValueModifications) void|Configura l'impostazione allowEncryptedValueModifications che viene usato per la copia bulk con colonne Always Encrypted.|  
   
 ### <a name="isqlserverbulkrecord"></a>ISQLServerBulkRecord  
  L'interfaccia ISQLServerBulkRecord può essere utilizzata per creare classi che leggono i dati da qualsiasi origine (ad esempio un file) e consentono a un'istanza di SQLServerBulkCopy di eseguire il caricamento bulk di una tabella di SQL Server con tali dati.  
   
-|Metodi di interfaccia|Description|  
+|Metodi di interfaccia|Descrizione|  
 |-----------------------|-----------------|  
 |Impostare\<Integer > getColumnOrdinals()|Ottenere gli ordinali per ognuna delle colonne rappresentate nel record di dati.|  
 |Stringa getColumnName(int column)|Ottenere il nome della colonna specificata.|  
@@ -1080,7 +1080,7 @@ public class Program
 |Oggetto getRowData()]|Ottenere i dati per la riga corrente come una matrice di oggetti.<br /><br /> Ogni oggetto deve corrispondere al tipo di linguaggio Java utilizzato per rappresentare il tipo di dati JDBC indicato per la colonna specificata.  Per ulteriori informazioni sui mapping appropriati, vedere "Informazioni sui tipi di dati del driver JDBC".|  
 |Int getScale (colonna di tipo int)|Ottenere la scala per la colonna specificata.|  
 |Booleano isAutoIncrement (colonna di tipo int)|Indica se la colonna rappresenta una colonna Identity.|  
-|Next booleano|Passa alla riga di dati successiva.|  
+|Next (booleano)|Passa alla riga di dati successiva.|  
   
 ### <a name="sqlserverbulkcsvfilerecord"></a>SQLServerBulkCSVFileRecord  
  Una semplice implementazione dell'interfaccia ISQLServerBulkRecord che può essere utilizzata per leggere i tipi di dati Java di base da un file delimitato in cui ogni riga rappresenta una riga di dati.  
@@ -1097,19 +1097,19 @@ public class Program
   
 5.  I caratteri a capo vengono utilizzati come caratteri di terminazione della riga e non sono consentiti nei dati.  
   
-|Costruttore|Description|  
+|Costruttore|Descrizione|  
 |-----------------|-----------------|  
-|SQLServerBulkCSVFileRecord (stringa fileToParse, codifica della stringa, il delimitatore di stringa, booleano firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String, String, String, boolean)|Inizializza una nuova istanza della classe SQLServerBulkCSVFileRecord che analizza ogni riga in fileToParse con il delimitatore e la codifica specificati. Se firstLineIsColumnNames è impostato su True, la prima riga nel file sarà analizzata come nomi di colonna.  Se la codifica è NULL, verrà utilizzata la codifica predefinita.|  
+|SQLServerBulkCSVFileRecord (stringa fileToParse, codifica della stringa, stringa delimitatore, booleano firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String, String, String, boolean)|Inizializza una nuova istanza della classe SQLServerBulkCSVFileRecord che analizza ogni riga in fileToParse con il delimitatore e la codifica specificati. Se firstLineIsColumnNames è impostato su True, la prima riga nel file sarà analizzata come nomi di colonna.  Se la codifica è NULL, verrà utilizzata la codifica predefinita.|  
 |SQLServerBulkCSVFileRecord (stringa fileToParse, di codifica della stringa, booleano firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String, String, boolean)|Inizializza una nuova istanza della classe SQLServerBulkCSVFileRecord che analizza ogni riga in fileToParse con una virgola come delimitatore e la codifica specificata. Se firstLineIsColumnNames è impostato su True, la prima riga nel file sarà analizzata come nomi di colonna.  Se la codifica è NULL, verrà utilizzata la codifica predefinita.|  
-|SQLServerBulkCSVFileRecord (fileToParse stringa, booleano firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String, boolean)|Inizializza una nuova istanza della classe SQLServerBulkCSVFileRecord che analizza ogni riga in fileToParse con una virgola come delimitatore e la codifica predefinita. Se firstLineIsColumnNames è impostato su True, la prima riga nel file verranno verrà analizzata come nomi di colonna.|  
+|SQLServerBulkCSVFileRecord (fileToParse stringa, booleano firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String, boolean)|Inizializza una nuova istanza della classe SQLServerBulkCSVFileRecord che analizza ogni riga in fileToParse con una virgola come delimitatore e la codifica predefinita. Se firstLineIsColumnNames è impostato su True, la prima riga nel file verrà analizzata come nomi di colonna.|  
   
-|Metodo|Description|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
-|Void addColumnMetadata (int positionInFile, stringa columnName, jdbcType int, int precisione, scala int)|Aggiunge i metadati per la colonna specificata nel file.|  
-|Void Close)|Rilascia le risorse associate al lettore di file.|  
-|Void (dateTimeFormatter di eFormatter DateTim setTimestampWithTimezoneFormat|Imposta il formato per l'analisi dei dati Timestamp del file come java.sql.Types.TIMESTAMP_WITH_TIMEZONE.|  
+|Void addColumnMetadata (positionInFile int, stringa columnName, jdbcType int, int precisione, scala int)|Aggiunge i metadati per la colonna specificata nel file.|  
+|Close (void)|Rilascia le risorse associate al lettore di file.|  
+|SetTimestampWithTimezoneFormat void (DateTim eFormatter dateTimeFormatter|Imposta il formato per l'analisi dei dati Timestamp del file come java.sql.Types.TIMESTAMP_WITH_TIMEZONE.|  
 |SetTimestampWithTimezoneFormat(String dateTimeFormat)setTimeWithTimezoneFormat(DateTimeFormatter) void|Imposta il formato per l'analisi dei dati Time del file come java.sql.Types.TIME_WITH_TIMEZONE.|  
-|Void setTimeWithTimezoneFormat (DateTimeForm atter dateTimeFormatter)|Imposta il formato per l'analisi dei dati Time del file come java.sql.Types.TIME_WITH_TIMEZONE.|  
+|SetTimeWithTimezoneFormat void (DateTimeForm mussate dateTimeFormatter)|Imposta il formato per l'analisi dei dati Time del file come java.sql.Types.TIME_WITH_TIMEZONE.|  
 |SetTimeWithTimezoneFormat(String timeFormat) void|Imposta il formato per l'analisi dei dati Time del file come java.sql.Types.TIME_WITH_TIMEZONE.|  
   
 ## <a name="see-also"></a>Vedere anche  

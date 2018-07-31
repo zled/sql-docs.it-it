@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire transazioni | Documenti Microsoft'
+title: 'Procedura: eseguire transazioni | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307660"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015788"
 ---
 # <a name="how-to-perform-transactions"></a>Procedura: Eseguire le transazioni
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,11 +53,11 @@ I passaggi principali per l'esecuzione di una transazione sono i seguenti:
   
 2.  Verificare l'esito positivo o negativo di ogni query inclusa nella transazione.  
   
-3.  Se appropriato, eseguire il commit della transazione con **sqlsrv_commit**. In caso contrario, eseguire il rollback della transazione con **sqlsrv_rollback**. Dopo la chiamata **sqlsrv_commit** o **sqlsrv_rollback**, il driver viene restituito in modalità autocommit.  
+3.  Se appropriato, eseguire il commit della transazione con **sqlsrv_commit**. In caso contrario, eseguire il rollback della transazione con **sqlsrv_rollback**. Dopo la chiamata a **sqlsrv_commit** o **sqlsrv_rollback** viene ripristinata la modalità autocommit per il driver.  
   
-    Per impostazione predefinita, il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] è in modalità autocommit. Ciò significa che viene eseguito automaticamente il commit di tutte le query al completamento dell'operazione a meno che non siano state programmate come parte di una transazione esplicita usando **sqlsrv_begin_transaction**.  
+    I [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] sono in modalità autocommit per impostazione predefinita. Ciò significa che viene eseguito automaticamente il commit di tutte le query al completamento dell'operazione a meno che non siano state programmate come parte di una transazione esplicita usando **sqlsrv_begin_transaction**.  
   
-    Se non viene eseguito il commit con una transazione esplicita **sqlsrv_commit**, rollback alla chiusura della connessione o al termine dello script.  
+    Se non viene eseguito il commit di una transazione esplicita tramite **sqlsrv_commit**, viene eseguito il rollback alla chiusura della connessione o al termine dello script.  
   
     Non usare Transact-SQL incorporato per l'esecuzione delle transazioni. Ad esempio, non eseguire un'istruzione con "BEGIN TRANSACTION" come query Transact-SQL per iniziare una transazione. Il comportamento transazionale previsto non può essere garantito quando si usa Transact-SQL incorporato per l'esecuzione delle transazioni.  
   
@@ -65,7 +65,7 @@ I passaggi principali per l'esecuzione di una transazione sono i seguenti:
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
 L'esempio seguente esegue diverse query come parte di una transazione. Se tutte le query hanno esito positivo, viene eseguito il commit della transazione. Se una delle query ha esito negativo, viene eseguito il rollback della transazione.  
   
 L'esempio tenta di eliminare un ordine di vendita dalla tabella *Sales.SalesOrderDetail* e di correggere i livelli di inventario del prodotto nella tabella *Product.ProductInventory* per ogni prodotto dell'ordine di vendita. Queste query vengono incluse in una transazione perché tutte le query devono essere completate correttamente per riflettere accuratamente lo stato degli ordini e la disponibilità del prodotto.  
@@ -74,7 +74,7 @@ La prima query dell'esempio recupera gli ID prodotto e le quantità per l'ID ord
   
 Le query che seguono (eliminazione dell'ordine di vendita e aggiornamento delle quantità di inventario del prodotto) sono parte della transazione.  
   
-Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ### <a name="code"></a>codice  
   
@@ -154,12 +154,12 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Commenti  
-Per porre l'attenzione sul comportamento delle transazioni, una parte della gestione degli errori consigliata non è inclusa nell'esempio. Per un'applicazione di produzione, è consigliabile controllare tutte le chiamate a un **sqlsrv** funzione per gli errori e gestirli di conseguenza.
+Per porre l'attenzione sul comportamento delle transazioni, una parte della gestione degli errori consigliata non è inclusa nell'esempio. Per un'applicazione di produzione è consigliabile controllare tutte le chiamate a un **sqlsrv** funzionare per gli errori e gestirli di conseguenza.
   
 ## <a name="see-also"></a>Vedere anche  
 [Aggiornamento dei dati &#40;Driver Microsoft per PHP per SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[Transazioni (motore di Database)](https://msdn.microsoft.com/library/ms190612.aspx)
+[Transazioni (Motore di database)](https://msdn.microsoft.com/library/ms190612.aspx)
 
 [Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Metodo (int, int) supportsConvert | Documenti Microsoft
+title: Metodo supportsConvert (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d482ebf9a5baba07e72f9d9f2bbb446bd3378363
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847946"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023969"
 ---
 # <a name="supportsconvert-method-int-int"></a>Metodo supportsConvert (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ public boolean supportsConvert(int fromType,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo supportsConvert viene specificato dal metodo supportsConvert nell'interfaccia DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

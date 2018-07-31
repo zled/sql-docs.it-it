@@ -1,5 +1,5 @@
 ---
-title: Indirizzare informativa - Driver PDO_SQLSRV esecuzione di istruzione preparata | Documenti Microsoft
+title: Diretta - istruzione preparata Driver PDO_SQLSRV esecuzione istruzione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,29 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a054717a1d8249e842611b2e07f49631f376049
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307480"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042220"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Esecuzione di istruzioni diretta e preparata nel driver PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In questo argomento viene illustrato l'utilizzo dell'attributo PDO:: sqlsrv_attr_direct_query per specificare l'esecuzione diretta delle istruzioni anziché l'impostazione predefinita, che viene preparata l'esecuzione dell'istruzione. Utilizzo di un'istruzione preparata può comportare prestazioni migliori se l'istruzione viene eseguita più volte utilizzando l'associazione di parametri.  
+Questo argomento illustra come usare l'attributo PDO::SQLSRV_ATTR_DIRECT_QUERY per specificare l'esecuzione diretta delle istruzioni anziché l'impostazione predefinita, che corrisponde all'esecuzione di istruzioni preparate. Utilizzo di un'istruzione preparata può comportare prestazioni migliori se l'istruzione viene eseguita più volte utilizzando l'associazione di parametro.  
   
 ## <a name="remarks"></a>Remarks  
-Se si desidera inviare un [!INCLUDE[tsql](../../includes/tsql_md.md)] istruzione direttamente al server senza la preparazione dell'istruzione dal driver, è possibile impostare l'attributo PDO:: sqlsrv_attr_direct_query con [PDO:: SetAttribute](../../connect/php/pdo-setattribute.md) (o come un driver (opzione) passato a [PDO::__construct](../../connect/php/pdo-construct.md)) o quando si chiama [PDO:: Prepare](../../connect/php/pdo-prepare.md). Per impostazione predefinita, il valore di PDO:: sqlsrv_attr_direct_query è False (utilizzare l'esecuzione dell'istruzione preparata).  
+Se si desidera inviare una [!INCLUDE[tsql](../../includes/tsql_md.md)] istruzione direttamente al server senza preparazione dell'istruzione dal driver, è possibile impostare l'attributo PDO:: sqlsrv_attr_direct_query [PDO:: SetAttribute](../../connect/php/pdo-setattribute.md) (o come un'opzione driver passato a [PDO::__construct](../../connect/php/pdo-construct.md)) o quando si chiama [PDO:: Prepare](../../connect/php/pdo-prepare.md). Per impostazione predefinita, il valore di PDO:: sqlsrv_attr_direct_query è False (usare l'esecuzione dell'istruzione preparata).  
   
-Se si utilizza [PDO:: query](../../connect/php/pdo-query.md), è possibile l'esecuzione diretta. Prima di chiamare [PDO:: query](../../connect/php/pdo-query.md), chiamare [PDO:: SetAttribute](../../connect/php/pdo-setattribute.md) e PDO:: sqlsrv_attr_direct_query su True.  Ogni chiamata a [PDO:: query](../../connect/php/pdo-query.md) possono essere eseguite con un'impostazione diversa per PDO:: sqlsrv_attr_direct_query.  
+Se si usa [PDO:: query](../../connect/php/pdo-query.md), è possibile l'esecuzione diretta. Prima di chiamare [PDO:: query](../../connect/php/pdo-query.md), chiamare [PDO:: SetAttribute](../../connect/php/pdo-setattribute.md) e PDO:: sqlsrv_attr_direct_query su True.  Ogni chiamata a [PDO:: query](../../connect/php/pdo-query.md) possono essere eseguite con un'impostazione diversa per PDO:: sqlsrv_attr_direct_query.  
   
-Se si utilizza [PDO:: Prepare](../../connect/php/pdo-prepare.md) e [pdostatement:: Execute](../../connect/php/pdostatement-execute.md) per eseguire una query più volte con parametri associati, l'esecuzione di istruzione preparata consente di ottimizzare l'esecuzione della query ripetute.  In questo caso, chiamare [PDO:: Prepare](../../connect/php/pdo-prepare.md) con PDO:: sqlsrv_attr_direct_query impostato su False il parametro di matrice opzioni driver. Se necessario, è possibile eseguire le istruzioni preparate con PDO:: sqlsrv_attr_direct_query impostato su False.  
+Se si usa [PDO:: Prepare](../../connect/php/pdo-prepare.md) e [pdostatement:: Execute](../../connect/php/pdostatement-execute.md) per eseguire una query più volte con parametri associati, l'esecuzione dell'istruzione preparata consente di ottimizzare l'esecuzione della query ripetute.  In questo caso, chiamare [PDO:: Prepare](../../connect/php/pdo-prepare.md) con PDO:: sqlsrv_attr_direct_query impostato su False nel parametro di matrice opzioni driver. Se necessario, è possibile eseguire le istruzioni preparate con PDO:: sqlsrv_attr_direct_query impostato su False.  
   
 Dopo aver chiamato [PDO:: Prepare](../../connect/php/pdo-prepare.md), non è possibile modificare il valore di PDO:: sqlsrv_attr_direct_query durante l'esecuzione di query preparata.  
   
-Se una query richiede il contesto che è stato impostato in una query precedente, quindi eseguire le query con PDO:: sqlsrv_attr_direct_query impostato su True. Ad esempio, se si utilizzano tabelle temporanee nelle query, PDO:: sqlsrv_attr_direct_query deve essere impostata su True.  
+Se una query richiede il contesto che è stato impostato in una query precedente, eseguire le query con PDO:: sqlsrv_attr_direct_query impostato su True. Ad esempio, se si usano le tabelle temporanee nelle query, PDO:: sqlsrv_attr_direct_query deve essere impostato su True.  
   
-L'esempio seguente viene illustrato quando è necessario contesto da un'istruzione precedente, è necessario impostare PDO:: sqlsrv_attr_direct_query su True.  Questo esempio utilizza le tabelle temporanee, sono disponibili solo per le istruzioni successive del programma quando si eseguono query direttamente.  
+L'esempio seguente illustra che quando è necessario contesto da un'istruzione precedente, è necessario impostare PDO:: sqlsrv_attr_direct_query su True.  Questo esempio Usa le tabelle temporanee, sono disponibili solo per le istruzioni successive nel programma quando le query vengono eseguite direttamente.  
   
 ```  
 <?php  

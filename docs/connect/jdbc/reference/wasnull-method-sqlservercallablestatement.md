@@ -1,5 +1,5 @@
 ---
-title: Metodo wasNull (SQLServerCallableStatement) | Documenti Microsoft
+title: Metodo wasNull (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce699426d08cf783aee881a0af0a51dee0268551
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851626"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021170"
 ---
 # <a name="wasnull-method-sqlservercallablestatement"></a>Metodo wasNull (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +39,13 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se l'ultimo parametro letto era null. In caso contrario, **false**.  
+ **true** se leggere l'ultimo parametro è null. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo wasNull viene specificato dal metodo wasNull nell'interfaccia Java.SQL. CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo wasNull viene specificato dal metodo wasNull nell'interfaccia java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
