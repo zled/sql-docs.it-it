@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchAll | Documenti Microsoft
+title: PDOStatement::fetchAll | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639ff09c2c739e99b974c1b4df7d4963b7959e94
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308990"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983021"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,11 +34,11 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 ```  
   
 #### <a name="parameters"></a>Parametri  
-$*fetch_style*: un simbolo (intero) che specifica il formato della riga di dati. Per un elenco di valori, vedere [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) . PDO::FETCH_COLUMN è consentito. PDO::FETCH_BOTH è il valore predefinito.  
+$*fetch_style*: simbolo (intero) che specifica il formato della riga di dati. Per un elenco di valori, vedere [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) . PDO::FETCH_COLUMN è consentito. PDO::FETCH_BOTH è il valore predefinito.  
   
-$*indice*: valore intero che rappresenta la colonna da restituire se $*fetch_style* è PDO:: fetch_column. 0 è il valore predefinito.  
+$*column_index*: valore intero che rappresenta la colonna da restituire se $*fetch_style* è PDO::FETCH_COLUMN. 0 è il valore predefinito.  
   
-$*ctor_args*: una matrice dei parametri di un costruttore di classe, quando $*fetch_style* è PDO:: fetch_class o PDO:: fetch_obj.  
+$*ctor_args*: matrice di parametri di un costruttore di classe, quando $*fetch_style* è PDO::FETCH_CLASS o PDO::FETCH_OBJ.  
   
 ## <a name="return-value"></a>Valore restituito  
 Una matrice delle righe rimanenti del set di risultati oppure false se la chiamata al metodo ha esito negativo.  

@@ -1,6 +1,6 @@
 ---
-title: Posizione del recupero successivo | Documenti Microsoft
-description: Recupero righe - posizione del recupero successiva
+title: Posizione del recupero successivo | Microsoft Docs
+description: Recupero di righe - Posizione del recupero successivo
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 46e6e3b9898d6c1adbe4df4bdc2b33444b623df9
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: ec1149b615c64f2113afc007c0ea04e4c4665698
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690114"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106107"
 ---
-# <a name="fetching-rows---next-fetch-position"></a>Recupero righe - posizione del recupero successiva
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="fetching-rows---next-fetch-position"></a>Recupero di righe - Posizione del recupero successivo
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server mantiene tenere traccia della posizione del recupero successivo in modo che una sequenza di chiamate per il **GetNextRows** metodo (senza salti, modifiche di direzione o intermedi le chiamate al **FindNextRow** **Seek**, o **esecuzione di RestartPosition** metodi) legge l'intero set di righe senza ignorare o ripetizione di una riga. Posizione del recupero successivo viene modificata chiamando **IRowset:: GetNextRows**, **IRowset:: RestartPosition**, o **IRowsetIndex:: Seek**, oppure chiamando **FindNextRow** con un valore null *pBookmark* valore. La chiamata **FindNextRow** con un valore diverso da null *pBookmark* valore non influisce sulla posizione del recupero successivo.  
+  Il driver OLE DB per SQL Server tiene traccia della posizione del recupero successivo in modo che una sequenza di chiamate al metodo **GetNextRows** (senza elementi ignorati, cambiamenti di direzione o nuove chiamate ai metodi **FindNextRow**, **Seek** o **RestartPosition**) legga l'intero set di righe senza ignorare o ripetere alcuna riga. La posizione del recupero successiva viene modificata chiamando **IRowset::GetNextRows**, **IRowset::RestartPosition** o **IRowsetIndex::Seek** oppure chiamando **FindNextRow** con un valore *pBookmark* Null. La chiamata a **FindNextRow** con un valore *pBookmark* non Null non influisce sulla posizione del recupero successivo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Recupero di righe](../../oledb/ole-db-rowsets/fetching-rows.md)  

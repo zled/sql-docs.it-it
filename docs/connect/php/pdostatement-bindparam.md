@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Bindparam | Documenti Microsoft'
+title: 'Pdostatement:: Bindparam | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 683ee4dcfd797f49ccd297f0a88f8fc607ea7aae
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308314"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007140"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,13 +34,13 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Parametri  
-$*parametro*: un identificatore del parametro (misto). Per un'istruzione che usa segnaposti denominati, utilizzare un nome di parametro (: nome). Per un'istruzione preparata utilizzando la sintassi punto interrogativo, si tratta dell'indice in base 1 del parametro.  
+$*parameter*: identificatore del parametro (misto). Per un'istruzione che usa segnaposti denominati, usare un nome parametro (:name). Per un'istruzione preparata che usa la sintassi punto interrogativo, è l'indice in base 1 del parametro.  
   
-&$*variabile*: il nome (misto) della variabile PHP da associare al parametro dell'istruzione SQL.  
+&$*variable*: nome (misto) della variabile PHP da associare al parametro dell'istruzione SQL.  
   
-$*data_type*: (intero) facoltativo PDO::PARAM_ * costante. Il valore predefinito è PDO::PARAM_STR.  
+$*data_type*: costante (intero) PDO::PARAM_* facoltativa. Il valore predefinito è PDO::PARAM_STR.  
   
-$*lunghezza*: lunghezza (intero) facoltativa del tipo di dati. È possibile specificare PDO:: sqlsrv_param_out_default_size per indicare la dimensione predefinita quando si usa PDO:: param_int o PDO:: param_bool in $*data_type*.  
+$*length*: lunghezza (intero) facoltativa del tipo di dati. È possibile specificare PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE per indicare le dimensioni predefinite quando si usa PDO::PARAM_INT o PDO::PARAM_BOOL in $*data_type*.  
   
 $*driver_options*: le opzioni specifiche del driver (miste) facoltative. Ad esempio, è possibile specificare PDO::SQLSRV_ENCODING_UTF8 per associare la colonna a una variabile come stringa codificata in UTF-8.  
   
@@ -48,7 +48,7 @@ $*driver_options*: le opzioni specifiche del driver (miste) facoltative. Ad esem
 TRUE in caso di esito positivo; in caso contrario, FALSE.  
   
 ## <a name="remarks"></a>Remarks  
-Quando si associano dati null alle colonne del server di tipo varbinary, binary o varbinary (max) è necessario specificare la codifica binaria (PDO:: sqlsrv_encoding_binary) usando $*driver_options*. Per ulteriori informazioni sulle costanti di codifica, vedere [costanti](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+Quando si associano dati Null alle colonne del server di tipo varbinary, binary o varbinary(max), è consigliabile specificare la codifica binaria (PDO::SQLSRV_ENCODING_BINARY) usando $*driver_options*. Per altre informazioni sulle costanti di codifica, vedere [Costanti](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
 
@@ -103,7 +103,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> Quando si associa un parametro di output a un tipo bigint, se il valore può finire di fuori dell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), l'utilizzo di PDO:: param_int con PDO:: sqlsrv_param_out_default_size potrebbe generare un'eccezione di "valore non compreso nell'intervallo". Pertanto, in alternativa, usare il valore predefinito PDO:: param_str e indicano le dimensioni della stringa risulta, che è al massimo 21. È il numero massimo di cifre, incluso il segno negativo, di qualsiasi valore bigint. 
+> Quando si associa un parametro di output a un tipo bigint, se il valore potrebbe finire compreso nell'intervallo di un' [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), uso di PDO:: param_int con PDO:: sqlsrv_param_out_default_size può comportare un'eccezione di "valore non compreso nell'intervallo". Pertanto, Usa invece il valore predefinito di PDO:: param_str e indicano le dimensioni della stringa risulta, che è al massimo 21. È il numero massimo di cifre, incluso il segno negativo, di qualsiasi valore bigint. 
 
 ## <a name="example"></a>Esempio  
 In questo esempio di codice viene illustrato come usare un parametro di input/output.  
@@ -125,10 +125,10 @@ In questo esempio di codice viene illustrato come usare un parametro di input/ou
 ```  
 
 > [!NOTE]
-> È consigliabile utilizzare le stringhe come input durante l'associazione di valori da un [colonna decimal o numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) per garantire la precisione e l'accuratezza PHP limitate precisione per [numeri a virgola mobile](http://php.net/manual/en/language.types.float.php). Lo stesso vale per le colonne di tipo bigint, soprattutto quando i valori sono di fuori dell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> È consigliabile usare le stringhe come input durante l'associazione di valori da un [colonna decimal o numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) per garantire precisione e accuratezza come PHP ha limitato la precisione per [numeri a virgola mobile](http://php.net/manual/en/language.types.float.php). Lo stesso vale per le colonne di tipo bigint, soprattutto quando i valori sono di fuori dell'intervallo di un' [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Esempio  
-In questo esempio di codice viene illustrato come associare un valore decimale come parametro di input.  
+Questo esempio di codice viene illustrato come associare un valore decimale come parametro di input.  
 
 ```
 <?php  

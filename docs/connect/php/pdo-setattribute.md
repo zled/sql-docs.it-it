@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: SetAttribute | Documenti Microsoft'
+title: 'PDO:: SetAttribute | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/13/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4bb058781139fd4a22fde87ddaab05a292499ca
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308332"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006863"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,29 +36,29 @@ bool PDO::setAttribute ( $attribute, $value );
 #### <a name="parameters"></a>Parametri  
 *$attribute*: attributo da impostare. Vedere la sezione Osservazioni per l'elenco degli attributi supportati.  
   
-*$value*: il valore (misto).  
+*$value*: valore (tipo misto).  
   
 ## <a name="return-value"></a>Valore restituito  
 Restituisce true in caso di esito positivo; in caso contrario, false.  
   
 ## <a name="remarks"></a>Remarks  
   
-|attribute|Elaborato da|Valori supportati|Description|  
+|attribute|Elaborato da|Valori supportati|Descrizione|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Consente di specificare se i nomi delle colonne sono in lettere maiuscole o minuscole.<br /><br />PDO::CASE_LOWER fa sì che i nomi delle colonne siano in lettere minuscole.<br /><br />PDO::CASE_NATURAL (impostazione predefinita) consente di visualizzare i nomi delle colonne così come vengono restituiti dal database.<br /><br />PDO::CASE_UPPER fa sì che i nomi delle colonne siano in lettere maiuscole.<br /><br />Questo attributo può essere impostato usando PDO::setAttribute.|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|Vedere la documentazione del PDO.|Vedere la documentazione del PDO.|  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|Specifica come il driver segnala gli errori.<br /><br />PDO::ERRMODE_SILENT (predefinito) imposta i codici di errore e le informazioni.<br /><br />PDO::ERRMODE_WARNING genera E_WARNING.<br /><br />PDO::ERRMODE_EXCEPTION causa la generazione di un'eccezione.<br /><br />Questo attributo può essere impostato usando PDO::setAttribute.|  
 |PDO::ATTR_ORACLE_NULLS|PDO|Vedere la documentazione del PDO.|Consente di specificare come devono essere restituiti i valori Null.<br /><br />PDO::NULL_NATURAL non esegue alcuna conversione.<br /><br />PDO::NULL_EMPTY_STRING converte una stringa vuota in valore Null.<br /><br />PDO::NULL_TO_STRING converte il valore Null in una stringa vuota.|  
-|PDO::ATTR_STATEMENT_CLASS|PDO|Vedere la documentazione del PDO.|Consente di impostare la classe di istruzione fornita dall'utente derivata da PDOStatement.<br /><br />Richiede `array(string classname, array(mixed constructor_args))`.<br /><br />Per ulteriori informazioni, vedere la documentazione del PDO.|  
+|PDO::ATTR_STATEMENT_CLASS|PDO|Vedere la documentazione del PDO.|Consente di impostare la classe di istruzione fornita dall'utente derivata da PDOStatement.<br /><br />Richiede `array(string classname, array(mixed constructor_args))`.<br /><br />Per altre informazioni, vedere la documentazione del PDO.|  
 |PDO::ATTR_STRINGIFY_FETCHES|PDO|true o false|Consente di convertire i valori numerici in stringhe durante il recupero di dati.|  
-|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 per il limite di memoria PHP.|Consente di configurare la dimensione del buffer che contiene il set di risultati.<br /><br />Il valore predefinito è 10.240 KB (10 MB).<br /><br />Per ulteriori informazioni sulle query che creano un cursore sul lato client, vedere [tipi di cursore &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 per il limite di memoria PHP.|Consente di configurare la dimensione del buffer che contiene il set di risultati.<br /><br />Il valore predefinito è 10.240 KB (10 MB).<br /><br />Per altre informazioni sulle query, vedere [Tipi di cursore &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|Specifica l'esecuzione di query diretta o preparata. Per altre informazioni, vedere [Esecuzione di istruzioni diretta e preparata nel driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|Consente di impostare la codifica del set di caratteri usato dal driver per comunicare con il server.<br /><br />PDO::SQLSRV_ENCODING_BINARY non è supportato.<br /><br />Il valore predefinito è PDO::SQLSRV_ENCODING_UTF8.|  
-|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true o false|Gestisce i recuperi numerici dalle colonne con i tipi numerici SQL (bit, integer, smallint, tinyint, float o real).<br /><br />Quando il flag di opzione di connessione ATTR_STRINGIFY_FETCHES è attiva, il valore restituito è una stringa, anche quando si trova in SQLSRV_ATTR_FETCHES_NUMERIC_TYPE.<br /><br />Quando il tipo PDO restituito nella colonna di associazione è PDO_PARAM_INT, il valore restituito da una colonna integer è un valore int, anche se SQLSRV_ATTR_FETCHES_NUMERIC_TYPE è disattivata.|  
+|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true o false|Gestisce operazioni di recupero numerici dalle colonne con tipi numerici SQL (bit, integer, smallint, tinyint, float o real).<br /><br />Quando il flag di opzione di connessione ATTR_STRINGIFY_FETCHES è attivata, il valore restituito è una stringa, anche quando SQLSRV_ATTR_FETCHES_NUMERIC_TYPE si trova in.<br /><br />Quando il tipo PDO restituito nella colonna di binding è PDO_PARAM_INT, il valore restituito da una colonna integer è un valore int anche se SQLSRV_ATTR_FETCHES_NUMERIC_TYPE è disattivata.|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|Consente di impostare il timeout in secondi della query.<br /><br />Il valore predefinito è 0, vale a dire che il driver attende i risultati per un periodo illimitato.<br /><br />I numeri negativi non sono consentiti.|  
-|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|Consente di impostare la dimensione del buffer di query.<br /><br />Il valore predefinito è 10240 KB, se non diversamente specificato nel file PHP. ini.<br /><br />Non sono consentiti i numeri negativi e zero.<br /><br />Per ulteriori informazioni sulle query che creano un cursore sul lato client, vedere [tipi di cursore &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|Consente di impostare la dimensione del buffer di query.<br /><br />Il valore predefinito è 10240 KB, se non viene specificato nel file PHP. ini.<br /><br />Lo zero e i numeri negativi non sono consentiti.<br /><br />Per altre informazioni sulle query, vedere [Tipi di cursore &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
   
-Il PDO elabora alcuni attributi predefiniti e richiede al driver di elaborare gli altri. Tutti gli attributi personalizzati e le opzioni di connessione vengono elaborati dal driver. Un attributo non supportato, l'opzione di connessione o un valore non supportato viene segnalato in base all'impostazione di PDO:: attr_errmode.  
+Il PDO elabora alcuni attributi predefiniti e richiede al driver di elaborare gli altri. Tutti gli attributi personalizzati e le opzioni di connessione vengono elaborati dal driver. Eventuali attributi, opzioni di connessione o valori non supportati vengono segnalati in base all'impostazione di PDO::ATTR_ERRMODE.  
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
   

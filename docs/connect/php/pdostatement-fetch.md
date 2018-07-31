@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Fetch | Documenti Microsoft'
+title: 'Pdostatement:: Fetch | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308420"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019999"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,19 +34,19 @@ mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset
 ```  
   
 #### <a name="parameters"></a>Parametri  
-$*fetch_style*: simbolo (intero) facoltativo che specifica il formato della riga di dati. Vedere la sezione Osservazioni per l'elenco di valori possibili per $*fetch_style*. Il valore predefinito è PDO::FETCH_BOTH. $*fetch_style* l'operazione di recupero metodo esegue l'override di $*fetch_style* specificato nel metodo PDO:: query.  
+$*fetch_style*: simbolo (intero) facoltativo che specifica il formato dei dati della riga. Vedere la sezione Osservazioni per l'elenco dei valori possibili per $*fetch_style*. Il valore predefinito è PDO::FETCH_BOTH. $*fetch_style* nel metodo di recupero esegue l'override di $*fetch_style* specificato nel metodo PDO::query.  
   
-$*cursor_orientation*: simbolo (intero) facoltativo che indica la riga da recuperare quando l'istruzione prepare specifica `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`. Vedere la sezione Osservazioni per l'elenco di valori possibili per $*cursor_orientation*. Vedere [PDO::prepare](../../connect/php/pdo-prepare.md) per un esempio di uso di un cursore scorrevole.  
+$*cursor_orientation*: simbolo (intero) facoltativo che indica la riga da recuperare quando l'istruzione prepare specifica `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`. Vedere la sezione Osservazioni per l'elenco dei possibili valori per $*cursor_orientation*. Vedere [PDO::prepare](../../connect/php/pdo-prepare.md) per un esempio di uso di un cursore scorrevole.  
   
-$*cursor_offset*: simbolo (intero) facoltativo che specifica la riga da recuperare quando $*cursor_orientation* è PDO:: fetch_ori_abs o PDO:: fetch_ori_rel e PDO:: attr_cursor è PDO:: cursor_scroll.  
+$*cursor_offset*: simbolo (intero) facoltativo che specifica la riga da recuperare quando $*cursor_orientation* è PDO::FETCH_ORI_ABS o PDO::FETCH_ORI_REL e PDO::ATTR_CURSOR è PDO::CURSOR_SCROLL.  
   
 ## <a name="return-value"></a>Valore restituito  
 Valore misto che restituisce una riga o false.  
   
 ## <a name="remarks"></a>Remarks  
-Il cursore viene spostato automaticamente in avanti quando si chiama un'operazione di recupero. Nella tabella seguente contiene l'elenco di possibili di $*fetch_style* valori.  
+Il cursore viene spostato automaticamente in avanti quando si chiama un'operazione di recupero. Nella tabella seguente sono elencati i valori possibili di $*fetch_style*.  
   
-|$*fetch_style*|Description|  
+|$*fetch_style*|Descrizione|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|Specifica una matrice indicizzata in base al nome della colonna.|  
 |PDO::FETCH_BOTH|Specifica una matrice indicizzata in base al nome della colonna e all'ordine in base 0. Impostazione predefinita.|  
@@ -59,18 +59,18 @@ Il cursore viene spostato automaticamente in avanti quando si chiama un'operazio
   
 Se il cursore si trova alla fine del set di risultati (l'ultima riga è stata recuperata e il cursore spostato oltre il limite del set di risultati) e se il cursore è forward-only (PDO::ATTR_CURSOR = PDO::CURSOR_FWDONLY), le successive chiamate di recupero avranno esito negativo.  
   
-Se il cursore è scorrevole (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), le chiamate di recupero sposteranno il cursore all'interno del limite del set di risultati. Nella tabella seguente contiene l'elenco di possibili di $*cursor_orientation* valori.  
+Se il cursore è scorrevole (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), le chiamate di recupero sposteranno il cursore all'interno del limite del set di risultati. Nella tabella seguente sono elencati i valori possibili di $*cursor_orientation*.  
   
-|$*cursor_orientation*|Description|  
+|$*cursor_orientation*|Descrizione|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|Recupera la riga seguente. Impostazione predefinita.|  
 |PDO::FETCH_ORI_PRIOR|Recupera la riga precedente.|  
 |PDO::FETCH_ORI_FIRST|Recupera la prima riga.|  
 |PDO::FETCH_ORI_LAST|Recupera l'ultima riga.|  
-|PDO::FETCH_ORI_ABS, *num*|Recupera la riga richiesta in $*cursor_offset* dal numero di riga.|  
-|PDO::FETCH_ORI_REL, *num*|Recupera la riga richiesta in $*cursor_offset* base alla posizione relativa rispetto alla posizione corrente.|  
+|PDO::FETCH_ORI_ABS, *num*|Recupera la riga richiesta in $*cursor_offset* in base al numero di riga.|  
+|PDO::FETCH_ORI_REL, *num*|Recupera la riga richiesta in $*cursor_offset* in base alla posizione relativa rispetto alla posizione corrente.|  
   
-Se il valore specificato per $*cursor_offset* o $*cursor_orientation* risultati in una posizione di fuori limite del set di risultati, recupero avrà esito negativo.  
+Se il valore specificato per $*cursor_offset* o $*cursor_orientation* corrisponde a una posizione al di fuori del limite del set di risultati, il recupero avrà esito negativo.  
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
   

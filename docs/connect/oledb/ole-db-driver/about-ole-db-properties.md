@@ -1,5 +1,5 @@
 ---
-title: Sulle proprietà OLE DB | Documenti Microsoft
+title: Informazioni sulle proprietà OLE DB | Microsoft Docs
 description: Informazioni sulle proprietà OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 93bc309da576917777f0eddea01857ceb9702075
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a424615a54a5917d52f4144b995589345d6cb534
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665191"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105977"
 ---
 # <a name="about-ole-db-properties"></a>Informazioni sulle proprietà OLE DB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "35665191"
   
  Ogni proprietà presenta un valore, un tipo, una descrizione e un attributo di lettura/scrittura e, per le proprietà del set di righe, un indicatore che specifica se la proprietà può essere applicata alle singole colonne.  
   
- Una proprietà viene identificata da un GUID e da un numero intero che rappresenta l'ID della proprietà. Un set di proprietà è un set di tutte le proprietà che condividono lo stesso GUID. Oltre ai set di proprietà OLE DB predefiniti, il Driver OLE DB per SQL Server implementa proprietà e set di proprietà specifiche del provider in essi contenuti. Ogni proprietà appartiene a uno o più gruppi di proprietà. Un gruppo di proprietà è il gruppo di tutte le proprietà che si applicano a un particolare oggetto. Alcuni gruppi di proprietà includono i seguenti gruppi di proprietà: di inizializzazione, dell'origine dati, di sessione, del set di righe, di tabella e di colonna. In ognuno di questi gruppi sono presenti proprietà.  
+ Una proprietà viene identificata da un GUID e da un numero intero che rappresenta l'ID della proprietà. Un set di proprietà è un set di tutte le proprietà che condividono lo stesso GUID. Oltre ai set di proprietà OLE DB predefiniti, il driver OLE DB per SQL Server implementa proprietà e set di proprietà specifici del provider. Ogni proprietà appartiene a uno o più gruppi di proprietà. Un gruppo di proprietà è il gruppo di tutte le proprietà che si applicano a un particolare oggetto. Alcuni gruppi di proprietà includono i seguenti gruppi di proprietà: di inizializzazione, dell'origine dati, di sessione, del set di righe, di tabella e di colonna. In ognuno di questi gruppi sono presenti proprietà.  
   
  L'impostazione dei valori delle proprietà comporta:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "35665191"
 7.  Chiamata a un metodo per impostare proprietà e passaggio del conteggio e della matrice delle strutture DBPROPSET.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di un Driver OLE DB per SQL Server applicazione](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
+ [Creazione di un driver OLE DB per applicazione SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
  [Proprietà (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

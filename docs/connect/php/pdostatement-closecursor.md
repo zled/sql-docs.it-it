@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::closeCursor | Documenti Microsoft
+title: PDOStatement::closeCursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7795d237ab932ddb2cb7b1e45700f023ca939327
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308700"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019619"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ bool PDOStatement::closeCursor();
 Restituisce true in caso di esito positivo; in caso contrario, false.  
   
 ## <a name="remarks"></a>Remarks  
-closeCursor ha effetto quando l'opzione di connessione MultipleActiveResultSets è impostata su false.  Per ulteriori informazioni sull'opzione di connessione MultipleActiveResultSets, vedere [procedura: disabilitare il set di risultati MARS (Multiple Active)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
+closeCursor ha effetto quando l'opzione di connessione MultipleActiveResultSets è impostata su false.  Per altre informazioni sull'opzione di connessione MultipleActiveResultSets, vedere [Procedura: Disabilitare più set di risultati attivi (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
   
 Anziché chiamare closeCursor, è anche possibile limitarsi a impostare l'handle di istruzione su Null.  
   

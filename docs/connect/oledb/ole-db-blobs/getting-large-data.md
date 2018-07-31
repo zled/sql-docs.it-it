@@ -1,5 +1,5 @@
 ---
-title: Recupero di dati di grandi dimensioni | Documenti Microsoft
+title: Recupero di dati di grandi dimensioni | Microsoft Docs
 description: Recupero di dati di grandi dimensioni usando il Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7da19bac472558efadd3671e5dbfe09b5962f30f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 816d999978ff692e034bb65012cd8da46508ca8e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666201"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106181"
 ---
 # <a name="getting-large-data"></a>Recupero di dati di grandi dimensioni
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In generale, i consumer devono isolare il codice che crea un Driver OLE DB per l'oggetto di archiviazione SQL Server da un altro codice che gestisce i dati che non viene fatto riferimento tramite un **ISequentialStream** puntatore a interfaccia.  
+  I consumer devono in genere isolare il codice che crea un oggetto di archiviazione del driver OLE DB per SQL Server da altro codice che gestisce i dati a cui non si fa riferimento tramite un puntatore di interfaccia **ISequentialStream**.  
   
- In questo articolo si riferisce alle funzionalità disponibili con le funzioni seguenti:  
+ In questo articolo vengono descritte le funzionalità disponibili con le funzioni seguenti:  
   
 -   IRowset:GetData  
   
@@ -41,9 +41,9 @@ ms.locfileid: "35666201"
   
 -   ICommand::Execute  
   
- Il consumer deve recuperare una sola riga di dati in una chiamata ai **GetNextRows** metodo quando la proprietà DBPROP_ACCESSORDER, nel gruppo di proprietà set di righe è impostata su DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_ SEQUENTIALSTORAGEOBJECTS. Questo avviene perché i dati BLOB non viene memorizzato nel buffer. Se il valore di DBPROP_ACCESSORDER è DBPROPVAL_AO_RANDOM, il consumer può recuperare più righe di dati in **GetNextRows**.  
+ Il consumer deve recuperare una singola riga di dati in una chiamata al metodo **GetNextRows** quando la proprietà DBPROP_ACCESSORDER, nel gruppo di proprietà del set di righe, è impostata su DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Questo avviene perché i dati BLOB non viene memorizzato nel buffer. Se il valore di DBPROP_ACCESSORDER è impostato su DBPROPVAL_AO_RANDOM, il consumer può recuperare più righe di dati in **GetNextRows**.  
   
- Il Driver OLE DB per SQL Server non recupera dati di grandi dimensioni da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] finché non viene richiesto di farlo dal consumer. Il consumer deve associare tutti i dati di tipo short in una funzione di accesso e quindi utilizzare una o più funzioni di accesso temporanee per recuperare valori di dati di grandi dimensioni come richiesto.  
+ Il Driver OLE DB per SQL Server non recuperare i dati di grandi dimensioni da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] finché non viene richiesto di farlo dal consumer. Il consumer deve associare tutti i dati di tipo short in una funzione di accesso e quindi utilizzare una o più funzioni di accesso temporanee per recuperare valori di dati di grandi dimensioni come richiesto.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene recuperato un valore di dati di grandi dimensioni da una singola colonna:  

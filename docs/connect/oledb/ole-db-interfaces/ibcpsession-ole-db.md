@@ -1,5 +1,5 @@
 ---
-title: IBCPSession (OLE DB) | Documenti Microsoft
+title: IBCPSession (OLE DB) | Microsoft Docs
 description: Interfaccia IBCPSession (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,32 +17,32 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9a252ab45aa8f20bac2c8b73606ebdc07b8a332e
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 05cbf4799c1f8ae75fcc8a091a48c5c9cccc80c6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689484"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106117"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il **IBCPSession** interfaccia espone il supporto per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le operazioni di copia bulk basate su file. Il **IBCPSession** interfaccia viene esposta nel Driver OLE DB per SQL Server con lo stesso livello di sessioni. Il Driver OLE DB per SQL Server, gli oggetti origine dati sono factory per oggetti di sessione, in operazioni di copia bulk vengono specificate nella proprietà di connessione SSPROP_ENABLEBULKCOPY. Inoltre, la proprietà SSPROP_ENABLEFASTLOAD deve essere impostata su True.  
+  L'interfaccia **IBCPSession** espone il supporto per le operazioni di copia bulk basate su file [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il **IBCPSession** interfaccia viene esposta nel Driver OLE DB per SQL Server con lo stesso livello di sessioni. Nel driver OLE DB per SQL Server, gli oggetti origine dati sono factory per gli oggetti Session e le operazioni di copia bulk vengono specificate nella proprietà di connessione SSPROP_ENABLEBULKCOPY. Inoltre, la proprietà SSPROP_ENABLEFASTLOAD deve essere impostata su True.  
   
- La chiamata di **IDBCreateSession:: CreateSession** metodo comporterà quindi la creazione di un **BulkCopySession** oggetto. Tutti i metodi di copia bulk basate su file esposti tramite il **IBCPSession** oggetto vengono quindi chiamati con firme molto simili su questo **IBCPSession** dell'oggetto **IBCPSession**interfaccia.  
+ La chiamata al metodo **IDBCreateSession::CreateSession** comporterà quindi la creazione di un oggetto **BulkCopySession**. Tutti i metodi di copia bulk basati su file esposti tramite l'oggetto **IBCPSession** possono essere quindi chiamati con firme molto simili sull'interfaccia **IBCPSession** di questo oggetto **IBCPSession**.  
   
 > [!NOTE]  
->  Il Driver OLE DB per SQL Server supporta le operazioni di copia bulk basate sulla memoria tramite il [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) interfaccia.  
+>  Il driver OLE DB per SQL Server supporta operazioni di copia bulk basate sulla memoria tramite l'interfaccia [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md).  
   
- Per ulteriori informazioni sull'utilizzo del Driver OLE DB per SQL Server per le operazioni di copia bulk, vedere [l'esecuzione di operazioni di copia Bulk](../../oledb/features/performing-bulk-copy-operations.md).  
+ Per altre informazioni sull'utilizzo del Driver OLE DB per SQL Server per operazioni di copia bulk, vedere [esecuzione di operazioni di copia Bulk](../../oledb/features/performing-bulk-copy-operations.md).  
   
- Per un esempio che illustra come utilizzare il **IBCPSession** interfaccia, vedere [IBCPSession::BCPDone &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md).  
+ Per un esempio che illustra come usare il **IBCPSession** l'interfaccia, vedere [IBCPSession::BCPDone &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Metodo|Description|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
 |[Ibcpsession:: BCPColFmt &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)|Crea un'associazione tra variabili di programma e colonne di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[Ibcpsession:: BCPColumns &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)|Imposta il numero di campi da associare alle colonne di una tabella di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  

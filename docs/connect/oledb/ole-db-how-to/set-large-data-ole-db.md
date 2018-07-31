@@ -1,6 +1,6 @@
 ---
-title: Set di dati di grandi dimensioni (OLE DB) | Documenti Microsoft
-description: Set di dati di grandi dimensioni (OLE DB)
+title: Set di dati di grandi dimensioni (OLE DB) | Microsoft Docs
+description: Impostare dati di grandi dimensioni (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,23 +16,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4d04b6165e3c023bcd3df9c5617c700d253491ad
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 1a55907e46e65a115dd5be40b1c616dd8cc3ab9a
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665491"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106357"
 ---
 # <a name="set-large-data-ole-db"></a>Impostare dati di grandi dimensioni (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In questo esempio viene illustrato come impostare dati BLOB, creare una tabella, aggiungere un record di esempio, recuperare tale record nel set di righe e quindi impostare il valore del campo BLOB. Questo esempio non è supportato in IA64.  
   
- Per passare un puntatore al relativo oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama il **IRowsetChange:: SetData** o **IRowsetChange:: InsertRow** metodi.  
+ Per passare un puntatore al proprio oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama i metodi **IRowsetChange::SetData** o **IRowsetChange::InsertRow**.  
   
- In questo esempio richiede il database di esempio AdventureWorks, è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) pagina iniziale.  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -41,22 +41,22 @@ ms.locfileid: "35665491"
   
 #### <a name="to-set-blob-data"></a>Per impostare dati BLOB  
   
-1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare il **dwFlag** elemento di DBOBJECT struttura su STGM_READ e impostare l'elemento iid su **IID_ISequentialStream** (l'interfaccia da esporre).  
+1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare l'elemento **dwFlag** della struttura DBOBJECT su STGM_READ e impostare l'elemento iid su **IID_ISequentialStream**, ovvero l'interfaccia da esporre.  
   
 2.  Impostare le proprietà nel gruppo di proprietà DBPROPSET_ROWSET in modo che il set di righe sia aggiornabile.  
   
-3.  Creare un set di associazioni, uno per ogni colonna, utilizzando una matrice di strutture DBBINDING. Impostare il **wType** elemento nella struttura DBBINDING su DBTYPE_IUNKNOWN e **pObject** elemento in modo che punti alla struttura DBOBJECT creata.  
+3.  Creare un set di associazioni, uno per ogni colonna, utilizzando una matrice di strutture DBBINDING. Impostare l'elemento **wType** nella struttura DBBINDING su DBTYPE_IUNKNOWN e l'elemento **pObject** in modo che punti alla struttura DBOBJECT creata.  
   
 4.  Creare una funzione di accesso utilizzando le informazioni di associazione nella matrice di strutture DBBINDINGS.  
   
 5.  Chiamare **GetNextRows** per recuperare le righe successive nel set di righe. Chiamare **GetData** per leggere i dati dal set di righe.  
   
-6.  Per impostare i dati, creare un oggetto di archiviazione contenente i dati (e anche l'indicatore di lunghezza) e quindi chiamare **IRowsetChange:: SetData** (o **IRowsetChange:: InsertRow**) con la funzione di accesso che associa il Colonna BLOB.  
+6.  Per impostare i dati, creare un oggetto di archiviazione contenente i dati, nonché l'indicatore di lunghezza, e quindi chiamare **IRowsetChange::SetData** (o **IRowsetChange::InsertRow**) con la funzione di accesso che associa la colonna BLOB.  
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
- Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" per L"(local)\\\name", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente include la directory contenente msoledbsql.h.  
+### <a name="description"></a>Descrizione  
+ Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
 ### <a name="code"></a>codice  
   

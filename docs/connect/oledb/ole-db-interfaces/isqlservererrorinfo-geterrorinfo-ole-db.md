@@ -1,5 +1,5 @@
 ---
-title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) | Documenti Microsoft'
+title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) | Microsoft Docs'
 description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,21 +20,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 936924540c5c55f8e333a64d794e54af098f7279
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 124ed1cb5b91be80e9c5cec27f5dac8927cd2db0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690194"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106237"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Restituisce un puntatore a un Driver OLE DB per SQL Server SSERRORINFO struttura che contiene il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i dettagli dell'errore.  
   
- Il Driver OLE DB per SQL Server definisce la **ISQLServerErrorInfo** interfaccia degli errori. Questa interfaccia restituisce dettagli di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] errore, inclusi la gravità e stato.  
+ Il Driver OLE DB per SQL Server definisce la **ISQLServerErrorInfo** interfaccia degli errori. Questa interfaccia restituisce i dettagli di un errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], inclusi la gravità e lo stato.  
 
   
 ## <a name="syntax"></a>Sintassi  
@@ -48,23 +48,23 @@ HRESULT GetErrorInfo(
   
 ## <a name="arguments"></a>Argomenti  
  *ppSSErrorInfo*[out]  
- Puntatore a una struttura SSERRORINFO. Se il metodo ha esito negativo o non esiste alcuna [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] informazioni associate all'errore, il provider non alloca alcuna memoria e assicura che il *ppSSErrorInfo* argomento è un puntatore null nell'output.  
+ Puntatore a una struttura SSERRORINFO. Se il metodo non riesce o non sono disponibili informazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associate all'errore, il provider non alloca memoria e verifica che l'argomento *ppSSErrorInfo* sia un puntatore Null nell'output.  
   
  *ppErrorStrings*[out]  
- Puntatore a un puntatore stringa carattere Unicode. Se il metodo ha esito negativo o non esiste alcuna [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le informazioni associate a un errore, il provider non alloca alcuna memoria e assicura che il *ppErrorStrings* argomento è un puntatore null nell'output. Liberando il *ppErrorStrings* argomento con il **IMalloc:: Free** metodo libera i tre singoli membri della stringa della struttura SSERRORINFO restituita, come la memoria viene allocata in un blocco.  
+ Puntatore a un puntatore stringa carattere Unicode. Se il metodo non riesce o non sono disponibili informazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associate a un errore, il provider non alloca memoria e verifica che l'argomento *ppErrorStrings* sia un puntatore Null nell'output. Liberando l'argomento *ppErrorStrings* con il metodo **IMalloc::Free**, vengono liberati i tre singoli membri della stringa della struttura SSERRORINFO restituita, in quanto la memoria è allocata in un blocco.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  S_OK  
  Il metodo è riuscito.  
   
  E_INVALIDARG  
- Entrambi i *ppSSErrorInfo* o il *ppErrorStrings* argomento è NULL.  
+ Entrambi i *ppSSErrorInfo* o nella *ppErrorStrings* argomento era NULL.  
   
  E_OUTOFMEMORY  
- Il Driver OLE DB per SQL Server non è stato possibile allocare memoria sufficiente per completare la richiesta.  
+ Il Driver OLE DB per SQL Server non è riuscito ad allocare memoria sufficiente per completare la richiesta.  
   
 ## <a name="remarks"></a>Remarks  
- Il Driver OLE DB per SQL Server consente di allocare memoria per le stringhe SSERRORINFO e OLECHAR restituite tramite i puntatori passati dal consumer. Il consumer deve deallocare questa memoria usando il **IMalloc:: Free** metodo quando non è più necessario l'accesso ai dati dell'errore.  
+ Il driver OLE DB per SQL Server alloca memoria per le stringhe SSERRORINFO e OLECHAR restituite tramite i puntatori passati dal consumer. Il consumer deve deallocare questa memoria tramite il metodo **IMalloc::Free** quando l'accesso ai dati dell'errore non è più necessario.  
   
  La struttura SSERRORINFO viene definita nel modo seguente:  
   
@@ -82,17 +82,17 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Membro|Description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|*pwszMessage*|Messaggio di errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Viene restituito il messaggio tramite il **IErrorInfo:: GetDescription** metodo.|  
+|*pwszMessage*|Messaggio di errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il messaggio viene restituito attraverso il metodo **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui si è verificato l'errore.|  
 |*pwszProcedure*|Nome della stored procedure che genera l'errore se esso si è verificato all'interno della stessa, in caso contrario, una stringa vuota.|  
-|*lNative*|Numero di errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il numero di errore è identico a quello restituito nel *plNativeError* parametro del **ISQLErrorInfo:: Getsqlinfo** metodo.|  
+|*lNative*|Numero di errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il numero di errore è identico a quello restituito nel parametro *plNativeError* del metodo **ISQLErrorInfo::GetSQLInfo**.|  
 |*bState*|Stato dell'errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |*bClass*|Gravità dell'errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |*wLineNumber*|Quando applicabile, riga di una stored procedure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ha generato il messaggio di errore. Se non è coinvolta alcuna procedura, il valore predefinito è 1.|  
   
- Puntatori nella struttura di indirizzi nella stringa restituita di riferimento il *ppErrorStrings* argomento.  
+ I puntatori nella struttura fanno riferimento agli indirizzi nella stringa restituita nell'argomento *ppErrorStrings*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [ISQLServerErrorInfo &#40;OLE DB&#41;](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   

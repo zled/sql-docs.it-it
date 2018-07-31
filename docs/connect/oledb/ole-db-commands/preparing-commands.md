@@ -1,6 +1,6 @@
 ---
-title: Preparazione dei comandi | Documenti Microsoft
-description: Preparazione dei comandi utilizzando il Driver OLE DB per SQL Server
+title: Preparazione dei comandi | Microsoft Docs
+description: Preparazione dei comandi usando il Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ca162d2fffd23b55d53d34d32ad92a5cdbce7545
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: b5cefe4cea0c0d156c13239f24c4a97f7c90eeb0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666061"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106017"
 ---
 # <a name="preparing-commands"></a>Preparazione dei comandi
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server supporta la preparazione del comando per l'esecuzione multipla ottimizzata di un singolo comando; Tuttavia, la preparazione del comando genera un overhead e un consumer non è necessario preparare un comando per eseguirlo più volte. In genere, un comando deve essere preparato se verrà eseguito più di tre volte.  
+  Il driver OLE DB per SQL Server supporta la preparazione dei comandi per l'esecuzione multipla ottimizzata di un singolo comando. La preparazione dei comandi genera tuttavia un overhead e un consumer non ha la necessità di preparare un comando per eseguirlo più volte. In genere, un comando deve essere preparato se verrà eseguito più di tre volte.  
   
  Per motivi relativi alle prestazioni, la preparazione dei comandi viene rinviata fino all'esecuzione del comando. Questo è il comportamento predefinito. Eventuali errori nel comando da preparare verranno rilevati solo dopo l'esecuzione del comando o dell'operazione di metaproprietà. L'impostazione della proprietà di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSPROP_DEFERPREPARE su FALSE può determinare la disattivazione del comportamento predefinito.  
   
@@ -43,21 +43,21 @@ ms.locfileid: "35666061"
   
  Alcuni comandi non devono essere mai preparati, ad esempio quelli che specificano l'esecuzione di stored procedure o includono testo non valido per la creazione di stored procedure di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Se viene creata una stored procedure temporanea, il Driver OLE DB per SQL Server esegue la stored procedure temporanea, restituzione di risultati come se è stata eseguita l'istruzione stessa.  
+ Se viene creata una stored procedure temporanea, il driver OLE DB per SQL Server la esegue restituendo i risultati come se fosse stata eseguita l'istruzione stessa.  
   
- Creazione di stored procedure temporanee viene controllata dal Driver OLE DB per SQL Server-proprietà di inizializzazione specifica SSPROP_INIT_USEPROCFORPREP. Se il valore della proprietà è SSPROPVAL_USEPROCFORPREP_ON o SSPROPVAL_USEPROCFORPREP_ON_DROP, il Driver OLE DB per SQL Server tenta di creare una stored procedure quando viene preparato un comando. La creazione della stored procedure riesce se l'utente dell'applicazione dispone di autorizzazioni sufficienti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ La creazione di stored procedure temporanee viene controllata dalla proprietà di inizializzazione specifica del driver OLE DB per SQL Server denominata SSPROP_INIT_USEPROCFORPREP. Se il valore della proprietà è SSPROPVAL_USEPROCFORPREP_ON o SSPROPVAL_USEPROCFORPREP_ON_DROP, il driver OLE DB per SQL Server tenta di creare una stored procedure quando viene preparato un comando. La creazione della stored procedure riesce se l'utente dell'applicazione dispone di autorizzazioni sufficienti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Per i consumer che si disconnettono raramente, la creazione di stored procedure temporanee può richiedere notevoli risorse di **tempdb**, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database di sistema in cui vengono creati oggetti temporanei. Quando il valore di SSPROP_INIT_USEPROCFORPREP è sspropval_useprocforprep _ ON, le stored procedure temporanee create dal Driver OLE DB per SQL Server vengono eliminate solo quando la sessione che ha creato il comando perde la connessione all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se la connessione in oggetto è quella predefinita, creata al momento dell'inizializzazione dell'origine dati, la stored procedure temporanea viene eliminata solo quando l'origine dati diventa non inizializzata.  
+ Per i consumer che si disconnettono raramente, la creazione di stored procedure temporanee può richiedere risorse significative di **tempdb**, ovvero il database di sistema di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel quale vengono creati gli oggetti temporanei. Quando il valore di SSPROP_INIT_USEPROCFORPREP è SSPROPVAL_USEPROCFORPREP_ ON, le stored procedure temporanee create dal driver OLE DB per SQL Server vengono eliminate solo quando la sessione che ha creato il comando perde la connessione all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se la connessione in oggetto è quella predefinita, creata al momento dell'inizializzazione dell'origine dati, la stored procedure temporanea viene eliminata solo quando l'origine dati diventa non inizializzata.  
   
- Quando il valore di SSPROP_INIT_USEPROCFORPREP è SSPROPVAL_USEPROCFORPREP_ON_DROP, le procedure Driver OLE DB per SQL Server temporaneo archiviate vengono eliminate quando si verifica una delle operazioni seguenti:  
+ Quando il valore di SSPROP_INIT_USEPROCFORPREP è SSPROPVAL_USEPROCFORPREP_ON_DROP, le store procedure temporanee del driver OLE DB per SQL Server vengono eliminate quando si verifica una delle situazioni seguenti:  
   
--   Il consumer utilizza **ICommandText:: SetCommandText** per indicare un nuovo comando.  
+-   Il consumer usa **ICommandText::SetCommandText** per indicare un nuovo comando.  
   
--   Il consumer utilizza **ICommandPrepare::** per indicare che il testo del comando non è più necessario.  
+-   Il consumer usa **ICommandPrepare::Unprepare** per indicare che il testo del comando non è più necessario.  
   
 -   Il consumer rilascia tutti i riferimenti all'oggetto comando utilizzando la stored procedure temporanea.  
   
- Un oggetto comando dispone al massimo una stored procedure temporanea **tempdb**. Le stored procedure temporanee esistenti rappresentano il testo del comando corrente di un oggetto comando specifico.  
+ Un oggetto comando include al massimo una stored procedure temporanea in **tempdb**. Le stored procedure temporanee esistenti rappresentano il testo del comando corrente di un oggetto comando specifico.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Comandi](../../oledb/ole-db-commands/commands.md)  

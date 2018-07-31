@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: BeginTransaction | Documenti Microsoft'
+title: 'PDO:: BeginTransaction | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b5d1343a941904280c33f5a983be944c751f2f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307970"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020889"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,13 +37,13 @@ bool PDO::beginTransaction();
 true se la chiamata al metodo ha avuto esito positivo; in caso contrario, false.  
   
 ## <a name="remarks"></a>Remarks  
-La transazione avviata con PDO:: BeginTransaction termina quando [PDO:: commit](../../connect/php/pdo-commit.md) oppure [PDO:: rollback](../../connect/php/pdo-rollback.md) viene chiamato.  
+La transazione avviata con PDO::beginTransaction termina quando viene chiamato [PDO::commit](../../connect/php/pdo-commit.md) o [PDO::rollback](../../connect/php/pdo-rollback.md).  
   
 PDO::beginTransaction non è influenzato da e non influisce sul valore di PDO::ATTR_AUTOCOMMIT.  
   
 Non è consentito chiamare PDO::beginTransaction prima di terminare la chiamata PDO::beginTransaction precedente con PDO::rollback o PDO::commit.  
   
-Se questo metodo non riesce, la connessione restituisce in modalità di commit automatico.  
+Se questo metodo ha esito negativo, la connessione torna alla modalità di commit automatico.  
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
   

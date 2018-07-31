@@ -1,6 +1,6 @@
 ---
-title: Le sessioni | Documenti Microsoft
-description: Sessioni in OLE DB Driver per SQL Server
+title: Sessioni | Microsoft Docs
+description: Sessioni nel driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9bc74a5ee3fb461f641e55f3fdf9e9d540130f67
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ecb43b33acd7c2e95cf9b1335ead2ec7a42939fa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666171"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106827"
 ---
 # <a name="sessions"></a>Sessioni
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -186,12 +186,12 @@ EXIT:
 }  
 ```  
   
- Il Driver OLE DB per la connessione per gli oggetti di sessione di SQL Server a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può generare un sovraccarico significativo per le applicazioni che creano e rilasciano gli oggetti sessione continuamente. L'overhead può essere ridotto gestendo in modo efficiente il Driver OLE DB per gli oggetti di sessione di SQL Server. Il Driver OLE DB per le applicazioni di SQL Server consente di mantenere il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connessione di un oggetto di sessione attivo tramite la gestione di un riferimento in almeno un'interfaccia dell'oggetto.  
+ La connessione di oggetti di sessione del driver OLE DB per SQL Server a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può generare un overhead significativo per le applicazioni che creano e rilasciano continuamente oggetti di sessione. L'overhead può essere ridotto gestendo in modo efficiente i Driver OLE DB per gli oggetti di sessione di SQL Server. Le applicazioni del driver OLE DB per SQL Server possono mantenere attiva la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di un oggetto di sessione gestendo un riferimento in almeno un'interfaccia dell'oggetto.  
   
- La gestione di un pool di riferimenti agli oggetti di creazione del comando consente ad esempio di mantenere attive le connessioni a tali oggetti di sessione nel pool. Come oggetti di sessione sono richiesti, il codice di manutenzione del pool passa un valore valido **IDBCreateCommand** puntatore a interfaccia per il metodo dell'applicazione che richiede la sessione. Quando il metodo dell'applicazione non richiede più la sessione, restituisce di nuovo il puntatore all'interfaccia al codice di manutenzione del pool, anziché rilasciare il riferimento dell'applicazione all'oggetto di creazione del comando.  
+ La gestione di un pool di riferimenti agli oggetti di creazione del comando consente ad esempio di mantenere attive le connessioni a tali oggetti di sessione nel pool. Al momento della richiesta degli oggetti di sessione, il codice di manutenzione del pool passa un puntatore di interfaccia **IDBCreateCommand** valido al metodo dell'applicazione che richiede la sessione. Quando il metodo dell'applicazione non richiede più la sessione, restituisce di nuovo il puntatore all'interfaccia al codice di manutenzione del pool, anziché rilasciare il riferimento dell'applicazione all'oggetto di creazione del comando.  
   
 > [!NOTE]  
->  Nell'esempio precedente, il **IDBCreateCommand** interfaccia viene utilizzata perché il **ICommand** interfaccia implementa il **GetDBSession** (metodo), il metodo solo nell'ambito del set di righe o di comando che consente di determinare la sessione in cui è stato creato un oggetto. Pertanto, solo ed esclusivamente un oggetto comando consente a un'applicazione di recuperare un puntatore all'oggetto origine dati dal quale possono essere create sessioni aggiuntive.  
+>  Nell'esempio precedente l'interfaccia **IDBCreateCommand** viene usata perché l'interfaccia **ICommand** implementa il metodo **GetDBSession**, ovvero l'unico metodo nell'ambito del comando o del set di righe che consenta a un oggetto di determinare la sessione nella quale è stato creato. Pertanto, solo ed esclusivamente un oggetto comando consente a un'applicazione di recuperare un puntatore all'oggetto origine dati dal quale possono essere create sessioni aggiuntive.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetti origine dati &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  

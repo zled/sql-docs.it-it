@@ -1,5 +1,5 @@
 ---
-title: PDO::__construct | Documenti Microsoft
+title: PDO::__construct | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e426530a16fbe6d9749b505723d3251e43f94aa7
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307740"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979704"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,13 +34,13 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ```  
   
 #### <a name="parameters"></a>Parametri  
-*$dsn*: una stringa che contiene il nome del prefisso (sempre `sqlsrv`), due punti e la parola chiave Server. Ad esempio, `"sqlsrv:server=(local)"`. È possibile specificare facoltativamente altre parole chiave di connessione. Vedere [Connection Options](../../connect/php/connection-options.md) per una descrizione della parola chiave Server e di altre parole chiave di connessione. L'intera stringa *$dsn* è delimitata, quindi ogni parola chiave di connessione non deve essere delimitata singolarmente.  
+*$dsn*: stringa che contiene il nome del prefisso (sempre `sqlsrv`), due punti e la parola chiave Server. Ad esempio, `"sqlsrv:server=(local)"`. È possibile specificare facoltativamente altre parole chiave di connessione. Vedere [Connection Options](../../connect/php/connection-options.md) per una descrizione della parola chiave Server e di altre parole chiave di connessione. L'intera stringa *$dsn* è delimitata, quindi ogni parola chiave di connessione non deve essere delimitata singolarmente.  
   
 *$username*: parametro facoltativo. Stringa che contiene il nome dell'utente. Per connettersi usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , specificare l'ID di accesso. Per connettersi usando l'autenticazione di Windows, specificare `""`.  
   
 *$password*: parametro facoltativo. Stringa che contiene la password dell'utente. Per connettersi usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , specificare la password. Per connettersi usando l'autenticazione di Windows, specificare `""`.  
   
-*$driver_options*: facoltativo. È possibile specificare gli attributi di gestione Driver PDO e [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] gli attributi specifici PDO:: sqlsrv_attr_encoding, PDO:: sqlsrv_attr_direct_query. Un attributo non valido non genera un'eccezione. Gli attributi non validi generano eccezioni quando viene specificato [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
+*$driver_options*: facoltativo. È possibile specificare gli attributi di Gestione driver del PDO e gli attributi dei driver specifici di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]: PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Un attributo non valido non genera un'eccezione. Gli attributi non validi generano eccezioni quando viene specificato [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 ## <a name="return-value"></a>Valore restituito  
 Restituisce un oggetto PDO. In caso di errore, viene restituito un oggetto PDOException.  
@@ -51,9 +51,9 @@ PDOException
 ## <a name="remarks"></a>Remarks  
 È possibile chiudere un oggetto di connessione impostando l'istanza su Null.  
   
-Dopo una connessione, PDO:: ErrorCode visualizzerà 01000 anziché 00000.  
+Dopo la connessione, PDO:: ErrorCode Visualizza 01000 anziché 00000.  
   
-Se PDO::__construct non riesce per qualsiasi motivo, viene generata un'eccezione, anche se PDO:: attr_errmode è impostato su PDO:: errmode_silent.  
+Se per qualsiasi motivo PDO::__construct non viene eseguito correttamente, viene generata un'eccezione, anche se PDO::ATTR_ERRMODE è impostato su PDO::ERRMODE_SILENT.  
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
   

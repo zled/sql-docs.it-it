@@ -1,5 +1,5 @@
 ---
-title: Stabilire una connessione a un'origine dati | Documenti Microsoft
+title: Stabilire una connessione a un'origine dei dati | Microsoft Docs
 description: Stabilire una connessione a un'origine dati tramite il Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,25 +20,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7b4a864d10b109f32e552ed82d9d89868011496d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8c198bad7fbe50aff0493d25c438268efb1deeb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666101"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107037"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Avvio di una connessione a un'origine dati
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Per accedere il Driver OLE DB per SQL Server, il consumer deve prima creare un'istanza di un oggetto origine dati chiamando il **CoCreateInstance** metodo. Un identificatore univoco di classe (CLSID) identifica ogni provider OLE DB. Per il Driver OLE DB per SQL Server, l'identificatore di classe è CLSID_MSOLEDBSQL. È inoltre possibile utilizzare il simbolo MSOLEDBSQL_CLSID che verrà risolto per il Driver OLE DB per SQL Server che viene utilizzata per msoledbsql.h cui si fa riferimento.  
+  Per accedere al driver OLE DB per SQL Server, il consumer deve prima creare un'istanza di un oggetto origine dati chiamando il metodo **CoCreateInstance**. Un identificatore univoco di classe (CLSID) identifica ogni provider OLE DB. Per il Driver OLE DB per SQL Server, l'identificatore di classe è CLSID_MSOLEDBSQL. È anche possibile usare il simbolo MSOLEDBSQL_CLSID che verrà risolto al Driver OLE DB per SQL Server che viene usato in msoledbsql.h cui si fa riferimento.  
   
- L'origine dati oggetto espone il **IDBProperties** interfaccia, il consumer utilizza per fornire informazioni di autenticazione di base, ad esempio nome del server, nome del database, l'ID utente e password. Il **IDBProperties:: SetProperties** metodo viene chiamato per impostare queste proprietà.  
+ L'oggetto origine dati espone l'interfaccia **IDBProperties** usata dal consumer per fornire informazioni di base sull'autenticazione, ad esempio il nome del server, il nome del database, l'ID utente e la password. Per impostare queste proprietà, viene chiamato il metodo **IDBProperties::SetProperties**.  
   
  Se nel computer sono in esecuzione più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il nome del server viene specificato come NomeServer\NomeIstanza.  
   
- L'oggetto origine dati espone anche il **IDBInitialize** interfaccia. Dopo aver impostate le proprietà, viene stabilita connessione all'origine dati chiamando il **IDBInitialize:: Initialize** metodo. Esempio:  
+ L'oggetto origine dati espone anche l'interfaccia **IDBInitialize**. Dopo aver impostato le proprietà, la connessione all'origine dati viene stabilita chiamando il metodo **IDBInitialize::Initialize**. Ad esempio  
   
 ```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL,   
@@ -48,7 +48,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
                  (void **) &pIDBInitialize)  
 ```
   
- Questa chiamata a **CoCreateInstance** crea un singolo oggetto della classe associata CLSID_MSOLEDBSQL (CSLID associato a dati e al codice che verrà utilizzato per creare l'oggetto). IID_IDBInitialize è un riferimento all'identificatore dell'interfaccia (**IDBInitialize**) da utilizzare per comunicare con l'oggetto.  
+ Questa chiamata a **CoCreateInstance** crea un solo oggetto della classe associato a CLSID_MSOLEDBSQL (CSLID associato ai dati e al codice che verranno usati per creare l'oggetto). IID_IDBInitialize è un riferimento all'identificatore dell'interfaccia (**IDBInitialize**) da usare per comunicare con l'oggetto.  
   
  L'esempio seguente viene illustrato come inizializzare e stabilire una connessione all'origine dati.
   

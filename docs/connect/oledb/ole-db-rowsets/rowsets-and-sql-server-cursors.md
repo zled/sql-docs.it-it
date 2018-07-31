@@ -1,6 +1,6 @@
 ---
-title: Set di righe e cursori del Server SQL | Documenti Microsoft
-description: Cursori di SQL Server e i set di righe
+title: I set di righe e cursori SQL Server | Microsoft Docs
+description: Set di righe e cursori SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0860e164edcff6f4f89f1ac5ece5624d11d4568e
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: de602cbb2452c0d9d4201de89d7573a23c2704bc
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689604"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107187"
 ---
-# <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori di Server SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori Server SQL
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -64,7 +64,7 @@ ms.locfileid: "35689604"
   
     -   Non supportano le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] che restituiscono più di un singolo set di risultati.  
   
- I consumer possono richiedere comportamenti del cursore diversi in un set di righe attraverso l'impostazione di determinate proprietà specifiche del set di righe. Se il consumer non imposta una di queste proprietà set di righe o le imposta tutte sui valori predefiniti, il Driver OLE DB per SQL Server implementa il set di righe utilizzando un set di risultati predefinito. Se una di queste proprietà è impostata su un valore diverso da quello predefinito, il Driver OLE DB per SQL Server implementa il set di righe utilizzando un cursore del server.  
+ I consumer possono richiedere comportamenti del cursore diversi in un set di righe attraverso l'impostazione di determinate proprietà specifiche del set di righe. Se il consumer non imposta alcuna proprietà del set di righe o le imposta tutte sui rispettivi valori predefiniti, il driver OLE DB per SQL Server implementa il set di righe usando un set di risultati predefinito. Se una di queste proprietà è impostata su un valore diverso da quello predefinito, il driver OLE DB per SQL Server implementa il set di righe usando un cursore del server.  
   
  Le seguenti proprietà set di righe indirizzare il Driver OLE DB per SQL Server da usare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursori. Alcune proprietà possono essere combinate con altre senza rischi. Un set di righe che indica le proprietà DBPROP_IRowsetScroll e DBPROP_IRowsetChange, ad esempio, sarà un set di righe del segnalibro che esibisce un comportamento di aggiornamento immediato. Altre proprietà si escludono a vicenda. Un set di righe che esibisce DBPROP_OTHERINSERT, ad esempio, non può contenere segnalibri.  
   
@@ -75,13 +75,13 @@ ms.locfileid: "35689604"
 |DBPROP_BOOKMARKS o DBPROP_LITERALBOOKMARKS|VARIANT_TRUE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe è sequenziale e supporta solo lo scorrimento in avanti e il recupero. Il posizionamento relativo delle righe è supportato. Il testo del comando può contenere una clausola ORDER BY.|  
 |DBPROP_OWNUPDATEDELETE o DBPROP_OWNINSERT o DBPROP_OTHERUPDATEDELETE|VARIANT_TRUE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe supporta lo scorrimento e il recupero in entrambe le direzioni. Il posizionamento relativo delle righe è supportato. Il testo del comando può contenere una clausola ORDER BY.|  
 |DBPROP_OTHERINSERT|VARIANT_TRUE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe supporta lo scorrimento e il recupero in entrambe le direzioni. Il posizionamento relativo delle righe è supportato. Il testo del comando può includere una clausola ORDER BY se nelle colonne di riferimento esiste un indice.<br /><br /> DBPROP_OTHERINSERT non può essere VARIANT_TRUE se il set di righe contiene segnalibri. Il tentativo di creare un set di righe con questi segnalibri e questa proprietà di visibilità causa un errore.|  
-|DBPROP_IRowsetLocate o DBPROP_IRowsetScroll|VARIANT_TRUE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe supporta lo scorrimento e il recupero in entrambe le direzioni. I segnalibri e il posizionamento assoluto tramite il **IRowsetLocate** interfaccia sono supportati nel set di righe. Il testo del comando può contenere una clausola ORDER BY.<br /><br /> DBPROP_IRowsetLocate e DBPROP_IRowsetScroll richiedono segnalibri nel set di righe. Il tentativo di creare un set di righe con segnalibri e DBPROP_OTHERINSERT impostato su VARIANT_TRUE causa un errore.|  
+|DBPROP_IRowsetLocate o DBPROP_IRowsetScroll|VARIANT_TRUE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe supporta lo scorrimento e il recupero in entrambe le direzioni. I segnalibri e il posizionamento assoluto tramite l'interfaccia **IRowsetLocate** sono supportati nel set di righe. Il testo del comando può contenere una clausola ORDER BY.<br /><br /> DBPROP_IRowsetLocate e DBPROP_IRowsetScroll richiedono segnalibri nel set di righe. Il tentativo di creare un set di righe con segnalibri e DBPROP_OTHERINSERT impostato su VARIANT_TRUE causa un errore.|  
 |DBPROP_IRowsetChange o DBPROP_IRowsetUpdate|VARIANT_TRUE|È possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe è sequenziale e supporta solo lo scorrimento in avanti e il recupero. Il posizionamento relativo delle righe è supportato. Tutti i comandi che supportano i cursori aggiornabili possono supportare queste interfacce.|  
-|DBPROP_IRowsetLocate o DBPROP_IRowsetScroll e DBPROP_IRowsetChange o DBPROP_IRowsetUpdate|VARIANT_TRUE|È possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe supporta lo scorrimento e il recupero in entrambe le direzioni. I segnalibri e il posizionamento assoluto tramite **IRowsetLocate** sono supportati nel set di righe. Il testo del comando può contenere una clausola ORDER BY.|  
+|DBPROP_IRowsetLocate o DBPROP_IRowsetScroll e DBPROP_IRowsetChange o DBPROP_IRowsetUpdate|VARIANT_TRUE|È possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe supporta lo scorrimento e il recupero in entrambe le direzioni. I segnalibri e il posizionamento assoluto tramite l'interfaccia **IRowsetLocate** sono supportati nel set di righe. Il testo del comando può contenere una clausola ORDER BY.|  
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe supporta solo lo scorrimento in avanti. Il posizionamento relativo delle righe è supportato. Il testo del comando può includere una clausola ORDER BY se nelle colonne di riferimento esiste un indice.<br /><br /> DBPROP_IMMOBILEROWS è disponibile solo in set di righe che possono mostrare righe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inserite dai comandi in altre sessioni o da altri utenti. Il tentativo di aprire un set di righe con la proprietà impostata su VARIANT_FALSE in qualsiasi set di righe per il quale DBPROP_OTHERINSERT non può essere VARIANT_TRUE genera un errore.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe supporta solo lo scorrimento in avanti. Il posizionamento relativo delle righe è supportato. Il testo del comando può contenere una clausola ORDER BY a meno che non sia vincolato da un'altra proprietà.|  
   
- Un Driver OLE DB per SQL Server set di righe supportato da un cursore del server possono essere creato facilmente in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella di base o una vista utilizzando il **IOpenRowset:: OPENROWSET** metodo. Specificare la tabella o vista in base al nome, passando il set di righe richiesto proprietà consente di impostare il *rgPropertySets* parametro.  
+ Un set di righe del driver OLE DB per SQL Server supportato da un cursore del server può essere creato facilmente in una vista o in una tabella di base di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il metodo **IOpenRowset::OpenRowset**. Specificare la tabella o la vista in base al nome, passando i set di proprietà del set di righe richiesti nel parametro *rgPropertySets*.  
   
  Il testo del comando che crea un set di righe è limitato quando il consumer prevede che il set di righe sia supportato da un cursore del server. In particolare, il testo del comando è limitato a una singola istruzione SELECT che restituisce un solo risultato del set di righe o a una stored procedure che implementa una singola istruzione SELECT che restituisce un solo risultato del set di righe.  
   
@@ -152,9 +152,9 @@ ms.locfileid: "35689604"
  Dalla raccolta specificata di proprietà del set di righe, ottenere un subset di proprietà elencate nelle tabelle precedenti. Dividere queste proprietà in due sottogruppi a seconda del valore del flag, obbligatorio (T, F) o facoltativo (-), di ogni proprietà del set di righe. Per ogni modello di cursore, iniziare dalla prima tabella e spostarsi da sinistra verso destra. Confrontare i valori delle proprietà nei due sottogruppi e i valori delle proprietà corrispondenti in quella colonna. Verrà selezionato il modello di cursore in cui corrispondono include tutte le proprietà obbligatorie e con il minor numero di proprietà facoltative non corrispondenti. Se è disponibile più di un modello di cursore, verrà scelto quello all'estrema sinistra.  
   
 ## <a name="sql-server-cursor-block-size"></a>Dimensioni del blocco del cursore di SQL Server  
- Quando un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursore supporterà un Driver OLE DB per SQL Server set di righe, il numero di elementi nella riga gestione parametro di matrice del **IRowset:: GetNextRows** o il **IRowsetLocate:: GetRowsAt** metodi definisce la dimensione del blocco del cursore. Le righe indicate dagli handle nella matrice rappresentano i membri del blocco del cursore.  
+ Quando un cursore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta un set di righe del driver OLE DB per SQL Server, il numero di elementi nel parametro di matrice dell'handle di riga dei metodi **IRowset::GetNextRows** o **IRowsetLocate::GetRowsAt** definisce le dimensioni del blocco del cursore. Le righe indicate dagli handle nella matrice rappresentano i membri del blocco del cursore.  
   
- Per il set di righe che supportano i segnalibri, gli handle di riga recuperati tramite il **IRowsetLocate:: Getrowsbybookmark** il metodo per definire i membri del blocco del cursore.  
+ Per i set di righe che supportano i segnalibri, gli handle di riga recuperati tramite il metodo **IRowsetLocate::GetRowsByBookmark** definiscono i membri del blocco del cursore.  
   
  Indipendentemente dal metodo utilizzato per popolare il set di righe e formare il blocco del cursore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il blocco del cursore è attivo fino all'esecuzione del metodo di recupero righe successivo sul set di righe.  
   

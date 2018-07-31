@@ -1,5 +1,5 @@
 ---
-title: Oggetti origine dati persistenti | Documenti Microsoft
+title: Oggetti origine dati persistenti | Microsoft Docs
 description: Oggetti origine dati persistenti
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 174bd7985cacf33a1cb62988204d8b0cec99b89b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665611"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106947"
 ---
 # <a name="persisted-data-source-objects"></a>Oggetti origine dati persistenti
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "35665611"
 ## <a name="examples"></a>Esempi  
  **A. Rendere persistente l'inizializzazione dell'origine dati:**  
   
- In questo esempio viene illustrata una funzione che rende persistenti le proprietà di inizializzazione dell'origine dati definendo un server, un database e l'utilizzo della Modalità di autenticazione di Windows per la connessione. Il nome del server e il nome di database vengono ricevuti nel *pLocation* e *pDatasource* parametri della funzione.  
+ In questo esempio viene illustrata una funzione che rende persistenti le proprietà di inizializzazione dell'origine dati definendo un server, un database e l'utilizzo della Modalità di autenticazione di Windows per la connessione. Il nome del server e il nome del database vengono ricevuti nei parametri *pLocation* e *pDatasource* della funzione.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -233,7 +233,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- Il **IPersistFile:: Save** metodo può essere chiamato prima o dopo la chiamata **IDBInitialize:: Initialize**. La chiamata al metodo dopo una corretta restituzione da **IDBInitialize:: Initialize** assicura una specifica origine dati valido è persistente.  
+ Il metodo **IPersistFile::Save** può essere chiamato prima o dopo la chiamata al metodo **IDBInitialize::Initialize**. Se si chiama il metodo al termine del completamento di **IDBInitialize::Initialize** viene resa persistente una specifica di origine dati valida.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetti origine dati &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  

@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchColumn | Documenti Microsoft
+title: PDOStatement::fetchColumn | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20e79158a2b38dac6799e9affe7ac4bd656ff4f3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308885"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983245"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>Parametri  
-$*col*: intero facoltativo che indica il numero di colonna in base zero. Il valore predefinito è 0 (la prima colonna della riga).  
+$*column_number*: valore intero facoltativo che indica il numero di colonna in base zero. Il valore predefinito è 0 (la prima colonna della riga).  
   
 ## <a name="return-value"></a>Valore restituito  
 Una colonna oppure false se non sono presenti più righe.  
