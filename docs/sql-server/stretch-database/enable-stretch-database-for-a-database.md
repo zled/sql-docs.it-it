@@ -44,8 +44,7 @@ ms.locfileid: "37999483"
   
 -   Recuperare le informazioni sulla connessione e sull'account di accesso necessarie per creare un nuovo server di Azure o selezionare un server di Azure esistente.  
   
-##  <a name="EnableTSQLServer">
-            </a> Prerequisito: abilitare Stretch Database nel server  
+##  <a name="EnableTSQLServer"></a> Prerequisito: abilitare Stretch Database nel server  
  Prima di abilitare Stretch Database in un database o una tabella, è necessario abilitarlo nel server locale. Questa operazione richiede le autorizzazioni sysadmin o serveradmin.  
   
 -   Se si dispone delle autorizzazioni amministrative necessarie, la procedura guidata **Abilitare il database per l'estensione** configura il server per Estensione.  
