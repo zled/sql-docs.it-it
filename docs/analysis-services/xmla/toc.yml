@@ -1,0 +1,24 @@
+- name: Guida di riferimento a XML for Analysis (XMLA)
+  href: xml-for-analysis-xmla-reference.md
+- name: Conformità a XML for Analysis (XMLA)
+  href: xml-for-analysis-compliance-xmla.md
+- name: Tipi di dati XMLA
+  href: ../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md
+- name: Elementi XMLA - Comandi
+  href: ../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md
+- name: Elementi XMLA - Intestazioni
+  href: ../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md
+- name: Elementi XMLA - Proprietà
+  href: ../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md
+- name: Elementi XMLA - Metodi - Discover
+  href: xml-elements-methods-discover.md
+- name: Elementi XMLA - Metodi - Execute
+  href: xml-elements-methods-execute.md
+- name: Elementi XMLA - Metodi
+  href: xml-elements-methods.md
+- name: Elementi XMLA - Oggetti - DiscoverResponse
+  href: xml-elements-objects-discoverresponse.md
+- name: Elementi XMLA - Oggetti - ExecuteResponse
+  href: xml-elements-objects-executeresponse.md
+- name: Elementi XMLA - Oggetti
+  href: xml-elements-objects.md

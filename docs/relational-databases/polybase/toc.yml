@@ -1,0 +1,21 @@
+- name: Panoramica
+  href: polybase-guide.md
+- name: Introduzione
+  href: get-started-with-polybase.md
+- name: Riepilogo delle funzionalità
+  href: polybase-versioned-feature-summary.md
+- name: Gruppi con scalabilità orizzontale
+  href: polybase-scale-out-groups.md
+- name: Installazione
+  href: polybase-installation.md
+- name: Configurazione
+  href: polybase-configuration.md
+- name: Oggetti T-SQL
+  href: polybase-t-sql-objects.md
+- name: Query
+  href: polybase-queries.md
+- name: Risoluzione dei problemi
+  href: polybase-troubleshooting.md
+  items:
+    - name: Risolvere i problemi di connettività di PolyBase Kerberos
+      href: polybase-troubleshoot-connectivity.md

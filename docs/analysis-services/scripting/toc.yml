@@ -1,0 +1,16 @@
+- name: Analysis Services Scripting Language (ASSL per XMLA)
+  href: analysis-services-scripting-language-assl-for-xmla.md
+- name: Raccolte +
+  href: ../../analysis-services/scripting/collections/accounts-element-assl.md
+- name: Tipo di dati +
+  href: ../../analysis-services/scripting/data-type/action-data-type-assl.md
+- name: Oggetti +
+  href: ../../analysis-services/scripting/objects/account-element-assl.md
+- name: Proprietà +
+  href: ../../analysis-services/scripting/properties/access-element-assl.md
+- name: Gerarchia dei tipi di dati XML ASSL (Analysis Services Scripting Language)
+  href: analysis-services-scripting-language-xml-data-type-hierarchy-assl.md
+- name: Gerarchia di elementi XML ASSL (Analysis Services Scripting Language)
+  href: analysis-services-scripting-language-xml-element-hierarchy-assl.md
+- name: Elementi XML di Analysis Services Scripting Language (ASSL)
+  href: analysis-services-scripting-language-xml-elements-assl.md

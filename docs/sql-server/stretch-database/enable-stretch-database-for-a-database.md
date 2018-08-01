@@ -63,12 +63,10 @@ GO
   
  Per altre informazioni, vedere [Configure the remote data archive Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md) (Configurare l'opzione di configurazione remote data archive) e [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
-##  <a name="Wizard">
-            </a> Usare la procedura guidata per abilitare Stretch Database in un database  
+##  <a name="Wizard"></a> Usare la procedura guidata per abilitare Stretch Database in un database  
  Per informazioni sulla procedura guidata Abilitare il database per l'estensione e sulle informazioni da immettere e le scelte da compiere, vedere [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)(Iniziare eseguendo la procedura guidata Abilitare il database per l'estensione).  
   
-##  <a name="EnableTSQLDatabase">
-            </a> Usare Transact-SQL per abilitare Stretch Database in un database  
+##  <a name="EnableTSQLDatabase"></a> Usare Transact-SQL per abilitare Stretch Database in un database  
  Prima di abilitare Stretch Database nelle singole tabelle, è necessario abilitarlo nel database.  
   
  L'abilitazione di Stretch Database in un database o una tabella richiede autorizzazioni db_owner. L'abilitazione di Stretch Database in un database richiede anche le autorizzazioni CONTROL DATABASE.  

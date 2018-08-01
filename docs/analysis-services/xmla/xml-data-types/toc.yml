@@ -1,0 +1,12 @@
+- name: Tipi di dati XMLA
+  href: xml-data-types-xmla.md
+- name: Tipo di dati EmptyResult (XMLA)
+  href: emptyresult-data-type-xmla.md
+- name: Tipo di dati EnumString (XMLA)
+  href: enumstring-data-type-xmla.md
+- name: Tipo di dati MDDataSet (XMLA)
+  href: mddataset-data-type-xmla.md
+- name: Tipo di dati Resultset (XMLA)
+  href: resultset-data-type-xmla.md
+- name: Tipo di dati Rowset (XMLA)
+  href: rowset-data-type-xmla.md
