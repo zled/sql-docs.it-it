@@ -1,7 +1,7 @@
 ---
 title: Aggiungere parametri a un report per dispositivi mobili | Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 11/01/2016
+ms.date: 07/30/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: mobile-reports
@@ -15,19 +15,19 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6b0f444dbae81f05a28ff9cea6102d63aef317f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a854a49884c6a2f1bd93794a7854d30dc1e2d3d
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018383"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359608"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>Aggiungere parametri a un report per dispositivi mobili | Reporting Services
-È possibile creare report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] con parametri in modo che l'autore e i lettori dei report possano filtrare i report stessi. I report con parametri possono essere anche la destinazione di un [drill-through da un report di origine](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md). 
+È possibile creare un report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] con parametri in modo che l'autore e i lettori dei report possano filtrare i report stessi. Un report con parametri può essere anche la destinazione di un [drill-through da un report di origine](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md). 
 
-Per creare un report per dispositivi mobili con parametri, iniziare con un set di dati condiviso con almeno un parametro. Per altre informazioni, vedere [Creare un set di dati condiviso o un set di dati incorporato (Generatore report e SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+Per creare un report per dispositivi mobili con parametri, iniziare con un set di dati condiviso con almeno un parametro. Per altre informazioni, vedere [Creare un set di dati condiviso o un set di dati incorporato (Generatore report e SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md). I report per dispositivi mobili non supportano valori null per i parametri predefiniti, quindi verificare che i parametri abbiano valori predefiniti diversi da null.
 
-Dopo aver aggiunto i parametri a un report per dispositivi mobili, creare un URL per [aprire il report con parametri della stringa di query](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md).
+Dopo aver aggiunto i parametri a un report per dispositivi mobili, creare un URL per [aprire il report con parametri della stringa di query](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md). 
 
 1. Nella barra superiore del portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] selezionare **Nuovo** > **Report per dispositivi mobili**.  
   
