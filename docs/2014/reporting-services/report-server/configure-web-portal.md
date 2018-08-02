@@ -75,7 +75,7 @@ ms.locfileid: "37299761"
   
 4.  Fare clic su **Applica**.  
   
-5.  Se si utilizza [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o Windows Server 2008, potrebbe essere necessario completare altri passaggi per utilizzare Gestione report. Per altre informazioni, vedere [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+5.  Se si utilizza [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o Windows Server 2008, potrebbe essere necessario completare altri passaggi per utilizzare Gestione report. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="ConfigureSpecificURL"></a> Configurare Gestione report per l'utilizzo dell'URL di un server di report specifico  
  Quando si configurano gli URL nello strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , Gestione report rileva e utilizza automaticamente gli URL nuovi e aggiornati per il server di report eseguito nella stessa istanza del server. Se la distribuzione richiede l'utilizzo di un unico URL statico per tutte le richieste del server di report, è possibile specificare tale URL nel file RSReportServer.config.  
@@ -117,7 +117,7 @@ ms.locfileid: "37299761"
   
 4.  Nel computer di Gestione report modificare le impostazioni di configurazione in RSReportServer.config in modo da puntare all'istanza del server di report remoto. All'avvio, Gestione report leggerà il file di configurazione per ottenere l'URL del server di report:  
   
-    1.  Aprire RSReportServer.config in un editor di testo. Per impostazione predefinita, si trova in \Programmi\Microsoft SQL Server\MSRS11. \< *instancename*> Services\ReportServer..  
+    1.  Aprire RSReportServer.config in un editor di testo. Per impostazione predefinita, si trova in \Programmi\Microsoft SQL Server\MSRS11. \< *instancename*> Services\ReportServer.  
   
     2.  Trovare `ReportServerURL`.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "37299761"
   
 #### <a name="to-turn-off-report-manager"></a>Per disattivare Gestione report  
   
-1.  Aprire il file RSReportServer.config in un editor di testo. Per impostazione predefinita, si trova in \Programmi\Microsoft SQL Server\MSRS11. \< *instancename*> Services\ReportServer..  
+1.  Aprire il file RSReportServer.config in un editor di testo. Per impostazione predefinita, si trova in \Programmi\Microsoft SQL Server\MSRS11. \< *instancename*> Services\ReportServer.  
   
 2.  Individuare **IsReportManagerEnabled**.  
   

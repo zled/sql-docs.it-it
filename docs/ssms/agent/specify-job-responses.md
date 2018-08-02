@@ -54,7 +54,7 @@ Le risposte ai processi specificano azioni che verranno eseguite dal servizio [!
 |-|-|  
 |**Descrizione**|**Argomento**|  
 |Viene descritto come notificare lo stato del processo a un operatore.|[Notify an Operator of Job Status](../../ssms/agent/notify-an-operator-of-job-status.md)|  
-|Viene descritto come scrivere lo stato del processo nel registro applicazioni di Windows.|[Write the Job Status to the Windows Application Log](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
+|Viene descritto come scrivere lo stato del processo nel registro applicazioni di Windows.|[Registrare lo stato del processo nel registro applicazioni di Windows](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Monitoraggio e risposta agli eventi](../../ssms/agent/monitor-and-respond-to-events.md)  

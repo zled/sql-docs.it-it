@@ -55,7 +55,7 @@ Se il riquadro **Dati report** non è visualizzato, scegliere **Dati report** da
     >  
     >`Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2014`  
     >  
-    >Per altre informazioni sulle stringhe di connessione, vedere: [Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+    >Per ulteriori informazioni sulle stringhe di connessione, vedere: [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
      
   
 6.  Fare clic su **Credenziali** nel riquadro sinistro e selezionare **Usa autenticazione di Windows (sicurezza integrata)**.  
@@ -66,7 +66,7 @@ Se il riquadro **Dati report** non è visualizzato, scegliere **Dati report** da
 È stata definita correttamente una connessione al database di esempio [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . Verrà successivamente creato il report. Vedere [Lezione 3: Definizione di un set di dati per il report tabella &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
   
