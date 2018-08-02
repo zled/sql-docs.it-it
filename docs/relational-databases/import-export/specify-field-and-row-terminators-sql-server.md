@@ -1,7 +1,7 @@
 ---
 title: Specificare i caratteri di terminazione del campo e della riga (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2016
+ms.date: 07/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: import-export
@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d0890d79f2277b5f1ea1676bed9f4c9b20e6590
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42e23160b367d9e977de757acc3bd6883af43479
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940256"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278679"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,13 +98,21 @@ ms.locfileid: "32940256"
 -   Per una colonna a lunghezza fissa lunga il cui spazio è utilizzato solo parzialmente da molte righe.  
   
      In questa situazione, la definizione di un carattere di terminazione può ridurre lo spazio di archiviazione, facendo sì che il campo venga considerato un campo a lunghezza variabile.  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>Specifica di `\n` come carattere di terminazione di riga per l'esportazione bulk
+
+Quando si specifica `\n` come carattere di terminazione di riga per l'esportazione bulk o si usa in modo implicito il terminatore di riga predefinito, bcp restituisce una combinazione di ritorno a capo-avanzamento riga (CRLF) come carattere di terminazione di riga. Se si vuole usare solo un carattere di avanzamento riga (LF) come terminazione di riga, come avviene in genere nei computer Unix e Linux, usare la notazione esadecimale per specificare il carattere di terminazione di riga LF. Ad esempio
+
+```cmd
+bcp -r '0x0A'
+```
+
 ### <a name="examples"></a>Esempi  
  In questo esempio viene eseguita l'esportazione bulk dei dati dalla tabella `AdventureWorks.HumanResources.Department` al file di dati `Department-c-t.txt` usando il formato carattere con la virgola come carattere di terminazione del campo e il carattere di nuova riga (\n) come terminazione di riga.  
   
  Per il comando **bcp** sono disponibili le opzioni seguenti.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**-c**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
 |**-t** `,`|Specifica la virgola (,) come carattere di terminazione del campo.|  
@@ -132,7 +140,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      È possibile specificare i caratteri di terminazione per i singoli campi di un file di formato o per l'intero file di dati utilizzando i qualificatori illustrati nella tabella seguente:  
   
-    |Qualifier|Description|  
+    |Qualifier|Descrizione|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***carattere_terminazione_campo***'**|Specifica il carattere di terminazione del campo da utilizzare per i file di dati di tipo carattere e carattere Unicode.<br /><br /> Il valore predefinito è il carattere di tabulazione (\t).|  
     |ROWTERMINATOR **='***carattere_terminazione_riga***'**|Specifica il carattere di terminazione della riga da utilizzare per i file di dati di tipo carattere e carattere Unicode.<br /><br /> Il valore predefinito è \n (carattere di nuova riga).|  
@@ -144,7 +152,14 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
      Per il provider di set di righe con lettura bulk OPENROWSET, è possibile specificare i caratteri di terminazione solo nel file di formato, ad eccezione dei tipi di dati contenenti oggetti di grandi dimensioni. Se un file di dati di tipo carattere utilizza un carattere di terminazione non predefinito, è necessario definire tale carattere nel file di formato. Per altre informazioni, vedere [Creazione di un file di formato &#40;SQL Server&#41](../../relational-databases/import-export/create-a-format-file-sql-server.md) e [Utilizzo di un file di formato per l'importazione bulk dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
   
      Per altre informazioni sulla clausola OPENROWSET BULK, vedere [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-import"></a>Specifica di `\n` come carattere di terminazione di riga per l'importazione bulk
+Quando si specifica `\n` come carattere di terminazione di riga per l'importazione bulk o si usa in modo implicito il terminatore di riga predefinito, bcp e l'istruzione BULK INSERT si aspettano una combinazione di ritorno a capo-avanzamento riga (CRLF) come carattere di terminazione di riga. Se il file di origine usa solo un carattere di avanzamento riga (LF) come terminazione di riga, come avviene in genere nei file generati in computer Unix e Linux, usare la notazione esadecimale per specificare il carattere di terminazione di riga LF. Ad esempio, in un'istruzione BULK INSERT:
+
+```sql
+    ROWTERMINATOR = '0x0A'
+```
+ 
 ### <a name="examples"></a>Esempi  
  Negli esempi di questa sezione viene eseguita l'importazione bulk di dati di tipo carattere dal file dei dati `Department-c-t.txt` creato nell'esempio precedente nella tabella `myDepartment` del database di esempio [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] . Prima di eseguire le procedure illustrate negli esempi, è necessario creare la tabella. Per crearla in base allo schema **dbo** , nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire il codice seguente:  
   

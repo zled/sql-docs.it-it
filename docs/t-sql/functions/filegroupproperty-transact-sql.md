@@ -24,55 +24,52 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: afc112a5e07197ed8b0056a7daeddb55c0c418c9
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6cdc7d89b93d8961ed6000efdef4b34c34a54a7d
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790148"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228407"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce il valore di una proprietà di un filegroup quando vengono indicati il nome di un filegroup e il nome di una proprietà.  
+Questa funzione restituisce il valore della proprietà filegroup per un valore specificato di nome e filegroup.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-FILEGROUPPROPERTY ( filegroup_name , property )  
+FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
  *filegroup_name*  
- Espressione di tipo **sysname** che rappresenta il nome del filegroup per il quale restituire le informazioni della proprietà specificata.  
+Espressione di tipo **sysname** che rappresenta il nome del filegroup per il quale `FILEGROUPPROPERTY` restituisce le informazioni sulla proprietà specificata.  
   
  *property*  
- Espressione di tipo **varchar(128)** contenente il nome della proprietà del filegroup da restituire. *property* può avere uno dei valori seguenti.  
+Espressione di tipo **varchar(128)** che restituisce il nome della proprietà del filegroup. *Property* può restituire uno di questi valori:  
   
 |valore|Descrizione|Valore restituito|  
 |-----------|-----------------|--------------------|  
-|**IsReadOnly**|Filegroup di sola lettura.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input non valido.|  
-|**IsUserDefinedFG**|Filegroup definito dall'utente.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input non valido.|  
-|**IsDefault**|Filegroup predefinito.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input non valido.|  
+|**IsReadOnly**|Filegroup di sola lettura.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = input non valido.|  
+|**IsUserDefinedFG**|Filegroup definito dall'utente.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = input non valido.|  
+|**IsDefault**|Filegroup predefinito.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = input non valido.|  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **int**  
+**int**  
   
 ## <a name="remarks"></a>Remarks  
- *filegroup_name* corrisponde alla colonna **name** nella vista del catalogo **sys.filegroups**.  
+*filegroup_name* corrisponde alla colonna **name** dalla vista del catalogo **sys.filegroups**.  
   
 ## <a name="examples"></a>Esempi  
- In questo esempio viene restituita l'impostazione della proprietà `IsDefault` per il filegroup primario nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+Questo esempio restituisce l'impostazione della proprietà `IsDefault` per il filegroup primario nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
-  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  
 GO  
 ```  
-  
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  

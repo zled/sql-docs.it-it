@@ -26,17 +26,17 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54224c2b6f977f21764553ceddfb7e7be5fd10c7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 05bb6bb4ec9a34abf7669514f2ed1c18fe83817e
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788362"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228427"
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Restituisce il numero di identificazione (ID) di file per il nome di file logico specificato del file di dati, file di log o file full-text nel database corrente.  
+Questa funzione restituisce il numero di identificazione (ID) del file per il nome logico specificato del file di dati, file di log o file full-text nel database corrente. 
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,22 +48,22 @@ FILE_IDEX ( file_name )
   
 ## <a name="arguments"></a>Argomenti  
  *file_name*  
- Espressione di tipo **sysname** che rappresenta il nome del file per il quale restituire l'ID file.  
+Un'espressione di tipo **sysname** che restituisce il valore di ID di file 'FILE_IDEX' per il nome del file. 
   
 ## <a name="return-types"></a>Tipi restituiti  
- **int**  
+**int**  
   
- **NULL** in caso di errore  
+**NULL** in caso di errore  
   
 ## <a name="remarks"></a>Remarks  
- *file_name* corrisponde al nome file logico visualizzato nella colonna **name** della vista del catalogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) o [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
+*file_name* corrisponde al nome di file logico visualizzato nella colonna **name** dalla vista del catalogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) o [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
- È possibile utilizzare FILE_IDEX in un elenco di selezione, una clausola WHERE o in tutti i casi in cui è consentita un'espressione. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+Usare `FILE_IDEX` in un elenco SELECT, una clausola WHERE o in qualsiasi posizione che supporti l'uso di un'espressione. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. Recupero dell'ID file di un file specificato  
-Nell'esempio seguente viene restituito l'ID file per il file `AdventureWorks_Data`.  
+L'esempio seguente restituisce l'ID per il file `AdventureWorks_Data`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -82,7 +82,7 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. Recupero dell'ID file di un nome file non noto  
-Nell'esempio seguente viene restituito l'ID file del file di log `AdventureWorks` mediante la selezione del nome file logico dalla vista del catalogo `sys.database_files`, dove il tipo di file è uguale a `1` (log).  
+Questo esempio restituisce l'ID del file di log `AdventureWorks`. Il frammento di codice Transact-SQL (T-SQL) consente di selezionare il nome file logico dalla vista del catalogo `sys.database_files`, in cui il tipo di file è uguale a `1` (log).  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -100,7 +100,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. Recupero dell'ID file di un file del catalogo full-text  
-Nell'esempio seguente viene restituito l'ID di un file full-text mediante la selezione del nome file logico dalla vista del catalogo `sys.database_files`, dove il tipo di file è uguale a `4` (full-text). Se non esiste un catalogo full-text, nell'esempio verrà restituito NULL.  
+Questo esempio restituisce l'ID di un file full-text. Il frammento di codice T-SQL consente di selezionare il nome file logico dalla vista del catalogo `sys.database_files`, in cui il tipo di file è uguale a `4` (full-text). Se non esiste un catalogo full-text, il codice restituisce 'NULL'.
   
 ```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  

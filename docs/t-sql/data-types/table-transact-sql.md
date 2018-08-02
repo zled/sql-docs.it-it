@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 7/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2e95b9e38ab4716ce244c8a1328a2f4d2437d769
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432240"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240683"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ Per le query che modificano le variabili di tipo **table** non vengono generati 
   
 Non è possibile creare indici in modo esplicito su variabili di tipo **table** e per le variabili di tipo **table** non vengono mantenute statistiche. A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], è stata introdotta una nuova sintassi che consente di creare determinati tipi di indice inline con la definizione della tabella.  Usando questa nuova sintassi, è possibile creare indici su variabili **tabella** come parte della definizione della tabella. In alcuni casi, è possibile ottenere un miglioramento delle prestazioni usando tabelle temporanee, che offrono statistiche e supporto completo per l'indice. Per altre informazioni sulle tabelle temporanee e la creazione di indici inline, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
 
-
 Non è possibile chiamare funzioni definite dall'utente dai vincoli CHECK, dai valori DEFAULT e dalle colonne calcolate nella dichiarazione del tipo **table**.
   
 Non sono supportate operazioni di assegnazione tra variabili di tipo **table**.
@@ -115,6 +114,23 @@ Non sono supportate operazioni di assegnazione tra variabili di tipo **table**.
 Le operazioni di rollback delle transazioni non hanno alcun effetto sulle variabili di tipo **table**, poiché tali variabili hanno un ambito limitato e non fanno parte del database persistente.
   
 Le variabili di tabella non possono essere modificate dopo la creazione.
+
+## <a name="table-variable-deferred-compilation"></a>Compilazione posticipata delle variabili di tabella
+**La compilazione posticipata delle variabili di tabella** migliora la qualità del piano e le prestazioni generali per le query che fanno riferimento a variabili di tabella. Durante l'ottimizzazione e la compilazione iniziale del piano, questa funzionalità propagherà le stime della cardinalità basate sui conteggi effettivi delle righe di variabili di tabella. Queste informazioni accurate sui conteggi di righe verranno quindi usate per l'ottimizzazione delle operazioni del piano downstream.
+
+> [!NOTE]
+> La compilazione posticipata delle variabili di tabella è una funzionalità di anteprima pubblica nel database SQL di Azure.  
+
+Con la compilazione posticipata delle variabili di tabella, la compilazione di un'istruzione che fa riferimento a una variabile di tabella viene posticipata fino alla prima esecuzione effettiva dell'istruzione. Questo comportamento di compilazione posticipata è identico a quello delle tabelle temporanee e con questo cambiamento viene usata la cardinalità effettiva invece dell'ipotesi originale basata su una sola riga. 
+
+Per abilitare l'anteprima pubblica della compilazione posticipata delle variabili di tabella, abilitare il livello di compatibilità del database 150 per il database a cui si è connessi quando si esegue la query.
+
+La compilazione posticipata delle variabili di tabella **non** modifica altre caratteristiche delle variabili di tabella. Ad esempio, questa funzionalità non aggiunge statistiche di colonna alle variabili di tabella.
+
+La compilazione posticipata delle variabili di tabella **non aumenta la frequenza di ricompilazione**.  Piuttosto, sposta la posizione di esecuzione della compilazione iniziale. Il piano memorizzato nella cache risultante viene generato in base al conteggio delle righe di variabili di tabella della compilazione posticipata iniziale. Il piano memorizzato nella cache viene riutilizzato da query consecutive fino a quando non viene rimosso o ricompilato. 
+
+Se il conteggio delle righe di variabili di tabella usato per la compilazione del piano iniziale rappresenta un valore tipico significativamente diverso da un'ipotesi di conteggio di righe fisso, le operazioni downstream ne trarranno vantaggio.  Se il conteggio delle righe di variabili di tabella varia notevolmente tra le esecuzioni, le prestazioni potrebbero non risultare migliorate da questa funzionalità.
+
   
 ## <a name="examples"></a>Esempi  
   
@@ -187,5 +203,3 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [Usare parametri con valori di tabella &#40;Motore di database&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [Hint di query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)
-  
-  

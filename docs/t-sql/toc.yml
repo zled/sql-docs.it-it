@@ -17,34 +17,9 @@
 - name: 'Esercitazione: Scrittura di istruzioni Transact-SQL'
   href: tutorial-writing-transact-sql-statements.md
   items:
-    - name: 'Lezione 1: Creazione di oggetti di database'
+    - name: 'Lezione 1: Creare ed eseguire query di oggetti di database'
       href: lesson-1-creating-database-objects.md
-      items:
-        - name: Lezione 1-1 - Creazione di un database
-          href: lesson-1-1-creating-a-database.md
-        - name: Lezione 1-2 - Creazione di una tabella
-          href: lesson-1-2-creating-a-table.md
-        - name: Lezione 1-3 - Inserimento e aggiornamento dei dati in una tabella
-          href: lesson-1-3-inserting-and-updating-data-in-a-table.md
-        - name: Lezione 1-4 - Lettura dei dati di una tabella
-          href: lesson-1-4-reading-the-data-in-a-table.md
-        - name: 'Lezione 1-5 - Riepilogo: Creazione di oggetti di database'
-          href: lesson-1-5-summary-creating-database-objects.md
-    - name: 'Lezione 2: Configurazione delle autorizzazioni per gli oggetti di database'
+    - name: 'Lezione 2: Configurare le autorizzazioni negli oggetti di database'
       href: lesson-2-configuring-permissions-on-database-objects.md
-      items:
-        - name: Lezione 2-1 - Creazione di un account di accesso
-          href: lesson-2-1-creating-a-login.md
-        - name: Lezione 2-2 - Concessione dell'accesso a un database
-          href: lesson-2-2-granting-access-to-a-database.md
-        - name: Lezione 2-3 - Creazione di viste e stored procedure
-          href: lesson-2-3-creating-views-and-stored-procedures.md
-        - name: Lezione 2-4 - Concessione dell'accesso a un oggetto di database
-          href: lesson-2-4-granting-access-to-a-database-object.md
-        - name: 'Lezione 2-5 - Riepilogo: Configurazione delle autorizzazioni per gli oggetti di database'
-          href: lesson-2-5-summary-configuring-permissions-on-database-objects.md
-    - name: 'Lezione 3: Eliminazione di oggetti di database'
+    - name: 'Lezione 3: Eliminare gli oggetti di database'
       href: lesson-3-deleting-database-objects.md
-      items:
-        - name: Lezione 3-1 - Eliminazione degli oggetti di database
-          href: lesson-3-1-deleting-database-objects.md

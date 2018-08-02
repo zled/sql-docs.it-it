@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
+ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080099"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228457"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Esercitazione: Suggerimenti e consigli per l'uso di SSMS
 Questa esercitazione offre alcuni suggerimenti aggiuntivi per l'uso di SQL Server Management Studio (SSMS). Questo articolo illustra come: 
@@ -189,6 +189,8 @@ Il log degli errori è un file che contiene i dettagli di ciò che si verifica n
     ![Trovare il log degli errori mediante query](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Trovare il percorso del log degli errori se non è possibile connettersi a SQL Server
+Il percorso per il log degli errori di SQL Server può variare a seconda delle impostazioni di configurazione. Il percorso per il log degli errori è indicato nei parametri di avvio di Gestione configurazione SQL Server. Attenersi alla procedura seguente per individuare il parametro di avvio pertinente che identifica la posizione del log degli errori di SQL Server. *Il percorso potrebbe essere diverso dal percorso indicato di seguito*. 
+
 1. Aprire Gestione configurazione SQL Server. 
 2. Espandere **Servizi**.
 3. Fare clic con il pulsante destro del mouse sull'istanza di SQL Server e quindi selezionare **Proprietà**:
