@@ -1,7 +1,7 @@
 ---
-title: Utilizzando una Stored Procedure senza parametri | Microsoft Docs
+title: Uso di una stored procedure senza parametri | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7db021b9d3fdf875c2c6074159b56d8e6cb0fd14
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 157d6f1b3948dbe697afc5af018b197ede9fec9b
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992923"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279132"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Utilizzo di una stored procedure senza parametri
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37992923"
   
  Come esempio, viene creata la seguente stored procedure nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:  
   
-```  
+```sql
 CREATE PROCEDURE GetContactFormalNames   
 AS  
 BEGIN  
@@ -44,26 +44,20 @@ BEGIN
 END  
 ```  
   
- Questa stored procedure restituisce un solo set di risultati contenente una colonna di dati che corrispondono a una combinazione di titolo, nome e cognome dei primi dieci contatti presenti nella tabella Person.Contact.  
+ Questa stored procedure restituisce un solo set di risultati contenente una colonna di dati che corrispondono a una combinazione di titolo, nome e cognome dei primi 10 contatti presenti nella tabella Person.Contact.  
   
  Nell'esempio seguente viene passata alla funzione una connessione aperta al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] e viene usato il metodo [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) per chiamare la stored procedure GetContactFormalNames.  
   
-```  
-public static void executeSprocNoParams(Connection con) {  
-   try {  
-      Statement stmt = con.createStatement();  
-      ResultSet rs = stmt.executeQuery("{call dbo.GetContactFormalNames}");  
-  
-      while (rs.next()) {  
-         System.out.println(rs.getString("FormalName"));  
-      }  
-      rs.close();  
-      stmt.close();  
-   }  
-   catch (Exception e) {  
-      e.printStackTrace();  
-   }  
-}  
+```java  
+public static void executeSprocNoParams(Connection con) throws SQLException {  
+    try(Statement stmt = con.createStatement();) {  
+
+        ResultSet rs = stmt.executeQuery("{call dbo.GetContactFormalNames}");  
+        while (rs.next()) {  
+            System.out.println(rs.getString("FormalName"));  
+        }  
+    }  
+}
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,7 +1,7 @@
 ---
 title: Uso di una stored procedure con un conteggio aggiornamenti | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,17 +14,17 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d858b255d5bdd6ce74509d36f4d0497220350694
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: b840cc9b6b8492af0cffa71986d747ac59b7dd57
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040819"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278922"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>Utilizzo di una stored procedure con i conteggi di aggiornamento
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Per modificare i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando una stored procedure, in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è disponibile la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Mediante la classe SQLServerCallableStatement è possibile chiamare le stored procedure che consentono di modificare i dati contenuti nel database e restituire un conteggio del numero di righe interessate, noto anche come conteggio aggiornamenti.  
+  Per modificare i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando una stored procedure, in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è disponibile la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Mediante la classe SQLServerCallableStatement è possibile chiamare le stored procedure che consentono di modificare i dati nel database e restituire un conteggio del numero di righe interessate, noto anche come conteggio aggiornamenti.  
   
  Dopo aver impostato la chiamata alla stored procedure usando la classe SQLServerCallableStatement, chiamare la stored procedure usando il metodo [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) o il metodo [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md). Il metodo executeUpdate restituisce un valore **int** contenente il numero di righe interessate dalla stored procedure, diversamente dal metodo execute. Se si usa il metodo execute e si desidera ottenere il conteggio del numero di righe interessate, chiamare il metodo [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) dopo avere eseguito la stored procedure.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "38040819"
   
  Come esempio viene creata la tabella e la stored procedure seguenti e vengono inseriti i dati di esempio nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   

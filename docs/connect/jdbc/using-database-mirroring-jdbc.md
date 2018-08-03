@@ -1,7 +1,7 @@
 ---
 title: Uso del mirroring (JDBC) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7528a85cd8e2eb258a89e6d7971ce0f80fa90258
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 686e62581e2c18b79f20a25be6c5cd0ec0bcb3f8
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041428"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278675"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Utilizzo del mirroring del database (JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,14 +39,14 @@ ms.locfileid: "38041428"
 ## <a name="programming-considerations"></a>Considerazioni sulla programmazione  
  Quando si verifica un errore nel server di database principale, l'applicazione client riceve errori in risposta a chiamate API che indicano che la connessione al database è stata persa. Se ciò si verifica, le modifiche al database non salvate vanno perse e si verifica il rollback della transazione. Se ciò avviene, è necessario chiudere la connessione (o rilasciare l'oggetto origine dati) e tentare di riaprirla. La nuova connessione viene reindirizzata in maniera trasparente al database mirror, che funge ora da server principale, senza che il client debba modificare la stringa di connessione o l'oggetto origine dati.  
   
- Quando viene inizialmente stabilita una connessione, il server principale invia l'identità del partner di failover al client che verrà utilizzando quando si verifica il failover. Se un'applicazione tenta di stabilire una connessione iniziale con un server principale con errori, il client non riconosce l'identità del partner di failover. Per consentire ai client di gestire questo scenario, la proprietà della stringa di connessione failoverPartner e facoltativamente il metodo di origine dati [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) consentono al client di specificare autonomamente l'identità del partner di failover. La proprietà client viene utilizzata solo in questo scenario. Se il server principale è disponibile, non viene utilizzata.  
+ Quando viene inizialmente stabilita una connessione, il server principale invia l'identità del partner di failover al client che verrà utilizzando quando si verifica il failover. Se un'applicazione tenta di stabilire una connessione iniziale con un server principale con errori, il client non riconosce l'identità del partner di failover. Per consentire ai client di gestire questo scenario, la proprietà della stringa di connessione failoverPartner e facoltativamente il metodo di origine dati [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) consentono al client di specificare autonomamente l'identità del partner di failover. La proprietà client viene usata solo in questo scenario. Se il server principale è disponibile, non viene usata.  
   
 > [!NOTE]  
 >  Se la proprietà failoverPartner viene specificata nella stringa di connessione o nell'oggetto origine dati, è necessario impostare anche la proprietà databaseName. In caso contrario, verrà generata un'eccezione. Se le proprietà failoverPartner e databaseName non sono specificate in modo esplicito, l'applicazione non tenterà di eseguire il failover in caso di errore del server di database principale. In altri termini, il reindirizzamento trasparente funziona solo per connessioni che specificano in modo esplicito le proprietà failoverPartner e databaseName. Per altre informazioni su failoverPartner e altre proprietà di stringa di connessione, vedere [impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).  
   
- Se il server del partner di failover fornito dal client non fa riferimento a un server che funge da partner di failover per il database specificato e se il server o il database a cui viene fatto riferimento si trova in una disposizione di mirroring, la connessione viene rifiutata dal server. Benché la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) fornisca il metodo [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md), questo metodo restituisce solo il nome del partner di failover specificato nella stringa di connessione o nel metodo setFailoverPartner. Per recuperare il nome dell'effettivo partner di failover usato, usare l'istruzione [!INCLUDE[tsql](../../includes/tsql_md.md)] seguente:  
+ Se il server del partner di failover fornito dal client non fa riferimento a un server che opera come partner di failover per il database specificato e se il server o il database a cui viene fatto riferimento si trova in una disposizione di mirroring, la connessione viene rifiutata dal server. Benché la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) fornisca il metodo [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md), questo metodo restituisce solo il nome del partner di failover specificato nella stringa di connessione o nel metodo setFailoverPartner. Per recuperare il nome dell'effettivo partner di failover usato, usare l'istruzione [!INCLUDE[tsql](../../includes/tsql_md.md)] seguente:  
   
-```  
+```sql
 SELECT m.mirroring_role_DESC, m.mirroring_state_DESC,  
 m.mirroring_partner_instance FROM sys.databases as db,  
 sys.database_mirroring AS m WHERE db.name = 'MirroringDBName'  
@@ -61,68 +61,52 @@ AND db.database_id = m.database_id
 ## <a name="example"></a>Esempio  
  Nel seguente esempio, viene eseguito un primo tentativo di connessione al server principale. Se il tentativo non riesce e viene generata un'eccezione, viene eseguito un tentativo di connessione al server mirror, che potrebbe essere stato promosso a nuovo server principale. Notare l'utilizzo della proprietà failoverPartner nella stringa di connessione.  
   
-```  
-import java.sql.*;  
-  
-public class clientFailover {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://serverA:1433;" +  
-         "databaseName=AdventureWorks;integratedSecurity=true;" +  
-         "failoverPartner=serverB";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-  
-      try {  
-         // Establish the connection to the principal server.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-         System.out.println("Connected to the principal server.");  
-  
-         // Note that if a failover of serverA occurs here, then an  
-         // exception will be thrown and the failover partner will  
-         // be used in the first catch block below.  
-  
-         // Create and execute an SQL statement that inserts some data.  
-         stmt = con.createStatement();  
-  
-         // Note that the following statement assumes that the   
-         // TestTable table has been created in the AdventureWorks  
-         // sample database.  
-         stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (SQLException se) {  
-         try {  
-            // The connection to the principal server failed,  
-            // try the mirror server which may now be the new  
-            // principal server.  
-            System.out.println("Connection to principal server failed, " +  
-            "trying the mirror server.");  
-            con = DriverManager.getConnection(connectionUrl);  
-            System.out.println("Connected to the new principal server.");  
-            stmt = con.createStatement();  
-            stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");  
-         }  
-         catch (Exception e) {  
-            e.printStackTrace();  
-         }  
-      }  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-      // Close the JDBC objects.  
-      finally {  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-}  
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ClientFailover {
+    public static void main(String[] args) {
+
+        String connectionUrl = "jdbc:sqlserver://serverA:1433;" 
+                + "databaseName=AdventureWorks;integratedSecurity=true;" 
+                + "failoverPartner=serverB";
+
+        // Establish the connection to the principal server.
+        try (Connection con = DriverManager.getConnection(connectionUrl); 
+                Statement stmt = con.createStatement();) {
+            System.out.println("Connected to the principal server.");
+
+            // Note that if a failover of serverA occurs here, then an
+            // exception will be thrown and the failover partner will
+            // be used in the first catch block below.
+
+            // Execute a SQL statement that inserts some data.
+
+            // Note that the following statement assumes that the
+            // TestTable table has been created in the AdventureWorks
+            // sample database.
+            stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");
+        }
+        catch (SQLException se) {
+            System.out.println("Connection to principal server failed, " + "trying the mirror server.");
+            // The connection to the principal server failed,
+            // try the mirror server which may now be the new
+            // principal server.
+            try (Connection con = DriverManager.getConnection(connectionUrl); 
+                    Statement stmt = con.createStatement();) {
+                System.out.println("Connected to the new principal server.");
+                stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");
+            }
+            // Handle any errors that may have occurred.
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

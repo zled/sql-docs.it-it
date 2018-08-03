@@ -1,7 +1,7 @@
 ---
 title: Informazioni sulle transazioni XA | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78fdb7edae90289d64d4c7fdf74ac3a12d4b115
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: e86cdc909ec6c7457094125df3965008a8849dbd
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040609"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278602"
 ---
 # <a name="understanding-xa-transactions"></a>Informazioni sulle transazioni XA
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,13 +43,13 @@ ms.locfileid: "38040609"
 ## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>Linee guida e limitazioni relative all'utilizzo di transazioni XA  
  Le seguenti linee guida aggiuntive si applicano alle transazioni a "regime di controllo stretto ("tightly-coupled")":  
   
--   Quando si utilizzano le transazioni XA con Microsoft Distributed Transaction Coordinator (MS DTC), è possibile che la versione corrente di MS DTC non supporti il comportamento dei rami XA a "regime di controllo stretto ("tightly-coupled")". In MS DTC è ad esempio presente un mapping uno-a-uno tra un ID di transazione dei rami XA (XID) e un ID di transazione MS DTC e il lavoro eseguito da ognuno dei rami XA a regime di controllo libero ("loosely-coupled") viene isolato da quello degli altri rami.  
+-   Quando si usano le transazioni XA con Microsoft Distributed Transaction Coordinator (MS DTC), è possibile che la versione corrente di MS DTC non supporti il comportamento dei rami XA a regime di controllo stretto ("tightly-coupled"). In MS DTC è ad esempio presente un mapping uno-a-uno tra un ID di transazione dei rami XA (XID) e un ID di transazione MS DTC e il lavoro eseguito da ognuno dei rami XA a regime di controllo libero ("loosely-coupled") viene isolato da quello degli altri rami.  
   
      L'hotfix fornito in [MSDTC and Tightly Coupled Transactions](http://support.microsoft.com/kb/938653) (MS DTC e transazioni a regime di controllo stretto) fornisce il supporto per i rami XA a "regime di controllo stretto" ("tightly-coupled") in caso di mapping tra più rami XA con lo stesso ID di transazione globale (GTRID) e un singolo ID di transazione MS DTC. Questo supporto consente a più rami XA a "regime di controllo stretto" ("tightly-coupled") di vedere le modifiche degli altri rami nello strumento di gestione delle risorse, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 -   Un flag [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) consente alle applicazioni di usare le transazioni XA a "regime di controllo stretto" ("tightly-coupled") con ID di transazione dei rami XA (BQUAL) diversi ma con lo stesso ID di transazione globale (GTRID) e ID di formato (FormatID). Per utilizzare questa funzionalità, è necessario impostare il [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) sul parametro del metodo XAResource.start flag:  
   
-    ```  
+    ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
@@ -96,7 +96,7 @@ ms.locfileid: "38040609"
   
 1.  Aprire la directory LOG del computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] che parteciperà alle transazioni distribuite. Selezionare e aprire il file "ERRORLOG" di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Eseguire la ricerca della frase "Using 'SQLJDBC_XA.dll' version ..." nel file "ERRORLOG".  
   
-2.  Aprire la directory Binn del computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] che parteciperà alle transazioni distribuite. Selezionare l'assembly sqljdbc_xa.dll.  
+2.  Aprire la directory Binn del computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] che parteciperà alle transazioni distribuite. Selezionare l'assembly sqljdbc_xa. dll.  
   
     -   In Windows Vista o versione successiva: fare clic con il pulsante destro del mouse su sqljdbc_xa.dll, quindi scegliere Proprietà. Fare clic sulla scheda **Dettagli**. Nel campo **Versione file** è indicata la versione del file sqljdbc_xa.dll attualmente installata nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
@@ -105,7 +105,7 @@ ms.locfileid: "38040609"
 ###  <a name="BKMK_ServerSide"></a> Configurazione delle impostazioni di timeout sul lato server per il rollback automatico delle transazioni non preparate  
   
 > [!WARNING]  
->  Questa opzione sul lato server è stata introdotta con Microsoft JDBC Driver 4.2 (e versioni successive) per SQL Server. Per ottenere il comportamento aggiornato, verificare che il file sqljdbc_xa.dll nel server sia aggiornato. Per altri dettagli sull'impostazione dei timeout lato client, vedere [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+>  Questa opzione sul lato server è stata introdotta con Microsoft JDBC Driver 4.2 (e versioni successive) per SQL Server. Per ottenere il comportamento aggiornato, verificare che il file sqljdbc_xa.dll nel server sia aggiornato. Per altre informazioni sull'impostazione dei timeout lato client, vedere [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
   
  Sono disponibili due impostazioni del Registro di sistema (valori DWORD) per controllare il comportamento di timeout delle transazioni distribuite:  
   
@@ -153,7 +153,7 @@ ms.locfileid: "38040609"
 ### <a name="configuring-the-user-defined-roles"></a>Configurazione dei ruoli definiti dall'utente  
  Per concedere a un utente specifico l'autorizzazione necessaria per partecipare alle transazioni distribuite con il driver JDBC, aggiungere l'utente al ruolo SqlJDBCXAUser. Usare, ad esempio, il codice [!INCLUDE[tsql](../../includes/tsql_md.md)] seguente per aggiungere un utente denominato 'shelby' (utente di accesso standard SQL denominato 'shelby') al ruolo SqlJDBCXAUser:  
   
-```  
+```sql
 USE master  
 GO  
 EXEC sp_grantdbaccess 'shelby', 'shelby'  
@@ -161,11 +161,11 @@ GO
 EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
 ```  
   
- I ruoli SQL definiti dall'utente vengono definiti per database. Per creare il proprio ruolo al fine di ottenere maggiore sicurezza, sarà necessario definire il ruolo in ciascun database e aggiungere gli utenti per database. Il ruolo SqlJDBCXAUser è rigorosamente definito nel database master poiché viene utilizzato per concedere l'accesso alle stored procedure estese SQL JDBC che risiedono nel master. Sarà necessario concedere prima l'accesso al master ai singoli utenti, quindi consentire l'accesso al ruolo SqlJDBCXAUser una volta connessi al database master.  
+ I ruoli SQL definiti dall'utente vengono definiti per database. Per creare il proprio ruolo al fine di ottenere maggiore sicurezza, sarà necessario definire il ruolo in ciascun database e aggiungere gli utenti per database. Il ruolo SqlJDBCXAUser è rigorosamente definito nel database master poiché viene usato per concedere l'accesso alle stored procedure estese SQL JDBC che risiedono nel master. Sarà necessario concedere prima l'accesso al master ai singoli utenti, quindi consentire l'accesso al ruolo SqlJDBCXAUser una volta connessi al database master.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```java
 import java.net.Inet4Address;  
 import java.sql.*;  
 import java.util.Random;  

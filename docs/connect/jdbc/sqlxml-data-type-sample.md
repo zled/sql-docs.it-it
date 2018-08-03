@@ -1,7 +1,7 @@
 ---
-title: Esempio del tipo di dati SQLXML | Documenti Microsoft
+title: Esempio di tipo di dati SQLXML | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,17 +14,17 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dfec22f18dd07a9961f7747ad82f2baea9f3ce8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4fa3613eacecfb6362212ae0bd1852b59583d404
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853131"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278872"
 ---
 # <a name="sqlxml-data-type-sample"></a>Esempio di tipo di dati SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Questo [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] applicazione di esempio illustra come archiviare dati XML in un database relazionale, come recuperare i dati XML da un database e come analizzare i dati XML con il **SQLXML** tipo di dati Java.  
+  Questa applicazione [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] di esempio illustra come archiviare dati XML in un database relazionale, come recuperare dati XML da un database e come analizzare dati XML con il tipo di dati Java **SQLXML**.  
   
  Negli esempi di codice di questa sezione viene utilizzato un parser Simple API for XML (SAX). SAX è uno standard sviluppato pubblicamente per l'analisi di documenti XML basata su eventi, che offre inoltre un'API per la gestione dei dati XML. Si noti che nelle applicazioni è possibile utilizzare anche altri parser XML, ad esempio Document Object Model (DOM), Streaming API for XML (StAX) o altri.  
   
@@ -33,17 +33,17 @@ ms.locfileid: "32853131"
 > [!IMPORTANT]  
 >  Per poter utilizzare l'API del parser SAX, è necessario importare l'implementazione standard di SAX dal pacchetto javax.xml.  
   
- Il file di codice per questo esempio è sqlxmlExample.java ed è disponibile nel seguente percorso:  
+ Il file di codice per questo esempio è SQLXMLExample.java ed è disponibile nel seguente percorso:  
   
- \<*directory di installazione*> \sqljdbc_\<*versione*>\\<*language*> \samples\datatypes  
+ \<*directory di installazione*> \sqljdbc_\<*versione*>\\<*linguaggio*> \samples\datatypes  
   
 ## <a name="requirements"></a>Requisiti  
- Per eseguire questa applicazione di esempio, è necessario impostare il classpath per includere il file sqljdbc4.jar. Se nel classpath manca una voce per il file sqljdbc4.jar, nell'applicazione di esempio verrà generata un'eccezione di classe non trovata. Per ulteriori informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
+ Per eseguire questa applicazione di esempio, è necessario impostare il classpath per includere il file sqljdbc4.jar. Se nel classpath manca una voce per il file sqljdbc4.jar, nell'applicazione di esempio verrà generata un'eccezione di classe non trovata. Per altre informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
   
- Inoltre, occorre accedere il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database di esempio per eseguire questa applicazione di esempio.  
+ Per eseguire questa applicazione di esempio, è inoltre necessario accedere al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)].  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, il codice di esempio stabilisce una connessione per il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] del database e quindi richiama il metodo createSampleTables.  
+ Nell'esempio seguente il codice di esempio esegue una connessione al database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] e quindi chiama il metodo createSampleTables.  
   
  Il metodo createSampleTables elimina le eventuali tabelle di test TestTable1 e TestTable2 esistenti, quindi inserisce due righe in TestTable1.  
   
@@ -51,15 +51,15 @@ ms.locfileid: "32853131"
   
  La classe ExampleContentHandler implementa un gestore di contenuto personalizzato che definisce i metodi per gli eventi del parser.  
   
- Il metodo showGetters indica come analizzare i dati dell'oggetto SQLXML utilizzando SAX, ContentHandler e XMLReader. Nell'esempio di codice viene innanzitutto creata un'istanza del gestore di contenuto personalizzato ExampleContentHandler. Viene quindi creata ed eseguita un'istruzione SQL che restituisce un set di dati da TestTable1. Viene infine ottenuto un parser SAX e vengono analizzati i dati XML.  
+ Il metodo showGetters indica come analizzare i dati dell'oggetto SQLXML usando SAX, ContentHandler e XMLReader. Nell'esempio di codice viene innanzitutto creata un'istanza del gestore di contenuto personalizzato ExampleContentHandler. Viene quindi creata ed eseguita un'istruzione SQL che restituisce un set di dati da TestTable1. Viene infine ottenuto un parser SAX e vengono analizzati i dati XML.  
   
- Il metodo showsetters indica di seguito viene illustrato come impostare il **xml** colonna utilizzando SAX, ContentHandler e ResultSet. Viene innanzitutto creato un oggetto SQLXML vuoto utilizzando il [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) metodo della classe di connessione. Viene quindi ottenuta un'istanza di un gestore di contenuto per scrivere i dati nell'oggetto SQLXML e i dati vengono successivamente scritti in TestTable1. Infine, scorrere le righe di dati contenuti nel set di risultati, il codice di esempio e Usa il [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) metodo per leggere i dati XML.  
+ Il metodo showSetters indica come impostare la colonna **xml** usando SAX, ContentHandler e ResultSet. Viene innanzitutto creato un oggetto SQLXML vuoto usando il metodo [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) della classe Connection. Viene quindi ottenuta un'istanza di un gestore di contenuto per scrivere i dati nell'oggetto SQLXML e i dati vengono successivamente scritti in TestTable1. Viene infine eseguita un'iterazione nelle righe di dati incluse nel set di risultati e viene usato il metodo [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) per leggere i dati XML.  
   
- Il metodo showTransformer indica come ottenere i dati XML da una tabella e inserirli in un'altra tabella utilizzando SAX e Transformer. Viene innanzitutto recuperato l'oggetto SQLXML di origine da TestTable1. Quindi, viene creato un oggetto SQLXML di destinazione vuoto utilizzando il [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) metodo della classe di connessione. Viene quindi aggiornato l'oggetto SQLXML di destinazione e i dati XML vengono scritti in TestTable2. Infine, scorrere le righe di dati contenuti nel set di risultati, il codice di esempio e Usa il [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) metodo per leggere i dati XML in TestTable2.  
+ Il metodo showTransformer indica come ottenere i dati XML da una tabella e inserirli in un'altra tabella utilizzando SAX e Transformer. Viene innanzitutto recuperato l'oggetto SQLXML di origine da TestTable1. Viene quindi creato un oggetto SQLXML di destinazione vuoto usando il metodo [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) della classe Connection. Viene quindi aggiornato l'oggetto SQLXML di destinazione e i dati XML vengono scritti in TestTable2. Viene infine eseguita un'iterazione nelle righe di dati incluse nel set di risultati e viene usato il metodo [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) per leggere i dati XML in TestTable2.  
   
  [!code[JDBC#UsingSQLXML1](../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo dei tipi di dati di &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)  
+ [Uso dei tipi di dati &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)  
   
   

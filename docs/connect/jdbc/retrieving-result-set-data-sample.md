@@ -1,7 +1,7 @@
 ---
 title: Recupero dei risultati Set di dati di esempio | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4d073fb21077bc5873dcb55be452e32ee5a0af3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f8fe0d97c8a8ec0f29e8a6b85542ea0627a5c6fb
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039195"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279142"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Esempio di recupero dei dati del set di risultati
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,69 +31,49 @@ ms.locfileid: "38039195"
  \<*directory di installazione*> \sqljdbc_\<*versione*>\\<*linguaggio*> \samples\resultsets  
   
 ## <a name="requirements"></a>Requisiti  
- Per eseguire questa applicazione di esempio, è necessario impostare il classpath per includere il file sqljdbc.jar o sqljdbc4.jar. Se nel classpath manca una voce per il file sqljdbc.jar o sqljdbc4.jar, nell'applicazione di esempio verrà generata un'eccezione comune di classe non trovata. Sarà inoltre necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Per altre informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
+ Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. È anche necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Per altre informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  Con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] vengono offerti i file di libreria di classi sqljdbc.jar e sqljdbc4.jar da utilizzare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. Per altre informazioni sui file JAR da scegliere, vedere [requisiti di sistema per il Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  Con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sono inclusi file di libreria di classi mssql-jdbc da usare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. Per altre informazioni sui file JAR da scegliere, vedere [requisiti di sistema per il Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente, mediante il codice di esempio viene eseguita una connessione al database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] di esempio. Quindi, utilizzando un'istruzione SQL con l'oggetto [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), viene eseguita l'istruzione SQL e i dati restituiti vengono posizionati in un oggetto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
- Quindi, il codice di esempio richiama il metodo personalizzato displayRow per ripetere le righe di dati contenuti nel set di risultati e utilizza il metodo [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) per visualizzare alcuni dei dati contenuti.  
+ Successivamente il codice di esempio chiama il metodo personalizzato displayRow per ripetere le righe di dati incluse nel set di risultati e usa il metodo [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) per visualizzare alcuni di questi dati.  
   
 ```java
-import java.sql.*;  
-  
-public class retrieveRS {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-            "databaseName=AdventureWorks;integratedSecurity=true;";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-  
-         // Establish the connection.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-  
-         // Create and execute an SQL statement that returns a  
-         // set of data and then display it.  
-         String SQL = "SELECT * FROM Production.Product;";  
-         stmt = con.createStatement();  
-         rs = stmt.executeQuery(SQL);  
-         displayRow("PRODUCTS", rs);  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-  
-   private static void displayRow(String title, ResultSet rs) {  
-      try {  
-         System.out.println(title);  
-         while (rs.next()) {  
-            System.out.println(rs.getString("ProductNumber") + " : " + rs.getString("Name"));  
-         }  
-      } catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-   }  
-}  
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class RetrieveRS {
+
+    public static void main(String[] args) {
+
+        // Create a variable for the connection string.
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+
+        try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
+            String SQL = "SELECT * FROM Production.Product;";
+            ResultSet rs = stmt.executeQuery(SQL);
+            displayRow("PRODUCTS", rs);
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void displayRow(String title,
+            ResultSet rs) throws SQLException {
+        System.out.println(title);
+        while (rs.next()) {
+            System.out.println(rs.getString("ProductNumber") + " : " + rs.getString("Name"));
+        }
+    }
+}
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

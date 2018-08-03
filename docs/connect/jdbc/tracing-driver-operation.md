@@ -1,7 +1,7 @@
 ---
 title: Creazione di tracce | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,17 +14,17 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32eecd4a6667dd25d58aa9fe09d3382f5dbc374f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991973"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279262"
 ---
 # <a name="tracing-driver-operation"></a>Creazione di tracce
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'utilizzo della traccia, o registrazione, per semplificare la risoluzione dei problemi relativi all'utilizzo del driver JDBC nell'applicazione. Per abilitare l'utilizzo delle tracce, nel driver JDBC vengono utilizzate le API di registrazione in java.util.logging, che mettono a disposizione un set di classi per la creazione degli oggetti Logger e LogRecord.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'uso della traccia, o registrazione, per semplificare la risoluzione dei problemi relativi all'uso del driver JDBC nell'applicazione. Per abilitare l'utilizzo delle tracce, nel driver JDBC vengono utilizzate le API di registrazione in java.util.logging, che mettono a disposizione un set di classi per la creazione degli oggetti Logger e LogRecord.  
   
 > [!NOTE]  
 >  Per il componente nativo (sqljdbc_xa.dll) incluso nel driver JDBC, la creazione di tracce è abilitata grazie al framework Built-In Diagnostics (BID). Per informazioni sul BID, vedere la pagina relativa alla [traccia di accesso ai dati in SQL Server](http://go.microsoft.com/fwlink/?LinkId=70042).  
@@ -39,7 +39,7 @@ ms.locfileid: "37991973"
  Nelle sezioni seguenti sono descritti i livelli di registrazione e le categorie che è possibile registrare. Vengono inoltre fornite informazioni sull'abilitazione della creazione di tracce nell'applicazione.  
   
 ## <a name="logging-levels"></a>Livelli di registrazione  
- A ciascun messaggio di log creato è associato un livello di registrazione. Tale livello determina l'importanza del messaggio. Il livello è definito dalla classe **Level** in java.util.logging. Se abilitata per un livello, la registrazione verrà abilitata per tutti i livelli superiori. In questa sezione vengono descritti i livelli di registrazione per le categorie di registrazione pubbliche e interne. Per ulteriori informazioni sulle categorie di registrazione, vedere la sezione Categorie di registrazione in questo argomento.  
+ A ciascun messaggio di log creato è associato un livello di registrazione. Tale livello determina l'importanza del messaggio. Il livello è definito dalla classe **Level** in java.util.logging. Se abilitata per un livello, la registrazione verrà abilitata per tutti i livelli superiori. In questa sezione vengono descritti i livelli di registrazione per le categorie di registrazione pubbliche e interne. Per altre informazioni sulle categorie di registrazione, vedere la sezione Categorie di registrazione in questo articolo.  
   
  Nella tabella seguente sono descritti i vari livelli di registrazione disponibili per le categorie di registrazione pubbliche.  
   
@@ -92,10 +92,10 @@ ms.locfileid: "37991973"
 |SQLServerStatement|Consente di registrare i messaggi nella classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Le applicazioni possono impostare il livello di registrazione su FINE, FINER e FINEST.|  
 |XA|Consente di registrare i messaggi per tutte le transazioni XA nella classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md). Le applicazioni possono impostare il livello di registrazione su FINE e FINER.|  
 |KerbAuthentication|Registrati messaggi relativi all'autenticazione Kerberos di tipo 4 (quando il **authenticationScheme** proprietà di connessione è impostata su **JavaKerberos**). L'applicazione può impostare il livello di registrazione su FINE o FINER.|  
-|TDS.DATA|Registra i messaggi contenenti la conversazione a livello di protocollo TDS tra il driver e SQL Server. Il contenuto dettagliato di ogni pacchetto TDS inviato e ricevuto viene registrato in formato ASCII ed esadecimale. Le credenziali di accesso (nomi utente e password) non vengono registrati. Tutti gli altri dati vengono registrati.<br /><br /> Questa categoria consente di creare messaggi molto dettagliati ed esaustivi e può essere abilitata solo impostando il livello di registrazione su FINEST.|  
+|TDS.DATA|Registra i messaggi contenenti la conversazione a livello di protocollo TDS tra il driver e SQL Server. Il contenuto dettagliato di ogni pacchetto TDS inviato e ricevuto viene registrato in formato ASCII ed esadecimale. Le credenziali di accesso (nomi utente e password) non vengono registrate. Tutti gli altri dati vengono registrati.<br /><br /> Questa categoria consente di creare messaggi molto dettagliati ed esaustivi e può essere abilitata solo impostando il livello di registrazione su FINEST.|  
 |TDS.Channel|Questa categoria consente di eseguire le tracce delle azioni del canale di comunicazione TCP con SQL Server. I messaggi registrati includono l'apertura e la chiusura di socket, nonché le operazioni di lettura e scrittura. Vengono inoltre eseguite le tracce dei messaggi correlati alla definizione di una connessione SSL (Secure Socket Layer) con SQL Server.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINE, FINER o FINEST.|  
 |TDS.Writer|Questa categoria consente di eseguire le tracce delle operazioni di scrittura nel canale TDS. Si noti che vengono eseguite le tracce solo della lunghezza delle operazioni di scrittura e non del contenuto. Vengono inoltre eseguite le tracce dei problemi quando al server viene inviato un segnale di attenzione per annullare l'esecuzione di un'istruzione.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINEST.|  
-|TDS.Reader|Questa categoria consente di eseguire le tracce di alcune operazioni di lettura dal canale TDS con livello FINEST. Con tale livello le tracce possono risultare particolarmente dettagliate. Con i livelli WARNING e SEVERE questa categoria consente di eseguire le tracce quando il driver riceve un protocollo TDS non valido da SQL Server prima della chiusura della connessione.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINER e FINEST.|  
+|TDS.Reader|Questa categoria consente di eseguire le tracce di alcune operazioni di lettura dal canale TDS con livello FINEST. Con tale livello le tracce possono risultare dettagliate. Con i livelli WARNING e SEVERE questa categoria consente di eseguire le tracce quando il driver riceve un protocollo TDS non valido da SQL Server prima della chiusura della connessione.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINER e FINEST.|  
 |TDS.Command|Questa categoria consente di eseguire la traccia delle transizioni di stato di basso livello e di altre informazioni associate all'esecuzione di comandi TDS, ad esempio le esecuzioni di istruzioni [!INCLUDE[tsql](../../includes/tsql_md.md)], i recuperi di cursori ResultSet, i commit e così via.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINEST.|  
 |TDS.TOKEN|Questa categoria consente di registrare solo i token dei pacchetti di flussi TDS e risulta meno dettagliata della categoria TDS.DATA. Può essere abilitata solo impostando il livello di registrazione su FINEST.<br /><br /> Con il livello FINEST questa categoria consente di eseguire le tracce dei token TDS quando vengono elaborati nella risposta. Con il livello SEVERE esegue le tracce quando viene rilevato un token TDS non valido.|  
 |SQLServerDatabaseMetaData|Consente di registrare i messaggi nella classe [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md). Le applicazioni possono impostare il livello di registrazione su FINE.|  
@@ -110,27 +110,27 @@ ms.locfileid: "37991973"
 ## <a name="enabling-tracing-programmatically"></a>Abilitazione delle tracce a livello di programmazione  
  La creazione di tracce può essere abilitata a livello di programmazione creando un oggetto Logger e indicando la categoria da registrare. Il codice seguente, ad esempio, consente di abilitare la registrazione per le istruzioni SQL:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.FINER);  
 ```  
   
  Per disabilitare la registrazione dal codice, utilizzare:  
   
-```  
+```java
 logger.setLevel(Level.OFF);  
 ```  
   
  Per registrare tutte le categorie disponibili, utilizzare:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc");  
 logger.setLevel(Level.FINE);  
 ```  
   
  Per disabilitare una categoria specifica, utilizzare:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.OFF);  
 ```  

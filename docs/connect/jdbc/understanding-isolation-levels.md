@@ -1,7 +1,7 @@
 ---
 title: Informazioni sui livelli di isolamento | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7c09de18ede2c5230179f4ac4df68686d9d256c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 270ccbea5a7c12e8f7188cc4ad125e346a3eddd1
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039161"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278653"
 ---
 # <a name="understanding-isolation-levels"></a>Informazioni sui livelli di isolamento
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,23 +55,23 @@ ms.locfileid: "38039161"
 |Snapshot|no|no|no|  
 |Serializable|no|no|no|  
   
- Le transazioni devono essere eseguite almeno a un livello di isolamento Repeatable read, per impedire la perdita di aggiornamenti che può verificarsi quando due transazioni recuperano entrambe la stessa riga e successivamente la aggiornano in base ai valori recuperati in origine. Se le due transazioni aggiornano le righe utilizzando una singola istruzione UPDATE e non basano l'aggiornamento sui valori recuperati in precedenza, non possono verificarsi perdite di aggiornamenti al livello di isolamento predefinito Read committed.  
+ Le transazioni devono essere eseguite almeno a un livello di isolamento Repeatable read, per impedire la perdita di aggiornamenti che può verificarsi quando due transazioni recuperano entrambe la stessa riga e successivamente la aggiornano in base ai valori recuperati in origine. Se le due transazioni aggiornano le righe usando una singola istruzione UPDATE e non basano l'aggiornamento sui valori recuperati in precedenza, non possono verificarsi perdite di aggiornamenti al livello di isolamento predefinito Read committed.  
   
  Per impostare il livello di isolamento per una transazione, è possibile usare il metodo [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Questo metodo accetta un valore **int** come argomento, basato su una delle costanti di connessione, come illustrato di seguito:  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```  
   
- Per usare il nuovo livello di isolamento dello snapshot di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile usare una delle costanti SQLServerConnection, come illustrato di seguito:  
+ Per usare il nuovo livello di isolamento dello snapshot di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile usare una delle costanti SQLServerConnection:  
   
-```  
+```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
 ```  
   
  In alternativa, è possibile utilizzare:  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```  
   

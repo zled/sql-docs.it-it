@@ -1,7 +1,7 @@
 ---
 title: Note sulla versione per il Driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,18 +14,18 @@ caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ec71defcba0a6f122d3c3ff9a098e163f07079c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 730c569e74dfafc48e7dcb5efb560022a0bbe54d
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38021124"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279152"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Note sulla versione per il Driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Aggiornamenti in Microsoft JDBC Driver 6.4 per SQL Server
-Microsoft JDBC Driver 6.4 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. I file JAR inclusi nel pacchetto di 6,4 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, il file mssql-jdbc-6.4.0.jre8.jar dal pacchetto di 6,4 è consigliabile per l'uso con Java 8. 
+Microsoft JDBC Driver 6.4 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. I file JAR nel pacchetto di 6,4 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, il file mssql-jdbc-6.4.0.jre8.jar dal pacchetto di 6,4 è consigliabile per l'uso con Java 8. 
 
 **Supporto per JDK 9**  
   
@@ -33,7 +33,7 @@ Supporto per Java Development Kit (JDK) versione 9.0, oltre a JDK 8.0 e 7.0.
   
 **Conformità a JDBC 4.3**  
   
-Supporto per la specifica Java Database Connectivity API 4.3, oltre a 4.1 e 4.2. I metodi dell'API di JDBC 4.3 vengono aggiunte ma non ancora implementati. Per informazioni dettagliate, vedere [JDBC 4.3 conformità per il Driver JDBC](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+Supporto per la specifica Java Database Connectivity API 4.3, oltre a 4.1 e 4.2. I metodi dell'API di JDBC 4.3 vengono aggiunte ma non ancora implementati. Per informazioni dettagliate, vedere [Conformità con JDBC 4.3 per JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
  
 **Aggiunta nuova proprietà di connessione: sslProtocol**
 
@@ -56,14 +56,14 @@ Ora il driver supporta i tipi di dati DATETIME e SMALLDATETIME quando si usano i
 Il Driver JDBC supporta ora i tipi di dati sql_variant da utilizzare con SQL Server. Sql_variant è anche supportato con funzionalità quali i parametri con valori di tabella (TVP) e BulkCopy con limitazioni di seguito:
 
 1. Per i valori delle Date: quando si usa TVP per popolare una tabella che contiene i valori datetime/smalldatetime/date nella colonna sql_variant, chiamata di metodi getDateTime()/getSmallDateTime()/getDate() sul set di risultati non funziona e genera l'eccezione seguente:
-    ```
+    ```java
     java.lang.String cannot be cast to java.sql.Timestamp
     ```
     Soluzione alternativa: usare invece i metodi "getString()" o "getObject()".
 
 2. Uso di TVP con Variante SQL per valori null
 
-Se si usa TVP per popolare una tabella e invia il valore NULL al tipo di colonna sql_variant, si verifica un'eccezione come inserimento valore NULL con tipo di colonna sql_variant in TVP non è attualmente supportata.
+Se si usa TVP per popolare una tabella e invia il valore NULL al tipo di colonna sql_variant, che si incontrano un'eccezione una inserimento valore NULL con tipo di colonna sql_variant in TVP non è attualmente supportata.
 
 **Implementazione di un'istruzione preparata la memorizzazione nella cache dei metadati**
 
@@ -75,10 +75,10 @@ Ora il driver JDBC supporta anche l'autenticazione integrata di Azure Active Dir
 
 **Versione aggiornata di ADAL4J per 1.4.0**
 
-Il Driver JDBC è aggiornata relativa dipendenza maven dopo azure-activedirectory-library-for-java (ADAL4J) alla versione 1.4.0. Per altre informazioni sulle dipendenze, fare riferimento a [qui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+Il Driver JDBC è aggiornata relativa dipendenza maven dopo azure-activedirectory-library-for-java (ADAL4J) alla versione 1.4.0. Per altre informazioni sulle dipendenze, vedere [qui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Aggiornamenti in Microsoft JDBC Driver 6.2 per SQL Server
-Microsoft JDBC Driver 6.2 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. Il file con estensione jar contenuti nel pacchetto 6.0 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, il file mssql-jdbc-6.2.1.jre8.jar dal pacchetto 6.2 è consigliato per l'uso con Java 8. 
+Microsoft JDBC Driver 6.2 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. I file JAR nel pacchetto 6.0 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, il file mssql-jdbc-6.2.1.jre8.jar dal pacchetto 6.2 è consigliato per l'uso con Java 8. 
 
 > [!NOTE]  
 >  Un problema con il miglioramento di memorizzazione nella cache dei metadati è stato trovato nella versione RTW 6.2 JDBC rilasciata il 29 giugno 2017. È stato eseguito il rollback il miglioramento e nuovo file con estensione jar (versione 6.2.1) verranno rilasciati 17 luglio 2017 di [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), e [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Aggiornare i progetti per l'uso di 6.2.1 rilasciare i file con estensione jar. Leggi [note sulla versione](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) per altri dettagli.
@@ -95,7 +95,7 @@ Il Driver JDBC ora utilizzabile nella JVM eseguiti in modalità di compatibilit�
 
 Il Driver JDBC include ora il supporto per: 
 * Metodo di entità e la Password per le applicazioni in cui la configurazione di Kerberos non può essere modificato o non è possibile recuperare un nuovo token o keytab. Questo metodo può essere utilizzato per l'autenticazione a un Server SQL che consente solo l'autenticazione Kerberos. 
-* Autenticazione tra aree tramite l'autenticazione integrata Kerberos di senza impostare in modo esplicito il nome SPN del server. Il driver adesso viene calcolato automaticamente l'area di autenticazione anche quando non è stato specificato.
+* Autenticazione tra aree tramite l'autenticazione integrata Kerberos di senza impostare in modo esplicito il nome SPN del server. Il driver adesso viene calcolato automaticamente l'area di autenticazione anche quando esso non è stato fornito.
 * La delega vincolata Kerberos mediante l'accettazione di rappresentare le credenziali dell'utente come un oggetto credenziali GSS tramite l'origine dati. Questa credenziale rappresentata viene quindi usata per stabilire una connessione di Kerberos. 
 
 **Aggiunta dei timeout**
@@ -106,20 +106,20 @@ Il Driver JDBC supporta ora possibile configurare i timeout seguenti che è poss
 
 ## <a name="updates-in-microsoft-jdbc-driver-61-for-sql-server"></a>Aggiornamenti in Microsoft JDBC Driver 6.1 per SQL Server
 
-Il Microsoft JDBC Driver 6.1 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. Questa è la versione iniziale open source del Driver JDBC e contiene i file mssql-jdbc-6.1.0.jre7.jar mssql-jdbc-6.1.0.jre8.jar, che corrispondono alla compatibilità tra le versioni di Java. 
+Il Microsoft JDBC Driver 6.1 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. Questa è la versione open source iniziale del Driver JDBC e contiene i file mssql-jdbc-6.1.0.jre7.jar mssql-jdbc-6.1.0.jre8.jar, che corrispondono alla compatibilità tra le versioni di Java. 
 
 ## <a name="updates-in-microsoft-jdbc-driver-60-for-sql-server"></a>Aggiornamenti in Microsoft JDBC Driver 6.0 per SQL Server
 
-Microsoft JDBC Driver 6.0 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. Il file con estensione jar contenuti nel pacchetto 6.0 sono denominate secondo la conformità con la versione dell'API di JDBC. Ad esempio, il file sqljdbc42.jar dal pacchetto 6.0 è conforme a JDBC API 4.2. Analogamente, il file sqljdbc41.jar è conforme con JDBC 4.1 di API.
+Microsoft JDBC Driver 6.0 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. I file JAR nel pacchetto 6.0 sono denominate secondo la conformità con la versione dell'API di JDBC. Ad esempio, il file sqljdbc42.jar dal pacchetto 6.0 è conforme a JDBC API 4.2. Analogamente, il file sqljdbc41.jar è conforme con JDBC 4.1 di API.
 
 Per assicurarsi che si dispone di sqljdbc41.jar o sqljdbc42.jar a destra, eseguire le seguenti righe di codice. Se l'output è "versione del Driver: versione 6.0.7507.100", è necessario il pacchetto di JDBC Driver 6.0.
-```
+```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```  
  **Crittografia sempre attiva**  
   
- Supporto per la funzionalità Crittografia sempre attiva rilasciata di recente in SQL Server 2016, una nuova funzionalità di sicurezza che assicura che i dati sensibili non siano visualizzati come testo non crittografato in un'istanza di SQL Server. Crittografia sempre attiva crittografa in modo trasparente i dati nell'applicazione, in modo che SQL Server debba gestire solo i dati crittografati e non i valori di testo non crittografato. In caso di compromissione dell'istanza di SQL o del computer host, un utente malintenzionato ottiene solo il testo crittografato dei dati sensibili. Per informazioni dettagliate, vedere [Utilizzo di Always Encrypted con il JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
+ Supporto per la funzionalità Crittografia sempre attiva rilasciata di recente in SQL Server 2016, una nuova funzionalità di sicurezza che assicura che i dati sensibili non siano visualizzati come testo non crittografato in un'istanza di SQL Server. Crittografia sempre attiva crittografa in modo trasparente i dati nell'applicazione, in modo che SQL Server debba gestire solo i dati crittografati e non i valori di testo non crittografato. In caso di compromissione dell'istanza di SQL o del computer host, un utente malintenzionato ottiene solo il testo crittografato dei dati sensibili. Per informazioni dettagliate, vedere [Uso di Always Encrypted con il JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
   
  **Internationalized Domain Name (IDN)**  
   
@@ -142,10 +142,10 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
  Il driver ora supporta le connessioni trasparenti ai gruppi di disponibilità AlwaysOn. Il driver individua rapidamente la topologia AlwaysOn corrente dell'infrastruttura server e si connette in modo trasparente al server attivo corrente.  
   
 ## <a name="updates-in-microsoft-jdbc-driver-42-for-sql-server-and-later"></a>Aggiornamenti in Microsoft JDBC Driver 4.2 per SQL Server e versioni successive  
-Microsoft JDBC Driver 4.2 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. Il file con estensione jar contenuti nel pacchetto 4.2 sono denominate secondo la conformità con la versione dell'API di JDBC. Ad esempio, il file sqljdbc42.jar dal pacchetto 4.2 è conforme a JDBC API 4.2. Analogamente, il file sqljdbc41.jar è conforme con JDBC 4.1 di API.
+Microsoft JDBC Driver 4.2 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. I file JAR nel pacchetto 4.2 sono denominate secondo la conformità con la versione dell'API di JDBC. Ad esempio, il file sqljdbc42.jar dal pacchetto 4.2 è conforme a JDBC API 4.2. Analogamente, il file sqljdbc41.jar è conforme con JDBC 4.1 di API.
 
 Per assicurarsi che si dispone di sqljdbc41.jar o sqljdbc42.jar a destra, eseguire le seguenti righe di codice. Se l'output è "versione del Driver: 4.2.6420.100", è necessario il pacchetto di Driver JDBC 4.2.
-```
+```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```
@@ -159,15 +159,15 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  **Copia bulk**  
   
- La funzionalità di copia bulk viene utilizzata per copiare rapidamente grandi quantità di dati in tabelle o viste nei database di SQL Server. Per informazioni dettagliate, vedere [usando la copia Bulk con il Driver JDBC](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).  
+ La funzionalità di copia bulk viene utilizzata per copiare rapidamente grandi quantità di dati in tabelle o viste nei database di SQL Server. Per informazioni dettagliate, vedere [Uso della copia bulk con il driver JDBC](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).  
   
  **Opzione di rollback di transazione XA**  
   
- Aggiunte nuove opzioni di timeout per il rollback automatico esistente di transazioni non preparate. Per dettagli, vedere [informazioni sulle transazioni XA](../../connect/jdbc/understanding-xa-transactions.md).  
+ Aggiunte nuove opzioni di timeout per il rollback automatico esistente di transazioni non preparate. Per informazioni dettagliate, vedere [informazioni sulle transazioni XA](../../connect/jdbc/understanding-xa-transactions.md).  
   
  **Nuova proprietà di connessione principale Kerberos**  
   
- Aggiunta una nuova proprietà di connessione per aumentare la flessibilità con le connessioni Kerberos. Per i dettagli, vedere [Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).  
+ Aggiunta una nuova proprietà di connessione per aumentare la flessibilità con le connessioni Kerberos. Per informazioni dettagliate, vedere [Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).  
   
 ## <a name="updates-in-microsoft-jdbc-driver-41-for-sql-server-and-later"></a>Aggiornamenti in Microsoft JDBC Driver 4.1 per SQL Server e versioni successive  
  **Supporto per JDK 7**  

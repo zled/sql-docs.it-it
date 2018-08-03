@@ -1,7 +1,7 @@
 ---
-title: Modifica risultato serie di dati di esempio | Documenti Microsoft
+title: Modifica Set di risultati campione di dati | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,115 +14,99 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 47b2f8566607ec119aaa61a29468c7fca6388b5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b6d1a5b2952bbf2f628004c6884e8ce1bf3d7b95
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831946"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278562"
 ---
 # <a name="modifying-result-set-data-sample"></a>Esempio di modifica dei dati dei set di risultati
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Questo [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] applicazione di esempio viene illustrato come recuperare un set aggiornabile di dati da un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database. Quindi, usando metodi di [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) dell'oggetto, che inserisce, modifica e infine eliminata una riga di dati dal set di dati.  
+  Con questa applicazione di esempio [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] viene illustrato come recuperare un set aggiornabile di dati da un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Usando quindi i metodi dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) viene inserita, modificata e infine eliminata una riga di dati dal set di dati.  
   
- Il file di codice per questo esempio è updateRS.java ed è disponibile nel seguente percorso:  
+ Il file di codice per questo esempio è UpdateRS.java ed è disponibile nel seguente percorso:  
   
- \<*directory di installazione*> \sqljdbc_\<*versione*>\\<*language*> \samples\resultsets  
+ \<*directory di installazione*> \sqljdbc_\<*versione*>\\<*linguaggio*> \samples\resultsets  
   
 ## <a name="requirements"></a>Requisiti  
- Per eseguire questa applicazione di esempio, è necessario impostare il classpath per includere il file sqljdbc.jar o sqljdbc4.jar. Se nel classpath manca una voce per il file sqljdbc.jar o sqljdbc4.jar, nell'applicazione di esempio verrà generata un'eccezione comune di classe non trovata. Sarà inoltre necessario l'accesso per il [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] database di esempio. Per ulteriori informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+ Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. È anche necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Per altre informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  Il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornisce sqljdbc.jar e sqljdbc4.jar file della libreria di classe da utilizzare a seconda delle impostazioni preferite di Java Runtime Environment (JRE). Per ulteriori informazioni sui file JAR da scegliere, vedere [requisiti di sistema per il Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  Con [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sono inclusi file di libreria di classi mssql-jdbc da usare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. Per altre informazioni sui file JAR da scegliere, vedere [requisiti di sistema per il Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, il codice di esempio stabilisce una connessione per il [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] database di esempio. Quindi, usando un'istruzione SQL con il [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) dell'oggetto, che esegue l'istruzione SQL e inserisce i dati restituiti in un oggetto SQLServerResultSet aggiornabile.  
+ Nell'esempio seguente, mediante il codice di esempio viene eseguita una connessione al database [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] di esempio. Quindi, usando un'istruzione SQL con l'oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), viene eseguita l'istruzione SQL e i dati restituiti vengono posizionati in un oggetto SQLServerResultSet aggiornabile.  
   
- Successivamente, il codice di esempio utilizza il [moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) per spostare il set di risultati del cursore nella riga di inserimento, utilizza una serie di [updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) metodi per inserire dati nella nuova riga e quindi chiama il [insertRow](../../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) metodo in modo permanente la nuova riga di dati nel database.  
+ Il codice di esempio usa quindi il metodo [moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) per spostare il cursore del set di risultati nella riga di inserimento, usa una serie di metodi [updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) per inserire i dati nella nuova riga ed esegue la chiamata al metodo [insertRow](../../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) per rendere permanente la nuova riga di dati nel database.  
   
- Dopo aver inserito la nuova riga di dati, il codice di esempio utilizza un'istruzione SQL per recuperare la riga precedentemente inserita e quindi utilizza la combinazione di updateString e [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) eseguire metodi per aggiornare la riga di dati e renderla di nuovo permanente il database.  
+ Dopo aver inserito la nuova riga di dati, il codice di esempio usa un'istruzione SQL per recuperare la riga precedentemente inserita, quindi usa la combinazione dei metodi updateString e [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) per aggiornare la riga di dati e renderla di nuovo permanente nel database.  
   
- Infine, il codice di esempio recupera la riga di dati precedentemente aggiornata e quindi eliminarlo dal database utilizzando il [deleteRow](../../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md) metodo.  
+ Infine, recupera la riga di dati precedentemente aggiornata e la elimina dal database usando il metodo [deleteRow](../../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md).  
   
 ```java
-import java.sql.*;  
-  
-public class updateRS {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-            "databaseName=AdventureWorks;integratedSecurity=true;";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-  
-         // Establish the connection.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-  
-         // Create and execute an SQL statement, retrieving an updateable result set.  
-         String SQL = "SELECT * FROM HumanResources.Department;";  
-         stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);  
-         rs = stmt.executeQuery(SQL);  
-  
-         // Insert a row of data.  
-         rs.moveToInsertRow();  
-         rs.updateString("Name", "Accounting");  
-         rs.updateString("GroupName", "Executive General and Administration");  
-         rs.updateString("ModifiedDate", "08/01/2006");  
-         rs.insertRow();  
-  
-         // Retrieve the inserted row of data and display it.  
-         SQL = "SELECT * FROM HumanResources.Department WHERE Name = 'Accounting';";  
-         rs = stmt.executeQuery(SQL);  
-         displayRow("ADDED ROW", rs);  
-  
-         // Update the row of data.  
-         rs.first();  
-         rs.updateString("GroupName", "Finance");  
-         rs.updateRow();  
-  
-         // Retrieve the updated row of data and display it.  
-         rs = stmt.executeQuery(SQL);  
-         displayRow("UPDATED ROW", rs);  
-  
-         // Delete the row of data.  
-         rs.first();  
-         rs.deleteRow();  
-         System.out.println("ROW DELETED");  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-  
-   private static void displayRow(String title, ResultSet rs) {  
-      try {  
-         System.out.println(title);  
-         while (rs.next()) {  
-            System.out.println(rs.getString("Name") + " : " + rs.getString("GroupName"));  
-            System.out.println();  
-         }  
-      } catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-   }  
-}  
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class UpdateRS {
+
+    public static void main(String[] args) {
+
+        // Create a variable for the connection string.
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+
+        try (Connection con = DriverManager.getConnection(connectionUrl);
+                Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);) {
+
+            // Create and execute an SQL statement, retrieving an updateable result set.
+            String SQL = "SELECT * FROM HumanResources.Department;";
+            ResultSet rs = stmt.executeQuery(SQL);
+
+            // Insert a row of data.
+            rs.moveToInsertRow();
+            rs.updateString("Name", "Accounting");
+            rs.updateString("GroupName", "Executive General and Administration");
+            rs.updateString("ModifiedDate", "08/01/2006");
+            rs.insertRow();
+
+            // Retrieve the inserted row of data and display it.
+            SQL = "SELECT * FROM HumanResources.Department WHERE Name = 'Accounting';";
+            rs = stmt.executeQuery(SQL);
+            displayRow("ADDED ROW", rs);
+
+            // Update the row of data.
+            rs.first();
+            rs.updateString("GroupName", "Finance");
+            rs.updateRow();
+
+            // Retrieve the updated row of data and display it.
+            rs = stmt.executeQuery(SQL);
+            displayRow("UPDATED ROW", rs);
+
+            // Delete the row of data.
+            rs.first();
+            rs.deleteRow();
+            System.out.println("ROW DELETED");
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void displayRow(String title,
+            ResultSet rs) throws SQLException {
+        System.out.println(title);
+        while (rs.next()) {
+            System.out.println(rs.getString("Name") + " : " + rs.getString("GroupName"));
+            System.out.println();
+        }
+    }
+}
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
