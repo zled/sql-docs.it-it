@@ -1,7 +1,7 @@
 ---
-title: Connessione a un database SQL di Azure | Documenti Microsoft
+title: La connessione a un database SQL di Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,46 +14,46 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 183cd9c749cac8b1af3d97a9830d4d4288fd464f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e716ec94db3f37dc51136f55884ac0c9eb33d236
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832476"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278742"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connessione a un database SQL di Azure
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  In questo argomento vengono illustrati i problemi quando si utilizza il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] per connettersi a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. Per ulteriori informazioni sulla connessione a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vedere:  
+  In questo argomento vengono illustrati i problemi dell'uso di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] per la connessione a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. Per altre informazioni sulla connessione a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vedere:  
   
--   [SQL Azure Database](http://go.microsoft.com/fwlink/?LinkID=202490)  
+-   [Database SQL Azure](http://go.microsoft.com/fwlink/?LinkID=202490)  
   
--   [Procedura: connettersi a SQL Azure tramite JDBC](http://msdn.microsoft.com/library/gg715284.aspx)  
+-   [Procedura: Connettersi a SQL Azure mediante JDBC](http://msdn.microsoft.com/library/gg715284.aspx)  
   
--   [Utilizzo di SQL Azure in Java](http://msdn.microsoft.com/library/windowsazure/hh749029(VS.103).aspx)
+-   [Uso di SQL Azure in Java](http://msdn.microsoft.com/library/windowsazure/hh749029(VS.103).aspx)
 
 -   [Connessione tramite autenticazione di Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>Dettagli  
- Quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario connettersi al database master per chiamare **Getcatalogs**.  
- [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.getCatalogs** utilizza la vista sys. Databases per ottenere i cataloghi. Fare riferimento alla trattazione delle autorizzazioni in [Sys. Databases (Database di SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) comprendere **Getcatalogs** comportamento su un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+ Quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario connettersi al database master per chiamare **SQLServerDatabaseMetaData.getCatalogs**.  
+ [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.getCatalogs utilizzare la vista sys. Databases per ottenere i cataloghi. Fare riferimento alla trattazione delle autorizzazioni in [Sys. Databases (Database SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) comprendere **SQLServerDatabaseMetaData.getCatalogs** comportamento su una [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
  Connessioni eliminate  
- Quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], le connessioni inattive possono essere terminate da un componente di rete (ad esempio un firewall) dopo un periodo di inattività. In questo contesto esistono due tipi di inattività:  
+ Durante la connessione a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è possibile che le connessioni inattive siano terminate da un componente di rete, ad esempio un firewall, dopo un periodo di inattività. In questo contesto esistono due tipi di inattività:  
   
 -   Inattività a livello TCP, in cui le connessioni possono essere eliminate da un certo numero di dispositivi di rete.  
   
--   Inattività in SQL Azure Gateway, in cui TCP **keepalive** messaggi potrebbero verificarsi (rendendo la connessione non inattiva da una prospettiva TCP), ma non era una query attiva in 30 minuti. In questo scenario il gateway determinerà che la connessione TDS è inattiva da 30 minuti e la terminerà.  
+-   Inattività in SQL Azure Gateway, in cui potrebbero verificarsi messaggi TCP **keepalive** (rendendo la connessione non inattiva da una prospettiva TCP), ma in cui non è stata rilevata una query attiva da 30 minuti. In questo scenario il gateway determinerà che la connessione TDS è inattiva da 30 minuti e la terminerà.  
   
  Per evitare l'eliminazione di connessioni inattive da un componente di rete, è consigliabile impostare le seguenti impostazioni del Registro di sistema, o le relative equivalenti non Windows, nel sistema operativo in cui viene caricato il driver:  
   
 |Impostazione del Registro di sistema|Valore consigliato|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ parametri \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ parametri \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ parametri \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parametri \ parametro KeepAliveTime della connessione|30000|  
+|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parametri \ parametro KeepAliveInterval della connessione|1000|  
+|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parametri \ TcpMaxDataRetransmissions|10|  
   
- È necessario riavviare il computer affinché le impostazioni del Registro di sistema abbiano effetto.  
+ Riavviare il computer per attivare le impostazioni del Registro di sistema.  
   
  A tale scopo, durante l'esecuzione di Windows Azure creare un'attività di avvio per aggiungere le chiavi del Registro di sistema.  Ad esempio, aggiungere l'attività di avvio al file di definizione del servizio:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "32832476"
   
  Successivamente, aggiungere il file AddKeepAlive.cmd al progetto in uso. Impostare l'impostazione "Copia nella directory di output" su Copia sempre. Di seguito è riportato un esempio di file AddKeepAlive.cmd:  
   
-```  
+```bat
 if exist keepalive.txt goto done  
 time /t > keepalive.txt  
 REM Workaround for JDBC keep alive on SQL Azure  
@@ -78,14 +78,14 @@ shutdown /r /t 1
 ```  
   
  Accodamento del nome del server all'ID utente nella stringa di connessione  
- Prima della versione 4.0 del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], durante la connessione a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario aggiungere il nome del server per l'ID utente nella stringa di connessione. Ad esempio, user@servername. A partire dalla versione 4.0 del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], non è più necessario aggiungere @servername all'ID utente nella stringa di connessione.  
+ Prima della versione 4.0 di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], durante la connessione a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] veniva richiesto l'accodamento del nome del server all'ID utente nella stringa di connessione. Ad esempio, user@servername. A partire dalla versione 4.0 di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] l'accodamento di @servername all'ID utente nella stringa di connessione non è più necessario.  
   
  Impostazione di hostNameInCertificate obbligatoria per l'utilizzo della crittografia  
- Quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario specificare **hostNameInCertificate** se si specifica **crittografare = true**. (Se il nome del server nella stringa di connessione è *shortName*. *domainName*, impostare il **hostNameInCertificate** proprietà \*. *domainName*.)  
+ Quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario specificare **hostNameInCertificate** se si specifica **crittografare = true**. (Se è il nome del server nella stringa di connessione *shortName*. *domainName*, impostare il **hostNameInCertificate** proprietà \*. *domainName*.)  
   
- Esempio:  
+ Ad esempio  
   
-```  
+```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
 ```  
   

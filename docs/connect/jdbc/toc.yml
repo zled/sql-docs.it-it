@@ -11,7 +11,7 @@
       href: step-1-configure-development-environment-for-java-development.md
     - name: 'Passaggio 2: Creare un database SQL per lo sviluppo Java'
       href: step-2-create-a-sql-database-for-java-development.md
-    - name: 'Passaggio 3: Modello di verifica per la connessione a SQL con Java'
+    - name: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite Java'
       href: step-3-proof-of-concept-connecting-to-sql-using-java.md
 - name: Panoramica del driver JDBC
   href: overview-of-the-jdbc-driver.md
@@ -103,6 +103,8 @@
           href: basic-data-types-sample.md
         - name: Esempio di tipo di dati SQLXML
           href: sqlxml-data-type-sample.md
+        - name: Esempio di tipi di dati spaziali
+          href: spatial-data-types-sample.md
     - name: Utilizzo dei set di risultati
       href: working-with-result-sets.md
       items:
@@ -121,6 +123,8 @@
           href: reading-large-data-with-stored-procedures-sample.md
         - name: Esempio di aggiornamento di dati di grandi dimensioni
           href: updating-large-data-sample.md
+    - name: Esempio di individuazione dati e classificazione
+      href: data-discovery-classification-sample.md
 - name: Conformità e note legali per il driver JDBC per SQL
   href: compliance-and-legal-for-the-jdbc-sql-driver.md
   items:
@@ -163,6 +167,8 @@
           href: using-parameter-metadata.md
         - name: Utilizzo di tipi di dati di base
           href: using-basic-data-types.md
+        - name: Uso dei tipi di dati spaziali
+          href: use-spatial-datatypes.md
         - name: Informazioni sulle transazioni
           href: understanding-transactions.md
         - name: Utilizzo di una connessione
@@ -241,6 +247,8 @@
           href: wrappers-and-interfaces.md
         - name: Utilizzo della copia bulk con il driver JDBC
           href: using-bulk-copy-with-the-jdbc-driver.md
+        - name: Uso dell'API di copia bulk per un'operazione di inserimento batch
+          href: use-bulk-copy-api-batch-insert-operation.md
         - name: Utilizzo di una stored procedure con parametri di output
           href: using-a-stored-procedure-with-output-parameters.md
         - name: Esecuzione di operazioni batch
@@ -257,3 +265,5 @@
           href: azure-key-vault-sample-version-6.0.0.md
         - name: Versione di esempio di Azure Key Vault 6.2.2
           href: azure-key-vault-sample-version-6.2.2.md
+        - name: Versione di esempio di Azure Key Vault 7.0.0
+          href: azure-key-vault-sample-version-7-0-0.md
