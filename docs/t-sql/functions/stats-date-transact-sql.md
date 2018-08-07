@@ -25,13 +25,13 @@ caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0a587a90f1f5016ebbc0473584441cdf3f80aede
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3cbdf663bfc222752de2bd2ed71bc290e80185ff
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783612"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456445"
 ---
 # <a name="statsdate-transact-sql"></a>STATS_DATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,7 @@ STATS_DATE ( object_id , stats_id )
  
  Se le statistiche corrispondono a un indice, il valore *stats_id* nella vista del catalogo [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) corrisponde al valore *index_id* nella vista del catalogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo predefinito del database db_owner o l'autorizzazione per la visualizzazione dei metadati per la tabella o la vista indicizzata.  
   
 ## <a name="examples"></a>Esempi  

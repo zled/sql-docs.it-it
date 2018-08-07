@@ -29,13 +29,13 @@ caps.latest.revision: 84
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1d1ff4bfeb848cf4f668d7e48a3cd3b574052ecc
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 741f76e47b883ce9aa95b27c473052a78fa42967
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786212"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457505"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -282,7 +282,7 @@ SELECT IS_MEMBER ('db_owner');
 Se il valore restituito è 1, significa che l'utente è un membro del ruolo.  
    
     
-## <a name="permissions"></a>Autorizzazioni    
+## <a name="permissions"></a>Permissions    
  È richiesta l'autorizzazione TAKE OWNERSHIP per l'entità. Se il nuovo proprietario non è l'utente che sta eseguendo l'istruzione 1) è richiesta l'autorizzazione IMPERSONATE per il nuovo proprietario se si tratta di un utente o un account di accesso, oppure 2) se il nuovo proprietario è un ruolo, è richiesta l'appartenenza al ruolo o l'autorizzazione ALTER per tale ruolo, oppure 3) se il nuovo proprietario è un ruolo applicazione, è richiesta l'autorizzazione ALTER per il ruolo applicazione.    
     
 ## <a name="examples"></a>Esempi    

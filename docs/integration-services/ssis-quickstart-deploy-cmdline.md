@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1179443d8b86e23a51fdf2250f007914e27cf0b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b0327a7fb471299785d7899befabcbd9f228aa2e
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335865"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482702"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Distribuire un progetto SSIS dal prompt dei comandi con ISDeploymentWizard.exe
 Questa guida introduttiva illustra come distribuire un progetto SSIS al prompt dei comandi eseguendo la Distribuzione guidata Integration Services, `ISDeploymentWizard.exe`.
@@ -47,7 +47,7 @@ Per distribuire il progetto nel database SQL di Azure, ottenere le informazioni 
 3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
 
-## <a name="authentication-methods-in-the-deployment-wizard"></a>Metodi di autenticazione della Distribuzione guidata
+## <a name="wizard_auth"></a> Metodi di autenticazione della Distribuzione guidata
 
 Se si esegue la distribuzione a un server SQL Server con la Distribuzione guidata, è necessario usare l'autenticazione di Windows. Non è possibile usare l'autenticazione di SQL Server.
 

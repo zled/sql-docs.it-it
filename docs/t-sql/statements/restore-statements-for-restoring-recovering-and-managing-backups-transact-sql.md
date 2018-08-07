@@ -25,13 +25,13 @@ caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a29b6887161212069f814d0bb21dae48a6093907
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e9c5f4509735b763e6ea5752c9f6dd3c1e07a06e
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943017"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456995"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>Istruzioni RESTORE per il ripristino, il recupero e la gestione dei backup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
@@ -43,7 +43,7 @@ ms.locfileid: "36943017"
 > [!IMPORTANT]  
 >  Nelle versioni precedenti di SQL Server qualsiasi utente poteva ottenere informazioni sui set e i dispositivi di backup tramite le istruzioni Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY e RESTORE VERIFYONLY. Poiché tali istruzioni rivelano informazioni sul contenuto dei file di backup, per eseguirle in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive è necessaria l'autorizzazione CREATE DATABASE. Questo requisito consente di proteggere i file di backup in modo da rendere le informazioni di backup più sicure rispetto alle versioni precedenti. Per informazioni su questa autorizzazione, vedere [GRANT - autorizzazioni per database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |.|Descrizione|  
 |---------------|-----------------|  

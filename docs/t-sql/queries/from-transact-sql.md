@@ -37,13 +37,13 @@ caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9aff3c18d4f005a2f28260abac561596da96fc07
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a1f0e63ad7df6755c49a536a2ae7249d3adf8d9d
+ms.sourcegitcommit: 5e7f347b48b7d0400fb680645c28e781f2921141
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36247923"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496730"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -444,7 +444,7 @@ ON (p.ProductID = v.ProductID);
   
  Per altre informazioni su PIVOT e UNPIVOT ed esempi, vedere [Uso di PIVOT e UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Sono richieste le autorizzazioni per l'istruzione DELETE, SELECT o UPDATE.  
   
 ## <a name="examples"></a>Esempi  
@@ -488,7 +488,7 @@ FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;
 ### <a name="c-using-the-sql-92-cross-join-syntax"></a>C. Utilizzo della sintassi CROSS JOIN di SQL-92  
  Nell'esempio seguente viene restituito il prodotto incrociato delle due tabelle `Employee` e `Department` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Vengono restituiti inoltre un elenco di tutte le possibili combinazioni delle righe di `BusinessEntityID` e tutte le righe di nome `Department`.  
   
-```wql    
+```sql    
 SELECT e.BusinessEntityID, d.Name AS Department  
 FROM HumanResources.Employee AS e  
 CROSS JOIN HumanResources.Department AS d  

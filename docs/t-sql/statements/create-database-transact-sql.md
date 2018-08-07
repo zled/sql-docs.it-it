@@ -40,13 +40,13 @@ caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fb69ad94c2759a4f3bc55409212d9aedad2096f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4fc133c37f95ecbe09ce7bda56163f1adce549a3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792265"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456195"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -501,7 +501,7 @@ Alcune funzionalità del database dipendono dalle caratteristiche o dalle funzio
 ## <a name="viewing-database-information"></a>Visualizzazione delle informazioni sui database  
  Per restituire informazioni su database, file e filegroup, è possibile usare viste del catalogo, funzioni di sistema e stored procedure di sistema. Per altre informazioni, vedere [Viste di sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione CREATE DATABASE, CREATE ANY DATABASE o ALTER ANY DATABASE.  
   
  Per mantenere il controllo sull'utilizzo del disco per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'autorizzazione per la creazione dei database è in genere limitata a pochi account di accesso.  
@@ -1079,7 +1079,7 @@ La sintassi e le regole semantiche seguenti si applicano all'utilizzo dell'argom
   
  Per altre informazioni, vedere [Create a copy of an Azure SQL database using Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/) (Creare una copia di un database SQL di Azure mediante Transact-SQL).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 Per creare un database, l'account di accesso deve essere uno dei seguenti: 
   
 - Account di accesso principale di livello server  
@@ -1210,7 +1210,7 @@ I database nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] presentano 
    > [!TIP]
    > Come soluzione alternativa, usare [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbmi) dopo `CREATE DATABASE` per impostare le opzioni di database e aggiungere i file.  
 
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 Per creare un database, l'account di accesso deve essere uno dei seguenti: 
   
 - Account di accesso principale di livello server  
@@ -1291,7 +1291,7 @@ Usare [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements
 
 SQL Data Warehouse è impostato su COMPATIBILITY_LEVEL 130 e non può essere modificato. Per altri dettagli, vedere [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Prestazioni di query migliorate con Compatibility Level 130 nel database SQL di Azure).
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 Autorizzazioni necessarie:  
   
 -   Accesso principale di livello server (creato dal processo di provisioning) oppure  
@@ -1385,7 +1385,7 @@ WITH (
   
  Se AUTOGROW corrisponde a OFF, verrà restituito un errore per qualsiasi azione che aumenti le dimensioni del log in un singolo nodo di calcolo oltre il valore di *log_size*.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione **CREATE ANY DATABASE** nel database master o l'appartenenza al ruolo predefinito del server **sysadmin**.  
   
  Nell'esempio seguente viene fornita l'autorizzazione per creare un database per l'utente del database Fay.  
