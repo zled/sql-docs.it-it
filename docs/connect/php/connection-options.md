@@ -1,7 +1,7 @@
 ---
 title: Opzioni di connessione | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7408af86aee324d63998ab8d0bce1f5dc0e616
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 81dc9e66bee9411841a3ee421adb73840bb2b783
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174938"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367643"
 ---
 # <a name="connection-options"></a>Opzioni di connessione
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ Questo argomento elenca le opzioni consentite nella matrice associativa (quando 
 |TraceFile|String|Specifica il percorso del file usato per i dati di traccia.|Nessun valore impostato.|  
 |TraceOn|1 o **true** per abilitare la traccia.<br /><br />0 o **false** per disabilitare la traccia.|Specifica se la traccia ODBC è abilitata (1 o **true**) o disabilitata (0 o **false**) per la connessione in corso di creazione.|**false** (0)|  
 |TransactionIsolation|Il driver SQLSRV usa i valori seguenti:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />Il driver PDO_SQLSRV usa i valori seguenti:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Specifica il livello di isolamento delle transazioni.<br /><br />Per altre informazioni sull'isolamento delle transazioni, vedere [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) nella documentazione di SQL Server.|SQLSRV_TXN_READ_COMMITTED<br /><br />o Gestione configurazione<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|transparentNetworkIPResolution|**Enabled** o **Disabled**|Interessa la sequenza di connessione, il primo problema è risolto IP del nome host non risponde e non vi sono più indirizzi IP associati con il nome host.<br /><br />Interagisce con MultiSubnetFailover per fornire le sequenze di connessione diversa. Per altre informazioni, vedere [utilizzando la risoluzione IP di rete trasparente](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Abilitata|
+|transparentNetworkIPResolution|**Enabled** o **Disabled**|Interessa la sequenza di connessione, il primo problema è risolto IP del nome host non risponde e non vi sono più indirizzi IP associati con il nome host.<br /><br />Interagisce con MultiSubnetFailover per fornire le sequenze di connessione diversa. Per altre informazioni, vedere [risoluzione dell'IP di rete trasparente](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) oppure [mediante la risoluzione IP di rete trasparente](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Abilitata|
 |TrustServerCertificate|1 o **true** per considerare il certificato attendibile.<br /><br />0 o **false** per non considerare il certificato attendibile.|Specifica se il client deve considerare attendibile (1 o **true**) o rifiutare (0 o **false**) un certificato server autofirmato.|**false** (0)|  
 |UID<br /><br />(non supportato nel driver PDO_SQLSRV)|String|Specifica l'ID utente da usare durante la connessione con l'autenticazione di SQL Server<sup>4</sup>.|Nessun valore impostato.|  
 |WSID|String|Specifica il nome del computer per la traccia.|Nessun valore impostato.|  
@@ -69,7 +69,7 @@ Questo argomento elenca le opzioni consentite nella matrice associativa (quando 
 
 4. Istanza di *UID* e *PWD* devono essere entrambi impostati durante la connessione con l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
 
-Molte delle chiavi supportate sono attributi della stringa di connessione ODBC. Per informazioni sulle stringhe di connessione ODBC, vedere [Uso delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+Molte delle chiavi supportate sono attributi della stringa di connessione ODBC. Per informazioni sulle stringhe di connessione ODBC, vedere [Uso delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
 ## <a name="see-also"></a>Vedere anche  
 [Connessione al server](../../connect/php/connecting-to-the-server.md)  
