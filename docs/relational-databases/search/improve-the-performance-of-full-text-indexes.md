@@ -22,13 +22,13 @@ caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d5c8427cc756a3aa4635e97288cec3aa2e6fb8e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 55938d1a17e4a6f1d2e6321b74340fde24814df9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182117"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537701"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ Le prestazioni di esecuzione dei popolamenti completi non sono ottimali quando l
   
      Nella tabella seguente vengono descritti i tipi di attesa relativi a questo contesto.  
   
-    |Tipo di attesa|Description|Possibile soluzione|  
+    |Tipo di attesa|Descrizione|Possibile soluzione|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX o _UP)|Può indicare un collo di bottiglia a livello di IO, caso in cui anche la lunghezza media della coda del disco sarebbe elevata.|Lo spostamento dell'indice full-text in un filegroup diverso in un disco diverso potrebbe contribuire a ridurre il collo di bottiglia a livello di IO.|  
     |PAGELATCH_EX (o _UP)|Può indicare contese tra i thread che tentano di scrivere nello stesso file di database.|L'aggiunta di file al filegroup in cui risiede l'indice full-text potrebbe contribuire ad attenuare queste contese.|  

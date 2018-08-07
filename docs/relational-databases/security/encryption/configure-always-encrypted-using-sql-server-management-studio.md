@@ -18,13 +18,13 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b72dca20aaa566f8bb6630931fc656ee6231182
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180448"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543071"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Configurare Always Encrypted usando SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,7 +207,7 @@ WHERE [SSN] = @SSN;
 >   [!NOTE]
 >   Senza la parametrizzazione, l'intera query, incluse le conversioni dei tipi, viene elaborata all'interno di SQL Server o del database SQL di Azure. Con parametrizzazione abilitata, alcune conversioni dei tipi vengono eseguite da .NET Framework all'interno di SQL Server Management Studio. A causa delle differenze tra il sistema dei tipi .NET Framework e il sistema dei tipi SQL Server (ad esempio diversa precisione di alcuni tipi come float), una query eseguita con la parametrizzazione abilitata può produrre risultati diversi rispetto alla query eseguita senza la parametrizzazione abilitata. 
 
-#### <a name="permissions"></a>Autorizzazioni      
+#### <a name="permissions"></a>Permissions      
 
 Per eseguire le query su colonne crittografate, incluse le query che recuperano i dati in testo crittografato, sono necessarie le autorizzazioni `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` nel database.   
 Oltre a queste autorizzazioni, per decrittografare i risultati delle query o per crittografare i parametri di query (generati dalla parametrizzazione delle variabili Transact-SQL), è necessario anche accedere alla chiave master della colonna proteggendo le colonne di destinazione:   
@@ -259,7 +259,7 @@ La finestra di dialogo **Nuova chiave di crittografia della colonna** consente d
 
 SQL Server Management Studio genera una nuova chiave di crittografia della colonna e consente di recuperare i metadati per la chiave master della colonna selezionata dal database. SQL Server Management Studio userà quindi i metadati della chiave master della colonna per contattare l'archivio chiavi contenente la chiave master della colonna e crittografare la chiave di crittografia della colonna. Infine, vengono creati nel database i metadati per la nuova chiave di crittografia della colonna. Nella finestra di dialogo viene generata e rilasciata un'istruzione [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) .
 
-### <a name="permissions"></a>Autorizzazioni
+### <a name="permissions"></a>Permissions
 
 Sono necessarie le autorizzazioni *ALTER ANY ENCRYPTION MASTER KEY* e *VIEW ANY COLUMN MASTER KEY DEFINITION* del database per creare nella finestra di dialogo i metadati della chiave di crittografia della colonna e accedere ai metadati della chiave master della colonna.
 Per accedere a un archivio chiavi e usare la chiave master della colonna, è possibile richiedere le autorizzazioni per l'archivio chiavi e/o la chiave:
@@ -334,7 +334,7 @@ Se si sceglie di rimuovere la definizione della chiave master della colonna prec
 > [!NOTE]
 > Si consiglia di non eliminare definitivamente la chiave master della colonna precedente dopo la rotazione. È opportuno invece mantenere la chiave master della colonna precedente nell'archivio chiavi in cui si trova o archiviarla in un altro posto sicuro. Se si ripristina il database da un file di backup creato prima della configurazione della nuova chiave master della colonna, sarà necessaria la chiave precedente per accedere ai dati.
 
-### <a name="permissions"></a>Autorizzazioni
+### <a name="permissions"></a>Permissions
 
 La rotazione di una chiave master della colonna richiede le seguenti autorizzazioni di database:
 
@@ -369,7 +369,7 @@ Per ruotare una chiave di crittografia della colonna, usare la procedura guidata
 7.  Nella pagina **Riepilogo** esaminare le opzioni selezionate, quindi fare clic su **Fine** e chiudere la procedura guidata quando viene completata.
 8.  In **Esplora oggetti**passare alla cartella **Sicurezza/Chiavi con crittografia sempre attiva/Chiavi di crittografia della colonna** e individuare la chiave di crittografia della colonna precedente da rimuovere dal database. Fare clic sulla chiave con il pulsante destro del mouse e selezionare **Elimina**.
 
-### <a name="permissions"></a>Autorizzazioni
+### <a name="permissions"></a>Permissions
 
 La rotazione di una chiave di crittografia della colonna richiede le seguenti autorizzazioni di database: **ALTER ANY COLUMN MASTER KEY** : richiesta se si usa una nuova chiave di crittografia della colonna generata automaticamente (verranno generati anche una nuova chiave master della colonna e i relativi metadati).
 **ALTER ANY COLUMN ENCRYPTION KEY** : richiesta per aggiungere metadati per la nuova chiave di crittografia della colonna.
@@ -402,7 +402,7 @@ Quando si aggiorna un database usando un file DACPAC e il file DACPAC o il datab
 > [!NOTE]
 > Se la chiave master della colonna configurata per la colonna nel database o nel file DACPAC viene archiviata nell'insieme di credenziali delle chiavi di Azure, verrà richiesto di accedere ad Azure, a meno che l'accesso non sia già stato eseguito.
 
-### <a name="permissions"></a>Autorizzazioni
+### <a name="permissions"></a>Permissions
 
 Per eseguire un'operazione di aggiornamento dell'applicazione livello dati se Always Encrypted è configurato nel file DACPAC o nel database di destinazione, potrebbero essere necessarie alcune o tutte le autorizzazioni indicate di seguito, in base alle differenze tra lo schema nel file DACPAC e lo schema del database di destinazione.
 
@@ -425,7 +425,7 @@ Quando si importa il file BACPAC in un database, i dati crittografati del file B
 Se si usa un'applicazione configurata per modificare o recuperare i dati crittografati archiviati nel database di origine (quello esportato), non sono necessarie operazioni particolari per consentire all'applicazione di eseguire query sui dati crittografati nel database di destinazione, perché le chiavi presenti in entrambi i database sono le stesse.
 
 
-### <a name="permissions"></a>Autorizzazioni
+### <a name="permissions"></a>Permissions
 
 Sono necessarie le autorizzazioni *ALTER ANY COLUMN MASTER KEY* e *ALTER ANY COLUMN ENCRYPTION KEY* per il database di origine. Per il database di destinazione sono necessarie le autorizzazioni *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*e *VIEW ANY COLUMN ENCRYPTION* .
 
@@ -448,7 +448,7 @@ Nella tabella seguente sono riportati gli scenari di migrazione possibili con le
 |Spostare i dati crittografati senza decrittografarli.<br><br>**Nota:** le tabelle di destinazione con colonne crittografate devono esistere prima della migrazione.| Provider di dati/driver: *qualsiasi*<br>Impostazione di crittografia di colonna = Disabilitata<br><br>(se si usano il provider di dati .net Framework per SqlServer e .NET Framework 4.6 o versione successiva)| Provider di dati/driver: *qualsiasi*<br>Impostazione di crittografia di colonna = Disabilitata<br><br>(se si usano il provider di dati .net Framework per SqlServer e .NET Framework 4.6 o versione successiva)<br><br>L'utente deve avere impostato ALLOW_ENCRYPTED_VALUE_MODIFICATIONS su ON.<br><br>Per i dettagli, vedere [Migrare dati sensibili protetti da Crittografia sempre attiva](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).
 
 
-### <a name="permissions"></a>Autorizzazioni
+### <a name="permissions"></a>Permissions
 
 Per **crittografare** o **decrittografare** i dati memorizzati nell'origine dati, sono necessarie le autorizzazioni *VIEW ANY COLUMN MASTER KEY DEFINITION* e *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* nel database di origine.
 

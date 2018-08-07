@@ -21,13 +21,13 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71d1ac448c2dce243fe8d8b48603f26c84331d8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3fae0b36ae0a0b62425320bbe72d1b378bd2dc9a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941226"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542021"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Opzione SORT_IN_TEMPDB per gli indici
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "32941226"
   
 -   Se l'opzione SORT_IN_TEMPDB è impostata su OFF, nel filegroup di destinazione deve essere disponibile spazio sufficiente per archiviare la tabella finale, incluse le strutture di tutti gli indici. È possibile che gli extent della tabella e dell'indice abbiano una maggiore continuità se è disponibile una maggiore quantità di spazio libero.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  

@@ -18,13 +18,13 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d0930c0edee89ed0657c7da176fe0c1e6d3a6ac4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5aa8029462fdbe0fdf2aec1fbbbc648aca1c5b58
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182377"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534671"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gestione e monitoraggio della ricerca full-text per un'istanza del server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "33182377"
   
  Nella tabella seguente solo elencate le proprietà full-text di un'istanza del server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] correlate.  
   
-|Proprietà|Description|Funzione|  
+|Proprietà|Descrizione|Funzione|  
 |--------------|-----------------|--------------|  
 |**IsFullTextInstalled**|Indica se il componente full-text viene installato o meno con l'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  

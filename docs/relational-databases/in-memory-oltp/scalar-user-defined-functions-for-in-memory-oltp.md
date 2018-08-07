@@ -15,13 +15,13 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 34b5c0e77ec4caa54fcbd21f15bb518a758e193e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 50e4249226273fc7c5f51363597f1d4099ad6865
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330762"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539991"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Funzioni scalari definite dall'utente per OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ END
   
  Le funzioni scalari definite dall'utente e compilate in modo nativo non supportano STATISTICS XML. Quando si esegue una query che fa riferimento alla funzione definita dall'utente, con l'opzione STATISTICS XML abilitata, viene restituito il contenuto XML senza la parte per la stored procedure definita dall'utente.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Come per le stored procedure compilate in modo nativo, al momento della creazione della funzione vengono controllate le autorizzazioni per gli oggetti a cui la funzione fa riferimento. L'istruzione CREATE FUNCTION ha esito negativo se l'utente rappresentato non dispone delle autorizzazioni corrette. Se le modifiche alle autorizzazioni dell'utente rappresentato fanno sì che l'utente perda le autorizzazioni corrette, le successive esecuzioni della funzione definita dall'utente avranno esito negativo.  
   
  Quando si usa una funzione scalare definita dall'utente e compilata in modo nativo all'interno di una stored procedure compilata in modo nativo, le autorizzazioni per l'esecuzione della funzione definita dall'utente vengono controllate al momento della creazione della routine esterna. Se l'utente rappresentato dalla ruotine esterna non dispone di autorizzazioni EXEC per la funzione definita dall'utente, la creazione della stored procedure ha esito negativo. Se le modifiche alle autorizzazioni fanno sì che l'utente perda le autorizzazioni EXEC, l'esecuzione della procedura esterna ha esito negativo.  

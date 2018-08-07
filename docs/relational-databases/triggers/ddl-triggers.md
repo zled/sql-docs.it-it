@@ -14,13 +14,13 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da86c799085983f5d2bc73ba970893e9fbcc7385
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4fc7d5df1d8e7d11e97512a31cda94fbf2687e6b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432390"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539031"
 ---
 # <a name="ddl-triggers"></a>Trigger DDL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "37432390"
 >  Testare i trigger DDL per determinarne la risposta alle stored procedure di sistema eseguite. Sia l'istruzione CREATE TYPE che la stored procedure **sp_addtype** , ad esempio, attivano un trigger DDL creato in un evento CREATE_TYPE.  
   
 ## <a name="types-of-ddl-triggers"></a>Tipi di trigger DDL  
- Trigger DDL di Transact-SQL  
+ ### <a name="transact-sql-ddl-trigger"></a>Trigger DDL di Transact-SQL  
  Un tipo speciale di stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] che esegue una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in risposta a un evento con ambito server o con ambito database. Ad esempio, è possibile che un trigger DDL si attivi se viene eseguita un'istruzione come ALTER SERVER CONFIGURATION o se una tabella viene eliminata tramite DROP TABLE.  
   
- Trigger CLR DDL  
+ ### <a name="clr-ddl-trigger"></a>Trigger CLR DDL  
  Anziché eseguire una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] , un trigger CLR consente di eseguire uno o più metodi scritti in codice gestito che sono membri di un assembly creato in .NET Framework e caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  I trigger DDL vengono attivati solo in seguito all'esecuzione delle istruzioni DDL che li hanno generati I trigger DDL non possono essere utilizzati come trigger INSTEAD OF. I trigger DDL non vengono attivati in risposta a eventi che interessano stored procedure e tabelle temporanee globali o locali.  
@@ -112,7 +112,7 @@ GO
   
  Per un elenco dei gruppi predefiniti di istruzioni DDL disponibili per i trigger DDL e per informazioni sulle istruzioni specifiche incluse nei gruppi di eventi e sugli ambiti in cui è possibile programmare tali gruppi, vedere [Gruppi di eventi DDL](../../relational-databases/triggers/ddl-event-groups.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Attività|Argomento|  
 |----------|-----------|  
