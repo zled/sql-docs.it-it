@@ -30,13 +30,13 @@ caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2b8859b2cc7aed93f941756400caa387061034b6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6d788da4f619feebd27919d8a34ec81de4a923f4
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784272"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452705"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -139,7 +139,7 @@ Specifica il nome di una chiave asimmetrica da associare a questo account di acc
 - La [modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md) del server deve corrispondere al tipo di account di accesso per consentire l'accesso.
 - Per informazioni sulla progettazione di un sistema di autorizzazioni, vedere [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 - Solo gli utenti con autorizzazione **ALTER ANY LOGIN** per il server o appartenenza al ruolo predefinito del server **securityadmin** possono creare account di accesso. Per altre informazioni, vedere [Ruoli a livello di server](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
 - Se viene usata l'opzione **CREDENTIAL**, è richiesta anche l'autorizzazione **ALTER ANY CREDENTIAL** nel server. 
   
@@ -297,7 +297,7 @@ Nel database SQL i dati dell'account di accesso necessari per autenticare una co
   
  Per altre informazioni sugli account di accesso del database SQL, vedere [Controllo e concessione dell'accesso al database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins). 
  
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
 Solo l'account di accesso dell'entità di livello server (creato dal processo di provisioning) o i membri del ruolo del database `loginmanager` nel database master possono creare nuovi account di accesso. Per altre informazioni, vedere [Ruoli a livello di server](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
 
@@ -402,7 +402,7 @@ In SQL Data Warehouse i dati dell'account di accesso necessari per autenticare u
   
  Per altre informazioni sugli account di accesso SQL Data Warehouse, vedere [Controllo e concessione dell'accesso al database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins). 
  
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
 Solo l'account di accesso dell'entità di livello server (creato dal processo di provisioning) o i membri del ruolo del database `loginmanager` nel database master possono creare nuovi account di accesso. Per altre informazioni, vedere [Ruoli a livello di server](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
 
@@ -513,7 +513,7 @@ Specifica che sull'account di accesso deve essere eseguito il mapping a un accou
 - La creazione automatica di un account di accesso abilita il nuovo account a cui viene concessa l'autorizzazione **CONNECT SQL** a livello di server. 
 - Per informazioni sulla progettazione di un sistema di autorizzazioni, vedere [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 Solo gli utenti con autorizzazione **ALTER ANY LOGIN** per il server o appartenenza al ruolo predefinito del server **securityadmin** possono creare account di accesso. Per altre informazioni, vedere [Ruoli a livello di server](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
   
 ## <a name="after-creating-a-login"></a>Dopo la creazione di un account di accesso  
