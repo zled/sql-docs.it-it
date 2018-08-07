@@ -14,104 +14,107 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a96d9b11473171cabd40e485342e1846017b307
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 58276b03877423afe86f9c68841656b00ce0a8c6
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279232"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457785"
 ---
 # <a name="wrappers-and-interfaces"></a>Wrapper e interfacce
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta le interfacce che consentono la creazione di un proxy di una classe e i wrapper che consentono di accedere alle estensioni dell'API JDBC specifiche di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] tramite un'interfaccia proxy.  
-  
-## <a name="wrappers"></a>Wrapper  
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'interfaccia java.sql.Wrapper. Tale interfaccia fornisce un meccanismo per accedere alle estensioni dell'API JDBC specifiche di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] tramite un'interfaccia proxy.  
-  
- L'interfaccia Java definisce due metodi: **isWrapperFor** e **unwrap**. Il metodo **isWrapperFor** verifica se l'oggetto di input specificato implementa questa interfaccia. Il metodo **unwrap** restituisce un oggetto che implementa questa interfaccia per consentire l'accesso ai metodi specifici di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
-  
- **isWrapperFor** e **unwrap** metodi vengono esposti come indicato di seguito:  
-  
--   [Metodo isWrapperFor &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)  
-  
--   [Metodo unwrap &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
-  
--   [Metodo isWrapperFor &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)  
-  
--   [Metodo unwrap &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
-  
--   [Metodo isWrapperFor &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)  
-  
--   [Metodo Unwrap &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)  
-  
--   [Metodo isWrapperFor &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)  
-  
--   [Metodo unwrap &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
-  
--   [Metodo isWrapperFor &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)  
-  
--   [Metodo Unwrap &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)  
-  
--   [Metodo isWrapperFor &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)  
-  
--   [Metodo Unwrap &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
-  
-## <a name="interfaces"></a>Interfacce  
- A partire dalla versione 3.0 del driver JDBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], sono disponibili interfacce che consentono a un server applicazioni di accedere a un metodo specifico del driver dalla classe associata. Il wrapping della classe può essere eseguito dal server applicazioni tramite la creazione di un proxy, esponendo la funzionalità specifica di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] da un'interfaccia. Il driver [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta le interfacce che includono costanti e metodi specifici di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], per consentire a un server applicazioni di creare un proxy della classe.  
-  
- Le interfacce derivano da interfacce Java standard ed è pertanto possibile utilizzare lo stesso oggetto dopo averne annullato il wrapping per accedere alla funzionalità specifica del driver o alla funzionalità generica di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
-  
- Sono aggiunte le interfacce seguenti:  
-  
--   [ISQLServerCallableStatement](../../connect/jdbc/reference/isqlservercallablestatement-interface.md)  
-  
--   [ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md)  
-  
--   [ISQLServerDataSource](../../connect/jdbc/reference/isqlserverdatasource-interface.md)  
-  
--   [ISQLServerPreparedStatement](../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
-  
--   [ISQLServerResultSet](../../connect/jdbc/reference/isqlserverresultset-interface.md)  
-  
--   [ISQLServerStatement](../../connect/jdbc/reference/isqlserverstatement-interface.md)  
-  
-## <a name="example"></a>Esempio  
-  
-### <a name="description"></a>Descrizione  
- In questo esempio viene illustrato come accedere a una funzione specifica di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] da un oggetto DataSource. Il wrapping della classe DataSource potrebbe essere stato eseguito da un server applicazioni. Per accedere alla costante o alla funzione specifica del driver JDBC è possibile annullare il wrapping dall'origine dei dati a un'interfaccia ISQLServerDataSource e utilizzare le funzioni dichiarate in questa interfaccia.  
-  
-### <a name="code"></a>codice  
-  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta le interfacce che consentono la creazione di un proxy di una classe e i wrapper che consentono di accedere alle estensioni dell'API JDBC specifiche di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] tramite un'interfaccia proxy.
+
+## <a name="wrappers"></a>Wrapper
+
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'interfaccia java.sql.Wrapper. Tale interfaccia fornisce un meccanismo per accedere alle estensioni dell'API JDBC specifiche di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] tramite un'interfaccia proxy.
+
+L'interfaccia Java definisce due metodi: **isWrapperFor** e **unwrap**. Il metodo **isWrapperFor** verifica se l'oggetto di input specificato implementa questa interfaccia. Il metodo **unwrap** restituisce un oggetto che implementa questa interfaccia per consentire l'accesso ai metodi specifici di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+
+**isWrapperFor** e **unwrap** metodi vengono esposti come indicato di seguito:
+
+- [Metodo isWrapperFor &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
+
+- [Metodo unwrap &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)
+
+- [Metodo isWrapperFor &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)
+
+- [Metodo unwrap &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)
+
+- [Metodo isWrapperFor &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
+
+- [Metodo Unwrap &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
+
+- [Metodo isWrapperFor &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
+
+- [Metodo unwrap &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)
+
+- [Metodo isWrapperFor &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)
+
+- [Metodo Unwrap &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
+
+- [Metodo isWrapperFor &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)
+
+- [Metodo Unwrap &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
+
+## <a name="interfaces"></a>Interfacce
+
+A partire dalla versione 3.0 del driver JDBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], sono disponibili interfacce che consentono a un server applicazioni di accedere a un metodo specifico del driver dalla classe associata. Il wrapping della classe può essere eseguito dal server applicazioni tramite la creazione di un proxy, esponendo la funzionalità specifica di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] da un'interfaccia. Il driver [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta le interfacce che includono costanti e metodi specifici di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], per consentire a un server applicazioni di creare un proxy della classe.
+
+Le interfacce derivano da interfacce Java standard ed è pertanto possibile utilizzare lo stesso oggetto dopo averne annullato il wrapping per accedere alla funzionalità specifica del driver o alla funzionalità generica di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+
+Sono aggiunte le interfacce seguenti:
+
+- [ISQLServerCallableStatement](../../connect/jdbc/reference/isqlservercallablestatement-interface.md)
+
+- [ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md)
+
+- [ISQLServerDataSource](../../connect/jdbc/reference/isqlserverdatasource-interface.md)
+
+- [ISQLServerPreparedStatement](../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)
+
+- [ISQLServerResultSet](../../connect/jdbc/reference/isqlserverresultset-interface.md)
+
+- [ISQLServerStatement](../../connect/jdbc/reference/isqlserverstatement-interface.md)
+
+## <a name="example"></a>Esempio
+
+### <a name="description"></a>Descrizione
+
+In questo esempio viene illustrato come accedere a una funzione specifica di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] da un oggetto DataSource. Il wrapping della classe DataSource potrebbe essere stato eseguito da un server applicazioni. Per accedere alla costante o alla funzione specifica del driver JDBC è possibile annullare il wrapping dall'origine dei dati a un'interfaccia ISQLServerDataSource e utilizzare le funzioni dichiarate in questa interfaccia.
+
+### <a name="code"></a>codice
+
 ```java
 import javax.sql.*;  
 import java.sql.*;  
 import com.microsoft.sqlserver.jdbc.*;  
-  
+
 public class UnWrapTest {  
    public static void main(String[] args) {  
-      // This is a test.  This DataSource object could be something from an appserver   
+      // This is a test.  This DataSource object could be something from an appserver
       // which has wrapped the real SQLServerDataSource with its own wrapper  
       SQLServerDataSource ds = new SQLServerDataSource();  
       checkSendStringParametersAsUnicode(ds);  
    }  
-  
+
    // Unwrap to the ISQLServerDataSource interface to access the getSendStringParametersAsUnicode function  
    static void checkSendStringParametersAsUnicode(DataSource ds) {  
       try {  
          final ISQLServerDataSource sqlServerDataSource = ds.unwrap(ISQLServerDataSource.class);  
          boolean sendStringParametersAsUnicode = sqlServerDataSource.getSendStringParametersAsUnicode();  
-  
+
          System.out.println("Send string as parameter value is:-" + sendStringParametersAsUnicode);  
-  
+
       } catch (SQLException sqlE) {  
          System.out.println("Exception:-" + sqlE);  
       }  
    }  
 }  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Informazioni sui tipi di dati del driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
-  
-  
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Informazioni sui tipi di dati del driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

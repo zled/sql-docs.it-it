@@ -15,13 +15,13 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 923c06b5cb9a897946bcdff05e70f4af317ee311
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ff907398115e5beaaab2921ab7d2e301f66583ac
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332941"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560351"
 ---
 # <a name="stored-procedures-database-engine"></a>Stored procedure (Motore di database)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "37332941"
 > [!NOTE]  
 >  Le stored procedure estese verranno eliminate nelle future versioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non usare questa funzionalità in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui è attualmente implementata. In alternativa, creare stored procedure CLR. Questo metodo offre un'alternativa più efficiente rispetto alla scrittura di stored procedure estese.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |||  
 |-|-|  

@@ -18,13 +18,13 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90f15cbee03a155745366ed1a29d101752406ae3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7b5b297687860debe57d0624b9498678e86108f5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940496"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535371"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato nativo per importare o esportare dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +91,7 @@ Per importare correttamente i dati in formato nativo, verificare quanto segue:
 
 Il formato nativo è supportato dalle opzioni di comando seguenti:  
 
-|Comando|Opzione|Description|  
+|Comando|Opzione|Descrizione|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|Determina l'uso del tipo di dati nativo da parte dell'utilità bcp.*|  
 |BULK INSERT|DATAFILETYPE **='native'**|Utilizza i tipi di dati nativi o nativi estesi. Si noti che DATAFILETYPE non è necessario se i tipi di dati vengono specificati in un file di formato.|  

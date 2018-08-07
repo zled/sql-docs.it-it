@@ -13,13 +13,13 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3462eb53657d873d1c2e2ce57a09dad99ff4b253
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c6733d4b668e607a2b975b5861110df0c196d9ef
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334742"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553901"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Apertura di un editor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34334742"
 ### <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Se i file vengono condivisi con utenti in altri siti che utilizzano tabelle codici diverse, è necessario salvare il file con la tabella codici Unicode appropriata per evitare errori di lettura del file. Per il salvataggio dei file per gli ambienti UNIX o Macintosh è inoltre necessario assicurarsi di utilizzare il formato di documento appropriato. Nel menu **File** fare clic su **Salva con nome**, **Salva con codifica** dalla freccia a discesa accanto al pulsante **Salva** e quindi scegliere **Unix** o **Macintosh** in **Terminazioni riga**.  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  Le operazioni eseguite in un editor del codice sono soggette alle autorizzazioni concesse all'account di autenticazione utilizzato per l'accesso. Se ad esempio si apre una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzando l'autenticazione di Windows, non sarà possibile eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che fanno riferimento a oggetti per i quali l'account di Windows non dispone delle autorizzazioni di accesso.  
   
 ## <a name="how-to-open-editors"></a>Procedura: Apertura degli editor  

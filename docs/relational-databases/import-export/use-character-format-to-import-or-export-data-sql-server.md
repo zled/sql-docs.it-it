@@ -18,13 +18,13 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 994dbd67b155d791cc7d4ee25dc8525c471a5f11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e5594aca0122edbe3e591cf9f5840a0847b60a24
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940536"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554691"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere per l'importazione o l'esportazione di dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ Quando si utilizza il formato carattere, è necessario tenere presenti i fattori
   
 Il formato carattere è supportato dalle opzioni di comando seguenti:  
   
-|Comando|Opzione|Description|  
+|Comando|Opzione|Descrizione|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Determina l'uso dei dati di tipo carattere da parte dell'utilità bcp.*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Durante l'importazione bulk dei dati viene applicato il formato carattere.|  

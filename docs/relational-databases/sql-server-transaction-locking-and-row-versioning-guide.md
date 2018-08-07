@@ -21,13 +21,13 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0993d9437044b1eba713e2ac7cd10b2ab5372b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 50ae9731b974753b0a3fef174314ef5bbe3e03d5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973796"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563225"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -346,7 +346,7 @@ GO
   
  Nella tabella seguente sono illustrate le risorse che il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] può bloccare.  
   
-|Risorsa|Description|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
 |RID|ID di riga utilizzato per bloccare una singola riga all'interno di un heap.|  
 |KEY|Blocco di riga all'interno di un indice utilizzato per proteggere intervalli di chiavi nelle transazioni serializzabili.|  
@@ -368,7 +368,7 @@ GO
   
  Nella tabella seguente sono incluse le modalità blocco delle risorse utilizzate in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
   
-|Modalità blocco|Description|  
+|Modalità blocco|Descrizione|  
 |---------------|-----------------|  
 |Condiviso (S)|Blocco usato per operazioni di lettura che non comportano la modifica o l'aggiornamento dei dati, ad esempio l'istruzione `SELECT`.|  
 |Aggiornamento (U)|Blocco utilizzato per risorse che possono essere aggiornate. Impedisce un tipo comune di deadlock che si verifica quando più sessioni leggono e bloccano le risorse ed eventualmente ne eseguono l'aggiornamento in un momento successivo.|  
@@ -403,7 +403,7 @@ GO
   
 <a name="lock_intent_table"></a> Tra i blocchi preventivi sono inclusi i blocchi preventivi condivisi (IS), i blocchi preventivi esclusivi (IX) e i blocchi preventivi esclusivi condivisi (SIX).  
   
-|Modalità blocco|Description|  
+|Modalità blocco|Descrizione|  
 |---------------|-----------------|  
 |Blocco preventivo condiviso (IS)|Consente di proteggere i blocchi condivisi richiesti o acquisiti su alcune risorse, ma non tutte, di livello inferiore nella gerarchia.|  
 |Blocco preventivo esclusivo (IX)|Consente di proteggere i blocchi esclusivi richiesti o acquisiti su alcune risorse, ma non tutte, di livello inferiore nella gerarchia. IX rappresenta un superset di IS e consente inoltre di proteggere la richiesta di blocchi condivisi sulle risorse di livello inferiore.|  
@@ -467,7 +467,7 @@ GO
 -   Riga indica la modalità di blocco che protegge la voce di indice.  
 -   Modalità indica la modalità di blocco combinato utilizzata. Le modalità di blocco di intervalli di chiavi sono composte da due parti: La prima parte rappresenta il tipo di blocco usato per bloccare l'intervallo di indici (Range*T*), mentre la seconda rappresenta il tipo di blocco usato per bloccare una chiave specifica (*K*). Le due parti sono unite da un segno meno (-), ad esempio Range*T*-*K*.  
   
-    |Intervallo|Riga|Mode|Description|  
+    |Intervallo|Riga|Mode|Descrizione|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|Intervallo condiviso, blocco di risorsa condiviso, analisi intervallo serializzabile.|  
     |RangeS|U|RangeS-U|Intervallo condiviso, blocco di risorsa di aggiornamento; analisi aggiornamento serializzabile.|  
@@ -1500,7 +1500,7 @@ ALTER DATABASE AdventureWorks2016
   
  Nella tabella seguente sono inclusi e descritti gli stati possibili dell'opzione ALLOW_SNAPSHOT_ISOLATION. L'utilizzo dell'istruzione ALTER DATABASE con l'opzione ALLOW_SNAPSHOT_ISOLATION non blocca l'accesso in corso da parte degli utenti ai dati del database.  
   
-|Stato del framework di isolamento dello snapshot per il database corrente|Description|  
+|Stato del framework di isolamento dello snapshot per il database corrente|Descrizione|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|Il supporto per le transazioni di isolamento dello snapshot non è attivato. Non è consentita alcuna transazione di isolamento dello snapshot.|  
 |PENDING_ON|Il supporto per le transazioni di isolamento dello snapshot è in stato di transizione (da OFF a ON). Le transazioni aperte devono essere completate.<br /><br /> Non è consentita alcuna transazione di isolamento dello snapshot.|  

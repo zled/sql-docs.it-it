@@ -19,13 +19,13 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae7ce7fbf55cffbc069eb7afcc15eebbb6833f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4002404d3547e9633bc2e7bc5fd4fb9884efaef7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941406"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563535"
 ---
 # <a name="xml-format-files-sql-server"></a>File in formato XML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -257,7 +257,7 @@ ms.locfileid: "32941406"
   
  Per eseguire il mapping di un campo a una colonna nella tabella di destinazione vengono utilizzati gli attributi seguenti:  
   
-|Attributo COLUMN|Description|Facoltativo /<br /><br /> Obbligatorio|  
+|Attributo COLUMN|Descrizione|Facoltativo /<br /><br /> Obbligatorio|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="***fieldID***"**|Specifica l'ID del campo di cui eseguire il mapping alla colonna.<br /><br /> \<COLUMN SOURCE **="***fieldID***"**/> esegue il mapping a \<FIELD ID **="***fieldID***"**/>|Obbligatorio|  
 |NAME = "*columnName*"|Specifica il nome della colonna del set di righe rappresentato dal file di formato. Viene utilizzato per identificare la colonna nel set dei risultati e non corrisponde necessariamente al nome di colonna utilizzato nella tabella di destinazione.|Obbligatorio|  

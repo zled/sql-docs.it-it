@@ -14,13 +14,13 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 28dad124a7c4552418f103dc03d6893d5718632b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2af8f48646f0cb99ffd2bd5bf6ac734dcaeecf52
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941346"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534911"
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Avvio rapido: Eventi estesi in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -427,7 +427,7 @@ Alcuni scenari specifici per le sessioni eventi finalizzate alla valutazione dei
 La tabella seguente elenca i termini usati per gli eventi estesi e ne descrive i significati.
 
 
-| Nome | Description |
+| Nome | Descrizione |
 | :--- | :---------- |
 | sessione eventi | Un costrutto incentrato su uno o più eventi, oltre a elementi di supporto quali azioni e destinazioni. L'istruzione CREATE EVENT SESSION viene costruita a ogni sessione eventi. È possibile modificare una sessione eventi in modo da avviarla e arrestarla in base alle proprie esigenze. <br/> <br/> Una sessione eventi viene a volte indicata semplicemente come *sessione*, quando il dal contesto si evince che indica la *sessione eventi*. <br/> <br/> Altre informazioni sulle sessioni eventi sono descritte in: [Sessioni degli eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | evento | Un'occorrenza specifica del sistema che viene controllata da una sessione eventi attiva. <br/> <br/> Ad esempio, l'evento *sql_statement_completed* rappresenta il momento in cui viene completata un'istruzione T-SQL. L'evento può segnalare la durata e altri dati. |

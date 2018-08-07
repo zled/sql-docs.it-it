@@ -22,13 +22,13 @@ caps.latest.revision: 75
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a247da19c7b4f546cb2503f4be4478b1912373c3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0392a841a28df19105154521f9e93952f56c2bfe
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699932"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564575"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -133,7 +133,7 @@ GO
 |[sys.certificates &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Vista del catalogo che consente di visualizzare i certificati di un database.|  
 |[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)|Tramite la vista a gestione dinamica vengono fornite informazioni relative alle chiavi di crittografia usate in un database e allo stato di crittografia di un database.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Ogni funzionalità e comando di TDE ha requisiti specifici relativi alle autorizzazioni, descritti nelle tabelle precedenti.  
   
  La visualizzazione dei metadati interessati da TDE richiede l'autorizzazione VIEW DEFINITION per il certificato.  
@@ -239,7 +239,7 @@ GO
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Transparent Data Encryption e OLTP in memoria  
  È possibile abilitare TDE in un database contenente oggetti di OLTP in memoria. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , se la funzionalità TDE è abilitata, i dati e i record del log di OLTP in memoria vengono crittografati. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] i record di log OLTP in memoria vengono crittografati se è abilitata la crittografia TDE, ma non vengono crittografati i file del filegroup MEMORY_OPTIMIZED_DATA.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Spostare un database protetto da TDE in un'altra istanza di SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  
  [Abilitare TDE in SQL Server con EKM](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
  [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  

@@ -15,19 +15,19 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4d967a0ba497a7bcb8077140a76fc1b6214a6ff8
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7023667a5caa2706dabcb0ec0eae9b0a133bccc2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326602"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538271"
 ---
 # <a name="query-notifications-event-category"></a>Categoria di eventi di notifica delle query
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Nella categoria di eventi **Query Notifications** sono incluse classi di evento in cui sono disponibili informazioni che gli sviluppatori e gli amministratori possono usare per monitorare e risolvere i problemi relativi alle notifiche delle query.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Classe di evento QN:Dynamics](../../relational-databases/event-classes/qn-dynamics-event-class.md)  
  Vengono fornite informazioni sull'attività in background eseguita dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per supportare le notifiche delle query.  
   

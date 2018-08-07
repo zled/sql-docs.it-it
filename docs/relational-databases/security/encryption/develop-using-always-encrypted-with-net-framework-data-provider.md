@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ca667951d50ddf996d5ef5a46ee7d699681325c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973826"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538141"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Sviluppare con Always Encrypted e il provider di dati .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -282,7 +282,7 @@ Il processo per ottenere la chiave di crittografia di una colonna consiste nelle
 Il provider di dati .NET Framework per SQL Server viene fornito con i seguenti provider predefiniti di archivio delle chiavi master delle colonne, che sono pre-registrati con i nomi di provider specifici (usati per cercare il provider).
 
 
-| Classe | Description | Nome del provider (ricerca) |
+| Classe | Descrizione | Nome del provider (ricerca) |
 |:---|:---|:---|
 |Classe SqlColumnEncryptionCertificateStoreProvider| Un provider per l'archivio certificati di Windows. | MSSQL_CERTIFICATE_STORE |
 |[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Nota:** questo provider è disponibile in .NET Framework 4.6.1 e versioni successive. |Un provider di archivio delle chiavi che supporta [Microsoft Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). In genere, un archivio di questo tipo è un modulo di protezione hardware, ovvero un dispositivo fisico che protegge e gestisce le chiavi digitali e fornisce l'elaborazione della crittografia.  | MSSQL_CNG_STORE|
@@ -552,7 +552,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|nome|Description|Introdotta nella versione di .NET
+|nome|Descrizione|Introdotta nella versione di .NET
 |:---|:---|:---
 |[Classe SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Un provider di archivi di chiavi per l'archivio certificati di Windows.|  4.6
 |[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Un provider di archivi di chiavi per l'API di crittografia di Microsoft: Next Generation (CNG).|  4.6.1

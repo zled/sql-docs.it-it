@@ -17,13 +17,13 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b49b51f61faf046f5145267c7fa6d45deecc53f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1be1252c3504ae6c09530253b539d09577391023
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941046"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540951"
 ---
 # <a name="create-a-format-file-sql-server"></a>Creazione di un file di formato (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "32941046"
   
  Per il comando **bcp** sono disponibili i qualificatori seguenti.  
   
-|Qualificatori|Description|  
+|Qualificatori|Descrizione|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Specifica il file di formato non XML.|  
 |**-n**|Specifica i tipi di dati nativi.|  
@@ -98,7 +98,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Per il comando **bcp** sono disponibili i qualificatori seguenti.  
   
-|Qualificatori|Description|  
+|Qualificatori|Descrizione|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Specifica un file di formato non XML.|  
 |**-c**|Specifica i dati di tipo carattere.|  
@@ -197,7 +197,7 @@ Ecco un esempio di file di formato senza le informazioni sulle regole di confron
   
  Per il comando **bcp** sono disponibili i qualificatori seguenti.  
   
-|Qualificatori|Description|  
+|Qualificatori|Descrizione|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Specifica il file di formato XML.|  
 |**-c**|Specifica i dati di tipo carattere.|  
@@ -237,7 +237,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Per il comando **bcp** sono disponibili i qualificatori seguenti.  
   
-|Qualificatori|Description|  
+|Qualificatori|Descrizione|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Specifica il file di formato XML.|  
 |**-n**|Specifica i tipi di dati nativi.|  

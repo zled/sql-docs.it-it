@@ -18,19 +18,19 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d87072ad1b8db0a8daa019b93d50b3885fb2f5ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fa157f94a20b904519d0e90a4be8a09496f4a241
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32926438"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539551"
 ---
 # <a name="database-engine-developer-documentation"></a>Documentazione per gli sviluppatori del motore di database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce un vasto set di strumenti per lo sviluppo, l'amministrazione e il controllo di applicazioni di database.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Concetti relativi alla programmazione dell'integrazione con CLR &#40;Common Language Runtime&#41;](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
  Viene illustrata l'integrazione del componente Common Language Runtime (CLR) di .NET Framework per [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile creare stored procedure, trigger, tipi definiti dall'utente (UDT), funzioni definite dall'utente, funzioni di aggregazione definite dall'utente e funzioni di flusso con valori di tabella utilizzando qualsiasi linguaggio di .NET Framework, inclusi [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic .NET e [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   

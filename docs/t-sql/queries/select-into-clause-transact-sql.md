@@ -32,13 +32,13 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 88d7db92ac5ff2ebd47c28b27974da934a68a188
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 36277d0c22e37e1598deb0e52fa0aa1b98328873
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248013"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460025"
 ---
 # <a name="select---into-clause-transact-sql"></a>Clausola SELECT - INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -102,7 +102,7 @@ Se una di queste condizioni risulta vera, la colonna viene creata come colonna N
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
  La quantità di registrazioni per `SELECT...INTO` dipende dal modello di recupero attivato per il database. Nel modello di recupero con registrazione minima o in quello con registrazione minima delle operazioni bulk, per tali operazioni la registrazione prevista è quella minima. Con la registrazione minima, l'uso dell'istruzione `SELECT...INTO` può essere più efficiente della creazione di una tabella e del popolamento della stessa con un'istruzione INSERT. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'autorizzazione CREATE TABLE nel database di destinazione.  
   
 ## <a name="examples"></a>Esempi  
