@@ -28,13 +28,13 @@ caps.latest.revision: 41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: df0f8d8aaf0302d6d854a5fa1a5b0c1eee9e9aef
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e72eb9b870a0525739f657432a3cddbf17ac438f
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790892"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451295"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +134,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ## <a name="truncating-large-tables"></a>Troncamento delle tabelle di grandi dimensioni  
  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile eliminare o troncare le tabelle che includono più di 128 extent senza mantenere attivi blocchi simultanei in tutti gli extent necessari per l'eliminazione.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'autorizzazione minima necessaria è ALTER su *table_name*. Le autorizzazioni per l'istruzione TRUNCATE TABLE vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server sysadmin, dei ruoli predefiniti del database db_owner e db_ddladmin e al proprietario della tabella e non sono trasferibili. È tuttavia possibile incorporare l'istruzione TRUNCATE TABLE all'interno di un modulo, ad esempio una stored procedure, e concedere le autorizzazioni necessarie al modulo tramite la clausola EXECUTE AS.  
   
 ## <a name="examples"></a>Esempi  

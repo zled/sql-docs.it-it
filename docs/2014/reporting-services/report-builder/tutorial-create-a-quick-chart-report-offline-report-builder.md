@@ -18,17 +18,17 @@ caps.latest.revision: 25
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31d50f1fa8869cd3bff62f137a61a704518e588d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216811"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39400784"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
   In questa esercitazione verrà creato un grafico a torta utilizzando una procedura guidata e verranno quindi apportate alcune modifiche allo scopo di illustrare le potenzialità offerte all'utente. È possibile eseguire questa esercitazione in due modi diversi. Con entrambi i metodi si otterrà lo stesso risultato, ovvero un grafico a torta simile a quello riportato nell'illustrazione seguente:  
   
- ! ["Mio primo grafico a torta" in esecuzione visualizzare] (.. /Media/RS-my1stpierunview.gif "" my primo grafico a torta "in esecuzione Visualizza")  
+ ! ["Mio primo grafico a torta" in esecuzione visualizzare] (.. /Media/RS-my1stpierunview.gif "my primo grafico a torta" nella visualizzazione di esecuzione")  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Se si utilizzano dati XML o una query [!INCLUDE[tsql](../../../includes/tsql-md.md)], è necessario avere accesso a Generatore report di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. È possibile eseguire la versione autonoma o la versione ClickOnce disponibile in Gestione report o in un sito di SharePoint. Per le versioni ClickOnce, l'unica differenza riguarda il primo passaggio, ovvero l'apertura di Generatore report. Per altre informazioni, vedere [di installazione, disinstallazione e supporto di Generatore Report](../install-uninstall-and-report-builder-support.md).  

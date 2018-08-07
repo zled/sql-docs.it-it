@@ -14,22 +14,24 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cb8975c4eda311b93c7a26c1d83eecbbfa581f4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 50e80b34becde8987a06f9293a39ba24e3639cd2
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991653"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454195"
 ---
 # <a name="sqlxml-interface"></a>Interfaccia SQLXML
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Con il driver JDBC viene fornito supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia java.sql.SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il **SQLXML** esegue il mapping al tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** tipo di dati.  
+Con il driver JDBC viene fornito supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia java.sql.SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il **SQLXML** esegue il mapping al tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** tipo di dati.  
   
- L'interfaccia SQLXML fornisce i metodi per l'accesso al valore XML come un **stringa**, un **lettore** oppure **Writer**, oppure come un **Stream**. È inoltre possibile accedere al valore XML tramite **Origine** oppure impostarlo come **Risultato**, utilizzati con le API dei parser XML, tra cui Document Object Model (DOM), Simple API for XML (SAX) e Streaming API for XML (StAX), nonché con trasformazioni XSLT e XPath.  
+L'interfaccia SQLXML fornisce i metodi per l'accesso al valore XML come un **stringa**, un **lettore** oppure **Writer**, oppure come un **Stream**. È inoltre possibile accedere al valore XML tramite **Origine** oppure impostarlo come **Risultato**, utilizzati con le API dei parser XML, tra cui Document Object Model (DOM), Simple API for XML (SAX) e Streaming API for XML (StAX), nonché con trasformazioni XSLT e XPath.  
   
 ## <a name="remarks"></a>Remarks  
- Nella tabella seguente sono descritti i metodi definiti nell'interfaccia SQLXML:  
+
+Nella tabella seguente sono descritti i metodi definiti nell'interfaccia SQLXML:  
   
 |Sintassi del metodo|Descrizione del metodo|  
 |-------------------|------------------------|  
@@ -43,15 +45,14 @@ ms.locfileid: "37991653"
 |[T estende setResult risultato T (classe\<T > resultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|Restituisce un **risultato** per l'impostazione di **XML** valore specificato da questo **SQLXML** oggetto.<br /><br /> **Nota:** Il metodo setResult supporta le seguenti origini: javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult e java.io.OutputStream.|  
 |[void setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|Imposta il valore XML indicato dall'oggetto SQLXML sulla rappresentazione **Stringa** specificata.|  
   
- Le applicazioni possono leggere e scrivere valori XML da e in un oggetto SQLXML una sola volta.  
+Le applicazioni possono leggere e scrivere valori XML da e in un oggetto SQLXML una sola volta.  
   
- Quando viene chiamato il metodo free(), un oggetto SQLXML diventa non valido e non è accessibile in lettura o scrittura. Se l'applicazione tenta di richiamare su tale oggetto SQLXML un metodo diverso da free(), verrà generata un'eccezione.  
+Quando viene chiamato il metodo free(), un oggetto SQLXML diventa non valido e non è accessibile in lettura o scrittura. Se l'applicazione tenta di richiamare su tale oggetto SQLXML un metodo diverso da free(), verrà generata un'eccezione.  
   
- L'oggetto SQLXML diventa né leggibile né modificabile quando l'applicazione chiama uno dei seguenti metodi di richiamo: getSource, getCharacterStream, getBinaryStream, getString e.  
+L'oggetto SQLXML diventa né leggibile né modificabile quando l'applicazione chiama uno dei seguenti metodi di richiamo: getSource, getCharacterStream, getBinaryStream, getString e.  
   
- L'oggetto SQLXML diventa inaccessibile in lettura o quando l'applicazione chiama uno dei seguenti metodi di impostazione: setResult, setCharacterStream, setBinaryStream e setString.  
+L'oggetto SQLXML diventa inaccessibile in lettura o quando l'applicazione chiama uno dei seguenti metodi di impostazione: setResult, setCharacterStream, setBinaryStream e setString.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto di dati XML](../../connect/jdbc/supporting-xml-data.md)  
-  
-  
+
+[Supporto di dati XML](../../connect/jdbc/supporting-xml-data.md)  

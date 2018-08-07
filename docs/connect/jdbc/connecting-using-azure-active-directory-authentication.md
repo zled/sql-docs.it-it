@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d8f83d0f838304f6f541d1d88e56ce316b07d25
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: c86fc615bcf3dec2a87581bbb09f482c8befc943
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278842"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452645"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connessione con l'autenticazione di Azure Active Directory
 
@@ -211,10 +211,12 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > Un database utente indipendente deve essere presente un utente di database indipendente che rappresenta l'oggetto specificato e utente di Azure AD o uno dei gruppi, di Azure specificato utente AD a cui appartiene, deve esistere nel database e deve disporre dell'autorizzazione CONNECT (ad eccezione di Azure Active Directory l'amministratore del server o gruppo)
 
-
 ## <a name="connecting-using-access-token"></a>La connessione tramite Token di accesso
-Applicazioni/servizi può recuperare un token di accesso da Azure Active Directory e usarlo per connettersi al Database di SQL Azure. Si noti che accessToken può essere impostato solo usando il parametro Properties del metodo getConnection () nella classe DriverManager. Non può essere utilizzato nella stringa di connessione.
- 
+Applicazioni/servizi può recuperare un token di accesso da Azure Active Directory e usarlo per connettersi al Database di SQL Azure.
+
+> [!NOTE] 
+> **accessToken** può essere impostato solo usando il parametro Properties del metodo getConnection () nella classe DriverManager. Non può essere utilizzato nella stringa di connessione.
+
 L'esempio seguente contiene una semplice applicazione Java che si connette al Database SQL di Azure usando l'autenticazione basata su token di accesso. Prima di compilare ed eseguire l'esempio, eseguire la procedura seguente:
 1.  Creare un account dell'applicazione in Azure Active Directory per il servizio.
     1. Accedere al portale di Azure.

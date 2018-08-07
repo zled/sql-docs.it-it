@@ -27,13 +27,13 @@ caps.latest.revision: 60
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f81a0363ef180ed781ee7c325640985e8d20bc2
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3e23c8eff134160d7c55035738cad9a091bc460c
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789722"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454365"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -133,7 +133,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ## <a name="deprecation-notice"></a>Informativa sulle funzionalità deprecate  
  Le istruzioni CREATE SCHEMA che non specificano un nome di schema sono attualmente supportate per compatibilità con le versioni precedenti. Tali istruzioni in realtà non creano uno schema all'interno del database, ma creano tabelle e viste e concedono autorizzazioni. Le entità non necessitano dell'autorizzazione CREATE SCHEMA per eseguire questa versione meno recente di CREATE SCHEMA, perché non viene creato alcuno schema. Questa funzionalità verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione CREATE SCHEMA per il database.  
   
  Per creare un oggetto specificato all'interno dell'istruzione CREATE SCHEMA, l'utente deve disporre dell'autorizzazione CREATE corrispondente.  

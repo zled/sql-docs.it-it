@@ -36,13 +36,13 @@ caps.latest.revision: 75
 author: uc-msft
 ms.author: umajay
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ef8ab735511e5885fde7c3e5a218a75bc6f41fb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 45f0e42f637f452b12ff32a0b2f580c3c87e9bd3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262631"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454635"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>Set di risultati  
 Nella tabella seguente vengono descritte le colonne restituite nel set di risultati quando si specifica l'opzione STAT_HEADER.
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |nome|Nome dell'oggetto statistiche.|  
 |Updated|Data e ora dell'ultimo aggiornamento delle statistiche. La funzione [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) rappresenta un metodo alternativo per il recupero di queste informazioni. Per altre informazioni, vedere la sezione [Osservazioni](#Remarks) più avanti nella pagina.|  
@@ -114,7 +114,7 @@ Nella tabella seguente vengono descritte le colonne restituite nel set di risult
   
 Nella tabella seguente vengono descritte le colonne restituite nel set di risultati quando si specifica l'opzione DENSITY_VECTOR.
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |All Density|Il valore Density viene calcolato come 1/ *valori distinct*. Nei risultati la densità viene visualizzata per ogni prefisso di colonna dell'oggetto statistiche, una riga per ogni densità. Un valore distinct è un elenco distinto dei valori delle colonne per riga e per prefisso di colonna. Se l'oggetto statistiche contiene, ad esempio, le colonne chiave (A, B, C), i risultati restituiscono la densità degli elenchi di valori distinct in ognuno di tali prefissi di colonna, ovvero (A), (A, B) e (A, B, C). Utilizzando il prefisso (A, B, C), ciascuno di questi elenchi è un elenco di valori distinct, ovvero (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Utilizzando il prefisso (A, B) agli stessi valori di colonna sono associati gli elenchi di valori distinct (3, 5), (4, 4) e (4, 5).|  
 |Average Length|Lunghezza media, in byte, per archiviare un elenco di valori di colonna per il prefisso di colonna. Se per ogni valore presente nell'elenco (3, 5, 6), ad esempio, sono necessari 4 byte, la lunghezza media è di 12 byte.|  
@@ -122,7 +122,7 @@ Nella tabella seguente vengono descritte le colonne restituite nel set di risult
   
 Nella tabella seguente vengono descritte le colonne restituite nel set di risultati quando si specifica l'opzione HISTOGRAM.
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |---|---|
 |RANGE_HI_KEY|Valore di colonna pari al limite superiore per un intervallo dell'istogramma. Il valore di colonna viene denominato anche valore chiave.|  
 |RANGE_ROWS|Numero stimato di righe il cui valore di colonna è compreso in un intervallo dell'istogramma, escluso il limite superiore.|  

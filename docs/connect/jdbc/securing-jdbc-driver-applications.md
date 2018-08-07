@@ -14,31 +14,31 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11330ade60084a5e3995b5acf565d26f3b4da62b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 15ac2b868066efcf978fc92d17b381e08ce2932d
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979213"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454925"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Protezione delle applicazioni del driver JDBC
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Per migliorare la sicurezza di un'applicazione [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non è sufficiente evitare i problemi comuni relativi al codice. Un'applicazione che accede ai dati presenta numerosi punti di errore potenziali che un pirata informatico può sfruttare recuperare, modificare o distruggere dati sensibili. È importante comprendere tutti gli aspetti della sicurezza, dal processo di classificazione dei rischi durante la fase di progettazione dell'applicazione all'eventuale distribuzione fino all'importanza di una continua manutenzione.  
+Per migliorare la sicurezza di un'applicazione [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non è sufficiente evitare i problemi comuni relativi al codice. Un'applicazione che accede ai dati presenta numerosi punti di errore potenziali che un pirata informatico può sfruttare recuperare, modificare o distruggere dati sensibili. È importante comprendere tutti gli aspetti della sicurezza, dal processo di classificazione dei rischi durante la fase di progettazione dell'applicazione all'eventuale distribuzione fino all'importanza di una continua manutenzione.  
   
- Negli argomenti di questa sezione vengono descritti alcuni problemi di sicurezza comuni, inclusi quelli relativi a stringhe di connessione, convalida dell'input utente e sicurezza generale delle applicazioni.  
+Negli argomenti di questa sezione vengono descritti alcuni problemi di sicurezza comuni, inclusi quelli relativi a stringhe di connessione, convalida dell'input utente e sicurezza generale delle applicazioni.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Descrizione|  
-|-----------|-----------------|  
-|[Protezione delle stringhe di connessione](../../connect/jdbc/securing-connection-strings.md)|Vengono descritte le tecniche per la protezione delle informazioni utilizzate per la connessione a un'origine dati.|  
-|[Convalida dell'input utente](../../connect/jdbc/validating-user-input.md)|Vengono descritte le tecniche per la convalida dell'input utente.|  
-|[Sicurezza dell'applicazione](../../connect/jdbc/application-security.md)|Viene descritto come utilizzare le autorizzazioni relative ai criteri Java per proteggere un'applicazione del driver JDBC.|  
-|[Uso della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md)|Viene descritto come stabilire un canale di comunicazione sicuro con un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilizzando SSL (Secure Sockets Layer).|  
-|[Modalità FIPS](../../connect/jdbc/fips-mode.md)|Viene descritto come usare JDBC driver in modalità conforme a FIPS.| 
+| Argomento                                                                            | Descrizione                                                                                                                                                           |
+| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Protezione delle stringhe di connessione](../../connect/jdbc/securing-connection-strings.md) | Vengono descritte le tecniche per la protezione delle informazioni utilizzate per la connessione a un'origine dati.                                                                                    |
+| [Convalida dell'input utente](../../connect/jdbc/validating-user-input.md)             | Vengono descritte le tecniche per la convalida dell'input utente.                                                                                                                          |
+| [Sicurezza dell'applicazione](../../connect/jdbc/application-security.md)               | Viene descritto come utilizzare le autorizzazioni relative ai criteri Java per proteggere un'applicazione del driver JDBC.                                                                                |
+| [Uso della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md)               | Viene descritto come stabilire un canale di comunicazione sicuro con un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilizzando SSL (Secure Sockets Layer). |
+| [Modalità FIPS](../../connect/jdbc/fips-mode.md)                                     | Viene descritto come usare JDBC driver in modalità conforme a FIPS.                                                                                                              |
   
 ## <a name="see-also"></a>Vedere anche  
+
  [Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
-  
