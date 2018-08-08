@@ -19,16 +19,16 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2c0af1af6758a9520d36398dfd34dc56430dd392
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de4ff47096b20847ab3eecffee1cbe734bf17cab
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923656"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415440"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Ripristini a fasi (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Le informazioni contenute in questo argomento sono rilevanti solo per i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition in cui sono contenuti più file o filegroup e, nel modello di recupero con registrazione minima, solo per i filegroup di sola lettura.  
+  Le informazioni contenute in questo argomento sono rilevanti solo per i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition (ripristino in linea) o Standard Edition (ripristino non in linea) che contengono più file o filegroup e, nel modello semplice, solo per i filegroup di sola lettura.  
   
  Per informazioni sui ripristini a fasi e tabelle ottimizzate per la memoria, vedere [Backup e ripristino a fasi di database con tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   

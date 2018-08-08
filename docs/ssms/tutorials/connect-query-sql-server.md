@@ -12,12 +12,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: e487537bd5051d396e5f24243a33ded4aa38daf7
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988755"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367663"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Esercitazione: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio
 Questa esercitazione illustra come usare SQL Server Management Studio (SSMS) per connettersi all'istanza di SQL Server ed eseguire alcuni comandi Transact-SQL (T-SQL) di base. Questo articolo illustra come eseguire le operazioni seguenti:
@@ -184,5 +184,11 @@ I risultati di una query vengono visualizzati sotto la finestra di testo della q
     > [!NOTE]
     > Questa azione modifica solo il server al quale è connessa la finestra di query e non il server al quale è connesso Esplora oggetti. 
 
+## <a name="next-steps"></a>Passaggi successivi
+L'articolo successivo illustra come creare script per vari oggetti in SQL Server Management Studio. 
+
+Per altre informazioni, vedere l'articolo successivo:
+> [!div class="nextstepaction"]
+> [Passaggi successivi](scripting-ssms.md)
 
 

@@ -26,12 +26,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9314c7ffa3a25aa9feb0e8632c68667a4662f86e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a29b8d92aecddb64020bd12dfd4be4559f8c4399
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356053"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482682"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Miglioramento delle prestazioni della replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,6 +124,36 @@ Il parametro **–SubscriptionStreams** può migliorare notevolmente la velocit�
 
 Per altre informazioni sull'implementazione di flussi di sottoscrizione, vedere [Navigating SQL replication subscriptionStream setting](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting) (Informazioni sull'impostazione subscriptionStream per la replica SQL).
   
+### <a name="blocking-monitor-thread"></a>Thread di monitoraggio blocco
+
+L'agente di distribuzione mantiene un thread di monitoraggio blocco che rileva gli eventi di blocco tra le sessioni. Se il thread di monitoraggio blocco rileva blocchi tra le sessioni, l'agente di distribuzione attiva l'uso di una sola sessione per riapplicare il batch corrente di comandi che non è stato possibile applicare in precedenza.
+
+Il thread di monitoraggio blocco può rilevare il blocco tra sessioni dell'agente di distribuzione. Tuttavia il thread di monitoraggio blocco non è in grado di rilevare il blocco nelle situazioni seguenti:
+- Una delle sessioni in cui si verifica il blocco non è una sessione dell'agente di distribuzione.
+- Un deadlock di sessione blocca le attività dell'agente di distribuzione.
+
+In questo caso l'agente di distribuzione coordina tutte le sessioni in modo che eseguano il commit simultaneamente, non appena vengono eseguiti i relativi comandi. Un deadlock tra le sessioni si verifica quando sono vere le condizioni seguenti:
+
+- Il blocco si verifica tra le sessioni dell'agente di distribuzione e una sessione che non è dell'agente di distribuzione.
+- L'agente di distribuzione attende che tutte le sessioni completino l'esecuzione dei rispettivi comandi prima di coordinare il commit simultaneo delle sessioni.
+
+Ad esempio si supponga di impostare il parametro *SubscriptionStreams* su 8. Le sessioni dalla 10 alla 17 sono sessioni dell'agente di distribuzione. La sessione 18 non è una sessione dell'agente di distribuzione. La sessione 10 è bloccata dalla sessione 18 e la sessione 18 è bloccata dalla sessione 11. È anche necessario che le sessioni 10 e 11 eseguano il commit contemporaneamente. Tuttavia l'agente di distribuzione non può eseguire insieme il commit delle sessioni 10 e 11 a causa del blocco. Pertanto l'agente di distribuzione non può coordinare il commit simultaneo di queste otto sessioni fino a quando la sessione 10 e la sessione 11 non completano l'esecuzione dei rispettivi comandi.
+
+Il risultato di questo esempio è uno stato in cui nessuna sessione esegue i comandi corrispondenti. Quando viene raggiunto il tempo specificato nella proprietà **QueryTimeout**, l'agente di distribuzione annulla tutte le sessioni.
+
+> [!Note]
+> Per impostazione predefinita il valore della proprietà **QueryTimeout** è 5 minuti.
+
+Durante questo periodo di timeout query è possibile rilevare le tendenze seguenti nei contatori delle prestazioni dell'agente di distribuzione: 
+
+- Il valore del contatore delle prestazioni **Dist:Comandi recapitati/sec** è sempre 0.
+- Il valore del contatore delle prestazioni **Dist:Transazioni recapitate/sec** è sempre 0.
+- Il valore del contatore delle prestazioni **Dist:Latenza recapito** aumenta fino a quando non viene risolto il deadlock del thread.
+
+L'argomento "Replication Distribution Agent" della documentazione online di SQL Server contiene la descrizione seguente per il parametro *SubscriptionStreams*: "Se si verifica un errore di esecuzione o di commit di una delle connessioni, tutte le connessioni interromperanno il batch corrente e l'agente userà un singolo flusso per ripetere i batch non riusciti."
+
+L'agente di distribuzione usa una sessione per riprovare l'applicazione del batch che non era riuscita. Dopo aver applicato correttamente il batch, l'agente di distribuzione riprende l'uso di più sessioni senza riavviare il computer.
+
 #### <a name="commitbatchsize"></a>CommitBatchSize
 - Aumentare il valore del parametro **-CommitBatchSize** per l'agente di distribuzione.  
   
