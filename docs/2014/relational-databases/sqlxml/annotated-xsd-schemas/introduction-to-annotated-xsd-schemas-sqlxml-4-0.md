@@ -125,7 +125,7 @@ ms.locfileid: "37216891"
   
 -   XML Schema Part 0: Primer, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Strutture, W3C (raccomandazionehttp://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Strutture, W3C (raccomandazione http://www.w3.org/TR/xmlschema-1/)  
   
 -   XML Schema Part 2: Datatypes W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
   

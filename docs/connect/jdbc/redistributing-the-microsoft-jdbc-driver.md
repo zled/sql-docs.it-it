@@ -1,7 +1,7 @@
 ---
-title: Ridistribuzione di Microsoft JDBC Driver | Documenti Microsoft
+title: Ridistribuzione di Microsoft JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,28 +14,28 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4879fa6bf41179d78ddf73d4f5847ebf9514220e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3d872a8d5027820c389dbd139e80403ac268496e
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828456"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39458225"
 ---
 # <a name="redistributing-the-microsoft-jdbc-driver"></a>Ridistribuzione di Microsoft JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-and-64-driver"></a>Ridistribuire il Driver Microsoft JDBC 4.1, 4.2, 6.0, 6.2 e 6.4
-È possibile ridistribuire il driver JDBC 4.1, 4.2, 6.0, 6.2 e 6.4. Nei contratti di licenza per il 4.1, 4.2, 6.0, vedere la clausola "Codice distribuibile" 6.2 e 6.4 versioni del driver.
+## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-64-and-70-driver"></a>Ridistribuire il Driver Microsoft JDBC 4.1, 4.2, 6.0, 6.2, 6.4 e 7.0
+È possibile ridistribuire il driver JDBC 4.1, 4.2, 6.0, 6.2, 6.4 e 7.0. Nei contratti di licenza per il 4.1, 4.2, 6.0, 6.2, 6.4 e 7.0 versioni del driver, vedere la clausola "Codice distribuibile".
     
 ## <a name="register-to-redistribute-the-microsoft-jdbc-40-driver"></a>Registrarsi per ridistribuire Microsoft JDBC 4.0 Driver  
- Microsoft JDBC Driver 4.0 è necessaria la registrazione prima ridistribuirla. Fare clic sul collegamento seguente per esaminare il contratto di licenza per la versione 4.0 del driver.  È possibile stampare e conservare una copia del contratto di licenza come riferimento futuro, se si desidera.  
+ Microsoft JDBC Driver 4.0 richiede la registrazione prima ridistribuire il. Fare clic sul collegamento seguente per esaminare il contratto di licenza per la versione 4.0 del driver.  È possibile stampare e conservare una copia del contratto di licenza come riferimento futuro, se si desidera.  
   
  Se si sceglie di accettare il contratto di licenza, si verrà indirizzati alla pagina di registrazione e quindi la pagina di download.  
   
  [Licenza di ridistribuzione per Microsoft JDBC Driver 4.0 per SQL Server](https://msdn.microsoft.com/sqlserver/jj589698)  
   
- Nota: Microsoft utilizza l'account Microsoft per la registrazione e l'autenticazione protetta. Quando si registra per i diritti di ridistribuzione per la ridistribuzione di SQL Server JDBC Driver tramite account Microsoft, verrà richiesto di fornire informazioni che diventano parte del profilo di protezione.  
+ Nota: Microsoft Usa l'account Microsoft per la registrazione e l'autenticazione sicura. Quando si effettua la registrazione per i diritti di ridistribuzione di SQL Server JDBC Driver tramite l'account Microsoft viene richiesto di immettere informazioni che verranno incluse nel profilo sicuro.  
   
- Se non si dispone uno già, è possibile ottenere un [account Microsoft](https://signup.live.com/)  
+ Se non hai uno già, è possibile ottenere un [account Microsoft](https://signup.live.com/)  
   
   

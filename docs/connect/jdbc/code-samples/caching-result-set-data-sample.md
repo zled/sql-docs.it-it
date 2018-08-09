@@ -1,7 +1,7 @@
 ---
 title: Risultato di memorizzazione nella cache Set di dati di esempio | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,54 +14,61 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 487033ade14c5f320b45baba8857c171b94032a4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: 33dcb1a7e9b00968b4b02aa2d32b2ab0cc769d10
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278972"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455211"
 ---
 # <a name="caching-result-set-data-sample"></a>Esempio di memorizzazione nella cache dei dati dei set di risultati
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Con questa applicazione di esempio [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] viene illustrato come recuperare un set di dati di grandi dimensioni da un database e quindi controllare il numero di righe di dati memorizzate nella cache del client usando il metodo [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
+Con questa applicazione di esempio [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] viene illustrato come recuperare un set di dati di grandi dimensioni da un database e quindi controllare il numero di righe di dati memorizzate nella cache del client usando il metodo [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 > [!NOTE]  
->  La limitazione del numero di righe inserite nella cache del client è un'operazione diversa dalla limitazione del numero totale di righe contenute in un set di risultati. Per controllare il numero totale di righe contenute in un set di risultati, usare il metodo [setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) dell'oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), ereditato dagli oggetti [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
+> La limitazione del numero di righe inserite nella cache del client è un'operazione diversa dalla limitazione del numero totale di righe contenute in un set di risultati. Per controllare il numero totale di righe contenute in un set di risultati, usare il metodo [setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) dell'oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), ereditato dagli oggetti [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
- Per impostare un limite per il numero di righe memorizzate nella cache del client, è prima necessario usare un cursore lato server quando si crea uno degli oggetti Statement specificando esplicitamente il tipo di cursore da usare durante la creazione dell'oggetto Statement. Ad esempio, nel driver JDBC è disponibile il tipo di cursore TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, ovvero un cursore lato server di sola lettura, fast forward only, da usare con i database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Per impostare un limite per il numero di righe memorizzate nella cache del client, è prima necessario usare un cursore lato server quando si crea uno degli oggetti Statement specificando esplicitamente il tipo di cursore da usare durante la creazione dell'oggetto Statement. Ad esempio, nel driver JDBC è disponibile il tipo di cursore TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, ovvero un cursore lato server di sola lettura, fast forward only, da usare con i database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 > [!NOTE]  
->  Un'alternativa all'utilizzo del tipo di cursore specifico per SQL Server è l'utilizzo della proprietà della stringa di connessione selectMethod, impostandone il valore su "cursor". Per altre informazioni sui tipi di cursore supportati dal driver JDBC, vedere [informazioni sui tipi di cursore](../../../connect/jdbc/understanding-cursor-types.md).  
+> Un'alternativa all'utilizzo del tipo di cursore specifico per SQL Server è l'utilizzo della proprietà della stringa di connessione selectMethod, impostandone il valore su "cursor". Per altre informazioni sui tipi di cursore supportati dal driver JDBC, vedere [informazioni sui tipi di cursore](../../../connect/jdbc/understanding-cursor-types.md).  
   
- Dopo che è stata eseguita la query nell'oggetto Statement e dopo che al client sono stati restituiti i dati come set di risultati, è possibile chiamare il metodo setFetchSize per controllare la quantità dei dati recuperati contemporaneamente dal database. Ad esempio, se si dispone di una tabella che contiene 100 righe di dati e si imposta su 10 la dimensione del recupero, verranno inserite nella cache del client solo 10 righe di dati in qualsiasi momento. In questo modo verrà ridotta la velocità di elaborazione dei dati, ma si otterrà il vantaggio di utilizzare una quantità inferiore di memoria nel client, il che può risultare particolarmente utile quando si elaborano grandi quantità di dati.  
+Dopo che è stata eseguita la query nell'oggetto Statement e dopo che al client sono stati restituiti i dati come set di risultati, è possibile chiamare il metodo setFetchSize per controllare la quantità dei dati recuperati contemporaneamente dal database. Ad esempio, se si dispone di una tabella che contiene 100 righe di dati e si imposta su 10 la dimensione del recupero, verranno inserite nella cache del client solo 10 righe di dati in qualsiasi momento. In questo modo verrà ridotta la velocità di elaborazione dei dati, ma si otterrà il vantaggio di utilizzare una quantità inferiore di memoria nel client, il che può risultare particolarmente utile quando si elaborano grandi quantità di dati.  
   
- Il file di codice per questo esempio è CacheRS.java ed è disponibile nel seguente percorso:  
-  
- \<*directory di installazione*> \sqljdbc_\<*versione*>\\<*linguaggio*> \samples\resultsets  
-  
+Il file di codice per questo esempio è CacheResultSet.java, disponibile nel percorso seguente:  
+
+```bash  
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets  
+```
+
 ## <a name="requirements"></a>Requisiti  
- Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. È anche necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Per altre informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+
+Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. È anche necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Per altre informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  Con [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sono inclusi file di libreria di classi mssql-jdbc da usare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. Per altre informazioni sui file JAR da scegliere, vedere [requisiti di sistema per il Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
+> Con [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sono inclusi file di libreria di classi mssql-jdbc da usare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. Per altre informazioni sui file JAR da scegliere, vedere [requisiti di sistema per il Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, mediante il codice di esempio viene eseguita una connessione al database [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] di esempio. Viene quindi usata un'istruzione SQL con l'oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), viene specificato il tipo di cursore lato server, quindi viene eseguita l'istruzione SQL e i dati restituiti vengono collocati in un oggetto SQLServerResultSet.  
+
+Nell'esempio seguente, mediante il codice di esempio viene eseguita una connessione al database [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] di esempio. Viene quindi usata un'istruzione SQL con l'oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), viene specificato il tipo di cursore lato server e quindi viene eseguita l'istruzione SQL e i dati restituiti vengono inseriti in un oggetto SQLServerResultSet.  
   
- Il codice di esempio esegue quindi una chiamata al metodo timerTest personalizzato, passando come argomenti la dimensione di recupero da usare e il set di risultati. Il metodo timerTest imposta quindi la dimensione di recupero del set di risultati tramite il metodo setFetchSize, imposta l'ora di inizio del test e quindi scorre il set di risultati con un ciclo `While`. Non appena terminato il ciclo `While`, viene impostata l'ora di fine del test e quindi viene visualizzato il risultato del test stesso con le dimensioni di recupero, il numero di righe elaborate e il tempo impiegato per l'esecuzione.  
-  
+Il codice di esempio esegue quindi una chiamata al metodo timerTest personalizzato, passando come argomenti la dimensione di recupero da usare e il set di risultati. Il metodo timerTest imposta quindi la dimensione di recupero del set di risultati tramite il metodo setFetchSize, imposta l'ora di inizio del test e quindi scorre il set di risultati con un ciclo `While`. Non appena terminato il ciclo `While`, viene impostata l'ora di fine del test e quindi viene visualizzato il risultato del test stesso con le dimensioni di recupero, il numero di righe elaborate e il tempo impiegato per l'esecuzione.  
+
 ```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
 
-public class CacheRS {
+public class CacheResultSet {
 
+    @SuppressWarnings("serial")
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
@@ -72,30 +79,20 @@ public class CacheRS {
 
             String SQL = "SELECT * FROM Sales.SalesOrderDetail;";
 
-            // Perform a fetch for every row in the result set.
-            ResultSet rs = stmt.executeQuery(SQL);
-            timerTest(1, rs);
-            rs.close();
-
-            // Perform a fetch for every tenth row in the result set.
-            rs = stmt.executeQuery(SQL);
-            timerTest(10, rs);
-            rs.close();
-
-            // Perform a fetch for every 100th row in the result set.
-            rs = stmt.executeQuery(SQL);
-            timerTest(100, rs);
-            rs.close();
-
-            // Perform a fetch for every 1000th row in the result set.
-            rs = stmt.executeQuery(SQL);
-            timerTest(1000, rs);
-            rs.close();
-
-            // Perform a fetch for every 128th row (the default) in the result set.
-            rs = stmt.executeQuery(SQL);
-            timerTest(0, rs);
-            rs.close();
+            for (int n : new ArrayList<Integer>() {
+                {
+                    add(1);
+                    add(10);
+                    add(100);
+                    add(1000);
+                    add(0);
+                }
+            }) {
+                // Perform a fetch for every nth row in the result set.
+                try (ResultSet rs = stmt.executeQuery(SQL)) {
+                    timerTest(n, rs);
+                }
+            }
         }
         // Handle any errors that may have occurred.
         catch (SQLException e) {
@@ -129,9 +126,8 @@ public class CacheRS {
         System.out.println();
     }
 }
-```  
-  
+```
+
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo dei set di risultati](../../../connect/jdbc/working-with-result-sets.md)  
-  
-  
+
+[Utilizzo dei set di risultati](../../../connect/jdbc/code-samples/working-with-result-sets.md)  
