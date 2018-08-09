@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di dati di grandi dimensioni | Documenti Microsoft
+title: Utilizzo di dati di grandi dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,33 +14,33 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 688c1f331e3f60868cc53a510308a58730819dd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a60bc049b02ca998119fd4741fa51589a029aeca
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851736"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452295"
 ---
 # <a name="working-with-large-data"></a>Utilizzo di dati di grandi dimensioni
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Il driver JDBC fornisce supporto per la memorizzazione nel buffer adattiva, che consente di recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori server. Con il buffer adattivo il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] recupera i risultati dell'esecuzione di istruzioni dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] come questi sono necessari per l'applicazione, anziché tutti contemporaneamente. Quando l'applicazione non necessita più di accedere ai dati, questi vengono inoltre eliminati dal driver.  
+Il driver JDBC fornisce supporto per la memorizzazione nel buffer adattiva, che consente di recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori server. Grazie al buffering adattivo, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] può recuperare i risultati dell'esecuzione di istruzioni da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] quando questi sono necessari per l'applicazione e non tutti contemporaneamente. Quando l'applicazione non necessita più di accedere ai dati, questi vengono inoltre eliminati dal driver.
+
+In [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] JDBC Driver versione 1.2 la modalità di buffering predefinita era "**full**". Se l'applicazione non impostava la proprietà di connessione "responseBuffering" su "**adaptive**" nelle proprietà di connessione oppure tramite il metodo [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) dell'oggetto [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), il driver supportava la lettura dell'intero risultato dal server. Per ottenere il comportamento di buffering adattivo, l'applicazione doveva impostare esplicitamente la proprietà di connessione "responseBuffering" su "**adaptive**".  
   
- Nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] JDBC Driver versione 1.2, la modalità di buffer è "**completo**" per impostazione predefinita. Se l'applicazione non imposta la proprietà di connessione "responseBuffering" "**adattivo**" nelle proprietà di connessione o utilizzando il [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) metodo il [ SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) oggetto, il driver supportata la lettura dell'intero risultato dal server in una sola volta. Per ottenere il comportamento di memorizzazione nel buffer adattivo, l'applicazione era necessario impostare la proprietà di connessione "responseBuffering" su "**adattivo**" in modo esplicito.  
+il valore **adaptive** è la modalità di buffering predefinita e il driver JDBC memorizza nel buffer la quantità minima possibile di dati quando necessario. Per altre informazioni sull'utilizzo del buffer adattivo, vedere [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md).  
   
- Il **adattivo** è il valore predefinito modalità di buffering e il driver JDBC memorizza nel buffer di dati minima possibile quando necessario. Per ulteriori informazioni sull'utilizzo del buffer adattivo, vedere [utilizzando il buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md).  
-  
- Negli argomenti di questa sezione vengono descritti diversi modi in cui è possibile utilizzare per recuperare i dati di valori di grandi dimensioni da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
+ Gli argomenti in questa sezione descrivono vari modi per recuperare dati per valori di grandi dimensioni da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
-|-----------|-----------------|  
-|[Esempio di lettura di dati di grandi dimensioni](../../connect/jdbc/reading-large-data-sample.md)|Descrive come utilizzare un'istruzione SQL per recuperare dati per valori di grandi dimensioni.|  
-|[Esempio di lettura di dati di grandi dimensioni con una stored procedure](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)|Descrive come recuperare un valore del parametro OUT CallableStatement di grandi dimensioni.|  
-|[Esempio di aggiornamento di dati di grandi dimensioni](../../connect/jdbc/updating-large-data-sample.md)|Descrive come aggiornare dati per valori di grandi dimensioni in un database.|  
+| Argomento                                                                                                                      | Descrizione                                                              |
+| -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [Esempio di lettura di dati di grandi dimensioni](../../connect/jdbc/reading-large-data-sample.md)                                               | Descrive come utilizzare un'istruzione SQL per recuperare dati per valori di grandi dimensioni.       |
+| [Esempio di lettura di dati di grandi dimensioni con una stored procedure](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) | Descrive come recuperare un valore del parametro OUT CallableStatement di grandi dimensioni. |
+| [Esempio di aggiornamento di dati di grandi dimensioni](../../connect/jdbc/updating-large-data-sample.md)                                             | Descrive come aggiornare dati per valori di grandi dimensioni in un database.                |
   
-## <a name="see-also"></a>Vedere anche  
- [Applicazioni di esempio del driver JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
-  
+## <a name="see-also"></a>Vedere anche
+
+[Applicazioni di esempio del driver JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)  

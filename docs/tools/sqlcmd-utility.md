@@ -32,13 +32,13 @@ caps.latest.revision: 155
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3decb197568d28088e5206ac1ffc46b45108d734
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990413"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452735"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,8 +47,15 @@ ms.locfileid: "37990413"
 
  > Per l'utilizzo di sqlcmd in Linux, vedere [installare sqlcmd e bcp in Linux](../linux/sql-server-linux-setup-tools.md).
 
-  L'utilità **sqlcmd** consente di immettere istruzioni Transact-SQL, procedure di sistema e file script al prompt dei comandi, nell'**editor di query** in modalità SQLCMD, in un file script Windows o in un passaggio di processo del sistema operativo (Cmd.exe) in un processo di  Agent di SQL Server. Questa utilità Usa ODBC per eseguire batch Transact-SQL. 
-  
+ Il **sqlcmd** utilità consente di immettere istruzioni Transact-SQL, procedure di sistema e file di script tramite un'ampia gamma di modalità disponibili:
+
+- Al prompt dei comandi.
+- Nelle **Editor di Query** in modalità SQLCMD.
+- In un file di script di Windows.
+- In un passaggio di processo del sistema operativo (Cmd.exe) di un processo di SQL Server Agent.
+
+L'utilità Usa ODBC per eseguire batch Transact-SQL. 
+ 
 > [!NOTE]
 > Le versioni più recenti dell'utilità sqlcmd sono disponibili come versione Web nell' [Area download](http://go.microsoft.com/fwlink/?LinkID=825643). È necessaria versione 13.1 o successiva per supportare Always Encrypted (`-g`) e l'autenticazione di Azure Active Directory (`-G`). Nel computer potrebbero essere installate diverse versioni di sqlcmd.exe. Assicurarsi di usare la versione corretta. Per determinare la versione, eseguire `sqlcmd -?`.
 
@@ -57,7 +64,7 @@ ms.locfileid: "37990413"
   Per eseguire istruzioni sqlcmd in SSMS, selezionare la modalità SQLCMD dal menu a discesa Query nella parte superiore della struttura di navigazione.  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) usa Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient per l'esecuzione in modalità normale e SQLCMD nell'**editor di query**. Se **sqlcmd** viene eseguita dalla riga di comando, **sqlcmd** usa il driver ODBC. Poiché possono essere applicate opzioni predefinite diverse, l'esecuzione della stessa query nella modalità SQLCMD di [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] e nell'utilità **sqlcmd** potrebbe generare risultati diversi.  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) usa Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient per l'esecuzione in modalità normale e SQLCMD nell'**editor di query**. Se l'utilità **sqlcmd** viene eseguita dalla riga di comando, **sqlcmd** usa il driver ODBC. Poiché possono essere applicate opzioni predefinite diverse, l'esecuzione della stessa query nella modalità SQLCMD di [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] e nell'utilità **sqlcmd** potrebbe generare risultati diversi.  
 >   
   
  L'utilità **sqlcmd** non richiede attualmente uno spazio tra l'opzione della riga di comando e il valore. In una versione futura, tuttavia, è possibile che tra l'opzione della riga di comando e il valore sia necessario inserire uno spazio.  
@@ -121,13 +128,13 @@ sqlcmd
 ## <a name="command-line-options"></a>Opzioni della riga di comando  
  **Opzioni correlate all'account di accesso**  
   **-A**  
- Stabilisce la connessione a SQL Server tramite una connessione amministrativa dedicata (DAC, Dedicated Administrator Connection). Questo tipo di connessione viene utilizzato per eseguire la risoluzione dei problemi a livello di server e funziona solo in computer server che supportano le connessioni DAC. Se la connessione DAC non è disponibile, l'utilità **sqlcmd** genera un messaggio di errore e viene chiusa. Per altre informazioni sulle connessioni DAC, vedere [Connessione di diagnostica per gli amministratori di database](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). L'opzione - A non è supportata con l'opzione -G. Quando ci si connette al Database SQL di mediante - A, è necessario essere un amministratore SQL server. L'applicazione livello dati non è disponibile per un amministratore di Azure Active Directory.
+ Consente di accedere a SQL Server tramite una connessione amministrativa dedicata (DAC, Dedicated Administrator Connection). Questo tipo di connessione viene utilizzato per eseguire la risoluzione dei problemi a livello di server Questa connessione funziona solo con computer server che supportano l'applicazione livello dati. Se la connessione DAC non è disponibile, l'utilità **sqlcmd** genera un messaggio di errore e viene chiusa. Per altre informazioni sulle connessioni DAC, vedere [Connessione di diagnostica per gli amministratori di database](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). L'opzione - A non è supportata con l'opzione -G. Quando ci si connette al Database SQL di mediante - A, è necessario essere un amministratore SQL server. L'applicazione livello dati non è disponibile per un amministratore di Azure Active Directory.
   
  **-C**  
  Questa opzione viene utilizzata dal client per configurare l'attendibilità implicita del certificato del server senza necessità di convalida ed equivale all'opzione ADO.NET `TRUSTSERVERCERTIFICATE = true`.  
   
  **-d** *db_name*  
- Esegue un'istruzione `USE` *db_name* all'avvio di **sqlcmd**. Questa opzione imposta la variabile di scripting SQLCMDDBNAME di **sqlcmd** . per specificare il database iniziale. Il valore predefinito corrisponde alla proprietà relativa al database predefinito dell'accesso. Se il database non esiste, viene generato un messaggio di errore e l'utilità **sqlcmd** viene chiusa.  
+ Esegue un'istruzione `USE` *db_name* all'avvio di **sqlcmd**. Questa opzione imposta la variabile di scripting SQLCMDDBNAME di **sqlcmd** . Questo parametro specifica il database iniziale. Il valore predefinito corrisponde alla proprietà relativa al database predefinito dell'accesso. Se il database non esiste, viene generato un messaggio di errore e l'utilità **sqlcmd** viene chiusa.  
   
  **-l** *login_timeout*  
  Specifica il numero dei secondi che devono trascorrere prima che si verifichi il timeout di un accesso di **sqlcmd** al driver ODBC quando si tenta la connessione a un server. Questa opzione imposta la variabile di scripting SQLCMDLOGINTIMEOUT di **sqlcmd** . Il valore predefinito per il timeout di accesso a **sqlcmd** è otto secondi. Quando si usa l'opzione **-G** per la connessione al database SQL o a SQL Data Warehouse e l'autenticazione tramite Azure Active Directory, si consiglia un valore di timeout di almeno 30 secondi. Il valore del timeout deve essere un numero compreso tra 0 e 65.534. Se il valore specificato non è numerico o non è compreso in tale intervallo, **sqlcmd** genera un messaggio di errore. Il valore 0 specifica un timeout infinito.
@@ -149,10 +156,11 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 - **Nome utente e password di Azure Active Directory:** 
 
     Quando si vuole usare nome utente e password di Azure Active Directory, è possibile fornire l'opzione **-G** e anche usare nome utente e password fornendo le opzioni **-U** e **-P** .
+
     ``` 
     Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G 
     ``` 
-    Questo genera la seguente stringa di connessione nel back-end: 
+    Il parametro -G genera la seguente stringa di connessione nel back-end: 
 
     ```
      SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID= bob@contoso.com;PWD=MyAADPassword;AUTHENTICATION = ActiveDirectoryPassword 
@@ -192,7 +200,11 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  Questa opzione viene utilizzata dal client per richiedere una connessione crittografata.  
   
  **-P** *password*  
- Password specificata dall'utente. Alle password viene applicata la distinzione tra maiuscole e minuscole. Se si usa l'opzione -U omettendo l'opzione **-P** e la variabile di ambiente SQLCMDPASSWORD non è stata impostata, **sqlcmd** chiede all'utente di immettere una password. Per specificare una password Null (non consigliato), usare **-P ""**. E ricordare sempre di:
+ Password specificata dall'utente. Per le password viene fatta distinzione tra maiuscole e minuscole. Se si usa l'opzione -U omettendo l'opzione **-P** e la variabile di ambiente SQLCMDPASSWORD non è stata impostata, **sqlcmd** chiede all'utente di immettere una password. Non è consigliabile usare le password null, ma è possibile specificare una password null con una coppia di virgolette doppie adiacenti per il valore del parametro:
+
+- **-P ""**
+
+È consigliabile usare una password complessa.
  
 #### <a name="use-a-strong-passwordhttpsmsdnmicrosoftcomlibraryms161962sql130aspx"></a>[**Usare una password complessa.**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
   
@@ -212,7 +224,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  Se la combinazione di nome utente e password non è corretta, viene generato un messaggio di errore.  
   
-**NOTA**  La variabile di ambiente OSQLPASSWORD è disponibile per motivi di compatibilità con le versioni precedenti. La variabile di ambiente SQLCMDPASSWORD è prioritaria rispetto alla variabile di ambiente OSQLPASSWORD. Questo significa che è possibile usare **sqlcmd** e **osql** insieme senza creare conflitti e che gli script precedenti continueranno a funzionare correttamente.  
+**NOTA**  La variabile di ambiente OSQLPASSWORD è disponibile per motivi di compatibilità con le versioni precedenti. La variabile di ambiente SQLCMDPASSWORD ha la precedenza rispetto alla variabile di ambiente OSQLPASSWORD. Ora che OSQLPASSWORD non è più condivisa, le utilità **sqlcmd** e **osql** può essere usato uno accanto a altro senza interferenze. Gli script precedenti continueranno a funzionare.  
   
  Se si usa l'opzione **-P** in combinazione con l'opzione **-E** , viene generato un messaggio di errore.  
   
@@ -231,7 +243,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 >  La variabile di ambiente OSQLSERVER è disponibile per motivi di compatibilità con le versioni precedenti. La variabile di ambiente SQLCMDSERVER è prioritaria rispetto alla variabile di ambiente OSQLSERVER. Questo significa che è possibile usare **sqlcmd** e **osql** insieme senza creare conflitti e che gli script precedenti continueranno a funzionare correttamente.  
   
  **-U** *login_id*  
- È il nome di accesso o il nome utente di un database indipendente. Per gli utenti dei database indipendenti, è necessario fornire l'opzione del nome di database (-d).  
+ È il nome di accesso o il nome utente di un database indipendente. Per gli utenti dei database indipendenti, è necessario specificare l'opzione del nome di database (-d).  
   
 > [!NOTE]  
 >  La variabile di ambiente OSQLUSER è disponibile per motivi di compatibilità con le versioni precedenti. La variabile di ambiente SQLCMDUSER ha la priorità rispetto alla variabile di ambiente OSQLUSER. È quindi possibile usare **sqlcmd** e **osql** insieme senza conflitti e gli script **osql** esistenti continueranno a funzionare correttamente.  
@@ -260,7 +272,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
 -   **sqlcmd** riconosce automaticamente file di input Unicode sia di tipo Big-Endian che di tipo Little-Endian. Se è stata specificata l'opzione **-u** , l'output sarà sempre in formato Unicode Little-Endian.  
   
--   Se non viene specificato alcun file di output, la tabella codici di output sarà costituita dalla tabella codici della console. Ciò consente la visualizzazione corretta dell'output nella console.  
+-   Se non viene specificato alcun file di output, la tabella codici di output sarà costituita dalla tabella codici della console. Questo approccio consente la visualizzazione corretta dell'output nella console.  
   
 -   Se sono disponibili più file di input, vengono considerati appartenenti alla stessa tabella codici. È possibile combinare file di input Unicode e non Unicode.  
   
@@ -284,7 +296,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  **-o** *output_file*  
  Identifica il file che riceve l'output di **sqlcmd**.  
   
- Se si specifica **-u** , *output_file* viene archiviato in formato Unicode. Se il nome file non è valido, viene generato un messaggio di errore e l'utilità **sqlcmd** viene chiusa. **sqlcmd** non supporta la scrittura simultanea di più processi **sqlcmd** nello stesso file. L'output del file risulterà danneggiato o non corretto. Per altre informazioni sui formati di file, vedere l'opzione **-f** . Se il file non esiste, verrà creato. Un file con lo stesso nome di una sessione di **sqlcmd** precedente verrà sovrascritto. Il file specificato in questa posizione non corrisponde al file **stdout** . Se viene specificato un file **stdout** , questo file non verrà utilizzato.  
+ Se si specifica **-u** , *output_file* viene archiviato in formato Unicode. Se il nome file non è valido, viene generato un messaggio di errore e l'utilità **sqlcmd** viene chiusa. **sqlcmd** non supporta la scrittura simultanea di più processi **sqlcmd** nello stesso file. L'output del file risulterà danneggiato o non corretto. Vedere le **-f** commutatore è importante anche per i formati di file. Se il file non esiste, verrà creato. Un file con lo stesso nome di una sessione di **sqlcmd** precedente verrà sovrascritto. Il file specificato in questa posizione non corrisponde al file **stdout** . Se viene specificato un file **stdout**, questo file non verrà usato.  
   
  Percorsi di esempio:  
 
@@ -355,14 +367,14 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  `sqlcmd -v MyVar1=something -v MyVar2="some thing"`  
   
  **-x**  
- Indica a **sqlcmd** di ignorare le variabili di scripting. Ciò risulta utile quando uno script contiene numerose istruzioni INSERT che possono includere stringhe con lo stesso formato di variabili normali, ad esempio $(*variable_name*).  
+ Indica a **sqlcmd** di ignorare le variabili di scripting. Questo parametro risulta utile quando uno script contiene numerose istruzioni INSERT che possono includere stringhe con lo stesso formato di variabili normali, ad esempio $(*variable_name*).  
   
  **Opzioni di formattazione**  
   **-h** *headers*  
  Specifica il numero di righe da stampare tra le intestazioni delle colonne. Per impostazione predefinita, le intestazioni vengono stampate una volta per ogni set di risultati delle query. Questa opzione imposta la variabile di scripting SQLCMDHEADERS di **sqlcmd** . Usare **-1** per non stampare alcuna intestazione. Eventuali valori non validi comportano la generazione di un messaggio di errore e la chiusura di **sqlcmd** .  
   
  **-k** [**1** | **2**]  
- Rimuove tutti i caratteri di controllo, ad esempio i caratteri di tabulazione e nuova riga, dall'output. In questo modo viene conservata la formattazione di colonna quando vengono restituiti i dati. Se si specifica 1, i caratteri di controllo vengono sostituiti da un singolo spazio. Se si specifica 2, i caratteri di controllo consecutivi vengono sostituiti da uno spazio singolo. **-k** corrisponde a **-k1**.  
+ Rimuove tutti i caratteri di controllo, ad esempio i caratteri di tabulazione e nuova riga, dall'output. Questo parametro conserva la formattazione di colonna quando vengono restituiti i dati. Se si specifica 1, i caratteri di controllo vengono sostituiti da un singolo spazio. Se si specifica 2, i caratteri di controllo consecutivi vengono sostituiti da uno spazio singolo. **-k** corrisponde a **-k1**.  
   
  **-s** *col_separator*  
  Specifica il carattere separatore di colonna. L'impostazione predefinita è uno spazio vuoto. Questa opzione imposta la variabile di scripting SQLCMDCOLSEP di **sqlcmd** . Per utilizzare caratteri con un significato speciale per il sistema operativo, ad esempio il carattere e commerciale (&) o il punto e virgola (;), racchiudere il carattere specifico tra virgolette ("). Il separatore di colonna può essere un carattere a 8 bit qualsiasi.  
@@ -441,7 +453,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 > [!NOTE]  
 >  A causa della natura delle trasmissioni in rete, è possibile che **sqlcmd** non riceva una risposta tempestiva da tutti i server e pertanto che l'elenco di server restituito sia diverso per ogni chiamata di questa opzione.  
   
- Se si specifica il parametro facoltativo **c** , l'output viene visualizzato senza la riga di intestazione Servers e ogni riga del server viene elencata senza spazi iniziali. Questo tipo di output viene definito pulito. L'output pulito consente di migliorare le prestazioni di elaborazione dei linguaggi di scripting.  
+ Se si specifica il parametro facoltativo **c** , l'output viene visualizzato senza la riga di intestazione **Servers:** e ogni riga del server viene elencata senza spazi iniziali. In questa presentazione è detto l'output pulito. L'output pulito consente di migliorare le prestazioni di elaborazione dei linguaggi di scripting.  
   
  **-p**[**1**]  
  Stampa le statistiche delle prestazioni per ogni set di risultati. Di seguito è riportato un esempio del formato delle statistiche delle prestazioni:  
@@ -678,7 +690,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  Questo errore comporta la chiusura dello script **sqlcmd** e la restituzione dell'ID di messaggio 50001 al client.  
   
- I valori restituiti compresi tra -1 e -99 sono riservati a SQL Server. L'utilità **sqlcmd** definisce i valori restituiti aggiuntivi elencati di seguito:  
+ I valori restituiti compresi tra -1 e -99 sono riservati a SQL Server e l'utilità **sqlcmd** definisce i valori restituiti aggiuntivi elencati di seguito:  
   
 |Valori restituiti|Descrizione|  
 |-------------------|-----------------|  
@@ -687,7 +699,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 |-102|Si è verificato un errore di conversione durante la selezione del valore restituito.|  
   
  **GO** [*count*]  
- GO indica sia la fine di un batch che l'esecuzione di eventuali istruzioni Transact-SQL memorizzate nella cache. Il batch viene eseguito più volte in batch distinti. Non è possibile dichiarare una variabile più volte in un unico batch.
+ GO indica sia la fine di un batch che l'esecuzione di eventuali istruzioni Transact-SQL memorizzate nella cache. Il batch viene eseguito più volte in batch distinti. È possibile dichiarare una variabile più volte in un unico batch.
   
  **Comandi vari**  
   **:r \<** *filename* **>**  
@@ -720,7 +732,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  Se *timeout* viene omesso, il valore predefinito corrisponde al valore della variabile SQLCMDLOGINTIMEOUT.  
   
- Se si specifica solo *user_name* , come opzione o come variabile di ambiente, all'utente verrà chiesto di immettere una password. Ciò non si verifica se è stata impostata la variabile di ambiente SQLCMDUSER o SQLCMDPASSWORD. Se non si specificano opzioni o variabili di ambiente, per la connessione verrà utilizzata la modalità di autenticazione di Windows. Ad esempio, per connettersi a un'istanza, `instance1`, di SQL Server, `myserver`, utilizzando la sicurezza integrata, ad esempio, specificare:  
+ Se si specifica solo *user_name* , come opzione o come variabile di ambiente, all'utente verrà chiesto di immettere una password. Ciò non si verifica se è stata impostata la variabile di ambiente SQLCMDUSER o SQLCMDPASSWORD. Se non si specificano opzioni o variabili di ambiente, per la connessione verrà usata la modalità di autenticazione di Windows. Ad esempio, per connettersi a un'istanza, `instance1`, di SQL Server, `myserver`, utilizzando la sicurezza integrata, ad esempio, specificare:  
   
  `:connect myserver\instance1`  
   
@@ -757,20 +769,21 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
 -   Ogni nuova sessione di **sqlcmd** sovrascriverà i file esistenti con gli stessi nomi.  
   
-### <a name="informational-messages"></a>Messaggi informativi  
- **sqlcmd** stampa qualsiasi messaggio informativo inviato dal server. Nell'esempio seguente al termine dell'esecuzione delle istruzioni Transact-SQL viene stampato un messaggio informativo.  
+### <a name="informational-messages"></a>Messaggi informativi
+
+**sqlcmd** stampa qualsiasi messaggio informativo inviato dal server. Nell'esempio seguente al termine dell'esecuzione delle istruzioni Transact-SQL viene stampato un messaggio informativo.
   
- Al prompt dei comandi digitare quanto segue:  
+Al prompt dei comandi digitare quanto segue:
+
+`sqlcmd`
   
- `sqlcmd`  
-  
- `At the sqlcmd prompt type:`  
-  
- `USE AdventureWorks2012;`  
-  
- `GO`  
-  
- Se si preme INVIO, verrà stampato il messaggio informativo seguente: "Il contesto di database è stato sostituito con 'AdventureWorks2012'".  
+Al prompt digitare sqlcmd:
+
+`USE AdventureWorks2012;`
+
+`GO`
+
+Se si preme INVIO, verrà stampato il messaggio informativo seguente: "Il contesto di database è stato sostituito con 'AdventureWorks2012'".  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Formato di output delle query Transact-SQL  
  **sqlcmd** stampa prima di tutto un'intestazione di colonna contenente i nomi delle colonne specificati nell'elenco di selezione. I nomi di colonna sono delimitati tramite il carattere specificato da SQLCMDCOLSEP. Per impostazione predefinita, viene utilizzato uno spazio. Se la lunghezza del nome di colonna è minore della larghezza della colonna, nell'output vengono inseriti caratteri di riempimento fino alla colonna successiva.  

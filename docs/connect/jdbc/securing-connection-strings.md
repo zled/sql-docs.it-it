@@ -14,25 +14,25 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dbe0ac21775b41116f367ab688310fcb7c2b678f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b13501bac840f2f39390a3cfed184c11dc9f36bf
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38021235"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453125"
 ---
 # <a name="securing-connection-strings"></a>Protezione delle stringhe di connessione
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  La protezione dell'accesso all'origine dati è uno degli obiettivi più importanti di un'applicazione. Per limitare l'accesso all'origine dati, è necessario adottare alcune precauzioni per garantire la protezione delle informazioni di connessione quali ID utente, password e nome dell'origine dei dati. L'archiviazione di un ID utente e della password in testo normale, ad esempio nel codice sorgente, comporta un problema serio di protezione. Anche se si fornisce una versione compilata del codice contenente le informazioni su ID utente e password in un'origine esterna, il codice compilato potrebbe essere disassemblato e l'ID utente e la password risultare quindi esposti. Di conseguenza, è di fondamentale importanza che informazioni critiche quali ID utente e password non siano presenti nel codice.  
-  
- È consigliabile non archiviare la password insieme all'URL di connessione nel codice sorgente dell'applicazione, ma piuttosto in un file distinto con accesso limitato. L'accesso al file può essere concesso in base al contesto in cui viene eseguita l'applicazione.  
-  
- Un altro metodo è l'archiviazione della password crittografata in un file. Utilizzare un'API di crittografia che non richieda la chiave per l'archiviazione e che non sia stata derivata dalla password dell'utente. Ad esempio, è consigliabile valutare l'opportunità di utilizzare coppie di chiavi pubbliche/private basate sui certificati oppure un metodo in cui le due parti utilizzano un protocollo di chiave concordata (algoritmo di Diffie-Hellman) per generare le stesse chiavi private per la crittografia senza mai dover trasmettere la chiave privata.  
-  
- Se le informazioni sulla stringa di connessione provengono da un'origine esterna, ad esempio un utente che fornisce un ID utente e la relativa password, sarà necessario convalidare tutti gli input dell'origine per assicurarsi che il formato sia corretto e che non contenga ulteriori parametri che interessano la la connessione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Protezione delle applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
-  
-  
+La protezione dell'accesso all'origine dati è uno degli obiettivi più importanti di un'applicazione. Per limitare l'accesso all'origine dati, è necessario adottare alcune precauzioni per garantire la protezione delle informazioni di connessione quali ID utente, password e nome dell'origine dei dati. L'archiviazione di un ID utente e della password in testo normale, ad esempio nel codice sorgente, comporta un problema serio di protezione. Anche se si fornisce una versione compilata del codice contenente le informazioni su ID utente e password in un'origine esterna, il codice compilato potrebbe essere disassemblato e l'ID utente e la password risultare quindi esposti. Di conseguenza, è di fondamentale importanza che informazioni critiche quali ID utente e password non siano presenti nel codice.
+
+È consigliabile non archiviare la password insieme all'URL di connessione nel codice sorgente dell'applicazione, ma piuttosto in un file distinto con accesso limitato. L'accesso al file può essere concesso in base al contesto in cui viene eseguita l'applicazione.
+
+Un altro metodo è l'archiviazione della password crittografata in un file. Utilizzare un'API di crittografia che non richieda la chiave per l'archiviazione e che non sia stata derivata dalla password dell'utente. Ad esempio, è consigliabile valutare l'opportunità di utilizzare coppie di chiavi pubbliche/private basate sui certificati oppure un metodo in cui le due parti utilizzano un protocollo di chiave concordata (algoritmo di Diffie-Hellman) per generare le stesse chiavi private per la crittografia senza mai dover trasmettere la chiave privata.
+
+Se le informazioni sulla stringa di connessione provengono da un'origine esterna, ad esempio un utente che fornisce un ID utente e la relativa password, sarà necessario convalidare tutti gli input dell'origine per assicurarsi che il formato sia corretto e che non contenga ulteriori parametri che interessano la la connessione.
+
+## <a name="see-also"></a>Vedere anche
+
+[Protezione delle applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)
