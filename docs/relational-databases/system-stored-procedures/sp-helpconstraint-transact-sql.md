@@ -1,5 +1,5 @@
 ---
-title: sp_helpconstraint (Transact-SQL) | Documenti Microsoft
+title: sp_helpconstraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db7c4131c564dad86abe569862b364fbcc6c7288
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d2b4e51dc08ba897145d689d5ea6a918e3e7afb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242258"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559451"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,12 +56,12 @@ sp_helpconstraint [ @objname = ] 'table'
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- **sp_helpconstraint** consente di visualizzare una colonna con indicizzazione decrescente, se nelle chiavi primarie. Nel set di risultati il nome di tali colonne viene seguito da un segno meno (-). Nel caso di colonne indicizzate in ordine crescente, come per impostazione predefinita, viene invece visualizzato solo il nome delle colonne.  
+ **sp_helpconstraint** consente di visualizzare una colonna con indicizzazione decrescente se fanno parte di chiavi primarie. Nel set di risultati il nome di tali colonne viene seguito da un segno meno (-). Nel caso di colonne indicizzate in ordine crescente, come per impostazione predefinita, viene invece visualizzato solo il nome delle colonne.  
   
-## <a name="remarks"></a>Osservazioni  
- L'esecuzione **sp_help * * * tabella* tutte le informazioni sulla tabella specificata. Per visualizzare solo le informazioni sui vincoli, utilizzare **sp_helpconstraint**.  
+## <a name="remarks"></a>Note  
+ L'esecuzione di **sp_help * * * tabella* tutte le informazioni sulla tabella specificata. Per visualizzare solo le informazioni sui vincoli, usare **sp_helpconstraint**.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -74,7 +74,7 @@ EXEC sp_helpconstraint 'Production.Product';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

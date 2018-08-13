@@ -1,5 +1,5 @@
 ---
-title: sp_purge_jobhistory (Transact-SQL) | Documenti Microsoft
+title: sp_purge_jobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9c998f8b105ed0f85eb6637a3f861e435af4471e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9adf5bc1eada3a1fc2caa58db15fc4fc95ebd35b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257740"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564065"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,32 +49,32 @@ sp_purge_jobhistory
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_name=** ] **'***job_name***'**  
- Nome del processo di cui si desidera eliminare i record della cronologia. *job_name*viene **sysname**, con un valore predefinito è NULL. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+ Nome del processo di cui si desidera eliminare i record della cronologia. *nome_processo*viene **sysname**, con un valore predefinito è NULL. Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
 > [!NOTE]  
->  I membri del **sysadmin** fisso di server o del ruolo di **SQLAgentOperatorRole** ruolo predefinito del database possono eseguire **sp_purge_jobhistory** senza specificare un *job_name* o *job_id*. Quando **sysadmin** gli utenti specificano questi argomenti, la cronologia processo per tutti i processi locali e multiserver viene eliminata entro il tempo specificato da *oldest_date*. Quando **SQLAgentOperatorRole** gli utenti specificano questi argomenti, la cronologia processo per tutti i processi locali verrà eliminata entro il tempo specificato da *oldest_date*.  
+>  I membri del **sysadmin** fissa ruolo del server o i membri del **SQLAgentOperatorRole** ruolo predefinito del database possono eseguire **sp_purge_jobhistory** senza specificare un *nome_processo* oppure *job_id*. Quando **sysadmin** questi argomenti non vengono specificati gli utenti, la cronologia processo per tutti i processi locali e multiserver viene eliminata entro il tempo specificato da *oldest_date*. Quando **SQLAgentOperatorRole** gli utenti non specificano questi argomenti, la cronologia processo per tutti i processi locali verrà eliminata entro il tempo specificato da *oldest_date*.  
   
  [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo dei record da eliminare. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. Vedere la nota nella sezione Descrizione del **@job_name** per informazioni su come **sysadmin** o **SQLAgentOperatorRole** gli utenti possono utilizzare questo argomento.  
+ Numero di identificazione del processo dei record da eliminare. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL. Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi. Vedere la nota nella descrizione del **@job_name** per informazioni su come **sysadmin** oppure **SQLAgentOperatorRole** gli utenti possono usare questo argomento.  
   
  [ **@oldest_date** =] *oldest_date*  
- Il record meno recente da conservare nella cronologia. *oldest_date* viene **datetime**, con un valore predefinito è NULL. Quando *oldest_date* è specificato, **sp_purge_jobhistory** rimuove solo i record precedenti rispetto al valore specificato.  
+ Il record meno recente da conservare nella cronologia. *oldest_date* viene **datetime**, con un valore predefinito è NULL. Quando *oldest_date* omette **sp_purge_jobhistory** rimuove solo i record precedenti rispetto al valore specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Quando **sp_purge_jobhistory** viene completato correttamente, viene restituito un messaggio.  
   
-## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, solo i membri del **sysadmin** ruolo predefinito del server o **SQLAgentOperatorRole** ruolo predefinito del database può eseguire questa stored procedure. I membri di **sysadmin** possono eliminare la cronologia processo per tutti i processi locali e multiserver. I membri di **SQLAgentOperatorRole** possono eliminare la cronologia processo per tutti i processi locali solo.  
+## <a name="permissions"></a>Permissions  
+ Per impostazione predefinita, solo i membri del **sysadmin** ruolo predefinito del server o il **SQLAgentOperatorRole** ruolo predefinito del database può eseguire questa stored procedure. I membri del **sysadmin** possono eliminare la cronologia processo per tutti i processi locali e multiserver. I membri del **SQLAgentOperatorRole** possono eliminare la cronologia processo per tutti i processi locali solo.  
   
- Altri utenti, inclusi i membri di **SQLAgentUserRole** e i membri di **SQLAgentReaderRole**, deve essere concessa esplicitamente l'autorizzazione EXECUTE su **sp_purge_jobhistory**. Dopo la concessione dell'autorizzazione EXECUTE per questa stored procedure, a tali utenti è consentito eliminare solo la cronologia dei processi di cui sono proprietari.  
+ Altri utenti, inclusi i membri del **SQLAgentUserRole** e ai membri del **SQLAgentReaderRole**, deve essere concessa esplicitamente l'autorizzazione EXECUTE su **sp_purge_jobhistory**. Dopo la concessione dell'autorizzazione EXECUTE per questa stored procedure, a tali utenti è consentito eliminare solo la cronologia dei processi di cui sono proprietari.  
   
- Il **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** ruoli predefiniti del database sono presenti il **msdb** database. Per informazioni dettagliate sulle relative autorizzazioni, vedere [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Il **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** ruoli predefiniti del database sono nel **msdb** database. Per informazioni dettagliate sulle relative autorizzazioni, vedere [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
 ## <a name="examples"></a>Esempi  
   
@@ -93,7 +93,7 @@ GO
 ### <a name="b-remove-history-for-all-jobs"></a>B. Rimozione della cronologia di tutti i processi  
   
 > [!NOTE]  
->  Solo i membri del **sysadmin** fisso di server e del ruolo di **SQLAgentOperatorRole** possono rimuovere la cronologia per tutti i processi. Quando **sysadmin** agli utenti di eseguire questa stored procedure senza parametri, viene eliminata la cronologia processo per tutti i processi locali e multiserver. Quando **SQLAgentOperatorRole** agli utenti di eseguire questa stored procedure senza parametri, viene eliminata solo la cronologia processo per tutti i processi locali.  
+>  Solo i membri del **sysadmin** risolto ruolo del server e i membri delle **SQLAgentOperatorRole** possono rimuovere la cronologia per tutti i processi. Quando **sysadmin** agli utenti di eseguire questa stored procedure senza parametri, viene eliminata la cronologia processo per tutti i processi locali e multiserver. Quando **SQLAgentOperatorRole** agli utenti di eseguire questa stored procedure senza parametri, viene eliminata solo la cronologia processo per tutti i processi locali.  
   
  Nell'esempio seguente la procedura viene eseguita senza alcun parametro in modo da rimuovere tutti i record della cronologia.  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproperty (Transact-SQL) | Documenti Microsoft
+title: sp_addextendedproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8ebd317abcd9fec6ee6e116c0bbacc63bf547be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9f415c295a45e2505bfa30afb34b76dba1d423c5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240631"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555101"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_addextendedproperty
 >  La possibilità di specificare USER come tipo di livello 0 in una proprietà estesa di un oggetto di tipo di livello 1 verrà rimossa in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In alternativa, utilizzare SCHEMA come tipo di livello 0. Quando, ad esempio, si definisce una proprietà estesa in una tabella, specificare lo schema della tabella anziché un nome utente. La possibilità di specificare TYPE come tipo di livello 0 verrà rimossa in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per TYPE utilizzare SCHEMA come tipo di livello 0 e TYPE come tipo di livello 1.  
   
  [ @level0name=] {'*level0_object_name*'}  
- Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* viene **sysname** con un valore predefinito è NULL.  
+ Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* viene **sysname** con valore predefinito è NULL.  
   
  [ @level1type=] {'*level1_object_type*'}  
  Tipo di oggetto di livello 1. *level1_object_type* viene **varchar(128)**, con un valore predefinito è NULL. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
@@ -90,7 +90,7 @@ sp_addextendedproperty
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Ai fini della definizione delle proprietà estese, gli oggetti inclusi in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono classificati in base a tre livelli, ovvero 0, 1 e 2. Il livello 0 è il livello più alto e viene definito come oggetti inclusi nell'ambito del database. Gli oggetti di livello 1 sono inclusi nell'ambito di uno schema o utente, mentre gli oggetti di livello 2 sono contenuti dagli oggetti di livello 1. È possibile definire le proprietà estese per gli oggetti di qualsiasi livello.  
   
  È necessario qualificare i riferimenti a un oggetto in un livello mediante i nomi degli oggetti proprietari di livello superiore o che li contengono. Se, ad esempio, si aggiunge una proprietà estesa a una colonna di tabella (livello 2), è necessario specificare anche il nome della tabella (livello 1) che include la colonna e lo schema (livello 0) contenente la tabella.  
@@ -99,15 +99,15 @@ sp_addextendedproperty
   
  Le proprietà estese non sono consentite negli oggetti di sistema, negli oggetti esterni all'ambito di un database definito dall'utente oppure negli oggetti non elencati come valori validi nella sezione Argomenti.  
   
- Le proprietà estese non sono consentite nelle tabelle con ottimizzazione per la memoria.  
+ Le proprietà estese non sono consentite nelle tabelle ottimizzate per la memoria.  
   
 ## <a name="replicating-extended-properties"></a>Replica delle proprietà estese  
- Le proprietà estese vengono replicate solo nella sincronizzazione iniziale tra il server di pubblicazione e il Sottoscrittore. Se si aggiungono o si modificano proprietà estese dopo la sincronizzazione iniziale, le modifiche apportate non vengono replicate. Per ulteriori informazioni sulla replica degli oggetti di database, vedere [pubblicare dati e oggetti di Database](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+ Le proprietà estese vengono replicate solo nella sincronizzazione iniziale tra il server di pubblicazione e il Sottoscrittore. Se si aggiungono o si modificano proprietà estese dopo la sincronizzazione iniziale, le modifiche apportate non vengono replicate. Per altre informazioni su come replicare gli oggetti di database, vedere [pubblicare dati e oggetti di Database](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 ## <a name="schema-vs-user"></a>Differenza tra schemi  Utente  
- Non è consigliabile specificare USER come tipo di livello 0 quando si applica una proprietà estesa a un oggetto di database perché ciò può causare ambiguità nella risoluzione dei nomi. Si supponga, ad esempio che l'utente Mary sia proprietaria di due schemi (Mary e MySchema) e che entrambi gli schemi includano una tabella denominata MyTable. Se l'utente Mary aggiunge una proprietà estesa alla tabella MyTable e specifica  **@level0type = n'User'**,  **@level0name = Mary**, non è chiaro a quale tabella verrà applicata la proprietà estesa. Per mantenere la compatibilità con le versioni precedenti, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicherà la proprietà alla tabella inclusa nello schema denominato Mary.  
+ Non è consigliabile specificare USER come tipo di livello 0 quando si applica una proprietà estesa a un oggetto di database perché ciò può causare ambiguità nella risoluzione dei nomi. Si supponga, ad esempio che l'utente Mary sia proprietaria di due schemi (Mary e MySchema) e che entrambi gli schemi includano una tabella denominata MyTable. Se Mary aggiunge una proprietà estesa alla tabella MyTable e specifica  **@level0type = n'User'**,  **@level0name = Mary**, non è chiaro a quale tabella viene applicata la proprietà estesa. Per mantenere la compatibilità con le versioni precedenti, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicherà la proprietà alla tabella inclusa nello schema denominato Mary.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  I membri dei ruoli predefiniti del database db_owner e db_ddladmin possono aggiungere le proprietà estese a qualsiasi oggetto, anche se il ruolo db_ddladmin non può aggiungere proprietà al database stesso oppure a utenti o ruoli.  
   
  Gli utenti possono aggiungere le proprietà estese agli oggetti di cui sono proprietari oppure per i quali dispongono delle autorizzazioni ALTER o CONTROL.  
@@ -242,7 +242,7 @@ EXEC sys.sp_addextendedproperty
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  

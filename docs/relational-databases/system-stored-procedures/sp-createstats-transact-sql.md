@@ -1,5 +1,5 @@
 ---
-title: sp_createstats (Transact-SQL) | Documenti Microsoft
+title: sp_createstats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c37e65276e14bc8687f9ffceb1f5a2a5f3ca655
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 75e05e36dfea3a36fa01d08ca79b22c3abb7e2c4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239851"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555161"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Chiamate di [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) istruzione per creare statistiche di colonna singola su colonne che non sono già la prima colonna in un oggetto statistiche. La creazione di statistiche di colonna singola aumenta il numero di istogrammi, con un conseguente miglioramento delle stime della cardinalità, dei piani di query e delle prestazioni di esecuzione delle query. La prima colonna di un oggetto statistiche include un istogramma, mentre le altre colonne non dispongono istogrammi.  
+  Chiama il [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) istruzione per creare statistiche a colonna singola su colonne che non sono già la prima colonna in un oggetto statistiche. La creazione di statistiche di colonna singola aumenta il numero di istogrammi, con un conseguente miglioramento delle stime della cardinalità, dei piani di query e delle prestazioni di esecuzione delle query. La prima colonna di un oggetto statistiche include un istogramma, mentre le altre colonne non dispongono istogrammi.  
   
- sp_createstats è utile per applicazioni quali quelle di benchmarking quando l'ora di esecuzione delle query è critica e non è possibile attendere la generazione delle statistiche di colonna singola da parte di Query Optimizer. Nella maggior parte dei casi, non è necessario utilizzare sp_createstats; i piani di query optimizer genera le statistiche a colonna singola necessarie per migliorare le query quando il **AUTO_CREATE_STATISTICS** opzione è abilitata.  
+ sp_createstats è utile per applicazioni quali quelle di benchmarking quando l'ora di esecuzione delle query è critica e non è possibile attendere la generazione delle statistiche di colonna singola da parte di Query Optimizer. Nella maggior parte dei casi, non è necessario utilizzare sp_createstats; i piani di query optimizer genera le statistiche a colonna singola necessarie per migliorare la query quando la **AUTO_CREATE_STATISTICS** opzione è abilitata.  
   
- Per ulteriori informazioni sulle statistiche, vedere [statistiche](../../relational-databases/statistics/statistics.md). Per ulteriori informazioni sulla generazione di statistiche di colonna singola, vedere la **AUTO_CREATE_STATISTICS** opzione [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Per altre informazioni sulle statistiche, vedere [Statistiche](../../relational-databases/statistics/statistics.md). Per altre informazioni sulla generazione di statistiche a colonna singola, vedere la **AUTO_CREATE_STATISTICS** opzione [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,7 +63,7 @@ sp_createstats
  Usa il [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) istruzione con il **NORECOMPUTE** opzione. **NORECOMPUTE** viene **char(12)**.  e il valore predefinito è NO.  
   
  [  **@incremental=** ] **'incrementale'**  
- Usa il [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) istruzione con il **INCREMENTALE = ON** opzione. **Incrementale** viene **char(12)**.  e il valore predefinito è NO.  
+ Usa il [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) istruzione con il **INCREMENTAL = ON** opzione. **Incrementale** viene **char(12)**.  e il valore predefinito è NO.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -71,12 +71,12 @@ sp_createstats
 ## <a name="result-sets"></a>Set di risultati  
  Il nome dei nuovi oggetti statistiche corrisponde a quello delle colonne su cui sono stati creati.  
   
-## <a name="remarks"></a>Osservazioni  
- sp_createstats non crea né Aggiorna statistiche su colonne che sono prime colonne in un oggetto statistiche esistente.  Ciò include la prima colonna di statistiche create per gli indici, colonne con statistiche di colonna singola generate con l'opzione AUTO_CREATE_STATISTICS e la prima colonna di statistiche create con l'istruzione CREATE STATISTICS. sp_createstats non crea statistiche sulle prime colonne di indici disabilitati, a meno che tale colonna viene utilizzata in un altro indice abilitato. sp_createstats non crea statistiche sulle tabelle con un indice cluster disabilitato.  
+## <a name="remarks"></a>Note  
+ sp_createstats non crea né Aggiorna statistiche su colonne che sono prime colonne in un oggetto statistiche esistente.  Ciò include la prima colonna di statistiche create per indici, colonne con statistiche a colonna singola generate con l'opzione AUTO_CREATE_STATISTICS e la prima colonna di statistiche create con l'istruzione CREATE STATISTICS. sp_createstats non crea statistiche sulle prime colonne di indici disabilitati, a meno che tale colonna viene utilizzata in un altro indice abilitato. sp_createstats non crea statistiche sulle tabelle con un indice cluster disabilitato.  
   
- Quando la tabella contiene un set di colonne, sp_createstats non crea statistiche sulle colonne di tipo sparse. Per ulteriori informazioni sui set di colonne e colonne di tipo sparse, vedere [utilizzare set di colonne](../../relational-databases/tables/use-column-sets.md) e [utilizzare le colonne di tipo Sparse](../../relational-databases/tables/use-sparse-columns.md).  
+ Quando la tabella contiene un set di colonne, sp_createstats non crea statistiche sulle colonne di tipo sparse. Per altre informazioni sui set di colonne e colonne di tipo sparse, vedere [utilizzare set di colonne](../../relational-databases/tables/use-column-sets.md) e [usare le colonne di tipo Sparse](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
 ## <a name="examples"></a>Esempi  
@@ -104,7 +104,7 @@ GO
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

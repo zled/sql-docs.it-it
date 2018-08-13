@@ -1,5 +1,5 @@
 ---
-title: Specificare un percorso (SQLXML 4.0) | Microsoft Docs
+title: Specificare un percorso (SQLXML 4.0) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2c2cad3730cd0948f94adc8ad5b877fd2e921bc3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f93ee97b28af523251077c2124f16ea1ecb5e259
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032556"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548591"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Definizione di un percorso (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "38032556"
   
      L'asse specifica la relazione all'interno dell'albero tra i nodi selezionati dal passo e dal nodo di contesto. Il **padre**, **figlio**, **attributo**, e **self** sono supportati gli assi. Se un **figlio** asse è specificato nel percorso, tutti i nodi selezionati dalla query sono figli del nodo di contesto. Se un **padre** asse è specificato, il nodo selezionato è il nodo padre del nodo di contesto. Se un' **attributo** asse è specificato, i nodi selezionati sono gli attributi del nodo di contesto.  
   
--   **Test di nodo**  
+-   **test di nodo**  
   
      Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse (**figlio**, **padre**, **attributo**, e **self**) dispone di un tipo di nodo principale. Per il **attributo** asse, il tipo di nodo principale viene  **\<attributo >**. Per il **padre**, **figlio**, e **self** assi, il tipo di nodo principale è  **\<elemento >**.  
   

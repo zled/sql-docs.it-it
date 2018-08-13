@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
+title: sp_help_fulltext_system_components (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 849f2bbd004c47992c6b6faecf06b5abe5bcc9ea
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f799f560ba85123a4cb7f66067d775568883d5b7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38019989"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548411"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -88,7 +88,7 @@ sp_help_fulltext_system_components
 |**dbid**|**int**|ID del database.|  
 |**ftcatid**|**int**|ID del catalogo full-text.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'appartenenza al **pubblica** ruolo; tuttavia, gli utenti possono solo visualizzare informazioni sui cataloghi full-text per cui dispongono dell'autorizzazione VIEW DEFINITION. Solo i membri del **serveradmin** ruolo predefinito del server è possibile visualizzare i valori nel **fullpath** colonna.  
   
 ## <a name="remarks"></a>Note  

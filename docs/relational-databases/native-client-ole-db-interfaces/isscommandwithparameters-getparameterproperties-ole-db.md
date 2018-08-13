@@ -19,13 +19,13 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97b9a3a89693271e6dc062359114a7d7bd321bce
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: db7ff5ed9c55473283091950a5d5fee6dd5cd54f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409140"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533452"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,8 +43,8 @@ HRESULT GetParameterProperties(
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *pcParams*[out] [in]  
- Un puntatore alla memoria che contiene il numero di strutture SSPARAMPROPS restituite in *prgParamProperties*.  
+ *pcParams*[out][in]  
+ Puntatore alla memoria contenente il numero di strutture SSPARAMPROPS restituite in *prgParamProperties*.  
   
  *prgParamProperties*[out]  
  Puntatore alla memoria nel quale viene restituita una matrice di strutture SSPARAMPROPS. Il provider alloca memoria per le strutture e restituisce l'indirizzo per la memoria. il consumer rilascia questa memoria con **IMalloc:: Free** quando non è più necessario le strutture. Prima di chiamare **IMalloc:: Free** per *prgParamProperties*, il consumer deve anche chiamare **VariantClear** per il *vValue* proprietà ogni struttura DBPROP per evitare una perdita di memoria nei casi in cui la variante contiene un riferimento di tipo (ad esempio BSTR). Se *pcParams* è zero nell'output o si verifica un errore diverso da DB_E_ERRORSOCCURRED, il provider non alloca alcuna memoria e assicura che *prgParamProperties* è un puntatore null nell'output.  
@@ -70,7 +70,7 @@ HRESULT GetParameterProperties(
 |Membro|Description|  
 |------------|-----------------|  
 |*iOrdinal*|Numero ordinale del parametro passato.|  
-|*cPropertySets*|Il numero di strutture DBPROPSET in *rgPropertySets*.|  
+|*cPropertySets*|Numero di strutture DBPROPSET in *rgPropertySets*.|  
 |*rgPropertySets*|Puntatore alla memoria nel quale restituire una matrice di strutture DBPROPSET.|  
   
 ## <a name="see-also"></a>Vedere anche  

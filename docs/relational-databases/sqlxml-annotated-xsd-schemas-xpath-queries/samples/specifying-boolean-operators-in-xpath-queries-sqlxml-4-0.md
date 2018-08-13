@@ -1,5 +1,5 @@
 ---
-title: Specifica di operatori booleani nelle query XPath (SQLXML 4.0) | Documenti Microsoft
+title: Specifica di operatori booleani nelle query XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,22 +21,22 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c3f061db3f431f87c5f2a214776558c3f6d69a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3b284681edd3caa26028a159a7b4cf024aa08cb4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971456"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563715"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori booleani in query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Negli esempi seguenti viene illustrato come specificare operatori booleani in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Negli esempi seguenti viene illustrato come specificare operatori booleani in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. Specificare l'operatore booleano OR  
- Questa query XPath restituisce il  **\<cliente >** gli elementi figlio del nodo di contesto con il **CustomerID** valore di 13 o 31 attributo:  
+ Questa query XPath restituisce il  **\<cliente >** figli del nodo di contesto con il **CustomerID** attributo pari a 13 o 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -48,11 +48,11 @@ ms.locfileid: "32971456"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- Nel predicato, `attribute` è l'asse e `CustomerID` è il test di nodo (TRUE se **CustomerID** è un  **\<attributo >** nodo perché il  **\<attributo >** nodo è il nodo primario per il **attributo** asse). Il predicato filtra il  **\<cliente >** elementi e restituisce solo quelli che soddisfano la condizione specificate nel predicato.  
+ Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo (TRUE se **CustomerID** è un  **\<attributo >** nodo, in quanto il  **\<attributo >** nodo è il nodo primario per il **attributo** asse). Il predicato filtra le  **\<cliente >** elementi e restituisce solo quelli che soddisfano le condizioni specificate nel predicato.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Per testare query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (BooleanOperatorsA.xml) e salvarlo nella directory in cui è stato salvato il file SampleSchema1.xml.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "32971456"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzando ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato il set di risultati relativo all'esecuzione del modello:  
   

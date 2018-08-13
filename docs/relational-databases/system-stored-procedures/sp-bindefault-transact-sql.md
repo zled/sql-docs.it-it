@@ -22,13 +22,13 @@ caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a5bf898e8868006ab536bbd83bce3bd428aa5934
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 909cfac8df6a9eb57458f28ce42a11cca868829e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239311"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536572"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,28 +54,28 @@ sp_bindefault [ @defname = ] 'default' ,
  Nome del valore predefinito creato tramite CREATE DEFAULT. *impostazione predefinita* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
  [  **@objname=** ] **'***object_name***'**  
- Nome della tabella e della colonna o del tipo di dati alias a cui associare il valore predefinito. *object_name* viene **nvarchar(776)** non prevede alcun valore predefinito. *object_name* non può essere definita con il **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, o CLR tipi definiti dall'utente.  
+ Nome della tabella e della colonna o del tipo di dati alias a cui associare il valore predefinito. *object_name* viene **nvarchar(776)** non prevede alcun valore predefinito. *object_name* non possono essere definiti con la **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, o CLR tipi definiti dall'utente.  
   
- Se *object_name* è un nome di una sola parte, viene risolto come tipo di dati alias. Se è un nome in due o tre parti, viene prima risolto come tabella e colonna. Se la risoluzione non riesce, viene risolto come tipo di dati alias. Per impostazione predefinita, le colonne esistenti del tipo di dati alias ereditano *predefinito*, a meno che un valore predefinito è stato associato direttamente alla colonna. Valore predefinito non può essere associato a un **testo**, **ntext**, **immagine**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **timestamp**, o CLR colonna di tipo definito dall'utente, una colonna con la proprietà IDENTITY, una colonna calcolata o una colonna che esiste già un vincolo predefinito.  
+ Se *object_name* è un nome di una sola parte, viene risolto come tipo di dati alias. Se è un nome in due o tre parti, viene prima risolto come tabella e colonna. Se la risoluzione non riesce, viene risolto come tipo di dati alias. Per impostazione predefinita, le colonne esistenti del tipo di dati alias ereditano *predefinito*, a meno che un valore predefinito è stato associato direttamente alla colonna. Un valore predefinito non può essere associato a un **testo**, **ntext**, **immagine**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **timestamp**, o CLR colonna con tipo definito dall'utente, una colonna con la proprietà IDENTITY, una colonna calcolata o una colonna che esiste già un vincolo predefinito.  
   
 > [!NOTE]  
 >  *object_name* può contenere parentesi quadre **[]** come identificatori delimitati. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
  [  **@futureonly=** ] **'***futureonly_flag***'**  
- Utilizzato solo quando si associa un valore predefinito a un tipo di dati alias. *futureonly_flag* viene **varchar(15)** con un valore predefinito è NULL. Quando questo parametro è impostato su **futureonly**, le colonne esistenti di tale tipo di dati non possono ereditare il nuovo valore predefinito. Questo parametro non viene mai utilizzato per l'associazione di un valore predefinito a una colonna. Se *futureonly_flag* è NULL, il nuovo valore predefinito è associato a tutte le colonne del tipo di dati alias alcun valore predefinito o che utilizzano il valore predefinito esistente del tipo di dati alias.  
+ Utilizzato solo quando si associa un valore predefinito a un tipo di dati alias. *futureonly_flag* viene **varchar(15)** con valore predefinito è NULL. Quando questo parametro è impostato su **futureonly**, le colonne esistenti di tale tipo di dati non possono ereditare la nuova impostazione predefinita. Questo parametro non viene mai utilizzato per l'associazione di un valore predefinito a una colonna. Se *futureonly_flag* è NULL, il nuovo valore predefinito è associato a tutte le colonne del tipo di dati alias che attualmente alcun valore predefinito o che utilizzano il valore predefinito esistente del tipo di dati alias.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- È possibile utilizzare **sp_bindefault** per associare un nuovo valore predefinito a una colonna, sebbene sia preferibile utilizzare il vincolo predefinito, o a un tipo di dati alias senza disassociare un valore predefinito esistente. Il valore predefinito esistente viene ignorato. Non è possibile associare un valore predefinito a un tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a un tipo CLR definito dall'utente. Se il valore predefinito non è compatibile con la colonna a cui è stato associato, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] restituisce un messaggio di errore quando si tenta di inserire il valore predefinito, non in fase di associazione.  
+## <a name="remarks"></a>Note  
+ È possibile usare **sp_bindefault** per associare un nuovo valore predefinito a una colonna, sebbene sia preferibile utilizzare il vincolo predefinito, o a un tipo di dati alias senza disassociare un valore predefinito esistente. Il valore predefinito esistente viene ignorato. Non è possibile associare un valore predefinito a un tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a un tipo CLR definito dall'utente. Se il valore predefinito non è compatibile con la colonna a cui è stato associato, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] restituisce un messaggio di errore quando si tenta di inserire il valore predefinito, non in fase di associazione.  
   
- Le colonne esistenti del tipo di dati alias ereditano il nuovo valore predefinito, a meno che non è associato un valore predefinito in modo diretto o *futureonly_flag* è specificato come **futureonly**. Le nuove colonne del tipo di dati alias ereditano sempre il valore predefinito.  
+ Le colonne esistenti del tipo di dati alias ereditano il nuovo valore predefinito, a meno che non è associato un valore predefinito in modo diretto oppure *futureonly_flag* è specificato come **futureonly**. Le nuove colonne del tipo di dati alias ereditano sempre il valore predefinito.  
   
- Quando si associa un valore predefinito a una colonna, informazioni correlate vengono aggiunte al **Columns** vista del catalogo. Quando si associa un valore predefinito a un tipo di dati alias, informazioni correlate vengono aggiunte al **Sys. Types** vista del catalogo.  
+ Quando si associa un valore predefinito a una colonna, informazioni correlate vengono aggiunte alle **Sys. Columns** vista del catalogo. Quando si associa una predefinita a un tipo di dati alias, informazioni correlate vengono aggiunte alle **Sys. Types** vista del catalogo.  
   
-## <a name="permissions"></a>Autorizzazioni  
- L'utente deve proprietario della tabella oppure essere un membro del **sysadmin** ruolo predefinito del server, o **db_owner** e **db_ddladmin** ruoli predefiniti del database.  
+## <a name="permissions"></a>Permissions  
+ Utente deve essere proprietario della tabella o essere un membro del **sysadmin** ruolo predefinito del server o il **db_owner** e **db_ddladmin** ruoli predefiniti del database.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -89,7 +89,7 @@ EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. Associazione di un valore predefinito a un tipo di dati alias  
- Il valore predefinito `def_ssn` e il tipo di dati alias `ssn` esistono già. Nell'esempio seguente il valore predefinito `def_ssn` viene associato a `ssn`. Il valore predefinito viene ereditato da tutte le colonne a cui è stato assegnato il tipo di dati alias `ssn` in fase di creazione della tabella. Le colonne esistenti del tipo **ssn** ereditano inoltre il valore predefinito **def_ssn**, a meno che **futureonly** specificato per *futureonly_flag* valore, a meno che la colonna ha un valore predefinito associato direttamente. I valori predefiniti associati alle colonne sono sempre prioritari rispetto a quelli associati ai tipi di dati.  
+ Il valore predefinito `def_ssn` e il tipo di dati alias `ssn` esistono già. Nell'esempio seguente il valore predefinito `def_ssn` viene associato a `ssn`. Il valore predefinito viene ereditato da tutte le colonne a cui è stato assegnato il tipo di dati alias `ssn` in fase di creazione della tabella. Le colonne esistenti di tipo **ssn** anche ereditare l'impostazione predefinita **def_ssn**, a meno che non **futureonly** viene specificata per *futureonly_flag* valore, a meno che la colonna è associato direttamente a essa un valore predefinito. I valori predefiniti associati alle colonne sono sempre prioritari rispetto a quelli associati ai tipi di dati.  
   
 ```  
 USE master;  
@@ -98,7 +98,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn';
 ```  
   
 ### <a name="c-using-the-futureonlyflag"></a>C. Utilizzo di futureonly_flag  
- Nell'esempio seguente il valore predefinito `def_ssn` viene associato al tipo di dati alias `ssn`. Poiché **futureonly** è specificato, non le colonne esistenti di tipo `ssn` sono interessate.  
+ Nell'esempio seguente il valore predefinito `def_ssn` viene associato al tipo di dati alias `ssn`. Poiché **futureonly** è specificato, non le colonne esistenti di tipo `ssn` sono interessati.  
   
 ```  
 USE master;  
@@ -107,7 +107,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. Utilizzo di identificatori delimitati  
- Nell'esempio seguente viene illustrato l'utilizzo di identificatori delimitati, `[t.1]`nella *object_name*.  
+ L'esempio seguente illustra l'utilizzo di identificatori delimitati, `[t.1]`, in *object_name*.  
   
 ```  
 USE master;  
@@ -121,7 +121,7 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   

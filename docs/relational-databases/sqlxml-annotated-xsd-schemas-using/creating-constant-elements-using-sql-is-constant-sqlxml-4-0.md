@@ -1,5 +1,5 @@
 ---
-title: 'Creazione di elementi costanti tramite sql: è-constant (SQLXML 4.0) | Documenti Microsoft'
+title: 'Creazione di elementi costanti tramite sql: è-constant (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,33 +23,33 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81ee34607d198e88eee397b9c9f254f2133d1b22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8bf343e639eb17b370729f22e45385ebfd53d7b0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969386"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538431"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Creazione di elementi costanti tramite sql:is-constant (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Per specificare un elemento costante, vale a dire un elemento nello schema XSD che non esegue il mapping ad alcuna tabella di database o una colonna, è possibile utilizzare il **sql:costante-è** annotazione. Questa annotazione accetta un valore booleano (0=false, 1=true). I valori possibili sono 0, 1, true e false. Il **sql:costante-è** annotazione può essere specificata su un elemento che non dispone di attributi. Se viene specificata in un elemento con valore true (o 1), l'elemento non viene mappato al database ma viene comunque visualizzato nel documento XML.  
+  Per specificare un elemento costante, vale a dire un elemento nello schema XSD che non venga mappato ad alcuna tabella di database o colonna, ovvero è possibile usare il **sql: costante è** annotazione. Questa annotazione accetta un valore booleano (0=false, 1=true). I valori possibili sono 0, 1, true e false. Il **sql: costante è** annotazione può essere specificata in un elemento che non ha attributi. Se viene specificata in un elemento con valore true (o 1), l'elemento non viene mappato al database ma viene comunque visualizzato nel documento XML.  
   
- Il **sql:costante-è** annotazione può essere utilizzata per:  
+ Il **sql: costante è** annotazione può essere usata per:  
   
 -   Aggiunta di un elemento di livello principale al documento XML. XML richiede un singolo elemento di livello principale (elemento radice) per il documento.  
   
 -   Creazione di elementi contenitore, ad esempio un  **\<ordini >** elemento che esegue il wrapping di tutti gli ordini.  
   
- Il **sql: costante è** annotazione può essere aggiunta a un  **\<complexType >** elemento.  
+ Il **sql: costante viene** annotazione può essere aggiunto a un  **\<complexType >** elemento.  
   
 ## <a name="examples"></a>Esempi  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per esecuzione esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Definizione di sql:is-constant per aggiungere un elemento contenitore  
- In questo schema con annotazioni di XSD,  **\<CustomerOrders >** viene definito come elemento costante specificando il **sql: costante è** attributo con un valore pari a 1. Pertanto,  **\<CustomerOrders >** non è mappato ad alcuna tabella di database o di una colonna. Questo elemento costante è costituito il  **\<ordine >** gli elementi figlio.  
+ In questo schema XSD, con annotazioni  **\<CustomerOrders >** viene definito come elemento costante specificando la **sql: costante è** attributo con un valore pari a 1. Pertanto  **\<CustomerOrders >** non è mappato ad alcuna tabella di database o colonna. Questo elemento costante è costituito il  **\<ordine >** gli elementi figlio.  
   
- Sebbene  **\<CustomerOrders >** non è mappato ad alcuna tabella di database o di una colonna, viene comunque visualizzato nel documento XML risultante come elemento contenitore che contiene il  **\<ordine >** elementi figlio.  
+ Sebbene  **\<CustomerOrders >** non esegue il mapping ad alcuna tabella di database o colonna, viene comunque visualizzato nel codice XML risultante come elemento contenitore il  **\<ordine >** elementi figlio.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -111,7 +111,7 @@ ms.locfileid: "32969386"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzando ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato il set di risultati parziale:  
   

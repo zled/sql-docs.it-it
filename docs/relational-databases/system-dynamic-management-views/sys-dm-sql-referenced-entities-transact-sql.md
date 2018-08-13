@@ -1,5 +1,5 @@
 ---
-title: Sys.dm sql_referenced_entities (Transact-SQL) | Documenti Microsoft
+title: sql_referenced_entities (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 11/09/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a5eef60da505ab939908c22ce47311dfb5f070ea
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9dff46e117f5c75162e7fd8e0f717a0e72829714
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467697"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541681"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni entità definita dall'utente a cui si fa riferimento per nome nella definizione dell'entità di riferimento specificata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una dipendenza tra due entità viene creata quando un'entità definita dall'utente, detta il *fa riferimento a entità*, viene visualizzato in base al nome in un'espressione SQL persistente di un'altra entità definita dall'utente, chiamata di *entità di riferimento* . Ad esempio, se una stored procedure è l'entità di riferimento specificata, questa funzione restituisce tutte le entità definite dall'utente indicate nella stored procedure, ad esempio tabelle, viste, tipi definiti dall'utente (UDT) o altre stored procedure.  
+  Restituisce una riga per ogni entità definita dall'utente a cui si fa riferimento per nome nella definizione dell'entità di riferimento specificata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando un'entità definita dall'utente, denominato, viene creata una dipendenza tra due entità di *fa riferimento a entità*, viene visualizzata in base al nome in un'espressione SQL persistente di un'altra entità definite dall'utente, denominata il *riferimento entità* . Ad esempio, se una stored procedure è l'entità di riferimento specificata, questa funzione restituisce tutte le entità definite dall'utente indicate nella stored procedure, ad esempio tabelle, viste, tipi definiti dall'utente (UDT) o altre stored procedure.  
   
  È possibile utilizzare questa funzione a gestione dinamica per creare un report sui seguenti tipi di entità indicati dall'entità di riferimento specificata:  
   
@@ -69,38 +69,38 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ *schema_name*. ] *referencing_entity_name*  
- Nome dell'entità di riferimento. *schema_name* è obbligatorio quando la classe di riferimento è OBJECT.  
+ [ *nome_schema*. ] *referencing_entity_name*  
+ Nome dell'entità di riferimento. *schema_name* è obbligatorio quando la classe di riferimento è l'oggetto.  
   
- *schema_name.referencing_entity_name* viene **nvarchar(517)**.  
+ *schema_name.referencing_entity_name* è **nvarchar(517)**.  
   
- *< Classe_riferimento >* :: = {oggetto | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
+ *< Referencing_class >* :: = {oggetto | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
  Classe dell'entità di riferimento specificata. È possibile specificare solo una classe per istruzione.  
   
- *< classe_riferimento >* viene **nvarchar(60)**.  
+ *< referencing_class >* è **nvarchar(60)**.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|ID di colonna quando l'entità di riferimento è una colonna, in caso contrario, 0. Non ammette i valori Null.|  
-|referenced_server_name|**sysname**|Nome del server dell'entità a cui viene fatto riferimento.<br /><br /> Questa colonna viene popolata per le dipendenze tra server eseguite specificando un nome valido composto da quattro parti. Per informazioni sui nomi composti da più parti, vedere [convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> Valore NULL per le dipendenze non associate a schemi per cui è stato fatto riferimento all'entità senza specificare un nome in quattro parti.<br /><br /> Valore NULL per le entità associate a schemi perché devono essere nello stesso database e pertanto possono essere definite solo utilizzando due parti (*Object*) nome.|  
-|referenced_database_name|**sysname**|Nome del database dell'entità a cui viene fatto riferimento.<br /><br /> Questa colonna viene popolata per i riferimenti tra database o tra server eseguiti specificando un nome valido composto da tre o quattro parti.<br /><br /> Valore NULL per i riferimenti non associati a schemi che vengono specificati utilizzando un nome composto da una o due parti.<br /><br /> Valore NULL per le entità associate a schemi perché devono essere nello stesso database e pertanto possono essere definite solo utilizzando due parti (*Object*) nome.|  
+|referenced_server_name|**sysname**|Nome del server dell'entità a cui viene fatto riferimento.<br /><br /> Questa colonna viene popolata per le dipendenze tra server eseguite specificando un nome valido composto da quattro parti. Per informazioni sui nomi composti da più parti, vedere [convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> Valore NULL per le dipendenze non associate a schemi per cui è stato fatto riferimento all'entità senza specificare un nome in quattro parti.<br /><br /> Valore NULL per le entità associate a schemi perché devono essere nello stesso database e pertanto possono essere definite solo utilizzando due parti (*unicamente*) nome.|  
+|referenced_database_name|**sysname**|Nome del database dell'entità a cui viene fatto riferimento.<br /><br /> Questa colonna viene popolata per i riferimenti tra database o tra server eseguiti specificando un nome valido composto da tre o quattro parti.<br /><br /> Valore NULL per i riferimenti non associati a schemi che vengono specificati utilizzando un nome composto da una o due parti.<br /><br /> Valore NULL per le entità associate a schemi perché devono essere nello stesso database e pertanto possono essere definite solo utilizzando due parti (*unicamente*) nome.|  
 |referenced_schema_name|**sysname**|Schema a cui appartiene l'entità a cui viene fatto riferimento.<br /><br /> Valore NULL per i riferimenti non associati a schemi in cui è stato fatto riferimento all'entità senza specificare il nome dello schema.<br /><br /> Il valore non è mai NULL per riferimenti associati a schemi.|  
 |referenced_entity_name|**sysname**|Nome dell'entità a cui viene fatto riferimento. Non ammette i valori Null.|  
 |referenced_minor_name|**sysname**|Nome della colonna quando l'entità a cui viene fatto riferimento è una colonna; in caso contrario, NULL. referenced_minor_name è NULL, ad esempio, nella riga che elenca l'entità stessa cui viene fatto riferimento.<br /><br /> Un'entità a cui viene fatto riferimento è una colonna, se il nome nell'entità di riferimento identifica una colonna o se l'entità padre viene utilizzata in un'istruzione SELECT *.|  
-|referenced_id|**int**|ID dell'entità a cui viene fatto riferimento. Quando referenced_minor_id è diverso da 0, referenced_id è l'entità in cui viene definita la colonna.<br /><br /> Il valore è sempre NULL per i riferimenti tra server.<br /><br /> NULL per riferimenti tra database quando non è possibile determinare l'ID perché il database è offline o l'entità non può essere associata.<br /><br /> Valore NULL per i riferimenti all'interno del database se non è possibile determinare l'ID. Per i riferimenti non associati a schema, l'ID non può essere risolto quando l'entità di riferimento non esiste nel database o quando la risoluzione dei nomi è dipendente dal chiamante.  Nel secondo caso, is_caller_dependent viene impostato su 1.<br /><br /> Il valore non è mai NULL per riferimenti associati a schemi.|  
+|referenced_id|**int**|ID dell'entità a cui viene fatto riferimento. Quando referenced_minor_id è diverso da 0, referenced_id è l'entità in cui viene definita la colonna.<br /><br /> Il valore è sempre NULL per i riferimenti tra server.<br /><br /> NULL per riferimenti tra database quando non è possibile determinare l'ID perché il database è offline o l'entità non può essere associata.<br /><br /> Valore NULL per i riferimenti all'interno del database se non è possibile determinare l'ID. Per i riferimenti non associati a schema, l'ID non può essere risolto quando l'entità di riferimento non esiste nel database o quando la risoluzione del nome chiamante dipendenti.  In questo caso, is_caller_dependent è impostato su 1.<br /><br /> Il valore non è mai NULL per riferimenti associati a schemi.|  
 |referenced_minor_id|**int**|ID della colonna quando l'entità a cui viene fatto riferimento è una colonna; in caso contrario, 0. referenced_minor_is è 0, ad esempio, nella riga che elenca l'entità stessa cui viene fatto riferimento.<br /><br /> Per i riferimenti non associati a schemi, le dipendenze della colonna vengono indicate solo quando è possibile associare tutte le entità cui viene fatto riferimento. Se non è possibile associare una di tali entità, non viene segnalata alcuna dipendenza a livello di colonna e il valore di referenced_minor_id è 0. Vedere l'esempio D.|  
 |referenced_class|**tinyint**|Classe dell'entità con riferimenti.<br /><br /> 1 = Oggetto o colonna<br /><br /> 6 = Tipo<br /><br /> 10 = Raccolta di XML Schema<br /><br /> 21 = Funzione di partizione|  
 |referenced_class_desc|**nvarchar(60)**|Descrizione della classe dell'entità a cui viene fatto riferimento.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Indica che l'associazione di schemi per l'entità cui viene fatto riferimento si verifica in fase di esecuzione. Di conseguenza, la risoluzione dell'ID dell'entità dipende dallo schema del chiamante. Ciò avviene quando l'entità cui viene fatto riferimento è una stored procedure, una stored procedure estesa o una funzione definita dall'utente chiamata all'interno di un'istruzione EXECUTE.<br /><br /> 1 = L'entità cui viene fatto riferimento è dipendente dal chiamante e viene risolta in fase di esecuzione. In questo caso, il valore di referenced_id è NULL.<br /><br /> 0 = L'ID dell'entità a cui viene fatto riferimento non è dipendente dal chiamante. Il valore è sempre 0 per i riferimenti associati a schemi e tra database e tra server che indicano in modo esplicito un nome schema. Ad esempio, un riferimento a un'entità nel formato `EXEC MyDatabase.MySchema.MyProc` non è dipendente dal chiamante. Tuttavia, un riferimento nel formato `EXEC MyDatabase..MyProc` è dipendente dal chiamante.|  
-|is_ambiguous|**bit**|Indica il riferimento è ambiguo e può essere risolto in fase di esecuzione per una funzione definita dall'utente, un tipo definito dall'utente (UDT) o un riferimento xquery a una colonna di tipo **xml**. Si supponga, ad esempio, che l'istruzione `SELECT Sales.GetOrder() FROM Sales.MySales` sia definita in una stored procedure. Durante l'esecuzione della stored procedure non è possibile sapere se `Sales.GetOrder()` è una funzione definita dall'utente nello schema `Sales` o una colonna `Sales` di tipo definito dall'utente con un metodo `GetOrder()`.<br /><br /> 1 = Il riferimento a una funzione definita dall'utente o al metodo del tipo definito dall'utente (UDT) della colonna è ambiguo.<br /><br /> 0 = Il riferimento non è ambiguo o l'entità può essere associata correttamente quando la funzione viene chiamata.<br /><br /> Il valore è sempre 0 per i riferimenti associati allo schema.|  
+|is_ambiguous|**bit**|Indica il riferimento è ambiguo e può essere risolta in fase di esecuzione per una funzione definita dall'utente, un tipo definito dall'utente (UDT) o un riferimento xquery a una colonna di tipo **xml**. Si supponga, ad esempio, che l'istruzione `SELECT Sales.GetOrder() FROM Sales.MySales` sia definita in una stored procedure. Durante l'esecuzione della stored procedure non è possibile sapere se `Sales.GetOrder()` è una funzione definita dall'utente nello schema `Sales` o una colonna `Sales` di tipo definito dall'utente con un metodo `GetOrder()`.<br /><br /> 1 = Il riferimento a una funzione definita dall'utente o al metodo del tipo definito dall'utente (UDT) della colonna è ambiguo.<br /><br /> 0 = Il riferimento non è ambiguo o l'entità può essere associata correttamente quando la funzione viene chiamata.<br /><br /> Il valore è sempre 0 per i riferimenti associati allo schema.|  
 |is_selected|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1=Colonna o oggetto selezionato.|  
 |is_updated|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1= Colonna o oggetto modificato.|  
 |is_select_all|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1= Oggetto utilizzato in una clausola SELECT * (solo a livello di oggetto).|  
 |is_all_columns_found|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = È possibile trovare tutte le dipendenze delle colonne per l'oggetto.<br /><br /> 0 = Impossibile trovare le dipendenze delle colonne per l'oggetto.|
-|is_insert_all|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l'oggetto viene utilizzato in un'istruzione INSERT senza un elenco di colonne (a livello di oggetto solo).|  
-|is_incomplete|**bit**|**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = oggetto o colonna presenta un errore di associazione ed è pertanto incompleta.|
+|is_insert_all|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l'oggetto viene utilizzato in un'istruzione INSERT senza un elenco di colonne (solo oggetto livello).|  
+|is_incomplete|**bit**|**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l'oggetto o la colonna contiene un errore di associazione e incompleta.|
   
 ## <a name="exceptions"></a>Eccezioni  
  In una delle seguenti condizioni, restituisce un set di risultati vuoto:  
@@ -117,7 +117,7 @@ sys.dm_sql_referenced_entities (
   
  Restituisce l'errore 2020 quando le dipendenze della colonna non possono essere risolte. Questo errore non impedisce alla query di restituire dipendenze a livello di oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Questa funzione può essere eseguita nel contesto di qualsiasi database per restituire le entità che fanno riferimento a un trigger DDL a livello di server.  
   
  Nella tabella seguente sono elencati i tipi di entità per i quali vengono create e gestite le informazioni sulle dipendenze. Le informazioni sulle dipendenze non vengono create né gestite per regole, impostazioni predefinite, tabelle temporanee, stored procedure temporanee o oggetti di sistema.  
@@ -125,7 +125,7 @@ sys.dm_sql_referenced_entities (
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
 |Tabella|Sì*|Sì|  
-|Visualizza|Sì|Sì|  
+|Vista|Sì|Sì|  
 |Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
 |stored procedure CLR|no|Sì|  
 |Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
@@ -141,11 +141,11 @@ sys.dm_sql_referenced_entities (
 |Raccolta di XML Schema|no|Sì|  
 |Funzione di partizione|no|Sì|  
   
- \* Una tabella viene registrata come un'entità di riferimento solo quando si fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
+ \* Una tabella viene registrata come un'entità di riferimento solo quando si fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
   
  ** Le stored procedure numerate con un valore intero maggiore di 1 non vengono registrate come entità di riferimento o a cui viene fatto riferimento.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione SELECT per sys.dm_sql_referenced_entities e l'autorizzazione VIEW DEFINITION per l'entità di riferimento. Per impostazione predefinita, l'autorizzazione SELECT è concessa al ruolo public. È richiesta l'autorizzazione VIEW DEFINITION per il database o un'autorizzazione ALTER ANY DATABASE DDL TRIGGER per il database corrente quando l'entità di riferimento è un trigger DDL a livello di database. È richiesta l'autorizzazione VIEW ANY DEFINITION per il server quando l'entità di riferimento è un trigger DDL a livello di server.  
   
 ## <a name="examples"></a>Esempi  
@@ -269,7 +269,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. Restituzione dell'utilizzo di oggetti e colonne  
- Nell'esempio seguente vengono restituiti gli oggetti e le dipendenze delle colonne della stored procedure `HumanResources.uspUpdateEmployeePersonalInfo`. Questa procedura consente di aggiornare le colonne `NationalIDNumber`, `BirthDate,``MaritalStatus`, e `Gender` del `Employee` tabella basata su un oggetto specificato `BusinessEntityID` valore. Un'altra stored procedure, `upsLogError`, viene definita in un blocco TRY…CATCH per acquisire tutti gli errori di esecuzione. Le colonne `is_selected`, `is_updated` e `is_select_all` restituiscono informazioni sul modo in cui tali oggetti e colonne vengono utilizzati all'interno dell'oggetto di riferimento. La tabella e le colonne modificate vengono indicate con il valore 1 nella colonna is_updated. Viene selezionata solo la colonna `BusinessEntityID` e la stored procedure `uspLogError` non viene né selezionata né modificata.  
+ Nell'esempio seguente vengono restituiti gli oggetti e le dipendenze delle colonne della stored procedure `HumanResources.uspUpdateEmployeePersonalInfo`. Questa procedura consente di aggiornare le colonne `NationalIDNumber`, `BirthDate,``MaritalStatus`, e `Gender` della `Employee` tabella basata su un oggetto specificato `BusinessEntityID` valore. Un'altra stored procedure, `upsLogError`, viene definita in un blocco TRY…CATCH per acquisire tutti gli errori di esecuzione. Le colonne `is_selected`, `is_updated` e `is_select_all` restituiscono informazioni sul modo in cui tali oggetti e colonne vengono utilizzati all'interno dell'oggetto di riferimento. La tabella e le colonne modificate vengono indicate con il valore 1 nella colonna is_updated. Viene selezionata solo la colonna `BusinessEntityID` e la stored procedure `uspLogError` non viene né selezionata né modificata.  
   
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

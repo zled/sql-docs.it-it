@@ -1,5 +1,5 @@
 ---
-title: Specifica di un asse (SQLXML 4.0) | Documenti Microsoft
+title: Specifica un asse (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8659d8187042b0c40d2890e5a4feaf367efc7203
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 09c2ddbbe478672c610ed33c4c5efd55ddf0ad57
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968226"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551221"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Specifica di un asse (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "32968226"
   
      Contiene l'elemento padre del nodo di contesto.  
   
-     L'espressione XPath seguente seleziona tutti i  **\<cliente >** padri il  **\<ordine >** figli:  
+     L'espressione XPath seguente seleziona tutti i  **\<cliente >** padri del  **\<ordine >** figli:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -74,7 +74,7 @@ ms.locfileid: "32968226"
   
      Contiene il nodo di contesto stesso.  
   
-     L'espressione XPath seguente seleziona il nodo corrente in caso di  **\<ordine >** nodo:  
+     L'espressione XPath seguente seleziona il nodo corrente se è il  **\<ordine >** nodo:  
   
     ```  
     self::Order  

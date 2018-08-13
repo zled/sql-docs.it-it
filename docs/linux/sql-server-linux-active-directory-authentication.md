@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 7bc0a49035eeddfa014c39b9011fef85d98ce4cf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 44faf5cb1efb32da7df1ead5c9ad910f6c45bd30
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084353"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400704"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Esercitazione: L'autenticazione utilizzo di Active Directory con SQL Server in Linux
 
@@ -206,6 +206,9 @@ Per altre informazioni, vedere la documentazione di Red Hat per [scoperta e aggi
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
+   > [!NOTE]
+   > I nomi SPN possono richiedere alcuni minuti per propagarsi attraverso il dominio, soprattutto se il dominio è di grandi dimensioni. Se viene visualizzato l'errore, "kvno: Server non trovato nel database Kerberos durante il recupero delle credenziali per MSSQLSvc /\*\*\<il nome di dominio completo del computer host\>\*\*:\* \* \<porta tcp\>\*\*\@CONTOSO.COM ", attendere qualche minuto e riprovare.
+
 2. Crea un file keytab **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** per l'utente di Active Directory creato nel passaggio precedente. Quando richiesto, immettere la password per tale account di Active Directory.
 
    ```bash
@@ -223,18 +226,54 @@ Per altre informazioni, vedere la documentazione di Red Hat per [scoperta e aggi
    > [!NOTE]
    > Lo strumento ktutil non convalidare la password, assicurarsi che immettere correttamente.
 
-3. Chiunque abbia accesso a questo `keytab` file può rappresentare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sul dominio, quindi verificare che è limitare l'accesso per il file in modo che solo il `mssql` account abbia accesso in lettura:
+3. Aggiungere l'account del computer per il keytab con  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. L'account del computer (detto anche un UPN) è presente in `/etc/krb5.keytab` nel formato "\<hostname\>$\@\<realm.com\>" (ad esempio, $ sqlhost\@CONTOSO.COM). Queste voci da verranno copiati `/etc/krb5.keytab` a `mssql.keytab`.
+
+   ```bash
+   sudo ktutil
+
+   # Read all entries from /etc/krb5.keytab
+   ktutil: rkt /etc/krb5.keytab
+
+   # List all entries
+   ktutil: list
+
+   # Delete all entries by their slot number which are not the UPN one at a
+   # time.
+   # Warning: when an entry is deleted (e.g. slot 1), all values slide up by
+   # one to take its place (e.g. the entry in slot 2 moves to slot 1 when slot
+   # 1's entry is deleted)
+   ktutil: delent <slot num>
+   ktutil: delent <slot num>
+   ...
+
+   # List all entries to ensure only UPN entries are left
+   ktutil: list
+
+   # When only UPN entries are left, append these values to mssql.keytab
+   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+
+   quit
+   ```
+
+4. Chiunque abbia accesso a questo `keytab` file può rappresentare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sul dominio, quindi verificare che è limitare l'accesso per il file in modo che solo il `mssql` account abbia accesso in lettura:
 
    ```bash
    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
    ```
 
-4. Configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per usare questo `keytab` file per l'autenticazione Kerberos:
+5. Configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per usare questo `keytab` file per l'autenticazione Kerberos:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
    sudo systemctl restart mssql-server
+   ```
+
+6. Facoltativo: Disabilitare le connessioni dell'UDP al controller di dominio per migliorare le prestazioni. In molti casi, le connessioni di UDP avrà sempre esito negativo quando ci si connette a un controller di dominio, pertanto è possibile impostare le opzioni di configurazione `/etc/krb5.conf` per ignorare le chiamate UDP. Modifica `/etc/krb5.conf` e impostare le opzioni seguenti:
+
+   ```/etc/krb5.conf
+   [libdefaults]
+   udp_preference_limit=0
    ```
 
 ## <a id="createsqllogins"></a> Creare gli account di accesso basato su Active Directory in Transact-SQL
@@ -280,7 +319,7 @@ Il parametro della stringa di connessione specifiche per i client di usare l'aut
   * JDBC: [Kerberos mediante l'autenticazione integrata di connessione SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC: [usando l'autenticazione integrata](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET: [sintassi della stringa di connessione](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
-  
+ 
 ## <a name="next-steps"></a>Passaggi successivi
 
 In questa esercitazione è stato illustrato come configurare l'autenticazione di Active Directory con SQL Server in Linux. Si è appreso come a:

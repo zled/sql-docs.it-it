@@ -1,5 +1,5 @@
 ---
-title: Le conversioni da C a SQL | Microsoft Docs
+title: Le conversioni da C a SQL | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c222ed8aedbb4e84014119c896d59786a1db866a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f983a9ae2d98b5e93b08b65938b6627e1ea83c6c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431770"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542551"
 ---
-# <a name="datetime-data-type-conversions-from-c-to-sql"></a>Data/ora conversioni di tipi di dati da C a SQL
+# <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversioni dei tipi di dati datetime da C a SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

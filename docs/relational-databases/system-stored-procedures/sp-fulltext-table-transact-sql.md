@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_table (Transact-SQL) | Microsoft Docs
+title: sp_fulltext_table (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b6c759bd422ae815a284ae2cd14bc8b1861281ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1731c00431723da6187c2791c2758a3d957641d2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995608"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563085"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -96,7 +96,7 @@ sp_fulltext_table
   
  Il valore massimo definito per le dimensioni della colonna chiave full-text deve essere 900 byte. È consigliabile che le dimensioni della colonna chiave siano ridotte al massimo per motivi di prestazioni.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Solo i membri del **sysadmin** ruolo predefinito del server **db_owner** e **db_ddladmin** i ruoli predefiniti del database o un utente con le autorizzazioni reference per il catalogo full-text può eseguire **sp_fulltext_table**.  
   
 ## <a name="examples"></a>Esempi  

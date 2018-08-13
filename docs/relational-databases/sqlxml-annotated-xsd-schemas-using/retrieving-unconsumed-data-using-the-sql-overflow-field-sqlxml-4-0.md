@@ -1,5 +1,5 @@
 ---
-title: 'Il recupero dei dati non utilizzati tramite SQL: overflow-field (SQLXML 4.0) | Documenti Microsoft'
+title: 'Il recupero dei dati non utilizzati tramite SQL: overflow-campo (SQLXML 4.0) | Documenti di Microsoft'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c5ff309e264f78fe4e9ffa71c7deb0c41d93a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 51f9fe6c3e8053b1a03174d5e9ba3fce738c5231
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968376"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559211"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recupero di dati non utilizzati mediante sql:overflow-field (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Quando i record vengono inseriti in un database da un documento XML tramite la funzione OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)], tutti i dati non utilizzati dal documento XML di origine possono essere archiviati in una colonna. Quando si recuperano dati da un database utilizzando schemi con annotazioni, è possibile specificare il **SQL: overflow-campo** attributo per identificare la colonna nella tabella in cui vengono archiviati i dati di overflow. Il **SQL: overflow-campo** attributo può essere specificato in  **\<elemento >**.  
+  Quando i record vengono inseriti in un database da un documento XML tramite la funzione OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)], tutti i dati non utilizzati dal documento XML di origine possono essere archiviati in una colonna. Quando si recuperano dati da un database utilizzando schemi con annotazioni, è possibile specificare il **SQL: overflow-campo** attributo per identificare la colonna della tabella in cui sono memorizzati i dati di overflow. Il **SQL: overflow-campo** possibile specificare l'attributo su  **\<elemento >**.  
   
  I dati vengono quindi recuperati nei modi seguenti:  
   
--   Gli attributi archiviati nella colonna di overflow vengono aggiunti all'elemento che contiene il **SQL:overflow-campo** annotazione.  
+-   Gli attributi memorizzati nella colonna overflow vengono aggiunti all'elemento che contiene il **SQL: overflow-campo** annotazione.  
   
 -   Gli elementi figlio e i relativi discendenti, archiviati nella colonna di overflow nel database, vengono aggiunti come elementi figlio dopo il contenuto specificato in modo esplicito nello schema. Non viene rispettato alcun ordine.  
   
 ## <a name="examples"></a>Esempi  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per esecuzione esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. Specifica di sql:overflow-field per un elemento  
  In questo esempio si presuppone che sia stato eseguito lo script seguente per far sì che una tabella denominata Customers2 esista nel database tempdb:  
@@ -106,7 +106,7 @@ GO
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzando ADO per eseguire query di SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Set di risultati:  
   

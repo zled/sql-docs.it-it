@@ -24,13 +24,13 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 183970c09d23304553167b20366e0751d5f35207
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a8389ac173eb72c152eed3a7a8a40d8453dbed22
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993863"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541451"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |time_since_last_close_in_ms|**bigint**|Tempo trascorso dall'ultima chiusura del checkpoint.|  
 |current_checkpoint_id|**bigint**|Attualmente, i nuovi segmenti vengono assegnati a questo checkpoint. Il sistema di checkpoint è una pipeline. Il checkpoint corrente è quello che vengono assegnati a segmenti dal log. Dopo che è stato raggiunto un limite, il checkpoint viene rilasciato il controller e una nuova istanza creata come corrente.|  
 |current_checkpoint_segment_count|**bigint**|Numero di segmenti nel checkpoint corrente.|  
-|recovery_lsn_candidate|**bigint**|**Internamente solo**. Candidato per essere selezionato come recoverylsn quando current_checkpoint_id viene chiusa.|  
+|recovery_lsn_candidate|**bigint**|**Internamente solo**. Candidati da prelevare come recoverylsn chiusura current_checkpoint_id.|  
 |outstanding_checkpoint_count|**bigint**|Numero di checkpoint nella pipeline in attesa di essere chiuso.|  
 |closing_checkpoint_id|**bigint**|ID del punto di arresto di chiusura.<br /><br /> I serializzatori lavorano in parallelo, in modo che una volta effettuato terminati il checkpoint è un candidato per essere chiuso dal thread di chiusura. Ma il thread di chiusura solo possibile chiudere una alla volta e deve essere in ordine, in modo che il checkpoint di chiusura è quella che sta lavorando per il thread di chiusura.|  
 |recovery_checkpoint_id|**bigint**|ID del checkpoint da utilizzare per il ripristino.|  
@@ -108,7 +108,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |end_of_log_lsn|**numerico (38)**|LSN di fine del log.|  
 |task_address|**varbinary(8)**|Indirizzo di SOS_Task. Join a sys.dm_os_tasks per ottenere ulteriori informazioni.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione `VIEW DATABASE STATE` per il server.  
   
 ## <a name="see-also"></a>Vedere anche  

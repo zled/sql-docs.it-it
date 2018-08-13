@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_reset_exec_stats (Transact-SQL) | Documenti Microsoft
+title: sp_query_store_reset_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,18 +25,18 @@ caps.latest.revision: 6
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 152a2de5b373c9130f5d2a579737a823b752e832
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d91756ed0a9870c9748db62b7908dfb78091b175
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253751"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545121"
 ---
 # <a name="spquerystoreresetexecstats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Cancella le statistiche di runtime per un piano di query specifico dall'archivio query.  
+  Cancella le statistiche di runtime per un piano di query specifico da query store.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,13 +54,13 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
-## <a name="permissions"></a>Autorizzazioni  
- Richiede il **EXECUTE** autorizzazione per il database, e **eliminare** autorizzazione sulle viste del catalogo di archivio query.  
+## <a name="permissions"></a>Permissions  
+ Richiede la **EXECUTE** autorizzazione per il database, e **eliminare** l'autorizzazione per le viste del catalogo di archivio query.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce informazioni sulle query in archivio query.  
+ L'esempio seguente restituisce informazioni sulle query in query store.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -71,7 +71,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Dopo aver identificato plan_id che si desidera cancellare le statistiche, utilizzare l'esempio seguente per eliminare le statistiche di esecuzione per un piano di query specifico. Questo esempio elimina le statistiche di esecuzione per il numero di piano 3.  
+ Dopo aver identificato il plan_id che si desidera cancellare le statistiche, usare l'esempio seguente per eliminare le statistiche di esecuzione per un piano di query specifico. Questo esempio vengono eliminate le statistiche di esecuzione per il numero di piano 3.  
   
 ```  
 EXEC sp_query_store_reset_exec_stats 3;  

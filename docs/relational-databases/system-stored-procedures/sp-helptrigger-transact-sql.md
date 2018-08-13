@@ -1,5 +1,5 @@
 ---
-title: sp_helptrigger (Transact-SQL) | Documenti Microsoft
+title: sp_helptrigger (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c6c78c302266ce3a9e29c432e1a913c263d704
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6435e1b79907debc159b3ba39eb35980b783c791
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255089"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566235"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Viene restituito il tipo o i tipi di trigger DML definiti nella tabella specificata per il database corrente. sp_helptrigger non può essere utilizzata con trigger DDL. Query di [stored procedure di sistema](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) vista del catalogo.  
+  Viene restituito il tipo o i tipi di trigger DML definiti nella tabella specificata per il database corrente. sp_helptrigger non può essere utilizzata con trigger DDL. Query di [stored procedure di sistema](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) invece la vista del catalogo.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,9 +50,9 @@ sp_helptrigger [ @tabname = ] 'table'
  Nome della tabella del database corrente per cui si desidera ottenere informazioni sui trigger. *Nella tabella* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
  [  **@triggertype=** ] **'***tipo***'**  
- Tipo di trigger DML per cui restituire informazioni. *tipo di* viene **char(6)**, con un valore predefinito è NULL, e può essere uno dei valori seguenti.  
+ Tipo di trigger DML per cui restituire informazioni. *tipo di* viene **char(6)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**DELETE**|Restituisce informazioni sui trigger DELETE.|  
 |**INSERT**|Restituisce informazioni sui trigger INSERT.|  
@@ -75,8 +75,8 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsteadof**|**int**|1 = Trigger INSTEAD OF<br /><br /> 0 = Trigger diverso da INSTEAD OF|  
 |**trigger_schema**|**sysname**|Nome dello schema a cui appartiene il trigger.|  
   
-## <a name="permissions"></a>Autorizzazioni  
- Richiede [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) autorizzazione per la tabella.  
+## <a name="permissions"></a>Permissions  
+ È necessario [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) autorizzazione per la tabella.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eseguita la stored procedure `sp_helptrigger` per generare informazioni sui trigger definiti nella tabella `Person.Person`.  
@@ -88,7 +88,7 @@ EXEC sp_helptrigger 'Person.Person';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

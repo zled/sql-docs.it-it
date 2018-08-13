@@ -25,13 +25,13 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab6fb39894c7cbe10be6d00d5fc74e782ca5650e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ed20abe081acad3ef1c653f3041006c6453e4607
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061950"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540641"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "38061950"
 |**usertype**|**smallint**|ID del tipo di dati definito dall'utente dal **Sys. Types**. Causa un errore di overflow o restituisce NULL se il numero di tipi di dati è maggiore di 32.767.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Prec**|**smallint**|Livello di precisione della colonna.<br /><br /> -1 = **xml** o tipo di valore elevato.|  
-|**scalabilità**|**int**|Scala della colonna.<br /><br /> NULL = Tipo di dati non numerico.|  
+|**Scalabilità**|**int**|Scala della colonna.<br /><br /> NULL = Tipo di dati non numerico.|  
 |**iscomputed**|**int**|Flag che indica se si tratta di una colonna calcolata:<br /><br /> 0 = Non calcolata<br /><br /> 1 = Calcolata|  
 |**isoutparam**|**int**|Indica se il parametro della procedura è un parametro di output:<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**IsNullable**|**int**|Indica se la colonna ammette valori Null:<br /><br /> 1 = True<br /><br /> 0 = False|  

@@ -1,5 +1,5 @@
 ---
-title: 'Nascondere gli elementi e attributi tramite SQL: Hide | Documenti Microsoft'
+title: 'Nascondere gli elementi e attributi usando SQL: Hide | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -29,27 +29,27 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a6b58b7503e066c8d36e178b82f9048be7cd235f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c2e7f9df3211f2af5e063757b9c76c5eb9dc2ccf
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969562"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544291"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Nascondere gli elementi e gli attributi utilizzando sql:hide
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Quando viene eseguita una query XPath su uno schema XSD, il documento XML risultante presenterà gli elementi e gli attributi specificati nello schema. È possibile specificare che alcuni elementi e attributi essere nascosti nello schema mediante l'utilizzo di **SQL: hide** annotazione. Ciò si rivela utile quando i criteri di selezione della query richiedono determinati elementi o attributi dello schema, ma non si desidera che vengano restituiti nel documento XML generato.  
+  Quando viene eseguita una query XPath su uno schema XSD, il documento XML risultante presenterà gli elementi e gli attributi specificati nello schema. È possibile specificare che alcuni elementi e attributi essere nascosti nello schema utilizzando il **SQL: hide** annotazione. Ciò si rivela utile quando i criteri di selezione della query richiedono determinati elementi o attributi dello schema, ma non si desidera che vengano restituiti nel documento XML generato.  
   
  Il **SQL: hide** annotazione accetta un valore booleano (0 = false, 1 = true). I valori possibili sono 0, 1, true e false.  
   
 ## <a name="examples"></a>Esempi  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per esecuzione esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Specifica di sql:hide in un attributo  
- Lo schema XSD in questo esempio è costituito un  **\<Person. Contact >** elemento con **ContactID**, **FirstName**, e **LastName** attributi.  
+ Lo schema XSD in questo esempio è costituito da un  **\<Person. Contact >** elemento con **ContactID**, **FirstName**, e **LastName** degli attributi.  
   
- Il  **\<Person. Contact >** elemento è di tipo complesso e, pertanto, viene eseguito il mapping alla tabella con lo stesso nome (mapping predefinito). Tutti gli attributi di  **\<Person. Contact >** elemento sono di tipo semplice ed eseguire il mapping alle colonne con gli stessi nomi nella Person.Contacttable nel database AdventureWorks. Nello schema, il **SQL: hide** annotazione viene specificata per il **ContactID** attributo. Quando viene specificata una query XPath su questo schema, il **ContactID** non viene restituito nel documento XML.  
+ Il  **\<Person. Contact >** elemento è di tipo complesso e, pertanto, è mappato alla tabella con lo stesso nome (mapping predefinito). Tutti gli attributi del  **\<Person. Contact >** elemento sono di tipo semplice ed eseguire il mapping alle colonne con gli stessi nomi nella Person.Contacttable nel database AdventureWorks. Nello schema, il **SQL: hide** annotazione viene specificata per il **ContactID** attributo. Quando viene specificata una query XPath su questo schema, il **ContactID** non viene restituito nel documento XML.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -86,7 +86,7 @@ ms.locfileid: "32969562"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzando ADO per eseguire query di SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Set di risultati:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "32969562"
 </ROOT>  
 ```  
   
- Quando **SQL: hide** specificato in un elemento, l'elemento e i relativi attributi o elementi figlio non vengono visualizzati nel documento XML generato. Ecco un altro schema XSD in cui **SQL: hide** viene specificata per il  **\<OD >** elemento:  
+ Quando **SQL: hide** viene specificato in un elemento, l'elemento e i relativi attributi o elementi figlio non vengono visualizzati nel documento XML generato. Ecco un altro schema XSD in cui **SQL: hide** viene specificata per il  **\<OD >** elemento:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -151,7 +151,7 @@ ms.locfileid: "32969562"
 </xsd:schema>  
 ```  
   
- Quando una query XPath (ad esempio `/Customers[@CID="1"]`) specificata su questo schema, il documento XML generato non include il  **\<OD >** elemento e i relativi elementi figlio, come illustrato nel risultato parziale:  
+ Quando una query XPath (ad esempio `/Customers[@CID="1"]`) viene specificata su questo schema, il documento XML generato non include le  **\<OD >** elemento e i relativi elementi figlio, come illustrato nel risultato parziale:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

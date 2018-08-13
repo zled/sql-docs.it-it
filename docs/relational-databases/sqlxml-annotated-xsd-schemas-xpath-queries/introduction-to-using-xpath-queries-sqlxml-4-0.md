@@ -1,5 +1,5 @@
 ---
-title: Introduzione all'uso di query XPath (SQLXML 4.0) | Microsoft Docs
+title: Introduzione all'uso di query XPath (SQLXML 4.0) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e620b704f7678a9af8510e7b1d81321aec6ba061
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a5e973b710da9dd9619b59749dc1caf65209ed89
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982553"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561861"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduzione all'utilizzo di query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "37982553"
 |Predicati con valori numerici||  
 |Operatori aritmetici|mod|  
 |Funzioni nodo|**predecessore**, **ancestor-or-self**, **discendenti**, **descendant-or-self (/ /)**, **seguenti**,  **successivi**, **dello spazio dei nomi**, **precedente**, **pari livello precedenti**|  
-|Funzioni per i valori stringa|**String ()**, **Concat ()**, **starts-with**, **Contains**, **substring-before()**,  **substring-after()**, **substring**, **string-length()**, **normalize()**, **Translate)**|  
+|Funzioni per i valori stringa|**String ()**, **Concat ()**, **starts-with**, **Contains ()**, **substring-before()**,  **substring-after()**, **substring ()**, **string-length()**, **normalize()**, **Translate)**|  
 |funzioni booleane|**lang)**|  
 |Funzioni numeriche|**SUM ()**, **floor ()**, **Ceiling ()**, **Round)**|  
 |Operatore Union|&#124;|  

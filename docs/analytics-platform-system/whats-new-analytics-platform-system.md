@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b1eee6b3ca692c7935b061696b37842cda0f8326
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: b4059d9460eec5cd69e6e8b4a2f2ac95af5b3d0e
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137890"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400644"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quali sono le novità nel sistema di piattaforma Analitica, di un data warehouse di tipo scale-out MPP
 Vedere Novità gli ultimi aggiornamenti di Appliance per Microsoft® Analitica piattaforma di strumenti analitici. I punti di accesso è un'appliance di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse. 
@@ -25,7 +25,7 @@ Vedere Novità gli ultimi aggiornamenti di Appliance per Microsoft® Analitica p
 APS 2016 è un prerequisito per l'aggiornamento a AU7. Di seguito sono novità di APS AU7:
 
 ### <a name="auto-create-and-auto-update-statistics"></a>Crea automaticamente e l'aggiornamento automatico statistiche
-APS AU7 crea e aggiorna le statistiche automaticamente, per impostazione predefinita. Per aggiornare le impostazioni delle statistiche, gli amministratori possono utilizzare una nuova voce di menu funzionalità commutatore nel [Configuration Manager](appliance-configuration.md#CMTasks). Il [opzione della funzionalità](appliance-feature-switch.md) controlla il auto-create, l'aggiornamento automatico e il comportamento di aggiornamento asincrono delle statistiche. È anche possibile aggiornare le statistiche con il [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) istruzione.
+APS AU7 crea e aggiorna le statistiche automaticamente, per impostazione predefinita. Per aggiornare le impostazioni delle statistiche, gli amministratori possono utilizzare una nuova voce di menu funzionalità commutatore nel [Configuration Manager](appliance-configuration.md#CMTasks). Il [opzione della funzionalità](appliance-feature-switch.md) controlla il auto-create, l'aggiornamento automatico e il comportamento di aggiornamento asincrono delle statistiche. È anche possibile aggiornare le statistiche con il [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) istruzione.
 
 ### <a name="t-sql"></a>T-SQL
 Selezionare @var è ora supportato. Per altre informazioni, vedere [selezionare variabile locale] (/ sql/t-sql/language-elements/select-local-variable-transact-sql) 

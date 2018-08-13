@@ -1,5 +1,5 @@
 ---
-title: sp_helpstats (Transact-SQL) | Documenti Microsoft
+title: sp_helpstats (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eda430dedf39538c27f85d0ea11ca59bbfdc5e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 42d35f6890a5bfc686274510ee7ed4328e2860c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251637"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547561"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helpstats[ @objname = ] 'object_name'
  Specifica la tabella per cui recuperare le informazioni statistiche. *object_name* viene **nvarchar(520)** e non può essere null. È possibile specificare un nome composto da una o due parti.  
   
  [  **@results=**] **'***valore***'**  
- Specifica la quantità di informazioni da restituire. Le voci valide sono **tutti** e **statistiche**. **Tutti i** Elenca le statistiche per tutti gli indici e anche le colonne con statistiche create su di essi; **STATS** solo le statistiche non associate a un indice. *valore* viene **nvarchar(5** con un valore predefinito è STATS.  
+ Specifica la quantità di informazioni da restituire. Possibili valori sono **tutte** e **STATS**. **Tutti i** Elenca le statistiche per tutti gli indici e anche le colonne con statistiche create su di essi. **STATS** Elenca solo le statistiche non associate a un indice. *valore* viene **nvarchar(5** con valore predefinito è STATS.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -66,10 +66,10 @@ sp_helpstats[ @objname = ] 'object_name'
 |**statistics_name**|Nome delle statistiche. Restituisce **sysname** e non può essere null.|  
 |**statistics_keys**|Chiavi su cui sono basate le statistiche. Restituisce **nvarchar(2078)** e non può essere null.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Utilizzare DBCC SHOW_STATISTICS per visualizzare informazioni statistiche dettagliate su indici o statistiche specifici. Per altre informazioni, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) e [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -107,6 +107,6 @@ EXEC sp_helpstats
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

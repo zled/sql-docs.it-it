@@ -1,5 +1,5 @@
 ---
-title: 'Identificazione di colonne chiave mediante SQL: key-fields (SQLXML 4.0) | Documenti Microsoft'
+title: 'Identificazione delle colonne chiave mediante SQL: key-fields (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -26,36 +26,36 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a96060e6efaf0623cbc4c9fb738af3863f1010fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3e75779626c8769c609fa27f97b44562d3e9a8aa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971326"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535561"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificazione delle colonne chiave mediante sql:key-fields (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Quando si specifica una query XPath su uno schema XSD, nella maggior parte dei casi sono necessarie informazioni chiave per ottenere la nidificazione appropriata nel risultato. Specifica il **SQL:Key-campi** annotazione è un modo per assicurarsi che venga generata la gerarchia appropriata.  
+  Quando si specifica una query XPath su uno schema XSD, nella maggior parte dei casi sono necessarie informazioni chiave per ottenere la nidificazione appropriata nel risultato. Specifica la **SQL: Key-campi** annotazione è un modo per garantire che venga generata la gerarchia appropriata.  
   
 > [!NOTE]  
->  Per garantire una nidificazione appropriata, è consigliabile specificare **SQL:Key-campi** per gli elementi che eseguono il mapping alle tabelle. Il codice XML prodotto riconosce l'ordinamento del set di risultati sottostante. Se **SQL:Key-campi** non è specificato, il codice XML generato potrebbe non avere un formato corretto.  
+>  Per garantire una nidificazione appropriata, è consigliabile specificare **SQL: Key-campi** per gli elementi che eseguono il mapping alle tabelle. Il codice XML prodotto riconosce l'ordinamento del set di risultati sottostante. Se **SQL: Key-campi** non viene specificato, il codice XML generato potrebbe non essere corretto.  
   
- Il valore di **SQL:Key-campi** identifica le colonne che identificano in modo univoco le righe nella relazione. Se sono necessarie più colonne per identificare in modo univoco una riga, i valori delle colonne vengono delimitati da spazi.  
+ Il valore di **SQL: Key-campi** indica le colonne che identificano in modo univoco le righe nella relazione. Se sono necessarie più colonne per identificare in modo univoco una riga, i valori delle colonne vengono delimitati da spazi.  
   
- È necessario utilizzare il **SQL: Key-campi** annotazione quando un elemento contiene un  **\<SQL: Relationship >** che viene definito tra l'elemento e un elemento figlio ma non fornisce la chiave primaria della tabella specificata nell'elemento padre.  
+ È necessario usare il **SQL: Key-campi** annotazione quando un elemento contiene un  **\<SQL: Relationship >** che viene definito tra l'elemento e un elemento figlio ma non fornisce la chiave primaria della tabella specificata nell'elemento padre.  
   
 ## <a name="examples"></a>Esempi  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per esecuzione esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Creazione della nidificazione appropriata quando \<SQL: Relationship > non fornisce informazioni sufficienti  
- In questo esempio viene illustrato dove **SQL:Key-campi** deve essere specificato.  
+ Questo esempio viene illustrato dove **SQL: Key-campi** deve essere specificato.  
   
- Si consideri lo schema seguente: Lo schema specifica una gerarchia tra il  **\<ordine >** e  **\<cliente >** elementi nei quali il  **\<ordine >** tratta dell'elemento padre e  **\<cliente >** è un elemento figlio.  
+ Si consideri lo schema seguente: Lo schema specifica una gerarchia tra i  **\<ordine >** e  **\<cliente >** elementi in cui la  **\<ordine >** è l'elemento padre e il  **\<cliente >** è un elemento figlio.  
   
- Il  **\<SQL: Relationship >** tag è utilizzato per specificare la relazione padre-figlio. che identifica CustomerID nella tabella Sales.SalesOrderHeader come chiave padre che fa riferimento alla chiave figlio CustomerID nella tabella Sales.Customer. Le informazioni fornite in  **\<SQL: Relationship >** non è sufficiente per identificare in modo univoco le righe nella tabella padre (Sales. SalesOrderHeader). Pertanto, senza il **SQL:Key-campi** annotazione, la gerarchia generata non è precisa.  
+ Il  **\<SQL: Relationship >** tag viene usato per specificare la relazione padre-figlio. che identifica CustomerID nella tabella Sales.SalesOrderHeader come chiave padre che fa riferimento alla chiave figlio CustomerID nella tabella Sales.Customer. Le informazioni fornite in  **\<SQL: Relationship >** non sono sufficienti per identificare in modo univoco le righe nella tabella padre (Sales. SalesOrderHeader). Pertanto, senza la **SQL: Key-campi** annotazione, la gerarchia generata non è precisa.  
   
- Con **SQL: Key-campi** specificato in  **\<ordine >**, l'annotazione identifica in modo univoco le righe nel padre (tabella Sales. SalesOrderHeader) e relativi elementi figlio vengono visualizzati sotto il relativo elemento padre.  
+ Con **SQL: Key-campi** specificato in  **\<ordine >**, l'annotazione identifica in modo univoco le righe nel padre (tabella Sales. SalesOrderHeader) e dei relativi elementi figlio vengono visualizzate sotto le elemento padre.  
   
  Lo schema è il seguente:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "32971326"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzando ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato il set di risultati parziale:  
   
@@ -132,7 +132,7 @@ ms.locfileid: "32971326"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Specifica di sql:key-fields per produrre una nidificazione appropriata nel risultato  
- Nello schema seguente, non è specificata alcuna gerarchia mediante  **\<SQL: Relationship >**. Lo schema richiede ancora la specifica di **SQL:Key-campi** annotazione per identificare in modo univoco i dipendenti nella tabella HumanResources. Employee.  
+ Nello schema seguente, non è specificata alcuna gerarchia mediante  **\<SQL: Relationship >**. Lo schema richiede ancora che specifica la **SQL: Key-campi** annotazione per identificare in modo univoco i dipendenti nella tabella HumanResources. Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -177,7 +177,7 @@ ms.locfileid: "32971326"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzando ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Risultato:  
   

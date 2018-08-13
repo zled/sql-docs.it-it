@@ -24,13 +24,13 @@ caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4ad13459024604d748c1dac8a6649c09a53f10f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4cb287936b2cdbb73a53f04f3e10dc5304e41a54
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005743"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557261"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "38005743"
 |tombstone_operation_lsn|**nvarchar(23)**|Il file verrà eliminato una volta che tombstone_operation_lsn non è più sincronizzato con l'LSN di troncamento del log.|  
 |logical_deletion_log_block_id|**bigint**|Si applica solo alla stato 5.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione `VIEW DATABASE STATE` per il server.  
   
 ## <a name="use-cases"></a>Modalità di utilizzo comuni  

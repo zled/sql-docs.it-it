@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di un DiffGram con SQLXML classi gestite | Documenti Microsoft
+title: Esecuzione di un DiffGram con SQLXML classi gestite | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9d0fba2d5e51c38ccc2fee03279d4f97c4841ecb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e19e54a72bb6ef6852353d8ff9feb59bec00b8e0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969476"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548911"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Esecuzione di un DiffGram mediante classi gestite SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In questo esempio viene illustrato come eseguire un file DiffGram nel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ambiente .NET Framework per applicare i dati degli aggiornamenti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelle utilizzando le classi gestite SQLXML (Microsoft.Data.SqlXml).  
+  In questo esempio viene illustrato come eseguire un file DiffGram nel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ambiente .NET Framework per applicare i dati degli aggiornamenti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelle usando le classi gestite SQLXML (Microsoft.Data.SqlXml).  
   
  In questo esempio DiffGram viene utilizzato per aggiornare le informazioni per il cliente ALFKI (CompanyName e ContactName).  
   
@@ -59,9 +59,9 @@ ms.locfileid: "32969476"
 </ROOT>  
 ```  
   
- Il  **\<prima >** blocco include un  **\<cliente >** elemento (**diffgr: ID = "Customer1"**). Il  **\<DataInstance >** blocco include corrispondente  **\<cliente >** elemento con lo stesso **id**. Il  **\<cliente >** elemento il  **\<NewDataSet >** specifica inoltre **diffgr: HasChanges = "modified"**. indicando un'operazione di aggiornamento e il record del cliente nella tabella Cust viene aggiornato di conseguenza. Si noti che se il **diffgr:HasChanges** attributo non viene specificato, la logica di elaborazione DiffGram ignora questo elemento e viene eseguito alcun aggiornamento.  
+ Il  **\<prima di >** blocco include un  **\<cliente >** elemento (**diffgr: ID = "Customer1"**). Il  **\<DataInstance >** inclusioni di blocco corrispondente  **\<cliente >** elemento con stesso **id**. Il  **\<cliente >** elemento il  **\<NewDataSet >** specifica inoltre **diffgr: HasChanges = "modified"**. indicando un'operazione di aggiornamento e il record del cliente nella tabella Cust viene aggiornato di conseguenza. Si noti che se il **diffgr: HasChanges** attributo non viene specificato, la logica di elaborazione DiffGram ignora questo elemento e viene eseguito alcun aggiornamento.  
   
- Di seguito è riportato il codice per un'esercitazione applicazione c# che illustra come utilizzare le classi gestite SQLXML per eseguire il DiffGram sopra e aggiornare due tabelle (Cust, Ord), si creerà inoltre il **tempdb** database.  
+ Di seguito è riportato il codice per un'esercitazione applicazione c# che illustra come usare le classi gestite SQLXML per eseguire il DiffGram sopra riportato e aggiornamento di due tabelle (Cust, Ord) verrà creata anche nel **tempdb** database.  
   
 ```  
 using System;  
@@ -185,6 +185,6 @@ class Test
 8.  Al prompt dei comandi eseguire DiffgramSample.exe.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di DiffGram & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+ [Esempi di DiffGram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
   
   
