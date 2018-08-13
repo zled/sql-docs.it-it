@@ -21,12 +21,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 22aa54280e01854e44b8b3d64eefbd797eb98276
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011638"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008803"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Ogni blocco di codice dell'esempio è illustrato sulla stessa riga. Per copiare 
 ## <a name="1-configure-the-environment"></a>1. Configurazione dell'ambiente  
 Utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e il codice seguente per aprire il database `AdventureWorks2012` e utilizzare l'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] `CURRENT_USER` per controllare che come contesto venga visualizzato l'utente dbo.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -70,7 +70,7 @@ Per altre informazioni sull'istruzione CURRENT_USER, vedere [CURRENT_USER &#40;T
   
 Utilizzare questo codice come utente dbo per creare due utenti nel server e nel database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
   
-```  
+```sql
 CREATE LOGIN TestManagerUser   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khx';  
 GO  
@@ -91,7 +91,7 @@ Per altre informazioni sull'istruzione CREATE USER, vedere [CREATE USER &#40;Tra
   
 Utilizzare il codice seguente per modificare la proprietà dello schema `Purchasing` e impostarla sull'account `TestManagerUser` . In questo modo si consente all'account di utilizzare l'accesso completo alle istruzioni DML (Data Manipulation Language), ad esempio autorizzazioni `SELECT` e `INSERT` , sull'oggetto contenuto. `TestManagerUser` viene inoltre concessa la possibilità di creare stored procedure.  
   
-```  
+```sql
 /* Change owner of the Purchasing Schema to TestManagerUser */  
 ALTER AUTHORIZATION   
    ON SCHEMA::Purchasing   
@@ -111,7 +111,7 @@ Per cambiare contesto all'interno di un database, utilizzare l'istruzione EXECUT
   
 Utilizzare l'istruzione `EXECUTE AS` del codice seguente per cambiare il contesto impostandolo su `TestManagerUser` e creare una stored procedure in grado di visualizzare soltanto i dati necessari per `TestEmployeeUser`. Per soddisfare i requisiti, la stored procedure accetta una variabile per il numero dell'ordine di acquisto e non visualizza informazioni finanziarie. La clausola WHERE limita inoltre i risultati alle spedizioni parziali.  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestManagerUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -135,7 +135,7 @@ GO
   
 `TestEmployeeUser` non dispone attualmente dell'accesso a qualsiasi oggetto di database. Il codice seguente, ancora nel contesto `TestManagerUser` , concede all'account utente la possibilità di eseguire query sulle informazioni delle tabelle di base tramite la stored procedure.  
   
-```  
+```sql
 GRANT EXECUTE  
    ON OBJECT::Purchasing.usp_ShowWaitingItems  
    TO TestEmployeeUser;  
@@ -144,7 +144,7 @@ GO
   
 La stored procedure appartiene allo schema `Purchasing` , nonostante non venga specificato esplicitamente uno schema, poiché `TestManagerUser` è assegnato per impostazione predefinita allo schema `Purchasing` . È possibile utilizzare le informazioni del catalogo di sistema per individuare gli oggetti, come illustrato nel codice seguente.  
   
-```  
+```sql
 SELECT a.name AS 'Schema'  
    , b.name AS 'Object Name'  
    , b.type AS 'Object Type'  
@@ -157,7 +157,7 @@ GO
   
 Al termine di questa sezione dell'esempio, nel codice il contesto viene cambiato e nuovamente impostato su dbo mediante l'istruzione `REVERT`.  
   
-```  
+```sql
 REVERT;  
 GO  
 ```  
@@ -167,7 +167,7 @@ Per altre informazioni sull'istruzione REVERT, vedere [REVERT &#40;Transact-SQL&
 ## <a name="3-access-data-through-the-stored-procedure"></a>3. Accesso ai dati tramite la stored procedure  
 `TestEmployeeUser` non dispone di autorizzazioni per gli oggetti di database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ad eccezione dell'accesso e dei diritti assegnati al ruolo di database public. Quando `TestEmployeeUser` tenta di accedere alle tabelle di base, il codice seguente restituisce un errore.  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -183,7 +183,7 @@ GO
   
 Poiché gli oggetti a cui fa riferimento la stored procedure creata nell'ultima sezione sono di proprietà di `TestManagerUser` in virtù della proprietà dello schema `Purchasing` , `TestEmployeeUser` può accedere alle tabelle di base tramite la stored procedure. Nel codice seguente, in cui viene ancora utilizzato `TestEmployeeUser` come contesto, viene passato l'ordine di acquisto 952 come parametro.  
   
-```  
+```sql
 EXEC Purchasing.usp_ShowWaitingItems 952  
 GO  
 ```  
@@ -191,7 +191,7 @@ GO
 ## <a name="4-reset-the-environment"></a>4. Reimpostazione dell'ambiente  
 Nel codice seguente viene utilizzato il comando `REVERT` per ripristinare `dbo`come contesto dell'account corrente e quindi viene reimpostato l'ambiente.  
   
-```  
+```sql
 REVERT;  
 GO  
 ALTER AUTHORIZATION   
@@ -215,7 +215,7 @@ In questa sezione è riportato il codice completo dell'esempio.
 > [!NOTE]  
 > Nel codice non sono inclusi i due errori previsti che dimostrano l'impossibilità per `TestEmployeeUser` di eseguire una selezione nelle tabelle di base.  
   
-```  
+```sql
 /*   
 Script:       UserContextTutorial.sql  
 Author:       Microsoft  

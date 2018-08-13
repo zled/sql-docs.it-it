@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8195661f681d3f0e694e040e2319efdfcd3803bc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4860d2b38d6a2da7c6204e4fa6224b5ef08619c7
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553101"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008963"
 ---
 # <a name="principals-database-engine"></a>Entità (Motore di database)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,18 +47,18 @@ ms.locfileid: "39553101"
   
 ## <a name="sql-server-level-principals"></a>Entità a livello di SQL Server  
   
--  Accesso per l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]   
--  Account di accesso con autenticazione di Windows per un utente di Windows  
--  Account di accesso con autenticazione di Windows per un gruppo di Windows   
--  Account di accesso con autenticazione di Azure Active Directory per un utente AD
--  Account di accesso con autenticazione di Azure Active Directory per un gruppo AD
--  Ruolo del server  
+- Accesso per l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]   
+- Account di accesso con autenticazione di Windows per un utente di Windows  
+- Account di accesso con autenticazione di Windows per un gruppo di Windows   
+- Account di accesso con autenticazione di Azure Active Directory per un utente AD
+- Account di accesso con autenticazione di Azure Active Directory per un gruppo AD
+- Ruolo del server  
   
- ## <a name="database-level-principals"></a>Entità a livello di database  
+## <a name="database-level-principals"></a>Entità a livello di database
   
--   Utente del database (sono disponibili 11 tipi di utenti. Per altre informazioni, vedere [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)). 
--   Ruolo del database  
--   Ruolo applicazione  
+- Utente del database (sono disponibili 11 tipi di utenti. Per altre informazioni, vedere [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)).
+- Ruolo del database
+- Ruolo applicazione
   
 ## <a name="sa-login"></a>sa Login  
  L'account di accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` è un'entità a livello di server. Per impostazione predefinita, questo account viene creato durante l'installazione di un'istanza. A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il database predefinito di sa è il database master. diversamente da quanto consentito nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'account di accesso `sa` è un membro del ruolo predefinito del database `sysadmin`. L'account di accesso `sa` dispone di tutte le autorizzazioni per il server e non può essere limitato. L'account di accesso `sa` non può essere eliminato, ma può essere disabilitato in modo da impedirne l'uso.

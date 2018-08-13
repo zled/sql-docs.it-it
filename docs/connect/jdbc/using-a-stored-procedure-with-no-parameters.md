@@ -14,41 +14,42 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 157d6f1b3948dbe697afc5af018b197ede9fec9b
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 6bd763d709238c6bd25fbe7a90acb7b617004925
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279132"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661833"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Utilizzo di una stored procedure senza parametri
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Il tipo più semplice di stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] che è possibile chiamare è quello che non contiene parametri e restituisce un solo set di risultati. In [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è disponibile la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) che è possibile usare per chiamare questo tipo di stored procedure ed elaborare i dati restituiti.  
-  
- Quando si usa il driver JDBC per chiamare una stored procedure senza parametri, è necessario usare la sequenza di escape SQL `call`. La sintassi della sequenza di escape `call` senza parametri è la seguente:  
-  
- `{call procedure-name}`  
-  
+Il tipo più semplice di stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] che è possibile chiamare è quello che non contiene parametri e restituisce un solo set di risultati. In [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è disponibile la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) che è possibile usare per chiamare questo tipo di stored procedure ed elaborare i dati restituiti.
+
+Quando si usa il driver JDBC per chiamare una stored procedure senza parametri, è necessario usare la sequenza di escape SQL `call`. La sintassi della sequenza di escape `call` senza parametri è la seguente:
+
+`{call procedure-name}`
+
 > [!NOTE]  
->  Per altre informazioni sulle sequenze di escape SQL, vedere [usando le sequenze di Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
-  
- Come esempio, viene creata la seguente stored procedure nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:  
-  
+> Per altre informazioni sulle sequenze di escape SQL, vedere [usando le sequenze di Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+
+Come esempio, viene creata la seguente stored procedure nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
+
 ```sql
-CREATE PROCEDURE GetContactFormalNames   
+CREATE PROCEDURE GetContactFormalNames
 AS  
 BEGIN  
-   SELECT TOP 10 Title + ' ' + FirstName + ' ' + LastName AS FormalName   
+   SELECT TOP 10 Title + ' ' + FirstName + ' ' + LastName AS FormalName
    FROM Person.Contact  
 END  
-```  
-  
- Questa stored procedure restituisce un solo set di risultati contenente una colonna di dati che corrispondono a una combinazione di titolo, nome e cognome dei primi 10 contatti presenti nella tabella Person.Contact.  
-  
- Nell'esempio seguente viene passata alla funzione una connessione aperta al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] e viene usato il metodo [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) per chiamare la stored procedure GetContactFormalNames.  
-  
-```java  
+```
+
+Questa stored procedure restituisce un solo set di risultati contenente una colonna di dati che corrispondono a una combinazione di titolo, nome e cognome dei primi 10 contatti presenti nella tabella Person.Contact.
+
+Nell'esempio seguente viene passata alla funzione una connessione aperta al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] e viene usato il metodo [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) per chiamare la stored procedure GetContactFormalNames.
+
+```java
 public static void executeSprocNoParams(Connection con) throws SQLException {  
     try(Statement stmt = con.createStatement();) {  
 
@@ -58,9 +59,8 @@ public static void executeSprocNoParams(Connection con) throws SQLException {
         }  
     }  
 }
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [USo di istruzioni con stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)  
-  
-  
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[USo di istruzioni con stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md)

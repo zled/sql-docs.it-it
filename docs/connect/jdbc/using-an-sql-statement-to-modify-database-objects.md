@@ -14,28 +14,28 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b126fb0b5a72688c1801cf8854d8035763c8245f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a3386121432f918ef447f5d3ad1f4ff79a64c681
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040579"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662443"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>Utilizzo di un'istruzione SQL per modificare gli oggetti di database
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Per modificare gli oggetti di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante un'istruzione SQL, è possibile usare il metodo [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) della classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Il metodo executeUpdate passerà l'istruzione SQL al database per l'elaborazione e quindi restituirà un valore pari a 0 poiché non sono presenti righe interessate dall'operazione.  
-  
- A tale scopo, è necessario innanzitutto creare un oggetto SQLServerStatement usando il metodo [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).  
-  
+Per modificare gli oggetti di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante un'istruzione SQL, è possibile usare il metodo [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) della classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Il metodo executeUpdate passerà l'istruzione SQL al database per l'elaborazione e quindi restituirà un valore pari a 0 poiché non sono presenti righe interessate dall'operazione.
+
+A tale scopo, è necessario innanzitutto creare un oggetto SQLServerStatement usando il metodo [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
+
 > [!NOTE]  
->  Le istruzioni SQL che modificano gli oggetti presenti in un database vengono definite istruzioni DDL (Data Definition Language) e includono, ad esempio, CREATE TABLE, DROP TABLE, CREATE INDEX e DROP INDEX. Per altre informazioni sui tipi di istruzioni DDL supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere la documentazione in linea di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
-  
- Nell'esempio seguente viene passata alla funzione una connessione aperta al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], viene costruita un'istruzione SQL che creerà l'oggetto semplice TestTable nel database e quindi viene eseguita l'istruzione e visualizzato il valore restituito.  
-  
- [!code[JDBC#UsingSQLToModifyDBObjects1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_0_1.java)]  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso di istruzioni con SQL](../../connect/jdbc/using-statements-with-sql.md)  
-  
-  
+> Le istruzioni SQL che modificano gli oggetti presenti in un database vengono definite istruzioni DDL (Data Definition Language) e Sono inclusi, ad esempio le istruzioni `CREATE TABLE`, `DROP TABLE`, `CREATE INDEX`, e `DROP INDEX`. Per altre informazioni sui tipi di istruzioni DDL supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere la documentazione in linea di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].
+
+Nell'esempio seguente viene passata alla funzione una connessione aperta al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], viene costruita un'istruzione SQL che creerà l'oggetto semplice TestTable nel database e quindi viene eseguita l'istruzione e visualizzato il valore restituito.
+
+[!code[JDBC#UsingSQLToModifyDBObjects1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_0_1.java)]
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di istruzioni con SQL](../../connect/jdbc/using-statements-with-sql.md)
