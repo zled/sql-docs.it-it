@@ -1,5 +1,5 @@
 ---
-title: Schema di memorizzazione nella cache (SQLXML 4.0) | Documenti Microsoft
+title: Schema di memorizzazione nella cache (SQLXML 4.0) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebb2fd4b7e0b17f81f8e14f3bde60d56e3a60ff3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f6b9e9a8a6d9406def9e2adc90e1ef7e9b8545a1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971085"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559641"
 ---
 # <a name="schema-caching-sqlxml-40"></a>Memorizzazione nella cache degli schemi (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Con un'installazione side-by-side di XML per Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 e SQLXML 3.0, è possibile controllare in modo esplicito lo schema di memorizzazione nella cache in tutte le versioni con le chiavi del Registro di sistema seguente:  
+  Con un'installazione side-by-side di XML per Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 e SQLXML 3.0, è possibile controllare in modo esplicito lo schema di memorizzazione nella cache in tutte le versioni utilizzando le seguenti chiavi del Registro di sistema:  
   
  Web Release 1:  
   
@@ -58,15 +58,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
   
  È possibile impostare le dimensioni della cache degli schemi aggiungendo nel Registro di sistema la chiave sopra riportata.  
   
- Le dimensioni dello schema vengono impostate in base sulla memoria disponibile e al numero di schemi utilizzati. Il valore predefinito **SchemaCacheSize** dimensioni pari a 31. Se si imposta **SchemaCacheSize** superiore, viene utilizzata più memoria. Pertanto, è possibile aumentare le dimensioni della cache se l'accesso allo schema sembra lento o ridurle se la memoria è insufficiente.  
+ Le dimensioni dello schema vengono impostate in base sulla memoria disponibile e al numero di schemi utilizzati. Il valore predefinito **SchemaCacheSize** dimensioni sono 31. Se si imposta **SchemaCacheSize** superiore, viene utilizzata più memoria. Pertanto, è possibile aumentare le dimensioni della cache se l'accesso allo schema sembra lento o ridurle se la memoria è insufficiente.  
   
- Per motivi di prestazioni, è consigliabile impostare **SchemaCacheSize** superiore al numero di schemi di mapping generalmente utilizzati. Come aumenta il numero di schemi, se **SchemaCacheSize** è minore rispetto al numero di schemi di cui si dispone, le prestazioni diminuiscono.  
+ Per motivi di prestazioni, è consigliabile impostare **SchemaCacheSize** maggiore del numero di schemi di mapping utilizzati normalmente. Come aumenta il numero di schemi, se **SchemaCacheSize** è minore rispetto al numero di schemi è, le prestazioni peggiorano.  
   
 > [!NOTE]  
 >  Durante lo sviluppo, è consigliabile non memorizzare nella cache gli schemi, in quanto le modifiche apportate agli schemi non vengono riflesse nella cache per circa due minuti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [La cache dei modelli & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
- [Memorizzazione nella cache XSL & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
+ [La cache dei modelli &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
+ [La memorizzazione nella cache di XSL &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
   
   

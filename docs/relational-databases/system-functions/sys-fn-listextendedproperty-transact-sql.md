@@ -30,13 +30,13 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3484c32c00c5f94f084cd5c0e49837181054df40
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d0480fcc7880febe136431ff50cb3405b8427c40
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238438"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559721"
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,32 +62,32 @@ fn_listextendedproperty (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- {predefinito | '*property_name*' | NULL}  
+ {impostazione predefinita | «*property_name*' | NULL}  
  Nome della proprietà. *property_name* viene **sysname**. I possibili valori sono default, NULL o un nome di proprietà.  
   
- {predefinito | '*level0_object_type*' | NULL}  
+ {impostazione predefinita | «*level0_object_type*' | NULL}  
  Utente o tipo definito dall'utente. *level0_object_type* viene **varchar(128)**, con un valore predefinito è NULL. I possibili valori sono ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER e NULL.  
   
 > [!IMPORTANT]  
 >  I tipi USER e TYPE come tipi di livello 0 verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate. Utilizzare SCHEMA come tipo di livello 0 anziché USER. Per TYPE utilizzare SCHEMA come tipo di livello 0 e TYPE come tipo di livello 1.  
   
- {predefinito | '*level0_object_name*' | NULL}  
- Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* viene **sysname** con un valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
+ {impostazione predefinita | «*level0_object_name*' | NULL}  
+ Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* viene **sysname** con valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
   
- {predefinito | '*level1_object_type*' | NULL}  
- Tipo di oggetto di livello 1. *level1_object_type* viene **varchar(128)** con un valore predefinito è NULL. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
+ {impostazione predefinita | «*level1_object_type*' | NULL}  
+ Tipo di oggetto di livello 1. *level1_object_type* viene **varchar(128)** con valore predefinito è NULL. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
   
 > [!NOTE]  
 >  Per il valore predefinito viene eseguito il mapping a NULL e per il parametro 'default' viene eseguito il mapping al tipo di oggetto DEFAULT.  
   
- {predefinito | '*level1_object_name*' | NULL}  
- Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* viene **sysname** con un valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
+ {impostazione predefinita | «*level1_object_name*' | NULL}  
+ Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* viene **sysname** con valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
   
- {predefinito | '*level2_object_type*' | NULL}  
- Tipo di oggetto di livello 2. *level2_object_type* viene **varchar(128)** con un valore predefinito è NULL. I possibili valori sono DEFAULT, default (con mapping a NULL) e NULL. Gli input validi per *level2_object_type* sono colonne, vincoli, notifica degli eventi, indice, parametro, TRIGGER e NULL.  
+ {impostazione predefinita | «*level2_object_type*' | NULL}  
+ Tipo di oggetto di livello 2. *level2_object_type* viene **varchar(128)** con valore predefinito è NULL. I possibili valori sono DEFAULT, default (con mapping a NULL) e NULL. Gli input validi per *level2_object_type* sono colonne, vincolo, EVENT NOTIFICATION, INDEX, parametro, TRIGGER e NULL.  
   
- {predefinito | '*level2_object_name*' | NULL}  
- Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* viene **sysname** con un valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
+ {impostazione predefinita | «*level2_object_name*' | NULL}  
+ Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* viene **sysname** con valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
   
 ## <a name="tables-returned"></a>Tabelle restituite  
  Il formato delle tabelle restituite da fn_listextendedproperty è il seguente.  
@@ -96,19 +96,19 @@ fn_listextendedproperty (
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
-|name|**sysname**|  
+|NAME|**sysname**|  
 |Valore|**sql_variant**|  
   
  Se la tabella restituita è vuota, significa che all'oggetto non sono associate proprietà estese o che l'utente non è autorizzato a elencare le proprietà estese dell'oggetto. In caso di restituzione di proprietà estese per il database, le colonne objtype e objname saranno NULL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se il valore per *property_name* è NULL o default, fn_listextendedproperty restituisce tutte le proprietà per l'oggetto specificato.  
   
  Se è specificato il tipo di oggetto e il valore del nome oggetto corrispondente è NULL o default, fn_listextendedproperty restituisce tutte le proprietà estese di tutti gli oggetti del tipo specificato.  
   
  Gli oggetti si differenziano in base al livello compreso tra 0, il livello superiore, e 2, il livello inferiore. Se si specificano il nome e il tipo di un oggetto di livello inferiore (1 o 2), per il tipo e il nome dell'oggetto padre è necessario assegnare valori diversi da NULL o dal valore predefinito. In caso contrario, la funzione restituisce un set di risultati vuoto.  
   
- **objname** viene risolto come Latin1_General_CI_AI. Tuttavia è possibile risolvere questo eseguendo l'override delle regole di confronto per il confronto.  
+ **objname** viene risolto come Latin1_General_CI_AI. Tuttavia è possibile soluzione alternativa in questo eseguendo l'override delle regole di confronto per il confronto.  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
@@ -120,7 +120,7 @@ LEFT JOIN sys.fn_listextendedproperty(N'MS_Description', N'user',N'HumanResource
 WHERE o.name = 'Employee';  
 ```  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Le autorizzazioni per elencare le proprietà estese degli oggetti variano in base al tipo di oggetto.  
   
 ## <a name="examples"></a>Esempi  
@@ -147,7 +147,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. Visualizzazione delle proprietà estese in tutte le colonne di una tabella  
- Nell'esempio seguente vengono elencate le proprietà estese per le colonne di `ScrapReason` tabella. inclusa nello schema `Production`.  
+ L'esempio seguente elenca le proprietà estese delle colonne di `ScrapReason` tabella. inclusa nello schema `Production`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +172,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. Visualizzazione delle proprietà estese in tutte le tabelle incluse in uno schema  
- Nell'esempio seguente vengono elencate le proprietà estese per tutte le tabelle incluse nel `Sales` dello schema.  
+ L'esempio seguente elenca le proprietà estese per tutte le tabelle contenute nel `Sales` dello schema.  
   
 ```  
 USE AdventureWorks2012;  

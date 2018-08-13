@@ -24,13 +24,13 @@ caps.latest.revision: 70
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1089a1a30e50b389b05c79cf9af2443f7dc55d6e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c167edb697ec4a2691ddccb88358729fdba61cae
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042749"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562255"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "38042749"
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Numero di identificazione univoco del set di backup. Identità, chiave primaria.|  
 |**backup_set_uuid**|**uniqueidentifier**|Numero di identificazione univoco del set di backup.|  
-|**media_set_id**|**int**|Numero di identificazione univoco del set di supporti che include il set di backup. I riferimenti **backupmediaset (media_set_id)**.|  
+|**media_set_id**|**int**|Numero di identificazione univoco del set di supporti che include il set di backup. Riferimenti **backupmediaset(media_set_id)**.|  
 |**first_family_number**|**tinyint**|Numero del gruppo di supporti in cui inizia il set di backup. Può essere NULL.|  
 |**first_media_number**|**smallint**|Numero del supporto in cui inizia il set di backup. Può essere NULL.|  
 |**last_family_number**|**tinyint**|Numero del gruppo di supporti in cui termina il set di backup. Può essere NULL.|  
@@ -65,7 +65,7 @@ ms.locfileid: "38042749"
 |**first_lsn**|**numeric(25,0)**|Numero di sequenza del file di log del primo record, ovvero del record di log meno recente nel set di backup. Può essere NULL.|  
 |**last_lsn**|**numeric(25,0)**|Numero di sequenza del file di log (LSN) del record di log successivo dopo il set di backup. Può essere NULL.|  
 |**checkpoint_lsn**|**numeric(25,0)**|Numero di sequenza del file di log del record di log da cui deve essere avviata l'operazione di rollforward. Può essere NULL.|  
-|**database_backup_lsn**|**numeric(25,0)**|Numero di sequenza del file di log dell'operazione più recente di backup completo del database. Può essere NULL.<br /><br /> **database_backup_lsn** il "punto di inizio del checkpoint" che viene attivato all'avvio del backup. Questo numero LSN coincide con **first_lsn** se il backup viene eseguito quando il database è inattivo e non è configurata la replica.|  
+|**database_backup_lsn**|**numeric(25,0)**|Numero di sequenza del file di log dell'operazione più recente di backup completo del database. Può essere NULL.<br /><br /> **database_backup_lsn** il "punto di inizio del punto di controllo" che viene attivato quando viene avviato il backup. Tale LSN coinciderà con **first_lsn** se viene eseguito il backup quando il database è inattivo e non viene configurata alcuna replica.|  
 |**database_creation_date**|**datetime**|Data e ora in cui è stato creato il database. Può essere NULL.|  
 |**backup_start_date**|**datetime**|Data e ora in cui è stata avviata l'operazione di backup. Può essere NULL.|  
 |**backup_finish_date**|**datetime**|Data e ora in cui è terminata l'operazione di backup. Può essere NULL.|  
@@ -94,12 +94,12 @@ ms.locfileid: "38042749"
 |**has_incomplete_metadata**|**bit**|1 = Backup della parte finale del log con metadati incompleti. Per altre informazioni, vedere [Backup della parte finale del log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).|  
 |**is_force_offline**|**bit**|1 = Per il database è stata impostata la modalità offline mediante l'utilizzo dell'opzione NORECOVERY durante la creazione del backup.|  
 |**is_copy_only**|**bit**|1 = Backup di sola copia. Per altre informazioni, vedere [Backup di sola copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
-|**first_recovery_fork_guid**|**uniqueidentifier**|ID del fork di recupero iniziale. Corrisponde al **FirstRecoveryForkID** di RESTORE HEADERONLY.<br /><br /> Per i backup dei dati **first_recovery_fork_guid** equals **last_recovery_fork_guid**.|  
-|**last_recovery_fork_guid**|**uniqueidentifier**|ID del fork di recupero finale. Corrisponde al **RecoveryForkID** di RESTORE HEADERONLY.<br /><br /> Per i backup dei dati **first_recovery_fork_guid** equals **last_recovery_fork_guid**.|  
-|**fork_point_lsn**|**numeric(25,0)**|Se **first_recovery_fork_guid** non è uguale a **last_recovery_fork_guid**, questo è il numero di sequenza del log del punto di fork. Negli altri casi il valore è NULL.|  
+|**first_recovery_fork_guid**|**uniqueidentifier**|ID del fork di recupero iniziale. Corrisponde al **FirstRecoveryForkID** di RESTORE HEADERONLY.<br /><br /> Per il backup dei dati, **first_recovery_fork_guid** è uguale a **last_recovery_fork_guid**.|  
+|**last_recovery_fork_guid**|**uniqueidentifier**|ID del fork di recupero finale. Corrisponde al **RecoveryForkID** di RESTORE HEADERONLY.<br /><br /> Per il backup dei dati, **first_recovery_fork_guid** è uguale a **last_recovery_fork_guid**.|  
+|**fork_point_lsn**|**numeric(25,0)**|Se **first_recovery_fork_guid** non è uguale a **last_recovery_fork_guid**, questo è il numero di sequenza del registro del punto di divisione. Negli altri casi il valore è NULL.|  
 |**database_guid**|**uniqueidentifier**|ID univoco per il database. Corrisponde al **BindingID** di RESTORE HEADERONLY. Quando il database viene ripristinato, viene assegnato un nuovo valore.|  
 |**family_guid**|**uniqueidentifier**|ID univoco del database originale al momento della creazione. Questo valore rimane invariato quando il database viene ripristinato, anche in caso di modifica del nome.|  
-|**differential_base_lsn**|**numeric(25,0)**|Numero di sequenza del file di log (LSN) di base per i backup differenziali. Per un backup differenziale basato su singolo; le modifiche con valori LSN maggiori o uguali a **differential_base_lsn** sono inclusi nel backup differenziale.<br /><br /> Per un backup differenziale, il valore è NULL e il valore LSN deve essere determinato a livello di file di base (vedere [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Per i tipi di backup non differenziali, il valore è sempre NULL.|  
+|**differential_base_lsn**|**numeric(25,0)**|Numero di sequenza del file di log (LSN) di base per i backup differenziali. Per un backup differenziale basato su singolo; le modifiche con LSNs maggiore o uguale a **differential_base_lsn** sono inclusi nel backup differenziale.<br /><br /> Per un backup differenziale, il valore è NULL e il valore LSN deve essere determinato a livello di file di base (vedere [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Per i tipi di backup non differenziali, il valore è sempre NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|Per un backup differenziale basato su un solo backup, il valore è l'identificatore univoco della base differenziale.<br /><br /> Per i backup differenziali basati su più backup, il valore è NULL e la base differenziale deve essere determinata a livello di file.<br /><br /> Per tipi di backup non differenziali, il valore è NULL.|  
 |**compressed_backup_size**|**Numeric(20,0)**|Numero totale di byte del backup archiviato nel disco.<br /><br /> Per calcolare il rapporto di compressione, utilizzare **compressed_backup_size** e **backup_size**.<br /><br /> Durante un' **msdb** esegue l'aggiornamento, questo valore è impostato su NULL. che indica un backup non compresso.|  
 |**key_algorithm**|**nvarchar(32)**|Algoritmo utilizzato per crittografare il backup. Il valore NO_Encryption indica che il backup non è stato crittografato.|  
@@ -107,9 +107,9 @@ ms.locfileid: "38042749"
 |**encryptor_type**|**nvarchar(32)**|Tipo di componente di crittografia: certificato o chiave asimmetrica. , Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
   
 ## <a name="remarks"></a>Note  
- RESTORE VERIFYONLY FROM *dispositivo_backup* WITH LOADHISTORY popola la colonna delle **backupmediaset** tabella con i valori appropriati dall'intestazione del set di supporti.  
+ RESTORE VERIFYONLY da *periferica_backup* con LOADHISTORY popola la colonna di **backupmediaset** tabella con i valori appropriati dall'intestazione del set di supporti.  
   
- Per ridurre il numero di righe in questa tabella e in altre tabelle della cronologia e backup, eseguire la [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
+ Per ridurre il numero di righe in questa tabella e in altre tabelle di cronologia e backup, eseguire il [eseguire sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire il backup e ripristino di tabelle &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   

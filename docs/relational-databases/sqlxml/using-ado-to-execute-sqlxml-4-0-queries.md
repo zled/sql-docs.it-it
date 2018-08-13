@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di ADO per eseguire SQLXML 4.0 esegue una query | Microsoft Docs
+title: Utilizzare ADO per SQLXML 4.0 di eseguire una query | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ba44ff764f9adf8cc6b27f5ad298d8ebb5ad2c3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e79153cfafd08484b18f88c70efeab24ff9e5b00
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031369"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561591"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilizzo di ADO per eseguire query SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,11 +119,11 @@ ms.locfileid: "38031369"
   
 1.  Verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sia installato, come segue:  
   
-    1.  Dal **avviare** dal menu **impostazioni**e quindi fare clic su **Pannello di controllo**.  
+    1.  Dal **Start** dal menu **impostazioni**, quindi fare clic su **Pannello di controllo**.  
   
-    2.  Nel Pannello di controllo aprire **Aggiungi / Rimuovi programmi**  
+    2.  Nel Pannello di controllo aprire **Installazione applicazioni**  
   
-    3.  Nell'elenco dei programmi correntemente installati, verificare che **Microsoft SQL Server Native Client** visualizzato nell'elenco.  
+    3.  Nell'elenco dei programmi attualmente installati, verificare che **Microsoft SQL Server Native Client** viene visualizzato nell'elenco.  
   
         > [!NOTE]  
         >  Se è necessario installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vedere [installazione di SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  

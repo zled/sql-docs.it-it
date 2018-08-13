@@ -1,5 +1,5 @@
 ---
-title: Sys. event_notifications (Transact-SQL) | Documenti Microsoft
+title: Sys.event_notifications (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 353b6504b367ddae0a1bb211c6265ca726ffe157
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1b07ca793821b39a549e709f52fa57bf1dd32dcb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182187"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562095"
 ---
 # <a name="syseventnotifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni oggetto che rappresenta una notifica degli eventi, con **sys** = EN.  
+  Restituisce una riga per ogni oggetto di una notifica di evento, con **sys.objects.type** = EN.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "33182187"
 |**principal_id**|**int**|ID dell'entità di database proprietaria della notifica degli eventi.|  
 |**creator_sid**|**varbinary(85)**|SID dell'account di accesso che ha creato la notifica degli eventi.<br /><br /> È NULL se non si specifica l'opzione FAN_IN.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

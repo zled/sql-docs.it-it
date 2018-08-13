@@ -24,12 +24,13 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c457cd76f0c1090147d2df41a47c4c6f3c2ef5ad
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 65f48f853fca55961a69e4e6905e5fa148cf739f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560191"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,15 +58,15 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|ID della colonna.|  
 |**column_name**|**sysname**|Nome della colonna della tabella.|  
-|**column_usage**|**varchar(20)**|Modalità di utilizzo della colonna da parte della query. I valori possibili e le relative descrizioni sono:<br /><br /> UGUAGLIANZA: Colonna contribuisce a un predicato che esprime uguaglianza, nel formato seguente: <br />                        *table.column* = *constant_value*<br /><br /> DISUGUAGLIANZA: La colonna contribuisce a un predicato che esprime disuguaglianza, ad esempio, un predicato nella forma: *Table. Column* > *constant_value*. Qualsiasi operatore di confronto diverso da "=" esprime disuguaglianza.<br /><br /> Includi: Colonna non viene utilizzata per valutare un predicato, ma viene utilizzato per altri scopi, ad esempio, per coprire una query.|  
+|**column_usage**|**varchar(20)**|Modalità di utilizzo della colonna da parte della query. Le relative descrizioni e i valori possibili sono:<br /><br /> UGUAGLIANZA: Colonna contribuisce a un predicato che esprime uguaglianza, nel formato seguente: <br />                        *table.column* = *constant_value*<br /><br /> DISUGUAGLIANZA: La colonna contribuisce a un predicato che esprime disuguaglianza, ad esempio, un predicato del form: *Table. Column* > *constant_value*. Qualsiasi operatore di confronto diverso da "=" esprime disuguaglianza.<br /><br /> Includi: Colonna non viene utilizzato per valutare un predicato, ma viene utilizzato per altri motivi, ad esempio, per coprire una query.|  
   
-## <a name="remarks"></a>Osservazioni  
- Le informazioni restituite da **Sys.dm db_missing_index_columns** viene aggiornato quando una query viene ottimizzata attraverso il query optimizer e non è persistente. Le informazioni relative agli indici mancanti vengono mantenute solo fino al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per mantenere tali informazioni anche dopo il riciclo del server, gli amministratori di database devono eseguirne periodicamente copie di backup.  
+## <a name="remarks"></a>Note  
+ Le informazioni restituite da **DM db_missing_index_columns** viene aggiornato quando una query ottimizzata da query optimizer e non è persistente. Le informazioni relative agli indici mancanti vengono mantenute solo fino al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per mantenere tali informazioni anche dopo il riciclo del server, gli amministratori di database devono eseguirne periodicamente copie di backup.  
   
 ## <a name="transaction-consistency"></a>Consistenza delle transazioni  
  Se in una transazione viene creata o eliminata una tabella, le righe contenenti le informazioni sugli indici mancanti per gli oggetti eliminati vengono rimosse da questo oggetto a gestione dinamica, mantenendo la consistenza delle transazioni.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per eseguire query su questa funzione a gestione dinamica, è necessario che agli utenti sia stata concessa l'autorizzazione VIEW SERVER STATE o qualsiasi autorizzazione che include l'autorizzazione VIEW SERVER STATE.  
   
 ## <a name="examples"></a>Esempi  

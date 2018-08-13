@@ -1,5 +1,5 @@
 ---
-title: Sys. foreign_key_columns (Transact-SQL) | Documenti Microsoft
+title: Sys.foreign_key_columns (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 110528e8445703497beab5eb9339fb65d026d582
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 84a994759cf06b5ce3a0e41e6fa731a8477ce4ca
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179857"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561517"
 ---
 # <a name="sysforeignkeycolumns-transact-sql"></a>sys.foreign_key_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "33179857"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**constraint_object_id**|**int**|ID del vincolo FOREIGN KEY.|  
-|**constraint_column_id**|**int**|ID della colonna o set di colonne che compongono la chiave esterna (*1.. n* dove n = numero di colonne).|  
+|**constraint_column_id**|**int**|ID della colonna, o insieme di colonne, che costituiscono la chiave esterna (*1..n* dove n = numero di colonne).|  
 |**parent_object_id**|**int**|ID dell'oggetto padre del vincolo, ovvero l'oggetto di riferimento.|  
 |**parent_column_id**|**int**|ID della colonna padre, ovvero la colonna di riferimento.|  
 |**referenced_object_id**|**int**|ID dell'oggetto a cui si fa riferimento, che include la chiave candidata.|  
 |**referenced_column_id**|**int**|ID della colonna a cui si fa riferimento, ovvero la colonna chiave candidata.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

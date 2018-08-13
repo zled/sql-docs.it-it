@@ -17,13 +17,13 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c376209c269456614e133b5e2726620835fb6888
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 382f5750bbb10271579455f3e430b26e7afdf44d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049739"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560251"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Creazione, modifica e rimozione di indici
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -192,7 +192,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Creazione di un indice XML in Visual Basic  
- In questo esempio di codice viene illustrato come creare un indice XML in un tipo di dati XML. Il tipo di dati XML è una raccolta di XML schema denominata MySampleCollection, viene creato nella [schemi XML utilizzando](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Gli indici XML presentano alcune restrizioni, una delle quali è rappresentata dal fatto che devono essere creati in una tabella che dispone già di una chiave primaria cluster.  
+ In questo esempio di codice viene illustrato come creare un indice XML in un tipo di dati XML. Il tipo di dati XML è un insieme di schemi XML denominato MySampleCollection, creato in [utilizzando schemi XML](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Gli indici XML presentano alcune restrizioni, una delle quali è rappresentata dal fatto che devono essere creati in una tabella che dispone già di una chiave primaria cluster.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -255,7 +255,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Creazione di un indice XML in Visual C#  
- In questo esempio di codice viene illustrato come creare un indice XML in un tipo di dati XML. Il tipo di dati XML è una raccolta di XML schema denominata MySampleCollection, viene creato nella [schemi XML utilizzando](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Gli indici XML presentano alcune restrizioni, una delle quali è rappresentata dal fatto che devono essere creati in una tabella che dispone già di una chiave primaria cluster.  
+ In questo esempio di codice viene illustrato come creare un indice XML in un tipo di dati XML. Il tipo di dati XML è un insieme di schemi XML denominato MySampleCollection, creato in [utilizzando schemi XML](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Gli indici XML presentano alcune restrizioni, una delle quali è rappresentata dal fatto che devono essere creati in una tabella che dispone già di una chiave primaria cluster.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -318,7 +318,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>Creazione di un indice XML in PowerShell  
- In questo esempio di codice viene illustrato come creare un indice XML in un tipo di dati XML. Il tipo di dati XML è una raccolta di XML schema denominata MySampleCollection, viene creato nella [schemi XML utilizzando](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Gli indici XML presentano alcune restrizioni, una delle quali è rappresentata dal fatto che devono essere creati in una tabella che dispone già di una chiave primaria cluster.  
+ In questo esempio di codice viene illustrato come creare un indice XML in un tipo di dati XML. Il tipo di dati XML è un insieme di schemi XML denominato MySampleCollection, creato in [utilizzando schemi XML](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Gli indici XML presentano alcune restrizioni, una delle quali è rappresentata dal fatto che devono essere creati in una tabella che dispone già di una chiave primaria cluster.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

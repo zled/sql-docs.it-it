@@ -1,5 +1,5 @@
 ---
-title: Creazione di un set di righe con IOpenRowset | Microsoft Docs
+title: Creazione di un set di righe con IOpenRowset | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4a38eba623e91b063985fbc6924b87648cb8d58
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e55449d882ebbda8149d25eae447916505ba4ac0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432620"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562775"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Creazione di un set di righe con IOpenRowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "37432620"
 
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta la **IOpenRowset:: OPENROWSET** metodo con le restrizioni seguenti:  
   
--   Una tabella di base o una vista deve essere specificato in un database (DBID) ID struttura che il *pTableID* punta il parametro.  
+-   Una vista o una tabella di base deve essere specificata in una struttura del database (DBID) a cui punta il parametro *pTableID*.  
   
--   Il DBID *eKind* membro deve indicare DBKIND_NAME.  
+-   Il membro DBID *eKind* deve indicare DBKIND_NAME.  
   
--   Il DBID *uName* membro deve specificare il nome della tabella di base esistente o una vista come una stringa di caratteri Unicode.  
+-   Il membro DBID *uName* deve specificare il nome di una vista o di una tabella di base esistente come stringa di caratteri Unicode.  
   
--   Il *pIndexID* del parametro **OpenRowset** deve essere NULL.  
+-   Il parametro *pIndexID* di **OpenRowset** deve essere NULL.  
   
- Il set di risultati dei **IOpenRowset:: OPENROWSET** contiene un singolo set di righe. Set di risultati che contengono un singolo set di righe possono essere supportati dai [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursori. Il supporto del cursore consente allo sviluppatore di utilizzare i meccanismi di concorrenza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Il set di risultati di **IOpenRowset::OpenRowset** contiene un solo set di righe. I set di risultati che contengono un solo set di righe possono essere supportati dai cursori di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il supporto del cursore consente allo sviluppatore di utilizzare i meccanismi di concorrenza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  

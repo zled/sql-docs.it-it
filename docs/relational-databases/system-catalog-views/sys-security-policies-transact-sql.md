@@ -1,5 +1,5 @@
 ---
-title: Sys. security_policies (Transact-SQL) | Microsoft Docs
+title: Sys.security_policies (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -28,15 +28,15 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9131c0ea37ddbff456e5f14b441b89616ac462b0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993803"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561995"
 ---
-# <a name="syssecuritypolicies-transact-sql"></a>Sys. security_policies (Transact-SQL)
+# <a name="syssecuritypolicies-transact-sql"></a>Sys.security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni criterio di sicurezza nel database.  
@@ -58,7 +58,7 @@ ms.locfileid: "37993803"
 |uses_database_collation|**bit**|Usa le stesse regole di confronto del database.|  
 |is_schemabinding_enabled|**bit**|SCHEMABINDING dello stato per i criteri di sicurezza:<br /><br /> 0 o NULL = abilitata<br /><br /> 1 = disabilitata|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Le entità con la **ALTER ANY SECURITY POLICY** autorizzazione ha accesso a tutti gli oggetti in questa vista del catalogo, nonché tutti gli utenti con **VIEW DEFINITION** sull'oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
