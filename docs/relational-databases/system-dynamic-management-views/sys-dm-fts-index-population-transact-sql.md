@@ -1,5 +1,5 @@
 ---
-title: Sys.dm fts_index_population (Transact-SQL) | Documenti Microsoft
+title: Sys.dm_fts_index_population (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d82b044186f61ff09abdf3b0a31766e03f36dbcf
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bf7a49a2b315b3fdc1f46aad79c8d4292c644095
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465467"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564735"
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,13 +58,13 @@ ms.locfileid: "34465467"
 |**start_time**|**datetime**|Ora di inizio del popolamento.|  
 |**incremental_timestamp**|**timestamp**|Rappresenta il timestamp iniziale per il popolamento completo. Per tutti gli altri tipi di popolamento questo valore corrisponde all'ultimo checkpoint di cui è stato eseguito il commit che rappresenta lo stato dei popolamenti.|  
   
-## <a name="remarks"></a>Osservazioni  
- Quando l'indicizzazione semantica statistica è abilitata in aggiunta all'indicizzazione full-text, l'estrazione semantica e il popolamento di frasi chiave, nonché l'estrazione dei dati di somiglianza del documento, si verificano contemporaneamente all'indicizzazione full-text. Il popolamento dell'indice di somiglianza del documento si verifica successivamente, in una seconda fase. Per ulteriori informazioni, vedere [gestire e monitorare la ricerca semantica](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
+## <a name="remarks"></a>Note  
+ Quando l'indicizzazione semantica statistica è abilitata in aggiunta all'indicizzazione full-text, l'estrazione semantica e il popolamento di frasi chiave, nonché l'estrazione dei dati di somiglianza del documento, si verificano contemporaneamente all'indicizzazione full-text. Il popolamento dell'indice di somiglianza del documento si verifica successivamente, in una seconda fase. Per altre informazioni, vedere [gestire e monitorare la ricerca semantica](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
   
 ## <a name="physical-joins"></a>Join fisici  
  ![Join significativi di questa vista a gestione dinamica](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "join significativi di questa vista a gestione dinamica")  
@@ -79,7 +79,7 @@ In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE 
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Funzioni e viste a gestione dinamica ricerca semantica e ricerca full-Text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [Funzioni e viste a gestione dinamica la ricerca semantica e ricerca full-Text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   
 

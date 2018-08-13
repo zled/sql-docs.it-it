@@ -1,5 +1,5 @@
 ---
-title: systypes (Transact-SQL) | Documenti Microsoft
+title: Sys. systypes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8526b0335d9d222cd0c28f4304566812905a07b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 32f3ff7bb65822e0ce0c8e3e9192b88dd572c22b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240850"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537221"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,22 +47,22 @@ ms.locfileid: "33240850"
 |**tipoX**|**tinyint**|Tipo di dati per l'archiviazione fisica.|  
 |**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Tipo di dati esteso definito dall'utente. Causa un errore di overflow o restituisce NULL se il numero di tipi di dati è maggiore di 32.767.|  
-|**lunghezza**|**smallint**|Lunghezza fisica del tipo di dati.|  
+|**Lunghezza**|**smallint**|Lunghezza fisica del tipo di dati.|  
 |**xprec**|**tinyint**|Precisione interna utilizzata dal server, da non utilizzare nelle query.|  
 |**XScale**|**tinyint**|Scala interna utilizzata dal server, da non utilizzare nelle query.|  
 |**TImpossibile**|**int**|ID della stored procedure che include i controlli di integrità per questo tipo di dati.|  
 |**domain**|**int**|ID della stored procedure che include i controlli di integrità per questo tipo di dati.|  
-|**uid**|**smallint**|ID dello schema del proprietario del tipo.<br /><br /> Per i database aggiornati da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID dello schema corrisponde all'ID utente del proprietario.<br /><br /> **\*\* Importante \* \***  se si usa uno dei seguenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le istruzioni DDL, è necessario utilizzare il [Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) invece di vista del catalogo **systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.|  
+|**uid**|**smallint**|ID dello schema del proprietario del tipo.<br /><br /> Per i database aggiornati da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID dello schema corrisponde all'ID utente del proprietario.<br /><br /> **\*\* Importanti \* \* ** se si usa uno dei seguenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzioni DDL, è necessario usare il [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) invece di vista del catalogo **Sys. systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.|  
 |**reserved**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|Se di tipo carattere, **collationid** è l'id delle regole di confronto del database corrente; in caso contrario, è NULL.|  
 |**usertype**|**smallint**|ID tipo utente. Causa un errore di overflow o restituisce NULL se il numero di tipi di dati è maggiore di 32.767.|  
 |**variable**|**bit**|Tipo di dati a lunghezza variabile.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**AllowNulls**|**bit**|Indica l'impostazione predefinita relativa al supporto dei valori Null per questo tipo di dati. Il valore predefinito viene ignorato, se l'ammissione di valori null specificato tramite [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
+|**AllowNulls**|**bit**|Indica l'impostazione predefinita relativa al supporto dei valori Null per questo tipo di dati. Questo valore predefinito viene ignorato, se è specificato con valori null [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) oppure [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
 |**type**|**tinyint**|Tipo di dati per l'archiviazione fisica.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Prec**|**smallint**|Livello di precisione per il tipo di dati.<br /><br /> -1 = **xml** o tipi di valori di grandi dimensioni.|  
-|**scala**|**tinyint**|Scala per il tipo di dati, basata sulla precisione.<br /><br /> NULL = Tipo di dati non numerico.|  
-|**Regole di confronto**|**sysname**|Se di tipo carattere, **delle regole di confronto** è le regole di confronto del database corrente; in caso contrario, è NULL.|  
+|**Scalabilità**|**tinyint**|Scala per il tipo di dati, basata sulla precisione.<br /><br /> NULL = Tipo di dati non numerico.|  
+|**regole di confronto**|**sysname**|Se di tipo carattere, **regole di confronto** regole di confronto del database corrente; in caso contrario, è NULL.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste di compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   

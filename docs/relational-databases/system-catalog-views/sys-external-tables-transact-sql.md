@@ -17,13 +17,13 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06f71aedda72735652da9ee353dcd62e5c24b48c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0508a644a85c9ee39cd523893e36e704eb7e5b82
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037269"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548741"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "38037269"
 |remote_schema_name|**sysname**|Per le tabelle esterne su un'origine dati esterne SHARD_MAP_MANAGER, questo è lo schema in cui si trova la tabella di base sui database remoti (se diverso dallo schema in cui è definita la tabella esterna).||  
 |remote_object_name|**sysname**|Per le tabelle esterne su un'origine dati esterne SHARD_MAP_MANAGER, si tratta del nome della tabella di base sui database remoti (se diverso dal nome della tabella esterna).||  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

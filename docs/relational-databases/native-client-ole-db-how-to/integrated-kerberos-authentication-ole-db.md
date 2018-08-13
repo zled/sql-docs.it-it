@@ -14,13 +14,13 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0c722646c43b6b7016412540b00dbecdf667db8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0a7ce4512dea7990652ec40fd0c3f6ffd6b3ab64
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409830"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536381"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Autenticazione Kerberos integrata (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "37409830"
 
   Nell'esempio viene illustrato come ottenere l'autenticazione Kerberos reciproca tramite OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva.  
   
- Per altre informazioni sui nomi SPN e l'autenticazione Kerberos, vedere [nome dell'entità servizio &#40;SPN&#41; supporto nelle connessioni Client](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Per altre informazioni sui nomi SPN e l'autenticazione Kerberos, vedere l'argomento relativo al [supporto dei nomi dell'entità servizio &#40;SPN&#41; nelle connessioni client](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Esempio  
  È necessario specificare un server. Nel file con estensione cpp impostare "MyServer" su un nome di computer in cui sia presente un'istanza di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva.  

@@ -25,13 +25,13 @@ caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8883fb4fd7f70712f8e71ca9015380fd5c81ca93
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: eb653ad68c76380625e03637f7315a0aa9800aba
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032319"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537171"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>Sys. query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Infine, problemi del piano stesso:
 * Numero di operazioni consentite per Query Optimizer superato
 * XML del piano formato in modo non corretto
 
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede la **VIEW DATABASE STATE** l'autorizzazione.  
   
 ## <a name="see-also"></a>Vedere anche  

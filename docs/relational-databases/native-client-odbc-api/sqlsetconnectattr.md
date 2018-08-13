@@ -17,13 +17,13 @@ caps.latest.revision: 106
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 58e1abe1c2c0f69abacc6279113f49f75fd0ae79
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 01b8dfa06a36605fd4ef4bcb38b2bfa91fb8d538
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424120"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552541"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -174,7 +174,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  Una volta stabilita la connessione, l'applicazione può richiedere questo attributo utilizzando [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) per determinare l'identità del partner di failover. Se il server primario non dispone di partner di failover, la proprietà restituirà una stringa vuota. In questo modo, un'applicazione smart può memorizzare nella cache il server di backup determinato più di recente, benché con tali applicazioni sia necessario tenere conto del fatto che le informazioni vengono aggiornate solo quando la connessione viene stabilita per la prima volta (o reimpostata, se in pool) e possono diventare obsolete nel caso di connessioni prolungate.  
   
- Per altre informazioni, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md).  
+ Per altre informazioni, vedere [Uso del mirroring del database](../../relational-databases/native-client/features/using-database-mirroring.md).  
   
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY forza l'utilizzo dell'autenticazione di Windows per la convalida dell'accesso in fase di connessione al server. Quando viene utilizzata l'autenticazione di Windows, il driver ignora i valori di identificatore e la password utente forniti come parte della **SQLConnect**, [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md), o [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)l'elaborazione.  

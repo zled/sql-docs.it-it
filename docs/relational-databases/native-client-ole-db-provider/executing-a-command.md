@@ -19,13 +19,13 @@ ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 266cf6733c2a73f64dc6561e0cb0b13c6929a8b8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7f4b9bf22e92248b26f91d1579a602a683349e80
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423950"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534951"
 ---
 # <a name="executing-a-command"></a>Esecuzione di un comando
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "37423950"
 
   Dopo aver stabilita la connessione a un'origine dati, il consumer chiama il **IDBCreateSession:: CreateSession** metodo per creare una sessione. La sessione funge da comando, set di righe o factory di transazioni.  
   
- Per lavorare direttamente con le singole tabelle o indici, il consumer richiede il **IOpenRowset** interfaccia. Il **IOpenRowset:: OPENROWSET** metodo apre e restituisce un set di righe che include tutte le righe da una singola tabella di base o un indice.  
+ Per lavorare direttamente con singoli indici o tabelle, il consumer richiede l'interfaccia **IOpenRowset**. Il metodo **IOpenRowset::OpenRowset** apre e restituisce un set di righe che include tutte le righe di un singolo indice o tabella di base.  
   
- Per eseguire un comando (ad esempio SELECT \* FROM Authors), il consumer richiede il **IDBCreateCommand** interfaccia. Il consumer può eseguire la **IDBCreateCommand** per creare un oggetto command e richiesta per il **ICommandText** interfaccia. Il **ICommandText:: SetCommandText** metodo viene utilizzato per specificare il comando che deve essere eseguito.  
+ Per eseguire un comando, ad esempio SELECT \* FROM Authors, il consumer richiede l'interfaccia **IDBCreateCommand**. Il consumer può eseguire la **IDBCreateCommand** per creare un oggetto command e richiesta per il **ICommandText** interfaccia. Il **ICommandText:: SetCommandText** metodo viene utilizzato per specificare il comando che deve essere eseguito.  
   
- Il **Execute** comando viene usato per eseguire il comando. Il comando può essere qualsiasi nome di istruzione o di procedura SQL. Non tutti i comandi producono un oggetto set di risultati (set di righe). Comandi come SELECT * FROM Authors producono un set di risultati.  
+ Per eseguire il comando viene usato il comando **Esegui**. Il comando può essere qualsiasi nome di istruzione o di procedura SQL. Non tutti i comandi producono un oggetto set di risultati (set di righe). Comandi come SELECT * FROM Authors producono un set di risultati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un'applicazione del provider OLE DB di SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  

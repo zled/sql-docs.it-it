@@ -1,5 +1,5 @@
 ---
-title: column_master_keys (Transact-SQL) | Documenti Microsoft
+title: column_master_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -32,30 +32,30 @@ caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f961586da2bb4bd9a3169fe955d989557535ba7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 61b7c2eb43ec5d30dea98b7eda00f072f883793d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181777"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553011"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni chiave master del database aggiunto tramite il [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) istruzione. Ogni riga rappresenta una chiave master di colonna (CMK).  
+  Restituisce una riga per ogni chiave master del database aggiunta tramite il [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) istruzione. Ogni riga rappresenta una chiave master di colonna (CMK).  
     
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Il nome di CMK.|  
 |**column_master_key_id**|**int**|ID della chiave master della colonna.|  
-|**create_date**|**datetime**|Data di che creazione della chiave master di colonna.|  
+|**create_date**|**datetime**|Data che Creazione chiave master della colonna.|  
 |**modify_date**|**datetime**|Data che ultima modifica della chiave master della colonna.|  
-|**key_store_provider_name**|**sysname**|Nome del provider per l'archivio di chiavi master di colonna che contiene la chiave CMK. I valori consentiti sono:<br /><br /> MSSQL_CERTIFICATE_STORE: se l'archivio chiavi master della colonna è un archivio certificati.<br /><br /> Un valore definito dall'utente, se l'archivio chiavi master della colonna è di un tipo personalizzato.|  
-|**key_path**|**nvarchar(4000)**|Percorso specifiche dell'archivio di chiave master di colonna della chiave. Il formato del percorso dipende dal tipo di archivio chiave master di colonna. Esempio:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Per un archivio chiavi master della colonna personalizzata, lo sviluppatore è responsabile della definizione è il percorso di una chiave per l'archivio chiavi master della colonna personalizzato.|  
+|**key_store_provider_name**|**sysname**|Nome del provider per l'archivio chiavi master della colonna che contiene la chiave CMK. I valori consentiti sono:<br /><br /> MSSQL_CERTIFICATE_STORE: se l'archivio chiavi master della colonna è un certificato Store.<br /><br /> Un valore definito dall'utente, se l'archivio chiavi master della colonna è di tipo personalizzato.|  
+|**key_path**|**nvarchar(4000)**|Un percorso di specifiche dell'archivio di chiave master della colonna della chiave. Il formato del percorso dipende dal tipo archivio chiave master della colonna. Esempio:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Per un archivio chiavi master della colonna personalizzata, lo sviluppatore è responsabile della definizione è il percorso di una chiave per l'archivio chiavi master della colonna personalizzata.|  
   
-## <a name="permissions"></a>Autorizzazioni  
- Richiede il **VIEW ANY COLUMN MASTER KEY** autorizzazione.  
+## <a name="permissions"></a>Permissions  
+ Richiede la **VIEW ANY COLUMN MASTER KEY** l'autorizzazione.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

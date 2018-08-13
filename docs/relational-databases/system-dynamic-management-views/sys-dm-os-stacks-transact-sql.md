@@ -23,12 +23,13 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e5870f8b45d507a7f5eeffdee3ac46c1db2e669f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fa139af60be9f2f6ef3584352ce76ba19caa4894
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563135"
 ---
 # <a name="sysdmosstacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,16 +43,16 @@ ms.lasthandoff: 05/23/2018
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary(8)**|Indirizzo univoco per l'allocazione di stack. Non ammette i valori Null.|  
-|**frame_index**|**int**|Ogni riga rappresenta una funzione chiamata che, quando ordinato in ordine crescente in base all'indice di frame per un particolare **stack_address**, restituisce lo stack di chiamate completo. Non ammette i valori Null.|  
+|**frame_index**|**int**|Ogni riga rappresenta una funzione chiamata che, quando ordinato in ordine crescente in base all'indice di frame per un determinato **stack_address**, restituisce lo stack di chiamate completo. Non ammette i valori Null.|  
 |**frame_address**|**varbinary(8)**|Indirizzo della chiamata di funzione. Non ammette i valori Null.|  
   
-## <a name="remarks"></a>Osservazioni  
- **Sys.dm_os_stacks** richiede che i simboli del server e altri componenti sia presente nel server per visualizzare correttamente le informazioni.  
+## <a name="remarks"></a>Note  
+ **os_stacks** richiede che i simboli del server e altri componenti sia presente nel server per visualizzare le informazioni in modo corretto.  
   
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
 
 
 ## <a name="see-also"></a>Vedere anche  

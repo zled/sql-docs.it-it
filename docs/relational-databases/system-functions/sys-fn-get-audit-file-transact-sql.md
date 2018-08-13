@@ -25,13 +25,13 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 08f3d90937968713c598418a125ad0167ed94fe7
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9216f9babb03814fb7f644add94f20db7bcc4439
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980523"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556911"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn_get_audit_file ( file_pattern,
     
     Questo argomento deve includere sia un percorso (lettera di unità o condivisione di rete) che un nome di file, che può includere un carattere jolly. Un asterisco (*) è utilizzabile per raccogliere più file da un set di file di controllo. Esempio:  
   
-    -   **\<percorso >\\ \***  : è possibile raccogliere tutti i file si trova nel percorso di controllo.  
+    -   **\<percorso >\\ \* ** : è possibile raccogliere tutti i file si trova nel percorso di controllo.  
   
     -   **\<percorso > \LoginsAudit_{GUID}** : è possibile raccogliere tutti i file con il nome specificato e la coppia GUID di controllo.  
   
@@ -66,7 +66,7 @@ fn_get_audit_file ( file_pattern,
  
     Questo argomento viene usato per specificare l'URL blob (tra cui l'endpoint di archiviazione e il contenitore). Mentre non supporta un carattere jolly asterisco, è possibile usare un prefisso del nome del file parziale (blob) (anziché il nome del blob completo) per raccogliere più file (BLOB) che iniziano con questo prefisso. Esempio:
  
-      - **\<Storage_endpoint\>/\<contenitore\>/\<ServerName\>/\<DatabaseName\> /**  -consente di raccogliere tutti i file di controllo (BLOB) per il database specifico.    
+      - **\<Storage_endpoint\>/\<contenitore\>/\<ServerName\>/\<DatabaseName\> / ** -consente di raccogliere tutti i file di controllo (BLOB) per il database specifico.    
       
       - **\<Storage_endpoint\>/\<contenitore\>/\<ServerName\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>xel** -raccoglie un file di controllo specifico (blob).
   
@@ -134,7 +134,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="remarks"></a>Note  
  Se il *file_pattern* argomento passato a **fn_get_audit_file** fa riferimento a un percorso o un file che non esiste, o se il file non è un file di controllo, il **MSG_INVALID_AUDIT_FILE**viene restituito il messaggio di errore.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  - **SQL Server**: richiede la **CONTROL SERVER** l'autorizzazione.  
  - **Database SQL di Azure**: richiede la **CONTROL DATABASE** l'autorizzazione.     
     - Gli amministratori del server possono accedere ai log di controllo di tutti i database nel server.

@@ -1,5 +1,5 @@
 ---
-title: Ricerca di ulteriori informazioni su SQL Server Native Client | Microsoft Docs
+title: Ricerca di ulteriori informazioni su SQL Server Native Client | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06b8b102293ed8bea4af80650a4eaef67da0441b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7f81f8e336d0015bd5665c9c144b76289e3e8b93
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416700"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548821"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Ricerca di ulteriori informazioni su SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "37416700"
 
   Per ulteriori informazioni su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e sugli altri tipi di programmazione per l'accesso ai dati, vedere le risorse online seguenti:  
   
- [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)  
+ [Centro per sviluppatori di soluzioni di accesso ai dati e archiviazione](http://go.microsoft.com/fwlink?linkid=4173)  
  In questo sito sono disponibili articoli tecnici, codice di esempio e altre risorse per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e altre tecnologie di accesso ai dati.  
   
- [Blog su accesso dati](http://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Blog per l'accesso ai dati](http://go.microsoft.com/fwlink/?LinkId=48617)  
  In questo blog vengono fornite informazioni sulle tecnologie di accesso ai dati ed è possibile interagire direttamente con i membri del team di prodotto.  
   
  [Windows Data Access Components](http://go.microsoft.com/fwlink/?LinkId=107907)  

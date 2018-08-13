@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 000a31f76118a3f2acaf702ce5c74c1dd5703422
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107139"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400914"
 ---
 # <a name="configure-auto-statistics"></a>Configurare automaticamente le statistiche
 
@@ -45,7 +45,7 @@ Dopo l'aggiornamento a AU7 APS, statistiche automatico sono abilitata per impost
 La modifica dei valori di parametro funzionalità richiede un riavvio del servizio sui punti di accesso.
 
 ## <a name="change-auto-statistics-settings-on-a-database"></a>Modificare le impostazioni delle statistiche automatico in un database
-Quando le statistiche automatico sono abilitata dall'amministratore di sistema, è possibile usare [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) per modificare le impostazioni delle statistiche in un database. Se l'opzione della funzionalità delle statistiche automatico è abilitato dall'amministratore di sistema, i nuovi database creati dopo l'aggiornamento a AU7 avrà statistiche automatico abilitate. Tutti i database esistenti prima dell'aggiornamento a AU7 presentano statistiche automatico disabilitate. L'esempio seguente Abilita le statistiche automatiche per myPDW il database esistente.
+Quando le statistiche automatico sono abilitata dall'amministratore di sistema, è possibile usare [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) per modificare le impostazioni delle statistiche in un database. Se l'opzione della funzionalità delle statistiche automatico è abilitato dall'amministratore di sistema, i nuovi database creati dopo l'aggiornamento a AU7 avrà statistiche automatico abilitate. Tutti i database esistenti prima dell'aggiornamento a AU7 presentano statistiche automatico disabilitate. L'esempio seguente Abilita le statistiche automatiche per myPDW il database esistente.
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON

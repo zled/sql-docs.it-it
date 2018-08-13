@@ -19,13 +19,13 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023859"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556471"
 ---
 # <a name="automatic-tuning"></a>Ottimizzazione automatica
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -106,8 +106,7 @@ Alcune colonne da questa visualizzazione sono descritti nell'elenco seguente:
  - Descrizione che contiene il motivo per cui le informazioni [!INCLUDE[ssde_md](../../includes/ssde_md.md)] ritiene che la modifica del piano è una regressione delle prestazioni potenziali.
  - Data e ora quando viene rilevata una regressione il potenziale.
  - Assegnare un punteggio della raccomandazione. 
- - Dettagli sui problemi, ad esempio ID del piano rilevato, ID del piano regredito, ID del piano che deve essere forzato per risolvere il problema, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
- script che potrebbe essere applicato per risolvere il problema e così via. I dettagli vengono archiviati in [formato JSON](../../relational-databases/json/index.md).
+ - Dettagli sui problemi, ad esempio ID del piano rilevato, ID del piano regredito, ID del piano che per risolvere il problema, è necessario forzare [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script che potrebbe essere applicato per risolvere il problema e così via. I dettagli vengono archiviati in [formato JSON](../../relational-databases/json/index.md).
 
 Usare la query seguente per ottenere uno script che corregge il problema e informazioni aggiuntive sulle stimati ottenere:
 

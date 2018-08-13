@@ -1,5 +1,5 @@
 ---
-title: Procedures (Transact-SQL) | Documenti Microsoft
+title: Procedures (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10263b4418b90b2284d0abb3d433101a9afcaa98
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9c36883f8595b51239c78b178217a094f37e9484
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180617"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547931"
 ---
 # <a name="sysprocedures-transact-sql"></a>sys.procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contiene una riga per ogni oggetto che rappresenta una procedura di vario tipo, con **sys** = P, X, RF e PC.  
+  Contiene una riga per ogni oggetto che rappresenta una procedura di vario tipo, con **sys.objects.type** = P, X, RF e PC.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "33180617"
 |**is_repl_serializable_only**|**bit**|La replica dell'esecuzione della procedura ha luogo solo quando la transazione può essere serializzata.|  
 |**skips_repl_constraints**|**bit**|Durante l'esecuzione, la procedura ignora i vincoli contrassegnati come NOT FOR REPLICATION.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

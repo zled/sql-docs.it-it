@@ -1,5 +1,5 @@
 ---
-title: Sys.dm tran_top_version_generators (Transact-SQL) | Documenti Microsoft
+title: tran_top_version_generators (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,20 +23,21 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dad87c14f7b8f1af31b7a0245e3bbe0b634089c5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54b55bec3dd52a014286457770a40b51e0dd35c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536011"
 ---
 # <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Viene restituita una tabella virtuale per gli oggetti mediante i quali viene prodotta la maggior parte delle versioni dell'archivio delle versioni. **tran_top_version_generators** restituisce le prime 256 aggregati lunghezze dei record vengono raggruppate in base il **database_id** e **rowset_id**. **tran_top_version_generators** recupera i dati eseguendo una query di **dm_tran_version_store** tabella virtuale. **tran_top_version_generators** è una vista non efficiente per l'esecuzione perché questa vista query l'archivio delle versioni e l'archivio delle versioni può essere molto grande. È consigliabile utilizzare questa funzione per trovare i maggiori consumer dell'archivio delle versioni.  
+  Viene restituita una tabella virtuale per gli oggetti mediante i quali viene prodotta la maggior parte delle versioni dell'archivio delle versioni. **tran_top_version_generators** restituisce le prime 256 lunghezze dei record vengono raggruppate in base di aggregare la **database_id** e **rowset_id**. **tran_top_version_generators** recupera i dati eseguendo una query di **dm_tran_version_store** tabella virtuale. **tran_top_version_generators** è una vista inefficiente perché in questa vista esegue una query dell'archivio versione per eseguire e l'archivio delle versioni può essere molto grande. È consigliabile utilizzare questa funzione per trovare i maggiori consumer dell'archivio delle versioni.  
   
 > [!NOTE]  
->  Per chiamare questo metodo dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_tran_top_version_generators**.  
+>  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_tran_top_version_generators**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,16 +52,16 @@ sys.dm_tran_top_version_generators
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID del database.|  
 |**rowset_id**|**bigint**|ID del set di righe.|  
-|**aggregated_record_length_in_bytes**|**int**|Somma delle lunghezze dei record per ogni **database_id** e **rowset_id coppia** nell'archivio delle versioni.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|**aggregated_record_length_in_bytes**|**int**|Somma delle lunghezze dei record per ogni **database_id** e **coppia rowset_id** nell'archivio delle versioni.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
 
-## <a name="remarks"></a>Osservazioni  
- Poiché **tran_top_version_generators** potrebbe essere necessario lettura di numerose pagine durante l'analisi all'intero archivio versioni, in esecuzione **tran_top_version_generators** può interferire con sistema prestazioni.  
+## <a name="remarks"></a>Note  
+ In quanto **tran_top_version_generators** potrebbe essere necessario lettura di numerose pagine durante l'analisi all'intero archivio versioni, che esegue **tran_top_version_generators** può interferire con sistema prestazioni.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato uno scenario di test in cui quattro transazioni simultanee, ognuna identificata da un numero di sequenza della transazione (XSN), vengono eseguite in un database con le opzioni ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT impostate su ON. Vengono eseguite le transazioni seguenti:  

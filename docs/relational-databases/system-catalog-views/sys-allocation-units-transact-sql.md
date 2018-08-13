@@ -1,5 +1,5 @@
 ---
-title: Sys. allocation_units (Transact-SQL) | Documenti Microsoft
+title: Sys. allocation_units (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4fdaaf57b5883d85441b6abcc5e8b468b26e1726
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1199e2cc93541af9a089eade6be4e9b5b13f0433
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180117"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565745"
 ---
 # <a name="sysallocationunits-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,12 +46,12 @@ ms.locfileid: "33180117"
 |data_space_id|**int**|ID del filegroup contenente l'unità di allocazione.|  
 |total_pages|**bigint**|Numero totale di pagine allocate o riservate dall'unità di allocazione.|  
 |used_pages|**bigint**|Numero totale di pagine effettivamente utilizzate.|  
-|data_pages|**bigint**|Numero di pagine utilizzate contenenti:<br /><br /> Dati In-row<br /><br /> Dati LOB<br /><br /> Dati Row-overflow<br /><br /> <br /><br /> Si noti che il valore restituito non include pagine di indice interne e le pagine di gestione dell'allocazione.|  
+|data_pages|**bigint**|Numero di pagine utilizzate contenenti:<br /><br /> Dati In-row<br /><br /> Dati LOB<br /><br /> Dati Row-overflow<br /><br /> <br /><br /> Si noti che il valore restituito non include le pagine di indice interni e gestione dell'allocazione.|  
   
 > [!NOTE]  
 >  In caso di eliminazione o ricompilazione di indici di grandi dimensioni oppure di eliminazione o troncamento di tabelle di grandi dimensioni, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] le deallocazioni di pagine effettive e i relativi blocchi associati vengono posticipati fino all'esecuzione del commit della transazione. Le operazioni di eliminazione posticipate non rendono immediatamente disponibile lo spazio allocato. Pertanto, i valori restituiti da sys.allocation_units subito dopo l'eliminazione o il troncamento di un oggetto di grandi dimensioni potrebbero non corrispondere allo spazio su disco effettivamente disponibile.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

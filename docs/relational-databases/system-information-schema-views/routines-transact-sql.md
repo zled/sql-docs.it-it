@@ -1,5 +1,5 @@
 ---
-title: ROUTINE (Transact-SQL) | Documenti Microsoft
+title: ROUTINE (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 00ec03e10cd41e964c9687f04478e05871de5b68
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240601"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548888"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "33240601"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Nome specifico del catalogo. Questo nome corrisponde a ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nome specifico dello schema.<br /><br /> **\*\* Importante \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nome specifico dello schema.<br /><br /> **\*\* Importanti \* \* ** non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|Nome specifico del catalogo. Questo nome corrisponde a ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|Nome del catalogo della funzione.|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nome dello schema che contiene la funzione.<br /><br /> **\*\* Importante \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nome dello schema che contiene la funzione.<br /><br /> **\*\* Importanti \* \* ** non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|Nome della funzione.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Restituisce PROCEDURE per le stored procedure e FUNCTION per le funzioni.|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
@@ -67,7 +67,7 @@ ms.locfileid: "33240601"
 |NUMERIC_PRECISION|**smallint**|Precisione numerica del valore restituito. Per i tipi di dati non numerici viene restituito NULL.|  
 |NUMERIC_PRECISION_RADIX|**smallint**|Radice di precisione numerica del valore restituito. Per i tipi di dati non numerici viene restituito NULL.|  
 |NUMERIC_SCALE|**smallint**|Scala del valore restituito. Per i tipi di dati non numerici viene restituito NULL.|  
-|DATETIME_PRECISION|**smallint**|La precisione frazionaria del secondo se il valore restituito è di tipo **datetime**. In caso contrario, viene restituito NULL.|  
+|DATETIME_PRECISION|**smallint**|Precisione frazionaria del secondo se il valore restituito è di tipo **datetime**. In caso contrario, viene restituito NULL.|  
 |INTERVAL_TYPE|**nvarchar (** 30 **)**|NULL Riservato per utilizzi futuri.|  
 |INTERVAL_PRECISION|**smallint**|NULL Riservato per utilizzi futuri.|  
 |TYPE_UDT_CATALOG|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
@@ -79,7 +79,7 @@ ms.locfileid: "33240601"
 |MAXIMUM_CARDINALITY|**bigint**|NULL Riservato per utilizzi futuri.|  
 |DTD_IDENTIFIER|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|Restituisce SQL per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ed EXTERNAL per le funzioni scritte esternamente.<br /><br /> Le funzioni sono sempre di tipo SQL.|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Restituisce i primi 4000 caratteri del testo di definizione della funzione o della stored procedure se la funzione o la stored procedure non è crittografata. In caso contrario, viene restituito NULL.<br /><br /> Per assicurarsi di ottenere la definizione completa, eseguire una query di [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) funzione o la colonna di definizione del [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catalogo.|  
+|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Restituisce i primi 4000 caratteri del testo di definizione della funzione o della stored procedure se la funzione o la stored procedure non è crittografata. In caso contrario, viene restituito NULL.<br /><br /> Per assicurarsi di ottenere la definizione completa, eseguire una query di [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) funzione o la colonna di definizione nella [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catalogo.|  
 |EXTERNAL_NAME|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL Riservato per utilizzi futuri.|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL Riservato per utilizzi futuri.|  

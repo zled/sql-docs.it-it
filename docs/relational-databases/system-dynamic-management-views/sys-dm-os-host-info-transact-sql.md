@@ -22,13 +22,13 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0aa5f28f52c9d0df4e942809612e1ca59a1cb3c5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b64a026b1fcb4ce959b8a60938b73ccdb3c6c352
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38044237"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553451"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Questa visualizzazione è simile a [sys.dm_os_windows_info](../../relational-dat
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
 Il `SELECT` autorizzazione `sys.dm_os_host_info` viene concesso al `public` ruolo per impostazione predefinita. Se è stato revocato, è necessario `VIEW SERVER STATE` autorizzazione nel server.   
  
 >  [!CAUTION]

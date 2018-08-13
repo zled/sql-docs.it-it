@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: c589d08832e08399d54ca9612fc1468a6b1f3baf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95c9c2b9bdbcbfb6573688ad220ab504dc89e337
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084823"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415510"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare Cluster SLES per gruppo di disponibilità di SQL Server
 
@@ -215,7 +215,7 @@ crm configure property cluster-recheck-interval=2min
 
 Per altre informazioni sulle proprietà del cluster Pacemaker, vedere [configurazione di risorse Cluster](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
-# <a name="configure-fencing-stonith"></a>Configurare l'isolamento (STONITH)
+## <a name="configure-fencing-stonith"></a>Configurare l'isolamento (STONITH)
 I fornitori del cluster pacemaker richiedono STONITH deve essere abilitata e un dispositivo di fencing configurato per l'installazione del cluster supportate. Quando cluster resource manager non è possibile determinare lo stato di un nodo o di una risorsa in un nodo, l'isolamento consente di visualizzare di nuovo il cluster a uno stato noto.
 
 Isolamento a livello di risorsa principalmente assicura che non vi sia alcun danneggiamento dei dati durante un'interruzione del servizio tramite la configurazione di una risorsa. È possibile utilizzare l'isolamento a livello di risorsa, ad esempio, con DRBD (Distributed replicati blocco dispositivo) per contrassegnare il disco in un nodo come obsoleta quando il collegamento di comunicazione si arresta.
@@ -237,6 +237,16 @@ sudo crm configure property stonith-enabled=true
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Configurare le risorse del cluster per SQL Server
 
 Fare riferimento a [SLES amministrazione Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
+
+## <a name="enable-pacemaker"></a>Enable Pacemaker
+
+Enable Pacemaker in modo che venga avviato automaticamente.
+
+Eseguire il comando seguente in ogni nodo del cluster.
+
+```bash
+systemctl enable pacemaker
+```
 
 ### <a name="create-availability-group-resource"></a>Crea risorsa gruppo di disponibilità
 

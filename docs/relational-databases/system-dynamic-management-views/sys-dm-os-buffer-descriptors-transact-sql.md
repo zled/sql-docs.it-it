@@ -23,22 +23,22 @@ caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3bae01f30cf7b6af860004f69effb4df44cf3c8b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 807b1bafe3ca3d374765ede6ee3e557e6e50ffe9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465817"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557271"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce informazioni relative a tutte le pagine di dati incluse nel pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'output di questa vista può essere utilizzato per determinare la distribuzione delle pagine del database nel pool di buffer in base al database, all'oggetto o al tipo. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] questa DMV restituisce inoltre informazioni sulle pagine di dati nel file di estensione del pool di buffer. Per ulteriori informazioni, vedere [estensione del Pool di Buffer](../../database-engine/configure-windows/buffer-pool-extension.md).  
+  Restituisce informazioni relative a tutte le pagine di dati incluse nel pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'output di questa vista può essere utilizzato per determinare la distribuzione delle pagine del database nel pool di buffer in base al database, all'oggetto o al tipo. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] questa DMV restituisce inoltre informazioni sulle pagine di dati nel file di estensione del pool di buffer. Per altre informazioni, vedere [estensione del Pool di Buffer](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
  Quando una pagina di dati viene letta dal disco, viene copiata nel pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e memorizzata nella cache per il riutilizzo. Ogni pagina di dati memorizzata nella cache è associata a un descrittore di buffer. I descrittori di buffer identificano in modo univoco ogni pagina di dati attualmente memorizzata nella cache in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors restituisce le pagine memorizzate nella cache per tutti i database utente e di sistema. incluse le pagine associate al database Resource.  
   
-> **Nota:** da chiamare [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_os_buffer_descriptors**.  
+> **Nota:** chiamarla da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -53,16 +53,16 @@ ms.locfileid: "34465817"
 |is_modified|**bit**|1 = La pagina è stata modificata dopo essere stata letta dal disco. Ammette i valori Null.|  
 |numa_node|**int**|Nodo NUMA (non-uniform memory access) per il buffer. Ammette i valori Null.|  
 |read_microsec|**bigint**|Tempo effettivo (in microsecondi) necessario per leggere la pagina nel buffer. Questo numero viene reimpostato quando si riutilizza il buffer. Ammette i valori Null.|  
-|is_in_bpool_extension|**bit**|1 = pagina è inclusa l'estensione del pool di buffer. Ammette i valori Null.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|is_in_bpool_extension|**bit**|1 = è attiva l'estensione del pool di buffer della pagina. Ammette i valori Null.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
    
-## <a name="remarks"></a>Osservazioni  
- Sys.dm os_buffer_descriptors restituisce le pagine che vengono utilizzate per il database delle risorse. Sys.dm os_buffer_descriptors non restituisce informazioni sulle pagine libere o prelevate, né sulle pagine in cui si sono verificati errori quando sono stati letti.  
+## <a name="remarks"></a>Note  
+ DM os_buffer_descriptors restituisce le pagine utilizzate dal database delle risorse. DM os_buffer_descriptors non restituisce invece informazioni sulle pagine libere o prelevate, né sulle pagine in cui si sono verificati errori quando essi sono stati letti.  
   
 |From|Per|Il|Relazione|  
 |----------|--------|--------|------------------|  
@@ -121,7 +121,7 @@ ORDER BY cached_pages_count DESC;
  
  [Viste a gestione dinamica relative al sistema di operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Database Resource](../../relational-databases/databases/resource-database.md)   
- [Sys.dm_os_buffer_pool_extension_configuration & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

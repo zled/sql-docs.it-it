@@ -23,12 +23,13 @@ caps.latest.revision: 67
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b8e51c1078ebe9b1fd2784a14e8c8e1575eae27
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 85c9decc6e59e3a35290081cbc0af59410c5db9d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548028"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/23/2018
 |request_id|**int**|ID della richiesta. Valore univoco nel contesto della sessione. Non ammette i valori Null.|  
 |start_time|**datetime**|Timestamp relativo all'arrivo della richiesta. Non ammette i valori Null.|  
 |status|**nvarchar(30)**|Stato della richiesta. I possibili valori sono i seguenti:<br /><br /> Informazioni preliminari<br />In esecuzione<br />Eseguibile<br />Sospeso<br />Sospeso<br /><br /> Non ammette i valori Null.|  
-|comando|**nvarchar(32)**|Identifica il tipo di comando corrente in corso di elaborazione. I tipi di comandi più comuni sono i seguenti:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Per recuperare il testo della richiesta, utilizzare sys.dm_exec_sql_text con il valore sql_handle corrispondente per la richiesta. I processi interni di sistema impostano il comando in base al tipo di attività effettuata. Di seguito sono riportate le attività:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Non ammette i valori Null.|  
+|comando|**nvarchar(32)**|Identifica il tipo di comando corrente in corso di elaborazione. I tipi di comandi più comuni sono i seguenti:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Elimina<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Per recuperare il testo della richiesta, utilizzare sys.dm_exec_sql_text con il valore sql_handle corrispondente per la richiesta. I processi interni di sistema impostano il comando in base al tipo di attività effettuata. Di seguito sono riportate le attività:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Non ammette i valori Null.|  
 |sql_handle|**varbinary(64)**|Mappa hash del testo SQL della richiesta. Ammette i valori Null.|  
 |statement_start_offset|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui inizia l'istruzione in esecuzione. Può essere utilizzata in combinazione con la colonna sql_handle, la colonna statement_end_offset e la funzione a gestione dinamica sys.dm_exec_sql_text per recuperare l'istruzione in esecuzione per la richiesta. Ammette i valori Null.|  
 |statement_end_offset|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui termina l'istruzione in esecuzione. Può essere utilizzata in combinazione con la colonna sql_handle, la colonna statement_end_offset e la funzione a gestione dinamica sys.dm_exec_sql_text per recuperare l'istruzione in esecuzione per la richiesta. Ammette i valori Null.|  
@@ -93,15 +94,15 @@ ms.lasthandoff: 05/23/2018
 |group_id|**int**|ID del gruppo del carico di lavoro a cui appartiene la query. Non ammette i valori Null.|  
 |query_hash|**binary(8)**|Valore hash binario calcolato sulla query che consente di identificare query con logica analoga. È possibile utilizzare il valore hash della query per determinare l'utilizzo delle risorse aggregate per query che differiscono solo per valori letterali.|  
 |query_plan_hash|**binary(8)**|Valore hash binario calcolato sul piano di esecuzione di query che consente di identificare piani di esecuzioni analoghi. È possibile utilizzare il valore hash del piano di query per individuare il costo cumulativo di query con piani di esecuzione analoghi.|  
-|statement_sql_handle|**varbinary(64)**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Handle SQL della query singole. |  
-|statement_context_id|**bigint**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> La chiave esterna facoltativa per sys.query_context_settings. |  
+|statement_sql_handle|**varbinary(64)**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Handle SQL della singola query. |  
+|statement_context_id|**bigint**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> La chiave esterna facoltativa alla sys.query_context_settings. |  
 |dop |**int** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Il grado di parallelismo della query. |  
-|parallel_worker_count |**int** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Il numero di lavoro paralleli riservati, se si tratta di una query parallela.  |  
+|parallel_worker_count |**int** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Il numero di thread di lavoro paralleli riservati se si tratta di una query parallela.  |  
 |external_script_request_id |**uniqueidentifier** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> L'ID della richiesta dello script esterno associato alla richiesta corrente. |  
-|is_resumable |**bit** |**Si applica a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se la richiesta è un'operazione di indice può essere ripristinato. |  
+|is_resumable |**bit** |**Si applica a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se la richiesta è un'operazione su indici ripristinabili. |  
   
-## <a name="permissions"></a>Autorizzazioni  
- Se l'utente ha `VIEW SERVER STATE` autorizzazione nel server, l'utente vedrà le sessioni in esecuzione tutti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; in caso contrario, l'utente vedrà solo la sessione corrente. `VIEW SERVER STATE` non è possibile concedere [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] in modo `sys.dm_exec_requests` è sempre limita alla connessione corrente. 
+## <a name="permissions"></a>Permissions  
+ Se l'utente dispone `VIEW SERVER STATE` autorizzazione per il server, è possibile visualizzare le sessioni in esecuzione tutte nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; in caso contrario, l'utente verrà visualizzato solo nella sessione corrente. `VIEW SERVER STATE` non è possibile concedere [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] in modo `sys.dm_exec_requests` sarà sempre limitata alla connessione corrente. 
   
 ## <a name="examples"></a>Esempi  
   
@@ -121,14 +122,14 @@ GO
 ```  
   
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Ricerca di tutti i blocchi contenuti in un batch in esecuzione  
- Le seguenti query di esempio **Sys.dm exec_requests** per trovare il batch specifico e copiare il relativo `transaction_id` dall'output.  
+ Le seguenti query di esempio **exec_requests** per trovare il batch specifico e copiare il `transaction_id` dall'output.  
   
 ```  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- Per trovare informazioni sui blocchi, utilizzare copiato `transaction_id` con la funzione di sistema **Sys.dm tran_locks**.  
+ Quindi, per trovare le informazioni di blocco, usare l'insieme copiato `transaction_id` con la funzione di sistema **DM tran_locks**.  
   
 ```  
 SELECT * FROM sys.dm_tran_locks   
@@ -138,7 +139,7 @@ GO
 ```  
   
 ### <a name="c-finding-all-currently-blocked-requests"></a>C. Ricerca di tutte le richieste attualmente bloccate  
- Le seguenti query di esempio **Sys.dm exec_requests** per trovare informazioni relative alle richieste bloccate.  
+ Le seguenti query di esempio **exec_requests** per trovare informazioni relative alle richieste bloccate.  
   
 ```  
 SELECT session_id ,status ,blocking_session_id  

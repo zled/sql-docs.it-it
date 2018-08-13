@@ -16,25 +16,25 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b8a13d1b87bc67e68f7a984f5ff213718413d222
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 64fa6c3b169d6d206b2357e7f80e9c4447138882
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423920"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554531"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Recuperare colonne tramite IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Il **IRow** interfaccia consente l'accesso diretto alle colonne di una singola riga nel set di risultati. Pertanto **IRow** è un modo efficiente per recuperare le colonne da un set di risultati con una riga.  
+  L'interfaccia **IRow** consente di accedere direttamente alle colonne di una singola riga nel set di risultati. Di conseguenza, tramite **IRow** è possibile recuperare in modo efficace colonne da un set di risultati con una sola riga.  
   
- È disponibile un esempio di codice che viene illustrato come recuperare una singola riga mediante **IRow**. In questo esempio viene recuperata una colonna per volta dalla riga. Nell'esempio vengono illustrate le operazioni seguenti:  
+ È disponibile un esempio di codice in cui viene illustrato come recuperare una singola riga tramite **IRow**. In questo esempio viene recuperata una colonna per volta dalla riga. Nell'esempio vengono illustrate le operazioni seguenti:  
   
 -   Come recuperare un gruppo di colonne (in sequenza).  
   
--   Come accedere due volte a una colonna. La prima volta viene ottenuta la larghezza di colonna effettiva, mentre la seconda volta viene eseguito l'accesso ai dati effettivi. Nella struttura DBCOLUMNACCESS, se **pData** è NULL e **cbMaxLen** è uguale a 0, la chiamata a **IRow**-**> GetColumns()** Restituisce solo la lunghezza di colonna effettivi. In questo caso **IRow -> GetColumns()** è possibile chiamare nuovamente sulla stessa colonna per recuperare i dati effettivi.  
+-   Come accedere due volte a una colonna. La prima volta viene ottenuta la larghezza di colonna effettiva, mentre la seconda volta viene eseguito l'accesso ai dati effettivi. Nella struttura DBCOLUMNACCESS, se **pData** è NULL e **cbMaxLen** è 0, tramite la chiamata a **IRow**-**->GetColumns** viene restituita solo la lunghezza effettiva della colonna. In questo caso, è possibile chiamare nuovamente **IRow->GetColumns()** nella stessa colonna per recuperare i dati effettivi.  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -58,11 +58,11 @@ ms.locfileid: "37423920"
   
  Nella struttura DBCOLUMNACCESS, se pData è NULL e cbMaxLen è 0, tramite la chiamata a IRow->GetColumns viene restituita solo la larghezza di colonna effettiva. In questo caso, è possibile chiamare nuovamente IRow->GetColumns nella stessa colonna per recuperare i dati effettivi. Questo esempio non è supportato in IA64.  
   
- In questo esempio richiede il database di esempio AdventureWorks, che è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page di.  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
  Il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare una tabella utilizzata dall'esempio.  
   
- Compilare il secondo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" a L"(local)\\\name", dove nome è un'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
+ Compilare il secondo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
  Il terzo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di eliminare la tabella utilizzata dall'esempio.  
   

@@ -15,15 +15,15 @@ ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac3a37b26f077feed5f8a72c17afa887717b4ae7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ff85509ae8ef637268a84e51c10d751671940d7f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431330"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548521"
 ---
-# <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Modifiche apportate alla copia bulk per avanzata tipi data e ora (OLE DB e ODBC)
+# <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Modifiche della copia bulk per i tipi di data e ora migliorati (OLE DB e ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "37431330"
 ## <a name="format-files"></a>File di formato  
  Nella tabella seguente viene descritto l'input utilizzato per specificare i tipi di data/ora e i nomi dei tipi di dati del file host corrispondenti quando si compilano file di formato in modo interattivo.  
   
-|tipo di archiviazione di file|Tipo di dati del file host|Risposta alla richiesta: "specificare il tipo di archiviazione di file del campo < nome_campo > [\<predefinito >]:"|  
+|tipo di archiviazione di file|Tipo di dati del file host|Risposta alla richiesta: "Specificare il tipo di archiviazione di file del campo <nome_campo> [\<impostazione predefinita>]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
@@ -69,7 +69,7 @@ ms.locfileid: "37431330"
 ## <a name="character-data-files"></a>File di dati di tipo carattere  
  Nei file di dati di tipo carattere, i valori di data e ora vengono rappresentati come descritto nella sezione "Dati nei formati: stringhe e valori letterali" di [supporto dei tipi di dati per ODBC Date e miglioramenti per la fase](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) per ODBC o di [supporto dei tipi di dati per OLE DB data e miglioramenti per la fase](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) per OLE DB.  
   
- In file di dati nativi, i valori di data e ora per i quattro nuovi tipi vengono rappresentati come rispettive rappresentazioni TDS con una scala pari a 7 (poiché si tratta di al massimo supportato dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e file di dati bcp non archiviano la scala di tali colonne). Non sussiste alcuna modifica nella risorsa di archiviazione esistenti **data/ora** e **smalldatetime** rappresentazioni TDS di flusso di tipo o i relativi dati tabulari.  
+ In file di dati nativi, i valori di data e ora per i quattro nuovi tipi vengono rappresentati come rispettive rappresentazioni TDS con una scala pari a 7 (poiché si tratta di al massimo supportato dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e file di dati bcp non archiviano la scala di tali colonne). Non è stata apportata alcuna modifica all'archiviazione dei tipi **datetime** e **smalldatetime** esistenti o delle rispettive rappresentazioni TDS.  
   
  Di seguito vengono indicate le dimensioni dello spazio di archiviazione per i diversi tipi di archiviazione per OLE DB:  
   
@@ -108,7 +108,7 @@ ms.locfileid: "37431330"
 ## <a name="bcp-data-type-conversions"></a>Conversioni dei tipi di dati BCP  
  Nelle tabelle seguenti vengono fornite informazioni sulla conversione.  
   
- **Nota per OLE DB** le conversioni seguenti vengono eseguite da IBCPSession. IRowsetFastLoad utilizza conversioni OLE DB come definito in [conversioni eseguite da Client a Server](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Si noti che i valori datetime vengono arrotondati a 1/300 di secondo, mentre per i valori smalldatetime i secondi vengono impostati su zero in seguito all'esecuzione delle conversioni client descritte di seguito. L'arrotondamento dei valori datetime viene applicato a ore e minuti, ma non alla data.  
+ **Nota per OLE DB** Le conversioni seguenti vengono eseguite da IBCPSession. IRowsetFastLoad utilizza conversioni OLE DB come definito in [conversioni eseguite da Client a Server](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Si noti che i valori datetime vengono arrotondati a 1/300 di secondo, mentre per i valori smalldatetime i secondi vengono impostati su zero in seguito all'esecuzione delle conversioni client descritte di seguito. L'arrotondamento dei valori datetime viene applicato a ore e minuti, ma non alla data.  
   
 |A --><br /><br /> From|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
@@ -130,7 +130,7 @@ ms.locfileid: "37431330"
 |-|Non viene supportata alcuna conversione.<br /><br /> Viene generato un record di diagnostica ODBC con SQLSTATE 07006 e il messaggio "Violazione dell'attributo del tipo di dati".|  
 |1|Se i dati specificati non sono validi, viene generato un record di diagnostica ODBC con SQLSTATE 22007 e il messaggio "Formato di datetime non valido". Per i valori datetimeoffset, la parte relativa all'ora deve essere compresa nell'intervallo supportato in seguito alla conversione in UTC, anche se non è necessaria alcuna conversione in UTC. Ciò è dovuto al fatto che TDS e il server in genere normalizzano l'ora nei valori datetimeoffset per UTC. Di conseguenza, il client deve verificare che i componenti relativi all'ora siano compresi nell'intervallo supportato in seguito alla conversione in UTC.|  
 |2|Il componente relativo all'ora viene ignorato.|  
-|3|Per ODBC, se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22001 e il messaggio "Troncamento a destra della stringa di dati". Il numero di cifre per i secondi frazionari, ovvero la scala, è determinato dalle dimensioni della colonna di destinazione in base alla tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala di 7. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito in ODBC.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Scala prevista 0** 8<br /><br /> **Scala 1..7 prevista** 10,16<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Scala prevista 0:** 19<br /><br /> **Scala 1..7 prevista:** 21..27<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Scala prevista 0:** 26<br /><br /> **Scala 1..7 prevista:** 28..34<br /><br /> Per OLE DB, se si verifica un troncamento con perdita di dati, viene inserito un errore. Per datetime2 il numero di cifre per i secondi frazionari, ovvero la scala, è determinato dalle dimensioni della colonna di destinazione in base alla tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Scala prevista 0** 8<br /><br /> **Scala 1..9 prevista** 1..9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Scala prevista 0:** 19<br /><br /> **Scala 1..9 prevista:** 21..29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Scala prevista 0:** 26<br /><br /> **Scala 1..9 prevista:** 28..36|  
+|3|Per ODBC, se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22001 e il messaggio "Troncamento a destra della stringa di dati". Il numero di cifre per i secondi frazionari, ovvero la scala, è determinato dalle dimensioni della colonna di destinazione in base alla tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala di 7. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito in ODBC.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Scala prevista 0** 8<br /><br /> **Scala 1..7 prevista** 10,16<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Scala prevista 0:** 19<br /><br /> **Scala 1..7 prevista:** 21..27<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Scala prevista 0:** 26<br /><br /> **Scala 1..7 prevista:** 28..34<br /><br /> Per OLE DB, se si verifica un troncamento con perdita di dati, viene inserito un errore. Per datetime2 il numero di cifre per i secondi frazionari, ovvero la scala, è determinato dalle dimensioni della colonna di destinazione in base alla tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Scala prevista 0** 8<br /><br /> **Scala prevista 1..9** 1..9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Scala prevista 0:** 19<br /><br /> **Scala prevista 1..9:** 21..29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Scala prevista 0:** 26<br /><br /> **Scala prevista 1..9:** 28..36|  
 |4|Il componente relativo alla data viene ignorato.|  
 |5|Il fuso orario è impostato su UTC, ad esempio 00:00.|  
 |6|L'ora è impostata su zero.|  
@@ -144,6 +144,6 @@ ms.locfileid: "37431330"
   
 ## <a name="see-also"></a>Vedere anche  
  [Data e miglioramenti per la fase &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
- [Data e miglioramenti per la fase &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

@@ -16,13 +16,13 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 80b5776826790bf9026df5d25965c4116367b974
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b0cd923904b13e9cb63b72010e89d4079b966e22
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419630"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539181"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,17 +65,17 @@ HRESULT BCPSetBulkMode (
 |||  
 |-|-|  
 |**S_OK**|Il metodo è riuscito.|  
-|**E_FAIL**|Si è verificato un errore specifico del provider, per informazioni dettagliate usare l'interfaccia ISQLServerErrorInfo.|  
+|**E_FAIL**|Si è verificato un errore specifico del provider. Per informazioni dettagliate, usare l'interfaccia ISQLServerErrorInfo.|  
 |**E_UNEXPECTED**|La chiamata al metodo non era prevista. Ad esempio, il **IBCPSession2::BCPInit** (metodo) non è stato chiamato prima di chiamare IBCPSession2::BCPSetBulkMode.|  
 |**E_INVALIDARG**|L'argomento non è valido.|  
 |**E_OUTOFMEMORY**|Errore di memoria insufficiente.|  
   
 ## <a name="remarks"></a>Note  
- IBCPSession2::BCPSetBulkMode utilizzabile da copiare da una query o una tabella. Quando IBCPSession2::BCPSetBulkMode viene usato per copiare da un'istruzione di query in blocco, deve essere chiamato prima di chiamare `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` per specificare l'istruzione di query.  
+ IBCPSession2::BCPSetBulkMode utilizzabile da copiare da una query o una tabella. Quando si utilizza IBCPSession2::BCPSetBulkMode per eseguire una copia bulk da un'istruzione di query, è necessario chiamare tale metodo prima di `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` per specificare l'istruzione di query.  
   
  È necessario evitare di combinare la sintassi di chiamata RPC con la sintassi di query batch (ad esempio `{rpc func};SELECT * from Tbl`) in un unico testo di comando.  Ciò causerà ICommandPrepare:: Prepare restituire un errore e non consentono il recupero dei metadati. Utilizzare la sintassi ODBC CALL (ad esempio `{call func}; SELECT * from Tbl`) se è necessario combinare l'esecuzione della stored procedure e una query batch in un singolo testo di comando.  
   
- Nella tabella seguente sono elencate le costanti per la *proprietà* parametro.  
+ Nella tabella seguente sono elencate le costanti per il parametro *property*.  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
@@ -88,7 +88,7 @@ HRESULT BCPSetBulkMode (
   
  Non è possibile richiamare ibcpsession:: Bcpcontrol con **BCP_OPTION_TEXTFILE** e IBCPSession2::BCPSetBulkMode.  
   
- Se si prova a chiamare IBCPSession2::BCPSetBulkMode con una sequenza di chiamate di funzione che include ibcpsession:: BCPColFmt ibcpsession:: Bcpcontrol e ibcpsession:: Bcpreadfmt, una delle chiamate di funzione restituirà un errore nella sequenza. Se si sceglie di correggere l'errore, chiamare ibcpsession:: BCPInit per reimpostare le impostazioni e ricominciare da capo.  
+ Se si prova a chiamare IBCPSession2::BCPSetBulkMode con una sequenza di chiamate di funzione che include ibcpsession:: BCPColFmt ibcpsession:: Bcpcontrol e ibcpsession:: Bcpreadfmt, una delle chiamate di funzione restituirà un errore nella sequenza. Se si sceglie di correggere l'errore, chiamare IBCPSession::BCPInit per reimpostare le impostazioni e ricominciare.  
   
  Di seguito sono riportati alcuni esempi di chiamate di funzione che restituisce un errore di sequenza della funzione:  
   

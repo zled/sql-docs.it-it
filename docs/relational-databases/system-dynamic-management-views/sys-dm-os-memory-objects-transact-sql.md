@@ -23,17 +23,18 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d2cfed528dcbc58e4abed89ae1b76d0532d6bf6f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b746df94b0b7c36802663ca22c6b49107f10db18
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558431"
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Vengono restituiti gli oggetti di memoria attualmente allocati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare **Sys.dm os_memory_objects** per analizzare l'utilizzo della memoria e identificare la memoria possibili perdite.  
+  Vengono restituiti gli oggetti di memoria attualmente allocati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile usare **DM os_memory_objects** per analizzare il consumo di memoria e identificare possibili memoria perdite.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -53,20 +54,20 @@ ms.lasthandoff: 05/23/2018
 |**page_allocator_address**|**varbinary(8)**|Indirizzo di memoria dell'allocatore di pagine. Non ammette i valori Null. Per altre informazioni, vedere [DM os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |**creation_stack_address**|**varbinary(8)**|Solo per uso interno. Ammette i valori Null.|  
 |**sequence_num**|**int**|Solo per uso interno. Ammette i valori Null.|  
-|**partition_type**|**int**|Il tipo di partizione:<br /><br /> 0 - non partizionabile oggetto memoria<br /><br /> 1 - oggetto di memoria partizionabile, attualmente non è partizionata<br /><br /> 2 - oggetto memoria partizionabile, partizionata in base al nodo NUMA. In un ambiente con un singolo nodo NUMA equivale a 1.<br /><br /> 3 - oggetto memoria partizionabile, partizionato per CPU.|  
-|**contention_factor**|**real**|Un valore che specifica di contesa per questo oggetto di memoria, con 0 non indica nessun conflitto. Il valore viene aggiornato ogni volta che un determinato numero di allocazioni di memoria sono stato apportato riflettente conflitto durante tale periodo. Si applica solo agli oggetti di memoria thread-safe.|  
-|**waiting_tasks_count**|**bigint**|Numero di attese di questo oggetto memoria. Questo contatore viene incrementato ogni volta che la memoria viene allocata da questo oggetto memoria. L'incremento è il numero di attività attualmente in attesa dell'accesso a questo oggetto memoria. Si applica solo agli oggetti di memoria thread-safe. Questo è un valore di impegno migliore senza garantisce la correttezza.|  
-|**exclusive_access_count**|**bigint**|Specifica la frequenza con cui l'oggetto memoria ha effettuato l'accesso in modo esclusivo. Si applica solo agli oggetti di memoria thread-safe.  Questo è un valore di impegno migliore senza garantisce la correttezza.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|**partition_type**|**int**|Il tipo di partizione:<br /><br /> 0 - non partizionabile oggetto memoria<br /><br /> 1 - oggetto memory partizionabile, attualmente non partizionata<br /><br /> 2 - oggetto di memoria partizionabile, partizionato in base al nodo NUMA. In un ambiente con un singolo nodo NUMA ciò equivale a 1.<br /><br /> 3 - oggetto di memoria partizionabile, partizionato in base alla CPU.|  
+|**contention_factor**|**real**|Un valore che specifica di contesa per l'oggetto di memoria, con 0, vale a dire senza conflitti. Il valore viene aggiornato ogni volta che un determinato numero di allocazioni di memoria sono stato apportato riflettente contesa durante il periodo specificato. Si applica solo agli oggetti memoria affidabili.|  
+|**waiting_tasks_count**|**bigint**|Numero di attese su questo oggetto memoria. Questo contatore viene incrementato ogni volta che la memoria viene allocata da questo oggetto memoria. L'incremento è il numero di attività attualmente in attesa per l'accesso a questo oggetto memoria. Si applica solo agli oggetti memoria affidabili. Questo è un valore di impegno migliore senza una garanzia di correttezza.|  
+|**exclusive_access_count**|**bigint**|Specifica la frequenza oggetto memoria ha effettuato l'accesso in modo esclusivo. Si applica solo agli oggetti memoria affidabili.  Questo è un valore di impegno migliore senza una garanzia di correttezza.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
- **partition_type**, **contention_factor**, **waiting_tasks_count**, e **exclusive_access_count** non sono ancora implementate [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **partition_type**, **contention_factor**, **waiting_tasks_count**, e **exclusive_access_count** non sono ancora disponibili [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Gli oggetti memoria sono heap. Le allocazioni implementate dagli oggetti sono caratterizzate da una maggiore granularità rispetto alle allocazioni implementate dai clerk di memoria. I componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano oggetti memoria anziché clerk di memoria. Gli oggetti memoria utilizzano l'interfaccia dell'allocatore di pagine del clerk di memoria per allocare le pagine. Gli oggetti memoria non utilizzano interfacce di memoria virtuale o condivisa. In base al modello di allocazione, i componenti possono creare tipi diversi di oggetti memoria per allocare aree di dimensioni arbitrarie.  
   
  Le dimensioni di pagina tipiche di un oggetto memoria sono pari a 8 KB. Gli oggetti memoria incrementale possono tuttavia avere dimensioni di pagina da 512 byte a 8 KB.  

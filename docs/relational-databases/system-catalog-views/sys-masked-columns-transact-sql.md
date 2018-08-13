@@ -22,13 +22,13 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 432ea847081c8f0060954efdd6e7f2beea1a592d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 64461261b624ace154376250419ec2e9a2f6ac89
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998043"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558931"
 ---
 # <a name="sysmaskedcolumns-transact-sql"></a>masked_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37998043"
   
 ## <a name="remarks"></a>Note  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Questa vista restituisce informazioni sulle tabelle in cui l'utente ha una sorta di autorizzazione per la tabella o se l'utente ha l'autorizzazione VIEW ANY DEFINITION.  
   
 ## <a name="example"></a>Esempio  

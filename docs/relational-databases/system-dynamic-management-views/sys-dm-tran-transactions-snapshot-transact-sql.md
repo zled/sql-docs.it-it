@@ -23,23 +23,24 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e862da4552d605993a5dde7913fe1bec5856603
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bdf2bfdcd5f0f6963660b865053765351f224e31
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555481"
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una tabella virtuale per il **sequence_number** di transazioni che sono attive quando ogni transazione snapshot viene avviata. Le informazioni restituite da questa vista semplificano l'esecuzione delle operazioni seguenti:  
+  Restituisce una tabella virtuale per il **sequence_number** di transazioni che sono attive quando ogni transazione snapshot viene avviato. Le informazioni restituite da questa vista semplificano l'esecuzione delle operazioni seguenti:  
   
 -   Individuare il numero di transazioni snapshot attive.  
   
 -   Identificare le modifiche dei dati ignorate da una determinata transazione snapshot. Se all'avvio di una transazione snapshot una transazione risulta attiva, tutte le modifiche dei relativi dati vengono ignorate dalla transazione snapshot, anche dopo il commit della transazione.  
   
- Ad esempio, si consideri il seguente output da **Sys.dm tran_transactions_snapshot**:  
+ Ad esempio, si consideri il seguente output dalla **DM tran_transactions_snapshot**:  
   
 ```  
 transaction_sequence_num snapshot_id snapshot_sequence_num  
@@ -76,12 +77,12 @@ dm_tran_transactions_snapshot
 |**snapshot_id**|**int**|ID dello snapshot per ogni istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] avviata in Read committed con il controllo delle versioni delle righe. Questo valore viene utilizzato per generare una vista consistente dal punto di vista transazionale del database che supporta ogni query eseguita in Read committed utilizzando il controllo delle versioni delle righe.|  
 |**snapshot_sequence_num**|**bigint**|Numero di sequenza di una transazione attiva all'avvio della transazione snapshot.|  
   
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Quando una transazione snapshot viene avviata, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra tutte le transazioni attive in quel momento. **DM tran_transactions_snapshot** restituisce queste informazioni per tutte le transazioni snapshot attive.  
   
  Ogni transazione viene identificata da un numero di sequenza della transazione assegnato all'inizio della transazione. Le transazioni hanno inizio quando viene eseguita un'istruzione BEGIN TRANSACTION o BEGIN WORK. Tuttavia, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] assegna il numero di sequenza della transazione con l'esecuzione della prima istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che accede ai dati dopo l'istruzione BEGIN TRANSACTION o BEGIN WORK. I numeri di sequenza delle transazioni vengono aumentati di un'unità.  

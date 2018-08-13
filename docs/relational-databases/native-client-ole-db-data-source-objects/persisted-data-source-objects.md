@@ -18,13 +18,13 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8fd9e0cbb3ce90e40e53965000452d8a2dca1de
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0f7e7437486c601bfc04a3ad7a173d0d42b19b37
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419390"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537231"
 ---
 # <a name="persisted-data-source-objects"></a>Oggetti origine dati persistenti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37419390"
 ## <a name="examples"></a>Esempi  
  **A. Rendere persistente l'inizializzazione dell'origine dati:**  
   
- In questo esempio viene illustrata una funzione che rende persistenti le proprietà di inizializzazione dell'origine dati definendo un server, un database e l'utilizzo della Modalità di autenticazione di Windows per la connessione. Il nome del server e il nome di database vengono ricevuti nel *pLocation* e *pDatasource* parametri della funzione.  
+ In questo esempio viene illustrata una funzione che rende persistenti le proprietà di inizializzazione dell'origine dati definendo un server, un database e l'utilizzo della Modalità di autenticazione di Windows per la connessione. Il nome del server e il nome del database vengono ricevuti nei parametri *pLocation* e *pDatasource* della funzione.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -232,7 +232,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- Il **IPersistFile:: Save** metodo può essere chiamato prima o dopo aver chiamato **IDBInitialize:: Initialize**. La chiamata del metodo dopo una corretta restituzione da **IDBInitialize:: Initialize** assicura la persistenza di una specifica origine dati valida.  
+ Il metodo **IPersistFile::Save** può essere chiamato prima o dopo la chiamata al metodo **IDBInitialize::Initialize**. Se si chiama il metodo al termine del completamento di **IDBInitialize::Initialize** viene resa persistente una specifica di origine dati valida.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetti origine dati &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

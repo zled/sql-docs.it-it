@@ -1,4 +1,4 @@
-3. In tutti i nodi del cluster, aprire le porte del firewall di Pacemaker. Per aprire queste porte con `firewalld`, eseguire il comando seguente:
+3. In tutti i nodi del cluster aprire le porte del firewall di Pacemaker. Per aprire queste porte con `firewalld`, eseguire il comando seguente:
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -36,6 +36,7 @@
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
    sudo pcs cluster setup --name <clusterName> <node1> <node2> <node3> 
    sudo pcs cluster start --all
+   sudo pcs cluster enable --all
    ```
    
    >[!NOTE]

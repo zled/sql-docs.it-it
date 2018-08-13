@@ -1,5 +1,5 @@
 ---
-title: Supporto del tipo di dati per OLE DB data e ora miglioramenti | Documenti Microsoft
+title: Supporto dei tipi di dati per i miglioramenti relativi a data e ora OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a28cfe8761843893c61857e9677ec9cb1fa26afb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 57447d0d15ceaf5cb3d6ab72654a595c8e3e952a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947566"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557251"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Supporto tipo di dati per OLE DB data e ora miglioramenti
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Supporto dei tipi di dati per i miglioramenti relativi a data e ora OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,11 +35,11 @@ ms.locfileid: "32947566"
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapping dei tipi di dati in set di righe e parametri  
  OLE DB fornisce due nuovi tipi di dati per supportare i nuovi tipi di server: DBTYPE_DBTIME2 e DBTYPE_DBTIMESTAMPOFFSET. Nella tabella seguente viene illustrato il mapping completo per il tipo di server:  
   
-|Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo di dati OLE DB|Value|  
+|Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo di dati OLE DB|valore|  
 |-----------------------------------------|----------------------|-----------|  
-|datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
+|DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|data|DBTYPE_DBDATE|133 (OleDb)|  
+|Data|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -48,9 +48,9 @@ ms.locfileid: "32947566"
   
 |Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo di dati OLE DB|Formato stringa per le conversioni client|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta fino a tre cifre per i secondi frazionari per datetime.|  
+|DATETIME|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta fino a tre cifre per i secondi frazionari per datetime.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> Questo tipo di dati ha un'accuratezza di un minuto. Il componente dei secondi sarà zero nell'output mentre verrà arrotondato dal server nell'input.|  
-|data|DBTYPE_DBDATE|'yyyy-mm-dd'|  
+|Data|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> I secondi frazionari possono essere specificati facoltativamente utilizzando fino a sette cifre.|  
 |datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> I secondi frazionari possono essere specificati facoltativamente utilizzando fino a sette cifre.|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> I secondi frazionari possono essere specificati facoltativamente utilizzando fino a sette cifre.|  
@@ -80,7 +80,7 @@ ms.locfileid: "32947566"
   
  Sono state modificate le implementazioni per le strutture OLE esistenti seguenti in modo da supportare i nuovi tipi di data e ora di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le definizioni, tuttavia, non sono state modificate.  
   
--   DBTYPE_DATE. Si tratta di un tipo DATE di automazione. Viene rappresentato internamente come una **double**... La parte intera corrisponde al numero di giorni a partire dal 30 dicembre 1899, mentre la parte frazionaria rappresenta una frazione del giorno. Poiché questo tipo ha un'accuratezza di 1 secondo, dispone di una scala effettiva pari a 0.  
+-   DBTYPE_DATE. Si tratta di un tipo DATE di automazione. Viene rappresentato internamente come **double**. La parte intera corrisponde al numero di giorni a partire dal 30 dicembre 1899, mentre la parte frazionaria rappresenta una frazione del giorno. Poiché questo tipo ha un'accuratezza di 1 secondo, dispone di una scala effettiva pari a 0.  
   
 -   DBTYPE_DBDATE  
   
@@ -165,7 +165,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- La migrazione di applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client che utilizzano **sql_variant** e si basano sulla precisione limitata di **datetime** dovranno essere aggiornate se lo schema sottostante è aggiornato per utilizzare **datetime2** anziché **datetime**.  
+ Eseguire la migrazione di applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client che usano **sql_variant** e si basano sulla precisione limitata di **datetime** dovranno essere aggiornate se lo schema sottostante è aggiornato per usare **datetime2** invece **datetime**.  
   
  Le macro di accesso per SSVARIANT sono state estese anche con l'aggiunta degli elementi seguenti:  
   
@@ -177,18 +177,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Mapping dei tipi di dati in ITableDefinition::CreateTable  
- Il mapping dei tipi seguenti viene utilizzato con strutture DBCOLUMNDESC utilizzate da itabledefinition:: CreateTable.  
+ Con strutture DBCOLUMNDESC utilizzate da itabledefinition:: CreateTable viene usato il mapping dei tipi seguenti:  
   
 |Tipo di dati OLE DB (*wType*)|Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Note|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|data||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il DBCOLUMDESC *bScale* membro per determinare la precisione dei secondi frazionari.|  
-|DBTYPE_DBTIME2|**tempo**(p)|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il DBCOLUMDESC *bScale* membro per determinare la precisione dei secondi frazionari.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**DateTimeOffset**(p)|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il DBCOLUMDESC *bScale* membro per determinare la precisione dei secondi frazionari.|  
+|DBTYPE_DBDATE|Data||  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il DBCOLUMDESC *bScale* membro per determinare la precisione frazionaria dei secondi.|  
+|DBTYPE_DBTIME2|**time**(p)|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il DBCOLUMDESC *bScale* membro per determinare la precisione frazionaria dei secondi.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il DBCOLUMDESC *bScale* membro per determinare la precisione frazionaria dei secondi.|  
   
- Quando un'applicazione specifica DBTYPE_DBTIMESTAMP in *wType*, può eseguire l'override del mapping al **datetime2** fornendo un nome di tipo in *pwszTypeName*. Se **datetime** è specificato, *bScale* deve essere 3. Se **smalldatetime** è specificato, *bScale* deve essere 0. Se *bScale* non è coerente con *wType* e *pwszTypeName*, viene restituito DB_E_BADSCALE.  
+ Quando un'applicazione specifica DBTYPE_DBTIMESTAMP in *wType*, è possibile eseguire l'override del mapping al **datetime2** specificando un nome di tipo nella *pwszTypeName*. Se **data/ora** omette *bScale* deve essere 3. Se **smalldatetime** omette *bScale* deve essere 0. Se *bScale* non è coerente con *wType* e *pwszTypeName*, viene restituito DB_E_BADSCALE.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e ora miglioramenti & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

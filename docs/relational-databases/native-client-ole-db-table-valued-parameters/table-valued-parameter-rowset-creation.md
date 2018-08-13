@@ -16,13 +16,13 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6932538ac699d4a8c1e0dbb5d2cbef93a29511df
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 097b3e5c09a243952e0fd0562d54a73a4f00c561
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432360"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535331"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Creazione di un set di righe di parametri con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "37432360"
 ## <a name="static-scenario"></a>Scenario statico  
  Quando le informazioni sul tipo è noto, il consumer utilizza ITableDefinitionWithConstraints::CreateTableWithConstraints per creare un'istanza di un oggetto set di righe di parametri con valori di tabella che corrisponde a un parametro con valori di tabella.  
   
- Il *guid* campo (*pTableID* parametro) contiene il GUID speciale (CLSID_ROWSET_TVP). Il *pwszName* membro contiene il nome del tipo di parametro con valori di tabella che il consumer desidera creare un'istanza. Il *eKind* campo verrà impostato su DBKIND_GUID_NAME. Questo nome è necessario quando si tratta di un'istruzione SQL ad hoc; il nome è facoltativo se è una chiamata di procedura.  
+ Il *guid* campo (*pTableID* parametro) contiene il GUID speciale (CLSID_ROWSET_TVP). Il membro *pwszName* contiene il nome del tipo di parametro con valori di tabella di cui il consumer intende creare un'istanza. Il campo *eKind* sarà impostato su DBKIND_GUID_NAME. Questo nome è necessario quando si tratta di un'istruzione SQL ad hoc; il nome è facoltativo se è una chiamata di procedura.  
   
  Per l'aggregazione il consumer passa il *pUnkOuter* parametro con l'interfaccia IUnknown di controllo.  
   
  Le proprietà dell'oggetto parametro con valori di tabella di righe sono di sola lettura, in modo che il consumer non deve impostare alcuna proprietà *rgPropertySets*.  
   
- Per il *rgPropertySets* membro di ogni struttura DBCOLUMNDESC, il consumer può specificare proprietà aggiuntive per ogni colonna. Queste proprietà appartengono al set di proprietà DBPROPSET_SQLSERVERCOLUMN. Tali proprietà consentono di specificare le impostazioni predefinite e calcolate per ogni colonna. Supportano inoltre le proprietà esistenti della colonna, ad esempio nullability e identity.  
+ Per il membro *rgPropertySets* di ogni struttura DBCOLUMNDESC, il consumer può specificare proprietà aggiuntive per ogni colonna. Queste proprietà appartengono al set di proprietà DBPROPSET_SQLSERVERCOLUMN. Tali proprietà consentono di specificare le impostazioni predefinite e calcolate per ogni colonna. Supportano inoltre le proprietà esistenti della colonna, ad esempio nullability e identity.  
   
- Per recuperare le informazioni corrispondenti da un oggetto set di righe di parametri con valori di tabella, il consumer utilizza IRowsetInfo:: GetProperties.  
+ Per recuperare le informazioni corrispondenti da un oggetto set di righe di parametri con valori di tabella, il consumer usa IRowsetInfo::GetProperties.  
   
  Per recuperare informazioni su null, univoco, calcolata e aggiornare lo stato di ogni colonna, il consumer utilizza IColumnsRowset:: o IColumnsInfo:: GetColumnInfo. Questi metodi forniscono informazioni dettagliate su ogni colonna del set di righe di parametri con valori di tabella.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "37432360"
  Il *pTableID* e *pUnkOuter* parametri devono essere impostati come nello scenario statico. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Provider OLE DB Native quindi Ottiene le informazioni sul tipo (informazioni sulle colonne e vincoli) dal server e restituire un oggetto set di righe di parametri con valori di tabella tramite il *ppRowset* parametro. Questa operazione richiede la comunicazione con il server e pertanto non viene eseguita rispetto allo scenario statico. Lo scenario dinamico funziona solo con le chiamate di procedura con parametri.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Usare parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

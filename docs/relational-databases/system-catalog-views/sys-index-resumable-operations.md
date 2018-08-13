@@ -23,13 +23,13 @@ caps.latest.revision: 1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0d68f6e0946f9b5fb781448b2973939831b6cab9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 47ce09f820c979f059d5c5f4bad40304ca7a591d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058225"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555421"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "38058225"
 |**percent_complete**|**real**|Indice operazione lo stato di avanzamento completamento in % (non ammette valori null).|
 |**page_count**|**bigint**|Numero totale di pagine di indice allocate per l'operazione di compilazione per il nuovo indice e gli indici di mapping (non ammette valori null). 
 
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
    
 ## <a name="example"></a>Esempio  

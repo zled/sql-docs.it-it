@@ -1,5 +1,5 @@
 ---
-title: Mapping dei tipi di dati XSD ai tipi di dati XPath (SQLXML 4.0) | Documenti Microsoft
+title: Mapping dei tipi di dati XSD ai tipi di dati XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b41676bcf1cfe655fd7ed7f5c68b5b924c0f9814
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8ed33586deb593d0716e84344621f4a64ce59066
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969706"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551271"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>Mapping dei tipi di dati XSD ai tipi di dati XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "32969706"
   
 |Tipo di dati XSD|Tipo di dati XDR|Equivalente<br /><br /> Tipo di dati XPath|SQL Server<br /><br /> utilizzata|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  
-|**base64Binary**<br /><br /> **hexBinary**|**Nessuno**<br /><br /> **bin.base64bin.hex**|**Non applicabile**|Nessuno<br /><br /> EmployeeID|  
+|**base64Binary**<br /><br /> **HexBinary**|**Nessuno**<br /><br /> **bin.base64bin.hex**|**Non applicabile**|None<br /><br /> EmployeeID|  
 |**Boolean**|**boolean**|**boolean**|CONVERT(bit, EmployeeID)|  
-|**Decimal, integer, float, byte, short, int, long, float, double, unsignedByte, unsignedShort, unsignedInt, unsignedLong**|**numero, int, float, i1, i2, i4, i8, r4, r8ui1, ui2, ui4, ui8**|**number**|CONVERT(float(53), EmployeeID)|  
-|**ID, idref, idrefsentity, entità, notazione, nmtoken e nmtokens, DateTime, string, AnyURI**|**ID, idref, idrefsentity, entità, enumerazione, notazione, nmtoken, nmtokens, char, dateTime, dateTime.tz, string, uri, uuid**|**string**|CONVERT(nvarchar(4000), EmployeeID, 126)|  
-|**decimal**|**fixed14.4**|**Non applicabile (non vi è alcun tipo di dati in XPath è equivalente al tipo di dati XDR fixed 14.4).**|CONVERT(money, EmployeeID)|  
+|**Decimal, integer, float, byte, short, int, long, float, double, unsignedByte, unsignedShort, unsignedInt, unsignedLong**|**numero, int, float, i1, i2, i4, i8, r4, r8ui1, ui2, ui4, ui8**|**Numero**|CONVERT(float(53), EmployeeID)|  
+|**ID, idref, idrefsentity, entità, notation, nmtoken e nmtokens, DateTime, string, AnyURI**|**ID, idref, idrefsentity, entità, enumerazione, notation, nmtoken, nmtokens, char, dateTime, dateTime.tz, string, uri, uuid**|**string**|CONVERT(nvarchar(4000), EmployeeID, 126)|  
+|**decimal**|**fixed14.4**|**Non applicabile (non vi è alcun tipo di dati in XPath è equivalente al tipo di dati XDR fixed14.4).**|CONVERT(money, EmployeeID)|  
 |**data**|**data**|**string**|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |**time**|**time**<br /><br /> **time.tz**|**string**|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   

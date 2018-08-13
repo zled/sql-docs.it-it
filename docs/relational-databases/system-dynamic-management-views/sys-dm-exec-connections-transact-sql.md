@@ -1,5 +1,5 @@
 ---
-title: Sys.dm exec_connections (Transact-SQL) | Documenti Microsoft
+title: DM exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql
@@ -23,20 +23,21 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27499bf31561addd909d92a81222662e4470b8b5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f438405c33237f93cb214a1dfb40dff70fdf84e8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535631"
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce informazioni sulle connessioni stabilite per questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i dettagli di ogni connessione. Restituisce informazioni di connessione di livello server per SQL Server. Restituisce informazioni di connessione del database corrente per il Database SQL.  
+  Restituisce informazioni sulle connessioni stabilite per questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i dettagli di ogni connessione. Restituisce informazioni di connessione a livello di server per SQL Server. Restituisce informazioni di connessione del database corrente per il Database SQL.  
   
 > [!NOTE]
-> Per chiamare questo metodo dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare [sys.dm_pdw_exec_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
+> Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare [sys.dm_pdw_exec_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,8 +51,8 @@ ms.lasthandoff: 05/23/2018
 |encrypt_option|**nvarchar(40)**|Valore booleano che specifica se per la connessione è abilitata la crittografia. Non ammette i valori Null.|  
 |auth_scheme|**nvarchar(40)**|Specifica lo schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticazione di Windows utilizzato con questa connessione. Non ammette i valori Null.|  
 |node_affinity|**smallint**|Identifica il nodo di memoria con cui la connessione dispone di affinità. Non ammette i valori Null.|  
-|num_reads|**int**|Numero di letture di byte che si sono verificati durante la connessione. Ammette i valori Null.|  
-|num_writes|**int**|Numero di scritture di byte che si sono verificati durante la connessione. Ammette i valori Null.|  
+|num_reads|**int**|Numero di letture di byte che si sono verificate tramite questa connessione. Ammette i valori Null.|  
+|num_writes|**int**|Numero di scritture di byte che si sono verificate tramite questa connessione. Ammette i valori Null.|  
 |last_read|**datetime**|Timestamp dell'ultima lettura eseguita sulla connessione. Ammette i valori Null.|  
 |last_write|**datetime**|Timestamp dell'ultima scrittura eseguita sulla connessione. Non ammette valori Null.|  
 |net_packet_size|**int**|Dimensioni dei pacchetti di rete utilizzate per il trasferimento di informazioni e dati. Ammette i valori Null.|  
@@ -62,12 +63,12 @@ ms.lasthandoff: 05/23/2018
 |connection_id|**uniqueidentifier**|Identifica in modo univoco ogni connessione. Non ammette i valori Null.|  
 |parent_connection_id|**uniqueidentifier**|Identifica la connessione primaria utilizzata dalla sessione MARS. Ammette i valori Null.|  
 |most_recent_sql_handle|**varbinary(64)**|Handle SQL dell'ultima richiesta eseguita sulla connessione. La colonna most_recent_sql_handle è sempre sincronizzata con la colonna most_recent_session_id. Ammette i valori Null.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
 
 ## <a name="physical-joins"></a>Join fisici  
  ![Join per DM exec_connections](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "join per DM exec_connections")  

@@ -1,5 +1,5 @@
 ---
-title: Sys. database_event_session_events (Database SQL di Azure) | Microsoft Docs
+title: Sys. database_event_session_events (Database SQL di Azure) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9287bfe2f99e4bebc7a57b9ac527c04ada95bf9b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d49ac2e05868cfa4a9fd4a3bb1b9f799d4876687
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38065479"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549971"
 ---
-# <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>Sys. database_event_session_events (Database SQL di Azure)
+# <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>sys.database_event_session_events (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni evento in una sessione dell'evento.  
@@ -44,7 +44,7 @@ ms.locfileid: "38065479"
 |predicate|**nvarchar(3000)**|Espressione del predicato applicata all'evento. Ammette i valori Null.|  
 |predicate_xml|**nvarchar(3000)**|Espressione del predicato XML applicata all'evento. Ammette i valori Null.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il server.  
   
 ## <a name="remarks"></a>Note  

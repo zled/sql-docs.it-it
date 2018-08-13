@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client Support for LocalDB | Microsoft Docs
+title: SQL Server Native Client Support for LocalDB | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bff3be07c128ec6fce7a0cec039978079ded7246
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 46462921a0a2632f7bc5bd431a78d23e8954c7c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432650"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548601"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>Supporto SQL Server Native Client per il database locale
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "37432650"
 ## <a name="remarks"></a>Note  
  Per ulteriori informazioni sul database locale inclusa la modalità di installazione del database locale e di configurazione della relativa istanza, vedere:  
   
--   [Riferimento SQL Server Express LocalDB](../../../relational-databases/sql-server-express-localdb-reference.md)  
+-   [Riferimento al database locale di SQL Server Express](../../../relational-databases/sql-server-express-localdb-reference.md)  
   
 -   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "37432650"
   
 -   Uso **sqllocaldb.exe ho** per individuare il nome dell'istanza predefinita.  
   
--   Usare la **AttachDBFilename** parola chiave di stringa di connessione per specificare quale file di database il server deve connettersi. Quando si usa **AttachDBFilename**, se non si specifica il nome del database con il **Database** parola chiave di stringa di connessione, verrà rimosso dal database dell'istanza del database locale quando l'applicazione verrà chiusa.  
+-   Usare la parola chiave della stringa di connessione **AttachDBFilename** per specificare a quale file di database si deve collegare il server. Quando si usa **AttachDBFilename**, se non viene specificato il nome del database con la parola chiave della stringa di connessione **Database**, il database sarà rimosso dall'istanza di Local DB quando l'applicazione viene chiusa.  
   
 -   Specificare un'istanza del database locale nella stringa di connessione:  
   

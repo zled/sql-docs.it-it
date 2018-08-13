@@ -23,12 +23,13 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da708fb9606b5e5d52165680af8dff74a9201115
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 583a49e34b922e128ea7b55cf0c738789ca60a06
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565055"
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
   
 ## <a name="arguments"></a>Argomenti  
 *session_id*  
-L'id di sessione è in esecuzione il batch da ricercare. *session_id* viene **smallint**. *session_id* può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
+L'id di sessione è in esecuzione batch per essere cercato. *session_id* viene **smallint**. *session_id* può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
   
 -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
@@ -52,28 +53,28 @@ L'id di sessione è in esecuzione il batch da ricercare. *session_id* viene **sm
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)   
   
 *request_id*  
-Il request_id da [Sys.dm exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* viene **int**.  
+L'elemento request_id dal [exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* viene **int**.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**event_type**|**nvarchar(256)**|Il tipo di evento nel buffer di input per il valore spid specificato.|  
-|**parameters**|**smallint**|I parametri forniti per l'istruzione.|  
+|**parameters**|**smallint**|Tutti i parametri forniti per l'istruzione.|  
 |**event_info**|**nvarchar(max)**|Il testo dell'istruzione nel buffer di input per il valore spid specificato.|  
   
-## <a name="permissions"></a>Autorizzazioni  
- Nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente dispone dell'autorizzazione VIEW SERVER STATE, l'utente vedrà le sessioni tutti in esecuzione nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; in caso contrario, l'utente verrà visualizzato solo nella sessione corrente.  
+## <a name="permissions"></a>Permissions  
+ Sul [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente dispone dell'autorizzazione VIEW SERVER STATE, l'utente visualizzerà le sessioni in esecuzione tutte nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; in caso contrario, l'utente verrà visualizzato solo nella sessione corrente.  
   
- In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se l'utente è il proprietario del database, l'utente vedrà le sessioni in esecuzione tutti nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; in caso contrario, l'utente vedrà solo la sessione corrente.  
+ Sul [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se l'utente è il proprietario del database, l'utente visualizzerà tutti in esecuzione sessioni nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; in caso contrario, l'utente verrà visualizzato solo nella sessione corrente.  
   
-## <a name="remarks"></a>Osservazioni  
- Questa funzione a gestione dinamica può essere utilizzata in combinazione con Sys.dm exec_sessions o Sys.dm exec_requests attraverso la pratica **CROSS APPLY**.  
+## <a name="remarks"></a>Note  
+ Questa funzione a gestione dinamica può essere utilizzata in combinazione con Sys. dm _ exec_requests o con attraverso la pratica **CROSS APPLY**.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-simple-example"></a>A. Esempio semplice  
- Nell'esempio seguente viene illustrato come passare un id di sessione (SPID) e un id di richiesta alla funzione.  
+ Nell'esempio seguente viene illustrato il passaggio di un id di sessione (SPID) e un id richiesta per la funzione.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
@@ -81,7 +82,7 @@ GO
 ```  
   
 ### <a name="b-using-cross-apply-to-additional-information"></a>B. Tra si applicano alle informazioni aggiuntive  
- Nell'esempio seguente vengono elencati i buffer di input per le sessioni con id di sessione superiore a 50.  
+ L'esempio seguente elenca il buffer di input per le sessioni con id di sessione superiore a 50.  
   
 ```sql  
 SELECT es.session_id, ib.event_info   

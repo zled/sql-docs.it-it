@@ -1,5 +1,5 @@
 ---
-title: L'accesso a informazioni di diagnostica nel Log degli eventi estesi | Microsoft Docs
+title: Accesso alle informazioni di diagnostica nel log degli eventi estesi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -11,13 +11,13 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d72f09a351186d4f694308808237d6bfaa2e0d7c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6c79a01f432e565623fd931863e00e07b5af83df
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412070"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557491"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accesso alle informazioni di diagnostica nel registro eventi estesi
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,17 +25,17 @@ ms.locfileid: "37412070"
 
   A partire [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e i dati traccia di accesso ([traccia di accesso ai dati](http://go.microsoft.com/fwlink/?LinkId=125805)) sono stati aggiornati per renderne più semplice ottenere informazioni sugli errori di connessione di diagnostica da circolare di connettività informazioni sulle prestazioni del buffer e l'applicazione dal registro eventi esteso.  
   
- Per informazioni sulla lettura del registro eventi esteso, vedere [visualizzare i dati della sessione eventi](http://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49).  
+ Per ulteriori informazioni sulla lettura del log degli eventi estesi, vedere [View Event Session Data](http://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49) (Visualizzare i dati di una sessione di eventi).  
   
 > [!NOTE]  
 >  Questa funzionalità è destinata esclusivamente alla risoluzione dei problemi e a fini diagnostici e potrebbe non essere appropriata per il controllo o per scopi di sicurezza.  
   
 ## <a name="remarks"></a>Note  
- Per le operazioni di connessione, tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verrà inviato un ID di connessione client. Se la connessione non riesce, è possibile accedere al buffer circolare ([risoluzione dei problemi di connettività in SQL Server 2008 con il Buffer circolare della connettività](http://go.microsoft.com/fwlink/?LinkId=207752)) e trovare il **ClientConnectionID** campo e ottenere informazioni diagnostiche sull'errore di connessione. Gli ID di connessione client vengono registrati nel buffer circolare solo se si verifica un errore. In caso di errore di connessione prima dell'invio del pacchetto di preaccesso, l'ID di connessione client non verrà generato. L'ID di connessione client è un GUID a 16 byte. È anche possibile trovare il client di ID di connessione negli eventi estesi di output di destinazione, se il **client_connection_id** azione viene aggiunta agli eventi in una sessione eventi estesi. È possibile abilitare la traccia di accesso ai dati e rieseguire il comando di connessione e osservare il **ClientConnectionID** campo nella traccia di accesso di dati per un'operazione non riuscita, se necessaria ulteriore assistenza diagnostica.  
+ Per le operazioni di connessione, tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verrà inviato un ID di connessione client. In caso di errore di connessione, è possibile accedere al buffer circolare della connettività, [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](http://go.microsoft.com/fwlink/?LinkId=207752) (Risoluzione dei problemi relativi alla connettività in SQL Server 2008 con il buffer circolare della connettività), individuare il campo **ClientConnectionID** e ottenere le informazioni di diagnostica sul problema di connessione. Gli ID di connessione client vengono registrati nel buffer circolare solo se si verifica un errore. In caso di errore di connessione prima dell'invio del pacchetto di preaccesso, l'ID di connessione client non verrà generato. L'ID di connessione client è un GUID a 16 byte. È possibile trovare l'ID di connessione client anche nella destinazione di output degli eventi estesi, se l'azione **client_connection_id** viene aggiunta agli eventi in una sessione di eventi estesi. È possibile abilitare la traccia di accesso ai dati, eseguire di nuovo il comando di connessione e osservare il campo **ClientConnectionID** nella traccia di accesso ai dati per un'operazione con errori, se è necessaria ulteriore assistenza diagnostica.  
   
  Se si utilizza ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e una connessione ha esito positivo, è possibile ottenere il client di ID di connessione usando la **sql_copt_ss_client_connection_id consente** attributo con [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md).  
   
- Tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client viene inviato anche un ID attività specifico del thread. L'ID attività viene acquisito nelle sessioni di eventi estesi se avviate con l'opzione TRACK_CAUSAILITY abilitata. Per problemi di prestazioni con una connessione attiva, è possibile ottenere l'ID attività dalla traccia di accesso ai dati del client (**ActivityID** campo) e quindi individuare l'ID attività nell'output degli eventi estesi. L'ID attività negli eventi estesi è un GUID a 16 byte (diverso dal GUID per l'ID di connessione client) accodato con un numero di sequenza a quattro byte. Il numero di sequenza rappresenta l'ordine di una richiesta all'interno di un thread e indica l'ordine relativo di istruzioni batch e RPC per il thread. Il **ActivityID** viene inviato facoltativamente per istruzioni batch SQL e le richieste RPC quando è abilitata l'analisi di accesso dati e il bit 18 traccia parola di configurazione di accesso ai dati è attivato.  
+ Tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client viene inviato anche un ID attività specifico del thread. L'ID attività viene acquisito nelle sessioni di eventi estesi se avviate con l'opzione TRACK_CAUSAILITY abilitata. Per problemi di prestazioni con una connessione attiva, è possibile ottenere l'ID attività dalla traccia del client (campo **ActivityID**) e quindi individuare l'ID attività nell'output degli eventi estesi. L'ID attività negli eventi estesi è un GUID a 16 byte (diverso dal GUID per l'ID di connessione client) accodato con un numero di sequenza a quattro byte. Il numero di sequenza rappresenta l'ordine di una richiesta all'interno di un thread e indica l'ordine relativo di istruzioni batch e RPC per il thread. L'**ActivityID** viene inviato facoltativamente per istruzioni batch SQL e richieste RPC quando la traccia di accesso ai dati è abilitata e il diciottesimo bit nella configurazione della traccia di accesso ai dati è abilitato.  
   
  Di seguito è riportato un esempio di utilizzo di [!INCLUDE[tsql](../../../includes/tsql-md.md)] per avviare una sessione di eventi estesi che verrà archiviata in un buffer circolare e verrà registrato l'ID attività inviato da un client in operazioni RPC e batch.  
   

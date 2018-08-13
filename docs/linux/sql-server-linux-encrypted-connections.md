@@ -1,9 +1,9 @@
 ---
 title: Crittografia delle connessioni a SQL Server in Linux | Microsoft Docs
 description: Questo articolo descrive la crittografia delle connessioni a SQL Server in Linux.
-author: tmullaney
+author: vin-yu
 ms.date: 01/30/2018
-ms.author: meetb
+ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 574699c5cb3d1215e85af3f176812950dd4219da
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085033"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009033"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Crittografia delle connessioni a SQL Server in Linux
 
@@ -32,7 +32,7 @@ Prima di iniziare, è necessario assicurarsi che i certificati di rispettano i r
 - Dopo la valido dalla proprietà del certificato e prima la valido alla proprietà del certificato deve essere l'ora di sistema corrente.
 - Il certificato deve essere destinato all'autenticazione del server. Ciò richiede che la proprietà Enhanced Key Usage del certificato per specificare l'autenticazione Server (1.3.6.1.5.5.7.3.1).
 - Il certificato deve essere creato usando l'opzione KeySpec di AT_KEYEXCHANGE. Proprietà di utilizzo della chiave del certificato (KEY_USAGE) include in genere, anche la crittografia chiave (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- La proprietà Subject del certificato deve indicare che il nome comune (CN) sia lo stesso come il nome host o nome di dominio completo (FQDN) del computer del server. Nota: i certificati con caratteri jolly sono supportati. 
+- La proprietà Subject del certificato deve indicare che il nome comune (CN) sia lo stesso come il nome host o nome di dominio completo (FQDN) del computer del server. Nota: i certificati con caratteri jolly sono supportati.
 
 ## <a name="overview"></a>Panoramica
 TLS è usato per crittografare le connessioni da un'applicazione client per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando è configurato correttamente, TLS fornisce privacy e integrità dei dati per le comunicazioni tra client e server.  Le connessioni TLS possono essere inizializzata sul lato client o server avviate. 

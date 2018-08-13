@@ -1,5 +1,5 @@
 ---
-title: ROUTINE_COLUMNS (Transact-SQL) | Documenti Microsoft
+title: ROUTINE_COLUMNS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,25 +22,25 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fc7e43784d336fcd5358b00ad5fc82b5c89e0c3b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ca7c277ab96cfc12a44b6b650f5f28a1821c08b5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239281"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557661"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni colonna restituita dalle funzioni con valori di tabella a cui può accedere l'utente corrente del database corrente.  
   
- Per recuperare informazioni da questa vista, specificare il nome completo di **INFORMATION_SCHEMA. * * * view_name*.  
+ Per recuperare informazioni da questa visualizzazione, specificare il nome completo di **INFORMATION_SCHEMA. * * * view_name*.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Nome del catalogo o del database della funzione con valori di tabella.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la funzione con valori di tabella.<br /><br /> **\*\* Importante \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la funzione con valori di tabella.<br /><br /> **\*\* Importanti \* \* ** non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nome della funzione con valori di tabella.|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|Nome colonna.|  
 |**ORDINAL_POSITION**|**int**|Numero di identificazione della colonna.|  
@@ -52,15 +52,15 @@ ms.locfileid: "33239281"
 |**NUMERIC_PRECISION**|**tinyint**|Precisione dei dati numerici approssimati, dei dati numerici esatti, dei dati integer o dei dati in valuta. In caso contrario, viene restituito NULL.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base di precisione dei dati numerici approssimati, dei dati numerici esatti, dei dati integer o dei dati in valuta. In caso contrario, viene restituito NULL.|  
 |**NUMERIC_SCALE**|**tinyint**|Scala dei dati numerici approssimati, dei dati numerici esatti, dei dati integer o dei dati in valuta. In caso contrario, viene restituito NULL.|  
-|**DATETIME_PRECISION**|**smallint**|Codice di sottotipo per **datetime** e ISO**intero** tipi di dati. Per gli altri tipi di dati restituisce NULL.|  
+|**DATETIME_PRECISION**|**smallint**|Codice di sottotipo per **data/ora** e ISO**integer** i tipi di dati. Per gli altri tipi di dati restituisce NULL.|  
 |**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Restituisce **master**. Indica il database in cui si trova il set di caratteri se la colonna è di tipo carattere o **testo** tipo di dati. In caso contrario, viene restituito NULL.|  
 |**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|Viene restituito sempre NULL.|  
-|**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|Restituisce il nome univoco per il carattere impostato se questa colonna è di tipo carattere o **testo** tipo di dati. In caso contrario, viene restituito NULL.|  
+|**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|Restituisce il nome univoco per il set di caratteri se questa colonna è di tipo carattere o **testo** tipo di dati. In caso contrario, viene restituito NULL.|  
 |**COLLATION_CATALOG**|**varchar (** 6 **)**|Viene restituito sempre NULL.|  
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|Viene restituito sempre NULL.|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|Restituisce il nome univoco per l'ordinamento, se la colonna è di tipo carattere o **testo** tipo di dati. In caso contrario, viene restituito NULL.|  
 |**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Restituisce il nome del database in cui è stato creato il tipo di dati definito dall'utente se la colonna contiene un tipo di dati alias. In caso contrario, viene restituito NULL.|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Se il tipo di dati della colonna è un tipo definito dall'utente, restituisce il nome dello schema contenente il tipo di dati definito dall'utente. In caso contrario, viene restituito NULL.<br /><br /> **\*\* Importante \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Se il tipo di dati della colonna è un tipo definito dall'utente, restituisce il nome dello schema contenente il tipo di dati definito dall'utente. In caso contrario, viene restituito NULL.<br /><br /> **\*\* Importanti \* \* ** non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**NOME_DOMINIO**|**nvarchar (** 128 **)**|Restituisce il nome del tipo di dati definito dall'utente se la colonna contiene un tipo di dati definito dall'utente. In caso contrario, viene restituito NULL.|  
   
 ## <a name="see-also"></a>Vedere anche  

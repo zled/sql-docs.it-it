@@ -1,5 +1,5 @@
 ---
-title: Sys. system_objects (Transact-SQL) | Documenti Microsoft
+title: Sys. system_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eda958fa160f98aa4930eb12a6a14f402eee1f41
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 747e0e44db51db4b5e143b79645d1b1fc677607e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221762"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552641"
 ---
 # <a name="syssystemobjects-transact-sql"></a>sys.system_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33221762"
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Nome dell'oggetto.|  
+|NAME|**sysname**|Nome dell'oggetto.|  
 |object_id|**int**|Numero di identificazione dell'oggetto. Valore univoco all'interno di un database.|  
 |principal_id|**int**|ID del singolo proprietario se diverso dal proprietario dello schema. Per impostazione predefinita, gli oggetti contenuti nello schema appartengono al proprietario dello schema stesso. È tuttavia possibile specificare un altro proprietario tramite l'istruzione ALTER AUTHORIZATION per modificare la proprietà.<br /><br /> È NULL se non è presente un altro proprietario singolo.<br /><br /> È NULL se il tipo di oggetto è uno dei seguenti:<br /><br /> C = vincolo CHECK<br /><br /> D = DEFAULT (vincolo o valore autonomo)<br /><br /> F = vincolo FOREIGN KEY<br /><br /> PK = vincolo PRIMARY KEY<br /><br /> R = regola (tipo obsoleto, autonoma)<br /><br /> TA = Trigger di assembly (CLR)<br /><br /> TR = trigger SQL<br /><br /> UQ = vincolo UNIQUE|  
 |schema_id|**int**|ID dello schema che contiene l'oggetto.<br /><br /> Per tutti gli oggetti di sistema con ambito schema inclusi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questo valore sarà sempre disponibile in (schema_id('sys'), schema_id('INFORMATION_SCHEMA'))|  
@@ -48,11 +48,11 @@ ms.locfileid: "33221762"
 |type_desc|**nvarchar(60)**|Descrizione del tipo di oggetto. AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> DEFAULT_CONSTRAINT<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> INTERNAL_TABLE<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> RULE<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> SYSTEM_TABLE<br /><br /> SYNONYM<br /><br /> SERVICE_QUEUE<br /><br /> CLR_TRIGGER<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> TABLE_TYPE<br /><br /> USER_TABLE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> VIEW<br /><br /> EXTENDED_STORED_PROCEDURE|  
 |create_date|**datetime**|Data di creazione dell'oggetto.|  
 |modify_date|**datetime**|Data dell'ultima modifica apportata all'oggetto mediante un'istruzione ALTER. Se l'oggetto è una tabella o una vista, modify_date viene modificata anche quando si crea o si modifica un indice cluster nella tabella o nella vista.|  
-|is_ms_shipped|**bit**|Oggetto creato da un interno [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente.|  
+|is_ms_shipped|**bit**|Oggetto creato da interna [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente.|  
 |is_published|**bit**|L'oggetto viene pubblicato.|  
 |is_schema_published|**bit**|Viene pubblicato solo lo schema dell'oggetto.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

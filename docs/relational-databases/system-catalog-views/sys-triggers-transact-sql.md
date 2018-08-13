@@ -1,5 +1,5 @@
 ---
-title: Sys. Triggers (Transact-SQL) | Documenti Microsoft
+title: Sys. Triggers (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c176e5cdf68b5aa9516cd054a57f36c630b0c64
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cb87bc58f99cc501bff8d8a04f503f2fb04f1e3b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221782"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547141"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni oggetto che è un trigger di tipo TR o TA. I nomi dei trigger DML sono con ambito schema e, pertanto, sono visibili in **Sys. Objects**. I nomi di trigger DDL sono definiti a livello di ambito rispetto all'entità padre e sono visibili solo in questa vista.  
+  Contiene una riga per ogni oggetto che è un trigger di tipo TR o TA. I nomi di trigger DML sono con ambito schema e, pertanto, sono visibili in **Sys. Objects**. I nomi di trigger DDL sono definiti a livello di ambito rispetto all'entità padre e sono visibili solo in questa vista.  
   
  Il **parent_class** e **nome** colonne che identificano in modo univoco il trigger nel database.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33221782"
 |**object_id**|**int**|Numero di identificazione dell'oggetto. Valore univoco all'interno di un database.|  
 |**parent_class**|**tinyint**|Classe dell'entità padre del trigger.<br /><br /> 0 = Database per i trigger DDL.<br /><br /> 1 = Oggetto o colonna per i trigger DML.|  
 |**parent_class_desc**|**nvarchar(60)**|Descrizione della classe padre del trigger.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
-|**parent_ID**|**int**|ID dell'entità padre del trigger. I possibili valori sono i seguenti:<br /><br /> 0 = Trigger che hanno come entità padre un database.<br /><br /> Per i trigger DML, si tratta di **object_id** della tabella o vista in cui è definito il trigger DML.|  
+|**parent_ID**|**int**|ID dell'entità padre del trigger. I possibili valori sono i seguenti:<br /><br /> 0 = Trigger che hanno come entità padre un database.<br /><br /> Per i trigger DML, questo è il **object_id** della tabella o vista in cui è definito il trigger DML.|  
 |**type**|**char(2)**|Tipo di oggetto:<br /><br /> TA = Trigger di assembly (CLR)<br /><br /> TR = trigger SQL|  
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo di oggetto.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|Data di creazione del trigger.|  
@@ -55,7 +55,7 @@ ms.locfileid: "33221782"
 |**is_not_for_replication**|**bit**|Trigger creato con l'opzione NOT FOR REPLICATION.|  
 |**is_instead_of_trigger**|**bit**|1 = Trigger INSTEAD OF<br /><br /> 0 = Trigger AFTER|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

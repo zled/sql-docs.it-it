@@ -23,13 +23,13 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 173cef2bb02399e8145df1b5ff2a9d038eb6e03f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d7c8945b188e2ab8fd76bc7d7662f9f9c2886293
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987403"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554081"
 ---
 # <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "37987403"
 |system_high_memory_signal_state = 0<br /><br /> e<br /><br /> system_low_memory_signal_state = 0|L'utilizzo della memoria fisica è costante|  
 |system_high_memory_signal_state = 1<br /><br /> e<br /><br /> system_low_memory_signal_state = 1|La stato della memoria fisica è in fase di transizione<br /><br /> Il segnale massimo e minimo non devono mai essere attivi contemporaneamente. Tuttavia, modifiche rapide a livello di sistema operativo possono fare sì che entrambi i valori sembrino essere attivi in un'applicazione della modalità utente. La visualizzazione di entrambi i segnali attivi verrà interpretata come una stato della transizione.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  

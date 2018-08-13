@@ -25,18 +25,18 @@ caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97d14dc014827310706bdea8143e41a628a666d6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 836ef351d2af7e187420b680a90382fc504b9e89
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260857"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563075"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Consente di modificare il nome di un oggetto creato dall'utente nel database corrente. Questo oggetto può essere una tabella, indice, colonna, tipo di dati alias o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] definito dall'utente tipo di common language runtime (CLR).  
+  Consente di modificare il nome di un oggetto creato dall'utente nel database corrente. Questo oggetto può essere una tabella, indice, colonna, tipo di dati alias oppure [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] definite dall'utente tipo di common language runtime (CLR).  
   
 > [!CAUTION]  
 >  La modifica di una parte del nome di un oggetto potrebbe compromettere il funzionamento di script e stored procedure. È consigliabile evitare di utilizzare questa istruzione per rinominare stored procedure, trigger, funzioni definite dall'utente o viste. In alternativa, eliminare l'oggetto e ricrearlo con il nuovo nome.  
@@ -53,43 +53,43 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
 ## <a name="arguments"></a>Argomenti  
  [ @objname =] '*object_name*'  
- Nome corrente completo o non qualificato dell'oggetto utente o del tipo di dati. Se l'oggetto da rinominare è una colonna in una tabella, *object_name* deve essere nel formato *Table. Column* o *schema.table.column*. Se l'oggetto da rinominare è un indice, *object_name* deve essere nel formato *Table* o *schema.table.index*. Se l'oggetto da rinominare è un vincolo, *object_name* deve essere nel formato *schema.constraint*.  
+ Nome corrente completo o non qualificato dell'oggetto utente o del tipo di dati. Se l'oggetto da rinominare è una colonna in una tabella, *object_name* deve essere nel formato *Table. Column* oppure *schema.table.column*. Se l'oggetto da rinominare è un indice *object_name* deve essere nel formato *Table. index* oppure *schema.table.index*. Se l'oggetto da rinominare è un vincolo *object_name* deve essere nel formato *schema.constraint*.  
   
  Le virgolette sono necessarie solo se viene specificato un nome di oggetto completo. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *object_name* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
- [ @newname =] '*nuovo_nome*'  
- Nuovo nome dell'oggetto specificato. *nuovo_nome* deve essere un nome composto da una parte e devono rispettare le regole per gli identificatori. *newname* viene **sysname**, non prevede alcun valore predefinito.  
+ [ @newname =] '*new_name*'  
+ Nuovo nome dell'oggetto specificato. *new_name* deve essere un nome composto da una parte e devono rispettare le regole per gli identificatori. *newname* viene **sysname**, non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  I nomi di trigger non possono iniziare con # o ##.  
   
  [ @objtype =] '*object_type*'  
- Tipo dell'oggetto da rinominare. *object_type* viene **varchar(13)**, con un valore predefinito è NULL, e può essere uno dei valori seguenti.  
+ Tipo dell'oggetto da rinominare. *object_type* viene **varchar(13)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |COLUMN|Colonna da rinominare.|  
 |DATABASE|Database definito dall'utente. Quando si rinomina un database è necessario specificare questo tipo di oggetto.|  
 |INDEX|Indice definito dall'utente. Se si rinomina un indice con statistiche, vengono automaticamente rinominate anche le statistiche.|  
 |OBJECT|Un elemento di un tipo registrato in [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). È ad esempio possibile utilizzare OBJECT per rinominare oggetti che includono vincoli (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), tabelle utente e regole.|  
-|STATISTICS|**Si applica a** : da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistiche create in modo esplicito da un utente o in modo implicito con un indice. Se si rinominano le statistiche di un indice, viene automaticamente rinominato anche l'indice.|  
-|USERDATATYPE|Oggetto [tipi definiti dall'utente CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) aggiunti tramite l'istruzione [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) o [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
+|STATISTICS|**Si applica a **: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistiche create in modo esplicito da un utente o in modo implicito con un indice. Se si rinominano le statistiche di un indice, viene automaticamente rinominato anche l'indice.|  
+|USERDATATYPE|Oggetto [i tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) aggiunti tramite l'istruzione [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) oppure [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È possibile modificare il nome di un oggetto o un tipo di dati solo nel database corrente. I nomi della maggior parte dei tipi di dati e degli oggetti di sistema non sono modificabili.  
   
  La stored procedure sp_rename rinomina automaticamente l'indice associato ogni volta che viene rinominato un vincolo PRIMARY KEY o UNIQUE. Se un indice rinominato è associato a un vincolo PRIMARY KEY, quando si esegue sp_rename viene rinominato automaticamente anche il vincolo PRIMARY KEY.  
   
  La stored procedure sp_rename può essere utilizzata per rinominare indici XML primari e secondari.  
   
- Ridenominazione di una stored procedure, funzione, vista o trigger non modificherà il nome dell'oggetto corrispondente nella colonna definition del [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catalogo o ottenuto utilizzando il [Object DEFINIZIONE](../../t-sql/functions/object-definition-transact-sql.md) funzione predefinita. È pertanto consigliabile evitare di utilizzare sp_rename per rinominare questi tipi di oggetto. In alternativa, eliminare e ricreare l'oggetto con il nuovo nome.  
+ Ridenominazione di una stored procedure, funzione, vista o trigger non modificherà il nome dell'oggetto corrispondente nella colonna definition della [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catalogo o ottenuto usando la [Object DEFINIZIONE](../../t-sql/functions/object-definition-transact-sql.md) funzione predefinita. È pertanto consigliabile evitare di utilizzare sp_rename per rinominare questi tipi di oggetto. In alternativa, eliminare e ricreare l'oggetto con il nuovo nome.  
   
  La ridenominazione di un oggetto, ad esempio una tabella o una colonna, non aggiorna automaticamente i riferimenti a tale oggetto ed è necessario modificare manualmente tutti gli oggetti che fanno riferimento all'oggetto rinominato. Se, ad esempio, si rinomina una colonna di una tabella a cui viene fatto riferimento all'interno di un trigger, è necessario modificare il trigger in base al nuovo nome della colonna. Usare [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) per elencare le dipendenze dall'oggetto prima di rinominarlo.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Per rinominare oggetti, colonne e indici, è necessario disporre dell'autorizzazione ALTER per l'oggetto. Per rinominare tipi definiti dall'utente, è necessario disporre dell'autorizzazione CONTROL per il tipo. Per rinominare un database, è richiesta l'appartenenza al ruolo predefinito del server sysadmin o dbcreator.  
   
 ## <a name="examples"></a>Esempi  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. Ridenominazione di una colonna  
- Nell'esempio seguente rinomina il `TerritoryID` colonna il `SalesTerritory` tabella `TerrID`.  
+ Nell'esempio seguente viene rinominato il `TerritoryID` colonna il `SalesTerritory` alla tabella `TerrID`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -197,7 +197,7 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ```  
   
 ### <a name="f-renaming-statistics"></a>F. Ridenominazione delle statistiche  
- Nell'esempio seguente viene creato un oggetto statistiche denominato contactMail1 e quindi vengono rinominate le statistiche di nuovo contatto tramite sp_rename. Quando si rinominano le statistiche, l'oggetto deve essere specificato nel formato schema.table.statistics_name.  
+ Nell'esempio seguente crea un oggetto statistiche denominato contactMail1 e successivamente vengono rinominate le statistiche al nuovo contatto tramite sp_rename. Quando si rinominano le statistiche, l'oggetto deve essere specificato nel formato schema.table.statistics_name.  
   
 ```  
 CREATE STATISTICS ContactMail1  
@@ -212,6 +212,6 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

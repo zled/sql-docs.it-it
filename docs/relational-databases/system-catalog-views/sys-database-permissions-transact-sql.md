@@ -1,5 +1,5 @@
 ---
-title: Sys. database_permissions (Transact-SQL) | Documenti Microsoft
+title: Sys. database_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -24,28 +24,28 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 330b1c61e877fb71bcf94d6c8161e40c9ff5e7ac
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 477c4a616973ed56cfd1063411870ae78cfdd67e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182447"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545751"
 ---
 # <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce una riga per ogni autorizzazione o per ogni autorizzazione per le eccezioni di colonna nel database. Per le colonne, esiste una riga per ogni autorizzazione che è diversa dall'autorizzazione corrispondente a livello di oggetto. Se l'autorizzazione per la colonna è lo stesso dell'autorizzazione oggetto corrispondente, è presente alcuna riga per, e l'autorizzazione applicato è quello dell'oggetto.  
+  Restituisce una riga per ogni autorizzazione o per ogni autorizzazione per le eccezioni di colonna nel database. Per le colonne, esiste una riga per ogni autorizzazione che è diversa dall'autorizzazione corrispondente a livello di oggetto. Se l'autorizzazione per la colonna è lo stesso come autorizzazione per l'oggetto corrispondente, nessuna riga per tale e l'autorizzazione applicato è quello dell'oggetto.  
   
 > [!IMPORTANT]  
 >  Le autorizzazioni a livello di colonna hanno la precedenza sulle autorizzazioni a livello di oggetto per la stessa entità.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Identifica la classe per la quale esiste l'autorizzazione.<br /><br /> 0 = Database<br />1 = Oggetto o colonna<br />3 = Schema<br />4 = Entità di database<br />5 = assembly - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />6 = Tipo<br />10 = raccolta di XML Schema: <br />                      **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />15 = tipo di messaggio - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />16 = contratto di servizio - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />17 = Service - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />18 = associazione al servizio remoto - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />19 = route - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />23 = catalogo full-Text - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />24 = chiave simmetrica - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />25 = certificato - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />26 = chiave asimmetrica - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**class**|**tinyint**|Identifica la classe per la quale esiste l'autorizzazione.<br /><br /> 0 = Database<br />1 = Oggetto o colonna<br />3 = Schema<br />4 = Entità di database<br />5 = assembly - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />6 = Tipo<br />10 = raccolta di XML Schema: <br />                      **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />15 = tipo di messaggio - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />16 = contratto di servizio - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />17 = Service - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />18 = associazione al servizio remoto - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />19 = route - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />23 = catalogo full-Text - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />24 = chiave simmetrica - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />25 = - certificate **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />26 = chiave asimmetrica - **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**class_desc**|**nvarchar(60)**|Descrizione della classe per cui esiste l'autorizzazione.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
-|**major_id**|**int**|ID dell'elemento per cui esiste l'autorizzazione, interpretato in base alla classe di appartenenza. In genere, il **major_id** è semplicemente dell'ID che si applica a ciò che rappresenta la classe. <br /><br /> 0 = il database <br /><br /> > 0 = ID oggetto per gli oggetti utente <br /><br /> \<0 = ID oggetto per gli oggetti di sistema |  
-|**minor_id**|**int**|ID secondario dell'elemento per cui esiste l'autorizzazione, interpretato in base alla classe di appartenenza. Spesso, il **major_id** è zero, perché non è disponibile per la classe dell'oggetto non subcategory. In caso contrario, è l'ID di colonna di una tabella.|  
+|**major_id**|**int**|ID dell'elemento per cui esiste l'autorizzazione, interpretato in base alla classe di appartenenza. In genere, il **major_id** tratta semplicemente dell'ID che si applica a ciò che rappresenta la classe. <br /><br /> 0 = il database stesso <br /><br /> > 0 = l'ID oggetto per gli oggetti utente <br /><br /> \<0 = l'ID oggetto per gli oggetti di sistema |  
+|**minor_id**|**int**|ID secondario dell'elemento per cui esiste l'autorizzazione, interpretato in base alla classe di appartenenza. Spesso, il **major_id** è zero, perché non è disponibile per la classe dell'oggetto non subcategory. In caso contrario, è l'ID colonna di una tabella.|  
 |**grantee_principal_id**|**int**|ID dell'entità di database alla quale vengono concesse le autorizzazioni.|  
 |**grantor_principal_id**|**int**|ID dell'entità di database dell'utente che concede queste autorizzazioni.|  
 |**type**|**Char(4)**|Tipo di autorizzazione per il database Per un elenco dei tipi di autorizzazioni, vedere la tabella seguente.|  
@@ -54,7 +54,7 @@ ms.locfileid: "33182447"
 |**state_desc**|**nvarchar(60)**|Descrizione dello stato dell'autorizzazione:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>Autorizzazioni per il database   
-Sono possibili i seguenti tipi di autorizzazioni.
+I tipi di autorizzazioni seguenti sono possibili.
   
 |Tipo di autorizzazione|Nome dell'autorizzazione|Entità a protezione diretta a cui si applica|  
 |---------------------|---------------------|--------------------------|  
@@ -114,7 +114,7 @@ Sono possibili i seguenti tipi di autorizzazioni.
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
-|DL|DELETE|DATABASE, OBJECT, SCHEMA|  
+|DL|Elimina|DATABASE, OBJECT, SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
 |EX|EXECUTE|ASSEMBLY, DATABASE, OBJECT, SCHEMA, TYPE, XML SCHEMA COLLECTION|  
 |IM|IMPERSONATE|Utente|  
@@ -133,7 +133,7 @@ Sono possibili i seguenti tipi di autorizzazioni.
 |VWCT|VIEW CHANGE TRACKING|TABLE, SCHEMA|  
 |VWDS|VIEW DATABASE STATE|DATABASE|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Qualsiasi utente può visualizzare le proprie autorizzazioni. Per visualizzare le autorizzazioni di altri utenti, è richiesta VIEW DEFINITION, ALTER ANY USER o qualsiasi autorizzazione per un utente. Per visualizzare i ruoli definiti dall'utente, è richiesta l'autorizzazione ALTER ANY ROLE o l'appartenenza al ruolo (ad esempio pubblico).  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

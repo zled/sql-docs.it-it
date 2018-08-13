@@ -20,13 +20,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d589c5c5be33af5cd3f6d3a2f7946bed984e653f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e840e39570bd0bacb24903435675aa640d06fd68
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416011"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532761"
 ---
 # <a name="rowsets"></a>Set di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,23 +34,23 @@ ms.locfileid: "37416011"
 
   Le righe di un set di righe contengono colonne di dati. I set di righe sono oggetti centrali che consentono a tutti i provider di dati OLE DB di esporre dati di set di risultati in formato tabulare.  
   
- Dopo che un utente crea una sessione utilizzando il **IDBCreateSession:: CreateSession** metodo, il consumer può utilizzare l'il **IOpenRowset** oppure **IDBCreateCommand** interfaccia nella sessione per creare un set di righe. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta entrambe le interfacce. Di seguito sono descritti i due metodi.  
+ Dopo aver creato una sessione mediante il metodo **IDBCreateSession::CreateSession**, il consumer può usare l'interfaccia **IOpenRowset** o **IDBCreateCommand** nella sessione per creare un set di righe. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta entrambe le interfacce. Di seguito sono descritti i due metodi.  
   
--   Creare un set di righe chiamando il **IOpenRowset:: OPENROWSET** (metodo).  
+-   Creare un set di righe chiamando il metodo **IOpenRowset::OpenRowset**.  
   
-     Questo metodo equivale a chiamare un set di righe in una singola tabella e consente di aprire e restituire un set di righe che include tutte le righe di una singola tabella di base. Uno degli argomenti per **OpenRowset** è un ID di tabella che identifica la tabella da cui creare il set di righe.  
+     Questo metodo equivale a chiamare un set di righe in una singola tabella e consente di aprire e restituire un set di righe che include tutte le righe di una singola tabella di base. Uno degli argomenti di **OpenRowset** è un ID di tabella che identifica la tabella dalla quale creare il set di righe.  
   
--   Creare un oggetto comando chiamando il **IDBCreateCommand** (metodo).  
+-   Creare un oggetto comando chiamando il metodo **IDBCreateCommand::CreateCommand**.  
   
      L'oggetto comando esegue comandi supportati dal provider. Con il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, il consumer può specificare qualsiasi istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio un'istruzione SELECT o una chiamata a una stored procedure. Di seguito sono elencati i passaggi per la creazione di un set di righe tramite un oggetto comando:  
   
-    1.  Il consumer chiama il **IDBCreateCommand** metodo nella sessione per ottenere un oggetto comando che richieda il **ICommandText** interfaccia sull'oggetto del comando. Ciò **ICommandText** interfaccia imposta e recupera il testo del comando effettivo. Il consumer inserisce il comando di testo chiamando il **ICommandText:: SetCommandText** (metodo).  
+    1.  Il consumer chiama il metodo **IDBCreateCommand::CreateCommand** nella sessione per ottenere un oggetto comando che richieda l'interfaccia **ICommandText** sull'oggetto stesso. Questa interfaccia **ICommandText** imposta e recupera il testo del comando effettivo. Il consumer inserisce il comando di testo chiamando il metodo **ICommandText::SetCommandText**.  
   
-    2.  L'utente chiama il **ICommand:: Execute** metodo sul comando. L'oggetto set di righe compilato durante l'esecuzione del comando contiene il set di risultati restituito dal comando.  
+    2.  L'utente chiama il metodo **ICommand::Execute** sul comando. L'oggetto set di righe compilato durante l'esecuzione del comando contiene il set di risultati restituito dal comando.  
   
- Il consumer può utilizzare il **ICommandProperties** interfaccia da ottenere o impostare le proprietà per il set di righe restituito dal comando eseguito dalle **ICommand:: Execute** interfacce. Le proprietà generalmente più richieste sono le interfacce che il set di righe deve supportare. Oltre alle interfacce, il consumer può richiedere proprietà che modificano il comportamento del set di righe o dell'interfaccia.  
+ Nel consumer è possibile usare l'interfaccia **ICommandProperties** per ottenere o impostare le proprietà per il set di righe restituito dal comando eseguito dalle interfacce **ICommand::Execute**. Le proprietà generalmente più richieste sono le interfacce che il set di righe deve supportare. Oltre alle interfacce, il consumer può richiedere proprietà che modificano il comportamento del set di righe o dell'interfaccia.  
   
- I consumer rilasciano set di righe con la **IRowset:: Release** (metodo). Il rilascio di un set di righe comporta anche il rilascio di tutti gli handle di riga gestiti dal consumer per tale set di righe, ma non comporta il rilascio delle funzioni di accesso. Se si dispone di un **IAccessor** interfaccia, anche questa deve essere rilasciato.  
+ I consumer rilasciano set di righe con il metodo **IRowset::Release**. Il rilascio di un set di righe comporta anche il rilascio di tutti gli handle di riga gestiti dal consumer per tale set di righe, ma non comporta il rilascio delle funzioni di accesso. Se si ha un'interfaccia **IAccessor**, questa deve essere comunque rilasciata.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   

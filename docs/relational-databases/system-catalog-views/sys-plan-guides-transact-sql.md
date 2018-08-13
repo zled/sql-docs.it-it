@@ -1,5 +1,5 @@
 ---
-title: plan_guides (Transact-SQL) | Documenti Microsoft
+title: Sys. plan_guides (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4309a55a8c0b631cd1e5f49d6601bfba30245178
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6faaeea0bfc19594bd2131c4b40bdf270e4f6d8d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180706"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548391"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "33180706"
 |**scope_object_id**|**Int**|object_id dell'oggetto che definisce l'ambito della guida di piano, se l'ambito è OBJECT.<br /><br /> NULL se la guida di piano non è definita a livello di ambito di OBJECT.|  
 |**scope_batch**|**nvarchar(max)**|Testo batch, se **scope_type** è SQL.<br /><br /> NULL se il tipo di batch non è SQL.<br /><br /> Se è NULL e **scope_type** è SQL, il valore di **query_text** si applica.|  
 |**parameters**|**nvarchar(max)**|Stringa che definisce l'elenco dei parametri associati alla guida di piano.<br /><br /> NULL = Nessun elenco di parametri è associato alla guida di piano.|  
-|**suggerimenti**|**nvarchar(max)**|Hint della clausola OPTION associati alla guida di piano.|  
+|**hint**|**nvarchar(max)**|Hint della clausola OPTION associati alla guida di piano.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

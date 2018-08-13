@@ -1,5 +1,5 @@
 ---
-title: Sys. CHECK_CONSTRAINTS (Transact-SQL) | Documenti Microsoft
+title: Sys. CHECK_CONSTRAINTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4d223f9ffea455c995890bbac9758d7a24d71f67
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 00eb70eb52bad5466a466395b4e30bfc91a224e9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180297"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533181"
 ---
 # <a name="syscheckconstraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni oggetto che rappresenta un vincolo CHECK, con **sys** = "C".  
+  Contiene una riga per ogni oggetto che rappresenta un vincolo CHECK, con **sys.objects.type** = 'c'.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "33180297"
 |**uses_database_collation**|**bit**|1 = La corretta valutazione della definizione del vincolo dipende dalle regole di confronto predefinite del database; altrimenti, 0. Tale dipendenza impedisce la modifica delle regole di confronto predefinite del database.|  
 |**is_system_named**|**bit**|1 = Il nome è stato generato dal sistema.<br /><br /> 0 = Nome specificato dall'utente.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

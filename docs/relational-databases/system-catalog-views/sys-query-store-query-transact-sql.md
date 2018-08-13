@@ -1,5 +1,5 @@
 ---
-title: Sys. query_store_query (Transact-SQL) | Microsoft Docs
+title: Sys. query_store_query (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d9d53bc6cd0219502698ba8a02b6ba19eaf5f34f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 082be82ea40c05f50bffb4f3904c0c6be586d473
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985187"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547981"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>Sys. query_store_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "37985187"
 |**max_compile_memory_kb**|**bigint**|Compilare le statistiche di memoria.|  
 |**is_clouddb_internal_query**|**bit**|Sempre 0 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in locale.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede la **VIEW DATABASE STATE** l'autorizzazione.  
   
 ## <a name="see-also"></a>Vedere anche  

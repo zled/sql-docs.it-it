@@ -23,13 +23,13 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21b22b837cc4e46bdd5169b0c669e7dde74c029c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5bc68b376f5524324756715497c00094eb2ed101
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465157"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557141"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,27 +74,27 @@ Identifica in modo univoco un piano di query per un batch memorizzato nella cach
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|ID del database.<br /><br /> Per istruzioni SQL ad hoc e preparate, l'ID del database in cui sono state compilate le istruzioni.|  
 |**objectid**|**int**|ID dell'oggetto.<br /><br /> Per istruzioni SQL ad hoc e preparate viene restituito NULL.|  
-|**number**|**smallint**|Per una stored procedure numerata, questa colonna restituisce il numero della stored procedure. Per altre informazioni, vedere [numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Per istruzioni SQL ad hoc e preparate viene restituito NULL.|  
+|**Numero**|**smallint**|Per una stored procedure numerata, questa colonna restituisce il numero della stored procedure. Per altre informazioni, vedere [numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Per istruzioni SQL ad hoc e preparate viene restituito NULL.|  
 |**Crittografato**|**bit**|1 = Il testo SQL è crittografato.<br /><br /> 0 = Il testo SQL non è crittografato.|  
 |**text**|**nvarchar (max** **)**|Testo della query SQL.<br /><br /> Per gli oggetti crittografati viene restituito NULL.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione `VIEW SERVER STATE` per il server.  
   
-## <a name="remarks"></a>Osservazioni  
-Per le query ad hoc, gli handle SQL sono valori basati sul testo SQL venga inviato al server e possono provenire da qualsiasi database. 
+## <a name="remarks"></a>Note  
+Per le query ad hoc, gli handle SQL sono valori basati sul testo SQL inviato al server e possono provenire da qualsiasi database. 
 
 Per alcuni oggetti di database, ad esempio stored procedure, trigger o funzioni, gli handle SQL sono derivati dall'ID di database e dall'ID e dal numero dell'oggetto. 
 
 Handle del piano è un valore hash derivato dal piano compilato dell'intero batch. 
 
 > [!NOTE]
-> **DBID** non può essere determinato dalle *sql_handle* query ad hoc. Per determinare **dbid** query ad hoc, utilizzare *plan_handle* invece.
+> **DBID** non può essere determinato dalle *sql_handle* query ad hoc. Per determinare **dbid** query ad hoc, usare *plan_handle* invece.
   
 ## <a name="examples"></a>Esempi 
 
 ### <a name="a-conceptual-example"></a>A. Esempio concettuale
-Di seguito è riportato un esempio di base per illustrare il passaggio di un **sql_handle** direttamente o mediante **CROSS APPLY**.
+Di seguito è riportato un esempio di base per illustrare il passaggio di un **sql_handle** direttamente o con **CROSS APPLY**.
   1.  Creare attività.  
 Eseguire T-SQL seguente in una nuova finestra query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
       ```sql
@@ -106,8 +106,8 @@ Eseguire T-SQL seguente in una nuova finestra query in [!INCLUDE[ssManStudioFull
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  Utilizzando **CROSS APPLY**.  
-    Il valore di sql_handle da **Sys.dm exec_requests** verranno passate al **Sys.dm exec_sql_text** utilizzando **CROSS APPLY**. Aprire una nuova finestra query e passare il valore di spid identificato nel passaggio 1. In questo esempio il valore di spid possono essere `59`.
+    2.  Usando **CROSS APPLY**.  
+    Il valore sql_handle restituito da **exec_requests** verranno passati al **DM exec_sql_text** usando **CROSS APPLY**. Aprire una nuova finestra query e passare il valore di spid identificati nel passaggio 1. In questo esempio il valore di spid non dovesse essere `59`.
 
         ```sql
         SELECT t.*
@@ -116,8 +116,8 @@ Eseguire T-SQL seguente in una nuova finestra query in [!INCLUDE[ssManStudioFull
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-    2.  Il passaggio di **sql_handle** direttamente.  
-Acquisire il **sql_handle** da **Sys.dm exec_requests**. Quindi, passare il **sql_handle** direttamente a **Sys.dm exec_sql_text**. Aprire una nuova finestra query e passare il valore di spid identificato nel passaggio 1 per **Sys.dm exec_requests**. In questo esempio il valore di spid possono essere `59`. Quindi passare l'oggetto restituito **sql_handle** come argomento di **Sys.dm exec_sql_text**.
+    2.  Il passaggio **sql_handle** direttamente.  
+Acquisire le **sql_handle** dalla **exec_requests**. Passare quindi il **sql_handle** direttamente **DM exec_sql_text**. Aprire una nuova finestra query e passare il valore di spid identificati nel passaggio 1 per **exec_requests**. In questo esempio il valore di spid non dovesse essere `59`. Quindi passare l'oggetto restituito **sql_handle** come argomento al **DM exec_sql_text**.
 
         ```sql
         -- acquire sql_handle
@@ -143,7 +143,7 @@ CROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) AS st
 ORDER BY total_worker_time/execution_count DESC;  
 ```  
   
-### <a name="c-provide-batch-execution-statistics"></a>C. Le statistiche di esecuzione dei batch  
+### <a name="c-provide-batch-execution-statistics"></a>C. Fornisce statistiche di esecuzione batch  
  Nell'esempio seguente viene restituito il testo delle query SQL eseguite in batch e vengono visualizzate le relative informazioni statistiche.  
   
 ```sql  

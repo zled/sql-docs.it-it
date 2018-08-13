@@ -1,5 +1,5 @@
 ---
-title: Data e ora e i set di righe dello Schema | Documenti Microsoft
+title: Data e ora e i set di righe dello Schema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b20e21597cff194297160a549b08d6d745fbedc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6ea1b277300ec232a3b71abc01f6b02872983906
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947456"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555731"
 ---
-# <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadati - set di righe dello Schema di data e ora
+# <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadati - Set di righe dello schema e di data e ora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -36,10 +36,10 @@ ms.locfileid: "32947456"
   
 |Tipo di colonna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|data|DBTYPE_DBDATE|Clear|0|  
+|Data|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|Impostare|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
-|datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
+|DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Impostare|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Impostare|0..7|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "32947456"
   
  In COLUMN_FLAGS è disponibile un nuovo flag DBCOLUMNFLAGS_SS_ISVARIABLESCALE che consente di determinare il tipo di server delle colonne nelle applicazioni, dove DATA_TYPE è DBTYPE_DBTIMESTAMP. Per identificare il tipo di server è necessario utilizzare anche DATETIME_PRECISION.  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE è valido solo se connesso a un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] server o versione successiva. DBCOLUMNFLAGS_SS_ISFIXEDSCALE non è definito quando si è connessi a server legacy.  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE è valido solo quando si è connessi a un server [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versioni successive). DBCOLUMNFLAGS_SS_ISFIXEDSCALE non è definito quando si è connessi a server legacy.  
   
 ## <a name="procedureparameters-rowset"></a>Set di righe PROCEDURE_PARAMETERS  
  DATA_TYPE contiene gli stessi valori del set di righe dello schema COLUMNS e TYPE_NAME contiene il tipo di server.  
@@ -73,9 +73,9 @@ ms.locfileid: "32947456"
 ## <a name="providertypes-rowset"></a>Set di righe PROVIDER_TYPES  
  Per i tipi di data/ora vengono restituite le righe seguenti:  
   
-|Type -><br /><br /> Colonna|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Type -><br /><br /> colonna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
@@ -87,7 +87,7 @@ ms.locfileid: "32947456"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -100,6 +100,6 @@ ms.locfileid: "32947456"
  Poiché OLE DB definisce solo MINIMUM_SCALE e MAXIMUM_SCALE per i tipi numerici e decimali, l'utilizzo da parte di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client di queste colonne per time, datetime2 e datetimeoffset è di tipo non standard.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I metadati &#40;OLE DB&#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [Metadati &#40;OLE DB&#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

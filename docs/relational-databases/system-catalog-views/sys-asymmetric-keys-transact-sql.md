@@ -1,5 +1,5 @@
 ---
-title: asymmetric_keys (Transact-SQL) | Documenti Microsoft
+title: asymmetric_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e9ca85339f648d7081c14157dc531e38447a682e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 094827a645440b2503adbc413042ec99de44adb2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181827"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553611"
 ---
 # <a name="sysasymmetrickeys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "33181827"
 |**pvt_key_encryption_type**|**char(2)**|Tipo di crittografia utilizzata per la chiave.<br /><br /> NA = Chiave non crittografata<br /><br /> MK = La chiave è crittografata tramite la chiave master<br /><br /> PW = La chiave è crittografata tramite una password definita dall'utente<br /><br /> SK = La chiave è crittografata tramite la chiave master del servizio|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Descrizione della modalità di crittografia utilizzata per la chiave privata.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**Identificazione personale**|**varbinary(32)**|Hash SHA-1 della chiave. L'hash è univoco a livello globale.|  
-|**Algoritmo**|**char(2)**|Algoritmo utilizzato con la chiave.<br /><br /> 1R = RSA a 512 bit<br /><br /> 2R = RSA a 1024 bit<br /><br /> 3R = RSA a 2048 bit|  
+|**algoritmo**|**char(2)**|Algoritmo utilizzato con la chiave.<br /><br /> 1R = RSA a 512 bit<br /><br /> 2R = RSA a 1024 bit<br /><br /> 3R = RSA a 2048 bit|  
 |**algorithm_desc**|**nvarchar(60)**|Descrizione dell'algoritmo utilizzato con la chiave.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**lunghezza_chiave**|**int**|Lunghezza in bit della chiave.|  
 |**sid**|**varbinary(85)**|SID dell'account di accesso della chiave. Per le chiavi EKM questo valore è NULL.|  
@@ -56,7 +56,7 @@ ms.locfileid: "33181827"
 |**cryptographic_provider_guid**|**uniqueidentifier**|GUID del provider del servizio di crittografia. Per le chiavi non EKM questo valore è NULL.|  
 |**cryptographic_provider_algid**|**sql_variant**|ID dell'algoritmo del provider del servizio di crittografia. Per le chiavi non EKM questo valore è NULL.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

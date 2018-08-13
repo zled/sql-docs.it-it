@@ -1,5 +1,5 @@
 ---
-title: all_objects (Transact-SQL) | Documenti Microsoft
+title: all_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bc5aef0a9a816ba6a500587e46a3f7b2e1b6cda3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ab10ab7fa14f8b5e888536a94553b6a1e3db61e2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181117"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552821"
 ---
 # <a name="sysallobjects-transact-sql"></a>sys.all_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33181117"
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Nome dell'oggetto.|  
+|NAME|**sysname**|Nome dell'oggetto.|  
 |object_id|**int**|Numero di identificazione dell'oggetto. Valore univoco all'interno di un database.|  
 |principal_id|**int**|ID del singolo proprietario se diverso dal proprietario dello schema. Per impostazione predefinita, gli oggetti contenuti nello schema appartengono al proprietario dello schema stesso. È tuttavia possibile specificare un altro proprietario tramite l'istruzione ALTER AUTHORIZATION per modificare la proprietà.<br /><br /> NULL se non esiste alcun proprietario alternativo.<br /><br /> È NULL se il tipo di oggetto è uno dei seguenti:<br /><br /> C = vincolo CHECK<br /><br /> D = DEFAULT (vincolo o valore autonomo)<br /><br /> F = vincolo FOREIGN KEY<br /><br /> PK = vincolo PRIMARY KEY<br /><br /> R = regola (tipo obsoleto, autonoma)<br /><br /> TA = Trigger di assembly (CLR)<br /><br /> TR = trigger SQL<br /><br /> UQ = vincolo UNIQUE|  
 |schema_id|**int**|ID dello schema che include l'oggetto.<br /><br /> Per tutti gli oggetti di sistema definiti a livello di ambito dello schema inclusi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questo valore è sempre incluso in (schema_id('sys'), schema_id('INFORMATION_SCHEMA')).|  
@@ -52,7 +52,7 @@ ms.locfileid: "33181117"
 |is_published|**bit**|L'oggetto viene pubblicato.|  
 |is_schema_published|**bit**|Viene pubblicato solo lo schema dell'oggetto.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

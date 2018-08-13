@@ -1,5 +1,5 @@
 ---
-title: COLONNE (Transact-SQL) | Documenti Microsoft
+title: Le colonne (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54467131c2360d961421dd90b43024febbf06883
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8294d3cabda817f68999fc80de45171b09451d4e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238901"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536191"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33238901"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificatore della tabella.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> **\*\* Importante \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> **\*\* Importanti \* \* ** non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nome della tabella.|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|Nome colonna.|  
 |**ORDINAL_POSITION**|**int**|Numero di identificazione della colonna.|  
@@ -52,19 +52,19 @@ ms.locfileid: "33238901"
 |**NUMERIC_PRECISION**|**tinyint**|Precisione dei dati numerici approssimati, dei dati numerici esatti, dei dati integer o dei dati in valuta. Per gli altri tipi di dati viene restituito NULL.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base di precisione dei dati numerici approssimati, dei dati numerici esatti, dei dati integer o dei dati in valuta. Per gli altri tipi di dati viene restituito NULL.|  
 |**NUMERIC_SCALE**|**int**|Scala dei dati numerici approssimati, dei dati numerici esatti, dei dati integer o dei dati in valuta. Per gli altri tipi di dati viene restituito NULL.|  
-|**DATETIME_PRECISION**|**smallint**|Codice di sottotipo per **datetime** e ISO **intervallo** tipi di dati. Per gli altri tipi di dati viene restituito NULL.|  
-|**CHARACTER_SET_CATALOG**|**nvarchar (** 128 **)**|Restituisce **master**. Indica il database in cui si trova, il set di caratteri se la colonna è di tipo carattere o **testo** tipo di dati. Per gli altri tipi di dati viene restituito NULL.|  
+|**DATETIME_PRECISION**|**smallint**|Codice di sottotipo per **data/ora** e ISO **intervallo** i tipi di dati. Per gli altri tipi di dati viene restituito NULL.|  
+|**CHARACTER_SET_CATALOG**|**nvarchar (** 128 **)**|Restituisce **master**. Indica il database in cui è disponibile, il set di caratteri se la colonna è di tipo carattere o **testo** tipo di dati. Per gli altri tipi di dati viene restituito NULL.|  
 |**CHARACTER_SET_SCHEMA**|**nvarchar (** 128 **)**|Viene restituito sempre NULL.|  
-|**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|Restituisce il nome univoco per il carattere impostato se questa colonna è di tipo carattere o **testo** tipo di dati. Per gli altri tipi di dati viene restituito NULL.|  
+|**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|Restituisce il nome univoco per il set di caratteri se questa colonna è di tipo carattere o **testo** tipo di dati. Per gli altri tipi di dati viene restituito NULL.|  
 |**COLLATION_CATALOG**|**nvarchar (** 128 **)**|Viene restituito sempre NULL.|  
 |**COLLATION_SCHEMA**|**nvarchar (** 128 **)**|Viene restituito sempre NULL.|  
-|**COLLATION_NAME**|**nvarchar (** 128 **)**|Restituisce il nome univoco per le regole di confronto, se la colonna è di tipo carattere o **testo** tipo di dati. Per gli altri tipi di dati viene restituito NULL.|  
+|**COLLATION_NAME**|**nvarchar (** 128 **)**|Restituisce il nome univoco per le regole di confronto se la colonna è di tipo carattere o **testo** tipo di dati. Per gli altri tipi di dati viene restituito NULL.|  
 |**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Restituisce il nome del database in cui è stato creato il tipo di dati definito dall'utente se la colonna contiene un tipo di dati alias. Per gli altri tipi di dati viene restituito NULL.|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Restituisce il nome dello schema del tipo di dati definito dall'utente se la colonna contiene un tipo di dati definito dall'utente. Per gli altri tipi di dati viene restituito NULL.<br /><br /> **\*\* Importante \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un tipo di dati. L'unica modalità affidabile per cercare lo schema di un tipo consiste nell'utilizzare la funzione TYPEPROPERTY.|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Restituisce il nome dello schema del tipo di dati definito dall'utente se la colonna contiene un tipo di dati definito dall'utente. Per gli altri tipi di dati viene restituito NULL.<br /><br /> **\*\* Importanti \* \* ** non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un tipo di dati. L'unica modalità affidabile per cercare lo schema di un tipo consiste nell'utilizzare la funzione TYPEPROPERTY.|  
 |**NOME_DOMINIO**|**nvarchar (** 128 **)**|Restituisce il nome del tipo di dati definito dall'utente se la colonna contiene un tipo di dati definito dall'utente. Per gli altri tipi di dati viene restituito NULL.|  
   
-## <a name="remarks"></a>Osservazioni  
- Il **ORDINAL_POSITION** colonna il **INFORMATION_SCHEMA. COLONNE** vista non è compatibile con lo schema di bit delle colonne restituite dalla funzione COLUMNS_UPDATED. Per ottenere uno schema di bit compatibile con COLUMNS_UPDATED, è necessario fare riferimento il **ColumnID** proprietà della funzione di sistema COLUMNPROPERTY quando esegue una query di **INFORMATION_SCHEMA. COLONNE** visualizzazione. Esempio:  
+## <a name="remarks"></a>Note  
+ Il **ORDINAL_POSITION** colonna il **INFORMATION_SCHEMA. COLONNE** vista non è compatibile con lo schema di bit delle colonne restituite dalla funzione COLUMNS_UPDATED. Per ottenere uno schema di bit compatibile con COLUMNS_UPDATED, è necessario fare riferimento il **ColumnID** proprietà di funzione di sistema COLUMNPROPERTY quando esegue una query di **INFORMATION_SCHEMA. COLONNE** visualizzazione. Esempio:  
   
 ```  
 USE AdventureWorks2012;  

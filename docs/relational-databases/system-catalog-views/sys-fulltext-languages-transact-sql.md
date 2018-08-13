@@ -1,5 +1,5 @@
 ---
-title: Sys. fulltext_languages (Transact-SQL) | Documenti Microsoft
+title: Sys. fulltext_languages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,28 +25,28 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dabc9334091b5b545c78b069b3e9f31a5a68a1bd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b137d433f06eddcd57bc01bb2b26900c3fdd3483
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182057"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535211"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  In questa vista del catalogo è contenuta una riga per ogni lingua i cui word breaker sono registrati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni riga è visualizzato l'identificatore LCID e il nome della lingua. Quando si registrano i word breaker per una lingua, le altre risorse linguistiche, ovvero stemmer, parole non significative e file del thesaurus, risultano disponibili per le operazioni di indicizzazione/query full-text. Il valore di **nome** o **lcid** può essere specificato nella query full-text e dell'indice full-text [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni.  
+  In questa vista del catalogo è contenuta una riga per ogni lingua i cui word breaker sono registrati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni riga è visualizzato l'identificatore LCID e il nome della lingua. Quando si registrano i word breaker per una lingua, le altre risorse linguistiche, ovvero stemmer, parole non significative e file del thesaurus, risultano disponibili per le operazioni di indicizzazione/query full-text. Il valore di **name** oppure **lcid** può essere specificato nella query full-text e dell'indice full-text [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni.  
    
-|Colonna|Tipo di dati|Description|  
+|colonna|Tipo di dati|Description|  
 |------------|---------------|-----------------|  
-|**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Identificatore delle impostazioni locali (LCID) di Windows per la lingua.|  
-|**name**|**sysname**|È il valore dell'alias in [Sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondente al valore di **lcid** o rappresentazione di stringa dell'identificatore LCID numerico.|  
+|**LCID**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Identificatore delle impostazioni locali (LCID) di Windows per la lingua.|  
+|**name**|**sysname**|È il valore dell'alias in [Sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondente al valore di **lcid** o la rappresentazione di stringa dell'identificatore LCID numerico.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valori restituiti per le lingue predefinite  
  Nella tabella seguente sono mostrati i valori per le lingue i cui word breaker sono registrati per impostazione predefinita.  
   
-|Lingua|LCID|  
+|Linguaggio|LCID|  
 |--------------|----------|  
 |Arabo|1025|  
 |Bengali (India)|1093|  
@@ -54,7 +54,7 @@ ms.locfileid: "33182057"
 |Bulgaro|1026|  
 |Catalano|1027|  
 |Cinese (RAS di Hong Kong, Repubblica popolare cinese)|3076|  
-|Cinese (Macao - R.A.S.)|5124|  
+|Cinese (RAS di Macao)|5124|  
 |Cinese (Singapore)|4100|  
 |Croato|1050|  
 |Ceco|1029|  
@@ -84,7 +84,7 @@ ms.locfileid: "33182057"
 |Portoghese (Brasile)|1046|  
 |Portoghese (Portogallo)|2070|  
 |Punjabi|1094|  
-|Romeno|1048|  
+|Rumeno|1048|  
 |Russo|1049|  
 |Serbo (alfabeto cirillico)|3098|  
 |Serbo (alfabeto latino)|2074|  
@@ -102,10 +102,10 @@ ms.locfileid: "33182057"
 |Urdu|1056|  
 |Vietnamita|1066|  
   
-## <a name="remarks"></a>Osservazioni  
- Per aggiornare l'elenco di lingue registrate con la ricerca full-text, utilizzare [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'.  
+## <a name="remarks"></a>Note  
+ Per aggiornare l'elenco di lingue registrate con la ricerca full-text, usare [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -113,7 +113,7 @@ ms.locfileid: "33182057"
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Configurazione e gestione di word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurare e gestire i file del Thesaurus per la ricerca Full-Text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Configurare e gestire parole non significative ed elenchi per la ricerca Full-Text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
+ [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Aggiornare la ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

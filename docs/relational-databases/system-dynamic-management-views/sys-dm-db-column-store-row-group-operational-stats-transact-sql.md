@@ -16,13 +16,13 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 655f5838456fd72566405c453cecfd8858d7d6dd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6872055c103d83dbf72d3cda3105d0197bb5a93b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38048829"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544541"
 ---
 # <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "38048829"
 |**rowgroup_lock_wait_count**|**bigint**|Numero cumulativo di volte in cui il motore di database ha atteso il rowgroup blocco dopo l'ultimo riavvio SQL.|  
 |**rowgroup_lock_wait_in_ms**|**bigint**|Numero cumulativo di millisecondi il motore di database ha atteso il rowgroup blocco dopo l'ultimo riavvio SQL.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Sono richieste le autorizzazioni seguenti:  
   
 -   Autorizzazione CONTROL per la tabella specificata da object_id.  

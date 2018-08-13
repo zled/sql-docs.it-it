@@ -1,5 +1,5 @@
 ---
-title: Tipi CLR definiti dall'utente | Microsoft Docs
+title: Tipi CLR definiti dall'utente | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -35,16 +35,16 @@ caps.latest.revision: 67
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 71f1417b1fd54226be6d2bfe001e3e3f95b6ceff
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7d78c002d25d5804230ce53be05d809489d26b77
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353983"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008873"
 ---
 # <a name="clr-user-defined-types"></a>Tipi CLR definiti dall'utente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di creare oggetti di database programmati in un assembly creato in Common Language Runtime (CLR) di .NET Framework. Tra gli oggetti di database che consentono l'utilizzo del ricco modello di programmazione offerto da CLR vi sono trigger, stored procedure, funzioni, funzioni di aggregazione e tipi.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre la possibilità di creare oggetti di database programmati in un assembly creato in common language runtime (CLR) di .NET Framework. Tra gli oggetti di database che consentono l'utilizzo del ricco modello di programmazione offerto da CLR vi sono trigger, stored procedure, funzioni, funzioni di aggregazione e tipi.  
   
 > [!NOTE]  
 >  Per impostazione predefinita, l'esecuzione di codice CLR in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disattivata. CLR può essere abilitato usando il **sp_configure** stored procedure di sistema.  

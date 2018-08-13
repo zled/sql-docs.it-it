@@ -1,5 +1,5 @@
 ---
-title: Sys. syslanguages (Transact-SQL) | Documenti Microsoft
+title: Sys. syslanguages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4c879ed679052a14d420211c5977d2152d5ccb8f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c927af11c853a2cd2ff94049f4eb99de3c5e10f7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222072"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556391"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "33222072"
 |dateformat|**nchar(3)**|Formato di data, ad esempio DMY.|  
 |datefirst|**tinyint**|Primo giorno della settimana: 1 per lunedì, 2 per martedì e così via fino a 7 per domenica.|  
 |aggiornamento|**int**|Riservato per l'utilizzo nel sistema.|  
-|name|**sysname**|Nome di lingua ufficiale, ad esempio Français.|  
+|NAME|**sysname**|Nome di lingua ufficiale, ad esempio, francese.|  
 |alias|**sysname**|Nome di lingua alternativo, ad esempio Francese.|  
 |months|**nvarchar(372)**|Elenco delimitato da virgole dei nomi completi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 20 caratteri.|  
 |shortmonths|**nvarchar(132)**|Elenco delimitato da virgole dei nomi brevi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 9 caratteri.|  
@@ -71,7 +71,7 @@ ms.locfileid: "33222072"
 |Ceco|1029|1029|  
 |Ungherese|1038|1038|  
 |Polacco|1045|1045|  
-|Romeno|1048|1048|  
+|Rumeno|1048|1048|  
 |Croato|1050|1050|  
 |Slovacco|1051|1051|  
 |Sloveno|1060|1060|  

@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di file modello tramite la proprietà CommandText | Documenti Microsoft
+title: Esecuzione di file modello tramite la proprietà CommandText | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d96e75c3cd077b6985d76994cef35cb0b9dc7853
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5a6079aa56a74b85eddb9b9fa1135be008015cce
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619498"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563985"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Esecuzione di file modello mediante la proprietà CommandText
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Questo esempio viene illustrato come specificare i file modello costituiti da query SQL o XPath mediante la CommandTextproperty. Anziché specificare query SQL o XPath come valore di CommandText, è possibile specificare un nome di file come valore. Nell'esempio seguente, la proprietà CommandType è specificata come SqlXmlCommandType.TemplateFile.  
+  Questo esempio viene illustrato come specificare i file modello costituiti da query SQL o XPath mediante la CommandTextproperty. Anziché specificare la query SQL o XPath come valore di CommandText, è possibile specificare un nome di file come valore. Nell'esempio seguente, la proprietà CommandType è specificata come SqlXmlCommandType.TemplateFile.  
   
  L'applicazione di esempio esegue questo modello:  
   

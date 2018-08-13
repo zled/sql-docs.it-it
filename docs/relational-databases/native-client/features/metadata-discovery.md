@@ -1,5 +1,5 @@
 ---
-title: Individuazione dei metadati | Microsoft Docs
+title: Individuazione dei metadati | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -11,13 +11,13 @@ ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 51421229b4d5e8799e4a3995b9aed680fdaa026a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7c362f69e1491b8a031557c9e74f6ab4b19e3d5d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423430"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546241"
 ---
 # <a name="metadata-discovery"></a>Individuazione dei metadati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "37423430"
   
 -   ICommandWithParameters:: GetParameterInfo (vedere [ICommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md) per altre informazioni)  
   
- Si noterà anche un miglioramento delle prestazioni quando si specifica il formato di metadati utilizzando IBCPSession::BCPSetBulkMode  
+ È inoltre possibile notare un miglioramento nelle prestazioni quando si specifica il formato dei metadati utilizzando IBCPSession::BCPSetBulkMode  
   
  L'individuazione dei metadati migliorata in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è possibile grazie all'aggiunta di due stored procedure in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
   

@@ -23,17 +23,18 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8dace7d8dccee89fadac0ff88fe7d1400b28b023
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cb086e85072bf3b8a4713a7b4fb81c82fcaa1b5c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548511"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce dati statistici aggregati sulle prestazioni dei trigger memorizzati nella cache. La vista contiene una riga per ogni trigger e la durata della riga è uguale al periodo in cui il trigger rimane memorizzato nella cache. Quando un trigger viene rimosso dalla cache, le righe corrispondenti vengono eliminate dalla vista. In quel momento, viene generato un evento di traccia di SQL di Performance Statistics simile a **Sys.dm exec_query_stats**.  
+  Restituisce dati statistici aggregati sulle prestazioni dei trigger memorizzati nella cache. La vista contiene una riga per ogni trigger e la durata della riga è uguale al periodo in cui il trigger rimane memorizzato nella cache. Quando un trigger viene rimosso dalla cache, le righe corrispondenti vengono eliminate dalla vista. A quel punto, viene generato un evento di traccia SQL di perfomance Statistics simile a **DM exec_query_stats**.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -41,45 +42,45 @@ ms.lasthandoff: 05/23/2018
 |**object_id**|**int**|Numero di identificazione del trigger.|  
 |**type**|**char(2)**|Tipo dell'oggetto:<br /><br /> TA = Trigger di assembly (CLR)<br /><br /> TR = trigger SQL|  
 |**Type_desc**|**nvarchar(60)**|Descrizione del tipo di oggetto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary(64)**|Può essere utilizzato per correlare le query in **Sys.dm exec_query_stats** eseguite dall'interno del trigger.|  
-|**plan_handle**|**varbinary(64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con il **Sys.dm exec_cached_plans** vista a gestione dinamica.|  
+|**sql_handle**|**varbinary(64)**|Può essere utilizzato per correlare le query nelle **DM exec_query_stats** eseguite dall'interno del trigger.|  
+|**plan_handle**|**varbinary(64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con il **DM exec_cached_plans** vista a gestione dinamica.|  
 |**cached_time**|**datetime**|Ora in cui il trigger è stato aggiunto alla cache.|  
 |**last_execution_time**|**datetime**|Ora dell'ultima esecuzione del trigger.|  
-|**execution_count**|**bigint**|Il numero di volte in cui il trigger è stato eseguito a partire dall'ultima compilazione.|  
+|**execution_count**|**bigint**|Il numero di volte in cui è stato eseguito il trigger perché ultima compilazione.|  
 |**total_worker_time**|**bigint**|La quantità totale di tempo di CPU, espresso in microsecondi, utilizzato dalle esecuzioni del trigger a partire dalla relativa compilazione.|  
 |**last_worker_time**|**bigint**|Tempo di CPU, in microsecondi, utilizzato durante l'ultima esecuzione del trigger.|  
 |**min_worker_time**|**bigint**|Tempo di CPU massimo, espresso in microsecondi, utilizzato dal trigger durante una singola esecuzione.|  
 |**max_worker_time**|**bigint**|Tempo di CPU massimo, espresso in microsecondi, utilizzato dal trigger durante una singola esecuzione.|  
 |**total_physical_reads**|**bigint**|Numero totale di letture fisiche effettuate dalle esecuzioni del trigger dopo l'ultima compilazione.|  
 |**last_physical_reads**|**bigint**|Il numero di letture fisiche eseguite l'ultima che esecuzione del trigger.|  
-|**min_physical_reads**|**bigint**|Il numero minimo di letture fisiche effettuate trigger durante una singola esecuzione.|  
-|**max_physical_reads**|**bigint**|Il numero massimo di letture fisiche effettuate trigger durante una singola esecuzione.|  
+|**min_physical_reads**|**bigint**|Il numero minimo di letture fisiche che questo trigger effettuate durante una singola esecuzione.|  
+|**max_physical_reads**|**bigint**|Il numero massimo di letture fisiche che questo trigger effettuate durante una singola esecuzione.|  
 |**total_logical_writes**|**bigint**|Numero totale di scritture logiche effettuate dalle esecuzioni del trigger dopo l'ultima compilazione.|  
 |**last_logical_writes**|**bigint**|Il numero di scritture logiche eseguite l'ultima che esecuzione del trigger.|  
-|**min_logical_writes**|**bigint**|Il numero minimo di scritture logiche effettuate trigger durante una singola esecuzione.|  
-|**max_logical_writes**|**bigint**|Il numero massimo di scritture logiche effettuate trigger durante una singola esecuzione.|  
-|**total_logical_reads**|**bigint**|Numero totale di letture logiche effettuate dalle esecuzioni del trigger dopo l'ultima compilazione.|  
+|**min_logical_writes**|**bigint**|Il numero minimo di scritture logiche questo trigger effettuate durante una singola esecuzione.|  
+|**max_logical_writes**|**bigint**|Il numero massimo di scritture logiche questo trigger effettuate durante una singola esecuzione.|  
+|**total_logical_reads**|**bigint**|Numero totale di letture logiche effettuate dalle esecuzioni del trigger a partire dalla relativa compilazione.|  
 |**last_logical_reads**|**bigint**|Il numero di letture logiche eseguite l'ultima che esecuzione del trigger.|  
-|**min_logical_reads**|**bigint**|Il numero minimo di letture logiche effettuate trigger durante una singola esecuzione.|  
-|**max_logical_reads**|**bigint**|Il numero massimo di letture logiche effettuate trigger durante una singola esecuzione.|  
-|**total_elapsed_time**|**bigint**|Tempo trascorso totale, espresso in microsecondi, per le esecuzioni complete del trigger.|  
+|**min_logical_reads**|**bigint**|Il numero minimo di letture logiche questo trigger effettuate durante una singola esecuzione.|  
+|**max_logical_reads**|**bigint**|Il numero massimo di letture logiche questo trigger effettuate durante una singola esecuzione.|  
+|**total_elapsed_time**|**bigint**|Il tempo totale trascorso, espresso in microsecondi, per le esecuzioni complete del trigger.|  
 |**last_elapsed_time**|**bigint**|Tempo trascorso, in microsecondi, per l'ultima esecuzione completata del trigger.|  
-|**min_elapsed_time**|**bigint**|Tempo minimo trascorso, in microsecondi, per qualsiasi esecuzione completata del trigger.|  
+|**min_elapsed_time**|**bigint**|Il tempo minimo trascorso, espresso in microsecondi, per qualsiasi esecuzione completata del trigger.|  
 |**max_elapsed_time**|**bigint**|Il tempo massimo trascorso, espresso in microsecondi, per qualsiasi esecuzione completata del trigger.| 
-|**total_spills**|**bigint**|Il numero totale di pagine distribuite tramite l'esecuzione del trigger dopo l'ultima compilazione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|Il numero di pagine distribuite l'ultima che esecuzione del trigger.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|Il numero minimo di pagine in cui il trigger è sempre distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|Il numero massimo di pagine in cui il trigger è sempre distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_spills**|**bigint**|Il numero totale di pagine dopo l'ultima compilazione siano stati distribuiti tramite l'esecuzione del trigger.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Il numero di pagine ha distribuito l'ultima che esecuzione del trigger.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Il numero minimo di pagine che è mai stati inseriti vuoti questo trigger durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Il numero massimo di pagine che è mai stati inseriti vuoti questo trigger durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene esclusa tramite filtro.  
 
 Le statistiche nella vista vengono aggiornate quando viene completata una query.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sui primi cinque trigger identificati in base al tempo medio trascorso.  

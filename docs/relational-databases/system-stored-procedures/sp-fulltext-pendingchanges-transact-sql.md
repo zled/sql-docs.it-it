@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_pendingchanges (Transact-SQL) | Documenti Microsoft
+title: sp_fulltext_pendingchanges (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a6defefbc225d2f8301977d5826c74597eefb2c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5519ade9d6ea17377304034e076d96e20af57409
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244122"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558101"
 ---
 # <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,16 +53,16 @@ sp_fulltext_pendingchanges table_id
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**Key**|*|Valore di chiave full-text dalla tabella specificata.|  
-|**DocId**|**bigint**|Colonna dell'identificatore interno del documento (DocID) corrispondente al valore della chiave.|  
+|**Valore DocId**|**bigint**|Colonna dell'identificatore interno del documento (DocID) corrispondente al valore della chiave.|  
 |**Stato**|**int**|0 = La riga verrà rimossa dall'indice full-text.<br /><br /> 1 = Alla riga verrà applicata l'indicizzazione full-text.<br /><br /> 2 = La riga è aggiornata.<br /><br /> -1 = La riga è in uno stato di transizione (elaborazione batch senza commit) o in uno stato di errore.|  
 |**DocState**|**tinyint**|Dump non elaborato della colonna relativa allo stato del mapping dell'identificatore interno del documento (DocId).|  
   
- <sup>* Il tipo di dati per la chiave è identico al tipo di dati della colonna chiave full-text nella tabella di base.</sup>  
+ <sup>* Il tipo di dati per la chiave è lo stesso come il tipo di dati della colonna chiave full-text nella tabella di base.</sup>  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se non ci sono modifiche da elaborare, viene restituito un set di righe vuoto.  
   
  Query di ricerca full-Text non restituiscono righe con un **stato** valore pari a 0. Questo perché la riga è stata eliminata dalla tabella di base ed è in attesa di essere eliminata dall'indice full-text.  

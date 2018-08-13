@@ -23,12 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5779c87d467a52e28623419d6cf6bac392907fae
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 282a55a0594a0d52a89066c997e6392bc8cc0dbb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557401"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,24 +37,24 @@ ms.lasthandoff: 05/23/2018
   Restituisce statistiche dettagliate sul funzionamento di Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare questa vista durante l'ottimizzazione di un carico di lavoro per individuare problemi o miglioramenti per l'ottimizzazione delle query. Ad esempio, è possibile utilizzare il numero totale di ottimizzazioni, il valore del tempo trascorso e il valore di costo finale per confrontare le ottimizzazioni della query per il carico di lavoro corrente con eventuali variazioni rilevate durante il processo di ottimizzazione. Alcuni contatori forniscono dati rilevanti solo per utilizzo diagnostico interno in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi contatori sono contrassegnati come "Solo per uso interno".  
   
 > [!NOTE]  
->  Per chiamare questo metodo dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
+>  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Nome|Tipo di dati|Description|  
+|nome|Tipo di dati|Description|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|Nome dell'evento statistiche di Query Optimizer.|  
-|**occurrence**|**bigint**|Numero di occorrenze dell'evento di ottimizzazione per il contatore corrente.|  
+|**occorrenza**|**bigint**|Numero di occorrenze dell'evento di ottimizzazione per il contatore corrente.|  
 |**Valore**|**float**|Valore medio della proprietà per occorrenza dell'evento.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
     
-## <a name="remarks"></a>Osservazioni  
- **exec_query_optimizer_info** contiene le proprietà seguenti (contatori). Tutti i valori di occorrenza sono cumulativi e vengono impostati su 0 al riavvio del sistema. Tutti i valori dei campi valori vengono impostati su NULL al riavvio del sistema. Tutti i valori delle colonne valori che specificano una media utilizzano il valore di occorrenza della stessa riga del denominatore nel calcolo della media. Tutte le ottimizzazioni di query vengono misurate quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina le modifiche apportate a **dm_exec_query_optimizer_info**, tra cui entrambe le query generate dall'utente e sistema. L'esecuzione di un piano già memorizzato nella cache non modifica i valori in **dm_exec_query_optimizer_info**, solo le ottimizzazioni sono significative.  
+## <a name="remarks"></a>Note  
+ **exec_query_optimizer_info** contiene le proprietà seguenti (contatori). Tutti i valori di occorrenza sono cumulativi e vengono impostati su 0 al riavvio del sistema. Tutti i valori dei campi valori vengono impostati su NULL al riavvio del sistema. Tutti i valori delle colonne valori che specificano una media utilizzano il valore di occorrenza della stessa riga del denominatore nel calcolo della media. Tutte le ottimizzazioni di query vengono misurate quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina le modifiche apportate a **dm_exec_query_optimizer_info**, tra cui entrambe le query generati dal sistema e utente. L'esecuzione di un piano già memorizzati nella cache non modifica i valori in **dm_exec_query_optimizer_info**, solo le ottimizzazioni sono significative.  
   
-|Contatore|Occorrenza|Value|  
+|Contatore|Occorrenza|valore|  
 |-------------|----------------|-----------|  
 |optimizations|Numero totale di ottimizzazioni.|Non applicabile|  
 |elapsed time|Numero totale di ottimizzazioni.|Tempo medio trascorso per ottimizzazione in una singola istruzione (query), espresso in secondi.|  
@@ -85,7 +86,7 @@ In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE 
 |join hint|Numero di volte in cui l'algoritmo JOIN è stato applicato a un hint di join.|Non applicabile|  
 |view reference|Numero di volte in cui è stato fatto riferimento a una vista in una query.|Non applicabile|  
 |remote query|Numero di ottimizzazioni in cui la query ha fatto riferimento ad almeno un'origine dei dati remota, ad esempio una tabella con un nome in quattro parti o un risultato OPENROWSET.|Non applicabile|  
-|maximum DOP|Numero totale di ottimizzazioni.|Valore MAXDOP effettivo medio per un piano ottimizzato. Per impostazione predefinita, MAXDOP effettivo è determinato dal **massimo grado di parallelismo** configurazione del server, l'opzione e può essere sottoposto a override per una specifica query tramite il valore dell'hint per la query MAXDOP.|  
+|maximum DOP|Numero totale di ottimizzazioni.|Valore MAXDOP effettivo medio per un piano ottimizzato. Per impostazione predefinita, MAXDOP effettivo è determinato dal **massimo grado di parallelismo** configurazione del server opzione e può essere sottoposto a override per una specifica query tramite il valore dell'hint per la query MAXDOP.|  
 |maximum recursion level|Numero di ottimizzazioni in cui è stato specificato un livello MAXRECURSION maggiore di 0 con l'hint per la query.|Livello MAXRECURSION medio nelle ottimizzazioni in cui è stato specificato un livello di ricorsione massimo con l'hint per la query.|  
 |indexed views loaded|Solo per uso interno|Solo per uso interno|  
 |indexed views matched|Numero di ottimizzazioni in cui è stata trovata la corrispondenza per una o più viste indicizzate.|Numero medio di viste corrispondenti.|  

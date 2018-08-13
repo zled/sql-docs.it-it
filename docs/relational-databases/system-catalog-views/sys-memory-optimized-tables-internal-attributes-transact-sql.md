@@ -24,13 +24,13 @@ caps.latest.revision: 13
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ea18b7493e5a5ff35a50a63f9d8d57d22149838c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 51cd7c4fa45c6a09a0885bb69b11b916fa4caa51
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058213"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535091"
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Contiene una riga per ogni tabella interna ottimizzata per la memoria usata per 
 |type_desc| **nvarchar(60)**|   Descrizione del tipo<br/><br/>DELETED_ROWS_TABLE -> Tabella interna che tiene traccia delle righe eliminate per un indice columnstore.<br/>USER_TABLE -> Tabella contenente i dati utente all'interno di righe.<br/>DICTIONARIES_TABLE -> Dizionari per un indice columnstore.<br/>SEGMENTS_TABLE -> Segmenti compressi per un indice columnstore.<br/>ROW_GROUPS_INFO_TABLE -> Metadati relativi ai gruppi di righe compressi di un indice columnstore.<br/>INTERNAL OFF-ROW DATA TABLE -> Tabella interna usata per l'archiviazione di una colonna all'esterno di righe. In questo caso, minor_id riflette column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Parte finale, ad accesso frequente, della tabella di cronologia basata su disco. Le righe inserite nella cronologia vengono inserite prima in questa tabella ottimizzata per la memoria interna. Viene eseguita un'attività in background che sposta in modo asincrono le righe da questa tabella interna alla tabella di cronologia basata su disco. |
 |minor_id|  **int**|    0 indica un utente o una tabella interna<br/><br/>Un valore diverso da 0 indica l'ID di una colonna archiviata all'esterno di righe. Si unisce a column_id in sys.columns.<br/><br/>Ogni colonna archiviata all'esterno di righe ha una riga corrispondente in questa vista di sistema.|
 
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  

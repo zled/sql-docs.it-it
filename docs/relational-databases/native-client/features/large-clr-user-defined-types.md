@@ -13,13 +13,13 @@ ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2d008d4976f72ca4b2c802ffa5df4c1d1702f02e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0e8c84adbd2aa8b9e44df4745373e42bd2806061
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415430"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539391"
 ---
 # <a name="large-clr-user-defined-types"></a>Tipi CLR definiti dall'utente di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37415430"
 ## <a name="use-cases"></a>Modalità di utilizzo comuni  
  Per ODBC, il supporto per i tipi definiti dall'utente di grandi dimensioni include la possibilità di inviare i valori di tali tipi in parti come parametri data-at-execution. Questa operazione viene eseguita dall'uso di SQLPutData.  
   
- Per OLE DB, il supporto per i tipi UDT di grandi dimensioni include la capacità di valori UDT di flusso da e verso il server usando l'associazione di ISequentialStream.  
+ Per OLE DB, il supporto per i tipi definiti dall'utente di grandi dimensioni include la possibilità di eseguire il flusso dei valori di tali tipi al e dal server usando l'associazione ISequentialStream.  
   
  Tipi definiti dall'utente minori o uguali a 8.000 byte hanno lo stesso comportamento che in SQL Server 2005. Per OLE DB, si può comunque trasmettere piccole tipi definiti dall'utente tramite il binding di ISequentialStream.  
   

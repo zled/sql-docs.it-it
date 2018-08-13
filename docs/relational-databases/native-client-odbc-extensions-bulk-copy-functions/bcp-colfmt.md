@@ -21,13 +21,13 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d8f1adbd4dee8194d0e91d9efd3a99a52b79988
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9b84c239c348f83f0da211f3efaa28863d4e607f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419660"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536172"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,9 +92,9 @@ RETCODE bcp_colfmt (
   
  Per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caratteri e tipi di dati binari *cbUserData* può essere SQL_VARLEN_DATA, SQL_NULL_DATA, 0 o un valore positivo. Se *cbUserData* è SQL_VARLEN_DATA, il sistema utilizza l'indicatore di lunghezza, se presente, o una sequenza di caratteri di terminazione per determinare la lunghezza dei dati. Se vengono specificati sia un indicatore di lunghezza che una sequenza di caratteri di terminazione, la copia bulk utilizza la modalità che comporta la copia del minor numero di dati. Se *cbUserData* è SQL_VARLEN_DATA, i dati di tipo è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carattere o binario e né un indicatore di lunghezza né una sequenza di caratteri di terminazione è specificata, il sistema restituisce un messaggio di errore.  
   
- Se *cbUserData* è 0 o un valore positivo, il sistema Usa *cbUserData* come lunghezza massima dei dati. Tuttavia, se, oltre a un numero positivo *cbUserData*, una sequenza di carattere di terminazione o di un indicatore di lunghezza viene specificata, il sistema determina la lunghezza dei dati tramite il metodo che restituisce la quantità minima di dati da copiare.  
+ Se *cbUserData* è 0 o un valore positivo, il sistema usa *cbUserData* come lunghezza massima dei dati. Se, tuttavia, oltre a un *cbUserData* positivo, viene specificato un indicatore di lunghezza o una sequenza di caratteri di terminazione, il sistema determina la lunghezza dei dati usando il metodo che comporta la copia della quantità minima di dati.  
   
- Il *cbUserData* valore rappresenta il numero di byte di dati. Se i dati di tipo carattere vengono rappresentati come caratteri wide Unicode, un numero positivo *cbUserData* parametro value rappresenta il numero di caratteri moltiplicato per la dimensione, espressa in byte, di ogni carattere.  
+ Il valore *cbUserData* rappresenta il numero di byte dei dati. Se i dati di tipo carattere sono rappresentati da caratteri wide Unicode, un valore positivo per il parametro *cbUserData* rappresenta il numero di caratteri moltiplicato per la dimensione, espressa in byte, di ogni carattere.  
   
  *pUserDataTerm*  
  Sequenza di caratteri di terminazione da utilizzare per la colonna. Questo parametro risulta particolarmente utile per i dati di tipo carattere, in quanto tutti gli altri tipi hanno una lunghezza fissa o, nel caso dei dati binari, richiedono un indicatore di lunghezza per registrare in modo accurato il numero di byte presenti.  

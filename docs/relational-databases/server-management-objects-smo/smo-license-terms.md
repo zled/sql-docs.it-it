@@ -1,7 +1,7 @@
 ---
-title: SQL Server Shared Management Objects (SMO) - condizioni di licenza | Microsoft Docs
+title: SQL Server Shared Management Objects (SMO) - condizioni di licenza | Documenti di Microsoft
 ms.custom: ''
-ms.date: 08/06/2017
+ms.date: 08/08/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -12,13 +12,13 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: da7a9a138a5fd027f3b89c5f4b1d5db219c7d5d0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040429"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662243"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server Shared Management Objects (SMO) License termini
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,14 +67,13 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
   * il codice sia divulgato o distribuito nel formato in codice sorgente;
   * altri abbiano il diritto di modificarlo.
 
-**3.    AMBITO DI VALIDITÀ DELLA LICENZA.** Il software non viene venduto, ma è concesso in licenza. A meno che la legge applicabile non conceda ulteriori diritti, Microsoft si riserva tutti gli altri diritti non espressamente concessi in base al presente contratto, per implicazione, preclusione o altro. Il licenziatario potrà utilizzare il software esclusivamente nei modi espressamente concessi nel presente contratto. Nel far ciò, il licenziatario dovrà attenersi a qualsiasi limitazione tecnica presente nel software che gli consenta di utilizzarlo solo in determinati modi. Il licenziatario non potrà
-* aggirare le limitazioni tecniche presenti nel software;
-* decodificare, decompilare o disassemblare il software, fatta eccezione per i casi in cui tali attività siano espressamente consentite dalla legge applicabile, nonostante questa limitazione;
-* eseguire un numero di copie del software maggiore di quello specificato nel presente contratto o consentito dalla legge applicabile, nonostante questa limitazione;
-* pubblicare il software per consentirne la duplicazione da parte di terzi;
-* concedere il software in locazione, leasing o prestito;
-* trasferire il software o il presente contratto a terzi oppure
-* utilizzare il software per fornire hosting di servizi commerciali.
+
+**3. AMBITO DI VALIDITÀ DELLA LICENZA.** Il software non viene venduto, ma è concesso in licenza. A meno che la legge applicabile non conceda ulteriori diritti, Microsoft si riserva tutti gli altri diritti non espressamente concessi in base al presente contratto, per implicazione, preclusione o altro. Il licenziatario potrà utilizzare il software esclusivamente nei modi espressamente concessi nel presente contratto. Nel far ciò, il licenziatario dovrà attenersi a qualsiasi limitazione tecnica presente nel software che gli consenta di utilizzarlo solo in determinati modi. Non è possibile effettuare una delle seguenti:
+
+- Risolvere qualsiasi limitazione tecnica presente nel software.
+- Decodificare, decompilare o disassemblare il software, ad eccezione del fatto e solo nella misura in cui nonostante questa limitazione è espressamente consentite dalla legge applicabile.
+- Rendere più copie del software rispetto a quelle specificate nel presente contratto o consentite dalla legge applicabile, nonostante questa limitazione.
+- Condividere, pubblicare, noleggiare o eseguirne il lease del software o fornire il software come soluzione autonoma ospitata per gli altri utenti.
 
 **4.    COMUNICAZIONI DI TERZE PARTI.** Il software può includere componenti di terze parti con note legali distinte o disciplinati da altri contratti, come eventualmente descritto nel file ThirdPartyNotices fornito con il software.  Anche se tali componenti sono disciplinati da altri contratti, sono applicabili anche le dichiarazioni di non responsabilità, nonché le limitazioni e le esclusioni in relazione ai danni indicate di seguito.
 
@@ -106,3 +105,7 @@ Questa limitazione si applica a
 * controversie relative a responsabilità contrattuale, violazioni di garanzia e delle condizioni, responsabilità oggettiva, negligenza o altra colpa nella misura massima consentita dalla legge applicabile.
 
 Tale limitazione si applica anche nel caso in cui Microsoft era informata o avrebbe dovuto essere informata della possibilità del verificarsi di tali danni. La limitazione o l'esclusione di cui sopra potrebbe non essere applicabile al licenziatario in quanto l'esclusione o la limitazione di danni incidentali, consequenziali o di altro tipo potrebbe non essere consentita nel Paese di residenza del licenziatario.
+
+> [!NOTE]
+> Sezione 3 è stata aggiornata a 8 agosto 2018.
+

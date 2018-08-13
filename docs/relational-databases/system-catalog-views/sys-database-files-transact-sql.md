@@ -1,5 +1,5 @@
 ---
-title: Sys. database_files (Transact-SQL) | Documenti Microsoft
+title: Sys. database_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: ''
@@ -24,13 +24,13 @@ caps.latest.revision: 61
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 465a9f57e7787e992f61ec548bdfb8cabdada848
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f50b9b9da7eb904222ef307355e86c91a093db5b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181697"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550311"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "33181697"
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo di file:<br /><br /> ROWS (include file di cataloghi full-text aggiornati a oppure creati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (cataloghi full-text precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
 |**data_space_id**|**int**|Il valore può essere uguale o maggiore di 0. Un valore uguale a 0 rappresenta il file di log del database, mentre un valore maggiore di 0 rappresenta l'ID del filegroup in cui è archiviato il file di dati.|  
 |**name**|**sysname**|Nome logico del file nel database.|  
-|**physical_name**|**nvarchar(260)**|Nome del file del sistema operativo. Se il database è ospitato da un AlwaysOn [replica secondaria leggibile](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), **physical_name** indica il percorso del file del database di replica primaria. Per il percorso di un database secondario leggibile, eseguire una query [sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
+|**physical_name**|**nvarchar(260)**|Nome del file del sistema operativo. Se il database è ospitato da un AlwaysOn [replica secondaria leggibile](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), **physical_name** indica il percorso del file di database della replica primaria. Per il percorso del file corretto di un database secondario leggibile, eseguire una query [sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
 |**state**|**tinyint**|Stato del file:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|Descrizione dello stato del file:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Per altre informazioni, vedere [Stati del file](../../relational-databases/databases/file-states.md).|  
-|**size**|**int**|Dimensioni del file in pagine da 8 KB.<br /><br /> 0 = Non applicabile<br /><br /> Per uno snapshot del database, il valore size corrisponde allo spazio massimo utilizzabile dallo snapshot per il file.<br /><br /> Per i contenitori di filegroup FILESTREAM, dimensione riflette che corrente utilizzato dimensione del contenitore.|  
-|**max_size**|**int**|Dimensioni massime del file espresse in pagine da 8 KB.<br /><br /> 0 = Non è consentito alcun aumento.<br /><br /> -1 = La dimensione del file aumenterà finché il disco è pieno.<br /><br /> 268435456 = La dimensione del file di log aumenterà fino al valore massimo di 2 TB.<br /><br /> Per i contenitori di filegroup FILESTREAM, max_size riflette la dimensione massima del contenitore.<br /><br /> Si noti che i database che vengono aggiornati con una dimensione del file di log senza limiti restituirà -1 per la dimensione massima del file di log.|  
+|**size**|**int**|Dimensioni del file in pagine da 8 KB.<br /><br /> 0 = Non applicabile<br /><br /> Per uno snapshot del database, il valore size corrisponde allo spazio massimo utilizzabile dallo snapshot per il file.<br /><br /> Per i contenitori del filegroup FILESTREAM, dimensioni riflettono che corrente usato dimensione del contenitore.|  
+|**max_size**|**int**|Dimensioni massime del file espresse in pagine da 8 KB.<br /><br /> 0 = Non è consentito alcun aumento.<br /><br /> -1 = La dimensione del file aumenterà finché il disco è pieno.<br /><br /> 268435456 = La dimensione del file di log aumenterà fino al valore massimo di 2 TB.<br /><br /> Per i contenitori del filegroup FILESTREAM, max_size riflette la dimensione massima del contenitore.<br /><br /> Si noti che i database che vengono aggiornati con una dimensione del file di log senza limiti segnalerà -1 per le dimensioni massime del file di log.|  
 |**aumento delle dimensioni**|**int**|0 = La dimensione del file è fissa e non aumenterà.<br /><br /> >0 = Il file aumenterà automaticamente.<br /><br /> Se is_percent_growth = 0, il valore dell'aumento di dimensioni è espresso in unità di pagine da 8 KB, con arrotondamento ai 64 KB successivi.<br /><br /> Se is_percent_growth = 1, il valore dell'aumento di dimensioni è espresso come percentuale (numero intero).|  
 |**is_media_read_only**|**bit**|1 = Il file si trova in un supporto con accesso in sola lettura.<br /><br /> 0 = Il file è memorizzato in un supporto di lettura/scrittura.|  
 |**is_read_only**|**bit**|1 = Il file è contrassegnato per l'accesso in sola lettura.<br /><br /> 0 = Il file è contrassegnato in lettura/scrittura.|  
@@ -72,7 +72,7 @@ ms.locfileid: "33181697"
 > [!NOTE]  
 >  In caso di eliminazione o ricompilazione di indici di grandi dimensioni oppure di eliminazione o troncamento di tabelle di grandi dimensioni, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] le deallocazioni di pagine effettive e i relativi blocchi associati vengono posticipati fino all'esecuzione del commit della transazione. Le operazioni di eliminazione posticipate non rendono immediatamente disponibile lo spazio allocato. Pertanto, i valori restituiti da sys.database_files subito dopo l'eliminazione o il troncamento di un oggetto di grandi dimensioni potrebbero non rispecchiare lo spazio su disco effettivamente disponibile.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="examples"></a>Esempi  
@@ -84,7 +84,7 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-Per ulteriori informazioni sull'utilizzo [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], vedere [determinazione delle dimensioni del Database nel Database SQL di Azure V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) nel blog del Team di consulenza clienti di SQL.
+Per altre informazioni quando si usa [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], vedere [determinazione delle dimensioni del Database in Azure SQL Database V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) nel blog del Team di consulenza clienti di SQL.
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di database e file &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
@@ -92,6 +92,6 @@ Per ulteriori informazioni sull'utilizzo [!INCLUDE[ssSDS_md](../../includes/sssd
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
- [data_spaces & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

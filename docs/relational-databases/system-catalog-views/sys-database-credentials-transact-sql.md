@@ -22,13 +22,13 @@ caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 88ec73b3c29dfa8d9db0d4322b34b08ac535a621
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ed1a494823c661710d1a5c184ff72c9f5099565e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995690"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533471"
 ---
 # <a name="sysdatabasecredentials-transact-sql"></a>Sys. database_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "37995690"
 |target_type|**Nvarchar(100)**|Tipo di database-credenziali con ambito. Le credenziali con ambito restituisce NULL per il database.|  
 |target_id|**int**|ID dell'oggetto mappato per la credenziale con ambito database. Le credenziali con ambito restituisce 0 per il database|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione `CONTROL` per il database.  
   
 ## <a name="see-also"></a>Vedere anche  

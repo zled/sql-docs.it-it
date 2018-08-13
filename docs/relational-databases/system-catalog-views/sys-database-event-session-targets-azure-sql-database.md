@@ -17,15 +17,15 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e3969ef0ff469392a93cd389a2104d2f3f82f87b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e2714e462ffaa891ba44cb002a491366f86f0ba8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979473"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535461"
 ---
-# <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>Sys. database_event_session_targets (Database SQL di Azure)
+# <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>sys.database_event_session_targets (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni destinazione di evento per una sessione eventi.  
@@ -42,7 +42,7 @@ ms.locfileid: "37979473"
 |pacchetto|**sysname**|Nome del pacchetto dell'evento contenente la destinazione dell'evento. Non ammette i valori Null.|  
 |modulo|**sysname**|Nome del modulo contenente la destinazione dell'evento. Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il server.  
   
 ## <a name="remarks"></a>Note  

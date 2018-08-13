@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di query XPath con spazi dei nomi (Provider SQLXMLOLEDB) | Documenti Microsoft
+title: Esecuzione di query XPath con spazi dei nomi (Provider SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f4013b1aa99afadc5ebab0eca3157872f78bf03c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5f6322ec680995313e6f5fcb1fbb02269cf2b0ea
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969086"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532797"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Esecuzione di query XPath con spazi dei nomi (provider SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Le query XPath possono includere spazi dei nomi. Se gli elementi dello schema sono spazi dei nomi qualificati, ovvero includono uno spazio dei nomi di destinazione, è necessario che nelle query XPath eseguite sullo schema sia specificato lo spazio dei nomi in questione.  
   
- Poiché l'utilizzo del carattere jolly (*) non è supportato in SQLXML 4.0, è necessario specificare la query XPath utilizzando un prefisso dello spazio dei nomi. Per risolvere questo prefisso, utilizzare la proprietà di spazi dei nomi per specificare l'associazione dello spazio dei nomi.  
+ Poiché l'utilizzo del carattere jolly (*) non è supportato in SQLXML 4.0, è necessario specificare la query XPath utilizzando un prefisso dello spazio dei nomi. Per risolvere tale prefisso, utilizzare la proprietà di spazi dei nomi per specificare l'associazione dello spazio dei nomi.  
   
- Nell'esempio seguente, la query XPath specifica spazi dei nomi utilizzando il carattere jolly (\*) e le funzioni XPath Local e namespace-uri(). Questa query XPath restituisce tutti gli elementi in cui il nome locale è **contatto** e lo spazio dei nomi URI **urn: myschema:Contacts**.  
+ Nell'esempio seguente, la query XPath specifica spazi dei nomi usando il carattere jolly (\*) e le funzioni di XPath Local e namespace-uri(). Questa query XPath restituisce tutti gli elementi in cui il nome locale è **contatto** e lo spazio dei nomi URI **urn: myschema:Contacts**.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- In SQLXML 4.0 questa query XPath deve essere specificata con un prefisso dello spazio dei nomi. Un esempio è **x: Contact**, dove **x** è il prefisso dello spazio dei nomi. Si consideri lo schema XSD seguente:  
+ In SQLXML 4.0 questa query XPath deve essere specificata con un prefisso dello spazio dei nomi. Ad esempio **x: contattare**, dove **x** è il prefisso dello spazio dei nomi. Si consideri lo schema XSD seguente:  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -60,10 +60,10 @@ ms.locfileid: "32969086"
   
  Poiché questo schema definisce lo spazio dei nomi di destinazione, una query XPath (ad esempio "Employee") eseguita sullo schema deve includere lo spazio dei nomi.  
   
- Si tratta di un'applicazione Visual Basic [!INCLUDE[msCoName](../../../includes/msconame-md.md)] di esempio che esegue una query XPath (x:Employee) sullo schema XSD precedente. Per risolvere il prefisso, l'associazione dello spazio dei nomi viene specificata utilizzando la proprietà di spazi dei nomi.  
+ Si tratta di un'applicazione Visual Basic [!INCLUDE[msCoName](../../../includes/msconame-md.md)] di esempio che esegue una query XPath (x:Employee) sullo schema XSD precedente. Per risolvere il prefisso, viene specificata l'associazione dello spazio dei nomi usando la proprietà di spazi dei nomi.  
   
 > [!NOTE]  
->  Nel codice è necessario specificare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione. In questo esempio viene inoltre specificato l'utilizzo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) per il provider di dati che richiede l'installazione di un software client di rete aggiuntivo. Per ulteriori informazioni, vedere [requisiti di sistema per SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  Nel codice è necessario specificare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione. In questo esempio viene inoltre specificato l'utilizzo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) per il provider di dati che richiede l'installazione di un software client di rete aggiuntivo. Per altre informazioni, vedere [requisiti di sistema per SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

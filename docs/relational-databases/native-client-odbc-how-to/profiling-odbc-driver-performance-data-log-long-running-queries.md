@@ -1,5 +1,5 @@
 ---
-title: Registrare query con esecuzione prolungata (ODBC) | Microsoft Docs
+title: Registrare query con esecuzione prolungata (ODBC) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79bfcc0eb68dd60752078e001c805083d111181f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ab6951716679abc36c0dcbe14128bd58f737d9ab
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431810"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546471"
 ---
-# <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Dati di profilatura delle prestazioni ODBC Driver - Log query con esecuzione prolungata
+# <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Profilatura dei dati sulle prestazioni del driver ODBC - Registrare query a lunga esecuzione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

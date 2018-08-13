@@ -14,12 +14,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c429f832ec89abe78b77dd1e8ece10082aeb0026
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cf5b1d813261786201f366e7f8dee6c296451c7
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331951"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359618"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lezione 1: Creazione del progetto e del pacchetto di base
   In questa lezione verrà creato un pacchetto ETL semplice tramite cui vengono estratti i dati da un'unica origine file flat, trasformati i dati usando due componenti di trasformazione Ricerca e scritti i dati in questione nella tabella dei fatti **FactCurrency** di **AdventureWorksDW2012**. In questa lezione si imparerà a creare nuovi pacchetti, aggiungere e configurare connessioni origine e destinazione dati e usare nuovi componenti flusso di controllo e flusso di dati.  
@@ -30,7 +30,7 @@ ms.locfileid: "37331951"
 ## <a name="understanding-the-package-requirements"></a>Informazioni sui requisiti del pacchetto  
  Per questa esercitazione è richiesto Microsoft SQL Server Data Tools.  
   
- Per altre informazioni sull'installazione di SQL Server Data Tools, vedere [Scaricare SQL Server Data Tools (SSDT)](http://msdn.microsoft.com/data/hh297027).  
+ Per altre informazioni sull'installazione di SQL Server Data Tools, vedere [Scaricare SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).  
   
  Prima di creare un pacchetto è necessario conoscere bene la formattazione usata nei dati di origine e nella destinazione. Dopo avere acquisito familiarità con questi due formati di dati sarà possibile definire le trasformazioni necessarie per eseguire il mapping tra i dati di origine e la destinazione.  
   

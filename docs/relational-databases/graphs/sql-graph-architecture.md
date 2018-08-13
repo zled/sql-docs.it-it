@@ -19,13 +19,13 @@ caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 7cfba1fc79e44bb28a433c3b31fe5f4236037d6e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 49a0d942fd4d738b31d71d44fc74392469d047c2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051509"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546401"
 ---
 # <a name="sql-graph-architecture"></a>Architettura di grafi SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ Scopri il [!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni introdotte i
 
 
 
-## <a name="limitations-and-known-issues"></a>Problemi noti e limitazioni  
+## <a name="limitations-and-known-issues"></a>Limitazioni e problemi noti  
 Esistono alcune limitazioni sul nodo e le tabelle bordi in questa versione:
 * Tabelle temporanee locali o globali non possono essere tabelle nodi o bordi.
 * I tipi di tabella e variabili di tabella non possono essere dichiarate come una tabella nodi o bordi. 

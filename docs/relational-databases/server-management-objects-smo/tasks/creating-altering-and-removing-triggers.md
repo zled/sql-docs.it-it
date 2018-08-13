@@ -1,5 +1,5 @@
 ---
-title: Creazione, modifica e rimozione di trigger | Microsoft Docs
+title: Creazione, modifica e rimozione di trigger | Documenti di Microsoft
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9ce8e01f603bb7ec2fde42b36af186b9a03b1994
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9341860e4b810fb8eefeea885938251c737c0353
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018445"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563795"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>Creazione, modifica e rimozione di trigger
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

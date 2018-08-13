@@ -24,13 +24,13 @@ caps.latest.revision: ''
 author: tmullaney
 ms.author: thmullan
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a3791d82f0970ec6ed3e04ede69492abbcddb59
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f2749313495c8aa76fb45cd9d9dfe8d5fc0bc90e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055776"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548431"
 ---
 # <a name="sysspaddtrustedassembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Il valore hash SHA2_512 dell'assembly da aggiungere all'elenco di assembly atten
 [ @description =] '*descrizione*'  
 Descrizione definita dall'utente facoltativo dell'assembly. Microsoft consiglia di usare il nome canonico che codifica il nome semplice, numero di versione, impostazioni cultura, chiave pubblica e architettura dell'assembly da considerare attendibile. Questo valore identifica in modo univoco identifica l'assembly sul lato di runtime (CLR) di linguaggio comune ed è identico al valore di clr_name in Assemblies. 
 
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
 Richiede l'appartenenza al `sysadmin` ruolo predefinito del server o `CONTROL SERVER` autorizzazione.
 
