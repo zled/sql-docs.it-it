@@ -1,5 +1,5 @@
 ---
-title: Data e ora miglioramenti (ODBC) | Microsoft Docs
+title: Data e ora miglioramenti (ODBC) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,39 +16,39 @@ ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5761eec08e0e76abd7b9e79e6c0730c8d8af836d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2f1b2b021668db70e6390ccb8bcb5d724f62bcd5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422260"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542611"
 ---
-# <a name="date-and-time-improvements-odbc"></a>Data e ora miglioramenti (ODBC)
+# <a name="date-and-time-improvements-odbc"></a>Miglioramenti relativi a data e ora (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti nuovi tipi di dati di data e ora. Questa sezione viene descritto come questi nuovi tipi vengono esposti come estensioni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per una panoramica delle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto di Native Client per i nuovi tipi data e ora dei dati, vedere [data e ora miglioramenti](../../relational-databases/native-client/features/date-and-time-improvements.md). Per un esempio che illustra il supporto per data/ora ODBC, vedere [Usa tipi di data e ora](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md).  
+  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti nuovi tipi di dati di data e ora. In questa sezione viene descritto come questi nuovi tipi vengono esposti come estensioni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per una panoramica delle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il supporto Client nativo per la nuova data e tipi di dati di ora, vedere [data e ora miglioramenti](../../relational-databases/native-client/features/date-and-time-improvements.md). Per un esempio che illustra il supporto per ODBC Data/ora, vedere [Usa data e ora tipi](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md).  
   
- Per informazioni più generali sui tipi di dati di data e ora, vedere [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md).  
+ Per ulteriori informazioni generali sui tipi di dati di data e ora, vedere [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md).  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
  [Supporto dei tipi di dati per i miglioramenti relativi a data e ora ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
  Vengono fornite informazioni sui tipi ODBC che supportano i tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di data e ora.  
   
  [Metadati &#40;ODBC&#41;](http://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
- Descrive le informazioni restituite nella descrizione del parametro di implementazione (IPD) e campi IRD (descrittore) riga di implementazione, nonché i metadati della colonna restituiti da **SQLColumns** e **SQLProcedureColumns**. Descrive inoltre i metadati del tipo dati restituito da **SQLGetTypeInfo**.  
+ Descrive le informazioni restituite nel descrittore del parametro di implementazione (IPD) e campi di implementazione riga descrittore (IRD.), così come metadati della colonna restituito da **SQLColumns** e **SQLProcedureColumns**. Descrive inoltre i metadati del tipo di dati restituito da **SQLGetTypeInfo**.  
   
- [Conversioni di tipo di dati DateTime &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md)  
+ [Conversioni di tipi di dati DateTime &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md)  
  Viene descritto come eseguire la conversione tra i valori datetime e datetimeoffset.  
   
  [Supporto sql_variant per i tipi di data e ora](../../relational-databases/native-client-odbc-date-time/sql-variant-support-for-date-and-time-types.md)  
  Viene descritto il supporto della funzione SQL_VARIANT per la funzionalità avanzata di data e ora.  
   
- [Modifiche apportate alla copia di massa per i tipi avanzati di data e ora &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
+ [Le modifiche apportate alla copia di massa per data avanzata e tipi in fase di &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
  Vengono descritti i miglioramenti apportati ai tipi di data/ora per supportare le operazioni di copia bulk.  
   
- [Comportamento con versioni precedenti di SQL Server il tipo avanzate di data e ora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md)  
+ [Enhanced Data e ora il comportamento dei tipi con le versioni precedenti di SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md)  
  Viene descritto il comportamento previsto quando un'applicazione client che utilizza le caratteristiche avanzate di data e ora comunica con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quando un client compilato con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client invia comandi a un server che supporta le caratteristiche avanzate di data e ora.  
   
  [Supporto delle API ODBC per le funzionalità avanzate di data e ora](../../relational-databases/native-client-odbc-date-time/odbc-api-support-for-enhanced-date-and-time-features.md)  

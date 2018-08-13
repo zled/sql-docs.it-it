@@ -1,5 +1,5 @@
 ---
-title: sp_recompile (Transact-SQL) | Documenti Microsoft
+title: sp_recompile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 484008523d109f8852cdef34911c52d8f081218f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7c04b6daf385a80f82dc39e1b1891f737e7fb19a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246139"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544641"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,12 +46,12 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>Argomenti  
  [ @objname=] '*oggetto*'  
- Nome qualificato o non qualificato di una stored procedure, un trigger, una tabella, una vista o una funzione definita dall'utente nel database corrente. *oggetto* viene **nvarchar(776)**, non prevede alcun valore predefinito. Se *oggetto* è il nome della stored procedure, trigger o funzione definita dall'utente, la stored procedure, trigger o funzione verrà ricompilata alla successiva esecuzione. Se *oggetto* è il nome di un trigger della tabella o vista, tutte le stored procedure o funzioni definite dall'utente che fanno riferimento a tabella o della vista verranno ricompilate alla successiva esecuzione degli stessi.  
+ Nome qualificato o non qualificato di una stored procedure, un trigger, una tabella, una vista o una funzione definita dall'utente nel database corrente. *oggetto* viene **nvarchar(776)**, non prevede alcun valore predefinito. Se *oggetto* è il nome di una stored procedure, trigger o funzione definita dall'utente, la stored procedure, trigger o funzione verrà ricompilata alla successiva esecuzione. Se *oggetto* è il nome di una tabella o vista, tutte le stored procedure, trigger o funzioni definite dall'utente che fanno riferimento a tabella o della vista verranno ricompilate alla successiva esecuzione degli stessi.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  La stored procedure sp_recompile esegue la ricerca di un oggetto solo nel database corrente.  
   
  Le query usate da stored procedure, trigger e funzioni definite dall'utente vengono ottimizzate solo in fase di compilazione. Poiché le indicizzazioni o le altre modifiche che hanno effetto sulle statistiche vengono effettuate nel database, il livello di efficienza di stored procedure, trigger e funzioni definite dall'utente dopo la compilazione potrebbe risultare minore. Tramite la ricompilazione delle stored procedure e dei trigger che modificano una tabella, è possibile riottimizzare le query.  
@@ -59,7 +59,7 @@ sp_recompile [ @objname = ] 'object'
 > [!NOTE]  
 >  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le stored procedure, i trigger e le funzioni definite dall'utente vengono ricompilati automaticamente quando la ricompilazione risulta un'operazione vantaggiosa.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione ALTER per l'oggetto specificato.  
   
 ## <a name="examples"></a>Esempi  

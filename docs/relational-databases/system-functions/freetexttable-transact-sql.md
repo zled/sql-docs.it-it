@@ -1,5 +1,5 @@
 ---
-title: FREETEXTTABLE (Transact-SQL) | Documenti Microsoft
+title: La funzione FREETEXTTABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,18 +26,18 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f2d3c0c014db5a0cd5aab0dee22e6622fd24f20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5dbb201a507d168a06b6417c5648c209807bc773
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239051"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540561"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  È una funzione utilizzata nel [dalla clausola](../../t-sql/queries/from-transact-sql.md) di un [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione SELECT per eseguire un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricerca full-text full-text indicizzate colonne contenenti tipi di dati di tipo carattere. Questa funzione restituisce una tabella di zero, uno o più righe per le colonne contenenti valori che corrispondono al significato e non solo all'esatta formulazione, del testo specificato *freetext_string*. Viene fatto riferimento a FREETEXTTABLE come se fosse un normale nome di tabella.  
+  È una funzione utilizzata nella [clausola FROM](../../t-sql/queries/from-transact-sql.md) di un [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione SELECT per eseguire un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonne contenenti tipi di dati basati su caratteri con indicizzazione full-text: ricerca full-text. Questa funzione restituisce una tabella di zero, uno o più righe per le colonne contenenti valori che corrispondono al significato e non solo all'esatta formulazione, del testo nell'oggetto specificato *freetext_string*. Viene fatto riferimento a FREETEXTTABLE come se fosse un normale nome di tabella.  
   
  La funzione FREETEXTTABLE è utile per gli stessi tipi di corrispondenze come le [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md),  
   
@@ -62,9 +62,9 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>Argomenti  
  *table*  
- Nome della tabella contrassegnata per query full-text. *Nella tabella* oppure *vista*può essere un una, due o nome di oggetto di database di tre parti. L'esecuzione della ricerca in una vista può interessare solo una tabella di base con indicizzazione full-text.  
+ Nome della tabella contrassegnata per query full-text. *Nella tabella* oppure *visualizzazione*può essere un una, due o nome di oggetto di database di tre parti. L'esecuzione della ricerca in una vista può interessare solo una tabella di base con indicizzazione full-text.  
   
- *tabella* non è possibile specificare un nome di server e non può essere utilizzato nelle query su server collegati.  
+ *tabella* non è possibile specificare un nome di server e non può essere usato nelle query su server collegati.  
   
  *column_name*  
  Nome di una o più colonne indicizzate full-text della tabella specificata nella clausola FROM. La colonna o le colonne possono essere di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** r **varbinary(max)**.  
@@ -73,12 +73,12 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  Viene indicato che è possibile specificare più colonne, separate da virgola. *column_list*deve essere racchiuso tra parentesi. La lingua di tutte le colonne di *column_list* deve essere la stessa, a meno che non sia specificato *language_term*.  
   
  \*  
- Specifica che la ricerca della stringa specificata in *freetext_string* deve essere eseguita in tutte le colonne registrate per la ricerca full-text. A meno che non *language_term* è specificato, la lingua di tutte le colonne indicizzate full-text nella tabella deve essere lo stesso.  
+ Specifica che la ricerca della stringa specificata in *freetext_string* deve essere eseguita in tutte le colonne registrate per la ricerca full-text. A meno che *language_term* viene specificato, la lingua di tutte le colonne indicizzate full-text nella tabella deve essere lo stesso.  
   
  *freetext_string*  
  Testo da cercare nella colonna specificata in *column_name*. È possibile specificare qualsiasi testo, comprese parole e frasi. Vengono generate corrispondenze se nell'indice full-text viene trovato un termine o vengono trovate le forme di un termine.  
   
- A differenza della funzione CONTAINS ricercare condizione where ed è una parola chiave, se utilizzata in *freetext_string* la parola 'and' viene considerata una parola non significativa, o [parola non significativa](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)e verrà ignorata.  
+ A differenza di CONTAINS ricerca condizione where ed è una parola chiave, se utilizzata in *freetext_string* la parola 'and' viene considerata una parola non significativa, o [parola non significativa](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)e verrà ignorata.  
   
  Non è consentito utilizzare WEIGHT, FORMSOF, caratteri jolly, NEAR e altra sintassi. *freetext_string* viene sottoposta alla sillabazione, all'analisi morfologica e al thesaurus.  
   
@@ -94,22 +94,22 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  Se la lingua specificata non è valida o non vi sono risorse installate corrispondenti a tale lingua, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore. Per usare le risorse della lingua neutra, specificare 0x0 per *language_term*.  
   
  *top_n_by_rank*  
- Specifica che solo il *n*corrispondenze di pertinenza maggiore in ordine decrescente, vengono restituite. Si applica solo quando un valore integer *n*, viene specificato. Se il parametro *top_n_by_rank* viene combinato con altri parametri, la query potrebbe restituire un numero inferiore di righe rispetto al numero di righe effettivamente corrispondenti a tutti i predicati. *top_n_by_rank* consente di migliorare le prestazioni delle query richiamando solo le occorrenze più attinenti.  
+ Specifica che solo le *n*corrispondenze di pertinenza maggiore in ordine decrescente, vengono restituite. Si applica solo quando un valore intero, *n*, viene specificato. Se il parametro *top_n_by_rank* viene combinato con altri parametri, la query potrebbe restituire un numero inferiore di righe rispetto al numero di righe effettivamente corrispondenti a tutti i predicati. *top_n_by_rank* consente di migliorare le prestazioni delle query richiamando solo le occorrenze più attinenti.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  I predicati e le funzioni full-text possono essere utilizzati in una singola tabella, specificata in modo implicito nel predicato FROM. Per cercare in più tabelle, utilizzare una tabella unita in join nella clausola FROM, che consente di eseguire una ricerca in un set di risultati prodotto da due o più tabelle.  
   
  La funzione FREETEXTTABLE utilizza le stesse condizioni di ricerca del predicato FREETEXT.  
   
- Come per CONTAINSTABLE, la tabella restituita include le colonne denominate **chiave** e **RANK**, cui viene fatto riferimento nella query per ottenere le righe appropriate e utilizzare la riga di valori di classificazione.  
+ Come per CONTAINSTABLE, la tabella restituita include le colonne denominate **KEY** e **RANK**, cui viene fatto riferimento nella query per ottenere le righe appropriate e utilizzare i valori di pertinenza della riga.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  La funzione FREETEXTTABLE può essere richiamata soltanto dagli utenti che dispongono delle autorizzazioni SELECT appropriate per la tabella specificata o per le colonne della tabella a cui viene fatto riferimento.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-simple-example"></a>A. Esempio semplice  
- Nell'esempio seguente crea e popola una tabella semplice delle due colonne, elenco di 3 regioni e i colori nei flag. L'it crea e popola un catalogo full-text e l'indice della tabella. Il **FREETEXTTABLE** viene illustrata la sintassi.  
+ Nell'esempio seguente crea e popola una tabella semplice delle due colonne, elenco di 3 provincie e i colori nei flag. L'it crea e popola un catalogo full-text e un indice nella tabella. L'oggetto **FREETEXTTABLE** viene illustrata la sintassi.  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -167,12 +167,12 @@ GO
 ```  
   
 > [!NOTE]  
->  Il linguaggio *language_term* paramete*r* non è necessario utilizzare il *top_n_by_rank* parametro *.*  
+>  Il linguaggio *language_term* paramete*r* non è necessario usare il *top_n_by_rank* parametro *.*  
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione alla ricerca full-text](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Creare e gestire cataloghi full-text](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [CREARE il catalogo full-text & #40; Transact-SQL & #41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [Creazione e gestione di indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md)   

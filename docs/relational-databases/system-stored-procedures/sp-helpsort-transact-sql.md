@@ -1,5 +1,5 @@
 ---
-title: sp_helpsort (Transact-SQL) | Documenti Microsoft
+title: sp_helpsort (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eed0e712a4cba2400b864b0170b08a6007d85e63
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b72de312f8d3ab7abadc592b14149d47f65dfa7a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253694"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539411"
 ---
 # <a name="sphelpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_helpsort
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce le regole di confronto predefinite del server.  
   
-## <a name="remarks"></a>Osservazioni  
- Se un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene installato con le regole di confronto specificato per essere compatibile con un'installazione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_helpsort** restituisce risultati vuoti. In questo caso, è possibile determinare le regole di confronto eseguendo una query sull'oggetto SERVERPROPERTY, ad esempio `SELECT SERVERPROPERTY ('Collation');`.  
+## <a name="remarks"></a>Note  
+ Se un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene installato con le regole di confronto specificate come compatibili con un'installazione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_helpsort** restituisce risultati vuoti. In questo caso, è possibile determinare le regole di confronto eseguendo una query sull'oggetto SERVERPROPERTY, ad esempio `SELECT SERVERPROPERTY ('Collation');`.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -73,7 +73,7 @@ sp_helpsort;
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  

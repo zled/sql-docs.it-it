@@ -1,5 +1,5 @@
 ---
-title: Metadati del catalogo | Microsoft Docs
+title: Catalogo dei metadati | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,22 +16,22 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 457f25d5429eccf2c253bb6b39fbae40b43d100a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: da3616dfea8d45a82731d81ab62c98c2ac99a7f2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420380"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543001"
 ---
-# <a name="metadata---catalog"></a>Metadati - catalogo
+# <a name="metadata---catalog"></a>Metadati - Catalogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In questo argomento descrive i metadati della colonna restituiti da **SQLColumns** e **SQLProcedureColumns**, i metadati restituiti da tipi di dati **SQLGetTypeInfo**.  
+  In questo argomento vengono descritti i metadati della colonna restituito da **SQLColumns** e **SQLProcedureColumns**, e il tipo di dati restituito dai metadati **SQLGetTypeInfo**.  
   
 ## <a name="remarks"></a>Note  
- I valori di colonna seguenti vengono restituiti per i tipi di data/ora da **SQLColumns** e **SQLProcedureColumns**.  
+ Vengono restituiti i seguenti valori di colonna per i tipi di data e ora da **SQLColumns** e **SQLProcedureColumns**.  
   
 |Tipo di parametro|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "37420380"
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- I valori di colonna seguenti vengono restituiti per i tipi di data/ora da **SQLGetTypeInfo**:  
+ Vengono restituiti i seguenti valori di colonna per i tipi di data e ora da **SQLGetTypeInfo**:  
   
 |Tipo di parametro|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  

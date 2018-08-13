@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_virtualservernodes (Transact-SQL) | Microsoft Docs
+title: Sys.fn_virtualservernodes (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,13 +27,13 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4073c1668ef43e7d303a3e534d16763d33939e45
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: bc722b0b2b240ee72f2899cbebc7076549b4df0b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042789"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542051"
 ---
 # <a name="sysfnvirtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "38042789"
   Restituisce un elenco di nodi di istanze cluster di failover in cui è possibile eseguire un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tali informazioni risultano utili in ambienti con clustering di failover.  
   
 > [!IMPORTANT]  
->  Ciò [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] funzione di sistema è inclusa per compatibilità con le versioni precedenti. È consigliabile usare [DM os_cluster_nodes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) alternativa.  
+>  Ciò [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] funzione di sistema è inclusa per compatibilità con le versioni precedenti. Si consiglia di utilizzare [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) invece.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,11 +53,11 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>Tabelle restituite  
- Se il server corrente è un server cluster, **fn_virtualservernodes** restituisce un elenco di nodi di istanze cluster di failover su cui l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stata definita.  
+ Se il server corrente è un server cluster, **la funzione fn_virtualservernodes** restituisce un elenco di nodi di istanze di cluster di failover su cui l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato definito.  
   
- Se l'istanza del server corrente non è un server cluster, **fn_virtualservernodes** restituisce un set di righe vuoto.  
+ Se l'istanza del server corrente non è un server cluster, **la funzione fn_virtualservernodes** restituisce un set di righe vuoto.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'utente deve disporre dell'autorizzazione VIEW SERVER STATE per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="examples"></a>Esempi  

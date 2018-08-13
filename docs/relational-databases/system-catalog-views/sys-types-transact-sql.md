@@ -1,5 +1,5 @@
 ---
-title: Sys. Types (Transact-SQL) | Documenti Microsoft
+title: Sys. Types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ce1d7cbfc11a425a1e39622b379ad8b34cac6e10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9b4dc0dd6455823e2f08327a418032b47309b474
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221232"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539361"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,21 +42,21 @@ ms.locfileid: "33221232"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del tipo. Valore univoco all'interno dello schema.|  
 |**system_type_id**|**tinyint**|ID del tipo di sistema interno del tipo.|  
-|**user_type_id**|**int**|ID del tipo. Valore univoco all'interno del database. Per i tipi di dati di sistema, **user_type_id** = **system_type_id**.|  
+|**user_type_id**|**int**|ID del tipo. Valore univoco all'interno del database. Per tipi di dati di sistema **user_type_id** = **system_type_id**.|  
 |**schema_id**|**int**|ID dello schema a cui appartiene il tipo.|  
 |**principal_id**|**int**|ID del proprietario, se diverso dal proprietario dello schema. Per impostazione predefinita, gli oggetti contenuti nello schema appartengono al proprietario dello schema stesso. È tuttavia possibile specificare un altro proprietario modificando la proprietà mediante l'istruzione ALTER AUTHORIZATION.<br /><br /> NULL se non esiste un proprietario alternativo.|  
-|**max_length**|**smallint**|Lunghezza massima (in byte) del tipo.<br /><br /> -1 = la colonna è di tipo di dati **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**.<br /><br /> Per **testo** colonne, il **max_length** valore sarà 16.|  
-|**precisione**|**tinyint**|Precisione massima del tipo se numerica. In caso contrario 0.|  
-|**scala**|**tinyint**|Scala massima del tipo se numerica. In caso contrario 0.|  
+|**max_length**|**smallint**|Lunghezza massima (in byte) del tipo.<br /><br /> -1 = il tipo di dati della colonna **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, oppure **xml**.<br /><br /> Per la **testo** colonne, il **max_length** valore sarà 16.|  
+|**Precisione**|**tinyint**|Precisione massima del tipo se numerica. In caso contrario 0.|  
+|**Scalabilità**|**tinyint**|Scala massima del tipo se numerica. In caso contrario 0.|  
 |**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto del tipo se di tipo carattere. In caso contrario NULL.|  
 |**is_nullable**|**bit**|Il tipo ammette valori Null.|  
 |**is_user_defined**|**bit**|1 = Tipo definito dall'utente.<br /><br /> 0 = Tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**is_assembly_type**|**bit**|1 = L'implementazione del tipo è definita in un assembly CLR.<br /><br /> 0 = Il tipo è basato su un tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**default_object_id**|**int**|ID dell'oggetto predefinito autonomo associato al tipo tramite [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md).<br /><br /> 0 = Non esistono oggetti predefiniti.|  
-|**rule_object_id**|**int**|ID della regola autonoma associata al tipo utilizzando [sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md).<br /><br /> 0 = Non esistono regole.|  
+|**default_object_id**|**int**|ID dell'oggetto predefinito autonomo associato al tipo usando [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md).<br /><br /> 0 = Non esistono oggetti predefiniti.|  
+|**rule_object_id**|**int**|ID della regola autonoma associata al tipo usando [sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md).<br /><br /> 0 = Non esistono regole.|  
 |**is_table_type**|**bit**|Indica che il tipo è una tabella.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

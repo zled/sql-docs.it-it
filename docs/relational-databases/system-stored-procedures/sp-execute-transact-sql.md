@@ -1,5 +1,5 @@
 ---
-title: sp_execute (Transact-SQL) | Microsoft Docs
+title: sp_execute (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c96985d6bcc23427f67cdb8c6cb0fea360aba69a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a156b1670a1e697104503c7a887ac3482642b9ae
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041169"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540821"
 ---
 # <a name="spexecute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Esegue un preparata [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione utilizzando un handle specificato e il valore del parametro facoltativo. richiamare sp_execute specificando ID = 12 in un pacchetto del flusso TDS.  
+  Esegue un preparata [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione utilizzando un handle specificato e il valore del parametro facoltativo. viene richiamato sp_execute specificando l'ID = 12 in un pacchetto TDS (flusso) di dati tabulari.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ sp_execute handle OUTPUT
  È il *gestire* valore restituito da sp_prepare. *gestire* è un parametro obbligatorio che richiede **int** valore di input.  
   
  *bound_param*  
- Indica l'utilizzo di parametri aggiuntivi. *bound_param* è un parametro obbligatorio che richiede valori di input di qualsiasi tipo di dati per definire i parametri aggiuntivi per la procedura.  
+ Indica l'utilizzo di parametri aggiuntivi. *bound_param* è un parametro obbligatorio che chiama per valori di input di qualsiasi tipo di dati per indicare i parametri aggiuntivi per la procedura.  
   
 > [!NOTE]  
->  *bound_param* deve corrispondere alle dichiarazioni di sp_prepare*params* il valore e può essere nel formato  *@name = value* oppure *valore*.  
+>  *bound_param* corrispondere alle dichiarazioni effettuate il sp_prepare*params* il valore e può essere nel formato * @name = valore* o *valore*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

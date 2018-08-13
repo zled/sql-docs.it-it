@@ -23,12 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a0174fbe566afa6eec5c6cb208dacfed00fcd735
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f13f8e1edb78b969dd6303a6eca339fcb3946cd1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540761"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/23/2018
   Restituisce informazioni sulla coda di attesa relativa alle attività che sono in attesa di una risorsa.  
   
 > [!NOTE]  
->  Per chiamare questo metodo dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_os_waiting_tasks**.  
+>  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_waiting_tasks**.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,10 +51,10 @@ ms.lasthandoff: 05/23/2018
 |**blocking_session_id**|**smallint**|ID della sessione che sta bloccando la richiesta. Se questa colonna è NULL, la richiesta non è bloccata oppure non sono disponibili o identificabili informazioni di sessione per la sessione da cui è bloccata.<br /><br /> -2 = La risorsa di blocco appartiene a una transazione distribuita orfana.<br /><br /> -3 = La risorsa di blocco appartiene a una transazione di recupero posticipata.<br /><br /> -4 = Non è possibile determinare l'ID di sessione del proprietario del latch di blocco a causa di transizioni nello stato del latch interno.|  
 |**blocking_exec_context_id**|**int**|ID del contesto di esecuzione dell'attività di blocco.|  
 |**resource_description**|**nvarchar(3072)**|Descrizione della risorsa attualmente occupata. Per ulteriori informazioni, vedere l'elenco riportato di seguito.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
 ## <a name="resourcedescription-column"></a>Colonna resource_description  
- La colonna resource_description include i valori possibili seguenti.  
+ La colonna resource_description ha i valori possibili seguenti.  
   
  **Proprietario risorsa pool di thread:**  
   
@@ -61,9 +62,9 @@ ms.lasthandoff: 05/23/2018
   
  **Proprietario risorsa query parallela:**  
   
--   id exchangeEvent = {porta | Pipe}\<hex-address > WaitType =\<-tipo di attesa exchange > nodeId =\<exchange-nodo-id >  
+-   id exchangeEvent = {porta | Pipe}\<hex-address > WaitType =\<exchange-wait-type > nodeId =\<exchange-nodo-id >  
   
- **Tipo di attesa Exchange**  
+ **Tipo di attesa Exchange:**  
   
 -   e_waitNone  
   
@@ -79,17 +80,17 @@ ms.lasthandoff: 05/23/2018
   
 -   e_waitRange  
   
- **Proprietario risorsa di blocco:**  
+ **Proprietario della risorsa blocco:**  
   
--   \<tipo-specific-description > id = blocco\<blocco-hex-address > modalità =\<modalità > associatedObjectId =\<associata-obj-id >  
+-   \<tipo-specific-description > id = blocco\<blocco-hex-address > modalità =\<modalità > associatedObjectId =\<associati-obj-id >  
   
      **\<tipo-specific-description > può essere:**  
   
-    -   Per DATABASE: Databaselock subresource =\<databaselock-subresource > dbid =\<db-id >  
+    -   Per il DATABASE: Databaselock subresource =\<databaselock-subresource > dbid =\<db-id >  
   
     -   Per il FILE: Filelock fileid =\<file-id > subresource =\<filelock-subresource > dbid =\<db-id >  
   
-    -   Per OBJECT: Objectlock lockPartition =\<lock-partition-id > objid =\<obj-id > subresource =\<objectlock-subresource > dbid =\<db-id >  
+    -   Per l'oggetto: Objectlock lockPartition =\<lock-partition-id > objid =\<obj-id > subresource =\<objectlock-subresource > dbid =\<db-id >  
   
     -   Per PAGE: Pagelock fileid =\<file-id > pageid =\<pagina-id > dbid =\<db-id > subresource =\<pagelock-subresource >  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 05/23/2018
   
  **Proprietario risorsa generica:**  
   
--   Area di lavoro TransactionInfo TransactionMutex =\<id area di lavoro >  
+-   Area di lavoro TransactionInfo TransactionMutex =\<workspace-id >  
   
 -   Mutex  
   
@@ -137,13 +138,13 @@ ms.lasthandoff: 05/23/2018
   
 -   \<classe di latch > (\<latch-address >)  
   
-## <a name="permissions"></a>Autorizzazioni
+## <a name="permissions"></a>Permissions
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
  
 ## <a name="example"></a>Esempio
-In questo esempio identificherà le sessioni bloccate.  Eseguire il [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguire una query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+In questo esempio identifica le sessioni bloccate.  Eseguire la [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguire una query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 

@@ -23,17 +23,18 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a586933111d5bc08a36d7c0818d33e74975e7a4d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b86a512fa5a300c5e26e73d3cb50c804fbfaba5f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539711"
 ---
 # <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Vengono restituite le proprietà di statistiche per l'oggetto di database specificato (tabella o vista indicizzata) nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Per le tabelle partizionate, vedere simile [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md). 
+  Vengono restituite le proprietà di statistiche per l'oggetto di database specificato (tabella o vista indicizzata) nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Per le tabelle partizionate, vedere il simili [DM db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md). 
  
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,22 +60,22 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|Numero totale di righe campionate per i calcoli statistici.|  
 |passaggi|**int**|Numero di intervalli nell'istogramma. Per altre informazioni, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|Numero totale di righe nella tabella prima dell'applicazione dell'espressione di filtro (per statistiche filtrate). Se le statistiche non vengono filtrate, unfiltered_rows corrisponde al valore restituito nella colonna rows.|  
-|modification_counter|**bigint**|Numero totale di modifiche per la colonna iniziale delle statistiche, la colonna in cui viene compilato l'istogramma, dall'ultimo aggiornamento delle statistiche.<br /><br /> Le tabelle con ottimizzazione per la memoria: avvio [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa colonna contiene: numero totale di modifiche per la tabella poiché sono state aggiornate le statistiche temporali ultimo o il database è stato riavviato.|  
+|modification_counter|**bigint**|Numero totale di modifiche per la colonna iniziale delle statistiche, la colonna in cui viene compilato l'istogramma, dall'ultimo aggiornamento delle statistiche.<br /><br /> Le tabelle ottimizzate per la memoria: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e nella [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa colonna contiene: numero totale di modifiche per la tabella perché sono state aggiornate le statistiche temporali ultimo o il database è stato riavviato.|  
 |persisted_sample_percent|**float**|Percentuale di campionamento persistente usata per gli aggiornamenti delle statistiche che non specificano in modo esplicito una percentuale di campionamento. Se il valore è zero, non viene impostata alcuna percentuale di campionamento persistente per la statistica.<br /><br /> **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="Remarks"></a> Osservazioni  
- **Sys.dm_db_stats_properties** restituisce un set di righe vuoto in presenza delle condizioni seguenti:  
+ **DM db_stats_properties** restituisce un set di righe vuoto in presenza delle condizioni seguenti:  
   
 -   **object_id** oppure **stats_id** è NULL.    
 -   L'oggetto specificato non viene trovato oppure non corrisponde a una tabella o a una vista indicizzata.    
 -   L'ID delle statistiche specificato non corrisponde alle statistiche esistenti per l'ID oggetto specificato.    
 -   L'utente corrente non dispone delle autorizzazioni per visualizzare l'oggetto statistiche.  
   
- Questo comportamento consente l'utilizzo sicuro di **Sys.dm db_stats_properties** quando tra applicato alle righe nelle viste, ad esempio **Sys. Objects** e **Sys. Stats**.  
+ Questo comportamento consente l'utilizzo sicuro di **DM db_stats_properties** caso di applicazione incrociata in viste, ad esempio **Sys. Objects** e **Sys. Stats**.  
  
-La data di aggiornamento delle statistiche viene archiviata nell'[oggetto BLOB di statistiche](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) insieme all'[istogramma](../../relational-databases/statistics/statistics.md#histogram) e al [vettore di densità](../../relational-databases/statistics/statistics.md#density), non nei metadati. Quando viene letto alcun dato per generare i dati delle statistiche, non viene creato il blob di statistiche, la data non è disponibile e *last_updated* colonna è NULL. È il caso delle statistiche filtrate per le quali il predicato non restituisce alcuna riga o delle nuove tabelle vuote.
+La data di aggiornamento delle statistiche viene archiviata nell'[oggetto BLOB di statistiche](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) insieme all'[istogramma](../../relational-databases/statistics/statistics.md#histogram) e al [vettore di densità](../../relational-databases/statistics/statistics.md#density), non nei metadati. Quando viene letto alcun dato per generare i dati delle statistiche, il blob di statistiche non viene creato, non è disponibile, la data e il *last_updated* colonna è NULL. È il caso delle statistiche filtrate per le quali il predicato non restituisce alcuna riga o delle nuove tabelle vuote.
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  L'utente deve avere autorizzazioni di selezione per le colonne delle statistiche o essere proprietario della tabella o membro del ruolo predefinito del server `sysadmin`, del ruolo predefinito del database `db_owner` o del ruolo predefinito del database `db_ddladmin`.  
   
 ## <a name="examples"></a>Esempi  

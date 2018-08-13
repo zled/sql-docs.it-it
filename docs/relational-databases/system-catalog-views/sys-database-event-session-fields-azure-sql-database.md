@@ -1,5 +1,5 @@
 ---
-title: Sys. database_event_session_fields (Database SQL di Azure) | Microsoft Docs
+title: Sys. database_event_session_fields (Database SQL di Azure) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0a7c7ee610ae5eb3a56a46c5b8c7ba1645b64532
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 56378ff6f8fd3f83a4cdf38148372b504e485e46
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981853"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544211"
 ---
-# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>Sys. database_event_session_fields (Database SQL di Azure)
+# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>sys.database_event_session_fields (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni colonna personalizzabile che è impostata in modo esplicito su eventi e destinazioni.  
@@ -41,7 +41,7 @@ ms.locfileid: "37981853"
 |NAME|**sysname**|Nome del campo. Non ammette i valori Null.|  
 |Valore|**sql_variant**|Valore del campo. Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il server.  
   
 ## <a name="remarks"></a>Note  

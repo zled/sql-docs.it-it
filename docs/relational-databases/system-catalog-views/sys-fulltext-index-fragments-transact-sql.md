@@ -1,5 +1,5 @@
 ---
-title: fulltext_index_fragments (Transact-SQL) | Documenti Microsoft
+title: Sys.fulltext_index_fragments (Transact-SQL) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,18 +27,18 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18997da5a5eeb691245166be015b0678403b52ff
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2d6d073d2ed93208b0fc6c5fbe032b768392ee35
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182247"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543013"
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Un indice full-text utilizza tabelle interne denominate *frammenti di indice full-text* per archiviare i dati dell'indice invertito. Questa vista può essere utilizzata per eseguire una query sui metadati relativi a tali frammenti. Nella vista è contenuta una riga per ogni frammento di indice full-text presente in ogni tabella contenente un indice full-text.  
+  Un indice full-text utilizza tabelle interne chiamate *frammenti indice full-text* per memorizzare i dati di indice invertito. Questa vista può essere utilizzata per eseguire una query sui metadati relativi a tali frammenti. Nella vista è contenuta una riga per ogni frammento di indice full-text presente in ogni tabella contenente un indice full-text.  
  
   
 |Nome colonna|Tipo di dati|Description|  
@@ -49,9 +49,9 @@ ms.locfileid: "33182247"
 |TIMESTAMP|**timestamp**|Timestamp associato alla creazione del frammento. I timestamp dei frammenti più recenti sono più grandi dei timestamp di frammenti più vecchi.|  
 |data_size|**int**|Dimensione logica del frammento, espressa in byte.|  
 |row_count|**int**|Numero di righe singole nel frammento.|  
-|status|**int**|Stato del frammento. I valori possibili sono:<br /><br /> 0 = Appena creato e non ancora utilizzato.<br /><br /> 1 = Utilizzato per operazioni di inserimento durante il popolamento o l'unione di un indice full-text.<br /><br /> 4 = Chiuso. Pronto per le query<br /><br /> 6 = Utilizzato per l'input unione e pronto per le query.<br /><br /> 8 = Contrassegnato per l'eliminazione. Non verrà utilizzato per le query e l'unione dell'origine.<br /><br /> Uno stato pari a 4 o 6 indica che il frammento fa parte dell'indice full-text logico e che è possibile eseguire la query; è un *queryable* frammento.|  
+|status|**int**|Stato del frammento. I valori possibili sono:<br /><br /> 0 = Appena creato e non ancora utilizzato.<br /><br /> 1 = Utilizzato per operazioni di inserimento durante il popolamento o l'unione di un indice full-text.<br /><br /> 4 = Chiuso. Pronto per le query<br /><br /> 6 = Utilizzato per l'input unione e pronto per le query.<br /><br /> 8 = Contrassegnato per l'eliminazione. Non verrà utilizzato per le query e l'unione dell'origine.<br /><br /> Stato di 4 o 6 indica che il frammento fa parte dell'indice full-text logico e un possibile effettuarvi; in altre parole, si tratta di un *queryable* frammento.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  È possibile utilizzare la vista del catalogo sys.fulltext_index_fragments per eseguire una query sul numero di frammenti compresi in un indice full-text. Se si verifica un rallentamento nell'esecuzione delle query full-text, è possibile utilizzare sys.fulltext_index_fragments per eseguire query per il numero di frammenti di tipo queryable (stato = 4 o 6) nell'indice full-text, come segue:  
   
 ```  
@@ -59,7 +59,7 @@ SELECT table_id, status FROM sys.fulltext_index_fragments
    WHERE status=4 OR status=6;  
 ```  
   
- Se esistono molti frammenti di tipo queryable, Microsoft consiglia di riorganizzare il catalogo full-text che contiene l'indice full-text per unire i frammenti. Per riorganizzare un catalogo full-text utilizzo [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REORGANIZE. Per riorganizzare, ad esempio, un catalogo full-text denominato `ftCatalog` nel database `AdventureWorks2012`, immettere:  
+ Se esistono molti frammenti di tipo queryable, Microsoft consiglia di riorganizzare il catalogo full-text che contiene l'indice full-text per unire i frammenti. Per riorganizzare un impiego catalogo full-text [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* RIORGANIZZARE. Per riorganizzare, ad esempio, un catalogo full-text denominato `ftCatalog` nel database `AdventureWorks2012`, immettere:  
   
 ```  
 USE AdventureWorks2012;  
@@ -68,11 +68,11 @@ ALTER FULLTEXT CATALOG ftCatalog REORGANIZE;
 GO  
 ```  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Popolare gli indici full-text](../../relational-databases/search/populate-full-text-indexes.md)  
+ [Popolamento degli indici full-text](../../relational-databases/search/populate-full-text-indexes.md)  
   
   

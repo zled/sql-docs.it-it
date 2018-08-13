@@ -1,5 +1,5 @@
 ---
-title: Copia bulk di dati mediante IRowsetFastLoad (OLE DB) | Microsoft Docs
+title: Copiare i dati utilizzando IRowsetFastLoad (OLE DB) | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 684ef570f471e4e580ac1c720e30022da3e1293f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 11c891207168ba6b65277f8e3b572e00c7f7c1b4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408630"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541711"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Eseguire una copia bulk di dati mediante IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "37408630"
 
   In questo esempio viene illustrato l'utilizzo di IRowsetFastLoad per la copia bulk di record in una tabella.  
   
- Tramite il consumer viene inviata una notifica a SQLOLEDB della necessità di eseguire una copia bulk impostando su VARIANT_TRUE la proprietà SSPROP_ENABLEFASTLOAD specifica del provider SQLOLEDB. Con la proprietà impostata sull'origine dati, il consumer crea una sessione di SQLOLEDB. La nuova sessione consente al consumer di accedere al **IRowsetFastLoad**.  
+ Tramite il consumer viene inviata una notifica a SQLOLEDB della necessità di eseguire una copia bulk impostando su VARIANT_TRUE la proprietà SSPROP_ENABLEFASTLOAD specifica del provider SQLOLEDB. Con la proprietà impostata sull'origine dati, il consumer crea una sessione di SQLOLEDB. La nuova sessione consente al consumer di accedere a **IRowsetFastLoad**.  
   
- È disponibile un esempio completo che illustra l'uso del **IRowsetFastLoad** per la copia bulk dei record in una tabella. In questo esempio, vengono aggiunti 10 record alla tabella **IRFLTable**. È necessario creare la tabella **IRFLTable** nel database.  
+ In un esempio completo viene illustrato l'uso di **IRowsetFastLoad** per eseguire una copia bulk dei record in una tabella. In questo esempio vengono aggiunti 10 record alla tabella **IRFLTable**. È necessario creare la tabella **IRFLTable** nel database.  
   
- In questo esempio richiede il database di esempio AdventureWorks, che è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page di.  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -46,24 +46,24 @@ ms.locfileid: "37408630"
   
 1.  Stabilire una connessione all'origine dati.  
   
-2.  Impostare su VARIANT_TRUE la proprietà SSPROP_ENABLEFASTLOAD dell'origine dati specifica del provider SQLOLEDB. Con questa proprietà è impostata su VARIANT_TRUE, la sessione appena creata consente al consumer di accedere al **IRowsetFastLoad**.  
+2.  Impostare su VARIANT_TRUE la proprietà SSPROP_ENABLEFASTLOAD dell'origine dati specifica del provider SQLOLEDB. Grazie a questa impostazione, la sessione appena creata consente al consumer di accedere a **IRowsetFastLoad**.  
   
-3.  Creare una sessione che richiede la **IOpenRowset** interfaccia.  
+3.  Creare una sessione che richiede il **IOpenRowset** dell'interfaccia.  
   
-4.  Chiamare **IOpenRowset:: OPENROWSET** per aprire un set di righe che include tutte le righe dalla tabella (in cui i dati deve essere copiato tramite l'operazione di copia bulk).  
+4.  Chiamare **IOpenRowset::OpenRowset** per aprire un set di righe che include tutte le righe della tabella (in cui devono essere copiati i dati usando l'operazione di copia bulk).  
   
-5.  Effettuare le associazioni necessarie e creare una funzione di accesso usando **IAccessor:: CreateAccessor**.  
+5.  Le associazioni necessarie e creare una funzione di accesso utilizzando **IAccessor:: CreateAccessor**.  
   
 6.  Configurare il buffer della memoria dal quale verranno copiati i dati nella tabella.  
   
-7.  Chiamare **IRowsetFastLoad:: InsertRow** alla copia bulk dei dati nella tabella.  
+7.  Chiamare **IRowsetFastLoad:: InsertRow** per la copia di massa dei dati nella tabella.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio vengono aggiunti 10 record alla tabella IRFLTable. È necessario creare la tabella IRFLTable nel database. Questo esempio non è supportato in IA64.  
   
  Eseguire il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per creare la tabella utilizzata dall'applicazione.  
   
- Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" a L"(local)\\\name", dove nome è un'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
+ Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
  Eseguire il terzo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'applicazione.  
   
