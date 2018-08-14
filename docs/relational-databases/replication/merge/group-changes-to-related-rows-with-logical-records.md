@@ -47,7 +47,7 @@ ms.locfileid: "38035543"
   
  ![Record logico per tre tabelle con valori](../../../relational-databases/replication/merge/media/logical-records-02.gif "Record logico per tre tabelle con valori")  
   
- Per definire una relazione tra record logici per gli articoli, vedere [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
+ Per definire una relazione tra record logici per gli articoli, vedere [Definizione di una relazione tra record logici degli articoli di tabelle di merge](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
 ## <a name="benefits-of-logical-records"></a>Vantaggi dei record logici  
  La funzionalità di record logici offre due vantaggi principali:  
