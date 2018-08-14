@@ -22,7 +22,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38054079"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Procedura: Recuperare i parametri di input e output usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In questo argomento viene illustrato come usare il driver SQLSRV per chiamare una stored procedure in cui un parametro è definito come parametro di input/output e come recuperare i risultati. Durante il recupero di un parametro di output o di input/output, tutti i risultati restituiti dalla stored procedure devono essere usati prima che il valore del parametro restituito sia accessibile.  

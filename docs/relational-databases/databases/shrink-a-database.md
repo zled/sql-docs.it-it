@@ -68,7 +68,7 @@ ms.locfileid: "39551681"
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
--   Per visualizzare la quantità corrente di spazio disponibile, cioè non allocato, nel database. Per altre informazioni, vedere [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
+-   Per visualizzare la quantità corrente di spazio disponibile, cioè non allocato, nel database. Per altre informazioni, vedere [Visualizzare le informazioni sullo spazio allocato ai dati e ai log per un database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
 -   Quando si pianifica la compattazione di un database, considerare le informazioni seguenti:  
   
