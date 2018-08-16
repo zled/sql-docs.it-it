@@ -14,12 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7d43fbc0488886915689565475dd5e69967c348
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454055"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662283"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisiti di sistema per il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -78,31 +78,30 @@ ms.locfileid: "39454055"
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-6.4.0.jre7.jar|4.1|7|Richiede un Java Runtime Environment (JRE) versione 7.0. Utilizza JRE 6.0 o inferiore genera un'eccezione.<br /><br /> Le nuove funzionalità in 6.4 includono: autenticazione di Azure AD per Linux, metodo e la Password dell'entità per il rilevamento automatico di REALM in SPN per l'autenticazione tra domini, la delega vincolata Kerberos, Timeout della Query, il timeout del Socket, Kerberos e preparate handle di istruzione consiste nel riutilizzare. |  
 |mssql-jdbc-6.4.0.jre8.jar|4.2|8|Richiede un Java Runtime Environment (JRE) versione 8.0. Utilizza JRE 7.0 o inferiore genera un'eccezione.<br /><br /> Le nuove funzionalità in 6.4 includono: autenticazione di Azure AD per Linux, metodo e la Password dell'entità per il rilevamento automatico di REALM in SPN per l'autenticazione tra domini, la delega vincolata Kerberos, Timeout della Query, il timeout del Socket, Kerberos e preparate handle di istruzione consiste nel riutilizzare. |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Richiede Java Runtime Environment (JRE) 9.0. Utilizzo di JRE 8.0 o inferiore genera un'eccezione.<br /><br /> Le nuove funzionalità in 6.4 includono: autenticazione di Azure AD per Linux, metodo e la Password dell'entità per il rilevamento automatico di REALM in SPN per l'autenticazione tra domini, la delega vincolata Kerberos, Timeout della Query, il timeout del Socket, Kerberos e preparate handle di istruzione consiste nel riutilizzare. |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Richiede Java Runtime Environment (JRE) 9.0. Utilizzo di JRE 8.0 o inferiore genera un'eccezione.<br /><br /> Le nuove funzionalità in 6.4 includono: autenticazione di Azure AD per Linux, metodo e la Password dell'entità per il rilevamento automatico di REALM in SPN per l'autenticazione tra domini, la delega vincolata Kerberos, Timeout della Query, il timeout del Socket, Kerberos e preparate handle di istruzione consiste nel riutilizzare. |
 
+JDBC Driver 6.4 è disponibile anche nel Repository centrale di Maven e possono essere aggiunti a un progetto Maven aggiungendo il codice seguente nel modello POM. XML 
 
-  JDBC Driver 6.4 è disponibile anche nel Repository centrale di Maven e possono essere aggiunti a un progetto Maven aggiungendo il codice seguente nel modello POM. XML 
-  
  ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
     <version>6.4.0.jre9</version>
 </dependency>
-```    
+```
 
 **Microsoft JDBC Driver 6.2 per SQL Server:**  
   
-  JDBC Driver 6.2 include due librerie di classi JAR in ogni pacchetto di installazione: **mssql-jdbc-6.2.1.jre7.jar**, e **mssql-jdbc-6.2.1.jre8.jar**. 
+  JDBC Driver 6.2 include due librerie di classe JAR in ogni pacchetto di installazione: **mssql-jdbc-6.2.2.jre7.jar** e **mssql-jdbc-6.2.2.jre8.jar**. 
   
- JDBC Driver 6.2 è progettato per funzionare con ed essere supportato da tutte le principali macchine virtuali Java equivalenti alle macchine virtuali Sun, ma è stato testato solo su Sun JRE 5.0, 6.0, 7.0 e 8.0. 
+ JDBC Driver 6.2 è progettato per funzionare con ed essere supportato da tutte le principali macchine virtuali Java equivalenti alle macchine virtuali Sun, ma è stato testato solo su Sun JRE 5.0, 6.0, 7.0 e 8.0.
   
  Di seguito viene offerto un riepilogo del supporto fornito dai due file JAR inclusi in Microsoft JDBC Driver 6.0 e 4.2 per SQL Server:  
   
 |JAR|Conformità versione JDBC|Java versione consigliata|Descrizione|  
-|---------|-----------------------------|----------------------|-----------------|   
-|MSSQL-jdbc-6.2.1.jre7.jar|4.1|7|Richiede un Java Runtime Environment (JRE) versione 7.0. Utilizza JRE 6.0 o inferiore genera un'eccezione.<br /><br /> Le nuove funzionalità in 6.2 includono: autenticazione di Azure AD per Linux, metodo e la Password dell'entità per il rilevamento automatico di REALM in SPN per l'autenticazione tra domini, la delega vincolata Kerberos, Timeout della Query, il timeout del Socket, Kerberos e preparate handle di istruzione consiste nel riutilizzare. |  
-|MSSQL-jdbc-6.2.1.jre8.jar|4.2|8|Richiede un Java Runtime Environment (JRE) versione 8.0. Utilizza JRE 7.0 o inferiore genera un'eccezione.<br /><br /> Le nuove funzionalità in 6.2 includono: autenticazione di Azure AD per Linux, metodo e la Password dell'entità per il rilevamento automatico di REALM in SPN per l'autenticazione tra domini, la delega vincolata Kerberos, Timeout della Query, il timeout del Socket, Kerberos e preparate riutilizzo dei handle di istruzione|    
+|---------|-----------------------------|----------------------|-----------------|
+|MSSQL-jdbc-6.2.2.jre7.jar|4.1|7|Richiede un Java Runtime Environment (JRE) versione 7.0. Utilizza JRE 6.0 o inferiore genera un'eccezione.<br /><br /> Le nuove funzionalità in 6.2 includono: autenticazione di Azure AD per Linux, metodo e la Password dell'entità per il rilevamento automatico di REALM in SPN per l'autenticazione tra domini, la delega vincolata Kerberos, Timeout della Query, il timeout del Socket, Kerberos e preparate handle di istruzione consiste nel riutilizzare. |  
+|MSSQL-jdbc-6.2.3.jre8.jar|4.2|8|Richiede un Java Runtime Environment (JRE) versione 8.0. Utilizza JRE 7.0 o inferiore genera un'eccezione.<br /><br /> Le nuove funzionalità in 6.2 includono: autenticazione di Azure AD per Linux, metodo e la Password dell'entità per il rilevamento automatico di REALM in SPN per l'autenticazione tra domini, la delega vincolata Kerberos, Timeout della Query, il timeout del Socket, Kerberos e preparate riutilizzo dei handle di istruzione|    
 
   JDBC Driver 6.2 è disponibile anche nel Repository centrale di Maven e possono essere aggiunti a un progetto Maven aggiungendo il codice seguente nel modello POM. XML 
   
@@ -110,7 +109,7 @@ ms.locfileid: "39454055"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.2.1.jre8</version>
+    <version>6.2.2.jre8</version>
 </dependency>
 ```    
 

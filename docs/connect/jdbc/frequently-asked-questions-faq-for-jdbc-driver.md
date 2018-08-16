@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 620722d0e9f0f82f624c3385c4c524c307098333
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: 43fccc172756b8e7afdb4522c53693915be0f23c
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452135"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662333"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Domande frequenti sul driver JDBC
 
@@ -58,12 +58,12 @@ Microsoft JDBC Driver 6.2 supporta le specifiche JDBC 4.2, 4.1 e 4.0 e include d
 
 | JAR                       | Specifica JDBC     | Versione di JDK |
 | ------------------------- | ---------------------- | ----------- |
-| MSSQL-jdbc-6.2.1.jre8.jar | JDBC 4.2, 4.1 e 4.0 | JDK 8.0     |
-| MSSQL-jdbc-6.2.1.jre7.jar | JDBC 4.1 e 4.0       | JDK 7.0     |
+| MSSQL-jdbc-6.2.2.jre8.jar | JDBC 4.2, 4.1 e 4.0 | JDK 8.0     |
+| MSSQL-jdbc-6.2.2.jre7.jar | JDBC 4.1 e 4.0       | JDK 7.0     |
 
 Microsoft JDBC driver 6.0 e 4.2 per SQL Server supporta le specifiche JDBC 4.0, 4.1 e 4.2 e includono due librerie di classi JAR nel pacchetto di installazione, come indicato di seguito:
 
-| JAR           | Specifica JDBC     | Versione di JDK |
+| JAR           | Specifica JDBC     | Versione JDK |
 | ------------- | ---------------------- | ----------- |
 | sqljdbc42.jar | JDBC 4.2, 4.1 e 4.0 | JDK 8.0     |
 | sqljdbc41.jar | JDBC 4.1 e 4.0       | JDK 7.0     |

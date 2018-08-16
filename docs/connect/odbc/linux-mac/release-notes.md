@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 658cfd6ea66be82e243131eec9699c65708c2e5f
-ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
-ms.translationtype: MTE75
+ms.openlocfilehash: 7395524fd185afa03a317e49400822ad459dbf55
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024237"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662273"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Linux e macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "39024237"
 
 **Funzionalità aggiunte**:
 
-Classificazione dei dati per il Database SQL di Azure e SQL Server
+Classificazione dei dati per Database SQL di Azure e SQL Server, per altre informazioni vedere [classificazione dei dati](../data-classification.md)
 
 SQLBrowseConnect
 

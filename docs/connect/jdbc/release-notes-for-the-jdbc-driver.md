@@ -14,12 +14,12 @@ caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1870693ad4c12a6f04cd3b01380b77de728c245c
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454375"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662463"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Note sulla versione per il driver JDBC
 
@@ -27,7 +27,7 @@ ms.locfileid: "39454375"
 
 ## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>Aggiornamenti in Microsoft JDBC Driver 7.0 per SQL Server
 
-Microsoft JDBC Driver 7.0 per SQL Server è completamente conforme alla specifica di API di JDBC 4.2. I file JAR nel pacchetto 7.0 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, il file mssql-jdbc-7.0.0.jre8.jar dal pacchetto 7.0 deve essere utilizzato con Java 8.
+Microsoft JDBC Driver 7.0 per SQL Server è completamente conforme alla specifica di API di JDBC 4.2. I file JAR nel pacchetto 7.0 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, il file mssql-jdbc-7.0.0.jre10.jar dal pacchetto 7.0 deve essere utilizzato con Java 10.
 
 ### <a name="support-for-jdk-10"></a>Supporto per JDK 10
 
@@ -59,7 +59,7 @@ Microsoft JDBC Driver 7.0 per SQL Server introduce nuove proprietà di connessio
 
 ### <a name="added-azure-key-vault-provider-constructors"></a>Aggiunta dell'insieme di credenziali chiave Azure Provider costruttori
 
-Microsoft JDBC Driver 7.0 per SQL Server introduce nuovamente un costruttore rimosso in precedenza, per `SQLServerColumnEncryptionAzureKeyVaultProvider`, quali consentita l'autenticazione usando un metodo personalizzato implementato sulla `SQLServerKeyVaultAuthenticationCallback` per recuperare un token di accesso.
+Microsoft JDBC Driver 7.0 per SQL Server è stata reintrodotta un costruttore rimosso in precedenza, per `SQLServerColumnEncryptionAzureKeyVaultProvider`, quali consentita l'autenticazione usando un metodo personalizzato implementato sulla `SQLServerKeyVaultAuthenticationCallback` per recuperare un token di accesso.
 
 Nuovi costruttori avere la seguente definizione:
 
@@ -80,11 +80,11 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### <a name="updated-adal4j-version-to-160"></a>Versione ADAL4J aggiornata alla versione 1.6.0
 
-Microsoft JDBC Driver 7.0 per SQL Server è aggiornata relativa dipendenza maven dopo azure-activedirectory-library-for-java (ADAL4J) alla versione 1.6.0. Per altre informazioni sulle dipendenze, vedere [qui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+Microsoft JDBC Driver 7.0 per SQL Server è aggiornata relativa dipendenza maven dopo azure-activedirectory-library-for-java (ADAL4J) alla versione 1.6.0. Per altre informazioni sulle dipendenze, vedere [qui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Aggiornamenti in Microsoft JDBC Driver 6.4 per SQL Server
 
-Microsoft JDBC Driver 6.4 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. I file JAR nel pacchetto di 6,4 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, il file mssql-jdbc-6.4.0.jre8.jar dal pacchetto di 6,4 è consigliabile per l'uso con Java 8.
+Microsoft JDBC Driver 6.4 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. I file JAR nel pacchetto di 6,4 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, il file mssql-jdbc-6.4.0.jre8.jar dal pacchetto di 6,4 deve essere utilizzato con Java 8.
 
 ### <a name="support-for-jdk-9"></a>Supporto per JDK 9
 
@@ -134,10 +134,14 @@ Il Driver JDBC è aggiornata relativa dipendenza maven dopo azure-activedirector
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Aggiornamenti in Microsoft JDBC Driver 6.2 per SQL Server
 
-Microsoft JDBC Driver 6.2 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. I file JAR nel pacchetto 6.0 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, il file mssql-jdbc-6.2.1.jre8.jar dal pacchetto 6.2 è consigliato per l'uso con Java 8.
+Microsoft JDBC Driver 6.2 per SQL Server è completamente compatibile con le specifiche JDBC 4.1 e 4.2. I file JAR nel pacchetto 6.2 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, il file mssql-jdbc-6.2.2.jre8.jar dal pacchetto 6.2 è consigliato per l'uso con Java 8.
 
 > [!NOTE]  
-> Un problema con il miglioramento di memorizzazione nella cache dei metadati è stato trovato nella versione RTW 6.2 JDBC rilasciata il 29 giugno 2017. È stato eseguito il rollback il miglioramento e nuovo file con estensione jar (versione 6.2.1) verranno rilasciati 17 luglio 2017 di [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), e [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Aggiornare i progetti per l'uso di 6.2.1 rilasciare i file con estensione jar. Leggi [note sulla versione](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) per altri dettagli.
+> Un problema con il miglioramento di memorizzazione nella cache dei metadati è stato trovato nella versione RTW 6.2 JDBC rilasciata il 29 giugno 2017. È stato eseguito il rollback il miglioramento e nuovo file con estensione jar (versione 6.2.1) sono state rilasciate 17 luglio 2017. 
+>
+> È stato effettuato un altro miglioramento per eseguire l'aggiornamento di versione della libreria dipendente da Azure Key Vault a 1.0.0 e nuovo file con estensione jar (versione 6.2.2) sono stati rilasciati il 19 ottobre 2017.
+>
+> Scaricare gli aggiornamenti più recenti in JDBC Driver 6.2 sul [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), e [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Aggiornare i progetti per l'uso di 6.2.2 rilasciare i file con estensione jar. Note sulla versione per visualizzare [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) e [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) per altri dettagli.
 
 ### <a name="azure-active-directory-aad-support-for-linux"></a>Supporto tecnico di Azure Active Directory (AAD) per Linux
 
