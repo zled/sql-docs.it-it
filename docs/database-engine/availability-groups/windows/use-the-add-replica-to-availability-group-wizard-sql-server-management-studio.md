@@ -18,12 +18,12 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cd49e3ee7241a25531b6a2efcefe891b5993e8b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 21316e480ddaa3ea7f96ffdf530ef61edbbda2c1
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771117"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609680"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la procedura guidata Aggiungi replica a gruppo di disponibilità (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34771117"
     |**Endpoint**|Utilizzare questa scheda per verificare l'endpoint del mirroring di database esistente, se presente, per ogni nuova replica secondaria. Se tale endpoint risulta mancante in un'istanza del server i cui account del servizio utilizzano l'autenticazione di Windows, si tenterà di creare l'endpoint automaticamente.<br /><br /> <br /><br /> Nota: se un'istanza del server è in esecuzione in un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.|  
     |**Preferenze di backup**|Utilizzare questa scheda per specificare le preferenze di backup per il gruppo di disponibilità nel suo complesso, se si desidera modificare l'impostazione corrente e per specificare le priorità di backup per le singole repliche di disponibilità.|  
   
-6.  Se le repliche selezionate contengono database con una chiave master del database, immettere le password per le chiavi master del database nella pagina **Immetti password** . La colonna **Stato** visualizza **Password obbligatoria** per i database con una chiave master del database. Dopo avere immesso le password, fare clic su **Aggiorna**. Se le password sono state immesse correttamente, la colonna Stato visualizza **Password immessa**.  
+6.  Se le repliche selezionate contengono database con una chiave master del database, immettere le password per le chiavi master del database nella colonna **Password**. La colonna **Stato** visualizza **Password obbligatoria** per i database con una chiave master del database. L'opzione **Avanti** è disattivata finché non viene immessa la password corretta nella colonna **Password**. Dopo avere immesso le password, fare clic su **Aggiorna**. Se le password sono state immesse correttamente, la colonna Stato indica **Password immessa** e **Avanti** diventa disponibile.  
   
 7.  Nella pagina **Seleziona sincronizzazione dei dati iniziale** specificare come creare e aggiungere i nuovi database secondari al gruppo di disponibilità. Selezionare una delle opzioni seguenti:  
   

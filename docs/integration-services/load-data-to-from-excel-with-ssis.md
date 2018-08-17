@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f69793bbe07633e434f3f8b2776b1d75067bce75
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: 610bb894ca3cf2bc974f980c6879351d70cf6bee
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137930"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609811"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importare i dati da Excel o esportarli in Excel con SQL Server Integration Services (SSIS)
 
@@ -30,7 +30,7 @@ Le sezioni seguenti contengono le informazioni necessarie per usare Excel corret
 
 2.  I [file](#files-you-need) necessari.
 
-3.  Le informazioni di connessione che è necessario specificare e le impostazioni che è necessario configurare, quando si caricano dati da o in Excel.
+3.  Le informazioni di connessione che è necessario specificare e le impostazioni che è necessario configurare, quando si caricano dati da o in Excel con SSIS.
     -   [Specificare Excel](#specify-excel) come origine dati.
     -   Specificare il [percorso e il nome del file di Excel](#excel-file).
     -   Selezionare la [versione di Excel](#excel-version).
@@ -44,15 +44,15 @@ Le sezioni seguenti contengono le informazioni necessarie per usare Excel corret
 
 ## <a name="tools"></a> Strumenti disponibili
 
-È possibile importare dati da Excel o esportare dati in Excel usando uno degli strumenti seguenti:
+È possibile importare dati da Excel o esportare dati in Excel con SSIS usando uno degli strumenti seguenti:
 
--   **SQL Server Integration Services (SSIS)**. Creare un pacchetto SSIS che usa l'origine Excel o la destinazione Excel con Gestione connessione Excel. (Questo articolo non descrive come progettare pacchetti SSIS.)
+-   **SQL Server Integration Services (SSIS)**. Creare un pacchetto SSIS che usa l'origine Excel o la destinazione Excel con Gestione connessione Excel. (Questo articolo non descrive come creare pacchetti SSIS.)
 
 -   L'**Importazione/Esportazione guidata SQL Server** basata su SSIS. Per altre informazioni, vedere [Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) e [Connettersi a un'origine dati Excel (Importazione/Esportazione guidata SQL Server)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="files-you-need"></a> Ottenere i file necessari per connettersi a Excel
 
-Per poter importare dati da Excel o esportare dati in Excel, può essere necessario scaricare i componenti di connettività per Excel se non sono già installati. I componenti di connettività per Excel non sono installati per impostazione predefinita.
+Prima di poter importare dati da Excel o esportare dati in Excel con SSIS, può essere necessario scaricare i componenti di connettività per Excel se non sono già installati. I componenti di connettività per Excel non sono installati per impostazione predefinita.
 
 Scaricare la versione più recente dei componenti di connettività per Excel qui: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920). La versione più recente dei componenti può aprire file creati da versioni precedenti di Excel.
 

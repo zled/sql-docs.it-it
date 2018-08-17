@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 281eb9435fc3b251b9dfbc3d723a10f1df652f66
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541721"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008893"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ Per altre informazioni sulla quantità di memoria fisica supportata dai diversi 
   
 I sistemi con memoria virtuale consentono il commit in eccesso della memoria fisica, per cui il rapporto tra memoria virtuale e memoria fisica può essere maggiore di 1:1. Di conseguenza, i computer con diverse configurazioni di memoria fisica consentono l'esecuzione di programmi di dimensioni elevate. Tuttavia l'utilizzo di una quantità di memoria virtuale di molto superiore alla combinazione dei set di lavoro medi per tutti i processi determina un peggioramento delle prestazioni. 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-memory-architecture"></a>Architettura della memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+## <a name="sql-server-memory-architecture"></a>Architettura della memoria di SQL Server
 
 In[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la memoria viene acquisita e liberata in modo dinamico in base alle esigenze. In genere non è necessario che un amministratore specifichi la quantità di memoria da allocare a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'opzione corrispondente, tuttavia, è ancora disponibile e in alcuni ambienti è necessario impostarla.
 

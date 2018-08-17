@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 234996e85d88e9bed0313c2bf3abbf5f81eae65a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71cc5f675917e0e99c9f5a9806b8e928626c84eb
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865366"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609670"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurare un server per l'attesa su una porta TCP specifica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,11 @@ Poiché la porta 1433 è lo standard noto per [!INCLUDE[ssNoVersion](../../inclu
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Nell'area ***Proprietà** *IP***n*, nella casella **Porta TCP** digitare il numero di porta da assegnare per l'attesa a questo indirizzo IP e fare clic su **OK**.  
+4.  Nell'area ***Proprietà** *IP***n*, nella casella **Porta TCP** digitare il numero di porta da assegnare per l'attesa a questo indirizzo IP e fare clic su **OK**. È possibile specificare più porte separandole con una virgola.
+
+    > [!NOTE] 
+    > Se l'impostazione **Listen All** (Ascolta tutte) nella scheda **Protocol** (Protocollo) è impostata su "Yes" (Sì), verranno usati solo i valori **TCP Port** (Porta TCP) e **TCP Dynamic Port** (Porta dinamica TCP) nella sezione **IPAll** e le singole sezioni **IP***n* verranno ignorate completamente. Se l'impostazione **Listen All** (Ascolta tutte) è impostata su "No", le impostazioni **TCP Port** (Porta TCP) e **TCP Dynamic Port** (Porta dinamica TCP) nella sezione **IPAll** verranno ignorate e verranno invece usate le impostazioni **TCP Port** (Porta TCP), **TCP Dynamic Port** (Porta dinamica TCP) e **Enabled** (Abilitata) nelle singole sezioni **IP***n*.
+    > Per ogni sezione **IP***n* è disponibile un'impostazione **Enabled** (Abilitata) con valore predefinito "No", a causa del quale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignora questo indirizzo IP, anche se ha una porta definita.  
   
 5.  Nel riquadro della console fare clic su **Servizi di SQL Server**.  
   

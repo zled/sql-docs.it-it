@@ -18,12 +18,12 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 29c9a2ee3c323c9689e7ece0b2b1318a7051321e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d973be20ee14975fce34e7712d44ea8338931fa
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011738"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661454"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture e altre funzionalità di SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,11 @@ ms.locfileid: "33011738"
   
 -   [Replica transazionale](#TransReplication)  
   
--   [Ripristino o collegamento di un database abilitato per Change Data Capture](#RestoreOrAttach)  
+-   [Ripristino o collegamento di un database abilitato per Change Data Capture](#RestoreOrAttach)
+
+-   [Database indipendenti](#Contained)
   
-##  <a name="ChangeTracking"></a> Change Tracking  
+##  <a name="ChangeTracking"></a> Rilevamento delle modifiche  
  Le funzionalità Change Data Capture e [rilevamento modifiche](../../relational-databases/track-changes/about-change-tracking-sql-server.md) possono essere abilitate nello stesso database. Non richiedono considerazioni particolari. Per altre informazioni, vedere [Usare il rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
 ##  <a name="DatabaseMirroring"></a> Mirroring del database  
@@ -79,6 +81,9 @@ ms.locfileid: "33011738"
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   
  È possibile usare [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) per rimuovere Change Data Capture da un database collegato o ripristinato.  
+  
+##  <a name="Contained"></a> Database indipendenti  
+ La funzionalità Change Data Capture non è supportata in [database indipendenti](../../relational-databases/databases/contained-databases.md).
   
 ## <a name="change-data-capture-and-always-on"></a>Change Data Capture e Always On  
  Quando si usa Always On, è consigliabile eseguire un'enumerazione delle modifiche nella replica secondaria per ridurre il carico su disco nella replica primaria.  

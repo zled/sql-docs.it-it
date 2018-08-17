@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 7b5b27ecc45f59de8948cf6ddf0b0153132b6a35
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324435"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008903"
 ---
 # <a name="logging-in-to-sql-server"></a>Accesso a SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,8 @@ ms.locfileid: "36324435"
   
 |Tipo di istanza|Voce per il nome del server|  
 |----------------------|-------------------------------|  
-|Connessione a un'istanza predefinita utilizzando il protocollo predefinito. (Si tratta della voce consigliata per un'istanza predefinita).|APPHOST|  
-|Connessione a un'istanza denominata utilizzando il protocollo predefinito. (Si tratta della voce consigliata per un'istanza denominata).|APPHOST\SQLEXPRESS|  
+|Connessione a un'istanza predefinita utilizzando il protocollo predefinito.|APPHOST|  
+|Connessione a un'istanza denominata utilizzando il protocollo predefinito. |APPHOST\SQLEXPRESS|  
 |Connessione a un'istanza predefinita sullo stesso computer utilizzando un punto per indicare che l'istanza è in esecuzione sul computer locale.|,|  
 |Connessione a un'istanza denominata sullo stesso computer utilizzando un punto per indicare che l'istanza è in esecuzione sul computer locale.|.\SQLEXPRESS|  
 |Connessione a un'istanza predefinita sullo stesso computer utilizzando localhost per indicare che l'istanza è in esecuzione sul computer locale.|localhost|  
@@ -62,8 +62,8 @@ ms.locfileid: "36324435"
 |Connessione a un'istanza denominata sullo stesso computer che forza una connessione di memoria condivisa.|lpc:APPHOST\SQLEXPRESS|  
 |Connessione a un'istanza predefinita che è in ascolto sull'indirizzo TCP 192.168.17.28 utilizzando un indirizzo IP.|192.168.17.28|  
 |Connessione a un'istanza denominata che è in ascolto sull'indirizzo TCP 192.168.17.28 utilizzando un indirizzo IP.|192.168.17.28\SQLEXPRESS|  
-|Connessione a un'istanza predefinita che non è in ascolto sulla porta TCP predefinita, specificando la porta utilizzata, in questo caso 2828. (Questo non è necessario se [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in ascolto sulla porta predefinita (1433)).|APPHOST,2828|  
-|Connessione a un'istanza denominata su una porta TCP designata, in questo caso 2828. (Questo è spesso necessario se il servizio Browser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in esecuzione sul computer host).|APPHOST,2828|  
+|Connessione a un'istanza predefinita che non è in ascolto sulla porta TCP predefinita, specificando la porta utilizzata, in questo caso 2828. (La specifica di un numero di porta non è necessaria se [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in ascolto sulla porta predefinita (1433).)|APPHOST,2828|  
+|Connessione a un'istanza denominata su una porta TCP designata, in questo caso 2828. (La specifica di un numero di porta è spesso necessaria se il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser non è in esecuzione nel computer host.)|APPHOST,2828|  
 |Connessione a un'istanza predefinita che non è in ascolto sulla porta TCP predefinita, specificando sia l'indirizzo IP che la porta TCP utilizzata, in questo caso 2828.|192.168.17.28,2828|  
 |Connessione a un'istanza denominata specificando sia l'indirizzo IP che la porta TCP utilizzata, in questo caso 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Connessione a un'stanza predefinita per nome, forzando una connessione TCP.|tcp:APPHOST|  
@@ -82,7 +82,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Accedere a un'istanza di SQL Server &#40;prompt dei comandi&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Le risorse seguenti possono contribuire alla risoluzione di un problema di connessione.  
@@ -96,6 +96,6 @@ WHERE session_id = @@SPID;
   
  [Utilizzo dell'utilità sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [Creazione di un account di accesso](../../t-sql/lesson-2-1-creating-a-login.md)  
+ [Creazione di un account di accesso](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
   
   

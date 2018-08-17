@@ -27,12 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1d629b6dd1157c44e4a1bee1bbc944d48b4caff5
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401493"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020645"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controllo dell'accesso per dati sensibili nei pacchetti
   Per proteggere i dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile impostare un livello di protezione in modo da proteggere i dati sensibili o tutti i dati all'interno del pacchetto. Inoltre, è possibile crittografare questi dati con una password o una chiave utente o utilizzare il sistema di crittografia del database. Inoltre, il livello di protezione che si utilizza per un pacchetto non è necessariamente statico, ma cambia durante tutto il ciclo di vita del pacchetto. Spesso si imposta un livello di protezione durante lo sviluppo e un altro appena si distribuisce il pacchetto.  
@@ -98,7 +98,7 @@ ms.locfileid: "35401493"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>Per impostare o modificare il livello di protezione di un pacchetto in SQL Server Data Tools  
   
-1.  Controllare i valori disponibili per la proprietà **ProtectionLevel** nell'argomento [Impostazione del livello di protezione dei pacchetti](#set_protection)e determinare il valore appropriato per il pacchetto.  
+1.  Controllare i valori disponibili per la proprietà **ProtectionLevel** nella sezione [Livelli di protezione](#protection-levels) e determinare il valore appropriato per il pacchetto.  
   
 2.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenente il pacchetto.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35401493"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>Per impostare o modificare il livello di protezione dei pacchetti dal prompt dei comandi  
   
-1.  Controllare i valori disponibili per la proprietà **ProtectionLevel** nella sezione [Impostazione del livello di protezione dei pacchetti](#set_protection) e determinare il valore appropriato per il pacchetto.  
+1.  Controllare i valori disponibili per la proprietà **ProtectionLevel** nella sezione [Livelli di protezione](#protection-levels) e determinare il valore appropriato per il pacchetto.  
   
 2.  Controllare i mapping per l'opzione **Encrypt** nell'argomento [Utilità dtutil](../../integration-services/dtutil-utility.md)e determinare il valore intero appropriato da usare come valore della proprietà **ProtectionLevel** selezionata.  
   

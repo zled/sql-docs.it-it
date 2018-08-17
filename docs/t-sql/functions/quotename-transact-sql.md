@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2f54fce498fb1782c09c8caa24c7459432115cec
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9df60193005f6a83d6894a0718ba473f6b868d69
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451585"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609720"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  Stringa di dati di tipo carattere Unicode. *character_string* è di tipo **sysname** e la lunghezza massima è di 128 caratteri. In caso di input maggiori di 128 caratteri, viene restituito NULL.  
   
  '*quote_character*'  
- Stringa di un solo carattere da utilizzare come delimitatore. Può essere la virgoletta singola ( **'** ), la parentesi quadra aperta o chiusa ( **[]** ) oppure le virgolette doppie ( **"** ). Se *quote_character* viene omesso, vengono usate le parentesi quadre.  
+ Stringa di un solo carattere da utilizzare come delimitatore. Può essere una virgoletta singola ( **'** ), una parentesi quadra aperta o chiusa ( **[]** ), virgolette doppie ( **"** ), una parentesi sinistra o destra ( **()** ), il simbolo di maggiore di o minore di ( **><** ), una parentesi graffa sinistra o destra ( **{}** ) o un apice inverso ( **\`** ). Viene restituito NULL se viene specificato un carattere non valido. Se *quote_character* viene omesso, vengono usate le parentesi quadre.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar(258)**  

@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4ed0905805e3d7bed8841e29739f559bbbbdc9ac
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558881"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662483"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Motore di database)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,30 @@ Il server elabora il set di risultati e per ogni colonna crittografata incluso n
 
 Per informazioni dettagliate su come sviluppare applicazioni che usano Always Encrypted con driver client particolari, vedere [Always Encrypted (sviluppo di client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
+## <a name="remarks"></a>Remarks
+
+La decrittografia avviene tramite il client. Questo significa che alcune azioni che si verificano solo sul lato server non funzionano quando si usa Always Encrypted. 
+
+Di seguito è riportato un esempio di un aggiornamento che tenta di spostare dati da una colonna crittografata in una colonna non crittografata senza restituire un set di risultati al client: 
+
+```sql
+update dbo.Patients set testssn = SSN
+```
+
+Se SSN è una colonna crittografata con Always Encrypted, l'istruzione di aggiornamento precedente avrà esito negativo con un errore simile a:
+
+```
+Msg 206, Level 16, State 2, Line 89
+Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
+```
+
+Per aggiornare correttamente la colonna, procedere come segue:
+
+1. Eseguire SELECT sui dati della colonna SSN e archiviarli come set di risultati nell'applicazione. Ciò consentirà all'applicazione (*driver* client) di decrittografare la colonna.
+2. Eseguire INSERT per i dati dal set di risultati in SQL Server. 
+
+ >[!IMPORTANT]
+ > In questo scenario, i dati verranno decrittografati quando vengono inviati di nuovo al server perché la colonna di destinazione è di tipo varchar regolare e non accetta dati crittografati. 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>Selezione della crittografia deterministica o casuale  
  Il motore di database non agisce mai sui dati in testo non crittografato archiviati in colonne crittografate, ma supporta alcune query sui dati crittografati, a seconda del tipo di crittografia per la colonna. Crittografia sempre attiva supporta due tipi di crittografia: crittografia casuale e crittografia deterministica.  

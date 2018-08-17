@@ -1,58 +1,62 @@
 ---
-title: Caricare dati da SQL Server in Azure SQL Data Warehouse (SSIS) | Microsoft Docs
-description: In questo articolo viene illustrato come creare un pacchetto di SQL Server Integration Services (SSIS) per spostare dati da una vasta gamma di origini dati in SQL Data Warehouse.
+title: Caricare i dati in Azure SQL Data Warehouse con SQL Server Integration Services (SSIS) | Microsoft Docs
+description: Questo articolo illustra come creare un pacchetto di SQL Server Integration Services (SSIS) per spostare dati da una vasta gamma di origini dati in Azure SQL Data Warehouse.
 documentationcenter: NA
-ms.service: sql-data-warehouse
-ms.component: data-movement
+ms.prod: sql
+ms.prod_service: integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 04/04/2018
+ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 75a352ff4bb1f074a89ad4cc007844261d20c431
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087583"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020655"
 ---
-# <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Caricare i dati da SQL Server in Azure SQL Data Warehouse con SQL Server Integration Services (SSIS)
+# <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Caricare i dati in Azure SQL Data Warehouse con SQL Server Integration Services (SSIS)
 
-Creare un pacchetto di SQL Server Integration Services (SSIS) per caricare dati da SQL Server in [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index). È anche possibile ristrutturare, trasformare e pulire i dati durante il passaggio attraverso il flusso di dati SSIS.
+Creare un pacchetto di SQL Server Integration Services (SSIS) per caricare dati in [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index). È anche possibile ristrutturare, trasformare e pulire i dati durante il passaggio attraverso il flusso di dati SSIS.
 
-Questa esercitazione illustrerà come:
+Questo articolo illustra come eseguire le operazioni seguenti.
 
 * Creare un nuovo progetto di Integration Services in Visual Studio.
-* Connettersi a origini dati, inclusi SQL Server (come origine) e SQL Data Warehouse (come destinazione).
 * Progettare un pacchetto SSIS che carica i dati dall'origine nella destinazione.
 * Eseguire il pacchetto SSIS per caricare i dati.
 
-Questa esercitazione usa SQL Server come origine dati. SQL Server può essere in esecuzione in locale o in una macchina virtuale di Azure.
-
 ## <a name="basic-concepts"></a>Concetti fondamentali
-In SSIS l'unità di lavoro è un pacchetto. I pacchetti correlati vengono raggruppati in progetti. I progetti e pacchetti di progettazione in Visual Studio vengono creati con SQL Server Data Tools. Il processo di progettazione è un processo visivo in cui l'utente trascina e rilascia i componenti dalla casella degli strumenti all'area di progettazione, li connette e ne imposta le proprietà. Dopo aver completato il pacchetto, è possibile distribuirlo a SQL Server per la gestione completa, il monitoraggio e la sicurezza.
 
-## <a name="options-for-loading-data-with-ssis"></a>Opzioni di caricamento dei dati con SSIS
+Il pacchetto è l'unità di lavoro di base in SSIS. I pacchetti correlati vengono raggruppati in progetti. I progetti e pacchetti di progettazione in Visual Studio vengono creati con SQL Server Data Tools. Il processo di progettazione è un processo visivo in cui l'utente trascina e rilascia i componenti dalla casella degli strumenti all'area di progettazione, li connette e ne imposta le proprietà. Dopo aver completato il pacchetto, è possibile eseguirlo e distribuirlo facoltativamente a SQL Server per la gestione completa, il monitoraggio e la sicurezza.
+
+Un'introduzione dettagliata a SSIS esula dagli scopi di questo articolo. Per altre informazioni, vedere gli articoli seguenti:
+
+- [SQL Server Integration Services](sql-server-integration-services.md)
+
+- [Come creare un pacchetto ETL](ssis-how-to-create-an-etl-package.md)
+
+## <a name="options-for-loading-data-into-sql-data-warehouse-with-ssis"></a>Opzioni per il caricamento dei dati in SQL Data Warehouse con SSIS
 SQL Server Integration Services (SSIS) è un set di strumenti flessibile che offre un'ampia gamma di opzioni per la connessione e il caricamento dei dati in SQL Data Warehouse.
 
-1. Usare un componente di destinazione ADO NET per connettersi a SQL Data Warehouse. In questa esercitazione viene usato un componente di destinazione ADO NET perché contiene il minor numero di opzioni di configurazione.
-2. Usare un componente di destinazione OLE DB per connettersi a SQL Data Warehouse. Questa opzione può offrire prestazioni leggermente migliori rispetto alla destinazione ADO NET.
-3. Usare l'attività di caricamento BLOB di Azure per eseguire lo staging dei dati nell'archivio BLOB di Azure. Usare quindi l'attività Esegui SQL di SSIS per avviare uno script Polybase che carica i dati in SQL Data Warehouse. Questa opzione offre le prestazioni migliori tra le tre opzioni elencate di seguito. Per ottenere l'attività di caricamento BLOB di Azure, vedere [Microsoft SQL Server 2016 Integration Services Feature Pack per Azure][Microsoft SQL Server 2016 Integration Services Feature Pack for Azure]. Per altre informazioni su Polybase, vedere [Guida a PolyBase][PolyBase Guide].
+1. Il metodo preferito, che offre le migliori prestazioni, consiste nel creare un pacchetto che usa l'[attività Azure SQL DW Upload](control-flow/azure-sql-dw-upload-task.md) (Caricamento Azure SQL Data Warehouse) per caricare i dati. Questa attività incapsula le informazioni sia sull'origine che sulla destinazione. Si presuppone che i dati di origine siano archiviati in locale in file di testo delimitato.
 
-## <a name="before-you-start"></a>Prima di iniziare
-Per eseguire questa esercitazione, è necessario:
+2. In alternativa, è possibile creare un pacchetto che usa un'attività Flusso di dati che contiene un'origine e destinazione. Questo approccio supporta un'ampia gamma di origini dati, inclusi SQL Server e Azure SQL Data Warehouse.
 
-1. **SQL Server Integration Services (SSIS)**. SSIS è un componente di SQL Server e richiede una versione di valutazione o una versione con licenza di SQL Server. Per ottenere una versione di valutazione di SQL Server 2016 Preview, vedere [SQL Server Valutazioni][SQL Server Evaluations].
-2. **Visual Studio**. Per ottenere l'edizione gratuita di Visual Studio Community, vedere [Visual Studio Community][Visual Studio Community].
+## <a name="prerequisites"></a>Prerequisites
+Per eseguire questa esercitazione, sono necessari:
+
+1. **SQL Server Integration Services (SSIS)**. SSIS è un componente di SQL Server e richiede una versione con licenza o la versione per sviluppatori o la versione di valutazione di SQL Server. Per ottenere una versione di valutazione di SQL Server, vedere [Evaluation Center per SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
+2. **Visual Studio** (facoltativo). Per ottenere l'edizione gratuita di Visual Studio Community, vedere [Visual Studio Community][Visual Studio Community]. Se non si vuole installare Visual Studio, è possibile installare solo SQL Server Data Tools (SSDT). SSDT installa una versione di Visual Studio con funzionalità limitate.
 3. **SQL Server Data Tools per Visual Studio (SSDT)**. Per ottenere SQL Server Data Tools per Visual Studio, vedere [Scaricare SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **Dati di esempio**. Questa esercitazione usa i dati di esempio archiviati in SQL Server nel database di esempio AdventureWorks come dati di origine da caricare in SQL Data Warehouse. Per ottenere il database di esempio AdventureWorks, vedere la pagina dei [database di esempio AdventureWorks 2014][AdventureWorks 2014 Sample Databases].
-5. **Un database SQL Data Warehouse e le autorizzazioni**. In questa esercitazione ci si connette a un'istanza di SQL Data Warehouse e si caricano i dati. È necessario avere le autorizzazioni per creare una tabella e caricare i dati.
-6. **Una regola del firewall**. È necessario creare una regola del firewall in SQL Data Warehouse con l'indirizzo IP del computer locale prima di poter caricare dati in SQL Data Warehouse.
+4. **Un database di Azure SQL Data Warehouse e le autorizzazioni**. In questa esercitazione ci si connette a un'istanza di SQL Data Warehouse e si caricano i dati. È necessario avere le autorizzazioni per connettersi, creare una tabella e caricare i dati.
 
-## <a name="step-1-create-a-new-integration-services-project"></a>Passaggio 1: Creare un nuovo progetto di Integration Services
+## <a name="create-a-new-integration-services-project"></a>Creazione di un nuovo progetto di Integration Services
 1. Avviare Visual Studio.
 2. Scegliere **Nuovo progetto** dal menu **File**.
 3. Andare ai tipi di progetto **Installati | Progetti | Business Intelligence | Integration Services**.
@@ -66,7 +70,55 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
   
     ![][01]
 
-## <a name="step-2-create-the-basic-data-flow"></a>Passaggio 2: Creare il flusso di dati di base
+## <a name="option-1---use-the-sql-dw-upload-task"></a>Opzione 1 - Usare l'attività SQL DW Upload (Caricamento SQL Data Warehouse)
+
+Il primo approccio è un pacchetto che usa l'attività SQL DW Upload (Caricamento SQL Data Warehouse). Questa attività incapsula le informazioni sia sull'origine che sulla destinazione. Si presuppone che i dati di origine siano archiviati in file di testo delimitati, in locale o in Archiviazione BLOB di Azure.
+
+### <a name="prerequisites-for-option-1"></a>Prerequisiti per l'opzione 1
+
+Per continuare l'esercitazione con questa opzione, è necessario quanto segue:
+
+- [Microsoft SQL Server Integration Services Feature Pack per Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. L'attività SQL DW Upload (Caricamento SQL Data Warehouse) è un componente del Feature Pack.
+
+- Un account di [Archiviazione BLOB di Azure](https://docs.microsoft.com/azure/storage/). L'attività SQL DW Upload (Caricamento SQL Data Warehouse) carica i dati da Archiviazione BLOB di Azure in Azure SQL Data Warehouse. È possibile caricare file già presenti nell'archivio BLOB oppure è possibile caricare i file dal computer. Se si selezionano i file nel computer in uso, l'attività SQL DW Upload (Caricamento SQL Data Warehouse) li carica prima di tutto nell'archivio BLOB per lo staging e quindi li carica in SQL Data Warehouse.
+
+### <a name="add-and-configure-the-sql-dw-upload-task"></a>Aggiungere e configurare l'attività SQL DW Upload (Caricamento SQL Data Warehouse)
+
+1. Trascinare un'attività SQL DW Upload (Caricamento SQL Data Warehouse) dalla casella degli strumenti al centro dell'area di progettazione (nella scheda **Flusso di controllo**).
+
+2. Fare doppio clic sull'attività per aprire l'**editor dell'attività SQL DW Upload (Caricamento SQL Data Warehouse)**.
+
+    ![Pagina Generale dell'editor dell'attività SQL DW Upload (Caricamento SQL Data Warehouse)](media/load-data-to-sql-data-warehouse/azure-sql-dw-upload-task-editor.png)
+
+3. Configurare l'attività con l'aiuto delle istruzioni disponibili nell'articolo [Azure SQL DW Upload Task](control-flow/azure-sql-dw-upload-task.md) (Attività Caricamento SQL Data Warehouse). Dato che questa attività incapsula sia informazioni sull'origine che sulla destinazione e i mapping tra le tabelle di origine e di destinazione, l'editor dell'attività include numerose pagine di impostazioni da configurare.
+
+### <a name="create-a-similar-solution-manually"></a>Creare una soluzione simile manualmente
+
+Per un maggiore controllo, è possibile creare manualmente un pacchetto che emula il lavoro svolto dall'attività SQL DW Upload (Caricamento SQL Data Warehouse). 
+
+1. Usare l'attività di caricamento BLOB di Azure per eseguire lo staging dei dati nell'archivio BLOB di Azure. Per ottenere l'attività di caricamento BLOB di Azure, scaricare [Microsoft SQL Server Integration Services Feature Pack per Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
+
+2. Usare quindi l'attività Esegui SQL di SSIS per avviare uno script Polybase che carica i dati in SQL Data Warehouse. Per un esempio che carica dati da Archiviazione BLOB di Azure in SQL Data Warehouse (ma non con SSIS), vedere [Esercitazione: Caricare dati in Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
+
+## <a name="option-2---use-a-source-and-destination"></a>Opzione 2 - Usare un'origine e una destinazione
+
+Il secondo approccio è un pacchetto tipico che usa un'attività Flusso di dati che contiene un'origine e una destinazione. Questo approccio supporta un'ampia gamma di origini dati, inclusi SQL Server e Azure SQL Data Warehouse.
+
+Questa esercitazione usa SQL Server come origine dati. SQL Server può essere eseguito in locale o in una macchina virtuale di Azure.
+
+Per connettersi a SQL Server e SQL Data Warehouse, è possibile usare una gestione connessione ADO.NET e un'origine e una destinazione oppure una gestione connessione OLE DB e un'origine e una destinazione. Questa esercitazione usa ADO NET perché prevede il minor numero di opzioni di configurazione. OLE DB può offrire prestazioni leggermente migliori rispetto ad ADO NET.
+
+Per velocizzare l'operazione, è possibile usare Importazione/Esportazione guidata SQL Server per creare il pacchetto di base. Quindi, salvare il pacchetto e aprirlo in Visual Studio o SSDT per visualizzarlo e personalizzarlo. Per altre informazioni, vedere [Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+
+### <a name="prerequisites-for-option-2"></a>Prerequisiti per l'opzione 2
+
+Per continuare l'esercitazione con questa opzione, è necessario quanto segue:
+
+1. **Dati di esempio**. Questa esercitazione usa i dati di esempio archiviati in SQL Server nel database di esempio AdventureWorks come dati di origine da caricare in SQL Data Warehouse. Per ottenere il database di esempio AdventureWorks, vedere [Database di esempio AdventureWorks][AdventureWorks 2014 Sample Databases].
+
+2. **Una regola del firewall**. È necessario creare una regola del firewall in SQL Data Warehouse con l'indirizzo IP del computer locale prima di poter caricare dati in SQL Data Warehouse.
+
+### <a name="create-the-basic-data-flow"></a>Creare il flusso di dati di base
 1. Trascinare un'attività Flusso di dati dalla casella degli strumenti al centro dell'area di progettazione (nella scheda **Flusso di controllo**).
    
     ![][02]
@@ -76,7 +128,7 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
    
     ![][09]
 
-## <a name="step-3-configure-the-source-adapter"></a>Passaggio 3: Configurare l'adattatore di origine
+### <a name="configure-the-source-adapter"></a>Configurare l'adattatore di origine
 1. Fare doppio clic sull'adattatore di origine per aprire l'**Editor origine ADO.NET**.
    
     ![][03]
@@ -107,7 +159,7 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
 8. Nella finestra di dialogo **Anteprima risultati query** fare clic su **Chiudi** per ritornare all'**Editor origine ADO.NET**.
 9. Nell'**Editor origine ADO.NET** fare clic su **OK** per completare la configurazione dell'origine dati.
 
-## <a name="step-4-connect-the-source-adapter-to-the-destination-adapter"></a>Passaggio 4: Connettere l'adattatore di origine all'adattatore di destinazione
+### <a name="connect-the-source-adapter-to-the-destination-adapter"></a>Connettere l'adattatore di origine all'adattatore di destinazione
 1. Selezionare l'adattatore di origine nell'area di progettazione.
 2. Selezionare la freccia blu che si estende dall'adattatore di origine e trascinarla nell'editor di destinazione fino al completo inserimento.
    
@@ -115,7 +167,7 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
    
     In un pacchetto SSIS tipico è possibile usare diversi altri componenti dalla casella degli strumenti SSIS tra l'origine e la destinazione per ristrutturare, trasformare e pulire i dati mentre attraversano il flusso di dati SSIS. Per mantenere più semplice possibile questo esempio, viene eseguita la connessione dell'origine direttamente alla destinazione.
 
-## <a name="step-5-configure-the-destination-adapter"></a>Passaggio 5: Configurare l'adattatore di destinazione
+### <a name="configure-the-destination-adapter"></a>Configurare l'adattatore di destinazione
 1. Fare doppio clic sull'adattatore di destinazione per aprire l'**Editor destinazione ADO.NET**.
    
     ![][11]
@@ -146,8 +198,10 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
     ![][13]
 9. Fare clic su **OK** per completare la configurazione dell'origine dati.
 
-## <a name="step-6-run-the-package-to-load-the-data"></a>Passaggio 6: Eseguire il pacchetto per caricare i dati
+## <a name="run-the-package-to-load-the-data"></a>Eseguire il pacchetto per caricare i dati
 Eseguire il pacchetto facendo clic sul pulsante **Avvia** della barra degli strumenti o selezionando una delle opzioni **Esegui** nel menu **Debug**.
+
+I paragrafi seguenti descrivono i risultati visualizzati se si crea il pacchetto con la seconda opzione descritta in questo articolo, vale a dire con un flusso di dati che contiene un'origine e una destinazione.
 
 Quando inizia l'esecuzione del pacchetto si possono osservare delle ruote gialle in rotazione che indicano l'attività e il numero di righe elaborate fino a ora.
 
@@ -160,9 +214,10 @@ Quando l'esecuzione del pacchetto è terminata vengono visualizzati dei segni di
 Congratulazioni! Hai usato correttamente SQL Server Integration Services per caricare dati in Azure SQL Data Warehouse.
 
 ## <a name="next-steps"></a>Passaggi successivi
-* Altre informazioni sul flusso di dati SSIS. Iniziare da qui: [Flusso di dati][Data Flow].
-* Informazioni su come eseguire il debug e risolvere i problemi relativi ai pacchetti direttamente nell'ambiente di progettazione. Iniziare da qui: [Strumenti per la risoluzione dei problemi relativi allo sviluppo dei pacchetti][Troubleshooting Tools for Package Development].
-* Informazioni su come distribuire i progetti SSIS e i pacchetti nel server Integration Services o in un'altra posizione di archiviazione. Iniziare da qui: [Distribuire progetti e pacchetti][Deployment of Projects and Packages].
+
+- Informazioni su come eseguire il debug e risolvere i problemi relativi ai pacchetti direttamente nell'ambiente di progettazione. Iniziare da qui: [Strumenti per la risoluzione dei problemi relativi allo sviluppo dei pacchetti][Troubleshooting Tools for Package Development].
+
+- Informazioni su come distribuire i progetti SSIS e i pacchetti nel server Integration Services o in un'altra posizione di archiviazione. Iniziare da qui: [Distribuire progetti e pacchetti][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png
@@ -193,7 +248,7 @@ Congratulazioni! Hai usato correttamente SQL Server Integration Services per car
 [Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md
 
 <!--Other Web references-->
-[Microsoft SQL Server 2016 Integration Services Feature Pack for Azure]: http://go.microsoft.com/fwlink/?LinkID=626967
-[SQL Server Evaluations]: https://www.microsoft.com/evalcenter/evaluate-sql-server-2016
+[Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]: https://www.microsoft.com/download/details.aspx?id=54798
+[SQL Server Evaluations]: https://www.microsoft.com/evalcenter/evaluate-sql-server-2017
 [Visual Studio Community]: https://www.visualstudio.com/products/visual-studio-community-vs.aspx
 [AdventureWorks 2014 Sample Databases]: https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks
