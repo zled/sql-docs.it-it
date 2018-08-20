@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ccbf65c2b1d297b8fd36ef75f84a6a8c09b21175
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 470355f14c589d5ef62d9de2493d64ef4b8f48aa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950496"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175203"
 ---
 # <a name="sql-server-agent-jobs-object"></a>Oggetto Processi di SQL Server Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32950496"
   
  Nella tabella seguente sono illustrati i contatori di **SQLAgent:Processi** .  
   
-|nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |**Processi attivi**|Questo contatore indica il numero di processi attualmente in esecuzione.|  
 |**Processi non riusciti**|Questo contatore indica il numero di processi chiusi con un errore.|  
@@ -43,7 +43,7 @@ ms.locfileid: "32950496"
   
  Per ogni contatore nell'oggetto sono disponibili le istanze seguenti:  
   
-|Istanza|Description|  
+|Istanza|Descrizione|  
 |--------------|-----------------|  
 |**_Total**|Informazioni relative a tutti i processi.|  
 |**Avvisi**|Informazioni relative ai processi avviati da avvisi.|  
@@ -51,8 +51,8 @@ ms.locfileid: "32950496"
 |**Pianificazioni**|Informazioni relative ai processi avviati da pianificazioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implementazione di processi](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [Utilizzo degli oggetti prestazioni](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Implementazione di processi](../../ssms/agent/implement-jobs.md)   
+ [Utilizzo degli oggetti prestazioni](../../ssms/agent/use-performance-objects.md)   
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

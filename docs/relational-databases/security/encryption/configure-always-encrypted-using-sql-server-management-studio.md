@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d2156c3523e6dcc53c04ebf011406b715abe530
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543071"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175182"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Configurare Always Encrypted usando SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna 
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>Esecuzione di operazioni di aggiornamento dell'applicazione livello dati quando il database o il file DACPAC usa Always Encrypted
 
-Le[operazioni dell'applicazione livello dati](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) sono supportati nei file DACPAC e nei database con schemi che contengono colonne crittografate. L'operazione di aggiornamento dell'applicazione livello dati richiede una particolare attenzione: vedere la procedura [Aggiornare un'applicazione livello dati](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) per le modalità di esecuzione di un aggiornamento dell'applicazione livello dati in vari strumenti, tra cui SSMS. 
+Le[operazioni dell'applicazione livello dati](../../data-tier-applications/data-tier-applications.md) sono supportati nei file DACPAC e nei database con schemi che contengono colonne crittografate. L'operazione di aggiornamento dell'applicazione livello dati richiede una particolare attenzione: vedere la procedura [Aggiornare un'applicazione livello dati](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) per le modalità di esecuzione di un aggiornamento dell'applicazione livello dati in vari strumenti, tra cui SSMS. 
 
 Quando si aggiorna un database usando un file DACPAC e il file DACPAC o il database di destinazione contiene colonne crittografate, l'operazione di aggiornamento attiva un'operazione di crittografia dei dati se vengono soddisfatte tutte le condizioni seguenti:
 - Il database contiene una colonna con dati.
@@ -418,7 +418,7 @@ Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna 
 
 ## <a name="migrating-databases-with-encrypted-columns-using-bacpac"></a>Migrazione di database con colonne crittografate con un file BACPAC
 
-Quando si esporta un database, tutti i dati archiviati nelle colonne crittografate vengono recuperati e inseriti nel file [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) risultante (in formato crittografato). Il file BACPAC risultante contiene anche i metadati per le chiavi di Always Encrypted.
+Quando si esporta un database, tutti i dati archiviati nelle colonne crittografate vengono recuperati e inseriti nel file [BACPAC](../../data-tier-applications/data-tier-applications.md) risultante (in formato crittografato). Il file BACPAC risultante contiene anche i metadati per le chiavi di Always Encrypted.
 
 Quando si importa il file BACPAC in un database, i dati crittografati del file BACPAC vengono caricati nel database e i metadati delle chiavi di Always Encrypted vengono ricreati.
 

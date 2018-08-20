@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e559147286aa4f5664c09c38a80a4e568eff175
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 61e97bf25b13f8edd225e7b57ede4cecd0a78e35
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407953"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175230"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL
   Questa procedura dettagliata fornisce le informazioni necessarie per pubblicare un pacchetto SSIS come vista SQL in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -130,7 +130,7 @@ ms.locfileid: "35407953"
   
         1.  Specificare lo schema del database in cui si vuole creare la vista (campo Schema).  
   
-        2.  Specificare se i dati devono essere crittografati prima di inviarli in rete (campo Crittografa). Vedere [Utilizzo della crittografia senza convalida](http://msdn.microsoft.com/library/ms131691.aspx) per altre informazioni su questa impostazione e sull'impostazione TrustServerCertificate.  
+        2.  Specificare se i dati devono essere crittografati prima di inviarli in rete (campo Crittografa). Vedere [Utilizzo della crittografia senza convalida](../../relational-databases/native-client/features/using-encryption-without-validation.md) per altre informazioni su questa impostazione e sull'impostazione TrustServerCertificate.  
   
         3.  Specificare se è possibile usare un certificato server autofirmato quando è abilitata l'impostazione di crittografia (campo**TrustServerCertificate** ).  
   
@@ -213,7 +213,7 @@ GO
   
  Durante l'esecuzione della vista, la query del server collegato definito nella vista avvia il pacchetto SSIS specificato nella query e riceve l'output del pacchetto come un set di risultati tabulari.  
   
-1.  Prima di creare la vista digitare ed eseguire la query seguente nel nuovo intervallo di query. OPENQUERY è una funzione di set di righe supportata da SQL Server. Esegue la query pass-through specificata sul server collegato specificato usando il provider OLE DB associato a tale server. È possibile fare riferimento alla funzione OPENQUERY nella clausola FROM di una query come se fosse un nome di tabella. Vedere la [documentazione su OPENQUERY in MSDN Library](http://msdn.microsoft.com/library/ms188427.aspx) per altre informazioni.  
+1.  Prima di creare la vista digitare ed eseguire la query seguente nel nuovo intervallo di query. OPENQUERY è una funzione di set di righe supportata da SQL Server. Esegue la query pass-through specificata sul server collegato specificato usando il provider OLE DB associato a tale server. È possibile fare riferimento alla funzione OPENQUERY nella clausola FROM di una query come se fosse un nome di tabella. Vedere la [documentazione su OPENQUERY in MSDN Library](../../t-sql/functions/openquery-transact-sql.md) per altre informazioni.  
   
     ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   

@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9364bacf4e9f601c8cce9d5dfe4cd550d4b7405e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79469da3f919204e3ceb0d3e9a4b9968ba56ba02
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931016"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175235"
 ---
 # <a name="database-mail"></a>Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "32931016"
   
  È possibile configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per inviare messaggi di posta elettronica a operatori predefiniti nelle condizioni riportate di seguito.  
   
--   È stato attivato un avviso. È possibile configurare gli avvisi in modo da inviare notifiche tramite posta elettronica quando vengono generati eventi specifici, ad esempio per segnalare a un operatore un evento di database o una condizione del sistema operativo che richiede un intervento tempestivo. Per altre informazioni sulla configurazione degli avvisi, vedere [Avvisi](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
+-   È stato attivato un avviso. È possibile configurare gli avvisi in modo da inviare notifiche tramite posta elettronica quando vengono generati eventi specifici, ad esempio per segnalare a un operatore un evento di database o una condizione del sistema operativo che richiede un intervento tempestivo. Per altre informazioni sulla configurazione degli avvisi, vedere [Avvisi](../../ssms/agent/alerts.md).  
   
 -   Quando un'attività pianificata, ad esempio il backup di un database o un evento di replica, viene completata o non riesce. È possibile ad esempio utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Mail per notificare agli operatori il verificarsi di un errore durante l'elaborazione alla fine del mese.  
   
