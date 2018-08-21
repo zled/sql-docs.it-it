@@ -15,12 +15,12 @@ caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0a62aafb5512562339ad387dcb1bf8f34efac09d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cd9099b3f814fd65ac0c5d54e187fcfbc9cffb86
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981213"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175187"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
 
@@ -124,7 +124,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  Per altre informazioni sull'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, inclusi il servizio condiviso [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che rappresenta una novità in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e l'applicazione del servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che è necessario creare e configurare per poter usare le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) in MSDN Library.  
   
- Come illustrato nel diagramma riportato in precedenza in questo argomento, per gli avvisi dati vengono utilizzati processi di SQL Server Agent. Per creare i processi, è necessario che SQL Server Agent sia in esecuzione. SQL Server Agent potrebbe essere stato configurato per l'avvio automatico al momento dell'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. In caso contrario, è possibile avviare SQL Server Agent manualmente. Per altre informazioni, vedere [Configurare SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) e [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Come illustrato nel diagramma riportato in precedenza in questo argomento, per gli avvisi dati vengono utilizzati processi di SQL Server Agent. Per creare i processi, è necessario che SQL Server Agent sia in esecuzione. SQL Server Agent potrebbe essere stato configurato per l'avvio automatico al momento dell'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. In caso contrario, è possibile avviare SQL Server Agent manualmente. Per altre informazioni, vedere [Configurare SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) e [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  È possibile utilizzare la pagina **Avvisi e sottoscrizioni provisioning** in Amministrazione centrale SharePoint per verificare se SQL Server Agent è in esecuzione e per creare e scaricare script [!INCLUDE[tsql](../includes/tsql-md.md)] personalizzati da eseguire per concedere autorizzazioni a SQL Server Agent. È anche possibile generare gli script [!INCLUDE[tsql](../includes/tsql-md.md)] tramite PowerShell. Per altre informazioni, vedere [Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
@@ -252,7 +252,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
 -   ReadSentAlerts  
   
- È possibile utilizzare SQL Server Agent per eseguire la stored procedure in una pianificazione. Per altre informazioni, vedere [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec).  
+ È possibile utilizzare SQL Server Agent per eseguire la stored procedure in una pianificazione. Per altre informazioni, vedere [SQL Server Agent](../ssms/agent/sql-server-agent.md).  
   
 #### <a name="report-server-execution-log"></a>Log di esecuzione del server di report  
  I report vengono eseguiti per generare i feed di dati in base ai quali vengono compilate le definizioni di avviso. Il log di esecuzione del server di report nel database del server di report consente di acquisire informazioni ogni volta che un report viene eseguito. È possibile eseguire una query sulla vista ExecutionLog2 nel database per informazioni dettagliate. Per altre informazioni, vedere [Vista ExecutionLog ed ExecutionLog3 del server di report](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
