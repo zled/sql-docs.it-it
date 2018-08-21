@@ -1,7 +1,7 @@
 ---
 title: Origine di Azure Data Lake Store | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/16/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8bcab4b05afd22e06951e31f3037075830fba22
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3d179247f8d76a06c154ee2585a79ba6d1193554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409303"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175198"
 ---
 # <a name="azure-data-lake-store-source"></a>Origine di Azure Data Lake Store
   Il componente **Origine di Azure Data Lake Store** consente a un pacchetto SSIS di leggere dati da Azure Data Lake Store. I formati di file supportati sono: testo e AVRO.
@@ -44,3 +44,7 @@ ms.locfileid: "35409303"
         Se il formato del file corrisponde a testo, è necessario impostare il valore **Carattere delimitatore di colonna** . Selezionare anche **Nomi di colonne nella prima riga di dati** se la prima riga nel file contiene i nomi di colonna.  
   
 3.  Dopo aver specificato le informazioni di connessione, passare alla pagina **Colonne** per eseguire il mapping delle colonne di origine alle colonne di destinazione per il flusso di dati SSIS.   
+
+## <a name="text-qualifier"></a>Qualificatore di testo
+
+L'**origine Azure Data Lake Store** non supporta un qualificatore di testo. Se è necessario specificare un qualificatore di testo per elaborare i file in modo corretto, valutare la possibilità di scaricare i file nel computer locale ed elaborare i file con l'**origine file flat**. L'origine file flat consente di specificare un qualificatore di testo. Per altre informazioni, vedere [Origine file flat](flat-file-source.md).
